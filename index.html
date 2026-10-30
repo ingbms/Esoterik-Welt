@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Esoterik-Welt — Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen.">
   <title>Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr</title>
+  <link rel="canonical" href="https://esoterik-welt.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen">
+  <meta property="og:description" content="Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen.">
+  <meta property="og:url" content="https://esoterik-welt.github.io/">
+  <meta property="og:image" content="https://esoterik-welt.github.io/assets/og-preview.png">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Esoterik-Welt">
+  <meta name="twitter:description" content="Tarot, Kristalle, Runen & Mondphasen — esoterisches Wissen, bewusst und ohne medizinische Wirkungsaussagen.">
+  <meta name="twitter:image" content="https://esoterik-welt.github.io/assets/og-preview.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Styles -->
+  <link rel="preload" href="css/design-system.css" as="style">
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -19,6 +31,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
+  <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
   <!-- Header -->
   <header class="header" id="header" role="banner">
     <div class="header-inner">
@@ -41,7 +54,7 @@
   </header>
 
   <!-- Main Content -->
-  <main id="main" role="main">
+  <main id="main" role="main" tabindex="-1">
     <!-- Home / Hero Section -->
     <section id="home" class="page active" aria-labelledby="home-title">
       <div class="hero">
@@ -101,7 +114,7 @@
             3-Karten-Legung
           </button>
           <div class="flex-1"></div>
-          <select class="select" id="arcanaFilter" style="width: auto; min-width: 180px;">
+          <select class="select" id="arcanaFilter" aria-label="Tarot nach Arcana filtern" style="width: auto; min-width: 180px;">
             <option value="all">Alle Arcana</option>
             <option value="major">Nur Major Arcana</option>
             <option value="minor">Nur Minor Arcana</option>
@@ -112,7 +125,7 @@
           </select>
         </div>
 
-        <div class="grid grid-auto" id="tarotGrid" role="list" aria-label="Tarot-Karten"></div>
+        <div class="grid grid-auto" id="tarotGrid" role="group" aria-label="Tarot-Karten"></div>
 
         <!-- Drawn Card Display -->
         <div id="drawnCardContainer" class="mt-8" hidden>
@@ -131,7 +144,7 @@
             <p class="text-muted">Kraft der Erde. Filter nach Chakra, Farbe, Wirkung.</p>
           </div>
           <div class="flex flex-wrap gap-3">
-            <select class="select" id="chakraFilter" style="width: auto; min-width: 160px;">
+            <select class="select" id="chakraFilter" aria-label="Kristalle nach Chakra filtern" style="width: auto; min-width: 160px;">
               <option value="all">Alle Chakren</option>
               <option value="root">Wurzel (Rot)</option>
               <option value="sacral">Sakral (Orange)</option>
@@ -141,7 +154,7 @@
               <option value="third-eye">Stirn (Indigo)</option>
               <option value="crown">Krone (Violett/Weiß)</option>
             </select>
-            <select class="select" id="colorFilter" style="width: auto; min-width: 160px;">
+            <select class="select" id="colorFilter" aria-label="Kristalle nach Farbe filtern" style="width: auto; min-width: 160px;">
               <option value="all">Alle Farben</option>
               <option value="red">Rot</option>
               <option value="orange">Orange</option>
@@ -153,7 +166,7 @@
               <option value="white">Weiß/Klar</option>
               <option value="black">Schwarz</option>
             </select>
-            <input type="search" class="input" id="crystalSearch" placeholder="Suche..." style="width: auto; min-width: 200px;">
+            <input type="search" class="input" id="crystalSearch" aria-label="Kristalle suchen" placeholder="Suche..." style="width: auto; min-width: 200px;">
           </div>
         </div>
 
@@ -161,11 +174,11 @@
         <div id="activeFilterBadges" class="flex flex-wrap gap-2 mb-4" style="display:none;"></div>
 
         <div class="flex flex-wrap gap-3 mb-6">
-          <button class="btn btn-secondary" id="viewGridBtn" aria-pressed="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button>
-          <button class="btn btn-ghost" id="viewListBtn" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+          <button class="btn btn-secondary" id="viewGridBtn" aria-label="Rasteransicht" aria-pressed="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button>
+          <button class="btn btn-ghost" id="viewListBtn" aria-label="Listenansicht" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
         </div>
 
-        <div class="grid grid-auto" id="crystalGrid" role="list" aria-label="Kristalle"></div>
+        <div class="grid grid-auto" id="crystalGrid" role="group" aria-label="Kristalle"></div>
       </div>
     </section>
 
@@ -195,7 +208,7 @@
 
           <div class="card animate-slide-up stagger-1">
             <h3 class="mb-4">Monatsübersicht</h3>
-            <div class="moon-calendar" id="moonCalendar" role="grid" aria-label="Mondkalender"></div>
+            <div class="moon-calendar" id="moonCalendar" role="group" aria-label="Mondkalender"></div>
           </div>
         </div>
 
@@ -241,7 +254,7 @@
         </div>
 
         <h3 class="mb-4">Alle Runen des älteren Futhark</h3>
-        <div class="grid grid-auto" id="runeGrid" role="list" aria-label="Runen"></div>
+        <div class="grid grid-auto" id="runeGrid" role="group" aria-label="Runen"></div>
 
         <div id="runesHistory" style="margin-top:var(--space-6);" aria-label="Wurf-Historie"></div>
       </div>
@@ -256,7 +269,7 @@
         </div>
 
         <div class="flex flex-wrap gap-3 mb-6">
-          <select class="select" id="categoryFilter" style="width: auto; min-width: 180px;">
+          <select class="select" id="categoryFilter" aria-label="Artikel nach Kategorie filtern" style="width: auto; min-width: 180px;">
             <option value="all">Alle Kategorien</option>
             <option value="tarot">Tarot</option>
             <option value="crystals">Kristalle</option>
@@ -265,10 +278,10 @@
             <option value="rituals">Rituale</option>
             <option value="history">Geschichte & Mythos</option>
           </select>
-          <input type="search" class="input" id="articleSearch" placeholder="Artikel suchen..." style="width: auto; min-width: 250px;">
+          <input type="search" class="input" id="articleSearch" aria-label="Artikel suchen" placeholder="Artikel suchen..." style="width: auto; min-width: 250px;">
         </div>
 
-        <div class="grid grid-auto" id="articleGrid" role="list" aria-label="Artikel"></div>
+        <div class="grid grid-auto" id="articleGrid" role="group" aria-label="Artikel"></div>
 
         <div class="text-center mt-8">
           <button class="btn btn-secondary" id="loadMoreArticles">Mehr laden</button>
@@ -305,9 +318,9 @@
       <div class="footer-column">
         <h4>Rechtliches</h4>
         <ul class="footer-links">
-          <li><a href="#">Impressum</a></li>
-          <li><a href="#">Datenschutz</a></li>
-          <li><a href="#">Haftungsausschluss</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/datenschutz">Datenschutz</a></li>
+          <li><a href="/haftung">Haftungsausschluss</a></li>
         </ul>
       </div>
     </div>
