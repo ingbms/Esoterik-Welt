@@ -7,7 +7,9 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "jest",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "serve": "python -m http.server 8080",
+    "static": "python -m http.server 3000"
   },
   "keywords": [
     "esoterik",

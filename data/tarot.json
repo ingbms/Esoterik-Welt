@@ -1,0 +1,1174 @@
+{
+  "cards": [
+    {
+      "id": "tarot-01",
+      "name": "Der Narr",
+      "arcana": "major",
+      "suit": null,
+      "number": 0,
+      "meaning_upright": "Positive Bedeutung von Der Narr",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Narr",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/01-der-narr.jpg"
+    },
+    {
+      "id": "tarot-02",
+      "name": "Der Magier",
+      "arcana": "major",
+      "suit": null,
+      "number": 1,
+      "meaning_upright": "Positive Bedeutung von Der Magier",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Magier",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/02-der-magier.jpg"
+    },
+    {
+      "id": "tarot-03",
+      "name": "Die Hohepriesterin",
+      "arcana": "major",
+      "suit": null,
+      "number": 2,
+      "meaning_upright": "Positive Bedeutung von Die Hohepriesterin",
+      "meaning_reversed": "Gekehhrte Bedeutung von Die Hohepriesterin",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/03-die-hohepriesterin.jpg"
+    },
+    {
+      "id": "tarot-04",
+      "name": "Die Herrscherin",
+      "arcana": "major",
+      "suit": null,
+      "number": 3,
+      "meaning_upright": "Positive Bedeutung von Die Herrscherin",
+      "meaning_reversed": "Gekehhrte Bedeutung von Die Herrscherin",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/04-die-herrscherin.jpg"
+    },
+    {
+      "id": "tarot-05",
+      "name": "Der Herrscher",
+      "arcana": "major",
+      "suit": null,
+      "number": 4,
+      "meaning_upright": "Positive Bedeutung von Der Herrscher",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Herrscher",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/05-der-herrscher.jpg"
+    },
+    {
+      "id": "tarot-06",
+      "name": "Der Priester",
+      "arcana": "major",
+      "suit": null,
+      "number": 5,
+      "meaning_upright": "Positive Bedeutung von Der Priester",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Priester",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/06-der-priester.jpg"
+    },
+    {
+      "id": "tarot-07",
+      "name": "Die Liebenden",
+      "arcana": "major",
+      "suit": null,
+      "number": 6,
+      "meaning_upright": "Positive Bedeutung von Die Liebenden",
+      "meaning_reversed": "Gekehhrte Bedeutung von Die Liebenden",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/07-die-liebenden.jpg"
+    },
+    {
+      "id": "tarot-08",
+      "name": "Der Wagen",
+      "arcana": "major",
+      "suit": null,
+      "number": 7,
+      "meaning_upright": "Positive Bedeutung von Der Wagen",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Wagen",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/08-der-wagen.jpg"
+    },
+    {
+      "id": "tarot-09",
+      "name": "Die Kraft",
+      "arcana": "major",
+      "suit": null,
+      "number": 8,
+      "meaning_upright": "Positive Bedeutung von Die Kraft",
+      "meaning_reversed": "Gekehhrte Bedeutung von Die Kraft",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/09-die-kraft.jpg"
+    },
+    {
+      "id": "tarot-10",
+      "name": "Der Einsiedler",
+      "arcana": "major",
+      "suit": null,
+      "number": 9,
+      "meaning_upright": "Positive Bedeutung von Der Einsiedler",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Einsiedler",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/10-der-einsiedler.jpg"
+    },
+    {
+      "id": "tarot-11",
+      "name": "Das Rad des Schicksals",
+      "arcana": "major",
+      "suit": null,
+      "number": 10,
+      "meaning_upright": "Positive Bedeutung von Das Rad des Schicksals",
+      "meaning_reversed": "Gekehhrte Bedeutung von Das Rad des Schicksals",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/11-das-rad-des-schicksa.jpg"
+    },
+    {
+      "id": "tarot-12",
+      "name": "Die Gerechtigkeit",
+      "arcana": "major",
+      "suit": null,
+      "number": 11,
+      "meaning_upright": "Positive Bedeutung von Die Gerechtigkeit",
+      "meaning_reversed": "Gekehhrte Bedeutung von Die Gerechtigkeit",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/12-die-gerechtigkeit.jpg"
+    },
+    {
+      "id": "tarot-13",
+      "name": "Der Gehängte",
+      "arcana": "major",
+      "suit": null,
+      "number": 12,
+      "meaning_upright": "Positive Bedeutung von Der Gehängte",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Gehängte",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/13-der-gehaengte.jpg"
+    },
+    {
+      "id": "tarot-14",
+      "name": "Der Tod",
+      "arcana": "major",
+      "suit": null,
+      "number": 13,
+      "meaning_upright": "Positive Bedeutung von Der Tod",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Tod",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/14-der-tod.jpg"
+    },
+    {
+      "id": "tarot-15",
+      "name": "Die Mäßigkeit",
+      "arcana": "major",
+      "suit": null,
+      "number": 14,
+      "meaning_upright": "Positive Bedeutung von Die Mäßigkeit",
+      "meaning_reversed": "Gekehhrte Bedeutung von Die Mäßigkeit",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/15-die-maeßigkeit.jpg"
+    },
+    {
+      "id": "tarot-16",
+      "name": "Der Teufel",
+      "arcana": "major",
+      "suit": null,
+      "number": 15,
+      "meaning_upright": "Positive Bedeutung von Der Teufel",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Teufel",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/16-der-teufel.jpg"
+    },
+    {
+      "id": "tarot-17",
+      "name": "Der Turm",
+      "arcana": "major",
+      "suit": null,
+      "number": 16,
+      "meaning_upright": "Positive Bedeutung von Der Turm",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Turm",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/17-der-turm.jpg"
+    },
+    {
+      "id": "tarot-18",
+      "name": "Der Stern",
+      "arcana": "major",
+      "suit": null,
+      "number": 17,
+      "meaning_upright": "Positive Bedeutung von Der Stern",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Stern",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/18-der-stern.jpg"
+    },
+    {
+      "id": "tarot-19",
+      "name": "Der Mond",
+      "arcana": "major",
+      "suit": null,
+      "number": 18,
+      "meaning_upright": "Positive Bedeutung von Der Mond",
+      "meaning_reversed": "Gekehhrte Bedeutung von Der Mond",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/19-der-mond.jpg"
+    },
+    {
+      "id": "tarot-20",
+      "name": "Die Sonne",
+      "arcana": "major",
+      "suit": null,
+      "number": 19,
+      "meaning_upright": "Positive Bedeutung von Die Sonne",
+      "meaning_reversed": "Gekehhrte Bedeutung von Die Sonne",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/20-die-sonne.jpg"
+    },
+    {
+      "id": "tarot-21",
+      "name": "Das Gericht",
+      "arcana": "major",
+      "suit": null,
+      "number": 20,
+      "meaning_upright": "Positive Bedeutung von Das Gericht",
+      "meaning_reversed": "Gekehhrte Bedeutung von Das Gericht",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/21-das-gericht.jpg"
+    },
+    {
+      "id": "tarot-22",
+      "name": "Die Welt",
+      "arcana": "major",
+      "suit": null,
+      "number": 21,
+      "meaning_upright": "Positive Bedeutung von Die Welt",
+      "meaning_reversed": "Gekehhrte Bedeutung von Die Welt",
+      "keywords": [
+        "tarot",
+        "major",
+        "karte"
+      ],
+      "image_placeholder": "assets/tarot/major/22-die-welt.jpg"
+    },
+    {
+      "id": "tarot-minor-1-01",
+      "name": "Stäbe 1",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 1,
+      "meaning_upright": "Stäbe 1 aufrecht",
+      "meaning_reversed": "Stäbe 1 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "1"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-01.jpg"
+    },
+    {
+      "id": "tarot-minor-1-02",
+      "name": "Stäbe 2",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 2,
+      "meaning_upright": "Stäbe 2 aufrecht",
+      "meaning_reversed": "Stäbe 2 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "2"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-02.jpg"
+    },
+    {
+      "id": "tarot-minor-1-03",
+      "name": "Stäbe 3",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 3,
+      "meaning_upright": "Stäbe 3 aufrecht",
+      "meaning_reversed": "Stäbe 3 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "3"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-03.jpg"
+    },
+    {
+      "id": "tarot-minor-1-04",
+      "name": "Stäbe 4",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 4,
+      "meaning_upright": "Stäbe 4 aufrecht",
+      "meaning_reversed": "Stäbe 4 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "4"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-04.jpg"
+    },
+    {
+      "id": "tarot-minor-1-05",
+      "name": "Stäbe 5",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 5,
+      "meaning_upright": "Stäbe 5 aufrecht",
+      "meaning_reversed": "Stäbe 5 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "5"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-05.jpg"
+    },
+    {
+      "id": "tarot-minor-1-06",
+      "name": "Stäbe 6",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 6,
+      "meaning_upright": "Stäbe 6 aufrecht",
+      "meaning_reversed": "Stäbe 6 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "6"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-06.jpg"
+    },
+    {
+      "id": "tarot-minor-1-07",
+      "name": "Stäbe 7",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 7,
+      "meaning_upright": "Stäbe 7 aufrecht",
+      "meaning_reversed": "Stäbe 7 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "7"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-07.jpg"
+    },
+    {
+      "id": "tarot-minor-1-08",
+      "name": "Stäbe 8",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 8,
+      "meaning_upright": "Stäbe 8 aufrecht",
+      "meaning_reversed": "Stäbe 8 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "8"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-08.jpg"
+    },
+    {
+      "id": "tarot-minor-1-09",
+      "name": "Stäbe 9",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 9,
+      "meaning_upright": "Stäbe 9 aufrecht",
+      "meaning_reversed": "Stäbe 9 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "9"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-09.jpg"
+    },
+    {
+      "id": "tarot-minor-1-10",
+      "name": "Stäbe 10",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 10,
+      "meaning_upright": "Stäbe 10 aufrecht",
+      "meaning_reversed": "Stäbe 10 umgekehrt",
+      "keywords": [
+        "stäbe",
+        "minor",
+        "10"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-10.jpg"
+    },
+    {
+      "id": "tarot-minor-1-c1",
+      "name": "Stäbe Page",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 11,
+      "meaning_upright": "Page der Stäbe aufrecht",
+      "meaning_reversed": "Page der Stäbe umgekehrt",
+      "keywords": [
+        "stäbe",
+        "court",
+        "page"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-c1.jpg"
+    },
+    {
+      "id": "tarot-minor-1-c2",
+      "name": "Stäbe Ritter",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 12,
+      "meaning_upright": "Ritter der Stäbe aufrecht",
+      "meaning_reversed": "Ritter der Stäbe umgekehrt",
+      "keywords": [
+        "stäbe",
+        "court",
+        "ritter"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-c2.jpg"
+    },
+    {
+      "id": "tarot-minor-1-c3",
+      "name": "Stäbe Königin",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 13,
+      "meaning_upright": "Königin der Stäbe aufrecht",
+      "meaning_reversed": "Königin der Stäbe umgekehrt",
+      "keywords": [
+        "stäbe",
+        "court",
+        "königin"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-c3.jpg"
+    },
+    {
+      "id": "tarot-minor-1-c4",
+      "name": "Stäbe König",
+      "arcana": "minor",
+      "suit": "Stäbe",
+      "number": 14,
+      "meaning_upright": "König der Stäbe aufrecht",
+      "meaning_reversed": "König der Stäbe umgekehrt",
+      "keywords": [
+        "stäbe",
+        "court",
+        "könig"
+      ],
+      "image_placeholder": "assets/tarot/minor/stä-c4.jpg"
+    },
+    {
+      "id": "tarot-minor-2-01",
+      "name": "Kelche 1",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 1,
+      "meaning_upright": "Kelche 1 aufrecht",
+      "meaning_reversed": "Kelche 1 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "1"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-01.jpg"
+    },
+    {
+      "id": "tarot-minor-2-02",
+      "name": "Kelche 2",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 2,
+      "meaning_upright": "Kelche 2 aufrecht",
+      "meaning_reversed": "Kelche 2 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "2"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-02.jpg"
+    },
+    {
+      "id": "tarot-minor-2-03",
+      "name": "Kelche 3",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 3,
+      "meaning_upright": "Kelche 3 aufrecht",
+      "meaning_reversed": "Kelche 3 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "3"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-03.jpg"
+    },
+    {
+      "id": "tarot-minor-2-04",
+      "name": "Kelche 4",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 4,
+      "meaning_upright": "Kelche 4 aufrecht",
+      "meaning_reversed": "Kelche 4 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "4"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-04.jpg"
+    },
+    {
+      "id": "tarot-minor-2-05",
+      "name": "Kelche 5",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 5,
+      "meaning_upright": "Kelche 5 aufrecht",
+      "meaning_reversed": "Kelche 5 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "5"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-05.jpg"
+    },
+    {
+      "id": "tarot-minor-2-06",
+      "name": "Kelche 6",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 6,
+      "meaning_upright": "Kelche 6 aufrecht",
+      "meaning_reversed": "Kelche 6 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "6"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-06.jpg"
+    },
+    {
+      "id": "tarot-minor-2-07",
+      "name": "Kelche 7",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 7,
+      "meaning_upright": "Kelche 7 aufrecht",
+      "meaning_reversed": "Kelche 7 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "7"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-07.jpg"
+    },
+    {
+      "id": "tarot-minor-2-08",
+      "name": "Kelche 8",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 8,
+      "meaning_upright": "Kelche 8 aufrecht",
+      "meaning_reversed": "Kelche 8 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "8"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-08.jpg"
+    },
+    {
+      "id": "tarot-minor-2-09",
+      "name": "Kelche 9",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 9,
+      "meaning_upright": "Kelche 9 aufrecht",
+      "meaning_reversed": "Kelche 9 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "9"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-09.jpg"
+    },
+    {
+      "id": "tarot-minor-2-10",
+      "name": "Kelche 10",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 10,
+      "meaning_upright": "Kelche 10 aufrecht",
+      "meaning_reversed": "Kelche 10 umgekehrt",
+      "keywords": [
+        "kelche",
+        "minor",
+        "10"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-10.jpg"
+    },
+    {
+      "id": "tarot-minor-2-c1",
+      "name": "Kelche Page",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 11,
+      "meaning_upright": "Page der Kelche aufrecht",
+      "meaning_reversed": "Page der Kelche umgekehrt",
+      "keywords": [
+        "kelche",
+        "court",
+        "page"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-c1.jpg"
+    },
+    {
+      "id": "tarot-minor-2-c2",
+      "name": "Kelche Ritter",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 12,
+      "meaning_upright": "Ritter der Kelche aufrecht",
+      "meaning_reversed": "Ritter der Kelche umgekehrt",
+      "keywords": [
+        "kelche",
+        "court",
+        "ritter"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-c2.jpg"
+    },
+    {
+      "id": "tarot-minor-2-c3",
+      "name": "Kelche Königin",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 13,
+      "meaning_upright": "Königin der Kelche aufrecht",
+      "meaning_reversed": "Königin der Kelche umgekehrt",
+      "keywords": [
+        "kelche",
+        "court",
+        "königin"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-c3.jpg"
+    },
+    {
+      "id": "tarot-minor-2-c4",
+      "name": "Kelche König",
+      "arcana": "minor",
+      "suit": "Kelche",
+      "number": 14,
+      "meaning_upright": "König der Kelche aufrecht",
+      "meaning_reversed": "König der Kelche umgekehrt",
+      "keywords": [
+        "kelche",
+        "court",
+        "könig"
+      ],
+      "image_placeholder": "assets/tarot/minor/kel-c4.jpg"
+    },
+    {
+      "id": "tarot-minor-3-01",
+      "name": "Schwerter 1",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 1,
+      "meaning_upright": "Schwerter 1 aufrecht",
+      "meaning_reversed": "Schwerter 1 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "1"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-01.jpg"
+    },
+    {
+      "id": "tarot-minor-3-02",
+      "name": "Schwerter 2",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 2,
+      "meaning_upright": "Schwerter 2 aufrecht",
+      "meaning_reversed": "Schwerter 2 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "2"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-02.jpg"
+    },
+    {
+      "id": "tarot-minor-3-03",
+      "name": "Schwerter 3",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 3,
+      "meaning_upright": "Schwerter 3 aufrecht",
+      "meaning_reversed": "Schwerter 3 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "3"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-03.jpg"
+    },
+    {
+      "id": "tarot-minor-3-04",
+      "name": "Schwerter 4",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 4,
+      "meaning_upright": "Schwerter 4 aufrecht",
+      "meaning_reversed": "Schwerter 4 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "4"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-04.jpg"
+    },
+    {
+      "id": "tarot-minor-3-05",
+      "name": "Schwerter 5",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 5,
+      "meaning_upright": "Schwerter 5 aufrecht",
+      "meaning_reversed": "Schwerter 5 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "5"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-05.jpg"
+    },
+    {
+      "id": "tarot-minor-3-06",
+      "name": "Schwerter 6",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 6,
+      "meaning_upright": "Schwerter 6 aufrecht",
+      "meaning_reversed": "Schwerter 6 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "6"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-06.jpg"
+    },
+    {
+      "id": "tarot-minor-3-07",
+      "name": "Schwerter 7",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 7,
+      "meaning_upright": "Schwerter 7 aufrecht",
+      "meaning_reversed": "Schwerter 7 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "7"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-07.jpg"
+    },
+    {
+      "id": "tarot-minor-3-08",
+      "name": "Schwerter 8",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 8,
+      "meaning_upright": "Schwerter 8 aufrecht",
+      "meaning_reversed": "Schwerter 8 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "8"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-08.jpg"
+    },
+    {
+      "id": "tarot-minor-3-09",
+      "name": "Schwerter 9",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 9,
+      "meaning_upright": "Schwerter 9 aufrecht",
+      "meaning_reversed": "Schwerter 9 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "9"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-09.jpg"
+    },
+    {
+      "id": "tarot-minor-3-10",
+      "name": "Schwerter 10",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 10,
+      "meaning_upright": "Schwerter 10 aufrecht",
+      "meaning_reversed": "Schwerter 10 umgekehrt",
+      "keywords": [
+        "schwerter",
+        "minor",
+        "10"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-10.jpg"
+    },
+    {
+      "id": "tarot-minor-3-c1",
+      "name": "Schwerter Page",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 11,
+      "meaning_upright": "Page der Schwerter aufrecht",
+      "meaning_reversed": "Page der Schwerter umgekehrt",
+      "keywords": [
+        "schwerter",
+        "court",
+        "page"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-c1.jpg"
+    },
+    {
+      "id": "tarot-minor-3-c2",
+      "name": "Schwerter Ritter",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 12,
+      "meaning_upright": "Ritter der Schwerter aufrecht",
+      "meaning_reversed": "Ritter der Schwerter umgekehrt",
+      "keywords": [
+        "schwerter",
+        "court",
+        "ritter"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-c2.jpg"
+    },
+    {
+      "id": "tarot-minor-3-c3",
+      "name": "Schwerter Königin",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 13,
+      "meaning_upright": "Königin der Schwerter aufrecht",
+      "meaning_reversed": "Königin der Schwerter umgekehrt",
+      "keywords": [
+        "schwerter",
+        "court",
+        "königin"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-c3.jpg"
+    },
+    {
+      "id": "tarot-minor-3-c4",
+      "name": "Schwerter König",
+      "arcana": "minor",
+      "suit": "Schwerter",
+      "number": 14,
+      "meaning_upright": "König der Schwerter aufrecht",
+      "meaning_reversed": "König der Schwerter umgekehrt",
+      "keywords": [
+        "schwerter",
+        "court",
+        "könig"
+      ],
+      "image_placeholder": "assets/tarot/minor/sch-c4.jpg"
+    },
+    {
+      "id": "tarot-minor-4-01",
+      "name": "Pentakel 1",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 1,
+      "meaning_upright": "Pentakel 1 aufrecht",
+      "meaning_reversed": "Pentakel 1 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "1"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-01.jpg"
+    },
+    {
+      "id": "tarot-minor-4-02",
+      "name": "Pentakel 2",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 2,
+      "meaning_upright": "Pentakel 2 aufrecht",
+      "meaning_reversed": "Pentakel 2 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "2"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-02.jpg"
+    },
+    {
+      "id": "tarot-minor-4-03",
+      "name": "Pentakel 3",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 3,
+      "meaning_upright": "Pentakel 3 aufrecht",
+      "meaning_reversed": "Pentakel 3 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "3"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-03.jpg"
+    },
+    {
+      "id": "tarot-minor-4-04",
+      "name": "Pentakel 4",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 4,
+      "meaning_upright": "Pentakel 4 aufrecht",
+      "meaning_reversed": "Pentakel 4 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "4"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-04.jpg"
+    },
+    {
+      "id": "tarot-minor-4-05",
+      "name": "Pentakel 5",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 5,
+      "meaning_upright": "Pentakel 5 aufrecht",
+      "meaning_reversed": "Pentakel 5 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "5"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-05.jpg"
+    },
+    {
+      "id": "tarot-minor-4-06",
+      "name": "Pentakel 6",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 6,
+      "meaning_upright": "Pentakel 6 aufrecht",
+      "meaning_reversed": "Pentakel 6 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "6"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-06.jpg"
+    },
+    {
+      "id": "tarot-minor-4-07",
+      "name": "Pentakel 7",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 7,
+      "meaning_upright": "Pentakel 7 aufrecht",
+      "meaning_reversed": "Pentakel 7 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "7"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-07.jpg"
+    },
+    {
+      "id": "tarot-minor-4-08",
+      "name": "Pentakel 8",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 8,
+      "meaning_upright": "Pentakel 8 aufrecht",
+      "meaning_reversed": "Pentakel 8 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "8"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-08.jpg"
+    },
+    {
+      "id": "tarot-minor-4-09",
+      "name": "Pentakel 9",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 9,
+      "meaning_upright": "Pentakel 9 aufrecht",
+      "meaning_reversed": "Pentakel 9 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "9"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-09.jpg"
+    },
+    {
+      "id": "tarot-minor-4-10",
+      "name": "Pentakel 10",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 10,
+      "meaning_upright": "Pentakel 10 aufrecht",
+      "meaning_reversed": "Pentakel 10 umgekehrt",
+      "keywords": [
+        "pentakel",
+        "minor",
+        "10"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-10.jpg"
+    },
+    {
+      "id": "tarot-minor-4-c1",
+      "name": "Pentakel Page",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 11,
+      "meaning_upright": "Page der Pentakel aufrecht",
+      "meaning_reversed": "Page der Pentakel umgekehrt",
+      "keywords": [
+        "pentakel",
+        "court",
+        "page"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-c1.jpg"
+    },
+    {
+      "id": "tarot-minor-4-c2",
+      "name": "Pentakel Ritter",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 12,
+      "meaning_upright": "Ritter der Pentakel aufrecht",
+      "meaning_reversed": "Ritter der Pentakel umgekehrt",
+      "keywords": [
+        "pentakel",
+        "court",
+        "ritter"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-c2.jpg"
+    },
+    {
+      "id": "tarot-minor-4-c3",
+      "name": "Pentakel Königin",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 13,
+      "meaning_upright": "Königin der Pentakel aufrecht",
+      "meaning_reversed": "Königin der Pentakel umgekehrt",
+      "keywords": [
+        "pentakel",
+        "court",
+        "königin"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-c3.jpg"
+    },
+    {
+      "id": "tarot-minor-4-c4",
+      "name": "Pentakel König",
+      "arcana": "minor",
+      "suit": "Pentakel",
+      "number": 14,
+      "meaning_upright": "König der Pentakel aufrecht",
+      "meaning_reversed": "König der Pentakel umgekehrt",
+      "keywords": [
+        "pentakel",
+        "court",
+        "könig"
+      ],
+      "image_placeholder": "assets/tarot/minor/pen-c4.jpg"
+    }
+  ]
+}
