@@ -1,0 +1,196 @@
+{
+  "runes": [
+    {
+      "id": "rune-f-01",
+      "name": "Fehu",
+      "phoneme": "f / v",
+      "meaning": "Reichtum, Überfluss, Energie",
+      "divinatory_meaning": "Neuanfang durch materiellen oder energetischen Gewinn; Vorsicht vor Habgier.",
+      "image_placeholder": "assets/runes/fehu.jpg"
+    },
+    {
+      "id": "rune-u-02",
+      "name": "Uruz",
+      "phoneme": "u / ʊ",
+      "meaning": "Stärke, Urkraft, Gesundheit",
+      "divinatory_meaning": "Körperliche Regeneration; vielleicht eine Prüfung der inneren Kraft.",
+      "image_placeholder": "assets/runes/uruz.jpg"
+    },
+    {
+      "id": "rune-th-03",
+      "name": "Thurisaz",
+      "phoneme": "th / θ",
+      "meaning": "Grenzen, Schutz, Chaos",
+      "divinatory_meaning": "Notwendigkeit von Grenzen; Gefahr durch äußere Einflüsse.",
+      "image_placeholder": "assets/runes/thurisaz.jpg"
+    },
+    {
+      "id": "rune-a-04",
+      "name": "Ansuz",
+      "phoneme": "a / ɑ",
+      "meaning": "Kommunikation, Inspiration, Odin",
+      "divinatory_meaning": "Wichtiges Wissen oder eine Botschaft steht bevor.",
+      "image_placeholder": "assets/runes/ansuz.jpg"
+    },
+    {
+      "id": "rune-r-05",
+      "name": "Raidho",
+      "phoneme": "r / ɾ",
+      "meaning": "Reise, Ordnung, Recht",
+      "divinatory_meaning": "Bewegung in eine Richtung; Verantwortung übernehmen.",
+      "image_placeholder": "assets/runes/raidho.jpg"
+    },
+    {
+      "id": "rune-k-06",
+      "name": "Kenaz",
+      "phoneme": "k / c",
+      "meaning": "Feuer, Wissen, Technik",
+      "divinatory_meaning": "Kreatives Feuer entfachen; Wissen anwenden.",
+      "image_placeholder": "assets/runes/kenaz.jpg"
+    },
+    {
+      "id": "rune-g-07",
+      "name": "Gebo",
+      "phoneme": "g / ɡ",
+      "meaning": "Gabe, Austausch, Opfer",
+      "divinatory_meaning": "Geben und Nehmen im Gleichgewicht; Opferbereitschaft.",
+      "image_placeholder": "assets/runes/gebo.jpg"
+    },
+    {
+      "id": "rune-w-08",
+      "name": "Wunjo",
+      "phoneme": "w / ʋ",
+      "meaning": "Freude, Wohlstand, Gemeinschaft",
+      "divinatory_meaning": "Erfolg durch Gemeinschaft; Harmonie in Beziehungen.",
+      "image_placeholder": "assets/runes/wunjo.jpg"
+    },
+    {
+      "id": "rune-h-09",
+      "name": "Hagalaz",
+      "phoneme": "h / h",
+      "meaning": "Zerstörung, Transformation, Hagel",
+      "divinatory_meaning": "Notwendige Transformation durch Krise; nicht zu vermeiden.",
+      "image_placeholder": "assets/runes/hagalaz.jpg"
+    },
+    {
+      "id": "rune-n-10",
+      "name": "Nauthiz",
+      "phoneme": "n / n",
+      "meaning": "Not, Widerstand, Zwang",
+      "divinatory_meaning": "Einschränkungen akzeptieren; Widerstandskraft entwickeln.",
+      "image_placeholder": "assets/runes/nauthiz.jpg"
+    },
+    {
+      "id": "rune-i-11",
+      "name": "Isa",
+      "phoneme": "i / i",
+      "meaning": "Eis, Stille, Pause",
+      "divinatory_meaning": "Warten und Abwarten; Zeit der Reflexion.",
+      "image_placeholder": "assets/runes/isa.jpg"
+    },
+    {
+      "id": "rune-j-12",
+      "name": "Jera",
+      "phoneme": "j / j",
+      "meaning": "Ernte, Jahreszyklus, Fruchtbarkeit",
+      "divinatory_meaning": "Zyklen erkennen; das Gesäte ernten.",
+      "image_placeholder": "assets/runes/jera.jpg"
+    },
+    {
+      "id": "rune-e-13",
+      "name": "Eihwaz",
+      "phoneme": "ei / eɪ",
+      "meaning": "Eibe, Tod und Leben, Übergang",
+      "divinatory_meaning": "Grenzerfahrung; Übergang zwischen zwei Zuständen.",
+      "image_placeholder": "assets/runes/eihwaz.jpg"
+    },
+    {
+      "id": "rune-p-14",
+      "name": "Perthro",
+      "phoneme": "p / p",
+      "meaning": "Geheimnis, Schicksal, Los",
+      "divinatory_meaning": "Unbekanntes enthüllen; Schicksal annehmen.",
+      "image_placeholder": "assets/runes/perthro.jpg"
+    },
+    {
+      "id": "rune-a-15",
+      "name": "Algiz",
+      "phoneme": "a / ɑ",
+      "meaning": "Schutz, Abwehr, Bäume",
+      "divinatory_meaning": "Schutz suchen; Verbindung zur Natur stärken.",
+      "image_placeholder": "assets/runes/algiz.jpg"
+    },
+    {
+      "id": "rune-s-16",
+      "name": "Sowilo",
+      "phoneme": "s / s",
+      "meaning": "Sonne, Heilung, Energie",
+      "divinatory_meaning": "Licht und Klarheit; Heilung durch Energie.",
+      "image_placeholder": "assets/runes/sowilo.jpg"
+    },
+    {
+      "id": "rune-t-17",
+      "name": "Tiwaz",
+      "phoneme": "t / t",
+      "meaning": "Tyr, Recht, Opfer",
+      "divinatory_meaning": "Gerechtigkeit und Ordnung; bereit zum Opfer.",
+      "image_placeholder": "assets/runes/tiwaz.jpg"
+    },
+    {
+      "id": "rune-b-18",
+      "name": "Berkano",
+      "phoneme": "b / b",
+      "meaning": "Birke, Wachstum, Geburt",
+      "divinatory_meaning": "Neues entsteht; Wachstum beginnt.",
+      "image_placeholder": "assets/runes/berkano.jpg"
+    },
+    {
+      "id": "rune-e-19",
+      "name": "Ehwaz",
+      "phoneme": "e / ɛ",
+      "meaning": "Pferd, Bewegung, Partnerschaft",
+      "divinatory_meaning": "Bewegung in Partnerschaft; gemeinsame Reise.",
+      "image_placeholder": "assets/runes/ehwaz.jpg"
+    },
+    {
+      "id": "rune-m-20",
+      "name": "Mannaz",
+      "phoneme": "m / m",
+      "meaning": "Mensch, Gemeinschaft, Ordnung",
+      "divinatory_meaning": "Gemeinschaft als Kraft; menschliche Verbindungen.",
+      "image_placeholder": "assets/runes/mannaz.jpg"
+    },
+    {
+      "id": "rune-l-21",
+      "name": "Laguz",
+      "phoneme": "l / l",
+      "meaning": "Wasser, Fluss, Intuition",
+      "divinatory_meaning": "Fließen lassen; Intuition als Leitfaden.",
+      "image_placeholder": "assets/runes/laguz.jpg"
+    },
+    {
+      "id": "rune-i-22",
+      "name": "Ingwaz",
+      "phoneme": "i / i",
+      "meaning": "Fruchtbarkeit, Schutz, Erde",
+      "divinatory_meaning": "Erde und Fruchtbarkeit; Wachstum durch Geduld.",
+      "image_placeholder": "assets/runes/ingwaz.jpg"
+    },
+    {
+      "id": "rune-d-23",
+      "name": "Dagaz",
+      "phoneme": "d / d",
+      "meaning": "Tag, Licht, Erwachen",
+      "divinatory_meaning": "Neue Einsicht; Licht in Dunkelheit.",
+      "image_placeholder": "assets/runes/dagaz.jpg"
+    },
+    {
+      "id": "rune-o-24",
+      "name": "Othala",
+      "phoneme": "o / o",
+      "meaning": "Heimat, Tradition, Besitz",
+      "divinatory_meaning": "Wurzeln stärken; Besitz und Herkunft achten.",
+      "image_placeholder": "assets/runes/othala.jpg"
+    }
+  ]
+}

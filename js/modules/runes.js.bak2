@@ -1,0 +1,125 @@
+// Runes Module
+export class RunesModule {
+  constructor(modal, modalBody, closeBtn) {
+    this.modal = modal;
+    this.modalBody = modalBody;
+    this.closeBtn = closeBtn;
+    this.runes = window.runes || [];
+  }
+
+  async init() {
+    await import('../data/runes.js');
+    this.runes = window.runes || [];
+    this.renderGrid();
+    this.setupEventListeners();
+  }
+
+  renderGrid() {
+    const grid = document.getElementById('runeGrid');
+    if (!grid || !this.runes.length) return;
+    grid.innerHTML = this.runes.map(r => `
+      <article class="rune-card" data-id="${r.id}" tabindex="0" role="button" aria-label="${r.name}">
+        <div class="rune-symbol">${r.symbol}</div>
+        <h4 class="rune-name">${r.name}</h4>
+        <p class="rune-meaning">${r.meaning.substring(0, 60)}...</p>
+      </article>
+    `).join('');
+    grid.querySelectorAll('.rune-card').forEach(card => {
+      card.addEventListener('click', () => this.openRuneModal(parseInt(card.dataset.id)));
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.openRuneModal(parseInt(card.dataset.id));
+        }
+      });
+    });
+  }
+
+  openRuneModal(id) {
+    const rune = this.runes.find(r => r.id === id);
+    if (!rune) return;
+    this.modalBody.innerHTML = `
+      <div style="text-align: center; padding: var(--space-4);">
+        <div class="rune-symbol" style="font-size: 5rem; margin-bottom: var(--space-4);">${rune.symbol}</div>
+        <h3 style="font-family: var(--font-display); margin-bottom: var(--space-2);">${rune.name}</h3>
+        <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-4);">${rune.phonetic} · ${rune.meaning}</p>
+        <h4 style="font-size: var(--text-base); color: var(--color-text-secondary); margin-bottom: var(--space-2);">Keywords</h4>
+        <div class="flex flex-wrap gap-2 justify-center mb-6">
+          ${rune.keywords.map(k => `<span class="badge">${k}</span>`).join('')}
+        </div>
+        <h4 style="font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted); margin-bottom: var(--space-2);">Bedeutung</h4>
+        <div class="grid grid-2 gap-6 text-left">
+          <div class="card">
+            <h5 style="color: var(--color-emerald);">Aufrecht</h5>
+            <p style="font-size: var(--text-sm); color: var(--color-text-secondary);">${rune.meaning_upright}</p>
+          </div>
+          <div class="card">
+            <h5 style="color: var(--color-accent-rose);">Verkehrt</h5>
+            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">${rune.meaning_reversed}</p>
+          </div>
+        </div>
+      </div>
+    `;
+    document.getElementById('runeModalTitle').textContent = rune.name;
+    this.modal.hidden = false;
+    requestAnimationFrame(() => this.modal.classList.add('open'));
+    document.body.style.overflow = 'hidden';
+  }
+
+  setupEventListeners() {
+    document.getElementById('castRunesBtn')?.addEventListener('click', () => {
+      const runes = window.castRunes ? window.castRunes(3) : this.getRandomRunes(3);
+      this.showRunes(runes);
+    });
+    document.getElementById('castSingleRuneBtn')?.addEventListener('click', () => {
+      const rune = window.castRunes ? window.castRunes(1)[0] : this.getRandomRunes(1)[0];
+      this.showRunes([rune], true);
+    });
+  }
+
+  getRandomRunes(count, allowReversed = true) {
+    const shuffled = [...this.runes].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count).map(r => ({ ...r, reversed: allowReversed && Math.random() < 0.3 }));
+  }
+
+  showRunes(runes, isSingle = false) {
+    const container = document.getElementById('runeCastResult');
+    const castRunes = document.getElementById('castRunes');
+    const interpretation = document.getElementById('runeInterpretation');
+    container.hidden = false;
+
+    castRunes.innerHTML = runes.map((r, i) => `
+      <div class="cast-rune" style="animation-delay: ${i * 150}ms;">
+        ${!isSingle ? `<div class="position-label">${i === 0 ? 'Vergangenheit' : i === 1 ? 'Gegenwart' : 'Zukunft'}</div>` : ''}
+        <div class="rune-symbol">${r.reversed ? r.symbol.replace(/[ᚠ-ᛟ]/, m => String.fromCodePoint(m.codePointAt(0) + 1)) : r.symbol}</div>
+        <h4 class="rune-name">${r.name}</h4>
+        <p class="rune-position-meaning">${r.reversed ? r.meaning_reversed : r.meaning_upright}</p>
+      </div>
+    `).join('');
+
+    if (!isSingle && window.interpretThreeRuneSpread) {
+      interpretation.innerHTML = `
+        <h4 style="font-family: var(--font-display); color: var(--color-primary); margin-bottom: var(--space-4);">Interpretation</h4>
+        <div class="interpretation-section">
+          <h5>Vergangenheit</h5>
+          <p>${runes[0]?.reversed ? runes[0].meaning_reversed : runes[0]?.meaning_upright || ''}</p>
+        </div>
+        <div class="interpretation-section">
+          <h5>Gegenwart</h5>
+          <p>${runes[1]?.reversed ? runes[1].meaning_reversed : runes[1]?.meaning_upright || ''}</p>
+        </div>
+        <div class="interpretation-section">
+          <h5>Zukunft</h5>
+          <p>${runes[2]?.reversed ? runes[2].meaning_reversed : runes[2]?.meaning_upright || ''}</p>
+        </div>
+      `;
+    } else {
+      interpretation.innerHTML = `
+        <h4 style="font-family: var(--font-display); color: var(--color-primary); margin-bottom: var(--space-4);">Deutung</h4>
+        <p>${runes[0]?.reversed ? runes[0].meaning_reversed : runes[0]?.meaning_upright || ''}</p>
+      `;
+    }
+  }
+
+  onShow() {}
+}

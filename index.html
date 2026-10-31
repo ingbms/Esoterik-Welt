@@ -1,17 +1,386 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esoterik-Welt</title>
-    <style>
-        body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        h1 { color: #2c3e50; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Esoterik-Welt — Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen.">
+  <title>Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr</title>
+  <link rel="canonical" href="https://esoterik-welt.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen">
+  <meta property="og:description" content="Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen.">
+  <meta property="og:url" content="https://esoterik-welt.github.io/">
+  <meta property="og:image" content="https://esoterik-welt.github.io/assets/og-preview.png">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Esoterik-Welt">
+  <meta name="twitter:description" content="Tarot, Kristalle, Runen & Mondphasen — esoterisches Wissen, bewusst und ohne medizinische Wirkungsaussagen.">
+  <meta name="twitter:image" content="https://esoterik-welt.github.io/assets/og-preview.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="preload" href="css/design-system.css" as="style">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
-    <h1>Esoterik-Welt</h1>
-    <p>Willkommen bei Esoterik-Welt — eine Sammlung esoterischer Inhalte und Ressourcen.</p>
-    <p><em>Diese Seite wird automatisch via GitHub Pages bereitgestellt.</em></p>
+  <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
+  <!-- Header -->
+  <header class="header" id="header" role="banner">
+    <div class="header-inner">
+      <a href="#home" class="logo" aria-label="Esoterik-Welt Startseite">Esoterik-Welt</a>
+
+      <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
+        <ul class="nav-list" id="navList">
+          <li><a href="#home" class="nav-link active" data-page="home">Start</a></li>
+          <li><a href="#tarot" class="nav-link" data-page="tarot">Tarot</a></li>
+          <li><a href="#crystals" class="nav-link" data-page="crystals">Kristalle</a></li>
+          <li><a href="#moon" class="nav-link" data-page="moon">Mondphasen</a></li>
+          <li><a href="#runes" class="nav-link" data-page="runes">Runen</a></li>
+          <li><a href="#blog" class="nav-link" data-page="blog">Wissen</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navList">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" role="main" tabindex="-1">
+    <!-- Home / Hero Section -->
+    <section id="home" class="page active" aria-labelledby="home-title">
+      <div class="hero">
+        <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-content container">
+          <div class="hero-text animate-slide-up">
+            <span class="hero-badge badge badge-primary animate-fade-in stagger-1">Willkommen in der Esoterik-Welt</span>
+            <h1 id="home-title" class="animate-fade-in stagger-2">Entdecke die verborgene Sprache des Universums</h1>
+            <p class="hero-subtitle animate-fade-in stagger-3">Tarot · Kristalle · Runen · Mondphasen · Altes Wissen für moderne Suchende</p>
+            <div class="hero-actions animate-fade-in stagger-4 flex gap-4 flex-wrap">
+              <a href="#tarot" class="btn btn-primary btn-lg">Karte ziehen</a>
+              <a href="#crystals" class="btn btn-secondary btn-lg">Kristalle entdecken</a>
+            </div>
+          </div>
+          <div class="hero-scroll animate-fade-in stagger-5" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Grid -->
+      <div class="container" style="padding-top: var(--space-16); padding-bottom: var(--space-16);">
+        <div class="section-header text-center mb-8">
+          <h2 class="animate-slide-up">Pfade der Erkenntnis</h2>
+          <p class="text-muted animate-fade-in stagger-1">Wähle dein Tor zur Weisheit</p>
+        </div>
+        <div class="grid grid-auto" id="featureGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarot Section -->
+    <section id="tarot" class="page" aria-labelledby="tarot-title" hidden>
+      <div class="container">
+        <div class="section-header mb-8">
+          <h2 id="tarot-title">Tarot — Der Spiegel der Seele</h2>
+          <p class="text-muted">78 Karten. Major & Minor Arcana. Ziehe deine Karte des Tages.</p>
+        </div>
+
+        <div class="tarot-controls flex flex-wrap gap-3 mb-6">
+          <button class="btn btn-primary" id="drawCardBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M6 4v16M18 4v16M10 4v16"/>
+            </svg>
+            Karte ziehen
+          </button>
+          <button class="btn btn-secondary" id="drawThreeBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="4" width="7" height="16" rx="1"/>
+              <rect x="9" y="4" width="7" height="16" rx="1"/>
+              <rect x="17" y="4" width="7" height="16" rx="1"/>
+            </svg>
+            3-Karten-Legung
+          </button>
+          <div class="flex-1"></div>
+          <select class="select" id="arcanaFilter" aria-label="Tarot nach Arcana filtern" style="width: auto; min-width: 180px;">
+            <option value="all">Alle Arcana</option>
+            <option value="major">Nur Major Arcana</option>
+            <option value="minor">Nur Minor Arcana</option>
+            <option value="wands">Stäbe (Wands)</option>
+            <option value="cups">Kelche (Cups)</option>
+            <option value="swords">Schwerter (Swords)</option>
+            <option value="pentacles">Münzen (Pentacles)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-auto" id="tarotGrid" role="group" aria-label="Tarot-Karten"></div>
+
+        <!-- Drawn Card Display -->
+        <div id="drawnCardContainer" class="mt-8" hidden>
+          <h3 class="mb-4">Deine Ziehung</h3>
+          <div class="grid grid-auto" id="drawnCards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Crystals Section -->
+    <section id="crystals" class="page" aria-labelledby="crystals-title" hidden>
+      <div class="container">
+        <div class="section-header flex flex-wrap justify-between items-end gap-4 mb-8">
+          <div>
+            <h2 id="crystals-title">Kristalle & Steine</h2>
+            <p class="text-muted">Kraft der Erde. Filter nach Chakra, Farbe, Wirkung.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <select class="select" id="chakraFilter" aria-label="Kristalle nach Chakra filtern" style="width: auto; min-width: 160px;">
+              <option value="all">Alle Chakren</option>
+              <option value="root">Wurzel (Rot)</option>
+              <option value="sacral">Sakral (Orange)</option>
+              <option value="solar">Solarplexus (Gelb)</option>
+              <option value="heart">Herz (Grün/Rosa)</option>
+              <option value="throat">Hals (Blau)</option>
+              <option value="third-eye">Stirn (Indigo)</option>
+              <option value="crown">Krone (Violett/Weiß)</option>
+            </select>
+            <select class="select" id="colorFilter" aria-label="Kristalle nach Farbe filtern" style="width: auto; min-width: 160px;">
+              <option value="all">Alle Farben</option>
+              <option value="red">Rot</option>
+              <option value="orange">Orange</option>
+              <option value="yellow">Gelb</option>
+              <option value="green">Grün</option>
+              <option value="blue">Blau</option>
+              <option value="purple">Violett</option>
+              <option value="pink">Rosa</option>
+              <option value="white">Weiß/Klar</option>
+              <option value="black">Schwarz</option>
+            </select>
+            <input type="search" class="input" id="crystalSearch" aria-label="Kristalle suchen" placeholder="Suche..." style="width: auto; min-width: 200px;">
+          </div>
+        </div>
+
+        <div id="crystalFilterContainer" class="mb-4"></div>
+        <div id="activeFilterBadges" class="flex flex-wrap gap-2 mb-4" style="display:none;"></div>
+
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button class="btn btn-secondary" id="viewGridBtn" aria-label="Rasteransicht" aria-pressed="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button>
+          <button class="btn btn-ghost" id="viewListBtn" aria-label="Listenansicht" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </div>
+
+        <div class="grid grid-auto" id="crystalGrid" role="group" aria-label="Kristalle"></div>
+      </div>
+    </section>
+
+    <!-- Moon Phases Section -->
+    <section id="moon" class="page" aria-labelledby="moon-title" hidden>
+      <div class="container">
+        <div class="section-header mb-8">
+          <h2 id="moon-title">Mondphasen & Rituale</h2>
+          <p class="text-muted">Lebendiger Mondkalender. Aktuelle Phase, Zyklus & passende Rituale.</p>
+        </div>
+
+        <div class="grid grid-2 gap-8 mb-8" style="grid-template-columns: 1fr 2fr;">
+          <div class="card animate-slide-up" id="currentMoonCard">
+            <div class="moon-display" id="moonDisplay">
+              <div class="moon-svg-container" id="moonSvg"></div>
+              <div class="moon-info">
+                <h3 id="moonPhaseName">Lade...</h3>
+                <p id="moonIllumination">Beleuchtung: —%</p>
+                <p id="moonDaysUntil">Nächste Phase in — Tagen</p>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="badge badge-primary" id="moonZodiac">—</span>
+              <span class="text-muted text-sm" id="moonNextPhase">Nächste: —</span>
+            </div>
+          </div>
+
+          <div class="card animate-slide-up stagger-1">
+            <h3 class="mb-4">Monatsübersicht</h3>
+            <div class="moon-calendar" id="moonCalendar" role="group" aria-label="Mondkalender"></div>
+          </div>
+        </div>
+
+        <div class="card animate-slide-up stagger-2">
+          <h3 class="mb-4">Rituale für die aktuelle Phase</h3>
+          <div id="moonRituals" class="grid grid-auto"></div>
+        </div>
+
+        <div class="flex gap-3 mt-6">
+          <button id="icalBtn" class="btn btn-secondary" aria-label="Mondkalender als iCal exportieren">📅 iCal-Export (12 Monate)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Runes Section -->
+    <section id="runes" class="page" aria-labelledby="runes-title" hidden>
+      <div class="container">
+        <div class="section-header mb-8">
+          <h2 id="runes-title">Runen — Das ältere Futhark</h2>
+          <p class="text-muted">24 Runen. Werfe die Runen für Antworten aus der Tiefe der Zeit.</p>
+        </div>
+
+        <div class="runes-controls flex flex-wrap gap-3 mb-6">
+          <button class="btn btn-primary" id="castRunesBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H7"/>
+            </svg>
+            3 Runen werfen (Vergangenheit, Gegenwart, Zukunft)
+          </button>
+          <button class="btn btn-secondary" id="castSingleRuneBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v8M8 12h8"/>
+            </svg>
+            Einzelne Rune
+          </button>
+        </div>
+
+        <div id="runeCastResult" class="mb-8" hidden>
+          <h3 class="mb-4">Deine Runen</h3>
+          <div class="grid grid-3 gap-6" id="castRunes"></div>
+          <div class="mt-6" id="runeInterpretation"></div>
+        </div>
+
+        <h3 class="mb-4">Alle Runen des älteren Futhark</h3>
+        <div class="grid grid-auto" id="runeGrid" role="group" aria-label="Runen"></div>
+
+        <div id="runesHistory" style="margin-top:var(--space-6);" aria-label="Wurf-Historie"></div>
+      </div>
+    </section>
+
+    <!-- Blog/Wissen Section -->
+    <section id="blog" class="page" aria-labelledby="blog-title" hidden>
+      <div class="container">
+        <div class="section-header mb-8">
+          <h2 id="blog-title">Wissen & Artikel</h2>
+          <p class="text-muted">Tiefgehende Artikel zu Esoterik, Spiritualität & alter Weisheit.</p>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-6">
+          <select class="select" id="categoryFilter" aria-label="Artikel nach Kategorie filtern" style="width: auto; min-width: 180px;">
+            <option value="all">Alle Kategorien</option>
+            <option value="tarot">Tarot</option>
+            <option value="crystals">Kristalle</option>
+            <option value="runes">Runen</option>
+            <option value="moon">Mond & Zyklen</option>
+            <option value="rituals">Rituale</option>
+            <option value="history">Geschichte & Mythos</option>
+          </select>
+          <input type="search" class="input" id="articleSearch" aria-label="Artikel suchen" placeholder="Artikel suchen..." style="width: auto; min-width: 250px;">
+        </div>
+
+        <div class="grid grid-auto" id="articleGrid" role="group" aria-label="Artikel"></div>
+
+        <div class="text-center mt-8">
+          <button class="btn btn-secondary" id="loadMoreArticles">Mehr laden</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Esoterik-Welt</div>
+        <p class="footer-tagline">Eine Sammlung esoterischer Werkzeuge und Wissens für moderne Suchende. Kein Dogma — nur Werkzeuge für deine eigene Reise.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Tools</h4>
+        <ul class="footer-links">
+          <li><a href="#tarot">Tarot-Karten</a></li>
+          <li><a href="#crystals">Kristall-Katalog</a></li>
+          <li><a href="#moon">Mondkalender</a></li>
+          <li><a href="#runes">Runen-Wurf</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Wissen</h4>
+        <ul class="footer-links">
+          <li><a href="#blog">Artikel-Archiv</a></li>
+          <li><a href="#">Einsteiger-Guide</a></li>
+          <li><a href="#">Glossar</a></li>
+          <li><a href="#">Quellen</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Rechtliches</h4>
+        <ul class="footer-links">
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/datenschutz">Datenschutz</a></li>
+          <li><a href="/haftung">Haftungsausschluss</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Esoterik-Welt — Statische Website, keine Tracker, keine Cookies. <a href="https://github.com/ingbms/Esoterik-Welt" target="_blank" rel="noopener">Open Source auf GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-backdrop" id="cardModal" role="dialog" aria-modal="true" aria-labelledby="cardModalTitle" hidden>
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="cardModalTitle">Karten-Detail</h3>
+        <button class="modal-close" id="closeCardModal" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body" id="cardModalBody"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="crystalModal" role="dialog" aria-modal="true" aria-labelledby="crystalModalTitle" hidden>
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="crystalModalTitle">Kristall-Detail</h3>
+        <button class="modal-close" id="closeCrystalModal" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body" id="crystalModalBody"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="runeModal" role="dialog" aria-modal="true" aria-labelledby="runeModalTitle" hidden>
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="runeModalTitle">Runen-Detail</h3>
+        <button class="modal-close" id="closeRuneModal" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body" id="runeModalBody"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="articleModalTitle" hidden>
+    <div class="modal" style="max-width: 800px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="articleModalTitle">Artikel</h3>
+        <button class="modal-close" id="closeArticleModal" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body" id="articleModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/data/tarot.js"></script>
+  <script type="module" src="js/data/crystals.js"></script>
+  <script type="module" src="js/data/runes.js"></script>
+  <script type="module" src="js/data/moon.js"></script>
+  <script type="module" src="js/data/articles.js"></script>
+  <script type="module" src="js/modules/tarot.js"></script>
+  <script type="module" src="js/modules/crystals.js"></script>
+  <script type="module" src="js/modules/moon.js"></script>
+  <script type="module" src="js/modules/runes.js"></script>
+  <script type="module" src="js/modules/blog.js"></script>
 </body>
 </html>

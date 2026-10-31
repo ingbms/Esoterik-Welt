@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seite nicht gefunden — Esoterik-Welt</title>
+<meta name="description" content="Die angeforderte Seite existiert nicht. Zurück zur Startseite oder Suche.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@300;400;600&display=swap');
+  :root{--bg:#0b0c10;--surface:#12131a;--primary:#d4a843;--text:#ece8dc;--muted:#9aa09e;--glow:rgba(212,168,67,0.18);}
+  *{box-sizing:border-box;margin:0}
+  body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(135deg,var(--bg) 0%,#161725 100%);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
+  .card{background:rgba(18,19,26,0.95);border:1px solid rgba(212,168,67,0.22);border-radius:1.5rem;padding:3rem 2.5rem;max-width:560px;width:100%;text-align:center;box-shadow:0 0 60px var(--glow),inset 0 0 30px rgba(212,168,67,0.06)}
+  h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:4rem;line-height:1;color:var(--primary);margin-bottom:.25rem;letter-spacing:-.02em}
+  .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--muted);margin-bottom:1.5rem}
+  p{line-height:1.6;color:#ccc8be;margin-bottom:1.5rem}
+  .actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+  a{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.25rem;border-radius:9999px;text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .1s ease,box-shadow .2s ease;border:1px solid rgba(212,168,67,0.35)}
+  a.home{background:linear-gradient(135deg,var(--primary),#b88a35);color:#0b0c10;border-color:var(--primary);box-shadow:0 4px 22px rgba(212,168,67,0.35)}
+  a.home:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(212,168,67,0.45)}
+  a.search{background:rgba(212,168,67,0.08);color:var(--text);border-color:rgba(212,168,67,0.25)}
+  a.search:hover{background:rgba(212,168,67,0.14);transform:translateY(-2px)}
+  .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-top:1.5rem}
+</style>
+</head>
+<body>
+<main class="card" role="main" aria-label="Fehlerseite 404">
+  <h1>404</h1>
+  <p class="sub">Seite nicht gefunden</p>
+  <p>Die Seite, die du suchst, existiert nicht oder wurde verschoben. Nutze die Suche oder kehre zur Startseite zurück.</p>
+  <div class="actions">
+    <a class="home" href="/">Zur Startseite</a>
+    <a class="search" href="/#main">Zur Übersicht</a>
+  </div>
+  <p class="label">Esoterik-Welt — Tarot, Kristalle, Runen & Mondphasen</p>
+</main>
+</body>
+</html>
