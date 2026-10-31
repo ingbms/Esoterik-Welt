@@ -138,7 +138,7 @@ export class CrystalsModule {
       const div = document.createElement('div');
       div.className = 'filter-group mb-3';
       const h4 = document.createElement('h4');
-      h4.textContent = label; h4.style.h4.style.fontSize = 'var(--text-sm)'; h4.style.margin = 'var(--space-1) 0';
+      h4.textContent = label; h4.style.fontSize = 'var(--text-sm)'; h4.style.margin = 'var(--space-1) 0';
       div.appendChild(h4);
       const btns = document.createElement('div');
       btns.className = 'flex flex-wrap gap-2';

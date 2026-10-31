@@ -3,7 +3,7 @@ export class MoonModule {
   constructor() {}
 
   async init() {
-    this.mp = await import('../data/moon-phases.js');
+    this.mp = await import('../../data/moon-phases.js');
     this.data = await import('../data/moon.js');
     this.renderMoonPhase();
     this.renderCalendar();

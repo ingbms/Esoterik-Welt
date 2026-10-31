@@ -5,14 +5,19 @@ Statistische Website zu Tarot, Kristallen, Runen und Mondphasen — bewusst ohne
 ## Quickstart
 
 ```bash
-npm install
-npm run serve     # python -m http.server 8080
-npm run static    # python -m http.server 3000
-npm run build     # webpack production
-npm test          # Jest
+npm ci
+npx playwright install chromium   # einmalig für die Browser-Prüfung
+npm run build     # statische Pages-Quellen nach dist/Esoterik-Welt/
+npm run preview   # http://localhost:3000/Esoterik-Welt/
+npm run test:pages
+npm test -- --runInBand --runTestsByPath tests/api.test.js
+npm run verify:pages -- http://localhost:3000/Esoterik-Welt/ evidence/preview
 ```
 
 ## Architektur-Entscheidungen
+
+- **Eine kanonische Website:** GitHub Pages veröffentlicht `main:/` mit `index.html`, `css/`, `js/`, `data/` und `assets/`. `npm run build` verpackt dieselben Quellen; die Express-Vorschau verwendet `/Esoterik-Welt/` statt des veralteten `public/`-Platzhalters. `npm start` baut vorher automatisch. Kein Astro/Vite/Tailwind/PostCSS und kein Webpack-Einstieg erforderlich.
+- **Live-Prüfung:** `npm run verify:pages -- https://ingbms.github.io/Esoterik-Welt/ evidence/live` erzeugt Screenshots, CSS-/JS-MIME- und Netzwerk-/Console-Protokolle für zehn Ansichten bei 375/768/1440 px. Bestehende `test-results/` und andere Tests werden nicht überschrieben. Screenshots separat prüfen; historische QA-Aussagen unten sind kein Beleg für einen aktuellen Deploy.
 
 - **Hash-Routing:** Keine Server-Side-Routing nötig; statisches Hosting reicht. Routen: `#tarot`, `#crystals`, `#runes`, `#blog`, `#moon`, `#home`.
 - **Vanilla JS + ES-Module:** Keine Framework-Abhängigkeit; `blog.js`/`moon.js` nutzen `import/export`; `main.js` lädt dynamisch.

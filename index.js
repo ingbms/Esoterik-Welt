@@ -6,11 +6,15 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+const site = path.join(__dirname, 'dist', 'Esoterik-Welt');
+app.use('/Esoterik-Welt', express.static(site));
+app.use('/Esoterik-Welt', (req, res) => {
+  res.status(404).sendFile(path.join(site, '404.html'));
+});
 
 // Routes
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(site, 'index.html'));
 });
 
 app.get('/api/health', (req, res) => {
@@ -18,6 +22,9 @@ app.get('/api/health', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Esoterik-Welt server running on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Esoterik-Welt preview: http://localhost:${PORT}/Esoterik-Welt/`);
+  });
+}
+module.exports = app;
