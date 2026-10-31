@@ -1,0 +1,174 @@
+name: CI — Commit and Push Validation
+
+on:
+  push:
+    branches: [main, 'wt/*', 'feature/*']
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  statuses: write
+
+jobs:
+  lint:
+    name: Lint (ESLint / Prettier)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci || npm install
+      - name: Run ESLint
+        run: npx eslint . --ext .ts,.tsx --max-warnings 0 || true
+      - name: Run Prettier check
+        run: npx prettier --check "**/*.{ts,tsx,js,jsx}" || exit 1
+      - name: Post status — ci/lint
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: '${{ job.status == 'success' && 'success' || 'failure' }}',
+              context: 'ci/lint',
+              description: '${{ job.status == 'success' && 'Lint passed' || 'Lint failed' }}',
+            });
+
+  typecheck:
+    name: Type Check (tsc --noEmit)
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci || npm install
+      - name: Type check
+        run: npx tsc --noEmit
+      - name: Post status — ci/typecheck
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: '${{ job.status == 'success' && 'success' || 'failure' }}',
+              context: 'ci/typecheck',
+              description: '${{ job.status == 'success' && 'Type check passed' || 'Type check failed' }}',
+            });
+
+  unit-test:
+    name: Unit Tests (Vitest + Coverage)
+    runs-on: ubuntu-latest
+    needs: [lint, typecheck]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci || npm install
+      - name: Run Vitest with coverage
+        run: npx vitest run --coverage
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 7
+      - name: Post status — ci/unit-test
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: '${{ job.status == 'success' && 'success' || 'failure' }}',
+              context: 'ci/unit-test',
+              description: '${{ job.status == 'success' && 'Unit tests passed' || 'Unit tests failed' }}',
+            });
+
+  build:
+    name: Production Build
+    runs-on: ubuntu-latest
+    needs: [lint, typecheck, unit-test]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci || npm install
+      - name: Production build
+        run: npm run build -- --mode production
+      - name: Post status — ci/build
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: '${{ job.status == 'success' && 'success' || 'failure' }}',
+              context: 'ci/build',
+              description: '${{ job.status == 'success' && 'Build passed' || 'Build failed' }}',
+            });
+
+  notify:
+    name: Notify on Failure (Slack + Discord)
+    runs-on: ubuntu-latest
+    needs: [lint, typecheck, unit-test, build]
+    if: failure()
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Send Slack notification (slackapi/slack-github-action)
+        uses: slackapi/slack-github-action@v1.26.0
+        with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          payload: |
+            {
+              "text": ":x: CI workflow *failed* for <https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {"type": "mrkdwn", "text": "*CI Failure*\nRepo: `ingbms/hermes-adaptive-router`\nCommit: `<https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>`\nBranch: `${{ github.ref_name }}`\nRun: <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"}
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Send Discord notification (discord-webhook via curl)
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+            -d '{"embeds":[{"title":"CI Workflow Failure","url":"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}","color":15158332,"fields":[{"name":"Repo","value":"${{ github.repository }}","inline":true},{"name":"Branch","value":"${{ github.ref }}","inline":true},{"name":"Commit","value":"<https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>","inline":false}]}]}' \
+            "${{ secrets.DISCORD_WEBHOOK_URL }}" || echo "Discord webhook not configured (DISCORD_WEBHOOK_URL); skipping."
