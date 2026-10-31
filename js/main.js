@@ -2,7 +2,7 @@
 // Initializes the app, handles routing, and coordinates modules
 
 import { TarotModule } from './modules/tarot.js';
-import { CrystalsModule } from './modules/crystals.js';
+import { initCrystalsModule } from './modules/crystals.js';
 import { MoonModule } from './modules/moon.js';
 import { RunesModule } from './modules/runes.js';
 import { BlogModule } from './modules/blog.js';
@@ -49,14 +49,13 @@ async function init() {
 
   // Initialize all modules
   state.modules.tarot = new TarotModule(elements.modals.card, document.getElementById('cardModalBody'), elements.modalCloses.card);
-  state.modules.crystals = new CrystalsModule(elements.modals.crystal, document.getElementById('crystalModalBody'), elements.modalCloses.crystal);
+  await initCrystalsModule();
   state.modules.moon = new MoonModule();
   state.modules.runes = new RunesModule(elements.modals.rune, document.getElementById('runeModalBody'), elements.modalCloses.rune);
   state.modules.blog = new BlogModule(elements.modals.article, document.getElementById('articleModalBody'), elements.modalCloses.article);
 
   await Promise.all([
     state.modules.tarot.init(),
-    state.modules.crystals.init(),
     state.modules.moon.init(),
     state.modules.runes.init(),
     state.modules.blog.init()
@@ -81,7 +80,17 @@ async function init() {
 // --- Hero Canvas Animation ---
 function initHeroCanvas() {
   const canvas = elements.heroCanvas;
+  if (!canvas) return;
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motionQuery.matches) {
+    const enable = event => {
+      if (!event.matches) { motionQuery.removeEventListener('change', enable); initHeroCanvas(); }
+    };
+    motionQuery.addEventListener('change', enable);
+    return;
+  }
   const ctx = canvas.getContext('2d');
+  if (!ctx) return;
   let particles = [];
   let animationId = null;
 
@@ -132,6 +141,11 @@ function initHeroCanvas() {
   }, { passive: true });
 
   function animate() {
+    if (document.hidden || motionQuery.matches) {
+      if (motionQuery.matches) ctx.clearRect(0, 0, canvas.width, canvas.height);
+      animationId = null;
+      return;
+    }
     mouseX += (targetMouseX - mouseX) * 0.05;
     mouseY += (targetMouseY - mouseY) * 0.05;
     ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
@@ -165,6 +179,18 @@ function initHeroCanvas() {
   resize();
   createParticles();
   animate();
+  motionQuery.addEventListener('change', event => {
+    if (event.matches) {
+      if (animationId !== null) cancelAnimationFrame(animationId);
+      animationId = null;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    } else if (animationId === null && !document.hidden) {
+      animationId = requestAnimationFrame(animate);
+    }
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && !motionQuery.matches && animationId === null) animationId = requestAnimationFrame(animate);
+  });
 
   window.addEventListener('resize', () => {
     resize();
@@ -186,7 +212,8 @@ function setupNavigation() {
   // Mobile toggle
   elements.navToggle.addEventListener('click', () => {
     const isOpen = elements.nav.classList.toggle('open');
-    elements.navToggle.setAttribute('aria-expanded', isOpen);
+    elements.navToggle.setAttribute('aria-expanded', String(isOpen));
+    elements.navToggle.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
   });
   elements.navToggle.addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -230,12 +257,14 @@ function navigateTo(pageId, replace = false) {
   });
   elements.navLinks.forEach(link => {
     link.classList.toggle('active', link.dataset.page === pageId);
+    if (link.dataset.page === pageId) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
   });
 
   state.currentPage = pageId;
 
   // Scroll to top
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
 
   // Trigger module-specific onShow
   if (state.modules[pageId] && state.modules[pageId].onShow) {
@@ -312,7 +341,7 @@ function populateFeatureGrid() {
   ];
 
   grid.innerHTML = features.map((f, i) => `
-    <article class="card feature-card animate-slide-up stagger-${i + 1}" style="cursor: pointer;" data-page="${f.id}">
+    <article class="card feature-card animate-slide-up stagger-${i + 1}" role="link" data-page="${f.id}">
       <div class="feature-icon">${f.icon}</div>
       <h3 class="feature-title">${f.title}</h3>
       <p class="feature-desc">${f.desc}</p>

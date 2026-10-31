@@ -4,12 +4,12 @@ export class BlogModule {
     this.modal = modal;
     this.modalBody = modalBody;
     this.closeBtn = closeBtn;
-    this.articles = window.articles || [];
+    this.articles = [];
   }
 
   async init() {
-    await import('../data/articles.js');
-    this.articles = window.articles || [];
+    const mod = await import('../data/articles.js');
+    this.articles = mod.articles || mod.default || [];
     this.renderGrid();
     this.setupEventListeners();
   }
@@ -19,7 +19,7 @@ export class BlogModule {
     if (!grid || !this.articles.length) return;
     grid.innerHTML = this.articles.map(a => `
       <article class="card article-card" data-id="${a.id}" tabindex="0" role="button" aria-label="Artikel: ${a.title}">
-        <img class="article-image" src="https://picsum.photos/seed/${a.id}/600/340" alt="Artikel Illustration" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#120a1f,#2d1b47)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.outerHTML='<div class=\'article-image\' style=\'background:linear-gradient(135deg,#120a1f,#2d1b47);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:3rem;color:var(--color-primary);\'>📜</div>';">
+        <div class="article-image article-placeholder" aria-hidden="true">📜</div>
         <div class="article-content">
           <div class="article-meta">
             <span class="badge badge-primary">${a.category}</span>
@@ -105,7 +105,7 @@ export class BlogModule {
     // Re-render
     grid.innerHTML = filtered.map(a => `
       <article class="card article-card" data-id="${a.id}" tabindex="0" role="button" aria-label="Artikel: ${a.title}">
-        <img class="article-image" src="https://picsum.photos/seed/${a.id}/600/340" alt="Artikel Illustration" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#120a1f,#2d1b47)';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontFamily='var(--font-display)';this.style.fontSize='3rem';this.style.color='var(--color-primary)';this.innerHTML='📜';this.removeAttribute('onerror');this.style.height='100%';">
+        <div class="article-image article-placeholder" aria-hidden="true">📜</div>
         <div class="article-content">
           <div class="article-meta">
             <span class="badge badge-primary">${a.category}</span>

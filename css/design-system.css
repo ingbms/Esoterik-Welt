@@ -22,7 +22,7 @@
 
   --color-text-primary: #f0e6ff;
   --color-text-secondary: #c4b5d6;
-  --color-text-muted: #7a6a94;
+  --color-text-muted: #a99bbd;
   --color-text-on-primary: #0a0512;
 
   --color-chakra-root: #e53935;
@@ -84,6 +84,10 @@
   --shadow-glow: 0 0 20px rgba(187, 134, 252, 0.3);
   --shadow-glow-strong: 0 0 40px rgba(187, 134, 252, 0.5);
 
+  /* --- Visual surface / decorative (migrated from inline styles) --- */
+  --surface-ghost: rgba(45, 27, 71, 0.35);
+  --border-glow-subtle: rgba(187, 134, 252, 0.15);
+
   /* --- Transitions --- */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
@@ -112,8 +116,11 @@
   --color-border-glow: #bb86fc;
   --color-text-primary: #2d1b47;
   --color-text-secondary: #5a4a7a;
-  --color-text-muted: #8a7a9a;
+  --color-text-muted: #726181;
   --color-text-on-primary: #ffffff;
+  --color-primary: #7041a6;
+  --color-primary-light: #653499;
+  --color-primary-dark: #633492;
   --shadow-glow: 0 0 20px rgba(187, 134, 252, 0.2);
 }
 
@@ -147,8 +154,8 @@ body {
   color: var(--color-text-primary);
   background: var(--color-bg-deep);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(187,134,252,0.08), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(3,218,198,0.05), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, color-mix(in srgb, var(--color-primary) 8%, transparent), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, color-mix(in srgb, var(--color-secondary) 5%, transparent), transparent);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -182,6 +189,19 @@ a:focus-visible {
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
+button:focus-visible, select:focus-visible, input:focus-visible,
+textarea:focus-visible, [tabindex="0"]:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+[hidden] { display: none !important; }
+.skip-link {
+  position: fixed; top: var(--space-2); left: var(--space-2);
+  z-index: var(--z-toast); padding: var(--space-3);
+  background: var(--color-bg-deep); color: var(--color-text-primary);
+  transform: translateY(-150%);
+}
+.skip-link:focus { transform: none; }
 
 img { max-width: 100%; height: auto; display: block; }
 
@@ -222,7 +242,7 @@ img { max-width: 100%; height: auto; display: block; }
   top: 0;
   z-index: var(--z-sticky);
   height: var(--header-height);
-  background: rgba(10, 5, 18, 0.9);
+  background: color-mix(in srgb, var(--color-bg-deep) 90%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
   transition: background var(--transition-base), box-shadow var(--transition-base);
@@ -250,7 +270,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .logo:hover { color: var(--color-primary-light); }
 
-.nav { display: flex; align-items: center; gap: var(--space-8); }
+.nav { display: flex; align-items: center; gap: var(--space-8); margin-left: auto; }
+#favCounter { margin-left: var(--space-3); flex-shrink: 0; }
 
 .nav-list {
   display: flex;
@@ -302,20 +323,18 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 768px) {
-  .nav-toggle { display: block; }
+  .nav-toggle { display: block; min-width: 44px; min-height: 44px; }
   .nav {
-    position: absolute;
-    top: var(--header-height);
-    left: 0; right: 0;
-    background: var(--color-bg-deep);
-    border-bottom: 1px solid var(--color-border);
-    padding: var(--space-6);
-    flex-direction: column;
-    gap: var(--space-4);
-    display: none;
+    position: static; display: flex; padding: 0; border: 0;
+    background: transparent;
   }
-  .nav.open { display: flex; }
-  .nav-list { flex-direction: column; width: 100%; gap: var(--space-2); }
+  .nav-list {
+    display: none; position: absolute; top: var(--header-height);
+    left: 0; right: 0; padding: var(--space-4);
+    background: var(--color-bg-deep); border-bottom: 1px solid var(--color-border);
+    flex-direction: column; width: 100%; gap: var(--space-2);
+  }
+  .nav.open .nav-list { display: flex; }
   .nav-link { width: 100%; text-align: center; padding: var(--space-3); }
 }
 
@@ -462,11 +481,12 @@ img { max-width: 100%; height: auto; display: block; }
 .modal-close {
   background: none;
   border: none;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-size: var(--text-2xl);
   cursor: pointer;
   line-height: 1;
   padding: var(--space-1);
+  min-width: 44px; min-height: 44px;
   transition: color var(--transition-fast);
 }
 .modal-close:hover { color: var(--color-primary); }
@@ -520,7 +540,9 @@ img { max-width: 100%; height: auto; display: block; }
   transition: all var(--transition-fast);
 }
 .tooltip:hover::before,
-.tooltip:hover::after { opacity: 1; visibility: visible; }
+.tooltip:hover::after,
+.tooltip:focus-within::before,
+.tooltip:focus-within::after { opacity: 1; visibility: visible; }
 
 /* ============================================================================
    Form Elements
@@ -540,7 +562,7 @@ img { max-width: 100%; height: auto; display: block; }
 .input:focus, .select:focus, .textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.2);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
 }
 .input::placeholder { color: var(--color-text-muted); }
 .select { cursor: pointer; }
@@ -569,16 +591,16 @@ img { max-width: 100%; height: auto; display: block; }
   border: 1px solid var(--color-border);
   color: var(--color-text-secondary);
 }
-.badge-primary { background: rgba(187,134,252,0.15); border-color: var(--color-primary); color: var(--color-primary); }
-.badge-secondary { background: rgba(3,218,198,0.15); border-color: var(--color-secondary); color: var(--color-secondary); }
-.badge-gold { background: rgba(245,197,66,0.15); border-color: var(--color-accent-gold); color: var(--color-accent-gold); }
-.badge-chakra-root { background: rgba(229,57,53,0.15); border-color: var(--color-chakra-root); color: var(--color-chakra-root); }
-.badge-chakra-sacral { background: rgba(251,140,0,0.15); border-color: var(--color-chakra-sacral); color: var(--color-chakra-sacral); }
-.badge-chakra-solar { background: rgba(253,216,53,0.15); border-color: var(--color-chakra-solar); color: var(--color-chakra-solar); }
-.badge-chakra-heart { background: rgba(67,160,71,0.15); border-color: var(--color-chakra-heart); color: var(--color-chakra-heart); }
-.badge-chakra-throat { background: rgba(30,136,229,0.15); border-color: var(--color-chakra-throat); color: var(--color-chakra-throat); }
-.badge-chakra-third-eye { background: rgba(94,53,177,0.15); border-color: var(--color-chakra-third-eye); color: var(--color-chakra-third-eye); }
-.badge-chakra-crown { background: rgba(142,36,170,0.15); border-color: var(--color-chakra-crown); color: var(--color-chakra-crown); }
+.badge-primary { background: color-mix(in srgb, var(--color-primary) 15%, transparent); border-color: var(--color-primary); color: var(--color-primary); }
+.badge-secondary { background: color-mix(in srgb, var(--color-secondary) 15%, transparent); border-color: var(--color-secondary); color: var(--color-secondary); }
+.badge-gold { background: color-mix(in srgb, var(--color-accent-gold) 15%, transparent); border-color: var(--color-accent-gold); color: var(--color-accent-gold); }
+.badge-chakra-root { background: color-mix(in srgb, var(--color-chakra-root) 15%, transparent); border-color: var(--color-chakra-root); color: var(--color-chakra-root); }
+.badge-chakra-sacral { background: color-mix(in srgb, var(--color-chakra-sacral) 15%, transparent); border-color: var(--color-chakra-sacral); color: var(--color-chakra-sacral); }
+.badge-chakra-solar { background: color-mix(in srgb, var(--color-chakra-solar) 15%, transparent); border-color: var(--color-chakra-solar); color: var(--color-chakra-solar); }
+.badge-chakra-heart { background: color-mix(in srgb, var(--color-chakra-heart) 15%, transparent); border-color: var(--color-chakra-heart); color: var(--color-chakra-heart); }
+.badge-chakra-throat { background: color-mix(in srgb, var(--color-chakra-throat) 15%, transparent); border-color: var(--color-chakra-throat); color: var(--color-chakra-throat); }
+.badge-chakra-third-eye { background: color-mix(in srgb, var(--color-chakra-third-eye) 15%, transparent); border-color: var(--color-chakra-third-eye); color: var(--color-chakra-third-eye); }
+.badge-chakra-crown { background: color-mix(in srgb, var(--color-chakra-crown) 15%, transparent); border-color: var(--color-chakra-crown); color: var(--color-chakra-crown); }
 
 /* ============================================================================
    Footer
@@ -604,6 +626,7 @@ img { max-width: 100%; height: auto; display: block; }
 .footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
 .footer-links a { color: var(--color-text-secondary); font-size: var(--text-sm); transition: color var(--transition-fast); }
 .footer-links a:hover { color: var(--color-primary); }
+.footer a { text-decoration: underline; text-underline-offset: 0.2em; }
 .footer-bottom {
   margin-top: var(--space-8);
   padding-top: var(--space-6);
@@ -612,12 +635,16 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--color-text-muted);
   font-size: var(--text-xs);
 }
+.footer-tagline, .footer-column h4, .footer-bottom { color: var(--color-text-secondary); }
 
 @media (max-width: 768px) {
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 480px) {
   .footer-inner { grid-template-columns: 1fr; }
+  .header-inner { padding-inline: var(--space-3); }
+  .logo { font-size: var(--text-lg); }
+  #favCounter { margin-left: var(--space-1); }
 }
 
 /* ============================================================================
@@ -661,7 +688,10 @@ img { max-width: 100%; height: auto; display: block; }
 
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-1 { flex: 1; }
 .items-center { align-items: center; }
+.items-end { align-items: flex-end; }
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
 .gap-2 { gap: var(--space-2); }
@@ -683,10 +713,35 @@ img { max-width: 100%; height: auto; display: block; }
 .rounded-xl { border-radius: var(--radius-xl); }
 .rounded-full { border-radius: var(--radius-full); }
 
-/* Print styles */
+/* Print only the currently visible content, with high-contrast ink. */
 @media print {
-  .header, .footer, .btn, .modal-backdrop, .nav-toggle { display: none !important; }
-  body { background: white; color: black; }
-  .card { border: 1px solid #ccc; box-shadow: none; }
+  .header, .footer, .btn, .modal-backdrop, .nav-toggle,
+  .hero-canvas, .hero-scroll, .skip-link { display: none !important; }
+  body, .page, .card, .badge, .rune-card, .tarot-card,
+  .moon-calendar-day { background: #fff !important; color: #000 !important;
+    box-shadow: none !important; text-shadow: none !important; }
+  body { display: block; }
+  main, .container, .hero { max-width: none; min-height: 0; padding: 0; }
+  .page.active { display: block !important; animation: none; }
+  h1, h2, h3, h4, h5, h6, p, span, a,
+  .text-muted, .card-body, .card-subtitle { color: #000 !important; }
+  .card { border: 1px solid #777; break-inside: avoid; }
   a { text-decoration: underline; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; overflow-wrap: anywhere; }
 }
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll { animation: none !important; }
+  .hero-canvas { display: none !important; }
+  .animate-fade-in, .animate-slide-up, .drawn-card,
+  .cast-rune { opacity: 1 !important; transform: none !important; animation-delay: 0ms !important; }
+  .modal { transform: none !important; }
+}
+/* ============================================================
+   BEWUSST BELASSEN (nicht als Token migriert):
+   - Mondberechnung / synodische Konstante (29,53059 d) in data/moon-phases.js
+   - SVG-Geometrie (viewBox, cx/cy/r) und Mond-Gradient-Farben in moon.js
+     (#f8fafc, #e2e8f0, #94a3b8, #64748b, #334155) = physikalische Darstellung
+   - Druck-Schwarz (#000) / Weiß (#fff) in main.css (Print-Ansicht)
+   - Semantische Konstanten: Mohs-Härte, chemische Formeln (crystals.json)
+   - Tarot-Modal-Focus-Trap / ESC / Overlay-Logik (nicht visuell)
+============================================================ */

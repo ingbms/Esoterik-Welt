@@ -103,7 +103,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(187,134,252,0.05), rgba(3,218,198,0.05));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 5%, transparent), color-mix(in srgb, var(--color-secondary) 5%, transparent));
   opacity: 0;
   transition: opacity var(--transition-base);
 }
@@ -166,7 +166,7 @@
 .tarot-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(10,5,18,0.9));
+  background: linear-gradient(180deg, transparent 60%, color-mix(in srgb, var(--color-bg-deep) 90%, transparent));
   padding: var(--space-4);
   display: flex;
   flex-direction: column;
@@ -499,6 +499,11 @@
   content: '⏱ ';
 }
 
+.article-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--text-4xl); color: var(--color-primary);
+}
+
 /* --- Modals Content --- */
 .modal-card-detail {
   display: grid;
@@ -579,7 +584,7 @@
 }
 
 /* Breakpoint 640-1024: tablet adjustments */
-@media (min-width: 640px) and (max-width: 1023px) {
+@media (min-width: 769px) and (max-width: 1023px) {
   .header-inner { padding: 0 var(--space-4); }
   .nav { position: static; display: flex; }
   .nav-toggle { display: none; }
@@ -621,10 +626,48 @@
 .skeleton-text.short { width: 60%; }
 .skeleton-text.medium { width: 80%; }
 @keyframes fadeUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
-.grid-auto { display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: var(--space-3); }
+.grid-auto { display:grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr)); gap: var(--space-3); }
 @media (min-width: 640px) { .grid-auto { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); } }
 @media (min-width: 1024px) { .grid-auto { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); } }
 .modal-backdrop { transition: opacity 0.25s ease; }
 .modal-backdrop.open { opacity: 1; }
 .tarot-card button, .tarot-card { text-align: left; }
+/* Component variants: all cards inherit base tokens; selected chips are visibly pressed. */
+.feature-card { cursor: pointer; }
+.btn[aria-pressed="true"] { border: 2px solid var(--color-secondary); }
+.grid-2[style*="grid-template-columns"] { min-width: 0; }
+@media (max-width: 768px) {
+  #moon .grid-2 { grid-template-columns: minmax(0, 1fr) !important; }
+  .container { padding-inline: var(--space-4); }
+  .hero h1 { font-size: clamp(var(--text-2xl), 9vw, var(--text-4xl)); }
+  .moon-calendar-day { min-width: 0; padding: var(--space-1); }
+  .moon-calendar-day .day-phase { width: auto; height: auto; }
+  .tarot-controls .btn, .runes-controls .btn { white-space: normal; }
+}
+@media (max-width: 480px) {
+  .moon-calendar { gap: 0; }
+  .moon-calendar-day { font-size: var(--text-xs); }
+  #crystals select, #crystals input, #blog select, #blog input { width: 100% !important; min-width: 0 !important; }
+}
+@media print {
+  .hero { display: block; }
+  .hero-content { display: block; text-align: left; }
+  .tarot-overlay, .tarot-image, .article-image, .crystal-image { background: #fff !important; color: #000 !important; }
+  #crystalFilterContainer, #activeFilterBadges, .tarot-controls,
+  .runes-controls, #crystals .section-header > .flex, #blog .section-header + .flex {
+    display: none !important;
+  }
+  #crystalGrid, #tarotGrid, #runeGrid, #articleGrid,
+  #moonRituals, #moon .grid-2 { display: block !important; }
+  .crystal-image, .article-image { display: none !important; }
+  .card, .crystal-card, .rune-card, .tarot-card {
+    display: block; height: auto; aspect-ratio: auto;
+    margin-bottom: var(--space-3); padding: var(--space-3);
+    break-inside: avoid; overflow: visible;
+  }
+  .crystal-content, .article-content { padding: 0; }
+  .crystal-desc, .article-excerpt, .feature-desc { color: #000 !important; }
+  .moon-calendar { break-inside: avoid; }
+  .loading-skeleton { animation: none; }
+}
 

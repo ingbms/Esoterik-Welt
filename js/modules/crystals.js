@@ -46,7 +46,8 @@ export class CrystalsModule {
     const chakras = chakraStr ? [chakraStr] : [];
     const effectStr = (c.effect || c.tags || c.keywords || '').toString();
     const effects = effectStr.split(',').map(s => s.trim()).filter(Boolean);
-    const img = c.image_placeholder || (c.image ? c.image : null);
+    // image_placeholder describes an asset that has not been shipped.
+    const img = c.image || null;
     return {
       id: c.id || ('crys-' + Math.random().toString(36).slice(2, 9)),
       name,
@@ -116,14 +117,14 @@ export class CrystalsModule {
           const span = document.createElement('span');
           span.id = 'favCounter';
           span.className = 'badge badge-primary';
-          span.style.marginLeft = 'auto';
+          span.setAttribute('aria-label', 'Anzahl Kristall-Favoriten');
           span.setAttribute('aria-live', 'polite');
           headerInner.appendChild(span);
           this.favCounterEl = span;
         }
       }
     }
-    if (this.favCounterEl) this.favCounterEl.textContent = `${this.favIds.size}`;
+    if (this.favCounterEl) this.favCounterEl.textContent = `♥ ${this.favIds.size}`;
   }
 
   buildFilterUI() {
@@ -137,7 +138,7 @@ export class CrystalsModule {
       const div = document.createElement('div');
       div.className = 'filter-group mb-3';
       const h4 = document.createElement('h4');
-      h4.textContent = label; h4.style.fontSize = '0.85rem'; h4.style.margin = '0.25rem 0';
+      h4.textContent = label; h4.style.h4.style.fontSize = 'var(--text-sm)'; h4.style.margin = 'var(--space-1) 0';
       div.appendChild(h4);
       const btns = document.createElement('div');
       btns.className = 'flex flex-wrap gap-2';
@@ -241,30 +242,45 @@ export class CrystalsModule {
       const fav = this.favIds.has(c.id) ? '♥' : '♡';
       const chord = c.chakra.map(ch => `<span class="badge badge-chakra">${ch}</span>`).join('');
       const imgPart = c.image ? (c.image.startsWith('assets/') || c.image.startsWith('http')
-        ? `<img src="${c.image}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">`
+        ? `<img data-src="${c.image}" alt="" loading="lazy" decoding="async" width="320" height="320" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">`
         : `<div style="font-size:2.5rem;line-height:1;">${c.image}</div>`) : '';
       if (isList) {
-        return `<article class="card crystal-card crystal-card-interactive crystal-list-row" data-id="${c.id}" tabindex="0" role="button" aria-label="${c.name}">
-          <div class="crystal-thumb" style="flex:0 0 120px;min-height:120px;background:linear-gradient(135deg,#5b2d91,#2d1b47);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);overflow:hidden;">${imgPart}</div>
+        return `<article class="card crystal-card crystal-card-interactive crystal-list-row" data-id="${c.id}">
+          <div class="crystal-thumb" style="flex:0 0 120px;min-height:120px;background:linear-gradient(135deg,var(--color-border-glow),var(--color-border));display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);overflow:hidden;">${imgPart}</div>
           <div class="crystal-content" style="flex:1;min-width:0;">
-            <div class="flex justify-between items-start gap-2"><h3 class="crystal-name" style="margin:0;font-size:1.15rem;">${c.name}</h3><button type="button" class="btn btn-ghost btn-sm favorite-btn" aria-label="Favorit" data-id="${c.id}">${fav}</button></div>
+            <div class="flex justify-between items-start gap-2"><h3 class="crystal-name" style="margin:0;font-size:1.15rem;">${c.name}</h3><button type="button" class="btn btn-ghost btn-sm favorite-btn" aria-label="${this.favIds.has(c.id) ? 'Favorit entfernen' : 'Als Favorit speichern'}" data-id="${c.id}">${fav}</button></div>
             <div class="crystal-meta">${chord} <span class="badge badge-secondary">${c.colorRaw || c.color}</span></div>
             <p class="crystal-desc" style="margin:.25rem 0 0;">${c.description.substring(0, 160)}${c.description.length > 160 ? '...' : ''}</p>
+            <button type="button" class="btn btn-secondary btn-sm crystal-details-btn" aria-label="Details zu ${c.name} öffnen">Details anzeigen</button>
             <div class="text-muted" style="font-size:.8rem;">Formel: ${c.chemical_formula || '—'} · Härte: ${c.hardness != null ? c.hardness + ' Mohs' : '—'} · ${c.rarity || ''}</div>
           </div>
         </article>`;
       }
-      return `<article class="card crystal-card crystal-card-interactive" data-id="${c.id}" tabindex="0" role="button" aria-label="${c.name}">
-        <div class="crystal-image" style="aspect-ratio:1;overflow:hidden;background:linear-gradient(135deg,#5b2d91,#2d1b47);display:flex;align-items:center;justify-content:center;">${imgPart}</div>
+      return `<article class="card crystal-card crystal-card-interactive" data-id="${c.id}">
+        <div class="crystal-image" style="aspect-ratio:1;overflow:hidden;background:linear-gradient(135deg,var(--color-border-glow),var(--color-border));display:flex;align-items:center;justify-content:center;">${imgPart}</div>
         <div class="crystal-content">
-          <div class="flex justify-between items-start gap-2"><h3 class="crystal-name">${c.name}</h3><button type="button" class="btn btn-ghost btn-sm favorite-btn" aria-label="Favorit" data-id="${c.id}">${fav}</button></div>
+          <div class="flex justify-between items-start gap-2"><h3 class="crystal-name">${c.name}</h3><button type="button" class="btn btn-ghost btn-sm favorite-btn" aria-label="${this.favIds.has(c.id) ? 'Favorit entfernen' : 'Als Favorit speichern'}" data-id="${c.id}">${fav}</button></div>
           <div class="crystal-meta">${chord} <span class="badge badge-secondary">${c.colorRaw || c.color}</span></div>
           <p class="crystal-desc">${c.description.substring(0, 120)}${c.description.length > 120 ? '...' : ''}</p>
+          <button type="button" class="btn btn-secondary btn-sm crystal-details-btn" aria-label="Details zu ${c.name} öffnen">Details anzeigen</button>
           <div class="text-muted" style="font-size:.75rem;margin-top:.25rem;">${c.chemical_formula ? c.chemical_formula + ' · ' : ''}Härte ${c.hardness != null ? c.hardness : '—'}</div>
         </div>
       </article>`;
     }).join('');
     this.gridEl.innerHTML = html;
+    this.imageObserver?.disconnect();
+    const images = this.gridEl.querySelectorAll('img[data-src]');
+    const load = img => { img.src = img.dataset.src; delete img.dataset.src; };
+    if ('loading' in HTMLImageElement.prototype || !('IntersectionObserver' in window)) {
+      images.forEach(load);
+    } else {
+      this.imageObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { load(entry.target); this.imageObserver.unobserve(entry.target); }
+        });
+      }, { rootMargin: '200px' });
+      images.forEach(img => this.imageObserver.observe(img));
+    }
     this.gridEl.className = isList ? 'crystal-list' : 'grid grid-auto';
     if (isList) { this.gridEl.style.gridTemplateColumns = '1fr'; } else { this.gridEl.style.gridTemplateColumns = ''; }
 
@@ -273,10 +289,15 @@ export class CrystalsModule {
         if (e.target.closest('.favorite-btn')) return;
         this.openCrystalModal(card.dataset.id);
       });
-      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.openCrystalModal(card.dataset.id); } });
+
     });
     this.gridEl.querySelectorAll('.favorite-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => { e.stopPropagation(); this.toggleFavorite(btn.dataset.id); btn.textContent = this.favIds.has(btn.dataset.id) ? '♥' : '♡'; btn.setAttribute('aria-label', this.favIds.has(btn.dataset.id) ? 'Favorit entfernen' : 'Favorit'); });
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.id;
+        this.toggleFavorite(id);
+        [...this.gridEl.querySelectorAll('.favorite-btn')].find(b => b.dataset.id === id)?.focus();
+      });
     });
   }
 
@@ -291,19 +312,19 @@ export class CrystalsModule {
   openCrystalModal(id) {
     const c = this.crystals.find(x => x.id === id); if (!c) return;
     const related = this.crystals.filter(x => x.id !== id && (x.color === c.color || x.chakra.some(ch => c.chakra.includes(ch)))).slice(0, 3);
-    const relatedHtml = related.length ? `<div class="mt-4"><h4 style="font-size:0.9rem;color:var(--color-text-muted);margin-bottom:.5rem;">Verwandte Steine</h4><div class="flex flex-wrap gap-2">` + related.map(r => `<button type="button" class="btn btn-ghost btn-sm" onclick="window.crystalsModule.openCrystalModal('${r.id}')">${r.name}</button>`).join('') + `</div></div>` : '';
+    const relatedHtml = related.length ? `<div class="mt-4"><h4 style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-2);">Verwandte Steine</h4><div class="flex flex-wrap gap-2">` + related.map(r => `<button type="button" class="btn btn-ghost btn-sm" onclick="window.crystalsModule.openCrystalModal('${r.id}')">${r.name}</button>`).join('') + `</div></div>` : '';
     this.modalBody.innerHTML = `
       <div style="display:grid;gap:var(--space-6);grid-template-columns:1fr 2fr;align-items:start;">
-        <div style="aspect-ratio:1;border-radius:var(--radius-lg);background:linear-gradient(135deg,#5b2d91,#2d1b47);display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:240px;">
-          ${c.image && c.image.startsWith('assets/') ? `<img src="${c.image}" alt="" style="width:100%;height:100%;object-fit:cover;">` : `<div style="font-size:4rem;">${c.image}</div>`}
+        <div style="aspect-ratio:1;border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--color-border-glow),var(--color-border));display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:240px;">
+          ${c.image && c.image.startsWith('assets/') ? `<img src="${c.image}" alt="" decoding="async" width="320" height="320" style="width:100%;height:100%;object-fit:cover;">` : `<div style="font-size:4rem;">${c.image}</div>`}
         </div>
         <div>
           <h3 style="font-family:var(--font-display);color:var(--color-primary);margin-bottom:var(--space-1);font-size:1.6rem;">${c.name}</h3>
           <div class="flex flex-wrap gap-2 mb-3">${c.chakra.map(ch => `<span class="badge badge-chakra">${ch}</span>`).join('')} <span class="badge badge-secondary">${c.colorRaw || c.color}</span></div>
-          <h4 style="font-size:0.85rem;font-weight:600;color:var(--color-text-muted);margin-bottom:.25rem;">Chemische Formel</h4><p style="font-family:var(--font-mono);color:var(--color-text-secondary);margin:0 0 .75rem;">${c.chemical_formula || '—'}</p>
-          <h4 style="font-size:0.85rem;font-weight:600;color:var(--color-text-muted);margin-bottom:.25rem;">Härte</h4><p style="color:var(--color-text-secondary);margin:0 0 .75rem;">${c.hardness != null ? c.hardness + ' (Mohs)' : '—'}</p>
-          <h4 style="font-size:0.85rem;font-weight:600;color:var(--color-text-muted);margin-bottom:.25rem;">Wirkt auf</h4><p style="color:var(--color-text-secondary);margin:0 0 .75rem;">${c.effect.join(', ') || '—'}</p>
-          <h4 style="font-size:0.85rem;font-weight:600;color:var(--color-text-muted);margin-bottom:.25rem;">Beschreibung</h4><p style="line-height:1.7;color:var(--color-text-secondary);margin:0 0 .5rem;">${c.description}</p>
+          <h4 style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);margin-bottom:var(--space-1);">Chemische Formel</h4><p style="font-family:var(--font-mono);color:var(--color-text-secondary);margin:0 0 var(--space-3);">${c.chemical_formula || '—'}</p>
+          <h4 style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);margin-bottom:var(--space-1);">Härte</h4><p style="color:var(--color-text-secondary);margin:0 0 var(--space-3);">${c.hardness != null ? c.hardness + ' (Mohs)' : '—'}</p>
+          <h4 style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);margin-bottom:var(--space-1);">Wirkt auf</h4><p style="color:var(--color-text-secondary);margin:0 0 var(--space-3);">${c.effect.join(', ') || '—'}</p>
+          <h4 style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);margin-bottom:var(--space-1);">Beschreibung</h4><p style="line-height:1.7;color:var(--color-text-secondary);margin:0 0 var(--space-2);">${c.description}</p>
           ${relatedHtml}
         </div>
       </div>
