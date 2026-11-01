@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Only real, crawlable documents under the actual Pages base are listed.
+     SPA fragments (#tarot, #blog/1, …) are views of index.html, not separate
+     documents; they stay reachable as deep links without being indexed twice. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://esoterik-welt.github.io/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#tarot</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#crystals</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#runes</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#moon</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#home</loc><lastmod>2026-10-30</lastmod></url>
-  <!-- Blog-Artikel -->
-  <url><loc>https://esoterik-welt.github.io/#blog/1</loc><lastmod>2025-10-15</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog/2</loc><lastmod>2025-09-28</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog/3</loc><lastmod>2025-09-10</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog/4</loc><lastmod>2025-08-22</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog/5</loc><lastmod>2025-08-05</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog/6</loc><lastmod>2025-07-18</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog/7</loc><lastmod>2025-07-01</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog/8</loc><lastmod>2025-06-12</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog/9</loc><lastmod>2025-05-25</lastmod></url>
-  <url><loc>https://esoterik-welt.github.io/#blog/10</loc><lastmod>2025-05-08</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/impressum.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/datenschutz.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/haftung.html</loc><lastmod>2026-11-01</lastmod></url>
 </urlset>

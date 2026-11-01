@@ -1,10 +1,12 @@
 // Blog Module
+import { renderArticleContent } from '../article-content.js';
 export class BlogModule {
   constructor(modal, modalBody, closeBtn) {
     this.modal = modal;
     this.modalBody = modalBody;
     this.closeBtn = closeBtn;
     this.articles = [];
+    this.onArticleOpened = null;
   }
 
   async init() {
@@ -15,9 +17,17 @@ export class BlogModule {
   }
 
   renderGrid() {
+    if (!this.articles.length) return;
+    this.renderCards(this.articles);
+    this.syncArticleStatus(this.articles.length);
+  }
+
+  renderCards(list) {
     const grid = document.getElementById('articleGrid');
-    if (!grid || !this.articles.length) return;
-    grid.innerHTML = this.articles.map(a => `
+    if (!grid) return;
+    grid.innerHTML = list
+      .map(
+        (a) => `
       <article class="card article-card" data-id="${a.id}" tabindex="0" role="button" aria-label="Artikel: ${a.title}">
         <div class="article-image article-placeholder" aria-hidden="true">📜</div>
         <div class="article-content">
@@ -26,20 +36,22 @@ export class BlogModule {
             <span class="text-xs">${a.date}</span>
             <span class="text-xs">⏱ ${a.readTime}</span>
           </div>
-          <h3 class="article-title">${a.title}</h3>
+          <h2 class="article-title">${a.title}</h2>
           <p class="article-excerpt">${a.excerpt}</p>
           <div class="article-footer">
             <div class="flex gap-2 flex-wrap">
-              ${a.tags.map(t => `<span class="badge">${t}</span>`).join('')}
+              ${a.tags.map((t) => `<span class="badge">${t}</span>`).join('')}
             </div>
           </div>
         </div>
       </article>
-    `).join('');
+    `
+      )
+      .join('');
 
-    grid.querySelectorAll('.article-card').forEach(card => {
+    grid.querySelectorAll('.article-card').forEach((card) => {
       card.addEventListener('click', () => this.openArticleModal(parseInt(card.dataset.id)));
-      card.addEventListener('keydown', e => {
+      card.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           this.openArticleModal(parseInt(card.dataset.id));
@@ -48,24 +60,55 @@ export class BlogModule {
     });
   }
 
-  openArticleModal(id) {
-    const article = this.articles.find(a => a.id === id);
-    if (!article) return;
-    this.modalBody.innerHTML = `
-      <h2 style="font-family: var(--font-display); color: var(--color-primary); margin-bottom: var(--space-3);">${article.title}</h2>
-      <div class="flex gap-3 mb-4 flex-wrap">
-        <span class="badge badge-primary">${article.category}</span>
-        <span class="text-xs text-muted">${article.date} · ⏱ ${article.readTime}</span>
-        <div class="flex gap-1 flex-wrap">${article.tags.map(t => `<span class="badge">${t}</span>`).join('')}</div>
-      </div>
-      <div style="line-height: 1.75; color: var(--color-text-secondary); font-size: var(--text-base);">
-        ${article.content ? article.content.replace(/\n/g, '<br>') : `<p style="color: var(--color-text-muted);">${article.excerpt}</p><p style="color: var(--color-text-muted); font-style: italic;">Vollständiger Artikel wird geladen...</p>`}
-      </div>
-    `;
+  // Every published article is rendered at once: there is no second page of
+  // articles, so a "load more" control would only re-render the same cards.
+  syncArticleStatus(shown) {
+    const total = this.articles.length;
+    const button = document.getElementById('loadMoreArticles');
+    const status = document.getElementById('articleListStatus');
+    if (button) {
+      button.hidden = true;
+      button.disabled = true;
+    }
+    if (status) {
+      status.hidden = !total;
+      status.textContent = !total
+        ? ''
+        : shown === total
+          ? `Alle ${total} Artikel werden angezeigt.`
+          : `${shown} von ${total} Artikeln werden angezeigt.`;
+    }
+  }
+
+  findArticle(id) {
+    return this.articles.find((a) => a.id === id) || null;
+  }
+
+  openArticleModal(id, { updateUrl = true } = {}) {
+    const article = this.findArticle(id);
+    if (!article) return false;
+    const metadata = document.createElement('div');
+    metadata.className = 'flex gap-3 mb-4 flex-wrap';
+    const badge = (text, className = 'badge') => {
+      const span = document.createElement('span');
+      span.className = className;
+      span.textContent = text;
+      return span;
+    };
+    metadata.append(badge(article.category, 'badge badge-primary'));
+    metadata.append(badge(`${article.date} · ⏱ ${article.readTime}`, 'text-xs text-muted'));
+    const tags = document.createElement('div');
+    tags.className = 'flex gap-1 flex-wrap';
+    for (const tag of article.tags) tags.append(badge(tag));
+    metadata.append(tags);
+    const prose = document.createElement('div');
+    prose.className = 'article-prose';
+    prose.append(renderArticleContent(article.content || article.excerpt || ''));
+    this.modalBody.replaceChildren(metadata, prose);
     document.getElementById('articleModalTitle').textContent = article.title;
-    this.modal.hidden = false;
-    requestAnimationFrame(() => this.modal.classList.add('open'));
-    document.body.style.overflow = 'hidden';
+    this.modal.dialogController.open();
+    if (updateUrl && typeof this.onArticleOpened === 'function') this.onArticleOpened(article.id);
+    return true;
   }
 
   setupEventListeners() {
@@ -74,10 +117,6 @@ export class BlogModule {
       clearTimeout(this.searchTimeout);
       this.searchTimeout = setTimeout(() => this.filterArticles(), 300);
     });
-    document.getElementById('loadMoreArticles')?.addEventListener('click', () => {
-      // For demo: reload same articles
-      this.renderGrid();
-    });
   }
 
   filterArticles() {
@@ -85,11 +124,13 @@ export class BlogModule {
     const query = document.getElementById('articleSearch')?.value || '';
 
     let filtered = this.articles;
-    if (category !== 'all') filtered = filtered.filter(a => a.category === category);
-    if (query) filtered = filtered.filter(a =>
-      a.title.toLowerCase().includes(query.toLowerCase()) ||
-      a.tags.some(t => t.toLowerCase().includes(query.toLowerCase()))
-    );
+    if (category !== 'all') filtered = filtered.filter((a) => a.category === category);
+    if (query)
+      filtered = filtered.filter(
+        (a) =>
+          a.title.toLowerCase().includes(query.toLowerCase()) ||
+          a.tags.some((t) => t.toLowerCase().includes(query.toLowerCase()))
+      );
     this.filters = { category, query, filtered };
     this.updateGrid(filtered);
   }
@@ -99,36 +140,11 @@ export class BlogModule {
     if (!grid) return;
     if (!filtered || !filtered.length) {
       grid.innerHTML = '<p class="text-center text-muted">Keine Artikel gefunden.</p>';
+      this.syncArticleStatus(0);
       return;
     }
-    const cards = grid.querySelectorAll('.article-card');
-    // Re-render
-    grid.innerHTML = filtered.map(a => `
-      <article class="card article-card" data-id="${a.id}" tabindex="0" role="button" aria-label="Artikel: ${a.title}">
-        <div class="article-image article-placeholder" aria-hidden="true">📜</div>
-        <div class="article-content">
-          <div class="article-meta">
-            <span class="badge badge-primary">${a.category}</span>
-            <span class="text-xs">${a.date}</span>
-            <span class="text-xs">⏱ ${a.readTime}</span>
-          </div>
-          <h3 class="article-title">${a.title}</h3>
-          <p class="article-excerpt">${a.excerpt}</p>
-          <div class="article-footer">
-            <div class="flex gap-2 flex-wrap">${a.tags.map(t => `<span class="badge">${t}</span>`).join('')}</div>
-          </div>
-        </div>
-      </article>
-    `).join('');
-    grid.querySelectorAll('.article-card').forEach(card => {
-      card.addEventListener('click', () => this.openArticleModal(parseInt(card.dataset.id)));
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          this.openArticleModal(parseInt(card.dataset.id));
-        }
-      });
-    });
+    this.renderCards(filtered);
+    this.syncArticleStatus(filtered.length);
   }
 
   onShow() {}

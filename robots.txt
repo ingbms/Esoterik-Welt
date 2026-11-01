@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /tests/
-Disallow: /src/
-Disallow: /node_modules/
-Sitemap: https://esoterik-welt.github.io/sitemap.xml
+Disallow: /Esoterik-Welt/tests/
+Disallow: /Esoterik-Welt/src/
+Disallow: /Esoterik-Welt/node_modules/
+Sitemap: https://ingbms.github.io/Esoterik-Welt/sitemap.xml

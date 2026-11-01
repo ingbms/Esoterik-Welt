@@ -4,9 +4,79 @@
    ============================================================================ */
 
 /* Shared legal-page shell; keep existing design tokens and content. */
-.legal-content { padding-top: calc(var(--header-height) + var(--space-8)); padding-bottom: var(--space-8); }
-.legal-content h1 { font-size: clamp(var(--text-2xl), 6vw, var(--text-4xl)); overflow-wrap: anywhere; }
-.legal-content .card { max-width: 800px; margin-inline: auto; }
+.legal-content {
+  padding-top: calc(var(--header-height) + var(--space-8));
+  padding-bottom: var(--space-8);
+}
+/* Document titles (hero, section, legal, error) share one visual level so the
+   hierarchy is consistent across document types; see --text-page-title. */
+.page-title,
+.legal-content h1,
+.error-card h1 {
+  font-size: var(--text-page-title);
+  overflow-wrap: break-word;
+}
+.legal-content h1 {
+  hyphens: auto;
+}
+.legal-content .card {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+/* Error shell shares the site's card, button and typography tokens. */
+.error-page {
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-6);
+}
+.error-card {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.error-card h1 {
+  color: var(--color-primary);
+}
+.error-subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+}
+.error-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.error-label {
+  font-size: var(--text-xs);
+  margin: var(--space-6) 0 0;
+}
+
+/* Route fallback notice: keeps the requested page readable and offers a way back. */
+.route-notice {
+  max-width: var(--container-max);
+  margin: var(--space-6) auto 0;
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-inline-start: 3px solid var(--color-primary);
+  border-radius: var(--radius-md);
+}
+.route-notice p {
+  margin: 0;
+  font-size: var(--text-sm);
+  overflow-wrap: anywhere;
+}
+.route-notice .btn {
+  margin-inline-start: auto;
+  flex-shrink: 0;
+}
 
 /* --- Hero Section --- */
 .hero {
@@ -47,6 +117,10 @@
   font-size: var(--text-sm);
 }
 
+.hero h1 {
+  font-size: var(--text-page-title);
+}
+
 .hero-subtitle {
   font-size: var(--text-xl);
   color: var(--color-text-secondary);
@@ -71,9 +145,19 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-  40% { transform: translateX(-50%) translateY(-10px); }
-  60% { transform: translateX(-50%) translateY(-5px); }
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
 }
 
 /* --- Section Header --- */
@@ -81,8 +165,17 @@
   text-align: center;
   margin-bottom: var(--space-8);
 }
+.section-header h1,
 .section-header h2 {
   margin-bottom: var(--space-2);
+}
+
+/* Page titles follow --text-page-title; headings that sit inside a card stay at
+   the section size of the card scale (they were h3 before the outline fix). */
+.card-heading {
+  font-size: var(--text-2xl);
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 .section-header p {
   max-width: 600px;
@@ -108,11 +201,17 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 5%, transparent), color-mix(in srgb, var(--color-secondary) 5%, transparent));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-primary) 5%, transparent),
+    color-mix(in srgb, var(--color-secondary) 5%, transparent)
+  );
   opacity: 0;
   transition: opacity var(--transition-base);
 }
-.feature-card:hover::before { opacity: 1; }
+.feature-card:hover::before {
+  opacity: 1;
+}
 .feature-icon {
   width: 64px;
   height: 64px;
@@ -180,7 +279,17 @@
 .tarot-name {
   font-family: var(--font-display);
   font-size: var(--text-base);
+  hyphens: auto;
+  overflow-wrap: break-word;
   margin: 0;
+}
+@media (max-width: 480px) {
+  .tarot-name {
+    font-size: var(--text-sm);
+  }
+  .tarot-overlay {
+    padding: var(--space-3);
+  }
 }
 .tarot-arcana {
   font-size: var(--text-xs);
@@ -196,8 +305,12 @@
   margin: 0 auto;
   animation: slideUp var(--transition-slow) ease;
 }
-.drawn-card:nth-child(2) { animation-delay: 100ms; }
-.drawn-card:nth-child(3) { animation-delay: 200ms; }
+.drawn-card:nth-child(2) {
+  animation-delay: 100ms;
+}
+.drawn-card:nth-child(3) {
+  animation-delay: 200ms;
+}
 
 /* --- Crystal Cards --- */
 .crystal-card {
@@ -238,7 +351,45 @@
   margin: 0;
 }
 
-.crystal-content .favorite-btn { flex-shrink: 0; }
+.crystal-content .favorite-btn {
+  flex-shrink: 0;
+}
+
+/* Detail columns respond to the dialog's available width, not the viewport. */
+#crystalModalBody {
+  container-type: inline-size;
+}
+.crystal-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+.crystal-detail-layout > * {
+  min-width: 0;
+}
+.crystal-detail-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-border-glow), var(--color-border));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crystal-detail-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: cover;
+  border-radius: inherit;
+}
+@container (min-width: 36rem) {
+  .crystal-detail-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
 
 /* List View */
 .crystal-list .crystal-card {
@@ -276,8 +427,10 @@
 .moon-svg circle {
   transition: stroke-dashoffset var(--transition-slow);
 }
-.moon-info { text-align: center; }
-.moon-info h3 {
+.moon-info {
+  text-align: center;
+}
+.moon-info h2 {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   margin-bottom: var(--space-2);
@@ -406,8 +559,12 @@
   animation: slideUp var(--transition-slow) ease;
   position: relative;
 }
-.cast-rune:nth-child(2) { animation-delay: 150ms; }
-.cast-rune:nth-child(3) { animation-delay: 300ms; }
+.cast-rune:nth-child(2) {
+  animation-delay: 150ms;
+}
+.cast-rune:nth-child(3) {
+  animation-delay: 300ms;
+}
 .cast-rune .position-label {
   position: absolute;
   top: -12px;
@@ -421,8 +578,14 @@
   border-radius: var(--radius-full);
   white-space: nowrap;
 }
-.cast-rune .rune-symbol { font-size: 4rem; margin-bottom: var(--space-3); }
-.cast-rune .rune-name { font-size: var(--text-lg); margin: 0; }
+.cast-rune .rune-symbol {
+  font-size: 4rem;
+  margin-bottom: var(--space-3);
+}
+.cast-rune .rune-name {
+  font-size: var(--text-lg);
+  margin: 0;
+}
 .cast-rune .rune-position-meaning {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
@@ -445,7 +608,9 @@
 .interpretation-section {
   margin-bottom: var(--space-4);
 }
-.interpretation-section:last-child { margin-bottom: 0; }
+.interpretation-section:last-child {
+  margin-bottom: 0;
+}
 .interpretation-section h5 {
   font-size: var(--text-sm);
   font-weight: var(--font-weight-semibold);
@@ -509,11 +674,27 @@
 }
 
 .article-placeholder {
-  display: flex; align-items: center; justify-content: center;
-  font-size: var(--text-4xl); color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-4xl);
+  color: var(--color-primary);
 }
 
 /* --- Modals Content --- */
+.rune-modal-interpretations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  text-align: left;
+  margin-top: var(--space-4);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 640px) {
+  .rune-modal-interpretations {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .modal-card-detail {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -540,7 +721,9 @@
   gap: var(--space-2);
   margin-bottom: var(--space-4);
 }
-.modal-card-keywords .badge { font-size: 0.65rem; }
+.modal-card-keywords .badge {
+  font-size: 0.65rem;
+}
 .modal-card-meanings {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -576,107 +759,349 @@
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .hero-content { padding: var(--space-6) var(--space-4); }
-  .hero-subtitle { font-size: var(--text-lg); }
-  .hero-actions { flex-direction: column; align-items: center; }
-  .hero-actions .btn { width: 100%; max-width: 280px; }
+  .hero-content {
+    padding: var(--space-6) var(--space-4);
+  }
+  .hero-subtitle {
+    font-size: var(--text-lg);
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 280px;
+  }
 
-  .modal-card-detail { grid-template-columns: 1fr; }
-  .modal-card-meanings { grid-template-columns: 1fr; }
+  .modal-card-detail {
+    grid-template-columns: 1fr;
+  }
+  .modal-card-meanings {
+    grid-template-columns: 1fr;
+  }
 
-  .moon-calendar { grid-template-columns: repeat(7, 1fr); }
-  .moon-svg-container { width: 120px; height: 120px; }
+  .moon-calendar {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .moon-svg-container {
+    width: 120px;
+    height: 120px;
+  }
 
-  .cast-rune .rune-symbol { font-size: 3rem; }
+  .cast-rune .rune-symbol {
+    font-size: 3rem;
+  }
 
-  .section-header h2 { font-size: var(--text-2xl); }
+  .section-header h2 {
+    font-size: var(--text-2xl);
+  }
 }
 
 /* Breakpoint 640-1024: tablet adjustments */
 @media (min-width: 769px) and (max-width: 1023px) {
-  .header-inner { padding: 0 var(--space-4); }
-  .nav { position: static; display: flex; }
-  .nav-toggle { display: none; }
-  .nav-list { display: flex; gap: var(--space-3); }
-  .hero-text { max-width: 640px; }
+  .header-inner {
+    padding: 0 var(--space-4);
+  }
+  .nav {
+    position: static;
+    display: flex;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+    gap: var(--space-3);
+  }
+  .hero-text {
+    max-width: 640px;
+  }
 }
 
 /* Breakpoint >1024: desktop */
 @media (min-width: 1024px) {
-  .header-inner { padding: 0 var(--space-6); }
-  .nav { position: static; display: flex; }
-  .nav-toggle { display: none; }
-  .nav-list { display: flex; gap: var(--space-5); }
+  .header-inner {
+    padding: 0 var(--space-6);
+  }
+  .nav {
+    position: static;
+    display: flex;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+    gap: var(--space-5);
+  }
 }
 
 @media (max-width: 480px) {
-  .tarot-controls { flex-direction: column; }
-  .tarot-controls .flex-1 { display: none; }
-  #arcanaFilter { width: 100%; }
+  .tarot-controls {
+    flex-direction: column;
+  }
+  .tarot-controls .flex-1 {
+    display: none;
+  }
+  #arcanaFilter {
+    width: 100%;
+  }
 
-  .crystal-list .crystal-card { flex-direction: column; }
-  .crystal-list .crystal-image { width: 100%; height: 200px; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+  .crystal-list .crystal-card {
+    flex-direction: column;
+  }
+  .crystal-list .crystal-image {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
 
-  .rune-card { padding: var(--space-3); }
-  .rune-symbol { font-size: 2.5rem; }
+  .rune-card {
+    padding: var(--space-3);
+  }
+  .rune-symbol {
+    font-size: 2.5rem;
+  }
+}
+
+/* Safe article subset: keep headings and list markers semantic and readable. */
+.article-prose {
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+}
+.article-prose h3,
+.article-prose h4 {
+  margin-block: var(--space-5) var(--space-2);
+  color: var(--color-primary);
+}
+.article-prose h3 {
+  font-size: var(--text-xl);
+}
+.article-prose h4 {
+  font-size: var(--text-lg);
+}
+.article-prose ul,
+.article-prose ol {
+  margin-block: var(--space-3);
+  padding-inline-start: var(--space-6);
+}
+.article-prose ul {
+  list-style: disc;
+}
+.article-prose ol {
+  list-style: decimal;
+}
+.article-prose li + li {
+  margin-top: var(--space-2);
 }
 
 /* --- Loading States --- */
 .loading-skeleton {
-  background: linear-gradient(90deg, var(--color-bg-card) 25%, var(--color-bg-card-hover) 50%, var(--color-bg-card) 75%);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-card) 25%,
+    var(--color-bg-card-hover) 50%,
+    var(--color-bg-card) 75%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: var(--radius-md);
 }
-@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
 
-.skeleton-card { aspect-ratio: 2/3; border-radius: var(--radius-lg); }
-.skeleton-text { height: 1rem; border-radius: var(--radius-sm); margin: var(--space-2) 0; }
-.skeleton-text.short { width: 60%; }
-.skeleton-text.medium { width: 80%; }
-@keyframes fadeUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
-.grid-auto { display:grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr)); gap: var(--space-3); }
-@media (min-width: 640px) { .grid-auto { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); } }
-@media (min-width: 1024px) { .grid-auto { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); } }
-.modal-backdrop { transition: opacity 0.25s ease; }
-.modal-backdrop.open { opacity: 1; }
-.tarot-card button, .tarot-card { text-align: left; }
+.skeleton-card {
+  aspect-ratio: 2/3;
+  border-radius: var(--radius-lg);
+}
+.skeleton-text {
+  height: 1rem;
+  border-radius: var(--radius-sm);
+  margin: var(--space-2) 0;
+}
+.skeleton-text.short {
+  width: 60%;
+}
+.skeleton-text.medium {
+  width: 80%;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Content cards need a readable text measure; compact symbol galleries do not. */
+.grid-auto {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+#tarotGrid,
+#runeGrid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
+  gap: var(--space-3);
+}
+@media (min-width: 640px) {
+  #tarotGrid,
+  #runeGrid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  #tarotGrid,
+  #runeGrid {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  }
+}
+.grid > *,
+.crystal-content,
+.article-content {
+  min-width: 0;
+}
+.feature-card,
+.tarot-overlay,
+.crystal-content,
+.article-content {
+  overflow-wrap: anywhere;
+}
+/* One content inset, not card padding plus a second content inset. */
+.crystal-card,
+.article-card {
+  padding: 0;
+}
+.crystal-content,
+.article-content {
+  padding: var(--space-6);
+}
+.crystal-details-btn {
+  white-space: normal;
+}
+.modal-backdrop {
+  transition: opacity 0.25s ease;
+}
+.modal-backdrop.open {
+  opacity: 1;
+}
+.tarot-card button,
+.tarot-card {
+  text-align: left;
+}
 /* Component variants: all cards inherit base tokens; selected chips are visibly pressed. */
-.feature-card { cursor: pointer; }
-.btn[aria-pressed="true"] { border: 2px solid var(--color-secondary); }
-.grid-2[style*="grid-template-columns"] { min-width: 0; }
+.feature-card {
+  cursor: pointer;
+}
+.btn[aria-pressed='true'] {
+  border: 2px solid var(--color-secondary);
+}
+.grid-2[style*='grid-template-columns'] {
+  min-width: 0;
+}
 @media (max-width: 768px) {
-  #moon .grid-2 { grid-template-columns: minmax(0, 1fr) !important; }
-  .container { padding-inline: var(--space-4); }
-  .hero h1 { font-size: clamp(var(--text-2xl), 9vw, var(--text-4xl)); }
-  .moon-calendar-day { min-width: 0; padding: var(--space-1); }
-  .moon-calendar-day .day-phase { width: auto; height: auto; }
-  .tarot-controls .btn, .runes-controls .btn { white-space: normal; }
+  #moon .grid-2 {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .container {
+    padding-inline: var(--space-4);
+  }
+  .moon-calendar-day {
+    min-width: 0;
+    padding: var(--space-1);
+  }
+  .moon-calendar-day .day-phase {
+    width: auto;
+    height: auto;
+  }
+  .tarot-controls .btn,
+  .runes-controls .btn {
+    white-space: normal;
+  }
 }
 @media (max-width: 480px) {
-  .moon-calendar { gap: 0; }
-  .moon-calendar-day { font-size: var(--text-xs); }
-  #crystals select, #crystals input, #blog select, #blog input { width: 100% !important; min-width: 0 !important; }
+  .moon-calendar {
+    gap: 0;
+  }
+  .moon-calendar-day {
+    font-size: var(--text-xs);
+  }
+  #crystals select,
+  #crystals input,
+  #blog select,
+  #blog input {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
 }
 @media print {
-  .hero { display: block; }
-  .hero-content { display: block; text-align: left; }
-  .tarot-overlay, .tarot-image, .article-image, .crystal-image { background: #fff !important; color: #000 !important; }
-  #crystalFilterContainer, #activeFilterBadges, .tarot-controls,
-  .runes-controls, #crystals .section-header > .flex, #blog .section-header + .flex {
+  .hero {
+    display: block;
+  }
+  .hero-content {
+    display: block;
+    text-align: left;
+  }
+  .tarot-overlay,
+  .tarot-image,
+  .article-image,
+  .crystal-image {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  #crystalFilterContainer,
+  #activeFilterBadges,
+  .tarot-controls,
+  .runes-controls,
+  #crystals .section-header > .flex,
+  #blog .section-header + .flex {
     display: none !important;
   }
-  #crystalGrid, #tarotGrid, #runeGrid, #articleGrid,
-  #moonRituals, #moon .grid-2 { display: block !important; }
-  .crystal-image, .article-image { display: none !important; }
-  .card, .crystal-card, .rune-card, .tarot-card {
-    display: block; height: auto; aspect-ratio: auto;
-    margin-bottom: var(--space-3); padding: var(--space-3);
-    break-inside: avoid; overflow: visible;
+  #crystalGrid,
+  #tarotGrid,
+  #runeGrid,
+  #articleGrid,
+  #moonRituals,
+  #moon .grid-2 {
+    display: block !important;
   }
-  .crystal-content, .article-content { padding: 0; }
-  .crystal-desc, .article-excerpt, .feature-desc { color: #000 !important; }
-  .moon-calendar { break-inside: avoid; }
-  .loading-skeleton { animation: none; }
+  .crystal-image,
+  .article-image {
+    display: none !important;
+  }
+  .card,
+  .crystal-card,
+  .rune-card,
+  .tarot-card {
+    display: block;
+    height: auto;
+    aspect-ratio: auto;
+    margin-bottom: var(--space-3);
+    padding: var(--space-3);
+    break-inside: avoid;
+    overflow: visible;
+  }
+  .crystal-content,
+  .article-content {
+    padding: 0;
+  }
+  .crystal-desc,
+  .article-excerpt,
+  .feature-desc {
+    color: #000 !important;
+  }
+  .moon-calendar {
+    break-inside: avoid;
+  }
+  .loading-skeleton {
+    animation: none;
+  }
 }
-

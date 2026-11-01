@@ -1,4 +1,4 @@
-name: CI — Commit and Push Validation
+name: CI — Esoterik-Welt Commit and Push Validation
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   lint:
-    name: Lint (ESLint / Prettier)
+    name: Lint (ESLint / Prettier for .js / .cjs / .html)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -23,11 +23,11 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci || npm install
-      - name: Run ESLint
-        run: npx eslint . --ext .ts,.tsx --max-warnings 0 || true
-      - name: Run Prettier check
-        run: npx prettier --check "**/*.{ts,tsx,js,jsx}" || exit 1
+        run: npm ci
+      - name: Run ESLint (pinned eslint 9.39.1 via eslint.config.cjs)
+        run: npm run lint
+      - name: Run Prettier check (pinned prettier 3.6.2 via .prettierrc.json)
+        run: npm run format:check
       - name: Post status — ci/lint
         if: always()
         uses: actions/github-script@v7
@@ -43,41 +43,9 @@ jobs:
               description: '${{ job.status == 'success' && 'Lint passed' || 'Lint failed' }}',
             });
 
-  typecheck:
-    name: Type Check (tsc --noEmit)
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm ci || npm install
-      - name: Type check
-        run: npx tsc --noEmit
-      - name: Post status — ci/typecheck
-        if: always()
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.repos.createCommitStatus({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              sha: context.sha,
-              state: '${{ job.status == 'success' && 'success' || 'failure' }}',
-              context: 'ci/typecheck',
-              description: '${{ job.status == 'success' && 'Type check passed' || 'Type check failed' }}',
-            });
-
   unit-test:
-    name: Unit Tests (Vitest + Coverage)
+    name: Unit Tests (Jest + node:test pages regression + offline file)
     runs-on: ubuntu-latest
-    needs: [lint, typecheck]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -87,16 +55,15 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci || npm install
-      - name: Run Vitest with coverage
-        run: npx vitest run --coverage
-      - name: Upload coverage artifact
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: coverage-report
-          path: coverage/
-          retention-days: 7
+        run: npm ci
+      - name: Install Chromium for the offline file check
+        run: npx playwright install --with-deps chromium
+      - name: Run Jest tests (unit/API only, no browser specs)
+        run: npm test
+      - name: Run pages regression (node:test)
+        run: npm run test:pages
+      - name: Run offline file entry (node:test + Chromium, file:// like double click)
+        run: npm run test:offline
       - name: Post status — ci/unit-test
         if: always()
         uses: actions/github-script@v7
@@ -113,9 +80,9 @@ jobs:
             });
 
   build:
-    name: Production Build
+    name: Static Build (build-pages.cjs)
     runs-on: ubuntu-latest
-    needs: [lint, typecheck, unit-test]
+    needs: [unit-test]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -125,9 +92,13 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci || npm install
-      - name: Production build
-        run: npm run build -- --mode production
+        run: npm ci
+      - name: Install Chromium for the artifact verification
+        run: npx playwright install --with-deps chromium
+      - name: Static production build
+        run: node scripts/build-pages.cjs
+      - name: Verify built pages against a local server
+        run: npm run verify:build
       - name: Post status — ci/build
         if: always()
         uses: actions/github-script@v7
@@ -143,32 +114,44 @@ jobs:
               description: '${{ job.status == 'success' && 'Build passed' || 'Build failed' }}',
             });
 
-  notify:
-    name: Notify on Failure (Slack + Discord)
+  browser-e2e:
+    name: Browser E2E (Playwright specs against local Pages build)
     runs-on: ubuntu-latest
-    needs: [lint, typecheck, unit-test, build]
-    if: failure()
+    needs: [unit-test]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Send Slack notification (slackapi/slack-github-action)
-        uses: slackapi/slack-github-action@v1.26.0
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          payload: |
-            {
-              "text": ":x: CI workflow *failed* for <https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>",
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {"type": "mrkdwn", "text": "*CI Failure*\nRepo: `ingbms/hermes-adaptive-router`\nCommit: `<https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>`\nBranch: `${{ github.ref_name }}`\nRun: <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"}
-                }
-              ]
-            }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-      - name: Send Discord notification (discord-webhook via curl)
-        run: |
-          curl -X POST -H "Content-Type: application/json" \
-            -d '{"embeds":[{"title":"CI Workflow Failure","url":"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}","color":15158332,"fields":[{"name":"Repo","value":"${{ github.repository }}","inline":true},{"name":"Branch","value":"${{ github.ref }}","inline":true},{"name":"Commit","value":"<https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>","inline":false}]}]}' \
-            "${{ secrets.DISCORD_WEBHOOK_URL }}" || echo "Discord webhook not configured (DISCORD_WEBHOOK_URL); skipping."
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Chromium (pinned playwright 1.64.1)
+        run: npx playwright install --with-deps chromium
+      - name: Run Playwright specs (build + local Pages server)
+        run: npm run test:e2e
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            test-results/playwright-report.json
+            test-results/playwright/
+          retention-days: 7
+      - name: Post status — ci/browser-e2e
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: '${{ job.status == 'success' && 'success' || 'failure' }}',
+              context: 'ci/browser-e2e',
+              description: '${{ job.status == 'success' && 'Browser E2E passed' || 'Browser E2E failed' }}',
+            });

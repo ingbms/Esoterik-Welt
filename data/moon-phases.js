@@ -3,14 +3,14 @@ const SYNODIC = 29.53059;
 const REF_NEWMOON = Date.UTC(2000, 0, 6, 18, 14);
 
 const PHASE_NAMES = [
-  {key:"neumond", label:"Neumond", ritualCategory:"Neumond"},
-  {key:"zunehmend", label:"Zunehmender Mond", ritualCategory:"Zunehmend"},
-  {key:"erstes_viertel", label:"Erstes Viertel", ritualCategory:"Zunehmend"},
-  {key:"zunehmend_gibb", label:"Zunehmender Mond (Gibbous)", ritualCategory:"Zunehmend"},
-  {key:"vollmond", label:"Vollmond", ritualCategory:"Vollmond"},
-  {key:"abnehmend_gibb", label:"Abnehmender Mond (Gibbous)", ritualCategory:"Abnehmend"},
-  {key:"letztes_viertel", label:"Letztes Viertel", ritualCategory:"Abnehmend"},
-  {key:"abnehmend", label:"Abnehmender Mond", ritualCategory:"Abnehmend"},
+  { key: 'neumond', label: 'Neumond', ritualCategory: 'Neumond' },
+  { key: 'zunehmend', label: 'Zunehmender Mond', ritualCategory: 'Zunehmend' },
+  { key: 'erstes_viertel', label: 'Erstes Viertel', ritualCategory: 'Zunehmend' },
+  { key: 'zunehmend_gibb', label: 'Zunehmender Mond (Gibbous)', ritualCategory: 'Zunehmend' },
+  { key: 'vollmond', label: 'Vollmond', ritualCategory: 'Vollmond' },
+  { key: 'abnehmend_gibb', label: 'Abnehmender Mond (Gibbous)', ritualCategory: 'Abnehmend' },
+  { key: 'letztes_viertel', label: 'Letztes Viertel', ritualCategory: 'Abnehmend' },
+  { key: 'abnehmend', label: 'Abnehmender Mond', ritualCategory: 'Abnehmend' },
 ];
 
 function daysSinceRef(date) {
@@ -38,13 +38,15 @@ export function getPhaseForDate(date) {
     phase: info.key,
     label: info.label,
     pct: Math.round(pct * 100),
-    date: d.toISOString().split("T")[0],
+    date: d.toISOString().split('T')[0],
     illumination,
     category: info.ritualCategory,
   };
 }
 
-export function getCurrentPhase() { return getPhaseForDate(new Date()); }
+export function getCurrentPhase() {
+  return getPhaseForDate(new Date());
+}
 
 export function getMonthCalendar(year, month) {
   const first = new Date(Date.UTC(year, month - 1, 1));
@@ -54,7 +56,7 @@ export function getMonthCalendar(year, month) {
   for (let p = 0; p < startDay; p++) calendar.push(null);
   for (let d = 1; d <= daysInMonth; d++) {
     const dt = new Date(Date.UTC(year, month - 1, d));
-    calendar.push({day: d, ...getPhaseForDate(dt)});
+    calendar.push({ day: d, ...getPhaseForDate(dt) });
   }
   while (calendar.length < 42) calendar.push(null);
   return calendar;
@@ -69,11 +71,13 @@ export function getNextEvent(fromDate = new Date()) {
   const nextNeumond = new Date(d.getTime() + toNeumond * 86400000);
   const nextVollmond = new Date(d.getTime() + toVollmond * 86400000);
   if (toNeumond <= toVollmond) {
-    return {type: 'neumond', date: nextNeumond, days: Math.round(toNeumond)};
+    return { type: 'neumond', date: nextNeumond, days: Math.round(toNeumond) };
   }
-  return {type: 'vollmond', date: nextVollmond, days: Math.round(toVollmond)};
+  return { type: 'vollmond', date: nextVollmond, days: Math.round(toVollmond) };
 }
 
-export function getDaysUntil(fromDate = new Date()) { return getNextEvent(fromDate).days; }
+export function getDaysUntil(fromDate = new Date()) {
+  return getNextEvent(fromDate).days;
+}
 
 export { PHASE_NAMES, SYNODIC };

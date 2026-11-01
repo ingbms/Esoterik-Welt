@@ -6,7 +6,18 @@ const assert = require('node:assert/strict');
 const base = process.argv[2] || 'https://ingbms.github.io/Esoterik-Welt/';
 const output = path.resolve(process.argv[3] || 'evidence/t_9ff78898/live');
 const baseline = process.argv.includes('--baseline');
-const routes = ['home', 'tarot', 'crystals', 'moon', 'runes', 'blog', 'impressum.html', 'datenschutz.html', 'haftung.html', '404.html'];
+const routes = [
+  'home',
+  'tarot',
+  'crystals',
+  'moon',
+  'runes',
+  'blog',
+  'impressum.html',
+  'datenschutz.html',
+  'haftung.html',
+  '404.html',
+];
 
 (async () => {
   fs.mkdirSync(output, { recursive: true });
@@ -20,10 +31,22 @@ const routes = ['home', 'tarot', 'crystals', 'moon', 'runes', 'blog', 'impressum
       await network.send('Network.enable');
       await network.send('Network.setCacheDisabled', { cacheDisabled: true });
       let events = [];
-      page.on('console', msg => { if (['error', 'warning'].includes(msg.type())) events.push({ type: msg.type(), text: msg.text() }); });
-      page.on('pageerror', error => events.push({ type: 'pageerror', text: error.message }));
-      page.on('requestfailed', req => events.push({ type: 'requestfailed', url: req.url(), text: req.failure()?.errorText }));
-      page.on('response', response => events.push({ type: 'response', url: response.url(), status: response.status(), mime: response.headers()['content-type'], csp: response.headers()['content-security-policy'] || null }));
+      page.on('console', (msg) => {
+        if (['error', 'warning'].includes(msg.type())) events.push({ type: msg.type(), text: msg.text() });
+      });
+      page.on('pageerror', (error) => events.push({ type: 'pageerror', text: error.message }));
+      page.on('requestfailed', (req) =>
+        events.push({ type: 'requestfailed', url: req.url(), text: req.failure()?.errorText })
+      );
+      page.on('response', (response) =>
+        events.push({
+          type: 'response',
+          url: response.url(),
+          status: response.status(),
+          mime: response.headers()['content-type'],
+          csp: response.headers()['content-security-policy'] || null,
+        })
+      );
       for (const route of routes) {
         await page.goto('about:blank');
         events = [];
@@ -32,47 +55,81 @@ const routes = ['home', 'tarot', 'crystals', 'moon', 'runes', 'blog', 'impressum
         await page.evaluate(() => document.fonts.ready);
         await page.waitForTimeout(500);
         const metrics = await page.evaluate(() => ({
-          title: document.title, url: location.href, base: document.baseURI,
+          title: document.title,
+          url: location.href,
+          base: document.baseURI,
           background: getComputedStyle(document.body).backgroundColor,
           backgroundImage: getComputedStyle(document.body).backgroundImage,
           font: getComputedStyle(document.body).fontFamily,
-          headingFont: document.querySelector('h1,h2') ? getComputedStyle(document.querySelector('h1,h2')).fontFamily : null,
-          stylesheets: [...document.styleSheets].map(sheet => ({ href: sheet.href, rules: (() => { try { return sheet.cssRules.length; } catch { return null; } })() })),
+          headingFont: document.querySelector('h1,h2')
+            ? getComputedStyle(document.querySelector('h1,h2')).fontFamily
+            : null,
+          stylesheets: [...document.styleSheets].map((sheet) => ({
+            href: sheet.href,
+            rules: (() => {
+              try {
+                return sheet.cssRules.length;
+              } catch {
+                return null;
+              }
+            })(),
+          })),
           activePage: document.querySelector('.page.active')?.id,
           featureCount: document.querySelector('#featureGrid')?.children.length,
-          renderedCounts: Object.fromEntries(['tarotGrid', 'crystalGrid', 'runeGrid', 'articleGrid', 'moonCalendar', 'moonRituals'].map(id => [id, document.getElementById(id)?.children.length || 0])),
+          renderedCounts: Object.fromEntries(
+            ['tarotGrid', 'crystalGrid', 'runeGrid', 'articleGrid', 'moonCalendar', 'moonRituals'].map((id) => [
+              id,
+              document.getElementById(id)?.children.length || 0,
+            ])
+          ),
           navDisplay: document.querySelector('.nav') ? getComputedStyle(document.querySelector('.nav')).display : null,
           overflow: document.documentElement.scrollWidth > innerWidth,
-          links: [...document.querySelectorAll('a[href]')].map(a => a.href)
+          links: [...document.querySelectorAll('a[href]')].map((a) => a.href),
         }));
         const failures = [];
         try {
           assert.equal(response ? response.status() : 200, 200, 'document status');
-          assert.ok(metrics.background !== 'rgba(0, 0, 0, 0)' || metrics.backgroundImage !== 'none', 'missing page background');
+          assert.ok(
+            metrics.background !== 'rgba(0, 0, 0, 0)' || metrics.backgroundImage !== 'none',
+            'missing page background'
+          );
           assert.notEqual(metrics.background, 'rgb(255, 255, 255)', 'white unstyled background');
           if (route !== '404.html') {
             assert.equal(metrics.background, 'rgb(10, 5, 18)', 'design-system background not applied');
-            assert.ok(metrics.stylesheets.some(s => s.href?.endsWith('/css/design-system.css') && s.rules > 0), 'design-system stylesheet missing');
+            assert.ok(
+              metrics.stylesheets.some((s) => s.href?.endsWith('/css/design-system.css') && s.rules > 0),
+              'design-system stylesheet missing'
+            );
           }
           if (!route.endsWith('.html')) {
             assert.equal(metrics.activePage, route, 'navigation must reveal selected page');
             assert.equal(metrics.featureCount, 5, 'application initialization must populate five features');
-            for (const [id, count] of Object.entries(metrics.renderedCounts)) assert.ok(count > 0, `${id} must render its content`);
+            for (const [id, count] of Object.entries(metrics.renderedCounts))
+              assert.ok(count > 0, `${id} must render its content`);
           }
           for (const link of metrics.links) {
-            if (new URL(link).origin === new URL(base).origin) assert.ok(link.startsWith(base), 'navigation outside project base: ' + link);
+            if (new URL(link).origin === new URL(base).origin)
+              assert.ok(link.startsWith(base), 'navigation outside project base: ' + link);
           }
           assert.equal(metrics.overflow, false, 'horizontal overflow');
-        } catch (error) { failures.push(error.message); }
+        } catch (error) {
+          failures.push(error.message);
+        }
         for (const event of events) {
-          if (['error', 'pageerror', 'requestfailed'].includes(event.type) || event.status >= 400) failures.push(JSON.stringify(event));
+          if (['error', 'pageerror', 'requestfailed'].includes(event.type) || event.status >= 400)
+            failures.push(JSON.stringify(event));
           if (event.type === 'response' && /\/(css|js)\//.test(event.url)) {
             if (!event.url.startsWith(base.split('#')[0])) failures.push('asset outside base: ' + event.url);
-            if (/\.css(?:\?|$)/.test(event.url) && !event.mime?.includes('text/css')) failures.push('bad CSS MIME: ' + event.url);
-            if (/\.js(?:\?|$)/.test(event.url) && !/javascript/.test(event.mime || '')) failures.push('bad JS MIME: ' + event.url);
+            if (/\.css(?:\?|$)/.test(event.url) && !event.mime?.includes('text/css'))
+              failures.push('bad CSS MIME: ' + event.url);
+            if (/\.js(?:\?|$)/.test(event.url) && !/javascript/.test(event.mime || ''))
+              failures.push('bad JS MIME: ' + event.url);
           }
         }
-        await page.screenshot({ path: path.join(output, `${route.replace('.html', '')}-${width}.png`), fullPage: true });
+        await page.screenshot({
+          path: path.join(output, `${route.replace('.html', '')}-${width}.png`),
+          fullPage: true,
+        });
         results.push({ route, width, status: response?.status(), metrics, events: [...events], failures });
         console.log(`${failures.length ? 'FAIL' : 'PASS'} ${width} ${route}: ${failures.join('; ')}`);
       }
@@ -86,10 +143,16 @@ const routes = ['home', 'tarot', 'crystals', 'moon', 'runes', 'blog', 'impressum
       await context.close();
     }
   } finally {
-    fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify({ base, date: new Date().toISOString(), results }, null, 2));
+    fs.writeFileSync(
+      path.join(output, 'results.json'),
+      JSON.stringify({ base, date: new Date().toISOString(), results }, null, 2)
+    );
     await browser.close();
   }
-  const failed = results.filter(r => r.failures.length);
+  const failed = results.filter((r) => r.failures.length);
   console.log(`${results.length} pages/viewports checked; ${failed.length} failures`);
   if (failed.length && !baseline) process.exitCode = 1;
-})().catch(error => { console.error(error); process.exitCode = 1; });
+})().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

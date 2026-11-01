@@ -1,0 +1,19 @@
+# Dependencies and builds
+node_modules/
+dist/
+coverage/
+.lighthouseci/
+test-results/
+
+# Generated / evidence artifacts
+evidence/
+docs/
+public/
+Lokal*.html
+package-lock.json
+
+# Binaries / data blobs
+*.min.js
+*.png
+*.jpg
+*.svg
