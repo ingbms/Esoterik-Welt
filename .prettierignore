@@ -12,6 +12,11 @@ public/
 Lokal*.html
 package-lock.json
 
+# Legacy backup module: excluded from the production build by the `_` prefix
+# convention in scripts/build-pages.cjs, so it is not part of the shipped code
+# and keeps its historical bytes (evidence baselines hash it as protected file).
+js/modules/_tarot_old.js
+
 # Binaries / data blobs
 *.min.js
 *.png
