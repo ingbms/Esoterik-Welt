@@ -1,0 +1,1754 @@
+{
+  "base": "http://127.0.0.1:8138/Esoterik-Welt/",
+  "label": "Farbwelten",
+  "measured_at": "2026-11-02T22:05:26.043Z",
+  "withoutNinth": [
+    {
+      "viewport": 781,
+      "navVisible": true,
+      "contentWidth": 717,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        449,
+        38.78
+      ],
+      "gap": 16,
+      "used": 671.67,
+      "reserve": 45.33,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 800,
+      "navVisible": true,
+      "contentWidth": 736,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        449,
+        38.78
+      ],
+      "gap": 16,
+      "used": 671.67,
+      "reserve": 64.33,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 840,
+      "navVisible": true,
+      "contentWidth": 776,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        449,
+        38.78
+      ],
+      "gap": 16,
+      "used": 671.67,
+      "reserve": 104.33,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 900,
+      "navVisible": true,
+      "contentWidth": 836,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        449,
+        38.78
+      ],
+      "gap": 16,
+      "used": 671.67,
+      "reserve": 164.33,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 901,
+      "navVisible": true,
+      "contentWidth": 837,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        38.78
+      ],
+      "gap": 16,
+      "used": 721.16,
+      "reserve": 115.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 920,
+      "navVisible": true,
+      "contentWidth": 856,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        38.78
+      ],
+      "gap": 16,
+      "used": 721.16,
+      "reserve": 134.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 960,
+      "navVisible": true,
+      "contentWidth": 896,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        38.78
+      ],
+      "gap": 16,
+      "used": 721.16,
+      "reserve": 174.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1024,
+      "navVisible": true,
+      "contentWidth": 960,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        38.78
+      ],
+      "gap": 16,
+      "used": 721.16,
+      "reserve": 238.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1120,
+      "navVisible": true,
+      "contentWidth": 992,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        38.78
+      ],
+      "gap": 16,
+      "used": 721.16,
+      "reserve": 270.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1200,
+      "navVisible": true,
+      "contentWidth": 1072,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        615,
+        38.78
+      ],
+      "gap": 32,
+      "used": 891.16,
+      "reserve": 180.84,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1440,
+      "navVisible": true,
+      "contentWidth": 1312,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        615,
+        38.78
+      ],
+      "gap": 32,
+      "used": 891.16,
+      "reserve": 420.84,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 8,
+      "docOverflowX": 0
+    }
+  ],
+  "withNinth": [
+    {
+      "viewport": 781,
+      "navVisible": true,
+      "contentWidth": 717,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        522,
+        38.78
+      ],
+      "gap": 16,
+      "used": 744.67,
+      "reserve": -27.67,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 8
+    },
+    {
+      "viewport": 800,
+      "navVisible": true,
+      "contentWidth": 736,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        522,
+        38.78
+      ],
+      "gap": 16,
+      "used": 744.67,
+      "reserve": -8.67,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 840,
+      "navVisible": true,
+      "contentWidth": 776,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        522,
+        38.78
+      ],
+      "gap": 16,
+      "used": 744.67,
+      "reserve": 31.33,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 900,
+      "navVisible": true,
+      "contentWidth": 836,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        522,
+        38.78
+      ],
+      "gap": 16,
+      "used": 744.67,
+      "reserve": 91.33,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 901,
+      "navVisible": true,
+      "contentWidth": 837,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        38.78
+      ],
+      "gap": 16,
+      "used": 798.16,
+      "reserve": 38.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 920,
+      "navVisible": true,
+      "contentWidth": 856,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        38.78
+      ],
+      "gap": 16,
+      "used": 798.16,
+      "reserve": 57.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 960,
+      "navVisible": true,
+      "contentWidth": 896,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        38.78
+      ],
+      "gap": 16,
+      "used": 798.16,
+      "reserve": 97.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1024,
+      "navVisible": true,
+      "contentWidth": 960,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        38.78
+      ],
+      "gap": 16,
+      "used": 798.16,
+      "reserve": 161.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1120,
+      "navVisible": true,
+      "contentWidth": 992,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        38.78
+      ],
+      "gap": 16,
+      "used": 798.16,
+      "reserve": 193.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1200,
+      "navVisible": true,
+      "contentWidth": 1072,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        715,
+        38.78
+      ],
+      "gap": 32,
+      "used": 991.16,
+      "reserve": 80.84,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1440,
+      "navVisible": true,
+      "contentWidth": 1312,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        715,
+        38.78
+      ],
+      "gap": 32,
+      "used": 991.16,
+      "reserve": 320.84,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    }
+  ],
+  "withNinthCompacted": [
+    {
+      "viewport": 781,
+      "navVisible": true,
+      "contentWidth": 717,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        489,
+        38.78
+      ],
+      "gap": 12,
+      "used": 691.92,
+      "reserve": 25.08,
+      "navLinkFontSize": "12px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 800,
+      "navVisible": true,
+      "contentWidth": 736,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        489,
+        38.78
+      ],
+      "gap": 12,
+      "used": 691.92,
+      "reserve": 44.08,
+      "navLinkFontSize": "12px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 840,
+      "navVisible": true,
+      "contentWidth": 776,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        489,
+        38.78
+      ],
+      "gap": 12,
+      "used": 691.92,
+      "reserve": 84.08,
+      "navLinkFontSize": "12px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 900,
+      "navVisible": true,
+      "contentWidth": 836,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        489,
+        38.78
+      ],
+      "gap": 12,
+      "used": 691.92,
+      "reserve": 144.08,
+      "navLinkFontSize": "12px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 901,
+      "navVisible": true,
+      "contentWidth": 837,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        489,
+        38.78
+      ],
+      "gap": 12,
+      "used": 691.92,
+      "reserve": 145.08,
+      "navLinkFontSize": "12px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 920,
+      "navVisible": true,
+      "contentWidth": 856,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        489,
+        38.78
+      ],
+      "gap": 12,
+      "used": 691.92,
+      "reserve": 164.08,
+      "navLinkFontSize": "12px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 960,
+      "navVisible": true,
+      "contentWidth": 896,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        489,
+        38.78
+      ],
+      "gap": 12,
+      "used": 691.92,
+      "reserve": 204.08,
+      "navLinkFontSize": "12px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1024,
+      "navVisible": true,
+      "contentWidth": 960,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        38.78
+      ],
+      "gap": 16,
+      "used": 798.16,
+      "reserve": 161.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1120,
+      "navVisible": true,
+      "contentWidth": 992,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        38.78
+      ],
+      "gap": 16,
+      "used": 798.16,
+      "reserve": 193.84,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1200,
+      "navVisible": true,
+      "contentWidth": 1072,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        715,
+        38.78
+      ],
+      "gap": 32,
+      "used": 991.16,
+      "reserve": 80.84,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1440,
+      "navVisible": true,
+      "contentWidth": 1312,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        715,
+        38.78
+      ],
+      "gap": 32,
+      "used": 991.16,
+      "reserve": 320.84,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 0",
+      "argSeen": null,
+      "counterWidth": 38.78,
+      "linkCount": 9,
+      "docOverflowX": 0
+    }
+  ],
+  "counter3": [
+    {
+      "viewport": 781,
+      "navVisible": true,
+      "contentWidth": 717,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        522,
+        52.31
+      ],
+      "gap": 16,
+      "used": 758.2,
+      "reserve": -41.2,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 21
+    },
+    {
+      "viewport": 800,
+      "navVisible": true,
+      "contentWidth": 736,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        522,
+        52.31
+      ],
+      "gap": 16,
+      "used": 758.2,
+      "reserve": -22.2,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 2
+    },
+    {
+      "viewport": 840,
+      "navVisible": true,
+      "contentWidth": 776,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        522,
+        52.31
+      ],
+      "gap": 16,
+      "used": 758.2,
+      "reserve": 17.8,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 900,
+      "navVisible": true,
+      "contentWidth": 836,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        522,
+        52.31
+      ],
+      "gap": 16,
+      "used": 758.2,
+      "reserve": 77.8,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 901,
+      "navVisible": true,
+      "contentWidth": 837,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 25.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 920,
+      "navVisible": true,
+      "contentWidth": 856,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 44.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 960,
+      "navVisible": true,
+      "contentWidth": 896,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 84.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1024,
+      "navVisible": true,
+      "contentWidth": 960,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 148.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1120,
+      "navVisible": true,
+      "contentWidth": 992,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 180.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1200,
+      "navVisible": true,
+      "contentWidth": 1072,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        715,
+        52.31
+      ],
+      "gap": 32,
+      "used": 1004.69,
+      "reserve": 67.31,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1440,
+      "navVisible": true,
+      "contentWidth": 1312,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        715,
+        52.31
+      ],
+      "gap": 32,
+      "used": 1004.69,
+      "reserve": 307.31,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    }
+  ],
+  "counter3Compacted": [
+    {
+      "viewport": 781,
+      "navVisible": true,
+      "contentWidth": 717,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        522,
+        52.31
+      ],
+      "gap": 12,
+      "used": 738.45,
+      "reserve": -21.45,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 800,
+      "navVisible": true,
+      "contentWidth": 736,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        522,
+        52.31
+      ],
+      "gap": 12,
+      "used": 738.45,
+      "reserve": -2.45,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 840,
+      "navVisible": true,
+      "contentWidth": 776,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        522,
+        52.31
+      ],
+      "gap": 12,
+      "used": 738.45,
+      "reserve": 37.55,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 900,
+      "navVisible": true,
+      "contentWidth": 836,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        140.14,
+        522,
+        52.31
+      ],
+      "gap": 12,
+      "used": 738.45,
+      "reserve": 97.55,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "22px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 901,
+      "navVisible": true,
+      "contentWidth": 837,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 25.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 920,
+      "navVisible": true,
+      "contentWidth": 856,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 44.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 960,
+      "navVisible": true,
+      "contentWidth": 896,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 84.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1024,
+      "navVisible": true,
+      "contentWidth": 960,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 148.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1120,
+      "navVisible": true,
+      "contentWidth": 992,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        554,
+        52.31
+      ],
+      "gap": 16,
+      "used": 811.69,
+      "reserve": 180.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1200,
+      "navVisible": true,
+      "contentWidth": 1072,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        715,
+        52.31
+      ],
+      "gap": 32,
+      "used": 1004.69,
+      "reserve": 67.31,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1440,
+      "navVisible": true,
+      "contentWidth": 1312,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        715,
+        52.31
+      ],
+      "gap": 32,
+      "used": 1004.69,
+      "reserve": 307.31,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 9,
+      "docOverflowX": 0
+    }
+  ],
+  "counterBaseline": [
+    {
+      "viewport": 781,
+      "navVisible": true,
+      "contentWidth": 717,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        449,
+        52.31
+      ],
+      "gap": 16,
+      "used": 685.2,
+      "reserve": 31.8,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 800,
+      "navVisible": true,
+      "contentWidth": 736,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        449,
+        52.31
+      ],
+      "gap": 16,
+      "used": 685.2,
+      "reserve": 50.8,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 840,
+      "navVisible": true,
+      "contentWidth": 776,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        449,
+        52.31
+      ],
+      "gap": 16,
+      "used": 685.2,
+      "reserve": 90.8,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 900,
+      "navVisible": true,
+      "contentWidth": 836,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        151.89,
+        449,
+        52.31
+      ],
+      "gap": 16,
+      "used": 685.2,
+      "reserve": 150.8,
+      "navLinkFontSize": "13px",
+      "navGap": "4px",
+      "logoFontSize": "24px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 901,
+      "navVisible": true,
+      "contentWidth": 837,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        52.31
+      ],
+      "gap": 16,
+      "used": 734.69,
+      "reserve": 102.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 920,
+      "navVisible": true,
+      "contentWidth": 856,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        52.31
+      ],
+      "gap": 16,
+      "used": 734.69,
+      "reserve": 121.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 960,
+      "navVisible": true,
+      "contentWidth": 896,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        52.31
+      ],
+      "gap": 16,
+      "used": 734.69,
+      "reserve": 161.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1024,
+      "navVisible": true,
+      "contentWidth": 960,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        52.31
+      ],
+      "gap": 16,
+      "used": 734.69,
+      "reserve": 225.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1120,
+      "navVisible": true,
+      "contentWidth": 992,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        477,
+        52.31
+      ],
+      "gap": 16,
+      "used": 734.69,
+      "reserve": 257.31,
+      "navLinkFontSize": "13px",
+      "navGap": "8px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1200,
+      "navVisible": true,
+      "contentWidth": 1072,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        615,
+        52.31
+      ],
+      "gap": 32,
+      "used": 904.69,
+      "reserve": 167.31,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    },
+    {
+      "viewport": 1440,
+      "navVisible": true,
+      "contentWidth": 1312,
+      "children": [
+        "logo",
+        "nav",
+        "badge badge-primary"
+      ],
+      "childWidths": [
+        173.38,
+        615,
+        52.31
+      ],
+      "gap": 32,
+      "used": 904.69,
+      "reserve": 407.31,
+      "navLinkFontSize": "14px",
+      "navGap": "20px",
+      "logoFontSize": "28px",
+      "counterText": "♥ 128",
+      "argSeen": null,
+      "counterWidth": 52.31,
+      "linkCount": 8,
+      "docOverflowX": 0
+    }
+  ],
+  "mobileMenu": {
+    "viewport": 390,
+    "linkCount": 9,
+    "rowHeights": [
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48
+    ],
+    "minRowHeight": 48,
+    "listHeight": 457,
+    "viewportHeight": 844,
+    "docOverflowX": 0,
+    "activeLabel": "Start"
+  },
+  "consoleErrors": []
+}

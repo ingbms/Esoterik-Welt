@@ -1,0 +1,56 @@
+# Build- und Testlauf — Farbwelten (t_2275e7ad)
+# 2026-11-03T00:39:37+01:00 · 18070c4 auf feature/farbwelten-modul
+
+## npm run build
+> node scripts/build-pages.cjs
+
+Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.
+Static production build ready: dist/Esoterik-Welt/ (canonical Pages sources; no public/ placeholder).
+
+## npm run lint
+> esoterik-welt@1.0.0 lint
+> eslint . --max-warnings 0
+
+
+## npm run format:check
+
+Checking formatting...
+All matched files use Prettier code style!
+
+## npm run test:farbwelten
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 168.4459
+
+## npm run test:pages
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 536.9164
+
+## npx playwright test tests/farbwelten.spec.js
+Running 14 tests using 1 worker
+
+  ✓   1 tests\farbwelten.spec.js:39:1 › Navigationsziel öffnet die Sektion mit Titel, H1 und Fokus (536ms)
+  ✓   2 tests\farbwelten.spec.js:56:3 › Farbseite Rot: A–H-Skelett, eine H1, Metadaten (499ms)
+  ✓   3 tests\farbwelten.spec.js:56:3 › Farbseite Orange: A–H-Skelett, eine H1, Metadaten (455ms)
+  ✓   4 tests\farbwelten.spec.js:56:3 › Farbseite Gelb: A–H-Skelett, eine H1, Metadaten (481ms)
+  ✓   5 tests\farbwelten.spec.js:56:3 › Farbseite Grün: A–H-Skelett, eine H1, Metadaten (565ms)
+  ✓   6 tests\farbwelten.spec.js:56:3 › Farbseite Blau: A–H-Skelett, eine H1, Metadaten (548ms)
+  ✓   7 tests\farbwelten.spec.js:56:3 › Farbseite Indigo: A–H-Skelett, eine H1, Metadaten (797ms)
+  ✓   8 tests\farbwelten.spec.js:56:3 › Farbseite Violett: A–H-Skelett, eine H1, Metadaten (702ms)
+  ✓   9 tests\farbwelten.spec.js:75:1 › Einstieg: Hauptaktion führt zum Farbregister (838ms)
+  ✓  10 tests\farbwelten.spec.js:83:1 › Chakren: sieben Knoten, Pfeiltasten wechseln Auswahl und Panel (630ms)
+  ✓  11 tests\farbwelten.spec.js:98:1 › Lichtfrequenzen: Slider rechnet 650/530/420 nm korrekt (585ms)
+  ✓  12 tests\farbwelten.spec.js:118:1 › Alias-Routen ersetzen die Adresse durch die kanonische Route (506ms)
+  ✓  13 tests\farbwelten.spec.js:127:1 › Kein Überlauf an den Breakpoints 320/390/781/900/901/1440 (1.3s)
+  ✓  14 tests\farbwelten.spec.js:149:1 › Sitemap bleibt bei den echten Dokumenten (keine Fragment-URLs) (48ms)
+
+  14 passed (13.4s)
