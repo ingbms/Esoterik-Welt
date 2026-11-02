@@ -5,8 +5,9 @@
 //   data/crystals.json                       Datenmodell der Seite
 //   docs/kristalle/QUELLEN-RECHTS-MANIFEST.md  "Pflicht-Namensnennung"
 //
-// Zusätzlich spiegelt das Skript `credit.alt` in `image_alt` (Alt-Texte werden
-// im Manifest gepflegt, nicht doppelt) und ergänzt `adaptation_license` für
+// Zusätzlich spiegelt das Skript `credit.alt` in `image_alt` und in die Zeile
+// "Bildbeschreibung (Alt-Text)" des Sammelnachweises (Alt-Texte werden im
+// Manifest gepflegt, nicht doppelt) und ergänzt `adaptation_license` für
 // ShareAlike-Bilder.
 //
 //   node scripts/sync-crystal-attribution.cjs           # schreiben
@@ -24,6 +25,7 @@ const DATA = path.join(ROOT, 'data', 'crystals.json');
 const LEDGER = path.join(ROOT, 'docs', 'kristalle', 'QUELLEN-RECHTS-MANIFEST.md');
 
 const EOL = '\r\n';
+const ALT_PREFIX = '- Bildbeschreibung (Alt-Text): ';
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -40,30 +42,58 @@ function serializeData(data) {
   return `{${EOL}  "crystals": [${EOL}${lines.join(',' + EOL)}${EOL}  ]${EOL}}${EOL}`;
 }
 
-/** Ersetzt in jeder crys-xx-Sektion die Zeile "Pflicht-Namensnennung". */
-function updateLedger(text, texts) {
-  const lines = text.split('\n');
+/** Ersetzt in jeder crys-xx-Sektion die Zeile "Pflicht-Namensnennung" und
+ *  führt nach den Prüfsummen die Zeile "Bildbeschreibung (Alt-Text)". */
+function updateLedger(text, texts, alts) {
+  const lines = text.replace(/\r\n/g, '\n').split('\n');
+  const out = [];
   let currentId = null;
   let replaced = 0;
   for (let i = 0; i < lines.length; i += 1) {
-    const sectionId = /^##\s+(crys-\d+)\b/.exec(lines[i]);
+    const line = lines[i];
+    const sectionId = /^##\s+(crys-\d+)\b/.exec(line);
     if (sectionId) {
       currentId = sectionId[1];
+      out.push(line);
       continue;
     }
-    if (currentId && lines[i].startsWith('- Pflicht-Namensnennung: ')) {
-      // Zeilenende der Datei erhalten (der Generator schreibt CRLF).
-      const eol = lines[i].endsWith('\r') ? '\r' : '';
-      const next = `- Pflicht-Namensnennung: ${texts[currentId]}${eol}`;
-      if (lines[i] !== next) {
-        lines[i] = next;
+    if (!currentId) {
+      out.push(line);
+      continue;
+    }
+    if (line === '') {
+      // Leerzeile beendet den Abschnitt nicht (folgt direkt auf die Überschrift).
+      out.push(line);
+      continue;
+    }
+    if (line.startsWith('- Pflicht-Namensnennung: ')) {
+      const next = `- Pflicht-Namensnennung: ${texts[currentId]}`;
+      if (line !== next) replaced += 1;
+      out.push(next);
+      continue;
+    }
+    if (line.startsWith(ALT_PREFIX)) {
+      const next = `${ALT_PREFIX}${alts[currentId]}`;
+      if (line !== next) replaced += 1;
+      out.push(next);
+      continue;
+    }
+    if (line.startsWith('- Prüfsummen: ')) {
+      out.push(line);
+      // Alt-Zeile nur ergänzen, wenn die Sektion noch keine hat (idempotent).
+      const boundary = lines.findIndex((later, index) => index > i && (later === '' || /^##\s+/.test(later)));
+      const stop = boundary === -1 ? lines.length : boundary;
+      const hasAlt = lines.slice(i + 1, stop).some((later) => later.startsWith(ALT_PREFIX));
+      if (!hasAlt) {
+        out.push(`${ALT_PREFIX}${alts[currentId]}`);
         replaced += 1;
       }
-      currentId = null;
+      continue;
     }
+    out.push(line);
   }
   // Einheitliche Zeilenenden: der Sammelnachweis ist durchgehend CRLF.
-  return { text: lines.join('\n').replace(/\r?\n/g, EOL), replaced };
+  return { text: out.join(EOL), replaced };
 }
 
 function main() {
@@ -75,10 +105,12 @@ function main() {
 
   const texts = {};
   const originalTexts = {};
+  const alts = {};
   const problems = [];
   for (const image of manifest.images) {
     texts[image.id] = buildAttributionText(image);
     originalTexts[image.id] = image.attribution_text_required;
+    alts[image.id] = image.credit.alt;
     const deviations = checkAttributionText(image, image.attribution_text_required);
     if (deviations.length) {
       problems.push(`${image.id}: ${deviations.join('; ')}`);
@@ -105,7 +137,7 @@ function main() {
     }
   }
 
-  const nextLedger = updateLedger(ledger, texts);
+  const nextLedger = updateLedger(ledger, texts, alts);
   const missingSections = manifest.images.filter((image) => !ledger.includes(`## ${image.id} `));
   if (missingSections.length) {
     problems.push(`Ledger ohne Sektion: ${missingSections.map((i) => i.id).join(', ')}`);

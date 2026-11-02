@@ -51,7 +51,7 @@ ALT = {
     'crys-12': 'Karneol — orange-roter Achat-Handstein vor dunklem Grund, vollständig im Bild, Bänderung und Bruchkante sichtbar',
     'crys-13': 'Tigerauge — polierter goldbrauner Ei-Stein vor dunklem Grund, vollständig im Bild, helles Chatoyance-Band sichtbar',
     'crys-14': 'Labradorit — polierte Platte vor dunklem Grund, vollständig im Bild, blau-goldener Labradoreszenz-Schimmer sichtbar',
-    'crys-15': 'Petrified Wood — angeschnittene Scheibe vor hellem Grund, vollständig im Bild, Jahresringe und Zellstruktur sichtbar',
+    'crys-15': 'Petrified Wood — angeschnittene Scheibe vor dunklem Grund, vollständig im Bild, Jahresringe und Zellstruktur sichtbar',
     'crys-16': 'Bernstein — polierter honiggelber baltischer Bernstein vor hellem Grund, vollständig im Bild, Oberflächenglanz sichtbar',
     'crys-17': 'Mondstein — angeschliffene Platte vor dunklem Grund, vollständig im Bild, blauer Schimmer und Vitrinenreflexe sichtbar',
     'crys-18': 'Celestit — hellblaue Kristallgruppe auf Matrix vor dunklem Grund, vollständig im Bild, tafelige Kristallformen sichtbar',
@@ -236,6 +236,7 @@ def main():
         md.append(f'- Pflicht-Namensnennung: {img["attribution_text_required"]}')
         md.append('- Dateien: ' + ', '.join(f'{k}px {b} B' for k, b in img['bytes'].items()))
         md.append('- Prüfsummen: ' + ', '.join(f'{k}px {h}' for k, h in img['sha256'].items()))
+        md.append(f'- Bildbeschreibung (Alt-Text): {cr["alt"]}')
         md.append('')
     open(ROOT + '/docs/kristalle/QUELLEN-RECHTS-MANIFEST.md', 'w', encoding='utf-8').write('\n'.join(md))
 

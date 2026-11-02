@@ -116,7 +116,20 @@ test('data/crystals.json und Sammelnachweis spiegeln das Manifest', () => {
       ledger.includes(`- Pflicht-Namensnennung: ${image.attribution_text_required}`),
       `${image.id}: Sammelnachweis weicht ab`
     );
+    assert.ok(
+      ledger.includes(`- Bildbeschreibung (Alt-Text): ${image.credit.alt}`),
+      `${image.id}: Alt-Text fehlt im Sammelnachweis`
+    );
   }
+});
+
+test('crys-15 nennt den schwarzen Fotogrund (P2.4)', () => {
+  // Das Motiv liegt auf schwarzem Grund; Messung im Bericht t_41cfd4d7:
+  // Randband-Median 0,058, oberer Randstreifen 0,039 (dunkel <= 0,12).
+  const image = images.find((entry) => entry.id === 'crys-15');
+  assert.ok(image, 'crys-15 fehlt im Manifest');
+  assert.match(image.credit.alt, /vor dunklem Grund/, 'crys-15: Alt-Text nennt den Grund nicht');
+  assert.ok(!/hellen Grund/.test(image.credit.alt), 'crys-15: Alt-Text nennt weiterhin hellen Grund');
 });
 
 test('Alt-Texte widersprechen der gemessenen Grundhelligkeit nicht (P2.2)', () => {

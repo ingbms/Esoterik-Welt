@@ -27,6 +27,15 @@ BG_LUM = 0.0591  # #0b1012
 DIFF = 0.035     # Toleranz gegen WebP-Kantenrauschen
 STRIP = 0.10     # Anteil der Plattenhoehe fuer den Randstreifen
 
+# Manuelle Anmerkungen: Faelle, in denen der Randstreifen der Platte nicht den
+# Fotogrund zeigt, weil das Motiv bis an den Plattenrand reicht.
+NOTES = {
+    'crys-15': 'Der obere und untere Randstreifen enthalten die helle Schnittkante der Holzscheibe; '
+               'der eigentliche Fotogrund ist schwarz (aeusseres Randband 0.058, oberer Streifen 0.039; '
+               'evidence/kristalle-rereview-t_41cfd4d7/alt-ground-check.json). Alt-Text daher '
+               '"vor dunklem Grund" (Restbefund P2.4, Karte t_b21b0882).',
+}
+
 
 def px_lum(r, g, b):
     return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255.0
@@ -103,6 +112,8 @@ def main():
             data = {'ground_class': 'ohne Fotogrund (Freisteller)'}
         data['mode'] = img['production']['mode']
         data['alt'] = img['credit']['alt']
+        if img['id'] in NOTES:
+            data['note'] = NOTES[img['id']]
         out['images'][img['id']] = data
     text = json.dumps(out, ensure_ascii=False, indent=1) + '\n'
     if len(sys.argv) > 1:

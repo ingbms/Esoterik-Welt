@@ -59,7 +59,7 @@
    "ground_lum": 0.3401,
    "ground_class": "hell",
    "mode": "pad",
-   "alt": "Feueropal — oranger Opal in dunkler Matrix vor dunklem Grund, vollständig im Bild, leuchtende Farbflächen sichtbar"
+   "alt": "Feueropal — oranger Opal in dunkler Matrix vor hellem Studiohintergrund, vollständig im Bild, leuchtende Farbflächen sichtbar"
   },
   "crys-08": {
    "plate_bbox": [
@@ -374,7 +374,8 @@
    "ground_lum": 0.2729,
    "ground_class": "mittel",
    "mode": "pad",
-   "alt": "Petrified Wood — angeschnittene Scheibe vor hellem Grund, vollständig im Bild, Jahresringe und Zellstruktur sichtbar"
+   "alt": "Petrified Wood — angeschnittene Scheibe vor dunklem Grund, vollständig im Bild, Jahresringe und Zellstruktur sichtbar",
+   "note": "Der obere und untere Randstreifen enthalten die helle Schnittkante der Holzscheibe; der eigentliche Fotogrund ist schwarz (aeusseres Randband 0.058, oberer Streifen 0.039; evidence/kristalle-rereview-t_41cfd4d7/alt-ground-check.json). Alt-Text daher \"vor dunklem Grund\" (Restbefund P2.4, Karte t_b21b0882)."
   },
   "crys-30": {
    "plate_bbox": [
