@@ -47,10 +47,12 @@ export class DialogController {
     (this.focusables()[0] || this.panel).focus({ preventScroll: true });
   }
 
-  open() {
+  open(triggerEl = null) {
     if (activeDialog && activeDialog !== this) activeDialog.close();
     if (activeDialog !== this) {
-      this.trigger = document.activeElement;
+      // Expliziter Ausloeser (Karte/Schaltflaeche) hat Vorrang vor activeElement:
+      // bei Mausklick auf die Kartenflaeche waere das body.
+      this.trigger = triggerEl || document.activeElement;
       this.previousOverflow = document.body.style.overflow;
       // Preserve existing inert states, including on siblings owned by other features.
       this.background = [...document.body.children]

@@ -37,3 +37,7 @@ playwright-report/
 # Misc
 *.tgz
 .cache/
+
+# Python-Hilfsskripte (Bildaufbereitung, Pruefungen)
+__pycache__/
+*.pyc

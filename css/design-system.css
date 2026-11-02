@@ -701,7 +701,8 @@ button.card,
 .card[role='button']:hover,
 .card[role='link']:hover,
 button.card:hover,
-.crystal-card-interactive:hover {
+.crystal-card-interactive:hover,
+.crystal-card-interactive:focus-within {
   border-color: var(--color-line-strong);
 }
 

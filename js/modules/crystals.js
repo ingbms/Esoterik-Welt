@@ -50,8 +50,9 @@ export class CrystalsModule {
       .split(',')
       .map((s) => s.trim())
       .filter(Boolean);
-    // image_placeholder describes an asset that has not been shipped.
+    // image describes a shipped asset; image_placeholder was the pre-integration marker.
     const img = c.image || null;
+    const credit = c.image_credit || null;
     return {
       id: c.id || 'crys-' + Math.random().toString(36).slice(2, 9),
       name,
@@ -63,6 +64,22 @@ export class CrystalsModule {
       effect: effects,
       description: c.description || '',
       image: img || this.emojiForName(name),
+      hasPhoto: Boolean(img && img.startsWith('assets/')),
+      imageStem: c.image_stem || '',
+      imageFile: c.image_file || '',
+      imageAlt: c.image_alt || '',
+      imageCredit: credit
+        ? {
+            author: credit.author || '',
+            sourceLabel: credit.source_label || 'Wikimedia Commons',
+            sourceUrl: credit.source_url || '',
+            license: credit.license || '',
+            licenseUrl: credit.license_url || '',
+            retrieved: credit.retrieved || '',
+            changes: credit.changes || '',
+            short: c.attribution_text_short || credit.short || '',
+          }
+        : null,
       rarity: c.rarity || '',
     };
   }
@@ -285,6 +302,42 @@ export class CrystalsModule {
     this.renderGrid();
   }
 
+  escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  // Vier Stufen wie im ausgelieferten Manifest (320/640/960/1280).
+  levelPaths(c) {
+    if (!c.imageStem || !c.imageFile) return [];
+    return [320, 640, 960, 1280].map((w) => ({ width: w, path: `${c.imageStem}/${w}/${c.imageFile}` }));
+  }
+
+  // Bildplatte der Karte: 1:1, srcset/sizes, Lazy Loading, fester Rahmen.
+  figureHtml(c) {
+    if (!c.hasPhoto) {
+      return `<div class="crystal-image"><span class="crystal-glyph" aria-hidden="true">${c.image}</span></div>`;
+    }
+    const levels = this.levelPaths(c);
+    const fallback = levels[1] ? levels[1].path : c.image;
+    const srcset = levels.map((l) => `${l.path} ${l.width}w`).join(', ');
+    const sizes =
+      '(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw';
+    const credit = c.imageCredit?.short
+      ? `<figcaption class="crystal-credit">${this.escapeHtml(c.imageCredit.short)}</figcaption>`
+      : '';
+    return `<figure class="crystal-figure">
+            <div class="crystal-image">
+              <img class="crystal-photo" data-src="${fallback}" data-srcset="${srcset}" sizes="${sizes}"
+                   width="640" height="640" loading="lazy" decoding="async" alt="">
+            </div>
+            ${credit}
+          </figure>`;
+  }
+
   renderGrid() {
     if (!this.gridEl) return;
     if (!this.filtered.length) {
@@ -296,25 +349,26 @@ export class CrystalsModule {
       .map((c) => {
         const fav = this.favIds.has(c.id) ? '♥' : '♡';
         const chord = c.chakra.map((ch) => `<span class="badge badge-chakra">${ch}</span>`).join('');
-        const imgPart = c.image
-          ? c.image.startsWith('assets/') || c.image.startsWith('http')
-            ? `<img data-src="${c.image}" alt="" loading="lazy" decoding="async" width="320" height="320" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">`
-            : `<div class="crystal-glyph">${c.image}</div>`
-          : '';
+        const figure = this.figureHtml(c);
+        const creditInline =
+          isList && c.imageCredit?.short
+            ? `<p class="crystal-credit-inline">${this.escapeHtml(c.imageCredit.short)}</p>`
+            : '';
         if (isList) {
           return `<article class="card crystal-card crystal-card-interactive crystal-list-row" data-id="${c.id}">
-          <div class="crystal-thumb" style="flex:0 0 120px;min-height:120px;background:var(--color-bg-deep);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);overflow:hidden;">${imgPart}</div>
+          ${figure}
           <div class="crystal-content" style="flex:1;min-width:0;">
             <div class="flex justify-between items-start gap-2"><h2 class="crystal-name" style="margin:0;font-size:1.15rem;">${c.name}</h2><button type="button" class="btn btn-ghost btn-sm favorite-btn" aria-label="${this.favIds.has(c.id) ? 'Favorit entfernen' : 'Als Favorit speichern'}" data-id="${c.id}">${fav}</button></div>
             <div class="crystal-meta">${chord} <span class="badge badge-secondary">${c.colorRaw || c.color}</span></div>
             <p class="crystal-desc" style="margin:.25rem 0 0;">${c.description.substring(0, 160)}${c.description.length > 160 ? '...' : ''}</p>
             <button type="button" class="btn btn-secondary btn-sm crystal-details-btn" aria-label="Details zu ${c.name} öffnen">Details anzeigen</button>
             <div class="text-muted" style="font-size:.8rem;">Formel: ${c.chemical_formula || '—'} · Härte: ${c.hardness != null ? c.hardness + ' Mohs' : '—'} · ${c.rarity || ''}</div>
+            ${creditInline}
           </div>
         </article>`;
         }
         return `<article class="card crystal-card crystal-card-interactive" data-id="${c.id}">
-        <div class="crystal-image" style="aspect-ratio:1;overflow:hidden;background:var(--color-bg-deep);display:flex;align-items:center;justify-content:center;">${imgPart}</div>
+        ${figure}
         <div class="crystal-content">
           <div class="flex justify-between items-start gap-2"><h2 class="crystal-name">${c.name}</h2><button type="button" class="btn btn-ghost btn-sm favorite-btn" aria-label="${this.favIds.has(c.id) ? 'Favorit entfernen' : 'Als Favorit speichern'}" data-id="${c.id}">${fav}</button></div>
           <div class="crystal-meta">${chord} <span class="badge badge-secondary">${c.colorRaw || c.color}</span></div>
@@ -330,9 +384,33 @@ export class CrystalsModule {
     const images = this.gridEl.querySelectorAll('img[data-src]');
     const load = (img) => {
       img.src = img.dataset.src;
+      if (img.dataset.srcset) img.srcset = img.dataset.srcset;
       delete img.dataset.src;
+      delete img.dataset.srcset;
     };
-    if ('loading' in HTMLImageElement.prototype || !('IntersectionObserver' in window)) {
+    // Fehlerzustand: keine leere Flaeche, sondern Glyph + ehrlicher Hinweis.
+    images.forEach((img) => {
+      img.addEventListener(
+        'error',
+        () => {
+          const plate = img.closest('.crystal-image');
+          const card = img.closest('.crystal-card');
+          const crystal = this.crystals.find((x) => x.id === card?.dataset.id);
+          img.remove();
+          if (!plate) return;
+          plate.classList.add('is-missing');
+          plate.insertAdjacentHTML(
+            'beforeend',
+            `<span class="crystal-glyph" aria-hidden="true">${crystal ? this.emojiForName(crystal.name) : '💎'}</span>`
+          );
+          const credit = card?.querySelector('.crystal-credit');
+          if (credit) credit.textContent = 'Bild nicht verfügbar';
+        },
+        { once: true }
+      );
+    });
+    if (!('IntersectionObserver' in window)) {
+      // Ohne Observer bleibt nur sofortiges Laden (alte Browser).
       images.forEach(load);
     } else {
       this.imageObserver = new IntersectionObserver(
@@ -358,7 +436,17 @@ export class CrystalsModule {
     this.gridEl.querySelectorAll('.crystal-card').forEach((card) => {
       card.addEventListener('click', (e) => {
         if (e.target.closest('.favorite-btn')) return;
-        this.openCrystalModal(card.dataset.id);
+        // Tastaturpfad: die Details-Schaltflaeche ist der Ausloeser fuer die
+        // Fokus-Rueckgabe (Spec E11), auch beim Klick auf die Kartenflaeche.
+        const trigger = card.querySelector('.crystal-details-btn') || card;
+        this.openCrystalModal(card.dataset.id, trigger);
+      });
+    });
+    this.gridEl.querySelectorAll('.crystal-details-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.crystal-card');
+        this.openCrystalModal(card.dataset.id, btn);
       });
     });
     this.gridEl.querySelectorAll('.favorite-btn').forEach((btn) => {
@@ -380,7 +468,37 @@ export class CrystalsModule {
     this.renderGrid();
   }
 
-  openCrystalModal(id) {
+  creditHtml(c) {
+    const cr = c.imageCredit;
+    if (!cr) return '';
+    const license = cr.licenseUrl
+      ? `<a href="${cr.licenseUrl}" rel="noopener">${this.escapeHtml(cr.license)}</a>`
+      : this.escapeHtml(cr.license);
+    const source = cr.sourceUrl
+      ? `<a href="${cr.sourceUrl}" rel="noopener">Quelle: ${this.escapeHtml(cr.sourceLabel)}</a>`
+      : `Quelle: ${this.escapeHtml(cr.sourceLabel)}`;
+    return `<figcaption class="crystal-detail-credit">
+            <span class="credit-line"><span class="credit-label">Foto:</span> ${this.escapeHtml(cr.author)} &middot; ${license}</span>
+            <span class="credit-line">${source} &middot; abgerufen ${this.escapeHtml(cr.retrieved)}</span>
+            <span class="credit-line credit-meta">&Auml;nderungen: ${this.escapeHtml(cr.changes)}</span>
+          </figcaption>`;
+  }
+
+  figureDetailHtml(c) {
+    if (!c.hasPhoto) {
+      return `<div class="crystal-detail-image"><div class="crystal-glyph crystal-glyph--large">${c.image}</div><p class="crystal-glyph-note">Platzhalter-Symbol &middot; kein Foto im Projekt</p></div>`;
+    }
+    // Ein Pfad, ein Fehlerfall, ein Cache-Eintrag: 960 px deckt 336 px bei DPR 2.
+    const src = c.imageStem && c.imageFile ? `${c.imageStem}/960/${c.imageFile}` : c.image;
+    return `<figure class="crystal-detail-figure">
+            <div class="crystal-detail-image">
+              <img src="${src}" width="960" height="960" decoding="async" alt="${this.escapeHtml(c.imageAlt)}">
+            </div>
+            ${this.creditHtml(c)}
+          </figure>`;
+  }
+
+  openCrystalModal(id, triggerEl = null) {
     const c = this.crystals.find((x) => x.id === id);
     if (!c) return;
     const related = this.crystals
@@ -398,10 +516,7 @@ export class CrystalsModule {
       : '';
     this.modalBody.innerHTML = `
       <div class="crystal-detail-layout">
-        <div class="crystal-detail-image">
-          ${c.image && c.image.startsWith('assets/') ? `<img src="${c.image}" alt="" decoding="async" width="320" height="320">` : `<div class="crystal-glyph crystal-glyph--large">${c.image}</div>`}
-          ${c.image && c.image.startsWith('assets/') ? '' : '<p class="crystal-glyph-note">Platzhalter-Symbol · kein Foto im Projekt</p>'}
-        </div>
+        ${this.figureDetailHtml(c)}
         <div>
           <h3 style="font-family:var(--font-display);color:var(--color-primary);margin-bottom:var(--space-1);font-size:1.6rem;">${c.name}</h3>
           <div class="flex flex-wrap gap-2 mb-3">${c.chakra.map((ch) => `<span class="badge badge-chakra">${ch}</span>`).join('')} <span class="badge badge-secondary">${c.colorRaw || c.color}</span></div>
@@ -414,7 +529,7 @@ export class CrystalsModule {
       </div>
     `;
     document.getElementById('crystalModalTitle').textContent = c.name;
-    this.modal.dialogController.open();
+    this.modal.dialogController.open(triggerEl);
   }
 
   closeCrystalModal() {

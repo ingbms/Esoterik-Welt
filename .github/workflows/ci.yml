@@ -64,6 +64,8 @@ jobs:
         run: npm test
       - name: Run pages regression (node:test)
         run: npm run test:pages
+      - name: Run crystal attribution contract (licence texts, four levels, assets)
+        run: npm run test:crystals
       - name: Run astrology area contract and rendering tests (node:test, no browser)
         run: npm run test:astrologie
       - name: Run offline file entry (node:test + Chromium, file:// like double click)
