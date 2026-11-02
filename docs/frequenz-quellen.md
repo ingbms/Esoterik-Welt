@@ -149,7 +149,7 @@ Legende: **Q** = Quelle im Datensatz, **Prüfung** = was beim Abruf tatsächlich
 
 ### 6.1 EEG-Bänder: Warum Bereiche und keine Punktwerte
 
-Die Grenzen der EEG-Bänder sind **Konvention, nicht Messgröße**. Das Review [4] hat 184 Studien ausgewertet und zeigt: Die jeweils häufigste Definition deckt nur 30–50 % der Publikationen ab. Delta beginnt zwischen 0 und 2 Hz und endet zwischen 3,5 und 6 Hz; Beta endet zwischen 20 und 50 Hz. Empfohlen wird ein nicht überlappendes Schema (Delta < 4, Theta 4–7,5, Alpha 7,5–12,5, Beta 12,5–30, Gamma 30–40 Hz).
+Die Grenzen der EEG-Bänder sind **Konvention, nicht Messgröße**. Das Review [4] hat die Resting-State-Literatur systematisch ausgewertet und zeigt: Die jeweils häufigste Definition deckt nur 30–50 % der Publikationen ab. Delta beginnt zwischen 0 und 2 Hz und endet zwischen 3,5 und 6 Hz; Beta endet zwischen 20 und 50 Hz. Empfohlen wird ein nicht überlappendes Schema (Delta < 4, Theta 4–7,5, Alpha 7,5–12,5, Beta 12,5–30, Gamma 30–40 Hz).
 
 Der Datensatz nutzt die verbreitete Lehrbuchvariante (0,5–4 / 4–8 / 8–13 / 13–30 / 30–45 Hz) und benennt die Streuung in der Beschreibung. Ein Preset „Alpha 10 Hz“ ist damit ein **Beispielwert innerhalb** eines Bandes, keine Norm.
 
@@ -222,13 +222,13 @@ Der Vertragstest `Cousto-Frequenzen sind aus astronomischen Perioden reproduzier
 
 ### 6.7 432 Hz: kleiner Effekt, keine Gesundheitswirkung
 
-Die bekannteste kontrollierte Arbeit [14] ist eine randomisierte Crossover-Pilotstudie mit Musik in 440 Hz vs. 432 Hz. Ergebnis: Herzfrequenz im Mittel −4,79 bpm (p = 0,05), Blutdruck und Atemfrequenz nicht signifikant. Die Autoren schreiben selbst, dass es für die Behauptung besserer Wirkung **keine** wissenschaftlichen Studien gab. Eine neuere randomisierte Crossover-Studie an Krebspatient:innen verglich 432 Hz mit 443 Hz und fand −3 bpm vs. −1 bpm (p = 0,04) [16].
+Die bekannteste kontrollierte Arbeit [14] ist eine doppelblinde Crossover-Pilotstudie mit Musik in 440 Hz vs. 432 Hz. Ergebnis: Herzfrequenz im Mittel −4,79 bpm (p = 0,05), Blutdruck und Atemfrequenz nicht signifikant. Die Autoren schreiben selbst, dass es für die Behauptung besserer Wirkung **keine** wissenschaftlichen Studien gab. Eine neuere randomisierte Crossover-Studie an Krebspatient:innen verglich 432 Hz mit 443 Hz und fand −3 bpm vs. −1 bpm (p = 0,04) [16].
 
 Einordnung: Ein Unterschied von 2–5 Schlägen pro Minute bei kleinen Stichproben ist als physiologischer Effekt **plausibel**, aber empfindlich gegen Erwartungseffekte, Musikauswahl und Messzeitpunkt. Klinische Relevanz ist nicht gezeigt. Deshalb `plausibel`, `warnhinweis: true` und keine Aussage über Gesundheit.
 
 ### 6.8 40 Hz: Mausmodell ≠ Therapie
 
-[12] zeigt im Mausmodell, dass 40-Hz-Stimulation (optogenetisch und als Lichtflimmern) Amyloid-β senkt und Mikroglia aktiviert. Das ist ein relevanter Grundlagenbefund, aber: Tiermodell, kein Audio, keine Übertragbarkeit belegt. Klinische Studien zu 40-Hz-Licht- und Tonstimulation beim Menschen liefern bislang uneinheitliche Ergebnisse. Status daher `plausibel` mit ausdrücklichem Hinweis, nicht `belegt`.
+[12] zeigt im Mausmodell, dass 40-Hz-Stimulation (optogenetisch und als Lichtflimmern) Amyloid-β senkt und Mikroglia aktiviert. Das ist ein relevanter Grundlagenbefund, aber: Tiermodell, kein Audio, keine belegte Übertragbarkeit auf den Menschen. Status daher `plausibel` mit ausdrücklichem Hinweis, nicht `belegt`.
 
 ---
 
