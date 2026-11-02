@@ -913,7 +913,9 @@ class FrequencyEngineImpl {
       },
       seconds * 1000 + rampMs
     );
-    if (timer && typeof timer.unref === 'function') timer.unref();
+    // Kein unref(): dieser Timer ist funktional — er löst das Sweep-Promise
+    // auf. Ein unref'ter Timer lässt Node den Event-Loop leeren, bevor das
+    // Promise erfüllt ist (in Tests sichtbar als hängende Zusicherung).
 
     this.#sweep = { settle, timer, voice };
     this.#emit({
