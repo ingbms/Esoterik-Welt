@@ -1,0 +1,80 @@
+
+Running 35 tests using 1 worker
+
+[1/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:160:7 › Frequenzlabor — Wiedergabe und Autoplay › kein AudioContext vor Interaktion, Start/Stopp korrekt, idempotentes Stopp
+[2/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:199:7 › Frequenzlabor — Wiedergabe und Autoplay › erneutes Starten nach Stopp nutzt keinen zweiten Oszillatorsatz
+[3/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:215:7 › Frequenzlabor — Wiedergabe und Autoplay › blockierter AudioContext erzeugt eine sichtbare, wiederholbare Fehlermeldung
+[4/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 20 Hz liegt innerhalb ±1 Hz
+[5/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 100 Hz liegt innerhalb ±1 Hz
+[6/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 432 Hz liegt innerhalb ±1 Hz
+[7/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 440 Hz liegt innerhalb ±1 Hz
+[8/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 528 Hz liegt innerhalb ±1 Hz
+[9/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 1000 Hz liegt innerhalb ±1 Hz
+[10/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 5000 Hz liegt innerhalb ±1 Hz
+[11/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:279:7 › Frequenzlabor — Signalgenauigkeit › Realtime-Pfad kommandiert die in der UI gewählte Frequenz
+[12/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:295:7 › Frequenzlabor — Lautstärke-Deckel › Engine klemmt auf −6 dBFS und der Offline-Pegel bleibt darunter
+[13/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:302:7 › Frequenzlabor — Lautstärke-Deckel › UI-Slider endet bei −6 dBFS, Anzeige nennt den Deckel, Startpegel −20 dBFS
+[14/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:315:7 › Frequenzlabor — Lautstärke-Deckel › Startpegel und Deckel gelten auch nach einem Preset-Start
+[15/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:328:7 › Frequenzlabor — Sweep › Sweep läuft die eingestellte Dauer, endet am Ziel und meldet das
+[16/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:355:7 › Frequenzlabor — Sweep › Sweep-Abbruch beendet den Sweep und meldet den Abbruch
+[17/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:371:7 › Frequenzlabor — Presets und Bibliothek › Bibliotheks-Preset startet exakt seine Frequenz
+[18/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:388:7 › Frequenzlabor — Presets und Bibliothek › Labor-Preset-Auswahl listet nur hörbare Einträge und spielt die gewählte Frequenz
+[19/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:412:7 › Frequenzlabor — Presets und Bibliothek › nicht abspielbare Einträge haben keinen Abspielknopf, aber einen Hinweis
+[20/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:422:7 › Frequenzlabor — Quellen und Disclaimer › Quellenlinks sind https, extern abgesichert und vollständig
+[21/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:445:7 › Frequenzlabor — Quellen und Disclaimer › Disclaimer ist auf Hub und Labor sichtbar und nennt kein Medizinprodukt
+[22/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:462:7 › Frequenzlabor — Navigation › Hauptnavigation öffnet den Bereich, Alias wird normalisiert
+[23/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:477:7 › Frequenzlabor — Navigation › Browser-Zurück und -Vorwärts stellen die Ansicht wieder her
+[24/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:487:7 › Frequenzlabor — Navigation › Audio stoppt beim Verlassen der Seite
+[25/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:498:7 › Frequenzlabor — Navigation › pagehide stoppt laufendes Audio
+[26/35] [chromium-desktop] › tests\qa\01-funktional.spec.js:508:7 › Frequenzlabor — Ladeverhalten › Engine wird erst mit der Kategorie geladen
+[27/35] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:76:7 › Frequenzlabor — Tastaturbedienung › alle Kernbedienelemente sind ohne Maus erreichbar und bedienbar
+  1) [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:76:7 › Frequenzlabor — Tastaturbedienung › alle Kernbedienelemente sind ohne Maus erreichbar und bedienbar 
+
+    Error: fqStop muss per Tab erreichbar sein (Reihenfolge: A → fqPlay → fqFreqRange → fqFreqNumber → fqWaveform → fqGainRange → fqSweepFrom → fqSweepTo → fqSweepSeconds → fqSweepStart → fqBeatBase → fqBeatDelta → fqBeatPlay → fqPresetSelect → fqPresetPlay → fqBinauralPreset → fqCarrier → fqDelta → fqBinauralPlay → fqCompare432 → fqCompare440 → A)
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: "fqStop"
+    Received array: ["A", "fqPlay", "fqFreqRange", "fqFreqNumber", "fqWaveform", "fqGainRange", "fqSweepFrom", "fqSweepTo", "fqSweepSeconds", "fqSweepStart", …]
+
+      102 |     const ids = stops.map((stop) => stop.id);
+      103 |     for (const required of ['fqPlay', 'fqStop', 'fqFreqRange', 'fqFreqNumber', 'fqWaveform', 'fqGainRange', 'fqSweepStart', 'fqPresetSelect']) {
+    > 104 |       expect(ids, `${required} muss per Tab erreichbar sein (Reihenfolge: ${ids.join(' → ')})`).toContain(required);
+          |                                                                                                 ^
+      105 |     }
+      106 |     const withoutRing = stops.filter((stop) => !stop.ring && stop.tag !== 'BODY');
+      107 |     expect(withoutRing, 'jedes fokussierte Element zeigt einen Fokusring').toEqual([]);
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\02-barrierefreiheit.spec.js:104:97
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\02-barrierefreiheit-Freque-fa087-us-erreichbar-und-bedienbar-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\02-barrierefreiheit-Freque-fa087-us-erreichbar-und-bedienbar-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\02-barrierefreiheit-Freque-fa087-us-erreichbar-und-bedienbar-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\02-barrierefreiheit-Freque-fa087-us-erreichbar-und-bedienbar-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[28/35] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:118:7 › Frequenzlabor — Tastaturbedienung › Slider und Zahlenfeld bleiben per Tastatur synchron
+[29/35] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:141:7 › Frequenzlabor — Tastaturbedienung › Zahlenfeld klemmt auf 20 und 20.000 Hz
+[30/35] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:153:7 › Frequenzlabor — Screenreader-Stichprobe › Bedienelemente haben sprechende Namen, Canvas ist verborgen
+[31/35] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:175:7 › Frequenzlabor — Screenreader-Stichprobe › Evidenzstatus ist immer Text, nicht nur Farbe
+[32/35] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:189:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+[chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:189:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+KONTRAST_HUB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":56,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-lede","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Eine Schwingung ist eine periodische Änd"},{"selector":".fq-entry-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Menschlicher Hörbereich"},{"selector":".fq-entry-desc","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Normalhörende nehmen etwa 20 Hz bis 20.0"},{"selector":".fq-entry-hz","ratio":8.42,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"20 Hz – 20.000 Hz"},{"selector":".fq-badge","ratio":7.75,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Belegt"},{"selector":".fq-source-link","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"OpenStax College Physics 2e, Kap. 17.6 „"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":"#fqDisclaimerLang","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Dieses Frequenzlabor ist ein Bildungs- u"},{"selector":"#fq-quellen-title","ratio":15.36,"fontSize":28,"bold":false,"large":true,"required":3,"text":"Quellen und Methode"}]
+
+KONTRAST_LAB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":56,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-note","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"20 kHz ist für viele Menschen unhörbar. "},{"selector":"#fqGainReadout","ratio":13.86,"fontSize":18,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-gain-cap","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Deckel: −6 dBFS"},{"selector":"#fqStatus","ratio":10.07,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":""},{"selector":"#fqReadGain","ratio":13.86,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-panel-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Frequenz"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":".btn-primary","ratio":9.33,"fontSize":15,"bold":false,"large":false,"required":4.5,"text":"Karte ziehen\n                    ↓"},{"selector":".btn-secondary","ratio":13.86,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Zur Startseite"}]
+
+[33/35] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:237:7 › Frequenzlabor — reduzierte Bewegung › keine rAF-Animation, statische Erklärung sichtbar
+[34/35] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:264:7 › Frequenzlabor — mobile Ansicht 360 px › kein horizontaler Überlauf und bedienbare Touch-Ziele
+[35/35] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:290:7 › Frequenzlabor — mobile Ansicht 360 px › Bibliothek bleibt bei 360 px lesbar
+  1 failed
+    [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:76:7 › Frequenzlabor — Tastaturbedienung › alle Kernbedienelemente sind ohne Maus erreichbar und bedienbar 
+  34 passed (45.5s)
+EXIT=1

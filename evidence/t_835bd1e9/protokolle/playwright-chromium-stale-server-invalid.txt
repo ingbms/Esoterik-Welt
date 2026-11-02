@@ -1,0 +1,427 @@
+
+> esoterik-welt@1.0.0 test:e2e
+> npm run build && playwright test
+
+
+> esoterik-welt@1.0.0 build
+> node scripts/build-pages.cjs
+
+Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.
+Static production build ready: dist/Esoterik-Welt/ (canonical Pages sources; no public/ placeholder).
+
+Running 88 tests using 1 worker
+
+  ✘   1 tests\astrologie.spec.js:33:7 › Astrologie — Navigation und Deep-Links › main navigation opens the area and keeps one visible h1 (569ms)
+  ✓   2 tests\astrologie.spec.js:54:7 › Astrologie — Navigation und Deep-Links › every index area renders its full catalogue on a cold deep link (1.9s)
+  ✓   3 tests\astrologie.spec.js:64:7 › Astrologie — Navigation und Deep-Links › detail, back and forward keep the address and the content in sync (653ms)
+  ✓   4 tests\astrologie.spec.js:79:7 › Astrologie — Navigation und Deep-Links › a cold link to every reference item renders that item (2.5s)
+  ✓   5 tests\astrologie.spec.js:107:7 › Astrologie — Navigation und Deep-Links › an unknown path stays inside the area and offers real exits (570ms)
+  ✓   6 tests\astrologie.spec.js:118:7 › Astrologie — Filter, Suche, Zustand › element filter and search narrow the sign list and survive reload (1.2s)
+  ✓   7 tests\astrologie.spec.js:139:7 › Astrologie — Filter, Suche, Zustand › full-text search groups hits and shows a real empty state (1.0s)
+  ✓   8 tests\astrologie.spec.js:157:7 › Astrologie — Filter, Suche, Zustand › source markers lead into the ledger entry (814ms)
+  ✓   9 tests\astrologie.spec.js:171:7 › Astrologie — Tastatur, Fokus, Dialogverhalten › table of contents, details and letter jump are keyboard operable (914ms)
+  ✓  10 tests\astrologie.spec.js:194:7 › Astrologie — Tastatur, Fokus, Dialogverhalten › skip link keeps the astrology view visible and focuses main (655ms)
+  ✓  11 tests\astrologie.spec.js:207:9 › Astrologie — Lesbarkeit und Payload › no horizontal overflow at 375px in index, detail and glossary (1.3s)
+  ✓  12 tests\astrologie.spec.js:207:9 › Astrologie — Lesbarkeit und Payload › no horizontal overflow at 768px in index, detail and glossary (1.2s)
+  ✓  13 tests\astrologie.spec.js:207:9 › Astrologie — Lesbarkeit und Payload › no horizontal overflow at 1440px in index, detail and glossary (1.6s)
+  ✓  14 tests\astrologie.spec.js:228:7 › Astrologie — Lesbarkeit und Payload › body text contrast meets 4.5:1 on the dark background (606ms)
+  ✓  15 tests\astrologie.spec.js:260:7 › Astrologie — Lesbarkeit und Payload › the data module is only fetched when the area is opened (1.0s)
+  ✓  16 tests\capture-screenshots.spec.js:9:7 › Screenshots for F4 verification › Home page screenshot (1.3s)
+  ✓  17 tests\capture-screenshots.spec.js:15:7 › Screenshots for F4 verification › Tarot page screenshot (2.8s)
+  ✓  18 tests\capture-screenshots.spec.js:21:7 › Screenshots for F4 verification › Crystals page screenshot (1.8s)
+  ✓  19 tests\capture-screenshots.spec.js:27:7 › Screenshots for F4 verification › Moon page screenshot (1.6s)
+  ✓  20 tests\capture-screenshots.spec.js:33:7 › Screenshots for F4 verification › Runes page screenshot (1.5s)
+  ✓  21 tests\capture-screenshots.spec.js:39:7 › Screenshots for F4 verification › Blog page screenshot (1.3s)
+  ✓  22 tests\capture-screenshots.spec.js:45:7 › Screenshots for F4 verification › Impressum page screenshot (1.4s)
+  ✓  23 tests\capture-screenshots.spec.js:51:7 › Screenshots for F4 verification › Datenschutz page screenshot (907ms)
+  ✓  24 tests\capture-screenshots.spec.js:57:7 › Screenshots for F4 verification › Haftung page screenshot (900ms)
+  ✓  25 tests\capture-screenshots.spec.js:63:7 › Screenshots for F4 verification › 404 page screenshot (882ms)
+All errors: []
+Critical errors: []
+Warnings: []
+  ✓  26 tests\console-check.spec.js:9:7 › Console error check › Home page has no critical console errors (967ms)
+  ✓  27 tests\console-check.spec.js:39:7 › Console error check › Legal pages have no console errors (1.9s)
+  ✓  28 tests\console-check.spec.js:56:7 › Console error check › 404 page has no console errors (694ms)
+  ✓  29 tests\f4-fixes-verification.spec.js:9:7 › F4 Fixes Verification (P0-P2) › F4.1/F4.3: Root loads with <base> and correct canonical (321ms)
+  ✓  30 tests\f4-fixes-verification.spec.js:16:7 › F4 Fixes Verification (P0-P2) › F4.3: CSS assets load (design-system.css, main.css) (139ms)
+  ✓  31 tests\f4-fixes-verification.spec.js:23:7 › F4 Fixes Verification (P0-P2) › F4.3: Favicon asset exists (112ms)
+  ✓  32 tests\f4-fixes-verification.spec.js:28:7 › F4 Fixes Verification (P0-P2) › F4.3: JS modules load (294ms)
+  ✓  33 tests\f4-fixes-verification.spec.js:48:7 › F4 Fixes Verification (P0-P2) › F4.4: Legal routes resolve with .html (153ms)
+  ✓  34 tests\f4-fixes-verification.spec.js:55:7 › F4 Fixes Verification (P0-P2) › F4.4: Legal pages have content (354ms)
+  ✓  35 tests\f4-fixes-verification.spec.js:62:7 › F4 Fixes Verification (P0-P2) › F4.4/F4.1: 404 fallback works and links to #home (204ms)
+  ✓  36 tests\f4-fixes-verification.spec.js:72:7 › F4 Fixes Verification (P0-P2) › F4.1: Public/index.html has correct base and stylesheet (336ms)
+  ✓  37 tests\f4-fixes-verification.spec.js:80:7 › F4 Fixes Verification (P0-P2) › Navigation: All hash routes accessible via direct URL (567ms)
+  ✓  38 tests\f4-fixes-verification.spec.js:90:7 › F4 Fixes Verification (P0-P2) › Navigation: Nav links update URL hash (1.7s)
+  ✓  39 tests\f4-fixes-verification.spec.js:112:7 › F4 Fixes Verification (P0-P2) › Footer: Legal links work (975ms)
+  ✓  40 tests\f4-fixes-verification.spec.js:133:7 › F4 Fixes Verification (P0-P2) › External links have security attributes (582ms)
+  ✓  41 tests\f4-fixes-verification.spec.js:151:7 › F4 Fixes Verification (P0-P2) › Skip link navigates to main (434ms)
+  ✓  42 tests\f4-fixes-verification.spec.js:163:7 › F4 Fixes Verification (P0-P2) › OG/Twitter meta tags point to correct domain (483ms)
+  ✘  43 tests\frequenzlabor.spec.js:36:5 › U1: #frequenzen zeigt die Bibliothek mit einem H1 und ohne Konsolenfehler (10.3s)
+  ✘  44 tests\frequenzlabor.spec.js:52:5 › U2: der Alias #frequenzlabor wird auf #frequenzen/labor normalisiert (10.5s)
+  ✘  45 tests\frequenzlabor.spec.js:59:5 › U3: vor dem ersten Klick existiert kein AudioContext (10.3s)
+  ✘  46 tests\frequenzlabor.spec.js:79:5 › U4: Play startet, Stop beendet und räumt alle Stimmen ab (10.2s)
+  ✘  47 tests\frequenzlabor.spec.js:96:5 › U5: Slider und Zahlenfeld sind synchron, klemmen und nennen die Einheit (10.3s)
+  ✘  48 tests\frequenzlabor.spec.js:118:5 › U6: der Pegel endet hart bei −6 dBFS und der Deckel ist sichtbar (10.2s)
+  ✘  49 tests\frequenzlabor.spec.js:133:5 › U7: ein Preset aus der Bibliothek startet genau seine Frequenz (10.3s)
+  ✘  50 tests\frequenzlabor.spec.js:143:5 › U8: Schumann-Einträge haben keinen Abspielknopf, aber einen Hinweis (10.2s)
+  ✘  51 tests\frequenzlabor.spec.js:154:5 › U9: Tastaturbedienung und Fokus nach dem Ansichtswechsel (10.3s)
+  ✘  52 tests\frequenzlabor.spec.js:173:5 › U10: prefers-reduced-motion zeichnet statisch und startet keine Animationsschleife (10.2s)
+  ✘  53 tests\frequenzlabor.spec.js:197:5 › U11: 360 px ohne horizontalen Scroll und mit 44-px-Zielen (0ms)
+  -  54 tests\frequenzlabor.spec.js:212:5 › U12: Navigation verlässt die Seite und stoppt den Ton
+  -  55 tests\frequenzlabor.spec.js:224:5 › U13: der Offline-Build spielt Presets aus dem eingebetteten JSON
+  -  56 tests\frequenzlabor.spec.js:242:5 › U14: die Engine wird erst mit der Kategorie geladen
+  ✘  57 tests\link-check.spec.js:9:7 › Internal link verification › All internal links from home page return 200 (0ms)
+  -  58 tests\link-check.spec.js:59:7 › Internal link verification › All legal page links return 200
+  -  59 tests\link-check.spec.js:91:7 › Internal link verification › 404 page links return 200
+  ✘  60 tests\moon-calendar.spec.js:61:7 › Mondkalender — Monatswechsel, Takt und Relativtage › B1/B2: geblätterter Monat und Auswahl überleben den Minutentakt (0ms)
+  -  61 tests\moon-calendar.spec.js:107:7 › Mondkalender — Monatswechsel, Takt und Relativtage › B1: ohne Blättern zieht der Takt über Mitternacht in den neuen Monat
+  -  62 tests\moon-calendar.spec.js:120:7 › Mondkalender — Monatswechsel, Takt und Relativtage › B3: Relativtage folgen dem Kalendertag, nicht den Stunden
+  ✘  63 tests\regression-f4-links-staging.spec.js:11:7 › Routing / asset fixes (staging) › Root loads with <base> and correct canonical (0ms)
+  -  64 tests\regression-f4-links-staging.spec.js:18:7 › Routing / asset fixes (staging) › CSS asset loads (F4.3)
+  -  65 tests\regression-f4-links-staging.spec.js:25:7 › Routing / asset fixes (staging) › Legal routes resolve with .html (F4.4)
+  -  66 tests\regression-f4-links-staging.spec.js:32:7 › Routing / asset fixes (staging) › 404 fallback works and links to #home (F4.4/F4.1)
+  -  67 tests\regression-f4-links-staging.spec.js:43:7 › Routing / asset fixes (staging) › Favicon asset exists (P1)
+  -  68 tests\regression-f4-links-staging.spec.js:48:7 › Routing / asset fixes (staging) › Public/index server path loads with correct style (P1 divergence)
+  ✘  69 tests\regression-f4-links.spec.js:10:7 › Routing / asset fixes › Root loads with <base> and correct canonical (0ms)
+  -  70 tests\regression-f4-links.spec.js:17:7 › Routing / asset fixes › CSS asset loads (F4.3)
+  -  71 tests\regression-f4-links.spec.js:24:7 › Routing / asset fixes › Legal routes resolve with .html (F4.4)
+  -  72 tests\regression-f4-links.spec.js:31:7 › Routing / asset fixes › 404 fallback works and links to #home (F4.4/F4.1)
+  -  73 tests\regression-f4-links.spec.js:42:7 › Routing / asset fixes › Favicon asset exists (P1)
+  -  74 tests\regression-f4-links.spec.js:47:7 › Routing / asset fixes › Root page loads design-system.css stylesheet (P1 divergence)
+  ✘  75 tests\smoke-test-production.spec.js:9:7 › Production smoke test › Home page loads without console errors (0ms)
+  -  76 tests\smoke-test-production.spec.js:22:7 › Production smoke test › All hash routes navigate correctly
+  -  77 tests\smoke-test-production.spec.js:39:7 › Production smoke test › Navigation links work
+  -  78 tests\smoke-test-production.spec.js:59:7 › Production smoke test › Legal pages accessible
+  -  79 tests\smoke-test-production.spec.js:72:7 › Production smoke test › 404 page works and has home link
+  -  80 tests\smoke-test-production.spec.js:81:7 › Production smoke test › Assets load correctly
+  -  81 tests\smoke-test-production.spec.js:90:7 › Production smoke test › External links have correct attributes
+  -  82 tests\smoke-test-production.spec.js:109:7 › Production smoke test › Tarot card draw functionality
+  -  83 tests\smoke-test-production.spec.js:121:7 › Production smoke test › Crystal filters work
+  -  84 tests\smoke-test-production.spec.js:143:7 › Production smoke test › Moon phase displays
+  -  85 tests\smoke-test-production.spec.js:152:7 › Production smoke test › Rune casting works
+  -  86 tests\smoke-test-production.spec.js:167:7 › Production smoke test › Blog filters and search work
+  -  87 tests\smoke-test-production.spec.js:184:7 › Production smoke test › Footer legal links work
+  -  88 tests\smoke-test-production.spec.js:205:7 › Production smoke test › Skip link works
+
+
+  1) tests\astrologie.spec.js:33:7 › Astrologie — Navigation und Deep-Links › main navigation opens the area and keeps one visible h1 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 7
+    Received: 6
+
+      40 |     await page.goto(`${BASE}/`, { waitUntil: 'load' });
+      41 |     await page.locator('#featureGrid > *').first().waitFor();
+    > 42 |     expect(await page.locator('#featureGrid > *').count()).toBe(7);
+         |                                                            ^
+      43 |     await page.locator('.nav-link[data-page="astrologie"]').click();
+      44 |     await page.locator('#astrologie.active:not([hidden])').waitFor({ state: 'visible' });
+      45 |     await expect(page.locator('#astrologieRoot h1#astro-title')).toContainText('Astrologie');
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\astrologie.spec.js:42:60
+
+    Error Context: test-results\playwright\astrologie-Astrologie-—-Na-15ffc-ea-and-keeps-one-visible-h1\error-context.md
+
+  2) tests\frequenzlabor.spec.js:36:5 › U1: #frequenzen zeigt die Bibliothek mit einem H1 und ohne Konsolenfehler 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqLibrary .fq-entry').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqLibrary .fq-entry').first() with timeout 10000ms
+      - waiting for locator('#fqLibrary .fq-entry').first()
+
+
+      18 | async function openHub(page) {
+      19 |   await page.goto(`${BASE}/#frequenzen`, { waitUntil: 'load' });
+    > 20 |   await expect(page.locator('#fqLibrary .fq-entry').first()).toBeVisible();
+         |                                                              ^
+      21 | }
+      22 |
+      23 | async function openLab(page) {
+        at openHub (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:20:62)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:38:3
+
+    Error Context: test-results\playwright\frequenzlabor-U1-frequenze-f4690--H1-und-ohne-Konsolenfehler\error-context.md
+
+  3) tests\frequenzlabor.spec.js:52:5 › U2: der Alias #frequenzlabor wird auf #frequenzen/labor normalisiert 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqPlay')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqPlay') with timeout 10000ms
+      - waiting for locator('#fqPlay')
+
+
+      52 | test('U2: der Alias #frequenzlabor wird auf #frequenzen/labor normalisiert', async ({ page }) => {
+      53 |   await page.goto(`${BASE}/#frequenzlabor`, { waitUntil: 'load' });
+    > 54 |   await expect(page.locator('#fqPlay')).toBeVisible();
+         |                                         ^
+      55 |   expect(new URL(page.url()).hash).toBe('#frequenzen/labor');
+      56 |   await expect(page.locator('#fqPresetSelect option')).not.toHaveCount(0);
+      57 | });
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:54:41
+
+    Error Context: test-results\playwright\frequenzlabor-U2-der-Alias-44880-equenzen-labor-normalisiert\error-context.md
+
+  4) tests\frequenzlabor.spec.js:59:5 › U3: vor dem ersten Klick existiert kein AudioContext ───────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqPlay')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqPlay') with timeout 10000ms
+      - waiting for locator('#fqPlay')
+
+
+      23 | async function openLab(page) {
+      24 |   await page.goto(`${BASE}/#frequenzen/labor`, { waitUntil: 'load' });
+    > 25 |   await expect(page.locator('#fqPlay')).toBeVisible();
+         |                                         ^
+      26 | }
+      27 | function watchConsole(page) {
+      28 |   const errors = [];
+        at openLab (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:25:41)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:72:3
+
+    Error Context: test-results\playwright\frequenzlabor-U3-vor-dem-e-2f8e8-existiert-kein-AudioContext\error-context.md
+
+  5) tests\frequenzlabor.spec.js:79:5 › U4: Play startet, Stop beendet und räumt alle Stimmen ab ───
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqPlay')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqPlay') with timeout 10000ms
+      - waiting for locator('#fqPlay')
+
+
+      23 | async function openLab(page) {
+      24 |   await page.goto(`${BASE}/#frequenzen/labor`, { waitUntil: 'load' });
+    > 25 |   await expect(page.locator('#fqPlay')).toBeVisible();
+         |                                         ^
+      26 | }
+      27 | function watchConsole(page) {
+      28 |   const errors = [];
+        at openLab (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:25:41)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:80:3
+
+    Error Context: test-results\playwright\frequenzlabor-U4-Play-star-2c2c9-t-und-räumt-alle-Stimmen-ab\error-context.md
+
+  6) tests\frequenzlabor.spec.js:96:5 › U5: Slider und Zahlenfeld sind synchron, klemmen und nennen die Einheit 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqPlay')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqPlay') with timeout 10000ms
+      - waiting for locator('#fqPlay')
+
+
+      23 | async function openLab(page) {
+      24 |   await page.goto(`${BASE}/#frequenzen/labor`, { waitUntil: 'load' });
+    > 25 |   await expect(page.locator('#fqPlay')).toBeVisible();
+         |                                         ^
+      26 | }
+      27 | function watchConsole(page) {
+      28 |   const errors = [];
+        at openLab (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:25:41)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:97:3
+
+    Error Context: test-results\playwright\frequenzlabor-U5-Slider-un-17f1b-mmen-und-nennen-die-Einheit\error-context.md
+
+  7) tests\frequenzlabor.spec.js:118:5 › U6: der Pegel endet hart bei −6 dBFS und der Deckel ist sichtbar 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqPlay')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqPlay') with timeout 10000ms
+      - waiting for locator('#fqPlay')
+
+
+      23 | async function openLab(page) {
+      24 |   await page.goto(`${BASE}/#frequenzen/labor`, { waitUntil: 'load' });
+    > 25 |   await expect(page.locator('#fqPlay')).toBeVisible();
+         |                                         ^
+      26 | }
+      27 | function watchConsole(page) {
+      28 |   const errors = [];
+        at openLab (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:25:41)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:119:3
+
+    Error Context: test-results\playwright\frequenzlabor-U6-der-Pegel-a1e0d-und-der-Deckel-ist-sichtbar\error-context.md
+
+  8) tests\frequenzlabor.spec.js:133:5 › U7: ein Preset aus der Bibliothek startet genau seine Frequenz 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqLibrary .fq-entry').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqLibrary .fq-entry').first() with timeout 10000ms
+      - waiting for locator('#fqLibrary .fq-entry').first()
+
+
+      18 | async function openHub(page) {
+      19 |   await page.goto(`${BASE}/#frequenzen`, { waitUntil: 'load' });
+    > 20 |   await expect(page.locator('#fqLibrary .fq-entry').first()).toBeVisible();
+         |                                                              ^
+      21 | }
+      22 |
+      23 | async function openLab(page) {
+        at openHub (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:20:62)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:134:3
+
+    Error Context: test-results\playwright\frequenzlabor-U7-ein-Prese-5fc23-tartet-genau-seine-Frequenz\error-context.md
+
+  9) tests\frequenzlabor.spec.js:143:5 › U8: Schumann-Einträge haben keinen Abspielknopf, aber einen Hinweis 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqLibrary .fq-entry').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqLibrary .fq-entry').first() with timeout 10000ms
+      - waiting for locator('#fqLibrary .fq-entry').first()
+
+
+      18 | async function openHub(page) {
+      19 |   await page.goto(`${BASE}/#frequenzen`, { waitUntil: 'load' });
+    > 20 |   await expect(page.locator('#fqLibrary .fq-entry').first()).toBeVisible();
+         |                                                              ^
+      21 | }
+      22 |
+      23 | async function openLab(page) {
+        at openHub (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:20:62)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:144:3
+
+    Error Context: test-results\playwright\frequenzlabor-U8-Schumann--ea084-ielknopf-aber-einen-Hinweis\error-context.md
+
+  10) tests\frequenzlabor.spec.js:154:5 › U9: Tastaturbedienung und Fokus nach dem Ansichtswechsel ─
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqLibrary .fq-entry').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqLibrary .fq-entry').first() with timeout 10000ms
+      - waiting for locator('#fqLibrary .fq-entry').first()
+
+
+      18 | async function openHub(page) {
+      19 |   await page.goto(`${BASE}/#frequenzen`, { waitUntil: 'load' });
+    > 20 |   await expect(page.locator('#fqLibrary .fq-entry').first()).toBeVisible();
+         |                                                              ^
+      21 | }
+      22 |
+      23 | async function openLab(page) {
+        at openHub (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:20:62)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:155:3
+
+    Error Context: test-results\playwright\frequenzlabor-U9-Tastaturb-d71ef-us-nach-dem-Ansichtswechsel\error-context.md
+
+  11) tests\frequenzlabor.spec.js:173:5 › U10: prefers-reduced-motion zeichnet statisch und startet keine Animationsschleife 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#fqPlay')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqPlay') with timeout 10000ms
+      - waiting for locator('#fqPlay')
+
+
+      23 | async function openLab(page) {
+      24 |   await page.goto(`${BASE}/#frequenzen/labor`, { waitUntil: 'load' });
+    > 25 |   await expect(page.locator('#fqPlay')).toBeVisible();
+         |                                         ^
+      26 | }
+      27 | function watchConsole(page) {
+      28 |   const errors = [];
+        at openLab (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:25:41)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\frequenzlabor.spec.js:183:3
+
+    Error Context: test-results\playwright\frequenzlabor-U10-prefers--b5c4b-et-keine-Animationsschleife\error-context.md
+
+  12) tests\frequenzlabor.spec.js:197:5 › U11: 360 px ohne horizontalen Scroll und mit 44-px-Zielen 
+
+    Error: worker process exited unexpectedly (code=3221225794, signal=null)
+
+  13) tests\link-check.spec.js:9:7 › Internal link verification › All internal links from home page return 200 
+
+    Error: worker process exited unexpectedly (code=3221225794, signal=null)
+
+  14) tests\moon-calendar.spec.js:61:7 › Mondkalender — Monatswechsel, Takt und Relativtage › B1/B2: geblätterter Monat und Auswahl überleben den Minutentakt 
+
+    Error: worker process exited unexpectedly (code=3221225794, signal=null)
+
+  15) tests\regression-f4-links-staging.spec.js:11:7 › Routing / asset fixes (staging) › Root loads with <base> and correct canonical 
+
+    Error: worker process exited unexpectedly (code=3221225794, signal=null)
+
+  16) tests\regression-f4-links.spec.js:10:7 › Routing / asset fixes › Root loads with <base> and correct canonical 
+
+    Error: worker process exited unexpectedly (code=3221225794, signal=null)
+
+  17) tests\smoke-test-production.spec.js:9:7 › Production smoke test › Home page loads without console errors 
+
+    Error: worker process exited unexpectedly (code=3221225794, signal=null)
+
+  17 failed
+    tests\astrologie.spec.js:33:7 › Astrologie — Navigation und Deep-Links › main navigation opens the area and keeps one visible h1 
+    tests\frequenzlabor.spec.js:36:5 › U1: #frequenzen zeigt die Bibliothek mit einem H1 und ohne Konsolenfehler 
+    tests\frequenzlabor.spec.js:52:5 › U2: der Alias #frequenzlabor wird auf #frequenzen/labor normalisiert 
+    tests\frequenzlabor.spec.js:59:5 › U3: vor dem ersten Klick existiert kein AudioContext ────────
+    tests\frequenzlabor.spec.js:79:5 › U4: Play startet, Stop beendet und räumt alle Stimmen ab ────
+    tests\frequenzlabor.spec.js:96:5 › U5: Slider und Zahlenfeld sind synchron, klemmen und nennen die Einheit 
+    tests\frequenzlabor.spec.js:118:5 › U6: der Pegel endet hart bei −6 dBFS und der Deckel ist sichtbar 
+    tests\frequenzlabor.spec.js:133:5 › U7: ein Preset aus der Bibliothek startet genau seine Frequenz 
+    tests\frequenzlabor.spec.js:143:5 › U8: Schumann-Einträge haben keinen Abspielknopf, aber einen Hinweis 
+    tests\frequenzlabor.spec.js:154:5 › U9: Tastaturbedienung und Fokus nach dem Ansichtswechsel ───
+    tests\frequenzlabor.spec.js:173:5 › U10: prefers-reduced-motion zeichnet statisch und startet keine Animationsschleife 
+    tests\frequenzlabor.spec.js:197:5 › U11: 360 px ohne horizontalen Scroll und mit 44-px-Zielen ──
+    tests\link-check.spec.js:9:7 › Internal link verification › All internal links from home page return 200 
+    tests\moon-calendar.spec.js:61:7 › Mondkalender — Monatswechsel, Takt und Relativtage › B1/B2: geblätterter Monat und Auswahl überleben den Minutentakt 
+    tests\regression-f4-links-staging.spec.js:11:7 › Routing / asset fixes (staging) › Root loads with <base> and correct canonical 
+    tests\regression-f4-links.spec.js:10:7 › Routing / asset fixes › Root loads with <base> and correct canonical 
+    tests\smoke-test-production.spec.js:9:7 › Production smoke test › Home page loads without console errors 
+  30 did not run
+  41 passed (2.7m)

@@ -22,7 +22,7 @@ Methode: eigener Testplan, eigene Messroutinen, echte Browser — keine Übernah
 | Viewports | 1440×900 Desktop, 393×851 (Pixel 5), 360×640 Touch |
 | Audio | Headless ohne Audiogerät; gemessen wird der Signalpfad (OfflineAudioContext) und der Engine-/Graphzustand, nicht der Schalldruck im Raum |
 
-**Wichtiger Umgebungsbefund:** Auf Port 3100 lief ein fremder, veralteter Vorschauserver (`main` ohne Frequenzbereich). Der erste Suite-Lauf mit `reuseExistingServer: !CI` hat diesen Server übernommen und dadurch 14 Fälle falsch als „failed" gemeldet. Die QA-Konfiguration nutzt deshalb einen eigenen Port und `reuseExistingServer: false`; der ungültige Lauf ist als `evidence/t_835bd1e9/logs/playwright-chromium-stale-server-invalid.log` archiviert, der saubere Lauf als `playwright-chromium.log` (88/88).
+**Wichtiger Umgebungsbefund:** Auf Port 3100 lief ein fremder, veralteter Vorschauserver (`main` ohne Frequenzbereich). Der erste Suite-Lauf mit `reuseExistingServer: !CI` hat diesen Server übernommen und dadurch 14 Fälle falsch als „failed" gemeldet. Die QA-Konfiguration nutzt deshalb einen eigenen Port und `reuseExistingServer: false`; der ungültige Lauf ist als `evidence/t_835bd1e9/protokolle/playwright-chromium-stale-server-invalid.txt` archiviert, der saubere Lauf als `playwright-chromium.txt` (88/88).
 
 ## 2. Reproduktion
 
@@ -216,13 +216,13 @@ Keine.
 - Reproduktion: `#frequenzen/labor` öffnen, Slider `#fqFreqRange` fokussieren, zweimal `→` drücken. Anzeige `#fqFreqReadout` und Engine-Zustand stehen auf 444,66 Hz, das Zahlenfeld `#fqFreqNumber` zeigt weiterhin `440`. Ein anschließendes `change` im Zahlenfeld setzt den Ton auf 440 Hz zurück.
 - Ursache (Code): `setFrequency(hz, fromNumberField)` ruft `syncFrequency(fromNumberField)`; beim Slider-`input` wird `false` übergeben, wodurch `refs.freqNumber.value` nicht geschrieben wird (`js/modules/frequenzlabor.js`, Slider-Handler und `syncFrequency`).
 - Bewertung: Die beiden Bedienelemente zeigen unterschiedliche Werte für denselben Zustand; das ist genau die im ADR geforderte Kopplung. Der Umsetzer-Test U5 prüft nur den Readout, nicht das Zahlenfeld, und deckt den Fehler daher nicht auf.
-- Nachweis: `qa/02-barrierefreiheit.spec.js` → „Slider und Zahlenfeld bleiben per Tastatur synchron" (`test.fail` mit Begründung); Messprotokoll `evidence/t_835bd1e9/logs/probe-behavior.log`.
+- Nachweis: `qa/02-barrierefreiheit.spec.js` → „Slider und Zahlenfeld bleiben per Tastatur synchron" (`test.fail` mit Begründung); Messprotokoll `evidence/t_835bd1e9/protokolle/probe-behavior.txt`.
 - Empfehlung: im Slider-Handler `syncFrequency(true)` bzw. `this.refs.freqNumber.value = ...` mitschreiben; U5 um die Gegenrichtung erweitern.
 
 ### Minor
 
 **m-1 — Sweep-Start wird nicht angesagt; Statuszeile bleibt während des Sweeps auf dem alten Text.**
-Nach „Sweep starten" läuft der Ton, `#fqStatus` (aria-live) zeigt aber weiterhin z. B. „Ton gestoppt.", bis der Sweep endet. Screenreader-Nutzer erhalten keine Startansage (nur die Progressbar). NFR-15 fordert Statusmeldungen über `role="status"`. Nachweis: `probe-behavior.log` (SWEEP@200/800).
+Nach „Sweep starten" läuft der Ton, `#fqStatus` (aria-live) zeigt aber weiterhin z. B. „Ton gestoppt.", bis der Sweep endet. Screenreader-Nutzer erhalten keine Startansage (nur die Progressbar). NFR-15 fordert Statusmeldungen über `role="status"`. Nachweis: `probe-behavior.txt` (SWEEP@200/800).
 
 **m-2 — Datensatz-Disclaimer nennt falsche harte Grenze.**
 `data/frequencies.json` → `disclaimer.lautstaerke`: „begrenzt die Ausgabe hart auf -20 dBFS". Tatsächlich ist −20 dBFS der Startpegel, −6 dBFS der harte Deckel (Engine-Konstante, ADR NFR-7/8). Die UI rendert dieses Feld nicht, daher kein sichtbarer Fehler — der Datensatz ist aber irreführend und sollte korrigiert werden.
@@ -260,11 +260,11 @@ NFR-1 liegt bei 85 613 / 86 275 B (662 B, 0,8 %). Jede weitere statische Zeile i
 | --- | --- |
 | `evidence/t_835bd1e9/measurements.json` | alle Messwerte je Browser (Frequenz, Pegel, Sweep, Kontrast, rAF, Mobile, Tastatur) |
 | `evidence/t_835bd1e9/screens/*.png` | Hub/Labor 1440 px, Labor 360 px, reduzierte Bewegung — Chromium, Firefox, WebKit |
-| `evidence/t_835bd1e9/logs/playwright-chromium.log` | vollständige Feature-E2E-Suite (88/88) auf isoliertem Port |
-| `evidence/t_835bd1e9/logs/playwright-chromium-stale-server-invalid.log` | verworfener Lauf mit fremdem Server (14 Falschmeldungen) |
-| `evidence/t_835bd1e9/logs/qa-final-all-browsers.log` | QA-Suite über alle vier Projekte |
-| `evidence/t_835bd1e9/logs/qa-chromium.log`, `qa-webkit-mobile.log` | Iterationsläufe der QA-Suite |
-| `evidence/t_835bd1e9/logs/probe-behavior.log`, `probe-cancel.log` | Sonden zu Fokus, Slider-Sync, Sweep, Preset-Klick |
+| `evidence/t_835bd1e9/protokolle/playwright-chromium.txt` | vollständige Feature-E2E-Suite (88/88) auf isoliertem Port |
+| `evidence/t_835bd1e9/protokolle/playwright-chromium-stale-server-invalid.txt` | verworfener Lauf mit fremdem Server (14 Falschmeldungen) |
+| `evidence/t_835bd1e9/protokolle/qa-final-all-browsers.txt` | QA-Suite über alle vier Projekte |
+| `evidence/t_835bd1e9/protokolle/qa-chromium.txt`, `qa-webkit-mobile.txt` | Iterationsläufe der QA-Suite |
+| `evidence/t_835bd1e9/protokolle/probe-behavior.txt`, `probe-cancel.txt` | Sonden zu Fokus, Slider-Sync, Sweep, Preset-Klick |
 | `evidence/t_835bd1e9/scripts/*.cjs` | Mess- und Sonden-Skripte (reproduzierbar) |
 | `qa/01-funktional.spec.js`, `qa/02-barrierefreiheit.spec.js` | ausführbare QA-Fälle |
 | `playwright.qa.config.js` | eigenständige Konfiguration (eigener Port, drei Engines, mobiles Profil) |

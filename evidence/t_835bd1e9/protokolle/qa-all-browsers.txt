@@ -1,0 +1,1042 @@
+
+Running 140 tests using 1 worker
+
+[1/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:160:7 › Frequenzlabor — Wiedergabe und Autoplay › kein AudioContext vor Interaktion, Start/Stopp korrekt, idempotentes Stopp
+[2/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:199:7 › Frequenzlabor — Wiedergabe und Autoplay › erneutes Starten nach Stopp nutzt keinen zweiten Oszillatorsatz
+[3/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:215:7 › Frequenzlabor — Wiedergabe und Autoplay › blockierter AudioContext erzeugt eine sichtbare, wiederholbare Fehlermeldung
+[4/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 20 Hz liegt innerhalb ±1 Hz
+[5/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 100 Hz liegt innerhalb ±1 Hz
+[6/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 432 Hz liegt innerhalb ±1 Hz
+[7/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 440 Hz liegt innerhalb ±1 Hz
+[8/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 528 Hz liegt innerhalb ±1 Hz
+[9/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 1000 Hz liegt innerhalb ±1 Hz
+[10/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 5000 Hz liegt innerhalb ±1 Hz
+[11/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:279:7 › Frequenzlabor — Signalgenauigkeit › Realtime-Pfad kommandiert die in der UI gewählte Frequenz
+[12/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:295:7 › Frequenzlabor — Lautstärke-Deckel › Engine klemmt auf −6 dBFS und der Offline-Pegel bleibt darunter
+[13/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:302:7 › Frequenzlabor — Lautstärke-Deckel › UI-Slider endet bei −6 dBFS, Anzeige nennt den Deckel, Startpegel −20 dBFS
+[14/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:315:7 › Frequenzlabor — Lautstärke-Deckel › Startpegel und Deckel gelten auch nach einem Preset-Start
+[15/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:328:7 › Frequenzlabor — Sweep › Sweep läuft die eingestellte Dauer, endet am Ziel und meldet das
+[16/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:355:7 › Frequenzlabor — Sweep › Sweep-Abbruch beendet den Sweep und meldet den Abbruch
+[17/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:371:7 › Frequenzlabor — Presets und Bibliothek › Bibliotheks-Preset startet exakt seine Frequenz
+[18/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:388:7 › Frequenzlabor — Presets und Bibliothek › Labor-Preset-Auswahl listet nur hörbare Einträge und spielt die gewählte Frequenz
+[19/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:412:7 › Frequenzlabor — Presets und Bibliothek › nicht abspielbare Einträge haben keinen Abspielknopf, aber einen Hinweis
+[20/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:422:7 › Frequenzlabor — Quellen und Disclaimer › Quellenlinks sind https, extern abgesichert und vollständig
+[21/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:445:7 › Frequenzlabor — Quellen und Disclaimer › Disclaimer ist auf Hub und Labor sichtbar und nennt kein Medizinprodukt
+[22/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:462:7 › Frequenzlabor — Navigation › Hauptnavigation öffnet den Bereich, Alias wird normalisiert
+[23/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:477:7 › Frequenzlabor — Navigation › Browser-Zurück und -Vorwärts stellen die Ansicht wieder her
+[24/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:487:7 › Frequenzlabor — Navigation › Audio stoppt beim Verlassen der Seite
+[25/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:498:7 › Frequenzlabor — Navigation › pagehide stoppt laufendes Audio
+[26/140] [chromium-desktop] › tests\qa\01-funktional.spec.js:508:7 › Frequenzlabor — Ladeverhalten › Engine wird erst mit der Kategorie geladen
+[27/140] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:76:7 › Frequenzlabor — Tastaturbedienung › alle Kernbedienelemente sind ohne Maus erreichbar und bedienbar
+[28/140] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:130:7 › Frequenzlabor — Tastaturbedienung › Slider und Zahlenfeld bleiben per Tastatur synchron
+[29/140] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:153:7 › Frequenzlabor — Tastaturbedienung › Zahlenfeld klemmt auf 20 und 20.000 Hz
+[30/140] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:165:7 › Frequenzlabor — Screenreader-Stichprobe › Bedienelemente haben sprechende Namen, Canvas ist verborgen
+[31/140] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:187:7 › Frequenzlabor — Screenreader-Stichprobe › Evidenzstatus ist immer Text, nicht nur Farbe
+[32/140] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:201:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+[chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:201:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+KONTRAST_HUB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":56,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-lede","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Eine Schwingung ist eine periodische Änd"},{"selector":".fq-entry-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Menschlicher Hörbereich"},{"selector":".fq-entry-desc","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Normalhörende nehmen etwa 20 Hz bis 20.0"},{"selector":".fq-entry-hz","ratio":8.42,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"20 Hz – 20.000 Hz"},{"selector":".fq-badge","ratio":7.75,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Belegt"},{"selector":".fq-source-link","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"OpenStax College Physics 2e, Kap. 17.6 „"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":"#fqDisclaimerLang","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Dieses Frequenzlabor ist ein Bildungs- u"},{"selector":"#fq-quellen-title","ratio":15.36,"fontSize":28,"bold":false,"large":true,"required":3,"text":"Quellen und Methode"}]
+
+KONTRAST_LAB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":56,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-note","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"20 kHz ist für viele Menschen unhörbar. "},{"selector":"#fqGainReadout","ratio":13.86,"fontSize":18,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-gain-cap","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Deckel: −6 dBFS"},{"selector":"#fqStatus","ratio":10.07,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":""},{"selector":"#fqReadGain","ratio":13.86,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-panel-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Frequenz"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":".btn-primary","ratio":9.33,"fontSize":15,"bold":false,"large":false,"required":4.5,"text":"Karte ziehen\n                    ↓"},{"selector":".btn-secondary","ratio":13.86,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Zur Startseite"}]
+
+[33/140] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:249:7 › Frequenzlabor — reduzierte Bewegung › keine rAF-Animation, statische Erklärung sichtbar
+[34/140] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:276:7 › Frequenzlabor — mobile Ansicht 360 px › kein horizontaler Überlauf und bedienbare Touch-Ziele
+[35/140] [chromium-desktop] › tests\qa\02-barrierefreiheit.spec.js:302:7 › Frequenzlabor — mobile Ansicht 360 px › Bibliothek bleibt bei 360 px lesbar
+[36/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:160:7 › Frequenzlabor — Wiedergabe und Autoplay › kein AudioContext vor Interaktion, Start/Stopp korrekt, idempotentes Stopp
+[37/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:199:7 › Frequenzlabor — Wiedergabe und Autoplay › erneutes Starten nach Stopp nutzt keinen zweiten Oszillatorsatz
+[38/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:215:7 › Frequenzlabor — Wiedergabe und Autoplay › blockierter AudioContext erzeugt eine sichtbare, wiederholbare Fehlermeldung
+[39/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 20 Hz liegt innerhalb ±1 Hz
+[40/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 100 Hz liegt innerhalb ±1 Hz
+[41/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 432 Hz liegt innerhalb ±1 Hz
+[42/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 440 Hz liegt innerhalb ±1 Hz
+[43/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 528 Hz liegt innerhalb ±1 Hz
+[44/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 1000 Hz liegt innerhalb ±1 Hz
+[45/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 5000 Hz liegt innerhalb ±1 Hz
+[46/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:279:7 › Frequenzlabor — Signalgenauigkeit › Realtime-Pfad kommandiert die in der UI gewählte Frequenz
+[47/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:295:7 › Frequenzlabor — Lautstärke-Deckel › Engine klemmt auf −6 dBFS und der Offline-Pegel bleibt darunter
+[48/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:302:7 › Frequenzlabor — Lautstärke-Deckel › UI-Slider endet bei −6 dBFS, Anzeige nennt den Deckel, Startpegel −20 dBFS
+[49/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:315:7 › Frequenzlabor — Lautstärke-Deckel › Startpegel und Deckel gelten auch nach einem Preset-Start
+[50/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:328:7 › Frequenzlabor — Sweep › Sweep läuft die eingestellte Dauer, endet am Ziel und meldet das
+[51/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:355:7 › Frequenzlabor — Sweep › Sweep-Abbruch beendet den Sweep und meldet den Abbruch
+[52/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:371:7 › Frequenzlabor — Presets und Bibliothek › Bibliotheks-Preset startet exakt seine Frequenz
+[53/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:388:7 › Frequenzlabor — Presets und Bibliothek › Labor-Preset-Auswahl listet nur hörbare Einträge und spielt die gewählte Frequenz
+[54/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:412:7 › Frequenzlabor — Presets und Bibliothek › nicht abspielbare Einträge haben keinen Abspielknopf, aber einen Hinweis
+[55/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:422:7 › Frequenzlabor — Quellen und Disclaimer › Quellenlinks sind https, extern abgesichert und vollständig
+[56/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:445:7 › Frequenzlabor — Quellen und Disclaimer › Disclaimer ist auf Hub und Labor sichtbar und nennt kein Medizinprodukt
+[57/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:462:7 › Frequenzlabor — Navigation › Hauptnavigation öffnet den Bereich, Alias wird normalisiert
+[58/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:477:7 › Frequenzlabor — Navigation › Browser-Zurück und -Vorwärts stellen die Ansicht wieder her
+[59/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:487:7 › Frequenzlabor — Navigation › Audio stoppt beim Verlassen der Seite
+[60/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:498:7 › Frequenzlabor — Navigation › pagehide stoppt laufendes Audio
+[61/140] [firefox-desktop] › tests\qa\01-funktional.spec.js:508:7 › Frequenzlabor — Ladeverhalten › Engine wird erst mit der Kategorie geladen
+[62/140] [firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:76:7 › Frequenzlabor — Tastaturbedienung › alle Kernbedienelemente sind ohne Maus erreichbar und bedienbar
+[63/140] [firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:130:7 › Frequenzlabor — Tastaturbedienung › Slider und Zahlenfeld bleiben per Tastatur synchron
+[64/140] [firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:153:7 › Frequenzlabor — Tastaturbedienung › Zahlenfeld klemmt auf 20 und 20.000 Hz
+[65/140] [firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:165:7 › Frequenzlabor — Screenreader-Stichprobe › Bedienelemente haben sprechende Namen, Canvas ist verborgen
+[66/140] [firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:187:7 › Frequenzlabor — Screenreader-Stichprobe › Evidenzstatus ist immer Text, nicht nur Farbe
+[67/140] [firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:201:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+[firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:201:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+KONTRAST_HUB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":56,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-lede","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Eine Schwingung ist eine periodische Änd"},{"selector":".fq-entry-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Menschlicher Hörbereich"},{"selector":".fq-entry-desc","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Normalhörende nehmen etwa 20 Hz bis 20.0"},{"selector":".fq-entry-hz","ratio":8.42,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"20 Hz – 20.000 Hz"},{"selector":".fq-badge","ratio":7.75,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Belegt"},{"selector":".fq-source-link","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"OpenStax College Physics 2e, Kap. 17.6 „"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":"#fqDisclaimerLang","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Dieses Frequenzlabor ist ein Bildungs- u"},{"selector":"#fq-quellen-title","ratio":15.36,"fontSize":28,"bold":false,"large":true,"required":3,"text":"Quellen und Methode"}]
+
+KONTRAST_LAB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":56,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-note","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"20 kHz ist für viele Menschen unhörbar. "},{"selector":"#fqGainReadout","ratio":13.86,"fontSize":18,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-gain-cap","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Deckel: −6 dBFS"},{"selector":"#fqStatus","ratio":10.07,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":""},{"selector":"#fqReadGain","ratio":13.86,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-panel-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Frequenz"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":".btn-primary","ratio":9.33,"fontSize":15,"bold":false,"large":false,"required":4.5,"text":"Karte ziehen\n                    ↓"},{"selector":".btn-secondary","ratio":13.86,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Zur Startseite"}]
+
+[68/140] [firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:249:7 › Frequenzlabor — reduzierte Bewegung › keine rAF-Animation, statische Erklärung sichtbar
+[69/140] [firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:276:7 › Frequenzlabor — mobile Ansicht 360 px › kein horizontaler Überlauf und bedienbare Touch-Ziele
+[70/140] [firefox-desktop] › tests\qa\02-barrierefreiheit.spec.js:302:7 › Frequenzlabor — mobile Ansicht 360 px › Bibliothek bleibt bei 360 px lesbar
+[71/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:160:7 › Frequenzlabor — Wiedergabe und Autoplay › kein AudioContext vor Interaktion, Start/Stopp korrekt, idempotentes Stopp
+  1) [webkit-desktop] › tests\qa\01-funktional.spec.js:160:7 › Frequenzlabor — Wiedergabe und Autoplay › kein AudioContext vor Interaktion, Start/Stopp korrekt, idempotentes Stopp 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      172 |     await expect
+      173 |       .poll(async () => (await readState(page)).status, { timeout: 10000 })
+    > 174 |       .toBe('running');
+          |        ^
+      175 |
+      176 |     const afterStart = await readState(page);
+      177 |     expect(afterStart.freqHz).toBe(440);
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:174:8
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-66fa5--korrekt-idempotentes-Stopp-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-66fa5--korrekt-idempotentes-Stopp-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-66fa5--korrekt-idempotentes-Stopp-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-66fa5--korrekt-idempotentes-Stopp-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[72/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:199:7 › Frequenzlabor — Wiedergabe und Autoplay › erneutes Starten nach Stopp nutzt keinen zweiten Oszillatorsatz
+  2) [webkit-desktop] › tests\qa\01-funktional.spec.js:199:7 › Frequenzlabor — Wiedergabe und Autoplay › erneutes Starten nach Stopp nutzt keinen zweiten Oszillatorsatz 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      201 |     await openLab(page);
+      202 |     await page.locator('#fqPlay').click();
+    > 203 |     await expect.poll(async () => (await readState(page)).status).toBe('running');
+          |                                                                   ^
+      204 |     await page.locator('#fqStop').click();
+      205 |     await expect.poll(async () => (await readState(page)).status).toBe('idle');
+      206 |     await page.locator('#fqPlay').click();
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:203:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-65ebc-inen-zweiten-Oszillatorsatz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-65ebc-inen-zweiten-Oszillatorsatz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-65ebc-inen-zweiten-Oszillatorsatz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-65ebc-inen-zweiten-Oszillatorsatz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[73/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:215:7 › Frequenzlabor — Wiedergabe und Autoplay › blockierter AudioContext erzeugt eine sichtbare, wiederholbare Fehlermeldung
+  3) [webkit-desktop] › tests\qa\01-funktional.spec.js:215:7 › Frequenzlabor — Wiedergabe und Autoplay › blockierter AudioContext erzeugt eine sichtbare, wiederholbare Fehlermeldung 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "error"
+    Received: "unsupported"
+
+      236 |     const text = await error.textContent();
+      237 |     expect(text.trim().length, 'Fehlertext darf nicht leer sein').toBeGreaterThan(5);
+    > 238 |     expect((await readState(page)).status).toBe('error');
+          |                                            ^
+      239 |
+      240 |     // Wiederholbar: erneuter Klick zeigt die Meldung erneut.
+      241 |     await page.locator('#fqPlay').click();
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:238:44
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-61362-wiederholbare-Fehlermeldung-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-61362-wiederholbare-Fehlermeldung-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-61362-wiederholbare-Fehlermeldung-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-61362-wiederholbare-Fehlermeldung-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[74/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 20 Hz liegt innerhalb ±1 Hz
+  4) [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 20 Hz liegt innerhalb ±1 Hz 
+
+    Error: page.evaluate: ReferenceError: Can't find variable: OfflineAudioContext
+
+      78 |  */
+      79 | async function renderTone(page, { freq, seconds = 1.5, gainDb, waveform }) {
+    > 80 |   return page.evaluate(
+         |               ^
+      81 |     async ({ base, freq, seconds, gainDb, waveform }) => {
+      82 |       const module = await import(`${base}/js/modules/frequenz-engine.js`);
+      83 |       const sampleRate = 48000;
+        at renderTone (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:80:15)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:260:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-a2bb1-20-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-a2bb1-20-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-a2bb1-20-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-a2bb1-20-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[75/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 100 Hz liegt innerhalb ±1 Hz
+  5) [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 100 Hz liegt innerhalb ±1 Hz 
+
+    Error: page.evaluate: ReferenceError: Can't find variable: OfflineAudioContext
+
+      78 |  */
+      79 | async function renderTone(page, { freq, seconds = 1.5, gainDb, waveform }) {
+    > 80 |   return page.evaluate(
+         |               ^
+      81 |     async ({ base, freq, seconds, gainDb, waveform }) => {
+      82 |       const module = await import(`${base}/js/modules/frequenz-engine.js`);
+      83 |       const sampleRate = 48000;
+        at renderTone (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:80:15)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:260:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-8b1e0-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-8b1e0-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-8b1e0-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-8b1e0-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[76/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 432 Hz liegt innerhalb ±1 Hz
+  6) [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 432 Hz liegt innerhalb ±1 Hz 
+
+    Error: page.evaluate: ReferenceError: Can't find variable: OfflineAudioContext
+
+      78 |  */
+      79 | async function renderTone(page, { freq, seconds = 1.5, gainDb, waveform }) {
+    > 80 |   return page.evaluate(
+         |               ^
+      81 |     async ({ base, freq, seconds, gainDb, waveform }) => {
+      82 |       const module = await import(`${base}/js/modules/frequenz-engine.js`);
+      83 |       const sampleRate = 48000;
+        at renderTone (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:80:15)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:260:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-2259a-32-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-2259a-32-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-2259a-32-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-2259a-32-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[77/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 440 Hz liegt innerhalb ±1 Hz
+  7) [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 440 Hz liegt innerhalb ±1 Hz 
+
+    Error: page.evaluate: ReferenceError: Can't find variable: OfflineAudioContext
+
+      78 |  */
+      79 | async function renderTone(page, { freq, seconds = 1.5, gainDb, waveform }) {
+    > 80 |   return page.evaluate(
+         |               ^
+      81 |     async ({ base, freq, seconds, gainDb, waveform }) => {
+      82 |       const module = await import(`${base}/js/modules/frequenz-engine.js`);
+      83 |       const sampleRate = 48000;
+        at renderTone (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:80:15)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:260:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-e9020-40-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-e9020-40-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-e9020-40-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-e9020-40-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[78/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 528 Hz liegt innerhalb ±1 Hz
+  8) [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 528 Hz liegt innerhalb ±1 Hz 
+
+    Error: page.evaluate: ReferenceError: Can't find variable: OfflineAudioContext
+
+      78 |  */
+      79 | async function renderTone(page, { freq, seconds = 1.5, gainDb, waveform }) {
+    > 80 |   return page.evaluate(
+         |               ^
+      81 |     async ({ base, freq, seconds, gainDb, waveform }) => {
+      82 |       const module = await import(`${base}/js/modules/frequenz-engine.js`);
+      83 |       const sampleRate = 48000;
+        at renderTone (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:80:15)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:260:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-9fbb4-28-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-9fbb4-28-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-9fbb4-28-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-9fbb4-28-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[79/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 1000 Hz liegt innerhalb ±1 Hz
+  9) [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 1000 Hz liegt innerhalb ±1 Hz 
+
+    Error: page.evaluate: ReferenceError: Can't find variable: OfflineAudioContext
+
+      78 |  */
+      79 | async function renderTone(page, { freq, seconds = 1.5, gainDb, waveform }) {
+    > 80 |   return page.evaluate(
+         |               ^
+      81 |     async ({ base, freq, seconds, gainDb, waveform }) => {
+      82 |       const module = await import(`${base}/js/modules/frequenz-engine.js`);
+      83 |       const sampleRate = 48000;
+        at renderTone (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:80:15)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:260:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-271f0-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-271f0-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-271f0-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-271f0-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[80/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 5000 Hz liegt innerhalb ±1 Hz
+  10) [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 5000 Hz liegt innerhalb ±1 Hz 
+
+    Error: page.evaluate: ReferenceError: Can't find variable: OfflineAudioContext
+
+      78 |  */
+      79 | async function renderTone(page, { freq, seconds = 1.5, gainDb, waveform }) {
+    > 80 |   return page.evaluate(
+         |               ^
+      81 |     async ({ base, freq, seconds, gainDb, waveform }) => {
+      82 |       const module = await import(`${base}/js/modules/frequenz-engine.js`);
+      83 |       const sampleRate = 48000;
+        at renderTone (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:80:15)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:260:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-63846-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-63846-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-63846-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-63846-00-Hz-liegt-innerhalb-±1-Hz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[81/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:279:7 › Frequenzlabor — Signalgenauigkeit › Realtime-Pfad kommandiert die in der UI gewählte Frequenz
+  11) [webkit-desktop] › tests\qa\01-funktional.spec.js:279:7 › Frequenzlabor — Signalgenauigkeit › Realtime-Pfad kommandiert die in der UI gewählte Frequenz 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      284 |     await expect(page.locator('#fqFreqNumber')).toHaveValue('528');
+      285 |     await page.locator('#fqPlay').click();
+    > 286 |     await expect.poll(async () => (await readState(page)).status).toBe('running');
+          |                                                                   ^
+      287 |     const state = await readState(page);
+      288 |     expect(state.freqHz).toBe(528);
+      289 |     const oscillators = await readOscillators(page);
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:286:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-0a9de-in-der-UI-gewählte-Frequenz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-0a9de-in-der-UI-gewählte-Frequenz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-0a9de-in-der-UI-gewählte-Frequenz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-0a9de-in-der-UI-gewählte-Frequenz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[82/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:295:7 › Frequenzlabor — Lautstärke-Deckel › Engine klemmt auf −6 dBFS und der Offline-Pegel bleibt darunter
+  12) [webkit-desktop] › tests\qa\01-funktional.spec.js:295:7 › Frequenzlabor — Lautstärke-Deckel › Engine klemmt auf −6 dBFS und der Offline-Pegel bleibt darunter 
+
+    Error: page.evaluate: ReferenceError: Can't find variable: OfflineAudioContext
+
+      78 |  */
+      79 | async function renderTone(page, { freq, seconds = 1.5, gainDb, waveform }) {
+    > 80 |   return page.evaluate(
+         |               ^
+      81 |     async ({ base, freq, seconds, gainDb, waveform }) => {
+      82 |       const module = await import(`${base}/js/modules/frequenz-engine.js`);
+      83 |       const sampleRate = 48000;
+        at renderTone (C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:80:15)
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:297:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-5fdc6-fline-Pegel-bleibt-darunter-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-5fdc6-fline-Pegel-bleibt-darunter-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-5fdc6-fline-Pegel-bleibt-darunter-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-5fdc6-fline-Pegel-bleibt-darunter-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[83/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:302:7 › Frequenzlabor — Lautstärke-Deckel › UI-Slider endet bei −6 dBFS, Anzeige nennt den Deckel, Startpegel −20 dBFS
+[84/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:315:7 › Frequenzlabor — Lautstärke-Deckel › Startpegel und Deckel gelten auch nach einem Preset-Start
+  13) [webkit-desktop] › tests\qa\01-funktional.spec.js:315:7 › Frequenzlabor — Lautstärke-Deckel › Startpegel und Deckel gelten auch nach einem Preset-Start 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      318 |     await page.locator('#fqPresetSelect').selectOption('solfeggio-528');
+      319 |     await page.locator('#fqPresetPlay').click();
+    > 320 |     await expect.poll(async () => (await readState(page)).status).toBe('running');
+          |                                                                   ^
+      321 |     const state = await readState(page);
+      322 |     expect(state.gainDb).toBeLessThanOrEqual(-6);
+      323 |     expect(state.gainDb).toBeGreaterThanOrEqual(-60);
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:320:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-80734-uch-nach-einem-Preset-Start-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-80734-uch-nach-einem-Preset-Start-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-80734-uch-nach-einem-Preset-Start-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-80734-uch-nach-einem-Preset-Start-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[85/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:328:7 › Frequenzlabor — Sweep › Sweep läuft die eingestellte Dauer, endet am Ziel und meldet das
+  14) [webkit-desktop] › tests\qa\01-funktional.spec.js:328:7 › Frequenzlabor — Sweep › Sweep läuft die eingestellte Dauer, endet am Ziel und meldet das 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('#fqSweepProgress')
+    Expected: visible
+    Received: hidden
+    Timeout:  15000ms
+
+    Call log:
+      - Expect "toBeVisible" locator('#fqSweepProgress') with timeout 15000ms
+      - waiting for locator('#fqSweepProgress')
+        30 × locator resolved to <div aria-valuemin="0" aria-valuenow="0" role="progressbar" aria-valuemax="100" id="fqSweepProgress" class="fq-progress-track" aria-label="Sweep-Fortschritt">…</div>
+           - unexpected value "hidden"
+
+
+      333 |     const started = Date.now();
+      334 |     await page.locator('#fqSweepStart').click();
+    > 335 |     await expect(page.locator('#fqSweepProgress')).toBeVisible();
+          |                                                    ^
+      336 |     await page.waitForTimeout(700);
+      337 |     const midProgress = Number(await page.locator('#fqSweepProgress').getAttribute('aria-valuenow'));
+      338 |     expect(midProgress, 'Fortschritt läuft während des Sweeps').toBeGreaterThan(0);
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:335:52
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-06dd2-ndet-am-Ziel-und-meldet-das-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-06dd2-ndet-am-Ziel-und-meldet-das-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-06dd2-ndet-am-Ziel-und-meldet-das-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-06dd2-ndet-am-Ziel-und-meldet-das-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[86/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:355:7 › Frequenzlabor — Sweep › Sweep-Abbruch beendet den Sweep und meldet den Abbruch
+  15) [webkit-desktop] › tests\qa\01-funktional.spec.js:355:7 › Frequenzlabor — Sweep › Sweep-Abbruch beendet den Sweep und meldet den Abbruch 
+
+    Error: expect(received).not.toBeNull()
+
+    Received: null
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      357 |     await page.locator('#fqSweepSeconds').fill('8');
+      358 |     await page.locator('#fqSweepStart').click();
+    > 359 |     await expect.poll(async () => (await readState(page)).sweep, { timeout: 10000 }).not.toBeNull();
+          |                                                                                          ^
+      360 |     await expect(page.locator('#fqSweepCancel')).toBeEnabled();
+      361 |     await page.locator('#fqSweepCancel').click();
+      362 |     await expect.poll(async () => (await readState(page)).sweep, { timeout: 10000 }).toBe(null);
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:359:90
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-c2ad7-weep-und-meldet-den-Abbruch-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-c2ad7-weep-und-meldet-den-Abbruch-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-c2ad7-weep-und-meldet-den-Abbruch-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-c2ad7-weep-und-meldet-den-Abbruch-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[87/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:371:7 › Frequenzlabor — Presets und Bibliothek › Bibliotheks-Preset startet exakt seine Frequenz
+  16) [webkit-desktop] › tests\qa\01-funktional.spec.js:371:7 › Frequenzlabor — Presets und Bibliothek › Bibliotheks-Preset startet exakt seine Frequenz 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      377 |     await expect
+      378 |       .poll(async () => (await readState(page)).status, { timeout: 10000 })
+    > 379 |       .toBe('running');
+          |        ^
+      380 |     expect((await readState(page)).freqHz).toBe(528);
+      381 |     const oscillators = await readOscillators(page);
+      382 |     expect(oscillators[oscillators.length - 1].freq).toBeCloseTo(528, 3);
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:379:8
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-731d8-tartet-exakt-seine-Frequenz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-731d8-tartet-exakt-seine-Frequenz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-731d8-tartet-exakt-seine-Frequenz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-731d8-tartet-exakt-seine-Frequenz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[88/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:388:7 › Frequenzlabor — Presets und Bibliothek › Labor-Preset-Auswahl listet nur hörbare Einträge und spielt die gewählte Frequenz
+  17) [webkit-desktop] › tests\qa\01-funktional.spec.js:388:7 › Frequenzlabor — Presets und Bibliothek › Labor-Preset-Auswahl listet nur hörbare Einträge und spielt die gewählte Frequenz 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      406 |     await page.locator('#fqPresetSelect').selectOption('kammerton-440');
+      407 |     await page.locator('#fqPresetPlay').click();
+    > 408 |     await expect.poll(async () => (await readState(page)).status).toBe('running');
+          |                                                                   ^
+      409 |     expect((await readState(page)).freqHz).toBe(440);
+      410 |   });
+      411 |
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:408:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-252ae-pielt-die-gewählte-Frequenz-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-252ae-pielt-die-gewählte-Frequenz-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-252ae-pielt-die-gewählte-Frequenz-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-252ae-pielt-die-gewählte-Frequenz-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[89/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:412:7 › Frequenzlabor — Presets und Bibliothek › nicht abspielbare Einträge haben keinen Abspielknopf, aber einen Hinweis
+[90/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:422:7 › Frequenzlabor — Quellen und Disclaimer › Quellenlinks sind https, extern abgesichert und vollständig
+[91/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:445:7 › Frequenzlabor — Quellen und Disclaimer › Disclaimer ist auf Hub und Labor sichtbar und nennt kein Medizinprodukt
+[92/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:462:7 › Frequenzlabor — Navigation › Hauptnavigation öffnet den Bereich, Alias wird normalisiert
+[93/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:477:7 › Frequenzlabor — Navigation › Browser-Zurück und -Vorwärts stellen die Ansicht wieder her
+[94/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:487:7 › Frequenzlabor — Navigation › Audio stoppt beim Verlassen der Seite
+  18) [webkit-desktop] › tests\qa\01-funktional.spec.js:487:7 › Frequenzlabor — Navigation › Audio stoppt beim Verlassen der Seite 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      488 |     await openLab(page);
+      489 |     await page.locator('#fqPlay').click();
+    > 490 |     await expect.poll(async () => (await readState(page)).status).toBe('running');
+          |                                                                   ^
+      491 |     await page.locator('.nav-link[data-page="home"]').click();
+      492 |     await expect(page.locator('#home')).toBeVisible();
+      493 |     await expect
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:490:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-d9a2c-pt-beim-Verlassen-der-Seite-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-d9a2c-pt-beim-Verlassen-der-Seite-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-d9a2c-pt-beim-Verlassen-der-Seite-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-d9a2c-pt-beim-Verlassen-der-Seite-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[95/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:498:7 › Frequenzlabor — Navigation › pagehide stoppt laufendes Audio
+  19) [webkit-desktop] › tests\qa\01-funktional.spec.js:498:7 › Frequenzlabor — Navigation › pagehide stoppt laufendes Audio 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      499 |     await openLab(page);
+      500 |     await page.locator('#fqPlay').click();
+    > 501 |     await expect.poll(async () => (await readState(page)).status).toBe('running');
+          |                                                                   ^
+      502 |     await page.evaluate(() => window.dispatchEvent(new PageTransitionEvent('pagehide')));
+      503 |     await expect.poll(async () => (await readState(page)).status).toBe('idle');
+      504 |   });
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:501:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-2be38-hide-stoppt-laufendes-Audio-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-2be38-hide-stoppt-laufendes-Audio-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-2be38-hide-stoppt-laufendes-Audio-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-2be38-hide-stoppt-laufendes-Audio-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[96/140] [webkit-desktop] › tests\qa\01-funktional.spec.js:508:7 › Frequenzlabor — Ladeverhalten › Engine wird erst mit der Kategorie geladen
+[97/140] [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:76:7 › Frequenzlabor — Tastaturbedienung › alle Kernbedienelemente sind ohne Maus erreichbar und bedienbar
+  20) [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:76:7 › Frequenzlabor — Tastaturbedienung › alle Kernbedienelemente sind ohne Maus erreichbar und bedienbar 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      89 |     await expect
+      90 |       .poll(async () => (await page.evaluate(() => window.EsoterikWelt.frequenz.getState().status)))
+    > 91 |       .toBe('running');
+         |        ^
+      92 |     await page.locator('#frequenzen-title').focus();
+      93 |
+      94 |     const stops = [];
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\02-barrierefreiheit.spec.js:91:8
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\02-barrierefreiheit-Freque-fa087-us-erreichbar-und-bedienbar-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\02-barrierefreiheit-Freque-fa087-us-erreichbar-und-bedienbar-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\02-barrierefreiheit-Freque-fa087-us-erreichbar-und-bedienbar-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\02-barrierefreiheit-Freque-fa087-us-erreichbar-und-bedienbar-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[98/140] [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:130:7 › Frequenzlabor — Tastaturbedienung › Slider und Zahlenfeld bleiben per Tastatur synchron
+[99/140] [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:153:7 › Frequenzlabor — Tastaturbedienung › Zahlenfeld klemmt auf 20 und 20.000 Hz
+[100/140] [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:165:7 › Frequenzlabor — Screenreader-Stichprobe › Bedienelemente haben sprechende Namen, Canvas ist verborgen
+[101/140] [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:187:7 › Frequenzlabor — Screenreader-Stichprobe › Evidenzstatus ist immer Text, nicht nur Farbe
+[102/140] [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:201:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+[webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:201:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+KONTRAST_HUB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":56,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-lede","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Eine Schwingung ist eine periodische Änd"},{"selector":".fq-entry-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Menschlicher Hörbereich"},{"selector":".fq-entry-desc","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Normalhörende nehmen etwa 20 Hz bis 20.0"},{"selector":".fq-entry-hz","ratio":8.42,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"20 Hz – 20.000 Hz"},{"selector":".fq-badge","ratio":7.75,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Belegt"},{"selector":".fq-source-link","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"OpenStax College Physics 2e, Kap. 17.6 „"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":"#fqDisclaimerLang","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Dieses Frequenzlabor ist ein Bildungs- u"},{"selector":"#fq-quellen-title","ratio":15.36,"fontSize":28,"bold":false,"large":true,"required":3,"text":"Quellen und Methode"}]
+
+KONTRAST_LAB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":56,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-note","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"20 kHz ist für viele Menschen unhörbar. "},{"selector":"#fqGainReadout","ratio":13.86,"fontSize":18,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-gain-cap","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Deckel: −6 dBFS"},{"selector":"#fqStatus","ratio":10.07,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":""},{"selector":"#fqReadGain","ratio":13.86,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-panel-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Frequenz"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":".btn-primary","ratio":9.33,"fontSize":15,"bold":false,"large":false,"required":4.5,"text":"Karte ziehen\n                    ↓"},{"selector":".btn-secondary","ratio":13.86,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Zur Startseite"}]
+
+[103/140] [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:249:7 › Frequenzlabor — reduzierte Bewegung › keine rAF-Animation, statische Erklärung sichtbar
+  21) [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:249:7 › Frequenzlabor — reduzierte Bewegung › keine rAF-Animation, statische Erklärung sichtbar 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      260 |     await expect
+      261 |       .poll(async () => (await page.evaluate(() => window.EsoterikWelt.frequenz.getState().status)))
+    > 262 |       .toBe('running');
+          |        ^
+      263 |     await expect(page.locator('#fqMotionNote'), 'Hinweis zur reduzierten Bewegung ist sichtbar').toBeVisible();
+      264 |     const before = await page.evaluate(() => window.__qaRaf);
+      265 |     await page.waitForTimeout(1000);
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\02-barrierefreiheit.spec.js:262:8
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\02-barrierefreiheit-Freque-f8566-tatische-Erklärung-sichtbar-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\02-barrierefreiheit-Freque-f8566-tatische-Erklärung-sichtbar-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\02-barrierefreiheit-Freque-f8566-tatische-Erklärung-sichtbar-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\02-barrierefreiheit-Freque-f8566-tatische-Erklärung-sichtbar-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[104/140] [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:276:7 › Frequenzlabor — mobile Ansicht 360 px › kein horizontaler Überlauf und bedienbare Touch-Ziele
+  22) [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:276:7 › Frequenzlabor — mobile Ansicht 360 px › kein horizontaler Überlauf und bedienbare Touch-Ziele 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "running"
+    Received: "unsupported"
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      295 |
+      296 |     await page.locator('#fqPlay').tap();
+    > 297 |     await expect.poll(async () => (await page.evaluate(() => window.EsoterikWelt.frequenz.getState().status))).toBe('running');
+          |                                                                                                                ^
+      298 |     await page.locator('#fqStop').tap();
+      299 |     await expect.poll(async () => (await page.evaluate(() => window.EsoterikWelt.frequenz.getState().status))).toBe('idle');
+      300 |   });
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\02-barrierefreiheit.spec.js:297:112
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\02-barrierefreiheit-Freque-a6ccf--und-bedienbare-Touch-Ziele-webkit-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\02-barrierefreiheit-Freque-a6ccf--und-bedienbare-Touch-Ziele-webkit-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\02-barrierefreiheit-Freque-a6ccf--und-bedienbare-Touch-Ziele-webkit-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\02-barrierefreiheit-Freque-a6ccf--und-bedienbare-Touch-Ziele-webkit-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[105/140] [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:302:7 › Frequenzlabor — mobile Ansicht 360 px › Bibliothek bleibt bei 360 px lesbar
+[106/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:160:7 › Frequenzlabor — Wiedergabe und Autoplay › kein AudioContext vor Interaktion, Start/Stopp korrekt, idempotentes Stopp
+[107/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:199:7 › Frequenzlabor — Wiedergabe und Autoplay › erneutes Starten nach Stopp nutzt keinen zweiten Oszillatorsatz
+[108/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:215:7 › Frequenzlabor — Wiedergabe und Autoplay › blockierter AudioContext erzeugt eine sichtbare, wiederholbare Fehlermeldung
+[109/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 20 Hz liegt innerhalb ±1 Hz
+[110/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 100 Hz liegt innerhalb ±1 Hz
+[111/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 432 Hz liegt innerhalb ±1 Hz
+[112/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 440 Hz liegt innerhalb ±1 Hz
+[113/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 528 Hz liegt innerhalb ±1 Hz
+[114/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 1000 Hz liegt innerhalb ±1 Hz
+[115/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 5000 Hz liegt innerhalb ±1 Hz
+[116/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:279:7 › Frequenzlabor — Signalgenauigkeit › Realtime-Pfad kommandiert die in der UI gewählte Frequenz
+[117/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:295:7 › Frequenzlabor — Lautstärke-Deckel › Engine klemmt auf −6 dBFS und der Offline-Pegel bleibt darunter
+[118/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:302:7 › Frequenzlabor — Lautstärke-Deckel › UI-Slider endet bei −6 dBFS, Anzeige nennt den Deckel, Startpegel −20 dBFS
+[119/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:315:7 › Frequenzlabor — Lautstärke-Deckel › Startpegel und Deckel gelten auch nach einem Preset-Start
+[120/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:328:7 › Frequenzlabor — Sweep › Sweep läuft die eingestellte Dauer, endet am Ziel und meldet das
+[121/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:355:7 › Frequenzlabor — Sweep › Sweep-Abbruch beendet den Sweep und meldet den Abbruch
+[122/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:371:7 › Frequenzlabor — Presets und Bibliothek › Bibliotheks-Preset startet exakt seine Frequenz
+  23) [chromium-mobile] › tests\qa\01-funktional.spec.js:371:7 › Frequenzlabor — Presets und Bibliothek › Bibliotheks-Preset startet exakt seine Frequenz 
+
+    Test timeout of 90000ms exceeded.
+
+    Error: locator.click: Test timeout of 90000ms exceeded.
+    Browser logs:
+
+    <launching> C:\Users\mas\AppData\Local\ms-playwright\chromium_headless_shell-1248\chrome-headless-shell-win64\chrome-headless-shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\Users\mas\AppData\Local\Temp\playwright_chromiumdev_profile-7nRRhl --remote-debugging-pipe --no-startup-window
+    <launched> pid=45496
+    [pid=45496][err] [1102/230050.212:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230051.329:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230052.324:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230052.561:INFO:CONSOLE:271] "Frequenzlabor: Audio output could not be started.", source: http://127.0.0.1:3324/Esoterik-Welt/js/modules/frequenzlabor.js (271)
+    [pid=45496][err] [1102/230052.562:INFO:CONSOLE:271] "Frequenzlabor: Audio output could not be started.", source: http://127.0.0.1:3324/Esoterik-Welt/js/modules/frequenzlabor.js (271)
+    [pid=45496][err] [1102/230052.764:INFO:CONSOLE:271] "Frequenzlabor: Audio output could not be started.", source: http://127.0.0.1:3324/Esoterik-Welt/js/modules/frequenzlabor.js (271)
+    [pid=45496][err] [1102/230052.765:INFO:CONSOLE:271] "Frequenzlabor: Audio output could not be started.", source: http://127.0.0.1:3324/Esoterik-Welt/js/modules/frequenzlabor.js (271)
+    [pid=45496][err] [1102/230053.516:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230054.511:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230055.681:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230057.174:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230058.603:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230059.731:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230100.919:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230102.063:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230103.744:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230104.859:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230106.061:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230107.102:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230111.264:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496][err] [1102/230112.585:INFO:CONSOLE:265] "Esoterik-Welt initialized", source: http://127.0.0.1:3324/Esoterik-Welt/js/main.js (265)
+    [pid=45496] <gracefully close start>
+    Call log:
+      - waiting for locator('.nav-link[data-page="home"]')
+        - locator resolved to <a href="#home" class="nav-link" data-page="home">Start</a>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+          - waiting 100ms
+        172 × waiting for element to be visible, enabled and stable
+            - element is not visible
+          - retrying click action
+            - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      382 |     expect(oscillators[oscillators.length - 1].freq).toBeCloseTo(528, 3);
+      383 |     // Ton für den nächsten Testfall beenden (gleiche Seite, kein Neuladen).
+    > 384 |     await page.locator('.nav-link[data-page="home"]').click();
+          |                                                       ^
+      385 |     await expect.poll(async () => (await readState(page)).status).toBe('idle');
+      386 |   });
+      387 |
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:384:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-731d8-tartet-exakt-seine-Frequenz-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-731d8-tartet-exakt-seine-Frequenz-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-731d8-tartet-exakt-seine-Frequenz-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-731d8-tartet-exakt-seine-Frequenz-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[123/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:388:7 › Frequenzlabor — Presets und Bibliothek › Labor-Preset-Auswahl listet nur hörbare Einträge und spielt die gewählte Frequenz
+[124/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:412:7 › Frequenzlabor — Presets und Bibliothek › nicht abspielbare Einträge haben keinen Abspielknopf, aber einen Hinweis
+[125/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:422:7 › Frequenzlabor — Quellen und Disclaimer › Quellenlinks sind https, extern abgesichert und vollständig
+[126/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:445:7 › Frequenzlabor — Quellen und Disclaimer › Disclaimer ist auf Hub und Labor sichtbar und nennt kein Medizinprodukt
+[127/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:462:7 › Frequenzlabor — Navigation › Hauptnavigation öffnet den Bereich, Alias wird normalisiert
+  24) [chromium-mobile] › tests\qa\01-funktional.spec.js:462:7 › Frequenzlabor — Navigation › Hauptnavigation öffnet den Bereich, Alias wird normalisiert 
+
+    Test timeout of 90000ms exceeded.
+
+    Error: locator.click: Test timeout of 90000ms exceeded.
+    Call log:
+      - waiting for locator('.nav-link[data-page="frequenzen"]')
+        - locator resolved to <a class="nav-link" href="#frequenzen" data-page="frequenzen">Frequenzen</a>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+          - waiting 100ms
+        172 × waiting for element to be visible, enabled and stable
+            - element is not visible
+          - retrying click action
+            - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      463 |     const problems = watchConsole(page);
+      464 |     await page.goto(`${BASE}/`, { waitUntil: 'load' });
+    > 465 |     await page.locator('.nav-link[data-page="frequenzen"]').click();
+          |                                                             ^
+      466 |     await expect(page.locator('#frequenzen')).toBeVisible();
+      467 |     expect(new URL(page.url()).hash).toBe('#frequenzen');
+      468 |     await expect(page.locator('#frequenzen h1')).toHaveCount(1);
+        at C:\Users\mas\Arbeit\Esoterik-Welt-qa\tests\qa\01-funktional.spec.js:465:61
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-47a5b-ich-Alias-wird-normalisiert-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-47a5b-ich-Alias-wird-normalisiert-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-47a5b-ich-Alias-wird-normalisiert-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-47a5b-ich-Alias-wird-normalisiert-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[128/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:477:7 › Frequenzlabor — Navigation › Browser-Zurück und -Vorwärts stellen die Ansicht wieder her
+[129/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:487:7 › Frequenzlabor — Navigation › Audio stoppt beim Verlassen der Seite
+  25) [chromium-mobile] › tests\qa\01-funktional.spec.js:487:7 › Frequenzlabor — Navigation › Audio stoppt beim Verlassen der Seite 
+
+    Test timeout of 90000ms exceeded.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-d9a2c-pt-beim-Verlassen-der-Seite-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\qa\01-funktional-Frequenzlabo-d9a2c-pt-beim-Verlassen-der-Seite-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\qa\01-funktional-Frequenzlabo-d9a2c-pt-beim-Verlassen-der-Seite-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\qa\01-funktional-Frequenzlabo-d9a2c-pt-beim-Verlassen-der-Seite-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[130/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:498:7 › Frequenzlabor — Navigation › pagehide stoppt laufendes Audio
+[131/140] [chromium-mobile] › tests\qa\01-funktional.spec.js:508:7 › Frequenzlabor — Ladeverhalten › Engine wird erst mit der Kategorie geladen
+[132/140] [chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:76:7 › Frequenzlabor — Tastaturbedienung › alle Kernbedienelemente sind ohne Maus erreichbar und bedienbar
+[133/140] [chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:130:7 › Frequenzlabor — Tastaturbedienung › Slider und Zahlenfeld bleiben per Tastatur synchron
+[134/140] [chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:153:7 › Frequenzlabor — Tastaturbedienung › Zahlenfeld klemmt auf 20 und 20.000 Hz
+[135/140] [chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:165:7 › Frequenzlabor — Screenreader-Stichprobe › Bedienelemente haben sprechende Namen, Canvas ist verborgen
+[136/140] [chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:187:7 › Frequenzlabor — Screenreader-Stichprobe › Evidenzstatus ist immer Text, nicht nur Farbe
+[137/140] [chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:201:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+[chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:201:7 › Frequenzlabor — Kontrast › Textkontrast erfüllt WCAG AA auf Hub und Labor
+KONTRAST_HUB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":34,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-lede","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Eine Schwingung ist eine periodische Änd"},{"selector":".fq-entry-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Menschlicher Hörbereich"},{"selector":".fq-entry-desc","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Normalhörende nehmen etwa 20 Hz bis 20.0"},{"selector":".fq-entry-hz","ratio":8.42,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"20 Hz – 20.000 Hz"},{"selector":".fq-badge","ratio":7.75,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Belegt"},{"selector":".fq-source-link","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"OpenStax College Physics 2e, Kap. 17.6 „"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":"#fqDisclaimerLang","ratio":10.07,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"Dieses Frequenzlabor ist ein Bildungs- u"},{"selector":"#fq-quellen-title","ratio":15.36,"fontSize":28,"bold":false,"large":true,"required":3,"text":"Quellen und Methode"}]
+
+KONTRAST_LAB=[{"selector":"#frequenzen-title","ratio":15.36,"fontSize":34,"bold":false,"large":true,"required":3,"text":"Frequenzen & Schwingungen"},{"selector":".fq-note","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"20 kHz ist für viele Menschen unhörbar. "},{"selector":"#fqGainReadout","ratio":13.86,"fontSize":18,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-gain-cap","ratio":8.42,"fontSize":13,"bold":false,"large":false,"required":4.5,"text":"Deckel: −6 dBFS"},{"selector":"#fqStatus","ratio":10.07,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":""},{"selector":"#fqReadGain","ratio":13.86,"fontSize":16,"bold":false,"large":false,"required":4.5,"text":"−20 dBFS"},{"selector":".fq-panel-title","ratio":13.86,"fontSize":20,"bold":false,"large":false,"required":4.5,"text":"Frequenz"},{"selector":"#fqDisclaimerKurz","ratio":9.09,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Bildungs- und Experimentierangebot, kein"},{"selector":".btn-primary","ratio":9.33,"fontSize":15,"bold":false,"large":false,"required":4.5,"text":"Karte ziehen\n                    ↓"},{"selector":".btn-secondary","ratio":13.86,"fontSize":14,"bold":false,"large":false,"required":4.5,"text":"Zur Startseite"}]
+
+[138/140] [chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:249:7 › Frequenzlabor — reduzierte Bewegung › keine rAF-Animation, statische Erklärung sichtbar
+[139/140] [chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:276:7 › Frequenzlabor — mobile Ansicht 360 px › kein horizontaler Überlauf und bedienbare Touch-Ziele
+[140/140] [chromium-mobile] › tests\qa\02-barrierefreiheit.spec.js:302:7 › Frequenzlabor — mobile Ansicht 360 px › Bibliothek bleibt bei 360 px lesbar
+  25 failed
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:160:7 › Frequenzlabor — Wiedergabe und Autoplay › kein AudioContext vor Interaktion, Start/Stopp korrekt, idempotentes Stopp 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:199:7 › Frequenzlabor — Wiedergabe und Autoplay › erneutes Starten nach Stopp nutzt keinen zweiten Oszillatorsatz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:215:7 › Frequenzlabor — Wiedergabe und Autoplay › blockierter AudioContext erzeugt eine sichtbare, wiederholbare Fehlermeldung 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 20 Hz liegt innerhalb ±1 Hz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 100 Hz liegt innerhalb ±1 Hz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 432 Hz liegt innerhalb ±1 Hz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 440 Hz liegt innerhalb ±1 Hz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 528 Hz liegt innerhalb ±1 Hz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 1000 Hz liegt innerhalb ±1 Hz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:258:9 › Frequenzlabor — Signalgenauigkeit › Sinus 5000 Hz liegt innerhalb ±1 Hz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:279:7 › Frequenzlabor — Signalgenauigkeit › Realtime-Pfad kommandiert die in der UI gewählte Frequenz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:295:7 › Frequenzlabor — Lautstärke-Deckel › Engine klemmt auf −6 dBFS und der Offline-Pegel bleibt darunter 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:315:7 › Frequenzlabor — Lautstärke-Deckel › Startpegel und Deckel gelten auch nach einem Preset-Start 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:328:7 › Frequenzlabor — Sweep › Sweep läuft die eingestellte Dauer, endet am Ziel und meldet das 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:355:7 › Frequenzlabor — Sweep › Sweep-Abbruch beendet den Sweep und meldet den Abbruch 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:371:7 › Frequenzlabor — Presets und Bibliothek › Bibliotheks-Preset startet exakt seine Frequenz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:388:7 › Frequenzlabor — Presets und Bibliothek › Labor-Preset-Auswahl listet nur hörbare Einträge und spielt die gewählte Frequenz 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:487:7 › Frequenzlabor — Navigation › Audio stoppt beim Verlassen der Seite 
+    [webkit-desktop] › tests\qa\01-funktional.spec.js:498:7 › Frequenzlabor — Navigation › pagehide stoppt laufendes Audio 
+    [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:76:7 › Frequenzlabor — Tastaturbedienung › alle Kernbedienelemente sind ohne Maus erreichbar und bedienbar 
+    [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:249:7 › Frequenzlabor — reduzierte Bewegung › keine rAF-Animation, statische Erklärung sichtbar 
+    [webkit-desktop] › tests\qa\02-barrierefreiheit.spec.js:276:7 › Frequenzlabor — mobile Ansicht 360 px › kein horizontaler Überlauf und bedienbare Touch-Ziele 
+    [chromium-mobile] › tests\qa\01-funktional.spec.js:371:7 › Frequenzlabor — Presets und Bibliothek › Bibliotheks-Preset startet exakt seine Frequenz 
+    [chromium-mobile] › tests\qa\01-funktional.spec.js:462:7 › Frequenzlabor — Navigation › Hauptnavigation öffnet den Bereich, Alias wird normalisiert 
+    [chromium-mobile] › tests\qa\01-funktional.spec.js:487:7 › Frequenzlabor — Navigation › Audio stoppt beim Verlassen der Seite 
+  115 passed (11.7m)
+EXIT=1
