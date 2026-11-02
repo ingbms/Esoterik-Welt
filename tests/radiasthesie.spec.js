@@ -211,7 +211,7 @@ test('Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt', async (
   const rows = await page
     .locator('#navList .nav-link')
     .evaluateAll((nodes) => nodes.map((node) => Math.round(node.getBoundingClientRect().width)));
-  expect(rows.length).toBe(8);
+  expect(rows.length).toBe(9);
   expect(new Set(rows)).toEqual(new Set([342]));
   await expect(page.locator('#navList')).toBeVisible();
 });

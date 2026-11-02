@@ -67,7 +67,7 @@ test('offline file entry serves every route without network access', async (t) =
     assert.ok(startup[key] > 0, `${key} must render offline`);
   }
 
-  for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'pendeln', 'blog', 'home']) {
+  for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'pendeln', 'farbwelten', 'blog', 'home']) {
     await page.click(`.nav-link[data-page="${route}"]`);
     await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible', timeout: 10000 });
     assert.equal(new URL(page.url()).hash, '#' + route, `${route} route hash`);
@@ -79,6 +79,13 @@ test('offline file entry serves every route without network access', async (t) =
   await page.locator('#pendelnRoot h1#pendeln-title').waitFor({ state: 'visible', timeout: 10000 });
   assert.match(await page.locator('#pendelnRoot h1#pendeln-title').textContent(), /Radiästhesie/);
   assert.ok((await page.locator('#pendelnRoot').textContent()).length > 5000, 'dowsing topic must render offline');
+
+  // The colour area must work from the double-clicked file, including a cold
+  // deep link into a colour page (its data module is inlined, never fetched).
+  await page.goto(localUrl + '#farbwelten/rot', { waitUntil: 'load' });
+  await page.locator('#farbweltenRoot h1').waitFor({ state: 'visible', timeout: 10000 });
+  assert.match(await page.locator('#farbweltenRoot h1').textContent(), /^Rot$/);
+  assert.ok((await page.locator('#farbweltenRoot').textContent()).length > 3000, 'colour page must render offline');
 
   // The astrology area must work from the double-clicked file, including a
   // cold deep link into a detail page (data is inlined, never fetched).

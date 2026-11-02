@@ -14,6 +14,10 @@ const routes = [
   'astrologie',
   'runes',
   'pendeln',
+  'farbwelten',
+  'farbwelten/rot',
+  'farbwelten/chakren',
+  'farbwelten/lichtfrequenzen',
   'blog',
   'impressum.html',
   'datenschutz.html',
@@ -95,6 +99,7 @@ const routes = [
                 'moonRituals',
                 'astrologieRoot',
                 'pendelnRoot',
+                'farbweltenRoot',
               ].map((id) => [id, document.getElementById(id)?.children.length || 0])
             ),
             navDisplay: document.querySelector('.nav')
@@ -121,12 +126,13 @@ const routes = [
             );
           }
           if (!route.endsWith('.html')) {
-            assert.equal(metrics.activePage, route, 'navigation must reveal selected page');
+            assert.equal(metrics.activePage, route.split('/')[0], 'navigation must reveal selected page');
             assert.equal(metrics.featureCount, 6, 'application initialization must populate six features');
             for (const [id, count] of Object.entries(metrics.renderedCounts)) {
               // Area containers only render while their own route is active.
               if (id === 'astrologieRoot' && route !== 'astrologie') continue;
               if (id === 'pendelnRoot' && route !== 'pendeln') continue;
+              if (id === 'farbweltenRoot' && !route.startsWith('farbwelten')) continue;
               assert.ok(count > 0, `${id} must render its content`);
             }
           }
@@ -158,7 +164,17 @@ const routes = [
       }
       // Exercise actual mobile/desktop navigation instead of only direct hashes.
       await page.goto(base, { waitUntil: 'networkidle' });
-      for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'pendeln', 'blog', 'home']) {
+      for (const route of [
+        'tarot',
+        'crystals',
+        'moon',
+        'astrologie',
+        'runes',
+        'pendeln',
+        'farbwelten',
+        'blog',
+        'home',
+      ]) {
         if (await page.locator('#navToggle').isVisible()) await page.locator('#navToggle').click();
         await page.locator(`.nav-link[data-page="${route}"]`).click();
         await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible' });

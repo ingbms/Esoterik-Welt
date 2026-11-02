@@ -8,6 +8,7 @@ import { RunesModule } from './modules/runes.js';
 import { BlogModule } from './modules/blog.js';
 import { AstrologieModule } from './modules/astrologie.js';
 import { RadiasthesieModule } from './modules/radiasthesie.js';
+import { FarbweltenModule } from './modules/farbwelten.js';
 import { DialogController } from './dialog.js';
 
 // --- State ---
@@ -19,7 +20,7 @@ const state = {
 // --- Routes ---
 // Only these ids are pages. #main is the skip target inside the document and
 // must never become a page id; unknown fragments must never hide every section.
-const MAIN_PAGES = ['home', 'tarot', 'crystals', 'moon', 'runes', 'astrologie', 'blog', 'pendeln'];
+const MAIN_PAGES = ['home', 'tarot', 'crystals', 'moon', 'runes', 'astrologie', 'blog', 'pendeln', 'farbwelten'];
 const PAGE_IDS = new Set(MAIN_PAGES);
 const SKIP_ANCHOR = 'main';
 const ARTICLE_ROUTE = /^blog\/([^/]+)$/;
@@ -35,6 +36,25 @@ const ASTROLOGIE_ROUTE = /^astrologie(?:\/([^?]*))?(?:\?(.*))?$/;
 // goes to the area module, which answers unknown slugs with its own in-area
 // error view instead of the site-wide route notice.
 const PENDELN_ROUTE = /^pendeln(?:\/([^?]*))?(?:\?(.*))?$/;
+// The colour area is one page with its own sub-routes:
+// #farbwelten, #farbwelten/rot, #farbwelten/rot/physik, #farbwelten/chakren,
+// #farbwelten/lichtfrequenzen. Everything after "farbwelten" goes to the area
+// module, which answers unknown slugs with its own in-area view.
+const FARBWELTEN_ROUTE = /^farbwelten(?:\/([^?]*))?(?:\?(.*))?$/;
+// Kompatibilität: die Auftragsadressen /chakren und /lichtfrequenzen sind
+// Hash-Aliase auf die Unterrouten der Sektion (siehe 02 §2).
+const FARBWELTEN_ALIASES = new Set(['chakren', 'lichtfrequenzen']);
+// Views, deren erster Pfadabschnitt bereits ein Sprungziel ist (Einstieg).
+const FARBWELTEN_ANCHOR_VIEWS = new Set(['register', 'einstiege', 'methodik']);
+
+// A route points at an in-page anchor when it has a second segment, or when its
+// only segment is an anchor view. Such routes scroll themselves (area module);
+// the generic scroll-to-top must not run afterwards.
+function isAnchorRoute(segments) {
+  if (!Array.isArray(segments) || !segments.length) return false;
+  if (segments.length > 1) return true;
+  return FARBWELTEN_ANCHOR_VIEWS.has(segments[0]);
+}
 
 // --- Per-route metadata ---
 // Every view lives in one document, so the title and the description have to
@@ -77,6 +97,11 @@ const PAGE_META = {
     title: 'Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand | Esoterik-Welt',
     description:
       'Radiästhesie, Pendeln und Orakel: Instrumente, Geschichte und Handhabung im Überblick — mit Kennzeichnung von Tradition, Hypothese und geprüftem Befund, ohne Wirkungsversprechen.',
+  },
+  farbwelten: {
+    title: 'Farbwelten — Bedeutung, Physik und Tradition der Farben | Esoterik-Welt',
+    description:
+      'Sieben Farbwelten zwischen Licht, Wahrnehmung und Tradition: Wellenlängen, Assoziationen, Chakren und Forschungsstand differenziert erklärt.',
   },
 };
 
@@ -133,6 +158,21 @@ function parseRoute(hash) {
         .split('/')
         .filter(Boolean),
       query: pendeln[2] || '',
+      raw,
+    };
+  }
+  if (FARBWELTEN_ALIASES.has(raw)) {
+    return { type: 'farbwelten', page: 'farbwelten', segments: [raw], query: '', raw, alias: true };
+  }
+  const farbwelten = FARBWELTEN_ROUTE.exec(raw);
+  if (farbwelten) {
+    return {
+      type: 'farbwelten',
+      page: 'farbwelten',
+      segments: String(farbwelten[1] || '')
+        .split('/')
+        .filter(Boolean),
+      query: farbwelten[2] || '',
       raw,
     };
   }
@@ -204,6 +244,8 @@ async function init() {
   state.modules.astrologie = new AstrologieModule(document.getElementById('astrologieRoot'));
   // The dowsing area renders into its own container, after the runes section.
   state.modules.pendeln = new RadiasthesieModule(document.getElementById('pendelnRoot'));
+  // The colour area renders into its own container, after the dowsing section.
+  state.modules.farbwelten = new FarbweltenModule(document.getElementById('farbweltenRoot'));
   // A card-opened article becomes its own history entry, so Back/Forward,
   // reload and the dialog close action stay consistent with the address bar.
   state.modules.blog.onArticleOpened = (id) => {
@@ -248,8 +290,20 @@ async function init() {
       console.error('Radiästhesie-Daten nicht verfügbar', error); // the module shows its own error view
     }
   }
+  // The colour area renders from a static data module; loading before the
+  // route settles guarantees real content on a cold deep link.
+  if (initialRoute.type === 'farbwelten') {
+    try {
+      await state.modules.farbwelten.load();
+    } catch (error) {
+      console.error('Farbwelten-Daten nicht verfügbar', error);
+    }
+  }
   applyRoute(initialRoute, { instant: true, silent: true });
-  if (initialRoute.type !== 'skip') settleRouteScroll(state.currentPage);
+  // In-area anchors (e.g. #farbwelten/rot/physik) scroll and focus themselves;
+  // the generic "top of page" settle would override that jump.
+  const initialAreaAnchor = initialRoute.type === 'farbwelten' && isAnchorRoute(initialRoute.segments);
+  if (initialRoute.type !== 'skip' && !initialAreaAnchor) settleRouteScroll(state.currentPage);
 
   // Populate home feature grid
   populateFeatureGrid();
@@ -306,7 +360,8 @@ function setupNavigation() {
   const restoreRoute = () => {
     const route = parseRoute(location.hash);
     applyRoute(route, { fromHistory: true, instant: true });
-    if (route.type !== 'skip') settleRouteScroll(state.currentPage);
+    const areaAnchor = route.type === 'farbwelten' && isAnchorRoute(route.segments);
+    if (route.type !== 'skip' && !areaAnchor) settleRouteScroll(state.currentPage);
   };
   window.addEventListener('popstate', restoreRoute);
   window.addEventListener('hashchange', restoreRoute);
@@ -440,6 +495,25 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
     return;
   }
 
+  // The colour area owns its sub-routes, exactly like the dowsing area. The
+  // compatibility aliases #chakren and #lichtfrequenzen are replaced, so the
+  // address bar immediately shows the canonical in-area route.
+  if (route.type === 'farbwelten') {
+    clearRouteNotice();
+    const hash = route.alias ? `#farbwelten/${route.segments[0]}` : `#${route.raw}`;
+    navigateTo('farbwelten', replace || Boolean(route.alias), {
+      fromHistory,
+      instant,
+      silent,
+      hash,
+      subroute: { segments: route.segments, query: route.query },
+    });
+    // A cold alias link is applied silently, so navigateTo does not write the
+    // URL. The canonical in-area route replaces it explicitly.
+    if (route.alias && location.hash !== hash) history.replaceState({ page: 'farbwelten' }, '', hash);
+    return;
+  }
+
   // Unknown fragment: keep a readable page and explain the dead link instead of
   // hiding every section, which left the site looking empty.
   const page = PAGE_IDS.has(state.currentPage) ? state.currentPage : 'home';
@@ -466,11 +540,15 @@ function navigateTo(
   state.currentPage = pageId;
   applyRouteMeta(pageId);
 
-  // Scroll to top
-  window.scrollTo({
-    top: 0,
-    behavior: instant || window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
-  });
+  // Scroll to top. Area sub-routes that point at an in-page anchor scroll to
+  // that anchor themselves; a smooth "top" animation would fight their jump.
+  const hasAreaAnchor = Boolean(subroute && isAnchorRoute(subroute.segments));
+  if (!hasAreaAnchor) {
+    window.scrollTo({
+      top: 0,
+      behavior: instant || window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+    });
+  }
 
   // Trigger module-specific work. Areas that render their own sub-views expose
   // show(segments, query); the remaining modules keep their onShow() hook.

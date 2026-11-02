@@ -6,3 +6,7 @@
 # Any end-of-line conversion would make that test fail on a Windows checkout
 # while passing on Linux CI, so the file must be stored and checked out verbatim.
 js/data/astrologie.js -text
+# js/data/farbwelten.js is generated from content/farbwelten/*.md by
+# scripts/generate-farbwelten-data.cjs; store it verbatim so regeneration stays
+# idempotent on Windows checkouts.
+js/data/farbwelten.js -text

@@ -80,6 +80,69 @@
   --color-chakra-third-eye: #5e35b1;
   --color-chakra-crown: #8e24aa;
 
+  /* --- Farbwelten (Sektion „Farben“) -------------------------------------
+     Inhaltsfarben der sieben Farbwelten. Automatisch erzeugt von
+     docs/farbwelten-konzept/scripts/generate-palette.py; Kontraste und Rollen
+     sind in docs/farbwelten-konzept/03-farbwelten-und-paletten.md belegt:
+     -ink ≥ 4,81:1 auf allen drei dunklen Flächen, -line ≥ 3,22:1, Text auf
+     -deep ≥ 8,96:1. Text steht nie auf -core oder -soft. Nicht von Hand
+     ändern; bei Änderung das Skript erneut ausführen. */
+  --fw-rot-ink: #cf6a60;
+  --fw-rot-core: #bc4a41;
+  --fw-rot-core-deep: #853630;
+  --fw-rot-soft: #d69991;
+  --fw-rot-line: #985c55;
+  --fw-rot-deep: #281715;
+  --fw-rot-deep-alt: #1d100e;
+
+  --fw-orange-ink: #c77434;
+  --fw-orange-core: #ad5c13;
+  --fw-orange-core-deep: #7a4213;
+  --fw-orange-soft: #d09f7d;
+  --fw-orange-line: #936240;
+  --fw-orange-deep: #26180f;
+  --fw-orange-deep-alt: #1c110a;
+
+  --fw-gelb-ink: #a08b32;
+  --fw-gelb-core: #887315;
+  --fw-gelb-core-deep: #605213;
+  --fw-gelb-soft: #b9ab74;
+  --fw-gelb-line: #786c3a;
+  --fw-gelb-deep: #201c0c;
+  --fw-gelb-deep-alt: #171408;
+
+  --fw-gruen-ink: #4da15d;
+  --fw-gruen-core: #1d8b3d;
+  --fw-gruen-core-deep: #1b622d;
+  --fw-gruen-soft: #8bb890;
+  --fw-gruen-line: #47764e;
+  --fw-gruen-deep: #131f14;
+  --fw-gruen-deep-alt: #0d170e;
+
+  --fw-blau-ink: #4391d7;
+  --fw-blau-core: #1678c3;
+  --fw-blau-core-deep: #15568a;
+  --fw-blau-soft: #85afd8;
+  --fw-blau-line: #447098;
+  --fw-blau-deep: #111d28;
+  --fw-blau-deep-alt: #0c151d;
+
+  --fw-indigo-ink: #857fd7;
+  --fw-indigo-core: #6e64c8;
+  --fw-indigo-core-deep: #4d478c;
+  --fw-indigo-soft: #a5a5d9;
+  --fw-indigo-line: #6a689c;
+  --fw-indigo-deep: #1a1a28;
+  --fw-indigo-deep-alt: #13121d;
+
+  --fw-violett-ink: #ad71bf;
+  --fw-violett-core: #9853ad;
+  --fw-violett-core-deep: #6b3c79;
+  --fw-violett-soft: #bf9cca;
+  --fw-violett-line: #82608d;
+  --fw-violett-deep: #211824;
+  --fw-violett-deep-alt: #18111a;
+
   /* --- Typography -------------------------------------------------------- */
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -196,6 +259,74 @@
   --color-primary-dark: #633492;
   --color-secondary-text: #006b61;
   --shadow-glow: 0 0 20px rgba(187, 134, 252, 0.2);
+}
+
+/* --- Aktive Farbwelt ------------------------------------------------------
+   Eine Zuweisung statt Inline-Styles: js/modules/farbwelten.js setzt
+   #farbweltenRoot[data-farbwelt="rot"]. Nur Komponenten der Sektion lesen
+   --fw-current-*; die globalen Tokens bleiben unverändert. */
+[data-farbwelt='rot'] {
+  --fw-current-ink: var(--fw-rot-ink);
+  --fw-current-core: var(--fw-rot-core);
+  --fw-current-core-deep: var(--fw-rot-core-deep);
+  --fw-current-soft: var(--fw-rot-soft);
+  --fw-current-line: var(--fw-rot-line);
+  --fw-current-deep: var(--fw-rot-deep);
+  --fw-current-deep-alt: var(--fw-rot-deep-alt);
+}
+[data-farbwelt='orange'] {
+  --fw-current-ink: var(--fw-orange-ink);
+  --fw-current-core: var(--fw-orange-core);
+  --fw-current-core-deep: var(--fw-orange-core-deep);
+  --fw-current-soft: var(--fw-orange-soft);
+  --fw-current-line: var(--fw-orange-line);
+  --fw-current-deep: var(--fw-orange-deep);
+  --fw-current-deep-alt: var(--fw-orange-deep-alt);
+}
+[data-farbwelt='gelb'] {
+  --fw-current-ink: var(--fw-gelb-ink);
+  --fw-current-core: var(--fw-gelb-core);
+  --fw-current-core-deep: var(--fw-gelb-core-deep);
+  --fw-current-soft: var(--fw-gelb-soft);
+  --fw-current-line: var(--fw-gelb-line);
+  --fw-current-deep: var(--fw-gelb-deep);
+  --fw-current-deep-alt: var(--fw-gelb-deep-alt);
+}
+[data-farbwelt='gruen'] {
+  --fw-current-ink: var(--fw-gruen-ink);
+  --fw-current-core: var(--fw-gruen-core);
+  --fw-current-core-deep: var(--fw-gruen-core-deep);
+  --fw-current-soft: var(--fw-gruen-soft);
+  --fw-current-line: var(--fw-gruen-line);
+  --fw-current-deep: var(--fw-gruen-deep);
+  --fw-current-deep-alt: var(--fw-gruen-deep-alt);
+}
+[data-farbwelt='blau'] {
+  --fw-current-ink: var(--fw-blau-ink);
+  --fw-current-core: var(--fw-blau-core);
+  --fw-current-core-deep: var(--fw-blau-core-deep);
+  --fw-current-soft: var(--fw-blau-soft);
+  --fw-current-line: var(--fw-blau-line);
+  --fw-current-deep: var(--fw-blau-deep);
+  --fw-current-deep-alt: var(--fw-blau-deep-alt);
+}
+[data-farbwelt='indigo'] {
+  --fw-current-ink: var(--fw-indigo-ink);
+  --fw-current-core: var(--fw-indigo-core);
+  --fw-current-core-deep: var(--fw-indigo-core-deep);
+  --fw-current-soft: var(--fw-indigo-soft);
+  --fw-current-line: var(--fw-indigo-line);
+  --fw-current-deep: var(--fw-indigo-deep);
+  --fw-current-deep-alt: var(--fw-indigo-deep-alt);
+}
+[data-farbwelt='violett'] {
+  --fw-current-ink: var(--fw-violett-ink);
+  --fw-current-core: var(--fw-violett-core);
+  --fw-current-core-deep: var(--fw-violett-core-deep);
+  --fw-current-soft: var(--fw-violett-soft);
+  --fw-current-line: var(--fw-violett-line);
+  --fw-current-deep: var(--fw-violett-deep);
+  --fw-current-deep-alt: var(--fw-violett-deep-alt);
 }
 
 /* ============================================================================
@@ -549,7 +680,11 @@ hr {
   background: var(--color-primary);
 }
 
-@media (max-width: 780px) {
+/* Neun Hauptziele: Ab 901 px passen Logo, neun Links und der Favoritenzähler
+   nebeneinander (gemessen 50,31 px Reserve, docs/farbwelten-konzept/02 §3).
+   Zwischen 781 und 900 px würde die Kopfzeile um 16,20 px überlaufen; dort
+   gilt deshalb das gestapelte Menü. */
+@media (max-width: 900px) {
   .nav-toggle {
     display: inline-flex;
   }

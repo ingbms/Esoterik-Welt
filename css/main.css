@@ -3829,13 +3829,14 @@
   }
 }
 
-/* --- Kopfzeile mit sieben Navigationszielen -----------------------------
-   Der Astrologiebereich ist das siebte Hauptziel. Zwischen 781 px (ab dort
-   zeigt das Design-System die horizontale Navigation) und dem Desktop-Bereich
-   reichte die Breite für Logo + sieben Links nicht mehr: Die Kopfzeile lief
-   um bis zu 74 px über. Statt die Mobile-Navigation früher einzuschalten,
-   bleiben hier alle Ziele sichtbar und rücken nur enger zusammen. */
-@media (min-width: 781px) and (max-width: 1120px) {
+/* --- Kopfzeile mit neun Navigationszielen -------------------------------
+   Das Farbmodul „Farben“ ist das neunte Hauptziel. Ab 901 px zeigt das
+   Design-System die horizontale Navigation; neun Ziele plus dreistelliger
+   Favoritenzähler passen dort mit 50,31 px Reserve (gemessen:
+   docs/farbwelten-konzept/messung/nav-9-ziele-farben.json). Zwischen 901 und
+   1120 px rücken die Ziele eng zusammen, ohne die 13-px-Schriftgrenze zu
+   unterschreiten. Unterhalb von 901 px gilt das gestapelte Menü. */
+@media (min-width: 901px) and (max-width: 1120px) {
   .nav-list {
     gap: var(--space-2);
   }
@@ -3845,21 +3846,6 @@
   }
   .header-inner {
     gap: var(--space-4);
-  }
-}
-
-/* --- Kopfzeile mit acht Navigationszielen -------------------------------
-   Das Themenmodul „Pendeln“ ist das achte Hauptziel. Acht Ziele plus
-   dreistelliger Favoritenzähler brauchen zwischen 781 und 900 px 21 px mehr,
-   als der Block oben hergibt (gemessen: docs/radiasthesie-konzept/messung/
-   nav-8-ziele.json). Kleineres Logo und engerer Listenabstand schaffen 53 px
-   Reserve; bei 781 px bleiben 31,8 px. */
-@media (min-width: 781px) and (max-width: 900px) {
-  .logo {
-    font-size: 24px;
-  }
-  .nav-list {
-    gap: var(--space-1);
   }
 }
 
