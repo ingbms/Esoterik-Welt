@@ -1,0 +1,73 @@
+# 2026-11-03T00:28:19+01:00 · fix/frequenzlabor-qa-m1
+$ npm run test:frequenz
+
+> esoterik-welt@1.0.0 test:frequenz
+> node --test tests/frequenz-engine.mjs tests/frequenz-presets.mjs
+
+✔ E1 — Import und Konstruktion erzeugen keinen AudioContext (1.1474ms)
+✔ E2 — play(440) startet einen Oszillator mit 20-ms-Einblendung (2.2862ms)
+✔ E3 — play(5) und play(25000) klemmen auf 20 bzw. 20000 Hz (1.3872ms)
+✔ E4 — play(NaN) und play(0) werden mit invalid_frequency abgelehnt (0.6653ms)
+✔ E5 — setGain(10) klemmt auf den harten Deckel −6 dBFS (0.4496ms)
+✔ E6 — setGain(-100) klemmt auf −60 dBFS (0.1442ms)
+✔ E7 — setWaveform("square") setzt Typ und −6-dB-Trim der Stimme (0.497ms)
+✔ E8 — sweep(200, 800, 2) plant eine exponentielle Rampe über 2 s (137.7265ms)
+✔ E9 — stop() während eines Sweeps bricht ab, räumt auf und wird idle (1.36ms)
+✔ E10 — stop() ist idempotent (0.3883ms)
+✔ E11 — playBinaural(200, 8) erzeugt 200/208 Hz mit harten Pannern (0.6773ms)
+✔ E12 — setBeatDelta im Ton-Modus wirft invalid_state (0.5162ms)
+✔ E13 — blockierter Kontext ergibt context_blocked, Status error, keine Oszillatoren (0.4432ms)
+✔ E14 — fehlende Web-Audio-API lehnt mit unsupported ab (0.2212ms)
+✔ E15 — dispose() schließt den Kontext, leert Listener und sperrt play() (11.855ms)
+✔ E16 — subscribe/onstatechange: Reihenfolge, revision +1, Abmelden wirkt (0.6502ms)
+✔ E17 — Analysator liefert im Idle Nullen bzw. −Infinity (0.6095ms)
+✔ E18 — Offline-Render 440 Hz: FFT-Peak, Pegel ≤ 0,501 und monotone Flanken (60.5197ms)
+✔ E19 — playTones([440, 444]) erzeugt zwei Stimmen mit Voice-Gain 1/2 (4.8785ms)
+✔ E20 — leere Liste und mehr als vier Stimmen werden mit invalid_argument abgelehnt (0.3409ms)
+✔ Zusatz — Zustand ist unveränderlich und Analysekanäle sind getrennt (0.441ms)
+✔ P1: der Datenbestand wird vollständig normalisiert (1.7323ms)
+✔ P2: nur die Allowlist und Partner-Töne werden abgespielt (0.4341ms)
+✔ P3: Schumann, EEG-Bänder und andere Zahlen bleiben ohne Ton (0.3026ms)
+✔ P4: ein gültiges playback-Feld gewinnt gegen die Allowlist (0.6989ms)
+✔ P5: defekte Daten führen zu einem sichtbaren Fehlerzustand, nicht zum Absturz (0.2313ms)
+✔ P6: blockierter localStorage bricht die Seite nicht (0.3776ms)
+✔ P7: unbekannte Speicherversion wird ignoriert und überschrieben (1.3138ms)
+✔ P8: unsichere Quellen-URLs werden nicht verlinkt (0.1939ms)
+✔ Partner-Ton erzeugt zwei Stimmen, binauraler Eintrag bleibt kanalgetrennt (0.2788ms)
+✔ Binaural-Presets sind Konstanten und decken vier Bänder ab (0.1993ms)
+✔ Frequenzformatierung nutzt deutsche Schreibweise und die Einheit Hz (15.4452ms)
+✔ Feature-Flags: Produktion ignoriert den URL-Override, lokal gilt er (0.3707ms)
+✔ Datenladen nutzt das eingebettete JSON vor fetch (file://-Pfad) (0.5583ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 435.7725
+$ npm run test:frequencies
+
+> esoterik-welt@1.0.0 test:frequencies
+> node --test tests/frequencies-data.cjs
+
+✔ Datei ist valides JSON mit Kopfbereich (1.0086ms)
+✔ mindestens 20 Einträge, beide Kategorien vertreten (1.4289ms)
+✔ jeder Eintrag hat alle Pflichtfelder mit korrektem Typ (0.5576ms)
+✔ IDs sind eindeutig (0.1689ms)
+✔ Bereiche sind logisch und Einzeltöne liegen im Bereich (0.211ms)
+✔ beschreibung_kurz bleibt unter 200 Zeichen und nennt keine Wirkung (0.1849ms)
+✔ jede Zeile verweist auf eine auflösbare Quelle (0.4096ms)
+✔ Disclaimer ist vorhanden, benennt Grenzen und Lautstärke (0.4249ms)
+✔ keine unbelegten Gesundheitsbehauptungen im Datensatz (0.9279ms)
+✔ esoterische Einträge sind nie als „belegt“ eingestuft (0.3095ms)
+✔ warnhinweis ist bei Wirkaussagen gesetzt (0.8682ms)
+✔ Cousto-Frequenzen sind aus astronomischen Perioden reproduzierbar (0.2853ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.1247

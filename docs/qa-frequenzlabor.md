@@ -6,6 +6,8 @@ Methode: eigener Testplan, eigene Messroutinen, echte Browser — keine Übernah
 
 **Ergebnis: keine Blocker. Ein Major-Befund (M-1), drei Minor-Befunde. Freigabeempfehlung mit Auflage: M-1 vor dem Merge beheben.**
 
+**Nachtrag (Kanban `t_b78a89a5`): M-1, m-1 und m-2 sind behoben und mit Tests belegt — siehe 8.1. Die Auflage aus Abschnitt 9 ist damit erfüllt.**
+
 ---
 
 ## 1. Prüfumgebung
@@ -218,14 +220,17 @@ Keine.
 - Bewertung: Die beiden Bedienelemente zeigen unterschiedliche Werte für denselben Zustand; das ist genau die im ADR geforderte Kopplung. Der Umsetzer-Test U5 prüft nur den Readout, nicht das Zahlenfeld, und deckt den Fehler daher nicht auf.
 - Nachweis: `qa/02-barrierefreiheit.spec.js` → „Slider und Zahlenfeld bleiben per Tastatur synchron" (`test.fail` mit Begründung); Messprotokoll `evidence/t_835bd1e9/protokolle/probe-behavior.txt`.
 - Empfehlung: im Slider-Handler `syncFrequency(true)` bzw. `this.refs.freqNumber.value = ...` mitschreiben; U5 um die Gegenrichtung erweitern.
+- **Status: behoben in `t_b78a89a5`** (siehe 8.1).
 
 ### Minor
 
 **m-1 — Sweep-Start wird nicht angesagt; Statuszeile bleibt während des Sweeps auf dem alten Text.**
 Nach „Sweep starten" läuft der Ton, `#fqStatus` (aria-live) zeigt aber weiterhin z. B. „Ton gestoppt.", bis der Sweep endet. Screenreader-Nutzer erhalten keine Startansage (nur die Progressbar). NFR-15 fordert Statusmeldungen über `role="status"`. Nachweis: `probe-behavior.txt` (SWEEP@200/800).
+- **Status: behoben in `t_b78a89a5`** — `startSweep()` sagt den Start jetzt an (siehe 8.1).
 
 **m-2 — Datensatz-Disclaimer nennt falsche harte Grenze.**
 `data/frequencies.json` → `disclaimer.lautstaerke`: „begrenzt die Ausgabe hart auf -20 dBFS". Tatsächlich ist −20 dBFS der Startpegel, −6 dBFS der harte Deckel (Engine-Konstante, ADR NFR-7/8). Die UI rendert dieses Feld nicht, daher kein sichtbarer Fehler — der Datensatz ist aber irreführend und sollte korrigiert werden.
+- **Status: behoben in `t_b78a89a5`** — Text nennt jetzt Startpegel −20 dBFS und harte Grenze −6 dBFS (siehe 8.1).
 
 **m-3 — Testkonfiguration kann einen fremden Server übernehmen.**
 `playwright.config.js` setzt `reuseExistingServer: !process.env.CI`. Lokal führte ein veralteter Server auf Port 3100 zu 14 falschen Fehlschlägen (archiviert). Die QA-Konfiguration nutzt `false` und einen eigenen Port; für die Feature-Suite wäre dieselbe Härtung sinnvoll.
@@ -236,6 +241,29 @@ Der Test vergleicht den SHA-256 der Rohdatei mit einem LF-Baseline. Mit `core.au
 **m-5 — Sehr kleine Reserve im Initialgraph.**
 NFR-1 liegt bei 85 613 / 86 275 B (662 B, 0,8 %). Jede weitere statische Zeile im Initialpfad sprengt das Budget; das Gate schlägt dann zwar korrekt an, die Reserve sollte aber bewusst überwacht werden.
 
+### 8.1 Nachbesserung der Befunde (Kanban `t_b78a89a5`)
+
+Branch `fix/frequenzlabor-qa-m1`, aufbauend auf `docs/qa-frequenzlabor` (`b1bf1df`), Prüfobjekt unverändert `feature/frequenzlabor-ui` (`580ed53`).
+
+| Befund | Status | Änderung | Nachweis |
+| --- | --- | --- | --- |
+| M-1 | **behoben** | `setFrequency(hz)` schreibt den Zustand jetzt in beiden Richtungen über `syncFrequency(true)` in das Zahlenfeld; der dadurch ungenutzte Parameter `fromNumberField` ist entfernt. Der Slider-`input`-Handler und der `change`-Handler des Zahlenfelds rufen dieselbe Methode auf, die Klemme auf 20/20 000 Hz bleibt sichtbar. | `qa/02-barrierefreiheit.spec.js` „Slider und Zahlenfeld bleiben per Tastatur synchron" grün ohne `test.fail` (Chromium + Firefox); `tests/frequenzlabor.spec.js` U5 prüft zusätzlich die Richtung Slider → Zahlenfeld und dass ein `change` den zuletzt gesetzten Ton nicht zurücksetzt |
+| m-1 | **behoben** | `startSweep()` sagt den Start an: „Sweep läuft: 200 → 800 Hz, 2 s." Die Zahlen stammen aus `formatHz`, damit Ansage und Anzeige dieselbe deutsche Schreibweise nutzen. | `qa/01-funktional.spec.js` „Sweep-Start wird angesagt" und `tests/frequenzlabor.spec.js` U15, beide grün in Chromium und Firefox |
+| m-2 | **behoben** | `data/frequencies.json` → `disclaimer.lautstaerke`: „Die Audio-Engine startet bei −20 dBFS und begrenzt die Ausgabe hart auf −6 dBFS …" | `npm run test:frequencies` (12/12) prüft Startpegel −20 dBFS, harte Grenze −6 dBFS und dass −20 dBFS nicht mehr als harte Grenze genannt wird |
+
+**Nachweis der Nachbesserung** (alle Läufe auf dem Branch `fix/frequenzlabor-qa-m1` nach `npm run build`; Protokolle unter `evidence/t_b78a89a5/protokolle/`):
+
+| Prüfung | Ergebnis | Protokoll |
+| --- | --- | --- |
+| `npm run lint` (eslint, `--max-warnings 0`) | bestanden (0 Fehler, 0 Warnungen) | `lint.txt` |
+| `npx prettier --check` (geänderte Dateien) | bestanden | `prettier.txt` |
+| `npm run test:frequenz` | 34/34 | `node-suites.txt` |
+| `npm run test:frequencies` | 12/12 | `node-suites.txt` |
+| `npm run test:e2e` (Chromium, 89 Fälle inkl. neuem U15) | 89/89 | `e2e-feature-chromium.txt` |
+| `npx playwright test --config=playwright.qa.config.js --project=chromium-desktop --project=firefox-desktop` | **72/72** (36 je Browser), keine Expected-Failures mehr | `qa-chromium-firefox.txt` |
+
+**Porthinweis:** Auf Port 3100 lief während der Nachbesserung erneut der fremde Vorschauserver aus Befund m-3. Der ungefilterte Aufruf `npm run test:e2e` hat ihn übernommen und 14 Fälle falsch als „failed" gemeldet (`e2e-feature-stale-server-invalid.txt`); der Nachweis oben stammt von einem freien Port (`E2E_PORT=3311`, `CI=1`, also `reuseExistingServer: false`). m-3 bleibt als Aufgabe für die Testinfrastruktur offen.
+
 ## 9. Entscheidung
 
 **Freigabe empfohlen — mit Auflage M-1.**
@@ -245,6 +273,8 @@ NFR-1 liegt bei 85 613 / 86 275 B (662 B, 0,8 %). Jede weitere statische Zeile i
 - Barrierefreiheit ist auf Baum- und Messebene belegt (Kontrast ≥ 7,75:1, Tastatur vollständig, 0 rAF bei reduzierter Bewegung, 44-px-Ziele).
 - **Auflage:** M-1 vor dem Merge beheben (kleiner, lokaler Fix) und U5 um die Slider→Zahlenfeld-Richtung erweitern. Ohne Behebung ist die Abnahme von U5/NFR-14 nicht vollständig.
 - m-1 bis m-5 sind Minor und können als Folgearbeiten laufen; m-3/m-4 betreffen die Testinfrastruktur.
+
+**Nachtrag nach Nachbesserung (`t_b78a89a5`, siehe 8.1):** Die Auflage ist erfüllt. M-1 ist behoben und mit der zuvor fehlenden Gegenrichtung Slider → Zahlenfeld belegt; m-1 und m-2 sind ebenfalls umgesetzt. Feature-Suite 89/89 und QA-Suite 72/72 (Chromium + Firefox) sind grün, die drei Expected-Failures für M-1 sind entfernt. **Damit ist das Frequenzlabor ohne offene Auflage freigabefähig**; offen bleiben nur die Minor-Befunde m-3 (Testserver-Übernahme), m-4 (CRLF im Tarot-Hash-Test) und m-5 (Budgetreserve) sowie die Restrisiken aus Abschnitt 10.
 
 ## 10. Restrisiken und nicht geprüfte Punkte
 
@@ -268,3 +298,8 @@ NFR-1 liegt bei 85 613 / 86 275 B (662 B, 0,8 %). Jede weitere statische Zeile i
 | `evidence/t_835bd1e9/scripts/*.cjs` | Mess- und Sonden-Skripte (reproduzierbar) |
 | `qa/01-funktional.spec.js`, `qa/02-barrierefreiheit.spec.js` | ausführbare QA-Fälle |
 | `playwright.qa.config.js` | eigenständige Konfiguration (eigener Port, drei Engines, mobiles Profil) |
+| `evidence/t_b78a89a5/protokolle/lint.txt`, `prettier.txt` | Lint- und Formatprüfung nach der Nachbesserung |
+| `evidence/t_b78a89a5/protokolle/node-suites.txt` | `npm run test:frequenz` (34/34) und `npm run test:frequencies` (12/12) |
+| `evidence/t_b78a89a5/protokolle/e2e-feature-chromium.txt` | Feature-E2E 89/89 nach der Nachbesserung |
+| `evidence/t_b78a89a5/protokolle/qa-chromium-firefox.txt` | QA-Suite 72/72 (Chromium + Firefox) nach der Nachbesserung |
+| `evidence/t_b78a89a5/protokolle/e2e-feature-stale-server-invalid.txt` | verworfener Lauf, der den fremden Server auf Port 3100 übernommen hat (m-3) |
