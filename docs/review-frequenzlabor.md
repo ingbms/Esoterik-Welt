@@ -14,8 +14,8 @@
 **APPROVE MIT AUFLAGEN.**
 
 - **Keine Blocker.** Sicherheits-, Gehörschutz- und Evidenzanforderungen sind belegt; es gibt kein Heilversprechen, keinen Ton ohne Nutzerinteraktion und keinen Weg am −6-dBFS-Deckel vorbei.
-- **Auflage A1 (vor Merge der nutzerseitigen PRs #3/#6):** M-1 beheben — der Frequenz-Slider aktualisiert das Zahlenfeld nicht (unabhängig reproduziert: Readout 444,7 Hz, Feld 440). Ticket `t_b78a89a5` (läuft).
-- **Auflage A2 (vor Merge der nutzerseitigen PRs #3/#6):** Frequenzbibliothek um die im Master-Auftrag §3.1 ausdrücklich geforderten Themen ergänzen (Rife/Bioresonanz, Cymatics/Chladni, Klangschalen/Mantras, Chakren-Zuordnungen, Solfeggio 174/285/963). Ticket `t_1da0941f`.
+- **Auflage A1 (vor Merge des UI-PR #6):** M-1 beheben — der Frequenz-Slider aktualisiert das Zahlenfeld nicht (unabhängig reproduziert: Readout 444,7 Hz, Feld 440). Ticket `t_b78a89a5` (läuft).
+- **Auflage A2 (vor Merge der PRs #3 und #6):** Frequenzbibliothek um die im Master-Auftrag §3.1 ausdrücklich geforderten Themen ergänzen (Rife/Bioresonanz, Cymatics/Chladni, Klangschalen/Mantras, Chakren-Zuordnungen, Solfeggio 174/285/963). Ticket `t_1da0941f`.
 - **Sofort mergebar:** PR #4 (ADR) und PR #5 (Engine). Beide sind ohne Auflage freigegeben.
 - **Nach dem Merge zu erfüllen:** A3 (Pause/Weiter + ADR-Nachtrag, `t_f2a0868c`), A4 (P11: interne Verlinkung/Build-Link/SEO, `t_9564a3d5`), A5 (Restrisiken Safari/iOS, Screenreader, Hörtest, `t_4a8106de`) sowie die Testinfrastruktur `t_8e62434e`.
 - **Der Master-Auftrag ist mit dem Merge allein nicht abgeschlossen.** Erst A1 und A2 plus die Nachweise aus A5 erfüllen die Definition of Done des Master-Auftrags (§12).
@@ -201,7 +201,7 @@ Rife-Frequenzen/Bioresonanz, Cymatics/Chladni, Klangschalen/Mantras, Chakren-Zuo
 
 | ID | Auflage | Ticket | Fälligkeit |
 | --- | --- | --- | --- |
-| A1 | M-1 beheben, U5 um Slider→Zahlenfeld erweitern, m-1/m-2 mitnehmen | `t_b78a89a5` | **vor Merge #3/#6** |
+| A1 | M-1 beheben, U5 um Slider→Zahlenfeld erweitern, m-1/m-2 mitnehmen | `t_b78a89a5` | **vor Merge #6** |
 | A2 | Fehlende Pflichtthemen der Bibliothek ergänzen und Test um Themenabdeckung erweitern | `t_1da0941f` | **vor Merge #3/#6** |
 | A3 | Pause/Weiter oder begründete ADR-Abweichung; ADR-Nachtrag Engine-Semantik | `t_f2a0868c` | nach Merge, vor Master-Abschluss |
 | A4 | P11: interne Verlinkung, Quellendokument im Build, Landingpage-Entscheidung | `t_9564a3d5` | nach Merge, vor Master-Abschluss |
