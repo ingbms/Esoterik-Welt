@@ -12,7 +12,7 @@ Methode: eigener Testplan, eigene Messroutinen, echte Browser — keine Übernah
 
 | Punkt | Wert |
 | --- | --- |
-| Arbeitsbaum | `C:\Users\mas\Arbeit\Esoterik-Welt-qa`, detached HEAD `580ed53`, `git diff origin/main` für Produktdateien leer |
+| Arbeitsbaum | `C:\Users\mas\Arbeit\Esoterik-Welt-qa`, Prüfobjekt `580ed53`, QA-Branch `docs/qa-frequenzlabor`; `git diff 580ed53..HEAD -- js css index.html data scripts tests` ist leer (keine Produktänderung durch die QA) |
 | Build | `npm run build` (statischer Build `dist/Esoterik-Welt/`, Offline-Datei `Lokal.html`) |
 | Server | `node index.js` auf isoliertem Port (QA-Config `reuseExistingServer: false`) |
 | Betriebssystem | Windows 11 |
