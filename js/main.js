@@ -7,6 +7,7 @@ import { MoonModule } from './modules/moon.js';
 import { RunesModule } from './modules/runes.js';
 import { BlogModule } from './modules/blog.js';
 import { AstrologieModule } from './modules/astrologie.js';
+import { RadiasthesieModule } from './modules/radiasthesie.js';
 import { DialogController } from './dialog.js';
 
 // --- State ---
@@ -18,7 +19,7 @@ const state = {
 // --- Routes ---
 // Only these ids are pages. #main is the skip target inside the document and
 // must never become a page id; unknown fragments must never hide every section.
-const MAIN_PAGES = ['home', 'tarot', 'crystals', 'moon', 'runes', 'astrologie', 'blog'];
+const MAIN_PAGES = ['home', 'tarot', 'crystals', 'moon', 'runes', 'astrologie', 'blog', 'pendeln'];
 const PAGE_IDS = new Set(MAIN_PAGES);
 const SKIP_ANCHOR = 'main';
 const ARTICLE_ROUTE = /^blog\/([^/]+)$/;
@@ -28,6 +29,12 @@ const ARTICLE_ROUTE = /^blog\/([^/]+)$/;
 // area module, which answers unknown slugs with its own in-area error view
 // instead of the site-wide route notice.
 const ASTROLOGIE_ROUTE = /^astrologie(?:\/([^?]*))?(?:\?(.*))?$/;
+// The dowsing area is one page with its own sub-routes:
+// #pendeln, #pendeln/radiasthesie, #pendeln/radiasthesie/befunde,
+// #pendeln/glossar?b=R, #pendeln/suche?q=pendel … Everything after "pendeln"
+// goes to the area module, which answers unknown slugs with its own in-area
+// error view instead of the site-wide route notice.
+const PENDELN_ROUTE = /^pendeln(?:\/([^?]*))?(?:\?(.*))?$/;
 
 // --- Per-route metadata ---
 // Every view lives in one document, so the title and the description have to
@@ -65,6 +72,11 @@ const PAGE_META = {
     title: 'Wissen & Artikel — Esoterik, Rituale, Geschichte | Esoterik-Welt',
     description:
       'Artikel zu Esoterik, Spiritualität und alter Weisheit: Tarot, Kristalle, Runen, Mondzyklen und Rituale.',
+  },
+  pendeln: {
+    title: 'Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand | Esoterik-Welt',
+    description:
+      'Radiästhesie, Pendeln und Orakel: Instrumente, Geschichte und Handhabung im Überblick — mit Kennzeichnung von Tradition, Hypothese und geprüftem Befund, ohne Wirkungsversprechen.',
   },
 };
 
@@ -109,6 +121,18 @@ function parseRoute(hash) {
         .split('/')
         .filter(Boolean),
       query: astrologie[2] || '',
+      raw,
+    };
+  }
+  const pendeln = PENDELN_ROUTE.exec(raw);
+  if (pendeln) {
+    return {
+      type: 'pendeln',
+      page: 'pendeln',
+      segments: String(pendeln[1] || '')
+        .split('/')
+        .filter(Boolean),
+      query: pendeln[2] || '',
       raw,
     };
   }
@@ -178,6 +202,8 @@ async function init() {
   // loaded lazily (see modules/astrologie.js): on HTTP the data file is only
   // fetched when the area is opened, offline webpack inlines it.
   state.modules.astrologie = new AstrologieModule(document.getElementById('astrologieRoot'));
+  // The dowsing area renders into its own container, after the runes section.
+  state.modules.pendeln = new RadiasthesieModule(document.getElementById('pendelnRoot'));
   // A card-opened article becomes its own history entry, so Back/Forward,
   // reload and the dialog close action stay consistent with the address bar.
   state.modules.blog.onArticleOpened = (id) => {
@@ -211,6 +237,15 @@ async function init() {
       await state.modules.astrologie.load();
     } catch (error) {
       console.error('Astrologie-Daten nicht verfügbar', error); // the module shows its own error view
+    }
+  }
+  // Same for a cold deep link into the dowsing area: render real content
+  // before the route settles, so no empty page is focused or announced.
+  if (initialRoute.type === 'pendeln') {
+    try {
+      await state.modules.pendeln.load();
+    } catch (error) {
+      console.error('Radiästhesie-Daten nicht verfügbar', error); // the module shows its own error view
     }
   }
   applyRoute(initialRoute, { instant: true, silent: true });
@@ -383,6 +418,19 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
   if (route.type === 'astrologie') {
     clearRouteNotice();
     navigateTo('astrologie', replace, {
+      fromHistory,
+      instant,
+      silent,
+      hash: `#${route.raw}`,
+      subroute: { segments: route.segments, query: route.query },
+    });
+    return;
+  }
+
+  // The dowsing area owns its sub-routes, exactly like the astrology area.
+  if (route.type === 'pendeln') {
+    clearRouteNotice();
+    navigateTo('pendeln', replace, {
       fromHistory,
       instant,
       silent,

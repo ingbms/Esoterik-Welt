@@ -566,6 +566,10 @@ hr {
     top: var(--header-height);
     left: 0;
     right: 0;
+    /* Gestapeltes Menü: ohne stretch erbt die Liste `align-items: center` aus
+       der Desktop-Regel, die Ziele schrumpfen auf Textbreite und stehen
+       mittig. Volle Breite = 44-px-Trefferfläche über die ganze Zeile. */
+    align-items: stretch;
     flex-direction: column;
     gap: 0;
     width: 100%;

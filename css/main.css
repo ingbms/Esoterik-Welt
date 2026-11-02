@@ -3847,3 +3847,30 @@
     gap: var(--space-4);
   }
 }
+
+/* --- Kopfzeile mit acht Navigationszielen -------------------------------
+   Das Themenmodul „Pendeln“ ist das achte Hauptziel. Acht Ziele plus
+   dreistelliger Favoritenzähler brauchen zwischen 781 und 900 px 21 px mehr,
+   als der Block oben hergibt (gemessen: docs/radiasthesie-konzept/messung/
+   nav-8-ziele.json). Kleineres Logo und engerer Listenabstand schaffen 53 px
+   Reserve; bei 781 px bleiben 31,8 px. */
+@media (min-width: 781px) and (max-width: 900px) {
+  .logo {
+    font-size: 24px;
+  }
+  .nav-list {
+    gap: var(--space-1);
+  }
+}
+
+/* Reflow bei 320 px (WCAG 1.4.10): Die Produktivseite lief mit Favoritenzähler
+   um 19 px über. Kleineres Logo und engerer Abstand beseitigen den Überlauf;
+   die Regel greift nur unterhalb von 361 px. */
+@media (max-width: 360px) {
+  .header-inner {
+    gap: var(--space-2);
+  }
+  .logo {
+    font-size: 22px;
+  }
+}

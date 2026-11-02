@@ -1,0 +1,20 @@
+{
+  "fokus": {
+    "text": "Pendeln",
+    "outline": "2px solid rgb(198, 179, 142)",
+    "offset": "4px"
+  },
+  "hover": {
+    "borderColor": "rgb(130, 146, 142)"
+  },
+  "menue": {
+    "open": true,
+    "expanded": "true",
+    "label": "Menü schließen",
+    "listDisplay": "flex",
+    "listHeight": 409
+  },
+  "quellen": {
+    "open": true
+  }
+}

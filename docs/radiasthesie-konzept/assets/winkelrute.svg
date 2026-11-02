@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Schematische Winkelrute in Aufsicht</title>
+  <desc id="d2">Zwei Ruten laufen von einem Griffpunkt aus in einem Winkel von etwa 40 Grad auseinander. Ein gestrichelter Bogen markiert den Winkel, ein Pfeil deutet die traditionell gedeutete Ausschlagrichtung an.</desc>
+  <!-- Griffpunkt -->
+  <circle cx="120" cy="250" r="5" fill="#c6b38e" />
+  <text x="96" y="278" fill="#babdb7" font-family="ui-monospace, Menlo, monospace" font-size="11">Griff</text>
+  <!-- beiden Ruten -->
+  <line x1="120" y1="250" x2="430" y2="150" stroke="#82928e" stroke-width="1.5" />
+  <line x1="120" y1="250" x2="430" y2="196" stroke="#82928e" stroke-width="1.5" />
+  <!-- Winkelbogen -->
+  <path d="M 300 191.7 A 190 190 0 0 0 300 209.6" stroke="#c6b38e" stroke-width="1" />
+  <text x="308" y="208" fill="#c6b38e" font-family="ui-monospace, Menlo, monospace" font-size="12">≈ 40°</text>
+  <!-- Ausschlag-Andeutung -->
+  <path d="M 430 150 C 452 130 452 108 438 96" stroke="#3c484b" stroke-width="1" stroke-dasharray="3 3" fill="none" />
+  <path d="M 438 96 l 6 10 l -12 -1 z" fill="#82928e" />
+  <text x="336" y="92" fill="#babdb7" font-family="ui-monospace, Menlo, monospace" font-size="11">Ausschlag (gedeutet)</text>
+  <!-- Horizontlinie -->
+  <line x1="60" y1="330" x2="460" y2="330" stroke="#3c484b" stroke-width="1" />
+  <text x="60" y="352" fill="#babdb7" font-family="ui-monospace, Menlo, monospace" font-size="11">Boden / Gelände (schematisch)</text>
+  <!-- Maß -->
+  <line x1="430" y1="150" x2="430" y2="196" stroke="#3c484b" stroke-width="1" />
+  <text x="440" y="178" fill="#babdb7" font-family="ui-monospace, Menlo, monospace" font-size="11">Öffnung</text>
+</svg>

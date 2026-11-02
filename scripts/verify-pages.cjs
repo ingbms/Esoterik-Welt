@@ -13,6 +13,7 @@ const routes = [
   'moon',
   'astrologie',
   'runes',
+  'pendeln',
   'blog',
   'impressum.html',
   'datenschutz.html',
@@ -93,6 +94,7 @@ const routes = [
                 'moonCalendar',
                 'moonRituals',
                 'astrologieRoot',
+                'pendelnRoot',
               ].map((id) => [id, document.getElementById(id)?.children.length || 0])
             ),
             navDisplay: document.querySelector('.nav')
@@ -122,8 +124,9 @@ const routes = [
             assert.equal(metrics.activePage, route, 'navigation must reveal selected page');
             assert.equal(metrics.featureCount, 6, 'application initialization must populate six features');
             for (const [id, count] of Object.entries(metrics.renderedCounts)) {
-              // The astrology container only renders while its own route is active.
+              // Area containers only render while their own route is active.
               if (id === 'astrologieRoot' && route !== 'astrologie') continue;
+              if (id === 'pendelnRoot' && route !== 'pendeln') continue;
               assert.ok(count > 0, `${id} must render its content`);
             }
           }
@@ -155,7 +158,7 @@ const routes = [
       }
       // Exercise actual mobile/desktop navigation instead of only direct hashes.
       await page.goto(base, { waitUntil: 'networkidle' });
-      for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'blog', 'home']) {
+      for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'pendeln', 'blog', 'home']) {
         if (await page.locator('#navToggle').isVisible()) await page.locator('#navToggle').click();
         await page.locator(`.nav-link[data-page="${route}"]`).click();
         await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible' });

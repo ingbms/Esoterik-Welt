@@ -45,6 +45,7 @@
       <link rel="preload" href="css/design-system.css" as="style" />
       <link rel="stylesheet" href="css/design-system.css" />
       <link rel="stylesheet" href="css/main.css" />
+      <link rel="stylesheet" href="css/radiasthesie.css" />
 
       <!-- Favicon -->
       <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -72,6 +73,7 @@
             <li><a href="#moon" class="nav-link" data-page="moon">Mondphasen</a></li>
             <li><a href="#astrologie" class="nav-link" data-page="astrologie">Astrologie</a></li>
             <li><a href="#runes" class="nav-link" data-page="runes">Runen</a></li>
+            <li><a href="#pendeln" class="nav-link" data-page="pendeln">Pendeln</a></li>
             <li><a href="#blog" class="nav-link" data-page="blog">Wissen</a></li>
           </ul>
           <button
@@ -641,6 +643,26 @@
         </div>
       </section>
 
+      <!-- Themenmodul: Radiästhesie, Pendeln und Orakel (#pendeln/…) -->
+      <section id="pendeln" class="page" aria-label="Radiästhesie, Pendeln und Orakel" hidden>
+        <div class="container">
+          <noscript>
+            <div class="astro-callout astro-callout--limit">
+              <p>
+                <strong>Dieser Bereich braucht JavaScript.</strong> Die Inhalte liegen als lokale Datendatei im Projekt;
+                es wird nichts nachgeladen und nichts übertragen.
+              </p>
+              <p>
+                Kurzfassung ohne Skript: Radiästhesie ist der Oberbegriff für Ruten- und Pendelpraxis; der Bereich
+                beschreibt Instrumente, Geschichte und Forschungsstand, ohne eine Wirkung zu behaupten. Kontrollierte
+                Tests erbrachten keine Treffer über dem Zufall.
+              </p>
+            </div>
+          </noscript>
+          <div id="pendelnRoot" class="rad-root"></div>
+        </div>
+      </section>
+
       <!-- Blog/Wissen Section -->
       <section id="blog" class="page" aria-labelledby="blog-title" hidden>
         <div class="container">
@@ -708,6 +730,7 @@
           <h2>Wissen</h2>
           <ul class="footer-links">
             <li><a href="#astrologie">Astrologie-Bereich</a></li>
+            <li><a href="#pendeln">Radiästhesie &amp; Pendeln</a></li>
             <li><a href="#blog">Artikel-Archiv</a></li>
             <li><a href="#blog/6">Einsteiger-Guide</a></li>
           </ul>

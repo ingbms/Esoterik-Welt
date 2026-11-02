@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-labelledby="t4 d4">
+  <title id="t4">Drei gefächerte Karten als Zeichen für Orakel</title>
+  <desc id="d4">Drei hochformatige Karten liegen leicht gefächert übereinander. Auf der mittleren Karte stehen ein Kreis, ein Dreieck und eine Linie als abstrakte Symbole für Bild- und Zeichenorakel.</desc>
+  <g fill="none" stroke="#3c484b" stroke-width="1">
+    <line x1="60" y1="340" x2="460" y2="340" />
+  </g>
+  <g>
+    <g transform="rotate(-14 260 340)">
+      <rect x="176" y="76" width="168" height="252" rx="3" fill="#0b1012" stroke="#3c484b" stroke-width="1" />
+    </g>
+    <g transform="rotate(14 260 340)">
+      <rect x="176" y="76" width="168" height="252" rx="3" fill="#0b1012" stroke="#3c484b" stroke-width="1" />
+    </g>
+    <rect x="176" y="70" width="168" height="256" rx="3" fill="#141c1f" stroke="#82928e" stroke-width="1.5" />
+    <circle cx="260" cy="140" r="24" stroke="#c6b38e" stroke-width="1" />
+    <path d="M 236 236 L 260 196 L 284 236 Z" stroke="#82928e" stroke-width="1" />
+    <line x1="212" y1="262" x2="308" y2="262" stroke="#3c484b" stroke-width="1" />
+    <line x1="212" y1="278" x2="292" y2="278" stroke="#3c484b" stroke-width="1" />
+    <line x1="212" y1="294" x2="300" y2="294" stroke="#3c484b" stroke-width="1" />
+  </g>
+  <text x="60" y="368" fill="#babdb7" font-family="ui-monospace, Menlo, monospace" font-size="11">Bild- und Zeichenorakel · schematisch</text>
+</svg>
