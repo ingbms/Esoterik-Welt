@@ -145,12 +145,8 @@ test.describe('Frequenzlabor — Tastaturbedienung', () => {
   });
 
   test('Slider und Zahlenfeld bleiben per Tastatur synchron', async ({ page }) => {
-    // BEFUND M-1 (Major): Der Slider aktualisiert das Zahlenfeld nicht.
-    // Erwartet wird U5/NFR-14 ("Slider + Zahlenfeld | Werte synchron").
-    test.fail(
-      true,
-      'Befund M-1: Nach Slider-Bewegung zeigt #fqFreqNumber weiter den alten Wert, während Readout und Engine den neuen Wert nutzen.'
-    );
+    // U5/NFR-14: Slider und Zahlenfeld zeigen jederzeit denselben Wert.
+    // Befund M-1 (t_835bd1e9) ist mit t_b78a89a5 behoben.
     await openLab(page);
     await page.locator('#fqFreqRange').focus();
     const before = await page.locator('#fqFreqRange').inputValue();

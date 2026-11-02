@@ -113,6 +113,26 @@ test('U5: Slider und Zahlenfeld sind synchron, klemmen und nennen die Einheit', 
   await page.locator('#fqFreqRange').dispatchEvent('input');
   await expect(page.locator('#fqFreqReadout')).toContainText('Hz');
   await expect(page.locator('#fqReadPeriod')).toContainText('ms');
+
+  // Gegenrichtung Slider → Zahlenfeld (Befund M-1, t_b78a89a5): beide
+  // Bedienelemente müssen jederzeit denselben Wert zeigen (U5/NFR-14).
+  const parseReadout = (text) =>
+    Number(
+      text
+        .replace(/\s*Hz$/, '')
+        .replace(/\./g, '')
+        .replace(',', '.')
+    );
+  const readoutHz = parseReadout(await page.locator('#fqFreqReadout').textContent());
+  const fieldHz = Number(await page.locator('#fqFreqNumber').inputValue());
+  expect(Math.abs(fieldHz - readoutHz), `Zahlenfeld ${fieldHz} Hz vs. Anzeige ${readoutHz} Hz`).toBeLessThan(1);
+  expect(await page.evaluate(() => window.EsoterikWelt.frequenz.getState().freqHz)).toBeCloseTo(readoutHz, 0);
+
+  // Ein `change` im Zahlenfeld darf den zuletzt per Slider gesetzten Ton nicht
+  // auf einen alten Wert zurücksetzen.
+  const readoutText = await page.locator('#fqFreqReadout').textContent();
+  await page.locator('#fqFreqNumber').dispatchEvent('change');
+  await expect(page.locator('#fqFreqReadout')).toHaveText(readoutText);
 });
 
 test('U6: der Pegel endet hart bei −6 dBFS und der Deckel ist sichtbar', async ({ page }) => {
@@ -248,4 +268,18 @@ test('U14: die Engine wird erst mit der Kategorie geladen', async ({ page }) => 
   await page.goto(`${BASE}/#frequenzen`, { waitUntil: 'load' });
   await expect(page.locator('#fqLibrary .fq-entry').first()).toBeVisible();
   expect(requests.some((url) => url.includes('frequenz-engine.js'))).toBe(true);
+});
+
+test('U15: der Sweep-Start wird in der Live-Region angesagt (NFR-15)', async ({ page }) => {
+  await openLab(page);
+  await page.locator('#fqSweepFrom').fill('200');
+  await page.locator('#fqSweepTo').fill('800');
+  await page.locator('#fqSweepSeconds').fill('2');
+  await page.locator('#fqSweepStart').click();
+  // Die Startansage steht sofort an, nicht erst nach dem Sweep-Ende (Befund m-1).
+  await expect(page.locator('#fqStatus')).toContainText('Sweep läuft: 200 → 800 Hz, 2 s');
+  await expect
+    .poll(() => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status), { timeout: 5000 })
+    .toBe('running');
+  await page.locator('#fqSweepCancel').click();
 });
