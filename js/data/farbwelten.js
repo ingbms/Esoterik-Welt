@@ -908,8 +908,24 @@ export const FARBWELTEN = [
       ],
       psychologie: [
         {
-          type: 'gap',
-          text: 'Für diese Farbwelt enthält der Redaktionsstand keinen Abschnitt zur Farbpsychologie. Die Seite nennt deshalb keine Assoziationen; die Ergänzung erfolgt redaktionell nach derselben Quellenlage wie bei den übrigen Farbwelten.',
+          type: 'p',
+          text: 'Für Indigo liegt keine eigenständige Farb-Emotions-Forschung vor; die großen systematischen Reviews untersuchen Grundfarben – Blau, Grön, Rot, Gelb, Orange – und gruppieren Indigo nicht als separate emotionale Kategorie [3][4]. Das hat Konsequenzen für jede Aussage über Indigo: Was als "Indigo-Assoziation" beschrieben wird, ist entweder eine Konnotation der zugrunde liegenden Grundfarbe Blau oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter Effekt [7].',
+        },
+        {
+          type: 'p',
+          text: 'Die Review [3] beschreibt Blau als assoziiert mit positiven, niedrig erregten Emotionen – Ruhe, Vertrauen, Konzentration – und betont, dass diese Assoziation interkulturell ähnlich, aber nicht identisch ist [4]. Wie bei allen Farben gilt: Assoziation ist nicht Wirkung [7]. Für Indigo, das physikalisch zwischen Blau und Violett liegt (ca. 420–450 nm, knapp am kurzwelligen Rand von Blau) [10][24], bedeutet das: Jede Assoziation, die einen "indigo-typischen" emotionalen Zustand behauptet, würde entweder vom Blauen abgeleitet oder als Spekulation formuliert – niemals als eigenständiger, reproduzierbarer Befund präsentiert. Die Studienlage erlaubt dies nicht.',
+        },
+        {
+          type: 'p',
+          text: 'Interkulturell zeigen sich bei Blautönen vergleichbare Muster – Ruhe und Seriosität als häufige Assoziationen –, aber die Varianz zwischen Probandengruppen bleibt hoch [4]. Für Indigo als Übergangsfarbe ist diese Varianz noch größer, weil die Wahrnehmung selbst von der spektralen Zusammensetzung (Metamerie) und der Bildschirmkalibration abhängt: Ein "indigo" auf einem Monitor ist ein RGB-Mix, kein Spektralreinstoff, und zwei Beobachter können dieselbe Bildschirmfarbe als eher blau oder eher violett wahrnehmen [31][24]. Das macht jede emotionale Aussage über Indigo zusätzlich fraglich.',
+        },
+        {
+          type: 'p',
+          text: 'Abgrenzung Blau ↔ Indigo, quellenbasiert: Blau umfasst etwa 450–495 nm; Indigo liegt bei ca. 420–450 nm und grenzt an die violette Kante des sichtbaren Spektrums [10]. Die Forschung behandelt Indigo als Teil der Blautöne, nicht als eigene emotionale Klasse [3][4]. Eine Aussage wie "Indigo beruhigt stärker als Blau" wäre daher nicht belegt – sie würde die fehlende Eigenstudie mit einer künstlichen Differenzierung überspielen. Ehrlich formuliert lautet die Einordnung: Indigo hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen (gelb, [1][2]), nicht als Wirkung.',
+        },
+        {
+          type: 'quote',
+          text: '**Red-Tabu beachtet:** Keine medizinische Wirkung, keine "Indigo öffnet das dritte Auge"-Behauptung als Tatsache [9]. Keine roten Aussagen zur Farbwirkung.',
         },
       ],
       tradition: [
@@ -974,7 +990,7 @@ export const FARBWELTEN = [
       researchChips: ['Empirie begrenzt'],
       note: 'Die Evidenzlage ist nicht symmetrisch: Die Tradition beschreibt eine Bedeutung, die Forschung untersucht Lichtwirkungen — nicht die Farbe als Heilmittel.',
     },
-    sources: ['1', '2', '3', '4', '9', '10', '24', '31'],
+    sources: ['1', '2', '3', '4', '7', '9', '10', '24', '31'],
     shortRefs: [],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
   },
@@ -1042,8 +1058,24 @@ export const FARBWELTEN = [
       ],
       psychologie: [
         {
-          type: 'gap',
-          text: 'Für diese Farbwelt enthält der Redaktionsstand keinen Abschnitt zur Farbpsychologie. Die Seite nennt deshalb keine Assoziationen; die Ergänzung erfolgt redaktionell nach derselben Quellenlage wie bei den übrigen Farbwelten.',
+          type: 'p',
+          text: 'Für Violett liegt keine eigenständige Farb-Emotions-Forschung vor; die großen systematischen Reviews [3][4] untersuchen Grundfarben und gruppieren Violett nicht als eigene emotionale Kategorie [3][4]. Was als "Violett-Assoziation" beschrieben wird – oft als mystisch, achtsam, transzendent – ist entweder eine Konnotation der zugrunde liegenden Blautöne oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter Effekt [7]. Das muss klar unterschieden werden: Assoziation ist nicht Wirkung [7].',
+        },
+        {
+          type: 'p',
+          text: 'Die Review [3] beschreibt Blau als assoziiert mit Ruhe, Vertrauen und Konzentration, und betont, dass diese Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Violett, das physikalisch zwischen Blau und dem UV-Rand liegt (ca. 380–450 nm) [10][24], teilt die Blautöne-Charakteristik, aber seine Wahrnehmung ist stärker vom spektralen Mix und vom Bildschirm-Rendering abhängig: Ein "Violett" auf einem Monitor ist typischerweise ein Magenta-Mix (rotes + blaues Licht), kein Spektralreinstoff [31]. Zwei Beobachter können dieselbe Bildschirmfarbe als eher blau-violett oder eher rot-violett wahrnehmen – ein Metamerie-Phänomen, das emotionale Aussagen zusätzlich fraglich macht [24][31]. Die Studie [4] zeigt, dass solche Wahrnehmungsvarianzen die emotionale Interpretation stärker beeinflussen als bei Grundfarben mit klarerem Spektralspektrum.',
+        },
+        {
+          type: 'p',
+          text: 'Abgrenzung Violett ↔ Magenta, quellenbasiert: Violett (ca. 380–450 nm) ist eine spektrale Farbe im sichtbaren Bereich; Magenta (Additiv-Mix ~ 620 nm rot + 450 nm blau) ist nicht spektral, sondern entsteht nur durch simultane Stimulation zweier Rezeptoren [24][31]. Die Forschung [3][4] unterscheidet diese nicht systematisch – die meisten Studien sprechen von "purple/violet" als einer Kategorie – und liefert damit keine eigenständige emotionale Differenzierung zwischen spektralem Violett und additivem Magenta. Ehrlich formuliert heißt das: Für Violett als spektrale Farbe und Magenta als Mischfarbe gibt es keine getrennte emotionale Forschung; jede Aussage über "violett-typische" emotionale Wirkung würde entweder vom Blauen abgeleitet oder als spekulativ formuliert – nie als eigenständiger Befund.',
+        },
+        {
+          type: 'p',
+          text: 'Interkulturell sind Blautöne- und Violett-Assoziationen ähnlich (Ruhe, Tiefe), aber die Varianz bleibt hoch [4]. Eine Aussage wie "Violett fördert Spiritualität stärker als Blau" wäre nicht belegt – sie würde die fehlende Eigenstudie durch eine künstliche Differenzierung ersetzen. Die ehrliche Einordnung lautet: Violett hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen (gelb, [1][2]), nicht als Wirkung.',
+        },
+        {
+          type: 'quote',
+          text: '**Red-Tabu beachtet:** Keine medizinische Wirkung, keine "Violett heilt Krebs", keine "UV liegt im Violettbereich"-Falschbehauptung [9][19]. Keine roten Aussagen zur Farbwirkung.',
         },
       ],
       tradition: [
@@ -1108,7 +1140,7 @@ export const FARBWELTEN = [
       researchChips: ['Empirie begrenzt'],
       note: 'Die Evidenzlage ist nicht symmetrisch: Die Tradition beschreibt eine Bedeutung, die Forschung untersucht Lichtwirkungen — nicht die Farbe als Heilmittel.',
     },
-    sources: ['1', '2', '3', '4', '9', '10', '19', '24', '31'],
+    sources: ['1', '2', '3', '4', '7', '9', '10', '19', '24', '31'],
     shortRefs: ['20'],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
   },

@@ -19,6 +19,18 @@ Violett liegt bei ca. 380–450 nm, ca. 666–789 THz [10][24]. Es hat die höch
 
 In der Tradition heißt es, Violett stehe für das Kronenchakra und für Spiritualität [1]. Das moderne Regenbogenmodell ordnet Violett dem siebten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination existiert [1][2]. In der klassischen Lehre (1577) gab es keine Farbzuordnung zu den Zentern [1].
 
+## Farbpsychologie
+
+Für Violett liegt keine eigenständige Farb-Emotions-Forschung vor; die großen systematischen Reviews [3][4] untersuchen Grundfarben und gruppieren Violett nicht als eigene emotionale Kategorie [3][4]. Was als "Violett-Assoziation" beschrieben wird – oft als mystisch, achtsam, transzendent – ist entweder eine Konnotation der zugrunde liegenden Blautöne oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter Effekt [7]. Das muss klar unterschieden werden: Assoziation ist nicht Wirkung [7].
+
+Die Review [3] beschreibt Blau als assoziiert mit Ruhe, Vertrauen und Konzentration, und betont, dass diese Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Violett, das physikalisch zwischen Blau und dem UV-Rand liegt (ca. 380–450 nm) [10][24], teilt die Blautöne-Charakteristik, aber seine Wahrnehmung ist stärker vom spektralen Mix und vom Bildschirm-Rendering abhängig: Ein "Violett" auf einem Monitor ist typischerweise ein Magenta-Mix (rotes + blaues Licht), kein Spektralreinstoff [31]. Zwei Beobachter können dieselbe Bildschirmfarbe als eher blau-violett oder eher rot-violett wahrnehmen – ein Metamerie-Phänomen, das emotionale Aussagen zusätzlich fraglich macht [24][31]. Die Studie [4] zeigt, dass solche Wahrnehmungsvarianzen die emotionale Interpretation stärker beeinflussen als bei Grundfarben mit klarerem Spektralspektrum.
+
+Abgrenzung Violett ↔ Magenta, quellenbasiert: Violett (ca. 380–450 nm) ist eine spektrale Farbe im sichtbaren Bereich; Magenta (Additiv-Mix ~ 620 nm rot + 450 nm blau) ist nicht spektral, sondern entsteht nur durch simultane Stimulation zweier Rezeptoren [24][31]. Die Forschung [3][4] unterscheidet diese nicht systematisch – die meisten Studien sprechen von "purple/violet" als einer Kategorie – und liefert damit keine eigenständige emotionale Differenzierung zwischen spektralem Violett und additivem Magenta. Ehrlich formuliert heißt das: Für Violett als spektrale Farbe und Magenta als Mischfarbe gibt es keine getrennte emotionale Forschung; jede Aussage über "violett-typische" emotionale Wirkung würde entweder vom Blauen abgeleitet oder als spekulativ formuliert – nie als eigenständiger Befund.
+
+Interkulturell sind Blautöne- und Violett-Assoziationen ähnlich (Ruhe, Tiefe), aber die Varianz bleibt hoch [4]. Eine Aussage wie "Violett fördert Spiritualität stärker als Blau" wäre nicht belegt – sie würde die fehlende Eigenstudie durch eine künstliche Differenzierung ersetzen. Die ehrliche Einordnung lautet: Violett hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen (gelb, [1][2]), nicht als Wirkung.
+
+> **Red-Tabu beachtet:** Keine medizinische Wirkung, keine "Violett heilt Krebs", keine "UV liegt im Violettbereich"-Falschbehauptung [9][19]. Keine roten Aussagen zur Farbwirkung.
+
 ## Was nicht verwendet wird (Rot-Tabu)
 
 "Violett heilt Krebs", "UV liegt im Violettbereich" [9][19] – nicht verwendet. Keine medizinische Wirkung behauptet.
@@ -31,7 +43,7 @@ Betrachten Sie einen violetten Farbton – ein Bild, eine Blume, ein Licht. Noti
 
 ---
 
-## Quellen – [1][2][9][10][19][24]
+## Quellen – [1][2][3][4][7][9][10][19][24][31]
 
 ## Anmerkung zur ehrlichen Einordnung
 
