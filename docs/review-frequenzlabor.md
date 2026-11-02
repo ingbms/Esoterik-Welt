@@ -158,7 +158,7 @@ Der Datensatz trennt durchgehend Physik, Tradition und Behauptung; esoterische E
 | Disclaimer | Browser | Kurztext sichtbar; Langtext 842 Zeichen inkl. „80 dB" (WHO) |
 | Labor-DOM | Browser | „Deckel: −6 dBFS", Gehörschutz-Hinweis am Pegelregler, Kopfhörer-Hinweis binaural |
 | M-1-Repro | Browser, 2× ArrowRight | Readout 444,7 Hz / Feld 440 — **Befund bestätigt** |
-| Quellen-URLs | `curl` | 8 Kern-URLs 200; ISO-Seiten 403 (Bot-Schutz) |
+| Quellen-URLs | `curl` | 13 Kern-URLs geprüft: 11 × HTTP 200, 2 × HTTP 403 (ISO, Bot-Schutz) |
 | Secrets | `git grep` Schlüsselmuster | keine Treffer |
 
 ---

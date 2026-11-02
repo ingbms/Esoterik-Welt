@@ -64,7 +64,7 @@ Formel: `f = (1/T) * 2^n` mit T in Sekunden; n so, dass der Ton im von Cousto ge
 403 https://www.iso.org/files/live/sites/isoorg/files/news/magazine/ISO%20Focus+%20(2010-2013)/en/2012/ISO%20Focus+,%20Nov.-Dec.%202012.pdf
 ```
 
-Inhaltsprüfungen:
+Inhaltsprüfungen (13 URLs geprüft: 11 × HTTP 200, 2 × HTTP 403 durch Bot-Schutz bei ISO):
 - PMC6333694: „alpha … most frequently defined in the range of 8–13 Hz (85/84 % of studies)" — deckt die Angabe im Datensatz.
 - PLOS ONE Ingendoh et al. 2023: systematisches Review, Wirkungen „inconclusive at best" — Datensatz sagt „Wirkungen umstritten".
 - PubMed 31031095: 432 Hz senkt Herzfrequenz stärker als 440 Hz (Pilotstudie, Autoren fordern größere Stichprobe) — Status `plausibel` korrekt.
