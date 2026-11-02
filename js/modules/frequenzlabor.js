@@ -695,7 +695,7 @@ export class FrequenzlaborModule {
     this.refs.play.addEventListener('click', () => this.play());
     this.refs.stop.addEventListener('click', () => this.stopTone());
     this.refs.freqRange.addEventListener('input', () => {
-      this.setFrequency(this.sliderToHz(Number(this.refs.freqRange.value)), false);
+      this.setFrequency(this.sliderToHz(Number(this.refs.freqRange.value)));
     });
     this.refs.freqRange.addEventListener('change', () => this.persist({ freqHz: this.freqHz }));
     this.refs.freqNumber.addEventListener('change', () => {
@@ -705,7 +705,7 @@ export class FrequenzlaborModule {
         this.showError({ code: 'invalid_frequency' });
         return;
       }
-      this.setFrequency(clamp(value, FREQUENCY_LIMITS.minHz, FREQUENCY_LIMITS.maxHz), true);
+      this.setFrequency(clamp(value, FREQUENCY_LIMITS.minHz, FREQUENCY_LIMITS.maxHz));
       this.persist({ freqHz: this.freqHz });
     });
     this.refs.waveform.addEventListener('change', () => {
@@ -776,9 +776,12 @@ export class FrequenzlaborModule {
     return hz >= 100 ? Math.round(hz * 10) / 10 : Math.round(hz * 100) / 100;
   }
 
-  setFrequency(hz, fromNumberField) {
+  setFrequency(hz) {
     this.freqHz = clamp(hz, FREQUENCY_LIMITS.minHz, FREQUENCY_LIMITS.maxHz);
-    this.syncFrequency(fromNumberField);
+    // U5/NFR-14: Slider und Zahlenfeld zeigen jederzeit denselben Wert. Beide
+    // Richtungen schreiben deshalb in das Zahlenfeld; beim Tippen selbst greift
+    // nur der `change`-Handler, sodass keine Eingabe mitten im Tippen überschrieben wird.
+    this.syncFrequency(true);
     try {
       this.engine.setFrequency(this.freqHz);
     } catch (error) {
@@ -799,7 +802,7 @@ export class FrequenzlaborModule {
   async playFixed(hz) {
     this.refs.error.hidden = true;
     this.freqHz = hz;
-    this.syncFrequency(false);
+    this.syncFrequency(true);
     try {
       await this.engine.play(hz, { waveform: 'sine', gainDb: this.gainDb });
       this.announce(`Vergleichston: ${formatHz(hz)}.`);
@@ -881,6 +884,11 @@ export class FrequenzlaborModule {
       FREQUENCY_LIMITS.maxSweepSeconds
     );
     this.refs.error.hidden = true;
+    // NFR-15: der Sweep-Start wird angesagt, nicht nur das Ende (Befund m-1).
+    // Die Zahlen kommen aus `formatHz`, damit Ansage und Anzeige dieselbe
+    // deutsche Schreibweise verwenden.
+    const hzValue = (value) => formatHz(value).replace(/\s*Hz$/, '');
+    this.announce(`Sweep läuft: ${hzValue(from)} → ${formatHz(to)}, ${seconds.toLocaleString('de-DE')} s.`);
     this.engine
       .sweep(from, to, seconds, { curve: 'exponential' })
       .then((result) => {
