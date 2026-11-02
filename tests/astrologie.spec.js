@@ -10,7 +10,7 @@
 // gegen das tatsächlich gerenderte DOM geprüft.
 import { test, expect } from 'playwright/test';
 
-const BASE = process.env.BASE_URL || 'http://127.0.0.1:3100/Esoterik-Welt';
+const BASE = process.env.BASE_URL || `http://127.0.0.1:${process.env.E2E_PORT || 3100}/Esoterik-Welt`;
 
 const AREAS = [
   { hash: '#astrologie/zeichen', selector: '.astro-card', count: 12, title: 'Die zwölf Zeichen' },

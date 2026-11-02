@@ -109,6 +109,15 @@
   color: var(--color-text-primary);
   white-space: nowrap;
 }
+/* WCAG 1.4.1: links in running text must not rely on colour alone. The palette
+   puts primary and secondary at ~1.07:1, so these links are underlined. */
+.fq-prose a,
+.fq-lede a,
+.fq-note a,
+.fq-disclaimer-lang a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .fq-mono {
   font-family: var(--font-mono);
 }
@@ -503,18 +512,25 @@
   .fq-visual {
     position: static;
   }
-}
-@media (max-width: 700px) {
+  /* NFR-22: the transport stays reachable while scrolling through the panels.
+     It sticks below the page header, not over it, and never leaves the page. */
   .fq-transport {
     position: sticky;
-    bottom: 0;
-    z-index: var(--z-sticky);
-    padding: var(--space-3);
-    background: var(--color-bg-card);
-    border-top: 1px solid var(--color-line-strong);
-    margin-inline: calc(var(--gutter) * -1);
+    top: var(--header-height);
+    z-index: var(--z-dropdown);
     padding-inline: var(--gutter);
+    margin-inline: calc(var(--gutter) * -1);
+    background: var(--color-bg-card);
+    border-block: 1px solid var(--color-line-strong);
   }
+  /* A focused control must not disappear under the sticky transport. */
+  .fq-controls input,
+  .fq-controls select,
+  .fq-controls button {
+    scroll-margin-top: calc(var(--header-height) + 112px);
+  }
+}
+@media (max-width: 700px) {
   .fq-live-hz {
     margin-left: 0;
   }

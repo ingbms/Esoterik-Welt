@@ -74,6 +74,8 @@ jobs:
         run: npm run check:frequenz-budget
       - name: Run astrology area contract and rendering tests (node:test, no browser)
         run: npm run test:astrologie
+      - name: Run frequency engine contract and signal tests (node:test, mocked Web Audio)
+        run: npm run test:frequenz
       - name: Run offline file entry (node:test + Chromium, file:// like double click)
         run: npm run test:offline
       - name: Run tarot deck integration (78 cards, assets, interpretations, draws, file://)
