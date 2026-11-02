@@ -33,6 +33,39 @@ npm run verify:pages -- http://localhost:3000/Esoterik-Welt/ evidence/preview
 - **Mond:** Synodische Periode 29,53059 d; Referenz 2000-01-06; 42-Tage-Grid; iCal-Export `.ics`. Astronomische Formel, keine astrologische Prognose.
 - **Blog:** 10 reale Artikel (`js/data/articles.js`) mit Markdown-Inhalten.
 
+## Frequenzlabor-Audio-Engine
+
+`js/modules/frequenz-engine.js` ist die einzige Audioquelle der Seite: reines Browser-ES-Modul ohne DOM-, Daten- oder UI-Bezug. Verbindlich sind [ADR §4](docs/adr-frequenzlabor.md) (Semantik, Zahlen, Fehlerfälle) und `js/modules/frequenz-engine.d.ts` (Typen).
+
+```js
+import { getFrequencyEngine } from './modules/frequenz-engine.js';
+
+const engine = getFrequencyEngine(); // erzeugt noch keinen AudioContext
+engine.subscribe((state) => render(state)); // jede Änderung ist ein neuer, eingefrorener Schnappschuss
+
+button.addEventListener('click', () => engine.play(440)); // Ton startet im Nutzer-Task
+// Weitere Aufrufe, ebenfalls nur aus einem Ereignis heraus:
+//   await engine.playTones([440, 444]);                 // Schwebung im selben Kanal
+//   await engine.playBinaural({ carrierHz: 200, deltaHz: 8 });
+//   await engine.sweep(200, 800, 5);                    // exponentiell, Promise am Ende
+//   engine.setGain(-30); engine.setWaveform('triangle'); // synchron, ohne Kontext-Erzeugung
+//   await engine.stop();                                 // 20 ms Fade-out, Nodes freigegeben
+```
+
+Verbindliche Eigenschaften:
+
+- **Kein Ton ohne Nutzerinteraktion.** Der AudioContext entsteht ausschließlich in `play()`, `playTones()` und `playBinaural()` — synchron vor dem ersten `await` im auslösenden Ereignis. Setter und `isSupported()` erzeugen nie einen Kontext.
+- **Pegel-Deckel:** Start −20 dBFS, harte Grenze −6 dBFS (die Engine klemmt selbst, unabhängig von der UI), Rechteck/Sägezahn −6 dB. Bei `n` Stimmen erhält jede `1/n`; die Summe bleibt rechnerisch ≤ 0,501 und damit clippingfrei.
+- **Frequenzbereich:** 20–20.000 Hz. Endliche Werte außerhalb werden geklemmt; `NaN`, `Infinity` und `≤ 0` lehnen mit `FrequencyEngineError('invalid_frequency')` ab.
+- **Fehlercodes statt Texten:** `unsupported`, `context_blocked`, `context_closed`, `invalid_frequency`, `invalid_argument`, `invalid_state`, `internal`. Die deutschen UI-Texte liegen im Controller (ADR §4.7).
+- **Aufräumen:** `stop()` blendet aus, stoppt und trennt alle Oszillatoren; `dispose()` schließt den Kontext und leert die Listener. `subscribe()` liefert eine idempotente Abmeldefunktion.
+
+Tests ohne Audiogerät — E1–E20 der Abnahmematrix plus Signal-Render über einen nachgebauten Offline-Graphen (FFT-Peak ±1 Hz, Spitzenamplitude ≤ 0,501, monotone Flanken):
+
+```bash
+npm run test:frequenz
+```
+
 ## Projektstruktur
 
 ```
