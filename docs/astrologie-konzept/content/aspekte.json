@@ -1,0 +1,208 @@
+{
+  "dataset": "aspekte",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Fünf Hauptaspekte der westlichen Astrologie mit ihren Winkeldefinitionen. Orben sind Konventionen, keine Naturkonstanten; die Zuordnung zu harmonisch oder spannungsreich ist Deutungstradition.",
+  "items": [
+    {
+      "id": "aspekt-konjunktion",
+      "slug": "konjunktion",
+      "name": "Konjunktion",
+      "short": "Die Konjunktion verbindet zwei Faktoren am selben Ort des Tierkreises. Traditionell gilt sie als Verdichtung: Die beteiligten Themen liegen nah beieinander und verstärken sich gegenseitig.",
+      "long": "Definition: Zwei Faktoren stehen bei einer Konjunktion im selben Gradbereich des Tierkreises, also in einem Winkel von etwa 0 Grad. Die zulässige Abweichung ist der Orbis. In der modernen Praxis werden für die Konjunktion häufig rund 8 bis 10 Grad angesetzt, bei Sonne oder Mond auch mehr; ohne Sonne und Mond nennen manche Astrologinnen und Astrologen eher 8 Grad [S11][S17].\n\nDeutung: Die Konjunktion gilt als Verdichtung. Anders als ein Spannungsaspekt trennt sie die Faktoren nicht, sondern legt sie übereinander. Das kann als Bündelung, Intensität oder Ununterscheidbarkeit erlebt werden: Zwei Themen sind so nah, dass sie schwer getrennt wahrgenommen werden. Ob das als Stärke oder als Enge wirkt, hängt von den beteiligten Faktoren, ihren Zeichen und Häusern ab. Eine Konjunktion von Sonne und Mond (Neumond) ist etwas anderes als eine Konjunktion von Saturn und Pluto.\n\nDifferenzierung: Die Konjunktion ist kein automatisch günstiger oder ungünstiger Aspekt. Sie kann Ressourcen bündeln, aber auch einen blinden Fleck erzeugen, weil zwei Motive immer gemeinsam auftreten. Wichtig ist, welche Faktoren beteiligt sind und ob ein Faktor den anderen dominiert. Die populäre Rede von einer guten oder schlechten Konjunktion verdeckt diese Unterschiede.\n\nOrb-Hinweis: Der Orbis ist eine Konvention. Ein weiter Orbis macht den Aspekt schwächer, ein enger Orbis prägnanter; eine einheitliche Norm gibt es nicht [S17].",
+      "keywords": [
+        "0 Grad",
+        "Verdichtung",
+        "Bündelung",
+        "Neumond",
+        "Orbis"
+      ],
+      "sources": [
+        "S11",
+        "S17"
+      ],
+      "claims": [
+        "c10",
+        "c11"
+      ],
+      "cross_refs": [
+        "grund-aspekt-orben",
+        "faktor-sonne",
+        "faktor-mond"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Der Winkel ist eine Definition; die Deutung als Verdichtung und die Orb-Größen sind Fachkonventionen."
+      },
+      "angle_deg": 0,
+      "glyph": "☌",
+      "traditionelle_qualitaet": "Verdichtend und verbindend; weder eindeutig förderlich noch eindeutig spannungsreich. Die Qualität hängt von den beteiligten Faktoren ab.",
+      "orb": {
+        "modern_typisch": "etwa 8 bis 10 Grad, bei Sonne oder Mond auch weiter",
+        "spanne": "etwa 0 bis 10 Grad, in manchen Schulen enger",
+        "schulhinweis": "Psychologische Astrologie neigt zu weiteren Orben, Horary und traditionelle Schulen zu engeren. Ohne Sonne und Mond werden häufig 8 Grad genannt [S11][S17]."
+      },
+      "common_misreading": "Die Konjunktion wird oft pauschal als guter oder starker Aspekt gelesen. Tatsächlich verbindet sie nur; ob daraus Ressource oder Enge wird, entscheiden die beteiligten Faktoren und der Kontext."
+    },
+    {
+      "id": "aspekt-sextil",
+      "slug": "sextil",
+      "name": "Sextil",
+      "short": "Das Sextil trennt zwei Faktoren um 60 Grad. Traditionell gilt es als anregender, eher günstiger Aspekt, der Gelegenheiten und Austausch betont.",
+      "long": "Definition: Ein Sextil liegt bei einem Winkel von 60 Grad, also bei zwei Zeichen Abstand im Tierkreis. Die moderne Praxis verwendet häufig Orben von etwa 4 bis 6 Grad; manche Schulen gehen bis 8 Grad [S11]. Der Aspekt gehört zu den Hauptaspekten, auch wenn er in der populären Astrologie weniger Aufmerksamkeit bekommt als Quadrat oder Trigon.\n\nDeutung: Das Sextil wird traditionell als Gelegenheit, Anregung und Beweglichkeit gelesen. Es verbindet Faktoren, die sich ergänzen können, ohne sich zu bedrängen. Das kann als Neugier, Kooperation oder praktische Lösung erscheinen. Anders als das Trigon gilt es nicht als selbstverständlich fließend; es braucht eher eine bewusste Nutzung. Wer ein Sextil nicht aufgreift, verliert keine Katastrophe, sondern eine Möglichkeit.\n\nDifferenzierung: Die Qualität hängt von den beteiligten Faktoren ab. Ein Sextil zwischen Mond und Venus kann soziale Wärme begünstigen; ein Sextil zwischen Mars und Saturn kann strukturierte Anstrengung ermöglichen. Die Zuordnung zu günstig ist eine Tradition, keine Messung. In der modernen Psychologie der Astrologie wird das Sextil oft als Entwicklungschance beschrieben, die aktiv ergriffen werden muss.\n\nOrb-Hinweis: Kleine Orben sind üblich, weil der Aspekt sonst schnell in die Nähe anderer Winkel gerät. Die genaue Grenze ist eine Konvention [S17].",
+      "keywords": [
+        "60 Grad",
+        "Gelegenheit",
+        "Austausch",
+        "Anregung",
+        "Hauptaspekt"
+      ],
+      "sources": [
+        "S11",
+        "S17"
+      ],
+      "claims": [
+        "c10",
+        "c11"
+      ],
+      "cross_refs": [
+        "grund-aspekt-orben",
+        "aspekt-trigon",
+        "aspekt-quadrat"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Der Winkel ist definiert; die Deutung als Gelegenheit und die Orb-Grenzen sind Konvention."
+      },
+      "angle_deg": 60,
+      "glyph": "⚹",
+      "traditionelle_qualitaet": "Anregend und eher förderlich; betont Gelegenheit und Austausch, ohne die Faktoren zu verschmelzen.",
+      "orb": {
+        "modern_typisch": "etwa 4 bis 6 Grad",
+        "spanne": "etwa 2 bis 8 Grad, je nach Schule und beteiligten Faktoren",
+        "schulhinweis": "Kleinere Orben sind üblich, weil das Sextil sonst in die Nähe anderer Winkel rutscht. Psychologische Schulen nutzen eher weitere Orben [S17]."
+      },
+      "common_misreading": "Das Sextil wird oft als automatisch glücklich gelesen. Tradiert ist es eine Gelegenheit, die genutzt werden muss; ohne bewusste Entscheidung bleibt es eine Möglichkeit."
+    },
+    {
+      "id": "aspekt-quadrat",
+      "slug": "quadrat",
+      "name": "Quadrat",
+      "short": "Das Quadrat trennt zwei Faktoren um 90 Grad. Traditionell gilt es als Spannungsaspekt, der Reibung, Entscheidungsdruck und Entwicklung erzwingt.",
+      "long": "Definition: Ein Quadrat liegt bei 90 Grad, also bei drei Zeichen Abstand. Die moderne Praxis verwendet häufig Orben von etwa 6 bis 8 Grad; manche Schulen gehen bis 8 Grad oder etwas darüber [S11]. Es ist neben der Opposition der klassische Spannungsaspekt.\n\nDeutung: Das Quadrat wird traditionell als Reibung gelesen: Zwei Faktoren wollen gleichzeitig wirken und stehen sich dabei im Weg. Das kann als innerer Konflikt, als äußerer Druck oder als Antrieb erlebt werden. Die Spannung ist nicht automatisch schlecht; sie kann Energie erzeugen, die ohne Widerstand fehlen würde. Wer ein Quadrat nur als Unglück liest, übersieht die developmental Seite: Reibung kann zu Handlung, Struktur und Reifung führen.\n\nDifferenzierung: Die Qualität hängt von den beteiligten Faktoren ab. Ein Quadrat zwischen Sonne und Saturn kann Disziplin erzwingen; ein Quadrat zwischen Venus und Mars kann Begehren und Bindung gegeneinander stellen. Die populäre Vorstellung, Quadrate seien grundsätzlich schlecht, ist eine Verkürzung. In der Radixdeutung wird eher gefragt, wie mit der Spannung umgegangen wird, als ob sie glücklich oder unglücklich macht.\n\nOrb-Hinweis: Ein Quadrat mit weitem Orbis kann als Hintergrundspannung wirken; ein exaktes Quadrat wird oft als prägnanter erlebt. Die Grenze bleibt eine Konvention [S17].",
+      "keywords": [
+        "90 Grad",
+        "Spannung",
+        "Reibung",
+        "Entwicklung",
+        "Hauptaspekt"
+      ],
+      "sources": [
+        "S11",
+        "S17"
+      ],
+      "claims": [
+        "c10",
+        "c11"
+      ],
+      "cross_refs": [
+        "grund-aspekt-orben",
+        "aspekt-opposition",
+        "aspekt-trigon"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Der Winkel ist definiert; die Deutung als Spannung und die Orb-Grenzen sind Konvention."
+      },
+      "angle_deg": 90,
+      "glyph": "□",
+      "traditionelle_qualitaet": "Spannungsreich und handlungsfordernd; kann Reibung, Druck und Entwicklungsimpulse erzeugen.",
+      "orb": {
+        "modern_typisch": "etwa 6 bis 8 Grad",
+        "spanne": "etwa 5 bis 8 Grad, je nach Schule und beteiligten Faktoren",
+        "schulhinweis": "Traditionelle und Horary-Schulen arbeiten enger, psychologische Schulen weiter. Ein exaktes Quadrat gilt als prägnanter als ein weites [S17]."
+      },
+      "common_misreading": "Das Quadrat wird oft als sicherer Unglücksfaktor gelesen. Tradiert ist es eine Spannung, die Handlung und Reifung erzwingen kann; entscheidend ist der Umgang mit ihr."
+    },
+    {
+      "id": "aspekt-trigon",
+      "slug": "trigon",
+      "name": "Trigon",
+      "short": "Das Trigon trennt zwei Faktoren um 120 Grad. Traditionell gilt es als fließender, günstiger Aspekt, der Ressourcen und Selbstverständlichkeit betont.",
+      "long": "Definition: Ein Trigon liegt bei 120 Grad, also bei vier Zeichen Abstand. Die moderne Praxis verwendet häufig Orben von etwa 5 bis 10 Grad, abhängig von den beteiligten Faktoren [S11]. Es gilt als der klassische Harmonieaspekt neben dem Sextil.\n\nDeutung: Das Trigon wird traditionell als leichtes Zusammenspiel gelesen: Die Faktoren unterstützen sich, ohne dass viel gerungen werden muss. Das kann als Talent, Selbstverständlichkeit oder Glück im Sinne von Leichtigkeit erscheinen. Die Schattenseite ist, dass Leichtigkeit auch bequem machen kann: Was immer gelingt, wird selten geprüft oder weiterentwickelt.\n\nDifferenzierung: Nicht jedes Trigon ist automatisch wohltünd. Ein Trigon zwischen zwei schwierigen Faktoren kann eine Spannung so glatt machen, dass sie unbemerkt bleibt. Die Qualität hängt von den beteiligten Faktoren, ihren Zeichen und Häusern ab. Die populäre Gleichsetzung von Trigon mit Glück ist eine Verkürzung; tradiert ist eher ein Feld von Begabung und Selbstverständlichkeit.\n\nOrb-Hinweis: Weite Orben sind beim Trigon üblich, weil der Aspekt als stabil gilt. Die Grenze bleibt eine Konvention [S11][S17].",
+      "keywords": [
+        "120 Grad",
+        "Fließen",
+        "Talent",
+        "Leichtigkeit",
+        "Hauptaspekt"
+      ],
+      "sources": [
+        "S11",
+        "S17"
+      ],
+      "claims": [
+        "c10",
+        "c11"
+      ],
+      "cross_refs": [
+        "grund-aspekt-orben",
+        "aspekt-sextil",
+        "aspekt-quadrat"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Der Winkel ist definiert; die Deutung als Harmonie und die Orb-Grenzen sind Konvention."
+      },
+      "angle_deg": 120,
+      "glyph": "△",
+      "traditionelle_qualitaet": "Fließend und eher förderlich; betont Ressourcen, Talent und Selbstverständlichkeit, kann aber bequem machen.",
+      "orb": {
+        "modern_typisch": "etwa 6 bis 8 Grad, teilweise bis 10 Grad",
+        "spanne": "etwa 5 bis 10 Grad, je nach Schule und beteiligten Faktoren",
+        "schulhinweis": "Weite Orben sind üblich, weil das Trigon als stabil gilt. Psychologische Schulen nutzen eher größere Spielräume [S11][S17]."
+      },
+      "common_misreading": "Das Trigon wird oft als garantierter Glücksfall gelesen. Tradiert ist es eine Leichtigkeit, die auch zur Bequemlichkeit oder zum Übersehen von Spannungen führen kann."
+    },
+    {
+      "id": "aspekt-opposition",
+      "slug": "opposition",
+      "name": "Opposition",
+      "short": "Die Opposition stellt zwei Faktoren gegenüber. Traditionell gilt sie als Spannungsaspekt, der Polarisierung, Spiegelung und Ausgleich verlangt.",
+      "long": "Definition: Eine Opposition liegt bei 180 Grad, also bei sechs Zeichen Abstand. Die moderne Praxis verwendet häufig Orben von etwa 8 bis 10 Grad; manche Schulen gehen bis 10 Grad oder etwas darüber [S11]. Sie ist der zweite klassische Spannungsaspekt neben dem Quadrat.\n\nDeutung: Die Opposition wird traditionell als Gegenüberstellung gelesen: Zwei Faktoren stehen sich gegenüber und verlangen eine Vermittlung. Das kann als äußerer Konflikt, als Projektion auf andere oder als innere Polarität erscheinen. Anders als das Quadrat ist die Opposition symmetrischer; sie kann bewusster verhandelt werden, weil beide Seiten sichtbar sind. Die Kunst liegt nicht darin, eine Seite zu wählen, sondern einen Umgang mit beiden zu finden.\n\nDifferenzierung: Die Opposition ist kein automatisch schlechter Aspekt. Sie kann Wachheit, Dialog und Balance erzeugen. Die populäre Vorstellung, Opposition bedeute Trennung oder Feindschaft, ist eine Verkürzung. In der Radixdeutung wird gefragt, welche Themen gegeneinander stehen und wie sie integriert werden können. Die Achse der beteiligten Häuser ist dabei oft wichtiger als der Winkel allein.\n\nOrb-Hinweis: Oppositionen mit weitem Orbis können als Hintergrundspannung wirken; exakte Oppositionen werden oft als prägnanter erlebt. Die Grenze bleibt eine Konvention [S17].",
+      "keywords": [
+        "180 Grad",
+        "Gegenüberstellung",
+        "Polarität",
+        "Ausgleich",
+        "Hauptaspekt"
+      ],
+      "sources": [
+        "S11",
+        "S17"
+      ],
+      "claims": [
+        "c10",
+        "c11"
+      ],
+      "cross_refs": [
+        "grund-aspekt-orben",
+        "aspekt-quadrat",
+        "aspekt-konjunktion"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Der Winkel ist definiert; die Deutung als Polarität und die Orb-Grenzen sind Konvention."
+      },
+      "angle_deg": 180,
+      "glyph": "☍",
+      "traditionelle_qualitaet": "Spannungsreich und ausgleichsfordernd; betont Gegenüberstellung, Spiegelung und Verhandlung zwischen zwei Polen.",
+      "orb": {
+        "modern_typisch": "etwa 8 bis 10 Grad",
+        "spanne": "etwa 5 bis 10 Grad, je nach Schule und beteiligten Faktoren",
+        "schulhinweis": "Traditionelle Schulen arbeiten enger, psychologische weiter. Die Achsenhäuser sind oft aussagekräftiger als der reine Winkel [S17]."
+      },
+      "common_misreading": "Die Opposition wird oft als sichere Trennung oder Feindschaft gelesen. Tradiert ist sie eine Polarität, die Dialog und Ausgleich verlangt und beide Seiten sichtbar macht."
+    }
+  ]
+}

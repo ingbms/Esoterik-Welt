@@ -1,0 +1,997 @@
+{
+  "dataset": "grundlagen",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Grundlagen- und Vertiefungstexte für den Einstieg in die westliche tropische Astrologie. Die Texte trennen astronomische Fakten, historische Einordnung, Deutungstradition und empirische Evidenz. Sie sind Lehr- und Reflexionsmaterial, keine Diagnose- oder Prognosegrundlage.",
+  "items": [
+    {
+      "id": "grund-begriff",
+      "slug": "was-astrologie-ist",
+      "name": "Was Astrologie ist",
+      "title": "Was Astrologie ist - und was sie nicht ist",
+      "level": "grundlagen",
+      "short": "Astrologie ist ein historisches Deutungssystem, das Himmelskörperpositionen als Zeichen für irdische und menschliche Zusammenhänge liest. Sie ist keine Astronomie und keine wissenschaftlich bestätigte Wirkungstheorie.",
+      "long": "Astrologie ist eine Form der Divination: Sie deutet die Positionen und Bewegungen von Sonne, Mond, Planeten und Sternen als Zeichen für irdische und menschliche Zusammenhänge [S07]. Der Bezug auf den Himmel macht sie nicht zu einer Naturwissenschaft. Astronomie beschreibt, was Himmelskörper sind und wie sie sich bewegen; Astrologie ordnet diesen Bewegungen Bedeutungen zu. Beide nutzen teilweise dieselben Beobachtungen, verfolgen aber verschiedene Ziele.\n\nHistorisch wurde Astrologie lange als ernsthafte Wissensform behandelt und war mit Mathematik, Kalenderkunde und Medizin verbunden. In der modernen Wissenschaft gilt sie als Pseudoscience, weil ihre Wirkbehauptungen in kontrollierten Studien nicht bestanden haben und kein plausibler Mechanismus bekannt ist [S06][S07][S09]. Das heißt nicht, dass historische Texte wertlos sind oder dass Menschen keine sinnvollen Erfahrungen mit astrologischen Symbolen machen können. Es heißt, dass die Behauptung, Himmelskörper würden Persönlichkeit oder Ereignisse verursachen, nicht durch Evidenz gestützt ist.\n\nDieses Paket behandelt Astrologie deshalb als Kultur- und Deutungstradition. Es erklärt, wie die Tradition aufgebaut ist, welche Regeln sie verwendet und woher ihre Bilder kommen. Es behauptet nicht, dass diese Regeln die Welt kausal erklären. Wer Astrologie nutzt, sollte den Unterschied zwischen einem interessanten Deutungsangebot und einer Tatsachenbehauptung kennen.\n\nDie wichtigste Arbeitshaltung: Neugier auf das Symbolsystem, Klarheit über den Geltungsanspruch, Respekt vor Menschen, die astrologische Sprache für Selbstreflexion nutzen, und Skepsis gegenüber jeder Aussage, die mit Sicherheit Gesundheit, Geld, Beziehungen oder Zukunft vorhersagt.",
+      "keywords": [
+        "Divination",
+        "Deutungssystem",
+        "Astronomie",
+        "Pseudoscience",
+        "Geltungsanspruch"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S09"
+      ],
+      "claims": [
+        "c17",
+        "c19",
+        "c23"
+      ],
+      "cross_refs": [
+        "grund-geschichte",
+        "grund-evidenz",
+        "grund-ethik",
+        "grund-ekliptik"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Historische und wissenschaftliche Einordnung sind belegt; die Nutzung als Reflexionssprache ist eine redaktionelle Entscheidung."
+      },
+      "key_points": [
+        "Astrologie ist ein Deutungssystem, keine Astronomie.",
+        "Die moderne Wissenschaft ordnet astrologische Wirkbehauptungen als nicht belegt ein.",
+        "Kulturelle und reflexive Nutzung ist möglich, ohne die Wirkbehauptung zu übernehmen."
+      ]
+    },
+    {
+      "id": "grund-geschichte",
+      "slug": "geschichte",
+      "name": "Geschichte",
+      "title": "Kurze Geschichte der Astrologie",
+      "level": "grundlagen",
+      "short": "Die Astrologie entstand aus mesopotamischer Himmelsomen-Deutung, wurde in hellenistischer Zeit horoskopbasiert und verbreitete sich über Indien, den islamischen Raum und Europa.",
+      "long": "Die frühesten Vorläufer liegen in Mesopotamien: Himmelserscheinungen wurden als Omen für Herrscher, Ernten, Kriege und Naturereignisse gedeutet. Diese Omen-Astrologie war zunächst stärker kollektiv und königlich geprägt als individuell [S07]. In der hellenistischen Zeit entstand die horoskopbasierte Astrologie, die den Himmel auf den Geburtszeitpunkt einer Person bezog. Der Begriff Horoskop kommt vom griechischen horoskopos, dem Stundenmarkierer beziehungsweise Aszendenten [S22].\n\nPtolemaios verfasste im 2. Jahrhundert n. Chr. die Tetrabiblos, eine einflussreiche systematische Darstellung der Astrologie, die über das Mittelalter und die frühe Neuzeit weiterwirkte. Über Handels- und Gelehrtennetzwerke gelangte astrologisches Wissen nach Indien, in den islamischen Raum und nach Europa; regionale Traditionen entwickelten eigene Systeme, etwa die vedische Astrologie mit siderischem Bezug [S07][S13].\n\nIn Europa war Astrologie bis in die frühe Neuzeit Teil von Universitäts- und Hofkultur. Mit der wissenschaftlichen Revolution verschob sich die Grenze: Astronomie wurde mathematisch-empirisch, Astrologie blieb ein Deutungssystem. Im 20. Jahrhundert entstand die psychologische Astrologie, die Zeichen und Planeten als Persönlichkeits- und Entwicklungsbilder las. Gleichzeitig wurde die Zeitungshoroskop-Kultur massenwirksam [S07].\n\nFür den Einstieg reicht diese grobe Linie. Wichtig ist, dass Astrologie keine einheitliche Lehre ist: Unterschiedliche Epochen und Regionen verwenden verschiedene Zeichen, Häuser, Aspekte und Herrschaftsregeln. Wer von der Astrologie spricht, sollte sagen, welche Tradition gemeint ist.",
+      "keywords": [
+        "Mesopotamien",
+        "Hellenismus",
+        "Ptolemaios",
+        "Indien",
+        "psychologische Astrologie"
+      ],
+      "sources": [
+        "S07",
+        "S22",
+        "S13"
+      ],
+      "claims": [
+        "c22",
+        "c23",
+        "c03"
+      ],
+      "cross_refs": [
+        "grund-begriff",
+        "grund-tropisch-siderisch",
+        "grund-herrschaft"
+      ],
+      "kennzeichnung": {
+        "typ": "historisch",
+        "hinweis": "Grobe Entwicklungslinie nach Enzyklopädie und Tertiärquelle; regionale und schulische Unterschiede sind vielfältiger."
+      },
+      "key_points": [
+        "Vorläufer in Mesopotamien, horoskopbasierte Form in hellenistischer Zeit.",
+        "Ptolemaios und die Tetrabiblos prägten die europäische Überlieferung.",
+        "Astrologie ist historisch und regional vielfältig, keine einheitliche Lehre."
+      ]
+    },
+    {
+      "id": "grund-ekliptik",
+      "slug": "ekliptik-und-himmelssphaere",
+      "name": "Ekliptik",
+      "title": "Ekliptik, Himmelssphäre und geozentrische Perspektive",
+      "level": "grundlagen",
+      "short": "Die Ekliptik ist die scheinbare Jahresbahn der Sonne am Himmel. Die Astrologie beschreibt Positionen von der Erde aus, also geozentrisch, ohne damit ein geozentrisches Weltbild zu behaupten.",
+      "long": "Von der Erde aus betrachtet wandert die Sonne im Laufe eines Jahres scheinbar durch eine Reihe von Sternbildern. Diese scheinbare Bahn heißt Ekliptik. Sie ist die Projektion der Erdbahn auf die gedachte Himmelssphäre. Der Zodiak ist ein Gürtel von etwa 8 Grad nördlich und südlich der Ekliptik, in dem Sonne, Mond und die hellen Planeten überwiegend erscheinen [S14].\n\nDie Ekliptik ist gegen den Himmelsäquator geneigt, weil die Erdachse um etwa 23,4 Grad gekippt ist [S01]. Diese Neigung erzeugt die Jahreszeiten und die unterschiedlichen Tageslängen. Der Frühlingspunkt, an dem die Sonne den Himmelsäquator nach Norden kreuzt, ist der Nullpunkt des tropischen Tierkreises.\n\nGeozentrisch bedeutet in der Astrologie: Die Positionen werden so beschrieben, wie sie von einem Ort auf der Erde aus erscheinen. Das ist keine Behauptung, die Erde stehe im Zentrum des Sonnensystems. Die Planeten umlaufen die Sonne; ihre scheinbaren Bewegungen am Himmel entstehen aus der Kombination von Erdrotation, Erdbahn und Planetenbahnen [S15].\n\nFür die Deutung ist diese Perspektive konstitutiv: Ein Horoskop ist eine Karte des Himmels von einem bestimmten Ort zu einer bestimmten Zeit. Ohne Ort und Zeit keine Häuser und keine Achsen. Wer astronomische und astrologische Aussagen vergleicht, sollte deshalb immer fragen, ob von einer beobachteten Position, einer berechneten Bahn oder einer zugeordneten Bedeutung die Rede ist.",
+      "keywords": [
+        "Ekliptik",
+        "Himmelssphäre",
+        "geozentrisch",
+        "Frühlingspunkt",
+        "Zodiak"
+      ],
+      "sources": [
+        "S14",
+        "S01",
+        "S15"
+      ],
+      "claims": [
+        "c04",
+        "c25",
+        "c02"
+      ],
+      "cross_refs": [
+        "grund-tropisch-siderisch",
+        "grund-zeichen-sternbilder",
+        "grund-aszendent-mc"
+      ],
+      "kennzeichnung": {
+        "typ": "astronomie",
+        "hinweis": "Geometrische und astronomische Grundlagen; die astrologische Nutzung dieser Punkte ist eine separate Konvention."
+      },
+      "key_points": [
+        "Die Ekliptik ist die scheinbare Sonnenbahn, nicht die Erdbahn selbst.",
+        "Geozentrisch meint den Beobachtungsstandpunkt, nicht ein Weltbild.",
+        "Der Zodiak ist ein Gürtel um die Ekliptik, kein einzelnes Sternbild."
+      ]
+    },
+    {
+      "id": "grund-tropisch-siderisch",
+      "slug": "tropisch-und-siderisch",
+      "name": "Tropisch und siderisch",
+      "title": "Tropischer und siderischer Tierkreis",
+      "level": "vertiefung",
+      "short": "Tropische Astrologie rechnet ab dem Frühlingspunkt, siderische Astrologie ab einem sternbezogenen Nullpunkt. Beide teilen die Ekliptik in zwölf Zeichen, meinen aber unterschiedliche Bezugssysteme.",
+      "long": "Der tropische Tierkreis beginnt am Frühlings-Äquinoktium und teilt die Ekliptik in zwölf gleiche Sektoren von 30 Grad. Die Zeichen sind damit an den Jahreszeiten orientiert, nicht an den sichtbaren Sternbildern [S13][S19]. Das ist die in der westlichen Astrologie übliche Konvention und die Arbeitsannahme dieses Pakets.\n\nDer siderische Tierkreis orientiert sich an der Position der Sterne. Weil die Erdachse präzediert, verschiebt sich der Frühlingspunkt langsam gegenüber dem Sternhintergrund, etwa um ein Grad in 72 Jahren [S13]. Siderische Systeme korrigieren diese Verschiebung mit einem Ayanamsa genannten Wert. In der vedischen Astrologie ist der Lahiri-Ayanamsa verbreitet; weitere Systeme existieren [S13].\n\nDie Folge: Derselbe Himmelskörper kann tropisch in einem anderen Zeichen stehen als siderisch. Die Differenz ist nicht willkürlich, sondern folgt aus dem gewählten Nullpunkt. Sie ist heute schulabhängig und wird hier nicht als fester Gradwert behauptet, weil verschiedene Ayanamsas verschiedene Werte liefern [S13].\n\nFür den Einstieg gilt: Man sollte tropische und siderische Aussagen nicht unmarkiert mischen. Ein Text, der von Widder spricht, meint im tropischen System den Sektor ab dem Frühlingspunkt; im siderischen System meint er einen anderen Abschnitt des Himmels. Beide Systeme können intern konsistent sein. Die Frage, welches richtig ist, ist eine Frage der Tradition und des Zwecks, nicht der Astronomie allein.",
+      "keywords": [
+        "tropisch",
+        "siderisch",
+        "Ayanamsa",
+        "Lahiri",
+        "Frühlingspunkt"
+      ],
+      "sources": [
+        "S13",
+        "S19",
+        "S06"
+      ],
+      "claims": [
+        "c02",
+        "c03",
+        "c06"
+      ],
+      "cross_refs": [
+        "grund-zeichen-sternbilder",
+        "grund-ekliptik",
+        "zeichen-widder"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Definitionen und Präzessionsfolge sind belegt; die Wahl des Systems ist eine Tradition, keine Naturtatsache."
+      },
+      "key_points": [
+        "Tropisch rechnet ab dem Frühlingspunkt, siderisch ab einem sternbezogenen Nullpunkt.",
+        "Ayanamsa-Werte korrigieren die Präzession, sind aber schulabhängig.",
+        "Systeme nicht unmarkiert mischen."
+      ]
+    },
+    {
+      "id": "grund-zeichen-sternbilder",
+      "slug": "zeichen-und-sternbilder",
+      "name": "Zeichen vs. Sternbilder",
+      "title": "Warum Zeichen und Sternbilder nicht dasselbe sind",
+      "level": "vertiefung",
+      "short": "Tierkreiszeichen sind 30-Grad-Sektoren; Sternbilder sind ungleiche Areale mit IAU-Grenzen. Wegen der Präzession liegt der Frühlingspunkt heute nicht mehr im Sternbild Widder.",
+      "long": "Die zwölf Tierkreiszeichen sind keine Sternbilder. Ein Zeichen ist ein Sektor von genau 30 Grad auf der Ekliptik; ein Sternbild ist ein historisch definiertes Areal am Himmel mit sehr unterschiedlicher Größe und Form. Die IAU kennt 88 Sternbilder mit seit 1928/1930 festen Grenzen [S04]. Zwölf davon liegen entlang der Ekliptik, dazu kommt Ophiuchus, der Schlangenträger [S05][S14].\n\nDie tropischen Zeichen beginnen am Frühlingspunkt. Dieser Punkt verschiebt sich durch die Präzession der Erdachse langsam rückwärts durch den Tierkreis, etwa 0,014 Grad pro Jahr beziehungsweise ein Grad in rund 72 Jahren [S01][S13]. Deshalb liegt der Frühlingspunkt heute im Bereich der Fische, nicht im Sternbild Widder. Die Sonne steht in den heutigen Kalendermonaten auch in anderen Sternbildern als in den Zeichen, die ihnen historisch zugeordnet wurden.\n\nDas ist kein Fehler der Astrologie im Sinne eines Rechenfehlers: Das tropische System definiert seine Zeichen bewusst über die Jahreszeiten und nicht über die Sternbilder [S13][S19]. Der häufig zitierte Satz, die NASA habe den Tierkreis geändert, ist eine Verwechslung. Die NASA hat auf die Differenz zwischen Astronomie und Astrologie hingewiesen; sie hat kein astrologisches System umgestellt [S05][S06].\n\nWer die sichtbaren Sternbilder als Bezug nehmen will, landet bei der siderischen Astrologie. Wer die Jahreszeiten als Bezug nimmt, bleibt beim tropischen System. Beides sind Konventionen mit unterschiedlichen Nullpunkten. Wichtig ist, den Unterschied zu benennen, statt Zeichen und Sternbilder als dasselbe zu behandeln.",
+      "keywords": [
+        "Präzession",
+        "Ophiuchus",
+        "IAU",
+        "Sternbilder",
+        "Frühlingspunkt"
+      ],
+      "sources": [
+        "S01",
+        "S04",
+        "S05",
+        "S06",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c01",
+        "c05",
+        "c02",
+        "c03"
+      ],
+      "cross_refs": [
+        "grund-tropisch-siderisch",
+        "grund-ekliptik",
+        "zeichen-fische"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Fakten und Definitionsunterschiede sind belegt; die Bewertung als Fehler oder Nichtfehler ist eine Interpretationsfrage."
+      },
+      "key_points": [
+        "Zeichen sind 30-Grad-Sektoren, Sternbilder sind ungleiche Areale.",
+        "Die Präzession verschiebt den Frühlingspunkt gegenüber den Sternbildern.",
+        "Tropische und siderische Systeme setzen verschiedene Nullpunkte."
+      ]
+    },
+    {
+      "id": "element-feuer",
+      "slug": "element-feuer",
+      "name": "Feuer",
+      "title": "Element Feuer",
+      "level": "grundlagen",
+      "short": "Feuer steht in der Elementlehre für Wärme, Bewegung, Begeisterung und Ausstrahlung. Die Zeichen Widder, Löwe und Schütze werden ihm zugeordnet.",
+      "long": "Feuer ist eines der vier klassischen Elemente der abendländischen Naturphilosophie und in der Astrologie eine Deutungsqualität. Ihm werden Wärme, Bewegung, Begeisterung, Mut und Ausstrahlung zugeordnet. Die drei Feuerzeichen sind Widder (kardinal), Löwe (fix) und Schütze (veränderlich) [S14][S12].\n\nDie Elementlehre ist keine Physik. Sie beschreibt keine Stoffe im modernen Sinn, sondern eine symbolische Qualität: Wie richtet sich etwas nach außen, wie wird Energie sichtbar, wie schnell entzündet sich etwas? Feuer kann wärmen, erhellen und antreiben, aber auch verbrennen und verbrauchen. Diese Ambivalenz gehört zur Deutung.\n\nFeuerzeichen werden traditionell mit Initiative, Selbstausdruck und Begeisterungsfähigkeit verbunden. Ein Mensch mit vielen Feuerzeichen kann als temperamentvoll, direkt oder optimistisch erscheinen; das ist eine Typisierung, keine Messung. Entscheidend ist immer die Kombination mit Mond, Aszendent, Häusern und Aspekten. Einzelne Zeichen oder Elemente reichen nicht für eine Persönlichkeitsaussage.\n\nFür den Einstieg hilft eine einfache Frage: Wo im Horoskop zeigt sich Feuer, und was macht es mit der Energie? Feuer in einem Winkelhaus kann präsenter wirken als Feuer in einem späten Haus. Die Elementlehre ist ein Vergleichswerkzeug, kein Etikett.",
+      "keywords": [
+        "Feuer",
+        "Wärme",
+        "Begeisterung",
+        "Widder",
+        "Löwe",
+        "Schütze"
+      ],
+      "sources": [
+        "S14",
+        "S12"
+      ],
+      "claims": [
+        "c02",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "zeichen-widder",
+        "zeichen-loewe",
+        "zeichen-schuetze",
+        "modalitaet-kardinal"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Elementlehre ist eine symbolische Tradition; sie beschreibt keine physikalischen Stoffe oder messbaren Eigenschaften."
+      },
+      "key_points": [
+        "Feuer ist eine symbolische Qualität, keine Physik.",
+        "Widder, Löwe und Schütze sind die drei Feuerzeichen.",
+        "Elemente sind Vergleichswerkzeuge, keine Persönlichkeitsdiagnosen."
+      ]
+    },
+    {
+      "id": "element-erde",
+      "slug": "element-erde",
+      "name": "Erde",
+      "title": "Element Erde",
+      "level": "grundlagen",
+      "short": "Erde steht für Konkretes, Bestand, Körperbezug und praktische Umsetzung. Die Zeichen Stier, Jungfrau und Steinbock werden ihr zugeordnet.",
+      "long": "Erde ist das Element der Konkretisierung. In der Astrologie werden ihm Bestand, Verlässlichkeit, Körperbezug, Sinnlichkeit und praktische Umsetzung zugeordnet. Die drei Erdzeichen sind Stier (fix), Jungfrau (veränderlich) und Steinbock (kardinal) [S14][S12].\n\nDie Erdqualität fragt: Was hält? Was ist brauchbar? Was kann getestet werden? Erde ist langsamer als Feuer oder Luft, aber oft belastbarer. Sie kann als bodenständig, geduldig und realistisch erscheinen, aber auch als schwerfällig, besitzorientiert oder übervorsichtig. Wie bei allen Elementen ist die Ambivalenz Teil der Deutung.\n\nErde ist kein moralischer Wert. Die Tradition neigt dazu, Erdzeichen mit Vernunft und Feuerzeichen mit Impuls zu verbinden; das sind kulturelle Zuordnungen, keine Naturgesetze. Ein Erdzeichen kann impulsiv sein, wenn andere Faktoren es tragen; ein Feuerzeichen kann sehr praktisch sein. Die Elementlehre beschreibt Schwerpunkte, keine Ausschließlichkeiten.\n\nFür die Radixdeutung ist interessant, wo Erde fehlt oder überbetont ist. Ein Mangel an Erde kann als Schwierigkeit mit Alltag, Körper oder Verlässlichkeit gelesen werden; eine Überbetonung als Tendenz, sich in Sicherheit oder Kontrolle zurückzuziehen. Auch das sind Deutungsangebote, keine Befunde.",
+      "keywords": [
+        "Erde",
+        "Bestand",
+        "Körper",
+        "Praxis",
+        "Stier",
+        "Jungfrau",
+        "Steinbock"
+      ],
+      "sources": [
+        "S14",
+        "S12"
+      ],
+      "claims": [
+        "c02",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "zeichen-stier",
+        "zeichen-jungfrau",
+        "zeichen-steinbock",
+        "modalitaet-fix"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Elementlehre ist eine symbolische Tradition; keine medizinischen oder materiellen Tatsachenbehauptungen."
+      },
+      "key_points": [
+        "Erde steht für Konkretisierung und Bestand.",
+        "Stier, Jungfrau und Steinbock sind die drei Erdzeichen.",
+        "Erdzuordnung ist kein moralischer oder medizinischer Befund."
+      ]
+    },
+    {
+      "id": "element-luft",
+      "slug": "element-luft",
+      "name": "Luft",
+      "title": "Element Luft",
+      "level": "grundlagen",
+      "short": "Luft steht für Wahrnehmung, Austausch, Abstraktion und Distanz. Die Zeichen Zwillinge, Waage und Wassermann werden ihr zugeordnet.",
+      "long": "Luft ist das Element des Austauschs und der Abstraktion. In der Astrologie werden ihm Wahrnehmung, Sprache, Denken, Beziehung und Distanz zugeordnet. Die drei Luftzeichen sind Zwillinge (veränderlich), Waage (kardinal) und Wassermann (fix) [S14][S12].\n\nLuft fragt: Wie wird etwas wahrgenommen, benannt und geteilt? Sie kann beweglich, neugierig und vermittelnd wirken, aber auch distanziert, zerstreut oder übermäßig prinzipienorientiert. Luft ist nicht automatisch intelligent und Feuer nicht automatisch mutig; die Elemente beschreiben Stile, keine Begabungen.\n\nIn der traditionellen Elementlehre bildet Luft mit Feuer die aktiven, mit Wasser und Erde die empfangenderen Qualitäten; diese Polarität ist historisch und kulturell geprägt. Sie kann als Orientierung dienen, sollte aber nicht als starre Geschlechter- oder Charakterordnung gelesen werden.\n\nFür die Deutung ist die Verbindung von Luft und Kommunikation wichtig: Luftzeichen werden oft mit Sprache, Netzwerken und Perspektivwechsel verbunden. Ein Horoskop mit vielen Luftzeichen kann einen Menschen zeigen, der viel denkt und spricht; ob das als Offenheit oder als Flucht in Distanz erlebt wird, entscheiden die anderen Faktoren.",
+      "keywords": [
+        "Luft",
+        "Austausch",
+        "Denken",
+        "Distanz",
+        "Zwillinge",
+        "Waage",
+        "Wassermann"
+      ],
+      "sources": [
+        "S14",
+        "S12"
+      ],
+      "claims": [
+        "c02",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "zeichen-zwillinge",
+        "zeichen-waage",
+        "zeichen-wassermann",
+        "modalitaet-veraenderlich"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Elementlehre ist eine symbolische Tradition; keine Aussage über Intelligenz oder Charakter."
+      },
+      "key_points": [
+        "Luft steht für Wahrnehmung, Sprache und Austausch.",
+        "Zwillinge, Waage und Wassermann sind die drei Luftzeichen.",
+        "Luft ist kein Maß für Intelligenz."
+      ]
+    },
+    {
+      "id": "element-wasser",
+      "slug": "element-wasser",
+      "name": "Wasser",
+      "title": "Element Wasser",
+      "level": "grundlagen",
+      "short": "Wasser steht für Gefühl, Bindung, Durchlässigkeit und Erinnerung. Die Zeichen Krebs, Skorpion und Fische werden ihm zugeordnet.",
+      "long": "Wasser ist das Element der Bindung und der Durchlässigkeit. In der Astrologie werden ihm Gefühl, Erinnerung, Nähe, Schutz und die Fähigkeit zugeordnet, Atmosphären wahrzunehmen. Die drei Wasserzeichen sind Krebs (kardinal), Skorpion (fix) und Fische (veränderlich) [S14][S12].\n\nWasser fragt: Was berührt mich, was bindet mich, wo bin ich durchlässig? Es kann empathisch, tief und schützend wirken, aber auch in Rückzug, Verschmelzung oder Kontrolle kippen. Wasser ist nicht automatisch emotionaler als andere Elemente; es beschreibt eine Art der Bezogenheit.\n\nDie traditionelle Zuordnung von Wasser zu Gefühlen ist kulturell verstärkt. In der Deutung ist wichtig, zwischen Empfindung und Ausdruck zu unterscheiden: Ein Mensch mit wenig Wasser kann sehr gefühlvoll sein, aber anders sprechen; ein Mensch mit viel Wasser kann Gefühle zurückhalten, um nicht verletzlich zu sein. Die Elementlehre ist ein Zugang, kein Test.\n\nFür die Radixdeutung ist die Frage nach Grenzen zentral: Wo fließt etwas zusammen, und wo braucht es ein Ufer? Wasser ohne Begrenzung kann überfluten; Wasser mit klaren Ufern kann tragen. Diese Metapher ist Tradition, keine psychologische Diagnose.",
+      "keywords": [
+        "Wasser",
+        "Gefühl",
+        "Bindung",
+        "Durchlässigkeit",
+        "Krebs",
+        "Skorpion",
+        "Fische"
+      ],
+      "sources": [
+        "S14",
+        "S12"
+      ],
+      "claims": [
+        "c02",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "zeichen-krebs",
+        "zeichen-skorpion",
+        "zeichen-fische",
+        "modalitaet-kardinal"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Elementlehre ist eine symbolische Tradition; keine psychologische oder medizinische Diagnose."
+      },
+      "key_points": [
+        "Wasser steht für Bindung, Empfindung und Durchlässigkeit.",
+        "Krebs, Skorpion und Fische sind die drei Wasserzeichen.",
+        "Wasser ist kein Maß für Emotionalität oder Gesundheit."
+      ]
+    },
+    {
+      "id": "modalitaet-kardinal",
+      "slug": "modalitaet-kardinal",
+      "name": "Kardinal",
+      "title": "Modalität kardinal",
+      "level": "grundlagen",
+      "short": "Kardinalzeichen beginnen mit den Jahreszeiten und werden traditionell mit Initiative, Anfang und Richtungsgebung verbunden: Widder, Krebs, Waage, Steinbock.",
+      "long": "Die Modalitäten teilen die zwölf Zeichen in drei Gruppen von je vier. Kardinal sind die Zeichen, die an den Sonnenwenden und Äquinoktien beginnen: Widder, Krebs, Waage und Steinbock [S14]. In der Deutung werden sie mit Anfang, Initiative und Richtungsgebung verbunden.\n\nKardinal bedeutet nicht automatisch Führung oder Erfolg. Die Tradition beschreibt eine Bewegung, die etwas in Gang setzt: ein Projekt beginnen, eine Beziehung initiieren, eine Struktur aufbauen, eine Entscheidung treffen. Kardinalzeichen können entschlossen wirken, aber auch ungeduldig oder dominant, wenn andere nicht mitziehen.\n\nDie Modalität ist eine formale Einteilung, keine Persönlichkeitseigenschaft. Sie wird erst im Zusammenspiel mit Element, Haus und Aspekten aussagekräftig. Ein kardinales Feuerzeichen (Widder) wirkt anders als ein kardinales Wasserzeichen (Krebs) oder ein kardinales Erdzeichen (Steinbock). Die Modalität beschreibt den Rhythmus, das Element die Qualität.\n\nFür den Einstieg hilft die Frage: Wo beginnt jemand etwas, und wo beginnt er immer wieder neu, ohne zu Ende zu kommen? Kardinalität kann ein Motor sein, aber auch eine Schleife.",
+      "keywords": [
+        "kardinal",
+        "Initiative",
+        "Anfang",
+        "Widder",
+        "Krebs",
+        "Waage",
+        "Steinbock"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "claims": [
+        "c02",
+        "c07"
+      ],
+      "cross_refs": [
+        "zeichen-widder",
+        "zeichen-krebs",
+        "zeichen-waage",
+        "zeichen-steinbock",
+        "element-feuer"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Modalitäteneinteilung ist eine astrologische Konvention; die Deutung als Initiative ist Tradition."
+      },
+      "key_points": [
+        "Kardinalzeichen beginnen an den Jahreszeitenpunkten.",
+        "Kardinal meint Initiative, nicht automatisch Führung.",
+        "Die Modalität wirkt nur im Zusammenspiel mit Element und Kontext."
+      ]
+    },
+    {
+      "id": "modalitaet-fix",
+      "slug": "modalitaet-fix",
+      "name": "Fix",
+      "title": "Modalität fix",
+      "level": "grundlagen",
+      "short": "Fixzeichen liegen in der Mitte der Jahreszeiten und werden traditionell mit Dauer, Stabilität und Beharrlichkeit verbunden: Stier, Löwe, Skorpion, Wassermann.",
+      "long": "Fix sind die Zeichen in der Mitte der Jahreszeiten: Stier, Löwe, Skorpion und Wassermann [S14]. In der Deutung werden sie mit Dauer, Stabilität, Beharrlichkeit und der Fähigkeit verbunden, etwas zu halten.\n\nFix bedeutet nicht automatisch Starrheit. Die Tradition beschreibt eine Kraft, die Bestand gibt: Eine Entscheidung wird durchgehalten, eine Beziehung gepflegt, ein Wert verteidigt. Fixzeichen können verlässlich wirken, aber auch schwer zu bewegen sein, wenn Veränderung nötig ist.\n\nDie Modalität ist eine formale Einteilung. Ein fixes Feuerzeichen (Löwe) wirkt anders als ein fixes Wasserzeichen (Skorpion) oder ein fixes Luftzeichen (Wassermann). Die Fixqualität beschreibt den Rhythmus, in dem etwas gehalten wird; das Element beschreibt, was gehalten wird.\n\nFür den Einstieg hilft die Frage: Was halte ich fest, und dient das noch? Fixierung kann Schutz sein oder Gefangenschaft. Die Deutung sollte beides sehen.",
+      "keywords": [
+        "fix",
+        "Dauer",
+        "Stabilität",
+        "Stier",
+        "Löwe",
+        "Skorpion",
+        "Wassermann"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "claims": [
+        "c02",
+        "c07"
+      ],
+      "cross_refs": [
+        "zeichen-stier",
+        "zeichen-loewe",
+        "zeichen-skorpion",
+        "zeichen-wassermann",
+        "element-erde"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Modalitäteneinteilung ist eine astrologische Konvention; die Deutung als Dauer ist Tradition."
+      },
+      "key_points": [
+        "Fixzeichen liegen in der Mitte der Jahreszeiten.",
+        "Fix meint Dauer und Beharrlichkeit, nicht automatisch Starrheit.",
+        "Fixierung kann Schutz oder Gefangenschaft sein."
+      ]
+    },
+    {
+      "id": "modalitaet-veraenderlich",
+      "slug": "modalitaet-veraenderlich",
+      "name": "Veränderlich",
+      "title": "Modalität veränderlich",
+      "level": "grundlagen",
+      "short": "Veränderliche Zeichen enden die Jahreszeiten und werden traditionell mit Anpassung, Übergang und Auflösung verbunden: Zwillinge, Jungfrau, Schütze, Fische.",
+      "long": "Veränderlich sind die Zeichen am Ende der Jahreszeiten: Zwillinge, Jungfrau, Schütze und Fische [S14]. In der Deutung werden sie mit Anpassung, Übergang, Flexibilität und der Fähigkeit verbunden, zwischen Zuständen zu vermitteln.\n\nVeränderlich bedeutet nicht automatisch Unzuverlässigkeit. Die Tradition beschreibt eine Bewegung, die sich anpasst und löst: Ein Muster wird verabschiedet, eine Form wird verändert, ein Übergang wird gestaltet. Veränderliche Zeichen können flexibel und lernbereit wirken, aber auch zerstreut oder flüchtig, wenn sie keine Richtung finden.\n\nDie Modalität ist eine formale Einteilung. Ein veränderliches Feuerzeichen (Schütze) wirkt anders als ein veränderliches Erdzeichen (Jungfrau) oder ein veränderliches Wasserzeichen (Fische). Die Modalität beschreibt den Rhythmus des Übergangs; das Element beschreibt, was übergeht.\n\nFür den Einstieg hilft die Frage: Was löst sich gerade auf, und was entsteht daraus? Veränderung kann Befreiung sein oder Orientierungslosigkeit. Die Deutung sollte beides benennen.",
+      "keywords": [
+        "veränderlich",
+        "Anpassung",
+        "Übergang",
+        "Zwillinge",
+        "Jungfrau",
+        "Schütze",
+        "Fische"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "claims": [
+        "c02",
+        "c07"
+      ],
+      "cross_refs": [
+        "zeichen-zwillinge",
+        "zeichen-jungfrau",
+        "zeichen-schuetze",
+        "zeichen-fische",
+        "element-luft"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Modalitäteneinteilung ist eine astrologische Konvention; die Deutung als Anpassung ist Tradition."
+      },
+      "key_points": [
+        "Veränderliche Zeichen enden die Jahreszeiten.",
+        "Veränderlich meint Anpassung und Übergang, nicht automatisch Unzuverlässigkeit.",
+        "Übergänge können Befreiung oder Orientierungslosigkeit bedeuten."
+      ]
+    },
+    {
+      "id": "grund-herrschaft",
+      "slug": "herrschaft-und-wuerden",
+      "name": "Herrschaft",
+      "title": "Herrschersysteme und Würden",
+      "level": "vertiefung",
+      "short": "Die traditionelle Herrschaftslehre ordnet die Zeichen den sieben sichtbaren Himmelskörpern zu; moderne Systeme ergänzen Uranus, Neptun und Pluto. Die Zuordnungen sind Konventionen.",
+      "long": "In der traditionellen Astrologie hat jedes Zeichen einen Herrscher. Die ältere Lehre verwendet die sieben mit bloßem Auge sichtbaren Himmelskörper: Sonne, Mond, Merkur, Venus, Mars, Jupiter und Saturn [S12]. Daraus ergibt sich die klassische Zuordnung: Widder und Skorpion zu Mars, Stier und Waage zu Venus, Zwillinge und Jungfrau zu Merkur, Krebs zum Mond, Löwe zur Sonne, Schütze und Fische zu Jupiter, Steinbock und Wassermann zu Saturn.\n\nMit der Entdeckung der äußeren Planeten wurden moderne Zuordnungen ergänzt: Uranus für Wassermann, Neptun für Fische, Pluto für Skorpion. Diese Ergänzungen sind Konventionen des 19. und 20. Jahrhunderts, keine antiken Setzungen [S12]. Viele Astrologinnen und Astrologen verwenden traditionelle und moderne Herrscher nebeneinander, oft mit unterschiedlicher Gewichtung.\n\nDas System der Würden beschreibt, wie gut ein Planet in einem Zeichen steht. Domizil bedeutet: Der Planet steht in einem Zeichen, das er regiert. Exil bedeutet das Gegenteil; Erhöhung und Fall sind weitere Abstufungen. Die Tradition nennt dies essentielle Würden. Sie sind ein Bewertungssystem innerhalb der Astrologie, keine messbare Eigenschaft [S12].\n\nFür den Einstieg reicht: Herrschaft ist eine Verweisstruktur. Sie sagt, welcher Planet für ein Zeichen oder eine Hausspitze zuständig ist und wo man weitersuchen kann. Sie sagt nicht, dass ein Mensch von einem Planeten bestimmt wird. Die Wahl zwischen traditionellen und modernen Herrschern sollte im Text sichtbar gemacht werden.",
+      "keywords": [
+        "Herrscher",
+        "Domizil",
+        "Exil",
+        "Würden",
+        "Uranus",
+        "Pluto"
+      ],
+      "sources": [
+        "S12",
+        "S10"
+      ],
+      "claims": [
+        "c12",
+        "c26",
+        "c13"
+      ],
+      "cross_refs": [
+        "grund-haeuser-systeme",
+        "faktor-saturn",
+        "faktor-uranus",
+        "faktor-pluto"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Herrschafts- und Würdenlehre sind astrologische Konventionen; moderne Zuordnungen sind historisch jünger."
+      },
+      "key_points": [
+        "Traditionell regieren sieben sichtbare Himmelskörper die Zeichen.",
+        "Uranus, Neptun und Pluto sind moderne Ergänzungen.",
+        "Würden sind ein internes Bewertungssystem, keine Messgröße."
+      ]
+    },
+    {
+      "id": "grund-aspekt-orben",
+      "slug": "aspekte-und-orben",
+      "name": "Aspekte und Orben",
+      "title": "Aspekte, Winkel und Orben",
+      "level": "vertiefung",
+      "short": "Aspekte sind Winkelbeziehungen zwischen Faktoren. Die fünf Hauptaspekte sind Konjunktion, Sextil, Quadrat, Trigon und Opposition; Orben legen fest, wie genau ein Winkel sein muss.",
+      "long": "Ein Aspekt ist eine Winkelbeziehung zwischen zwei Faktoren im Horoskop, oft zwischen Planeten, aber auch zu Aszendent oder MC [S11]. Die fünf Hauptaspekte sind Konjunktion (0 Grad), Sextil (60 Grad), Quadrat (90 Grad), Trigon (120 Grad) und Opposition (180 Grad). Weitere Aspekte wie Halbsextil (30 Grad) oder Quincunx (150 Grad) gelten als Neben- oder Minoraspekte.\n\nEin Aspekt muss nicht exakt sein. Der Orbis ist die zulässige Abweichung: Ein Quadrat bei 87 Grad kann noch als Quadrat gelten, wenn der Orbis 3 Grad beträgt. Orben sind Konventionen. Moderne psychologische Astrologie neigt zu weiteren Orben, Horary und traditionelle Schulen zu engeren; Sonne und Mond erhalten oft größere Spielräume als die äußeren Planeten [S11][S17].\n\nNeben dem Winkel sind weitere Unterscheidungen üblich: Ein applikativer Aspekt wird enger, ein separater weiter. Ein partiler Aspekt ist fast exakt. Ein Aspekt kann außerhalb der Zeichen liegen, obwohl der Winkel stimmt (out-of-sign oder dissociate); manche Schulen gewichten ihn dann schwächer. Diese Regeln sind nicht einheitlich [S17].\n\nWichtig ist die Trennung von Geometrie und Deutung: Der Winkel ist berechenbar, die Bedeutung ist Tradition. Ein Quadrat ist nicht automatisch schlecht, ein Trigon nicht automatisch gut. Die Qualität hängt von den beteiligten Faktoren, ihren Zeichen, Häusern und dem Kontext ab. Wer Orben als Naturgesetze behandelt, verwechselt eine Fachkonvention mit einer Messung.",
+      "keywords": [
+        "Aspekt",
+        "Orbis",
+        "applikativ",
+        "separativ",
+        "partil",
+        "Hauptaspekte"
+      ],
+      "sources": [
+        "S11",
+        "S17"
+      ],
+      "claims": [
+        "c10",
+        "c11"
+      ],
+      "cross_refs": [
+        "aspekt-konjunktion",
+        "aspekt-sextil",
+        "aspekt-quadrat",
+        "aspekt-trigon",
+        "aspekt-opposition"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Winkel sind definiert; Orben und Bewertungen sind schulabhängige Konventionen."
+      },
+      "key_points": [
+        "Fünf Hauptaspekte: 0, 60, 90, 120 und 180 Grad.",
+        "Orben sind Konventionen, keine Naturkonstanten.",
+        "Winkelgeometrie und Deutung sind zu trennen."
+      ]
+    },
+    {
+      "id": "grund-haeuser-systeme",
+      "slug": "haeusersysteme",
+      "name": "Häusersysteme",
+      "title": "Häuser und Häusersysteme",
+      "level": "vertiefung",
+      "short": "Häuser sind zeit- und ortsabhängige Lebensfelder. Es gibt mehrere Systeme; Placidus ist im modernen Westen verbreitet, Equal House teilt ab dem Aszendenten in 30-Grad-Schritten.",
+      "long": "Häuser teilen das Horoskop in zwölf Felder, die von der Geburtszeit und vom Geburtsort abhängen. Sie beschreiben Lebensbereiche wie Identität, Ressourcen, Kommunikation, Herkunft, Kreativität, Arbeit, Partnerschaft, gemeinsame Ressourcen, Sinn, Beruf, Netzwerk und Rückzug [S10]. Die Häuser sind damit etwas anderes als die Zeichen: Zeichen sind am Himmel orientiert, Häuser an der lokalen Perspektive.\n\nEs gibt verschiedene Häusersysteme. Equal House teilt die Ekliptik vom Aszendenten aus in zwölf gleiche Abschnitte von 30 Grad. Ganzzeichen-Häuser ordnen jedem Haus ein volles Zeichen zu, beginnend mit dem Zeichen des Aszendenten. Placidus ist ein zeitbasiertes Quadrantensystem und im modernen Westen verbreitet; Koch, Campanus, Regiomontanus und andere Systeme existieren ebenfalls [S10][S16].\n\nDie Systeme liefern unterschiedliche Hausspitzen und damit unterschiedliche Zuordnungen von Planeten zu Häusern. Kein System ist wissenschaftlich als das richtige erwiesen; die Wahl ist eine Fachkonvention. Placidus ist jenseits der Polarkreise nicht durchgehend definiert, weil bestimmte Grade zirkumpolar sind und nie den Horizont berühren [S10]. In hohen Breiten werden deshalb oft Equal House oder Ganzzeichen-Häuser verwendet.\n\nFür die Deutung ist Transparenz wichtig: Ein Text sollte nennen, welches System verwendet wird. Wer zwei Horoskope vergleicht, sollte nicht unbemerkt das System wechseln. Die Hausdeutung selbst ist Tradition; die geometrische Konstruktion ist berechenbar, die Bedeutung der Felder nicht.",
+      "keywords": [
+        "Häuser",
+        "Placidus",
+        "Equal House",
+        "Ganzzeichen",
+        "Polarkreis"
+      ],
+      "sources": [
+        "S10",
+        "S16"
+      ],
+      "claims": [
+        "c08",
+        "c09",
+        "c26"
+      ],
+      "cross_refs": [
+        "grund-aszendent-mc",
+        "haus-1",
+        "haus-10",
+        "grund-radix-synthese"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Die Existenz mehrerer Systeme und die Placidus-Grenze sind belegt; die Wahl des Systems ist eine Fachkonvention."
+      },
+      "key_points": [
+        "Häuser hängen von Zeit und Ort ab, Zeichen nicht.",
+        "Placidus ist verbreitet, aber jenseits der Polarkreise nicht durchgehend definiert.",
+        "Das verwendete System muss transparent genannt werden."
+      ]
+    },
+    {
+      "id": "grund-aszendent-mc",
+      "slug": "aszendent-und-mc",
+      "name": "Aszendent und MC",
+      "title": "Aszendent, Deszendent, MC und IC",
+      "level": "vertiefung",
+      "short": "Aszendent und MC sind die beiden Hauptachsen des Horoskops: der östliche Horizontschnittpunkt und der obere Meridianpunkt der Ekliptik. Sie machen die Geburtszeit wichtig.",
+      "long": "Der Aszendent ist der Punkt der Ekliptik, der im Moment der Geburt am östlichen Horizont aufgeht. Der Deszendent liegt gegenüber am westlichen Horizont. Der MC (Medium Coeli) ist der Punkt der Ekliptik, der den oberen Meridian schneidet; der IC liegt gegenüber am unteren Meridian [S22][S23]. Diese vier Punkte bilden die Achsen des Horoskops.\n\nDie Achsen sind geometrische Schnittpunkte, keine Himmelskörper. Der Aszendent hängt von der genauen Zeit und vom Ort ab; der MC von Zeit und geografischer Länge. Schon wenige Minuten können den Aszendenten um etwa ein Grad verschieben; die Faustregel von rund vier Minuten pro Grad ist eine Näherung und variiert je nach Breite und Tierkreiszeichen. Ohne belastbare Geburtszeit ist der Aszendent oft nicht sicher bestimmbar [S22].\n\nIn der Deutung steht der Aszendent traditionell für Auftreten, Körperbezug und die Art, wie jemand in Kontakt tritt; der Deszendent für das Gegenüber und die Beziehung; der MC für öffentliche Rolle und Beruf; der IC für Herkunft und inneres Fundament [S10][S23]. Diese Zuordnungen sind Tradition. Sie werden erst im Zusammenhang mit Zeichen, Planeten und Häusern aussagekräftig.\n\nDie wichtigste praktische Konsequenz: Astrologie mit Häusern ist keine reine Datumsangelegenheit. Wer nur das Geburtsdatum kennt, kann ein Sonnenzeichen bestimmen, aber keine belastbare Radix mit Häusern und Aszendent. Dieses Paket verlangt deshalb keine Geburtsdaten und simuliert keine Achsen.",
+      "keywords": [
+        "Aszendent",
+        "MC",
+        "IC",
+        "Deszendent",
+        "Geburtszeit"
+      ],
+      "sources": [
+        "S22",
+        "S23",
+        "S10"
+      ],
+      "claims": [
+        "c09",
+        "c08"
+      ],
+      "cross_refs": [
+        "haus-1",
+        "haus-7",
+        "haus-10",
+        "haus-4",
+        "grund-haeuser-systeme"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Die geometrischen Definitionen sind belegt; die Deutungen der Achsen sind Tradition."
+      },
+      "key_points": [
+        "Aszendent und MC sind Schnittpunkte der Ekliptik mit Horizont beziehungsweise Meridian.",
+        "Die Achsen machen die Geburtszeit für die Radix entscheidend.",
+        "Ohne genaue Zeit keine belastbare Haus- und Achsenbestimmung."
+      ]
+    },
+    {
+      "id": "grund-radix-synthese",
+      "slug": "radix-lesen",
+      "name": "Radix lesen",
+      "title": "Radixlesen als Synthese",
+      "level": "vertiefung",
+      "short": "Radixlesen ist kein Ablesen einzelner Zeichen, sondern eine gewichtete Synthese aus Faktoren, Zeichen, Häusern, Aspekten und Achsen - als Hypothese, nicht als Diagnose.",
+      "long": "Eine Radix ist die Karte des Himmels zum Geburtszeitpunkt an einem Ort. Sie enthält Faktoren (Sonne, Mond, Planeten), Zeichenpositionen, Häuser, Achsen und Aspekte. Radixlesen bedeutet, diese Ebenen zu gewichten und miteinander in Beziehung zu setzen [S10][S11]. Es gibt keine allgemein verbindliche Reihenfolge; die folgende Methode ist ein didaktischer Vorschlag.\n\nSchritt 1: die Leitfrage klären. Wer eine Radix liest, sollte wissen, ob es um Selbstreflexion, um ein symbolisches Porträt oder um eine konkrete Entscheidung geht. Astrologie ist keine Diagnose und keine Prognose; die Leitfrage bestimmt, welche Ebenen relevant sind.\n\nSchritt 2: die Grundstruktur erfassen. Sonne, Mond und Aszendent werden oft als erste Trias gelesen: Sonne für bewusste Richtung, Mond für Bedürfnisse und Regulation, Aszendent für Auftreten und Zugang. Diese Trias ist Tradition, keine vollständige Persönlichkeit.\n\nSchritt 3: Schwerpunkte suchen. Welche Zeichen, Elemente und Modalitäten sind häufig? Welche Häuser sind besetzt? Welche Planeten stehen in Winkelhäusern? Welche Aspekte sind eng? Häufungen sind Hinweise, keine Beweise.\n\nSchritt 4: Herrscher und Achsen verfolgen. Der Herrscher des Aszendenten und die Herrscher der besetzten Hausspitzen zeigen, wohin die Aufmerksamkeit weiterwandert. Dispositor-Ketten können lange Wege ergeben; sie sind ein Navigationsmittel, kein Schicksalsfaden [S12].\n\nSchritt 5: Spannungen und Ressourcen benennen. Quadrate und Oppositionen sind nicht automatisch schlecht, Trigone nicht automatisch gut. Frage: Wie geht jemand mit der Spannung um? Welche Ressource steht zur Verfügung?\n\nSchritt 6: Gegenprobe. Welche Lesart würde die Person selbst nicht erkennen? Welche Alternative ergibt sich, wenn man das Häusersystem wechselt oder eine unsichere Geburtszeit berücksichtigt? Eine gute Lesart bleibt vorläufig und benennt ihre Grenzen.\n\nSchritt 7: Sprache prüfen. Beschreibungen sollten differenziert, nicht deterministisch und nicht schmeichelnd sein. Der Barnum-Effekt warnt davor, allgemeine Aussagen für treffend zu halten [S21]. Eine Radixdeutung ist ein Angebot, keine Messung.",
+      "keywords": [
+        "Radix",
+        "Synthese",
+        "Gewichtung",
+        "Herrscher",
+        "Gegenprobe"
+      ],
+      "sources": [
+        "S10",
+        "S11",
+        "S12",
+        "S21"
+      ],
+      "claims": [
+        "c07",
+        "c20",
+        "c26"
+      ],
+      "cross_refs": [
+        "grund-aszendent-mc",
+        "grund-aspekt-orben",
+        "grund-haeuser-systeme",
+        "grund-sonnenzeichen-grenzen"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Methode ist ein didaktischer Vorschlag; sie ist keine psychologische Diagnose und keine Prognose."
+      },
+      "key_points": [
+        "Radixlesen ist eine gewichtete Synthese, kein Ablesen einzelner Zeichen.",
+        "Die Lesart bleibt Hypothese und braucht Gegenprobe.",
+        "Sprache und Geltungsanspruch müssen transparent bleiben."
+      ]
+    },
+    {
+      "id": "grund-transite",
+      "slug": "transite",
+      "name": "Transite",
+      "title": "Transite und Zeitdeutung",
+      "level": "vertiefung",
+      "short": "Transite sind aktuelle Himmelsstellungen im Verhältnis zur Radix. Sie werden traditionell als Zeitqualitäten gelesen, nicht als sichere Ereignisvorhersagen.",
+      "long": "Ein Transit ist die aktuelle Position eines Faktors am Himmel im Verhältnis zu einer festen Radix. Man vergleicht also, wo ein Planet heute steht und welche Punkte der Geburtskarte er berührt. Transite sind ein Zeitdeutungsinstrument der Astrologie, keine astronomische Besonderheit. Bei der Auswertung werden die Winkel zwischen Transitposition und Radixpunkt wie jeder andere Aspekt als Winkelabstand gemessen [S11]; welches Haus dabei berührt wird, hängt von Zeit und Ort ab, nicht vom Datum [S10].\n\nDie Zeitmaße sind sehr unterschiedlich: Der Mond bewegt sich in Stunden durch Grade, die Sonne in Tagen, Mars in Wochen, Jupiter in Monaten, Saturn in Jahren, Uranus, Neptun und Pluto in Jahrzehnten. Daraus ergeben sich unterschiedliche Lesarten: Ein Mondtransit wird als kurze Stimmung gelesen, ein Saturntransit als langer Prozess. Diese Zuordnungen sind Tradition, keine Messung von Wirkung.\n\nIn der populären Astrologie werden Transite oft als Ereignisvorhersage verkauft: Saturn-Rückkehr, Pluto-Transit, Merkur rückläufig. Die Tradition kennt auch die vorsichtigere Lesart: Ein Transit beschreibt eine Zeitqualität, die unterschiedlich erlebt werden kann. Ob und wie etwas geschieht, hängt von vielen Faktoren ab, nicht von einem Winkel allein. Eine sichere Vorhersage von Gesundheit, Geld, Trennung oder Erfolg ist mit Astrologie nicht belegt [S09].\n\nFür dieses Paket gilt: Transite werden erklärt, aber nicht berechnet. Eine echte Transitberechnung braucht Ephemeriden, eine belastbare Radix und eine dokumentierte Zeit- und Häuserkonvention. Zufallswerte oder geschätzte Positionen wären keine Berechnung.",
+      "keywords": [
+        "Transit",
+        "Zeitqualität",
+        "Saturnrückkehr",
+        "Ephemeriden",
+        "keine Prognose"
+      ],
+      "sources": [
+        "S10",
+        "S11",
+        "S09"
+      ],
+      "claims": [
+        "c07",
+        "c17",
+        "c28"
+      ],
+      "cross_refs": [
+        "grund-ruecklaeufigkeit",
+        "grund-radix-synthese",
+        "grund-berechnung"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Transitdeutung ist Tradition; die Ablehnung sicherer Ereignisvorhersagen folgt aus der Evidenzlage."
+      },
+      "key_points": [
+        "Transite vergleichen aktuelle Stellungen mit der Radix.",
+        "Zeitmaße reichen von Stunden bis Jahrzehnten.",
+        "Transite sind Zeitqualitäten, keine sicheren Ereignisvorhersagen."
+      ]
+    },
+    {
+      "id": "grund-ruecklaeufigkeit",
+      "slug": "ruecklaeufigkeit",
+      "name": "Rückläufigkeit",
+      "title": "Rückläufigkeit: Scheinbewegung, nicht Umkehr",
+      "level": "vertiefung",
+      "short": "Rückläufig erscheinende Planeten bewegen sich nicht tatsächlich rückwärts. Die Umkehr ist eine Perspektivwirkung der unterschiedlichen Bahngeschwindigkeiten.",
+      "long": "Von der Erde aus gesehen verlangsamt ein Planet manchmal seine Bewegung vor dem Sternhintergrund, hält an und scheint einige Zeit rückwärts zu laufen. Das ist die scheinbare Rückläufigkeit. Sie entsteht, weil Erde und Planet unterschiedlich schnell um die Sonne laufen; die Erde überholt den äußeren Planeten auf der inneren Bahn, und die Projektion seiner Bewegung kehrt sich zeitweise um [S15].\n\nAstronomisch bewegt sich der Planet weiter in derselben Richtung. Die Bezeichnung rückläufig beschreibt also die beobachtete Bewegung am Himmel, nicht eine Umkehr der Bahn. Bei Merkur und Venus, die innerhalb der Erdbahn laufen, ist das Phänomen besonders auffällig; bei den äußeren Planeten tritt es ebenfalls auf, aber seltener und über längere Zeiträume [S15].\n\nIn der Astrologie wird die Rückläufigkeit als Zeit der Verlangsamung, Überprüfung oder Innerlichkeit gedeutet. Besonders Merkur rückläufig ist zu einem populären Motiv geworden, oft verbunden mit der Warnung vor Verträgen, Technik oder Reisen. Für solche konkreten Warnungen gibt es keine belastbare Evidenz [S09]. Die Deutung ist Tradition, nicht Vorhersage.\n\nSinnvoll ist die Unterscheidung: Astronomisch ist die Rückläufigkeit ein Perspektiveffekt und berechenbar. Astrologisch ist sie ein Symbol für Wiederholung, Prüfung und verlangsamte Bewegung. Wer beides trennt, kann das Motiv nutzen, ohne es als Naturgesetz auszugeben.",
+      "keywords": [
+        "Rückläufigkeit",
+        "Scheinbewegung",
+        "Merkur",
+        "Perspektive",
+        "keine Warnung"
+      ],
+      "sources": [
+        "S15",
+        "S09"
+      ],
+      "claims": [
+        "c14",
+        "c17",
+        "c19"
+      ],
+      "cross_refs": [
+        "faktor-merkur",
+        "grund-transite",
+        "grund-zeichen-sternbilder"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Die astronomische Erklärung ist belegt; die Deutung als Prüfungszeit ist Tradition ohne Wirkungsnachweis."
+      },
+      "key_points": [
+        "Rückläufigkeit ist eine scheinbare Bewegung.",
+        "Ursache sind unterschiedliche Bahngeschwindigkeiten.",
+        "Keine belastbare Evidenz für konkrete Warnungen vor Verträgen oder Technik."
+      ]
+    },
+    {
+      "id": "grund-sonnenzeichen-grenzen",
+      "slug": "grenzen-der-sonnenzeichen",
+      "name": "Grenzen der Sonnenzeichen",
+      "title": "Grenzen der Sonnenzeichen-Typologie",
+      "level": "vertiefung",
+      "short": "Das Sonnenzeichen beschreibt nur die Sonnenposition im Zeichensektor. Es reicht nicht für Persönlichkeitsaussagen; allgemeine Beschreibungen wirken oft treffend, weil sie vage sind.",
+      "long": "Das Sonnenzeichen ist der bekannteste Teil der Astrologie und der am stärksten verkürzte. Es beschreibt die Position der Sonne im tropischen Zeichensektor zum Geburtszeitpunkt. Ein Horoskop enthält aber mindestens neun weitere Faktoren, zwölf Häuser, Achsen und Aspekte [S10][S11][S19]. Wer nur das Sonnenzeichen liest, liest einen kleinen Ausschnitt.\n\nDie populäre Sonnenzeichen-Typologie ist aus mehreren Gründen problematisch. Erstens sind die Beschreibungen oft so allgemein, dass sie auf viele Menschen passen; der Barnum- beziehungsweise Forer-Effekt erklärt, warum solche Texte als treffend erlebt werden [S21]. Zweitens gibt es keine belastbare Evidenz für einen Zusammenhang zwischen Geburtsdatum und Persönlichkeit oder Intelligenz [S06][S09]. Drittens sind die Datumsgrenzen Näherungen und variieren je nach Jahr und Quelle [S06].\n\nDer bekannteste doppelblinde Test an Radixdeutungen, Carlson 1985, ergab laut Sekundärliteratur keine bessere Trefferquote als Zufall [S08][S09]. Auch die größere Untersuchung von Dean und Kelly fand keine Unterstützung für astrologische Behauptungen [S09]. Als alternative Erklärung für scheinbare Zusammenhänge werden unter anderem saisonale Geburtseffekte diskutiert [S19]. Das sind keine Beweise gegen jede kulturelle Nutzung, aber sie sprechen gegen die Behauptung, Sonnenzeichen seien eine zuverlässige Persönlichkeitsdiagnose.\n\nWas bleibt? Das Sonnenzeichen kann als Einstieg in ein Symbolsystem dienen: Es gibt ein Thema, eine Bildsprache, eine Reflexionsfrage. Es ist kein Test und keine Identität. Wer Astrologie ernsthaft als Tradition behandelt, sollte den Unterschied zwischen einem Deutungsangebot und einer Tatsachenbehauptung sichtbar halten.",
+      "keywords": [
+        "Sonnenzeichen",
+        "Barnum-Effekt",
+        "Carlson",
+        "Evidenz",
+        "Typologie"
+      ],
+      "sources": [
+        "S06",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S19",
+        "S21"
+      ],
+      "claims": [
+        "c17",
+        "c18",
+        "c20",
+        "c21",
+        "c07"
+      ],
+      "cross_refs": [
+        "faktor-sonne",
+        "grund-evidenz",
+        "grund-ethik",
+        "zeichen-widder"
+      ],
+      "kennzeichnung": {
+        "typ": "empirie",
+        "hinweis": "Die Evidenzlage ist belegt; die Nutzung des Sonnenzeichens als Reflexionsmotiv ist eine redaktionelle Entscheidung."
+      },
+      "key_points": [
+        "Das Sonnenzeichen ist nur ein Faktor von vielen.",
+        "Vage Beschreibungen wirken durch den Barnum-Effekt treffend.",
+        "Kontrollierte Tests stützen keine Persönlichkeitsdiagnose per Sonnenzeichen."
+      ]
+    },
+    {
+      "id": "grund-mond",
+      "slug": "mond-verstehen",
+      "name": "Mond verstehen",
+      "title": "Den Mond verstehen: Astronomie und Deutung",
+      "level": "vertiefung",
+      "short": "Der Mond ist astronomisch der nächste Himmelskörper und astrologisch ein Faktor für Bedürfnisse und Rhythmen. Phasen, Zyklus und Zeichenwechsel sollten auseinandergehalten werden.",
+      "long": "Der Mond umrundet die Erde in 27,3217 Tagen. Bis zur nächsten gleichen Phase vergehen 29,53 Tage, weil die Erde sich währenddessen weiter um die Sonne bewegt [S18]. Die Phasen entstehen durch den Beleuchtungswinkel von Sonne, Erde und Mond. Bei Neumond steht der Mond zwischen Erde und Sonne, bei Vollmond steht die Erde zwischen beiden. Finsternisse sind besondere Konstellationen, keine regulären Monatsereignisse.\n\nAstrologisch gilt der Mond als Faktor für Bedürfnisse, emotionale Regulation, Sicherheit, Erinnerung und körperliche Rhythmen. Das Mondzeichen beschreibt, in welchem Sektor der Mond zum Geburtszeitpunkt stand. Weil der Mond den Sektor im Mittel etwa alle 2,46 Tage wechselt, ist das Mondzeichen ohne genaue Geburtszeit oft unsicher [S18]. Die Mondphase zur Geburt wird in manchen Schulen ebenfalls gedeutet; auch das ist Tradition.\n\nDie populäre Verbindung von Mondphasen mit Schlaf, Stimmung, Geburten oder Unfällen ist wissenschaftlich nicht belegt. Der Mond erzeugt Gezeiten und beeinflusst Lichtverhältnisse; ein direkter, zuverlässiger Einfluss auf menschliches Verhalten oder Gesundheit ist nicht nachgewiesen [S06][S09]. Das heißt nicht, dass Mondbeobachtung sinnlos ist: Sie ist astronomisch interessant und kulturell reich. Aber sie ist kein Gesundheits- oder Ereignisradar.\n\nFür die Deutung ist eine ruhige Sprache wichtig: Der Mond beschreibt, was jemand braucht, um sich sicher zu fühlen, und wie er mit Wiederholung umgeht. Das ist ein Reflexionsangebot, keine Diagnose. Wer den Mond als Symbol nutzt, sollte die astronomischen Fakten daneben stehen lassen, statt sie zu überdehnen.",
+      "keywords": [
+        "Mond",
+        "Phasen",
+        "synodisch",
+        "Mondzeichen",
+        "Bedürfnisse"
+      ],
+      "sources": [
+        "S18",
+        "S06",
+        "S09"
+      ],
+      "claims": [
+        "c15",
+        "c17",
+        "c07"
+      ],
+      "cross_refs": [
+        "faktor-mond",
+        "zeichen-krebs",
+        "haus-4",
+        "grund-transite"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Zyklusdaten sind belegt; die emotionale Deutung ist Tradition, gesundheitliche Wirkbehauptungen werden ausdrücklich nicht gestützt."
+      },
+      "key_points": [
+        "Siderischer Monat 27,32 Tage, synodischer Monat 29,53 Tage.",
+        "Der Mond wechselt den Zeichensektor im Mittel alle 2,46 Tage.",
+        "Keine belastbare Evidenz für Mondphasen als Gesundheits- oder Ereignisradar."
+      ]
+    },
+    {
+      "id": "grund-evidenz",
+      "slug": "evidenz-und-grenzen",
+      "name": "Evidenz",
+      "title": "Evidenzlage und Grenzen der Astrologie",
+      "level": "nachschlagen",
+      "short": "Kontrollierte Studien haben keine belastbare Evidenz für astrologische Wirkbehauptungen ergeben; ein plausibler Mechanismus ist nicht bekannt. Kulturelle Bedeutung bleibt davon unberührt.",
+      "long": "Die wissenschaftliche Prüfung der Astrologie hat eine lange Geschichte. Der bekannteste doppelblinde Test stammt von Shawn Carlson (1985): Astrologinnen und Astrologen sollten Radixen Persönlichkeitsprofilen zuordnen; laut Sekundärliteratur war die Trefferquote nicht besser als Zufall [S08][S09]. Weitere Untersuchungen, darunter die groß angelegte Studie von Dean und Kelly, fanden ebenfalls keine Unterstützung [S09].\n\nDie Einordnung als Pseudoscience folgt nicht aus einer einzelnen Studie, sondern aus dem Gesamtbild: Astrologische Aussagen wurden wiederholt geprüft und bestanden die Tests nicht; es gibt keinen bekannten physikalischen oder biologischen Mechanismus, der die behaupteten Effekte plausibel machen würde; und die Regeln sind historisch gewachsen und schulabhängig, nicht aus einer Theorie abgeleitet [S07][S09].\n\nDas ist ein Negativbefund, kein Beweis, dass nie irgendein Effekt existiert. Wissenschaft arbeitet mit vorläufigen Aussagen. Aber die Beweislast liegt bei denen, die eine Wirkung behaupten. Solange keine belastbare Evidenz vorliegt, ist es unredlich, Astrologie als gesicherte Persönlichkeits- oder Ereignisdiagnose darzustellen.\n\nUnberührt davon bleibt die kulturelle, historische und reflexive Bedeutung. Menschen können astrologische Symbole nutzen, um über sich nachzudenken, ohne zu behaupten, die Sterne würden ihr Leben bestimmen. Dieses Paket versucht genau diese Trennung: die Tradition verständlich machen, ohne ihre Wirkbehauptungen zu übernehmen. Wer Astrologie als Kunst, Sprache oder Kulturphänomen schätzt, muss nicht behaupten, sie sei Wissenschaft.",
+      "keywords": [
+        "Evidenz",
+        "Carlson",
+        "Pseudoscience",
+        "Mechanismus",
+        "Geltungsanspruch"
+      ],
+      "sources": [
+        "S07",
+        "S08",
+        "S09",
+        "S06"
+      ],
+      "claims": [
+        "c17",
+        "c18",
+        "c19"
+      ],
+      "cross_refs": [
+        "grund-begriff",
+        "grund-sonnenzeichen-grenzen",
+        "grund-ethik"
+      ],
+      "kennzeichnung": {
+        "typ": "empirie",
+        "hinweis": "Die Evidenzlage wird nach Enzyklopädie, Studie und Tertiärquelle referiert; die Studie selbst war nur im Abstract zugänglich."
+      },
+      "key_points": [
+        "Kontrollierte Tests stützen astrologische Wirkbehauptungen nicht.",
+        "Ein plausibler Mechanismus ist nicht bekannt.",
+        "Kulturelle Nutzung ist unabhängig von der Wahrheitsfrage möglich."
+      ]
+    },
+    {
+      "id": "grund-ethik",
+      "slug": "ethik-und-grenzen",
+      "name": "Ethik",
+      "title": "Ethik, Sprache und Grenzen der Deutung",
+      "level": "nachschlagen",
+      "short": "Astrologische Deutung darf keine Diagnosen, keine sicheren Prognosen und keine Angstmache erzeugen. Geburtsdaten sind persönliche Daten und brauchen Schutz.",
+      "long": "Astrologische Sprache kann stark wirken. Sie kann Menschen helfen, über sich nachzudenken, aber sie kann auch verunsichern, abhängig machen oder falsche Sicherheit erzeugen. Deshalb braucht jede verantwortliche Darstellung klare Grenzen.\n\nKeine Diagnosen: Astrologie ist kein medizinisches, psychologisches oder psychiatrisches Verfahren. Aussagen über Krankheit, Heilung, Suizidalität, Sucht oder Therapie gehören nicht in ein Horoskop. Keine sicheren Prognosen: Aussagen über Gesundheit, Geld, Schwangerschaft, Trennung, Tod oder Unfälle sind mit Astrologie nicht belegbar und sollten nicht als Vorhersage formuliert werden [S09]. Keine Angstmache: Drohungen mit Transiten, Rückläufen oder schlechten Aspekten sind ethisch problematisch und fachlich nicht gedeckt.\n\nKeine realen Personen ohne Einwilligung: Beispieldeutungen sollten fiktiv sein und das klar sagen. Reale Menschen dürfen nicht ohne Zustimmung analysiert oder öffentlich gedeutet werden. Geburtsdaten sind personenbezogene Daten; wer sie erhebt, braucht einen Zweck, eine Rechtsgrundlage und Datenschutz. Dieses Paket erhebt keine Geburtsdaten und braucht keine Konten.\n\nSprache: Deutungen sollten differenziert, respektvoll und nicht deterministisch sein. Sie sollten Tradition als Tradition kennzeichnen und nicht den Eindruck erwecken, wissenschaftliche Befunde zu referieren. Sie sollten keine kulturellen Stereotype über Geschlecht, Herkunft oder Körper reproduzieren. Und sie sollten den Menschen nicht auf ein Zeichen reduzieren.\n\nDie ethische Leitfrage lautet nicht: Was sagt das Horoskop? Sondern: Hilft diese Aussage der Person, sich selbst besser zu verstehen, ohne ihr Angst zu machen oder ihre Freiheit zu nehmen?",
+      "keywords": [
+        "Ethik",
+        "keine Diagnose",
+        "keine Prognose",
+        "Datenschutz",
+        "Sprache"
+      ],
+      "sources": [
+        "S09",
+        "S07"
+      ],
+      "claims": [
+        "c17",
+        "c19",
+        "c28"
+      ],
+      "cross_refs": [
+        "grund-evidenz",
+        "grund-sonnenzeichen-grenzen",
+        "grund-radix-synthese"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Redaktionelle und berufsethische Leitlinien; sie folgen aus der Evidenzlage und dem Datenschutz, nicht aus astrologischer Lehre."
+      },
+      "key_points": [
+        "Keine medizinischen, psychologischen oder finanziellen Diagnosen.",
+        "Keine sicheren Ereignis- oder Gesundheitsprognosen.",
+        "Geburtsdaten sind personenbezogen und nur mit Zweck und Schutz zu verarbeiten."
+      ]
+    },
+    {
+      "id": "grund-berechnung",
+      "slug": "echte-berechnung",
+      "name": "Echte Berechnung",
+      "title": "Was eine echte Radixberechnung braucht",
+      "level": "nachschlagen",
+      "short": "Eine echte Radix- oder Transitberechnung braucht Ephemeriden, Zeitzonen, Geodaten und eine dokumentierte Häuserkonvention. Zufallswerte wären keine Berechnung.",
+      "long": "Dieses Paket enthält keine Radixberechnung. Das ist eine bewusste Entscheidung: Eine scheinbar genaue Grafik mit erfundenen oder geschätzten Positionen wäre eine Täuschung. Wenn später eine echte Berechnung angeboten wird, sind mehrere Hürden zu lösen.\n\nEphemeriden: Für Sonne, Mond und Planeten werden belastbare Positionsdaten benötigt, etwa aus einem etablierten Ephemeridenwerk. Die verbreitete Swiss Ephemeris ist dual lizenziert (AGPL oder kommerzielle Lizenz); die Lizenzfrage muss vor der Integration geklärt werden, nicht danach. Alternativ kommen frei lizenzierte Datensätze in Frage, deren Genauigkeit und Abdeckung zu prüfen sind.\n\nZeit und Ort: Geburtszeit, Zeitzone, Sommerzeitregeln und geografische Koordinaten müssen korrekt sein. Historische Zeitzonen sind fehleranfällig; eine Bibliothek mit IANA-Zeitzonendaten ist nötig. Die Genauigkeit der Geburtszeit begrenzt die Genauigkeit von Aszendent und Häusern; ohne Zeitangabe sind diese Punkte nicht belastbar [S22][S23].\n\nHäuser und Aspekte: Das Häusersystem muss gewählt und dokumentiert werden. Placidus ist verbreitet, aber in hohen Breiten nicht durchgehend definiert [S10]. Aspektorben müssen als Konvention offengelegt werden. Eine Berechnung ohne diese Angaben ist nicht reproduzierbar.\n\nDatenschutz und Tests: Geburtsdaten sind personenbezogene Daten. Speicherung, Löschung, Einwilligung und Zweckbindung sind zu klären. Technisch braucht es Referenztests gegen bekannte Beispiele, Plausibilitätsprüfungen und eine klare Fehlerbehandlung. Eine Berechnung ist erst dann brauchbar, wenn sie reproduzierbar, dokumentiert und ethisch verantwortbar ist [S10].",
+      "keywords": [
+        "Ephemeriden",
+        "Swiss Ephemeris",
+        "Zeitzonen",
+        "Datenschutz",
+        "Häusersystem"
+      ],
+      "sources": [
+        "S10",
+        "S22",
+        "S23"
+      ],
+      "claims": [
+        "c28",
+        "c08",
+        "c09"
+      ],
+      "cross_refs": [
+        "grund-aszendent-mc",
+        "grund-haeuser-systeme",
+        "grund-transite",
+        "grund-ethik"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Technische Anforderungen für einen späteren Rechenschritt; keine Implementierung und keine erfundenen Positionen in diesem Paket."
+      },
+      "key_points": [
+        "Ephemeriden, Zeitzonen, Geodaten und Häuserkonvention sind Pflicht.",
+        "Lizenz- und Datenschutzfragen müssen vor der Implementierung geklärt sein.",
+        "Ohne belastbare Geburtszeit keine belastbaren Achsen und Häuser."
+      ]
+    }
+  ]
+}

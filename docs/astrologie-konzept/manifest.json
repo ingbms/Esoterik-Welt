@@ -1,0 +1,228 @@
+{
+  "paket": "astrologie-konzept",
+  "task": "t_f81e9094",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "status": "lokales-lieferpaket-review-ausstehend",
+  "beschreibung": "Vollstaendiges Inhalts-, Schema- und Strukturpaket fuer den Astrologiebereich der Esoterik-Welt. Keine Produktdatei geaendert, kein Commit, kein Push, kein Deploy.",
+  "arbeitsannahme": "Westliche tropische, geozentrische Astrologie als Einstieg; Tradition, Astronomie, Konvention und Evidenz sind getrennt gekennzeichnet.",
+  "counts": {
+    "zeichen": 12,
+    "faktoren": 10,
+    "haeuser": 12,
+    "aspekte": 5,
+    "grundlagen": 24,
+    "beispiele": 4,
+    "faq": 15,
+    "glossar": 65,
+    "lernstufen": 6,
+    "quellen": 25,
+    "claims": 28
+  },
+  "validation": {
+    "status": "pass",
+    "report": "evidence/t_f81e9094/validation-report.json",
+    "sha256": "31dc930abdea66e7dc7081bf4ffa6c2905e4006d91c7ad3ba203b8274ce1b99a",
+    "errors": 0,
+    "warnings": 0,
+    "text": {
+      "chars": 208191,
+      "words": 28120,
+      "longest": {
+        "id": "long",
+        "chars": 2713
+      }
+    }
+  },
+  "render_check": {
+    "status": "pass",
+    "report": "evidence/t_f81e9094/render-check.json",
+    "sha256": "1da8a9a1e339afecceba869a95ffd36e7d7cda1ca787c4bd4ddd8425e72a39aa",
+    "issues": 0,
+    "totals": {
+      "files": 11,
+      "words": 69270,
+      "chars": 593340,
+      "anchors": 362,
+      "internal_links": 2908
+    }
+  },
+  "files": [
+    {
+      "path": "docs/astrologie-konzept/CHECKPOINT.md",
+      "bytes": 18173,
+      "sha256": "b693634d32ee73b804463d08c1931fa77a688bea2a12c4e196c345f9519065c7"
+    },
+    {
+      "path": "docs/astrologie-konzept/README.md",
+      "bytes": 8759,
+      "sha256": "79484ddbedf13f31e4e8eb22f3b187a035a585bb4c703e078db00f4ebed3f6df"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/aspekte.json",
+      "bytes": 14673,
+      "sha256": "1df5210905d671838e3d3a0453eee467427364c429b13c1f761a1b8bb8ebde6e"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/beispiele.json",
+      "bytes": 20298,
+      "sha256": "5865a49d114221b564db17dbf993fa4a1173866743df53b1e358ceb589e3e00a"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/faktoren.json",
+      "bytes": 36715,
+      "sha256": "0ae1e0e892634d90c5f1c6d192bf369a61dc04c42f4d3560b2b36f45f8be909c"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/faq.json",
+      "bytes": 23582,
+      "sha256": "6c6a769fe7f704d44e12b3c65e1582161c96a20235dbd9d37da8b93c87f35f45"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/glossar.json",
+      "bytes": 28760,
+      "sha256": "99bfcd9b125baf9095c4d5b613f80f1f3b4ea0d89e661e7ae814ac69f91dc024"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/grundlagen.json",
+      "bytes": 66296,
+      "sha256": "11760f282d4f94aa61982021e1ac49a83de294b24ef6115c5d1011fe674efd0f"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/haeuser.json",
+      "bytes": 27495,
+      "sha256": "6e0a213e63c0c73849b0264184c4bca5ea8d4045a3e8bd939a2b2d174a3991f1"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/lernpfad.json",
+      "bytes": 13478,
+      "sha256": "ffef8c5df49b43557d5d3d06b2e337b273527f943cb7a49f90b2f5fd9172b0b4"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/quellen.json",
+      "bytes": 33870,
+      "sha256": "3f273e3e3d294d8cb3e296b132c5e0d730af7ad77b1cfc5ee600c557b4b1b24d"
+    },
+    {
+      "path": "docs/astrologie-konzept/content/zeichen.json",
+      "bytes": 59478,
+      "sha256": "5cb81b4cbf94e6c36ccb8b07a5a0ebcc1aa99b76e6c541650b36bcc8ab851565"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/01-lernpfad.md",
+      "bytes": 14291,
+      "sha256": "9f385164c93f7291c6aab03bbe349c72c3a277a184126d20ac988295ae6aac73"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/02-grundlagen.md",
+      "bytes": 64492,
+      "sha256": "ee8f8beff69ede211a75de90151a3ec92f42b67b7ae7da0b0300ccad32cc5ed6"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/03-zeichen.md",
+      "bytes": 60810,
+      "sha256": "8a4eb3fd57ca9c750a1737b398c9612b6418811b93079859d32ae8cade151033"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/04-faktoren.md",
+      "bytes": 34785,
+      "sha256": "91883e4e8a7d47af39dfe9caeb6265d2f2cc60bced5f079d919c1c5dbba6acc2"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/05-haeuser.md",
+      "bytes": 25201,
+      "sha256": "178149028e241e0baf043087550ec7463895ffb2eb5f686a24db53b2134cd424"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/06-aspekte.md",
+      "bytes": 14315,
+      "sha256": "87753388fc99a195324d196ab45f748d3acfdd6117f035bba498970bd662a5aa"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/07-beispiele.md",
+      "bytes": 21319,
+      "sha256": "fa0ce80e733e1ca4ed2bf1f0f4b46159c585662a312c322843c8eaddbef3c829"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/08-faq.md",
+      "bytes": 25503,
+      "sha256": "d73b663f7a7bd24994d94a66eff4fa68f68b720bcce133c7d42efd8827ff1443"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/09-glossar.md",
+      "bytes": 27621,
+      "sha256": "c6b1a3eb070d28c9173fd292bf0d689a37ff625aa2b7e7c87ef70ebd1f4a8ede"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/10-quellen.md",
+      "bytes": 30135,
+      "sha256": "0b1293f9b71a505f75b4a9d615a60de6b3586420e40213886eeb9005817a992c"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/astrologie-datenindex.csv",
+      "bytes": 36297,
+      "sha256": "3f315ff894b391c289f5e69ae03709748220fe88aa0d7877487ab25cadc0d4be"
+    },
+    {
+      "path": "docs/astrologie-konzept/generated/astrologie-kompendium.md",
+      "bytes": 282821,
+      "sha256": "1b11fd161dfd22a78db8fa7572921e1b6de08d2b8023dd3555853db75953095f"
+    },
+    {
+      "path": "docs/astrologie-konzept/ia-konzept.md",
+      "bytes": 16621,
+      "sha256": "0c26dcce2f007d02617300a77e20417f06ae11d054d1a28e2f88f3566d8937a7"
+    },
+    {
+      "path": "docs/astrologie-konzept/review-checkliste.md",
+      "bytes": 6383,
+      "sha256": "98491961dfb454fb82af8d18265a5fba760fd13612915fabae394c483ed688d5"
+    },
+    {
+      "path": "docs/astrologie-konzept/schema/astrologie.schema.json",
+      "bytes": 17312,
+      "sha256": "8ebdc7517770c35a8244d3d602d15ddb526cc443d4182e2005952ffaae3b533e"
+    },
+    {
+      "path": "docs/astrologie-konzept/scripts/_ortho-propose.cjs",
+      "bytes": 2137,
+      "sha256": "1b2cfd1a59fccf50945379099b0050008fa9af99b66d68951596fcbcc9e9e6ff"
+    },
+    {
+      "path": "docs/astrologie-konzept/scripts/_text-check.cjs",
+      "bytes": 1831,
+      "sha256": "94a447266efa2f77fef310fa0c96406538c069e3974312036f3a9e1bd3caa490"
+    },
+    {
+      "path": "docs/astrologie-konzept/scripts/apply-orthography.cjs",
+      "bytes": 4708,
+      "sha256": "eea018db7fc1133315699bc7736484352b30af7eb33e688ce801f5252efed20d"
+    },
+    {
+      "path": "docs/astrologie-konzept/scripts/check-rendered.cjs",
+      "bytes": 3416,
+      "sha256": "1a3d133fffdb9361e87f14bb27ae0f86f10b0fbf4e4c9f0d83969e452ade8d57"
+    },
+    {
+      "path": "docs/astrologie-konzept/scripts/manifest.cjs",
+      "bytes": 4995,
+      "sha256": "5429ad3268f72ff592ec64e1f2a7f0fc7278e015a73fb0ea53af60c9191d1c40"
+    },
+    {
+      "path": "docs/astrologie-konzept/scripts/render.cjs",
+      "bytes": 13932,
+      "sha256": "685b3cfe197c50142a8b4f7b207ace2859523f01ee7c225e743d8a020c5f075c"
+    },
+    {
+      "path": "docs/astrologie-konzept/scripts/validate.cjs",
+      "bytes": 21885,
+      "sha256": "f96049ee00b25b9582cf2b50b48e4515c7a146a3ed13436ef97d8313022eab75"
+    }
+  ],
+  "grenzen": [
+    "Keine unabhaengige fachliche Review in diesem Lauf; die Karte geht nach eigener Pruefung in request_review.",
+    "Keine Radix-, Transit- oder Aszendentberechnung; keine Geburtsdaten.",
+    "Quellen am 2026-11-01 abgerufen; Webinhalte koennen sich aendern.",
+    "Keine Druckfreigabe und keine Veroeffentlichung."
+  ]
+}

@@ -6,6 +6,7 @@ import { initCrystalsModule } from './modules/crystals.js';
 import { MoonModule } from './modules/moon.js';
 import { RunesModule } from './modules/runes.js';
 import { BlogModule } from './modules/blog.js';
+import { AstrologieModule } from './modules/astrologie.js';
 import { DialogController } from './dialog.js';
 
 // --- State ---
@@ -17,10 +18,16 @@ const state = {
 // --- Routes ---
 // Only these ids are pages. #main is the skip target inside the document and
 // must never become a page id; unknown fragments must never hide every section.
-const MAIN_PAGES = ['home', 'tarot', 'crystals', 'moon', 'runes', 'blog'];
+const MAIN_PAGES = ['home', 'tarot', 'crystals', 'moon', 'runes', 'astrologie', 'blog'];
 const PAGE_IDS = new Set(MAIN_PAGES);
 const SKIP_ANCHOR = 'main';
 const ARTICLE_ROUTE = /^blog\/([^/]+)$/;
+// The astrology area is one page with its own sub-routes:
+// #astrologie, #astrologie/zeichen, #astrologie/zeichen/widder,
+// #astrologie/suche?q=mond … Everything after "astrologie" is handed to the
+// area module, which answers unknown slugs with its own in-area error view
+// instead of the site-wide route notice.
+const ASTROLOGIE_ROUTE = /^astrologie(?:\/([^?]*))?(?:\?(.*))?$/;
 
 // --- Per-route metadata ---
 // Every view lives in one document, so the title and the description have to
@@ -41,12 +48,18 @@ const PAGE_META = {
     description: 'Kristall-Katalog mit Chakra-, Farb- und Wirkungsfilter: Steine im Überblick, Details und Favoriten.',
   },
   moon: {
-    title: 'Mondphasen, Kalender & Rituale | Esoterik-Welt',
-    description: 'Aktuelle Mondphase, Monatskalender, passende Rituale und iCal-Export für den Mondzyklus.',
+    title: 'Mondphasen, Kalender & Deutung | Esoterik-Welt',
+    description:
+      'Aktuelle Mondphase mit Beleuchtungsgrad, Zeitachse der vier Hauptphasen, Monatskalender mit Tagesdetails und iCal-Export.',
   },
   runes: {
     title: 'Runen — Das ältere Futhark | Esoterik-Welt',
     description: '24 Runen des älteren Futhark: 3-Runen-Wurf, Einzelrune, Deutung und Wurf-Historie.',
+  },
+  astrologie: {
+    title: 'Astrologie — Zeichen, Faktoren, Häuser, Aspekte | Esoterik-Welt',
+    description:
+      'Astrologie lernen und nachschlagen: zwölf Zeichen, zehn Faktoren, zwölf Häuser, fünf Hauptaspekte, Lernpfad, Glossar und FAQ — ohne Berechnung, ohne Geburtsdaten.',
   },
   blog: {
     title: 'Wissen & Artikel — Esoterik, Rituale, Geschichte | Esoterik-Welt',
@@ -85,6 +98,20 @@ function parseRoute(hash) {
   if (raw === SKIP_ANCHOR) return { type: 'skip', raw };
   const article = ARTICLE_ROUTE.exec(raw);
   if (article) return { type: 'article', page: 'blog', id: article[1], raw };
+  // Astrology sub-routes carry their own query (?q=, ?element=…) so filters and
+  // search results survive reload, deep links and Back/Forward.
+  const astrologie = ASTROLOGIE_ROUTE.exec(raw);
+  if (astrologie) {
+    return {
+      type: 'astrologie',
+      page: 'astrologie',
+      segments: String(astrologie[1] || '')
+        .split('/')
+        .filter(Boolean),
+      query: astrologie[2] || '',
+      raw,
+    };
+  }
   if (PAGE_IDS.has(raw)) return { type: 'page', page: raw, raw };
   return { type: 'unknown', raw };
 }
@@ -104,7 +131,6 @@ const elements = {
   navToggle: document.getElementById('navToggle'),
   pages: document.querySelectorAll('.page'),
   navLinks: document.querySelectorAll('.nav-link'),
-  heroCanvas: document.getElementById('heroCanvas'),
   routeNotice: document.getElementById('routeNotice'),
   routeNoticeText: document.getElementById('routeNoticeText'),
   routeNoticeLink: document.getElementById('routeNoticeLink'),
@@ -124,9 +150,6 @@ const elements = {
 
 // --- Initialize ---
 async function init() {
-  // Initialize hero canvas animation
-  initHeroCanvas();
-
   // Setup navigation
   setupNavigation();
 
@@ -151,6 +174,10 @@ async function init() {
     document.getElementById('articleModalBody'),
     elements.modalCloses.article
   );
+  // The astrology area renders into its own container. Its content module is
+  // loaded lazily (see modules/astrologie.js): on HTTP the data file is only
+  // fetched when the area is opened, offline webpack inlines it.
+  state.modules.astrologie = new AstrologieModule(document.getElementById('astrologieRoot'));
   // A card-opened article becomes its own history entry, so Back/Forward,
   // reload and the dialog close action stay consistent with the address bar.
   state.modules.blog.onArticleOpened = (id) => {
@@ -177,6 +204,15 @@ async function init() {
   // Apply whatever fragment the address bar carried (page, article deep link,
   // skip anchor or unknown fragment) instead of using it as a page id blindly.
   const initialRoute = parseRoute(location.hash);
+  // A cold deep link into the astrology area must render real content before
+  // the route settles, so the data module is fetched first (once).
+  if (initialRoute.type === 'astrologie') {
+    try {
+      await state.modules.astrologie.load();
+    } catch (error) {
+      console.error('Astrologie-Daten nicht verfügbar', error); // the module shows its own error view
+    }
+  }
   applyRoute(initialRoute, { instant: true, silent: true });
   if (initialRoute.type !== 'skip') settleRouteScroll(state.currentPage);
 
@@ -187,140 +223,6 @@ async function init() {
   window.addEventListener('scroll', onScroll, { passive: true });
 
   console.log('Esoterik-Welt initialized');
-}
-
-// --- Hero Canvas Animation ---
-function initHeroCanvas() {
-  const canvas = elements.heroCanvas;
-  if (!canvas) return;
-  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (motionQuery.matches) {
-    const enable = (event) => {
-      if (!event.matches) {
-        motionQuery.removeEventListener('change', enable);
-        initHeroCanvas();
-      }
-    };
-    motionQuery.addEventListener('change', enable);
-    return;
-  }
-  const ctx = canvas.getContext('2d');
-  if (!ctx) return;
-  let particles = [];
-  let animationId = null;
-
-  function resize() {
-    canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-    canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-  }
-
-  class Particle {
-    constructor() {
-      this.reset();
-    }
-    reset() {
-      this.x = Math.random() * canvas.offsetWidth;
-      this.y = Math.random() * canvas.offsetHeight;
-      this.size = Math.random() * 2 + 0.5;
-      this.speedX = (Math.random() - 0.5) * 0.3;
-      this.speedY = (Math.random() - 0.5) * 0.3;
-      this.opacity = Math.random() * 0.5 + 0.1;
-      this.color = Math.random() > 0.5 ? '187,134,252' : '3,218,198';
-    }
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      if (this.x < 0 || this.x > canvas.offsetWidth || this.y < 0 || this.y > canvas.offsetHeight) {
-        this.reset();
-      }
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${this.color},${this.opacity})`;
-      ctx.fill();
-    }
-  }
-
-  function createParticles() {
-    const count = Math.min(80, Math.floor((canvas.offsetWidth * canvas.offsetHeight) / 15000));
-    particles = Array.from({ length: count }, () => new Particle());
-  }
-
-  let mouseX = 0,
-    mouseY = 0,
-    targetMouseX = 0,
-    targetMouseY = 0;
-  canvas.addEventListener(
-    'mousemove',
-    (e) => {
-      const rect = canvas.getBoundingClientRect();
-      targetMouseX = (e.clientX - rect.left - rect.width / 2) / rect.width;
-      targetMouseY = (e.clientY - rect.top - rect.height / 2) / rect.height;
-    },
-    { passive: true }
-  );
-
-  function animate() {
-    if (document.hidden || motionQuery.matches) {
-      if (motionQuery.matches) ctx.clearRect(0, 0, canvas.width, canvas.height);
-      animationId = null;
-      return;
-    }
-    mouseX += (targetMouseX - mouseX) * 0.05;
-    mouseY += (targetMouseY - mouseY) * 0.05;
-    ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
-    ctx.save();
-    ctx.translate(mouseX * 12, mouseY * 12);
-    particles.forEach((p) => {
-      p.update();
-      p.draw();
-    });
-    drawConnections();
-    ctx.restore();
-    animationId = requestAnimationFrame(animate);
-  }
-
-  function drawConnections() {
-    const maxDist = 120;
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < maxDist) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(187,134,252,${0.1 * (1 - dist / maxDist)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
-        }
-      }
-    }
-  }
-
-  resize();
-  createParticles();
-  animate();
-  motionQuery.addEventListener('change', (event) => {
-    if (event.matches) {
-      if (animationId !== null) cancelAnimationFrame(animationId);
-      animationId = null;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-    } else if (animationId === null && !document.hidden) {
-      animationId = requestAnimationFrame(animate);
-    }
-  });
-  document.addEventListener('visibilitychange', () => {
-    if (!document.hidden && !motionQuery.matches && animationId === null) animationId = requestAnimationFrame(animate);
-  });
-
-  window.addEventListener('resize', () => {
-    resize();
-    createParticles();
-  });
 }
 
 // --- Navigation ---
@@ -476,6 +378,20 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
     return;
   }
 
+  // The astrology area owns its sub-routes. The router reveals the page and
+  // hands the segments over; the area module renders content, title and focus.
+  if (route.type === 'astrologie') {
+    clearRouteNotice();
+    navigateTo('astrologie', replace, {
+      fromHistory,
+      instant,
+      silent,
+      hash: `#${route.raw}`,
+      subroute: { segments: route.segments, query: route.query },
+    });
+    return;
+  }
+
   // Unknown fragment: keep a readable page and explain the dead link instead of
   // hiding every section, which left the site looking empty.
   const page = PAGE_IDS.has(state.currentPage) ? state.currentPage : 'home';
@@ -486,7 +402,7 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
 function navigateTo(
   pageId,
   replace = false,
-  { fromHistory = false, instant = false, silent = false, hash = null } = {}
+  { fromHistory = false, instant = false, silent = false, hash = null, subroute = null } = {}
 ) {
   // Update active states
   elements.pages.forEach((page) => {
@@ -508,9 +424,18 @@ function navigateTo(
     behavior: instant || window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
   });
 
-  // Trigger module-specific onShow
-  if (state.modules[pageId] && state.modules[pageId].onShow) {
-    state.modules[pageId].onShow();
+  // Trigger module-specific work. Areas that render their own sub-views expose
+  // show(segments, query); the remaining modules keep their onShow() hook.
+  const module = state.modules[pageId];
+  if (module && typeof module.show === 'function') {
+    const pending = module.show(subroute ? subroute.segments : [], subroute ? subroute.query : '', {
+      focus: !silent,
+    });
+    if (pending && typeof pending.catch === 'function') {
+      pending.catch((error) => console.error('Ansicht konnte nicht gerendert werden', error));
+    }
+  } else if (module && module.onShow) {
+    module.onShow();
   }
 
   // Update URL hash without scroll
@@ -550,26 +475,35 @@ function closeModal(key) {
   elements.modals[key].dialogController.close();
 }
 
-// --- Home Feature Grid ---
+// --- Home Feature Grid (path register) ---
 function populateFeatureGrid() {
   const grid = document.getElementById('featureGrid');
   if (!grid) return;
 
+  // No emoji: the register is typographic, numbered 01–06 (Nachtatelier).
   const features = [
-    { id: 'tarot', icon: '🃏', title: 'Tarot', desc: '78 Karten, Major & Minor Arcana, Tageskarte & Legungen' },
-    { id: 'crystals', icon: '💎', title: 'Kristalle', desc: '30+ Steine mit Chakra-Filter, Wirkungen & Details' },
-    { id: 'moon', icon: '🌙', title: 'Mondphasen', desc: 'Aktuelle Phase, Kalender, Rituale & Tierkreiszeichen' },
-    { id: 'runes', icon: 'ᚠ', title: 'Runen', desc: 'Älteres Futhark, 3-Runen-Wurf & Deutung' },
-    { id: 'blog', icon: '📜', title: 'Wissen', desc: 'Artikel zu Esoterik, Geschichte, Ritualen & Praxis' },
+    { id: 'tarot', title: 'Tarot', desc: '78 Karten, Major & Minor Arcana, Tageskarte & Legungen' },
+    { id: 'crystals', title: 'Kristalle', desc: '30+ Steine mit Chakra-Filter, Wirkungen & Details' },
+    { id: 'moon', title: 'Mondphasen', desc: 'Heute-Überblick, Zeitachse, Kalender, acht Phasen & Deutung' },
+    {
+      id: 'astrologie',
+      title: 'Astrologie',
+      desc: '12 Zeichen, 10 Faktoren, 12 Häuser, 5 Aspekte, Lernpfad & Glossar',
+    },
+    { id: 'runes', title: 'Runen', desc: 'Älteres Futhark, 3-Runen-Wurf & Deutung' },
+    { id: 'blog', title: 'Wissen', desc: 'Artikel zu Esoterik, Geschichte, Ritualen & Praxis' },
   ];
 
   grid.innerHTML = features
     .map(
       (f, i) => `
-    <article class="card feature-card animate-slide-up stagger-${i + 1}" role="link" data-page="${f.id}">
-      <div class="feature-icon">${f.icon}</div>
-      <h3 class="feature-title">${f.title}</h3>
-      <p class="feature-desc">${f.desc}</p>
+    <article class="feature-card" role="link" data-page="${f.id}">
+      <span class="feature-icon" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
+      <div class="feature-body">
+        <h3 class="feature-title">${f.title}</h3>
+        <p class="feature-desc">${f.desc}</p>
+      </div>
+      <span class="feature-arrow" aria-hidden="true">↗</span>
     </article>
   `
     )

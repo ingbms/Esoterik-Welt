@@ -64,8 +64,12 @@ jobs:
         run: npm test
       - name: Run pages regression (node:test)
         run: npm run test:pages
+      - name: Run astrology area contract and rendering tests (node:test, no browser)
+        run: npm run test:astrologie
       - name: Run offline file entry (node:test + Chromium, file:// like double click)
         run: npm run test:offline
+      - name: Run tarot deck integration (78 cards, assets, interpretations, draws, file://)
+        run: npm run test:tarot
       - name: Post status — ci/unit-test
         if: always()
         uses: actions/github-script@v7

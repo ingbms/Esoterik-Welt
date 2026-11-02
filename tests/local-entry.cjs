@@ -8,30 +8,45 @@ const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'evidence/t_4f0ebfc2');
 
 async function exercise(page, events, interactions = true) {
-  await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 5, { timeout: 10000 });
-  const metrics = await page.evaluate(() => ({
-    url: location.href,
-    base: document.baseURI,
-    background: getComputedStyle(document.body).backgroundColor,
-    counts: Object.fromEntries(
-      ['featureGrid', 'tarotGrid', 'crystalGrid', 'runeGrid', 'articleGrid', 'moonCalendar', 'moonRituals'].map(
-        (id) => [id, document.getElementById(id)?.children.length || 0]
-      )
-    ),
-    modules: Object.keys(window.EsoterikWelt.state.modules),
-  }));
-  assert.equal(metrics.background, 'rgb(10, 5, 18)');
-  assert.equal(metrics.counts.featureGrid, 5);
+  await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 6, { timeout: 10000 });
+  const metrics = await page.evaluate(() => {
+    // Compare the painted body background against the design-system token instead
+    // of a hard-coded literal, so a reviewed palette change cannot silently drift.
+    const probe = document.createElement('div');
+    probe.style.backgroundColor = 'var(--color-bg-deep)';
+    document.body.append(probe);
+    const tokenBackground = getComputedStyle(probe).backgroundColor;
+    probe.remove();
+    return {
+      url: location.href,
+      base: document.baseURI,
+      background: getComputedStyle(document.body).backgroundColor,
+      tokenBackground,
+      counts: Object.fromEntries(
+        ['featureGrid', 'tarotGrid', 'crystalGrid', 'runeGrid', 'articleGrid', 'moonCalendar', 'moonRituals'].map(
+          (id) => [id, document.getElementById(id)?.children.length || 0]
+        )
+      ),
+      modules: Object.keys(window.EsoterikWelt.state.modules),
+    };
+  });
+  assert.equal(metrics.background, metrics.tokenBackground, 'body background must use --color-bg-deep');
+  assert.equal(metrics.counts.featureGrid, 6);
   assert.equal(metrics.counts.crystalGrid, 30);
   for (const [id, count] of Object.entries(metrics.counts)) assert.ok(count > 0, `${id} is empty`);
-  assert.deepEqual(metrics.modules.sort(), ['blog', 'moon', 'runes', 'tarot']);
-  for (const route of ['tarot', 'crystals', 'moon', 'runes', 'blog', 'home']) {
+  assert.deepEqual(metrics.modules.sort(), ['astrologie', 'blog', 'moon', 'runes', 'tarot']);
+  // The astrology area is one page with sub-routes; it must render real content
+  // in the offline bundle too (the data module is inlined by webpack).
+  for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'blog', 'home']) {
     if (await page.locator('#navToggle').isVisible()) await page.locator('#navToggle').click();
     await page.locator(`.nav-link[data-page="${route}"]`).click();
     await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible' });
     assert.equal(new URL(page.url()).hash, '#' + route);
     if (!interactions) continue;
-    if (route === 'tarot') {
+    if (route === 'astrologie') {
+      await page.locator('#astrologieRoot h1#astro-title').waitFor({ state: 'visible' });
+      assert.ok((await page.locator('#astrologieRoot').textContent()).length > 800, 'astrology hub must render');
+    } else if (route === 'tarot') {
       await page.locator('#drawThreeBtn').click();
       await page.locator('#cardModal:not([hidden])').waitFor({ state: 'visible' });
       assert.equal(await page.locator('#drawnCards > *').count(), 3);
@@ -137,18 +152,25 @@ test('tarot modal restores the captured focus after clearing its instance field'
   const vm = require('node:vm');
   const source = fs
     .readFileSync(path.join(root, 'js/modules/tarot.js'), 'utf8')
-    .replace(/^import .*;$/m, '')
+    // Imports come in one-line and multi-line form; both are stripped here so the
+    // class can be exercised without a bundler.
+    .replace(/^import\s+[\s\S]*?from\s+'[^']+';$/gm, '')
     .replace('export class TarotModule', 'globalThis.TarotModule = class TarotModule');
   let delayed;
   const context = {
     tarotCards: [],
     document: { body: { style: {} } },
+    // Deck registry helpers the constructor touches; the dialog lifecycle under
+    // test does not render a card.
+    getDeck: () => ({ id: 'nachtatelier-v1', levels: { thumb: '300', detail: '600', zoom: '1200' }, basePath: '' }),
+    DEFAULT_DECK_ID: 'nachtatelier-v1',
     setTimeout: (callback) => {
       delayed = callback;
     },
   };
   vm.runInNewContext(source, context);
-  const modal = { classList: { remove() {} }, hidden: false };
+  // closeModal() also drops the zoom state from the dialog panel.
+  const modal = { classList: { remove() {} }, hidden: false, querySelector: () => null };
   const tarot = new context.TarotModule(modal, null, null);
   let focused = false;
   tarot.previouslyFocused = {
@@ -179,7 +201,8 @@ test('generated local files match the production package', () => {
     );
     assert.match(html, /GENERATED by npm run build/);
   }
-  assert.match(fs.readFileSync(path.join(root, 'index.html'), 'utf8'), /<base href="\/Esoterik-Welt\/">/);
+  // Prettier serialises void elements as `<base … />`; assert the target, not the slash.
+  assert.match(fs.readFileSync(path.join(root, 'index.html'), 'utf8'), /<base href="\/Esoterik-Welt\/"\s*\/?>/);
 });
 
 test('Lokal.html works offline in an isolated directory, including legal links and cold routes', async () => {
@@ -193,6 +216,9 @@ test('Lokal.html works offline in an isolated directory, including legal links a
     'Lokal-404.html',
   ])
     fs.copyFileSync(path.join(root, file), path.join(isolated, file));
+  // The offline edition ships local fonts/photographs next to the HTML; copy the
+  // same asset tree so the isolated directory is a complete double-click bundle.
+  fs.cpSync(path.join(root, 'assets'), path.join(isolated, 'assets'), { recursive: true });
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({ offline: true, reducedMotion: 'reduce' });
   const page = await context.newPage();
@@ -214,21 +240,42 @@ test('Lokal.html works offline in an isolated directory, including legal links a
       await page.locator(`footer a[href="Lokal-${target}.html"]`).click();
       await page.waitForURL(new RegExp(`/Lokal-${target}\\.html$`));
       assert.equal(await page.locator('h1').count(), 1);
-      assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), 'rgb(10, 5, 18)');
+      assert.equal(
+        await page.evaluate(() => {
+          const probe = document.createElement('div');
+          probe.style.backgroundColor = 'var(--color-bg-deep)';
+          document.body.append(probe);
+          const token = getComputedStyle(probe).backgroundColor;
+          probe.remove();
+          return getComputedStyle(document.body).backgroundColor === token;
+        }),
+        true,
+        'legal page must paint the --color-bg-deep background'
+      );
       await page.locator('.logo').click();
       await page.waitForURL(url);
-      await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 5);
+      await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 6);
     }
-    for (const route of ['tarot', 'crystals', 'moon', 'runes', 'blog']) {
+    for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'blog']) {
       await page.goto('about:blank');
       await page.goto(url + '#' + route, { waitUntil: 'load' });
       await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible' });
+      if (route === 'astrologie') {
+        await page.locator('#astrologieRoot h1#astro-title').waitFor({ state: 'visible' });
+      }
       routes.push(route);
     }
+    // A cold deep link into a detail page must render that page from the file
+    // bundle (no fetch, no empty section).
+    await page.goto('about:blank');
+    await page.goto(url + '#astrologie/zeichen/widder', { waitUntil: 'load' });
+    await page.locator('#astrologieRoot h1#astro-title').waitFor({ state: 'visible' });
+    assert.match(await page.locator('#astrologieRoot h1#astro-title').textContent(), /Widder/);
+    assert.ok((await page.locator('#astrologieRoot').textContent()).length > 3000);
     await page.goto(pathToFileURL(path.join(isolated, 'Lokal-404.html')).href);
     await page.locator('a.home').click();
     await page.waitForURL(url);
-    await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 5);
+    await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 6);
     assert.deepEqual(
       requests.filter((request) => !request.startsWith('file:')),
       []

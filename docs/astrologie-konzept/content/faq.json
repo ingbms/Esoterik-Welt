@@ -1,0 +1,387 @@
+{
+  "dataset": "faq",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Häufige Fragen zur westlichen tropischen Astrologie, beantwortet mit klarer Trennung von Tradition, Astronomie und Evidenz. Die Antworten sind Bildungsmaterial, keine Beratung.",
+  "items": [
+    {
+      "id": "faq-wissenschaft",
+      "slug": "ist-astrologie-wissenschaftlich",
+      "frage": "Ist Astrologie wissenschaftlich?",
+      "short_answer": "Nein. Astrologie ist ein historisches Deutungssystem; ihre Wirkbehauptungen haben in kontrollierten Studien keine belastbare Bestätigung gefunden.",
+      "long_answer": "Astrologie wird in der modernen Wissenschaft als Pseudoscience eingeordnet [S07]. Der bekannteste doppelblinde Test an Radixdeutungen (Carlson 1985) ergab laut Sekundärliteratur keine bessere Trefferquote als Zufall [S08][S09]. Auch weitere Untersuchungen fanden keine Unterstützung, und es ist kein plausibler physikalischer oder biologischer Mechanismus bekannt [S09]. Das bedeutet nicht, dass astrologische Symbole kulturell oder reflexiv wertlos sind. Es bedeutet, dass die Behauptung, Himmelskörper würden Persönlichkeit oder Ereignisse verursachen, nicht als wissenschaftlich gesichert gelten kann. Wer Astrologie nutzt, sollte diesen Unterschied kennen und keine medizinischen, finanziellen oder existenziellen Entscheidungen darauf stützen.",
+      "related": [
+        "grund-evidenz",
+        "grund-begriff",
+        "grund-ethik"
+      ],
+      "sources": [
+        "S07",
+        "S08",
+        "S09"
+      ],
+      "claims": [
+        "c17",
+        "c18",
+        "c19"
+      ],
+      "kennzeichnung": {
+        "typ": "empirie",
+        "hinweis": "Wissenschaftliche Einordnung und Studienlage; keine Aussage über den kulturellen Wert astrologischer Symbolik."
+      }
+    },
+    {
+      "id": "faq-sternbild",
+      "slug": "warum-passt-mein-sternzeichen-nicht",
+      "frage": "Warum passt mein Sternzeichen nicht zum Sternbild?",
+      "short_answer": "Weil Tierkreiszeichen und Sternbilder verschiedene Dinge sind. Die Zeichen sind 30-Grad-Sektoren ab dem Frühlingspunkt; die Sternbilder haben ungleiche Grenzen und haben sich durch die Präzession verschoben.",
+      "long_answer": "Der tropische Tierkreis beginnt am Frühlings-Äquinoktium und teilt die Ekliptik in zwölf gleiche Sektoren von 30 Grad [S13][S19]. Diese Sektoren sind an den Jahreszeiten orientiert. Sternbilder sind dagegen Areale am Himmel mit historisch gewachsenen, ungleichen Grenzen; die IAU kennt 88 Sternbilder [S04]. Entlang der Ekliptik liegen zwölf klassische Tierkreissternbilder plus Ophiuchus [S05]. Durch die Präzession der Erdachse verschiebt sich der Frühlingspunkt langsam gegenüber den Sternbildern, etwa um ein Grad in 72 Jahren [S01][S13]. Deshalb steht die Sonne heute in anderen Sternbildern als in den Zeichen, die ihnen historisch zugeordnet wurden. Das ist kein Rechenfehler der Astrologie, sondern eine Folge unterschiedlicher Bezugssysteme. Wer die Sternbilder als Bezug will, landet bei der siderischen Astrologie; wer die Jahreszeiten als Bezug will, bleibt beim tropischen System.",
+      "related": [
+        "grund-zeichen-sternbilder",
+        "grund-tropisch-siderisch",
+        "grund-ekliptik"
+      ],
+      "sources": [
+        "S01",
+        "S04",
+        "S05",
+        "S13",
+        "S19"
+      ],
+      "claims": [
+        "c01",
+        "c02",
+        "c05"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische und definitorische Grundlagen; die Systemwahl ist eine Konvention."
+      }
+    },
+    {
+      "id": "faq-tropisch-siderisch",
+      "slug": "tropisch-oder-siderisch",
+      "frage": "Was ist der Unterschied zwischen tropischer und siderischer Astrologie?",
+      "short_answer": "Tropisch rechnet ab dem Frühlingspunkt, siderisch ab einem sternbezogenen Nullpunkt. Deshalb können dieselben Himmelskörper in verschiedenen Zeichen stehen.",
+      "long_answer": "Die tropische Astrologie setzt den Nullpunkt auf das Frühlings-Äquinoktium; die Zeichen sind an den Jahreszeiten orientiert. Die siderische Astrologie orientiert sich an der Position der Sterne und korrigiert die Präzession mit einem Ayanamsa [S13]. Der bekannteste Ayanamsa ist der Lahiri-Wert der vedischen Astrologie; weitere Systeme existieren [S13]. Weil sich der Frühlingspunkt gegenüber den Sternen verschiebt, sind tropische und siderische Zeichen heute nicht mehr deckungsgleich. Ein und dieselbe Planetenposition kann tropisch in einem anderen Zeichen liegen als siderisch. Beide Systeme können intern konsistent sein; sie beantworten unterschiedliche Fragen. Wichtig ist, sie nicht unmarkiert zu mischen. Dieses Paket arbeitet mit der tropischen Konvention und sagt das an jeder Stelle, an der es relevant ist.",
+      "related": [
+        "grund-tropisch-siderisch",
+        "grund-zeichen-sternbilder",
+        "zeichen-widder"
+      ],
+      "sources": [
+        "S13",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c03"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Definitionen und Präzessionsfolge; die Systemwahl ist Tradition."
+      }
+    },
+    {
+      "id": "faq-geburtsdatum",
+      "slug": "reicht-geburtsdatum",
+      "frage": "Reicht mein Geburtsdatum für ein Horoskop?",
+      "short_answer": "Für ein Sonnenzeichen ja, für eine vollständige Radix mit Häusern und Aszendent nein. Dafür braucht es Geburtszeit und Geburtsort.",
+      "long_answer": "Mit dem Geburtsdatum lässt sich die ungefähre Sonnenposition im tropischen Zeichensektor bestimmen. Das ist das populäre Sonnenzeichen. Eine vollständige Radix enthält aber auch Mond, Planeten, Häuser und Achsen. Der Mond wechselt den Zeichensektor im Mittel etwa alle 2,46 Tage; ohne Geburtszeit ist das Mondzeichen oft unsicher [S18]. Aszendent und Häuser hängen sogar von der genauen Uhrzeit und vom Ort ab [S22][S10]. Ohne belastbare Zeit sind diese Punkte nicht seriös bestimmbar. Dieses Paket verlangt deshalb keine Geburtsdaten und simuliert keine Radix. Wer eine echte Radix berechnen will, braucht Zeit, Ort und eine dokumentierte Häuserkonvention.",
+      "related": [
+        "grund-aszendent-mc",
+        "grund-haeuser-systeme",
+        "faktor-mond"
+      ],
+      "sources": [
+        "S18",
+        "S22",
+        "S10"
+      ],
+      "claims": [
+        "c09",
+        "c15",
+        "c28"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Technische und definitorische Grenzen der Datumsangabe; keine Berechnung in diesem Paket."
+      }
+    },
+    {
+      "id": "faq-aszendent",
+      "slug": "was-ist-der-aszendent",
+      "frage": "Was ist der Aszendent?",
+      "short_answer": "Der Aszendent ist der Punkt der Ekliptik, der zum Geburtszeitpunkt am östlichen Horizont aufgeht. Er hängt von Zeit und Ort ab und wird traditionell mit Auftreten und Zugang verbunden.",
+      "long_answer": "Geometrisch ist der Aszendent der östliche Schnittpunkt von Ekliptik und Horizont [S22]. Der gegenüberliegende Punkt ist der Deszendent. Der MC ist der obere Meridianpunkt der Ekliptik, der IC der untere [S23]. Diese vier Punkte bilden die Achsen des Horoskops. Der Aszendent ändert sich mit der Zeit und dem Ort; schon wenige Minuten können ihn um etwa ein Grad verschieben. Die Faustregel von rund vier Minuten pro Grad ist eine Näherung und variiert je nach Breite und Tierkreiszeichen. In der Deutung steht der Aszendent traditionell für Auftreten, Körperbezug und die Art, wie jemand in Kontakt tritt. Diese Deutung ist Tradition, keine Messung. Ohne genaue Geburtszeit ist der Aszendent nicht belastbar.",
+      "related": [
+        "grund-aszendent-mc",
+        "haus-1",
+        "haus-7"
+      ],
+      "sources": [
+        "S22",
+        "S23",
+        "S10"
+      ],
+      "claims": [
+        "c09",
+        "c08"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Geometrische Definition ist belegt; die Deutung als Auftreten ist Tradition."
+      }
+    },
+    {
+      "id": "faq-ruecklaeufig",
+      "slug": "was-bedeutet-ruecklaeufig",
+      "frage": "Was bedeutet es, wenn ein Planet rückläufig ist?",
+      "short_answer": "Der Planet bewegt sich nicht tatsächlich rückwärts. Von der Erde aus gesehen kehrt sich seine scheinbare Richtung vor dem Sternhintergrund zeitweise um.",
+      "long_answer": "Die scheinbare Rückläufigkeit entsteht durch die unterschiedlichen Bahngeschwindigkeiten von Erde und beobachtetem Planeten. Die Erde überholt einen äußeren Planeten auf der inneren Bahn; dadurch kehrt sich die projizierte Bewegung am Himmel zeitweise um [S15]. Astronomisch läuft der Planet weiter in derselben Richtung. In der Astrologie wird die Rückläufigkeit als Zeit der Verlangsamung, Überprüfung oder Innerlichkeit gedeutet. Besonders Merkur rückläufig ist ein populäres Motiv, oft verbunden mit Warnungen vor Verträgen oder Technik. Für solche konkreten Warnungen gibt es keine belastbare Evidenz [S09]. Sinnvoll ist die Trennung: Astronomisch ist die Rückläufigkeit berechenbar; astrologisch ist sie ein Symbol, keine Ursache für konkrete Ereignisse.",
+      "related": [
+        "grund-ruecklaeufigkeit",
+        "faktor-merkur",
+        "grund-transite"
+      ],
+      "sources": [
+        "S15",
+        "S09"
+      ],
+      "claims": [
+        "c14",
+        "c17"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Erklärung ist belegt; die Prüfungsdeutung ist Tradition ohne Wirkungsnachweis."
+      }
+    },
+    {
+      "id": "faq-orbis",
+      "slug": "was-ist-ein-orbis",
+      "frage": "Was ist ein Orbis?",
+      "short_answer": "Der Orbis ist die zulässige Abweichung von einem exakten Aspektwinkel. Er ist eine Konvention und variiert nach Schule, Planet und Aspekt.",
+      "long_answer": "Ein Aspekt ist eine Winkelbeziehung, zum Beispiel ein Quadrat bei 90 Grad. In der Praxis muss der Winkel nicht exakt sein: Der Orbis legt fest, wie weit die Abweichung sein darf, damit der Aspekt noch gilt [S11]. Ein Quadrat bei 87 Grad kann bei einem Orbis von 3 Grad noch als Quadrat gelten. Orben sind keine Naturkonstanten. Moderne psychologische Astrologie neigt zu weiteren Orben, Horary und traditionelle Schulen zu engeren; Sonne und Mond erhalten oft größere Spielräume als die äußeren Planeten [S11][S17]. Auch die Frage, ob ein Aspekt außerhalb der Zeichen noch zählt, wird unterschiedlich beantwortet. Wichtig ist, den verwendeten Orbis zu nennen, weil sonst zwei Deutungen nicht vergleichbar sind.",
+      "related": [
+        "grund-aspekt-orben",
+        "aspekt-quadrat",
+        "grund-radix-synthese"
+      ],
+      "sources": [
+        "S11",
+        "S17"
+      ],
+      "claims": [
+        "c10",
+        "c11"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Winkeldefinition und schulabhängige Orb-Konventionen."
+      }
+    },
+    {
+      "id": "faq-haeusersysteme",
+      "slug": "warum-verschiedene-haeusersysteme",
+      "frage": "Warum gibt es verschiedene Häusersysteme?",
+      "short_answer": "Weil Häuser aus unterschiedlichen geometrischen und zeitlichen Konstruktionen abgeleitet werden. Kein System ist wissenschaftlich als das richtige erwiesen.",
+      "long_answer": "Häuser teilen das Horoskop in zwölf Lebensfelder, abhängig von Zeit und Ort. Es gibt mehrere Ansätze: Equal House teilt ab dem Aszendenten in 30-Grad-Schritten; Ganzzeichen-Häuser ordnen jedem Haus ein volles Zeichen zu; Placidus und andere Quadrantensysteme konstruieren die Hausspitzen aus Zeit- und Raumabschnitten [S10][S16]. Die Systeme liefern unterschiedliche Hausspitzen und damit unterschiedliche Zuordnungen von Planeten zu Häusern. Kein System ist wissenschaftlich als das richtige erwiesen; die Wahl ist eine Fachkonvention. Placidus ist im modernen Westen verbreitet, aber jenseits der Polarkreise nicht durchgehend definiert [S10]. In hohen Breiten werden deshalb oft Equal House oder Ganzzeichen-Häuser verwendet. Für die Deutung ist Transparenz wichtig: Ein Text sollte das verwendete System nennen.",
+      "related": [
+        "grund-haeuser-systeme",
+        "grund-aszendent-mc",
+        "haus-1"
+      ],
+      "sources": [
+        "S10",
+        "S16"
+      ],
+      "claims": [
+        "c08",
+        "c09"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Die Existenz mehrerer Systeme und die Placidus-Grenze sind belegt; die Wahl ist Konvention."
+      }
+    },
+    {
+      "id": "faq-pluto",
+      "slug": "ist-pluto-ein-planet",
+      "frage": "Ist Pluto ein Planet?",
+      "short_answer": "Astronomisch gilt Pluto seit 2006 als Zwergplanet. In der modernen Astrologie wird er dennoch als Deutungsfaktor verwendet.",
+      "long_answer": "Pluto wurde am 18. Februar 1930 entdeckt und umrundet die Sonne in rund 248 Jahren [S20]. Seit der IAU-Entscheidung von 2006 wird er als Zwergplanet klassifiziert, nicht als Planet [S20]. Diese Einordnung ist ein astronomischer Status. In der modernen Astrologie wird Pluto weiterhin als Faktor für Macht, Tiefe und Transformation verwendet, oft als moderner Herrscher des Skorpions [S12]. Die beiden Fragen sind zu trennen: Die Astronomie beschreibt, was Pluto ist und wie er sich bewegt; die Astrologie ordnet ihm eine Bedeutung zu. Wer von den acht Planeten spricht, meint astronomisch Merkur bis Neptun; wer in der Astrologie von zehn Faktoren spricht, meint Sonne, Mond und acht Körper einschließlich Pluto.",
+      "related": [
+        "faktor-pluto",
+        "grund-herrschaft",
+        "zeichen-skorpion"
+      ],
+      "sources": [
+        "S20",
+        "S12"
+      ],
+      "claims": [
+        "c13",
+        "c12",
+        "c27"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomischer Status und astrologische Verwendung sind getrennt belegt."
+      }
+    },
+    {
+      "id": "faq-vorhersage",
+      "slug": "kann-astrologie-gesundheit-geld-vorhersagen",
+      "frage": "Kann Astrologie Gesundheit, Geld oder Ereignisse vorhersagen?",
+      "short_answer": "Nein. Für sichere Vorhersagen zu Gesundheit, Geld, Beziehungen oder Ereignissen gibt es keine belastbare Evidenz.",
+      "long_answer": "Astrologische Aussagen zu Gesundheit, Geld, Trennung, Tod oder Erfolg sind prognostische Behauptungen. Kontrollierte Studien stützen sie nicht [S06][S09]. Es gibt keinen bekannten Mechanismus, der solche Effekte plausibel machen würde [S09]. Astrologie ist kein medizinisches, psychologisches, rechtliches oder finanzielles Verfahren. Wer astrologische Symbole für Reflexion nutzt, sollte sie nicht als Entscheidungsinstanz behandeln. Das gilt besonders für angstbesetzte Themen: Drohungen mit Transiten oder schlechten Aspekten sind ethisch problematisch und fachlich nicht gedeckt. Eine verantwortliche Darstellung sagt klar, was Tradition ist und was nicht. Sie verspricht keine Sicherheit und macht keine Angst.",
+      "related": [
+        "grund-ethik",
+        "grund-evidenz",
+        "grund-transite"
+      ],
+      "sources": [
+        "S06",
+        "S09"
+      ],
+      "claims": [
+        "c17",
+        "c19"
+      ],
+      "kennzeichnung": {
+        "typ": "empirie",
+        "hinweis": "Evidenzlage und redaktionelle Grenze; keine medizinische, rechtliche oder finanzielle Beratung."
+      }
+    },
+    {
+      "id": "faq-barnum",
+      "slug": "warum-wirken-beschreibungen-treffend",
+      "frage": "Warum wirken Horoskopbeschreibungen oft so treffend?",
+      "short_answer": "Weil sie häufig vage und allgemein genug sind, um auf viele Menschen zu passen. Diesen Effekt nennt man Barnum- oder Forer-Effekt.",
+      "long_answer": "Der Barnum- beziehungsweise Forer-Effekt beschreibt die Tendenz, allgemeine Persönlichkeitsbeschreibungen als ungewöhnlich treffend zu erleben, obwohl sie auf viele Menschen zutreffen [S21]. In einem klassischen Experiment erhielten alle Teilnehmenden denselben Text und bewerteten ihn dennoch als individuell passend [S21]. Astrologische Beschreibungen arbeiten oft mit solchen allgemeinen Formulierungen: Sie sind freundlich, mehrdeutig und lassen Spielraum für eigene Erinnerungen. Das erklärt Zustimmung, aber nicht Wahrheit. Ein weiterer Faktor ist der Bestätigungsfehler: Menschen erinnern sich eher an Treffer als an Fehlpassungen. Wer die Trefferquote prüfen will, sollte vorab konkrete, falsifizierbare Vorhersagen notieren und später ehrlich auszählen. Genau das tun kontrollierte Studien, und dort schneiden astrologische Radixdeutungen nicht besser ab als der Zufall [S08][S09].",
+      "related": [
+        "grund-sonnenzeichen-grenzen",
+        "grund-evidenz",
+        "grund-radix-synthese"
+      ],
+      "sources": [
+        "S21",
+        "S08",
+        "S09"
+      ],
+      "claims": [
+        "c20",
+        "c18",
+        "c17"
+      ],
+      "kennzeichnung": {
+        "typ": "empirie",
+        "hinweis": "Psychologischer Erklärungsansatz; keine Aussage über die Wahrheit einzelner Deutungen."
+      }
+    },
+    {
+      "id": "faq-sonnenzeichen",
+      "slug": "was-ist-ein-sonnenzeichen",
+      "frage": "Was ist ein Sonnenzeichen - und was nicht?",
+      "short_answer": "Das Sonnenzeichen ist die Position der Sonne im tropischen Zeichensektor zum Geburtszeitpunkt. Es ist ein Faktor von vielen, keine vollständige Persönlichkeit.",
+      "long_answer": "Das Sonnenzeichen beschreibt, in welchem 30-Grad-Sektor die Sonne zum Geburtszeitpunkt stand. Es ist der bekannteste, aber nicht der einzige Faktor der Astrologie. Eine Radix enthält Mond, weitere Planeten, Häuser, Achsen und Aspekte [S10][S11]. Die populäre Sonnenzeichen-Typologie verkürzt dieses Bild. Sie ist zudem empirisch nicht gestützt: Es gibt keine belastbare Evidenz für einen Zusammenhang zwischen Geburtsdatum und Persönlichkeit oder Intelligenz [S06]. Die Datumsgrenzen sind Näherungen und variieren je nach Jahr und Quelle [S06]. Das Sonnenzeichen kann als Einstieg in eine Bildsprache dienen und Reflexionsfragen anregen. Es ist kein Test, keine Diagnose und keine Identität. Wer mehr wissen will, kommt an Mond, Aszendent und Häusern nicht vorbei - und an der Frage, ob die Geburtszeit belastbar ist.",
+      "related": [
+        "faktor-sonne",
+        "grund-sonnenzeichen-grenzen",
+        "zeichen-widder"
+      ],
+      "sources": [
+        "S06",
+        "S10",
+        "S11"
+      ],
+      "claims": [
+        "c07",
+        "c06",
+        "c17"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Definition und Evidenzgrenze; die Nutzung als Reflexionsmotiv ist eine Entscheidung, keine Tatsache."
+      }
+    },
+    {
+      "id": "faq-geburtsdaten-website",
+      "slug": "braucht-die-website-geburtsdaten",
+      "frage": "Braucht die Website meine Geburtsdaten?",
+      "short_answer": "Nein. Der Lernbereich funktioniert ohne Geburtsdaten, ohne Konto und ohne Tracker. Eine echte Radixberechnung ist nicht Teil dieses Pakets.",
+      "long_answer": "Dieses Inhalts- und Strukturpaket ist als Lern- und Nachschlagebereich konzipiert. Es erklärt Zeichen, Faktoren, Häuser, Aspekte und Grundlagen, ohne eine individuelle Radix zu berechnen. Dafür sind keine Geburtsdaten nötig. Das ist bewusst so gewählt: Geburtsdaten sind personenbezogene Daten und brauchen einen klaren Zweck, eine Rechtsgrundlage und Schutz. Eine echte Radix- oder Transitberechnung wäre ein separater, technisch und rechtlich anspruchsvoller Schritt. Sie braucht belastbare Ephemeriden, Zeitzonen, Geodaten, eine dokumentierte Häuserkonvention und eine Lizenzklärung [S10][S22]. Zufallswerte oder geschätzte Positionen wären keine Berechnung und würden Scheingenauigkeit erzeugen. Der Lernbereich bleibt daher datensparsam: keine Geburtseingaben, keine Konten, keine Tracker.",
+      "related": [
+        "grund-berechnung",
+        "grund-ethik",
+        "grund-aszendent-mc"
+      ],
+      "sources": [
+        "S10",
+        "S22",
+        "S23"
+      ],
+      "claims": [
+        "c28",
+        "c09"
+      ],
+      "kennzeichnung": {
+        "typ": "konvention",
+        "hinweis": "Produkt- und Datenschutzentscheidung; keine Implementierung einer Berechnung."
+      }
+    },
+    {
+      "id": "faq-radix-lernen",
+      "slug": "wie-lernt-man-radixlesen",
+      "frage": "Wie lernt man, eine Radix zu lesen?",
+      "short_answer": "Indem man zuerst die einzelnen Ebenen lernt, dann gewichtet und schließlich eine Synthese mit Gegenprobe formuliert. Übung an fiktiven Beispielen hilft, ohne reale Personen zu deuten.",
+      "long_answer": "Ein sinnvoller Lernweg führt vom Einfachen zum Komplexen: zuerst die zwölf Zeichen mit Element, Modalität und Herrscher; dann die zehn Faktoren; dann Häuser, Achsen und Aspekte; schließlich die Synthese [S10][S11][S12]. Wichtig ist, die Ebenen nicht zu verwechseln: Ein Zeichen ist kein Haus, ein Aspekt ist kein Ereignis, ein Herrscher ist kein Schicksal. Für die Synthese hilft eine feste Reihenfolge: Leitfrage, Grundstruktur, Schwerpunkte, Herrscher und Achsen, Spannungen und Ressourcen, Gegenprobe, Sprache prüfen. Übung an fiktiven Figuren ist sinnvoll, weil sie keine Persönlichkeitsrechte verletzt und Fehler erlaubt. Reale Menschen sollten nur mit Einwilligung und ohne diagnostische Ambition gedeutet werden. Und immer gilt: Eine astrologische Lesart ist eine Hypothese, keine Messung [S21].",
+      "related": [
+        "grund-radix-synthese",
+        "beispiel-mira",
+        "lernpfad-stufe-4"
+      ],
+      "sources": [
+        "S10",
+        "S11",
+        "S12",
+        "S21"
+      ],
+      "claims": [
+        "c07",
+        "c20"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Didaktischer Lernweg; die Methode ist Tradition, die Warnung vor Diagnosen folgt aus der Evidenzlage."
+      }
+    },
+    {
+      "id": "faq-astronomie",
+      "slug": "ist-astrologie-astronomie",
+      "frage": "Ist Astrologie dasselbe wie Astronomie?",
+      "short_answer": "Nein. Astronomie ist die Naturwissenschaft der Himmelskörper; Astrologie ist ein Deutungssystem, das ihnen Bedeutungen zuordnet.",
+      "long_answer": "Astronomie beschreibt, was Himmelskörper sind, wie sie sich bewegen und welche physikalischen Gesetze gelten. Astrologie deutet Positionen und Bewegungen als Zeichen für irdische und menschliche Zusammenhänge [S07]. Beide nutzen teilweise dieselben Beobachtungen, aber mit unterschiedlichen Zielen und Methoden. Die eine fragt: Wie ist der Himmel beschaffen? Die andere fragt: Was könnte diese Konstellation symbolisch bedeuten? Die Verwechslung ist alt und wird durch gemeinsame Geschichte begünstigt. Sie ist trotzdem ein Kategorienfehler. Astronomische Fakten wie die Präzession oder die 13 ekliptikalen Sternbilder widerlegen die Astrologie nicht automatisch, weil das tropische System sie nicht als Fehler behandelt [S13]. Aber sie zeigen, dass astrologische Aussagen nicht aus Astronomie abgeleitet werden können. Wer beides sauber trennt, kann über beides reden, ohne sie zu vermischen.",
+      "related": [
+        "grund-begriff",
+        "grund-geschichte",
+        "grund-zeichen-sternbilder"
+      ],
+      "sources": [
+        "S07",
+        "S13",
+        "S19"
+      ],
+      "claims": [
+        "c23",
+        "c02",
+        "c05"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Begriffs- und Methodenunterscheidung; keine Wirkungsbehauptung."
+      }
+    }
+  ]
+}

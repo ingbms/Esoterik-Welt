@@ -1,0 +1,2936 @@
+{
+  "description": "Beleuchtungsgrad des Mondes (Prozent) für 00:00 UT, ausgewertet mit NASA/JPL Horizons (Ziel 301, geozentrisch, Größe 10).",
+  "source": "https://ssd.jpl.nasa.gov/api/horizons.api (COMMAND=301, CENTER=500@399, QUANTITIES=10)",
+  "retrieved": "2026-11-02",
+  "raw": "evidence/t_f7b2af0a-moon/sources/horizons-illu-<Jahr>.txt",
+  "entries": [
+    {
+      "utc": "2025-01-01T00:00:00.000Z",
+      "illuminatedPercent": 1.46729
+    },
+    {
+      "utc": "2025-01-02T00:00:00.000Z",
+      "illuminatedPercent": 5.0545
+    },
+    {
+      "utc": "2025-01-03T00:00:00.000Z",
+      "illuminatedPercent": 10.87995
+    },
+    {
+      "utc": "2025-01-04T00:00:00.000Z",
+      "illuminatedPercent": 18.7196
+    },
+    {
+      "utc": "2025-01-05T00:00:00.000Z",
+      "illuminatedPercent": 28.20978
+    },
+    {
+      "utc": "2025-01-06T00:00:00.000Z",
+      "illuminatedPercent": 38.87375
+    },
+    {
+      "utc": "2025-01-07T00:00:00.000Z",
+      "illuminatedPercent": 50.15523
+    },
+    {
+      "utc": "2025-01-08T00:00:00.000Z",
+      "illuminatedPercent": 61.45354
+    },
+    {
+      "utc": "2025-01-09T00:00:00.000Z",
+      "illuminatedPercent": 72.15905
+    },
+    {
+      "utc": "2025-01-10T00:00:00.000Z",
+      "illuminatedPercent": 81.69137
+    },
+    {
+      "utc": "2025-01-11T00:00:00.000Z",
+      "illuminatedPercent": 89.5417
+    },
+    {
+      "utc": "2025-01-12T00:00:00.000Z",
+      "illuminatedPercent": 95.31644
+    },
+    {
+      "utc": "2025-01-13T00:00:00.000Z",
+      "illuminatedPercent": 98.77309
+    },
+    {
+      "utc": "2025-01-14T00:00:00.000Z",
+      "illuminatedPercent": 99.83749
+    },
+    {
+      "utc": "2025-01-15T00:00:00.000Z",
+      "illuminatedPercent": 98.59542
+    },
+    {
+      "utc": "2025-01-16T00:00:00.000Z",
+      "illuminatedPercent": 95.26046
+    },
+    {
+      "utc": "2025-01-17T00:00:00.000Z",
+      "illuminatedPercent": 90.12822
+    },
+    {
+      "utc": "2025-01-18T00:00:00.000Z",
+      "illuminatedPercent": 83.53005
+    },
+    {
+      "utc": "2025-01-19T00:00:00.000Z",
+      "illuminatedPercent": 75.79711
+    },
+    {
+      "utc": "2025-01-20T00:00:00.000Z",
+      "illuminatedPercent": 67.23973
+    },
+    {
+      "utc": "2025-01-21T00:00:00.000Z",
+      "illuminatedPercent": 58.14189
+    },
+    {
+      "utc": "2025-01-22T00:00:00.000Z",
+      "illuminatedPercent": 48.76807
+    },
+    {
+      "utc": "2025-01-23T00:00:00.000Z",
+      "illuminatedPercent": 39.37797
+    },
+    {
+      "utc": "2025-01-24T00:00:00.000Z",
+      "illuminatedPercent": 30.24506
+    },
+    {
+      "utc": "2025-01-25T00:00:00.000Z",
+      "illuminatedPercent": 21.67441
+    },
+    {
+      "utc": "2025-01-26T00:00:00.000Z",
+      "illuminatedPercent": 14.01446
+    },
+    {
+      "utc": "2025-01-27T00:00:00.000Z",
+      "illuminatedPercent": 7.65643
+    },
+    {
+      "utc": "2025-01-28T00:00:00.000Z",
+      "illuminatedPercent": 3.01473
+    },
+    {
+      "utc": "2025-01-29T00:00:00.000Z",
+      "illuminatedPercent": 0.48466
+    },
+    {
+      "utc": "2025-01-30T00:00:00.000Z",
+      "illuminatedPercent": 0.3808
+    },
+    {
+      "utc": "2025-01-31T00:00:00.000Z",
+      "illuminatedPercent": 2.86984
+    },
+    {
+      "utc": "2025-02-01T00:00:00.000Z",
+      "illuminatedPercent": 7.91933
+    },
+    {
+      "utc": "2025-02-02T00:00:00.000Z",
+      "illuminatedPercent": 15.28223
+    },
+    {
+      "utc": "2025-02-03T00:00:00.000Z",
+      "illuminatedPercent": 24.5235
+    },
+    {
+      "utc": "2025-02-04T00:00:00.000Z",
+      "illuminatedPercent": 35.07799
+    },
+    {
+      "utc": "2025-02-05T00:00:00.000Z",
+      "illuminatedPercent": 46.31887
+    },
+    {
+      "utc": "2025-02-06T00:00:00.000Z",
+      "illuminatedPercent": 57.61774
+    },
+    {
+      "utc": "2025-02-07T00:00:00.000Z",
+      "illuminatedPercent": 68.38804
+    },
+    {
+      "utc": "2025-02-08T00:00:00.000Z",
+      "illuminatedPercent": 78.11299
+    },
+    {
+      "utc": "2025-02-09T00:00:00.000Z",
+      "illuminatedPercent": 86.36391
+    },
+    {
+      "utc": "2025-02-10T00:00:00.000Z",
+      "illuminatedPercent": 92.81381
+    },
+    {
+      "utc": "2025-02-11T00:00:00.000Z",
+      "illuminatedPercent": 97.24716
+    },
+    {
+      "utc": "2025-02-12T00:00:00.000Z",
+      "illuminatedPercent": 99.5638
+    },
+    {
+      "utc": "2025-02-13T00:00:00.000Z",
+      "illuminatedPercent": 99.77377
+    },
+    {
+      "utc": "2025-02-14T00:00:00.000Z",
+      "illuminatedPercent": 97.98205
+    },
+    {
+      "utc": "2025-02-15T00:00:00.000Z",
+      "illuminatedPercent": 94.36525
+    },
+    {
+      "utc": "2025-02-16T00:00:00.000Z",
+      "illuminatedPercent": 89.14519
+    },
+    {
+      "utc": "2025-02-17T00:00:00.000Z",
+      "illuminatedPercent": 82.56475
+    },
+    {
+      "utc": "2025-02-18T00:00:00.000Z",
+      "illuminatedPercent": 74.87069
+    },
+    {
+      "utc": "2025-02-19T00:00:00.000Z",
+      "illuminatedPercent": 66.30586
+    },
+    {
+      "utc": "2025-02-20T00:00:00.000Z",
+      "illuminatedPercent": 57.11122
+    },
+    {
+      "utc": "2025-02-21T00:00:00.000Z",
+      "illuminatedPercent": 47.53677
+    },
+    {
+      "utc": "2025-02-22T00:00:00.000Z",
+      "illuminatedPercent": 37.85918
+    },
+    {
+      "utc": "2025-02-23T00:00:00.000Z",
+      "illuminatedPercent": 28.40256
+    },
+    {
+      "utc": "2025-02-24T00:00:00.000Z",
+      "illuminatedPercent": 19.55666
+    },
+    {
+      "utc": "2025-02-25T00:00:00.000Z",
+      "illuminatedPercent": 11.78338
+    },
+    {
+      "utc": "2025-02-26T00:00:00.000Z",
+      "illuminatedPercent": 5.60031
+    },
+    {
+      "utc": "2025-02-27T00:00:00.000Z",
+      "illuminatedPercent": 1.53105
+    },
+    {
+      "utc": "2025-02-28T00:00:00.000Z",
+      "illuminatedPercent": 0.02211
+    },
+    {
+      "utc": "2025-03-01T00:00:00.000Z",
+      "illuminatedPercent": 1.344
+    },
+    {
+      "utc": "2025-03-02T00:00:00.000Z",
+      "illuminatedPercent": 5.51196
+    },
+    {
+      "utc": "2025-03-03T00:00:00.000Z",
+      "illuminatedPercent": 12.26217
+    },
+    {
+      "utc": "2025-03-04T00:00:00.000Z",
+      "illuminatedPercent": 21.09633
+    },
+    {
+      "utc": "2025-03-05T00:00:00.000Z",
+      "illuminatedPercent": 31.37431
+    },
+    {
+      "utc": "2025-03-06T00:00:00.000Z",
+      "illuminatedPercent": 42.41594
+    },
+    {
+      "utc": "2025-03-07T00:00:00.000Z",
+      "illuminatedPercent": 53.57985
+    },
+    {
+      "utc": "2025-03-08T00:00:00.000Z",
+      "illuminatedPercent": 64.30726
+    },
+    {
+      "utc": "2025-03-09T00:00:00.000Z",
+      "illuminatedPercent": 74.13646
+    },
+    {
+      "utc": "2025-03-10T00:00:00.000Z",
+      "illuminatedPercent": 82.70075
+    },
+    {
+      "utc": "2025-03-11T00:00:00.000Z",
+      "illuminatedPercent": 89.72106
+    },
+    {
+      "utc": "2025-03-12T00:00:00.000Z",
+      "illuminatedPercent": 94.99948
+    },
+    {
+      "utc": "2025-03-13T00:00:00.000Z",
+      "illuminatedPercent": 98.41489
+    },
+    {
+      "utc": "2025-03-14T00:00:00.000Z",
+      "illuminatedPercent": 99.91924
+    },
+    {
+      "utc": "2025-03-15T00:00:00.000Z",
+      "illuminatedPercent": 99.53199
+    },
+    {
+      "utc": "2025-03-16T00:00:00.000Z",
+      "illuminatedPercent": 97.33118
+    },
+    {
+      "utc": "2025-03-17T00:00:00.000Z",
+      "illuminatedPercent": 93.44157
+    },
+    {
+      "utc": "2025-03-18T00:00:00.000Z",
+      "illuminatedPercent": 88.02151
+    },
+    {
+      "utc": "2025-03-19T00:00:00.000Z",
+      "illuminatedPercent": 81.25156
+    },
+    {
+      "utc": "2025-03-20T00:00:00.000Z",
+      "illuminatedPercent": 73.32772
+    },
+    {
+      "utc": "2025-03-21T00:00:00.000Z",
+      "illuminatedPercent": 64.46143
+    },
+    {
+      "utc": "2025-03-22T00:00:00.000Z",
+      "illuminatedPercent": 54.88777
+    },
+    {
+      "utc": "2025-03-23T00:00:00.000Z",
+      "illuminatedPercent": 44.88157
+    },
+    {
+      "utc": "2025-03-24T00:00:00.000Z",
+      "illuminatedPercent": 34.77937
+    },
+    {
+      "utc": "2025-03-25T00:00:00.000Z",
+      "illuminatedPercent": 25.00158
+    },
+    {
+      "utc": "2025-03-26T00:00:00.000Z",
+      "illuminatedPercent": 16.06438
+    },
+    {
+      "utc": "2025-03-27T00:00:00.000Z",
+      "illuminatedPercent": 8.5661
+    },
+    {
+      "utc": "2025-03-28T00:00:00.000Z",
+      "illuminatedPercent": 3.13241
+    },
+    {
+      "utc": "2025-03-29T00:00:00.000Z",
+      "illuminatedPercent": 0.31648
+    },
+    {
+      "utc": "2025-03-30T00:00:00.000Z",
+      "illuminatedPercent": 0.47513
+    },
+    {
+      "utc": "2025-03-31T00:00:00.000Z",
+      "illuminatedPercent": 3.66819
+    },
+    {
+      "utc": "2025-04-01T00:00:00.000Z",
+      "illuminatedPercent": 9.6307
+    },
+    {
+      "utc": "2025-04-02T00:00:00.000Z",
+      "illuminatedPercent": 17.83372
+    },
+    {
+      "utc": "2025-04-03T00:00:00.000Z",
+      "illuminatedPercent": 27.603
+    },
+    {
+      "utc": "2025-04-04T00:00:00.000Z",
+      "illuminatedPercent": 38.24181
+    },
+    {
+      "utc": "2025-04-05T00:00:00.000Z",
+      "illuminatedPercent": 49.11759
+    },
+    {
+      "utc": "2025-04-06T00:00:00.000Z",
+      "illuminatedPercent": 59.70166
+    },
+    {
+      "utc": "2025-04-07T00:00:00.000Z",
+      "illuminatedPercent": 69.57288
+    },
+    {
+      "utc": "2025-04-08T00:00:00.000Z",
+      "illuminatedPercent": 78.40298
+    },
+    {
+      "utc": "2025-04-09T00:00:00.000Z",
+      "illuminatedPercent": 85.93779
+    },
+    {
+      "utc": "2025-04-10T00:00:00.000Z",
+      "illuminatedPercent": 91.98222
+    },
+    {
+      "utc": "2025-04-11T00:00:00.000Z",
+      "illuminatedPercent": 96.39154
+    },
+    {
+      "utc": "2025-04-12T00:00:00.000Z",
+      "illuminatedPercent": 99.068
+    },
+    {
+      "utc": "2025-04-13T00:00:00.000Z",
+      "illuminatedPercent": 99.96032
+    },
+    {
+      "utc": "2025-04-14T00:00:00.000Z",
+      "illuminatedPercent": 99.06358
+    },
+    {
+      "utc": "2025-04-15T00:00:00.000Z",
+      "illuminatedPercent": 96.41755
+    },
+    {
+      "utc": "2025-04-16T00:00:00.000Z",
+      "illuminatedPercent": 92.10303
+    },
+    {
+      "utc": "2025-04-17T00:00:00.000Z",
+      "illuminatedPercent": 86.23728
+    },
+    {
+      "utc": "2025-04-18T00:00:00.000Z",
+      "illuminatedPercent": 78.97071
+    },
+    {
+      "utc": "2025-04-19T00:00:00.000Z",
+      "illuminatedPercent": 70.48728
+    },
+    {
+      "utc": "2025-04-20T00:00:00.000Z",
+      "illuminatedPercent": 61.01133
+    },
+    {
+      "utc": "2025-04-21T00:00:00.000Z",
+      "illuminatedPercent": 50.82174
+    },
+    {
+      "utc": "2025-04-22T00:00:00.000Z",
+      "illuminatedPercent": 40.27261
+    },
+    {
+      "utc": "2025-04-23T00:00:00.000Z",
+      "illuminatedPercent": 29.81496
+    },
+    {
+      "utc": "2025-04-24T00:00:00.000Z",
+      "illuminatedPercent": 20.00829
+    },
+    {
+      "utc": "2025-04-25T00:00:00.000Z",
+      "illuminatedPercent": 11.50493
+    },
+    {
+      "utc": "2025-04-26T00:00:00.000Z",
+      "illuminatedPercent": 4.9899
+    },
+    {
+      "utc": "2025-04-27T00:00:00.000Z",
+      "illuminatedPercent": 1.07226
+    },
+    {
+      "utc": "2025-04-28T00:00:00.000Z",
+      "illuminatedPercent": 0.15271
+    },
+    {
+      "utc": "2025-04-29T00:00:00.000Z",
+      "illuminatedPercent": 2.31986
+    },
+    {
+      "utc": "2025-04-30T00:00:00.000Z",
+      "illuminatedPercent": 7.327
+    },
+    {
+      "utc": "2025-05-01T00:00:00.000Z",
+      "illuminatedPercent": 14.6619
+    },
+    {
+      "utc": "2025-05-02T00:00:00.000Z",
+      "illuminatedPercent": 23.67243
+    },
+    {
+      "utc": "2025-05-03T00:00:00.000Z",
+      "illuminatedPercent": 33.69093
+    },
+    {
+      "utc": "2025-05-04T00:00:00.000Z",
+      "illuminatedPercent": 44.1181
+    },
+    {
+      "utc": "2025-05-05T00:00:00.000Z",
+      "illuminatedPercent": 54.45801
+    },
+    {
+      "utc": "2025-05-06T00:00:00.000Z",
+      "illuminatedPercent": 64.31708
+    },
+    {
+      "utc": "2025-05-07T00:00:00.000Z",
+      "illuminatedPercent": 73.38523
+    },
+    {
+      "utc": "2025-05-08T00:00:00.000Z",
+      "illuminatedPercent": 81.41321
+    },
+    {
+      "utc": "2025-05-09T00:00:00.000Z",
+      "illuminatedPercent": 88.19421
+    },
+    {
+      "utc": "2025-05-10T00:00:00.000Z",
+      "illuminatedPercent": 93.55289
+    },
+    {
+      "utc": "2025-05-11T00:00:00.000Z",
+      "illuminatedPercent": 97.34175
+    },
+    {
+      "utc": "2025-05-12T00:00:00.000Z",
+      "illuminatedPercent": 99.44329
+    },
+    {
+      "utc": "2025-05-13T00:00:00.000Z",
+      "illuminatedPercent": 99.77549
+    },
+    {
+      "utc": "2025-05-14T00:00:00.000Z",
+      "illuminatedPercent": 98.29818
+    },
+    {
+      "utc": "2025-05-15T00:00:00.000Z",
+      "illuminatedPercent": 95.01823
+    },
+    {
+      "utc": "2025-05-16T00:00:00.000Z",
+      "illuminatedPercent": 89.99293
+    },
+    {
+      "utc": "2025-05-17T00:00:00.000Z",
+      "illuminatedPercent": 83.33217
+    },
+    {
+      "utc": "2025-05-18T00:00:00.000Z",
+      "illuminatedPercent": 75.20134
+    },
+    {
+      "utc": "2025-05-19T00:00:00.000Z",
+      "illuminatedPercent": 65.82751
+    },
+    {
+      "utc": "2025-05-20T00:00:00.000Z",
+      "illuminatedPercent": 55.51053
+    },
+    {
+      "utc": "2025-05-21T00:00:00.000Z",
+      "illuminatedPercent": 44.63854
+    },
+    {
+      "utc": "2025-05-22T00:00:00.000Z",
+      "illuminatedPercent": 33.70273
+    },
+    {
+      "utc": "2025-05-23T00:00:00.000Z",
+      "illuminatedPercent": 23.30038
+    },
+    {
+      "utc": "2025-05-24T00:00:00.000Z",
+      "illuminatedPercent": 14.11056
+    },
+    {
+      "utc": "2025-05-25T00:00:00.000Z",
+      "illuminatedPercent": 6.82827
+    },
+    {
+      "utc": "2025-05-26T00:00:00.000Z",
+      "illuminatedPercent": 2.05816
+    },
+    {
+      "utc": "2025-05-27T00:00:00.000Z",
+      "illuminatedPercent": 0.19442
+    },
+    {
+      "utc": "2025-05-28T00:00:00.000Z",
+      "illuminatedPercent": 1.33448
+    },
+    {
+      "utc": "2025-05-29T00:00:00.000Z",
+      "illuminatedPercent": 5.26764
+    },
+    {
+      "utc": "2025-05-30T00:00:00.000Z",
+      "illuminatedPercent": 11.54304
+    },
+    {
+      "utc": "2025-05-31T00:00:00.000Z",
+      "illuminatedPercent": 19.58205
+    },
+    {
+      "utc": "2025-06-01T00:00:00.000Z",
+      "illuminatedPercent": 28.78701
+    },
+    {
+      "utc": "2025-06-02T00:00:00.000Z",
+      "illuminatedPercent": 38.61454
+    },
+    {
+      "utc": "2025-06-03T00:00:00.000Z",
+      "illuminatedPercent": 48.60704
+    },
+    {
+      "utc": "2025-06-04T00:00:00.000Z",
+      "illuminatedPercent": 58.39242
+    },
+    {
+      "utc": "2025-06-05T00:00:00.000Z",
+      "illuminatedPercent": 67.66721
+    },
+    {
+      "utc": "2025-06-06T00:00:00.000Z",
+      "illuminatedPercent": 76.17479
+    },
+    {
+      "utc": "2025-06-07T00:00:00.000Z",
+      "illuminatedPercent": 83.68656
+    },
+    {
+      "utc": "2025-06-08T00:00:00.000Z",
+      "illuminatedPercent": 89.98958
+    },
+    {
+      "utc": "2025-06-09T00:00:00.000Z",
+      "illuminatedPercent": 94.88223
+    },
+    {
+      "utc": "2025-06-10T00:00:00.000Z",
+      "illuminatedPercent": 98.17758
+    },
+    {
+      "utc": "2025-06-11T00:00:00.000Z",
+      "illuminatedPercent": 99.71323
+    },
+    {
+      "utc": "2025-06-12T00:00:00.000Z",
+      "illuminatedPercent": 99.36539
+    },
+    {
+      "utc": "2025-06-13T00:00:00.000Z",
+      "illuminatedPercent": 97.06412
+    },
+    {
+      "utc": "2025-06-14T00:00:00.000Z",
+      "illuminatedPercent": 92.80711
+    },
+    {
+      "utc": "2025-06-15T00:00:00.000Z",
+      "illuminatedPercent": 86.67022
+    },
+    {
+      "utc": "2025-06-16T00:00:00.000Z",
+      "illuminatedPercent": 78.81454
+    },
+    {
+      "utc": "2025-06-17T00:00:00.000Z",
+      "illuminatedPercent": 69.49133
+    },
+    {
+      "utc": "2025-06-18T00:00:00.000Z",
+      "illuminatedPercent": 59.04651
+    },
+    {
+      "utc": "2025-06-19T00:00:00.000Z",
+      "illuminatedPercent": 47.92443
+    },
+    {
+      "utc": "2025-06-20T00:00:00.000Z",
+      "illuminatedPercent": 36.6674
+    },
+    {
+      "utc": "2025-06-21T00:00:00.000Z",
+      "illuminatedPercent": 25.90259
+    },
+    {
+      "utc": "2025-06-22T00:00:00.000Z",
+      "illuminatedPercent": 16.30551
+    },
+    {
+      "utc": "2025-06-23T00:00:00.000Z",
+      "illuminatedPercent": 8.53364
+    },
+    {
+      "utc": "2025-06-24T00:00:00.000Z",
+      "illuminatedPercent": 3.13603
+    },
+    {
+      "utc": "2025-06-25T00:00:00.000Z",
+      "illuminatedPercent": 0.4627
+    },
+    {
+      "utc": "2025-06-26T00:00:00.000Z",
+      "illuminatedPercent": 0.60756
+    },
+    {
+      "utc": "2025-06-27T00:00:00.000Z",
+      "illuminatedPercent": 3.40894
+    },
+    {
+      "utc": "2025-06-28T00:00:00.000Z",
+      "illuminatedPercent": 8.50619
+    },
+    {
+      "utc": "2025-06-29T00:00:00.000Z",
+      "illuminatedPercent": 15.42649
+    },
+    {
+      "utc": "2025-06-30T00:00:00.000Z",
+      "illuminatedPercent": 23.66892
+    },
+    {
+      "utc": "2025-07-01T00:00:00.000Z",
+      "illuminatedPercent": 32.76356
+    },
+    {
+      "utc": "2025-07-02T00:00:00.000Z",
+      "illuminatedPercent": 42.29971
+    },
+    {
+      "utc": "2025-07-03T00:00:00.000Z",
+      "illuminatedPercent": 51.92902
+    },
+    {
+      "utc": "2025-07-04T00:00:00.000Z",
+      "illuminatedPercent": 61.35323
+    },
+    {
+      "utc": "2025-07-05T00:00:00.000Z",
+      "illuminatedPercent": 70.30565
+    },
+    {
+      "utc": "2025-07-06T00:00:00.000Z",
+      "illuminatedPercent": 78.5329
+    },
+    {
+      "utc": "2025-07-07T00:00:00.000Z",
+      "illuminatedPercent": 85.78132
+    },
+    {
+      "utc": "2025-07-08T00:00:00.000Z",
+      "illuminatedPercent": 91.7909
+    },
+    {
+      "utc": "2025-07-09T00:00:00.000Z",
+      "illuminatedPercent": 96.29877
+    },
+    {
+      "utc": "2025-07-10T00:00:00.000Z",
+      "illuminatedPercent": 99.05289
+    },
+    {
+      "utc": "2025-07-11T00:00:00.000Z",
+      "illuminatedPercent": 99.83487
+    },
+    {
+      "utc": "2025-07-12T00:00:00.000Z",
+      "illuminatedPercent": 98.48856
+    },
+    {
+      "utc": "2025-07-13T00:00:00.000Z",
+      "illuminatedPercent": 94.94884
+    },
+    {
+      "utc": "2025-07-14T00:00:00.000Z",
+      "illuminatedPercent": 89.26455
+    },
+    {
+      "utc": "2025-07-15T00:00:00.000Z",
+      "illuminatedPercent": 81.6109
+    },
+    {
+      "utc": "2025-07-16T00:00:00.000Z",
+      "illuminatedPercent": 72.28991
+    },
+    {
+      "utc": "2025-07-17T00:00:00.000Z",
+      "illuminatedPercent": 61.72064
+    },
+    {
+      "utc": "2025-07-18T00:00:00.000Z",
+      "illuminatedPercent": 50.42188
+    },
+    {
+      "utc": "2025-07-19T00:00:00.000Z",
+      "illuminatedPercent": 38.9884
+    },
+    {
+      "utc": "2025-07-20T00:00:00.000Z",
+      "illuminatedPercent": 28.05904
+    },
+    {
+      "utc": "2025-07-21T00:00:00.000Z",
+      "illuminatedPercent": 18.273
+    },
+    {
+      "utc": "2025-07-22T00:00:00.000Z",
+      "illuminatedPercent": 10.21356
+    },
+    {
+      "utc": "2025-07-23T00:00:00.000Z",
+      "illuminatedPercent": 4.34555
+    },
+    {
+      "utc": "2025-07-24T00:00:00.000Z",
+      "illuminatedPercent": 0.96076
+    },
+    {
+      "utc": "2025-07-25T00:00:00.000Z",
+      "illuminatedPercent": 0.14885
+    },
+    {
+      "utc": "2025-07-26T00:00:00.000Z",
+      "illuminatedPercent": 1.8044
+    },
+    {
+      "utc": "2025-07-27T00:00:00.000Z",
+      "illuminatedPercent": 5.66721
+    },
+    {
+      "utc": "2025-07-28T00:00:00.000Z",
+      "illuminatedPercent": 11.38127
+    },
+    {
+      "utc": "2025-07-29T00:00:00.000Z",
+      "illuminatedPercent": 18.5533
+    },
+    {
+      "utc": "2025-07-30T00:00:00.000Z",
+      "illuminatedPercent": 26.79716
+    },
+    {
+      "utc": "2025-07-31T00:00:00.000Z",
+      "illuminatedPercent": 35.75835
+    },
+    {
+      "utc": "2025-08-01T00:00:00.000Z",
+      "illuminatedPercent": 45.1201
+    },
+    {
+      "utc": "2025-08-02T00:00:00.000Z",
+      "illuminatedPercent": 54.59602
+    },
+    {
+      "utc": "2025-08-03T00:00:00.000Z",
+      "illuminatedPercent": 63.91503
+    },
+    {
+      "utc": "2025-08-04T00:00:00.000Z",
+      "illuminatedPercent": 72.80381
+    },
+    {
+      "utc": "2025-08-05T00:00:00.000Z",
+      "illuminatedPercent": 80.97112
+    },
+    {
+      "utc": "2025-08-06T00:00:00.000Z",
+      "illuminatedPercent": 88.09872
+    },
+    {
+      "utc": "2025-08-07T00:00:00.000Z",
+      "illuminatedPercent": 93.8432
+    },
+    {
+      "utc": "2025-08-08T00:00:00.000Z",
+      "illuminatedPercent": 97.85267
+    },
+    {
+      "utc": "2025-08-09T00:00:00.000Z",
+      "illuminatedPercent": 99.80011
+    },
+    {
+      "utc": "2025-08-10T00:00:00.000Z",
+      "illuminatedPercent": 99.42987
+    },
+    {
+      "utc": "2025-08-11T00:00:00.000Z",
+      "illuminatedPercent": 96.60807
+    },
+    {
+      "utc": "2025-08-12T00:00:00.000Z",
+      "illuminatedPercent": 91.36303
+    },
+    {
+      "utc": "2025-08-13T00:00:00.000Z",
+      "illuminatedPercent": 83.90278
+    },
+    {
+      "utc": "2025-08-14T00:00:00.000Z",
+      "illuminatedPercent": 74.60414
+    },
+    {
+      "utc": "2025-08-15T00:00:00.000Z",
+      "illuminatedPercent": 63.97768
+    },
+    {
+      "utc": "2025-08-16T00:00:00.000Z",
+      "illuminatedPercent": 52.6198
+    },
+    {
+      "utc": "2025-08-17T00:00:00.000Z",
+      "illuminatedPercent": 41.16314
+    },
+    {
+      "utc": "2025-08-18T00:00:00.000Z",
+      "illuminatedPercent": 30.23168
+    },
+    {
+      "utc": "2025-08-19T00:00:00.000Z",
+      "illuminatedPercent": 20.40137
+    },
+    {
+      "utc": "2025-08-20T00:00:00.000Z",
+      "illuminatedPercent": 12.16482
+    },
+    {
+      "utc": "2025-08-21T00:00:00.000Z",
+      "illuminatedPercent": 5.90011
+    },
+    {
+      "utc": "2025-08-22T00:00:00.000Z",
+      "illuminatedPercent": 1.84755
+    },
+    {
+      "utc": "2025-08-23T00:00:00.000Z",
+      "illuminatedPercent": 0.09984
+    },
+    {
+      "utc": "2025-08-24T00:00:00.000Z",
+      "illuminatedPercent": 0.60969
+    },
+    {
+      "utc": "2025-08-25T00:00:00.000Z",
+      "illuminatedPercent": 3.21423
+    },
+    {
+      "utc": "2025-08-26T00:00:00.000Z",
+      "illuminatedPercent": 7.6701
+    },
+    {
+      "utc": "2025-08-27T00:00:00.000Z",
+      "illuminatedPercent": 13.69051
+    },
+    {
+      "utc": "2025-08-28T00:00:00.000Z",
+      "illuminatedPercent": 20.97625
+    },
+    {
+      "utc": "2025-08-29T00:00:00.000Z",
+      "illuminatedPercent": 29.23573
+    },
+    {
+      "utc": "2025-08-30T00:00:00.000Z",
+      "illuminatedPercent": 38.19258
+    },
+    {
+      "utc": "2025-08-31T00:00:00.000Z",
+      "illuminatedPercent": 47.58213
+    },
+    {
+      "utc": "2025-09-01T00:00:00.000Z",
+      "illuminatedPercent": 57.13921
+    },
+    {
+      "utc": "2025-09-02T00:00:00.000Z",
+      "illuminatedPercent": 66.5809
+    },
+    {
+      "utc": "2025-09-03T00:00:00.000Z",
+      "illuminatedPercent": 75.58812
+    },
+    {
+      "utc": "2025-09-04T00:00:00.000Z",
+      "illuminatedPercent": 83.79172
+    },
+    {
+      "utc": "2025-09-05T00:00:00.000Z",
+      "illuminatedPercent": 90.77036
+    },
+    {
+      "utc": "2025-09-06T00:00:00.000Z",
+      "illuminatedPercent": 96.06858
+    },
+    {
+      "utc": "2025-09-07T00:00:00.000Z",
+      "illuminatedPercent": 99.24094
+    },
+    {
+      "utc": "2025-09-08T00:00:00.000Z",
+      "illuminatedPercent": 99.92079
+    },
+    {
+      "utc": "2025-09-09T00:00:00.000Z",
+      "illuminatedPercent": 97.89863
+    },
+    {
+      "utc": "2025-09-10T00:00:00.000Z",
+      "illuminatedPercent": 93.18458
+    },
+    {
+      "utc": "2025-09-11T00:00:00.000Z",
+      "illuminatedPercent": 86.02905
+    },
+    {
+      "utc": "2025-09-12T00:00:00.000Z",
+      "illuminatedPercent": 76.89184
+    },
+    {
+      "utc": "2025-09-13T00:00:00.000Z",
+      "illuminatedPercent": 66.37242
+    },
+    {
+      "utc": "2025-09-14T00:00:00.000Z",
+      "illuminatedPercent": 55.12794
+    },
+    {
+      "utc": "2025-09-15T00:00:00.000Z",
+      "illuminatedPercent": 43.8034
+    },
+    {
+      "utc": "2025-09-16T00:00:00.000Z",
+      "illuminatedPercent": 32.9851
+    },
+    {
+      "utc": "2025-09-17T00:00:00.000Z",
+      "illuminatedPercent": 23.17583
+    },
+    {
+      "utc": "2025-09-18T00:00:00.000Z",
+      "illuminatedPercent": 14.78369
+    },
+    {
+      "utc": "2025-09-19T00:00:00.000Z",
+      "illuminatedPercent": 8.11724
+    },
+    {
+      "utc": "2025-09-20T00:00:00.000Z",
+      "illuminatedPercent": 3.38331
+    },
+    {
+      "utc": "2025-09-21T00:00:00.000Z",
+      "illuminatedPercent": 0.68748
+    },
+    {
+      "utc": "2025-09-22T00:00:00.000Z",
+      "illuminatedPercent": 0.03945
+    },
+    {
+      "utc": "2025-09-23T00:00:00.000Z",
+      "illuminatedPercent": 1.36467
+    },
+    {
+      "utc": "2025-09-24T00:00:00.000Z",
+      "illuminatedPercent": 4.52176
+    },
+    {
+      "utc": "2025-09-25T00:00:00.000Z",
+      "illuminatedPercent": 9.32297
+    },
+    {
+      "utc": "2025-09-26T00:00:00.000Z",
+      "illuminatedPercent": 15.55387
+    },
+    {
+      "utc": "2025-09-27T00:00:00.000Z",
+      "illuminatedPercent": 22.98829
+    },
+    {
+      "utc": "2025-09-28T00:00:00.000Z",
+      "illuminatedPercent": 31.39598
+    },
+    {
+      "utc": "2025-09-29T00:00:00.000Z",
+      "illuminatedPercent": 40.54157
+    },
+    {
+      "utc": "2025-09-30T00:00:00.000Z",
+      "illuminatedPercent": 50.17486
+    },
+    {
+      "utc": "2025-10-01T00:00:00.000Z",
+      "illuminatedPercent": 60.01397
+    },
+    {
+      "utc": "2025-10-02T00:00:00.000Z",
+      "illuminatedPercent": 69.72428
+    },
+    {
+      "utc": "2025-10-03T00:00:00.000Z",
+      "illuminatedPercent": 78.89919
+    },
+    {
+      "utc": "2025-10-04T00:00:00.000Z",
+      "illuminatedPercent": 87.05236
+    },
+    {
+      "utc": "2025-10-05T00:00:00.000Z",
+      "illuminatedPercent": 93.63447
+    },
+    {
+      "utc": "2025-10-06T00:00:00.000Z",
+      "illuminatedPercent": 98.08644
+    },
+    {
+      "utc": "2025-10-07T00:00:00.000Z",
+      "illuminatedPercent": 99.93013
+    },
+    {
+      "utc": "2025-10-08T00:00:00.000Z",
+      "illuminatedPercent": 98.87646
+    },
+    {
+      "utc": "2025-10-09T00:00:00.000Z",
+      "illuminatedPercent": 94.91054
+    },
+    {
+      "utc": "2025-10-10T00:00:00.000Z",
+      "illuminatedPercent": 88.31323
+    },
+    {
+      "utc": "2025-10-11T00:00:00.000Z",
+      "illuminatedPercent": 79.60677
+    },
+    {
+      "utc": "2025-10-12T00:00:00.000Z",
+      "illuminatedPercent": 69.45027
+    },
+    {
+      "utc": "2025-10-13T00:00:00.000Z",
+      "illuminatedPercent": 58.53015
+    },
+    {
+      "utc": "2025-10-14T00:00:00.000Z",
+      "illuminatedPercent": 47.48
+    },
+    {
+      "utc": "2025-10-15T00:00:00.000Z",
+      "illuminatedPercent": 36.84056
+    },
+    {
+      "utc": "2025-10-16T00:00:00.000Z",
+      "illuminatedPercent": 27.05123
+    },
+    {
+      "utc": "2025-10-17T00:00:00.000Z",
+      "illuminatedPercent": 18.45813
+    },
+    {
+      "utc": "2025-10-18T00:00:00.000Z",
+      "illuminatedPercent": 11.32637
+    },
+    {
+      "utc": "2025-10-19T00:00:00.000Z",
+      "illuminatedPercent": 5.84973
+    },
+    {
+      "utc": "2025-10-20T00:00:00.000Z",
+      "illuminatedPercent": 2.15626
+    },
+    {
+      "utc": "2025-10-21T00:00:00.000Z",
+      "illuminatedPercent": 0.31114
+    },
+    {
+      "utc": "2025-10-22T00:00:00.000Z",
+      "illuminatedPercent": 0.31968
+    },
+    {
+      "utc": "2025-10-23T00:00:00.000Z",
+      "illuminatedPercent": 2.13237
+    },
+    {
+      "utc": "2025-10-24T00:00:00.000Z",
+      "illuminatedPercent": 5.65278
+    },
+    {
+      "utc": "2025-10-25T00:00:00.000Z",
+      "illuminatedPercent": 10.74734
+    },
+    {
+      "utc": "2025-10-26T00:00:00.000Z",
+      "illuminatedPercent": 17.25468
+    },
+    {
+      "utc": "2025-10-27T00:00:00.000Z",
+      "illuminatedPercent": 24.99179
+    },
+    {
+      "utc": "2025-10-28T00:00:00.000Z",
+      "illuminatedPercent": 33.75431
+    },
+    {
+      "utc": "2025-10-29T00:00:00.000Z",
+      "illuminatedPercent": 43.30923
+    },
+    {
+      "utc": "2025-10-30T00:00:00.000Z",
+      "illuminatedPercent": 53.37944
+    },
+    {
+      "utc": "2025-10-31T00:00:00.000Z",
+      "illuminatedPercent": 63.62197
+    },
+    {
+      "utc": "2025-11-01T00:00:00.000Z",
+      "illuminatedPercent": 73.60549
+    },
+    {
+      "utc": "2025-11-02T00:00:00.000Z",
+      "illuminatedPercent": 82.79806
+    },
+    {
+      "utc": "2025-11-03T00:00:00.000Z",
+      "illuminatedPercent": 90.58177
+    },
+    {
+      "utc": "2025-11-04T00:00:00.000Z",
+      "illuminatedPercent": 96.31074
+    },
+    {
+      "utc": "2025-11-05T00:00:00.000Z",
+      "illuminatedPercent": 99.4166
+    },
+    {
+      "utc": "2025-11-06T00:00:00.000Z",
+      "illuminatedPercent": 99.53738
+    },
+    {
+      "utc": "2025-11-07T00:00:00.000Z",
+      "illuminatedPercent": 96.61852
+    },
+    {
+      "utc": "2025-11-08T00:00:00.000Z",
+      "illuminatedPercent": 90.93473
+    },
+    {
+      "utc": "2025-11-09T00:00:00.000Z",
+      "illuminatedPercent": 83.0199
+    },
+    {
+      "utc": "2025-11-10T00:00:00.000Z",
+      "illuminatedPercent": 73.54191
+    },
+    {
+      "utc": "2025-11-11T00:00:00.000Z",
+      "illuminatedPercent": 63.17932
+    },
+    {
+      "utc": "2025-11-12T00:00:00.000Z",
+      "illuminatedPercent": 52.53894
+    },
+    {
+      "utc": "2025-11-13T00:00:00.000Z",
+      "illuminatedPercent": 42.12216
+    },
+    {
+      "utc": "2025-11-14T00:00:00.000Z",
+      "illuminatedPercent": 32.32645
+    },
+    {
+      "utc": "2025-11-15T00:00:00.000Z",
+      "illuminatedPercent": 23.46376
+    },
+    {
+      "utc": "2025-11-16T00:00:00.000Z",
+      "illuminatedPercent": 15.78144
+    },
+    {
+      "utc": "2025-11-17T00:00:00.000Z",
+      "illuminatedPercent": 9.47825
+    },
+    {
+      "utc": "2025-11-18T00:00:00.000Z",
+      "illuminatedPercent": 4.71299
+    },
+    {
+      "utc": "2025-11-19T00:00:00.000Z",
+      "illuminatedPercent": 1.60653
+    },
+    {
+      "utc": "2025-11-20T00:00:00.000Z",
+      "illuminatedPercent": 0.2397
+    },
+    {
+      "utc": "2025-11-21T00:00:00.000Z",
+      "illuminatedPercent": 0.64986
+    },
+    {
+      "utc": "2025-11-22T00:00:00.000Z",
+      "illuminatedPercent": 2.82874
+    },
+    {
+      "utc": "2025-11-23T00:00:00.000Z",
+      "illuminatedPercent": 6.7226
+    },
+    {
+      "utc": "2025-11-24T00:00:00.000Z",
+      "illuminatedPercent": 12.2345
+    },
+    {
+      "utc": "2025-11-25T00:00:00.000Z",
+      "illuminatedPercent": 19.22697
+    },
+    {
+      "utc": "2025-11-26T00:00:00.000Z",
+      "illuminatedPercent": 27.52216
+    },
+    {
+      "utc": "2025-11-27T00:00:00.000Z",
+      "illuminatedPercent": 36.89679
+    },
+    {
+      "utc": "2025-11-28T00:00:00.000Z",
+      "illuminatedPercent": 47.07007
+    },
+    {
+      "utc": "2025-11-29T00:00:00.000Z",
+      "illuminatedPercent": 57.68498
+    },
+    {
+      "utc": "2025-11-30T00:00:00.000Z",
+      "illuminatedPercent": 68.28794
+    },
+    {
+      "utc": "2025-12-01T00:00:00.000Z",
+      "illuminatedPercent": 78.31783
+    },
+    {
+      "utc": "2025-12-02T00:00:00.000Z",
+      "illuminatedPercent": 87.12134
+    },
+    {
+      "utc": "2025-12-03T00:00:00.000Z",
+      "illuminatedPercent": 94.01212
+    },
+    {
+      "utc": "2025-12-04T00:00:00.000Z",
+      "illuminatedPercent": 98.37766
+    },
+    {
+      "utc": "2025-12-05T00:00:00.000Z",
+      "illuminatedPercent": 99.80941
+    },
+    {
+      "utc": "2025-12-06T00:00:00.000Z",
+      "illuminatedPercent": 98.20393
+    },
+    {
+      "utc": "2025-12-07T00:00:00.000Z",
+      "illuminatedPercent": 93.78459
+    },
+    {
+      "utc": "2025-12-08T00:00:00.000Z",
+      "illuminatedPercent": 87.03246
+    },
+    {
+      "utc": "2025-12-09T00:00:00.000Z",
+      "illuminatedPercent": 78.56395
+    },
+    {
+      "utc": "2025-12-10T00:00:00.000Z",
+      "illuminatedPercent": 69.01072
+    },
+    {
+      "utc": "2025-12-11T00:00:00.000Z",
+      "illuminatedPercent": 58.93982
+    },
+    {
+      "utc": "2025-12-12T00:00:00.000Z",
+      "illuminatedPercent": 48.82126
+    },
+    {
+      "utc": "2025-12-13T00:00:00.000Z",
+      "illuminatedPercent": 39.0304
+    },
+    {
+      "utc": "2025-12-14T00:00:00.000Z",
+      "illuminatedPercent": 29.86768
+    },
+    {
+      "utc": "2025-12-15T00:00:00.000Z",
+      "illuminatedPercent": 21.58203
+    },
+    {
+      "utc": "2025-12-16T00:00:00.000Z",
+      "illuminatedPercent": 14.39009
+    },
+    {
+      "utc": "2025-12-17T00:00:00.000Z",
+      "illuminatedPercent": 8.48767
+    },
+    {
+      "utc": "2025-12-18T00:00:00.000Z",
+      "illuminatedPercent": 4.05299
+    },
+    {
+      "utc": "2025-12-19T00:00:00.000Z",
+      "illuminatedPercent": 1.24262
+    },
+    {
+      "utc": "2025-12-20T00:00:00.000Z",
+      "illuminatedPercent": 0.18247
+    },
+    {
+      "utc": "2025-12-21T00:00:00.000Z",
+      "illuminatedPercent": 0.95656
+    },
+    {
+      "utc": "2025-12-22T00:00:00.000Z",
+      "illuminatedPercent": 3.59655
+    },
+    {
+      "utc": "2025-12-23T00:00:00.000Z",
+      "illuminatedPercent": 8.07405
+    },
+    {
+      "utc": "2025-12-24T00:00:00.000Z",
+      "illuminatedPercent": 14.2962
+    },
+    {
+      "utc": "2025-12-25T00:00:00.000Z",
+      "illuminatedPercent": 22.10331
+    },
+    {
+      "utc": "2025-12-26T00:00:00.000Z",
+      "illuminatedPercent": 31.26581
+    },
+    {
+      "utc": "2025-12-27T00:00:00.000Z",
+      "illuminatedPercent": 41.4782
+    },
+    {
+      "utc": "2025-12-28T00:00:00.000Z",
+      "illuminatedPercent": 52.34925
+    },
+    {
+      "utc": "2025-12-29T00:00:00.000Z",
+      "illuminatedPercent": 63.39202
+    },
+    {
+      "utc": "2025-12-30T00:00:00.000Z",
+      "illuminatedPercent": 74.02292
+    },
+    {
+      "utc": "2025-12-31T00:00:00.000Z",
+      "illuminatedPercent": 83.58361
+    },
+    {
+      "utc": "2026-01-01T00:00:00.000Z",
+      "illuminatedPercent": 91.39877
+    },
+    {
+      "utc": "2026-01-01T00:00:00.000Z",
+      "illuminatedPercent": 91.39877
+    },
+    {
+      "utc": "2026-01-02T00:00:00.000Z",
+      "illuminatedPercent": 96.87032
+    },
+    {
+      "utc": "2026-01-03T00:00:00.000Z",
+      "illuminatedPercent": 99.58655
+    },
+    {
+      "utc": "2026-01-04T00:00:00.000Z",
+      "illuminatedPercent": 99.40485
+    },
+    {
+      "utc": "2026-01-05T00:00:00.000Z",
+      "illuminatedPercent": 96.47002
+    },
+    {
+      "utc": "2026-01-06T00:00:00.000Z",
+      "illuminatedPercent": 91.16014
+    },
+    {
+      "utc": "2026-01-07T00:00:00.000Z",
+      "illuminatedPercent": 83.98775
+    },
+    {
+      "utc": "2026-01-08T00:00:00.000Z",
+      "illuminatedPercent": 75.49901
+    },
+    {
+      "utc": "2026-01-09T00:00:00.000Z",
+      "illuminatedPercent": 66.20174
+    },
+    {
+      "utc": "2026-01-10T00:00:00.000Z",
+      "illuminatedPercent": 56.5314
+    },
+    {
+      "utc": "2026-01-11T00:00:00.000Z",
+      "illuminatedPercent": 46.8479
+    },
+    {
+      "utc": "2026-01-12T00:00:00.000Z",
+      "illuminatedPercent": 37.45026
+    },
+    {
+      "utc": "2026-01-13T00:00:00.000Z",
+      "illuminatedPercent": 28.59788
+    },
+    {
+      "utc": "2026-01-14T00:00:00.000Z",
+      "illuminatedPercent": 20.53065
+    },
+    {
+      "utc": "2026-01-15T00:00:00.000Z",
+      "illuminatedPercent": 13.4834
+    },
+    {
+      "utc": "2026-01-16T00:00:00.000Z",
+      "illuminatedPercent": 7.69222
+    },
+    {
+      "utc": "2026-01-17T00:00:00.000Z",
+      "illuminatedPercent": 3.39145
+    },
+    {
+      "utc": "2026-01-18T00:00:00.000Z",
+      "illuminatedPercent": 0.80151
+    },
+    {
+      "utc": "2026-01-19T00:00:00.000Z",
+      "illuminatedPercent": 0.10942
+    },
+    {
+      "utc": "2026-01-20T00:00:00.000Z",
+      "illuminatedPercent": 1.44537
+    },
+    {
+      "utc": "2026-01-21T00:00:00.000Z",
+      "illuminatedPercent": 4.86036
+    },
+    {
+      "utc": "2026-01-22T00:00:00.000Z",
+      "illuminatedPercent": 10.30911
+    },
+    {
+      "utc": "2026-01-23T00:00:00.000Z",
+      "illuminatedPercent": 17.64122
+    },
+    {
+      "utc": "2026-01-24T00:00:00.000Z",
+      "illuminatedPercent": 26.60013
+    },
+    {
+      "utc": "2026-01-25T00:00:00.000Z",
+      "illuminatedPercent": 36.82751
+    },
+    {
+      "utc": "2026-01-26T00:00:00.000Z",
+      "illuminatedPercent": 47.87048
+    },
+    {
+      "utc": "2026-01-27T00:00:00.000Z",
+      "illuminatedPercent": 59.19179
+    },
+    {
+      "utc": "2026-01-28T00:00:00.000Z",
+      "illuminatedPercent": 70.18699
+    },
+    {
+      "utc": "2026-01-29T00:00:00.000Z",
+      "illuminatedPercent": 80.21626
+    },
+    {
+      "utc": "2026-01-30T00:00:00.000Z",
+      "illuminatedPercent": 88.65669
+    },
+    {
+      "utc": "2026-01-31T00:00:00.000Z",
+      "illuminatedPercent": 94.97307
+    },
+    {
+      "utc": "2026-02-01T00:00:00.000Z",
+      "illuminatedPercent": 98.79209
+    },
+    {
+      "utc": "2026-02-02T00:00:00.000Z",
+      "illuminatedPercent": 99.95555
+    },
+    {
+      "utc": "2026-02-03T00:00:00.000Z",
+      "illuminatedPercent": 98.53135
+    },
+    {
+      "utc": "2026-02-04T00:00:00.000Z",
+      "illuminatedPercent": 94.77773
+    },
+    {
+      "utc": "2026-02-05T00:00:00.000Z",
+      "illuminatedPercent": 89.07634
+    },
+    {
+      "utc": "2026-02-06T00:00:00.000Z",
+      "illuminatedPercent": 81.85943
+    },
+    {
+      "utc": "2026-02-07T00:00:00.000Z",
+      "illuminatedPercent": 73.55217
+    },
+    {
+      "utc": "2026-02-08T00:00:00.000Z",
+      "illuminatedPercent": 64.53965
+    },
+    {
+      "utc": "2026-02-09T00:00:00.000Z",
+      "illuminatedPercent": 55.15727
+    },
+    {
+      "utc": "2026-02-10T00:00:00.000Z",
+      "illuminatedPercent": 45.69786
+    },
+    {
+      "utc": "2026-02-11T00:00:00.000Z",
+      "illuminatedPercent": 36.42798
+    },
+    {
+      "utc": "2026-02-12T00:00:00.000Z",
+      "illuminatedPercent": 27.60703
+    },
+    {
+      "utc": "2026-02-13T00:00:00.000Z",
+      "illuminatedPercent": 19.50419
+    },
+    {
+      "utc": "2026-02-14T00:00:00.000Z",
+      "illuminatedPercent": 12.40916
+    },
+    {
+      "utc": "2026-02-15T00:00:00.000Z",
+      "illuminatedPercent": 6.63284
+    },
+    {
+      "utc": "2026-02-16T00:00:00.000Z",
+      "illuminatedPercent": 2.495
+    },
+    {
+      "utc": "2026-02-17T00:00:00.000Z",
+      "illuminatedPercent": 0.29756
+    },
+    {
+      "utc": "2026-02-18T00:00:00.000Z",
+      "illuminatedPercent": 0.28604
+    },
+    {
+      "utc": "2026-02-19T00:00:00.000Z",
+      "illuminatedPercent": 2.6064
+    },
+    {
+      "utc": "2026-02-20T00:00:00.000Z",
+      "illuminatedPercent": 7.26797
+    },
+    {
+      "utc": "2026-02-21T00:00:00.000Z",
+      "illuminatedPercent": 14.12305
+    },
+    {
+      "utc": "2026-02-22T00:00:00.000Z",
+      "illuminatedPercent": 22.86866
+    },
+    {
+      "utc": "2026-02-23T00:00:00.000Z",
+      "illuminatedPercent": 33.06836
+    },
+    {
+      "utc": "2026-02-24T00:00:00.000Z",
+      "illuminatedPercent": 44.18655
+    },
+    {
+      "utc": "2026-02-25T00:00:00.000Z",
+      "illuminatedPercent": 55.62702
+    },
+    {
+      "utc": "2026-02-26T00:00:00.000Z",
+      "illuminatedPercent": 66.77108
+    },
+    {
+      "utc": "2026-02-27T00:00:00.000Z",
+      "illuminatedPercent": 77.01573
+    },
+    {
+      "utc": "2026-02-28T00:00:00.000Z",
+      "illuminatedPercent": 85.81362
+    },
+    {
+      "utc": "2026-03-01T00:00:00.000Z",
+      "illuminatedPercent": 92.71475
+    },
+    {
+      "utc": "2026-03-02T00:00:00.000Z",
+      "illuminatedPercent": 97.40435
+    },
+    {
+      "utc": "2026-03-03T00:00:00.000Z",
+      "illuminatedPercent": 99.7277
+    },
+    {
+      "utc": "2026-03-04T00:00:00.000Z",
+      "illuminatedPercent": 99.693
+    },
+    {
+      "utc": "2026-03-05T00:00:00.000Z",
+      "illuminatedPercent": 97.45037
+    },
+    {
+      "utc": "2026-03-06T00:00:00.000Z",
+      "illuminatedPercent": 93.25278
+    },
+    {
+      "utc": "2026-03-07T00:00:00.000Z",
+      "illuminatedPercent": 87.41065
+    },
+    {
+      "utc": "2026-03-08T00:00:00.000Z",
+      "illuminatedPercent": 80.25158
+    },
+    {
+      "utc": "2026-03-09T00:00:00.000Z",
+      "illuminatedPercent": 72.0929
+    },
+    {
+      "utc": "2026-03-10T00:00:00.000Z",
+      "illuminatedPercent": 63.22915
+    },
+    {
+      "utc": "2026-03-11T00:00:00.000Z",
+      "illuminatedPercent": 53.93311
+    },
+    {
+      "utc": "2026-03-12T00:00:00.000Z",
+      "illuminatedPercent": 44.46672
+    },
+    {
+      "utc": "2026-03-13T00:00:00.000Z",
+      "illuminatedPercent": 35.09806
+    },
+    {
+      "utc": "2026-03-14T00:00:00.000Z",
+      "illuminatedPercent": 26.11999
+    },
+    {
+      "utc": "2026-03-15T00:00:00.000Z",
+      "illuminatedPercent": 17.86571
+    },
+    {
+      "utc": "2026-03-16T00:00:00.000Z",
+      "illuminatedPercent": 10.71515
+    },
+    {
+      "utc": "2026-03-17T00:00:00.000Z",
+      "illuminatedPercent": 5.08525
+    },
+    {
+      "utc": "2026-03-18T00:00:00.000Z",
+      "illuminatedPercent": 1.39806
+    },
+    {
+      "utc": "2026-03-19T00:00:00.000Z",
+      "illuminatedPercent": 0.02597
+    },
+    {
+      "utc": "2026-03-20T00:00:00.000Z",
+      "illuminatedPercent": 1.2226
+    },
+    {
+      "utc": "2026-03-21T00:00:00.000Z",
+      "illuminatedPercent": 5.05868
+    },
+    {
+      "utc": "2026-03-22T00:00:00.000Z",
+      "illuminatedPercent": 11.38606
+    },
+    {
+      "utc": "2026-03-23T00:00:00.000Z",
+      "illuminatedPercent": 19.84467
+    },
+    {
+      "utc": "2026-03-24T00:00:00.000Z",
+      "illuminatedPercent": 29.90986
+    },
+    {
+      "utc": "2026-03-25T00:00:00.000Z",
+      "illuminatedPercent": 40.9618
+    },
+    {
+      "utc": "2026-03-26T00:00:00.000Z",
+      "illuminatedPercent": 52.35453
+    },
+    {
+      "utc": "2026-03-27T00:00:00.000Z",
+      "illuminatedPercent": 63.4701
+    },
+    {
+      "utc": "2026-03-28T00:00:00.000Z",
+      "illuminatedPercent": 73.75423
+    },
+    {
+      "utc": "2026-03-29T00:00:00.000Z",
+      "illuminatedPercent": 82.73808
+    },
+    {
+      "utc": "2026-03-30T00:00:00.000Z",
+      "illuminatedPercent": 90.05213
+    },
+    {
+      "utc": "2026-03-31T00:00:00.000Z",
+      "illuminatedPercent": 95.4356
+    },
+    {
+      "utc": "2026-04-01T00:00:00.000Z",
+      "illuminatedPercent": 98.74112
+    },
+    {
+      "utc": "2026-04-02T00:00:00.000Z",
+      "illuminatedPercent": 99.93232
+    },
+    {
+      "utc": "2026-04-03T00:00:00.000Z",
+      "illuminatedPercent": 99.07243
+    },
+    {
+      "utc": "2026-04-04T00:00:00.000Z",
+      "illuminatedPercent": 96.3047
+    },
+    {
+      "utc": "2026-04-05T00:00:00.000Z",
+      "illuminatedPercent": 91.82784
+    },
+    {
+      "utc": "2026-04-06T00:00:00.000Z",
+      "illuminatedPercent": 85.87175
+    },
+    {
+      "utc": "2026-04-07T00:00:00.000Z",
+      "illuminatedPercent": 78.67798
+    },
+    {
+      "utc": "2026-04-08T00:00:00.000Z",
+      "illuminatedPercent": 70.48836
+    },
+    {
+      "utc": "2026-04-09T00:00:00.000Z",
+      "illuminatedPercent": 61.54301
+    },
+    {
+      "utc": "2026-04-10T00:00:00.000Z",
+      "illuminatedPercent": 52.08744
+    },
+    {
+      "utc": "2026-04-11T00:00:00.000Z",
+      "illuminatedPercent": 42.38732
+    },
+    {
+      "utc": "2026-04-12T00:00:00.000Z",
+      "illuminatedPercent": 32.74817
+    },
+    {
+      "utc": "2026-04-13T00:00:00.000Z",
+      "illuminatedPercent": 23.53513
+    },
+    {
+      "utc": "2026-04-14T00:00:00.000Z",
+      "illuminatedPercent": 15.18544
+    },
+    {
+      "utc": "2026-04-15T00:00:00.000Z",
+      "illuminatedPercent": 8.20275
+    },
+    {
+      "utc": "2026-04-16T00:00:00.000Z",
+      "illuminatedPercent": 3.12193
+    },
+    {
+      "utc": "2026-04-17T00:00:00.000Z",
+      "illuminatedPercent": 0.43851
+    },
+    {
+      "utc": "2026-04-18T00:00:00.000Z",
+      "illuminatedPercent": 0.51236
+    },
+    {
+      "utc": "2026-04-19T00:00:00.000Z",
+      "illuminatedPercent": 3.47451
+    },
+    {
+      "utc": "2026-04-20T00:00:00.000Z",
+      "illuminatedPercent": 9.17613
+    },
+    {
+      "utc": "2026-04-21T00:00:00.000Z",
+      "illuminatedPercent": 17.20487
+    },
+    {
+      "utc": "2026-04-22T00:00:00.000Z",
+      "illuminatedPercent": 26.96214
+    },
+    {
+      "utc": "2026-04-23T00:00:00.000Z",
+      "illuminatedPercent": 37.76714
+    },
+    {
+      "utc": "2026-04-24T00:00:00.000Z",
+      "illuminatedPercent": 48.94949
+    },
+    {
+      "utc": "2026-04-25T00:00:00.000Z",
+      "illuminatedPercent": 59.90916
+    },
+    {
+      "utc": "2026-04-26T00:00:00.000Z",
+      "illuminatedPercent": 70.14253
+    },
+    {
+      "utc": "2026-04-27T00:00:00.000Z",
+      "illuminatedPercent": 79.24574
+    },
+    {
+      "utc": "2026-04-28T00:00:00.000Z",
+      "illuminatedPercent": 86.90791
+    },
+    {
+      "utc": "2026-04-29T00:00:00.000Z",
+      "illuminatedPercent": 92.90279
+    },
+    {
+      "utc": "2026-04-30T00:00:00.000Z",
+      "illuminatedPercent": 97.08231
+    },
+    {
+      "utc": "2026-05-01T00:00:00.000Z",
+      "illuminatedPercent": 99.37172
+    },
+    {
+      "utc": "2026-05-02T00:00:00.000Z",
+      "illuminatedPercent": 99.76423
+    },
+    {
+      "utc": "2026-05-03T00:00:00.000Z",
+      "illuminatedPercent": 98.31337
+    },
+    {
+      "utc": "2026-05-04T00:00:00.000Z",
+      "illuminatedPercent": 95.12267
+    },
+    {
+      "utc": "2026-05-05T00:00:00.000Z",
+      "illuminatedPercent": 90.33354
+    },
+    {
+      "utc": "2026-05-06T00:00:00.000Z",
+      "illuminatedPercent": 84.11399
+    },
+    {
+      "utc": "2026-05-07T00:00:00.000Z",
+      "illuminatedPercent": 76.65057
+    },
+    {
+      "utc": "2026-05-08T00:00:00.000Z",
+      "illuminatedPercent": 68.14623
+    },
+    {
+      "utc": "2026-05-09T00:00:00.000Z",
+      "illuminatedPercent": 58.82555
+    },
+    {
+      "utc": "2026-05-10T00:00:00.000Z",
+      "illuminatedPercent": 48.94793
+    },
+    {
+      "utc": "2026-05-11T00:00:00.000Z",
+      "illuminatedPercent": 38.82748
+    },
+    {
+      "utc": "2026-05-12T00:00:00.000Z",
+      "illuminatedPercent": 28.85544
+    },
+    {
+      "utc": "2026-05-13T00:00:00.000Z",
+      "illuminatedPercent": 19.51662
+    },
+    {
+      "utc": "2026-05-14T00:00:00.000Z",
+      "illuminatedPercent": 11.38632
+    },
+    {
+      "utc": "2026-05-15T00:00:00.000Z",
+      "illuminatedPercent": 5.09133
+    },
+    {
+      "utc": "2026-05-16T00:00:00.000Z",
+      "illuminatedPercent": 1.22568
+    },
+    {
+      "utc": "2026-05-17T00:00:00.000Z",
+      "illuminatedPercent": 0.23188
+    },
+    {
+      "utc": "2026-05-18T00:00:00.000Z",
+      "illuminatedPercent": 2.28649
+    },
+    {
+      "utc": "2026-05-19T00:00:00.000Z",
+      "illuminatedPercent": 7.24212
+    },
+    {
+      "utc": "2026-05-20T00:00:00.000Z",
+      "illuminatedPercent": 14.65678
+    },
+    {
+      "utc": "2026-05-21T00:00:00.000Z",
+      "illuminatedPercent": 23.89633
+    },
+    {
+      "utc": "2026-05-22T00:00:00.000Z",
+      "illuminatedPercent": 34.26087
+    },
+    {
+      "utc": "2026-05-23T00:00:00.000Z",
+      "illuminatedPercent": 45.08739
+    },
+    {
+      "utc": "2026-05-24T00:00:00.000Z",
+      "illuminatedPercent": 55.80658
+    },
+    {
+      "utc": "2026-05-25T00:00:00.000Z",
+      "illuminatedPercent": 65.95842
+    },
+    {
+      "utc": "2026-05-26T00:00:00.000Z",
+      "illuminatedPercent": 75.18273
+    },
+    {
+      "utc": "2026-05-27T00:00:00.000Z",
+      "illuminatedPercent": 83.2009
+    },
+    {
+      "utc": "2026-05-28T00:00:00.000Z",
+      "illuminatedPercent": 89.7987
+    },
+    {
+      "utc": "2026-05-29T00:00:00.000Z",
+      "illuminatedPercent": 94.81482
+    },
+    {
+      "utc": "2026-05-30T00:00:00.000Z",
+      "illuminatedPercent": 98.13516
+    },
+    {
+      "utc": "2026-05-31T00:00:00.000Z",
+      "illuminatedPercent": 99.69116
+    },
+    {
+      "utc": "2026-06-01T00:00:00.000Z",
+      "illuminatedPercent": 99.45946
+    },
+    {
+      "utc": "2026-06-02T00:00:00.000Z",
+      "illuminatedPercent": 97.46107
+    },
+    {
+      "utc": "2026-06-03T00:00:00.000Z",
+      "illuminatedPercent": 93.75876
+    },
+    {
+      "utc": "2026-06-04T00:00:00.000Z",
+      "illuminatedPercent": 88.45333
+    },
+    {
+      "utc": "2026-06-05T00:00:00.000Z",
+      "illuminatedPercent": 81.68031
+    },
+    {
+      "utc": "2026-06-06T00:00:00.000Z",
+      "illuminatedPercent": 73.60952
+    },
+    {
+      "utc": "2026-06-07T00:00:00.000Z",
+      "illuminatedPercent": 64.44996
+    },
+    {
+      "utc": "2026-06-08T00:00:00.000Z",
+      "illuminatedPercent": 54.46167
+    },
+    {
+      "utc": "2026-06-09T00:00:00.000Z",
+      "illuminatedPercent": 43.9745
+    },
+    {
+      "utc": "2026-06-10T00:00:00.000Z",
+      "illuminatedPercent": 33.40982
+    },
+    {
+      "utc": "2026-06-11T00:00:00.000Z",
+      "illuminatedPercent": 23.2962
+    },
+    {
+      "utc": "2026-06-12T00:00:00.000Z",
+      "illuminatedPercent": 14.26365
+    },
+    {
+      "utc": "2026-06-13T00:00:00.000Z",
+      "illuminatedPercent": 6.9983
+    },
+    {
+      "utc": "2026-06-14T00:00:00.000Z",
+      "illuminatedPercent": 2.14818
+    },
+    {
+      "utc": "2026-06-15T00:00:00.000Z",
+      "illuminatedPercent": 0.1945
+    },
+    {
+      "utc": "2026-06-16T00:00:00.000Z",
+      "illuminatedPercent": 1.33362
+    },
+    {
+      "utc": "2026-06-17T00:00:00.000Z",
+      "illuminatedPercent": 5.4251
+    },
+    {
+      "utc": "2026-06-18T00:00:00.000Z",
+      "illuminatedPercent": 12.03343
+    },
+    {
+      "utc": "2026-06-19T00:00:00.000Z",
+      "illuminatedPercent": 20.54062
+    },
+    {
+      "utc": "2026-06-20T00:00:00.000Z",
+      "illuminatedPercent": 30.27541
+    },
+    {
+      "utc": "2026-06-21T00:00:00.000Z",
+      "illuminatedPercent": 40.61191
+    },
+    {
+      "utc": "2026-06-22T00:00:00.000Z",
+      "illuminatedPercent": 51.01963
+    },
+    {
+      "utc": "2026-06-23T00:00:00.000Z",
+      "illuminatedPercent": 61.07261
+    },
+    {
+      "utc": "2026-06-24T00:00:00.000Z",
+      "illuminatedPercent": 70.435
+    },
+    {
+      "utc": "2026-06-25T00:00:00.000Z",
+      "illuminatedPercent": 78.83874
+    },
+    {
+      "utc": "2026-06-26T00:00:00.000Z",
+      "illuminatedPercent": 86.06349
+    },
+    {
+      "utc": "2026-06-27T00:00:00.000Z",
+      "illuminatedPercent": 91.92299
+    },
+    {
+      "utc": "2026-06-28T00:00:00.000Z",
+      "illuminatedPercent": 96.25908
+    },
+    {
+      "utc": "2026-06-29T00:00:00.000Z",
+      "illuminatedPercent": 98.9421
+    },
+    {
+      "utc": "2026-06-30T00:00:00.000Z",
+      "illuminatedPercent": 99.8755
+    },
+    {
+      "utc": "2026-07-01T00:00:00.000Z",
+      "illuminatedPercent": 99.00224
+    },
+    {
+      "utc": "2026-07-02T00:00:00.000Z",
+      "illuminatedPercent": 96.31081
+    },
+    {
+      "utc": "2026-07-03T00:00:00.000Z",
+      "illuminatedPercent": 91.83953
+    },
+    {
+      "utc": "2026-07-04T00:00:00.000Z",
+      "illuminatedPercent": 85.67948
+    },
+    {
+      "utc": "2026-07-05T00:00:00.000Z",
+      "illuminatedPercent": 77.97735
+    },
+    {
+      "utc": "2026-07-06T00:00:00.000Z",
+      "illuminatedPercent": 68.94072
+    },
+    {
+      "utc": "2026-07-07T00:00:00.000Z",
+      "illuminatedPercent": 58.84773
+    },
+    {
+      "utc": "2026-07-08T00:00:00.000Z",
+      "illuminatedPercent": 48.06142
+    },
+    {
+      "utc": "2026-07-09T00:00:00.000Z",
+      "illuminatedPercent": 37.04521
+    },
+    {
+      "utc": "2026-07-10T00:00:00.000Z",
+      "illuminatedPercent": 26.37039
+    },
+    {
+      "utc": "2026-07-11T00:00:00.000Z",
+      "illuminatedPercent": 16.70083
+    },
+    {
+      "utc": "2026-07-12T00:00:00.000Z",
+      "illuminatedPercent": 8.73957
+    },
+    {
+      "utc": "2026-07-13T00:00:00.000Z",
+      "illuminatedPercent": 3.13265
+    },
+    {
+      "utc": "2026-07-14T00:00:00.000Z",
+      "illuminatedPercent": 0.34881
+    },
+    {
+      "utc": "2026-07-15T00:00:00.000Z",
+      "illuminatedPercent": 0.57866
+    },
+    {
+      "utc": "2026-07-16T00:00:00.000Z",
+      "illuminatedPercent": 3.69924
+    },
+    {
+      "utc": "2026-07-17T00:00:00.000Z",
+      "illuminatedPercent": 9.321
+    },
+    {
+      "utc": "2026-07-18T00:00:00.000Z",
+      "illuminatedPercent": 16.89191
+    },
+    {
+      "utc": "2026-07-19T00:00:00.000Z",
+      "illuminatedPercent": 25.81121
+    },
+    {
+      "utc": "2026-07-20T00:00:00.000Z",
+      "illuminatedPercent": 35.51476
+    },
+    {
+      "utc": "2026-07-21T00:00:00.000Z",
+      "illuminatedPercent": 45.51816
+    },
+    {
+      "utc": "2026-07-22T00:00:00.000Z",
+      "illuminatedPercent": 55.42453
+    },
+    {
+      "utc": "2026-07-23T00:00:00.000Z",
+      "illuminatedPercent": 64.91109
+    },
+    {
+      "utc": "2026-07-24T00:00:00.000Z",
+      "illuminatedPercent": 73.70798
+    },
+    {
+      "utc": "2026-07-25T00:00:00.000Z",
+      "illuminatedPercent": 81.57801
+    },
+    {
+      "utc": "2026-07-26T00:00:00.000Z",
+      "illuminatedPercent": 88.30211
+    },
+    {
+      "utc": "2026-07-27T00:00:00.000Z",
+      "illuminatedPercent": 93.67263
+    },
+    {
+      "utc": "2026-07-28T00:00:00.000Z",
+      "illuminatedPercent": 97.49458
+    },
+    {
+      "utc": "2026-07-29T00:00:00.000Z",
+      "illuminatedPercent": 99.59402
+    },
+    {
+      "utc": "2026-07-30T00:00:00.000Z",
+      "illuminatedPercent": 99.83143
+    },
+    {
+      "utc": "2026-07-31T00:00:00.000Z",
+      "illuminatedPercent": 98.11738
+    },
+    {
+      "utc": "2026-08-01T00:00:00.000Z",
+      "illuminatedPercent": 94.42735
+    },
+    {
+      "utc": "2026-08-02T00:00:00.000Z",
+      "illuminatedPercent": 88.8135
+    },
+    {
+      "utc": "2026-08-03T00:00:00.000Z",
+      "illuminatedPercent": 81.41275
+    },
+    {
+      "utc": "2026-08-04T00:00:00.000Z",
+      "illuminatedPercent": 72.45194
+    },
+    {
+      "utc": "2026-08-05T00:00:00.000Z",
+      "illuminatedPercent": 62.25194
+    },
+    {
+      "utc": "2026-08-06T00:00:00.000Z",
+      "illuminatedPercent": 51.23143
+    },
+    {
+      "utc": "2026-08-07T00:00:00.000Z",
+      "illuminatedPercent": 39.90795
+    },
+    {
+      "utc": "2026-08-08T00:00:00.000Z",
+      "illuminatedPercent": 28.88919
+    },
+    {
+      "utc": "2026-08-09T00:00:00.000Z",
+      "illuminatedPercent": 18.84427
+    },
+    {
+      "utc": "2026-08-10T00:00:00.000Z",
+      "illuminatedPercent": 10.44604
+    },
+    {
+      "utc": "2026-08-11T00:00:00.000Z",
+      "illuminatedPercent": 4.286
+    },
+    {
+      "utc": "2026-08-12T00:00:00.000Z",
+      "illuminatedPercent": 0.78045
+    },
+    {
+      "utc": "2026-08-13T00:00:00.000Z",
+      "illuminatedPercent": 0.10037
+    },
+    {
+      "utc": "2026-08-14T00:00:00.000Z",
+      "illuminatedPercent": 2.15411
+    },
+    {
+      "utc": "2026-08-15T00:00:00.000Z",
+      "illuminatedPercent": 6.62974
+    },
+    {
+      "utc": "2026-08-16T00:00:00.000Z",
+      "illuminatedPercent": 13.07689
+    },
+    {
+      "utc": "2026-08-17T00:00:00.000Z",
+      "illuminatedPercent": 20.99475
+    },
+    {
+      "utc": "2026-08-18T00:00:00.000Z",
+      "illuminatedPercent": 29.89988
+    },
+    {
+      "utc": "2026-08-19T00:00:00.000Z",
+      "illuminatedPercent": 39.36322
+    },
+    {
+      "utc": "2026-08-20T00:00:00.000Z",
+      "illuminatedPercent": 49.01938
+    },
+    {
+      "utc": "2026-08-21T00:00:00.000Z",
+      "illuminatedPercent": 58.5576
+    },
+    {
+      "utc": "2026-08-22T00:00:00.000Z",
+      "illuminatedPercent": 67.70408
+    },
+    {
+      "utc": "2026-08-23T00:00:00.000Z",
+      "illuminatedPercent": 76.20283
+    },
+    {
+      "utc": "2026-08-24T00:00:00.000Z",
+      "illuminatedPercent": 83.8001
+    },
+    {
+      "utc": "2026-08-25T00:00:00.000Z",
+      "illuminatedPercent": 90.23588
+    },
+    {
+      "utc": "2026-08-26T00:00:00.000Z",
+      "illuminatedPercent": 95.24448
+    },
+    {
+      "utc": "2026-08-27T00:00:00.000Z",
+      "illuminatedPercent": 98.56562
+    },
+    {
+      "utc": "2026-08-28T00:00:00.000Z",
+      "illuminatedPercent": 99.96543
+    },
+    {
+      "utc": "2026-08-29T00:00:00.000Z",
+      "illuminatedPercent": 99.26463
+    },
+    {
+      "utc": "2026-08-30T00:00:00.000Z",
+      "illuminatedPercent": 96.3685
+    },
+    {
+      "utc": "2026-08-31T00:00:00.000Z",
+      "illuminatedPercent": 91.29237
+    },
+    {
+      "utc": "2026-09-01T00:00:00.000Z",
+      "illuminatedPercent": 84.177
+    },
+    {
+      "utc": "2026-09-02T00:00:00.000Z",
+      "illuminatedPercent": 75.29152
+    },
+    {
+      "utc": "2026-09-03T00:00:00.000Z",
+      "illuminatedPercent": 65.02516
+    },
+    {
+      "utc": "2026-09-04T00:00:00.000Z",
+      "illuminatedPercent": 53.87085
+    },
+    {
+      "utc": "2026-09-05T00:00:00.000Z",
+      "illuminatedPercent": 42.403
+    },
+    {
+      "utc": "2026-09-06T00:00:00.000Z",
+      "illuminatedPercent": 31.24869
+    },
+    {
+      "utc": "2026-09-07T00:00:00.000Z",
+      "illuminatedPercent": 21.04868
+    },
+    {
+      "utc": "2026-09-08T00:00:00.000Z",
+      "illuminatedPercent": 12.40599
+    },
+    {
+      "utc": "2026-09-09T00:00:00.000Z",
+      "illuminatedPercent": 5.82502
+    },
+    {
+      "utc": "2026-09-10T00:00:00.000Z",
+      "illuminatedPercent": 1.65332
+    },
+    {
+      "utc": "2026-09-11T00:00:00.000Z",
+      "illuminatedPercent": 0.04301
+    },
+    {
+      "utc": "2026-09-12T00:00:00.000Z",
+      "illuminatedPercent": 0.94593
+    },
+    {
+      "utc": "2026-09-13T00:00:00.000Z",
+      "illuminatedPercent": 4.14446
+    },
+    {
+      "utc": "2026-09-14T00:00:00.000Z",
+      "illuminatedPercent": 9.30651
+    },
+    {
+      "utc": "2026-09-15T00:00:00.000Z",
+      "illuminatedPercent": 16.04597
+    },
+    {
+      "utc": "2026-09-16T00:00:00.000Z",
+      "illuminatedPercent": 23.97257
+    },
+    {
+      "utc": "2026-09-17T00:00:00.000Z",
+      "illuminatedPercent": 32.7227
+    },
+    {
+      "utc": "2026-09-18T00:00:00.000Z",
+      "illuminatedPercent": 41.97069
+    },
+    {
+      "utc": "2026-09-19T00:00:00.000Z",
+      "illuminatedPercent": 51.4249
+    },
+    {
+      "utc": "2026-09-20T00:00:00.000Z",
+      "illuminatedPercent": 60.81418
+    },
+    {
+      "utc": "2026-09-21T00:00:00.000Z",
+      "illuminatedPercent": 69.87021
+    },
+    {
+      "utc": "2026-09-22T00:00:00.000Z",
+      "illuminatedPercent": 78.31035
+    },
+    {
+      "utc": "2026-09-23T00:00:00.000Z",
+      "illuminatedPercent": 85.82557
+    },
+    {
+      "utc": "2026-09-24T00:00:00.000Z",
+      "illuminatedPercent": 92.0781
+    },
+    {
+      "utc": "2026-09-25T00:00:00.000Z",
+      "illuminatedPercent": 96.71316
+    },
+    {
+      "utc": "2026-09-26T00:00:00.000Z",
+      "illuminatedPercent": 99.38769
+    },
+    {
+      "utc": "2026-09-27T00:00:00.000Z",
+      "illuminatedPercent": 99.81453
+    },
+    {
+      "utc": "2026-09-28T00:00:00.000Z",
+      "illuminatedPercent": 97.81423
+    },
+    {
+      "utc": "2026-09-29T00:00:00.000Z",
+      "illuminatedPercent": 93.36101
+    },
+    {
+      "utc": "2026-09-30T00:00:00.000Z",
+      "illuminatedPercent": 86.60825
+    },
+    {
+      "utc": "2026-10-01T00:00:00.000Z",
+      "illuminatedPercent": 77.88518
+    },
+    {
+      "utc": "2026-10-02T00:00:00.000Z",
+      "illuminatedPercent": 67.66632
+    },
+    {
+      "utc": "2026-10-03T00:00:00.000Z",
+      "illuminatedPercent": 56.52463
+    },
+    {
+      "utc": "2026-10-04T00:00:00.000Z",
+      "illuminatedPercent": 45.08093
+    },
+    {
+      "utc": "2026-10-05T00:00:00.000Z",
+      "illuminatedPercent": 33.95809
+    },
+    {
+      "utc": "2026-10-06T00:00:00.000Z",
+      "illuminatedPercent": 23.74197
+    },
+    {
+      "utc": "2026-10-07T00:00:00.000Z",
+      "illuminatedPercent": 14.94727
+    },
+    {
+      "utc": "2026-10-08T00:00:00.000Z",
+      "illuminatedPercent": 7.98675
+    },
+    {
+      "utc": "2026-10-09T00:00:00.000Z",
+      "illuminatedPercent": 3.14589
+    },
+    {
+      "utc": "2026-10-10T00:00:00.000Z",
+      "illuminatedPercent": 0.56795
+    },
+    {
+      "utc": "2026-10-11T00:00:00.000Z",
+      "illuminatedPercent": 0.25469
+    },
+    {
+      "utc": "2026-10-12T00:00:00.000Z",
+      "illuminatedPercent": 2.08428
+    },
+    {
+      "utc": "2026-10-13T00:00:00.000Z",
+      "illuminatedPercent": 5.84244
+    },
+    {
+      "utc": "2026-10-14T00:00:00.000Z",
+      "illuminatedPercent": 11.2591
+    },
+    {
+      "utc": "2026-10-15T00:00:00.000Z",
+      "illuminatedPercent": 18.04187
+    },
+    {
+      "utc": "2026-10-16T00:00:00.000Z",
+      "illuminatedPercent": 25.90018
+    },
+    {
+      "utc": "2026-10-17T00:00:00.000Z",
+      "illuminatedPercent": 34.55744
+    },
+    {
+      "utc": "2026-10-18T00:00:00.000Z",
+      "illuminatedPercent": 43.75121
+    },
+    {
+      "utc": "2026-10-19T00:00:00.000Z",
+      "illuminatedPercent": 53.22383
+    },
+    {
+      "utc": "2026-10-20T00:00:00.000Z",
+      "illuminatedPercent": 62.70628
+    },
+    {
+      "utc": "2026-10-21T00:00:00.000Z",
+      "illuminatedPercent": 71.8992
+    },
+    {
+      "utc": "2026-10-22T00:00:00.000Z",
+      "illuminatedPercent": 80.45581
+    },
+    {
+      "utc": "2026-10-23T00:00:00.000Z",
+      "illuminatedPercent": 87.9737
+    },
+    {
+      "utc": "2026-10-24T00:00:00.000Z",
+      "illuminatedPercent": 94.00391
+    },
+    {
+      "utc": "2026-10-25T00:00:00.000Z",
+      "illuminatedPercent": 98.08532
+    },
+    {
+      "utc": "2026-10-26T00:00:00.000Z",
+      "illuminatedPercent": 99.80654
+    },
+    {
+      "utc": "2026-10-27T00:00:00.000Z",
+      "illuminatedPercent": 98.88542
+    },
+    {
+      "utc": "2026-10-28T00:00:00.000Z",
+      "illuminatedPercent": 95.24283
+    },
+    {
+      "utc": "2026-10-29T00:00:00.000Z",
+      "illuminatedPercent": 89.04141
+    },
+    {
+      "utc": "2026-10-30T00:00:00.000Z",
+      "illuminatedPercent": 80.67186
+    },
+    {
+      "utc": "2026-10-31T00:00:00.000Z",
+      "illuminatedPercent": 70.69191
+    },
+    {
+      "utc": "2026-11-01T00:00:00.000Z",
+      "illuminatedPercent": 59.74317
+    },
+    {
+      "utc": "2026-11-02T00:00:00.000Z",
+      "illuminatedPercent": 48.47391
+    },
+    {
+      "utc": "2026-11-03T00:00:00.000Z",
+      "illuminatedPercent": 37.4848
+    },
+    {
+      "utc": "2026-11-04T00:00:00.000Z",
+      "illuminatedPercent": 27.29916
+    },
+    {
+      "utc": "2026-11-05T00:00:00.000Z",
+      "illuminatedPercent": 18.35041
+    },
+    {
+      "utc": "2026-11-06T00:00:00.000Z",
+      "illuminatedPercent": 10.97773
+    },
+    {
+      "utc": "2026-11-07T00:00:00.000Z",
+      "illuminatedPercent": 5.42424
+    },
+    {
+      "utc": "2026-11-08T00:00:00.000Z",
+      "illuminatedPercent": 1.83645
+    },
+    {
+      "utc": "2026-11-09T00:00:00.000Z",
+      "illuminatedPercent": 0.26663
+    },
+    {
+      "utc": "2026-11-10T00:00:00.000Z",
+      "illuminatedPercent": 0.68044
+    },
+    {
+      "utc": "2026-11-11T00:00:00.000Z",
+      "illuminatedPercent": 2.97067
+    },
+    {
+      "utc": "2026-11-12T00:00:00.000Z",
+      "illuminatedPercent": 6.9755
+    },
+    {
+      "utc": "2026-11-13T00:00:00.000Z",
+      "illuminatedPercent": 12.49813
+    },
+    {
+      "utc": "2026-11-14T00:00:00.000Z",
+      "illuminatedPercent": 19.32376
+    },
+    {
+      "utc": "2026-11-15T00:00:00.000Z",
+      "illuminatedPercent": 27.23053
+    },
+    {
+      "utc": "2026-11-16T00:00:00.000Z",
+      "illuminatedPercent": 35.99251
+    },
+    {
+      "utc": "2026-11-17T00:00:00.000Z",
+      "illuminatedPercent": 45.37378
+    },
+    {
+      "utc": "2026-11-18T00:00:00.000Z",
+      "illuminatedPercent": 55.11445
+    },
+    {
+      "utc": "2026-11-19T00:00:00.000Z",
+      "illuminatedPercent": 64.91051
+    },
+    {
+      "utc": "2026-11-20T00:00:00.000Z",
+      "illuminatedPercent": 74.39213
+    },
+    {
+      "utc": "2026-11-21T00:00:00.000Z",
+      "illuminatedPercent": 83.10835
+    },
+    {
+      "utc": "2026-11-22T00:00:00.000Z",
+      "illuminatedPercent": 90.53037
+    },
+    {
+      "utc": "2026-11-23T00:00:00.000Z",
+      "illuminatedPercent": 96.08761
+    },
+    {
+      "utc": "2026-11-24T00:00:00.000Z",
+      "illuminatedPercent": 99.24426
+    },
+    {
+      "utc": "2026-11-25T00:00:00.000Z",
+      "illuminatedPercent": 99.60652
+    },
+    {
+      "utc": "2026-11-26T00:00:00.000Z",
+      "illuminatedPercent": 97.02636
+    },
+    {
+      "utc": "2026-11-27T00:00:00.000Z",
+      "illuminatedPercent": 91.65567
+    },
+    {
+      "utc": "2026-11-28T00:00:00.000Z",
+      "illuminatedPercent": 83.92236
+    },
+    {
+      "utc": "2026-11-29T00:00:00.000Z",
+      "illuminatedPercent": 74.43943
+    },
+    {
+      "utc": "2026-11-30T00:00:00.000Z",
+      "illuminatedPercent": 63.88954
+    },
+    {
+      "utc": "2026-12-01T00:00:00.000Z",
+      "illuminatedPercent": 52.92871
+    },
+    {
+      "utc": "2026-12-02T00:00:00.000Z",
+      "illuminatedPercent": 42.13031
+    },
+    {
+      "utc": "2026-12-03T00:00:00.000Z",
+      "illuminatedPercent": 31.96679
+    },
+    {
+      "utc": "2026-12-04T00:00:00.000Z",
+      "illuminatedPercent": 22.8145
+    },
+    {
+      "utc": "2026-12-05T00:00:00.000Z",
+      "illuminatedPercent": 14.96707
+    },
+    {
+      "utc": "2026-12-06T00:00:00.000Z",
+      "illuminatedPercent": 8.64767
+    },
+    {
+      "utc": "2026-12-07T00:00:00.000Z",
+      "illuminatedPercent": 4.01658
+    },
+    {
+      "utc": "2026-12-08T00:00:00.000Z",
+      "illuminatedPercent": 1.17449
+    },
+    {
+      "utc": "2026-12-09T00:00:00.000Z",
+      "illuminatedPercent": 0.1639
+    },
+    {
+      "utc": "2026-12-10T00:00:00.000Z",
+      "illuminatedPercent": 0.97159
+    },
+    {
+      "utc": "2026-12-11T00:00:00.000Z",
+      "illuminatedPercent": 3.53366
+    },
+    {
+      "utc": "2026-12-12T00:00:00.000Z",
+      "illuminatedPercent": 7.74344
+    },
+    {
+      "utc": "2026-12-13T00:00:00.000Z",
+      "illuminatedPercent": 13.46064
+    },
+    {
+      "utc": "2026-12-14T00:00:00.000Z",
+      "illuminatedPercent": 20.51918
+    },
+    {
+      "utc": "2026-12-15T00:00:00.000Z",
+      "illuminatedPercent": 28.73073
+    },
+    {
+      "utc": "2026-12-16T00:00:00.000Z",
+      "illuminatedPercent": 37.88162
+    },
+    {
+      "utc": "2026-12-17T00:00:00.000Z",
+      "illuminatedPercent": 47.72157
+    },
+    {
+      "utc": "2026-12-18T00:00:00.000Z",
+      "illuminatedPercent": 57.94469
+    },
+    {
+      "utc": "2026-12-19T00:00:00.000Z",
+      "illuminatedPercent": 68.16601
+    },
+    {
+      "utc": "2026-12-20T00:00:00.000Z",
+      "illuminatedPercent": 77.9018
+    },
+    {
+      "utc": "2026-12-21T00:00:00.000Z",
+      "illuminatedPercent": 86.56817
+    },
+    {
+      "utc": "2026-12-22T00:00:00.000Z",
+      "illuminatedPercent": 93.51589
+    },
+    {
+      "utc": "2026-12-23T00:00:00.000Z",
+      "illuminatedPercent": 98.11442
+    },
+    {
+      "utc": "2026-12-24T00:00:00.000Z",
+      "illuminatedPercent": 99.87621
+    },
+    {
+      "utc": "2026-12-25T00:00:00.000Z",
+      "illuminatedPercent": 98.58063
+    },
+    {
+      "utc": "2026-12-26T00:00:00.000Z",
+      "illuminatedPercent": 94.34009
+    },
+    {
+      "utc": "2026-12-27T00:00:00.000Z",
+      "illuminatedPercent": 87.5721
+    },
+    {
+      "utc": "2026-12-28T00:00:00.000Z",
+      "illuminatedPercent": 78.89248
+    },
+    {
+      "utc": "2026-12-29T00:00:00.000Z",
+      "illuminatedPercent": 68.98323
+    },
+    {
+      "utc": "2026-12-30T00:00:00.000Z",
+      "illuminatedPercent": 58.48724
+    },
+    {
+      "utc": "2026-12-31T00:00:00.000Z",
+      "illuminatedPercent": 47.95242
+    },
+    {
+      "utc": "2027-01-01T00:00:00.000Z",
+      "illuminatedPercent": 37.81944
+    }
+  ]
+}

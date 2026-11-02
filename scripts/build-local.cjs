@@ -54,9 +54,16 @@ async function buildLocal(output) {
         if (!href || !href[1].startsWith('css/')) return tag;
         const source = href[1];
         const css = read(source);
-        if (/@import|url\s*\(/i.test(css))
+        // Local font files are project assets, not third-party requests. They stay
+        // as relative urls and must exist next to the offline file (assets/fonts).
+        // Anything else still has to be inlined explicitly.
+        const withoutFonts = css.replace(/url\(\s*(['"]?)(?:\.\.\/)?assets\/fonts\/[A-Za-z0-9._-]+\1\s*\)/gi, '');
+        if (/@import|url\s*\(/i.test(withoutFonts))
           throw new Error('Inline new CSS assets explicitly before shipping offline: ' + source);
-        return `<style data-source="${source}">${css.replace(/<\/style/gi, '<\\/style')}</style>`;
+        // The stylesheet sits in css/, the generated offline file at the repo root:
+        // rebase its font urls so the same bytes resolve from the document.
+        const inlined = css.replace(/url\(\s*(['"]?)\.\.\/assets\//g, 'url($1assets/');
+        return `<style data-source="${source}">${inlined.replace(/<\/style/gi, '<\\/style')}</style>`;
       })
       .replace(/(\bhref=")(?:\.\/)?assets\/favicon\.svg(")/i, (_, before, after) => {
         const data = Buffer.from(read('assets/favicon.svg')).toString('base64');

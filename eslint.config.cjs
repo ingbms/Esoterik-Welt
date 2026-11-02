@@ -44,7 +44,9 @@ module.exports = [
   },
   {
     // Browser application modules (ES modules, loaded via <script type="module">).
-    files: ['js/**/*.js', 'data/**/*.js'],
+    // .mjs kennzeichnet die reine Rechenmodule, die auch von node --test
+    // importiert werden (data/moon-astro.mjs).
+    files: ['js/**/*.js', 'data/**/*.js', 'data/**/*.mjs'],
     languageOptions: {
       ecmaVersion: 2023,
       sourceType: 'module',

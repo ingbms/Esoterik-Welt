@@ -1,0 +1,741 @@
+{
+  "dataset": "faktoren",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Zehn zentrale Deutungsfaktoren der westlichen Astrologie: Sonne, Mond und die acht Körper Merkur bis Pluto. Astronomische Angaben sind Fakten, die zugeordneten Themen sind Deutungstradition. Die Erde ist kein astrologischer Faktor; Pluto wird trotz Zwergplanetenstatus mitgezählt.",
+  "items": [
+    {
+      "id": "faktor-sonne",
+      "slug": "sonne",
+      "name": "Sonne",
+      "short": "Die Sonne ist der Zentralkörper des Sonnensystems und in der Astrologie der Faktor für Identität, Selbstausdruck und bewusste Lebensrichtung.",
+      "long": "Astronomie: Die Sonne ist ein Stern und enthält den größten Teil der Masse des Sonnensystems. Von der Erde aus gesehen beschreibt sie im Laufe eines Jahres scheinbar einen Kreis entlang der Ekliptik; die tropische Einteilung beginnt diesen Kreis am Frühlingspunkt [S01][S14]. Die Erde umrundet die Sonne in rund 365,2 Tagen [S02]. Die Sonne geht im Osten auf und im Westen unter, weil sich die Erde dreht, nicht weil die Sonne die Erde umkreist.\n\nDeutungstradition: Die Sonne gilt als Faktor für Ich-Bild, Vitalität, Selbstvertrauen, bewusste Absicht und die Frage, wofür jemand steht. In der klassischen Herrschaftslehre regiert sie den Löwen; in der modernen Astrologie wird sie oft als Kern der Persönlichkeit gelesen. Das populäre Sonnenzeichen ist eine Verkürzung dieses Faktors auf die Position im Zeichensektor zum Geburtszeitpunkt [S12][S19].\n\nDifferenzierung: Die Sonne beschreibt keine messbare Persönlichkeit. Ein Sonnenzeichen sagt nichts über Intelligenz, Charakter oder Lebenserfolg aus [S06]. In der Radix wird die Sonne im Verhältnis zu Mond, Aszendent, Haus und Aspekten gelesen; dieselbe Sonne im Löwen kann in verschiedenen Häusern sehr unterschiedlich wirken. Die Sonne steht traditionell auch für Vaterbilder und öffentliche Rollen, aber diese Zuordnung ist kulturell geprägt und nicht universell.\n\nTypische Missdeutung: Die Gleichsetzung von Sonne mit Egoismus oder Herrschaft ist eine Verkürzung. Tradiert ist eher die Frage nach dem eigenen Zentrum: Was gibt jemandem Richtung, und was bleibt davon übrig, wenn niemand zusieht?\n\nZyklus: Die Sonne wechselt im tropischen System ungefähr einmal pro Monat den Zeichensektor; der scheinbare Jahreslauf ist die Grundlage des Sonnenzeichens [S01].",
+      "keywords": [
+        "Identität",
+        "Selbstausdruck",
+        "Lebensrichtung",
+        "Leuchtkörper",
+        "Löwe"
+      ],
+      "sources": [
+        "S01",
+        "S02",
+        "S06",
+        "S12",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c25",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-loewe",
+        "haus-5",
+        "grund-sonnenzeichen-grenzen",
+        "aspekt-konjunktion"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Angaben sind belegt; die Zuordnung zu Identität und Lebensrichtung ist Deutungstradition."
+      },
+      "kind": "leuchtkoerper",
+      "astronomy": {
+        "orbital_period_days": null,
+        "orbital_period_text": "Kein Umlauf um die Erde; die Erde umrundet die Sonne in 365,2 Tagen, daraus entsteht der scheinbare Jahreslauf.",
+        "discovery": "Seit Urzeiten beobachtet.",
+        "visibility": "Mit bloßem Auge sichtbar, aber nie direkt ohne Schutz zu beobachten.",
+        "note": "Die Sonne ist der Zentralkörper; geozentrische Angaben sind Beobachtungsperspektive, kein Weltbild."
+      },
+      "themes": [
+        "Ich-Bild",
+        "Vitalität",
+        "bewusste Absicht",
+        "Selbstvertrauen",
+        "öffentliche Rolle"
+      ],
+      "questions": [
+        "Wofür stehe ich ein, wenn niemand applaudiert?",
+        "Was gibt mir Richtung, unabhängig von Anerkennung?",
+        "Wo verwechsle ich Sichtbarkeit mit Selbstwert?"
+      ],
+      "misreadings": [
+        "Die Sonne als ganzen Menschen zu lesen, statt als einen Faktor neben Mond, Aszendent und Häusern.",
+        "Sonnenzeichen-Typologien als Persönlichkeitstest zu verwenden, obwohl sie nur eine Zeichenposition beschreiben."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-loewe",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-loewe",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Rund ein Zeichensektor pro Monat; der genaue Wechsel verschiebt sich jährlich um Stunden bis einen Tag."
+    },
+    {
+      "id": "faktor-mond",
+      "slug": "mond",
+      "name": "Mond",
+      "short": "Der Mond ist der nächste Himmelskörper der Erde und in der Astrologie der Faktor für emotionale Regulation, Bedürfnisse, Gewohnheit und körperliche Rhythmen.",
+      "long": "Astronomie: Der Mond umrundet die Erde in 27,3217 Tagen (siderischer Monat). Bis zur nächsten gleichen Phase vergehen 29,53 Tage (synodischer Monat), weil sich die Erde währenddessen weiter um die Sonne bewegt [S18]. Seine scheinbare Gestalt verändert sich durch den Winkel zwischen Sonne, Erde und Mond; die Phasen sind kein Schatten der Erde, sondern eine Beleuchtungsfrage. Der Mond stabilisiert die Erdachsenneigung und erzeugt Gezeiten.\n\nDeutungstradition: Der Mond gilt als Faktor für Gefühle, Bedürfnisse, Sicherheit, Erinnerung, Gewohnheit und die Art, wie jemand sich selbst beruhigt. In der Herrschaftslehre regiert er den Krebs; das natürliche vierte Haus verbindet ihn mit Herkunft und Zuhause [S12][S10]. Weil der Mond den Zeichensektor im Mittel etwa alle 2,46 Tage wechselt, ist das Mondzeichen ohne genaue Geburtszeit oft nicht sicher bestimmbar [S18].\n\nDifferenzierung: Die Astrologie liest den Mond nicht als Ursache von Gefühlen, sondern als Symbol für das, was jemand braucht, um sich sicher zu fühlen. Ein Mond in einem Feuerzeichen kann andere Bedürfnisse zeigen als ein Mond in Wasser oder Erde. Die populäre Rede von Mondphasen und Stimmung ist wissenschaftlich nicht belegt; der Mond beeinflusst Gezeiten und Lichtverhältnisse, aber es gibt keine belastbare Evidenz für einen direkten Einfluss auf menschliches Verhalten oder Gesundheit [S06][S09].\n\nTypische Missdeutung: Der Mond wird oft auf Launen oder Mütterlichkeit reduziert. Tradiert ist eine Regulationsfigur: Wie geht jemand mit Nähe, Unsicherheit und Wiederholung um? Der Mond ist nicht das ganze Gefühlsleben, sondern ein Zugang zu Bedürfnissen.\n\nZyklus: Siderisch 27,32 Tage, synodisch 29,53 Tage; daraus folgt ein Zeichenwechsel im Mittel alle 2,46 Tage.",
+      "keywords": [
+        "Gefühle",
+        "Bedürfnisse",
+        "Gewohnheit",
+        "Rhythmus",
+        "Krebs"
+      ],
+      "sources": [
+        "S18",
+        "S12",
+        "S10",
+        "S06",
+        "S09"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c15",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-krebs",
+        "haus-4",
+        "grund-mond",
+        "faktor-sonne"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Zyklusdaten sind belegt; die emotionale Deutung ist Tradition und keine medizinische oder psychologische Diagnose."
+      },
+      "kind": "leuchtkoerper",
+      "astronomy": {
+        "orbital_period_days": 27.3217,
+        "orbital_period_text": "Siderischer Monat 27,3217 Tage; synodischer Monat 29,53 Tage.",
+        "discovery": "Seit Urzeiten beobachtet.",
+        "visibility": "Mit bloßem Auge sichtbar; Phasen und Bahn sind ohne Hilfsmittel gut beobachtbar.",
+        "note": "Der Mond entfernt sich langsam von der Erde; die Bahn ist nicht exakt kreisförmig."
+      },
+      "themes": [
+        "emotionale Regulation",
+        "Sicherheit",
+        "Bedürfnisse",
+        "Erinnerung",
+        "Rhythmus"
+      ],
+      "questions": [
+        "Was brauche ich, um mich sicher zu fühlen?",
+        "Welche Gewohnheit beruhigt mich, und welche hält mich fest?",
+        "Wo verwechsle ich Nähe mit Verschmelzung?"
+      ],
+      "misreadings": [
+        "Den Mond als direkte Ursache von Stimmung oder Gesundheit zu behandeln; dafür gibt es keine belastbare Evidenz.",
+        "Das Mondzeichen ohne Geburtszeit als sicher zu bestimmen, obwohl der Mond den Sektor alle 2,46 Tage wechselt."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-krebs",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-krebs",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Siderisch 27,32 Tage; synodisch 29,53 Tage. Der Zeichenwechsel erfolgt im Mittel etwa alle 2,46 Tage."
+    },
+    {
+      "id": "faktor-merkur",
+      "slug": "merkur",
+      "name": "Merkur",
+      "short": "Merkur ist der sonnennächste Planet und in der Astrologie der Faktor für Denken, Sprache, Lernen und Austausch.",
+      "long": "Astronomie: Merkur umrundet die Sonne in rund 88 Tagen und ist der kleinste Planet des Sonnensystems [S02]. Von der Erde aus entfernt er sich nie weit von der Sonne; deshalb ist er nur in der Nähe des Horizonts und nur kurz zu sehen. Seine scheinbare Rückwärtsbewegung entsteht durch die unterschiedliche Bahngeschwindigkeit von Erde und Merkur [S15].\n\nDeutungstradition: Merkur gilt als Faktor für Wahrnehmung, Sprache, Denken, Lernen, Handel und Vermittlung. In der Herrschaftslehre regiert er Zwillinge und Jungfrau; das natürliche dritte Haus verbindet ihn mit Nachrichten, Nachbarschaft und alltäglichem Austausch [S12][S10]. Merkur wird oft als schneller, beweglicher Faktor beschrieben, der Informationen sammelt und weitergibt.\n\nDifferenzierung: Ein Merkur-Zeichen beschreibt keine Intelligenz und keine Sprachbegabung im messbaren Sinn. Es beschreibt eine Stilfrage: Wie wird gedacht, wie wird gesprochen, wie wird geprüft? Merkur in einem Wasserzeichen kann anders formulieren als Merkur in Erde oder Luft. Die populäre Rede von Merkur rückläufig als Zeit für Vertrags- oder Technikchaos ist eine moderne Erzählung ohne belastbare Evidenz [S09].\n\nTypische Missdeutung: Merkur wird oft mit List oder Unzuverlässigkeit verbunden. Tradiert ist eine Vermittlungsfigur: Denken und Sprache sind Werkzeuge, die auch irren können. Die ethische Frage ist nicht, ob jemand geschickt spricht, sondern wofür.\n\nZyklus: Rund 88 Tage Umlauf; der Zeichensektor wechselt im Mittel alle zwei bis drei Wochen, stark abhängig von der scheinbaren Rückläufigkeit.",
+      "keywords": [
+        "Denken",
+        "Sprache",
+        "Lernen",
+        "Vermittlung",
+        "Zwillinge"
+      ],
+      "sources": [
+        "S02",
+        "S12",
+        "S10",
+        "S15",
+        "S09"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c14",
+        "c16",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-zwillinge",
+        "zeichen-jungfrau",
+        "haus-3",
+        "grund-ruecklaeufigkeit"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Daten und die Scheinbarkeit der Rückläufigkeit sind belegt; die Denk- und Sprachdeutung ist Tradition."
+      },
+      "kind": "planet",
+      "astronomy": {
+        "orbital_period_days": 88,
+        "orbital_period_text": "Rund 88 Tage.",
+        "discovery": "Seit der Antike bekannt.",
+        "visibility": "Mit bloßem Auge, aber nur kurz und nahe der Sonne.",
+        "note": "Merkur ist der sonnennächste und kleinste Planet; seine hohe Bahngeschwindigkeit erzeugt häufige scheinbare Rückläufe."
+      },
+      "themes": [
+        "Wahrnehmung",
+        "Sprache",
+        "Lernen",
+        "Handel",
+        "Vermittlung"
+      ],
+      "questions": [
+        "Welche Geschichte erzähle ich mir über das, was ich sehe?",
+        "Wo hilft mir Sprache, und wo verdeckt sie?",
+        "Was prüfe ich selbst, statt es nur weiterzugeben?"
+      ],
+      "misreadings": [
+        "Merkur mit Intelligenz gleichzusetzen; das Zeichen beschreibt einen Stil, keine Messgröße.",
+        "Rückläufigkeit als Ursache für konkrete technische oder vertragliche Probleme zu behandeln."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-zwillinge",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-jungfrau",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-zwillinge",
+          "system": "modern"
+        },
+        {
+          "sign": "zeichen-jungfrau",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Umlauf rund 88 Tage; der Zeichensektor wechselt im Mittel alle zwei bis drei Wochen, mit scheinbaren Rückläufen."
+    },
+    {
+      "id": "faktor-venus",
+      "slug": "venus",
+      "name": "Venus",
+      "short": "Venus ist der zweite Planet von der Sonne und in der Astrologie der Faktor für Werte, Attraktion, Ästhetik und Beziehungsstil.",
+      "long": "Astronomie: Venus umrundet die Sonne in rund 225 Tagen und ist von der Erde aus der hellste Planet am Himmel [S02]. Sie erscheint als Morgen- oder Abendstern, weil sie innerhalb der Erdbahn läuft und nie weit von der Sonne entfernt steht. Ihre dichte Atmosphäre und die hohe Oberflächentemperatur sind astronomische Eigenschaften, keine astrologischen Zeichen.\n\nDeutungstradition: Venus gilt als Faktor für das, was jemand schön, wertvoll oder anziehend findet: Beziehung, Genuss, Kunst, Harmonie und materielle Werte. In der Herrschaftslehre regiert sie Stier und Waage; das natürliche zweite und siebte Haus verbinden sie mit Besitz und Partnerschaft [S12][S10].\n\nDifferenzierung: Venus beschreibt keine Liebesfähigkeit und keine Moral. Sie zeigt eine Präferenz: Was wird als wertvoll erlebt, und wie wird Nähe gestaltet? Venus in Erde kann Nähe über Verlässlichkeit suchen, Venus in Luft über Gespräch. Die kulturelle Aufladung von Venus mit Weiblichkeit und Schönheit ist eine historische Schicht, keine Naturtatsache.\n\nTypische Missdeutung: Venus wird oft auf Romantik reduziert. Tradiert ist sie auch eine Figur für Wert und Tausch: Was ist jemand bereit zu geben, und was erwartet jemand dafür? Das schließt Geld, Kunst und Selbstwert ein.\n\nZyklus: Rund 225 Tage Umlauf; der Zeichensektor wechselt im Mittel alle drei bis vier Wochen.",
+      "keywords": [
+        "Werte",
+        "Attraktion",
+        "Ästhetik",
+        "Beziehung",
+        "Waage"
+      ],
+      "sources": [
+        "S02",
+        "S12",
+        "S10"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c16",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-stier",
+        "zeichen-waage",
+        "haus-2",
+        "haus-7"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Daten sind belegt; die Zuordnung zu Werten und Attraktion ist Deutungstradition."
+      },
+      "kind": "planet",
+      "astronomy": {
+        "orbital_period_days": 224.7,
+        "orbital_period_text": "Rund 225 Tage.",
+        "discovery": "Seit der Antike bekannt.",
+        "visibility": "Mit bloßem Auge als Morgen- oder Abendstern sehr hell sichtbar.",
+        "note": "Venus läuft innerhalb der Erdbahn und entfernt sich scheinbar nie weit von der Sonne."
+      },
+      "themes": [
+        "Werte",
+        "Attraktion",
+        "Genuss",
+        "Kunst",
+        "Beziehungsstil"
+      ],
+      "questions": [
+        "Was ist mir wirklich wertvoll?",
+        "Wo verwechsle ich Anerkennung mit Nähe?",
+        "Wie gestalte ich Nähe, ohne mich zu verbiegen?"
+      ],
+      "misreadings": [
+        "Venus auf Romantik zu verkürzen und Wert-, Geld- und Kunstfragen zu übersehen.",
+        "Venus-Zeichen als Aussage über Liebesfähigkeit oder Moral zu lesen."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-stier",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-waage",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-stier",
+          "system": "modern"
+        },
+        {
+          "sign": "zeichen-waage",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Umlauf rund 225 Tage; der Zeichensektor wechselt im Mittel alle drei bis vier Wochen."
+    },
+    {
+      "id": "faktor-mars",
+      "slug": "mars",
+      "name": "Mars",
+      "short": "Mars ist der vierte Planet von der Sonne und in der Astrologie der Faktor für Antrieb, Durchsetzung, Begehren und Konflikt.",
+      "long": "Astronomie: Mars umrundet die Sonne in rund 687 Tagen und ist der nächste äußere Nachbar der Erde [S02]. Seine rötliche Farbe stammt von Eisenmineralien auf der Oberfläche. Wie alle äußeren Planeten kann er von der Erde aus scheinbar rückwärts laufen, wenn die Erde ihn auf ihrer inneren Bahn überholt [S15].\n\nDeutungstradition: Mars gilt als Faktor für Energie, Durchsetzung, Mut, Begehren, Streit und die Art, wie jemand Widerstand begegnet. In der klassischen Herrschaftslehre regiert er Widder und Skorpion; in der modernen Astrologie bleibt Widder, während Skorpion oft Pluto zugeordnet wird [S12][S10].\n\nDifferenzierung: Mars beschreibt keine Gewaltbereitschaft. Tradiert ist eine Bewegungs- und Grenzfigur: Wie setzt jemand sich durch, wie verteidigt jemand etwas, wie geht jemand mit Frustration um? Mars in Wasser kann indirekt kämpfen, Mars in Erde langsam und zäh. Die kulturelle Gleichsetzung von Mars mit Männlichkeit ist eine historische Schicht.\n\nTypische Missdeutung: Mars wird oft mit Aggression oder Krieg gleichgesetzt. Die Tradition kennt auch den Mut, eine Grenze zu ziehen, und die Fähigkeit, für etwas einzustehen. Aggression ist eine mögliche Form, nicht die Definition.\n\nZyklus: Rund 687 Tage Umlauf; der Zeichensektor wechselt im Mittel alle sechs bis sieben Wochen, mit einer Rückläufigkeitsphase etwa alle zwei Jahre.",
+      "keywords": [
+        "Antrieb",
+        "Durchsetzung",
+        "Mut",
+        "Konflikt",
+        "Widder"
+      ],
+      "sources": [
+        "S02",
+        "S12",
+        "S10",
+        "S15"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c14",
+        "c16",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-widder",
+        "zeichen-skorpion",
+        "haus-1",
+        "grund-ruecklaeufigkeit"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Daten sind belegt; die Antriebs- und Konfliktdeutung ist Tradition."
+      },
+      "kind": "planet",
+      "astronomy": {
+        "orbital_period_days": 687,
+        "orbital_period_text": "Rund 687 Tage.",
+        "discovery": "Seit der Antike bekannt.",
+        "visibility": "Mit bloßem Auge als rötlicher Punkt sichtbar.",
+        "note": "Die scheinbare Rückläufigkeit entsteht durch das Überholen der Erde auf der inneren Bahn."
+      },
+      "themes": [
+        "Antrieb",
+        "Durchsetzung",
+        "Begehren",
+        "Abgrenzung",
+        "Konflikt"
+      ],
+      "questions": [
+        "Wofür kämpfe ich, und wogegen?",
+        "Wie gehe ich mit Frustration um?",
+        "Wo ist Nachgeben eine Entscheidung und wo ein Muster?"
+      ],
+      "misreadings": [
+        "Mars mit Gewalt oder Aggression gleichzusetzen.",
+        "Den Planeten als Ursache für Konflikte zu behandeln, statt als Deutungsfigur für den Umgang mit ihnen."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-widder",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-skorpion",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-widder",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Umlauf rund 687 Tage; der Zeichensektor wechselt im Mittel alle sechs bis sieben Wochen."
+    },
+    {
+      "id": "faktor-jupiter",
+      "slug": "jupiter",
+      "name": "Jupiter",
+      "short": "Jupiter ist der größte Planet des Sonnensystems und in der Astrologie der Faktor für Ausdehnung, Sinn, Chancen und Überzeugungen.",
+      "long": "Astronomie: Jupiter umrundet die Sonne in rund 11,9 Jahren und ist massereicher als alle anderen Planeten zusammen [S02]. Von der Erde aus ist er mit bloßem Auge als heller Punkt sichtbar. Seine scheinbare Rückläufigkeit ist ein Perspektiveffekt der unterschiedlichen Bahngeschwindigkeiten [S15].\n\nDeutungstradition: Jupiter gilt als Faktor für Wachstum, Weite, Glauben, Bildung, Recht und die Frage, woran jemand sich orientiert. In der Herrschaftslehre regiert er Schütze und Fische; in der modernen Astrologie bleibt Schütze, während Fische oft Neptun zugeordnet wird [S12][S10].\n\nDifferenzierung: Jupiter beschreibt kein Glück und keine moralische Überlegenheit. Tradiert ist eine Ausdehnungsfigur: Was wird größer, wenn jemand ihm folgt? Das kann Großzügigkeit und Lernfreude sein, aber auch Maßlosigkeit und Überzeugung ohne Prüfung. Jupiter in Erde kann Wachstum konkret und langsam suchen, Jupiter in Feuer eher expansiv.\n\nTypische Missdeutung: Jupiter wird oft als Glücksplanet gelesen. Die Tradition kennt auch die Übertreibung: Zu viel Weite kann Details und Grenzen übersehen. Glück ist keine astrologische Kategorie.\n\nZyklus: Rund 11,9 Jahre Umlauf; der Zeichensektor wechselt im Mittel etwa einmal pro Jahr.",
+      "keywords": [
+        "Wachstum",
+        "Sinn",
+        "Bildung",
+        "Überzeugung",
+        "Schütze"
+      ],
+      "sources": [
+        "S02",
+        "S12",
+        "S10",
+        "S15"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c14",
+        "c16",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-schuetze",
+        "zeichen-fische",
+        "haus-9",
+        "grund-transite"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Daten sind belegt; die Sinn- und Wachstumsdeutung ist Tradition."
+      },
+      "kind": "planet",
+      "astronomy": {
+        "orbital_period_days": 4331,
+        "orbital_period_text": "Rund 11,9 Jahre.",
+        "discovery": "Seit der Antike bekannt.",
+        "visibility": "Mit bloßem Auge als heller Punkt sichtbar.",
+        "note": "Jupiter ist massereicher als alle anderen Planeten zusammen; seine Monde sind ein eigener Forschungsgegenstand."
+      },
+      "themes": [
+        "Wachstum",
+        "Sinn",
+        "Bildung",
+        "Recht",
+        "Überzeugung"
+      ],
+      "questions": [
+        "Woran orientiere ich mich, wenn niemand zusieht?",
+        "Wo wird meine Weite zur Übertreibung?",
+        "Was lerne ich gerade wirklich?"
+      ],
+      "misreadings": [
+        "Jupiter als Garantie für Glück oder Erfolg zu lesen.",
+        "Wachstum mit moralischer Richtigkeit gleichzusetzen."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-schuetze",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-fische",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-schuetze",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Umlauf rund 11,9 Jahre; der Zeichensektor wechselt im Mittel etwa einmal pro Jahr."
+    },
+    {
+      "id": "faktor-saturn",
+      "slug": "saturn",
+      "name": "Saturn",
+      "short": "Saturn ist der sechste Planet von der Sonne und in der Astrologie der Faktor für Grenze, Struktur, Zeit und Verantwortung.",
+      "long": "Astronomie: Saturn umrundet die Sonne in rund 29,4 Jahren und ist für sein Ringsystem bekannt [S02]. Mit bloßem Auge ist er als gelblicher Punkt sichtbar; die Ringe sind erst mit Teleskopen zu erkennen. Seine scheinbare Rückläufigkeit folgt demselben Perspektivmuster wie bei den anderen äußeren Planeten [S15].\n\nDeutungstradition: Saturn gilt als Faktor für Begrenzung, Disziplin, Verantwortung, Zeit, Reifung und die Frage, was jemand aus hält. In der Herrschaftslehre regiert er Steinbock und Wassermann; in der modernen Astrologie bleibt Steinbock, während Wassermann oft Uranus zugeordnet wird [S12][S10].\n\nDifferenzierung: Saturn beschreibt keine Strafe und kein Unglück. Tradiert ist eine Formfigur: Wo braucht jemand Struktur, und wo wird Struktur zur Härte? Saturn in Erde kann sich in langfristigem Aufbau zeigen, Saturn in Wasser in emotionaler Zurückhaltung. Die populäre Angst vor Saturn-Rückkehr ist eine moderne Erzählung, keine belegte Ereignisvorhersage.\n\nTypische Missdeutung: Saturn wird oft als böser, einschränkender Planet gelesen. Die Tradition kennt auch die entlastende Seite: Grenzen machen Entscheidungen möglich. Verantwortung ist nicht dasselbe wie Selbstbestrafung.\n\nZyklus: Rund 29,4 Jahre Umlauf; der Zeichensektor wechselt im Mittel etwa alle zweieinhalb Jahre.",
+      "keywords": [
+        "Grenze",
+        "Struktur",
+        "Zeit",
+        "Verantwortung",
+        "Steinbock"
+      ],
+      "sources": [
+        "S02",
+        "S12",
+        "S10",
+        "S15"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c14",
+        "c16",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-steinbock",
+        "zeichen-wassermann",
+        "haus-10",
+        "grund-transite"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Daten sind belegt; die Grenz- und Verantwortungsdeutung ist Tradition."
+      },
+      "kind": "planet",
+      "astronomy": {
+        "orbital_period_days": 10747,
+        "orbital_period_text": "Rund 29,4 Jahre.",
+        "discovery": "Seit der Antike bekannt.",
+        "visibility": "Mit bloßem Auge als gelblicher Punkt sichtbar; Ringe nur mit Teleskop.",
+        "note": "Saturn ist der letzte mit bloßem Auge ohne weiteres auffindbare Planet der klassischen Siebenzahl."
+      },
+      "themes": [
+        "Grenze",
+        "Disziplin",
+        "Verantwortung",
+        "Zeit",
+        "Reifung"
+      ],
+      "questions": [
+        "Welche Grenze entlastet mich?",
+        "Wo bin ich zu hart gegen mich?",
+        "Was baue ich langfristig, und wofür?"
+      ],
+      "misreadings": [
+        "Saturn als Strafe oder Unglücksfaktor zu lesen.",
+        "Saturn-Rückkehr als sichere Ereignisvorhersage zu behandeln."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-steinbock",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-wassermann",
+          "system": "traditionell"
+        },
+        {
+          "sign": "zeichen-steinbock",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Umlauf rund 29,4 Jahre; der Zeichensektor wechselt im Mittel etwa alle zweieinhalb Jahre."
+    },
+    {
+      "id": "faktor-uranus",
+      "slug": "uranus",
+      "name": "Uranus",
+      "short": "Uranus ist ein Eisriese und in der modernen Astrologie der Faktor für Eigenständigkeit, Unterbrechung und Erneuerung.",
+      "long": "Astronomie: Uranus umrundet die Sonne in rund 84 Jahren und gehört zu den Eisriesen [S02][S24]. Seine Achse ist stark geneigt, sodass die Pole abwechselnd lange im Licht und im Dunkeln liegen. Uranus gehört nicht zur klassischen Siebenzahl der mit bloßem Auge bekannten Himmelskörper und wurde erst mit optischen Hilfsmitteln gefunden [S12].\n\nDeutungstradition: Uranus ist eine moderne Ergänzung der Astrologie. Er gilt als Faktor für Individualisierung, Bruch mit Konventionen, Innovation, Freiheit und plötzliche Veränderung. In der modernen Herrschaftslehre wird ihm Wassermann zugeordnet [S12][S10].\n\nDifferenzierung: Uranus beschreibt keine Rebellion und keine politische Haltung. Tradiert ist eine Unterbrechungsfigur: Wo wird ein Muster durchbrochen, und was wird dadurch sichtbar? Uranus in einem festen Zeichen kann Eigenständigkeit betonen, Uranus in Wasser eher als emotionale Distanzierung erscheinen. Die Zuordnung zu Wassermann ist eine Konvention des modernen Astrologiebetriebs, keine antike Setzung.\n\nTypische Missdeutung: Uranus wird oft als Chaot oder Befreier gefeiert. Die Tradition kennt auch die kalte Seite: Distanz, die Nähe verhindert, und Widerspruch, der nur der eigenen Unabhängigkeit dient.\n\nZyklus: Rund 84 Jahre Umlauf; der Zeichensektor wechselt im Mittel etwa alle sieben Jahre.",
+      "keywords": [
+        "Eigenständigkeit",
+        "Unterbrechung",
+        "Innovation",
+        "Freiheit",
+        "Wassermann"
+      ],
+      "sources": [
+        "S02",
+        "S24",
+        "S12",
+        "S10"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c16",
+        "c24",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-wassermann",
+        "haus-11",
+        "grund-herrschaft"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Daten sind belegt; die Freiheits- und Unterbrechungsdeutung ist moderne Deutungstradition."
+      },
+      "kind": "planet",
+      "astronomy": {
+        "orbital_period_days": 30589,
+        "orbital_period_text": "Rund 84 Jahre.",
+        "discovery": "Nicht zur klassischen Siebenzahl gehörend; mit optischen Hilfsmitteln entdeckt.",
+        "visibility": "Ohne Hilfsmittel nicht zuverlässig sichtbar.",
+        "note": "Uranus ist ein Eisriese mit stark geneigter Achse; die genaue Entdeckungsgeschichte wird hier nicht als Jahreszahl behauptet."
+      },
+      "themes": [
+        "Eigenständigkeit",
+        "Bruch",
+        "Innovation",
+        "Freiheit",
+        "Netzwerk"
+      ],
+      "questions": [
+        "Wo durchbreche ich ein Muster, und wozu?",
+        "Ist meine Distanz Schutz oder Flucht?",
+        "Was bleibt von meiner Freiheit, wenn ich sie teile?"
+      ],
+      "misreadings": [
+        "Uranus mit Rebellion oder Fortschritt gleichzusetzen.",
+        "Die moderne Wassermann-Zuordnung als antike Tradition auszugeben."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-wassermann",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Umlauf rund 84 Jahre; der Zeichensektor wechselt im Mittel etwa alle sieben Jahre."
+    },
+    {
+      "id": "faktor-neptun",
+      "slug": "neptun",
+      "name": "Neptun",
+      "short": "Neptun ist der äußerste Planet des Sonnensystems und in der modernen Astrologie der Faktor für Auflösung, Imagination und Durchlässigkeit.",
+      "long": "Astronomie: Neptun umrundet die Sonne in rund 164 Jahren und ist der äußerste der acht Planeten [S02][S25]. Er wurde 1846 auf Grundlage von Bahnstörungen des Uranus aufgefunden und ist ohne Teleskop nicht sichtbar [S24][S25]. Seine blaue Farbe entsteht unter anderem durch Methan in der Atmosphäre.\n\nDeutungstradition: Neptun ist eine moderne Ergänzung. Er gilt als Faktor für Imagination, Mitgefühl, Spiritualität, Auflösung von Grenzen und die Frage, was sich nicht exakt fassen lässt. In der modernen Herrschaftslehre wird ihm Fische zugeordnet [S12][S10].\n\nDifferenzierung: Neptun beschreibt keine besondere Spiritualität und keine psychische Krankheit. Tradiert ist eine Durchlässigkeitsfigur: Wo verschwimmen Grenzen, und wo wird daraus Offenheit statt Orientierungslosigkeit? Neptun in Erde kann Ideale konkretisieren wollen, Neptun in Luft sie abstrahieren. Die Zuordnung zu Fische ist eine Konvention des 19./20. Jahrhunderts.\n\nTypische Missdeutung: Neptun wird oft als reine Esoterik oder als Illusion gelesen. Die Tradition kennt beides: die Fähigkeit, Bilder und Atmosphären wahrzunehmen, und die Gefahr, sich in ihnen zu verlieren.\n\nZyklus: Rund 164 Jahre Umlauf; der Zeichensektor wechselt im Mittel etwa alle 14 Jahre.",
+      "keywords": [
+        "Imagination",
+        "Mitgefühl",
+        "Auflösung",
+        "Spiritualität",
+        "Fische"
+      ],
+      "sources": [
+        "S02",
+        "S24",
+        "S25",
+        "S12",
+        "S10"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c16",
+        "c24",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-fische",
+        "haus-12",
+        "grund-herrschaft"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Daten sind belegt; die Imaginations- und Auflösungsdeutung ist moderne Deutungstradition."
+      },
+      "kind": "planet",
+      "astronomy": {
+        "orbital_period_days": 59800,
+        "orbital_period_text": "Rund 164 Jahre.",
+        "discovery": "1846 auf Grundlage von Bahnstörungen aufgefunden.",
+        "visibility": "Ohne Teleskop nicht sichtbar.",
+        "note": "Neptun ist der äußerste der acht Planeten; Pluto liegt jenseits davon auf einer anderen Bahn."
+      },
+      "themes": [
+        "Imagination",
+        "Mitgefühl",
+        "Grenzauflösung",
+        "Sehnsucht",
+        "Ambiguität"
+      ],
+      "questions": [
+        "Wo sehe ich, was ich sehen will?",
+        "Welche Grenze braucht meine Offenheit?",
+        "Was trägt meine Sehnsucht, und was verdeckt sie?"
+      ],
+      "misreadings": [
+        "Neptun mit Spiritualität oder psychischer Erkrankung gleichzusetzen.",
+        "Durchlässigkeit als Tugend zu feiern, ohne die Notwendigkeit von Grenzen zu benennen."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-fische",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Umlauf rund 164 Jahre; der Zeichensektor wechselt im Mittel etwa alle 14 Jahre."
+    },
+    {
+      "id": "faktor-pluto",
+      "slug": "pluto",
+      "name": "Pluto",
+      "short": "Pluto ist ein Zwergplanet im Kuipergürtel und in der modernen Astrologie der Faktor für Macht, Tiefe, Verlust und Transformation.",
+      "long": "Astronomie: Pluto wurde am 18. Februar 1930 entdeckt und umrundet die Sonne in rund 248 Jahren auf einer stark exzentrischen Bahn [S20][S02]. Seit der IAU-Entscheidung von 2006 gilt er als Zwergplanet, nicht als Planet. Diese Einordnung ist ein astronomischer Status, keine Aussage darüber, ob Astrologinnen und Astrologen ihn weiter als Deutungsfaktor verwenden.\n\nDeutungstradition: Pluto ist eine moderne Ergänzung. Er gilt als Faktor für Macht, Kontrolle, Verlust, Scham, Tiefe und Prozesse, die sich nicht freiwillig vollziehen. In der modernen Herrschaftslehre wird ihm Skorpion zugeordnet [S12].\n\nDifferenzierung: Pluto beschreibt keine Gewalt und kein Schicksal. Tradiert ist eine Transformationsfigur: Was muss sterben, damit etwas anderes entstehen kann? Pluto in einem Zeichen kann Machtfragen betonen, Pluto in einem Haus das Lebensfeld, in dem Kontrolle und Hingabe verhandelt werden. Die Gleichsetzung mit Tod oder Katastrophe ist eine populäre Verkürzung.\n\nTypische Missdeutung: Pluto wird oft als dunkle, gefährliche Kraft inszeniert. Die Tradition kennt auch die Fähigkeit, sich mit dem Unangenehmen auseinanderzusetzen und Machtverhältnisse zu erkennen. Das ist keine Erlaubnis für Kontrolle.\n\nZyklus: Rund 248 Jahre Umlauf; der Zeichensektor wechselt wegen der exzentrischen Bahn stark variabel, grob zwischen 12 und 30 Jahren.",
+      "keywords": [
+        "Macht",
+        "Tiefe",
+        "Transformation",
+        "Kontrolle",
+        "Skorpion"
+      ],
+      "sources": [
+        "S20",
+        "S02",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c12",
+        "c13",
+        "c16",
+        "c27"
+      ],
+      "cross_refs": [
+        "zeichen-skorpion",
+        "haus-8",
+        "grund-herrschaft"
+      ],
+      "kennzeichnung": {
+        "typ": "gemischt",
+        "hinweis": "Astronomische Daten und der Zwergplanetenstatus sind belegt; die Macht- und Transformationsdeutung ist moderne Tradition."
+      },
+      "kind": "zwergplanet",
+      "astronomy": {
+        "orbital_period_days": 90560,
+        "orbital_period_text": "Rund 248 Jahre.",
+        "discovery": "Entdeckt am 18. Februar 1930.",
+        "visibility": "Nur mit Teleskop sichtbar.",
+        "note": "Seit 2006 als Zwergplanet klassifiziert; die astrologische Verwendung ist davon unabhängig."
+      },
+      "themes": [
+        "Macht",
+        "Kontrolle",
+        "Verlust",
+        "Tiefe",
+        "Transformation"
+      ],
+      "questions": [
+        "Wo gebe ich Macht ab, ohne es zu merken?",
+        "Was muss ich loslassen, damit etwas Neues entstehen kann?",
+        "Wann wird Schutz zu Kontrolle?"
+      ],
+      "misreadings": [
+        "Pluto mit Tod, Gewalt oder sicheren Katastrophen gleichzusetzen.",
+        "Den astronomischen Zwergplanetenstatus mit der astrologischen Verwendung zu verwechseln."
+      ],
+      "rulerships": [
+        {
+          "sign": "zeichen-skorpion",
+          "system": "modern"
+        }
+      ],
+      "cycle_text": "Umlauf rund 248 Jahre; der Zeichensektor wechselt wegen der exzentrischen Bahn stark variabel, grob zwischen 12 und 30 Jahren."
+    }
+  ]
+}

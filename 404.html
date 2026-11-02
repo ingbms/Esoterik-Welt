@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seite nicht gefunden — Esoterik-Welt</title>
     <meta name="description" content="Die angeforderte Seite existiert nicht. Zurück zur Startseite oder Suche." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/fonts/Manrope.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/design-system.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   </head>
   <body class="error-page">
     <main class="card error-card" aria-label="Fehlerseite 404">
+      <p class="label">Fehler 404</p>
       <h1>404</h1>
       <p class="error-subtitle">Seite nicht gefunden</p>
-      <p>
+      <p class="text-muted">
         Die Seite, die du suchst, existiert nicht oder wurde verschoben. Nutze die Suche oder kehre zur Startseite
         zurück.
       </p>
@@ -28,7 +24,7 @@
         <a class="home btn btn-primary" href="/Esoterik-Welt/">Zur Startseite</a>
         <a class="search btn btn-secondary" href="/Esoterik-Welt/#home">Zur Übersicht</a>
       </div>
-      <p class="error-label text-muted">Esoterik-Welt — Tarot, Kristalle, Runen & Mondphasen</p>
+      <p class="error-label">Esoterik-Welt — Tarot, Kristalle, Runen &amp; Mondphasen</p>
     </main>
   </body>
 </html>

@@ -1,361 +1,1081 @@
-// Tarot Data — 78 Cards (Major + Minor Arcana)
+// GENERATED FILE — do not edit by hand.
+// Source: docs/tarot-deck-nachtatelier/manifest-assets.json (identities, 78 stable ids)
+//         docs/tarot-deck-nachtatelier/_work/texts.json   (keywords, image language, upright/reversed)
+// Regenerate: node scripts/generate-tarot-data.cjs
+// The interpretations are symbolic/traditional readings, not predictions and not
+// medical or therapeutic advice.
+export const TAROT_DECK_ID = 'nachtatelier-v1';
+export const TAROT_CARD_COUNT = 78;
+
+export const TAROT_DISCLAIMER =
+  'Symbolische, traditionelle Deutung — ein Angebot zum Nachdenken, keine Vorhersage und kein Heil- oder Wirkversprechen.';
+
+export const SUIT_LABELS = { wands: 'Stäbe', cups: 'Kelche', swords: 'Schwerter', pentacles: 'Münzen' };
+
 export const tarotCards = [
-  // Major Arcana (0-21)
   {
     id: 0,
     name: 'Der Narr',
+    numeral: '0',
     arcana: 'major',
+    suit: null,
     number: 0,
-    keywords: ['Neuanfang', 'Spontanität', 'Vertrauen', 'Unbekanntes'],
-    meaning_up: 'Ein neuer Zyklus beginnt. Vertraue dem Unbekannten.',
-    meaning_rev: 'Unüberlegtheit, Risiko, Naivität.',
+    rank: 'major',
+    keywords: ['Aufbruch', 'Vertrauen', 'Offenheit', 'Unbekanntes'],
+    symbolism:
+      'Ein Wanderer tritt an einer Klippe ins Leere, den Blick nach oben, das Bündel am Stab; ein kleiner Hund springt neben ihm, die Sonne steht hinter ihm.',
+    meaning_up: 'Ein Anfang ohne fertigen Plan. Wer den ersten Schritt wagt, gewinnt Erfahrung statt Sicherheit.',
+    meaning_rev: 'Sprunghaftigkeit, fehlende Bodenhaftung oder ein Risiko, das niemand geprüft hat.',
   },
   {
     id: 1,
     name: 'Der Magier',
+    numeral: 'I',
     arcana: 'major',
+    suit: null,
     number: 1,
-    keywords: ['Manifestation', 'Willenskraft', 'Fähigkeiten', 'Handlung'],
-    meaning_up: 'Du hast alle Werkzeuge. Handle jetzt.',
-    meaning_rev: 'Manipulation, ungenutztes Potenzial, Täuschung.',
+    rank: 'major',
+    keywords: ['Wille', 'Können', 'Handlung', 'Konzentration'],
+    symbolism:
+      'Ein Mann hebt den Stab vor einem Tisch mit Kelch, Schwert und Münze; über seinem Kopf schwebt das Zeichen der Unendlichkeit.',
+    meaning_up:
+      'Die Werkzeuge liegen bereit. Können, Wille und ein klarer nächster Schritt bringen die Sache in Bewegung.',
+    meaning_rev: 'Geschick ohne Verantwortung, Manipulation oder ein Können, das ungenutzt bleibt.',
   },
   {
     id: 2,
     name: 'Die Hohepriesterin',
+    numeral: 'II',
     arcana: 'major',
+    suit: null,
     number: 2,
-    keywords: ['Intuition', 'Geheimnis', 'Inneres Wissen', 'Passivität'],
-    meaning_up: 'Hör auf deine innere Stimme. Wissen ruht in dir.',
-    meaning_rev: 'Unterdrückte Intuition, Oberflächlichkeit, Geheimnisse.',
+    rank: 'major',
+    keywords: ['Intuition', 'Schweigen', 'Wissen', 'Beobachtung'],
+    symbolism:
+      'Sie sitzt zwischen den Säulen B und J, ein Schriftband in der Hand, die Mondsichel zu Füßen; hinter ihr fällt der Granatapfelvorhang.',
+    meaning_up: 'Wissen, das noch nicht ausgesprochen ist: beobachten, zuhören und das Ungesagte wahrnehmen.',
+    meaning_rev: 'Verdrängte Wahrnehmung, Geheimniskrämerei oder ein Wissen, das übergangen wird.',
   },
   {
     id: 3,
     name: 'Die Herrscherin',
+    numeral: 'III',
     arcana: 'major',
+    suit: null,
     number: 3,
-    keywords: ['Fülle', 'Kreativität', 'Mutterschaft', 'Natur'],
-    meaning_up: 'Fruchtbare Phase. Pflege deine Projekte.',
-    meaning_rev: 'Kreative Blockade, Vernachlässigung, Überfürsorge.',
+    rank: 'major',
+    keywords: ['Fülle', 'Fürsorge', 'Wachstum', 'Sinnlichkeit'],
+    symbolism:
+      'Eine gekrönte Frau ruht auf einem Polster im Freien, das Zepter mit Weltkugel neben sich, den Schild mit Venuszeichen am Boden; um sie reift Weizen.',
+    meaning_up: 'Wachstum und Fülle entstehen durch Pflege. Was regelmäßig versorgt wird, gedeiht.',
+    meaning_rev: 'Erschöpfung durch zu viel Fürsorge, kreative Blockade oder Vernachlässigung des eigenen Anteils.',
   },
   {
     id: 4,
     name: 'Der Herrscher',
+    numeral: 'IV',
     arcana: 'major',
+    suit: null,
     number: 4,
-    keywords: ['Autorität', 'Struktur', 'Kontrolle', 'Stabilität'],
-    meaning_up: 'Übernimm Verantwortung. Schaffe Ordnung.',
-    meaning_rev: 'Tyrannei, Starrheit, Kontrollverlust.',
+    rank: 'major',
+    keywords: ['Ordnung', 'Verantwortung', 'Grenze', 'Stabilität'],
+    symbolism:
+      'Ein bärtiger König sitzt auf einem Steinthron mit Widderköpfen, Zepter und Weltkugel in den Händen; hinter ihm erheben sich kahle Berge.',
+    meaning_up: 'Klare Ordnung, Zuständigkeit und Grenzen schaffen Verlässlichkeit.',
+    meaning_rev: 'Starrheit, Kontrolle um ihrer selbst willen oder Macht ohne Rückbindung.',
   },
   {
     id: 5,
     name: 'Der Hierophant',
+    numeral: 'V',
     arcana: 'major',
+    suit: null,
     number: 5,
-    keywords: ['Tradition', 'Spirituelle Führung', 'Konvention', 'Lehre'],
-    meaning_up: 'Suche Weisheit in bewährten Systemen.',
-    meaning_rev: 'Dogmatik, Rebellion, unkonventioneller Weg.',
+    rank: 'major',
+    keywords: ['Lehre', 'Tradition', 'Zugehörigkeit', 'Regel'],
+    symbolism:
+      'Ein Lehrer mit dreifacher Krone steht zwischen zwei Säulen, die Rechte zum Segen erhoben, zwei gekreuzte Schlüssel zu seinen Füßen.',
+    meaning_up: 'Überliefertes Wissen und Zugehörigkeit geben Halt – solange man ihre Herkunft kennt.',
+    meaning_rev: 'Dogma, äußere Autorität ohne innere Prüfung oder der bewusste Schritt aus der Konvention.',
   },
   {
     id: 6,
     name: 'Die Liebenden',
+    numeral: 'VI',
     arcana: 'major',
+    suit: null,
     number: 6,
-    keywords: ['Liebe', 'Wahl', 'Harmonie', 'Partnerschaft'],
-    meaning_up: 'Wichtige Entscheidung aus dem Herzen.',
-    meaning_rev: 'Disharmonie, falsche Wahl, Wertekonflikt.',
+    rank: 'major',
+    keywords: ['Wahl', 'Verbindung', 'Übereinstimmung', 'Werte'],
+    symbolism:
+      'Zwei nackte Menschen stehen unter einem geflügelten Wesen; hinter ihnen der Baum mit der Schlange und ein Feigenbaum.',
+    meaning_up: 'Eine Wahl aus innerer Übereinstimmung; Verbindung, in der Gefühl und Werte zusammenpassen.',
+    meaning_rev: 'Zwiespalt, Wertekonflikt oder eine Entscheidung, die aus Angst getroffen wird.',
   },
   {
     id: 7,
     name: 'Der Wagen',
+    numeral: 'VII',
     arcana: 'major',
+    suit: null,
     number: 7,
-    keywords: ['Sieg', 'Entschlossenheit', 'Kontrolle', 'Vorwärtskommen'],
-    meaning_up: 'Fokus und Wille führen zum Erfolg.',
-    meaning_rev: 'Richtungslosigkeit, Aggression, Kontrollverlust.',
+    rank: 'major',
+    keywords: ['Richtung', 'Wille', 'Fahrt', 'Selbstkontrolle'],
+    symbolism: 'Ein geharnischter Lenker steht im Wagen, zwei Sphinxe ziehen ihn, über der Stadtmauer leuchten Sterne.',
+    meaning_up: 'Gebündelte Kräfte, klare Richtung, Fahrt aufnehmen – auch gegen Widerstand.',
+    meaning_rev: 'Richtungslosigkeit, Übersteuerung oder Aggression, die das Gespann zerreißt.',
   },
   {
     id: 8,
     name: 'Die Kraft',
+    numeral: 'VIII',
     arcana: 'major',
+    suit: null,
     number: 8,
-    keywords: ['Mut', 'Geduld', 'Innerer Stärke', 'Mitgefühl'],
-    meaning_up: 'Sanfte Kraft zähmt wilde Natur.',
-    meaning_rev: 'Selbstzweifel, Schwäche, Unterdrückte Wut.',
+    rank: 'major',
+    keywords: ['Mut', 'Geduld', 'Sanftheit', 'Triebkontrolle'],
+    symbolism: 'Eine Frau in Weiß öffnet dem Löwen das Maul, ohne Gewalt; über ihr schwebt das Unendlichkeitszeichen.',
+    meaning_up: 'Sanfte Beharrlichkeit zähmt Trieb und Angst. Mut muss nicht hart sein.',
+    meaning_rev: 'Selbstzweifel, ungezügelte Wut oder Stärke, die nur durch Unterdrückung entsteht.',
   },
   {
     id: 9,
     name: 'Der Eremit',
+    numeral: 'IX',
     arcana: 'major',
+    suit: null,
     number: 9,
-    keywords: ['Rückzug', 'Suche', 'Weisheit', 'Innere Führung'],
-    meaning_up: 'Zeit für Reflexion. Das Licht ist in dir.',
-    meaning_rev: 'Isolation, Einsamkeit, Verweigerung.',
+    rank: 'major',
+    keywords: ['Rückzug', 'Prüfung', 'Eigenes Licht', 'Stille'],
+    symbolism:
+      'Ein alter Mann steht auf einem Berggipfel, hält eine Laterne mit sechszackigem Stern und stützt sich auf einen Stab.',
+    meaning_up: 'Rückzug und Prüfung: Erkenntnis braucht Stille und den eigenen Maßstab.',
+    meaning_rev: 'Isolation, Weltflucht oder Rat, der verweigert wird.',
   },
   {
     id: 10,
     name: 'Das Rad des Schicksals',
+    numeral: 'X',
     arcana: 'major',
+    suit: null,
     number: 10,
-    keywords: ['Wandel', 'Zyklen', 'Schicksal', 'Glück'],
-    meaning_up: 'Wende zum Besseren. Alles dreht sich.',
-    meaning_rev: 'Unglück, Widerstand gegen Wandel, Pechsträhne.',
+    rank: 'major',
+    keywords: ['Zyklus', 'Wende', 'Muster', 'Bewegung'],
+    symbolism:
+      'Ein großes Rad mit Schriftzeichen, darüber eine Sphinx mit Schwert; in den Ecken vier geflügelte Wesen.',
+    meaning_up: 'Ein Zyklus wendet sich. Was lange festhing, kommt in Bewegung – nicht immer freiwillig.',
+    meaning_rev: 'Widerstand gegen den Wandel oder ein Muster, das sich wiederholt, weil es ungeprüft bleibt.',
   },
   {
     id: 11,
     name: 'Die Gerechtigkeit',
+    numeral: 'XI',
     arcana: 'major',
+    suit: null,
     number: 11,
-    keywords: ['Ausgleich', 'Wahrheit', 'Karma', 'Entscheidung'],
-    meaning_up: 'Gerechter Ausgang. Cause & Effect.',
-    meaning_rev: 'Ungerechtigkeit, Vorurteil, Ausweichverhalten.',
+    rank: 'major',
+    keywords: ['Abwägung', 'Verantwortung', 'Folge', 'Klarheit'],
+    symbolism: 'Eine sitzende Gestalt hält ein aufrechtes Schwert und eine Waage, zwischen zwei Säulen.',
+    meaning_up: 'Abwägen, Verantwortung übernehmen und eine Entscheidung mit ihren Folgen annehmen.',
+    meaning_rev: 'Voreiliges Urteil, Ungleichgewicht oder Verantwortung, die abgewälzt wird.',
   },
   {
     id: 12,
     name: 'Der Gehängte',
+    numeral: 'XII',
     arcana: 'major',
+    suit: null,
     number: 12,
-    keywords: ['Opfer', 'Perspektivwechsel', 'Loslassen', 'Warten'],
-    meaning_up: 'Neue Sicht durch Hingabe. Pause.',
-    meaning_rev: 'Opferbereitschaft verweigert, Stagnation.',
+    rank: 'major',
+    keywords: ['Perspektive', 'Anhalten', 'Loslassen', 'Hingabe'],
+    symbolism:
+      'Ein Mann hängt kopfüber an einem T-förmigen Balken, ein Bein gekreuzt; sein Kopf ist von Licht umgeben.',
+    meaning_up: 'Anhalten und die Perspektive umkehren. Loslassen wirkt mehr als erzwingen.',
+    meaning_rev: 'Fruchtbares Warten kippt in Stagnation, oder ein Opfer hat keinen Sinn mehr.',
   },
   {
     id: 13,
     name: 'Der Tod',
+    numeral: 'XIII',
     arcana: 'major',
+    suit: null,
     number: 13,
-    keywords: ['Ende', 'Transformation', 'Neubeginn', 'Unvermeidlich'],
-    meaning_up: 'Alte Strukturen sterben für Neues.',
-    meaning_rev: 'Widerstand gegen Wandel, nicht loslassen können.',
+    rank: 'major',
+    keywords: ['Ende', 'Abschnitt', 'Klarheit', 'Neubeginn'],
+    symbolism:
+      'Ein geharnischter Reiter trägt eine schwarze Fahne; zwischen zwei Türmen geht die Sonne auf, Menschen und ein Bischof stehen vor ihm.',
+    meaning_up: 'Ein Abschnitt endet endgültig. Erst der klare Schnitt schafft Platz für Neues.',
+    meaning_rev: 'Festhalten am Vergangenen, Angst vor dem Ende oder ein Übergang, der sich hinzieht.',
   },
   {
     id: 14,
     name: 'Die Mäßigkeit',
+    numeral: 'XIV',
     arcana: 'major',
+    suit: null,
     number: 14,
-    keywords: ['Balance', 'Geduld', 'Heilung', 'Integration'],
-    meaning_up: 'Mittelweg finden. Alchemie der Gegensätze.',
-    meaning_rev: 'Extremismus, Ungeduld, Disharmonie.',
+    rank: 'major',
+    keywords: ['Maß', 'Mischung', 'Geduld', 'Heilung'],
+    symbolism: 'Ein geflügeltes Wesen gießt Wasser zwischen zwei Kelchen, ein Fuß im Teich; ein Pfad führt zum Licht.',
+    meaning_up: 'Maß und Mischung: Gegensätze werden vermittelt, Heilung braucht Geduld.',
+    meaning_rev: 'Übermaß, Ungeduld oder eine Mischung, die nicht zusammenpasst.',
   },
   {
     id: 15,
     name: 'Der Teufel',
+    numeral: 'XV',
     arcana: 'major',
+    suit: null,
     number: 15,
-    keywords: ['Sucht', 'Materialismus', 'Schatten', 'Befreiung'],
-    meaning_up: 'Erkenne deine Ketten. Befreiung ist möglich.',
-    meaning_rev: 'Loslösung, Bewusstwerdung, Schattenarbeit.',
+    rank: 'major',
+    keywords: ['Bindung', 'Abhängigkeit', 'Schatten', 'Prüfung'],
+    symbolism:
+      'Eine gehörnte Gestalt sitzt auf einem Stein, zwei Menschen hängen an locker sitzenden Ketten, eine Fackel brennt verkehrt.',
+    meaning_up: 'Eine Bindung hält, weil sie nicht geprüft wird. Der erste Schritt ist, die Kette zu bemerken.',
+    meaning_rev: 'Die Ketten lösen sich: Abhängigkeit oder Sucht wird bearbeitbar.',
   },
   {
     id: 16,
     name: 'Der Turm',
+    numeral: 'XVI',
     arcana: 'major',
+    suit: null,
     number: 16,
-    keywords: ['Plötzlicher Wandel', 'Erschütterung', 'Befreiung', 'Wahrheit'],
-    meaning_up: 'Falsche Strukturen stürzen ein. Notwendiger Bruch.',
-    meaning_rev: 'Angst vor Wandel, Katastrophe vermeiden, innerer Turm.',
+    rank: 'major',
+    keywords: ['Einbruch', 'Bruch', 'Wahrheit', 'Befreiung'],
+    symbolism:
+      'Ein Turm wird vom Blitz getroffen, die Krone stürzt, zwei Menschen fallen, Flammen schlagen aus den Fenstern.',
+    meaning_up: 'Ein falsches Gebäude bricht. Der Einbruch ist unvermeidlich – und befreiend.',
+    meaning_rev: 'Innerer Einsturz ohne äußeren Anlass, Aufschub oder angstvolle Vorwegnahme.',
   },
   {
     id: 17,
     name: 'Der Stern',
+    numeral: 'XVII',
     arcana: 'major',
+    suit: null,
     number: 17,
-    keywords: ['Hoffnung', 'Inspiration', 'Heilung', 'Führung'],
-    meaning_up: 'Hoffnung kehrt zurück. Du wirst geführt.',
-    meaning_rev: 'Hoffnungslosigkeit, Selbstzweifel, Trennung.',
+    rank: 'major',
+    keywords: ['Hoffnung', 'Vertrauen', 'Heilung', 'Klarheit'],
+    symbolism:
+      'Eine kniende Frau schüttet Wasser in einen Teich und auf das Land; ein großer achtzackiger Stern und sieben kleinere leuchten über ihr.',
+    meaning_up: 'Nach der Krise kehrt Zuversicht zurück. Stilles Vertrauen trägt weiter als Beweise.',
+    meaning_rev: 'Enttäuschte Hoffnung, Selbstzweifel oder ein Blick, der nur den Mangel sieht.',
   },
   {
     id: 18,
     name: 'Der Mond',
+    numeral: 'XVIII',
     arcana: 'major',
+    suit: null,
     number: 18,
-    keywords: ['Illusion', 'Angst', 'Unbewusstes', 'Intuition'],
-    meaning_up: 'Nicht alles ist wie es scheint. Vertraue Intuition.',
-    meaning_rev: 'Ängste überwinden, Klarheit, Täuschung endet.',
+    rank: 'major',
+    keywords: ['Unbewusstes', 'Täuschung', 'Angst', 'Intuition'],
+    symbolism:
+      'Zwischen zwei Türmen führt ein Pfad aus einem Teich; Hund und Wolf heulen den Mond an, ein Krebs steigt aus dem Wasser.',
+    meaning_up:
+      'Bilder und Ängste sind wirklich, aber nicht dasselbe wie Tatsachen. Prüfen, was der eigene Blick hinzufügt.',
+    meaning_rev: 'Die Verwirrung löst sich, Vermutungen werden überprüfbar, Angst verliert ihre Macht.',
+    deep: 'Der Mond ist die Karte der Nachtseite des Erkennens. Das Bild zeigt keinen Irrtum, den man einfach wegdiskutieren könnte, sondern einen Weg, der im Halbdunkel liegt: Ein Pfad führt aus dem Wasser zwischen zwei Türmen hindurch, Hund und Wolf antworten dem Licht, und aus der Tiefe steigt ein Krebs ans Ufer. Jedes Element steht für eine eigene Schicht – das Wasser für das Unbewusste, die Tiere für den gezähmten und den wilden Anteil, der Krebs für das, was aus der Tiefe auftaucht, ohne dass man es gerufen hat.\n\nAls Deutung heißt das: In einer unklaren Lage sind Gefühle und Ahnungen echte Informationen, aber sie sind keine Beweise. Der Mond lädt dazu ein, beides getrennt zu halten – wahrnehmen, ohne sofort zu urteilen; prüfen, ohne die eigene Wahrnehmung zu verachten. Typische Situationen sind Träume, die nicht loslassen, ein Verdacht ohne Beleg, eine Stimmung, die sich nicht benennen lässt, oder eine Phase, in der alte Muster aus dem Verborgenen wieder auftauchen.\n\nPraktisch hilft: das Unklare aufschreiben statt es zu entscheiden, eine zweite Perspektive einholen, und erst handeln, wenn sich die Lage aufhellt. Umgekehrt zeigt die Karte, dass die Verwirrung ein Ende hat: Was lange wie eine Bedrohung wirkte, lässt sich benennen, und mit dem Benennen verliert es seinen Schrecken.',
   },
   {
     id: 19,
     name: 'Die Sonne',
+    numeral: 'XIX',
     arcana: 'major',
+    suit: null,
     number: 19,
-    keywords: ['Freude', 'Erfolg', 'Lebendigkeit', 'Klarheit'],
-    meaning_up: 'Strahlender Erfolg. Kindliche Freude.',
-    meaning_rev: 'Vorübergehende Trübung, Ego, Übermut.',
+    rank: 'major',
+    keywords: ['Freude', 'Klarheit', 'Erfolg', 'Lebendigkeit'],
+    symbolism:
+      'Ein Kind reitet auf einem weißen Pferd, vier Sonnenblumen stehen hinter einer Mauer, die Sonne sendet Strahlen.',
+    meaning_up: 'Klarheit und Freude sind da, ohne dass man sie erarbeiten muss. Sichtbar werden, was gut ist.',
+    meaning_rev: 'Vorübergehende Trübung, Übermut oder ein Erfolg, der nur nach außen glänzt.',
   },
   {
     id: 20,
     name: 'Das Gericht',
+    numeral: 'XX',
     arcana: 'major',
+    suit: null,
     number: 20,
-    keywords: ['Erwachen', 'Rechenschaft', 'Vergebung', 'Berufung'],
-    meaning_up: 'Innerer Ruf. Vergebung und Neubeginn.',
-    meaning_rev: 'Selbstkritik, Verweigerung, Schuldgefühle.',
+    rank: 'major',
+    keywords: ['Ruf', 'Bilanz', 'Vergebung', 'Erwachen'],
+    symbolism: 'Eine Posaune ruft über Wasser und Berge; Menschen erheben sich aus Gräbern und strecken die Arme.',
+    meaning_up: 'Ein Ruf, der nicht überhört werden kann: Bilanz ziehen, vergeben und neu ansetzen.',
+    meaning_rev: 'Harte Selbstkritik, Schuldgefühle oder ein Ruf, der verweigert wird.',
   },
   {
     id: 21,
     name: 'Die Welt',
+    numeral: 'XXI',
     arcana: 'major',
+    suit: null,
     number: 21,
-    keywords: ['Vollendung', 'Integration', 'Reiseende', 'Ganzheit'],
-    meaning_up: 'Zyklus vollendet. Ganzheit erreicht.',
-    meaning_rev: 'Unvollendet, Verlust, offene Enden.',
+    rank: 'major',
+    keywords: ['Vollendung', 'Ganzheit', 'Abschluss', 'Integration'],
+    symbolism:
+      'Eine Tänzerin steht in einem Lorbeerkranz, zwei Stäbe in den Händen; in den Ecken die vier geflügelten Wesen.',
+    meaning_up: 'Ein Zyklus ist vollendet. Was zusammengehörte, ist jetzt ein Ganzes.',
+    meaning_rev: 'Offene Enden, ein Abschluss, der fehlt, oder ein Verlust, der noch nicht betrauert ist.',
   },
-
-  // Minor Arcana — Wands (Stäbe)
-  ...Array.from({ length: 14 }, (_, i) => ({
-    id: 22 + i,
-    name: `${i === 0 ? 'Ass' : i === 10 ? 'Bube' : i === 11 ? 'Ritter' : i === 12 ? 'Königin' : i === 13 ? 'König' : i} der Stäbe`,
+  {
+    id: 22,
+    name: 'Ass der Stäbe',
+    numeral: 'A',
     arcana: 'minor',
     suit: 'wands',
-    number: i + 1,
-    keywords:
-      i === 0
-        ? ['Inspiration', 'Potenzial']
-        : i === 1
-          ? ['Planung', 'Entscheidung']
-          : i === 2
-            ? ['Überblick', 'Führung']
-            : i === 3
-              ? ['Feiern', 'Teamwork']
-              : i === 4
-                ? ['Konkurrenz', 'Konflikt']
-                : i === 5
-                  ? ['Siege', 'Anerkennung']
-                  : i === 6
-                    ? ['Verteidigung', 'Standhaftigkeit']
-                    : i === 7
-                      ? ['Schnelligkeit', 'Handlung']
-                      : i === 8
-                        ? ['Ausdauer', 'Letzte Meile']
-                        : i === 9
-                          ? ['Last', 'Verantwortung']
-                          : i === 10
-                            ? ['Entdeckung', 'Neugier']
-                            : i === 11
-                              ? ['Energie', 'Aktion']
-                              : i === 12
-                                ? ['Charisma', 'Magnetismus']
-                                : ['Visionär', 'Meisterschaft'],
-    meaning_up: 'Feuer-Energie: Kreativität, Wille, Aktion.',
-    meaning_rev: 'Blockierte Energie, Impulsivität, Burnout.',
-  })),
-
-  // Minor Arcana — Cups (Kelche)
-  ...Array.from({ length: 14 }, (_, i) => ({
-    id: 36 + i,
-    name: `${i === 0 ? 'Ass' : i === 10 ? 'Bube' : i === 11 ? 'Ritter' : i === 12 ? 'Königin' : i === 13 ? 'König' : i} der Kelche`,
+    number: 1,
+    rank: 'ace',
+    keywords: ['Impuls', 'Beginn', 'Energie'],
+    symbolism:
+      'Eine Hand aus einer Wolke hält einen blühenden Stab, Blätter fallen herab, unten liegt eine Landschaft.',
+    meaning_up: 'Ein frischer Impuls: Energie ist da und will Form finden.',
+    meaning_rev: 'Verzögerung, verpuffte Energie oder ein Anfang, der nicht getragen wird.',
+  },
+  {
+    id: 23,
+    name: '2 der Stäbe',
+    numeral: '2',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 2,
+    rank: '2',
+    keywords: ['Planung', 'Weltblick', 'Entscheidung'],
+    symbolism:
+      'Ein Mann steht auf einer Zinne, hält einen Globus und einen Stab; ein zweiter Stab ist am Gemäuer befestigt.',
+    meaning_up: 'Der Blick ist weit, die Mittel sind begrenzt: planen statt sofort losziehen.',
+    meaning_rev: 'Angst vor dem nächsten Schritt oder eine Planung, die zu eng bleibt.',
+  },
+  {
+    id: 24,
+    name: '3 der Stäbe',
+    numeral: '3',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 3,
+    rank: '3',
+    keywords: ['Weite', 'Erwartung', 'Ausbau'],
+    symbolism:
+      'Ein Mann steht auf einer Klippe und blickt auf Schiffe am Horizont; drei Stäbe sind im Boden verankert.',
+    meaning_up: 'Was begonnen wurde, trägt weiter. Der Blick richtet sich auf das, was kommt.',
+    meaning_rev: 'Erwartete Ergebnisse bleiben aus, oder der Ausbau erfolgt zu früh.',
+  },
+  {
+    id: 25,
+    name: '4 der Stäbe',
+    numeral: '4',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 4,
+    rank: '4',
+    keywords: ['Heimkehr', 'Fest', 'Sicherheit'],
+    symbolism: 'Zwei Menschen feiern unter einer Girlande vor einem Schloss, vier Stäbe bilden das Gerüst des Bogens.',
+    meaning_up: 'Ein Grund zu feiern: Ankommen, Übergang und gemeinsame Sicherheit.',
+    meaning_rev: 'Spannung im Fest, Aufschub oder eine Sicherheit, die nur Fassade ist.',
+  },
+  {
+    id: 26,
+    name: '5 der Stäbe',
+    numeral: '5',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 5,
+    rank: '5',
+    keywords: ['Wettbewerb', 'Reibung', 'Übung'],
+    symbolism: 'Fünf junge Männer stoßen mit Stäben spielerisch zusammen, die Bewegungen bleiben ungeordnet.',
+    meaning_up: 'Reibung, die voranbringt: Wettbewerb als Übung, nicht als Krieg.',
+    meaning_rev: 'Konfliktvermeidung oder Streit, der keinen Zweck mehr hat.',
+  },
+  {
+    id: 27,
+    name: '6 der Stäbe',
+    numeral: '6',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 6,
+    rank: '6',
+    keywords: ['Anerkennung', 'Erfolg', 'Auftritt'],
+    symbolism:
+      'Ein Reiter mit Lorbeerkranz auf dem Kopf trägt einen bekränzten Stab, ihm folgen Träger weiterer Stäbe.',
+    meaning_up: 'Sichtbarer Erfolg und Anerkennung; die Leistung wird gesehen.',
+    meaning_rev: 'Zweifel an der Anerkennung oder Stolz, der die Abhängigkeit von anderen leugnet.',
+  },
+  {
+    id: 28,
+    name: '7 der Stäbe',
+    numeral: '7',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 7,
+    rank: '7',
+    keywords: ['Verteidigung', 'Standpunkt', 'Druck'],
+    symbolism: 'Ein Mann steht auf einer Anhöhe und wehrt mit einem Stab gegen sechs Stäbe, die von unten kommen.',
+    meaning_up: 'Einen Standpunkt halten, auch wenn Gegenwind kommt.',
+    meaning_rev: 'Überforderung, Rückzug oder Verteidigung ohne erkennbaren Angriff.',
+  },
+  {
+    id: 29,
+    name: '8 der Stäbe',
+    numeral: '8',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 8,
+    rank: '8',
+    keywords: ['Tempo', 'Nachricht', 'Bewegung'],
+    symbolism: 'Acht Stäbe fliegen schräg über eine Landschaft, unten fließt ein Fluss.',
+    meaning_up: 'Schnelle Bewegung und Nachrichten; jetzt ist Tempo gefragt.',
+    meaning_rev: 'Verzögerung oder Eile, die kein Ziel mehr kennt.',
+  },
+  {
+    id: 30,
+    name: '9 der Stäbe',
+    numeral: '9',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 9,
+    rank: '9',
+    keywords: ['Ausdauer', 'Grenze', 'Wachsamkeit'],
+    symbolism: 'Ein Mann lehnt an einem Stab, den Kopf verbunden; acht weitere Stäbe stehen wie ein Zaun hinter ihm.',
+    meaning_up: 'Ausdauer an der Grenze der Kräfte; wachsam bleiben, aber nicht verbissen.',
+    meaning_rev: 'Erschöpfung oder Wachsamkeit, die zur Härte gegen sich selbst wird.',
+  },
+  {
+    id: 31,
+    name: '10 der Stäbe',
+    numeral: '10',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 10,
+    rank: '10',
+    keywords: ['Last', 'Verantwortung', 'Ziel'],
+    symbolism: 'Ein Mann trägt zehn gebündelte Stäbe vor sich her, ein Dorf liegt im Hintergrund.',
+    meaning_up: 'Viel Verantwortung auf einmal: tragen, was nötig ist, und abgeben, was nicht nötig ist.',
+    meaning_rev: 'Überlast abwerfen oder zusammenbrechen – die Last ist nicht mehr tragbar.',
+  },
+  {
+    id: 32,
+    name: 'Bube der Stäbe',
+    numeral: 'BUBE',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 11,
+    rank: 'page',
+    keywords: ['Neugier', 'Botschaft', 'Aufbruch'],
+    symbolism: 'Ein junger Bote steht mit einem Stab in karger Ebene, drei Pyramiden ragen im Hintergrund auf.',
+    meaning_up: 'Neugier und eine Botschaft; ein Anfang wird angekündigt.',
+    meaning_rev: 'Unruhe, Ankündigung ohne Folgen oder ein Vorhaben, das nicht durchgehalten wird.',
+  },
+  {
+    id: 33,
+    name: 'Ritter der Stäbe',
+    numeral: 'RITTER',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 12,
+    rank: 'knight',
+    keywords: ['Tatendrang', 'Reise', 'Begeisterung'],
+    symbolism: 'Ein Ritter reitet auf einem steigenden Pferd, den Stab mit Federbusch erhoben, über eine Ebene.',
+    meaning_up: 'Tatendrang und Bewegung; das Vorhaben nimmt Fahrt auf.',
+    meaning_rev: 'Überstürzung oder ein Vorhaben, das ohne Plan vorangetrieben wird.',
+  },
+  {
+    id: 34,
+    name: 'Königin der Stäbe',
+    numeral: 'KÖNIGIN',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 13,
+    rank: 'queen',
+    keywords: ['Ausstrahlung', 'Selbstvertrauen', 'Wärme'],
+    symbolism:
+      'Eine Königin sitzt auf einem Löwenthron, hält einen Stab und eine Sonnenblume; eine Katze sitzt zu ihren Füßen.',
+    meaning_up: 'Ausstrahlung und Selbstvertrauen; Wärme, die andere mitnimmt.',
+    meaning_rev: 'Eifersucht, Überforderung oder Selbstbehauptung auf Kosten anderer.',
+  },
+  {
+    id: 35,
+    name: 'König der Stäbe',
+    numeral: 'KÖNIG',
+    arcana: 'minor',
+    suit: 'wands',
+    number: 14,
+    rank: 'king',
+    keywords: ['Führung', 'Verantwortung', 'Weitblick'],
+    symbolism: 'Ein König sitzt auf einem Thron mit Löwen und Eidechsen, hält Stab und einen kleinen Feuerling.',
+    meaning_up: 'Führung mit Weitblick; Verantwortung wird selbstverständlich getragen.',
+    meaning_rev: 'Herrschaft durch Druck oder ein Anspruch, der nicht mehr gedeckt ist.',
+  },
+  {
+    id: 36,
+    name: 'Ass der Kelche',
+    numeral: 'A',
     arcana: 'minor',
     suit: 'cups',
-    number: i + 1,
-    keywords:
-      i === 0
-        ? ['Neue Liebe', 'Intuition']
-        : i === 1
-          ? ['Partnerschaft', 'Verbindung']
-          : i === 2
-            ? ['Freude', 'Freundschaft']
-            : i === 3
-              ? ['Nostalgie', 'Vergessenes']
-              : i === 4
-                ? ['Enttäuschung', 'Trauer']
-                : i === 5
-                  ? ['Vergangenheit', 'Loslassen']
-                  : i === 6
-                    ? ['Träumerei', 'Illusionen']
-                    : i === 7
-                      ? ['Weiterziehen', 'Suche']
-                      : i === 8
-                        ? ['Wunsch', 'Erfüllung']
-                        : i === 9
-                          ? ['Harmonie', 'Familie']
-                          : i === 10
-                            ? ['Botschaft', 'Angebot']
-                            : i === 11
-                              ? ['Romantik', 'Idealismus']
-                              : i === 12
-                                ? ['Mitgefühl', 'Heilung']
-                                : ['Emotionale Reife', 'Balance'],
-    meaning_up: 'Wasser-Energie: Gefühle, Beziehungen, Intuition.',
-    meaning_rev: 'Emotionale Blockade, Rückzug, Übersensibilität.',
-  })),
-
-  // Minor Arcana — Swords (Schwerter)
-  ...Array.from({ length: 14 }, (_, i) => ({
-    id: 50 + i,
-    name: `${i === 0 ? 'Ass' : i === 10 ? 'Bube' : i === 11 ? 'Ritter' : i === 12 ? 'Königin' : i === 13 ? 'König' : i} der Schwerter`,
+    number: 1,
+    rank: 'ace',
+    keywords: ['Gefühl', 'Angebot', 'Intuition'],
+    symbolism:
+      'Eine Hand aus einer Wolke hält einen übervollen Kelch, fünf Ströme fließen in einen Teich, eine Taube trägt eine Hostie.',
+    meaning_up: 'Ein Gefühl oder Angebot kommt von außen und ist noch ungeprüft.',
+    meaning_rev: 'Verschlossenes Gefühl, ein überhörtes Angebot oder Rückzug aus Enttäuschung.',
+  },
+  {
+    id: 37,
+    name: '2 der Kelche',
+    numeral: '2',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 2,
+    rank: '2',
+    keywords: ['Begegnung', 'Austausch', 'Vertrag'],
+    symbolism:
+      'Zwei Menschen stehen einander gegenüber und tauschen Kelche; über ihnen erscheint ein Caduceus mit Löwenkopf.',
+    meaning_up: 'Ein Austausch auf Augenhöhe; Verbindung, die auf Gegenseitigkeit beruht.',
+    meaning_rev: 'Ungleichgewicht im Austausch, Streit oder ein Versprechen ohne Deckung.',
+  },
+  {
+    id: 38,
+    name: '3 der Kelche',
+    numeral: '3',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 3,
+    rank: '3',
+    keywords: ['Freundschaft', 'Fest', 'Dankbarkeit'],
+    symbolism: 'Drei Frauen tanzen mit erhobenen Kelchen im Kreis, um sie herum stehen Früchte und Kürbisse.',
+    meaning_up: 'Gemeinschaft und Freude; teilen, was geerntet wurde.',
+    meaning_rev: 'Ausgelassenheit als Flucht oder Distanz in einer Gruppe, die zusammenzugehören scheint.',
+  },
+  {
+    id: 39,
+    name: '4 der Kelche',
+    numeral: '4',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 4,
+    rank: '4',
+    keywords: ['Rückzug', 'Übersehen', 'Unlust'],
+    symbolism:
+      'Eine Person sitzt unter einem Baum, drei Kelche stehen vor ihr; ein vierter Kelch erscheint aus einer Wolke.',
+    meaning_up: 'Ein Angebot wird nicht gesehen, weil der Blick nach innen gerichtet ist.',
+    meaning_rev: 'Ein neues Angebot annehmen oder den Rückzug bewusst beenden.',
+  },
+  {
+    id: 40,
+    name: '5 der Kelche',
+    numeral: '5',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 5,
+    rank: '5',
+    keywords: ['Verlust', 'Trauer', 'Blick'],
+    symbolism:
+      'Eine vermummte Gestalt steht vor drei umgestürzten Kelchen; zwei Kelche bleiben stehen, hinter ihr führen Fluss und Brücke weiter.',
+    meaning_up: 'Ein Verlust braucht Trauer – und der Blick auf das, was unversehrt geblieben ist.',
+    meaning_rev: 'Den Verlust annehmen und den Weg über die Brücke gehen.',
+  },
+  {
+    id: 41,
+    name: '6 der Kelche',
+    numeral: '6',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 6,
+    rank: '6',
+    keywords: ['Erinnerung', 'Unschuld', 'Vergangenheit'],
+    symbolism: 'Zwei Kinder stehen in einem Hof und betrachten sechs Kelche, die mit Blumen gefüllt sind.',
+    meaning_up: 'Erinnerung an eine unbeschwerte Zeit; sie wärmt, ohne die Gegenwart zu ersetzen.',
+    meaning_rev: 'Verklärung der Vergangenheit oder ein Festhalten, das den nächsten Schritt blockiert.',
+  },
+  {
+    id: 42,
+    name: '7 der Kelche',
+    numeral: '7',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 7,
+    rank: '7',
+    keywords: ['Möglichkeiten', 'Täuschung', 'Auswahl'],
+    symbolism:
+      'Eine Schattenfigur betrachtet sieben Kelche in einer Wolke, gefüllt mit Schloss, Juwel, Lorbeer, Drache, Schlange und Köpfen.',
+    meaning_up: 'Viele Möglichkeiten, aber nicht alle sind real; prüfen, bevor gewählt wird.',
+    meaning_rev: 'Klarheit über die Auswahl oder Ernüchterung nach einer Illusion.',
+  },
+  {
+    id: 43,
+    name: '8 der Kelche',
+    numeral: '8',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 8,
+    rank: '8',
+    keywords: ['Aufbruch', 'Suche', 'Unzufriedenheit'],
+    symbolism:
+      'Eine Person geht mit einem Stab von acht gestapelten Kelchen fort, im Hintergrund steht ein Mond über Bergen.',
+    meaning_up: 'Ein Aufbruch aus Unzufriedenheit; die Suche ist ehrlich, das Ziel noch unklar.',
+    meaning_rev: 'Rückkehr, ein Aufbruch ohne Grund oder eine Suche, die nur Ablenkung war.',
+  },
+  {
+    id: 44,
+    name: '9 der Kelche',
+    numeral: '9',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 9,
+    rank: '9',
+    keywords: ['Wunsch', 'Zufriedenheit', 'Genuss'],
+    symbolism:
+      'Ein zufriedener Mann sitzt mit verschränkten Armen auf einer Bank, neun Kelche stehen im Bogen hinter ihm.',
+    meaning_up: 'Ein Wunsch ist erfüllt; Genuss und Zufriedenheit sind erlaubt.',
+    meaning_rev: 'Wunscherfüllung mit Haken oder eine Zufriedenheit, die nicht geteilt werden kann.',
+  },
+  {
+    id: 45,
+    name: '10 der Kelche',
+    numeral: '10',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 10,
+    rank: '10',
+    keywords: ['Harmonie', 'Familie', 'Regenbogen'],
+    symbolism:
+      'Eine Familie steht mit erhobenen Armen unter einem Regenbogen mit zehn Kelchen, im Hintergrund ein Haus.',
+    meaning_up: 'Geteilte Harmonie und ein tragfähiges Zuhause.',
+    meaning_rev: 'Harmonie nach außen bei Bruchstellen innen; das Bild stimmt nicht mit dem Gefühl überein.',
+  },
+  {
+    id: 46,
+    name: 'Bube der Kelche',
+    numeral: 'BUBE',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 11,
+    rank: 'page',
+    keywords: ['Empfindsamkeit', 'Angebot', 'Vorstellungskraft'],
+    symbolism: 'Ein junger Bote hält einen Kelch, aus dem ein Fisch schaut; hinter ihm bewegt sich das Meer.',
+    meaning_up: 'Empfindsamkeit und ein inneres Angebot; Vorstellungskraft wird fruchtbar.',
+    meaning_rev: 'Rückzug in Fantasie oder ein Angebot, das nicht umgesetzt wird.',
+  },
+  {
+    id: 47,
+    name: 'Ritter der Kelche',
+    numeral: 'RITTER',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 12,
+    rank: 'knight',
+    keywords: ['Romantik', 'Einladung', 'Maß'],
+    symbolism: 'Ein Ritter reitet ruhig an einem Fluss entlang und hält einen Kelch, den er betrachtet.',
+    meaning_up: 'Eine freundliche Einladung; Romantik mit ruhigem Schritt.',
+    meaning_rev: 'Unrealistisches Angebot oder ein Versprechen ohne Substanz.',
+  },
+  {
+    id: 48,
+    name: 'Königin der Kelche',
+    numeral: 'KÖNIGIN',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 13,
+    rank: 'queen',
+    keywords: ['Mitgefühl', 'Zuwendung', 'Intuition'],
+    symbolism:
+      'Eine Königin sitzt am Wasser und hält einen geschlossenen Kelch, ein Engel mit Kelch erscheint über ihr.',
+    meaning_up: 'Mitgefühl und Zuwendung; Gefühle werden genau wahrgenommen.',
+    meaning_rev: 'Fürsorge ohne Grenze oder Gefühle, die nicht mehr unterschieden werden.',
+  },
+  {
+    id: 49,
+    name: 'König der Kelche',
+    numeral: 'KÖNIG',
+    arcana: 'minor',
+    suit: 'cups',
+    number: 14,
+    rank: 'king',
+    keywords: ['emotionale Reife', 'Ruhe', 'Haltung'],
+    symbolism: 'Ein König sitzt auf einem Thron im Wasser, ein Fisch springt, ein Schiff fährt vorbei.',
+    meaning_up: 'Emotionale Reife und Ruhe; Gefühle werden gehalten, nicht verdrängt.',
+    meaning_rev: 'Emotionale Kontrolle als Panzer oder Kälte, die Nähe verhindert.',
+  },
+  {
+    id: 50,
+    name: 'Ass der Schwerter',
+    numeral: 'A',
     arcana: 'minor',
     suit: 'swords',
-    number: i + 1,
-    keywords:
-      i === 0
-        ? ['Klarheit', 'Durchbruch']
-        : i === 1
-          ? ['Abwägung', 'Stillstand']
-          : i === 2
-            ? ['Herzschmerz', 'Trennung']
-            : i === 3
-              ? ['Erholung', 'Ruhe']
-              : i === 4
-                ? ['Ruhe', 'Rückzug']
-                : i === 5
-                  ? ['Übergang', 'Reise']
-                  : i === 6
-                    ? ['Täuschung', 'Strategie']
-                    : i === 7
-                      ? ['Mut', 'Entschlossenheit']
-                      : i === 8
-                        ? ['Einschränkung', 'Gedankenfalle']
-                        : i === 9
-                          ? ['Albträume', 'Angst']
-                          : i === 10
-                            ? ['Neugier', 'Wachsamkeit']
-                            : i === 11
-                              ? ['Handlung', 'Direktheit']
-                              : i === 12
-                                ? ['Unabhängigkeit', 'Klarheit']
-                                : ['Autorität', 'Intellekt'],
-    meaning_up: 'Luft-Energie: Verstand, Konflikt, Wahrheit.',
-    meaning_rev: 'Konfusion, Grausamkeit, Selbstbetrug.',
-  })),
-
-  // Minor Arcana — Pentacles (Münzen)
-  ...Array.from({ length: 14 }, (_, i) => ({
-    id: 64 + i,
-    name: `${i === 0 ? 'Ass' : i === 10 ? 'Bube' : i === 11 ? 'Ritter' : i === 12 ? 'Königin' : i === 13 ? 'König' : i} der Münzen`,
+    number: 1,
+    rank: 'ace',
+    keywords: ['Klarheit', 'Schnitt', 'Wahrheit'],
+    symbolism:
+      'Eine Hand aus einer Wolke hält ein aufrechtes Schwert, dessen Spitze eine Krone trägt; unten liegt ein Gebirge.',
+    meaning_up: 'Ein klarer Gedanke, der schneidet: benennen, was ist.',
+    meaning_rev: 'Verzerrte Klarheit, ein Urteil ohne Prüfung oder ein Schnitt, der zu früh kommt.',
+  },
+  {
+    id: 51,
+    name: '2 der Schwerter',
+    numeral: '2',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 2,
+    rank: '2',
+    keywords: ['Abwägung', 'Blockade', 'Entscheidung'],
+    symbolism:
+      'Eine verbundene Frau sitzt mit zwei gekreuzten Schwertern vor dem Meer, über ihr steht eine Mondsichel.',
+    meaning_up: 'Zwei Möglichkeiten blockieren sich; die Entscheidung wird durch Schweigen nicht leichter.',
+    meaning_rev: 'Die Blockade löst sich, Informationen fließen, eine Entscheidung wird möglich.',
+  },
+  {
+    id: 52,
+    name: '3 der Schwerter',
+    numeral: '3',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 3,
+    rank: '3',
+    keywords: ['Schmerz', 'Trennung', 'Klarheit'],
+    symbolism: 'Drei Schwerter durchbohren ein Herz, dahinter fällt Regen aus grauen Wolken.',
+    meaning_up: 'Ein Schmerz, der klar benannt werden kann; das Durchbohrende ist die Wahrheit, nicht die Strafe.',
+    meaning_rev: 'Heilung beginnt oder ein Schmerz wird verdrängt, statt angesehen zu werden.',
+  },
+  {
+    id: 53,
+    name: '4 der Schwerter',
+    numeral: '4',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 4,
+    rank: '4',
+    keywords: ['Ruhe', 'Rückzug', 'Erholung'],
+    symbolism: 'Ein Ritter liegt auf einem Grabmal, drei Schwerter hängen an der Wand, ein Kirchenfenster leuchtet.',
+    meaning_up: 'Ruhe als Pflicht: sich zurückziehen, bis die Kräfte zurück sind.',
+    meaning_rev: 'Ruhe, die nicht gefunden wird, oder Unruhe, die den Rückzug verhindert.',
+  },
+  {
+    id: 54,
+    name: '5 der Schwerter',
+    numeral: '5',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 5,
+    rank: '5',
+    keywords: ['Streit', 'Sieg', 'Verlust'],
+    symbolism: 'Ein Mann hält zwei Schwerter, drei liegen am Boden, zwei weitere entfernen sich Richtung Wasser.',
+    meaning_up: 'Ein Streit mit Gewinn und Verlust; der Sieg kostet mehr, als er einbringt.',
+    meaning_rev: 'Versöhnung oder die Einsicht, dass der Streit beendet werden kann.',
+  },
+  {
+    id: 55,
+    name: '6 der Schwerter',
+    numeral: '6',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 6,
+    rank: '6',
+    keywords: ['Übergang', 'Reise', 'Abschied'],
+    symbolism: 'Ein Fährmann bringt eine Frau und ein Kind über das Wasser, sechs Schwerter stehen im Boot.',
+    meaning_up: 'Ein notwendiger Übergang; die Last reist mit, aber das Ufer wechselt.',
+    meaning_rev: 'Ungelöste Last auf der Überfahrt oder ein Übergang, der nicht abgeschlossen wird.',
+  },
+  {
+    id: 56,
+    name: '7 der Schwerter',
+    numeral: '7',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 7,
+    rank: '7',
+    keywords: ['Täuschung', 'Strategie', 'Selbstbetrug'],
+    symbolism: 'Ein Mann schleicht mit fünf Schwertern aus einem Lager, zwei Schwerter bleiben zurück.',
+    meaning_up: 'Etwas wird geholt, ohne dass es geklärt ist; die Rechnung bleibt offen.',
+    meaning_rev: 'Enttarnung, Rückgabe oder die Einsicht, dass der Vorteil keiner war.',
+  },
+  {
+    id: 57,
+    name: '8 der Schwerter',
+    numeral: '8',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 8,
+    rank: '8',
+    keywords: ['Fessel', 'Denkfalle', 'Angst'],
+    symbolism:
+      'Eine gefesselte und verbundene Frau steht zwischen acht Schwertern; das Schloss im Hintergrund ist offen.',
+    meaning_up: 'Die Fesseln sind Gedanken: eng, aber nicht vollständig.',
+    meaning_rev: 'Fesseln lösen sich; der Weg nach draußen wird sichtbar.',
+  },
+  {
+    id: 58,
+    name: '9 der Schwerter',
+    numeral: '9',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 9,
+    rank: '9',
+    keywords: ['Angst', 'Nacht', 'Grübeln'],
+    symbolism: 'Eine Person sitzt im Bett, das Gesicht in den Händen; neun Schwerter hängen an der Wand.',
+    meaning_up: 'Nächtliches Grübeln: die Angst ist groß, die Lage meist kleiner als das Bild.',
+    meaning_rev: 'Die Angst wird benannt und verliert an Größe; Erleichterung wird möglich.',
+  },
+  {
+    id: 59,
+    name: '10 der Schwerter',
+    numeral: '10',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 10,
+    rank: '10',
+    keywords: ['Ende', 'Erschöpfung', 'Licht'],
+    symbolism: 'Eine Figur liegt mit zehn Schwertern im Rücken am Boden; am Horizont geht goldenes Licht auf.',
+    meaning_up: 'Ein Ende, das nicht mehr zu steigern ist; danach bleibt nur der Neuanfang.',
+    meaning_rev: 'Erholung beginnt; das Schlimmste liegt hinter der Person.',
+  },
+  {
+    id: 60,
+    name: 'Bube der Schwerter',
+    numeral: 'BUBE',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 11,
+    rank: 'page',
+    keywords: ['Wachheit', 'Frage', 'Direktheit'],
+    symbolism: 'Ein junger Bote steht auf einem Hügel mit erhobenem Schwert, Wolken ziehen hinter ihm auf.',
+    meaning_up: 'Wachheit und eine klare Frage; Direktheit ohne Umweg.',
+    meaning_rev: 'Streitlust oder Zerstreuung, die das eigentliche Thema verfehlt.',
+  },
+  {
+    id: 61,
+    name: 'Ritter der Schwerter',
+    numeral: 'RITTER',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 12,
+    rank: 'knight',
+    keywords: ['Tempo', 'Angriff', 'Entschlossenheit'],
+    symbolism: 'Ein Ritter stürmt mit erhobenem Schwert nach vorn, Wolken und Bäume beugen sich im Wind.',
+    meaning_up: 'Entschlossenheit und Tempo; ein Angriff mit klarem Ziel.',
+    meaning_rev: 'Angriff ohne Ziel oder eine Eile, die nur Schaden anrichtet.',
+  },
+  {
+    id: 62,
+    name: 'Königin der Schwerter',
+    numeral: 'KÖNIGIN',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 13,
+    rank: 'queen',
+    keywords: ['Schärfe', 'Urteil', 'Erfahrung'],
+    symbolism:
+      'Eine Königin sitzt aufrecht auf einem Thron, das Schwert gerade erhoben; Wolken und Schmetterlinge umgeben sie.',
+    meaning_up: 'Schärfe und Urteilskraft; eine klare Haltung aus Erfahrung.',
+    meaning_rev: 'Schärfe ohne Mitgefühl oder ein Urteil, das verletzt statt klärt.',
+  },
+  {
+    id: 63,
+    name: 'König der Schwerter',
+    numeral: 'KÖNIG',
+    arcana: 'minor',
+    suit: 'swords',
+    number: 14,
+    rank: 'king',
+    keywords: ['Autorität', 'Maßstab', 'Klarheit'],
+    symbolism:
+      'Ein König sitzt frontal auf einem Thron, das Schwert aufrecht; Schmetterling und Mohn sind in seinen Mantel gesetzt.',
+    meaning_up: 'Autorität mit Maßstab; Entscheidungen werden begründet.',
+    meaning_rev: 'Willkür oder ein Urteil ohne Verhältnismäßigkeit.',
+  },
+  {
+    id: 64,
+    name: 'Ass der Münzen',
+    numeral: 'A',
     arcana: 'minor',
     suit: 'pentacles',
-    number: i + 1,
-    keywords:
-      i === 0
-        ? ['Chance', 'Wohlstand']
-        : i === 1
-          ? ['Balance', 'Flexibilität']
-          : i === 2
-            ? ['Handwerk', 'Teamarbeit']
-            : i === 3
-              ? ['Meisterschaft', 'Perfektion']
-              : i === 4
-                ? ['Sicherheit', 'Besitz']
-                : i === 5
-                  ? ['Mangel', 'Großzügigkeit']
-                  : i === 6
-                    ? ['Geduld', 'Investition']
-                    : i === 7
-                      ? ['Einschätzung', 'Qualität']
-                      : i === 8
-                        ? ['Fertigkeit', 'Hingabe']
-                        : i === 9
-                          ? ['Fülle', 'Erbe']
-                          : i === 10
-                            ? ['Lernen', 'Neuanfang']
-                            : i === 11
-                              ? ['Routine', 'Pflicht']
-                              : i === 12
-                                ? ['Fürsorge', 'Praxis']
-                                : ['Meisterschaft', 'Wohlstand'],
-    meaning_up: 'Erde-Energie: Materie, Arbeit, Manifestation.',
-    meaning_rev: 'Verschwendung, Gier, Stagnation, Vernachlässigung.',
-  })),
+    number: 1,
+    rank: 'ace',
+    keywords: ['Gelegenheit', 'Substanz', 'Anfang'],
+    symbolism: 'Eine Hand aus einer Wolke hält eine Münze über einen Garten mit Tor und blühenden Pflanzen.',
+    meaning_up: 'Eine konkrete Gelegenheit mit Substanz; sie will angenommen werden.',
+    meaning_rev: 'Verpasste Gelegenheit oder ein Anfang, der ohne Boden bleibt.',
+  },
+  {
+    id: 65,
+    name: '2 der Münzen',
+    numeral: '2',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 2,
+    rank: '2',
+    keywords: ['Balance', 'Vielgleichzeitigkeit', 'Bewegung'],
+    symbolism:
+      'Ein Mensch jongliert zwei Münzen, eine Unendlichkeitsschleife verbindet sie; im Hintergrund fahren Schiffe.',
+    meaning_up: 'Mehrere Aufgaben gleichzeitig halten, ohne die Balance zu verlieren.',
+    meaning_rev: 'Überlast oder eine Balance, die erst gefunden werden muss.',
+  },
+  {
+    id: 66,
+    name: '3 der Münzen',
+    numeral: '3',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 3,
+    rank: '3',
+    keywords: ['Handwerk', 'Zusammenarbeit', 'Qualität'],
+    symbolism:
+      'Ein Steinmetz arbeitet in einer Kirche, zwei Betrachter stehen mit Plänen daneben; drei Münzen sind in den Bogen gemeißelt.',
+    meaning_up: 'Handwerk, das geprüft wird; Qualität entsteht im Zusammenspiel.',
+    meaning_rev: 'Routine ohne Qualitätsanspruch oder Zusammenarbeit, die nicht trägt.',
+  },
+  {
+    id: 67,
+    name: '4 der Münzen',
+    numeral: '4',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 4,
+    rank: '4',
+    keywords: ['Festhalten', 'Sicherheit', 'Besitz'],
+    symbolism: 'Ein sitzender Mensch hält eine Münze, zwei liegen unter den Füßen, eine ruht auf dem Kopf.',
+    meaning_up: 'Sicherheit wird festgehalten; Vorsicht ist berechtigt, Erstarrung nicht.',
+    meaning_rev: 'Das Festhalten lockert sich, oder Verlustangst bestimmt alle Entscheidungen.',
+  },
+  {
+    id: 68,
+    name: '5 der Münzen',
+    numeral: '5',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 5,
+    rank: '5',
+    keywords: ['Mangel', 'Ausgrenzung', 'Hilfe'],
+    symbolism: 'Zwei Menschen gehen im Schnee an einem erleuchteten Kirchenfenster vorbei.',
+    meaning_up: 'Mangel und Ausgrenzung; der Weg zur Hilfe ist oft näher als der Blick vermuten lässt.',
+    meaning_rev: 'Hilfe wird angenommen; die Lage bessert sich durch Kontakt.',
+  },
+  {
+    id: 69,
+    name: '6 der Münzen',
+    numeral: '6',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 6,
+    rank: '6',
+    keywords: ['Gabe', 'Ausgleich', 'Abhängigkeit'],
+    symbolism: 'Ein Kaufmann wiegt mit einer Waage Münzen ab und gibt sie an zwei Empfangende.',
+    meaning_up: 'Geben und Nehmen sind geregelt; die Waage zeigt, wer worauf angewiesen ist.',
+    meaning_rev: 'Ungleiche Gabe oder Abhängigkeit, die als Großzügigkeit getarnt wird.',
+  },
+  {
+    id: 70,
+    name: '7 der Münzen',
+    numeral: '7',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 7,
+    rank: '7',
+    keywords: ['Geduld', 'Investition', 'Prüfung'],
+    symbolism: 'Ein Gärtner lehnt auf einer Hacke und betrachtet einen Busch mit sieben Münzen.',
+    meaning_up: 'Investition braucht Zeit; prüfen, ob das Wachstum echt ist.',
+    meaning_rev: 'Ungeduld, vorzeitige Ernte oder ein Einsatz, der nicht aufgeht.',
+  },
+  {
+    id: 71,
+    name: '8 der Münzen',
+    numeral: '8',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 8,
+    rank: '8',
+    keywords: ['Fertigkeit', 'Hingabe', 'Wiederholung'],
+    symbolism: 'Ein Handwerker meißelt an acht Münzen, im Hintergrund steht eine Stadt.',
+    meaning_up: 'Hingabe an die Wiederholung; Fertigkeit entsteht durch Übung.',
+    meaning_rev: 'Wiederholung ohne Ziel oder Arbeit, die nur noch Routine ist.',
+  },
+  {
+    id: 72,
+    name: '9 der Münzen',
+    numeral: '9',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 9,
+    rank: '9',
+    keywords: ['Fülle', 'Selbstwert', 'Ernte'],
+    symbolism:
+      'Eine Frau steht in einem Weingarten, ein Falke sitzt auf ihrer Hand; neun Münzen hängen zwischen den Reben.',
+    meaning_up: 'Fülle und Selbstwert zugleich; die Ernte ist verdient.',
+    meaning_rev: 'Der Schein von Fülle oder ein Selbstwert, der an Besitz gebunden wird.',
+  },
+  {
+    id: 73,
+    name: '10 der Münzen',
+    numeral: '10',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 10,
+    rank: '10',
+    keywords: ['Vermögen', 'Familie', 'Dauer'],
+    symbolism: 'Ein Familienbogen steht unter zehn Münzen, ein Hund und ein alter Mann sind zu sehen.',
+    meaning_up: 'Dauerhaftes Vermögen und Weitergabe über Generationen.',
+    meaning_rev: 'Vermögen mit Konflikt oder eine Neubewertung dessen, was wirklich bleibt.',
+  },
+  {
+    id: 74,
+    name: 'Bube der Münzen',
+    numeral: 'BUBE',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 11,
+    rank: 'page',
+    keywords: ['Lernen', 'Konzentration', 'Beginn'],
+    symbolism: 'Ein junger Bote steht in einem Feld und betrachtet eine Münze, die er in den Händen hält.',
+    meaning_up: 'Lernen mit Ernst; ein Anfang wird sorgfältig geprüft.',
+    meaning_rev: 'Zerstreuung oder Lernen ohne Richtung.',
+  },
+  {
+    id: 75,
+    name: 'Ritter der Münzen',
+    numeral: 'RITTER',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 12,
+    rank: 'knight',
+    keywords: ['Zuverlässigkeit', 'Geduld', 'Beständigkeit'],
+    symbolism:
+      'Ein Ritter sitzt auf einem schweren, stehenden Pferd und hält eine Münze; vor ihm liegt ein gepflügtes Feld.',
+    meaning_up: 'Zuverlässigkeit und Beständigkeit; Fortschritt im eigenen Tempo.',
+    meaning_rev: 'Stillstand oder Übervorsicht, die jede Bewegung verhindert.',
+  },
+  {
+    id: 76,
+    name: 'Königin der Münzen',
+    numeral: 'KÖNIGIN',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 13,
+    rank: 'queen',
+    keywords: ['Fürsorge', 'Praxis', 'Wärme'],
+    symbolism: 'Eine Königin sitzt in einem Garten und hält eine Münze im Schoß; ein Hase läuft neben ihr.',
+    meaning_up: 'Fürsorge mit praktischem Blick; Wärme, die konkret wird.',
+    meaning_rev: 'Überfürsorge oder materielle Unsicherheit, die alles bestimmt.',
+  },
+  {
+    id: 77,
+    name: 'König der Münzen',
+    numeral: 'KÖNIG',
+    arcana: 'minor',
+    suit: 'pentacles',
+    number: 14,
+    rank: 'king',
+    keywords: ['Meisterschaft', 'Besitz', 'Verantwortung'],
+    symbolism: 'Ein König sitzt in einem Weingarten, Münzen und Weinlaub umgeben ihn, ein Stierkopf ist am Thron.',
+    meaning_up: 'Meisterschaft und Verantwortung für das, was aufgebaut wurde.',
+    meaning_rev: 'Besitzgier oder Erstarrung im Erreichten.',
+  },
 ];
+
+export function deckCardLabel(card) {
+  const arcana = card.arcana === 'major' ? 'Große Arkana' : `Kleine Arkana · ${SUIT_LABELS[card.suit] || ''}`.trim();
+  return `${card.name} · ${card.numeral} · ${arcana}`;
+}
 
 export function getRandomCards(count, allowReversed = true) {
   const shuffled = [...tarotCards].sort(() => Math.random() - 0.5);
@@ -366,13 +1086,13 @@ export function getRandomCards(count, allowReversed = true) {
 }
 
 export function getCardById(id) {
-  return tarotCards.find((c) => c.id === id);
+  return tarotCards.find((card) => card.id === id);
 }
 
 export function getCardsBySuit(suit) {
-  return tarotCards.filter((c) => c.suit === suit);
+  return tarotCards.filter((card) => card.suit === suit);
 }
 
 export function getMajorArcana() {
-  return tarotCards.filter((c) => c.arcana === 'major');
+  return tarotCards.filter((card) => card.arcana === 'major');
 }

@@ -1,0 +1,3014 @@
+{
+ "deck_id": "nachtatelier-v1",
+ "label": "Nachtatelier",
+ "version": "1.0.0-preview",
+ "card_count": 78,
+ "aspect": "3:5",
+ "color_space": "sRGB",
+ "source_deck": "docs/tarot-deck-nachtatelier",
+ "source_manifest": "manifest-assets.json",
+ "naming_note": "IDs bleiben unverändert. Die Anzeigenamen der nummerierten kleinen Arkana sind gegenüber dem bestehenden Generator kanonisch korrigiert (z. B. ID 23: Generator '1 der Stäbe', kanonisch '2 der Stäbe'). Der Generator muss im Integrationsschritt berichtigt werden.",
+ "levels": {
+  "thumb": "300",
+  "detail": "600",
+  "zoom": "1200"
+ },
+ "back": {
+  "sha256_source": "86518aa973288e557a613dfaae416735c83bbb119b085d32f20da6bcfa134739",
+  "files": {
+   "thumb": {
+    "path": "300/Ruecken.jpg",
+    "bytes": 14505,
+    "sha256": "f577cfb2f51e1a283e1feacbc88905e38cd283cb7306afdd4e3e1374157505f4",
+    "size": [
+     300,
+     500
+    ]
+   },
+   "detail": {
+    "path": "600/Ruecken.jpg",
+    "bytes": 45944,
+    "sha256": "c61315e569ce442300c86590d9d1aca18a629f1423108f6e9db426b0d0ef94d4",
+    "size": [
+     600,
+     1000
+    ]
+   },
+   "zoom": {
+    "path": "1200/Ruecken.jpg",
+    "bytes": 139317,
+    "sha256": "b58bfc3ec889618b1060edd462af20d90dcc5fe79cf3e0cfbbf599c7632f8f70",
+    "size": [
+     1200,
+     2000
+    ]
+   }
+  }
+ },
+ "cards": [
+  {
+   "id": 0,
+   "name": "Der Narr",
+   "numeral": "0",
+   "number": 0,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/00.jpg",
+     "bytes": 25541,
+     "sha256": "3f80a4ae245d43601b408013a2cff3b793d5765eaf0a0358987b13bd03aaf94d",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/00.jpg",
+     "bytes": 86327,
+     "sha256": "f8117c1fea6f7683e78f7ac57467a129cc7303bb8cfbae99d4d04032ec57a232",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/00.jpg",
+     "bytes": 317055,
+     "sha256": "7d8bde897245f8d3d6e599e750fe007cb892137cd9be53338481d3df93fee03f",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 1,
+   "name": "Der Magier",
+   "numeral": "I",
+   "number": 1,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/01.jpg",
+     "bytes": 25697,
+     "sha256": "579d60dfc77fdb7c0c680ae6e64d2d93922c5f74e68a344c9e1a5f50ed319d8c",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/01.jpg",
+     "bytes": 86039,
+     "sha256": "c7f937f6f2780ac09793b51de75b70ce240a339f21c531a981288a6a15be0b1c",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/01.jpg",
+     "bytes": 312372,
+     "sha256": "3197d52e59bc5bb825f14ab60c55674503faee283fcc01a33c8a02cc0fed8aae",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 2,
+   "name": "Die Hohepriesterin",
+   "numeral": "II",
+   "number": 2,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/02.jpg",
+     "bytes": 28133,
+     "sha256": "39f14bd2c2412b2897f9966a048b6b33102535f506dc20cbc7941aad3326b60c",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/02.jpg",
+     "bytes": 98346,
+     "sha256": "0a2ee02a1d76749d75fb8b8111d42130bf9cc1f4cf2bcfc66cccbf1e759e3c65",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/02.jpg",
+     "bytes": 371241,
+     "sha256": "a6bbcd233d969953fce0d96874c96ce6e0e48c9df3ad6f79e7b1f6b501e39ba3",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 3,
+   "name": "Die Herrscherin",
+   "numeral": "III",
+   "number": 3,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/03.jpg",
+     "bytes": 30862,
+     "sha256": "9c0ed65ed66f6b42c3756292a262c6f0c648a12c2b7a8996dfb9d31341da279b",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/03.jpg",
+     "bytes": 105759,
+     "sha256": "fa7a36df7611c85f143844705ec355fa7e02f4b125f9b9f3bc201e2c8e170da7",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/03.jpg",
+     "bytes": 384184,
+     "sha256": "35a5557c61399c4db65d6f1e995d4a1b0fffb5539690ec68ddea68fd50d7b8f4",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 4,
+   "name": "Der Herrscher",
+   "numeral": "IV",
+   "number": 4,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/04.jpg",
+     "bytes": 27232,
+     "sha256": "2c663417441c80894361d22fce1aa4a0771cfd40f4ecfecd0b1fad4432d3fdb5",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/04.jpg",
+     "bytes": 98958,
+     "sha256": "2f688c78c852a05821301318938743037468f9062b9df0e2b2f866d609324bd5",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/04.jpg",
+     "bytes": 374298,
+     "sha256": "64368bb4a9cb4ecb8f50b4a671f851f845e5a18aafae6afeb80254d0dd789c08",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 5,
+   "name": "Der Hierophant",
+   "numeral": "V",
+   "number": 5,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/05.jpg",
+     "bytes": 28841,
+     "sha256": "80257b6ff72dcb76d1e1d8433ad3fa3666ea001ef80007665009270d9520e0f9",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/05.jpg",
+     "bytes": 98439,
+     "sha256": "301108f1a98ade56628df5fa99d408c6d98e3cd40abaace7b6b456dd34de3b61",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/05.jpg",
+     "bytes": 365301,
+     "sha256": "1535394f83bc2cdeef118055d0137e8c0332b26bcc9311264edfc7ea59558fbd",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 6,
+   "name": "Die Liebenden",
+   "numeral": "VI",
+   "number": 6,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/06.jpg",
+     "bytes": 28997,
+     "sha256": "97457a65c12c5342bbdc7da370c68dd24c74b4345c662bf0ce55032cdc8c4fd5",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/06.jpg",
+     "bytes": 103864,
+     "sha256": "89866bc0201cdd5ee565a03c5d3e1029773f742fb8bf5b65daf4ebaf392761e7",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/06.jpg",
+     "bytes": 389388,
+     "sha256": "d41eaae5be99a34120fa5f607b9ea126046e04352519618550fc393088d60d37",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 7,
+   "name": "Der Wagen",
+   "numeral": "VII",
+   "number": 7,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/07.jpg",
+     "bytes": 28705,
+     "sha256": "2d9c668dcf4d75137aa858dafcf291af5f2df36c814b2f5be9e2121f19acdacc",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/07.jpg",
+     "bytes": 96340,
+     "sha256": "ea99c69c8b30cd110d1e55310407f621fb27b6e840087a2d538b7b9fc6c90581",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/07.jpg",
+     "bytes": 346788,
+     "sha256": "66479758dba0c0ce6d79426570075642db37d05cc1bb282c26d3e744d00a355b",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 8,
+   "name": "Die Kraft",
+   "numeral": "VIII",
+   "number": 8,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/08.jpg",
+     "bytes": 24061,
+     "sha256": "02d6488d8ba31fd37e7e7b557a850e4e3628b9d3e21509cd3ffcd4b2aa1fc85d",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/08.jpg",
+     "bytes": 83465,
+     "sha256": "f890fdc6f0d8e46c06d813bd8b9e072c9d068e7fd7b6afc6cceb52ff204cd3e7",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/08.jpg",
+     "bytes": 311855,
+     "sha256": "ccf7e72aae03d1f5f300e1d58aca6196323edc038eebdef359cc081a900cf574",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 9,
+   "name": "Der Eremit",
+   "numeral": "IX",
+   "number": 9,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/09.jpg",
+     "bytes": 21237,
+     "sha256": "77f743e1f6a127c0a5835c69e588e6a3ca924a2b0b350d8b8c15593052d16901",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/09.jpg",
+     "bytes": 73145,
+     "sha256": "ddc1b4b33756469e395e528e78919a8f12c32ac8f917ecfbfbb2a296fbf52926",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/09.jpg",
+     "bytes": 287189,
+     "sha256": "ce1c83def5375d88579f7c7531cccc39e6d42f200e123ea104d5f29f703c0422",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 10,
+   "name": "Das Rad des Schicksals",
+   "numeral": "X",
+   "number": 10,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/10.jpg",
+     "bytes": 29023,
+     "sha256": "a0509ca92d7f4b1c6e0c2a86a19dca3e6b4bacbace4dcdae5bd87b44b9d84798",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/10.jpg",
+     "bytes": 102930,
+     "sha256": "abd61b18464f7093f3c102962576c3c1551573a4786b47dec8f4e5e7b90d57fe",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/10.jpg",
+     "bytes": 379622,
+     "sha256": "8805a89e16c02f27d146dfd3a1745f74e4e727251ec0e3df022a77cdb9cb5aab",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 11,
+   "name": "Die Gerechtigkeit",
+   "numeral": "XI",
+   "number": 11,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/11.jpg",
+     "bytes": 28119,
+     "sha256": "503174cdf403c2d4c7afe833ff902e34df2fe9f2bdee766190bef7bcb1d09bd5",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/11.jpg",
+     "bytes": 98080,
+     "sha256": "24ba4c6e288f7c64285f34affddaaea7f9c73d133ce297cc7740ea65675da4cc",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/11.jpg",
+     "bytes": 366791,
+     "sha256": "47947611c6838cabf214943970447b841870c63a1d859ccc5982f46754499e34",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 12,
+   "name": "Der Gehängte",
+   "numeral": "XII",
+   "number": 12,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/12.jpg",
+     "bytes": 22342,
+     "sha256": "7788b1a11dc0fb8f427b8b23529e052d3280606c0a2f55dfda0e6a4e80283af5",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/12.jpg",
+     "bytes": 90952,
+     "sha256": "643808b98ae7540a6cea3f46495155f0034a19fde01a4e18dbe5965c7c8709c1",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/12.jpg",
+     "bytes": 369577,
+     "sha256": "71c5a205636322e9a7f342c72f14593279019343ea641c1b5949e93c67bc4276",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 13,
+   "name": "Der Tod",
+   "numeral": "XIII",
+   "number": 13,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/13.jpg",
+     "bytes": 29347,
+     "sha256": "87beda57112a1ed87031fa83d98a65d44eca323a5df18d7fab539ddf24498fdf",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/13.jpg",
+     "bytes": 103880,
+     "sha256": "5417840add1ed710b198fb7e63bdde7256243aeb8408e19bb414473561bc4426",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/13.jpg",
+     "bytes": 385833,
+     "sha256": "fbe5cb25822aa2eb27fd774c20cdb4471f3dcabe474a9f9c7b440aa2326ea63c",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 14,
+   "name": "Die Mäßigkeit",
+   "numeral": "XIV",
+   "number": 14,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/14.jpg",
+     "bytes": 29386,
+     "sha256": "2b821457ff5f5c8acbee51930b61c9db82a65fd755ba41c77e52c8e068b1df2a",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/14.jpg",
+     "bytes": 106504,
+     "sha256": "d8662d2cb694abf996d277085bb392f8cdbed0c6d86d898f586e5b48537eee77",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/14.jpg",
+     "bytes": 404398,
+     "sha256": "2a376117ef4b1efc6b1c31806ea0b0a31c067aa8c2238a80daa87f178806a444",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 15,
+   "name": "Der Teufel",
+   "numeral": "XV",
+   "number": 15,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/15.jpg",
+     "bytes": 24747,
+     "sha256": "dd6b3a982fea7f81980208504f094dd9ac7f1059cad8267cf6408ee23163fcea",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/15.jpg",
+     "bytes": 85041,
+     "sha256": "b69c1fed0d88156c1161609d9bf252840472674471ec5dff0f5e335abeb0a3d8",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/15.jpg",
+     "bytes": 309827,
+     "sha256": "c66b66df9a1e78ec391a6ac373fe54123dfd7c631d8e86951a6ce835a90d0757",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 16,
+   "name": "Der Turm",
+   "numeral": "XVI",
+   "number": 16,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/16.jpg",
+     "bytes": 25925,
+     "sha256": "81db9e1e7cefb27163c7854d7119bfa24f27b07efa248908b982759873bb4a0a",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/16.jpg",
+     "bytes": 86758,
+     "sha256": "3043836faf60efd056d3b6e848bbad16131661cde2df2ce08fd5c9f79f0f5628",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/16.jpg",
+     "bytes": 317013,
+     "sha256": "175c3d0c040b28aab9f450cb03c49125a2c37334b7d08eeca3aed057d898d670",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 17,
+   "name": "Der Stern",
+   "numeral": "XVII",
+   "number": 17,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/17.jpg",
+     "bytes": 26160,
+     "sha256": "d9741799c89caf3f0c4a6701658b12c4934b05d4dfe6093f1e5f2fcc39b13d06",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/17.jpg",
+     "bytes": 87563,
+     "sha256": "05168f0c3af20143f6f671629101fa5917f67fbce6403c68a4ac1d3de4684c58",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/17.jpg",
+     "bytes": 323778,
+     "sha256": "7bc83b9a053064714c219d22f4d3cf20d8c51bf2db59ae67fc57cee8fb8a403b",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 18,
+   "name": "Der Mond",
+   "numeral": "XVIII",
+   "number": 18,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/18.jpg",
+     "bytes": 25979,
+     "sha256": "9ede5b7e500b1a80145828348957a519c47fa4147c57b052260ba57b1a7069bb",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/18.jpg",
+     "bytes": 88393,
+     "sha256": "22725c19ae826d555493bb99a1cd3c3cdeed25e91037a1e6ff44ffc3ed7a909c",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/18.jpg",
+     "bytes": 328513,
+     "sha256": "77e46f50f305bbad2ceee173e2a441d036a731ce73c32ca0147c8bd02bf6d959",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 19,
+   "name": "Die Sonne",
+   "numeral": "XIX",
+   "number": 19,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/19.jpg",
+     "bytes": 30284,
+     "sha256": "cfaee7ff5f7abb446b1227e343bd887faae1a7762a972d6f985605e3c8351dfd",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/19.jpg",
+     "bytes": 103627,
+     "sha256": "9ae672154c714566e70de666ddf2123a1894c08f1bd24ff7ae9d6824abb51c19",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/19.jpg",
+     "bytes": 382078,
+     "sha256": "b38ca798df486ed18b2250c84a07e8e0fb3481b129fb9325e7028f36c84298d3",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 20,
+   "name": "Das Gericht",
+   "numeral": "XX",
+   "number": 20,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/20.jpg",
+     "bytes": 29008,
+     "sha256": "d2e0d2764c8240b0b46ca5e7f03b748d242c724575867f53713853de0b9330e6",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/20.jpg",
+     "bytes": 101723,
+     "sha256": "e25d09cbc266d8d238d3afb37a377e91ac60eb96fb6863c7796f9dd0d956f1ab",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/20.jpg",
+     "bytes": 380963,
+     "sha256": "51b7b050ab47978214387b474044217d5b6cdfb053c37b14c5d1b553912220f6",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 21,
+   "name": "Die Welt",
+   "numeral": "XXI",
+   "number": 21,
+   "arcana": "major",
+   "suit": null,
+   "suit_label": "Große Arkana",
+   "files": {
+    "thumb": {
+     "path": "300/21.jpg",
+     "bytes": 28528,
+     "sha256": "fd2ecd6bf3fa661fbb0b0c0ef048ccb4372c921e2330735049825e298ecef96b",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/21.jpg",
+     "bytes": 99507,
+     "sha256": "aa5662cba9f7a96025503a3d1a43718d274c690683a0a8bfa1a61cf1aa30bd55",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/21.jpg",
+     "bytes": 373664,
+     "sha256": "db72af3758b43d903f12651de9253559cf121aa51f958a0994846facdf1a5b48",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 22,
+   "name": "Ass der Stäbe",
+   "numeral": "A",
+   "number": 1,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/22.jpg",
+     "bytes": 22573,
+     "sha256": "894c080ae60bbeafdbb0a9faba41735845f945b310123bea1e38c9944fa3601f",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/22.jpg",
+     "bytes": 84820,
+     "sha256": "7e62f3d98737460a097e8b89026d339e2f8d1e3bc8b94fb4c3e04cf30ebf2ea0",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/22.jpg",
+     "bytes": 352169,
+     "sha256": "a5697be3a3937a16c7da9f2d53580bad6e048b773934ba59d2ed9dac9bf77b74",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 23,
+   "name": "2 der Stäbe",
+   "numeral": "2",
+   "number": 2,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/23.jpg",
+     "bytes": 22705,
+     "sha256": "edb70b6271a6bd04d7f205d804bdd5de87b38d5b631baa9740cc7e9ec17b6f1f",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/23.jpg",
+     "bytes": 82417,
+     "sha256": "d8941fcd36f0dce79e1e630f51ff3d5fe98d0139b512101453cc545e6457db77",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/23.jpg",
+     "bytes": 339500,
+     "sha256": "e1ac10bbd52c8092df3a49eb130a043484ecdb2941f1612f6126d03d07f2e115",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 24,
+   "name": "3 der Stäbe",
+   "numeral": "3",
+   "number": 3,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/24.jpg",
+     "bytes": 23079,
+     "sha256": "02a6fc5b4598257fdc8fe5a5c1353a3332e5b53bec2ca2e6ed4c1bc362401a39",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/24.jpg",
+     "bytes": 82029,
+     "sha256": "c0e375905c8e59e7c6c3d29e3047cd2fa3daf2c5d79e1439d60f3a32c80dc78a",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/24.jpg",
+     "bytes": 344010,
+     "sha256": "59dff852231cc62c852d4bcc94358313af8abd1ab9fd9031a93bb5f28207ceda",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 25,
+   "name": "4 der Stäbe",
+   "numeral": "4",
+   "number": 4,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/25.jpg",
+     "bytes": 24854,
+     "sha256": "2f13fef3641943013e4a783a1950fdba19f6d6932f7391d0dd7f2d06a8a24931",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/25.jpg",
+     "bytes": 82995,
+     "sha256": "7076fbf59e02643cb08a3280adfe2eabeb6fad7124da408df6546ff48bbe3c8e",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/25.jpg",
+     "bytes": 316149,
+     "sha256": "3a9eab83d8701879fda1947a7a13044aa378e8f35ed6b16ba307005de28c0101",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 26,
+   "name": "5 der Stäbe",
+   "numeral": "5",
+   "number": 5,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/26.jpg",
+     "bytes": 23844,
+     "sha256": "a9f53d2e835391434cf558badccca86d6d54980b0f681fb1837b04db2dffbda7",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/26.jpg",
+     "bytes": 81849,
+     "sha256": "4eedb707f1c9b064c93076224a2bff539220eae821d029c42af8d151ac76bef4",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/26.jpg",
+     "bytes": 322831,
+     "sha256": "15b3e28defe294eeee593123c90ffad12945882339a8bc510a9bcf3607cfaf1b",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 27,
+   "name": "6 der Stäbe",
+   "numeral": "6",
+   "number": 6,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/27.jpg",
+     "bytes": 25081,
+     "sha256": "6a4deb77f8d011cdee3f094b2a8807647bdfc9624d8ddb1fcf1205b11c5d6a08",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/27.jpg",
+     "bytes": 87764,
+     "sha256": "7e465f3cec938a205c8032a3b8d3da9342de4a2aeb36629fd9bdedf1605ad670",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/27.jpg",
+     "bytes": 344473,
+     "sha256": "c97716fb67a790735ef608e7b5558cf1fc2f98ce50a1bbd0f05c6e704eaa7dc4",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 28,
+   "name": "7 der Stäbe",
+   "numeral": "7",
+   "number": 7,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/28.jpg",
+     "bytes": 21992,
+     "sha256": "a70484514804175eda1139dd88b48984bbfd1563069f323ae6b042b969e47e45",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/28.jpg",
+     "bytes": 75044,
+     "sha256": "fa93887a92b7a99cb11233c6236ea783a10032a36579e72fb774c20573226c13",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/28.jpg",
+     "bytes": 289871,
+     "sha256": "c4f2726ef7ee67c1ba78572cdc9624a6b5503b7b4d18cf46068ce90cb4cfed7a",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 29,
+   "name": "8 der Stäbe",
+   "numeral": "8",
+   "number": 8,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/29.jpg",
+     "bytes": 23278,
+     "sha256": "9facd3e3d3deb941f9e5a4039adb87821196480078113fd72a83e2831b357f84",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/29.jpg",
+     "bytes": 76109,
+     "sha256": "ca72399113e0777e5bbd69ec2ff3a04bc167d440a88e3be97ddeff6b4f23db60",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/29.jpg",
+     "bytes": 293392,
+     "sha256": "c3b9d0856ea1f1ef8bf52635ce6bdf7f78972dbbeb5c60e569ff77f95f95a305",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 30,
+   "name": "9 der Stäbe",
+   "numeral": "9",
+   "number": 9,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/30.jpg",
+     "bytes": 25204,
+     "sha256": "81fe1566826cdc1ba473d98c56d8433fd513fbd23d624207399c2a028412ee9f",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/30.jpg",
+     "bytes": 87765,
+     "sha256": "07f5f485ac20a4b72eff840e94b6faaed79cfa389599e4fd4f2456aab874b6c4",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/30.jpg",
+     "bytes": 349500,
+     "sha256": "6a02aee4376f31d8cc23c69ee2331cc8b3eca436df84dd882a0c751c44217217",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 31,
+   "name": "10 der Stäbe",
+   "numeral": "10",
+   "number": 10,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/31.jpg",
+     "bytes": 24029,
+     "sha256": "a8938367c5bf6264d23d3986737123d0a256e0d3717b1dce6148ad5e30aee70f",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/31.jpg",
+     "bytes": 82518,
+     "sha256": "40675473bd7b78cae1a274612cd34d0fd15d1a091371703d6018c58ad9d05878",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/31.jpg",
+     "bytes": 325797,
+     "sha256": "e56533337f3d3487c5e6addc68cc3a6512f868cdfae2182dac1804ba8f8dd312",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 32,
+   "name": "Bube der Stäbe",
+   "numeral": "BUBE",
+   "number": 11,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/32.jpg",
+     "bytes": 23911,
+     "sha256": "6b5744b8dc6ee7d9ff3ef016b75221baa3358282c66f2c30ea8a14c6f5580e09",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/32.jpg",
+     "bytes": 90959,
+     "sha256": "738ae310552ea7a0806af298bdb0e7d57b304dd781aead7c019d5150df31e5c9",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/32.jpg",
+     "bytes": 372226,
+     "sha256": "d72ee6a72c3dc87f0d0e8f93e4936c51da06c4182e6d4d07b397c30677be53fb",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 33,
+   "name": "Ritter der Stäbe",
+   "numeral": "RITTER",
+   "number": 12,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/33.jpg",
+     "bytes": 25898,
+     "sha256": "da72d46f06493090dc3133be179501c1e4bfdc46f59c1e482a55ab1b88daa66d",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/33.jpg",
+     "bytes": 96574,
+     "sha256": "8f3578acd77fc48a775bd9657e0ef99c3222039201d8495318f2aa8f98e08cbc",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/33.jpg",
+     "bytes": 382035,
+     "sha256": "b859ec01d49c9f21d9a7ce09536c0e0787226879a286e71f70ab3aac8b738e8e",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 34,
+   "name": "Königin der Stäbe",
+   "numeral": "KÖNIGIN",
+   "number": 13,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/34.jpg",
+     "bytes": 29805,
+     "sha256": "faca51d5f8910db70638c3f1f60b260ceb0e991bac9fd3bc28ec976d8af820ab",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/34.jpg",
+     "bytes": 106144,
+     "sha256": "eed7e876a332346c9a65b3fd81f30545402e04e9d8d97c868a30af8b2597ec7b",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/34.jpg",
+     "bytes": 405599,
+     "sha256": "0cab298e7b0818ac571363472b13427f5d9e0b36d36f3639a8765effba8da6ca",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 35,
+   "name": "König der Stäbe",
+   "numeral": "KÖNIG",
+   "number": 14,
+   "arcana": "minor",
+   "suit": "wands",
+   "suit_label": "Stäbe",
+   "files": {
+    "thumb": {
+     "path": "300/35.jpg",
+     "bytes": 27595,
+     "sha256": "e4d953d928c96337ec20f6d424ed2c9c3f46908423ae8fec65ab339ad5b35a8d",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/35.jpg",
+     "bytes": 101097,
+     "sha256": "2ed76625cca32086661cf192fa9a71be86433789c71a4231f431e1c380ca39fa",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/35.jpg",
+     "bytes": 400572,
+     "sha256": "4730e242cd7273334474ef68752d18117697e40b203f8cfd8a8c47be8abce53c",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 36,
+   "name": "Ass der Kelche",
+   "numeral": "A",
+   "number": 1,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/36.jpg",
+     "bytes": 23841,
+     "sha256": "baa7f7ad59c864e08429d2a90bc9157a26cbec534d7e6dfbb5d1be5d1083e6e3",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/36.jpg",
+     "bytes": 89963,
+     "sha256": "47d3471a312ddf873c01b755ec3287e55fba3e2a47371e2b89ec0d01bd1ea35b",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/36.jpg",
+     "bytes": 371010,
+     "sha256": "9e2bb2e98f33d3276b32522f6c891aefccaf1d7ffdc5b87f5d95b11d9fce2668",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 37,
+   "name": "2 der Kelche",
+   "numeral": "2",
+   "number": 2,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/37.jpg",
+     "bytes": 23160,
+     "sha256": "aaf2c7896259970184944085654f64a7fbd3f81b9e461e0b79f69b10cbf77ee0",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/37.jpg",
+     "bytes": 79456,
+     "sha256": "ee470e4ba6f0afefae1c4806d03704a10a2a512cfa51ec66e02efe59eab695c7",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/37.jpg",
+     "bytes": 330620,
+     "sha256": "ad251b8d89a7acccb7b2a07537c8a6dcd07951db9e93237fcff9d359886b663d",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 38,
+   "name": "3 der Kelche",
+   "numeral": "3",
+   "number": 3,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/38.jpg",
+     "bytes": 23983,
+     "sha256": "2db008272c9a32fc2ff77e57e3e54e35bdab978d030f39baeec9a5665769cafc",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/38.jpg",
+     "bytes": 84444,
+     "sha256": "acced7b155f7041b9cb8cb541d16cf6d02254cc2bf742d328285fdd5509b02a9",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/38.jpg",
+     "bytes": 323912,
+     "sha256": "d9932f450b7bc5a17d5c492418c25e2e41526b75aad98ccb70ae45ce57d1fcd9",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 39,
+   "name": "4 der Kelche",
+   "numeral": "4",
+   "number": 4,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/39.jpg",
+     "bytes": 22480,
+     "sha256": "e7ec07b05089fa0f8b806c27184e6cf1d6c73c5184dc9a9c067f1b84166d2363",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/39.jpg",
+     "bytes": 75958,
+     "sha256": "b3e889b050241536ade97f0b09bbcda2da6ffa00b80da212048d567a4138079b",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/39.jpg",
+     "bytes": 292353,
+     "sha256": "8f60ff82f69565fe7ced7826c41d91acb1c69f05a740368476da691f59b4a41a",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 40,
+   "name": "5 der Kelche",
+   "numeral": "5",
+   "number": 5,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/40.jpg",
+     "bytes": 18754,
+     "sha256": "8488072f3b61680e7ca8f0311ced3d74c6910694c34c53bf8b199a20a9071477",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/40.jpg",
+     "bytes": 63479,
+     "sha256": "14f5633b4b15dc4e255040aa8461fb4a3c3f893fe7fb1b177ae88e45469b018d",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/40.jpg",
+     "bytes": 255233,
+     "sha256": "cb4c124704b960a425858ee93bd16bb11967623c5141a14aade2c9d7a757728a",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 41,
+   "name": "6 der Kelche",
+   "numeral": "6",
+   "number": 6,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/41.jpg",
+     "bytes": 26034,
+     "sha256": "c8f3e145dbbebea77607d821db898fbe1a2c1930eb123b6bc8a3005cbd007c79",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/41.jpg",
+     "bytes": 90937,
+     "sha256": "898d50f6de8e357cc0d29be3f5c5f1a5c39a9e2a808aebae5d0d304f07b0dc04",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/41.jpg",
+     "bytes": 361478,
+     "sha256": "4a92855360da059e4f9adebb61bad51e200f54b63034e6e090632b438055d4eb",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 42,
+   "name": "7 der Kelche",
+   "numeral": "7",
+   "number": 7,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/42.jpg",
+     "bytes": 24786,
+     "sha256": "24981fa36b392b856217d5276122c4e3ee18385ecd7f61ef19a938b3a2fd030a",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/42.jpg",
+     "bytes": 81609,
+     "sha256": "02f656e437be10e676b76bc22a56313d9e80983d140010c15132fc2bdedb09b6",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/42.jpg",
+     "bytes": 298694,
+     "sha256": "7355ce77f47916d23764be3ea4ce1b058e6e7d011d8989256d80ad4a1b3e93cb",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 43,
+   "name": "8 der Kelche",
+   "numeral": "8",
+   "number": 8,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/43.jpg",
+     "bytes": 21155,
+     "sha256": "3004aacbab124e5b36491c8bb1fcd8e9f630ff973f89ca5ce9de5d1a8a5288c8",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/43.jpg",
+     "bytes": 73530,
+     "sha256": "161df07246271703c9e173bcad60baaec4d9bef7575f7fdf7316091bc7ce7879",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/43.jpg",
+     "bytes": 306761,
+     "sha256": "b1b68bd11856d98bdc36c95a2b94b9229036b86ac78fc06e8e200a0d9f6f8818",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 44,
+   "name": "9 der Kelche",
+   "numeral": "9",
+   "number": 9,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/44.jpg",
+     "bytes": 24846,
+     "sha256": "53695933a096b44d7a791d40d967c431c911e937944e748b8bf291c5dc723c39",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/44.jpg",
+     "bytes": 84110,
+     "sha256": "9bfd7e404feff5b46e2fa261c5f92efa4acc93f15722fe5aca49d42d0fa31df6",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/44.jpg",
+     "bytes": 308867,
+     "sha256": "4ec026d8f0344083dc641c706bba9adfc9952903da43e79acba06d1808383950",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 45,
+   "name": "10 der Kelche",
+   "numeral": "10",
+   "number": 10,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/45.jpg",
+     "bytes": 22138,
+     "sha256": "d5b5b4d636e2b32be5065cbe63ec2db26b1af7722e85a63c40a7eda9fa3657e1",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/45.jpg",
+     "bytes": 81923,
+     "sha256": "cb0916fd7a083a54a4851ac0f9d200bb39df338c5f7aefd26733237fcba03f5c",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/45.jpg",
+     "bytes": 346672,
+     "sha256": "2fd1c7c24e01e5de4305ac06831aba3227a4d58e8b952ae3f4044fcb8e145f94",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 46,
+   "name": "Bube der Kelche",
+   "numeral": "BUBE",
+   "number": 11,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/46.jpg",
+     "bytes": 21975,
+     "sha256": "39c74869a81ea07f9c0c237314768de1284ce85c38ea844f237dffb01f9ee636",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/46.jpg",
+     "bytes": 85728,
+     "sha256": "35a1a3c9da6b7ee8baee8df96b39935590158b6ec9d86fc1acaf94c9ff5d9fdb",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/46.jpg",
+     "bytes": 361661,
+     "sha256": "c8760d70c58c31bef6f41ecc8d999d7ac6f307b7a2383a32022b124e6a55dfd2",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 47,
+   "name": "Ritter der Kelche",
+   "numeral": "RITTER",
+   "number": 12,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/47.jpg",
+     "bytes": 24249,
+     "sha256": "ade0b19cad90aa9f6b31205b9033311905e2e2a4b56810b3e0bc8de965fa7766",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/47.jpg",
+     "bytes": 89278,
+     "sha256": "9d72581896f00d06945f6421f24c31a53e73309908ffbcbfcd85d4f611c521e7",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/47.jpg",
+     "bytes": 359980,
+     "sha256": "fb3b93a7cdd0b122a5bbc063219233de822811196fd540fc9712665d176f15be",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 48,
+   "name": "Königin der Kelche",
+   "numeral": "KÖNIGIN",
+   "number": 13,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/48.jpg",
+     "bytes": 26026,
+     "sha256": "5c0c4c5747bb0f8582754021ffd05f53d69277fe8d6bdf818d1501e12cd54d9b",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/48.jpg",
+     "bytes": 90555,
+     "sha256": "9798659a7990401241a3fd40868cd6fa27ba9e14711265ad11a894b6c672b3cf",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/48.jpg",
+     "bytes": 335989,
+     "sha256": "fff1b2879751f710a9836d5d2d904514963bb2c4809bde649f4977b7d8fd06da",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 49,
+   "name": "König der Kelche",
+   "numeral": "KÖNIG",
+   "number": 14,
+   "arcana": "minor",
+   "suit": "cups",
+   "suit_label": "Kelche",
+   "files": {
+    "thumb": {
+     "path": "300/49.jpg",
+     "bytes": 24741,
+     "sha256": "6301c797fdd8c30bfd1be125f846862a6070ee36dd2deb9ed269a6b902985dc9",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/49.jpg",
+     "bytes": 87284,
+     "sha256": "6eba05ccec6c19ddd3ae0ca36130ca5164a46623382f9c18ddd56ac47c540b8c",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/49.jpg",
+     "bytes": 344574,
+     "sha256": "86f20bcebe8aac9e34626ab35bce193d730790996533d5e48e5b3c2e782ff015",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 50,
+   "name": "Ass der Schwerter",
+   "numeral": "A",
+   "number": 1,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/50.jpg",
+     "bytes": 21264,
+     "sha256": "9464bccceab17b3b8a010ebed7afa3b1eb6160bde6266f2628d74bb4b6c401df",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/50.jpg",
+     "bytes": 77945,
+     "sha256": "1d5b68c1ed59491479610f65ebccc65a322c2b21ff5498670fd199a9ebbccfbd",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/50.jpg",
+     "bytes": 330563,
+     "sha256": "032ba89ec28dad2e4c94ce30d97082549d228595bb3adc89b945da6eb19b24b1",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 51,
+   "name": "2 der Schwerter",
+   "numeral": "2",
+   "number": 2,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/51.jpg",
+     "bytes": 20674,
+     "sha256": "2c61b5b81e151a41fefacbe3fefcf24a967728c0e860a2e048ad4fca94879be9",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/51.jpg",
+     "bytes": 73475,
+     "sha256": "dc17df1dc91106863261a802e70aa35c3dfa40e6bdbd3426ae72fbd3daa12581",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/51.jpg",
+     "bytes": 305834,
+     "sha256": "48e0135d2654467febb7c01b24ff81e37d3ab279ed9426fa72bb0b52e22c3578",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 52,
+   "name": "3 der Schwerter",
+   "numeral": "3",
+   "number": 3,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/52.jpg",
+     "bytes": 20664,
+     "sha256": "05b413f739633ff65193a7f6f958c288766aadf3dc4870fb02c383ebcd51455c",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/52.jpg",
+     "bytes": 69157,
+     "sha256": "1441291a1eb895b43492e72ade808979b7a9e917072b32350dcd3f8a1373beaf",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/52.jpg",
+     "bytes": 277740,
+     "sha256": "9d9d08589ea613c1a4c4e8573d86724f4f2bb8c772bfb122c86fc85ad76a0ed6",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 53,
+   "name": "4 der Schwerter",
+   "numeral": "4",
+   "number": 4,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/53.jpg",
+     "bytes": 22181,
+     "sha256": "8f7f0fe0a0da63c3fd7ebe6945c1ace23b176e3dcef05b4df33775259256e3e5",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/53.jpg",
+     "bytes": 75539,
+     "sha256": "b398aabfacd8f7ac80849c3c24ab5bb4c84d4be8239c23cc976cb4d15cb7713b",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/53.jpg",
+     "bytes": 307995,
+     "sha256": "52c7d26f71fe15746e408b5f42a1b98497df89a25025dac3ea2897d50750b3a7",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 54,
+   "name": "5 der Schwerter",
+   "numeral": "5",
+   "number": 5,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/54.jpg",
+     "bytes": 24178,
+     "sha256": "a3af11cdce869ec9d5b8f081c01c509d0375974f7aa07383d2f3df311bf340a2",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/54.jpg",
+     "bytes": 81535,
+     "sha256": "45feb9057d910cc9bd0d09a203663d0e2040ee8721978611936ab6949f169ab8",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/54.jpg",
+     "bytes": 326204,
+     "sha256": "e745938dd56650d86123c870f745bee73d710011032bf06143f3ea71fe3b0484",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 55,
+   "name": "6 der Schwerter",
+   "numeral": "6",
+   "number": 6,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/55.jpg",
+     "bytes": 21874,
+     "sha256": "be460f88076f546a04b7ed7d5476ef18487fdf7b56862919a48328af3e738379",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/55.jpg",
+     "bytes": 82420,
+     "sha256": "4112f5f72e2626e67f90e37e9a33ab46ebbe7c8f83132efac50b3c986e39c7d0",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/55.jpg",
+     "bytes": 343943,
+     "sha256": "6b5072efeb1be73c40133da06ada67e48b34a212fbfee9bf8fae52c941678ab4",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 56,
+   "name": "7 der Schwerter",
+   "numeral": "7",
+   "number": 7,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/56.jpg",
+     "bytes": 22441,
+     "sha256": "cf1c52415e40ae915618dd21759eb6565e953ef1ceb0e59c0fae7afe908d4eba",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/56.jpg",
+     "bytes": 74594,
+     "sha256": "5b2a791cfeac957d50eb0511ee5036e66ad38c2cabaa01ec1b5233c1e20265b0",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/56.jpg",
+     "bytes": 286030,
+     "sha256": "0590242f0cad34e183b88bc476d8984377dfad6d881dc11913e25deeac0348de",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 57,
+   "name": "8 der Schwerter",
+   "numeral": "8",
+   "number": 8,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/57.jpg",
+     "bytes": 22194,
+     "sha256": "413d648ff3d027fdb84de502090418da9f06eebb29beedbd8298d0cb57ac11a3",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/57.jpg",
+     "bytes": 79889,
+     "sha256": "543f8e2f63876f4f04b641e7673b54e032e55330235c5ad85f507082a5eb3062",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/57.jpg",
+     "bytes": 328655,
+     "sha256": "1f280d467ee830987c37636c89a12b92357f5a5b523b28b85a88f1cfd3040c92",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 58,
+   "name": "9 der Schwerter",
+   "numeral": "9",
+   "number": 9,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/58.jpg",
+     "bytes": 22892,
+     "sha256": "166a6fd561a621941f2d4b104b056820672b525f92f54d2a34efd4e33f76b035",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/58.jpg",
+     "bytes": 76740,
+     "sha256": "6614638c26de8b88e3859ecb7fb233524b2a5f704ab36019669c5a88e1f39669",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/58.jpg",
+     "bytes": 292762,
+     "sha256": "db7b062174c26dc495fe0c62f73ec52ab445e041f6e9eb78a561b9326f77704e",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 59,
+   "name": "10 der Schwerter",
+   "numeral": "10",
+   "number": 10,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/59.jpg",
+     "bytes": 22809,
+     "sha256": "022c55f4dc2df4953828756255b739890685c35c856a2b9a796bfaa2381e3d00",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/59.jpg",
+     "bytes": 75509,
+     "sha256": "b20dc0679716682e1ba964bc4798b951a2c17f13a25cfae9452722cbb35ff917",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/59.jpg",
+     "bytes": 286035,
+     "sha256": "634b1798ceb4b299ee45fe438f14cd521594559a8bd14d182e89e25500654189",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 60,
+   "name": "Bube der Schwerter",
+   "numeral": "BUBE",
+   "number": 11,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/60.jpg",
+     "bytes": 23607,
+     "sha256": "6e741d706710650f22b0ebece62b3b5e81627f8cd0b8e321bc3dbbe9ba6b2f32",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/60.jpg",
+     "bytes": 84079,
+     "sha256": "2dc1ac6d8c569d8dbf61089e9062fe80f323d95792d3b35514ecb67492c5ea1d",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/60.jpg",
+     "bytes": 328849,
+     "sha256": "ec34b1e1c003e40c0c381c994e26bb969d615174481d9694f36ae9019c5035f1",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 61,
+   "name": "Ritter der Schwerter",
+   "numeral": "RITTER",
+   "number": 12,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/61.jpg",
+     "bytes": 26164,
+     "sha256": "c0de58b235979950d0f51dad8d2cac5a4746e35a1d59df47c04a987306d580f3",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/61.jpg",
+     "bytes": 89413,
+     "sha256": "963b2443b42199e9a6f08d2ebef7423606041a81e7e2ee5eceb1db66a07ebfdf",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/61.jpg",
+     "bytes": 330403,
+     "sha256": "b03925b823a61de498e48ba742a5dc8f2287e1c24e7092135cd275c4f6c3f85a",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 62,
+   "name": "Königin der Schwerter",
+   "numeral": "KÖNIGIN",
+   "number": 13,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/62.jpg",
+     "bytes": 24268,
+     "sha256": "cebb8cedc620ded80b8a531601a7f659843df95598ebf3a7902065932f660c9f",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/62.jpg",
+     "bytes": 81999,
+     "sha256": "5abd8e53747a121ba0062b4ee8e0e0e53cb618794285e0629950bfa30d7ea810",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/62.jpg",
+     "bytes": 310074,
+     "sha256": "8d57b79717d3f3ba6f32430c4809299041b4d9d2eaa13aa8dd22eef9e39a57f7",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 63,
+   "name": "König der Schwerter",
+   "numeral": "KÖNIG",
+   "number": 14,
+   "arcana": "minor",
+   "suit": "swords",
+   "suit_label": "Schwerter",
+   "files": {
+    "thumb": {
+     "path": "300/63.jpg",
+     "bytes": 25406,
+     "sha256": "65ddc6d31d9302e9f201d7de7ebd69c6c8b3fb948b8e03cb586f2058fa424326",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/63.jpg",
+     "bytes": 93075,
+     "sha256": "f34e929fb7abba2caaa6a2d613735f46e1bef4730462da2fbbffdcf4d9f32f12",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/63.jpg",
+     "bytes": 360970,
+     "sha256": "c7c1af9f504fe684652cb4c03ec9f1f94bb9298e2eaa265db46893908d1c6b0c",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 64,
+   "name": "Ass der Münzen",
+   "numeral": "A",
+   "number": 1,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/64.jpg",
+     "bytes": 22633,
+     "sha256": "531afc4f0d45574f2ad0e50f7560d04d7b1730c8d1e1d38d24105c3b25d2c1f9",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/64.jpg",
+     "bytes": 84445,
+     "sha256": "7b23ed4dcee1aadd4ff3ec8a42438ad29154a48ade48eaa8f91067c36b54ceaa",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/64.jpg",
+     "bytes": 339968,
+     "sha256": "c66458f742cb4658e01e6cc4d67655d9f50ef83c73e7699731fcbc8b8af0c5ce",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 65,
+   "name": "2 der Münzen",
+   "numeral": "2",
+   "number": 2,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/65.jpg",
+     "bytes": 20690,
+     "sha256": "0741226f5719ec4b20c88674fc0518fb7b01675efbadede8b765836731c090c2",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/65.jpg",
+     "bytes": 74686,
+     "sha256": "a924bd5516dd95e80e4369321a7bead515992799acc1ebcae9640a3959a2ed8c",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/65.jpg",
+     "bytes": 322335,
+     "sha256": "1ae8e2d986111c8982d545a192d05770c56fbf11b241dd42faddbc49d6b32d7c",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 66,
+   "name": "3 der Münzen",
+   "numeral": "3",
+   "number": 3,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/66.jpg",
+     "bytes": 26140,
+     "sha256": "e777c173930e7caace65b5bdc28b8e8a11f4869aaa35c480a22723f6b0db80d9",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/66.jpg",
+     "bytes": 90030,
+     "sha256": "f809d54afb87c740facc0707c2de995e94435ab868984715fc736cd03fd68dba",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/66.jpg",
+     "bytes": 334815,
+     "sha256": "bc685b6570116f9122b4e38226931e9b18be50af57d9882eaab7a98dc0bb4b23",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 67,
+   "name": "4 der Münzen",
+   "numeral": "4",
+   "number": 4,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/67.jpg",
+     "bytes": 19137,
+     "sha256": "a0b320cbf5cadde9d25b7b096cc0aa37f260ab963d2266542ce2bbf0b852798b",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/67.jpg",
+     "bytes": 69052,
+     "sha256": "02750b9a89246be70c83ffbe0b1718d4130ba05bde29dc15060a93c44dc85041",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/67.jpg",
+     "bytes": 299814,
+     "sha256": "d571caa1d124e8c5553ce9f67bb32f070a9762fd0500dd2b4b3e1813e06024ac",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 68,
+   "name": "5 der Münzen",
+   "numeral": "5",
+   "number": 5,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/68.jpg",
+     "bytes": 27979,
+     "sha256": "3bc59e3a585ae3bd66448ba94d0af499b439830b02cd5a177bde6ab046e55473",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/68.jpg",
+     "bytes": 97133,
+     "sha256": "41311c3c58a697782727ec4a382d521003a8547704d15d81b38ee8fe74367318",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/68.jpg",
+     "bytes": 346764,
+     "sha256": "d15152f8fa9a50911ff2179e68a03a2413ecde535f45b8928d475c5d2d82d592",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 69,
+   "name": "6 der Münzen",
+   "numeral": "6",
+   "number": 6,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/69.jpg",
+     "bytes": 23291,
+     "sha256": "42167319e467acf297e1750234a23d55b9747c9caf78e5a8e262d1a24af7801b",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/69.jpg",
+     "bytes": 81017,
+     "sha256": "c3b456e7a7a77e70c898e14aeba822d55fe5ec60cb007e57fa312ffa7ecc3862",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/69.jpg",
+     "bytes": 327252,
+     "sha256": "7736eaf24f0460bca4be63134482b1283d74caa6db59a81814d4bf2a69eb6a7d",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 70,
+   "name": "7 der Münzen",
+   "numeral": "7",
+   "number": 7,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/70.jpg",
+     "bytes": 23768,
+     "sha256": "f1aa6de6f72762a77bb3fc30c71c4b785c3fe0d384f91a4ab8e2e9c0100457aa",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/70.jpg",
+     "bytes": 85230,
+     "sha256": "12a8f5b5acdc1fc808a66586370b9857e46e49be95058683962cade5548addd6",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/70.jpg",
+     "bytes": 344702,
+     "sha256": "c6fdea302ac068e8837b6ebacabc18e63efb469a95d52f2616c309c95124bdad",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 71,
+   "name": "8 der Münzen",
+   "numeral": "8",
+   "number": 8,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/71.jpg",
+     "bytes": 20864,
+     "sha256": "8ae74dda05375d0160c5eabcd7127cf2d3d37b73234005089a8162864d5fc471",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/71.jpg",
+     "bytes": 75553,
+     "sha256": "41b608750e0a5a554bfe5dd24df5bad9c8710440445de0af1072ff8c08211d3d",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/71.jpg",
+     "bytes": 316051,
+     "sha256": "06e60f0baee5e0f7a6ff49a7541e0d8574ca8508317621b5f63e1fc3afa68d1a",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 72,
+   "name": "9 der Münzen",
+   "numeral": "9",
+   "number": 9,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/72.jpg",
+     "bytes": 25976,
+     "sha256": "4005c72769187c9816865a515a2e5c6ddf670f2ce22fc7356112a2690acf28b0",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/72.jpg",
+     "bytes": 85735,
+     "sha256": "fb3a99ed22bfdc5bfc69f2c51bfa700763de96bfc4c1dc8de01f8aa19022e31d",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/72.jpg",
+     "bytes": 317035,
+     "sha256": "a46c46aa4bb4d7e2a9fefb39b2e276dd933760466c0dd89dda959e5c188e79cf",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 73,
+   "name": "10 der Münzen",
+   "numeral": "10",
+   "number": 10,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/73.jpg",
+     "bytes": 27779,
+     "sha256": "782216b2caf9ec5d77a31353bf035b0d6963936e74a6ed183512e0581d9c97a5",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/73.jpg",
+     "bytes": 93988,
+     "sha256": "55f58f667de8e8a49a8b85623b52fcdc54b08b4c424cb1494d456dade3a306bd",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/73.jpg",
+     "bytes": 351957,
+     "sha256": "afe41792e3f991e9e041f530741e0bc80b7942c547874adbfdab72d3485a4ef3",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 74,
+   "name": "Bube der Münzen",
+   "numeral": "BUBE",
+   "number": 11,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/74.jpg",
+     "bytes": 22179,
+     "sha256": "d0f8f30eaff1ed2d9bf94d3ee8f7a1b535a8c08b04e72f6670365a1b02377f22",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/74.jpg",
+     "bytes": 73751,
+     "sha256": "704ac34f5d208604c2412c2438a810fbaa4c5b35cee00c0ed30cf0fe14012ebe",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/74.jpg",
+     "bytes": 275312,
+     "sha256": "1ab29e3a0239abb17e6ba241a633430ac576854b616b26d7311207ccd5ad3f03",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 75,
+   "name": "Ritter der Münzen",
+   "numeral": "RITTER",
+   "number": 12,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/75.jpg",
+     "bytes": 22157,
+     "sha256": "1dbac499b94ae92383ed8e9cdcba017d0ff3d835e3d889eb9458a60259255250",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/75.jpg",
+     "bytes": 72968,
+     "sha256": "a12bc45fda0f6047dbc9bc670fbc02b0f65902216e49c427a6bb52e903229f4c",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/75.jpg",
+     "bytes": 266253,
+     "sha256": "51a67af88ecd805ce47d618be86f699b4167afd1c6c38c73750a226730a91560",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 76,
+   "name": "Königin der Münzen",
+   "numeral": "KÖNIGIN",
+   "number": 13,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/76.jpg",
+     "bytes": 29275,
+     "sha256": "5677bd5801d4af86e3b33105a77e54deb9b6ee87a4a5d070c674e67cbb65696f",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/76.jpg",
+     "bytes": 100499,
+     "sha256": "d03536fb1a514a76f464f1b8331e18db87c983e0a53ec019d9a91c25a902a5ac",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/76.jpg",
+     "bytes": 361601,
+     "sha256": "2522b120b80ae22bccbadcfa074da401eec140fcfbe1bfd2b14c582e3ca6d7b1",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  },
+  {
+   "id": 77,
+   "name": "König der Münzen",
+   "numeral": "KÖNIG",
+   "number": 14,
+   "arcana": "minor",
+   "suit": "pentacles",
+   "suit_label": "Münzen",
+   "files": {
+    "thumb": {
+     "path": "300/77.jpg",
+     "bytes": 26646,
+     "sha256": "059d84a77d982ec38c6118bbebd48f96af8452f1fa573cc4bab54cdf2be39b0e",
+     "size": [
+      300,
+      500
+     ]
+    },
+    "detail": {
+     "path": "600/77.jpg",
+     "bytes": 89201,
+     "sha256": "e8aac845408235b409797805e37ee738ae042f7517a4fdb6354123a02e1f905a",
+     "size": [
+      600,
+      1000
+     ]
+    },
+    "zoom": {
+     "path": "1200/77.jpg",
+     "bytes": 316427,
+     "sha256": "08a68aa7a0526376f0a4bc76a7e400c3b16f223fbed01ece16ff91bd3943b389",
+     "size": [
+      1200,
+      2000
+     ]
+    }
+   }
+  }
+ ]
+}

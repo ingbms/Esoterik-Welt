@@ -17,6 +17,11 @@ package-lock.json
 # and keeps its historical bytes (evidence baselines hash it as protected file).
 js/modules/_tarot_old.js
 
+# Generated data module: emitted from docs/astrologie-konzept/content/*.json by
+# scripts/generate-astrologie-data.cjs (single-line JSON payload; formatting it
+# would only produce diff noise). Freshness is enforced by tests/astrologie.mjs.
+js/data/astrologie.js
+
 # Binaries / data blobs
 *.min.js
 *.png

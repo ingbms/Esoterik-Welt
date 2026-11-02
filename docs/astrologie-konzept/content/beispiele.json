@@ -1,0 +1,377 @@
+{
+  "dataset": "beispiele",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Vier ausdrücklich fiktive Lehrbeispiele. Es handelt sich nicht um berechnete Horoskope, nicht um reale Personen und nicht um Gradangaben. Die gesetzten Zeichen- und Hausannahmen dienen nur dazu, das synthetische Lesen zu zeigen.",
+  "items": [
+    {
+      "id": "beispiel-mira",
+      "slug": "beispiel-mira",
+      "titel": "Mira: Löwe-Sonne, Krebs-Mond, Waage-Aszendent",
+      "fictional": true,
+      "no_calculation": true,
+      "figuren": [
+        "Mira, eine erfundene Figur"
+      ],
+      "annahmen": [
+        "Sonne im Löwe-Sektor, Mond im Krebs-Sektor, Aszendent im Waage-Sektor: gesetzte Lehrannahmen, keine Berechnung.",
+        "Merkur im Jungfrau-Sektor, Venus im Löwe-Sektor, Mars im Widder-Sektor: ebenfalls gesetzt.",
+        "Keine Geburtszeit, kein Geburtsort, keine Gradangaben; die Hauspositionen bleiben offen."
+      ],
+      "schritte": [
+        {
+          "titel": "Leitfrage und Grenzen",
+          "denkweg": "Die Leitfrage lautet: Wie zeigt sich Mira in Gruppen, und wo geraten Selbstausdruck und Rücksichtnahme in Spannung? Es geht um ein symbolisches Porträt, nicht um eine Diagnose.",
+          "refs": [
+            "grund-radix-synthese",
+            "grund-ethik"
+          ]
+        },
+        {
+          "titel": "Die Trias lesen",
+          "denkweg": "Löwe-Sonne wird als Wunsch gelesen, sichtbar zu gestalten und für etwas einzustehen. Krebs-Mond betont Schutzbedürfnis und emotionale Zugehörigkeit. Waage-Aszendent zeigt ein zugewandtes, abwägendes Auftreten. Die Trias ist bewusst widersprüchlich: sichtbar sein wollen und zugleich Schutz suchen.",
+          "refs": [
+            "faktor-sonne",
+            "faktor-mond",
+            "grund-aszendent-mc",
+            "zeichen-loewe",
+            "zeichen-krebs",
+            "zeichen-waage"
+          ]
+        },
+        {
+          "titel": "Elemente und Modalitäten gewichten",
+          "denkweg": "Feuer und Wasser dominieren, Luft ist über den Aszendenten vertreten, Erde fehlt in der gesetzten Auswahl. Kardinal und fix stehen nebeneinander: Der Impuls, etwas zu beginnen, trifft auf das Bedürfnis, es zu halten. Das kann als Engagement gelesen werden, aber auch als innerer Widerstreit zwischen Vortreten und Zurückziehen.",
+          "refs": [
+            "element-feuer",
+            "element-wasser",
+            "element-luft",
+            "modalitaet-kardinal",
+            "modalitaet-fix"
+          ]
+        },
+        {
+          "titel": "Faktoren differenzieren",
+          "denkweg": "Merkur in Jungfrau spricht eher prüfend und detailgenau; Venus in Löwe sucht warme, sichtbare Bestätigung; Mars in Widder handelt schnell und direkt. Daraus entsteht ein Profil, in dem Zuwendung und Genauigkeit nebeneinander stehen und der Antrieb nicht lange wartet.",
+          "refs": [
+            "faktor-merkur",
+            "faktor-venus",
+            "faktor-mars",
+            "zeichen-jungfrau"
+          ]
+        },
+        {
+          "titel": "Gegenprobe",
+          "denkweg": "Würde Mira sich selbst als harmoniesüchtig beschreiben? Der Waage-Aszendent legt das nahe, die Löwe-Sonne widerspricht. Vielleicht ist das Abwägen kein Wesenszug, sondern eine Strategie, um Konflikte zu vermeiden, in denen die Sonne zu viel riskieren würde. Diese Gegenprobe bleibt Hypothese.",
+          "refs": [
+            "grund-sonnenzeichen-grenzen",
+            "grund-aspekt-orben"
+          ]
+        }
+      ],
+      "synthese": "Mira wirkt nach außen zugewandt und abwägend, während innen ein starkes Bedürfnis nach Schutz und Zugehörigkeit arbeitet. Der Löwe-Anteil will gestalten und gesehen werden, der Krebs-Anteil will nicht verletzlich dastehen. Die Spannung ist nicht per se ein Problem: Sie kann erklären, warum Mira in Gruppen vermittelt, aber persönliche Anerkennung schwer annimmt. Eine hilfreiche Lesart wäre: Mira braucht einen Rahmen, in dem sie sichtbar sein kann, ohne sich schutzlos zu fühlen. Das ist eine Deutungshypothese, keine Aussage über eine reale Person.",
+      "alternative_lesart": "Wird statt eines quadrantenbasierten Häusersystems ein Ganzzeichen-System verwendet oder die Geburtszeit anders angenommen, verschieben sich die Hausbezüge und damit die Gewichtung. Auch eine andere Lesart der Waage-Sonne wäre möglich: Statt Harmoniesuche könnte das Abwägen als bewusste Methode gelesen werden, Entscheidungen zu prüfen. Die Beispieldeutung ist daher bewusst vorläufig.",
+      "grenzen": [
+        "Es gibt keine berechnete Radix und keine gesicherte Geburtszeit; die Hauspositionen sind offen.",
+        "Die Deutung ist eine didaktische Konstruktion und keine Aussage über eine reale Person.",
+        "Die Zuordnung von Zeichen zu Eigenschaften ist Tradition und keine Messung."
+      ],
+      "disclaimer": "Mira ist eine erfundene Figur. Alle Annahmen sind gesetzt, nicht berechnet. Das Beispiel zeigt eine Methode und darf nicht als Persönlichkeitsdiagnose oder als Vorlage für die Deutung realer Menschen verwendet werden.",
+      "sources": [
+        "S10",
+        "S11",
+        "S12",
+        "S19"
+      ],
+      "claims": [
+        "c07",
+        "c17",
+        "c20"
+      ],
+      "cross_refs": [
+        "grund-radix-synthese",
+        "grund-aszendent-mc",
+        "grund-haeuser-systeme",
+        "zeichen-loewe",
+        "zeichen-krebs"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Fiktives Lehrbeispiel ohne Berechnung; die Methode ist Tradition, die Figur ist erfunden."
+      }
+    },
+    {
+      "id": "beispiel-tobias",
+      "slug": "beispiel-tobias",
+      "titel": "Tobias: Steinbock-Sonne, Zwillinge-Mond, Skorpion-Aszendent",
+      "fictional": true,
+      "no_calculation": true,
+      "figuren": [
+        "Tobias, eine erfundene Figur"
+      ],
+      "annahmen": [
+        "Sonne im Steinbock-Sektor, Mond im Zwillinge-Sektor, Aszendent im Skorpion-Sektor: gesetzte Lehrannahmen, keine Berechnung.",
+        "Saturn im Steinbock-Sektor und im zehnten Haus: gesetzt, um die Achse Beruf-Verantwortung zu zeigen.",
+        "Merkur im Wassermann-Sektor, Venus im Fische-Sektor: ebenfalls gesetzt."
+      ],
+      "schritte": [
+        {
+          "titel": "Leitfrage und Grenzen",
+          "denkweg": "Die Leitfrage lautet: Wie geht Tobias mit Verantwortung und Nähe um? Das Beispiel soll zeigen, wie eine scheinbar klare Sonne durch Mond und Aszendent gebrochen wird.",
+          "refs": [
+            "grund-radix-synthese",
+            "grund-ethik"
+          ]
+        },
+        {
+          "titel": "Die Trias lesen",
+          "denkweg": "Steinbock-Sonne wird als Verantwortungs- und Strukturthema gelesen. Zwillinge-Mond betont Beweglichkeit, Sprache und ein Bedürfnis nach geistigem Austausch. Skorpion-Aszendent zeigt eine zurückhaltende, prüfende Präsenz. Die Kombination kann als ernst nach außen und bewegt nach innen gelesen werden.",
+          "refs": [
+            "faktor-sonne",
+            "faktor-mond",
+            "grund-aszendent-mc",
+            "zeichen-steinbock",
+            "zeichen-zwillinge",
+            "zeichen-skorpion"
+          ]
+        },
+        {
+          "titel": "Häuser und Achsen",
+          "denkweg": "Saturn im zehnten Haus verstärkt das Thema Verantwortung und öffentliche Rolle. Der Skorpion-Aszendent legt eine vorsichtige Kontaktaufnahme nahe; der Zwillinge-Mond sucht Austausch, aber eher über Themen als über unmittelbare Nähe. Daraus entsteht die Frage, ob Tobias Nähe über Gespräch herstellt und dabei Distanz wahrt.",
+          "refs": [
+            "haus-10",
+            "haus-1",
+            "faktor-saturn",
+            "grund-haeuser-systeme"
+          ]
+        },
+        {
+          "titel": "Aspekte als Spannung lesen",
+          "denkweg": "Angenommen, Saturn steht in einem Spannungsaspekt zur Sonne: Das würde die Ernsthaftigkeit und den Selbstanspruch betonen. Angenommen, der Mond steht in einem Spannungsaspekt zum Aszendenten: Das würde den Unterschied zwischen innerem Bedürfnis und äußerem Auftreten hervorheben. Beide Annahmen sind gesetzt und nicht berechnet.",
+          "refs": [
+            "aspekt-quadrat",
+            "aspekt-opposition",
+            "grund-aspekt-orben"
+          ]
+        },
+        {
+          "titel": "Gegenprobe",
+          "denkweg": "Würde Tobias sich selbst als distanziert beschreiben? Vielleicht nicht; der Zwillinge-Mond kann sehr gesprächig sein. Die Distanz liegt eher im Skorpion-Aszendenten und in der Steinbock-Sonne. Die Gegenprobe fragt, welche Lesart die Person selbst überraschen würde, und hält das Ergebnis offen.",
+          "refs": [
+            "grund-sonnenzeichen-grenzen",
+            "grund-radix-synthese"
+          ]
+        }
+      ],
+      "synthese": "Tobias wirkt nach außen kontrolliert und beobachtend, während innen ein starkes Bedürfnis nach Austausch und geistiger Bewegung besteht. Die Steinbock-Sonne setzt auf Verantwortung und langfristige Struktur; der Zwillinge-Mond sucht Abwechslung und Gespräch; der Skorpion-Aszendent prüft, bevor er sich zeigt. Eine plausible Lesart: Tobias stellt Nähe über gemeinsame Themen her und schützt sich durch Themenkontrolle. Das kann Verlässlichkeit erzeugen, aber auch Nähe verhindern, wenn Gespräche zur Distanzierung werden. Auch hier gilt: Hypothese, keine Diagnose.",
+      "alternative_lesart": "Ohne gesicherte Geburtszeit ist der Skorpion-Aszendent unsicher. Bei einem anderen Aszendenten verschieben sich alle Häuser; die Saturn-Stellung im zehnten Haus wäre dann nicht mehr gegeben. Zudem kann der Zwillinge-Mond als Leichtigkeit statt als Unruhe gelesen werden. Die Beispieldeutung ist bewusst an die gesetzten Annahmen gebunden.",
+      "grenzen": [
+        "Die Aspekte und Hauspositionen sind gesetzt, nicht berechnet.",
+        "Die Geburtszeit fehlt; der Aszendent ist daher nicht belastbar.",
+        "Die Lesart ist eine didaktische Konstruktion, keine Aussage über eine reale Person."
+      ],
+      "disclaimer": "Tobias ist eine erfundene Figur. Alle Annahmen sind gesetzt, nicht berechnet. Das Beispiel dient der Methodenschulung und darf nicht als Persönlichkeitsdiagnose oder als Vorlage für reale Menschen verwendet werden.",
+      "sources": [
+        "S10",
+        "S11",
+        "S12",
+        "S19"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c09",
+        "c20"
+      ],
+      "cross_refs": [
+        "grund-radix-synthese",
+        "grund-aszendent-mc",
+        "grund-haeuser-systeme",
+        "zeichen-steinbock",
+        "zeichen-zwillinge"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Fiktives Lehrbeispiel ohne Berechnung; die Methode ist Tradition, die Figur ist erfunden."
+      }
+    },
+    {
+      "id": "beispiel-nora",
+      "slug": "beispiel-nora",
+      "titel": "Nora: Fische-Sonne, Waage-Mond, Löwe-Aszendent",
+      "fictional": true,
+      "no_calculation": true,
+      "figuren": [
+        "Nora, eine erfundene Figur"
+      ],
+      "annahmen": [
+        "Sonne im Fische-Sektor, Mond im Waage-Sektor, Aszendent im Löwe-Sektor: gesetzte Lehrannahmen, keine Berechnung.",
+        "Neptun im Fische-Sektor und im zwölften Haus: gesetzt, um die Frage nach Grenzen und Imagination zu zeigen.",
+        "Jupiter im Schütze-Sektor und im neunten Haus: ebenfalls gesetzt."
+      ],
+      "schritte": [
+        {
+          "titel": "Leitfrage und Grenzen",
+          "denkweg": "Die Leitfrage lautet: Wie verbindet Nora Nähe und Sichtbarkeit? Das Beispiel zeigt eine Konstellation, in der zwei weiche Faktoren auf einen präsenten Aszendenten treffen.",
+          "refs": [
+            "grund-radix-synthese",
+            "grund-ethik"
+          ]
+        },
+        {
+          "titel": "Die Trias lesen",
+          "denkweg": "Fische-Sonne wird als durchlässige, imaginative Identitätsfigur gelesen. Waage-Mond sucht Balance und emotionale Fairness. Löwe-Aszendent zeigt ein warmes, sichtbares Auftreten. Die Spannung: Nora kann nach außen präsent wirken, während innen Grenzen und Selbstbehauptung schwerfallen.",
+          "refs": [
+            "faktor-sonne",
+            "faktor-mond",
+            "grund-aszendent-mc",
+            "zeichen-fische",
+            "zeichen-waage",
+            "zeichen-loewe"
+          ]
+        },
+        {
+          "titel": "Häuser und Herrscher",
+          "denkweg": "Neptun im zwölften Haus verstärkt das Thema Rückzug und Auflösung. Jupiter im neunten Haus betont Sinnsuche und Weite. Der Löwe-Aszendent wird von der Sonne regiert, die in Fische steht: Das zeigt eine Verbindung zwischen sichtbarem Auftreten und einer eher durchlässigen Identitätsfigur.",
+          "refs": [
+            "haus-12",
+            "haus-9",
+            "faktor-neptun",
+            "faktor-jupiter",
+            "grund-herrschaft"
+          ]
+        },
+        {
+          "titel": "Aspekte als Ressource lesen",
+          "denkweg": "Angenommen, Mond und Venus stehen in einem fließenden Aspekt: Das würde soziale Wärme und Ästhetik betonen. Angenommen, Sonne und Neptun stehen in einem Spannungsaspekt: Das würde die Frage nach Selbstbild und Auflösung verschärfen. Beide Annahmen sind gesetzt, nicht berechnet.",
+          "refs": [
+            "aspekt-trigon",
+            "aspekt-quadrat",
+            "grund-aspekt-orben"
+          ]
+        },
+        {
+          "titel": "Gegenprobe und Sprache",
+          "denkweg": "Die Gefahr dieser Lesart ist, Nora auf Weichheit zu reduzieren. Der Löwe-Aszendent widerspricht dem. Die Gegenprobe fragt: Wo zeigt Nora Klarheit und Struktur, die im Beispiel nicht betont werden? Eine gute Deutung benennt diese Lücke, statt sie zu füllen.",
+          "refs": [
+            "grund-sonnenzeichen-grenzen",
+            "grund-radix-synthese",
+            "grund-ethik"
+          ]
+        }
+      ],
+      "synthese": "Nora kann nach außen warm und präsent wirken, während innen die Frage nach Grenzen und eigener Position zentral bleibt. Fische-Sonne und Neptun im zwölften Haus betonen Durchlässigkeit und Imagination; der Waage-Mond sucht Fairness und Beziehung; der Löwe-Aszendent gibt dem Ganzen eine sichtbare Form. Eine plausible Lesart: Nora braucht einen gestalteten Rahmen, etwa Kunst, Projekt oder Gruppe, in dem Durchlässigkeit nicht als Überforderung erlebt wird. Die Löwe-Präsenz kann Schutz sein, nicht nur Eitelkeit.",
+      "alternative_lesart": "Das zwölfte Haus ist stark von der Häuserkonvention abhängig. Bei einem anderen System kann Neptun in einem anderen Haus stehen; damit ändert sich die Lesart erheblich. Auch die Fische-Sonne kann als Rückzug oder als kreative Offenheit gelesen werden. Die Beispieldeutung bleibt an die gesetzten Annahmen gebunden.",
+      "grenzen": [
+        "Neptun- und Jupiter-Hauspositionen sind gesetzt, nicht berechnet.",
+        "Die Geburtszeit fehlt; Aszendent und Häuser sind nicht belastbar.",
+        "Die Lesart ist eine didaktische Konstruktion, keine Aussage über eine reale Person."
+      ],
+      "disclaimer": "Nora ist eine erfundene Figur. Alle Annahmen sind gesetzt, nicht berechnet. Das Beispiel dient der Methodenschulung und darf nicht als Persönlichkeitsdiagnose oder als Vorlage für reale Menschen verwendet werden.",
+      "sources": [
+        "S10",
+        "S11",
+        "S12",
+        "S19"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c09",
+        "c20"
+      ],
+      "cross_refs": [
+        "grund-radix-synthese",
+        "grund-aszendent-mc",
+        "grund-haeuser-systeme",
+        "zeichen-fische",
+        "zeichen-waage"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Fiktives Lehrbeispiel ohne Berechnung; die Methode ist Tradition, die Figur ist erfunden."
+      }
+    },
+    {
+      "id": "beispiel-selin",
+      "slug": "beispiel-selin",
+      "titel": "Selin: Warum ein Transit keine Kündigung vorhersagt",
+      "fictional": true,
+      "no_calculation": true,
+      "figuren": [
+        "Selin, eine erfundene Figur"
+      ],
+      "annahmen": [
+        "Selin steht vor einer beruflichen Entscheidung und liest, ein Saturn-Transit bedeute eine sichere Kündigung oder einen unvermeidbaren Bruch.",
+        "Die Transitbehauptung ist ein populäres Motiv, keine berechnete Aussage und keine belegte Vorhersage.",
+        "Es gibt keine Radix, keine Ephemeriden und keine Geburtszeit; das Beispiel prüft den Umgang mit einer Deutung, nicht ein Horoskop."
+      ],
+      "schritte": [
+        {
+          "titel": "Die Behauptung isolieren",
+          "denkweg": "Zuerst wird die Aussage zerlegt: Was genau wird behauptet? Ein Transit wird als Ursache eines Ereignisses dargestellt. Das ist eine starke Kausalbehauptung, die von der Astrologie nicht belegt ist.",
+          "refs": [
+            "grund-transite",
+            "grund-evidenz",
+            "grund-ethik"
+          ]
+        },
+        {
+          "titel": "Astronomie und Deutung trennen",
+          "denkweg": "Astronomisch beschreibt ein Transit eine aktuelle Position. Die Bedeutung als Krise oder Befreiung ist eine Deutungstradition. Aus der Position folgt kein Ereignis.",
+          "refs": [
+            "grund-transite",
+            "grund-ruecklaeufigkeit",
+            "faktor-saturn"
+          ]
+        },
+        {
+          "titel": "Die Entscheidung zurückholen",
+          "denkweg": "Statt das Horoskop zu fragen, wird gefragt: Welche Informationen braucht Selin für die Entscheidung? Arbeitsbedingungen, Vertrag, Finanzen, Gesundheit, persönliche Ziele. Astrologie kann als Reflexionsfrage dienen, aber nicht als Entscheidungsinstanz.",
+          "refs": [
+            "grund-radix-synthese",
+            "grund-ethik"
+          ]
+        },
+        {
+          "titel": "Eine ethische Formulierung finden",
+          "denkweg": "Eine vertretbare Formulierung wäre: Der Saturn-Transit kann als Bild für Begrenzung und Verantwortung gelesen werden. Ob Selin kündigt, hängt von realen Bedingungen ab. Die Formulierung macht die Tradition sichtbar, ohne eine Vorhersage zu behaupten.",
+          "refs": [
+            "grund-ethik",
+            "aspekt-quadrat",
+            "haus-10"
+          ]
+        }
+      ],
+      "synthese": "Das Beispiel zeigt, wie eine astrologische Aussage in eine unzulässige Prognose kippt. Selin wird nicht durch einen Transit gekündigt; sie trifft eine Entscheidung aufgrund von Bedingungen, die sie prüfen kann. Der Transit kann als Symbol für Druck, Verantwortung oder Reifung gelesen werden, aber er liefert keine Evidenz für einen konkreten Ausgang. Eine hilfreiche astrologische Sprache wäre: Das Motiv lädt dazu ein, die eigene Situation genauer anzusehen. Eine unhilfreiche Sprache wäre: Der Transit bedeutet, dass du kündigen musst.",
+      "alternative_lesart": "Manche Astrologinnen und Astrologen lesen Saturn-Transite als Zeit der Strukturierung und nicht als Krise. Andere halten Transite für bedeutungslos. Beide Haltungen sind mit der Evidenzlage vereinbar, solange sie keine sicheren Ereignisse behaupten. Die Beispieldeutung wählt bewusst die vorsichtige Variante.",
+      "grenzen": [
+        "Es gibt keine berechnete Radix und keinen berechneten Transit.",
+        "Die Behauptung einer sicheren Kündigung ist eine unzulässige Prognose.",
+        "Das Beispiel ist eine ethische Übung, keine astrologische Fallanalyse."
+      ],
+      "disclaimer": "Selin ist eine erfundene Figur. Das Beispiel enthält keine berechneten Positionen und keine Vorhersage. Es zeigt, wie man eine astrologische Behauptung prüft und in eine nicht-deterministische Sprache übersetzt.",
+      "sources": [
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "claims": [
+        "c17",
+        "c19",
+        "c28"
+      ],
+      "cross_refs": [
+        "grund-transite",
+        "grund-evidenz",
+        "grund-ethik",
+        "faktor-saturn",
+        "haus-10"
+      ],
+      "kennzeichnung": {
+        "typ": "empirie",
+        "hinweis": "Kritisches Lehrbeispiel zur Grenze astrologischer Prognosen; die Figur ist erfunden, die Positionen sind nicht berechnet."
+      }
+    }
+  ]
+}

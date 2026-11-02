@@ -1,5 +1,7 @@
 # CI/CD Pipeline Architecture — Hermes Adaptive Router
 
+> **Hinweis (t_cadcfeb4):** Diese Datei beschreibt die Plugin-Pipeline (`hermes-adaptive-router`) und ist nicht die aktive CI/Deploy-Konfiguration für das Esoterik-Welt-Repo. Die tatsächliche Pipeline für Esoterik-Welt ist `.github/workflows/ci.yml` (siehe `docs/plan-t_cadcfeb4.md`).
+>
 > Status: Design spec  |  Branch: `wt/t_fc0d4b4d`  |  Workspace: `hermes-adaptive-router`
 > Target repo: `ingbms/hermes-adaptive-router` (private by default)
 

@@ -12,13 +12,9 @@
     <base href="/Esoterik-Welt/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Impressum — Esoterik-Welt</title>
+    <meta name="description" content="Impressum, Bild- und Schriftennachweise der Esoterik-Welt." />
     <link rel="canonical" href="https://ingbms.github.io/Esoterik-Welt/impressum.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/fonts/Manrope.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="css/design-system.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -28,15 +24,80 @@
     <header class="header">
       <div class="header-inner">
         <a class="logo" href="./">Esoterik-Welt</a>
-        <nav aria-label="Seitennavigation"><a class="btn btn-secondary btn-sm" href="./">Zur Startseite</a></nav>
+        <nav aria-label="Seitennavigation">
+          <a class="btn btn-secondary btn-sm" href="./">Zur Startseite</a>
+        </nav>
       </div>
     </header>
     <main id="main" class="container legal-content" tabindex="-1">
       <article class="card">
         <h1>Impressum</h1>
-        <p>Esoterik-Welt — Persönliches Projekt von Markus (ingbms). Kontakt über GitHub.</p>
-        <a class="btn btn-primary" href="./">Zurück zur Startseite</a>
+        <div class="legal-prose">
+          <p>Esoterik-Welt — Persönliches Projekt von Markus (ingbms). Kontakt über GitHub.</p>
+
+          <h2 id="bildnachweise">Bild- und Schriftennachweise</h2>
+          <p>
+            Die Website verwendet ausschließlich lokal ausgelieferte Schriften und Fotografien. Es werden keine
+            Bildmodelle zur Erzeugung von Inhalten eingesetzt; es wurden keine Bilder gekauft.
+          </p>
+
+          <h2>Fotografie: Bergkristall (Startseite, Hero)</h2>
+          <ul>
+            <li>Titel: „Quartz Brésil“</li>
+            <li>Urheber: Didier Descouens</li>
+            <li>
+              Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Quartz_Br%C3%A9sil.jpg" rel="noopener"
+                >commons.wikimedia.org/wiki/File:Quartz_Brésil.jpg</a
+              >
+            </li>
+            <li>
+              Lizenz: CC BY-SA 4.0 —
+              <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener"
+                >creativecommons.org/licenses/by-sa/4.0</a
+              >
+            </li>
+            <li>
+              Änderungen: gleichmäßige Verkleinerung auf maximal 2400 px, JPEG-Export; im Browser leichte redaktionelle
+              Abstimmung (saturate 0.65, brightness 1.04, screen) auf dem dunklen Hintergrund. Kein Beschnitt des
+              Motivs. Die bearbeitete Fassung steht ebenfalls unter CC BY-SA 4.0.
+            </li>
+          </ul>
+
+          <h2>Grafik: Orion-Koordinatenstudie</h2>
+          <ul>
+            <li>
+              Eigene Vektorzeichnung („assets/cosmos/orion-chart.svg“) von Esoterik-Welt auf Grundlage öffentlich
+              zugänglicher Sternkoordinaten (Sternliste Orion, Wikimedia, abgerufen am 31.10.2026).
+            </li>
+            <li>
+              Redaktionell verbundene Punkte in equirektangulanter Darstellung; keine Epoche, keine Eigenbewegung, keine
+              Beobachtungszeit. Nicht als Navigations- oder Beobachtungskarte geeignet.
+            </li>
+            <li>Rechte an der Zeichnung: Esoterik-Welt Art Direction, CC BY 4.0.</li>
+          </ul>
+
+          <h2>Schriften</h2>
+          <ul>
+            <li>Fraunces (regulär und kursiv) sowie Manrope: SIL Open Font License 1.1.</li>
+            <li>
+              Die vollständigen Lizenztexte liegen unverändert im Projekt unter
+              <code>assets/fonts/Fraunces-OFL.txt</code> und <code>assets/fonts/Manrope-OFL.txt</code>.
+            </li>
+            <li>Die Schriften werden lokal ausgeliefert; es werden keine Font-Dienste Dritter eingebunden.</li>
+          </ul>
+        </div>
+        <p><a class="btn btn-primary" href="./">Zurück zur Startseite</a></p>
       </article>
     </main>
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p>© 2025 Esoterik-Welt — Statische Website, keine Tracker, keine Cookies.</p>
+        <p>
+          <a href="./">Startseite</a> · <a href="impressum.html">Impressum</a> ·
+          <a href="datenschutz.html">Datenschutz</a> · <a href="haftung.html">Haftungsausschluss</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

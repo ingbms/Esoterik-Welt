@@ -1,0 +1,56 @@
+{
+  "source": "https://en.wikipedia.org/wiki/List_of_stars_in_Orion",
+  "accessed": "2026-10-31",
+  "description": "Sieben manuell übertragene Koordinatenpaare; keine vollständige Himmelskarte, keine Beobachtungsvorhersage. Darstellung equirektangular, Osten links; Linien redaktionelle Verbindung. Werte ohne Eigenbewegungskorrektur. Keine Epoche behauptet, da Quellenextrakt sie nicht ausweist.",
+  "stars": [
+    {
+      "name": "Rigel",
+      "bayer": "β",
+      "ra_hours": 5.242297222222223,
+      "dec_degrees": -8.201638888888889,
+      "visual_magnitude": 0.18
+    },
+    {
+      "name": "Betelgeuse",
+      "bayer": "α",
+      "ra_hours": 5.919525,
+      "dec_degrees": 7.407027777777778,
+      "visual_magnitude": 0.42
+    },
+    {
+      "name": "Bellatrix",
+      "bayer": "γ",
+      "ra_hours": 5.418852777777778,
+      "dec_degrees": 6.349722222222222,
+      "visual_magnitude": 1.64
+    },
+    {
+      "name": "Alnilam",
+      "bayer": "ε",
+      "ra_hours": 5.603558333333333,
+      "dec_degrees": -1.2019166666666665,
+      "visual_magnitude": 1.69
+    },
+    {
+      "name": "Alnitak",
+      "bayer": "ζ",
+      "ra_hours": 5.679311111111112,
+      "dec_degrees": -1.9425833333333333,
+      "visual_magnitude": 1.88
+    },
+    {
+      "name": "Saiph",
+      "bayer": "κ",
+      "ra_hours": 5.795941666666667,
+      "dec_degrees": -9.669611111111111,
+      "visual_magnitude": 2.07
+    },
+    {
+      "name": "Mintaka",
+      "bayer": "δ",
+      "ra_hours": 5.533444444444444,
+      "dec_degrees": -0.2990833333333333,
+      "visual_magnitude": 2.2
+    }
+  ]
+}

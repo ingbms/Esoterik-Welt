@@ -299,11 +299,11 @@ export class CrystalsModule {
         const imgPart = c.image
           ? c.image.startsWith('assets/') || c.image.startsWith('http')
             ? `<img data-src="${c.image}" alt="" loading="lazy" decoding="async" width="320" height="320" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">`
-            : `<div style="font-size:2.5rem;line-height:1;">${c.image}</div>`
+            : `<div class="crystal-glyph">${c.image}</div>`
           : '';
         if (isList) {
           return `<article class="card crystal-card crystal-card-interactive crystal-list-row" data-id="${c.id}">
-          <div class="crystal-thumb" style="flex:0 0 120px;min-height:120px;background:linear-gradient(135deg,var(--color-border-glow),var(--color-border));display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);overflow:hidden;">${imgPart}</div>
+          <div class="crystal-thumb" style="flex:0 0 120px;min-height:120px;background:var(--color-bg-deep);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);overflow:hidden;">${imgPart}</div>
           <div class="crystal-content" style="flex:1;min-width:0;">
             <div class="flex justify-between items-start gap-2"><h2 class="crystal-name" style="margin:0;font-size:1.15rem;">${c.name}</h2><button type="button" class="btn btn-ghost btn-sm favorite-btn" aria-label="${this.favIds.has(c.id) ? 'Favorit entfernen' : 'Als Favorit speichern'}" data-id="${c.id}">${fav}</button></div>
             <div class="crystal-meta">${chord} <span class="badge badge-secondary">${c.colorRaw || c.color}</span></div>
@@ -314,7 +314,7 @@ export class CrystalsModule {
         </article>`;
         }
         return `<article class="card crystal-card crystal-card-interactive" data-id="${c.id}">
-        <div class="crystal-image" style="aspect-ratio:1;overflow:hidden;background:linear-gradient(135deg,var(--color-border-glow),var(--color-border));display:flex;align-items:center;justify-content:center;">${imgPart}</div>
+        <div class="crystal-image" style="aspect-ratio:1;overflow:hidden;background:var(--color-bg-deep);display:flex;align-items:center;justify-content:center;">${imgPart}</div>
         <div class="crystal-content">
           <div class="flex justify-between items-start gap-2"><h2 class="crystal-name">${c.name}</h2><button type="button" class="btn btn-ghost btn-sm favorite-btn" aria-label="${this.favIds.has(c.id) ? 'Favorit entfernen' : 'Als Favorit speichern'}" data-id="${c.id}">${fav}</button></div>
           <div class="crystal-meta">${chord} <span class="badge badge-secondary">${c.colorRaw || c.color}</span></div>
@@ -399,7 +399,8 @@ export class CrystalsModule {
     this.modalBody.innerHTML = `
       <div class="crystal-detail-layout">
         <div class="crystal-detail-image">
-          ${c.image && c.image.startsWith('assets/') ? `<img src="${c.image}" alt="" decoding="async" width="320" height="320">` : `<div style="font-size:4rem;">${c.image}</div>`}
+          ${c.image && c.image.startsWith('assets/') ? `<img src="${c.image}" alt="" decoding="async" width="320" height="320">` : `<div class="crystal-glyph crystal-glyph--large">${c.image}</div>`}
+          ${c.image && c.image.startsWith('assets/') ? '' : '<p class="crystal-glyph-note">Platzhalter-Symbol · kein Foto im Projekt</p>'}
         </div>
         <div>
           <h3 style="font-family:var(--font-display);color:var(--color-primary);margin-bottom:var(--space-1);font-size:1.6rem;">${c.name}</h3>

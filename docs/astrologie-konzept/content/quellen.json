@@ -1,0 +1,754 @@
+{
+  "dataset": "quellen",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Westliche tropische, geozentrische Astrologie als didaktischer Einstieg. Deutungstradition, astronomischer Fakt, Konvention und empirische Evidenz werden getrennt gekennzeichnet. Alle Quellen wurden am 2026-11-01 tatsächlich abgerufen; der Abrufstatus ist je Eintrag vermerkt.",
+  "quellen": [
+    {
+      "id": "S01",
+      "titel": "Chapter 2: Reference Systems",
+      "herausgeber": "NASA Science",
+      "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter2-1/",
+      "typ": "referenzwerk",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "NASA-Textinhalte gelten überwiegend als gemeinfrei. Hier nur kurze Zitate und Paraphrase; keine Übernahme ganzer Passagen, keine NASA-Logos.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "precession causes the axis of Earth to describe a circle having a 23.4 degree radius ... over about 26,000 years ... .014 degree each year",
+      "einsatz": [
+        "Präzession",
+        "Bezugssysteme",
+        "Sternorte"
+      ],
+      "grenzen": "Technische Referenz für Raumfahrt; keine astrologischen Aussagen."
+    },
+    {
+      "id": "S02",
+      "titel": "Planetary Fact Sheet - Metric",
+      "herausgeber": "NASA NSSDCA",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+      "typ": "referenzwerk",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "NASA-Daten, überwiegend gemeinfrei. Zahlenwerte hier paraphrasiert; Quellenangabe erforderlich.",
+      "abrufstatus": "vollständig abgerufen; Seite zuletzt aktualisiert am 2025-03-18",
+      "kurzzitat": "Orbital Period (days): Mercury 88.0, Venus 224.7, Earth 365.2, Mars 687.0, Jupiter 4331, Saturn 10,747, Uranus 30,589, Neptune 59,800, Pluto 90,560",
+      "einsatz": [
+        "Umlaufzeiten",
+        "Achsenneigung",
+        "Pluto als Zwergplanet im Datenblatt"
+      ],
+      "grenzen": "Mittlere Bahndaten; keine Ephemeriden für einzelne Tage."
+    },
+    {
+      "id": "S03",
+      "titel": "Nutation and Precession",
+      "herausgeber": "NASA Earth Sciences",
+      "url": "https://earth.gsfc.nasa.gov/geo/multimedia/nutation-and-precession",
+      "typ": "referenzwerk",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "NASA-Inhalt, überwiegend gemeinfrei; kurze Paraphrase mit Quellenangabe.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "the spin axis appears to trace a circle ... over a long period of time (approximately 26,000 years)",
+      "einsatz": [
+        "Präzession als langfristige Achsenbewegung"
+      ],
+      "grenzen": "Erklärung der Bewegung, keine Aussage zu Tierkreisdeutung."
+    },
+    {
+      "id": "S04",
+      "titel": "The Constellations",
+      "herausgeber": "International Astronomical Union (IAU)",
+      "url": "https://www.iau.org/IAU/IAU/Astronomy-FAQs/Constellations.aspx",
+      "typ": "referenzwerk",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "IAU-Webtext; kurze Zitate mit Quellenangabe, keine Übernahme größerer Abschnitte.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "At its first General Assembly held in Rome in 1922, the IAU ... agreed on a list of 88 constellations ... boundaries approved ... 1928, published 1930",
+      "einsatz": [
+        "88 Sternbilder",
+        "Grenzen und Geschichte der Sternbilder"
+      ],
+      "grenzen": "Sternbilder sind astronomische Areale, keine astrologischen Zeichen."
+    },
+    {
+      "id": "S05",
+      "titel": "A Brief Guide to the Zodiac",
+      "herausgeber": "timeanddate.com (Dean Clark)",
+      "url": "https://www.timeanddate.com/astronomy/zodiac-guide.html",
+      "typ": "sekundaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "Urheberrechtlich geschützt; nur kurze Zitate und Paraphrase mit Quellenangabe.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "The Sun actually passes through another constellation known as Ophiuchus ... not included ... twelve equal sections of 30 degrees",
+      "einsatz": [
+        "Ophiuchus",
+        "Zwölfteilung",
+        "Präzession"
+      ],
+      "grenzen": "Populärwissenschaftliche Darstellung; für Detailfragen IAU-Quellen vorziehen."
+    },
+    {
+      "id": "S06",
+      "titel": "Zodiac | Signs, Dates, Symbols, Months, Astrology, & Facts",
+      "herausgeber": "Encyclopädia Britannica",
+      "url": "https://www.britannica.com/topic/zodiac",
+      "typ": "referenzwerk",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "Urheberrechtlich geschützt; nur kurze Zitate mit Quellenangabe, keine Übernahme.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "Because of the precession of the equinoxes ... the zodiac sign dates ... no longer correspond to the actual constellation. Astrology is not supported by science. No correlation has been found between birth dates and personality or intelligence.",
+      "einsatz": [
+        "Zeichendaten",
+        "Präzession",
+        "Evidenzlage"
+      ],
+      "grenzen": "Enzyklopädie-Übersicht; Datumsangaben dort weichen von anderen Publikationen um etwa einen Tag ab."
+    },
+    {
+      "id": "S07",
+      "titel": "Astrology | Chart, Zodiac Signs, Meaning, Definition, History",
+      "herausgeber": "Encyclopädia Britannica (David E. Pingree)",
+      "url": "https://www.britannica.com/topic/astrology",
+      "typ": "referenzwerk",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "Urheberrechtlich geschützt; kurze Zitate mit Quellenangabe.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "astrology, type of divination ... widely considered today to be a pseudoscience ... millions of people ... put their faith in such systems",
+      "einsatz": [
+        "Definition",
+        "Geschichte",
+        "Wissenschaftliche Einordnung",
+        "Typen der Astrologie"
+      ],
+      "grenzen": "Übersichtsartikel; keine vollständige Schulgeschichte."
+    },
+    {
+      "id": "S08",
+      "titel": "A double-blind test of astrology",
+      "herausgeber": "Nature 318, 419-425 (Shawn Carlson, 1985)",
+      "url": "https://www.nature.com/articles/318419a0",
+      "typ": "primaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "Paywall; nur Abstract eingesehen. Kurzes Zitat, kein Volltextzugriff, keine Übernahme von Tabellen.",
+      "abrufstatus": "nur Abstract öffentlich abrufbar; Volltext nicht eingesehen",
+      "kurzzitat": "Two double-blind tests were made of the thesis that astrological 'natal charts' can be used to describe accurately personality traits of test subjects.",
+      "einsatz": [
+        "Empirische Prüfung der Radixdeutung"
+      ],
+      "grenzen": "Eine Studie mit methodischen Debatten; kein Beweis für oder gegen jede Form astrologischer Praxis. Ergebnis laut Sekundärliteratur nicht besser als Zufall."
+    },
+    {
+      "id": "S09",
+      "titel": "Astrology and science",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Astrology_and_science",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Nur Faktenentnahme und kurze Zitate mit Quellenangabe; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "Scientific testing has found no evidence to support the premises ... the most famous test ... led to the conclusion that natal astrology performed no better than chance ... no proposed mechanism",
+      "einsatz": [
+        "Forschungsstand",
+        "Carlson-Test",
+        "Mechanismus-Kritik"
+      ],
+      "grenzen": "Tertiärquelle; Aussagen wurden gegen S06, S07 und S08 geprüft."
+    },
+    {
+      "id": "S10",
+      "titel": "House (astrology)",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/House_(astrology)",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "divide the horoscope into ... twelve houses whose positions depend on time and location rather than on date ... Placidus ... most commonly used ... not defined beyond polar circles ... equal house ... 30 degree increments starting from the degree of the ascendant",
+      "einsatz": [
+        "Häuser",
+        "Häusersysteme",
+        "Placidus-Grenzen",
+        "Equal House"
+      ],
+      "grenzen": "Tertiärquelle mit wechselnder Belegqualität; Systemnamen und Grundprinzipien wurden quergeprüft."
+    },
+    {
+      "id": "S11",
+      "titel": "Astrological aspect",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Astrological_aspect",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "conjunction ... 0-10 degrees ... trine ... 120 degrees ... an orb of 5-10 degrees is allowed ... easy (60 sextile or 120 trine) or hard (90 square or 180 opposition)",
+      "einsatz": [
+        "Hauptaspekte",
+        "Winkel",
+        "Orben"
+      ],
+      "grenzen": "Tertiärquelle; keine normative Festlegung von Orben."
+    },
+    {
+      "id": "S12",
+      "titel": "Domicile (astrology)",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Domicile_(astrology)",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "each sign is ruled by one of the 7 visible planets ... modern astrologers assign ... Pluto ... Uranus ... Neptune",
+      "einsatz": [
+        "Herrschaft",
+        "traditionelle und moderne Zuordnung"
+      ],
+      "grenzen": "Tertiärquelle; Zuordnungen sind Konventionen, keine Naturgesetze."
+    },
+    {
+      "id": "S13",
+      "titel": "Sidereal and tropical astrology",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Sidereal_and_tropical_astrology",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "tropical systems consider 0 degrees of Aries as always coinciding with the March equinox ... sidereal ... maintains the alignment ... via ... ayanamsas ... drift apart over the centuries",
+      "einsatz": [
+        "tropisch vs. siderisch",
+        "Ayanamsa",
+        "Präzessionsfolge"
+      ],
+      "grenzen": "Tertiärquelle; Differenzwerte sind schulabhängig."
+    },
+    {
+      "id": "S14",
+      "titel": "Zodiac",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Zodiac",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "belt-shaped region ... approximately 8 degrees north and south of the ecliptic ... divided ... into 12 equal parts ... each occupying 30 degrees",
+      "einsatz": [
+        "Zodiak-Gürtel",
+        "Zwölfteilung",
+        "Ekliptik"
+      ],
+      "grenzen": "Tertiärquelle; Definitionen wurden mit S05, S06 und S19 abgeglichen."
+    },
+    {
+      "id": "S15",
+      "titel": "Apparent retrograde motion",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Apparent_retrograde_motion",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "the term refers to planets, as they appear from Earth, stopping briefly and reversing direction ... in reality ... perpetually orbit in the same uniform direction",
+      "einsatz": [
+        "Rückläufigkeit als Scheinbewegung"
+      ],
+      "grenzen": "Tertiärquelle; physikalische Erklärung ist Standardastronomie."
+    },
+    {
+      "id": "S16",
+      "titel": "House System",
+      "herausgeber": "Astrodienst Astrowiki",
+      "url": "http://www.astro.com/astrowiki/en/House_System",
+      "typ": "sekundaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "Urheberrechtlich geschützt; nur Suchsnippet eingesehen, kein Volltextabruf.",
+      "abrufstatus": "Direktabruf nicht möglich (Bot-Schutz); nur Suchsnippet vom 2026-11-01",
+      "kurzzitat": "no matter which system is used, the axes Ascendant/Descendant and Medium Coeli/Imum Coeli stay the same ... The Placidus House System is the most commonly used",
+      "einsatz": [
+        "Achseninvarianz",
+        "Placidus-Verbreitung"
+      ],
+      "grenzen": "Nur Snippet; als schwache Stütze markiert, Kernaussagen auch in S10 belegt."
+    },
+    {
+      "id": "S17",
+      "titel": "Orb - Astrodienst Astrowiki",
+      "herausgeber": "Astrodienst Astrowiki",
+      "url": "https://www.astro.com/astrowiki/en/Orb",
+      "typ": "sekundaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "Urheberrechtlich geschützt; nur Suchsnippet eingesehen, kein Volltextabruf.",
+      "abrufstatus": "Direktabruf durch Bot-Schutz blockiert; nur Suchsnippet vom 2026-11-01",
+      "kurzzitat": "modern astrologers allow larger orbs for the sun and moon, of perhaps 10-12 degrees ... narrower orbs for the other planets, perhaps 5-7 degrees ... Psychological Astrology tends to use larger orbs, whereas Horary Astrology tends to work with tighter ones",
+      "einsatz": [
+        "Orb-Größen",
+        "Schulabhängigkeit"
+      ],
+      "grenzen": "Nur Snippet; keine normative Quelle, nur Beispielkonvention."
+    },
+    {
+      "id": "S18",
+      "titel": "Moon Fact Sheet",
+      "herausgeber": "NASA NSSDCA",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+      "typ": "referenzwerk",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "NASA-Daten, überwiegend gemeinfrei; Zahlenwerte paraphrasiert.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "Revolution period (days) 27.3217 ... Synodic period (days) 29.53",
+      "einsatz": [
+        "Mondzyklus",
+        "siderischer und synodischer Monat"
+      ],
+      "grenzen": "Astronomische Daten; keine Aussage zu Monddeutung oder Verhalten."
+    },
+    {
+      "id": "S19",
+      "titel": "Astrological sign",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Astrological_sign",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "twelve 30-degree sectors ... enumerate from the first day of spring ... shifted out of alignment ... by axial precession ... Astrology is a pseudoscience ... more plausible explanations ... seasonal birth",
+      "einsatz": [
+        "Zeichendefinition",
+        "Präzession",
+        "Evidenzlage",
+        "saisonale Alternativerklärung"
+      ],
+      "grenzen": "Tertiärquelle; die saisonale Hypothese ist dort nur knapp referiert."
+    },
+    {
+      "id": "S20",
+      "titel": "Pluto",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Pluto",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "Pluto ... is a dwarf planet in the Kuiper belt ... discovered February 18, 1930 ... orbital period 247.94 years",
+      "einsatz": [
+        "Pluto-Status",
+        "Entdeckung",
+        "Umlaufzeit"
+      ],
+      "grenzen": "Tertiärquelle; Statusfrage wurde 2006 durch die IAU entschieden."
+    },
+    {
+      "id": "S21",
+      "titel": "Barnum effect",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Barnum_effect",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "individuals give high accuracy ratings to descriptions of their personality that supposedly are tailored specifically to them, yet which are in fact vague and general enough to apply to a broad range of people",
+      "einsatz": [
+        "Barnum-/Forer-Effekt",
+        "subjektive Validierung"
+      ],
+      "grenzen": "Tertiärquelle; Effekt ist in der Psychologie gut etabliert, hier nur als Erklärungsangebot genutzt."
+    },
+    {
+      "id": "S22",
+      "titel": "Ascendant",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Ascendant",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "the value of the ecliptical geocentric longitude ... which is easterly on the horizon",
+      "einsatz": [
+        "Aszendent als geometrischer Schnittpunkt"
+      ],
+      "grenzen": "Tertiärquelle; Definition ist geometrisch nachvollziehbar."
+    },
+    {
+      "id": "S23",
+      "titel": "Midheaven",
+      "herausgeber": "Collins English Dictionary",
+      "url": "https://www.collinsdictionary.com/us/dictionary/english/midheaven",
+      "typ": "lexikon",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "Wörterbucheintrag, urheberrechtlich geschützt; nur Definitionsparaphrase mit Quellenangabe.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "the point on the ecliptic, measured in degrees, that crosses the meridian of a particular place at a particular time",
+      "einsatz": [
+        "MC-Definition"
+      ],
+      "grenzen": "Kurze Lexikondefinition; keine weitergehende Fachdiskussion."
+    },
+    {
+      "id": "S24",
+      "titel": "Uranus",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Uranus",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "Uranus is the seventh planet from the Sun ... ice giant ... On 23 September 1846, Johann Gottfried Galle located a new planet, later named Neptune",
+      "einsatz": [
+        "Uranus als Ice Giant",
+        "Neptun-Entdeckung 1846"
+      ],
+      "grenzen": "Tertiärquelle; Entdeckungsjahr Uranus nicht im abgerufenen Ausschnitt belegt und daher hier nicht behauptet."
+    },
+    {
+      "id": "S25",
+      "titel": "Neptune",
+      "herausgeber": "Wikipedia (englischsprachige Ausgabe)",
+      "url": "https://en.wikipedia.org/wiki/Neptune",
+      "typ": "tertiaerquelle",
+      "abgerufen_am": "2026-11-01",
+      "sprache": "en",
+      "rechte_hinweis": "CC BY-SA 4.0. Faktenentnahme und kurze Zitate; kein Artikeltext übernommen.",
+      "abrufstatus": "vollständig abgerufen",
+      "kurzzitat": "Neptune is the eighth and farthest known planet orbiting the Sun ... unexpected changes in the orbit of Uranus led ... to hypothesise ... perturbation by an unknown planet",
+      "einsatz": [
+        "Neptun als äußerster Planet",
+        "Entdeckungszusammenhang"
+      ],
+      "grenzen": "Tertiärquelle; Detailgeschichte der Entdeckung nicht vollständig eingesehen."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c01",
+      "aussage": "Die Erdachse präzediert: Sie beschreibt mit rund 23,4 Grad Radius einen Kegel und braucht für einen vollen Umlauf etwa 26.000 Jahre; daraus folgt eine apparente Verschiebung von etwa 0,014 Grad pro Jahr.",
+      "evidenztyp": "astronomischer_fakt",
+      "quellen": [
+        "S01",
+        "S03"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Zahlen sind gerundet; aktuelle Epochenwerte unterscheiden sich leicht."
+    },
+    {
+      "id": "c02",
+      "aussage": "Der tropische Tierkreis beginnt am Frühlings-Äquinoktium und teilt die Ekliptik in zwölf gleiche Sektoren von je 30 Grad; die Zeichen sind an Jahreszeiten, nicht an Sternbildgrenzen gebunden.",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S13",
+        "S19",
+        "S14"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Definition des tropischen Systems; andere Systeme definieren anders."
+    },
+    {
+      "id": "c03",
+      "aussage": "Siderische Systeme korrigieren die Präzession über Ayanamsa-Werte und orientieren sich an der Sternposition; tropische und siderische Zeichen sind deshalb heute um einen schulabhängigen Betrag gegeneinander verschoben.",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S13"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Der konkrete Abstand hängt vom Ayanamsa ab und wird hier nicht als fixer Wert behauptet."
+    },
+    {
+      "id": "c04",
+      "aussage": "Der Zodiak ist ein Gürtel von etwa 8 Grad nördlich und südlich der Ekliptik; er wird in zwölf Sektoren von je 30 Grad geteilt.",
+      "evidenztyp": "astronomischer_fakt",
+      "quellen": [
+        "S14",
+        "S06"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Die 8-Grad-Angabe beschreibt den Bereich, in dem Mond und Planeten überwiegend erscheinen."
+    },
+    {
+      "id": "c05",
+      "aussage": "Entlang der Ekliptik liegen zwölf klassische Tierkreissternbilder plus Ophiuchus; die IAU kennt insgesamt 88 Sternbilder mit seit 1928/1930 festen Grenzen.",
+      "evidenztyp": "astronomischer_fakt",
+      "quellen": [
+        "S04",
+        "S05",
+        "S14"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Sternbilder sind ungleiche Areale; Zeichen sind gleiche Sektoren."
+    },
+    {
+      "id": "c06",
+      "aussage": "Die in Publikationen genannten Datumsgrenzen der Sonnenzeichen sind Näherungen und unterscheiden sich je nach Jahr, Zeitzone und Quelle um etwa einen Tag.",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S06",
+        "S19"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Deshalb werden im Paket Zeiträume als ungefähre Orientierung und nicht als exakte Kalenderdaten ausgegeben."
+    },
+    {
+      "id": "c07",
+      "aussage": "Ein Horoskop umfasst in der westlichen Tradition weit mehr als das Sonnenzeichen: unter anderem Mond, weitere Planeten, Häuser, Achsen und Aspekte; das Sonnenzeichen beschreibt nur die Sonnenposition im Zeichensektor.",
+      "evidenztyp": "deutungstradition",
+      "quellen": [
+        "S07",
+        "S10",
+        "S11",
+        "S19"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Die Aussage beschreibt den Aufbau der Tradition, nicht deren empirische Gültigkeit."
+    },
+    {
+      "id": "c08",
+      "aussage": "Häuser sind zeit- und ortsabhängige Einteilungen des Horoskops; es gibt mehrere Systeme. Placidus ist im modernen Westen verbreitet und jenseits der Polarkreise nicht durchgehend definiert; Equal House teilt ab dem Aszendenten in 30-Grad-Schritten.",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S10",
+        "S16"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Kein System ist wissenschaftlich als richtig erwiesen; die Wahl ist eine Fachkonvention."
+    },
+    {
+      "id": "c09",
+      "aussage": "Aszendent und MC sind geometrische Schnittpunkte: der Aszendent ist der östliche Schnittpunkt von Ekliptik und Horizont, der MC der Punkt der Ekliptik am oberen Meridian. Die Achsen AC/DC und MC/IC bleiben in den gängigen Häusersystemen gleich.",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S22",
+        "S23",
+        "S16",
+        "S10"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Die Deutung dieser Punkte ist Tradition; die geometrische Definition ist davon unabhängig."
+    },
+    {
+      "id": "c10",
+      "aussage": "Die fünf Hauptaspekte sind Konjunktion (0 Grad), Sextil (60 Grad), Quadrat (90 Grad), Trigon (120 Grad) und Opposition (180 Grad).",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S11"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Winkel sind Definition; die Zuordnung zu leicht oder spannungsreich ist Deutungstradition."
+    },
+    {
+      "id": "c11",
+      "aussage": "Orben sind keine festen Naturgrößen: Zulässige Abweichungen variieren nach Planet, Aspekt, Schule und Anwendungszweck; psychologische Astrologie nutzt eher weite, Horary eher enge Orben.",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S11",
+        "S17"
+      ],
+      "sicherheit": "mittel",
+      "hinweis": "S17 ist nur als Suchsnippet abrufbar; die Aussage wird deshalb als Konvention mit Beispielwerten, nicht als Norm ausgegeben."
+    },
+    {
+      "id": "c12",
+      "aussage": "Die traditionelle Herrschaftslehre ordnet die zwölf Zeichen den sieben mit bloßem Auge sichtbaren Himmelskörpern zu; moderne Systeme ergänzen Uranus, Neptun und Pluto für einzelne Zeichen.",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S12"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Zuordnungen sind historisch gewachsen und schulabhängig."
+    },
+    {
+      "id": "c13",
+      "aussage": "Pluto wurde am 18. Februar 1930 entdeckt und ist seit der IAU-Entscheidung von 2006 ein Zwergplanet; in der modernen Astrologie wird er dennoch als Deutungsfaktor verwendet.",
+      "evidenztyp": "astronomischer_fakt",
+      "quellen": [
+        "S20",
+        "S02"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Astronomischer Status und astrologische Verwendung sind zwei verschiedene Fragen."
+    },
+    {
+      "id": "c14",
+      "aussage": "Rückläufig erscheinende Planeten bewegen sich nicht tatsächlich rückwärts; die Umkehr ist eine Perspektivwirkung der unterschiedlichen Bahngeschwindigkeiten von Erde und beobachtetem Planeten.",
+      "evidenztyp": "astronomischer_fakt",
+      "quellen": [
+        "S15"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Die scheinbare Bewegung ist real beobachtbar, die Deutung als Ereignis ist Tradition."
+    },
+    {
+      "id": "c15",
+      "aussage": "Der siderische Monat dauert 27,3217 Tage, der synodische Monat 29,53 Tage; daraus ergibt sich ein Wechsel des Mond-Zeichensektors im Mittel etwa alle 2,46 Tage.",
+      "evidenztyp": "astronomischer_fakt",
+      "quellen": [
+        "S18"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Der 2,46-Tage-Wert ist eine Rechnung aus 29,53 geteilt durch 12 und keine Ephemeridenangabe."
+    },
+    {
+      "id": "c16",
+      "aussage": "Die mittleren siderischen Umlaufzeiten betragen rund 88 Tage (Merkur), 225 Tage (Venus), 687 Tage (Mars), 11,9 Jahre (Jupiter), 29,4 Jahre (Saturn), 83,7 Jahre (Uranus), 163,7 Jahre (Neptun) und 247,9 Jahre (Pluto).",
+      "evidenztyp": "astronomischer_fakt",
+      "quellen": [
+        "S02",
+        "S20"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Gerundete Mittelwerte; keine Aussage über aktuelle Positionen."
+    },
+    {
+      "id": "c17",
+      "aussage": "Astrologie wird in der modernen Wissenschaft als Pseudoscience eingeordnet; es gibt keine belastbare Evidenz für einen Zusammenhang zwischen Geburtsdatum und Persönlichkeit oder Intelligenz.",
+      "evidenztyp": "empirischer_befund",
+      "quellen": [
+        "S06",
+        "S07",
+        "S09",
+        "S19"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Die Einordnung betrifft astrologische Wirkbehauptungen, nicht die kulturelle oder reflexive Nutzung von Symbolen."
+    },
+    {
+      "id": "c18",
+      "aussage": "Der bekannteste doppelblinde Test an Radixdeutungen (Carlson 1985) ergab laut Sekundärliteratur keine bessere Trefferquote als Zufall.",
+      "evidenztyp": "empirischer_befund",
+      "quellen": [
+        "S08",
+        "S09"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Nur das Abstract von S08 war zugänglich; das Ergebnis wird über S09 berichtet."
+    },
+    {
+      "id": "c19",
+      "aussage": "Für astrologische Wirkbehauptungen fehlt ein plausibler physikalischer oder biologischer Mechanismus, der nicht grundlegenden Erkenntnissen widersprechen würde.",
+      "evidenztyp": "empirischer_befund",
+      "quellen": [
+        "S09"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Negativbefund; er schließt eine bisher unbekannte Wirkung nicht logisch aus, macht sie aber unbegründet."
+    },
+    {
+      "id": "c20",
+      "aussage": "Der Barnum- beziehungsweise Forer-Effekt erklärt, warum vage, allgemein zutreffende Persönlichkeitsbeschreibungen als ungewöhnlich treffend erlebt werden können.",
+      "evidenztyp": "empirischer_befund",
+      "quellen": [
+        "S21"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Psychologischer Effekt; er erklärt Zustimmung, nicht die Wahrheit der Aussage."
+    },
+    {
+      "id": "c21",
+      "aussage": "Als alternative Erklärung für scheinbare Geburtsmonat-Persönlichkeitszusammenhänge werden unter anderem saisonale Effekte der Geburt diskutiert.",
+      "evidenztyp": "empirischer_befund",
+      "quellen": [
+        "S19"
+      ],
+      "sicherheit": "mittel",
+      "hinweis": "Nur als Forschungsrichtung genannt, nicht als abschließend belegt."
+    },
+    {
+      "id": "c22",
+      "aussage": "Astrologie ist historisch aus mesopotamischer Himmelsomen-Deutung entstanden, wurde in hellenistischer Zeit zu horoskopbasierter Astrologie weiterentwickelt und verbreitete sich nach Indien, in den islamischen Raum und nach Europa.",
+      "evidenztyp": "historisch",
+      "quellen": [
+        "S07"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Grobe Entwicklungslinie; regionale Traditionen sind vielfältiger als diese Summe."
+    },
+    {
+      "id": "c23",
+      "aussage": "Astrologie wird als Form der Divination definiert, die Himmelskörperpositionen als Zeichen für irdische und menschliche Ereignisse deutet.",
+      "evidenztyp": "historisch",
+      "quellen": [
+        "S07"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Definitionsaussage einer Enzyklopädie, keine Wirksamkeitsbehauptung."
+    },
+    {
+      "id": "c24",
+      "aussage": "Uranus und Neptun gehören nicht zu den klassischen sieben sichtbaren Himmelskörpern; Neptun wurde 1846 anhand von Bahnstörungen aufgefunden.",
+      "evidenztyp": "astronomischer_fakt",
+      "quellen": [
+        "S24",
+        "S25",
+        "S12"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Entdeckungsgeschichte Neptuns; das Entdeckungsjahr von Uranus wird hier nicht behauptet, weil es im abgerufenen Ausschnitt nicht belegt war."
+    },
+    {
+      "id": "c25",
+      "aussage": "Die Ekliptik ist die scheinbare jährliche Bahn der Sonne am Himmel; die geozentrische Perspektive ist für die Astrologie konstitutiv, auch wenn die Planeten tatsächlich die Sonne umlaufen.",
+      "evidenztyp": "astronomischer_fakt",
+      "quellen": [
+        "S14",
+        "S05",
+        "S15"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Geozentrisch meint hier den Beobachtungsstandpunkt, nicht ein Weltbild."
+    },
+    {
+      "id": "c26",
+      "aussage": "Häuserherrschaft wird in der Tradition über das Zeichen auf der Hausspitze bestimmt; ein Planet in seinem Domizil gilt als besonders stark.",
+      "evidenztyp": "deutungstradition",
+      "quellen": [
+        "S10",
+        "S12"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Deutungsregel, keine messbare Eigenschaft."
+    },
+    {
+      "id": "c27",
+      "aussage": "Sonne und Mond werden in der Astrologie als Leuchtkörper den acht weiteren Deutungsfaktoren vorangestellt; die Zahl zehn ergibt sich aus zwei Leuchtkörpern plus acht Planeten beziehungsweise Pluto.",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S12",
+        "S20"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Die Erde ist kein astrologischer Deutungsfaktor; Pluto wird trotz Zwergplanetenstatus mitgezählt."
+    },
+    {
+      "id": "c28",
+      "aussage": "Eine echte Radix- oder Transitberechnung erfordert belastbare Ephemeriden, korrekte Zeitzonen- und Ortsdaten sowie eine dokumentierte Häuserkonvention; Zufallswerte oder geschätzte Positionen wären keine Berechnung.",
+      "evidenztyp": "konvention",
+      "quellen": [
+        "S10",
+        "S22",
+        "S23"
+      ],
+      "sicherheit": "hoch",
+      "hinweis": "Technische Anforderung für einen späteren, separaten Rechenschritt."
+    }
+  ]
+}

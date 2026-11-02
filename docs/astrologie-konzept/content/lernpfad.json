@@ -1,0 +1,296 @@
+{
+  "dataset": "lernpfad",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Sechsstufiger Lernpfad für Erwachsene ohne Vorkenntnisse. Der Pfad ist so gebaut, dass jede Stufe eine kurze Orientierung, ein vertiefendes Vergleichsstück und eine konkrete Übung enthält. Er verlangt keine Geburtsdaten und keine Anmeldung.",
+  "intro": "Dieser Lernpfad führt in sechs Stufen durch die westliche tropische Astrologie. Stufe 1 klärt, was Astrologie ist und was sie nicht ist. Stufe 2 führt die zwölf Zeichen ein. Stufe 3 erklärt die zehn Faktoren und die fünf Hauptaspekte. Stufe 4 behandelt Häuser und Achsen. Stufe 5 zeigt, wie eine Radix als Synthese gelesen wird, und wo die Grenzen liegen. Stufe 6 ist ein Nachschlage- und Vertiefungsangebot. Jede Stufe hat eine kurze Orientierung, konkrete Leseschritte und zwei bis drei Verständnisfragen. Wer wenig Zeit hat, kann mit Stufe 1 und 2 beginnen und die späteren Stufen als Nachschlagewerk nutzen. Wer nur eine Frage hat, findet sie im FAQ oder im Glossar.",
+  "items": [
+    {
+      "id": "lernpfad-stufe-1",
+      "slug": "orientierung",
+      "title": "Stufe 1: Orientierung",
+      "level": "grundlagen",
+      "goal": "Nach dieser Stufe kannst du erklären, was Astrologie ist, worin sie sich von Astronomie unterscheidet und warum die Unterscheidung von Tradition und Evidenz für eine verantwortliche Nutzung wichtig ist.",
+      "reading_time_min": 25,
+      "steps": [
+        {
+          "title": "Begriff und Geltungsanspruch",
+          "refs": [
+            "grund-begriff",
+            "grund-geschichte"
+          ],
+          "task": "Lies die beiden Textseiten und notiere in eigenen Worten den Unterschied zwischen einem Deutungssystem und einer Naturwissenschaft. Achte darauf, welche Aussagen als Tradition und welche als Fakt markiert sind."
+        },
+        {
+          "title": "Himmel und Beobachtung",
+          "refs": [
+            "grund-ekliptik",
+            "grund-zeichen-sternbilder"
+          ],
+          "task": "Vollziehe die Unterscheidung von Ekliptik, Tierkreis und Sternbild nach. Zeichne zur Kontrolle einen Kreis mit zwölf gleichen Sektoren und markiere daneben, warum ein Sternbild nicht deckungsgleich mit einem Sektor ist."
+        },
+        {
+          "title": "Evidenz und Sprache",
+          "refs": [
+            "grund-evidenz",
+            "grund-sonnenzeichen-grenzen"
+          ],
+          "task": "Lies die Evidenzseite und formuliere drei Sätze, die eine astrologische Aussage als Tradition kennzeichnen, ohne sie als Tatsache zu behaupten. Vermeide dabei sowohl Spott als auch Werbung."
+        }
+      ],
+      "check_questions": [
+        "Was ist der Unterschied zwischen Astronomie und Astrologie?",
+        "Warum sind Tierkreiszeichen und Sternbilder nicht dasselbe?",
+        "Welche Art von Aussage darf eine verantwortliche Astrologie-Seite nicht treffen?"
+      ],
+      "next": "lernpfad-stufe-2"
+    },
+    {
+      "id": "lernpfad-stufe-2",
+      "slug": "die-zwoelf-zeichen",
+      "title": "Stufe 2: Die zwölf Zeichen",
+      "level": "grundlagen",
+      "goal": "Nach dieser Stufe kannst du alle zwölf Zeichen mit Element, Modalität, traditionellem Herrscher und ungefährer tropischer Zeitspanne benennen und ihre Bilder in eigenen Worten erklären.",
+      "reading_time_min": 45,
+      "steps": [
+        {
+          "title": "Das Raster verstehen",
+          "refs": [
+            "element-feuer",
+            "element-erde",
+            "element-luft",
+            "element-wasser",
+            "modalitaet-kardinal",
+            "modalitaet-fix",
+            "modalitaet-veraenderlich"
+          ],
+          "task": "Baue eine Tabelle mit vier Elementen und drei Modalitäten. Trage die zwölf Zeichen in die passenden Felder ein, ohne in die Einzeltexte zu schauen. Prüfe anschließend mit den Zeichenseiten."
+        },
+        {
+          "title": "Die Zeichen lesen",
+          "refs": [
+            "zeichen-widder",
+            "zeichen-stier",
+            "zeichen-zwillinge",
+            "zeichen-krebs",
+            "zeichen-loewe",
+            "zeichen-jungfrau"
+          ],
+          "task": "Lies die ersten sechs Zeichenseiten. Markiere für jedes Zeichen ein Bild, eine Stärke, eine Spannung und eine Reflexionsfrage, die dich persönlich anspricht. Achte darauf, dass du keine Beschreibung als Charaktertest verwendest."
+        },
+        {
+          "title": "Die zweite Hälfte und die Gegenpole",
+          "refs": [
+            "zeichen-waage",
+            "zeichen-skorpion",
+            "zeichen-schuetze",
+            "zeichen-steinbock",
+            "zeichen-wassermann",
+            "zeichen-fische"
+          ],
+          "task": "Lies die zweiten sechs Zeichenseiten und notiere die sechs Gegenpole (Widder-Waage, Stier-Skorpion, Zwillinge-Schütze, Krebs-Steinbock, Löwe-Wassermann, Jungfrau-Fische). Erkläre zu einem Paar, wie die beiden Seiten zusammenhängen."
+        },
+        {
+          "title": "Herrschaft und Systemgrenze",
+          "refs": [
+            "grund-herrschaft",
+            "grund-tropisch-siderisch"
+          ],
+          "task": "Ordne jedem Zeichen den traditionellen Herrscher zu. Markiere die drei Zeichen, bei denen moderne Systeme einen anderen Herrscher ergänzen. Schreibe dazu, warum die Zuordnung eine Konvention ist."
+        }
+      ],
+      "check_questions": [
+        "Welche vier Zeichen sind kardinal, und was bedeutet das?",
+        "Warum hat Skorpion traditionell Mars und modern Pluto als Herrscher?",
+        "Was ist der Unterschied zwischen einem Zeichen und einem Sternbild?"
+      ],
+      "next": "lernpfad-stufe-3"
+    },
+    {
+      "id": "lernpfad-stufe-3",
+      "slug": "faktoren-und-aspekte",
+      "title": "Stufe 3: Faktoren und Aspekte",
+      "level": "vertiefung",
+      "goal": "Nach dieser Stufe kannst du die zehn zentralen Faktoren und die fünf Hauptaspekte erklären, Winkel von Orben unterscheiden und begründen, warum dieselbe Konstellation je nach Schule anders gelesen werden kann.",
+      "reading_time_min": 40,
+      "steps": [
+        {
+          "title": "Die zehn Faktoren",
+          "refs": [
+            "faktor-sonne",
+            "faktor-mond",
+            "faktor-merkur",
+            "faktor-venus",
+            "faktor-mars"
+          ],
+          "task": "Lies die ersten fünf Faktorseiten. Notiere zu jedem Faktor einen astronomischen Fakt und ein traditionelles Thema. Achte darauf, dass du beides nicht verwechselst."
+        },
+        {
+          "title": "Die äußeren Faktoren",
+          "refs": [
+            "faktor-jupiter",
+            "faktor-saturn",
+            "faktor-uranus",
+            "faktor-neptun",
+            "faktor-pluto"
+          ],
+          "task": "Lies die zweiten fünf Faktorseiten. Markiere die drei Faktoren, die nicht zur klassischen Siebenzahl gehören, und erkläre, warum sie in der modernen Astrologie trotzdem verwendet werden."
+        },
+        {
+          "title": "Winkel und Orben",
+          "refs": [
+            "grund-aspekt-orben",
+            "aspekt-konjunktion",
+            "aspekt-sextil",
+            "aspekt-quadrat",
+            "aspekt-trigon",
+            "aspekt-opposition"
+          ],
+          "task": "Zeichne einen Kreis und trage die fünf Hauptwinkel ein. Notiere zu jedem Aspekt einen typischen Orben und einen Satz zur traditionellen Bewertung. Erkläre, warum der Orbis eine Konvention ist."
+        }
+      ],
+      "check_questions": [
+        "Welche fünf Hauptaspekte gibt es, und welche Winkel gehören dazu?",
+        "Warum ist ein weiter Orbis nicht automatisch falsch?",
+        "Was unterscheidet die Sonne als Leuchtkörper von den acht Planeten?"
+      ],
+      "next": "lernpfad-stufe-4"
+    },
+    {
+      "id": "lernpfad-stufe-4",
+      "slug": "haeuser-und-achsen",
+      "title": "Stufe 4: Häuser und Achsen",
+      "level": "vertiefung",
+      "goal": "Nach dieser Stufe kannst du die zwölf Häuser benennen, die vier Achsen unterscheiden und erklären, warum Geburtszeit und Häusersystem die Deutung verändern.",
+      "reading_time_min": 35,
+      "steps": [
+        {
+          "title": "Die zwölf Felder",
+          "refs": [
+            "haus-1",
+            "haus-2",
+            "haus-3",
+            "haus-4",
+            "haus-5",
+            "haus-6"
+          ],
+          "task": "Lies die ersten sechs Hausseiten. Ordne jedem Haus ein Stichwort und eine Alltagsfrage zu. Vermeide dabei medizinische oder finanzielle Aussagen."
+        },
+        {
+          "title": "Die zweite Hälfte",
+          "refs": [
+            "haus-7",
+            "haus-8",
+            "haus-9",
+            "haus-10",
+            "haus-11",
+            "haus-12"
+          ],
+          "task": "Lies die zweiten sechs Hausseiten. Markiere die vier Winkelhäuser und erkläre, warum sie traditionell als besonders prägnant gelten."
+        },
+        {
+          "title": "Achsen und Systeme",
+          "refs": [
+            "grund-aszendent-mc",
+            "grund-haeuser-systeme",
+            "gloss-placidus",
+            "gloss-equal-house"
+          ],
+          "task": "Erkläre den Unterschied zwischen Aszendent, Deszendent, MC und IC. Vergleiche Placidus und Equal House an einem selbst gewählten Beispiel und notiere, welche Angaben ein Text machen muss, damit die Deutung nachvollziehbar bleibt."
+        }
+      ],
+      "check_questions": [
+        "Warum hängen Häuser von der Geburtszeit ab, Zeichen aber nicht?",
+        "Was ist der Unterschied zwischen Aszendent und MC?",
+        "Warum ist Placidus in hohen Breiten nicht immer definiert?"
+      ],
+      "next": "lernpfad-stufe-5"
+    },
+    {
+      "id": "lernpfad-stufe-5",
+      "slug": "synthese-und-grenzen",
+      "title": "Stufe 5: Synthese und Grenzen",
+      "level": "vertiefung",
+      "goal": "Nach dieser Stufe kannst du eine fiktive Radix in sieben Schritten gewichtet lesen, eine Gegenprobe formulieren und die Grenzen der Deutung klar benennen.",
+      "reading_time_min": 40,
+      "steps": [
+        {
+          "title": "Die Methode",
+          "refs": [
+            "grund-radix-synthese",
+            "grund-herrschaft",
+            "gloss-dispositor"
+          ],
+          "task": "Lies die Synthesemethode und notiere die sieben Schritte. Erkläre, warum eine Lesart als Hypothese formuliert werden muss und was eine Gegenprobe leistet."
+        },
+        {
+          "title": "Beispiele nachvollziehen",
+          "refs": [
+            "beispiel-mira",
+            "beispiel-tobias",
+            "beispiel-nora"
+          ],
+          "task": "Lies die drei fiktiven Beispiele. Markiere in jedem Beispiel die gesetzten Annahmen und die Stellen, an denen die Deutung ausdrücklich vorläufig bleibt. Prüfe, ob die Figuren wirklich als erfunden gekennzeichnet sind."
+        },
+        {
+          "title": "Grenzen und Zeitdeutung",
+          "refs": [
+            "beispiel-selin",
+            "grund-transite",
+            "grund-ruecklaeufigkeit",
+            "grund-ethik"
+          ],
+          "task": "Lies das kritische Beispiel und die Seiten zu Transiten und Rückläufigkeit. Formuliere eine astrologische Aussage über einen Transit, die keine Ereignisvorhersage ist, und eine, die unzulässig wäre. Erkläre den Unterschied."
+        }
+      ],
+      "check_questions": [
+        "Warum ist eine Radixdeutung keine Diagnose?",
+        "Wie unterscheidet man eine Zeitqualität von einer Ereignisvorhersage?",
+        "Welche Angaben braucht eine echte Berechnung, die dieses Paket nicht liefert?"
+      ],
+      "next": "lernpfad-stufe-6"
+    },
+    {
+      "id": "lernpfad-stufe-6",
+      "slug": "nachschlagen-und-vertiefen",
+      "title": "Stufe 6: Nachschlagen und Vertiefen",
+      "level": "nachschlagen",
+      "goal": "Nach dieser Stufe kannst du Begriffe selbstständig nachschlagen, Quellen einordnen und erkennen, wann eine Aussage belegt, eine Konvention oder eine Deutungstradition ist.",
+      "reading_time_min": 20,
+      "steps": [
+        {
+          "title": "Glossar und FAQ nutzen",
+          "refs": [
+            "gloss-aszendent",
+            "gloss-orbis",
+            "faq-wissenschaft",
+            "faq-sternbild"
+          ],
+          "task": "Suche im Glossar drei Begriffe, die dir noch unklar sind, und lies die zugehörigen FAQ-Antworten. Notiere, welche Quelle jeweils genannt wird und welchen Typ sie hat."
+        },
+        {
+          "title": "Quellen einordnen",
+          "refs": [
+            "grund-evidenz",
+            "grund-ethik"
+          ],
+          "task": "Lies die Quellen und Claims im Quellenledger. Ordne drei Quellen als primär, sekundär oder tertiär ein und erkläre, warum die Einordnung für die Aussagekraft wichtig ist."
+        },
+        {
+          "title": "Eine eigene Frage formulieren",
+          "refs": [
+            "grund-berechnung",
+            "grund-mond"
+          ],
+          "task": "Formuliere eine Frage, die dieses Paket nicht beantwortet, und beschreibe, welche Art von Quelle oder Berechnung nötig wäre, um sie zu beantworten. Achte darauf, keine Scheingenauigkeit zu erzeugen."
+        }
+      ],
+      "check_questions": [
+        "Woran erkennt man eine belegte Aussage im Vergleich zu einer Deutungstradition?",
+        "Welche Rolle spielt die Quellentypologie für die Bewertung?",
+        "Was fehlt diesem Paket bewusst, und warum?"
+      ],
+      "next": null
+    }
+  ]
+}

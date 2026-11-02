@@ -1,0 +1,934 @@
+{
+  "dataset": "zeichen",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Westliche tropische, geozentrische Astrologie als Einstieg. Die zwölf Zeichen sind hier gleiche 30-Grad-Sektoren ab dem Frühlings-Äquinoktium, keine Sternbilder. Alle Zeiträume sind ungefähre Orientierung. Die Deutungen sind Traditionsmaterial und keine empirischen Persönlichkeitsaussagen.",
+  "items": [
+    {
+      "id": "zeichen-widder",
+      "slug": "widder",
+      "name": "Widder",
+      "short": "Der Widder eröffnet den tropischen Tierkreis am Frühlingspunkt. Traditionell steht das kardinale Feuerzeichen für Aufbruch, Initiative und die Erfahrung, sich mit eigener Kraft in die Welt zu setzen.",
+      "long": "Astronomische Orientierung: Die Sonne durchläuft den Widder-Sektor des tropischen Tierkreises ungefähr vom 21. März bis zum 19. April. Diese Grenzen sind Näherungen: Der genaue Zeitpunkt des Zeichenwechsels verschiebt sich von Jahr zu Jahr um Stunden bis zu einem Tag, und Publikationen runden unterschiedlich [S06][S19]. Der Sektor ist nicht mit dem Sternbild Widder identisch. Wegen der Präzession der Erdachse liegt der Frühlingspunkt heute im Bereich der Fische, während die tropischen Zeichen weiterhin am Äquinoktium beginnen [S06][S13].\n\nBildsprache: Der Widder ist das erste Tier des Tierkreises, ein Jungtier mit Hörnern, das vorwärts drängt. In der griechischen Überlieferung rettet der goldene Widder Phrixos und Helle; das Goldene Vlies wird später zum Ziel der Argonauten. Das Bild trägt weniger Herrschaft als Aufbruch: etwas in Bewegung setzen, ein Risiko eingehen, eine Richtung behaupten. Der traditionelle Herrscher ist Mars, der auch in der modernen Zuordnung bleibt. Das natürliche erste Haus verbindet das Zeichen mit Körper, Auftreten und der Frage, wie jemand die eigene Existenz behauptet [S12][S10].\n\nDeutung: Als kardinales Feuerzeichen wird der Widder mit Anfang, Impuls und Durchsetzung verbunden. Die Bewegung ist nach außen gerichtet, oft schnell, unmittelbar und wenig abwägend. Das kann als Entschlossenheit, Mut und Klarheit erlebt werden; es kann aber auch Reibung erzeugen, weil der eigene Antrieb vor der Wirkung auf andere kommt. Das Zeichen beschreibt keine Charaktereigenschaft im messbaren Sinn, sondern eine Deutungsfigur für die Art, wie ein Mensch mit Anfang, Wettbewerb und Widerstand umgeht [S07].\n\nDifferenzierung: Eine Widder-Sonne ist nur ein Faktor im Horoskop. Mond, Merkur, Venus, Mars, die Häuser und die Aspekte verändern das Bild erheblich. Wer den Widder nur als laut, aggressiv oder sportlich liest, verfehlt die Spannbreite: Es gibt zurückhaltende Widder-Menschen, deren Impuls sich im Denken, im Handwerk oder in der stillen Weigerung zeigt, sich bremsen zu lassen. Die Tradition neigt dazu, Zeichen mit kulturell codierten Geschlechterbildern aufzuladen; das ist eine historische Schicht, keine Naturtatsache.\n\nTypische Missdeutung: Widder wird oft mit Aggression gleichgesetzt. Näher an der Tradition ist die Beschreibung einer initiierenden Kraft, die auch scheu, ungeduldig oder ungeschickt sein kann. Aggression ist eine mögliche Ausdrucksform, nicht die Definition. Wer das Zeichen als Rechtfertigung für Rücksichtslosigkeit benutzt, verwechselt eine Deutungsfigur mit einer Freigabe.\n\nEntwicklungsfrage: Der Widder lernt, seinen Impuls zu bemerken, bevor er handelt, und zu prüfen, ob das Neue wirklich das Eigene ist oder nur der Reiz des Anfangs.",
+      "keywords": [
+        "Aufbruch",
+        "Initiative",
+        "Durchsetzung",
+        "Kardinalfeuer",
+        "Mars"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-feuer",
+        "modalitaet-kardinal",
+        "faktor-mars",
+        "haus-1",
+        "zeichen-waage"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-feuer",
+      "modality": "modalitaet-kardinal",
+      "polarity": "yang",
+      "ruler_traditional": "faktor-mars",
+      "ruler_modern": "faktor-mars",
+      "date_range_tropical": {
+        "from": "03-21",
+        "to": "04-19",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Widder",
+        "glyph": "♈",
+        "bildsprache": "Gehörnter Widder, Frühlingsauftakt, Goldenes Vlies, vorwärts gerichtete Bewegung."
+      },
+      "strengths": [
+        "Kann Anfangen, wo andere noch abwägen",
+        "Sagt Direktes klar und zeitnah",
+        "Bringt Mut auf, ein Risiko sichtbar zu tragen",
+        "Reagiert schnell und pragmatisch auf Widerstand",
+        "Setzt Impulse, die Gruppen in Bewegung bringen"
+      ],
+      "tensions": [
+        "Verwechselt Tempo mit Richtung",
+        "Wird ungeduldig, wenn Ergebnisse auf sich warten lassen",
+        "Erzeugt durch Schroffheit Reibung, die nicht beabsichtigt war",
+        "Lässt Projekte nach dem Start liegen, wenn der Reiz vorbei ist",
+        "Nimmt Bremsen persönlich statt als Information"
+      ],
+      "reflection_questions": [
+        "Wo beginne ich etwas, ohne das Ende mitzudenken?",
+        "Wann verwechsle ich Klarheit mit Rücksichtslosigkeit?",
+        "Was passiert, wenn ich einem Impuls drei Atemzüge Zeit lasse?"
+      ],
+      "common_misreading": "Die verbreitete Gleichsetzung von Widder mit Aggression oder Führungsanspruch ist eine Verkürzung. Die Tradition beschreibt zuerst eine initiierende, nach vorn gerichtete Bewegung, die ebenso schüchtern, ungeschickt oder still sein kann.",
+      "natural_house": "haus-1",
+      "opposite": "zeichen-waage"
+    },
+    {
+      "id": "zeichen-stier",
+      "slug": "stier",
+      "name": "Stier",
+      "short": "Der Stier ist das fixe Erdzeichen des Tropus. Traditionell verbindet er Stabilität, sinnliche Wahrnehmung und den Umgang mit Ressourcen, Besitz und Grenzen.",
+      "long": "Astronomische Orientierung: Der Stier-Sektor reicht ungefähr vom 20. April bis zum 20. Mai. Auch hier handelt es sich um eine gerundete Konvention; der tatsächliche Sonnenstand im Sektor hängt vom Jahr und von der Zeitzone ab [S06][S19]. Das Sternbild Stier ist wesentlich größer als der 30-Grad-Sektor und liegt durch die Präzession nicht deckungsgleich mit ihm [S13].\n\nBildsprache: Der Stier ist ein Zug- und Lasttier, das Gewicht trägt und Boden hält. In der griechischen Mythologie entführt Zeus als Stier die Europa; das Bild schwankt zwischen Fruchtbarkeit, Kraft und Begehren. Der traditionelle Herrscher ist Venus. Das natürliche zweite Haus verbindet das Zeichen mit Nahrung, Besitz, Werten und der Frage, was jemand als das Seine betrachtet [S12][S10].\n\nDeutung: Als fixes Erdzeichen wird der Stier mit Beharren, Körperbewusstsein und Genussfähigkeit verbunden. Die Tradition beschreibt eine Kraft, die nicht schnell ist, aber bleibt; die Dinge prüft, bevor sie ihnen traut, und sie dann hält. Das kann Verlässlichkeit, Ausdauer und eine gute Nähe zu Materie und Sinnlichkeit bedeuten. Es kann aber auch starr werden, wenn Veränderung nötig ist, oder Besitz und Sicherheit so wichtig nehmen, dass Lebendigkeit darunter leidet.\n\nDifferenzierung: Der Stier wird häufig auf Bequemlichkeit und Materialismus reduziert. Tradiert ist eher eine Frage nach Tragfähigkeit: Was hält? Was ist wirklich meins? Was muss ich loslassen, damit etwas wachsen kann? Ein Stier-Mond kann anders wirken als eine Stier-Sonne, und ein Stier-Aszendent beschreibt eher die Art des Auftretens als den gesamten Charakter. Die Zeichenebene ist eine Perspektive unter mehreren.\n\nTypische Missdeutung: Die Gleichung Stier gleich faul oder besitzgierig ist eine kulturelle Verkürzung. Die Tradition betont zuerst Bestand und sinnliche Prüfung. Widerstand gegen Veränderung ist eine mögliche Schattenseite, keine Definition.\n\nEntwicklungsfrage: Der Stier lernt, zwischen tragender Stabilität und bloßer Erstarrung zu unterscheiden, und zu merken, wann Festhalten teurer wird als Loslassen.",
+      "keywords": [
+        "Stabilität",
+        "Sinnlichkeit",
+        "Ressourcen",
+        "Fixerde",
+        "Venus"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-erde",
+        "modalitaet-fix",
+        "faktor-venus",
+        "haus-2",
+        "zeichen-skorpion"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-erde",
+      "modality": "modalitaet-fix",
+      "polarity": "yin",
+      "ruler_traditional": "faktor-venus",
+      "ruler_modern": "faktor-venus",
+      "date_range_tropical": {
+        "from": "04-20",
+        "to": "05-20",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Stier",
+        "glyph": "♉",
+        "bildsprache": "Stierkraft, Zugtier, Fruchtbarkeit, Erdung, Besitzgrenze."
+      },
+      "strengths": [
+        "Hält Projekte und Beziehungen über längere Zeit",
+        "Nimmt über Körper und Sinne genau wahr",
+        "Baut verlässliche Strukturen und Ressourcen auf",
+        "Bleibt in Krisen ruhig und belastbar",
+        "Hat ein feines Gespür für Qualität und Genuss"
+      ],
+      "tensions": [
+        "Hält an Zuständen fest, die schon nicht mehr tragen",
+        "Verwechselt Sicherheit mit Kontrolle",
+        "Braucht lange, bis Veränderung als notwendig akzeptiert wird",
+        "Zieht sich in Bequemlichkeit zurück, wenn Anstrengung unangenehm wird",
+        "Kann Besitz und Status mit Wert verwechseln"
+      ],
+      "reflection_questions": [
+        "Was hält mich wirklich, und was halte ich nur aus Gewohnheit?",
+        "Wo schütze ich Besitz, obwohl ich eigentlich Beziehung schützen will?",
+        "Welche sinnliche Erfahrung bringt mich zurück in den Moment?"
+      ],
+      "common_misreading": "Stier gilt oft als materialistisch und unbeweglich. Die Tradition beschreibt zuerst eine prüfende, bestandssichernde Kraft; Erstarrung ist ihre mögliche Schattenform, nicht ihr Wesen.",
+      "natural_house": "haus-2",
+      "opposite": "zeichen-skorpion"
+    },
+    {
+      "id": "zeichen-zwillinge",
+      "slug": "zwillinge",
+      "name": "Zwillinge",
+      "short": "Zwillinge ist das veränderliche Luftzeichen des Tropus. Traditionell steht es für Wahrnehmung, Sprache, Austausch und die Fähigkeit, mehrere Perspektiven gleichzeitig zu halten.",
+      "long": "Astronomische Orientierung: Der Zwillinge-Sektor umfasst ungefähr den 21. Mai bis 20. Juni. Die Grenze ist eine Konvention und kann je nach Quelle um einen Tag abweichen [S06][S19]. Das Sternbild Zwillinge ist nicht der Sektor; die tropische Einteilung folgt dem Frühlingspunkt und damit den Jahreszeiten, nicht den Sternbildgrenzen [S13][S14].\n\nBildsprache: Die Zwillinge verweisen auf die Dioskuren Kastor und Pollux, zwei ungleiche Brüder, die zusammen gehören und doch verschiedene Wege gehen. Das Bild trägt Spannung zwischen Nahe und Eigenständigkeit, zwischen einem und dem anderen. Der traditionelle Herrscher ist Merkur. Das natürliche dritte Haus verbindet das Zeichen mit Nachbarschaft, Geschwistern, Lernen, Medien und alltäglichem Austausch [S12][S10].\n\nDeutung: Als veränderliches Luftzeichen wird Zwillinge mit Beweglichkeit, Neugier und sprachlicher Gewandtheit verbunden. Die Tradition beschreibt ein Wahrnehmen, das schnell verbindet, vergleicht und benennt. Das kann geistige Flexibilität, Humor und die Fähigkeit sein, zwischen Gruppen zu vermitteln. Es kann aber auch zerstreuen: zu viele Fäden, zu wenig Tiefe, ein Wechsel der Position, der andere verunsichert.\n\nDifferenzierung: Zwillinge wird oft als oberflächlich oder unzuverlässig gelesen. Näher an der Tradition ist die Beschreibung einer parallelen Verarbeitung: Mehrere Eindrücke werden gleichzeitig aufgenommen und müssen erst geordnet werden. Das kann wie Widerspruch wirken, obwohl es eine Form des Denkens ist. Merkur in einem anderen Zeichen, ein Wasser-Mond oder ein betontes viertes Haus verändern die Ausdrucksform erheblich.\n\nTypische Missdeutung: Die Rede von der gespaltenen Persönlichkeit ist eine Verkürzung. Das Zeichen beschreibt einen Wechsel der Perspektive, nicht eine gespaltene Identität. Untreue oder Unverbindlichkeit sind mögliche ethische Entscheidungen, keine astrologischen Notwendigkeiten.\n\nEntwicklungsfrage: Zwillinge lernt, Neugier zu vertiefen, statt sie nur zu vervielfältigen, und Worte so zu wählen, dass sie Verbindung schaffen statt Flucht.",
+      "keywords": [
+        "Neugier",
+        "Sprache",
+        "Austausch",
+        "Veränderliche Luft",
+        "Merkur"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-luft",
+        "modalitaet-veraenderlich",
+        "faktor-merkur",
+        "haus-3",
+        "zeichen-schuetze"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-luft",
+      "modality": "modalitaet-veraenderlich",
+      "polarity": "yang",
+      "ruler_traditional": "faktor-merkur",
+      "ruler_modern": "faktor-merkur",
+      "date_range_tropical": {
+        "from": "05-21",
+        "to": "06-20",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Zwillinge",
+        "glyph": "♊",
+        "bildsprache": "Zwei Brüder, Doppelung, Austausch, Brücke zwischen Welten."
+      },
+      "strengths": [
+        "Erfasst Zusammenhänge schnell und spielerisch",
+        "Findet Worte für komplexe Sachverhalte",
+        "Wechselt Perspektiven und vermittelt zwischen Gruppen",
+        "Bleibt neugierig und lernbereit",
+        "Bringt Leichtigkeit und Humor in festgefahrene Situationen"
+      ],
+      "tensions": [
+        "Verliert sich in Nebenschauplätzen",
+        "Sagt Dinge, bevor sie zu Ende gedacht sind",
+        "Weicht Konflikten durch Themenwechsel aus",
+        "Wirkt auf andere unverbindlich oder widersprüchlich",
+        "Verwechselt Informationsmenge mit Verstehen"
+      ],
+      "reflection_questions": [
+        "Welches Thema will ich wirklich zu Ende denken?",
+        "Wo nutze ich Sprache, um Nähe zu vermeiden?",
+        "Was gewinne ich, wenn ich eine Position länger halte?"
+      ],
+      "common_misreading": "Zwillinge wird oft als oberflächlich, wankelmütig oder gespalten gelesen. Die Tradition beschreibt zuerst eine schnelle, vergleichende Wahrnehmung, die mehrere Perspektiven zugleich hält und darin auch überfordern kann.",
+      "natural_house": "haus-3",
+      "opposite": "zeichen-schuetze"
+    },
+    {
+      "id": "zeichen-krebs",
+      "slug": "krebs",
+      "name": "Krebs",
+      "short": "Krebs ist das kardinale Wasserzeichen des Tropus. Traditionell verbindet es Schutz, Zugehörigkeit, Erinnerung und die Frage, wo jemand emotional verwurzelt ist.",
+      "long": "Astronomische Orientierung: Der Krebs-Sektor liegt ungefähr zwischen dem 21. Juni und dem 22. Juli. Der Zeitraum ist eine gerundete Orientierung; der genaue Wechsel hängt vom Jahr und von der Zeitzone ab [S06][S19]. Das Sternbild Krebs ist auffallend klein und schwach, während der tropische Sektor exakt 30 Grad umfasst. Das zeigt noch einmal, dass Zeichen und Sternbilder verschiedene Dinge sind [S13][S14].\n\nBildsprache: Der Krebs trägt einen Panzer und weiche Gliedmaßen; er bewegt sich seitwärts, hält sich an Strukturen fest und zieht sich bei Gefahr zurück. Das Bild ist weniger sentimental, als die populäre Deutung vermuten lässt: Es geht um Schutz, Grenze und die Frage, was jemand als Zuhause erlebt. Der traditionelle Herrscher ist der Mond. Das natürliche vierte Haus verbindet das Zeichen mit Herkunft, Familie, Wohnen und innerem Fundament [S12][S10].\n\nDeutung: Als kardinales Wasserzeichen wird Krebs mit emotionaler Aufmerksamkeit, Fürsorge und Erinnerung verbunden. Die kardinale Qualität zeigt sich nicht als lautes Vorwärtsgehen, sondern als initiierende Bewegung im Emotionalen: jemanden aufnehmen, ein Nest bauen, eine Grenze ziehen. Das kann Warmherzigkeit, Schutzinstinkt und eine gute Nähe zu Bedürfnissen bedeuten. Es kann aber auch in Rückzug, Überbehütung oder eine Bindung an alte Verletzungen kippen.\n\nDifferenzierung: Krebs wird häufig als kindlich, empfindlich oder häuslich verkürzt. Tradiert ist eine komplexe Schutzfigur: Wer viel schützt, hat oft selbst einen hohen Schutzbedarf. Ein Krebs-Aszendent kann zurückhaltend wirken, während eine Krebs-Sonne offen fürsorglich auftritt. Die Hausbesetzung und die Aspekte entscheiden, ob das Schutzbedürfnis eher als Nähe oder als Kontrolle erscheint.\n\nTypische Missdeutung: Tränen, Rückzug und Nostalgie sind mögliche Ausdrucksformen, aber nicht das ganze Zeichen. Die Tradition betont ebenso die Fähigkeit, Grenzen zu setzen und für andere da zu sein, ohne sich aufzulösen.\n\nEntwicklungsfrage: Krebs lernt, Schutz und Offenheit so zu dosieren, dass Nähe nicht zur Absicherung wird und alte Geschichten nicht die Gegenwart regieren.",
+      "keywords": [
+        "Schutz",
+        "Zugehörigkeit",
+        "Erinnerung",
+        "Kardinalwasser",
+        "Mond"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-wasser",
+        "modalitaet-kardinal",
+        "faktor-mond",
+        "haus-4",
+        "zeichen-steinbock"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-wasser",
+      "modality": "modalitaet-kardinal",
+      "polarity": "yin",
+      "ruler_traditional": "faktor-mond",
+      "ruler_modern": "faktor-mond",
+      "date_range_tropical": {
+        "from": "06-21",
+        "to": "07-22",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Krebs",
+        "glyph": "♋",
+        "bildsprache": "Panzer und weiche Scheren, Nest, Rückzug, nächtliche Gezeiten."
+      },
+      "strengths": [
+        "Nimmt emotionale Zustände differenziert wahr",
+        "Schützt Menschen, die Schutz brauchen",
+        "Hält Erinnerungen und Zusammenhänge lebendig",
+        "Baut Nähe und Verlässlichkeit auf",
+        "Kann in Krisen für andere stabilisierend wirken"
+      ],
+      "tensions": [
+        "Zieht sich zurück, statt Konflikte anzusprechen",
+        "Kränkt sich leichter, als sie oder er zeigt",
+        "Verwechselt Fürsorge mit Kontrolle",
+        "Bleibt an alten Verletzungen hängen",
+        "Erwartet Nähe, ohne sie klar zu benennen"
+      ],
+      "reflection_questions": [
+        "Wo schütze ich mich, obwohl ich eigentlich Nähe will?",
+        "Welche alte Geschichte erzähle ich immer wieder?",
+        "Wie kann ich Fürsorge zeigen, ohne mich selbst zu verlieren?"
+      ],
+      "common_misreading": "Krebs gilt oft als weich, kindlich oder häuslich. Die Tradition beschreibt eine Schutzfigur mit starker Grenz- und Zugehörigkeitsfrage; Rückzug und Fürsorge sind zwei Seiten derselben Bewegung.",
+      "natural_house": "haus-4",
+      "opposite": "zeichen-steinbock"
+    },
+    {
+      "id": "zeichen-loewe",
+      "slug": "loewe",
+      "name": "Löwe",
+      "short": "Löwe ist das fixe Feuerzeichen des Tropus. Traditionell steht es für Präsenz, Gestaltung, Herz und die Erfahrung, gesehen zu werden.",
+      "long": "Astronomische Orientierung: Der Löwe-Sektor umfasst ungefähr den 23. Juli bis 22. August. Wie bei allen Zeichen ist das eine gerundete Konvention; der exakte Wechsel verschiebt sich jährlich [S06][S19]. Das Sternbild Löwe enthält helle Sterne und eine markante Form, ist aber nicht mit dem 30-Grad-Sektor identisch [S13][S14].\n\nBildsprache: Der Löwe ist ein Raubtier mit Mähne, das in der Sonne liegt und seinen Platz behauptet. In der griechischen Überlieferung steht der Nemëische Löwe für eine Kraft, die sich nicht mit einer gewöhnlichen Waffe bezwingen lässt; Herakles überwältigt ihn mit Körperkraft. Das Bild trägt mehr als Eitelkeit: Es geht um Würde, Gestaltung und die Frage, wofür jemand einsteht. Der traditionelle Herrscher ist die Sonne. Das natürliche fünfte Haus verbindet das Zeichen mit Kreativität, Spiel, Liebe und Selbstausdruck [S12][S10].\n\nDeutung: Als fixes Feuerzeichen wird Löwe mit Präsenz, Großzügigkeit und Gestaltungswillen verbunden. Die fixe Qualität gibt der Feuerkraft Dauer: nicht nur anfangen, sondern etwas zur Erscheinung bringen und dazu stehen. Das kann Charisma, Loyalität und die Fähigkeit sein, andere zu ermutigen. Es kann aber auch in Eitelkeit, Kränkung durch Nichtbeachtung oder den Zwang kippen, die Bühne zu kontrollieren.\n\nDifferenzierung: Die populäre Gleichsetzung mit Narzissmus greift zu kurz. Tradiert ist eine Gestaltungsfigur, die Resonanz braucht: Ohne Publikum wird Feuer schnell zu Pose oder Erschöpfung. Eine Löwe-Sonne kann zurückhaltend sein, wenn andere Faktoren Schüchternheit betonen; ein Löwe-Mond zeigt eher den emotionalen Hunger nach Anerkennung. Die kulturelle Aufladung von Männlichkeit und Stolz ist eine historische Schicht, keine Naturtatsache.\n\nTypische Missdeutung: Wer Löwe nur als selbstverliebt liest, übersieht die Großzügigkeit und den Mut, für etwas einzustehen. Wer das Zeichen als Freibrief für Dominanz nimmt, verwechselt eine Deutungsfigur mit einer Erlaubnis.\n\nEntwicklungsfrage: Löwe lernt, sich zu zeigen, ohne die Resonanz anderer zur Bedingung für den eigenen Wert zu machen.",
+      "keywords": [
+        "Präsenz",
+        "Gestaltung",
+        "Herz",
+        "Fixfeuer",
+        "Sonne"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-feuer",
+        "modalitaet-fix",
+        "faktor-sonne",
+        "haus-5",
+        "zeichen-wassermann"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-feuer",
+      "modality": "modalitaet-fix",
+      "polarity": "yang",
+      "ruler_traditional": "faktor-sonne",
+      "ruler_modern": "faktor-sonne",
+      "date_range_tropical": {
+        "from": "07-23",
+        "to": "08-22",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Löwe",
+        "glyph": "♌",
+        "bildsprache": "Mähne, Sonne, Bühne, Herz, königliche Gestalt mit Verantwortung."
+      },
+      "strengths": [
+        "Bringt Dinge sichtbar und gestaltet zur Form",
+        "Ermutigt andere durch eigene Präsenz",
+        "Steht loyal zu Menschen und Projekten",
+        "Hat Würde und Haltung in schwierigen Lagen",
+        "Kann großzügig teilen und feiern"
+      ],
+      "tensions": [
+        "Wird kränkbar, wenn Anerkennung ausbleibt",
+        "Verwechselt Aufmerksamkeit mit Wertschätzung",
+        "Dramatisiert Konflikte, um gesehen zu werden",
+        "Kontrolliert die Bühne, statt andere auftreten zu lassen",
+        "Verliert sich in Pose, wenn echte Resonanz fehlt"
+      ],
+      "reflection_questions": [
+        "Wofür stehe ich ein, wenn niemand applaudiert?",
+        "Wo verwechsle ich Sichtbarkeit mit Bedeutung?",
+        "Wem gebe ich Raum, statt selbst im Zentrum zu bleiben?"
+      ],
+      "common_misreading": "Löwe wird oft auf Eitelkeit und Narzissmus reduziert. Die Tradition beschreibt zuerst eine gestaltende, herzgeleitete Präsenz, die Resonanz braucht und in der Schattenform zur Pose erstarren kann.",
+      "natural_house": "haus-5",
+      "opposite": "zeichen-wassermann"
+    },
+    {
+      "id": "zeichen-jungfrau",
+      "slug": "jungfrau",
+      "name": "Jungfrau",
+      "short": "Jungfrau ist das veränderliche Erdzeichen des Tropus. Traditionell steht es für Unterscheidung, Genauigkeit, Dienst und die Kunst, im Alltag brauchbare Ordnung zu schaffen.",
+      "long": "Astronomische Orientierung: Der Jungfrau-Sektor reicht ungefähr vom 23. August bis 22. September. Die Grenzen sind gerundet und variieren leicht je nach Quelle und Jahr [S06][S19]. Das Sternbild Jungfrau ist besonders ausgedehnt und enthält helle Sterne; der tropische Sektor bleibt dennoch exakt 30 Grad breit [S13][S14].\n\nBildsprache: Die Jungfrau trägt eine Ähre und verweist auf Ernte, Auswahl und Bearbeitung. In der griechischen Überlieferung ist Asträa, die Göttin der Gerechtigkeit, mit dem Bild verbunden; sie verlässt die Erde, als die Menschen ungerecht werden. Das Bild ist weniger sexuell konnotiert, als der Name in modernen Sprachen nahelegt: Es geht um Unterscheidung, Reinheit der Methode und die Frage, was brauchbar ist. Der traditionelle Herrscher ist Merkur. Das natürliche sechste Haus verbindet das Zeichen mit Arbeit, Routine, Gesundheit und Dienst [S12][S10].\n\nDeutung: Als veränderliches Erdzeichen wird Jungfrau mit Analyse, Sorgfalt und Verbesserung verbunden. Die Tradition beschreibt einen Blick für Details und Fehler, der Dinge funktionsfähig macht. Das kann handwerkliche Qualität, nützliche Kritik und eine gute Nähe zu Körper und Alltag bedeuten. Es kann aber auch in Perfektionismus, Selbstkritik und die ständige Sorge kippen, nicht zu genügen.\n\nDifferenzierung: Jungfrau wird oft als pedantisch oder kalt gelesen. Tradiert ist eine dienende, unterscheidende Intelligenz, die sich um das kümmert, was tatsächlich getan werden muss. Ein Jungfrau-Mond kann emotionale Sicherheit über Ordnung suchen; ein Jungfrau-Aszendent kann zurückhaltend und beobachtend wirken. Die berufliche und gesundheitliche Ebene ist Tradition und keine medizinische Aussage.\n\nTypische Missdeutung: Die Gleichsetzung mit Reinheit, Keuschheit oder ständiger Kritik ist eine kulturelle Verkürzung. Das Zeichen beschreibt eine Methode des Unterscheidens, nicht einen moralischen Rang. Selbstoptimierung kann ein Ausdruck sein, muss es aber nicht.\n\nEntwicklungsfrage: Jungfrau lernt, zwischen hilfreicher Genauigkeit und selbstschädigender Kontrolle zu unterscheiden, und das Gute im Unvollständigen zu sehen.",
+      "keywords": [
+        "Genauigkeit",
+        "Unterscheidung",
+        "Dienst",
+        "Veränderliche Erde",
+        "Merkur"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-erde",
+        "modalitaet-veraenderlich",
+        "faktor-merkur",
+        "haus-6",
+        "zeichen-fische"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert. Keine medizinischen Aussagen."
+      },
+      "element": "element-erde",
+      "modality": "modalitaet-veraenderlich",
+      "polarity": "yin",
+      "ruler_traditional": "faktor-merkur",
+      "ruler_modern": "faktor-merkur",
+      "date_range_tropical": {
+        "from": "08-23",
+        "to": "09-22",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Jungfrau",
+        "glyph": "♍",
+        "bildsprache": "Ähre, Ernte, Auswahl, kritischer Blick, dienende Genauigkeit."
+      },
+      "strengths": [
+        "Erkennt Details und Fehler, die anderen entgehen",
+        "Macht Ideen alltagstauglich und überprüfbar",
+        "Arbeitet verlässlich und methodisch",
+        "Kann hilfreiche, konkrete Kritik formulieren",
+        "Sorgt für Ordnung, die Entlastung schafft"
+      ],
+      "tensions": [
+        "Verwechselt Qualität mit Perfektion",
+        "Kritisiert sich selbst härter als andere",
+        "Verliert sich in Details und Nebenaufgaben",
+        "Sorgt sich um Dinge, die noch nicht eingetreten sind",
+        "Wirkt durch ständige Korrektur distanziert"
+      ],
+      "reflection_questions": [
+        "Wann ist genug wirklich genug?",
+        "Wem dient meine Kritik gerade?",
+        "Was könnte ich loslassen, ohne dass etwas Wesentliches kaputtgeht?"
+      ],
+      "common_misreading": "Jungfrau wird oft als pedantisch, frostig oder krankheitsfixiert dargestellt. Die Tradition beschreibt zuerst eine unterscheidende, dienende Intelligenz; Perfektionismus ist ihre Schattenform, keine Definition.",
+      "natural_house": "haus-6",
+      "opposite": "zeichen-fische"
+    },
+    {
+      "id": "zeichen-waage",
+      "slug": "waage",
+      "name": "Waage",
+      "short": "Waage ist das kardinale Luftzeichen des Tropus. Traditionell steht es für Abwägung, Beziehung, Fairness und die Frage, wie Eigenes und Anderes ins Gleichgewicht kommen.",
+      "long": "Astronomische Orientierung: Der Waage-Sektor liegt ungefähr zwischen dem 23. September und 22. Oktober. Der Herbstpunkt, an dem die Sonne den Waage-Sektor betritt, ist der zweite Nullpunkt des tropischen Systems; die Datumsangabe bleibt dennoch eine gerundete Orientierung [S06][S19]. Das Sternbild Waage ist verhältnismäßig schwach und war in der Antike zeitweise Teil des Skorpions; die Zeichengeschichte und die Sternbildgeschichte verlaufen nicht parallel [S13][S14].\n\nBildsprache: Die Waage ist ein Messinstrument, kein Lebewesen. Sie verweist auf Vergleich, Gewichtung und die Möglichkeit, eine Schieflage zu erkennen. In der griechischen Überlieferung ist die Waage mit Dike, der Gerechtigkeit, und mit dem Herbstäquinoktium verbunden. Der traditionelle Herrscher ist Venus. Das natürliche siebte Haus verbindet das Zeichen mit Partnerschaft, Verträgen, offenen Gegnern und der Erfahrung, sich im Spiegel des Anderen zu sehen [S12][S10].\n\nDeutung: Als kardinales Luftzeichen wird Waage mit Perspektivwechsel, Ästhetik und Diplomatie verbunden. Die kardinale Qualität zeigt sich im Anstoß zur Beziehung: ein Gespräch beginnen, einen Ausgleich suchen, eine Form finden. Das kann Fairness, Takt und die Fähigkeit sein, unterschiedliche Interessen zusammenzubringen. Es kann aber auch in Entscheidungsschwierigkeit, Konfliktvermeidung oder Abhängigkeit von Zustimmung kippen.\n\nDifferenzierung: Waage wird oft als harmoniesüchtig und oberflächlich gelesen. Tradiert ist eine abwägende Figur, die Spannungen aushält, bis eine tragfähige Form gefunden ist. Eine Waage-Sonne kann durchaus konfliktscheu sein; ein Waage-Mond sucht emotionale Balance eher über Beziehung. Die kulturelle Zuschreibung von Weiblichkeit und Schönheit ist eine historische Schicht.\n\nTypische Missdeutung: Wer Waage auf Gefälligkeit reduziert, übersieht die anspruchsvolle Seite: Gerechtigkeit kann unbequem sein, und eine echte Abwägung braucht Mut zur Entscheidung. Harmonie um jeden Preis ist eine Schattenform, nicht das Ziel.\n\nEntwicklungsfrage: Waage lernt, eine Position zu beziehen, ohne die Beziehung abzubrechen, und zu merken, dass Klarheit Fairness sein kann.",
+      "keywords": [
+        "Abwägung",
+        "Beziehung",
+        "Fairness",
+        "Kardinaluft",
+        "Venus"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-luft",
+        "modalitaet-kardinal",
+        "faktor-venus",
+        "haus-7",
+        "zeichen-widder"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-luft",
+      "modality": "modalitaet-kardinal",
+      "polarity": "yang",
+      "ruler_traditional": "faktor-venus",
+      "ruler_modern": "faktor-venus",
+      "date_range_tropical": {
+        "from": "09-23",
+        "to": "10-22",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Waage",
+        "glyph": "♎",
+        "bildsprache": "Zwei Schalen, Gleichgewicht, Herbstpunkt, Spiegel und Vertrag."
+      },
+      "strengths": [
+        "Sieht mehrere Seiten einer Sache",
+        "Formuliert fair und vermittelnd",
+        "Hat ein Gespür für Form, Ton und Ästhetik",
+        "Kann Beziehungen und Kooperationen aufbauen",
+        "Hält Spannungen aus, bis eine tragbare Lösung gefunden ist"
+      ],
+      "tensions": [
+        "Schiebt Entscheidungen auf, um niemanden zu enttäuschen",
+        "Verwechselt Harmonie mit Konfliktvermeidung",
+        "Wird abhängig von Zustimmung",
+        "Bleibt unklar, um Beziehungen nicht zu gefährden",
+        "Übersieht eigene Bedürfnisse im Abwägen"
+      ],
+      "reflection_questions": [
+        "Welche Entscheidung vermeide ich, um es allen recht zu machen?",
+        "Wo ist Klarheit die fairere Lösung?",
+        "Was will ich, wenn ich nicht zuerst an die Reaktion anderer denke?"
+      ],
+      "common_misreading": "Waage gilt oft als gefällig und unentschlossen. Die Tradition beschreibt zuerst eine abwägende, beziehungsorientierte Figur; Konfliktvermeidung ist eine Schattenform, nicht das ganze Zeichen.",
+      "natural_house": "haus-7",
+      "opposite": "zeichen-widder"
+    },
+    {
+      "id": "zeichen-skorpion",
+      "slug": "skorpion",
+      "name": "Skorpion",
+      "short": "Skorpion ist das fixe Wasserzeichen des Tropus. Traditionell steht es für Tiefe, Bindung, Macht und die Auseinandersetzung mit dem, was verborgen ist.",
+      "long": "Astronomische Orientierung: Der Skorpion-Sektor umfasst ungefähr den 23. Oktober bis 21. November. Die Grenze ist eine Konvention und kann in Publikationen um einen Tag abweichen [S06][S19]. Das Sternbild Skorpion ist deutlich größer als der tropische Sektor und liegt teilweise außerhalb der Ekliptikbreite; die Präzession verschiebt außerdem die Deckung zwischen Zeichen und Sternbild [S13][S14].\n\nBildsprache: Der Skorpion trägt einen Stachel und lebt in Verstecken. Das Bild ist stark aufgeladen: Gefahr, Gift, Verteidigung, aber auch Häutung und Regeneration. In der griechischen Überlieferung tötet der Skorpion Orion; die Figur steht für eine Kraft, die den Jäger zur Strecke bringt, also für Grenzen der eigenen Macht. Der traditionelle Herrscher ist Mars, in der modernen Zuordnung Pluto. Das natürliche achte Haus verbindet das Zeichen mit geteilten Ressourcen, Intimität, Verlust, Erbe und Transformation [S12][S10].\n\nDeutung: Als fixes Wasserzeichen wird Skorpion mit emotionaler Intensität, Loyalität und einem Gespür für Machtverhältnisse verbunden. Die fixe Qualität gibt dem Wasser Dauer: Gefühle bleiben, Bindungen werden tief, und was einmal wichtig war, lässt sich schwer ablegen. Das kann Krisenfestigkeit, Wahrnehmung für Untertöne und die Fähigkeit sein, sich wirklich einzulassen. Es kann aber auch in Kontrolle, Misstrauen, Geheimhaltung und Groll kippen.\n\nDifferenzierung: Die populäre Darstellung als rachsüchtig, sexuell oder gefährlich ist eine Verkürzung und oft sensationell aufgeladen. Tradiert ist eine Figur der Tiefe und der Grenzüberschreitung: Wer sich auf Skorpion einlässt, kommt an Punkte, die nicht oberflächlich bleiben. Ein Skorpion-Mond zeigt eher die emotionale Intensität, ein Skorpion-Aszendent eher eine zurückhaltende, prüfende Präsenz. Die moderne Pluto-Zuordnung ist eine Ergänzung des 20. Jahrhunderts, keine antike Selbstverständlichkeit.\n\nTypische Missdeutung: Wer Skorpion mit Bösartigkeit gleichsetzt, verwechselt eine Deutungsfigur mit einer moralischen Diagnose. Die Tradition beschreibt eine Schutz- und Tiefenbewegung; Kontrolle und Misstrauen sind mögliche Folgen von Verletzung, keine Naturnotwendigkeit.\n\nEntwicklungsfrage: Skorpion lernt, Intensität zuzulassen, ohne sie in Kontrolle zu verwandeln, und Vertrauen als Entscheidung zu behandeln, nicht als Risikofreiheit.",
+      "keywords": [
+        "Tiefe",
+        "Bindung",
+        "Macht",
+        "Fixwasser",
+        "Pluto"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12",
+        "c13"
+      ],
+      "cross_refs": [
+        "element-wasser",
+        "modalitaet-fix",
+        "faktor-mars",
+        "faktor-pluto",
+        "haus-8",
+        "zeichen-stier"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert. Keine Aussagen über reale Personen."
+      },
+      "element": "element-wasser",
+      "modality": "modalitaet-fix",
+      "polarity": "yin",
+      "ruler_traditional": "faktor-mars",
+      "ruler_modern": "faktor-pluto",
+      "date_range_tropical": {
+        "from": "10-23",
+        "to": "11-21",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Skorpion",
+        "glyph": "♏",
+        "bildsprache": "Stachel, Versteck, Häutung, Grenze der Macht, unterirdische Tiefe."
+      },
+      "strengths": [
+        "Geht Beziehungen und Themen wirklich auf den Grund",
+        "Bleibt in Krisen ansprechbar und loyal",
+        "Erkennt Machtverhältnisse und Untertöne",
+        "Kann sich intensiv auf eine Sache konzentrieren",
+        "Hat Mut, Unangenehmes nicht zu beschönigen"
+      ],
+      "tensions": [
+        "Verwechselt Schutz mit Kontrolle",
+        "Misstraut, bevor Vertrauen überhaupt geprüft wurde",
+        "Hält Informationen zurück, um nicht verletzlich zu sein",
+        "Trägt Groll über lange Zeit",
+        "Zieht sich ganz zurück, statt einen Konflikt zu klären"
+      ],
+      "reflection_questions": [
+        "Wem schenke ich Vertrauen, und was müsste passieren, damit ich es tue?",
+        "Wo schütze ich mich, indem ich andere kontrolliere?",
+        "Was wird leichter, wenn ich einen alten Groll loslasse?"
+      ],
+      "common_misreading": "Skorpion wird oft als rachsüchtig, gefährlich oder rein sexuell dargestellt. Die Tradition beschreibt eine tiefe, gebundene Wasserfigur, deren Schatten Kontrolle und Misstrauen sind; beides folgt aus Verletzlichkeit, nicht aus Wesen.",
+      "natural_house": "haus-8",
+      "opposite": "zeichen-stier"
+    },
+    {
+      "id": "zeichen-schuetze",
+      "slug": "schuetze",
+      "name": "Schütze",
+      "short": "Schütze ist das veränderliche Feuerzeichen des Tropus. Traditionell steht es für Weitblick, Sinnsuche, Lernen und die Bewegung über den eigenen Horizont hinaus.",
+      "long": "Astronomische Orientierung: Der Schütze-Sektor umfasst ungefähr den 22. November bis 21. Dezember. Die Angabe ist gerundet; der genaue Zeichenwechsel variiert jährlich und mit der Zeitzone [S06][S19]. Das Sternbild Schütze enthält das Zentrum der Milchstraße und ist astronomisch reich, aber nicht deckungsgleich mit dem tropischen Sektor [S13][S14].\n\nBildsprache: Der Schütze ist ein Bogenschütze, halb Mensch, halb Pferd, der auf ein Ziel außerhalb des eigenen Standorts zeigt. Das Bild trägt Reise, Jagd, Belehrung und die Frage, worauf jemand zielt. Der traditionelle Herrscher ist Jupiter. Das natürliche neunte Haus verbindet das Zeichen mit Fernreisen, höherer Bildung, Glauben, Recht und Sinnfragen [S12][S10].\n\nDeutung: Als veränderliches Feuerzeichen wird Schütze mit Optimismus, Lernfreude und Weitblick verbunden. Die veränderliche Qualität macht das Feuer beweglich: Es sucht neue Horizonte, statt an einem Ort zu brennen. Das kann Begeisterungsfähigkeit, großzügiges Denken und die Fähigkeit sein, Menschen für eine Idee zu gewinnen. Es kann aber auch in Maßlosigkeit, Belehrung und Flucht vor Details kippen.\n\nDifferenzierung: Schütze wird oft auf Reiselust und Lebensfreude reduziert. Tradiert ist eine Sinnfigur: Die Bewegung nach außen ist zugleich eine Suche nach Orientierung. Ein Schütze-Mond sucht emotionale Weite; ein Schütze-Aszendent wirkt offen und zugewandt, kann aber Ungeduld zeigen. Die kulturelle Verbindung mit Religion und Lehrhaftigkeit ist historisch, nicht zwingend.\n\nTypische Missdeutung: Die Gleichsetzung mit Oberflächlichkeit oder Besserwisserei ist eine Schattenform. Die Tradition betont zuerst die Fähigkeit, über den eigenen Tellerrand zu schauen; Maßlosigkeit entsteht, wenn Weite mit Beliebigkeit verwechselt wird.\n\nEntwicklungsfrage: Schütze lernt, große Ziele mit konkreten Schritten zu verbinden und zuzuhören, bevor er erklärt.",
+      "keywords": [
+        "Weitblick",
+        "Sinnsuche",
+        "Lernen",
+        "Veränderliches Feuer",
+        "Jupiter"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-feuer",
+        "modalitaet-veraenderlich",
+        "faktor-jupiter",
+        "haus-9",
+        "zeichen-zwillinge"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-feuer",
+      "modality": "modalitaet-veraenderlich",
+      "polarity": "yang",
+      "ruler_traditional": "faktor-jupiter",
+      "ruler_modern": "faktor-jupiter",
+      "date_range_tropical": {
+        "from": "11-22",
+        "to": "12-21",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Schütze",
+        "glyph": "♐",
+        "bildsprache": "Bogen und Pfeil, Zentaur, Horizont, Reise und Ziel."
+      },
+      "strengths": [
+        "Denkt in größeren Zusammenhängen",
+        "Begeistert sich für Lernen und neue Perspektiven",
+        "Ermutigt andere, über Grenzen hinauszudenken",
+        "Hat Humor und eine zugewandte Offenheit",
+        "Kann Sinn und Richtung in unübersichtlichen Lagen zeigen"
+      ],
+      "tensions": [
+        "Verliert sich in großen Plänen ohne Umsetzung",
+        "Belehrt andere, statt zuzuhören",
+        "Verwechselt Freiheit mit Unverbindlichkeit",
+        "Übersieht Details, die für andere wichtig sind",
+        "Flieht vor Enge, statt sie zu gestalten"
+      ],
+      "reflection_questions": [
+        "Welches Ziel verfolge ich wirklich, und welches ist nur eine Flucht?",
+        "Wann habe ich zuletzt zugehört, ohne zu erklären?",
+        "Was braucht mein großer Plan als nächsten konkreten Schritt?"
+      ],
+      "common_misreading": "Schütze gilt oft als reisefreudig, laut und belehrend. Die Tradition beschreibt zuerst eine Sinn- und Weitebewegung; Maßlosigkeit und Besserwisserei sind Schattenformen, nicht die Definition.",
+      "natural_house": "haus-9",
+      "opposite": "zeichen-zwillinge"
+    },
+    {
+      "id": "zeichen-steinbock",
+      "slug": "steinbock",
+      "name": "Steinbock",
+      "short": "Steinbock ist das kardinale Erdzeichen des Tropus. Traditionell steht es für Verantwortung, Struktur, Zeit und die Fähigkeit, langfristig etwas aufzubauen.",
+      "long": "Astronomische Orientierung: Der Steinbock-Sektor reicht ungefähr vom 22. Dezember bis 19. Januar. Der Jahreswechsel macht die Datumsangabe besonders fehleranfällig, wenn Zeitzonen oder Quellen unterschiedlich zählen; sie bleibt eine Orientierung [S06][S19]. Das Sternbild Steinbock ist klein und unscheinbar, während der tropische Sektor 30 Grad umfasst [S13][S14].\n\nBildsprache: Der Steinbock ist ein Ziegenfisch, ein Wesen, das Klippen erklimmt und ins Wasser taucht. Das Bild verbindet Aufstieg mit Anpassung an schwieriges Gelände; es geht um Ausdauer, Grenze und die Frage, was jemand bereit ist zu tragen. Der traditionelle Herrscher ist Saturn. Das natürliche zehnte Haus verbindet das Zeichen mit Beruf, öffentlicher Rolle, Verantwortung und Ziel [S12][S10].\n\nDeutung: Als kardinales Erdzeichen wird Steinbock mit Realismus, Disziplin und langfristiger Planung verbunden. Die kardinale Qualität zeigt sich nicht als spontaner Impuls, sondern als gerichtete Anstrengung: einen Weg beginnen, der über Jahre trägt. Das kann Verlässlichkeit, Verantwortungsbewusstsein und die Fähigkeit sein, schwierige Aufgaben zu übernehmen. Es kann aber auch in Härte, Statusfixierung und Freudlosigkeit kippen.\n\nDifferenzierung: Steinbock wird oft als kalt und karrieristisch dargestellt. Tradiert ist eine Figur der Begrenzung und Formgebung: Wer Grenzen kennt, kann bauen. Ein Steinbock-Mond sucht Sicherheit über Struktur; ein Steinbock-Aszendent wirkt zurückhaltend und ernst, kann aber auch eine große Warmherzigkeit schützen. Die kulturelle Gleichsetzung mit Erfolg ist eine moderne Verengung.\n\nTypische Missdeutung: Wer Steinbock auf Status und Leistung reduziert, übersieht die Zeitdimension: Es geht um Reifung, nicht nur um Erfolg. Härte gegen sich selbst ist eine Schattenform, keine Tugend.\n\nEntwicklungsfrage: Steinbock lernt, Verantwortung zu tragen, ohne sich selbst dabei zu vergessen, und Struktur als Ermöglichung statt als Gefängnis zu erleben.",
+      "keywords": [
+        "Verantwortung",
+        "Struktur",
+        "Zeit",
+        "Kardinalerde",
+        "Saturn"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-erde",
+        "modalitaet-kardinal",
+        "faktor-saturn",
+        "haus-10",
+        "zeichen-krebs"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-erde",
+      "modality": "modalitaet-kardinal",
+      "polarity": "yin",
+      "ruler_traditional": "faktor-saturn",
+      "ruler_modern": "faktor-saturn",
+      "date_range_tropical": {
+        "from": "12-22",
+        "to": "01-19",
+        "note": "Ungefähre tropische Orientierung über den Jahreswechsel; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Steinbock",
+        "glyph": "♑",
+        "bildsprache": "Ziegenfisch, Klippe, Aufstieg, Zeit und tragende Struktur."
+      },
+      "strengths": [
+        "Plant langfristig und hält durch",
+        "Übernimmt Verantwortung für das, was sie oder er zusagt",
+        "Baut Strukturen, die anderen Halt geben",
+        "Bleibt realistisch in schwierigen Lagen",
+        "Kann aus begrenzten Mitteln etwas Tragfähiges machen"
+      ],
+      "tensions": [
+        "Wird zu hart gegen sich selbst",
+        "Verwechselt Wert mit Leistung oder Status",
+        "Verschiebt Genuss auf später",
+        "Kontrolliert aus Angst vor Kontrollverlust",
+        "Wirkt distanziert, obwohl Nähe gewünscht ist"
+      ],
+      "reflection_questions": [
+        "Wofür trage ich Verantwortung, und wofür eigentlich nicht?",
+        "Was würde ich tun, wenn niemand meine Leistung bewertet?",
+        "Wo darf Leichtigkeit sein, ohne dass etwas zusammenbricht?"
+      ],
+      "common_misreading": "Steinbock wird oft als kalt und karrieristisch gelesen. Die Tradition beschreibt zuerst eine Form- und Zeitfigur, die aus Grenzen Tragfähigkeit macht; Härte ist eine Schattenform, keine Definition.",
+      "natural_house": "haus-10",
+      "opposite": "zeichen-krebs"
+    },
+    {
+      "id": "zeichen-wassermann",
+      "slug": "wassermann",
+      "name": "Wassermann",
+      "short": "Wassermann ist das fixe Luftzeichen des Tropus. Traditionell steht es für Eigenständigkeit, Systemblick, Zukunft und die Spannung zwischen Nähe und Distanz.",
+      "long": "Astronomische Orientierung: Der Wassermann-Sektor umfasst ungefähr den 20. Januar bis 18. Februar. Die Grenze ist gerundet und variiert je nach Quelle und Jahr [S06][S19]. Das Sternbild Wassermann ist groß und lichtschwach; der tropische Sektor ist wiederum ein exakter 30-Grad-Abschnitt [S13][S14].\n\nBildsprache: Der Wassermann trägt einen Krug und gießt Wasser aus, das nicht ihm gehört. Das Bild ist paradox: Ein Luftzeichen mit Wasser assoziiert, ein Einzelgänger, der eine gemeinsame Ressource verteilt. In der griechischen Überlieferung ist Ganymed der Mundschenk der Götter; das Bild verbindet Dienst, Außenseitertum und die Frage, wem jemand angehört. Der traditionelle Herrscher ist Saturn, in der modernen Zuordnung Uranus. Das natürliche elfte Haus verbindet das Zeichen mit Freundschaften, Netzwerken, Zukunftsideen und kollektiven Zielen [S12][S10].\n\nDeutung: Als fixes Luftzeichen wird Wassermann mit Eigenständigkeit, Abstraktion und einem Blick für Systeme verbunden. Die fixe Qualität gibt der Luft Dauer: Eine Idee wird nicht schnell fallen gelassen, auch wenn sie unbequem ist. Das kann Erfindungsgeist, Fairness gegenüber Gruppen und die Fähigkeit sein, Abstand als Klarheit zu nutzen. Es kann aber auch in Entfremdung, Prinzipienreiterei und emotionale Distanz kippen.\n\nDifferenzierung: Wassermann wird oft als gefühllos oder exzentrisch dargestellt. Tradiert ist eine Figur, die Zugehörigkeit anders organisiert: über Ideen, Netzwerke und Prinzipien statt über exklusive Nähe. Ein Wassermann-Mond kann Nähe über Freundschaft suchen; ein Wassermann-Aszendent wirkt freundlich-distanziert. Die moderne Uranus-Zuordnung ist eine Ergänzung, keine antike Setzung.\n\nTypische Missdeutung: Wer Wassermann auf Andersartigkeit reduziert, übersieht den Anspruch an Gemeinschaft und Gerechtigkeit. Widerspruch um des Widerspruchs willen ist eine Schattenform, nicht das Wesen.\n\nEntwicklungsfrage: Wassermann lernt, Distanz und Nähe zu verbinden, ohne die eine Seite zur Flucht vor der anderen zu machen.",
+      "keywords": [
+        "Eigenständigkeit",
+        "Systemblick",
+        "Zukunft",
+        "Fixluft",
+        "Uranus"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-luft",
+        "modalitaet-fix",
+        "faktor-saturn",
+        "faktor-uranus",
+        "haus-11",
+        "zeichen-loewe"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-luft",
+      "modality": "modalitaet-fix",
+      "polarity": "yang",
+      "ruler_traditional": "faktor-saturn",
+      "ruler_modern": "faktor-uranus",
+      "date_range_tropical": {
+        "from": "01-20",
+        "to": "02-18",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Wassermann",
+        "glyph": "♒",
+        "bildsprache": "Wasserträger, Krug, Netzwerk, Zukunft und geteilte Ressource."
+      },
+      "strengths": [
+        "Denkt unabhängig und systemisch",
+        "Erkennt Ungerechtigkeit in Strukturen",
+        "Bleibt Ideen treu, auch wenn sie unbequem sind",
+        "Kann Gruppen und Netzwerke verbinden",
+        "Nutzt Distanz, um klar zu sehen"
+      ],
+      "tensions": [
+        "Zieht sich in Prinzipien zurück, statt Nähe zu riskieren",
+        "Wirkt kühl, obwohl Interesse vorhanden ist",
+        "Widerspricht reflexartig, um Eigenständigkeit zu zeigen",
+        "Verliert den konkreten Menschen aus dem Blick",
+        "Verwechselt Freiheit mit Bindungsvermeidung"
+      ],
+      "reflection_questions": [
+        "Wo verwechsle ich Abstand mit Klarheit?",
+        "Welche Nähe habe ich vermieden, obwohl ich sie wollte?",
+        "Wem nützt meine Idee konkret?"
+      ],
+      "common_misreading": "Wassermann wird oft als gefühllos, exzentrisch oder unverbindlich gelesen. Die Tradition beschreibt zuerst eine eigenständige, systemorientierte Figur; Distanz ist eine mögliche Schutzform, keine Definition.",
+      "natural_house": "haus-11",
+      "opposite": "zeichen-loewe"
+    },
+    {
+      "id": "zeichen-fische",
+      "slug": "fische",
+      "name": "Fische",
+      "short": "Fische ist das veränderliche Wasserzeichen des Tropus. Traditionell steht es für Durchlässigkeit, Imagination, Mitgefühl und die Frage nach Grenzen zwischen Ich und Welt.",
+      "long": "Astronomische Orientierung: Der Fische-Sektor liegt ungefähr zwischen dem 19. Februar und 20. März. Der Zeitraum ist eine gerundete Orientierung; der exakte Wechsel hängt von Jahr und Zeitzone ab [S06][S19]. Das Sternbild Fische ist groß und lichtschwach; der Frühlingspunkt liegt heute im Bereich dieses Sternbilds, während das tropische Zeichen Widder weiterhin am Äquinoktium beginnt [S13][S14].\n\nBildsprache: Zwei Fische, durch eine Schnur verbunden, schwimmen in entgegengesetzte Richtungen. Das Bild trägt Ambivalenz, Durchlässigkeit und die Frage, wie zwei Bewegungen zusammengehören. In der griechischen Überlieferung verwandeln sich Aphrodite und Eros in Fische, um sich zu retten; das Bild verbindet Liebe, Flucht und Anpassung. Der traditionelle Herrscher ist Jupiter, in der modernen Zuordnung Neptun. Das natürliche zwölfte Haus verbindet das Zeichen mit Rückzug, Unbewusstem, Auflösung und dem, was sich nicht sauber ordnen lässt [S12][S10].\n\nDeutung: Als veränderliches Wasserzeichen wird Fische mit Empathie, Imagination und Durchlässigkeit verbunden. Die veränderliche Qualität macht das Wasser beweglich: Es passt sich an, nimmt Formen an und verliert dabei leicht die eigene Kontur. Das kann Mitgefühl, künstlerische Sensibilität und die Fähigkeit sein, Atmosphären wahrzunehmen. Es kann aber auch in Abgrenzungsschwierigkeiten, Realitätsflucht und Überforderung kippen.\n\nDifferenzierung: Fische wird oft als schwach, chaotisch oder esoterisch verkürzt. Tradiert ist eine Figur der Grenzüberschreitung: Das Ich ist nicht klar vom Anderen getrennt, und gerade darin liegt eine besondere Wahrnehmungsfähigkeit. Ein Fische-Mond sucht emotionale Verschmelzung; ein Fische-Aszendent wirkt weich und anpassungsfähig. Die moderne Neptun-Zuordnung ist eine Ergänzung des 19. und 20. Jahrhunderts.\n\nTypische Missdeutung: Wer Fische mit Unzuverlässigkeit oder Schwäche gleichsetzt, verwechselt eine Schattenform mit dem Zeichen. Die Tradition beschreibt zuerst eine durchlässige Wahrnehmung, die einen klaren Rahmen braucht, um nicht in Beliebigkeit zu zerfallen.\n\nEntwicklungsfrage: Fische lernt, Grenzen zu setzen, ohne die eigene Empfindungsfähigkeit zu verlieren, und Mitgefühl mit Selbstachtung zu verbinden.",
+      "keywords": [
+        "Durchlässigkeit",
+        "Imagination",
+        "Mitgefühl",
+        "Veränderliches Wasser",
+        "Neptun"
+      ],
+      "sources": [
+        "S06",
+        "S07",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S19"
+      ],
+      "claims": [
+        "c02",
+        "c06",
+        "c07",
+        "c12"
+      ],
+      "cross_refs": [
+        "element-wasser",
+        "modalitaet-veraenderlich",
+        "faktor-jupiter",
+        "faktor-neptun",
+        "haus-12",
+        "zeichen-jungfrau"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Zeichendeutung ist Traditionsmaterial; astronomische Angaben sind separat belegt und als Näherung markiert."
+      },
+      "element": "element-wasser",
+      "modality": "modalitaet-veraenderlich",
+      "polarity": "yin",
+      "ruler_traditional": "faktor-jupiter",
+      "ruler_modern": "faktor-neptun",
+      "date_range_tropical": {
+        "from": "02-19",
+        "to": "03-20",
+        "note": "Ungefähre tropische Orientierung; der exakte Wechsel verschiebt sich jährlich und ist zeitzonenabhängig."
+      },
+      "symbol": {
+        "name": "Fische",
+        "glyph": "♓",
+        "bildsprache": "Zwei Fische an einer Schnur, Meer, Auflösung, Traum und Mitgefühl."
+      },
+      "strengths": [
+        "Nimmt Atmosphären und unausgesprochene Gefühle wahr",
+        "Kann sich in andere einfühlen, ohne vorschnell zu urteilen",
+        "Hat Zugang zu Bildern, Symbolen und künstlerischer Form",
+        "Bleibt in unklaren Lagen ansprechbar",
+        "Kann Mitgefühl und Großzügigkeit zeigen"
+      ],
+      "tensions": [
+        "Verliert die eigene Grenze im Anderen",
+        "Weicht vor Konflikten in Fantasie oder Rückzug aus",
+        "Schiebt Entscheidungen auf, bis sie sich auflösen",
+        "Übernimmt Verantwortung für Dinge, die nicht die eigenen sind",
+        "Verwechselt Mitgefühl mit Selbstaufgabe"
+      ],
+      "reflection_questions": [
+        "Wo endet mein Mitgefühl und wo beginnt Selbstaufgabe?",
+        "Welche Grenze brauche ich, damit Nähe möglich bleibt?",
+        "Was ist real, und was ist meine Sehnsucht?"
+      ],
+      "common_misreading": "Fische gilt oft als schwach, chaotisch oder realitätsfern. Die Tradition beschreibt zuerst eine durchlässige, imaginative Wasserfigur; Abgrenzungsschwierigkeiten sind eine Schattenform, keine Definition.",
+      "natural_house": "haus-12",
+      "opposite": "zeichen-jungfrau"
+    }
+  ]
+}

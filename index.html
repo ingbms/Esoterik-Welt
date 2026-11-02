@@ -8,7 +8,6 @@
       }
     </script>
     <!-- /LOCAL-ENTRY -->
-    <base href="/Esoterik-Welt/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -32,15 +31,15 @@
       content="Tarot, Kristalle, Runen & Mondphasen — esoterisches Wissen, bewusst und ohne medizinische Wirkungsaussagen."
     />
 
-    <!-- Inert until HTTP: prevent speculative file-origin CSS/font requests during redirect. -->
+    <!-- Inert until HTTP: prevent speculative file-origin asset requests during redirect. -->
     <template id="http-resources">
-      <!-- Fonts -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet"
-      />
+      <!-- The Pages project lives under /Esoterik-Welt/. The base element is only
+           inserted on HTTP so a double-clicked file:// entry keeps resolving
+           against its own directory instead of C:/Esoterik-Welt/. -->
+      <base href="/Esoterik-Welt/" />
+      <!-- Local variable fonts (assets/fonts, SIL OFL 1.1) -->
+      <link rel="preload" href="assets/fonts/Fraunces.ttf" as="font" type="font/ttf" crossorigin />
+      <link rel="preload" href="assets/fonts/Manrope.ttf" as="font" type="font/ttf" crossorigin />
 
       <!-- Styles -->
       <link rel="preload" href="css/design-system.css" as="style" />
@@ -71,6 +70,7 @@
             <li><a href="#tarot" class="nav-link" data-page="tarot">Tarot</a></li>
             <li><a href="#crystals" class="nav-link" data-page="crystals">Kristalle</a></li>
             <li><a href="#moon" class="nav-link" data-page="moon">Mondphasen</a></li>
+            <li><a href="#astrologie" class="nav-link" data-page="astrologie">Astrologie</a></li>
             <li><a href="#runes" class="nav-link" data-page="runes">Runen</a></li>
             <li><a href="#blog" class="nav-link" data-page="blog">Wissen</a></li>
           </ul>
@@ -94,94 +94,223 @@
         <p id="routeNoticeText"></p>
         <a class="btn btn-secondary btn-sm" id="routeNoticeLink" href="#home">Zur Startseite</a>
       </div>
-      <!-- Home / Hero Section -->
+      <!-- Home: hero + path register + one astronomical plate -->
       <section id="home" class="page active" aria-labelledby="home-title">
-        <div class="hero">
-          <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
-          <div class="hero-content container">
-            <div class="hero-text animate-slide-up">
-              <span class="hero-badge badge badge-primary animate-fade-in stagger-1"
-                >Willkommen in der Esoterik-Welt</span
-              >
-              <h1 id="home-title" class="page-title animate-fade-in stagger-2">
-                Entdecke die verborgene Sprache des Universums
-              </h1>
-              <p class="hero-subtitle animate-fade-in stagger-3">
-                Tarot · Kristalle · Runen · Mondphasen · Altes Wissen für moderne Suchende
-              </p>
-              <div class="hero-actions animate-fade-in stagger-4 flex gap-4 flex-wrap">
-                <a href="#tarot" class="btn btn-primary btn-lg">Karte ziehen</a>
-                <a href="#crystals" class="btn btn-secondary btn-lg">Kristalle entdecken</a>
+        <div class="hero hero-band">
+          <div class="container">
+            <div class="hero-grid">
+              <div class="hero-copy">
+                <p class="label">Material · Zeichen · Zyklen</p>
+                <h1 id="home-title">Entdecke die verborgene Sprache des <em>Universums</em></h1>
+                <p class="hero-intro">
+                  Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger
+                  Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen.
+                </p>
+                <div class="hero-actions">
+                  <a href="#tarot" class="btn btn-primary">
+                    Karte ziehen
+                    <span aria-hidden="true">↓</span>
+                  </a>
+                  <a href="#astrologie" class="textlink">
+                    Astrologie lernen
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="hero-scroll animate-fade-in stagger-5" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M19 12l-7 7-7-7" />
-              </svg>
+              <figure class="specimen">
+                <img
+                  class="mineral"
+                  src="assets/mineral/quartz-light-2400.jpg"
+                  width="2400"
+                  height="2045"
+                  alt="Räumliche Bergkristallgruppe vor dunklem Grund: durchscheinende Spitzen, geriefte Flächen und gestaffelte Facetten, vollständig im Bild"
+                />
+                <figcaption class="caption">
+                  Bergkristall · Fotografie: Didier Descouens · CC BY-SA 4.0<br />
+                  Gewachsene Form, gerichtete Reflexe, echte Einschlüsse.
+                </figcaption>
+              </figure>
             </div>
           </div>
         </div>
 
-        <!-- Feature Grid -->
-        <div class="container" style="padding-top: var(--space-16); padding-bottom: var(--space-16)">
-          <div class="section-header text-center mb-8">
-            <h2 class="animate-slide-up">Pfade der Erkenntnis</h2>
-            <p class="text-muted animate-fade-in stagger-1">Wähle dein Tor zur Weisheit</p>
+        <!-- Path register: an index, not three equal feature tiles -->
+        <section class="section section--ruled" aria-labelledby="pfade-title">
+          <div class="container">
+            <div class="section-head">
+              <h2 id="pfade-title">Pfade der Erkenntnis</h2>
+              <p class="label">Sechs Zugänge</p>
+            </div>
+            <p class="section-lede">Wähle dein Tor zur Weisheit — jede Ansicht ist ein eigenes Werkzeug.</p>
+            <div class="grid" id="featureGrid" style="margin-top: var(--space-8)"></div>
           </div>
-          <div class="grid grid-auto" id="featureGrid">
-            <!-- Populated by JS -->
+        </section>
+
+        <!-- Material detail: one deliberate close-up, not a second hero -->
+        <section class="section section--ruled" aria-labelledby="material-title">
+          <div class="container">
+            <div class="material-grid">
+              <figure class="material-figure">
+                <img
+                  class="detail"
+                  src="assets/mineral/mineral-detail-1000.jpg"
+                  width="1000"
+                  height="1000"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Detailstudie einer Quarzstufe: eine lange durchscheinende Spitze über milchiger Basis, Riefen und Bruchflächen sichtbar"
+                />
+                <figcaption class="caption">Detailstudie · Fotografie: Didier Descouens · CC BY-SA 4.0</figcaption>
+              </figure>
+              <div>
+                <p class="label">Material / Bildsprache</p>
+                <h2 id="material-title">Ein Stein ist mehr als sein Glanz.</h2>
+                <p class="cosmos-text">
+                  Risse, Trübungen und unregelmäßige Kanten machen das Material lesbar. Licht zeigt den Körper, statt
+                  ihn mit einer Aura zu übermalen. Erst aus der aufmerksamen Betrachtung entsteht eine eigene Lesart.
+                </p>
+                <a class="textlink" href="#crystals">
+                  Zum Kristall-Katalog
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Astronomical order: one chart instance in the content-appropriate place -->
+        <section class="section cosmos" aria-labelledby="kosmos-title">
+          <div class="container">
+            <div class="cosmos-grid">
+              <div>
+                <p class="label">Kosmos / Eine zweite Ebene</p>
+                <h2 id="kosmos-title">Ein leiser Bezug zum großen Ganzen.</h2>
+                <p class="cosmos-text">
+                  Wenige Punkte, feine Beziehungen. Diese Tafel ordnet, ohne die Materialwelt zu übertönen: Orion als
+                  reduzierte Koordinatenstudie aus sieben Hauptsternen — nicht als aktueller Himmel und nicht als
+                  astrologische Vorhersage.
+                </p>
+                <a class="textlink" href="#blog">
+                  Artikel zu Zyklen und Materie
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <figure class="cosmos-figure">
+                <img
+                  class="chart"
+                  src="assets/cosmos/orion-chart.svg"
+                  width="430"
+                  height="430"
+                  alt="Orion: sieben Hauptsterne in einer reduzierten Koordinatenprojektion, Norden oben, Osten links"
+                />
+                <figcaption class="caption">
+                  Orion · sieben Hauptsterne · Deklination +10° bis −10°<br />
+                  Schematische Projektion; keine Beobachtungsvorhersage. Daten: Sternliste Orion (Wikimedia, abgerufen
+                  31.10.2026), eigene Vektorzeichnung.
+                </figcaption>
+                <div class="star-key" aria-label="Sternnamen">
+                  <span>α Betelgeuse</span><span>β Rigel</span><span>γ Bellatrix</span><span>δ Mintaka</span
+                  ><span>ε Alnilam</span><span>ζ Alnitak</span><span>κ Saiph</span>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- Tarot Section -->
       <section id="tarot" class="page" aria-labelledby="tarot-title" hidden>
         <div class="container">
           <div class="section-header mb-8">
+            <p class="label">Tarot / Spiegel der Seele</p>
             <h1 id="tarot-title" class="page-title">Tarot — Der Spiegel der Seele</h1>
-            <p class="text-muted">78 Karten. Major & Minor Arcana. Ziehe deine Karte des Tages.</p>
+            <p class="text-muted">
+              78 Karten des Nachtatelier-Decks: 22 Große Arkana und vier Farben mit je 14 Karten. Jede Karte hat eigene
+              Stichwörter, eine Beschreibung ihrer Bildsprache und je eine Deutung für aufrecht und umgekehrt.
+            </p>
           </div>
 
           <div class="tarot-controls flex flex-wrap gap-3 mb-6">
             <button class="btn btn-primary" id="drawCardBtn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="4" width="20" height="16" rx="2" />
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="1" />
                 <path d="M6 4v16M18 4v16M10 4v16" />
               </svg>
               Karte ziehen
             </button>
             <button class="btn btn-secondary" id="drawThreeBtn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
                 <rect x="1" y="4" width="7" height="16" rx="1" />
                 <rect x="9" y="4" width="7" height="16" rx="1" />
                 <rect x="17" y="4" width="7" height="16" rx="1" />
               </svg>
               3-Karten-Legung
             </button>
-            <div class="flex-1"></div>
-            <select
-              class="select"
-              id="arcanaFilter"
-              aria-label="Tarot nach Arcana filtern"
-              style="width: auto; min-width: 180px"
-            >
-              <option value="all">Alle Arcana</option>
-              <option value="major">Nur Major Arcana</option>
-              <option value="minor">Nur Minor Arcana</option>
-              <option value="wands">Stäbe (Wands)</option>
-              <option value="cups">Kelche (Cups)</option>
-              <option value="swords">Schwerter (Swords)</option>
-              <option value="pentacles">Münzen (Pentacles)</option>
-            </select>
+            <div class="tarot-filter-row">
+              <div class="tarot-search">
+                <label class="sr-only" for="tarotSearch">Tarotkarten durchsuchen</label>
+                <input
+                  type="search"
+                  class="input"
+                  id="tarotSearch"
+                  placeholder="Karte oder Stichwort suchen …"
+                  autocomplete="off"
+                />
+              </div>
+              <select
+                class="select"
+                id="arcanaFilter"
+                aria-label="Tarot nach Arcana filtern"
+                style="width: auto; min-width: 180px"
+              >
+                <option value="all">Alle Arcana</option>
+                <option value="major">Nur Major Arcana</option>
+                <option value="minor">Nur Minor Arcana</option>
+                <option value="wands">Stäbe (Wands)</option>
+                <option value="cups">Kelche (Cups)</option>
+                <option value="swords">Schwerter (Swords)</option>
+                <option value="pentacles">Münzen (Pentacles)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="tarot-status">
+            <p class="tarot-result-count" id="tarotResultCount" role="status" aria-live="polite"></p>
+            <button type="button" class="tarot-reset" id="tarotResetFilters">Filter zurücksetzen</button>
           </div>
 
           <div class="grid grid-auto" id="tarotGrid" role="group" aria-label="Tarot-Karten"></div>
+          <p class="empty-state" id="tarotEmptyState" hidden></p>
 
           <!-- Drawn Card Display -->
           <div id="drawnCardContainer" class="mt-8" hidden>
-            <h2 class="mb-4">Deine Ziehung</h2>
+            <h2 class="mb-4 card-heading">Deine Ziehung</h2>
+            <p class="text-muted tarot-draw-note">
+              Die Legung vergibt keine festen Positionen: Lies die gezogenen Karten als Abfolge von Impulsen.
+            </p>
             <div class="grid grid-auto" id="drawnCards"></div>
           </div>
+
+          <p class="tarot-deck-note">
+            Symbolische, traditionelle Deutung — ein Angebot zum Nachdenken, keine Vorhersage und kein Heil- oder
+            Wirkversprechen. Deck: „Nachtatelier“, Motive nach gemeinfreien historischen Vorlagen.
+          </p>
         </div>
       </section>
 
@@ -190,6 +319,7 @@
         <div class="container">
           <div class="section-header flex flex-wrap justify-between items-end gap-4 mb-8">
             <div>
+              <p class="label">Kristalle / Material</p>
               <h1 id="crystals-title" class="page-title">Kristalle &amp; Steine</h1>
               <p class="text-muted">Kraft der Erde. Filter nach Chakra, Farbe, Wirkung.</p>
             </div>
@@ -241,20 +371,38 @@
           <div id="activeFilterBadges" class="flex flex-wrap gap-2 mb-4" style="display: none"></div>
 
           <div class="flex flex-wrap gap-3 mb-6">
-            <button class="btn btn-secondary" id="viewGridBtn" aria-label="Rasteransicht" aria-pressed="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <button class="btn btn-secondary btn-sm" id="viewGridBtn" aria-label="Rasteransicht" aria-pressed="true">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
                 <rect x="3" y="3" width="7" height="7" rx="1" />
                 <rect x="14" y="3" width="7" height="7" rx="1" />
                 <rect x="3" y="14" width="7" height="7" rx="1" />
                 <rect x="14" y="14" width="7" height="7" rx="1" />
               </svg>
+              Raster
             </button>
-            <button class="btn btn-ghost" id="viewListBtn" aria-label="Listenansicht" aria-pressed="false">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <button class="btn btn-ghost btn-sm" id="viewListBtn" aria-label="Listenansicht" aria-pressed="false">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <line x1="3" y1="12" x2="21" y2="12" />
                 <line x1="3" y1="18" x2="21" y2="18" />
               </svg>
+              Liste
             </button>
           </div>
 
@@ -266,42 +414,158 @@
       <section id="moon" class="page" aria-labelledby="moon-title" hidden>
         <div class="container">
           <div class="section-header mb-8">
-            <h1 id="moon-title" class="page-title">Mondphasen &amp; Rituale</h1>
-            <p class="text-muted">Lebendiger Mondkalender. Aktuelle Phase, Zyklus & passende Rituale.</p>
+            <p class="label">Mond / Zyklus</p>
+            <h1 id="moon-title" class="page-title">Mondphasen</h1>
+            <p class="text-muted">
+              Was gerade am Himmel steht, wann die nächste Hauptphase ist — und was die acht Phasen bedeuten.
+            </p>
           </div>
 
-          <div class="grid grid-2 gap-8 mb-8" style="grid-template-columns: 1fr 2fr">
-            <div class="card animate-slide-up" id="currentMoonCard">
-              <div class="moon-display" id="moonDisplay">
+          <p class="moon-error" id="moonError" role="alert" hidden>
+            Die Mondberechnung ist in diesem Browser fehlgeschlagen. Die übrige Seite funktioniert weiter; bitte lade
+            die Seite neu.
+          </p>
+
+          <section class="moon-today" aria-labelledby="moonPhaseName">
+            <div class="card moon-today-card">
+              <div class="moon-today-figure">
                 <div class="moon-svg-container" id="moonSvg"></div>
-                <div class="moon-info">
-                  <h2 id="moonPhaseName">Lade...</h2>
-                  <p id="moonIllumination">Beleuchtung: —%</p>
-                  <p id="moonDaysUntil">Nächste Phase in — Tagen</p>
-                </div>
+                <p class="moon-figure-caption" id="moonFigureCaption">Monddarstellung wird geladen …</p>
               </div>
-              <div class="card-footer">
-                <span class="badge badge-primary" id="moonZodiac">—</span>
-                <span class="text-muted text-sm" id="moonNextPhase">Nächste: —</span>
+              <div class="moon-today-text">
+                <p class="moon-eyebrow" id="moonNowStamp">Datum wird geladen …</p>
+                <h2 id="moonPhaseName" class="moon-phase-title">Lade …</h2>
+                <p id="moonIllumination" class="moon-illumination">Beleuchtung wird geladen …</p>
+                <dl class="moon-facts">
+                  <div class="moon-fact">
+                    <dt>Mondalter</dt>
+                    <dd id="moonAge">—</dd>
+                  </div>
+                  <div class="moon-fact">
+                    <dt>Im Zyklus</dt>
+                    <dd id="moonCyclePos">—</dd>
+                  </div>
+                  <div class="moon-fact">
+                    <dt>Nächstes Ereignis</dt>
+                    <dd id="moonDaysUntil">—</dd>
+                  </div>
+                </dl>
+                <p class="moon-next" id="moonNextPhase">—</p>
+                <p class="moon-note">
+                  Berechnet im Browser nach Meeus, Kap. 48–49. Zeiten in <span id="moonTzLabel">Europe/Berlin</span>,
+                  Genauigkeit etwa ±1 Minute. Keine Standortdaten nötig.
+                </p>
               </div>
             </div>
+          </section>
 
-            <div class="card animate-slide-up stagger-1">
-              <h2 class="mb-4 card-heading">Monatsübersicht</h2>
-              <div class="moon-calendar" id="moonCalendar" role="group" aria-label="Mondkalender"></div>
+          <section class="moon-block" aria-labelledby="moonTimelineTitle">
+            <h2 class="moon-block-title" id="moonTimelineTitle">Die vier Hauptphasen im Verlauf</h2>
+            <p class="moon-block-intro">
+              Ein Zyklus dauert im Mittel 29,53 Tage. Die vier Hauptphasen teilen ihn in Viertel — ihre Abstände
+              schwanken aber um mehrere Stunden, weil die Mondbahn elliptisch ist.
+            </p>
+            <ol class="moon-timeline" id="moonTimeline"></ol>
+          </section>
+
+          <section class="moon-block" aria-labelledby="moonCalendarTitle">
+            <div class="moon-block-head">
+              <h2 class="moon-block-title" id="moonCalendarTitle">Monatskalender</h2>
+              <div class="moon-calendar-controls">
+                <button
+                  type="button"
+                  class="btn btn-ghost moon-cal-btn"
+                  id="moonPrevMonth"
+                  aria-label="Vorheriger Monat"
+                >
+                  ‹
+                </button>
+                <button type="button" class="btn btn-secondary moon-cal-btn" id="moonTodayBtn">Heute</button>
+                <button type="button" class="btn btn-ghost moon-cal-btn" id="moonNextMonth" aria-label="Nächster Monat">
+                  ›
+                </button>
+              </div>
             </div>
-          </div>
+            <p class="moon-calendar-label" id="moonCalendarLabel" aria-live="polite">—</p>
+            <div class="moon-calendar-layout">
+              <div class="moon-calendar-main">
+                <div class="moon-calendar" id="moonCalendar" role="group" aria-labelledby="moonCalendarTitle"></div>
+                <ul class="moon-legend" id="moonLegend" aria-label="Legende"></ul>
+              </div>
+              <div class="moon-day-detail" id="moonDayDetail" aria-live="polite"></div>
+            </div>
+          </section>
 
-          <div class="card animate-slide-up stagger-2">
-            <h2 class="mb-4 card-heading">Rituale für die aktuelle Phase</h2>
-            <div id="moonRituals" class="grid grid-auto"></div>
-          </div>
+          <section class="moon-block" aria-labelledby="moonPhasesTitle">
+            <h2 class="moon-block-title" id="moonPhasesTitle">Die acht Phasen verstehen</h2>
+            <p class="moon-block-intro">
+              Die vier Hauptphasen sind exakte Zeitpunkte. Sichel und Gibbous beschreiben die Bögen dazwischen — deshalb
+              kann ein Tag kurz nach dem Viertel schon als zunehmender Mond erscheinen. Die Zahlen sind berechnet; die
+              Deutungssätze darunter sind ausdrücklich als Deutung gekennzeichnet.
+            </p>
+            <div class="moon-phase-grid" id="moonPhaseGrid"></div>
+            <div class="moon-deepdive" id="moonDeepDive"></div>
+          </section>
 
-          <div class="flex gap-3 mt-6">
-            <button id="icalBtn" class="btn btn-secondary" aria-label="Mondkalender als iCal exportieren">
-              📅 iCal-Export (12 Monate)
-            </button>
-          </div>
+          <section class="moon-block moon-culture" aria-labelledby="moonCultureTitle">
+            <p class="moon-mode-label">Deutung · kulturell &amp; astrologisch — keine Messwerte</p>
+            <h2 class="moon-block-title" id="moonCultureTitle">Was Menschen in die Phasen gelesen haben</h2>
+            <p class="moon-block-intro">
+              Die Astronomie sagt, wie hell der Mond ist. Was er bedeuten soll, ist eine Überlieferung — hier steht
+              beides getrennt.
+            </p>
+            <div class="moon-culture-grid">
+              <div class="card moon-culture-card">
+                <h3 class="moon-subtitle">Reflexionsideen für die aktuelle Phase</h3>
+                <div id="moonRituals" class="moon-rituals"></div>
+              </div>
+              <div class="card moon-culture-card">
+                <h3 class="moon-subtitle">Deutung der aktuellen Phase</h3>
+                <p class="moon-culture-now" id="moonCultureNow">—</p>
+              </div>
+            </div>
+            <div class="moon-deepdive" id="moonCultureDive"></div>
+          </section>
+
+          <section class="moon-block moon-sources" aria-labelledby="moonSourcesTitle">
+            <h2 class="moon-block-title" id="moonSourcesTitle">Woher die Zahlen kommen</h2>
+            <ul class="moon-source-list" id="moonSourceList"></ul>
+            <p class="moon-limits">
+              <strong>Bewusst nicht enthalten:</strong> Mondauf- und -untergang (ohne Standort nicht berechenbar),
+              Mondzeichen (keine geprüfte Ephemeride im Projekt) und Finsternisse (eigene Rechnung über Knotenlage). Es
+              werden keine Standort- oder Gesundheitsdaten abgefragt.
+            </p>
+            <div class="moon-actions">
+              <button
+                id="icalBtn"
+                class="btn btn-secondary"
+                aria-label="Mondphasen der nächsten zwölf Monate als iCal-Datei herunterladen"
+              >
+                iCal-Export (12 Monate)
+              </button>
+              <p class="moon-ics-note" id="icalStatus" role="status"></p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Astrologie Section: one page, sub-routes are rendered by js/modules/astrologie.js -->
+      <section id="astrologie" class="page" aria-label="Astrologie" hidden>
+        <div class="container">
+          <noscript>
+            <div class="astro-callout astro-callout--limit">
+              <p>
+                <strong>Der Astrologiebereich braucht JavaScript.</strong> Die Inhalte liegen als lokale Datendatei im
+                Projekt und werden im Browser gerendert — es wird nichts nachgeladen und nichts übertragen.
+              </p>
+              <p>
+                Kurzfassung ohne Skript: Der Bereich erklärt die zwölf tropischen Tierkreiszeichen, zehn Faktoren, zwölf
+                Häuser und fünf Hauptaspekte der westlichen Astrologie, mit Glossar, FAQ und Quellenverzeichnis. Er
+                rechnet nichts und erhebt keine Geburtsdaten.
+              </p>
+            </div>
+          </noscript>
+          <div id="astrologieRoot" class="astro-root"></div>
         </div>
       </section>
 
@@ -309,19 +573,36 @@
       <section id="runes" class="page" aria-labelledby="runes-title" hidden>
         <div class="container">
           <div class="section-header mb-8">
+            <p class="label">Runen / Älteres Futhark</p>
             <h1 id="runes-title" class="page-title">Runen — Das ältere Futhark</h1>
             <p class="text-muted">24 Runen. Werfe die Runen für Antworten aus der Tiefe der Zeit.</p>
           </div>
 
           <div class="runes-controls flex flex-wrap gap-3 mb-6">
             <button class="btn btn-primary" id="castRunesBtn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
                 <path d="M12 2v20M17 5H7" />
               </svg>
               3 Runen werfen (Vergangenheit, Gegenwart, Zukunft)
             </button>
             <button class="btn btn-secondary" id="castSingleRuneBtn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 8v8M8 12h8" />
               </svg>
@@ -330,15 +611,15 @@
           </div>
 
           <div id="runeCastResult" class="mb-8" hidden>
-            <h2 class="mb-4">Deine Runen</h2>
+            <h2 class="mb-4 card-heading">Deine Runen</h2>
             <div class="grid grid-3 gap-6" id="castRunes"></div>
             <div class="mt-6" id="runeInterpretation"></div>
           </div>
 
-          <h2 class="mb-4">Alle Runen des älteren Futhark</h2>
+          <h2 class="mb-4 card-heading">Alle Runen des älteren Futhark</h2>
           <div class="grid grid-auto" id="runeGrid" role="group" aria-label="Runen"></div>
 
-          <div id="runesHistory" style="margin-top: var(--space-6)" aria-label="Wurf-Historie"></div>
+          <div id="runesHistory" class="mt-6" aria-label="Wurf-Historie"></div>
         </div>
       </section>
 
@@ -346,8 +627,9 @@
       <section id="blog" class="page" aria-labelledby="blog-title" hidden>
         <div class="container">
           <div class="section-header mb-8">
+            <p class="label">Wissen / Artikel</p>
             <h1 id="blog-title" class="page-title">Wissen &amp; Artikel</h1>
-            <p class="text-muted">Tiefgehende Artikel zu Esoterik, Spiritualität & alter Weisheit.</p>
+            <p class="text-muted">Tiefgehende Artikel zu Esoterik, Spiritualität &amp; alter Weisheit.</p>
           </div>
 
           <div class="flex flex-wrap gap-3 mb-6">
@@ -407,6 +689,7 @@
         <div class="footer-column">
           <h2>Wissen</h2>
           <ul class="footer-links">
+            <li><a href="#astrologie">Astrologie-Bereich</a></li>
             <li><a href="#blog">Artikel-Archiv</a></li>
             <li><a href="#blog/6">Einsteiger-Guide</a></li>
           </ul>
@@ -417,12 +700,13 @@
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>
             <li><a href="haftung.html">Haftungsausschluss</a></li>
+            <li><a href="impressum.html#bildnachweise">Bild- &amp; Schriftennachweise</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
+        <p>© 2025 Esoterik-Welt — Statische Website, keine Tracker, keine Cookies.</p>
         <p>
-          © 2025 Esoterik-Welt — Statische Website, keine Tracker, keine Cookies.
           <a href="https://github.com/ingbms/Esoterik-Welt" target="_blank" rel="noopener">Open Source auf GitHub</a>
         </p>
       </div>

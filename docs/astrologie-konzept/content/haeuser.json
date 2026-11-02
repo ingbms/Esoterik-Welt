@@ -1,0 +1,608 @@
+{
+  "dataset": "haeuser",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Zwölf Häuser der westlichen Astrologie als Lebensfelder. Häuser hängen von Geburtszeit und Ort ab; die hier beschriebenen Zuordnungen sind Deutungstradition und keine Tatsachenbehauptungen über reale Personen. Die Hausspitzen verschieben sich je nach Häusersystem.",
+  "items": [
+    {
+      "id": "haus-1",
+      "slug": "erstes-haus",
+      "name": "1. Haus",
+      "short": "Das erste Haus beginnt am Aszendenten und beschreibt traditionell Auftreten, Körperbezug, Selbstdarstellung und die Art, wie jemand in Situationen eintritt.",
+      "long": "Das erste Haus liegt am östlichen Horizont und beginnt in vielen Häusersystemen am Aszendenten. Es ist ein Winkelhaus und wird traditionell mit Identität, physischer Erscheinung, Temperament und der unmittelbaren Art des Auftretens verbunden [S10][S22]. Seine Lage am Horizont macht es zu einem der sensibelsten Bereiche für die Geburtszeit: Schon wenige Minuten können den Aszendenten und damit die Hausspitze verschieben.\n\nDeutung: Das erste Haus beschreibt keine fertige Persönlichkeit. Es zeigt eine Eintrittspforte: Wie beginnt jemand ein Gespräch, wie reagiert er auf einen Raum, wie zeigt sie sich, bevor sie sich erklärt? Zeichen und Planeten an der Hausspitze färben diese erste Bewegung. Ein besetztes erstes Haus kann Themen sichtbar machen, die andere sofort wahrnehmen; ein leeres erstes Haus ist keine Leerstelle, weil der Herrscher des Aszendenten weiterhin bedeutsam bleibt [S12].\n\nGrenze: Aussagen über Körper und Gesundheit sind hier Tradition und keine medizinische Diagnose. Das erste Haus ist kein Krankheitsbild und keine Charakterdiagnose.",
+      "keywords": [
+        "Aszendent",
+        "Auftreten",
+        "Identität",
+        "Winkelhaus",
+        "erster Eindruck"
+      ],
+      "sources": [
+        "S10",
+        "S22",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c09",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-widder",
+        "faktor-mars",
+        "grund-aszendent-mc",
+        "grund-haeuser-systeme"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Hausdeutung ist Traditionsmaterial; die Abhängigkeit von Zeit und Ort ist eine Konvention der Berechnung."
+      },
+      "number": 1,
+      "natural_sign": "zeichen-widder",
+      "angularity": "winkelhaus",
+      "hemisphere": "unter_dem_horizont",
+      "themes": [
+        "Auftreten",
+        "Körperbezug",
+        "Selbstwahrnehmung",
+        "Anfang",
+        "erster Eindruck"
+      ],
+      "questions": [
+        "Wie trete ich in einen Raum, bevor ich spreche?",
+        "Was zeigen andere an mir, das ich selbst nicht sehe?",
+        "Wo verwechsle ich Schutz mit Maske?"
+      ],
+      "caution": "Keine medizinischen oder charakterdiagnostischen Aussagen. Die Hausspitze ist zeitabhängig und systemabhängig."
+    },
+    {
+      "id": "haus-2",
+      "slug": "zweites-haus",
+      "name": "2. Haus",
+      "short": "Das zweite Haus beschreibt traditionell Ressourcen, Werte, Besitz und die Frage, was jemand als das Seine betrachtet und wovon er lebt.",
+      "long": "Das zweite Haus folgt auf den Aszendenten und ist ein Sukzedentenhaus. Es wird traditionell mit materiellen und immateriellen Ressourcen verbunden: Geld, Besitz, Nahrung, Fähigkeiten, Selbstwert und das, was jemand als Sicherheit erlebt [S10]. Der natürliche Bezug zum Stier und zur Venus ist eine Analogie, keine automatische Gleichsetzung.\n\nDeutung: Das zweite Haus fragt nicht nur, was jemand hat, sondern wie er Wert bildet und was er bereit ist zu investieren. Ein betontes zweites Haus kann Ressourcenbewusstsein oder Besorgnis um Sicherheit zeigen; ein Planet dort kann die Art beschreiben, wie Werte erworben, gehalten oder geteilt werden. Die Hausbesetzung ist dabei nur ein Faktor neben Zeichen, Aspekten und Herrscher.\n\nGrenze: Finanzielle Aussagen sind hier keine Beratung. Das zweite Haus beschreibt eine symbolische Beziehung zu Ressourcen, keine Prognose über Einkommen, Vermögen oder Kreditwürdigkeit.",
+      "keywords": [
+        "Ressourcen",
+        "Werte",
+        "Besitz",
+        "Selbstwert",
+        "Sicherheit"
+      ],
+      "sources": [
+        "S10",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-stier",
+        "faktor-venus",
+        "haus-8"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Ressourcen und Werten ist Tradition; keine Finanz- oder Rechtsberatung."
+      },
+      "number": 2,
+      "natural_sign": "zeichen-stier",
+      "angularity": "sukzedentenhaus",
+      "hemisphere": "unter_dem_horizont",
+      "themes": [
+        "Geld",
+        "Besitz",
+        "Fähigkeiten",
+        "Selbstwert",
+        "Sicherheit"
+      ],
+      "questions": [
+        "Was bedeutet mir Sicherheit wirklich?",
+        "Welche Fähigkeit ist mir selbstverständlich geworden?",
+        "Wo verwechsle ich Wert mit Preis?"
+      ],
+      "caution": "Keine Finanz-, Anlage- oder Schuldenberatung. Symbolische Ressourcenfrage, keine Prognose."
+    },
+    {
+      "id": "haus-3",
+      "slug": "drittes-haus",
+      "name": "3. Haus",
+      "short": "Das dritte Haus beschreibt traditionell Kommunikation, Lernen, Nachbarschaft, Geschwister und den alltäglichen Austausch von Informationen.",
+      "long": "Das dritte Haus ist ein Kadentenhaus und wird traditionell mit kurzen Wegen, Nachrichten, Sprache, frühem Lernen, Geschwistern und der nahen Umgebung verbunden [S10]. Es steht in Analogie zu Zwillingen und Merkur: Wahrnehmung, Vergleich und Vermittlung.\n\nDeutung: Das dritte Haus fragt, wie jemand Informationen aufnimmt, ordnet und weitergibt. Ein betontes drittes Haus kann Neugier, viel Kommunikation oder eine lebhafte innere Stimme zeigen. Ein Planet dort kann die Art des Lernens oder Sprechens prägen. Es geht weniger um tiefe Überzeugungen als um den täglichen Verkehr mit Zeichen, Worten und Menschen in der Nähe.\n\nGrenze: Das Haus beschreibt keine Intelligenz und keine Sprachbegabung im messbaren Sinn. Es ist ein symbolisches Feld für Austausch und Lernen.",
+      "keywords": [
+        "Kommunikation",
+        "Lernen",
+        "Nachbarschaft",
+        "Geschwister",
+        "Alltag"
+      ],
+      "sources": [
+        "S10",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-zwillinge",
+        "faktor-merkur",
+        "haus-9"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Kommunikation und Lernen ist Tradition, keine Messung von Intelligenz."
+      },
+      "number": 3,
+      "natural_sign": "zeichen-zwillinge",
+      "angularity": "kadentenhaus",
+      "hemisphere": "unter_dem_horizont",
+      "themes": [
+        "Sprache",
+        "Lernen",
+        "Nachbarschaft",
+        "Geschwister",
+        "Information"
+      ],
+      "questions": [
+        "Wie spreche ich mit mir selbst?",
+        "Welche Informationen suche ich, und welche meide ich?",
+        "Wo ist Schweigen die klarere Antwort?"
+      ],
+      "caution": "Keine Aussage über Intelligenz oder Sprachfähigkeit; Hausdeutung ist symbolisch."
+    },
+    {
+      "id": "haus-4",
+      "slug": "viertes-haus",
+      "name": "4. Haus",
+      "short": "Das vierte Haus liegt am unteren Himmel und beschreibt traditionell Herkunft, Familie, Wohnen, inneres Fundament und das, was jemand als Zuhause erlebt.",
+      "long": "Das vierte Haus beginnt am IC, dem unteren Meridianpunkt. Es ist ein Winkelhaus und wird traditionell mit Herkunft, Elternhaus, Wurzeln, Wohnen, seelischem Fundament und dem Ende von Angelegenheiten verbunden [S10]. Die Analogie zu Krebs und Mond betont Schutz, Erinnerung und Zugehörigkeit.\n\nDeutung: Das vierte Haus beschreibt nicht nur die reale Familie, sondern die innere Struktur, von der aus jemand Sicherheit entwickelt. Ein betontes viertes Haus kann eine starke Bindung an Herkunft oder eine intensive Auseinandersetzung mit ihr zeigen. Ein Planet dort kann die Art beschreiben, wie jemand sich einrichtet, was er als privat schützt und wo er sich zu Hause fühlt.\n\nGrenze: Aussagen über Familie sind keine Aussagen über reale Angehörige. Das Haus beschreibt eine Perspektive auf Herkunft und Zugehörigkeit, keine Tatsachen über andere Menschen.",
+      "keywords": [
+        "Herkunft",
+        "Familie",
+        "Zuhause",
+        "Fundament",
+        "IC"
+      ],
+      "sources": [
+        "S10",
+        "S12",
+        "S23"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c09",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-krebs",
+        "faktor-mond",
+        "haus-10",
+        "grund-aszendent-mc"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Herkunft und Zuhause ist Tradition; keine Aussagen über reale Familienmitglieder."
+      },
+      "number": 4,
+      "natural_sign": "zeichen-krebs",
+      "angularity": "winkelhaus",
+      "hemisphere": "unter_dem_horizont",
+      "themes": [
+        "Herkunft",
+        "Familie",
+        "Wohnen",
+        "Geborgenheit",
+        "inneres Fundament"
+      ],
+      "questions": [
+        "Was bedeutet Zuhause für mich, unabhängig von einem Ort?",
+        "Welche Geschichte meiner Herkunft trage ich weiter?",
+        "Wo brauche ich Rückzug, um wieder Boden zu finden?"
+      ],
+      "caution": "Keine Aussagen über reale Familienmitglieder oder Kindheitsdiagnosen."
+    },
+    {
+      "id": "haus-5",
+      "slug": "fuenftes-haus",
+      "name": "5. Haus",
+      "short": "Das fünfte Haus beschreibt traditionell Kreativität, Spiel, Selbstausdruck, Liebe und die Freude am Hervorbringen.",
+      "long": "Das fünfte Haus ist ein Sukzedentenhaus und wird traditionell mit Vergnügen, Spiel, Kreativität, Romantik, Kindern und dem Wunsch verbunden, etwas Eigenes in die Welt zu bringen [S10]. Die Analogie zu Löwe und Sonne betont Gestaltung, Herz und Sichtbarkeit.\n\nDeutung: Das fünfte Haus fragt, was jemand aus Freude tut, nicht aus Pflicht. Ein betontes fünftes Haus kann Gestaltungswillen, Spiellust oder den Wunsch nach Anerkennung zeigen. Ein Planet dort kann die Art beschreiben, wie jemand liebt, gestaltet oder sich zeigt. Es geht auch um Risiko und darum, sich mit einem Ergebnis zu identifizieren.\n\nGrenze: Das Haus ist keine Aussage über Fruchtbarkeit, Kinderzahl oder sexuelle Orientierung. Es beschreibt eine symbolische Ebene von Kreativität und Freude.",
+      "keywords": [
+        "Kreativität",
+        "Spiel",
+        "Liebe",
+        "Selbstausdruck",
+        "Freude"
+      ],
+      "sources": [
+        "S10",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-loewe",
+        "faktor-sonne",
+        "haus-11"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Kreativität und Freude ist Tradition; keine Aussagen zu Fruchtbarkeit oder realen Kindern."
+      },
+      "number": 5,
+      "natural_sign": "zeichen-loewe",
+      "angularity": "sukzedentenhaus",
+      "hemisphere": "unter_dem_horizont",
+      "themes": [
+        "Kreativität",
+        "Spiel",
+        "Romantik",
+        "Selbstausdruck",
+        "Risiko"
+      ],
+      "questions": [
+        "Was tue ich aus Freude, ohne es rechtfertigen zu müssen?",
+        "Wo verwechsle ich Beifall mit Nähe?",
+        "Welches Risiko wäre es wert?"
+      ],
+      "caution": "Keine Aussagen zu Fruchtbarkeit, Kinderwunsch oder sexueller Orientierung."
+    },
+    {
+      "id": "haus-6",
+      "slug": "sechstes-haus",
+      "name": "6. Haus",
+      "short": "Das sechste Haus beschreibt traditionell Arbeit, Alltag, Routinen, Dienst und die Frage, wie jemand für sich und andere sorgt.",
+      "long": "Das sechste Haus ist ein Kadentenhaus und wird traditionell mit täglicher Arbeit, Pflichten, Handwerk, Dienst, Gesundheit und den kleinen Wiederholungen des Lebens verbunden [S10]. Die Analogie zu Jungfrau und Merkur betont Unterscheidung, Methode und Verbesserung.\n\nDeutung: Das sechste Haus fragt, wie jemand seinen Alltag organisiert und welche Rolle Arbeit, Routine und Nützlichkeit spielen. Ein betontes sechstes Haus kann Sorgfalt, Dienstbereitschaft oder ein starkes Pflichtgefühl zeigen. Ein Planet dort kann die Art beschreiben, wie jemand Aufgaben angeht, Grenzen zieht oder sich um Körper und Umgebung kümmert.\n\nGrenze: Das Haus ist keine medizinische Diagnose. Aussagen über Gesundheit sind hier als Alltagssymbolik zu lesen, nicht als Befund, Therapie oder Prognose.",
+      "keywords": [
+        "Arbeit",
+        "Alltag",
+        "Routine",
+        "Dienst",
+        "Sorgfalt"
+      ],
+      "sources": [
+        "S10",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-jungfrau",
+        "faktor-merkur",
+        "haus-12"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Arbeit und Alltag ist Tradition; ausdrücklich keine medizinischen Aussagen."
+      },
+      "number": 6,
+      "natural_sign": "zeichen-jungfrau",
+      "angularity": "kadentenhaus",
+      "hemisphere": "unter_dem_horizont",
+      "themes": [
+        "Arbeit",
+        "Routine",
+        "Dienst",
+        "Handwerk",
+        "Selbstfürsorge"
+      ],
+      "questions": [
+        "Welche Routine trägt mich, und welche erschöpft mich?",
+        "Wem diene ich, und wem sollte ich nicht dienen?",
+        "Wo ist Perfektion eine Ausrede?"
+      ],
+      "caution": "Keine medizinische Diagnose, Therapie oder Gesundheitsprognose. Nur Alltagssymbolik."
+    },
+    {
+      "id": "haus-7",
+      "slug": "siebtes-haus",
+      "name": "7. Haus",
+      "short": "Das siebte Haus beginnt am Deszendenten und beschreibt traditionell Partnerschaft, Verträge, offene Gegner und die Erfahrung, sich im Anderen zu spiegeln.",
+      "long": "Das siebte Haus liegt am westlichen Horizont gegenüber dem Aszendenten. Es ist ein Winkelhaus und wird traditionell mit Ehe, Partnerschaft, Geschäftspartnern, Verträgen und offenen Gegnern verbunden [S10][S22]. Die Analogie zu Waage und Venus betont Abwägung, Beziehung und Fairness.\n\nDeutung: Das siebte Haus beschreibt nicht, wen jemand heiratet, sondern wie jemand Beziehung gestaltet und was er im Anderen sucht oder abwehrt. Ein betontes siebtes Haus kann Beziehungsorientierung, Verhandlungsbereitschaft oder eine starke Fixierung auf das Gegenüber zeigen. Ein Planet dort kann die Art beschreiben, wie Nähe, Vertrag und Konflikt ausgehandelt werden.\n\nGrenze: Das Haus ist keine Aussage über konkrete Partner oder Trennungen. Es beschreibt eine symbolische Beziehungsachse, keine Ereignisvorhersage.",
+      "keywords": [
+        "Partnerschaft",
+        "Vertrag",
+        "Beziehung",
+        "Spiegel",
+        "Deszendent"
+      ],
+      "sources": [
+        "S10",
+        "S22",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c09",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-waage",
+        "faktor-venus",
+        "haus-1"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Partnerschaft ist Tradition; keine Aussagen über reale Partner oder Beziehungsverläufe."
+      },
+      "number": 7,
+      "natural_sign": "zeichen-waage",
+      "angularity": "winkelhaus",
+      "hemisphere": "ueber_dem_horizont",
+      "themes": [
+        "Partnerschaft",
+        "Vertrag",
+        "Nähe",
+        "Konflikt",
+        "Spiegelung"
+      ],
+      "questions": [
+        "Was suche ich im Anderen, das ich selbst nicht zeige?",
+        "Wo sage ich ja, obwohl ich nein meine?",
+        "Welche Konflikte gehören wirklich mir?"
+      ],
+      "caution": "Keine Aussagen über konkrete Partnerwahl, Trennung oder Ehe. Symbolische Beziehungsachse."
+    },
+    {
+      "id": "haus-8",
+      "slug": "achtes-haus",
+      "name": "8. Haus",
+      "short": "Das achte Haus beschreibt traditionell geteilte Ressourcen, Intimität, Verlust, Erbe, Macht und Prozesse der Transformation.",
+      "long": "Das achte Haus ist ein Sukzedentenhaus und wird traditionell mit gemeinsamem Besitz, Schulden, Erbe, Intimität, Krisen, Verlust und dem Umgang mit Macht verbunden [S10]. Die Analogie zu Skorpion und den Herrschern Mars (traditionell) und Pluto (modern) betont Tiefe, Bindung und Grenzüberschreitung.\n\nDeutung: Das achte Haus fragt, was jemand teilt und was er zurückhält, wie er mit Abhängigkeit und Kontrolle umgeht und was geschieht, wenn Sicherheiten wegbrechen. Ein betontes achtes Haus kann Intensität, Krisenfestigkeit oder ein starkes Bedürfnis nach Kontrolle zeigen. Ein Planet dort kann die Art beschreiben, wie jemand Verlust, Nähe und gemeinsame Ressourcen verarbeitet.\n\nGrenze: Das Haus ist kein Todesurteil und keine Aussage über Erbschaften oder Krankheiten. Die populäre Gleichsetzung mit Tod ist eine Verkürzung; tradiert ist ein Feld von Bindung, Verlust und Wandlung.",
+      "keywords": [
+        "Intimität",
+        "Verlust",
+        "Erbe",
+        "Macht",
+        "Transformation"
+      ],
+      "sources": [
+        "S10",
+        "S12",
+        "S20"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-skorpion",
+        "faktor-pluto",
+        "haus-2"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Intimität und Wandlung ist Tradition; keine Todes-, Erb- oder Krankheitsprognose."
+      },
+      "number": 8,
+      "natural_sign": "zeichen-skorpion",
+      "angularity": "sukzedentenhaus",
+      "hemisphere": "ueber_dem_horizont",
+      "themes": [
+        "Intimität",
+        "geteilte Ressourcen",
+        "Verlust",
+        "Macht",
+        "Wandlung"
+      ],
+      "questions": [
+        "Was halte ich zurück, um nicht verletzlich zu sein?",
+        "Wem vertraue ich, und warum?",
+        "Was bedeutet Teilen für mich?"
+      ],
+      "caution": "Keine Aussagen zu Tod, Erbe, Krankheit oder finanziellen Verlusten."
+    },
+    {
+      "id": "haus-9",
+      "slug": "neuntes-haus",
+      "name": "9. Haus",
+      "short": "Das neunte Haus beschreibt traditionell Sinnfragen, höhere Bildung, Fernreisen, Recht, Glauben und die Suche nach Orientierung.",
+      "long": "Das neunte Haus ist ein Kadentenhaus und wird traditionell mit Fernreisen, höherer Bildung, Philosophie, Religion, Recht und der Frage nach dem großen Zusammenhang verbunden [S10]. Die Analogie zu Schütze und Jupiter betont Weite, Überzeugung und Sinnsuche.\n\nDeutung: Das neunte Haus fragt, woran jemand glaubt und wie er sich orientiert, wenn die naheliegenden Antworten nicht reichen. Ein betontes neuntes Haus kann Lernfreude, Reiselust oder eine starke Überzeugung zeigen. Ein Planet dort kann die Art beschreiben, wie jemand Sinn konstruiert, Autoritäten prüft oder Grenzen überschreitet.\n\nGrenze: Das Haus ist keine Aussage über den Wahrheitsgehalt einer Weltanschauung. Es beschreibt eine symbolische Suchbewegung, keine religiöse oder rechtliche Wahrheit.",
+      "keywords": [
+        "Sinn",
+        "Bildung",
+        "Reise",
+        "Glauben",
+        "Orientierung"
+      ],
+      "sources": [
+        "S10",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-schuetze",
+        "faktor-jupiter",
+        "haus-3"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Sinn und Bildung ist Tradition; keine Aussage über Wahrheit oder religiöse Verbindlichkeit."
+      },
+      "number": 9,
+      "natural_sign": "zeichen-schuetze",
+      "angularity": "kadentenhaus",
+      "hemisphere": "ueber_dem_horizont",
+      "themes": [
+        "Sinn",
+        "höhere Bildung",
+        "Fernreise",
+        "Recht",
+        "Glauben"
+      ],
+      "questions": [
+        "Woran glaube ich, wenn ich es nicht beweisen kann?",
+        "Welche Überzeugung habe ich von anderen übernommen?",
+        "Was lerne ich, wenn ich meinen Horizont verschiebe?"
+      ],
+      "caution": "Keine religiöse, rechtliche oder weltanschauliche Wahrheitsaussage."
+    },
+    {
+      "id": "haus-10",
+      "slug": "zehntes-haus",
+      "name": "10. Haus",
+      "short": "Das zehnte Haus beginnt am MC und beschreibt traditionell Beruf, öffentliche Rolle, Verantwortung und das Bild, das andere von jemandem haben.",
+      "long": "Das zehnte Haus beginnt am MC, dem oberen Meridianpunkt. Es ist ein Winkelhaus und wird traditionell mit Beruf, öffentlicher Stellung, Autorität, Verantwortung und dem Ruf einer Person verbunden [S10][S23]. Die Analogie zu Steinbock und Saturn betont Struktur, Zeit und Leistung.\n\nDeutung: Das zehnte Haus beschreibt nicht, welchen Beruf jemand ausübt, sondern wie er öffentlich wirken und welche Verantwortung er tragen will. Ein betontes zehntes Haus kann Karriereorientierung, Sichtbarkeit oder eine starke Beziehung zu Autorität zeigen. Ein Planet dort kann die Art beschreiben, wie jemand Verantwortung übernimmt, sich präsentiert oder mit Erwartungen umgeht.\n\nGrenze: Das Haus ist keine Berufs- oder Erfolgsprognose. Es beschreibt eine symbolische Achse von öffentlicher Rolle und innerem Fundament, nicht ein messbares Karriereergebnis.",
+      "keywords": [
+        "Beruf",
+        "öffentliche Rolle",
+        "Verantwortung",
+        "MC",
+        "Ruf"
+      ],
+      "sources": [
+        "S10",
+        "S23",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c09",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-steinbock",
+        "faktor-saturn",
+        "haus-4",
+        "grund-aszendent-mc"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Beruf und öffentlicher Rolle ist Tradition; keine Karriere- oder Erfolgsprognose."
+      },
+      "number": 10,
+      "natural_sign": "zeichen-steinbock",
+      "angularity": "winkelhaus",
+      "hemisphere": "ueber_dem_horizont",
+      "themes": [
+        "Beruf",
+        "öffentliche Rolle",
+        "Autorität",
+        "Verantwortung",
+        "Ruf"
+      ],
+      "questions": [
+        "Wofür will ich öffentlich einstehen?",
+        "Welche Erwartung habe ich an Erfolg?",
+        "Wer definiert, was gute Arbeit ist?"
+      ],
+      "caution": "Keine Berufs-, Einkommens- oder Erfolgsprognose."
+    },
+    {
+      "id": "haus-11",
+      "slug": "elftes-haus",
+      "name": "11. Haus",
+      "short": "Das elfte Haus beschreibt traditionell Freundschaften, Netzwerke, Gruppen, Zukunftsideen und die Frage, wozu jemand gehören will.",
+      "long": "Das elfte Haus ist ein Sukzedentenhaus und wird traditionell mit Freundschaft, Gemeinschaft, Förderern, Netzwerken, Hoffnungen und kollektiven Zielen verbunden [S10]. Die Analogie zu Wassermann und den Herrschern Saturn (traditionell) und Uranus (modern) betont Eigenständigkeit und Systemblick.\n\nDeutung: Das elfte Haus fragt, welche Gemeinschaft jemand sucht und welche Rolle er in ihr spielt. Ein betontes elftes Haus kann Netzwerkorientierung, Idealismus oder eine starke Bindung an Gruppen zeigen. Ein Planet dort kann die Art beschreiben, wie jemand Freundschaft versteht, Ziele teilt oder Distanz und Nähe in Gruppen reguliert.\n\nGrenze: Das Haus ist keine Aussage über die Anzahl oder Qualität realer Freundschaften. Es beschreibt eine symbolische Ebene von Zugehörigkeit und Zukunft.",
+      "keywords": [
+        "Freundschaft",
+        "Netzwerk",
+        "Gruppe",
+        "Zukunft",
+        "Zugehörigkeit"
+      ],
+      "sources": [
+        "S10",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-wassermann",
+        "faktor-uranus",
+        "haus-5"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Freundschaft und Netzwerk ist Tradition; keine Aussage über reale soziale Beziehungen."
+      },
+      "number": 11,
+      "natural_sign": "zeichen-wassermann",
+      "angularity": "sukzedentenhaus",
+      "hemisphere": "ueber_dem_horizont",
+      "themes": [
+        "Freundschaft",
+        "Netzwerk",
+        "Gruppe",
+        "Hoffnung",
+        "Zukunft"
+      ],
+      "questions": [
+        "Welcher Gruppe gehöre ich an, und warum?",
+        "Wo bin ich Teil eines Netzwerks, das mich nicht trägt?",
+        "Was hoffe ich für die Zukunft, und was tue ich dafür?"
+      ],
+      "caution": "Keine Aussage über reale Freundschaften, Mitgliedschaften oder soziale Prognosen."
+    },
+    {
+      "id": "haus-12",
+      "slug": "zwoelftes-haus",
+      "name": "12. Haus",
+      "short": "Das zwölfte Haus beschreibt traditionell Rückzug, Unbewusstes, Auflösung, Abgeschiedenheit und das, was sich der direkten Kontrolle entzieht.",
+      "long": "Das zwölfte Haus ist ein Kadentenhaus und wird traditionell mit Rückzug, Einsamkeit, Traum, Unbewusstem, verborgenen Dingen, Gefangenschaft und Auflösung verbunden [S10]. Die Analogie zu Fische und den Herrschern Jupiter (traditionell) und Neptun (modern) betont Durchlässigkeit und Grenzüberschreitung.\n\nDeutung: Das zwölfte Haus fragt, was jemand zurückzieht, was er nicht zeigen kann oder will und wo er sich selbst im Weg steht. Ein betontes zwölftes Haus kann Rückzugsbedarf, eine reiche Innenwelt oder ein Gefühl von Unklarheit zeigen. Ein Planet dort kann die Art beschreiben, wie jemand mit Einsamkeit, Schuld, Traum oder Auflösung umgeht.\n\nGrenze: Das Haus ist keine Diagnose und keine Aussage über psychische Erkrankung, Sucht oder Gefangenschaft. Die populäre Rede vom Schicksalshaus ist eine Verkürzung; tradiert ist ein Feld von Rückzug und innerer Verarbeitung.",
+      "keywords": [
+        "Rückzug",
+        "Unbewusstes",
+        "Traum",
+        "Auflösung",
+        "Einsamkeit"
+      ],
+      "sources": [
+        "S10",
+        "S12"
+      ],
+      "claims": [
+        "c07",
+        "c08",
+        "c26"
+      ],
+      "cross_refs": [
+        "zeichen-fische",
+        "faktor-neptun",
+        "haus-6"
+      ],
+      "kennzeichnung": {
+        "typ": "deutungstradition",
+        "hinweis": "Die Zuordnung zu Rückzug und Unbewusstem ist Tradition; keine psychologische oder medizinische Diagnose."
+      },
+      "number": 12,
+      "natural_sign": "zeichen-fische",
+      "angularity": "kadentenhaus",
+      "hemisphere": "ueber_dem_horizont",
+      "themes": [
+        "Rückzug",
+        "Traum",
+        "Unbewusstes",
+        "Loslassen",
+        "Stille"
+      ],
+      "questions": [
+        "Was ziehe ich zurück, weil ich es nicht zeigen kann?",
+        "Welche Stille brauche ich, und welche Isolation schadet mir?",
+        "Was würde ich sehen, wenn ich nicht wegschaue?"
+      ],
+      "caution": "Keine psychologische oder medizinische Diagnose; keine Aussagen über Sucht, Haft oder Schicksal."
+    }
+  ]
+}

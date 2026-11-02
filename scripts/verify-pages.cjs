@@ -11,6 +11,7 @@ const routes = [
   'tarot',
   'crystals',
   'moon',
+  'astrologie',
   'runes',
   'blog',
   'impressum.html',
@@ -54,38 +55,54 @@ const routes = [
         const response = await page.goto(url, { waitUntil: 'networkidle' });
         await page.evaluate(() => document.fonts.ready);
         await page.waitForTimeout(500);
-        const metrics = await page.evaluate(() => ({
-          title: document.title,
-          url: location.href,
-          base: document.baseURI,
-          background: getComputedStyle(document.body).backgroundColor,
-          backgroundImage: getComputedStyle(document.body).backgroundImage,
-          font: getComputedStyle(document.body).fontFamily,
-          headingFont: document.querySelector('h1,h2')
-            ? getComputedStyle(document.querySelector('h1,h2')).fontFamily
-            : null,
-          stylesheets: [...document.styleSheets].map((sheet) => ({
-            href: sheet.href,
-            rules: (() => {
-              try {
-                return sheet.cssRules.length;
-              } catch {
-                return null;
-              }
-            })(),
-          })),
-          activePage: document.querySelector('.page.active')?.id,
-          featureCount: document.querySelector('#featureGrid')?.children.length,
-          renderedCounts: Object.fromEntries(
-            ['tarotGrid', 'crystalGrid', 'runeGrid', 'articleGrid', 'moonCalendar', 'moonRituals'].map((id) => [
-              id,
-              document.getElementById(id)?.children.length || 0,
-            ])
-          ),
-          navDisplay: document.querySelector('.nav') ? getComputedStyle(document.querySelector('.nav')).display : null,
-          overflow: document.documentElement.scrollWidth > innerWidth,
-          links: [...document.querySelectorAll('a[href]')].map((a) => a.href),
-        }));
+        const metrics = await page.evaluate(() => {
+          // Resolve the expected background from the token, not from a literal.
+          const probe = document.createElement('div');
+          probe.style.backgroundColor = 'var(--color-bg-deep)';
+          document.body.append(probe);
+          const tokenBackground = getComputedStyle(probe).backgroundColor;
+          probe.remove();
+          return {
+            title: document.title,
+            url: location.href,
+            base: document.baseURI,
+            background: getComputedStyle(document.body).backgroundColor,
+            backgroundImage: getComputedStyle(document.body).backgroundImage,
+            font: getComputedStyle(document.body).fontFamily,
+            headingFont: document.querySelector('h1,h2')
+              ? getComputedStyle(document.querySelector('h1,h2')).fontFamily
+              : null,
+            stylesheets: [...document.styleSheets].map((sheet) => ({
+              href: sheet.href,
+              rules: (() => {
+                try {
+                  return sheet.cssRules.length;
+                } catch {
+                  return null;
+                }
+              })(),
+            })),
+            activePage: document.querySelector('.page.active')?.id,
+            featureCount: document.querySelector('#featureGrid')?.children.length,
+            renderedCounts: Object.fromEntries(
+              [
+                'tarotGrid',
+                'crystalGrid',
+                'runeGrid',
+                'articleGrid',
+                'moonCalendar',
+                'moonRituals',
+                'astrologieRoot',
+              ].map((id) => [id, document.getElementById(id)?.children.length || 0])
+            ),
+            navDisplay: document.querySelector('.nav')
+              ? getComputedStyle(document.querySelector('.nav')).display
+              : null,
+            overflow: document.documentElement.scrollWidth > innerWidth,
+            links: [...document.querySelectorAll('a[href]')].map((a) => a.href),
+            tokenBackground,
+          };
+        });
         const failures = [];
         try {
           assert.equal(response ? response.status() : 200, 200, 'document status');
@@ -95,7 +112,7 @@ const routes = [
           );
           assert.notEqual(metrics.background, 'rgb(255, 255, 255)', 'white unstyled background');
           if (route !== '404.html') {
-            assert.equal(metrics.background, 'rgb(10, 5, 18)', 'design-system background not applied');
+            assert.equal(metrics.background, metrics.tokenBackground, 'design-system background not applied');
             assert.ok(
               metrics.stylesheets.some((s) => s.href?.endsWith('/css/design-system.css') && s.rules > 0),
               'design-system stylesheet missing'
@@ -103,9 +120,12 @@ const routes = [
           }
           if (!route.endsWith('.html')) {
             assert.equal(metrics.activePage, route, 'navigation must reveal selected page');
-            assert.equal(metrics.featureCount, 5, 'application initialization must populate five features');
-            for (const [id, count] of Object.entries(metrics.renderedCounts))
+            assert.equal(metrics.featureCount, 6, 'application initialization must populate six features');
+            for (const [id, count] of Object.entries(metrics.renderedCounts)) {
+              // The astrology container only renders while its own route is active.
+              if (id === 'astrologieRoot' && route !== 'astrologie') continue;
               assert.ok(count > 0, `${id} must render its content`);
+            }
           }
           for (const link of metrics.links) {
             if (new URL(link).origin === new URL(base).origin)
@@ -135,7 +155,7 @@ const routes = [
       }
       // Exercise actual mobile/desktop navigation instead of only direct hashes.
       await page.goto(base, { waitUntil: 'networkidle' });
-      for (const route of ['tarot', 'crystals', 'moon', 'runes', 'blog', 'home']) {
+      for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'blog', 'home']) {
         if (await page.locator('#navToggle').isVisible()) await page.locator('#navToggle').click();
         await page.locator(`.nav-link[data-page="${route}"]`).click();
         await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible' });

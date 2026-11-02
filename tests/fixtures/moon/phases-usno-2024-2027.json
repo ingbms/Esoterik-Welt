@@ -1,0 +1,968 @@
+{
+  "description": "Zeiten der vier Hauptphasen in UTC, übernommen aus der USNO-API (Astronomical Applications Department, API 4.0.1). Minutenwerte.",
+  "source": "https://aa.usno.navy.mil/api/moon/phases/date (date=<Jahr>-01-01&nump=48)",
+  "retrieved": "2026-11-02",
+  "raw": "evidence/t_f7b2af0a-moon/sources/usno-phases-<Jahr>.json",
+  "entries": [
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-01-04T03:30:00.000Z",
+      "sourceTime": "2024-01-04 03:30 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-01-11T11:57:00.000Z",
+      "sourceTime": "2024-01-11 11:57 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-01-18T03:52:00.000Z",
+      "sourceTime": "2024-01-18 03:52 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-01-25T17:54:00.000Z",
+      "sourceTime": "2024-01-25 17:54 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-02-02T23:18:00.000Z",
+      "sourceTime": "2024-02-02 23:18 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-02-09T22:59:00.000Z",
+      "sourceTime": "2024-02-09 22:59 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-02-16T15:01:00.000Z",
+      "sourceTime": "2024-02-16 15:01 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-02-24T12:30:00.000Z",
+      "sourceTime": "2024-02-24 12:30 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-03-03T15:23:00.000Z",
+      "sourceTime": "2024-03-03 15:23 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-03-10T09:00:00.000Z",
+      "sourceTime": "2024-03-10 09:00 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-03-17T04:11:00.000Z",
+      "sourceTime": "2024-03-17 04:11 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-03-25T07:00:00.000Z",
+      "sourceTime": "2024-03-25 07:00 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-04-02T03:15:00.000Z",
+      "sourceTime": "2024-04-02 03:15 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-04-08T18:21:00.000Z",
+      "sourceTime": "2024-04-08 18:21 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-04-15T19:13:00.000Z",
+      "sourceTime": "2024-04-15 19:13 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-04-23T23:49:00.000Z",
+      "sourceTime": "2024-04-23 23:49 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-05-01T11:27:00.000Z",
+      "sourceTime": "2024-05-01 11:27 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-05-08T03:22:00.000Z",
+      "sourceTime": "2024-05-08 03:22 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-05-15T11:48:00.000Z",
+      "sourceTime": "2024-05-15 11:48 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-05-23T13:53:00.000Z",
+      "sourceTime": "2024-05-23 13:53 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-05-30T17:13:00.000Z",
+      "sourceTime": "2024-05-30 17:13 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-06-06T12:38:00.000Z",
+      "sourceTime": "2024-06-06 12:38 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-06-14T05:18:00.000Z",
+      "sourceTime": "2024-06-14 05:18 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-06-22T01:08:00.000Z",
+      "sourceTime": "2024-06-22 01:08 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-06-28T21:53:00.000Z",
+      "sourceTime": "2024-06-28 21:53 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-07-05T22:57:00.000Z",
+      "sourceTime": "2024-07-05 22:57 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-07-13T22:49:00.000Z",
+      "sourceTime": "2024-07-13 22:49 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-07-21T10:17:00.000Z",
+      "sourceTime": "2024-07-21 10:17 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-07-28T02:51:00.000Z",
+      "sourceTime": "2024-07-28 02:51 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-08-04T11:13:00.000Z",
+      "sourceTime": "2024-08-04 11:13 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-08-12T15:19:00.000Z",
+      "sourceTime": "2024-08-12 15:19 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-08-19T18:26:00.000Z",
+      "sourceTime": "2024-08-19 18:26 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-08-26T09:26:00.000Z",
+      "sourceTime": "2024-08-26 09:26 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-09-03T01:55:00.000Z",
+      "sourceTime": "2024-09-03 01:55 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-09-11T06:05:00.000Z",
+      "sourceTime": "2024-09-11 06:05 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-09-18T02:34:00.000Z",
+      "sourceTime": "2024-09-18 02:34 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-09-24T18:50:00.000Z",
+      "sourceTime": "2024-09-24 18:50 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-10-02T18:49:00.000Z",
+      "sourceTime": "2024-10-02 18:49 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-10-10T18:55:00.000Z",
+      "sourceTime": "2024-10-10 18:55 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-10-17T11:26:00.000Z",
+      "sourceTime": "2024-10-17 11:26 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-10-24T08:03:00.000Z",
+      "sourceTime": "2024-10-24 08:03 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-11-01T12:47:00.000Z",
+      "sourceTime": "2024-11-01 12:47 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-11-09T05:55:00.000Z",
+      "sourceTime": "2024-11-09 05:55 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-11-15T21:28:00.000Z",
+      "sourceTime": "2024-11-15 21:28 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2024-11-23T01:28:00.000Z",
+      "sourceTime": "2024-11-23 01:28 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2024-12-01T06:21:00.000Z",
+      "sourceTime": "2024-12-01 06:21 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2024-12-08T15:26:00.000Z",
+      "sourceTime": "2024-12-08 15:26 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2024-12-15T09:02:00.000Z",
+      "sourceTime": "2024-12-15 09:02 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-01-06T23:56:00.000Z",
+      "sourceTime": "2025-01-06 23:56 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-01-13T22:27:00.000Z",
+      "sourceTime": "2025-01-13 22:27 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-01-21T20:31:00.000Z",
+      "sourceTime": "2025-01-21 20:31 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-01-29T12:36:00.000Z",
+      "sourceTime": "2025-01-29 12:36 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-02-05T08:02:00.000Z",
+      "sourceTime": "2025-02-05 08:02 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-02-12T13:53:00.000Z",
+      "sourceTime": "2025-02-12 13:53 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-02-20T17:32:00.000Z",
+      "sourceTime": "2025-02-20 17:32 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-02-28T00:45:00.000Z",
+      "sourceTime": "2025-02-28 00:45 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-03-06T16:31:00.000Z",
+      "sourceTime": "2025-03-06 16:31 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-03-14T06:55:00.000Z",
+      "sourceTime": "2025-03-14 06:55 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-03-22T11:29:00.000Z",
+      "sourceTime": "2025-03-22 11:29 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-03-29T10:58:00.000Z",
+      "sourceTime": "2025-03-29 10:58 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-04-05T02:15:00.000Z",
+      "sourceTime": "2025-04-05 02:15 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-04-13T00:22:00.000Z",
+      "sourceTime": "2025-04-13 00:22 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-04-21T01:35:00.000Z",
+      "sourceTime": "2025-04-21 01:35 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-04-27T19:31:00.000Z",
+      "sourceTime": "2025-04-27 19:31 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-05-04T13:52:00.000Z",
+      "sourceTime": "2025-05-04 13:52 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-05-12T16:56:00.000Z",
+      "sourceTime": "2025-05-12 16:56 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-05-20T11:59:00.000Z",
+      "sourceTime": "2025-05-20 11:59 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-05-27T03:02:00.000Z",
+      "sourceTime": "2025-05-27 03:02 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-06-03T03:41:00.000Z",
+      "sourceTime": "2025-06-03 03:41 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-06-11T07:44:00.000Z",
+      "sourceTime": "2025-06-11 07:44 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-06-18T19:19:00.000Z",
+      "sourceTime": "2025-06-18 19:19 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-06-25T10:31:00.000Z",
+      "sourceTime": "2025-06-25 10:31 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-07-02T19:30:00.000Z",
+      "sourceTime": "2025-07-02 19:30 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-07-10T20:37:00.000Z",
+      "sourceTime": "2025-07-10 20:37 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-07-18T00:38:00.000Z",
+      "sourceTime": "2025-07-18 00:38 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-07-24T19:11:00.000Z",
+      "sourceTime": "2025-07-24 19:11 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-08-01T12:41:00.000Z",
+      "sourceTime": "2025-08-01 12:41 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-08-09T07:55:00.000Z",
+      "sourceTime": "2025-08-09 07:55 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-08-16T05:12:00.000Z",
+      "sourceTime": "2025-08-16 05:12 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-08-23T06:06:00.000Z",
+      "sourceTime": "2025-08-23 06:06 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-08-31T06:25:00.000Z",
+      "sourceTime": "2025-08-31 06:25 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-09-07T18:09:00.000Z",
+      "sourceTime": "2025-09-07 18:09 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-09-14T10:33:00.000Z",
+      "sourceTime": "2025-09-14 10:33 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-09-21T19:54:00.000Z",
+      "sourceTime": "2025-09-21 19:54 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-09-29T23:54:00.000Z",
+      "sourceTime": "2025-09-29 23:54 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-10-07T03:47:00.000Z",
+      "sourceTime": "2025-10-07 03:47 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-10-13T18:13:00.000Z",
+      "sourceTime": "2025-10-13 18:13 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-10-21T12:25:00.000Z",
+      "sourceTime": "2025-10-21 12:25 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-10-29T16:21:00.000Z",
+      "sourceTime": "2025-10-29 16:21 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-11-05T13:19:00.000Z",
+      "sourceTime": "2025-11-05 13:19 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-11-12T05:28:00.000Z",
+      "sourceTime": "2025-11-12 05:28 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-11-20T06:47:00.000Z",
+      "sourceTime": "2025-11-20 06:47 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2025-11-28T06:59:00.000Z",
+      "sourceTime": "2025-11-28 06:59 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2025-12-04T23:14:00.000Z",
+      "sourceTime": "2025-12-04 23:14 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2025-12-11T20:52:00.000Z",
+      "sourceTime": "2025-12-11 20:52 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2025-12-20T01:43:00.000Z",
+      "sourceTime": "2025-12-20 01:43 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-01-03T10:03:00.000Z",
+      "sourceTime": "2026-01-03 10:03 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-01-10T15:48:00.000Z",
+      "sourceTime": "2026-01-10 15:48 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-01-18T19:52:00.000Z",
+      "sourceTime": "2026-01-18 19:52 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-01-26T04:47:00.000Z",
+      "sourceTime": "2026-01-26 04:47 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-02-01T22:09:00.000Z",
+      "sourceTime": "2026-02-01 22:09 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-02-09T12:43:00.000Z",
+      "sourceTime": "2026-02-09 12:43 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-02-17T12:01:00.000Z",
+      "sourceTime": "2026-02-17 12:01 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-02-24T12:27:00.000Z",
+      "sourceTime": "2026-02-24 12:27 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-03-03T11:38:00.000Z",
+      "sourceTime": "2026-03-03 11:38 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-03-11T09:38:00.000Z",
+      "sourceTime": "2026-03-11 09:38 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-03-19T01:23:00.000Z",
+      "sourceTime": "2026-03-19 01:23 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-03-25T19:18:00.000Z",
+      "sourceTime": "2026-03-25 19:18 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-04-02T02:12:00.000Z",
+      "sourceTime": "2026-04-02 02:12 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-04-10T04:51:00.000Z",
+      "sourceTime": "2026-04-10 04:51 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-04-17T11:52:00.000Z",
+      "sourceTime": "2026-04-17 11:52 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-04-24T02:32:00.000Z",
+      "sourceTime": "2026-04-24 02:32 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-05-01T17:23:00.000Z",
+      "sourceTime": "2026-05-01 17:23 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-05-09T21:10:00.000Z",
+      "sourceTime": "2026-05-09 21:10 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-05-16T20:01:00.000Z",
+      "sourceTime": "2026-05-16 20:01 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-05-23T11:11:00.000Z",
+      "sourceTime": "2026-05-23 11:11 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-05-31T08:45:00.000Z",
+      "sourceTime": "2026-05-31 08:45 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-06-08T10:00:00.000Z",
+      "sourceTime": "2026-06-08 10:00 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-06-15T02:54:00.000Z",
+      "sourceTime": "2026-06-15 02:54 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-06-21T21:55:00.000Z",
+      "sourceTime": "2026-06-21 21:55 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-06-29T23:56:00.000Z",
+      "sourceTime": "2026-06-29 23:56 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-07-07T19:29:00.000Z",
+      "sourceTime": "2026-07-07 19:29 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-07-14T09:43:00.000Z",
+      "sourceTime": "2026-07-14 09:43 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-07-21T11:05:00.000Z",
+      "sourceTime": "2026-07-21 11:05 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-07-29T14:36:00.000Z",
+      "sourceTime": "2026-07-29 14:36 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-08-06T02:21:00.000Z",
+      "sourceTime": "2026-08-06 02:21 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-08-12T17:37:00.000Z",
+      "sourceTime": "2026-08-12 17:37 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-08-20T02:46:00.000Z",
+      "sourceTime": "2026-08-20 02:46 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-08-28T04:18:00.000Z",
+      "sourceTime": "2026-08-28 04:18 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-09-04T07:51:00.000Z",
+      "sourceTime": "2026-09-04 07:51 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-09-11T03:27:00.000Z",
+      "sourceTime": "2026-09-11 03:27 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-09-18T20:44:00.000Z",
+      "sourceTime": "2026-09-18 20:44 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-09-26T16:49:00.000Z",
+      "sourceTime": "2026-09-26 16:49 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-10-03T13:25:00.000Z",
+      "sourceTime": "2026-10-03 13:25 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-10-10T15:50:00.000Z",
+      "sourceTime": "2026-10-10 15:50 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-10-18T16:12:00.000Z",
+      "sourceTime": "2026-10-18 16:12 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-10-26T04:12:00.000Z",
+      "sourceTime": "2026-10-26 04:12 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-11-01T20:28:00.000Z",
+      "sourceTime": "2026-11-01 20:28 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-11-09T07:02:00.000Z",
+      "sourceTime": "2026-11-09 07:02 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-11-17T11:48:00.000Z",
+      "sourceTime": "2026-11-17 11:48 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2026-11-24T14:53:00.000Z",
+      "sourceTime": "2026-11-24 14:53 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2026-12-01T06:08:00.000Z",
+      "sourceTime": "2026-12-01 06:08 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2026-12-09T00:52:00.000Z",
+      "sourceTime": "2026-12-09 00:52 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2026-12-17T05:42:00.000Z",
+      "sourceTime": "2026-12-17 05:42 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-01-07T20:24:00.000Z",
+      "sourceTime": "2027-01-07 20:24 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-01-15T20:34:00.000Z",
+      "sourceTime": "2027-01-15 20:34 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-01-22T12:17:00.000Z",
+      "sourceTime": "2027-01-22 12:17 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-01-29T10:55:00.000Z",
+      "sourceTime": "2027-01-29 10:55 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-02-06T15:56:00.000Z",
+      "sourceTime": "2027-02-06 15:56 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-02-14T07:58:00.000Z",
+      "sourceTime": "2027-02-14 07:58 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-02-20T23:23:00.000Z",
+      "sourceTime": "2027-02-20 23:23 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-02-28T05:16:00.000Z",
+      "sourceTime": "2027-02-28 05:16 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-03-08T09:29:00.000Z",
+      "sourceTime": "2027-03-08 09:29 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-03-15T16:25:00.000Z",
+      "sourceTime": "2027-03-15 16:25 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-03-22T10:44:00.000Z",
+      "sourceTime": "2027-03-22 10:44 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-03-30T00:54:00.000Z",
+      "sourceTime": "2027-03-30 00:54 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-04-06T23:51:00.000Z",
+      "sourceTime": "2027-04-06 23:51 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-04-13T22:56:00.000Z",
+      "sourceTime": "2027-04-13 22:56 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-04-20T22:27:00.000Z",
+      "sourceTime": "2027-04-20 22:27 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-04-28T20:18:00.000Z",
+      "sourceTime": "2027-04-28 20:18 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-05-06T10:58:00.000Z",
+      "sourceTime": "2027-05-06 10:58 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-05-13T04:44:00.000Z",
+      "sourceTime": "2027-05-13 04:44 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-05-20T10:59:00.000Z",
+      "sourceTime": "2027-05-20 10:59 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-05-28T13:58:00.000Z",
+      "sourceTime": "2027-05-28 13:58 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-06-04T19:40:00.000Z",
+      "sourceTime": "2027-06-04 19:40 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-06-11T10:56:00.000Z",
+      "sourceTime": "2027-06-11 10:56 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-06-19T00:44:00.000Z",
+      "sourceTime": "2027-06-19 00:44 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-06-27T04:54:00.000Z",
+      "sourceTime": "2027-06-27 04:54 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-07-04T03:02:00.000Z",
+      "sourceTime": "2027-07-04 03:02 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-07-10T18:39:00.000Z",
+      "sourceTime": "2027-07-10 18:39 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-07-18T15:45:00.000Z",
+      "sourceTime": "2027-07-18 15:45 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-07-26T16:55:00.000Z",
+      "sourceTime": "2027-07-26 16:55 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-08-02T10:05:00.000Z",
+      "sourceTime": "2027-08-02 10:05 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-08-09T04:54:00.000Z",
+      "sourceTime": "2027-08-09 04:54 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-08-17T07:29:00.000Z",
+      "sourceTime": "2027-08-17 07:29 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-08-25T02:27:00.000Z",
+      "sourceTime": "2027-08-25 02:27 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-08-31T17:41:00.000Z",
+      "sourceTime": "2027-08-31 17:41 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-09-07T18:31:00.000Z",
+      "sourceTime": "2027-09-07 18:31 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-09-15T23:03:00.000Z",
+      "sourceTime": "2027-09-15 23:03 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-09-23T10:20:00.000Z",
+      "sourceTime": "2027-09-23 10:20 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-09-30T02:36:00.000Z",
+      "sourceTime": "2027-09-30 02:36 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-10-07T11:47:00.000Z",
+      "sourceTime": "2027-10-07 11:47 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-10-15T13:47:00.000Z",
+      "sourceTime": "2027-10-15 13:47 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-10-22T17:29:00.000Z",
+      "sourceTime": "2027-10-22 17:29 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-10-29T13:36:00.000Z",
+      "sourceTime": "2027-10-29 13:36 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-11-06T08:00:00.000Z",
+      "sourceTime": "2027-11-06 08:00 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-11-14T03:26:00.000Z",
+      "sourceTime": "2027-11-14 03:26 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-11-21T00:48:00.000Z",
+      "sourceTime": "2027-11-21 00:48 UT"
+    },
+    {
+      "type": "neumond",
+      "utc": "2027-11-28T03:24:00.000Z",
+      "sourceTime": "2027-11-28 03:24 UT"
+    },
+    {
+      "type": "erstes-viertel",
+      "utc": "2027-12-06T05:22:00.000Z",
+      "sourceTime": "2027-12-06 05:22 UT"
+    },
+    {
+      "type": "vollmond",
+      "utc": "2027-12-13T16:09:00.000Z",
+      "sourceTime": "2027-12-13 16:09 UT"
+    },
+    {
+      "type": "letztes-viertel",
+      "utc": "2027-12-20T09:11:00.000Z",
+      "sourceTime": "2027-12-20 09:11 UT"
+    }
+  ]
+}

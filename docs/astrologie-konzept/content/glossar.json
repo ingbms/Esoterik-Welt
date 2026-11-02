@@ -1,0 +1,1109 @@
+{
+  "dataset": "glossar",
+  "version": "1.0.0",
+  "stand": "2026-11-01",
+  "arbeitsannahme": "Glossar der westlichen tropischen Astrologie mit kurzen, verständlichen Definitionen. Wo ein Begriff Tradition ist, wird er als solche erklärt; astronomische Begriffe sind als Fakten eingeordnet.",
+  "items": [
+    {
+      "id": "gloss-aszendent",
+      "slug": "aszendent",
+      "term": "Aszendent",
+      "definition": "Der Punkt der Ekliptik, der zum Geburtszeitpunkt am östlichen Horizont aufgeht. Er hängt von Zeit und Ort ab und wird traditionell mit Auftreten und Zugang verbunden.",
+      "see_also": [
+        "gloss-deszendent",
+        "grund-aszendent-mc",
+        "haus-1"
+      ],
+      "sources": [
+        "S22"
+      ],
+      "claims": [
+        "c09"
+      ]
+    },
+    {
+      "id": "gloss-deszendent",
+      "slug": "deszendent",
+      "term": "Deszendent",
+      "definition": "Der Gegenpunkt des Aszendenten am westlichen Horizont. Er wird traditionell mit Begegnung, Partnerschaft und dem Gegenüber verbunden.",
+      "see_also": [
+        "gloss-aszendent",
+        "haus-7"
+      ],
+      "sources": [
+        "S10",
+        "S22"
+      ],
+      "claims": [
+        "c09"
+      ]
+    },
+    {
+      "id": "gloss-mc",
+      "slug": "mc",
+      "term": "MC (Medium Coeli)",
+      "definition": "Der Punkt der Ekliptik, der den oberen Meridian eines Ortes zum Geburtszeitpunkt schneidet. Er wird traditionell mit öffentlicher Rolle und Beruf verbunden.",
+      "see_also": [
+        "gloss-ic",
+        "haus-10",
+        "grund-aszendent-mc"
+      ],
+      "sources": [
+        "S23"
+      ],
+      "claims": [
+        "c09"
+      ]
+    },
+    {
+      "id": "gloss-ic",
+      "slug": "ic",
+      "term": "IC (Imum Coeli)",
+      "definition": "Der untere Meridianpunkt der Ekliptik, Gegenpunkt des MC. Er wird traditionell mit Herkunft, Zuhause und innerem Fundament verbunden.",
+      "see_also": [
+        "gloss-mc",
+        "haus-4"
+      ],
+      "sources": [
+        "S10",
+        "S23"
+      ],
+      "claims": [
+        "c09"
+      ]
+    },
+    {
+      "id": "gloss-achse",
+      "slug": "achse",
+      "term": "Achse",
+      "definition": "Paar gegenüberliegender Punkte im Horoskop, vor allem AC/DC und MC/IC. Die Achsen bleiben in den gängigen Häusersystemen gleich.",
+      "see_also": [
+        "gloss-aszendent",
+        "gloss-mc",
+        "grund-aszendent-mc"
+      ],
+      "sources": [
+        "S16",
+        "S22"
+      ],
+      "claims": [
+        "c09"
+      ]
+    },
+    {
+      "id": "gloss-aspekt",
+      "slug": "aspekt",
+      "term": "Aspekt",
+      "definition": "Eine Winkelbeziehung zwischen zwei Faktoren im Horoskop, etwa Konjunktion, Sextil, Quadrat, Trigon oder Opposition.",
+      "see_also": [
+        "gloss-orbis",
+        "grund-aspekt-orben",
+        "aspekt-konjunktion"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-orbis",
+      "slug": "orbis",
+      "term": "Orbis",
+      "definition": "Die zulässige Abweichung von einem exakten Aspektwinkel. Der Orbis ist eine Konvention und variiert nach Schule, Planet und Aspekt.",
+      "see_also": [
+        "gloss-aspekt",
+        "gloss-partil",
+        "grund-aspekt-orben"
+      ],
+      "sources": [
+        "S11",
+        "S17"
+      ],
+      "claims": [
+        "c11"
+      ]
+    },
+    {
+      "id": "gloss-applikation",
+      "slug": "applikation",
+      "term": "Applikativer Aspekt",
+      "definition": "Ein Aspekt, bei dem sich die beteiligten Faktoren einander annähern. Er gilt manchen Schulen als prägnanter als ein sich entfernender Aspekt.",
+      "see_also": [
+        "gloss-separation",
+        "gloss-aspekt"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-separation",
+      "slug": "separation",
+      "term": "Separater Aspekt",
+      "definition": "Ein Aspekt, bei dem sich die beteiligten Faktoren voneinander entfernen. Die Bewertung ist schulabhängig.",
+      "see_also": [
+        "gloss-applikation",
+        "gloss-aspekt"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-partil",
+      "slug": "partil",
+      "term": "Partil",
+      "definition": "Bezeichnung für einen fast exakten Aspekt. Je exakter der Winkel, desto prägnanter wird der Aspekt in vielen Schulen erlebt.",
+      "see_also": [
+        "gloss-orbis",
+        "gloss-aspekt"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-konjunktion",
+      "slug": "konjunktion-glossar",
+      "term": "Konjunktion",
+      "definition": "Aspekt bei etwa 0 Grad: Zwei Faktoren stehen im selben Tierkreisbereich. Traditionell eine Verdichtung, keine automatische Bewertung.",
+      "see_also": [
+        "aspekt-konjunktion",
+        "gloss-opposition"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-sextil",
+      "slug": "sextil-glossar",
+      "term": "Sextil",
+      "definition": "Aspekt bei 60 Grad. Traditionell als Gelegenheit und Anregung gelesen, nicht als garantierte Harmonie.",
+      "see_also": [
+        "aspekt-sextil",
+        "gloss-trigon"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-quadrat",
+      "slug": "quadrat-glossar",
+      "term": "Quadrat",
+      "definition": "Aspekt bei 90 Grad. Traditionell als Spannung gelesen, die Handlung und Reifung erzwingen kann.",
+      "see_also": [
+        "aspekt-quadrat",
+        "gloss-opposition"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-trigon",
+      "slug": "trigon-glossar",
+      "term": "Trigon",
+      "definition": "Aspekt bei 120 Grad. Traditionell als fließendes Zusammenspiel gelesen, das auch bequem machen kann.",
+      "see_also": [
+        "aspekt-trigon",
+        "gloss-sextil"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-opposition",
+      "slug": "opposition-glossar",
+      "term": "Opposition",
+      "definition": "Aspekt bei 180 Grad. Traditionell als Gegenüberstellung gelesen, die Ausgleich und Verhandlung verlangt.",
+      "see_also": [
+        "aspekt-opposition",
+        "gloss-konjunktion"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-halbsextil",
+      "slug": "halbsextil",
+      "term": "Halbsextil",
+      "definition": "Nebenaspekt bei 30 Grad. Wird je nach Schule unterschiedlich gewichtet und oft nur mit engem Orbis verwendet.",
+      "see_also": [
+        "gloss-aspekt",
+        "gloss-quincunx"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-quincunx",
+      "slug": "quincunx",
+      "term": "Quincunx",
+      "definition": "Nebenaspekt bei 150 Grad. Wird traditionell als Spannung zwischen unvereinbar erscheinenden Bereichen gelesen.",
+      "see_also": [
+        "gloss-aspekt",
+        "gloss-halbsextil"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-tierkreis",
+      "slug": "tierkreis",
+      "term": "Tierkreis",
+      "definition": "Der Gürtel von zwölf Zeichen entlang der Ekliptik. Im tropischen System sind es zwölf gleiche Sektoren von je 30 Grad.",
+      "see_also": [
+        "gloss-zeichen",
+        "gloss-ekliptik",
+        "grund-tropisch-siderisch"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "claims": [
+        "c02",
+        "c04"
+      ]
+    },
+    {
+      "id": "gloss-tropisch",
+      "slug": "tropisch",
+      "term": "Tropischer Tierkreis",
+      "definition": "Tierkreis, der am Frühlingspunkt beginnt und die Zeichen an den Jahreszeiten orientiert. Die in diesem Paket verwendete Konvention.",
+      "see_also": [
+        "gloss-siderisch",
+        "gloss-fruehlingspunkt",
+        "grund-tropisch-siderisch"
+      ],
+      "sources": [
+        "S13",
+        "S19"
+      ],
+      "claims": [
+        "c02"
+      ]
+    },
+    {
+      "id": "gloss-siderisch",
+      "slug": "siderisch",
+      "term": "Siderischer Tierkreis",
+      "definition": "Tierkreis, der sich an der Sternposition orientiert und die Präzession mit einem Ayanamsa korrigiert. Vor allem in der vedischen Astrologie verbreitet.",
+      "see_also": [
+        "gloss-tropisch",
+        "gloss-ayanamsa",
+        "grund-tropisch-siderisch"
+      ],
+      "sources": [
+        "S13"
+      ],
+      "claims": [
+        "c03"
+      ]
+    },
+    {
+      "id": "gloss-ayanamsa",
+      "slug": "ayanamsa",
+      "term": "Ayanamsa",
+      "definition": "Korrekturwert, der den Unterschied zwischen tropischem und siderischem Nullpunkt angibt. Der Wert ist schulabhängig.",
+      "see_also": [
+        "gloss-siderisch",
+        "gloss-praezession"
+      ],
+      "sources": [
+        "S13"
+      ],
+      "claims": [
+        "c03"
+      ]
+    },
+    {
+      "id": "gloss-praezession",
+      "slug": "praezession",
+      "term": "Präzession",
+      "definition": "Die langsame Kreiselbewegung der Erdachse mit einer Periode von etwa 26.000 Jahren. Sie verschiebt den Frühlingspunkt gegenüber den Sternbildern.",
+      "see_also": [
+        "gloss-fruehlingspunkt",
+        "gloss-ayanamsa",
+        "grund-zeichen-sternbilder"
+      ],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "claims": [
+        "c01"
+      ]
+    },
+    {
+      "id": "gloss-ekliptik",
+      "slug": "ekliptik-glossar",
+      "term": "Ekliptik",
+      "definition": "Die scheinbare jährliche Bahn der Sonne am Himmel, also die Projektion der Erdbahn auf die Himmelssphäre.",
+      "see_also": [
+        "gloss-tierkreis",
+        "gloss-himmelsaequator",
+        "grund-ekliptik"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "claims": [
+        "c25"
+      ]
+    },
+    {
+      "id": "gloss-himmelsaequator",
+      "slug": "himmelsaequator",
+      "term": "Himmelsäquator",
+      "definition": "Die Projektion des Erdäquators auf die Himmelssphäre. Sein Schnittpunkt mit der Ekliptik definiert den Frühlingspunkt.",
+      "see_also": [
+        "gloss-ekliptik",
+        "gloss-fruehlingspunkt"
+      ],
+      "sources": [
+        "S01",
+        "S14"
+      ],
+      "claims": [
+        "c25"
+      ]
+    },
+    {
+      "id": "gloss-fruehlingspunkt",
+      "slug": "fruehlingspunkt",
+      "term": "Frühlingspunkt",
+      "definition": "Der Punkt, an dem die Sonne den Himmelsäquator nach Norden kreuzt. Er ist der Nullpunkt des tropischen Tierkreises.",
+      "see_also": [
+        "gloss-tropisch",
+        "gloss-praezession",
+        "grund-tropisch-siderisch"
+      ],
+      "sources": [
+        "S13",
+        "S19"
+      ],
+      "claims": [
+        "c02"
+      ]
+    },
+    {
+      "id": "gloss-zeichen",
+      "slug": "zeichen",
+      "term": "Zeichen",
+      "definition": "Ein 30-Grad-Sektor des Tierkreises. Zeichen sind keine Sternbilder; im tropischen System beginnen sie am Frühlingspunkt.",
+      "see_also": [
+        "gloss-sternbild",
+        "gloss-tierkreis",
+        "grund-zeichen-sternbilder"
+      ],
+      "sources": [
+        "S19",
+        "S14"
+      ],
+      "claims": [
+        "c02",
+        "c05"
+      ]
+    },
+    {
+      "id": "gloss-sternbild",
+      "slug": "sternbild",
+      "term": "Sternbild",
+      "definition": "Ein astronomisch definiertes Areal am Himmel mit festen Grenzen. Die IAU kennt 88 Sternbilder; zwölf davon liegen klassisch im Tierkreis, dazu Ophiuchus.",
+      "see_also": [
+        "gloss-zeichen",
+        "grund-zeichen-sternbilder"
+      ],
+      "sources": [
+        "S04",
+        "S05"
+      ],
+      "claims": [
+        "c05"
+      ]
+    },
+    {
+      "id": "gloss-haus",
+      "slug": "haus",
+      "term": "Haus",
+      "definition": "Eines von zwölf Lebensfeldern im Horoskop. Häuser hängen von Geburtszeit und Ort ab und sind von den Zeichen zu unterscheiden.",
+      "see_also": [
+        "gloss-hausspitze",
+        "grund-haeuser-systeme",
+        "haus-1"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-hausspitze",
+      "slug": "hausspitze",
+      "term": "Hausspitze (Cusp)",
+      "definition": "Der Anfangsgrad eines Hauses. Die Lage der Hausspitzen hängt vom Häusersystem ab und bestimmt, welches Zeichen ein Haus regiert.",
+      "see_also": [
+        "gloss-haus",
+        "gloss-herrscher",
+        "grund-haeuser-systeme"
+      ],
+      "sources": [
+        "S10",
+        "S12"
+      ],
+      "claims": [
+        "c08",
+        "c26"
+      ]
+    },
+    {
+      "id": "gloss-ganzzeichenhaus",
+      "slug": "ganzzeichenhaus",
+      "term": "Ganzzeichen-Haus",
+      "definition": "Häusersystem, bei dem jedes Haus ein volles Zeichen umfasst; das erste Haus beginnt mit dem Zeichen des Aszendenten.",
+      "see_also": [
+        "gloss-equal-house",
+        "gloss-placidus",
+        "grund-haeuser-systeme"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-placidus",
+      "slug": "placidus",
+      "term": "Placidus",
+      "definition": "Zeitbasiertes Quadrantenhäusersystem, das im modernen Westen verbreitet ist. Jenseits der Polarkreise nicht durchgehend definiert.",
+      "see_also": [
+        "gloss-koch",
+        "gloss-equal-house",
+        "grund-haeuser-systeme"
+      ],
+      "sources": [
+        "S10",
+        "S16"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-koch",
+      "slug": "koch",
+      "term": "Koch",
+      "definition": "Häusersystem, das auf der Geburtszeit und der geografischen Breite aufbaut. Es ist eine Alternative zu Placidus, keine wissenschaftlich ausgezeichnete Norm.",
+      "see_also": [
+        "gloss-placidus",
+        "gloss-campanus"
+      ],
+      "sources": [
+        "S10",
+        "S16"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-campanus",
+      "slug": "campanus",
+      "term": "Campanus",
+      "definition": "Häusersystem, das die Himmelssphäre in gleiche Raumabschnitte teilt und auf die Ekliptik projiziert.",
+      "see_also": [
+        "gloss-regiomontanus",
+        "gloss-placidus"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-regiomontanus",
+      "slug": "regiomontanus",
+      "term": "Regiomontanus",
+      "definition": "Häusersystem, das den Himmelsäquator in gleiche Abschnitte teilt und die Teilung auf die Ekliptik überträgt.",
+      "see_also": [
+        "gloss-campanus",
+        "gloss-placidus"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-equal-house",
+      "slug": "equal-house",
+      "term": "Equal House",
+      "definition": "Häusersystem, bei dem ab dem Aszendenten zwölf gleich große Abschnitte von je 30 Grad gebildet werden. In hohen Breiten oft robuster als Placidus.",
+      "see_also": [
+        "gloss-ganzzeichenhaus",
+        "gloss-placidus"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-winkelhaus",
+      "slug": "winkelhaus",
+      "term": "Winkelhaus",
+      "definition": "Die Häuser 1, 4, 7 und 10. Sie liegen an den Achsen und gelten traditionell als besonders prägnant.",
+      "see_also": [
+        "gloss-sukzedentenhaus",
+        "gloss-kadentenhaus",
+        "haus-1"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-sukzedentenhaus",
+      "slug": "sukzedentenhaus",
+      "term": "Sukzedentenhaus",
+      "definition": "Die Häuser 2, 5, 8 und 11. Sie folgen auf die Winkelhäuser und gelten traditionell als stabilisierend.",
+      "see_also": [
+        "gloss-winkelhaus",
+        "gloss-kadentenhaus",
+        "haus-2"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-kadentenhaus",
+      "slug": "kadentenhaus",
+      "term": "Kadentenhaus",
+      "definition": "Die Häuser 3, 6, 9 und 12. Sie gelten traditionell als Häuser des Übergangs und der Vorbereitung.",
+      "see_also": [
+        "gloss-winkelhaus",
+        "gloss-sukzedentenhaus",
+        "haus-3"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "claims": [
+        "c08"
+      ]
+    },
+    {
+      "id": "gloss-herrscher",
+      "slug": "herrscher",
+      "term": "Herrscher",
+      "definition": "Der Planet, der einem Zeichen zugeordnet ist. Traditionell regieren sieben sichtbare Himmelskörper die Zeichen; moderne Systeme ergänzen Uranus, Neptun und Pluto.",
+      "see_also": [
+        "gloss-domizil",
+        "gloss-dispositor",
+        "grund-herrschaft"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "claims": [
+        "c12"
+      ]
+    },
+    {
+      "id": "gloss-dispositor",
+      "slug": "dispositor",
+      "term": "Dispositor",
+      "definition": "Der Herrscher des Zeichens, in dem ein Planet steht. Dispositor-Ketten folgen den Herrschaftsbeziehungen durch das Horoskop.",
+      "see_also": [
+        "gloss-herrscher",
+        "grund-herrschaft"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "claims": [
+        "c12",
+        "c26"
+      ]
+    },
+    {
+      "id": "gloss-domizil",
+      "slug": "domizil",
+      "term": "Domizil",
+      "definition": "Ein Planet steht in einem Zeichen, das er selbst regiert. In der traditionellen Würdenlehre gilt das als starke Stellung.",
+      "see_also": [
+        "gloss-exil",
+        "gloss-herrscher",
+        "grund-herrschaft"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "claims": [
+        "c26"
+      ]
+    },
+    {
+      "id": "gloss-exil",
+      "slug": "exil",
+      "term": "Exil",
+      "definition": "Ein Planet steht im Gegenzeichen seines Domizils. In der Würdenlehre gilt das als geschwächte Stellung.",
+      "see_also": [
+        "gloss-domizil",
+        "gloss-fall",
+        "grund-herrschaft"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "claims": [
+        "c26"
+      ]
+    },
+    {
+      "id": "gloss-erhoehung",
+      "slug": "erhoehung",
+      "term": "Erhöhung",
+      "definition": "Eine weitere Würde in der traditionellen Astrologie, in der ein Planet in einem bestimmten Zeichen als besonders wirksam gilt.",
+      "see_also": [
+        "gloss-fall",
+        "gloss-domizil",
+        "grund-herrschaft"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "claims": [
+        "c26"
+      ]
+    },
+    {
+      "id": "gloss-fall",
+      "slug": "fall",
+      "term": "Fall",
+      "definition": "Das Gegenzeichen der Erhöhung. In der Würdenlehre gilt diese Stellung als geschwächt.",
+      "see_also": [
+        "gloss-erhoehung",
+        "gloss-exil",
+        "grund-herrschaft"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "claims": [
+        "c26"
+      ]
+    },
+    {
+      "id": "gloss-element",
+      "slug": "element",
+      "term": "Element",
+      "definition": "Eine der vier symbolischen Qualitäten Feuer, Erde, Luft und Wasser. Jedes Zeichen gehört einem Element an.",
+      "see_also": [
+        "element-feuer",
+        "element-erde",
+        "element-luft",
+        "element-wasser"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "claims": [
+        "c02"
+      ]
+    },
+    {
+      "id": "gloss-modalitaet",
+      "slug": "modalitaet",
+      "term": "Modalität",
+      "definition": "Die Einteilung der Zeichen in kardinal, fix und veränderlich. Sie beschreibt einen Rhythmus, keine Persönlichkeitseigenschaft.",
+      "see_also": [
+        "modalitaet-kardinal",
+        "modalitaet-fix",
+        "modalitaet-veraenderlich"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "claims": [
+        "c02"
+      ]
+    },
+    {
+      "id": "gloss-polaritaet",
+      "slug": "polaritaet",
+      "term": "Polarität",
+      "definition": "Die Einteilung der Zeichen in yang oder aktiv und yin oder empfangend. Die Zuordnung ist traditionell und kulturell geprägt.",
+      "see_also": [
+        "gloss-element",
+        "gloss-modalitaet"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "claims": [
+        "c02"
+      ]
+    },
+    {
+      "id": "gloss-triplizitaet",
+      "slug": "triplizitaet",
+      "term": "Triplizität",
+      "definition": "Gruppe von drei Zeichen desselben Elements. Die Triplizitäten bilden die Grundlage der Elementlehre.",
+      "see_also": [
+        "gloss-element",
+        "element-feuer"
+      ],
+      "sources": [
+        "S14"
+      ],
+      "claims": [
+        "c02"
+      ]
+    },
+    {
+      "id": "gloss-sonnenzeichen",
+      "slug": "sonnenzeichen",
+      "term": "Sonnenzeichen",
+      "definition": "Die Position der Sonne im tropischen Zeichensektor zum Geburtszeitpunkt. Ein Faktor unter vielen, keine vollständige Persönlichkeit.",
+      "see_also": [
+        "faktor-sonne",
+        "grund-sonnenzeichen-grenzen",
+        "gloss-mondzeichen"
+      ],
+      "sources": [
+        "S19",
+        "S06"
+      ],
+      "claims": [
+        "c07",
+        "c17"
+      ]
+    },
+    {
+      "id": "gloss-mondzeichen",
+      "slug": "mondzeichen",
+      "term": "Mondzeichen",
+      "definition": "Die Position des Mondes im Zeichensektor zum Geburtszeitpunkt. Ohne genaue Geburtszeit oft unsicher, weil der Mond den Sektor etwa alle 2,46 Tage wechselt.",
+      "see_also": [
+        "faktor-mond",
+        "gloss-sonnenzeichen",
+        "grund-mond"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "claims": [
+        "c15"
+      ]
+    },
+    {
+      "id": "gloss-radix",
+      "slug": "radix",
+      "term": "Radix",
+      "definition": "Die Horoskopkarte zum Geburtszeitpunkt an einem Ort. Sie enthält Faktoren, Zeichen, Häuser, Achsen und Aspekte.",
+      "see_also": [
+        "grund-radix-synthese",
+        "gloss-transit",
+        "grund-aszendent-mc"
+      ],
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "claims": [
+        "c07"
+      ]
+    },
+    {
+      "id": "gloss-transit",
+      "slug": "transit",
+      "term": "Transit",
+      "definition": "Die aktuelle Himmelsstellung eines Faktors im Verhältnis zu einer festen Radix. Wird traditionell als Zeitqualität gelesen, nicht als sichere Ereignisvorhersage.",
+      "see_also": [
+        "grund-transite",
+        "gloss-radix",
+        "gloss-ruecklaeufigkeit"
+      ],
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "claims": [
+        "c07",
+        "c17"
+      ]
+    },
+    {
+      "id": "gloss-ruecklaeufigkeit",
+      "slug": "ruecklaeufigkeit-glossar",
+      "term": "Rückläufigkeit",
+      "definition": "Die scheinbare Umkehr der Bewegung eines Planeten vor dem Sternhintergrund. Sie entsteht durch unterschiedliche Bahngeschwindigkeiten, nicht durch eine echte Richtungsumkehr.",
+      "see_also": [
+        "grund-ruecklaeufigkeit",
+        "faktor-merkur",
+        "gloss-transit"
+      ],
+      "sources": [
+        "S15"
+      ],
+      "claims": [
+        "c14"
+      ]
+    },
+    {
+      "id": "gloss-synodisch",
+      "slug": "synodischer-monat",
+      "term": "Synodischer Monat",
+      "definition": "Die Zeit von einer Mondphase zur nächsten gleichen Phase: 29,53 Tage. Er ist länger als der siderische Monat, weil sich die Erde weiterbewegt.",
+      "see_also": [
+        "gloss-siderischer-monat",
+        "grund-mond",
+        "faktor-mond"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "claims": [
+        "c15"
+      ]
+    },
+    {
+      "id": "gloss-siderischer-monat",
+      "slug": "siderischer-monat",
+      "term": "Siderischer Monat",
+      "definition": "Die Zeit, in der der Mond einmal relativ zu den Sternen die Erde umrundet: 27,3217 Tage.",
+      "see_also": [
+        "gloss-synodisch",
+        "grund-mond"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "claims": [
+        "c15"
+      ]
+    },
+    {
+      "id": "gloss-ephemeride",
+      "slug": "ephemeride",
+      "term": "Ephemeride",
+      "definition": "Tabelle oder Datensatz mit berechneten Positionen von Himmelskörpern zu bestimmten Zeiten. Eine echte Radixberechnung braucht belastbare Ephemeriden.",
+      "see_also": [
+        "grund-berechnung",
+        "gloss-radix"
+      ],
+      "sources": [
+        "S10"
+      ],
+      "claims": [
+        "c28"
+      ]
+    },
+    {
+      "id": "gloss-stellium",
+      "slug": "stellium",
+      "term": "Stellium",
+      "definition": "Häufung von mindestens drei Faktoren in einem Zeichen oder Haus. Wird traditionell als Schwerpunkt gelesen; die genauen Kriterien sind schulabhängig.",
+      "see_also": [
+        "grund-radix-synthese",
+        "gloss-aspektfigur"
+      ],
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "claims": [
+        "c07"
+      ]
+    },
+    {
+      "id": "gloss-aspektfigur",
+      "slug": "aspektfigur",
+      "term": "Aspektfigur",
+      "definition": "Muster aus mehreren Aspekten, etwa ein Großes Trigon oder ein T-Quadrat. Die Deutung ist Tradition und schulabhängig.",
+      "see_also": [
+        "gloss-stellium",
+        "grund-aspekt-orben"
+      ],
+      "sources": [
+        "S11"
+      ],
+      "claims": [
+        "c10"
+      ]
+    },
+    {
+      "id": "gloss-barnum",
+      "slug": "barnum-effekt",
+      "term": "Barnum-Effekt",
+      "definition": "Die Tendenz, vage und allgemeine Persönlichkeitsbeschreibungen als ungewöhnlich treffend zu erleben. Auch Forer-Effekt genannt.",
+      "see_also": [
+        "grund-sonnenzeichen-grenzen",
+        "gloss-bestaetigungsfehler"
+      ],
+      "sources": [
+        "S21"
+      ],
+      "claims": [
+        "c20"
+      ]
+    },
+    {
+      "id": "gloss-bestaetigungsfehler",
+      "slug": "bestaetigungsfehler",
+      "term": "Bestätigungsfehler",
+      "definition": "Die Neigung, Informationen zu bevorzugen, die bestehende Erwartungen bestätigen, und Widersprechendes zu übersehen.",
+      "see_also": [
+        "gloss-barnum",
+        "grund-evidenz"
+      ],
+      "sources": [
+        "S21",
+        "S09"
+      ],
+      "claims": [
+        "c20",
+        "c17"
+      ]
+    },
+    {
+      "id": "gloss-divination",
+      "slug": "divination",
+      "term": "Divination",
+      "definition": "Deutungspraxis, die Zeichen oder Bilder nutzt, um Zusammenhänge oder zukünftige Entwicklungen zu erschließen. Astrologie wird als Form der Divination eingeordnet.",
+      "see_also": [
+        "grund-begriff",
+        "grund-geschichte"
+      ],
+      "sources": [
+        "S07"
+      ],
+      "claims": [
+        "c23"
+      ]
+    },
+    {
+      "id": "gloss-determinismus",
+      "slug": "determinismus",
+      "term": "Determinismus",
+      "definition": "Die Annahme, Ereignisse seien vollständig durch vorherige Bedingungen festgelegt. Eine deterministische Astrologie behauptet, das Horoskop lege das Leben fest; diese Annahme ist nicht belegt.",
+      "see_also": [
+        "grund-ethik",
+        "grund-evidenz"
+      ],
+      "sources": [
+        "S09"
+      ],
+      "claims": [
+        "c17",
+        "c19"
+      ]
+    },
+    {
+      "id": "gloss-deutung",
+      "slug": "deutung",
+      "term": "Deutung",
+      "definition": "Die Zuordnung von Bedeutung zu einem Zeichen, einer Konstellation oder einem Aspekt. Deutung ist Interpretation, nicht Messung.",
+      "see_also": [
+        "grund-radix-synthese",
+        "gloss-synthese"
+      ],
+      "sources": [
+        "S07"
+      ],
+      "claims": [
+        "c07",
+        "c23"
+      ]
+    },
+    {
+      "id": "gloss-synthese",
+      "slug": "synthese",
+      "term": "Synthese",
+      "definition": "Die Zusammenführung mehrerer Deutungsebenen zu einer gewichteten Lesart. Eine Synthese bleibt Hypothese und sollte ihre Grenzen nennen.",
+      "see_also": [
+        "grund-radix-synthese",
+        "gloss-deutung"
+      ],
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "claims": [
+        "c07"
+      ]
+    },
+    {
+      "id": "gloss-mondknoten",
+      "slug": "mondknoten",
+      "term": "Mondknoten",
+      "definition": "Die Schnittpunkte der Mondbahn mit der Ekliptik. In der Astrologie werden sie als Entwicklungsachse gedeutet; astronomisch sind sie berechenbare Bahnpunkte.",
+      "see_also": [
+        "faktor-mond",
+        "grund-transite"
+      ],
+      "sources": [
+        "S18"
+      ],
+      "claims": [
+        "c15"
+      ]
+    }
+  ]
+}

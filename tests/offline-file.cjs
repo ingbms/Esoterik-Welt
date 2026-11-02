@@ -32,30 +32,52 @@ test('offline file entry serves every route without network access', async (t) =
   });
 
   await page.goto(localUrl, { waitUntil: 'load' });
-  await page.waitForFunction(() => document.querySelectorAll('#featureGrid > *').length === 5, { timeout: 10000 });
+  await page.waitForFunction(() => document.querySelectorAll('#featureGrid > *').length === 6, { timeout: 10000 });
+  await page.evaluate(() => document.fonts.ready);
+  await page.waitForTimeout(300);
 
-  const startup = await page.evaluate(() => ({
-    url: location.href,
-    background: getComputedStyle(document.body).backgroundColor,
-    features: document.querySelectorAll('#featureGrid > *').length,
-    tarotCards: document.querySelectorAll('#tarotGrid > *').length,
-    crystals: document.querySelectorAll('#crystalGrid > *').length,
-    runes: document.querySelectorAll('#runeGrid > *').length,
-    articles: document.querySelectorAll('#articleGrid > *').length,
-  }));
+  const startup = await page.evaluate(() => {
+    const probe = document.createElement('div');
+    probe.style.backgroundColor = 'var(--color-bg-deep)';
+    document.body.append(probe);
+    const tokenBackground = getComputedStyle(probe).backgroundColor;
+    probe.remove();
+    return {
+      url: location.href,
+      background: getComputedStyle(document.body).backgroundColor,
+      tokenBackground,
+      features: document.querySelectorAll('#featureGrid > *').length,
+      tarotCards: document.querySelectorAll('#tarotGrid > *').length,
+      crystals: document.querySelectorAll('#crystalGrid > *').length,
+      runes: document.querySelectorAll('#runeGrid > *').length,
+      articles: document.querySelectorAll('#articleGrid > *').length,
+      fonts: {
+        fraunces: document.fonts.check('400 40px Fraunces'),
+        manrope: document.fonts.check('400 16px Manrope'),
+      },
+    };
+  });
 
-  assert.match(startup.url, /^file:\/\/\//, 'must run from file://');
-  assert.equal(startup.background, 'rgb(10, 5, 18)', 'design-system background must be applied offline');
-  assert.equal(startup.features, 5);
+  assert.match(startup.url, /^file:\/\//, 'must run from file://');
+  assert.equal(startup.background, startup.tokenBackground, 'design-system background must be applied offline');
+  assert.equal(startup.features, 6);
+  assert.equal(startup.fonts.fraunces, true, 'Fraunces must load from the local font files offline');
+  assert.equal(startup.fonts.manrope, true, 'Manrope must load from the local font files offline');
   for (const key of ['tarotCards', 'crystals', 'runes', 'articles']) {
     assert.ok(startup[key] > 0, `${key} must render offline`);
   }
 
-  for (const route of ['tarot', 'crystals', 'moon', 'runes', 'blog', 'home']) {
+  for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'blog', 'home']) {
     await page.click(`.nav-link[data-page="${route}"]`);
     await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible', timeout: 10000 });
     assert.equal(new URL(page.url()).hash, '#' + route, `${route} route hash`);
   }
+
+  // The astrology area must work from the double-clicked file, including a
+  // cold deep link into a detail page (data is inlined, never fetched).
+  await page.goto(localUrl + '#astrologie/zeichen/widder', { waitUntil: 'load' });
+  await page.locator('#astrologieRoot h1#astro-title').waitFor({ state: 'visible', timeout: 10000 });
+  assert.match(await page.locator('#astrologieRoot h1#astro-title').textContent(), /Widder/);
 
   // Deep link cold start must open the article dialog from the file itself.
   await page.goto(localUrl + '#blog/1', { waitUntil: 'load' });
