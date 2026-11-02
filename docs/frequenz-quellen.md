@@ -106,8 +106,8 @@ Legende: **Q** = Quelle im Datensatz, **Prüfung** = was beim Abruf tatsächlich
 | id | Behauptung | Status | Q | Prüfung / Anmerkung |
 |---|---|---|---|---|
 | `hoerbereich-mensch` | 20 Hz–20 kHz Hörbereich; darunter Infraschall, darüber Ultraschall | belegt | [1] | Wörtlich: „Normal human hearing encompasses frequencies from 20 to 20,000 Hz… Sounds below 20 Hz are called infrasound, whereas those above 20,000 Hz are ultrasound.“ |
-| `infraschall` | < 20 Hz ist bei hohen Pegeln hörbar | belegt | [2] | „infrasound is audible as well, provided that the sound level is high enough“; Schwellen ~86–90 dB bei 16 Hz, ~101–104 dB bei 8 Hz. |
-| `ultraschall-medizin` | > 20 kHz, medizinische Wandler im MHz-Bereich | belegt | [3] | „frequencies above the threshold of human hearing (above 20KHz), but most transducers … operate at much higher frequencies (in the megahertz (MHz) range)“ |
+| `infraschall` | < 20 Hz ist bei hohen Pegeln hörbar | belegt | [2] | „infrasound is audible as well, provided that the sound level is high enough“; Schwellen ~86–90 dB bei 16 Hz, ~101–104 dB bei 8 Hz; Töne bis mindestens 2 Hz nachgewiesen. |
+| `ultraschall-medizin` | klinischer Ultraschall 1–20 MHz | belegt | [3] | „Frequencies used in clinical ultrasound range from 1MHz to 20MHz“; Definition > 20 kHz zusätzlich bei NIBIB [22]. |
 | `eeg-delta` | 0,5–4 Hz | belegt | [4] | Review nennt Delta-Start 0–2 Hz, Ende 3,5–6 Hz; empfiehlt < 4 Hz. Grenzen sind konsensual, nicht genormt. |
 | `eeg-theta` | 4–8 Hz | belegt | [4] | Typisch 4–7,5 Hz; einzelne Arbeiten 2,5–8 Hz. |
 | `eeg-alpha` | 8–13 Hz | belegt | [4] | 85 % der Studien nutzen 8–13 Hz; Streuung 6–14 Hz. |
@@ -157,7 +157,7 @@ Wichtig für die UI: Die Zuordnung „Band X = Zustand Y“ ist eine statistisch
 
 ### 6.2 Hörbereich und Infraschall
 
-20 Hz–20 kHz ist die übliche Lehrbuchangabe [1]. Die obere Grenze ist altersabhängig und individuell; die untere Grenze ist keine Hörschwelle, sondern eine Konvention: Unter 20 Hz existiert keine genormte Hörschwelle, und tiefe Töne sind bei ausreichendem Pegel hörbar [2]. Der Datensatz gibt Infraschall deshalb als Bereich 0,1–20 Hz mit `warnhinweis: true` aus – nicht weil Infraschall gefährlich wäre, sondern weil die Aussage „unhörbar“ falsch ist und die UI keine Körperempfindungs-Versprechen machen soll.
+20 Hz–20 kHz ist die übliche Lehrbuchangabe [1]. Die obere Grenze ist altersabhängig und individuell; die untere Grenze ist keine Hörschwelle, sondern eine Konvention: Unter 20 Hz existiert keine genormte Hörschwelle, und tiefe Töne sind bei ausreichendem Pegel hörbar [2]. Der Datensatz gibt Infraschall deshalb als Bereich 2–20 Hz mit `warnhinweis: true` aus – nicht weil Infraschall gefährlich wäre, sondern weil die Aussage „unhörbar“ falsch ist und die UI keine Körperempfindungs-Versprechen machen soll.
 
 Pegelangaben (86–90 dB bei 16 Hz) stammen aus [2]; sie dienen der Einordnung, nicht als Einstellwert. Das Labor begrenzt die Ausgabe auf −20 dBFS und clampt auf 20–20.000 Hz – Infraschall und Ultraschall sind damit **nicht** abspielbar. Das ist beabsichtigt: Ein Browser-Lautsprecher kann diese Bereiche ohnehin nicht sauber wiedergeben, und die Daten dienen der Erklärung, nicht der Beschallung.
 
@@ -166,7 +166,7 @@ Pegelangaben (86–90 dB bei 16 Hz) stammen aus [2]; sie dienen der Einordnung, 
 - **440 Hz** ist die einzige genormte Zahl: ISO 16:1975, 2022 bestätigt, Toleranz 0,5 Hz [8].
 - **442 Hz** ist Praxis, nicht Norm: ISO beschreibt 2012, dass kontinentaleuropäische Sinfonieorchester höher stimmen, während UK/USA/Japan bei 440 Hz bleiben [9]. Die 2025er-Studie zu 432 Hz nennt für deutsche Berufsorchester 443 Hz [16] – die Angabe schwankt also je Orchester.
 - **435 Hz** war die erste gesetzliche Festlegung (Paris 1859, Wien 1885) [10].
-- **415–429 Hz** ist der historische Bereich für 1700–1850 [10]. Der Wert 415 Hz wird heute in der Alte-Musik-Praxis als Referenz verwendet; diese Konvention stammt aus dem 20. Jahrhundert und ist im Datensatz nur als Bereichsgrenze abgebildet, nicht als historische Messung.
+- **415–429 Hz** ist der historische Bereich für 1700–1850 [10]. Der Datensatz bildet ihn als Bereich ab; 415 Hz ist die untere Grenze und dient der UI als spielbarer Ankerwert, nicht als historische Messung.
 
 Konsequenz für die UI: 440 Hz als „Standard“ kennzeichnen, 415/432/435/442 als historische bzw. alternative Stimmungen – ohne Wertung „richtig/falsch“.
 
@@ -317,7 +317,7 @@ Alle URLs abgerufen am 2026-11-02.
 
 1. OpenStax, *College Physics 2e*, Kap. 17.6 „Hearing“ — https://openstax.org/books/college-physics-2e/pages/17-6-hearing (CC BY-NC-SA; nur als Nachweis zitiert)
 2. C. Kugler et al., „Temporal integration of infrasound at threshold“, *J. Assoc. Res. Otolaryngol.* (2023), PMC10389702 — https://pmc.ncbi.nlm.nih.gov/articles/PMC10389702/
-3. NIBIB (NIH), „Ultrasound“ — https://www.nibib.nih.gov/science-education/science-topics/ultrasound
+3. StatPearls (NCBI Bookshelf), „Ultrasound Physics and Instrumentation“ (Frequenzbereich 1–20 MHz) — https://www.ncbi.nlm.nih.gov/books/NBK570593/
 4. J. J. Newson & R. Thiagarajan, „EEG Frequency Bands in Psychiatric Disorders: A Review of Resting State Studies“, *Front. Hum. Neurosci.* 12:521 (2019), PMC6333694 — https://pmc.ncbi.nlm.nih.gov/articles/PMC6333694/
 5. OpenStax, *College Physics 2e*, Kap. 16.10 „Superposition and Interference“ — https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference
 6. R. M. Ingendoh, E. S. Posny & A. Heine, „Binaural beats to entrain the brain? A systematic review“, *PLOS ONE* 18(5):e0286023 (2023) — https://pmc.ncbi.nlm.nih.gov/articles/PMC10198548/
@@ -336,6 +336,7 @@ Alle URLs abgerufen am 2026-11-02.
 19. T. Babayi & G. H. Riazi, „The Effects of 528 Hz Sound Wave to Reduce Cell Death in Human Astrocyte Primary Cell Culture Treated with Ethanol“, *J. Addict. Res. Ther.* 8:335 (2017) — https://doi.org/10.4172/2155-6105.1000335
 20. § 3 Heilmittelwerbegesetz (HWG) — https://www.gesetze-im-internet.de/heilmwerbg/__3.html
 21. WHO, „Deafness and hearing loss: Safe listening“ — https://www.who.int/news-room/questions-and-answers/item/deafness-and-hearing-loss-safe-listening
+22. NIBIB (NIH), „Ultrasound“ (Definition > 20 kHz, Wandler im MHz-Bereich) — https://www.nibib.nih.gov/science-education/science-topics/ultrasound
 
 ---
 
