@@ -39,7 +39,7 @@ test.describe('Astrologie — Navigation und Deep-Links', () => {
 
     await page.goto(`${BASE}/`, { waitUntil: 'load' });
     await page.locator('#featureGrid > *').first().waitFor();
-    expect(await page.locator('#featureGrid > *').count()).toBe(6);
+    expect(await page.locator('#featureGrid > *').count()).toBe(7);
     await page.locator('.nav-link[data-page="astrologie"]').click();
     await page.locator('#astrologie.active:not([hidden])').waitFor({ state: 'visible' });
     await expect(page.locator('#astrologieRoot h1#astro-title')).toContainText('Astrologie');
