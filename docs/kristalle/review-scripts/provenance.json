@@ -1,0 +1,692 @@
+[
+ {
+  "id": "crys-01",
+  "slug": "amethyst",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amethyst_Quartz_Crystals.jpg?width=1280",
+  "expected_sha": "a87bb13b835745a6b6cf9178620f1dd8f85d880eb47f1ccc458b8c320bb58e9b",
+  "expected_bytes": 1005437,
+  "expected_dims": [
+   1280,
+   1926
+  ],
+  "status": "ok",
+  "got_bytes": 1005437,
+  "sha256": "a87bb13b835745a6b6cf9178620f1dd8f85d880eb47f1ccc458b8c320bb58e9b",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Amethyst_Quartz_Crystals.jpg/1280px-Amethyst_Quartz_Crystals.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1926
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-02",
+  "slug": "rosenquarz",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rose_quartz_%28GeoDIL_number_-_2521%29.jpg?width=1280",
+  "expected_sha": "8b4755b54c3c22e92fca30409c85189edbad7f7226b34f1917c68e7df18a82ba",
+  "expected_bytes": 229702,
+  "expected_dims": [
+   1280,
+   893
+  ],
+  "status": "ok",
+  "got_bytes": 229702,
+  "sha256": "8b4755b54c3c22e92fca30409c85189edbad7f7226b34f1917c68e7df18a82ba",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Rose_quartz_%28GeoDIL_number_-_2521%29.jpg/1280px-Rose_quartz_%28GeoDIL_number_-_2521%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   893
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-03",
+  "slug": "zitrin",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrine_%28GeoDIL_number_-_310%29.jpg?width=1280",
+  "expected_sha": "fa1e5f204b2a023750b84d183e2b78156b9ba5ce141f2b2585f7f59af0069135",
+  "expected_bytes": 232011,
+  "expected_dims": [
+   1280,
+   950
+  ],
+  "status": "ok",
+  "got_bytes": 232011,
+  "sha256": "fa1e5f204b2a023750b84d183e2b78156b9ba5ce141f2b2585f7f59af0069135",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Citrine_%28GeoDIL_number_-_310%29.jpg/1280px-Citrine_%28GeoDIL_number_-_310%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   950
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-04",
+  "slug": "obsidian",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Snowflake_obsidian_with_white_background.jpg?width=1280",
+  "expected_sha": "7067d6dc81162609991e1961b6bafaac82442a9f6c0309b5f5ec0e2df6267061",
+  "expected_bytes": 56281,
+  "expected_dims": [
+   1280,
+   916
+  ],
+  "status": "ok",
+  "got_bytes": 56281,
+  "sha256": "7067d6dc81162609991e1961b6bafaac82442a9f6c0309b5f5ec0e2df6267061",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Snowflake_obsidian_with_white_background.jpg/1280px-Snowflake_obsidian_with_white_background.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   916
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-05",
+  "slug": "lapis",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lapis-lazuli_hg.jpg?width=1280",
+  "expected_sha": "bad6d4f0abb2d8098acd5d0f3810ca5eab8e20d0efb9ac427729fadaa841bcd4",
+  "expected_bytes": 486703,
+  "expected_dims": [
+   1280,
+   1098
+  ],
+  "status": "ok",
+  "got_bytes": 486703,
+  "sha256": "bad6d4f0abb2d8098acd5d0f3810ca5eab8e20d0efb9ac427729fadaa841bcd4",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Lapis-lazuli_hg.jpg/1280px-Lapis-lazuli_hg.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1098
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-06",
+  "slug": "malachit",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Malachite_on_dolomite_%28GeoDIL_number_-_759%29.jpg?width=1280",
+  "expected_sha": "257dc386187073e7c3b48ccf24b14440a95b6437a954e37061eb24b379be8bf7",
+  "expected_bytes": 349888,
+  "expected_dims": [
+   1280,
+   928
+  ],
+  "status": "ok",
+  "got_bytes": 349888,
+  "sha256": "257dc386187073e7c3b48ccf24b14440a95b6437a954e37061eb24b379be8bf7",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Malachite_on_dolomite_%28GeoDIL_number_-_759%29.jpg/1280px-Malachite_on_dolomite_%28GeoDIL_number_-_759%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   928
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-07",
+  "slug": "citrin-wille",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrine_1_%28Russie%29.jpg?width=1280",
+  "expected_sha": "c4e97e3cd65352ad9dad485132551f55b8b920cd4a461b984ec224f45e07a5d6",
+  "expected_bytes": 198127,
+  "expected_dims": [
+   1280,
+   850
+  ],
+  "status": "ok",
+  "got_bytes": 198127,
+  "sha256": "c4e97e3cd65352ad9dad485132551f55b8b920cd4a461b984ec224f45e07a5d6",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Citrine_1_%28Russie%29.jpg/1280px-Citrine_1_%28Russie%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   850
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-08",
+  "slug": "fluorit",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg?width=1280",
+  "expected_sha": "854a3286f055835b00f06cc86018fdf596022e386c7674349ae55fcec5f8f5fd",
+  "expected_bytes": 213412,
+  "expected_dims": [
+   1280,
+   853
+  ],
+  "status": "ok",
+  "got_bytes": 213412,
+  "sha256": "854a3286f055835b00f06cc86018fdf596022e386c7674349ae55fcec5f8f5fd",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg/1280px-Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   853
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-09",
+  "slug": "selenit",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gypsum_7.jpg?width=1280",
+  "expected_sha": "dd0bd5bdab09c284bc45ffbc9858dd8b53ad7dc26861618fcd05cbd7563c1b7a",
+  "expected_bytes": 201254,
+  "expected_dims": [
+   1280,
+   1928
+  ],
+  "status": "ok",
+  "got_bytes": 201254,
+  "sha256": "dd0bd5bdab09c284bc45ffbc9858dd8b53ad7dc26861618fcd05cbd7563c1b7a",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Gypsum_7.jpg/1280px-Gypsum_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1928
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-10",
+  "slug": "schwarzer-turmalin",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tourmaline-MCG_79448-P4150859-black.jpg?width=1280",
+  "expected_sha": "a828c1f2d7daa7c616b8790bee050a7850695200d9e1a41d1b47a42166a19078",
+  "expected_bytes": 256817,
+  "expected_dims": [
+   1280,
+   1280
+  ],
+  "status": "ok",
+  "got_bytes": 256817,
+  "sha256": "a828c1f2d7daa7c616b8790bee050a7850695200d9e1a41d1b47a42166a19078",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Tourmaline-MCG_79448-P4150859-black.jpg/1280px-Tourmaline-MCG_79448-P4150859-black.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1280
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-11",
+  "slug": "aventurin",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aventurine_1.jpg?width=1280",
+  "expected_sha": "44c35496033a5ab1a6c3c25a45b633fdc61181d236b2108ee085c5b430768863",
+  "expected_bytes": 261395,
+  "expected_dims": [
+   1280,
+   872
+  ],
+  "status": "ok",
+  "got_bytes": 261395,
+  "sha256": "44c35496033a5ab1a6c3c25a45b633fdc61181d236b2108ee085c5b430768863",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Aventurine_1.jpg/1280px-Aventurine_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   872
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-12",
+  "slug": "karneol",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carnelian_%28GeoDIL_number_-_781%29.jpg?width=1280",
+  "expected_sha": "691731fe3fc428f8f9fba182466ffbf88a4485832baa2661333e5ea48139da5f",
+  "expected_bytes": 190835,
+  "expected_dims": [
+   1280,
+   953
+  ],
+  "status": "ok",
+  "got_bytes": 190835,
+  "sha256": "691731fe3fc428f8f9fba182466ffbf88a4485832baa2661333e5ea48139da5f",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Carnelian_%28GeoDIL_number_-_781%29.jpg/1280px-Carnelian_%28GeoDIL_number_-_781%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   953
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-13",
+  "slug": "tigerauge",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tigers_eye_egg_shape.jpg?width=1280",
+  "expected_sha": "424368fc09c8916ded3ab1b58cbc23de291c0737f17d23e8513980304293aa96",
+  "expected_bytes": 274534,
+  "expected_dims": [
+   1280,
+   970
+  ],
+  "status": "ok",
+  "got_bytes": 274534,
+  "sha256": "424368fc09c8916ded3ab1b58cbc23de291c0737f17d23e8513980304293aa96",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Tigers_eye_egg_shape.jpg/1280px-Tigers_eye_egg_shape.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   970
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-14",
+  "slug": "labradorit",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Labradorite_polie_1_%28Madagascar%29.jpg?width=1280",
+  "expected_sha": "b368448df5ffa6d268df950ed6bfa423000f6dafaa29011cbc28613ceaa0c071",
+  "expected_bytes": 334277,
+  "expected_dims": [
+   1280,
+   850
+  ],
+  "status": "ok",
+  "got_bytes": 334277,
+  "sha256": "b368448df5ffa6d268df950ed6bfa423000f6dafaa29011cbc28613ceaa0c071",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Labradorite_polie_1_%28Madagascar%29.jpg/1280px-Labradorite_polie_1_%28Madagascar%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   850
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-15",
+  "slug": "steinholz",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Petrified_wood_close_052615.jpg?width=1280",
+  "expected_sha": "9bfcd28e3f41392fa4ec116fe790f62a98c20c7bdfcad05dab2d9edb10a392f6",
+  "expected_bytes": 306340,
+  "expected_dims": [
+   1280,
+   904
+  ],
+  "status": "ok",
+  "got_bytes": 306340,
+  "sha256": "9bfcd28e3f41392fa4ec116fe790f62a98c20c7bdfcad05dab2d9edb10a392f6",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Petrified_wood_close_052615.jpg/1280px-Petrified_wood_close_052615.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   904
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-16",
+  "slug": "bernstein",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg?width=1280",
+  "expected_sha": "b52aaf9a65938bf0cf7ebc55dfd75e516b4763b0eb4ab10e081cc93f2ecab0c2",
+  "expected_bytes": 364397,
+  "expected_dims": [
+   1280,
+   1280
+  ],
+  "status": "ok",
+  "got_bytes": 364397,
+  "sha256": "b52aaf9a65938bf0cf7ebc55dfd75e516b4763b0eb4ab10e081cc93f2ecab0c2",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg/1280px-Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1280
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-17",
+  "slug": "moonstone",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamie%C5%84_ksi%C4%99%C5%BCycowy_%28moonstone%29_-_Larvik_k._Oslo._Norwegia.jpg?width=1280",
+  "expected_sha": "811a595062c8ef58cdc9fd7d5a6cb93b1bb4367c4ec541275d394ab00ce50256",
+  "expected_bytes": 173497,
+  "expected_dims": [
+   1280,
+   853
+  ],
+  "status": "ok",
+  "got_bytes": 173497,
+  "sha256": "811a595062c8ef58cdc9fd7d5a6cb93b1bb4367c4ec541275d394ab00ce50256",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Kamie%C5%84_ksi%C4%99%C5%BCycowy_%28moonstone%29_-_Larvik_k._Oslo._Norwegia.jpg/1280px-Kamie%C5%84_ksi%C4%99%C5%BCycowy_%28moonstone%29_-_Larvik_k._Oslo._Norwegia.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   853
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-18",
+  "slug": "celestit",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Celestine_-_Sakoany_deposit%2C_Katsepy%2C_Mitsinjo%2C_Boeny%2C_Madagascar.jpg?width=1280",
+  "expected_sha": "f0c01aecdd03da230e5bd90b7b9844d7149766f5d004669f4bb622bdfa5ab12a",
+  "expected_bytes": 219886,
+  "expected_dims": [
+   1280,
+   948
+  ],
+  "status": "ok",
+  "got_bytes": 219886,
+  "sha256": "f0c01aecdd03da230e5bd90b7b9844d7149766f5d004669f4bb622bdfa5ab12a",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Celestine_-_Sakoany_deposit%2C_Katsepy%2C_Mitsinjo%2C_Boeny%2C_Madagascar.jpg/1280px-Celestine_-_Sakoany_deposit%2C_Katsepy%2C_Mitsinjo%2C_Boeny%2C_Madagascar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   948
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-19",
+  "slug": "granat",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grossular_%28GeoDIL_number_-_303%29.jpg?width=1280",
+  "expected_sha": "215b1922a5eab490a177321a0ec46774fe88129ba0d0393e1b0aae4774a8d23c",
+  "expected_bytes": 181249,
+  "expected_dims": [
+   1280,
+   1088
+  ],
+  "status": "ok",
+  "got_bytes": 181249,
+  "sha256": "215b1922a5eab490a177321a0ec46774fe88129ba0d0393e1b0aae4774a8d23c",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Grossular_%28GeoDIL_number_-_303%29.jpg/1280px-Grossular_%28GeoDIL_number_-_303%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1088
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-20",
+  "slug": "smaragd",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_-2.jpg?width=1280",
+  "expected_sha": "6bbb7dc813c2219246caa5cd2fcce816311d1436051528018f950d90eb6dfad5",
+  "expected_bytes": 270885,
+  "expected_dims": [
+   1280,
+   850
+  ],
+  "status": "ok",
+  "got_bytes": 270885,
+  "sha256": "6bbb7dc813c2219246caa5cd2fcce816311d1436051528018f950d90eb6dfad5",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_-2.jpg/1280px-B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   850
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-21",
+  "slug": "rosenquarz-milch",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stuk_roze_kwarts_%282%29.jpg?width=1280",
+  "expected_sha": "d976754dfc424ed42b728796aa981742327b68c0d393bf1b595ad67539fca44f",
+  "expected_bytes": 114931,
+  "expected_dims": [
+   1280,
+   960
+  ],
+  "status": "ok",
+  "got_bytes": 114931,
+  "sha256": "d976754dfc424ed42b728796aa981742327b68c0d393bf1b595ad67539fca44f",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Stuk_roze_kwarts_%282%29.jpg/1280px-Stuk_roze_kwarts_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   960
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-22",
+  "slug": "amazonit",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg?width=1280",
+  "expected_sha": "29e748362243fc47d6f1ad3fb86675794d1d954547163ace82987adad3b7619e",
+  "expected_bytes": 461070,
+  "expected_dims": [
+   1280,
+   1600
+  ],
+  "status": "ok",
+  "got_bytes": 461070,
+  "sha256": "29e748362243fc47d6f1ad3fb86675794d1d954547163ace82987adad3b7619e",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg/1280px-Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1600
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-23",
+  "slug": "hematit",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hematite_%2820255007100%29.jpg?width=1280",
+  "expected_sha": "87c3ea5c2abbcb6318dabc3817c84caec6d1159c192abfcc330cb6e723a956e4",
+  "expected_bytes": 191129,
+  "expected_dims": [
+   1280,
+   854
+  ],
+  "status": "ok",
+  "got_bytes": 191129,
+  "sha256": "87c3ea5c2abbcb6318dabc3817c84caec6d1159c192abfcc330cb6e723a956e4",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Hematite_%2820255007100%29.jpg/1280px-Hematite_%2820255007100%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   854
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-24",
+  "slug": "quarz-klar",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-12-24_11-10-34-quartz-10f.jpg?width=1280",
+  "expected_sha": "b33d9c79ba0d18d7f7419114a2e0c90adac23087ed4d65ed06963946d55c6626",
+  "expected_bytes": 204514,
+  "expected_dims": [
+   1280,
+   783
+  ],
+  "status": "ok",
+  "got_bytes": 204514,
+  "sha256": "b33d9c79ba0d18d7f7419114a2e0c90adac23087ed4d65ed06963946d55c6626",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/2011-12-24_11-10-34-quartz-10f.jpg/1280px-2011-12-24_11-10-34-quartz-10f.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   783
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-25",
+  "slug": "peridot",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/P%C3%A9ridot_%28%3D_olivine%29_%28Pakistan%29_1.jpg?width=1280",
+  "expected_sha": "ba658397d54446d235267684b2081abfc6623231b77a8c027ea87e8638c9e125",
+  "expected_bytes": 270931,
+  "expected_dims": [
+   1280,
+   1291
+  ],
+  "status": "ok",
+  "got_bytes": 270931,
+  "sha256": "ba658397d54446d235267684b2081abfc6623231b77a8c027ea87e8638c9e125",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/P%C3%A9ridot_%28%3D_olivine%29_%28Pakistan%29_1.jpg/1280px-P%C3%A9ridot_%28%3D_olivine%29_%28Pakistan%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1291
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-26",
+  "slug": "kunzit",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spodumene_var._kunzite_%28Pakistan%29.jpg?width=1280",
+  "expected_sha": "27655d2f9e16dbf4f023077ea8e9b2ede81b084c52db9b4ca721e5ffc7018e3f",
+  "expected_bytes": 176584,
+  "expected_dims": [
+   1280,
+   850
+  ],
+  "status": "ok",
+  "got_bytes": 176584,
+  "sha256": "27655d2f9e16dbf4f023077ea8e9b2ede81b084c52db9b4ca721e5ffc7018e3f",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Spodumene_var._kunzite_%28Pakistan%29.jpg/1280px-Spodumene_var._kunzite_%28Pakistan%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   850
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-27",
+  "slug": "roter-jaspis",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jasper_%28GeoDIL_number_-_2520%29.jpg?width=1280",
+  "expected_sha": "3df4069c4956f39f79e6a070575d75675b954229dbece8d3788b9931c37ed767",
+  "expected_bytes": 238847,
+  "expected_dims": [
+   1280,
+   917
+  ],
+  "status": "ok",
+  "got_bytes": 238847,
+  "sha256": "3df4069c4956f39f79e6a070575d75675b954229dbece8d3788b9931c37ed767",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Jasper_%28GeoDIL_number_-_2520%29.jpg/1280px-Jasper_%28GeoDIL_number_-_2520%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   917
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-28",
+  "slug": "feueropal",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fire_opal_in_matrix_%28Juniper_Ridge%2C_Lake_County%2C_Oregon%2C_USA%29_11.jpg?width=1280",
+  "expected_sha": "391bef34f79cf9ba9f75cb5102ea6b6f931287be9c52fed666879bd78fa3f21c",
+  "expected_bytes": 242474,
+  "expected_dims": [
+   1280,
+   781
+  ],
+  "status": "ok",
+  "got_bytes": 242474,
+  "sha256": "391bef34f79cf9ba9f75cb5102ea6b6f931287be9c52fed666879bd78fa3f21c",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Fire_opal_in_matrix_%28Juniper_Ridge%2C_Lake_County%2C_Oregon%2C_USA%29_11.jpg/1280px-Fire_opal_in_matrix_%28Juniper_Ridge%2C_Lake_County%2C_Oregon%2C_USA%29_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   781
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-29",
+  "slug": "aquamarin",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aquamarine_beryl-MCG_90158-P4150841-black.jpg?width=1280",
+  "expected_sha": "e7ea46909abd0b10944fb66678fcc81308b9110b6a78c04c8996f4fb6ba7b227",
+  "expected_bytes": 234608,
+  "expected_dims": [
+   1280,
+   1280
+  ],
+  "status": "ok",
+  "got_bytes": 234608,
+  "sha256": "e7ea46909abd0b10944fb66678fcc81308b9110b6a78c04c8996f4fb6ba7b227",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Aquamarine_beryl-MCG_90158-P4150841-black.jpg/1280px-Aquamarine_beryl-MCG_90158-P4150841-black.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1280
+  ],
+  "dims_match": true
+ },
+ {
+  "id": "crys-30",
+  "slug": "rauchquarz",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg?width=1280",
+  "expected_sha": "121cd114c32790d58924e5fc39e1c2691300916f0b3730a620339e3ea596335d",
+  "expected_bytes": 575619,
+  "expected_dims": [
+   1280,
+   1920
+  ],
+  "status": "ok",
+  "got_bytes": 575619,
+  "sha256": "121cd114c32790d58924e5fc39e1c2691300916f0b3730a620339e3ea596335d",
+  "ctype": "image/jpeg",
+  "final_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg/1280px-Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+  "hash_match": true,
+  "bytes_match": true,
+  "dims": [
+   1280,
+   1920
+  ],
+  "dims_match": true
+ }
+]

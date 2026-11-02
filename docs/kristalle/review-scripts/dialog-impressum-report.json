@@ -1,0 +1,207 @@
+{
+ "dialogs": {
+  "360": {
+   "innerRect": {
+    "x": 24,
+    "y": 24,
+    "w": 312,
+    "h": 592
+   },
+   "innerFitsViewport": true,
+   "innerScrollsY": true,
+   "innerScrollsX": false,
+   "bodyScrollsY": false,
+   "imgBox": {
+    "w": 260,
+    "h": 260
+   },
+   "imgSame": true,
+   "imgFullyVisible": true,
+   "creditRect": {
+    "y": 416,
+    "h": 226
+   },
+   "creditFullyVisible": true,
+   "creditClipped": false,
+   "creditCss": {
+    "fs": "13px",
+    "lh": "20.15px"
+   },
+   "docOverflowX": 0,
+   "cls": 0.0119
+  },
+  "390": {
+   "innerRect": {
+    "x": 24,
+    "y": 24,
+    "w": 342,
+    "h": 796
+   },
+   "innerFitsViewport": true,
+   "innerScrollsY": true,
+   "innerScrollsX": false,
+   "bodyScrollsY": false,
+   "imgBox": {
+    "w": 290,
+    "h": 290
+   },
+   "imgSame": true,
+   "imgFullyVisible": true,
+   "creditRect": {
+    "y": 446,
+    "h": 185
+   },
+   "creditFullyVisible": true,
+   "creditClipped": false,
+   "creditCss": {
+    "fs": "13px",
+    "lh": "20.15px"
+   },
+   "docOverflowX": 0,
+   "cls": 0.0016
+  },
+  "768": {
+   "innerRect": {
+    "x": 31,
+    "y": 128,
+    "w": 707,
+    "h": 644
+   },
+   "innerFitsViewport": true,
+   "innerScrollsY": false,
+   "innerScrollsX": false,
+   "bodyScrollsY": false,
+   "imgBox": {
+    "w": 262,
+    "h": 262
+   },
+   "imgSame": true,
+   "imgFullyVisible": true,
+   "creditRect": {
+    "y": 522,
+    "h": 226
+   },
+   "creditFullyVisible": true,
+   "creditClipped": false,
+   "creditCss": {
+    "fs": "13px",
+    "lh": "20.15px"
+   },
+   "docOverflowX": 0,
+   "cls": 0.0008
+  },
+  "1440": {
+   "innerRect": {
+    "x": 280,
+    "y": 122,
+    "w": 880,
+    "h": 656
+   },
+   "innerFitsViewport": true,
+   "innerScrollsY": false,
+   "innerScrollsX": false,
+   "bodyScrollsY": false,
+   "imgBox": {
+    "w": 334,
+    "h": 334
+   },
+   "imgSame": true,
+   "imgFullyVisible": true,
+   "creditRect": {
+    "y": 588,
+    "h": 165
+   },
+   "creditFullyVisible": true,
+   "creditClipped": false,
+   "creditCss": {
+    "fs": "13px",
+    "lh": "20.15px"
+   },
+   "docOverflowX": 0,
+   "cls": 0.0014
+  }
+ },
+ "impressum": {
+  "sectionFound": true,
+  "entries": 0,
+  "firstFontSize": null,
+  "sectionTop": 116,
+  "clipped": 0,
+  "allHave2Links": true,
+  "anchors": [],
+  "docOverflowX": 0,
+  "pageErrors": [],
+  "missingLicenseLinks": [
+   "crys-01:no-entry",
+   "crys-09:no-entry",
+   "crys-24:no-entry",
+   "crys-28:no-entry",
+   "crys-08:no-entry",
+   "crys-05:no-entry",
+   "crys-14:no-entry",
+   "crys-18:no-entry",
+   "crys-29:no-entry",
+   "crys-11:no-entry",
+   "crys-06:no-entry",
+   "crys-20:no-entry",
+   "crys-22:no-entry",
+   "crys-26:no-entry",
+   "crys-02:no-entry",
+   "crys-17:no-entry",
+   "crys-21:no-entry",
+   "crys-25:no-entry",
+   "crys-03:no-entry",
+   "crys-13:no-entry",
+   "crys-07:no-entry",
+   "crys-16:no-entry",
+   "crys-12:no-entry",
+   "crys-27:no-entry",
+   "crys-15:no-entry",
+   "crys-30:no-entry",
+   "crys-19:no-entry",
+   "crys-23:no-entry",
+   "crys-04:no-entry",
+   "crys-10:no-entry"
+  ],
+  "missingSourceLinks": []
+ },
+ "perf": {},
+ "bySaDialogs": {
+  "crys-17": {
+   "text": "Foto: Lech Darski · Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 Quelle: Wikimedia Commons · abgerufen 2026-11-02 Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, eingebettete Maßstabs-Miniatur „56 mm“ entfernt, Skalierung auf 320/640/960/1280 px (WebP)",
+   "links": [
+    "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 -> https://creativecommons.org/licenses/by-sa/4.0",
+    "Quelle: Wikimedia Commons -> https://commons.wikimedia.org/wiki/File:Kamie%C5%84_ksi%C4%99%C5%BCycowy_(moonstone)_-_Larvik_k._Oslo._Norwegia.jpg"
+   ],
+   "alt": "Mondstein — angeschliffene Platte vor dunklem Grund, vollständig im Bild, blauer Schimmer und Vitrinenreflexe sichtbar",
+   "img": "960/moonstone.webp"
+  },
+  "crys-18": {
+   "text": "Foto: Ivar Leidus · Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 Quelle: Wikimedia Commons · abgerufen 2026-11-02 Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Skalierung auf 320/640/960/1280 px (WebP)",
+   "links": [
+    "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 -> https://creativecommons.org/licenses/by-sa/4.0",
+    "Quelle: Wikimedia Commons -> https://commons.wikimedia.org/wiki/File:Celestine_-_Sakoany_deposit,_Katsepy,_Mitsinjo,_Boeny,_Madagascar.jpg"
+   ],
+   "alt": "Celestit — hellblaue Kristallgruppe auf Matrix vor dunklem Grund, vollständig im Bild, tafelige Kristallformen sichtbar",
+   "img": "960/celestit.webp"
+  },
+  "crys-05": {
+   "text": "Foto: Hannes Grobe · Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 2.5 Quelle: Wikimedia Commons · abgerufen 2026-11-02 Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Motiv freigestellt, Skalierung auf 320/640/960/1280 px (WebP)",
+   "links": [
+    "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 2.5 -> https://creativecommons.org/licenses/by-sa/2.5",
+    "Quelle: Wikimedia Commons -> https://commons.wikimedia.org/wiki/File:Lapis-lazuli_hg.jpg"
+   ],
+   "alt": "Lapis Lazuli — ultramarinblauer Handstein vor dunklem Grund, vollständig im Bild, goldene Pyritadern sichtbar",
+   "img": "960/lapis.webp"
+  },
+  "crys-15": {
+   "text": "Foto: Wilson44691 · CC0 1.0 Universell (Public Domain Dedication) Quelle: Wikimedia Commons · abgerufen 2026-11-02 Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Bildrand weich in den Grund überblendet, Maßstabsbalken „1.0 cm“ retuschiert, Skalierung auf 320/640/960/1280 px (WebP)",
+   "links": [
+    "CC0 1.0 Universell (Public Domain Dedication) -> https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "Quelle: Wikimedia Commons -> https://commons.wikimedia.org/wiki/File:Petrified_wood_close_052615.jpg"
+   ],
+   "alt": "Petrified Wood — angeschnittene Scheibe vor hellem Grund, vollständig im Bild, Jahresringe und Zellstruktur sichtbar",
+   "img": "960/steinholz.webp"
+  }
+ }
+}

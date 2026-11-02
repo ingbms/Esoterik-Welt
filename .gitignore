@@ -41,3 +41,6 @@ playwright-report/
 # Python-Hilfsskripte (Bildaufbereitung, Pruefungen)
 __pycache__/
 *.pyc
+
+# Kristalle: abgeleitete Zwischendatei, erzeugt von docs/kristalle/scripts/extract-selection.py
+docs/kristalle/.selection.json

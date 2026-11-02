@@ -1,0 +1,434 @@
+{
+ "viewports": {
+  "360": {
+   "viewport": 360,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 310,
+    "h": 310
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 1,
+   "rows": 30,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "316x316",
+    "316x316",
+    "316x316"
+   ],
+   "chosen": [
+    "320/amethyst.webp",
+    "320/selenit.webp",
+    "320/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 74.5625,
+   "creditMinHeight": 38.1875,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  },
+  "390": {
+   "viewport": 390,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 340,
+    "h": 340
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 1,
+   "rows": 30,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "366x366",
+    "366x366",
+    "366x366"
+   ],
+   "chosen": [
+    "640/amethyst.webp",
+    "640/selenit.webp",
+    "640/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 56.375,
+   "creditMinHeight": 38.1875,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  },
+  "480": {
+   "viewport": 480,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 430,
+    "h": 430
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 1,
+   "rows": 30,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "451x451",
+    "451x451",
+    "451x451"
+   ],
+   "chosen": [
+    "640/amethyst.webp",
+    "640/selenit.webp",
+    "640/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 56.375,
+   "creditMinHeight": 38.1875,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  },
+  "640": {
+   "viewport": 640,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 282,
+    "h": 282
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 2,
+   "rows": 15,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "326x326",
+    "326x326",
+    "326x326"
+   ],
+   "chosen": [
+    "640/amethyst.webp",
+    "640/selenit.webp",
+    "640/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 74.59375,
+   "creditMinHeight": 74.59375,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  },
+  "768": {
+   "viewport": 768,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 338,
+    "h": 338
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 2,
+   "rows": 15,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "391x391",
+    "391x391",
+    "391x391"
+   ],
+   "chosen": [
+    "640/amethyst.webp",
+    "640/selenit.webp",
+    "640/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 74.59375,
+   "creditMinHeight": 74.59375,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  },
+  "1024": {
+   "viewport": 1024,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 302,
+    "h": 302
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 3,
+   "rows": 10,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "307x307",
+    "307x307",
+    "307x307"
+   ],
+   "chosen": [
+    "640/amethyst.webp",
+    "640/selenit.webp",
+    "640/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 74.59375,
+   "creditMinHeight": 74.59375,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  },
+  "1280": {
+   "viewport": 1280,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 366,
+    "h": 366
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 3,
+   "rows": 10,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "320x320",
+    "320x320",
+    "320x320"
+   ],
+   "chosen": [
+    "640/amethyst.webp",
+    "640/selenit.webp",
+    "640/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 74.59375,
+   "creditMinHeight": 74.59375,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  },
+  "1440": {
+   "viewport": 1440,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 308,
+    "h": 308
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 4,
+   "rows": 8,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "320x320",
+    "320x320",
+    "320x320"
+   ],
+   "chosen": [
+    "640/amethyst.webp",
+    "640/selenit.webp",
+    "640/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 74.59375,
+   "creditMinHeight": 74.59375,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  },
+  "1920": {
+   "viewport": 1920,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 320,
+    "h": 320
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 4,
+   "rows": 8,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "320x320",
+    "320x320",
+    "320x320"
+   ],
+   "chosen": [
+    "640/amethyst.webp",
+    "640/selenit.webp",
+    "640/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 74.59375,
+   "creditMinHeight": 74.59375,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  },
+  "2560": {
+   "viewport": 2560,
+   "docOverflowX": 0,
+   "plate": {
+    "w": 320,
+    "h": 320
+   },
+   "visibleCredits": 30,
+   "clippedCredits": [],
+   "ellipsisTruncated": 0,
+   "cardInnerOverflow": 0,
+   "firstRowCards": 4,
+   "rows": 8,
+   "imgLoaded": 30,
+   "imgNatural": [
+    "320x320",
+    "320x320",
+    "320x320"
+   ],
+   "chosen": [
+    "640/amethyst.webp",
+    "640/selenit.webp",
+    "640/quarz-klar.webp"
+   ],
+   "sizes": "(min-width: 1256px) 320px, (min-width: 952px) 30vw, (min-width: 632px) 51vw, (min-width: 380px) 94vw, 88vw",
+   "alts": [
+    ""
+   ],
+   "creditFont": "13px",
+   "creditMaxHeight": 74.59375,
+   "creditMinHeight": 74.59375,
+   "creditTextMismatch": 0,
+   "cardIdsPresent": 30
+  }
+ },
+ "dialog": {
+  "open": true,
+  "display": "flex",
+  "modalRect": {
+   "w": 1440,
+   "h": 900
+  },
+  "imgAlt": "Amethyst — violette Kristallstufe über gelboranger Matrix, vollständig im Bild, Spitzen und Bruchflächen sichtbar",
+  "imgSrc": "960/amethyst.webp",
+  "imgBox": {
+   "w": 334,
+   "h": 334
+  },
+  "imgNatural": "960x960",
+  "creditText": "Foto: CopyrightFreePhotos CopyrightFreePhotos.HQ101.com · Public Domain (Freigabe durch den Urheber, PD-self) Quelle: Wikimedia Commons · abgerufen 2026-11-02 Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP)",
+  "links": [
+   {
+    "text": "Public Domain (Freigabe durch den Urheber, PD-self)",
+    "href": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "rel": "noopener"
+   },
+   {
+    "text": "Quelle: Wikimedia Commons",
+    "href": "https://commons.wikimedia.org/wiki/File:Amethyst_Quartz_Crystals.jpg",
+    "rel": "noopener"
+   }
+  ],
+  "creditClipped": false,
+  "focusInside": true,
+  "activeEl": "BUTTON.modal-close",
+  "role": "dialog",
+  "ariaModal": "true",
+  "ariaLabelledby": "crystalModalTitle"
+ },
+ "loading": {
+  "initialImageRequests": 6,
+  "initialImageFiles": [
+   "mineral/quartz-light-2400.jpg",
+   "mineral/mineral-detail-1000.jpg",
+   "320/amethyst.webp",
+   "320/selenit.webp",
+   "320/quarz-klar.webp",
+   "320/feueropal.webp"
+  ]
+ },
+ "a11y": {},
+ "console": [],
+ "counts": {
+  "cards": 30,
+  "images": 30
+ },
+ "contrast": {
+  "color": "rgb(186, 189, 183)",
+  "bg": "rgb(20, 28, 31)",
+  "fontSize": "13px",
+  "lineHeight": "18.2px"
+ },
+ "contrastRatio": 9.090448373802284,
+ "dialogTabOrder": [
+  "IN:A:Public Domain (Freigabe durch ",
+  "IN:A:Quelle: Wikimedia Commons",
+  "IN:BUTTON:Schließen",
+  "IN:A:Public Domain (Freigabe durch ",
+  "IN:A:Quelle: Wikimedia Commons",
+  "IN:BUTTON:Schließen",
+  "IN:A:Public Domain (Freigabe durch ",
+  "IN:A:Quelle: Wikimedia Commons"
+ ],
+ "afterEscape": {
+  "modalHidden": true,
+  "focusReturnedTo": "btn btn-secondary btn-sm crystal-details-btn",
+  "focusIsDetailsBtn": true,
+  "bodyOverflow": "visible",
+  "ariaHidden": null
+ },
+ "focusBeforeDialog": "btn btn-secondary btn-sm crystal-details-btn",
+ "listView": {
+  "isList": true,
+  "cards": 30,
+  "inlineCredits": 30,
+  "visibleInline": 30,
+  "sample": "Foto: CopyrightFreePhotos CopyrightFreePhotos.HQ101.com · Public domain",
+  "clipped": 0
+ },
+ "sectionFooterLink": {
+  "text": "Alle Bildnachweise und Lizenzen",
+  "href": "http://127.0.0.1:8188/Esoterik-Welt/impressum.html#kristalle-fotos",
+  "visible": true
+ },
+ "pageErrors": []
+}

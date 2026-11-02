@@ -1,0 +1,23 @@
+{
+  "manifest": "docs/kristalle/image-sources.json",
+  "manifest_bytes": 174513,
+  "manifest_sha256": "af18a5b38f6d3216b50841de48a1abb91c58bf88f8601ac0463d331c0017bf61",
+  "crystals": 30,
+  "errors": [],
+  "warnings": [],
+  "license_urls_checked": {
+    "https://commons.wikimedia.org/wiki/Template:PD-self": "200",
+    "https://creativecommons.org/publicdomain/zero/1.0/deed.en": "200",
+    "https://creativecommons.org/licenses/by-sa/2.5": "200",
+    "https://creativecommons.org/licenses/by/4.0": "200",
+    "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en": "200",
+    "https://creativecommons.org/licenses/by-sa/4.0": "200",
+    "https://creativecommons.org/licenses/by/3.0": "200",
+    "https://creativecommons.org/licenses/by/2.0": "200"
+  },
+  "rendition_hash_check": {
+    "candidate": "crys-01-amethyst",
+    "ok": true
+  },
+  "mode": "live"
+}

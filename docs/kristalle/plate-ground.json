@@ -1,0 +1,455 @@
+{
+ "method": "Randstreifen der Fotoplatte im gelieferten 1280er-WebP; Klassen: hell >= 0.30, dunkel <= 0.12, mittel dazwischen",
+ "images": {
+  "crys-01": {
+   "plate_bbox": [
+    268,
+    80,
+    1010,
+    1200
+   ],
+   "strip_lum_top": 0.1044,
+   "strip_lum_bottom": 0.5306,
+   "plate_lum": 0.3666,
+   "ground_lum": 0.1044,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Amethyst — violette Kristallstufe über gelboranger Matrix, vollständig im Bild, Spitzen und Bruchflächen sichtbar"
+  },
+  "crys-09": {
+   "plate_bbox": [
+    266,
+    78,
+    1012,
+    1202
+   ],
+   "strip_lum_top": 0.0001,
+   "strip_lum_bottom": 0.137,
+   "plate_lum": 0.2096,
+   "ground_lum": 0.0001,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Selenit — hochkant stehende transparente Gipssäule vor dunklem Grund, vollständig im Bild, Schichtung sichtbar"
+  },
+  "crys-24": {
+   "plate_bbox": [
+    80,
+    298,
+    1200,
+    980
+   ],
+   "strip_lum_top": 0.6143,
+   "strip_lum_bottom": 0.4137,
+   "plate_lum": 0.5423,
+   "ground_lum": 0.4137,
+   "ground_class": "hell",
+   "mode": "pad",
+   "alt": "Kristallquarz — klarer Bergkristall mit Endfläche vor hellem Grund, vollständig im Bild, klare Silhouette sichtbar"
+  },
+  "crys-28": {
+   "plate_bbox": [
+    78,
+    298,
+    1200,
+    980
+   ],
+   "strip_lum_top": 0.4963,
+   "strip_lum_bottom": 0.3401,
+   "plate_lum": 0.4264,
+   "ground_lum": 0.3401,
+   "ground_class": "hell",
+   "mode": "pad",
+   "alt": "Feueropal — oranger Opal in dunkler Matrix vor dunklem Grund, vollständig im Bild, leuchtende Farbflächen sichtbar"
+  },
+  "crys-08": {
+   "plate_bbox": [
+    78,
+    266,
+    1202,
+    1014
+   ],
+   "strip_lum_top": 0.0117,
+   "strip_lum_bottom": 0.1131,
+   "plate_lum": 0.2695,
+   "ground_lum": 0.0117,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Fluorit — grüne Stufe aus würfeligen Kristallen vor dunklem Grund, vollständig im Bild, Würfelkanten sichtbar"
+  },
+  "crys-05": {
+   "plate_bbox": [
+    78,
+    168,
+    1198,
+    1110
+   ],
+   "strip_lum_top": 0.1471,
+   "strip_lum_bottom": 0.1823,
+   "plate_lum": 0.2373,
+   "ground_lum": 0.1471,
+   "ground_class": "mittel",
+   "mode": "matte",
+   "alt": "Lapis Lazuli — ultramarinblauer Handstein vor dunklem Grund, vollständig im Bild, goldene Pyritadern sichtbar"
+  },
+  "crys-14": {
+   "plate_bbox": [
+    78,
+    266,
+    1202,
+    1012
+   ],
+   "strip_lum_top": 0.0252,
+   "strip_lum_bottom": 0.2337,
+   "plate_lum": 0.2245,
+   "ground_lum": 0.0252,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Labradorit — polierte Platte vor dunklem Grund, vollständig im Bild, blau-goldener Labradoreszenz-Schimmer sichtbar"
+  },
+  "crys-18": {
+   "plate_bbox": [
+    78,
+    224,
+    1202,
+    1058
+   ],
+   "strip_lum_top": 0.0239,
+   "strip_lum_bottom": 0.4756,
+   "plate_lum": 0.416,
+   "ground_lum": 0.0239,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Celestit — hellblaue Kristallgruppe auf Matrix vor dunklem Grund, vollständig im Bild, tafelige Kristallformen sichtbar"
+  },
+  "crys-29": {
+   "plate_bbox": [
+    78,
+    78,
+    1202,
+    1202
+   ],
+   "strip_lum_top": 0.0002,
+   "strip_lum_bottom": 0.0002,
+   "plate_lum": 0.1137,
+   "ground_lum": 0.0002,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Aquamarin — hellblauer Kristall auf dunklem Muskovit vor dunklem Grund, vollständig im Bild, Kristallflächen sichtbar"
+  },
+  "crys-11": {
+   "plate_bbox": [
+    80,
+    260,
+    1198,
+    1018
+   ],
+   "strip_lum_top": 0.2418,
+   "strip_lum_bottom": 0.2047,
+   "plate_lum": 0.2576,
+   "ground_lum": 0.2047,
+   "ground_class": "mittel",
+   "mode": "pad",
+   "alt": "Aventurin — polierter grüner Trommelstein vor dunklem Stoffgrund, vollständig im Bild, glänzende Oberfläche sichtbar"
+  },
+  "crys-06": {
+   "plate_bbox": [
+    78,
+    232,
+    1202,
+    1046
+   ],
+   "strip_lum_top": 0.044,
+   "strip_lum_bottom": 0.0882,
+   "plate_lum": 0.3272,
+   "ground_lum": 0.044,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Malachit — traubige grüne Kruste auf hellem Dolomit vor dunklem Grund, vollständig im Bild, knospige Oberfläche sichtbar"
+  },
+  "crys-20": {
+   "plate_bbox": [
+    78,
+    266,
+    1202,
+    1014
+   ],
+   "strip_lum_top": 0.142,
+   "strip_lum_bottom": 0.2409,
+   "plate_lum": 0.3233,
+   "ground_lum": 0.142,
+   "ground_class": "mittel",
+   "mode": "pad",
+   "alt": "Smaragd — grüne Beryll-Kristalle in heller Matrix vor dunklem Grund, vollständig im Bild, Kristallköpfe sichtbar"
+  },
+  "crys-22": {
+   "plate_bbox": [
+    190,
+    78,
+    1090,
+    1202
+   ],
+   "strip_lum_top": 0.0387,
+   "strip_lum_bottom": 0.1434,
+   "plate_lum": 0.1902,
+   "ground_lum": 0.0387,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Amazonit — türkisgrüner Feldspat mit Rauchquarz vor dunklem Grund, vollständig im Bild, Kristallflächen sichtbar"
+  },
+  "crys-26": {
+   "plate_bbox": [
+    78,
+    266,
+    1202,
+    1014
+   ],
+   "strip_lum_top": 0.0759,
+   "strip_lum_bottom": 0.3412,
+   "plate_lum": 0.262,
+   "ground_lum": 0.0759,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Kunzit — rosavioletter Spodumen-Kristall vor dunklem Grund, vollständig im Bild, Spaltflächen sichtbar"
+  },
+  "crys-02": {
+   "plate_bbox": [
+    78,
+    248,
+    1202,
+    1032
+   ],
+   "strip_lum_top": 0.0439,
+   "strip_lum_bottom": 0.006,
+   "plate_lum": 0.4347,
+   "ground_lum": 0.006,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Rosenquarz — tiefrosafarbener massiver Handstein vor dunklem Grund, vollständig im Bild, körnige Oberfläche und Bruchkanten sichtbar"
+  },
+  "crys-17": {
+   "plate_bbox": [
+    78,
+    266,
+    1202,
+    1014
+   ],
+   "strip_lum_top": 0.0386,
+   "strip_lum_bottom": 0.1046,
+   "plate_lum": 0.1948,
+   "ground_lum": 0.0386,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Mondstein — angeschliffene Platte vor dunklem Grund, vollständig im Bild, blauer Schimmer und Vitrinenreflexe sichtbar"
+  },
+  "crys-21": {
+   "plate_bbox": [
+    80,
+    220,
+    1200,
+    1060
+   ],
+   "strip_lum_top": 0.6733,
+   "strip_lum_bottom": 0.6852,
+   "plate_lum": 0.7167,
+   "ground_lum": 0.6733,
+   "ground_class": "hell",
+   "mode": "pad",
+   "alt": "Rosenquarz — blassrosa, milchig-trüber massiver Brocken vor hellem Grund, vollständig im Bild, matte Bruchflächen sichtbar"
+  },
+  "crys-25": {
+   "plate_bbox": [
+    82,
+    78,
+    1196,
+    1202
+   ],
+   "strip_lum_top": 0.0901,
+   "strip_lum_bottom": 0.294,
+   "plate_lum": 0.2239,
+   "ground_lum": 0.0901,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Peridot — grüner Olivinkristall vor dunklem Grund, vollständig im Bild, Facetten und Einschlüsse sichtbar"
+  },
+  "crys-03": {
+   "plate_bbox": [
+    78,
+    222,
+    1202,
+    1056
+   ],
+   "strip_lum_top": 0.0095,
+   "strip_lum_bottom": 0.0224,
+   "plate_lum": 0.2987,
+   "ground_lum": 0.0095,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Zitrin — orangegelbe Kristallstufe mit Matrix vor dunklem Grund, vollständig im Bild, Kristallspitzen sichtbar"
+  },
+  "crys-13": {
+   "plate_bbox": [
+    78,
+    198,
+    1202,
+    1080
+   ],
+   "strip_lum_top": 0.2263,
+   "strip_lum_bottom": 0.1196,
+   "plate_lum": 0.2643,
+   "ground_lum": 0.1196,
+   "ground_class": "dunkel",
+   "mode": "matte",
+   "alt": "Tigerauge — polierter goldbrauner Ei-Stein vor dunklem Grund, vollständig im Bild, helles Chatoyance-Band sichtbar"
+  },
+  "crys-07": {
+   "plate_bbox": [
+    78,
+    266,
+    1164,
+    1012
+   ],
+   "strip_lum_top": 0.065,
+   "strip_lum_bottom": 0.1458,
+   "plate_lum": 0.2054,
+   "ground_lum": 0.065,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Citrin — geschliffener goldgelber Einzelkristall vor dunklem Grund, vollständig im Bild, klare Facettenflächen sichtbar"
+  },
+  "crys-16": {
+   "plate_bbox": [
+    80,
+    80,
+    1198,
+    1200
+   ],
+   "strip_lum_top": 0.3997,
+   "strip_lum_bottom": 0.328,
+   "plate_lum": 0.4423,
+   "ground_lum": 0.328,
+   "ground_class": "hell",
+   "mode": "pad",
+   "alt": "Bernstein — polierter honiggelber baltischer Bernstein vor hellem Grund, vollständig im Bild, Oberflächenglanz sichtbar"
+  },
+  "crys-12": {
+   "plate_bbox": [
+    76,
+    246,
+    1202,
+    1032
+   ],
+   "strip_lum_top": 0.2323,
+   "strip_lum_bottom": 0.1262,
+   "plate_lum": 0.3327,
+   "ground_lum": 0.1262,
+   "ground_class": "mittel",
+   "mode": "matte",
+   "alt": "Karneol — orange-roter Achat-Handstein vor dunklem Grund, vollständig im Bild, Bänderung und Bruchkante sichtbar"
+  },
+  "crys-27": {
+   "plate_bbox": [
+    78,
+    236,
+    1202,
+    1042
+   ],
+   "strip_lum_top": 0.004,
+   "strip_lum_bottom": 0.0032,
+   "plate_lum": 0.1567,
+   "ground_lum": 0.0032,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Roter Jaspis — plattiger roter Handstein mit grünen Einschlüssen vor dunklem Grund, vollständig im Bild, Bruchkante sichtbar"
+  },
+  "crys-15": {
+   "plate_bbox": [
+    80,
+    244,
+    1200,
+    1034
+   ],
+   "strip_lum_top": 0.2729,
+   "strip_lum_bottom": 0.4227,
+   "plate_lum": 0.4522,
+   "ground_lum": 0.2729,
+   "ground_class": "mittel",
+   "mode": "pad",
+   "alt": "Petrified Wood — angeschnittene Scheibe vor hellem Grund, vollständig im Bild, Jahresringe und Zellstruktur sichtbar"
+  },
+  "crys-30": {
+   "plate_bbox": [
+    266,
+    82,
+    1010,
+    1200
+   ],
+   "strip_lum_top": 0.1393,
+   "strip_lum_bottom": 0.3242,
+   "plate_lum": 0.2759,
+   "ground_lum": 0.1393,
+   "ground_class": "mittel",
+   "mode": "pad",
+   "alt": "Rauchquarz — hochkant stehender graubrauner Kristall vor grauem Grund, vollständig im Bild, Kristallspitze sichtbar"
+  },
+  "crys-19": {
+   "plate_bbox": [
+    78,
+    162,
+    1202,
+    1116
+   ],
+   "strip_lum_top": 0.0042,
+   "strip_lum_bottom": 0.0052,
+   "plate_lum": 0.1767,
+   "ground_lum": 0.0042,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Grossular-Granat — drei gelbgrüne Ikosaeder-Kristalle vor dunklem Grund, vollständig im Bild, Facettenflächen sichtbar"
+  },
+  "crys-23": {
+   "plate_bbox": [
+    112,
+    78,
+    1164,
+    1202
+   ],
+   "strip_lum_top": 0.1514,
+   "strip_lum_bottom": 0.1898,
+   "plate_lum": 0.2579,
+   "ground_lum": 0.1514,
+   "ground_class": "mittel",
+   "mode": "matte",
+   "alt": "Hematit — traubiger, metallisch grau-blau schillernder Einzelstein vor dunklem Grund, vollständig im Bild, Knollenoberfläche sichtbar"
+  },
+  "crys-04": {
+   "plate_bbox": [
+    78,
+    190,
+    1202,
+    1086
+   ],
+   "strip_lum_top": 0.108,
+   "strip_lum_bottom": 0.1353,
+   "plate_lum": 0.2103,
+   "ground_lum": 0.108,
+   "ground_class": "dunkel",
+   "mode": "matte",
+   "alt": "Schneeflockenobsidian — polierter schwarzer Knollen vor dunklem Grund, vollständig im Bild, helle Einschlüsse sichtbar"
+  },
+  "crys-10": {
+   "plate_bbox": [
+    78,
+    78,
+    1202,
+    1202
+   ],
+   "strip_lum_top": 0.0001,
+   "strip_lum_bottom": 0.0001,
+   "plate_lum": 0.0757,
+   "ground_lum": 0.0001,
+   "ground_class": "dunkel",
+   "mode": "pad",
+   "alt": "Schwarzer Turmalin — längs gestreifter Schörl-Kristall vor dunklem Grund, vollständig im Bild, Riefung sichtbar"
+  }
+ }
+}

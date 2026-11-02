@@ -1,0 +1,3366 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "kristalle-image-sources",
+  "project": "Esoterik-Welt",
+  "purpose": "Maschinenlesbarer Quellen- und Lizenznachweis für die Bebilderung der Kristalle-Sektion (30 Kristalle). Enthält je Kristall mindestens einen vollständig dokumentierten Bildkandidaten mit Originalquelle, Urheber, Lizenz, Lizenz-URL, Attributionspflicht und -text, Auflösung, Format und visueller Notiz.",
+  "generated_at": "2026-11-02T16:37:31Z",
+  "generated_by": "Kanban-Task t_75514188 (Profil deep_research_rag)",
+  "scope_source": "docs/kristalle-image-audit.md",
+  "retrieved_at": "2026-11-02",
+  "license_policy": {
+    "allowed": [
+      "Public Domain (inkl. PD-self)",
+      "CC0 1.0",
+      "CC BY 2.0/3.0/4.0",
+      "CC BY-SA 2.0/2.5/3.0/4.0"
+    ],
+    "excluded": [
+      "CC BY-NC*",
+      "CC BY-ND*",
+      "CC BY-NC-ND*",
+      "GFDL-only",
+      "Fair Use",
+      "Alle Rechte vorbehalten",
+      "Lizenz unklar"
+    ],
+    "rationale": "Das Projekt ist eine öffentliche, nicht-kommerzielle Esoterik-Website, veröffentlicht aber über GitHub Pages. NC-Lizenzen sind ausgeschlossen, weil eine spätere kommerzielle Nutzung (z. B. Print, Shop) nicht ausgeschlossen werden soll; ND-Lizenzen, weil Bilder beschnitten und skaliert werden müssen. CC BY-SA ist zugelassen, solange die ShareAlike-Pflicht im Impressum ausgewiesen wird.",
+    "preferred_order": [
+      "Public Domain",
+      "CC0 1.0",
+      "CC BY 4.0",
+      "CC BY-SA 4.0",
+      "ältere CC-Versionen"
+    ]
+  },
+  "method": {
+    "source": "Wikimedia Commons (MediaWiki-API), Dateibeschreibungsseite als Originalquelle",
+    "steps": [
+      "Suchbegriffe je Mineral (deutsch/englisch, inkl. Synonymen wie Schörl, Selenit/Gips, Celestin) gegen die Commons-API (list=search, namespace 6).",
+      "Automatische Lizenzvorfilterung: nur PD, CC0, CC BY, CC BY-SA; NC/ND/GFDL-only/unklar verworfen.",
+      "Mindestauflösung 1280×900 px (reicht für die 1280-px-Stufe des Audits).",
+      "Sichtprüfung aller Shortlist-Kandidaten als Kontaktbogen (PIL), Auswahl nach Motivklarheit, Ausleuchtung, ruhigem Hintergrund, quadratischer Beschnittfähigkeit und Abgrenzbarkeit der Doppelmotive.",
+      "Metadaten je Auswahl über die API (extmetadata: LicenseShortName, LicenseUrl, Artist, Credit, UsageTerms, AttributionRequired, Restrictions, SHA-1).",
+      "Lizenz zusätzlich am Original geprüft: Wikitext der Dateiseite geladen, Lizenzvorlagen extrahiert und SHA-256 des Wikitexts festgehalten (evidence/<slug>/wikitext.txt).",
+      "Lizenz-URLs per HTTP abgerufen (Status dokumentiert).",
+      "Reproduzierbare Renditions 320/640/1280 px über Special:FilePath geladen, Maße und SHA-256 gemessen."
+    ],
+    "excluded_material": "Nicht verwendet: js/data/crystals.js (toter Code, 36 fremde IDs), public/ (Legacy). Maßgeblich ist data/crystals.json mit crys-01…crys-30 (siehe Audit §3.1)."
+  },
+  "verification": {
+    "checked_on": "2026-11-02",
+    "license_url_status": "alle abgerufenen Lizenz-URLs HTTP 200 bzw. PD-Template-Seite",
+    "evidence_file": "docs/kristalle/image-sources.evidence.json",
+    "evidence_file_content": "API-Felder (LicenseShortName, LicenseUrl, Artist, Credit, UsageTerms, AttributionRequired, Restrictions, sha1), Lizenzvorlagen aus dem Wikitext der Dateiseite und SHA-256 des Wikitexts je Kristall",
+    "renditions_checked": "30 Kristalle × 3 Breiten (320/640/1280 px angefragt), Maße und SHA-256 gemessen",
+    "original_api_fields": [
+      "LicenseShortName",
+      "LicenseUrl",
+      "Artist",
+      "Credit",
+      "UsageTerms",
+      "AttributionRequired",
+      "Restrictions",
+      "DateTimeOriginal",
+      "sha1",
+      "width",
+      "height",
+      "mime",
+      "size"
+    ],
+    "validator": "docs/kristalle/image-sources.validation.json – automatischer Check: 30/30 Kristalle, Pflichtfelder vollständig, Lizenzklassen in Allowlist, target_path == image_placeholder aus data/crystals.json, Lizenz-URLs live 200, Rendition-SHA-256 stichprobenartig nachgeladen",
+    "not_verified": [
+      "Keine Rechtsberatung: die Einordnung als 'kompatibel' folgt der Projekt-Allowlist, nicht einer juristischen Prüfung.",
+      "Keine Prüfung auf Persönlichkeitsrechte abgebildeter Personen nötig (keine Personen im Bild), aber Restrictions-Feld je Datei dokumentiert.",
+      "Keine Prüfung, ob die Motive mineralogisch exakt der jeweiligen Handelsbezeichnung entsprechen (z. B. Citrin vs. erhitzter Amethyst); die Bildbeschreibungen der Quelle wurden übernommen."
+    ]
+  },
+  "integration_hints": {
+    "master_rendition": "`source.renditions.w1280` ist die größte benötigte Stufe (1280 px) und diente als Prüfmaster; SHA-256 ist hinterlegt, damit der Download verifizierbar ist.",
+    "target_paths": "Zielpfade stammen unverändert aus `image_placeholder` in data/crystals.json (`assets/crystals/<slug>.jpg`, relativ wegen `<base href=\"/Esoterik-Welt/\">`).",
+    "download_example": "curl -L -A \"Esoterik-Welt/1.0\" -o assets/crystals/amethyst.jpg '<renditions.w1280.url>'  → 1280×1926 px; daraus 320/640/1280-Stufen erzeugen (z. B. `sharp`), damit `srcset` exakt die im Audit empfohlenen Breiten trifft.",
+    "crop_rule": "Alle Motive sind 1:1-fähig; bei `square_crop: \"bedingt\"` (selenit, moonstone, rauchquarz) mittig beschneiden oder `object-fit: contain` verwenden, sonst werden Kristallspitzen gekappt (Art Direction: „keine Spitzen kappen“).",
+    "attribution_targets": "Impressum-Abschnitt `#kristalle-fotos` (Muster impressum.html:80-138) plus Kurz-Caption im Detail-Dialog; `attribution_text_required` ist der vollständige Pflichttext, `attribution_text_short` die Kartenvariante."
+  },
+  "duplicate_motif_handling": [
+    {
+      "pair": [
+        "crys-02 rosenquarz",
+        "crys-21 rosenquarz-milch"
+      ],
+      "decision": "crys-02 = tiefrosa massiver Handstein auf schwarzem Grund; crys-21 = blassrosa, milchig-trüber Brocken auf weißem Grund."
+    },
+    {
+      "pair": [
+        "crys-03 zitrin",
+        "crys-07 citrin-wille"
+      ],
+      "decision": "crys-03 = Rohstufe mit Kristallspitzen; crys-07 = geschliffene/polierte Trommelsteine."
+    }
+  ],
+  "statistics": {
+    "crystals_in_audit": 30,
+    "crystals_with_documented_candidate": 30,
+    "candidates_total": 30,
+    "license_classes": {
+      "Public-Domain": 7,
+      "CC0-1.0": 12,
+      "CC-BY-SA-2.5": 1,
+      "CC-BY-4.0": 4,
+      "CC-BY-SA-3.0": 2,
+      "CC-BY-SA-4.0": 2,
+      "CC-BY-3.0": 1,
+      "CC-BY-2.0": 1
+    },
+    "share_alike_count": 5,
+    "attribution_required_count": 11
+  },
+  "crystals": [
+    {
+      "crystal_id": "crys-01",
+      "slug": "amethyst",
+      "display_name": "Amethyst",
+      "audit_row": 1,
+      "target_path": "assets/crystals/amethyst.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-01-amethyst",
+          "selected": true,
+          "crystal_slug": "amethyst",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Amethyst Quartz Crystals.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Amethyst_Quartz_Crystals.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Amethyst_Quartz_Crystals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amethyst_Quartz_Crystals.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 497,
+                "bytes": 54279,
+                "sha256": "50befe1af5298a581f395500e14ed0e0e061982321505373111f39bf06e24aec"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amethyst_Quartz_Crystals.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 1445,
+                "bytes": 530758,
+                "sha256": "0f0a8b655ce040ec6e75b0616c06ad82b8b20dd2727cf20b69db5b25de9da4fb"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amethyst_Quartz_Crystals.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1926,
+                "bytes": 1005437,
+                "sha256": "a87bb13b835745a6b6cf9178620f1dd8f85d880eb47f1ccc458b8c320bb58e9b"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "CopyrightFreePhotos CopyrightFreePhotos.HQ101.com",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work by uploader 1",
+          "credit": "Own work by uploader 1",
+          "uploader": "Ordale",
+          "date": null,
+          "description_excerpt": "Amethyst & Quartz Crystals Close-up. Rock & mineral shop, unknown source.",
+          "license": {
+            "name": "Public Domain (Freigabe durch den Urheber, PD-self)",
+            "version": null,
+            "class": "Public-Domain",
+            "url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+            "url_http_status": null,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "PD-self"
+            ],
+            "usage_terms_field": "Public domain",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Amethyst Quartz Crystals“ – CopyrightFreePhotos CopyrightFreePhotos.HQ101.com, gemeinfrei (Public Domain, PD-self). Quelle: https://commons.wikimedia.org/wiki/File:Amethyst_Quartz_Crystals.jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: CopyrightFreePhotos CopyrightFreePhotos.HQ101.com · Public domain",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 3556,
+            "height_px": 5352,
+            "mime": "image/jpeg",
+            "bytes": 13262896,
+            "sha1": "eab04cf25acbc589f6b31802131f320b59c94a6b"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1926,
+            "format": "JPEG",
+            "sha256": "a87bb13b835745a6b6cf9178620f1dd8f85d880eb47f1ccc458b8c320bb58e9b",
+            "bytes": 1005437
+          },
+          "aspect_ratio": 0.664,
+          "background": {
+            "measured_border_luminance": 79.1,
+            "class": "neutral"
+          },
+          "square_crop": "gut",
+          "visual_note": "Makroaufnahme violetter Amethystkristalle über einer gelborangen Matrix; formatfüllend, keine Etiketten oder Maßstäbe im Bild.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 66,
+      "selection_reason": "Farbstichprobe des Kristalls stimmt (violett), Bild füllt die Kachel vollständig aus, dadurch kein toter Rand bei 1:1; Public Domain eines Stockfotografen, keine ShareAlike-Pflicht."
+    },
+    {
+      "crystal_id": "crys-02",
+      "slug": "rosenquarz",
+      "display_name": "Quarz (Rosenquarz)",
+      "audit_row": 2,
+      "target_path": "assets/crystals/rosenquarz.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-02-rosenquarz",
+          "selected": true,
+          "crystal_slug": "rosenquarz",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Rose quartz (GeoDIL number - 2521).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Rose_quartz_(GeoDIL_number_-_2521).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Rose_quartz_%28GeoDIL_number_-_2521%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rose_quartz_%28GeoDIL_number_-_2521%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 230,
+                "bytes": 20900,
+                "sha256": "558869715e8f867e5080a2cf3a319b0b7c0ee403c0ef1d964b7b8506f3b3efc0"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rose_quartz_%28GeoDIL_number_-_2521%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 670,
+                "bytes": 147791,
+                "sha256": "682cca96ab5a7fac89e5451c5a38b5f46580243a1bbdc6541f35b27b7ec85b00"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rose_quartz_%28GeoDIL_number_-_2521%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 893,
+                "bytes": 229702,
+                "sha256": "8b4755b54c3c22e92fca30409c85189edbad7f7226b34f1917c68e7df18a82ba"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Darla Sondrol",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: https://geodil.dperkins.org/h/2521.html",
+          "credit": "https://geodil.dperkins.org/h/2521.html",
+          "uploader": "DaxServer",
+          "date": "22 March 2002",
+          "description_excerpt": "Rose quartz, SiO2 (silicon dioxide), is opaque to translucent macrocrystalline quartz of pink to rose-red color. It normally occurs in the cores of large pegmatites as solid masses of rose colored quartz whose individual crystals have poorl",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "Cc-zero"
+            ],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Rose quartz (GeoDIL number - 2521)“ – Darla Sondrol, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Rose_quartz_(GeoDIL_number_-_2521).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Darla Sondrol · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 1708,
+            "height_px": 1192,
+            "mime": "image/jpeg",
+            "bytes": 256335,
+            "sha1": "16baaebd24db781aa19399c4a126172d568dbbdb"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 893,
+            "format": "JPEG",
+            "sha256": "8b4755b54c3c22e92fca30409c85189edbad7f7226b34f1917c68e7df18a82ba",
+            "bytes": 229702
+          },
+          "aspect_ratio": 1.433,
+          "background": {
+            "measured_border_luminance": 0.8,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Massiver, tiefrosafarbener Rosenquarz-Handstein freigestellt auf schwarzem Grund; Einzelobjekt, zentriert.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 40,
+      "selection_reason": "Dunkler Fond passt zum Nachtatelier-Look; sattes Rosa unterscheidet das Motiv klar vom milchigen Rosenquarz (crys-21)."
+    },
+    {
+      "crystal_id": "crys-03",
+      "slug": "zitrin",
+      "display_name": "Zitrin",
+      "audit_row": 3,
+      "target_path": "assets/crystals/zitrin.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-03-zitrin",
+          "selected": true,
+          "crystal_slug": "zitrin",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Citrine (GeoDIL number - 310).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Citrine_(GeoDIL_number_-_310).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Citrine_%28GeoDIL_number_-_310%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrine_%28GeoDIL_number_-_310%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 245,
+                "bytes": 20825,
+                "sha256": "1c5207ddcb3a42af50cdb747faca9748a1075a39513a8132ffc2907eee4d25d2"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrine_%28GeoDIL_number_-_310%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 713,
+                "bytes": 142816,
+                "sha256": "52972b6ca2b41d453048750fdc5b90b44931213e5272722f54f96aa68d938770"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrine_%28GeoDIL_number_-_310%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 950,
+                "bytes": 232011,
+                "sha256": "fa1e5f204b2a023750b84d183e2b78156b9ba5ce141f2b2585f7f59af0069135"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Shannon Heinle",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: https://geodil.dperkins.org/h/310.html",
+          "credit": "https://geodil.dperkins.org/h/310.html",
+          "uploader": "DaxServer",
+          "date": "9 April 2001",
+          "description_excerpt": "Citrine is the yellow orange variety of quartz (SiO2). It is rare in nature but can often be obtained by heating the purple variaty of quartz, amethyst. Quartz, one of the most abundant minerals on Earth, is found in nearly every geological",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "Cc-zero"
+            ],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Citrine (GeoDIL number - 310)“ – Shannon Heinle, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Citrine_(GeoDIL_number_-_310).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Shannon Heinle · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 2392,
+            "height_px": 1776,
+            "mime": "image/jpeg",
+            "bytes": 466996,
+            "sha1": "46abbb6e38e98132924a286b3e396bfdfb91e4da"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 950,
+            "format": "JPEG",
+            "sha256": "fa1e5f204b2a023750b84d183e2b78156b9ba5ce141f2b2585f7f59af0069135",
+            "bytes": 232011
+          },
+          "aspect_ratio": 1.347,
+          "background": {
+            "measured_border_luminance": 0.0,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Orange-gelbe Citrin-Kristallstufe auf schwarzem Grund, freigestellt; Kristallspitzen vollständig im Bild.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 47,
+      "selection_reason": "Rohstufe mit erkennbaren Kristallflächen zeigt den Unterschied zum geschliffenen Citrin (crys-07); dunkler Fond."
+    },
+    {
+      "crystal_id": "crys-04",
+      "slug": "obsidian",
+      "display_name": "Obsidian (Schwarzer Obsidian)",
+      "audit_row": 4,
+      "target_path": "assets/crystals/obsidian.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-04-obsidian",
+          "selected": true,
+          "crystal_slug": "obsidian",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Snowflake obsidian with white background.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Snowflake_obsidian_with_white_background.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Snowflake_obsidian_with_white_background.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Snowflake_obsidian_with_white_background.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 236,
+                "bytes": 7353,
+                "sha256": "725377f8877618fbb4f2b4c580060eadbadea699d451ab1ccd78c32ca9c81914"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Snowflake_obsidian_with_white_background.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 687,
+                "bytes": 33593,
+                "sha256": "e16745d1ae522c78f539264d370d29d496fe0ae4cab42c5c1a709de99a849ff9"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Snowflake_obsidian_with_white_background.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 916,
+                "bytes": 56281,
+                "sha256": "7067d6dc81162609991e1961b6bafaac82442a9f6c0309b5f5ec0e2df6267061"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Bordercolliez",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Bordercolliez",
+          "date": "2011-10-06",
+          "description_excerpt": "A polished snowflake obsidian on a white background.",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Snowflake obsidian with white background“ – Bordercolliez, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Snowflake_obsidian_with_white_background.jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Bordercolliez · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 1900,
+            "height_px": 1360,
+            "mime": "image/jpeg",
+            "bytes": 570126,
+            "sha1": "b2bb0ad23d45cb72a256141e290c7f00d875bb70"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 916,
+            "format": "JPEG",
+            "sha256": "7067d6dc81162609991e1961b6bafaac82442a9f6c0309b5f5ec0e2df6267061",
+            "bytes": 56281
+          },
+          "aspect_ratio": 1.397,
+          "background": {
+            "measured_border_luminance": 255.0,
+            "class": "hell"
+          },
+          "square_crop": "gut",
+          "visual_note": "Polierter schwarzer Obsidian-Knollen (Schneeflockenobsidian) auf reinweißem Grund; hoher Schwarz-Weiß-Kontrast, Objekt mittig.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 114,
+      "selection_reason": "Einzelobjekt ohne Maßstab/Etikett; glasiger Glanz ist gut erkennbar. Weißer Fond ist der einzige Ausreißer im Set und wird in der Galerie-Spec über `contain` bzw. Hintergrundfläche abgefangen."
+    },
+    {
+      "crystal_id": "crys-05",
+      "slug": "lapis",
+      "display_name": "Lapis Lazuli",
+      "audit_row": 5,
+      "target_path": "assets/crystals/lapis.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-05-lapis",
+          "selected": true,
+          "crystal_slug": "lapis",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Lapis-lazuli hg.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Lapis-lazuli_hg.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Lapis-lazuli_hg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lapis-lazuli_hg.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 283,
+                "bytes": 38307,
+                "sha256": "3de1e8d895de7a6519b6876712faf21f02dde4f3c225a4eff1d813dd240be3a2"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lapis-lazuli_hg.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 823,
+                "bytes": 296564,
+                "sha256": "0e3403d41e64d6de8f781a53cee44cbce4827e878b8d48567e8e0614108d0ecd"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lapis-lazuli_hg.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1098,
+                "bytes": 486703,
+                "sha256": "bad6d4f0abb2d8098acd5d0f3810ca5eab8e20d0efb9ac427729fadaa841bcd4"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Hannes Grobe",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Tillman",
+          "date": "2008-01-18",
+          "description_excerpt": "Lapis lazuli with pyrite. Afghanistan.",
+          "license": {
+            "name": "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 2.5",
+            "version": "2.5",
+            "class": "CC-BY-SA-2.5",
+            "url": "https://creativecommons.org/licenses/by-sa/2.5",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": true,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Attribution-Share Alike 2.5",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Lapis-lazuli hg“ – Hannes Grobe, lizenziert unter Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 2.5 — https://creativecommons.org/licenses/by-sa/2.5. Quelle: https://commons.wikimedia.org/wiki/File:Lapis-lazuli_hg.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Motiv freigestellt, Skalierung auf 320/640/960/1280 px (WebP). Bearbeitete Bildfassungen werden unter derselben Lizenz weitergegeben (ShareAlike).",
+          "attribution_text_short": "Foto: Hannes Grobe · CC BY-SA 2.5",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 1958,
+            "height_px": 1679,
+            "mime": "image/jpeg",
+            "bytes": 2130909,
+            "sha1": "802e2a9f4972c5a253bfa56c9ae8a18bc4de97fd"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1098,
+            "format": "JPEG",
+            "sha256": "bad6d4f0abb2d8098acd5d0f3810ca5eab8e20d0efb9ac427729fadaa841bcd4",
+            "bytes": 486703
+          },
+          "aspect_ratio": 1.166,
+          "background": {
+            "measured_border_luminance": 122.2,
+            "class": "neutral"
+          },
+          "square_crop": "gut",
+          "visual_note": "Lapis-Lazuli-Handstein, kräftig ultramarinblau mit goldenen Pyrit-Adern, auf grauem Verlaufshintergrund; mittig.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": true,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen",
+              "Bearbeitete Fassungen nur unter CC BY-SA weitergeben (ShareAlike)"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 25,
+      "selection_reason": "Blaustich und Pyrit-Gold sind die beiden im Datensatz genannten Merkmale („Dunkelblau / Gold“); ruhiger, neutraler Fond statt Museumsvitrine."
+    },
+    {
+      "crystal_id": "crys-06",
+      "slug": "malachit",
+      "display_name": "Malachit",
+      "audit_row": 6,
+      "target_path": "assets/crystals/malachit.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-06-malachit",
+          "selected": true,
+          "crystal_slug": "malachit",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Malachite on dolomite (GeoDIL number - 759).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Malachite_on_dolomite_(GeoDIL_number_-_759).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Malachite_on_dolomite_%28GeoDIL_number_-_759%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Malachite_on_dolomite_%28GeoDIL_number_-_759%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 239,
+                "bytes": 29288,
+                "sha256": "aa9d299944b053292022a7c99aa1f30c3e8ed5743ab6598475998452ee66f44c"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Malachite_on_dolomite_%28GeoDIL_number_-_759%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 696,
+                "bytes": 213251,
+                "sha256": "2d4fe9570f0a52da480f53fb673ae80f52978cd5afbd52c0032139fb277dcaaa"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Malachite_on_dolomite_%28GeoDIL_number_-_759%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 928,
+                "bytes": 349888,
+                "sha256": "257dc386187073e7c3b48ccf24b14440a95b6437a954e37061eb24b379be8bf7"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Twyla Baker",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: https://geodil.dperkins.org/h/759.html",
+          "credit": "https://geodil.dperkins.org/h/759.html",
+          "uploader": "DaxServer",
+          "date": "18 June 2001",
+          "description_excerpt": "Malachite,Cu2(CO3)(OH)2, (copper carbonate hydroxide) is a green copper carbonate mineral. Here it has precipitated on top of brown dolomite. Malachite occurs naturally in many different habits, including botryoidal, stalactitic or globular",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "Cc-zero"
+            ],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Malachite on dolomite (GeoDIL number - 759)“ – Twyla Baker, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Malachite_on_dolomite_(GeoDIL_number_-_759).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Twyla Baker · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 2566,
+            "height_px": 1860,
+            "mime": "image/jpeg",
+            "bytes": 752764,
+            "sha1": "16857eb5552b71222e9cb821df7979bee382d426"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 928,
+            "format": "JPEG",
+            "sha256": "257dc386187073e7c3b48ccf24b14440a95b6437a954e37061eb24b379be8bf7",
+            "bytes": 349888
+          },
+          "aspect_ratio": 1.38,
+          "background": {
+            "measured_border_luminance": 0.0,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Traubige grüne Malachit-Kruste auf hellem Dolomit vor schwarzem Grund; Objekt fast formatfüllend.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 25,
+      "selection_reason": "Naturstufe statt Kunstobjekt, kräftiges Malachitgrün, schwarzer Fond."
+    },
+    {
+      "crystal_id": "crys-07",
+      "slug": "citrin-wille",
+      "display_name": "Citrin (Wille)",
+      "audit_row": 7,
+      "target_path": "assets/crystals/citrin-wille.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-07-citrin-wille",
+          "selected": true,
+          "crystal_slug": "citrin-wille",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Citrine 1 (Russie).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Citrine_1_(Russie).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Citrine_1_%28Russie%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrine_1_%28Russie%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 219,
+                "bytes": 19154,
+                "sha256": "4d75f871de80d8d414daef0a4e503fb9790f0bd45ec315e61f15775dfec47d5f"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrine_1_%28Russie%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 638,
+                "bytes": 119701,
+                "sha256": "61e45f5b4b36a63e2e66d476065f98a051209d5c2b146c8f333245ffadac1785"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrine_1_%28Russie%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 850,
+                "bytes": 198127,
+                "sha256": "c4e97e3cd65352ad9dad485132551f55b8b920cd4a461b984ec224f45e07a5d6"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Parent Géry",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Slick-o-bot",
+          "date": "2008-12-19",
+          "description_excerpt": "quartz var. citrine : Russia",
+          "license": {
+            "name": "Public Domain (Freigabe durch den Urheber, PD-self)",
+            "version": null,
+            "class": "Public-Domain",
+            "url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+            "url_http_status": null,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "PD-self"
+            ],
+            "usage_terms_field": "Public domain",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Citrine 1 (Russie)“ – Parent Géry, gemeinfrei (Public Domain, PD-self). Quelle: https://commons.wikimedia.org/wiki/File:Citrine_1_(Russie).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Parent Géry · Public domain",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 4288,
+            "height_px": 2848,
+            "mime": "image/jpeg",
+            "bytes": 9511920,
+            "sha1": "889fa74116c019d0a7a5b3b4a46e1a090fffb894"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 850,
+            "format": "JPEG",
+            "sha256": "c4e97e3cd65352ad9dad485132551f55b8b920cd4a461b984ec224f45e07a5d6",
+            "bytes": 198127
+          },
+          "aspect_ratio": 1.506,
+          "background": {
+            "measured_border_luminance": 10.6,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Einzelner geschliffener Citrin-Kristall mit klaren Facettenflächen auf schwarzem Grund, warmes Goldgelb.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 83,
+      "selection_reason": "Bewusst geschliffenes Motiv als Gegenstück zur Rohstufe bei crys-03; zugleich Public Domain statt CC BY-SA und mit deutlich mehr Bildwirkung als die zuvor geprüften Trommelsteine auf weißem Grund."
+    },
+    {
+      "crystal_id": "crys-08",
+      "slug": "fluorit",
+      "display_name": "Fluorit",
+      "audit_row": 8,
+      "target_path": "assets/crystals/fluorit.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-08-fluorit",
+          "selected": true,
+          "crystal_slug": "fluorit",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Fluorite Xianghuapu Minéraux SU.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 220,
+                "bytes": 19884,
+                "sha256": "f40c89f8f7d01b568336b0190e95b07370ebedd24929de70b10414cdd465fb73"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 640,
+                "bytes": 125494,
+                "sha256": "d906d2a396d79e74048c54de7637e6167d2848f6df59488672857960e998b4de"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 853,
+                "bytes": 213412,
+                "sha256": "854a3286f055835b00f06cc86018fdf596022e386c7674349ae55fcec5f8f5fd"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Marie-Lan Taÿ Pamart",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Jastrow",
+          "date": "2026-02-03 14:49:58",
+          "description_excerpt": "Fluorite from the Xianghuapu mine, Chenzhou, Hunan, China. Sorbonne University mineral collection.",
+          "license": {
+            "name": "Creative Commons Namensnennung 4.0",
+            "version": "4.0",
+            "class": "CC-BY-4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Attribution 4.0",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Fluorite Xianghuapu Minéraux SU“ – Marie-Lan Taÿ Pamart, lizenziert unter Creative Commons Namensnennung 4.0 — https://creativecommons.org/licenses/by/4.0. Quelle: https://commons.wikimedia.org/wiki/File:Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Skalierung auf 320/640/960/1280 px (WebP).",
+          "attribution_text_short": "Foto: Marie-Lan Taÿ Pamart · CC BY 4.0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 8030,
+            "height_px": 5353,
+            "mime": "image/jpeg",
+            "bytes": 7923460,
+            "sha1": "d1d9927c7e9b8b5c05f424261c2042f97e401d33"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 853,
+            "format": "JPEG",
+            "sha256": "854a3286f055835b00f06cc86018fdf596022e386c7674349ae55fcec5f8f5fd",
+            "bytes": 213412
+          },
+          "aspect_ratio": 1.5,
+          "background": {
+            "measured_border_luminance": 4.6,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Grüne Fluorit-Stufe aus würfeligen Kristallen auf schwarzem Grund; scharf, kontrastreich, ohne Störobjekte.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": false,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 47,
+      "selection_reason": "Grün-violetter Farbcharakter des Datensatzes wird durch das satte Grün getragen; schwarzer Fond, hohe Auflösung (8030×5353 px Original)."
+    },
+    {
+      "crystal_id": "crys-09",
+      "slug": "selenit",
+      "display_name": "Selenit",
+      "audit_row": 9,
+      "target_path": "assets/crystals/selenit.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-09-selenit",
+          "selected": true,
+          "crystal_slug": "selenit",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Gypsum 7.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Gypsum_7.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Gypsum_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gypsum_7.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 497,
+                "bytes": 18844,
+                "sha256": "c5f10612751d65b69bf7e907f701ade0440badccafe5863d41397a24d3a39d5f"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gypsum_7.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 1446,
+                "bytes": 123022,
+                "sha256": "276051e60fa1ea67fe68d327bc2fc8dc7acc17e4bb39b6d82a85c4d2acc6ac79"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gypsum_7.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1928,
+                "bytes": 201254,
+                "sha256": "dd0bd5bdab09c284bc45ffbc9858dd8b53ad7dc26861618fcd05cbd7563c1b7a"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Géry PARENT",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Géry PARENT",
+          "date": "2008-12-16",
+          "description_excerpt": "gypsum var. selenite : Naica Mine, Naica, Mun. de Saucillo, Chihuahua, Mexico",
+          "license": {
+            "name": "Public Domain (Freigabe durch den Urheber, PD-self)",
+            "version": null,
+            "class": "Public-Domain",
+            "url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+            "url_http_status": null,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "PD-self"
+            ],
+            "usage_terms_field": "Public domain",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Gypsum 7“ – Géry PARENT, gemeinfrei (Public Domain, PD-self). Quelle: https://commons.wikimedia.org/wiki/File:Gypsum_7.jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Géry PARENT · Public domain",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 2656,
+            "height_px": 4000,
+            "mime": "image/jpeg",
+            "bytes": 2124792,
+            "sha1": "886facd53827475582b844feb666c3acf40b19ca"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1928,
+            "format": "JPEG",
+            "sha256": "dd0bd5bdab09c284bc45ffbc9858dd8b53ad7dc26861618fcd05cbd7563c1b7a",
+            "bytes": 201254
+          },
+          "aspect_ratio": 0.664,
+          "background": {
+            "measured_border_luminance": 0.4,
+            "class": "dunkel"
+          },
+          "square_crop": "bedingt",
+          "visual_note": "Hochkant stehende, transparente Selenit-/Gipsspat-Säule auf schwarzem Grund; vertikales Motiv.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 93,
+      "selection_reason": "Weißer, perlmuttriger Charakter und die langprismatische Form sind idealtypisch; wegen des Hochformats (2656×4000) muss der 1:1-Beschnitt mittig sitzen und oben/unten anschneiden — in der Galerie mit `contain` oder bewusst mittigem `cover` lösen."
+    },
+    {
+      "crystal_id": "crys-10",
+      "slug": "schwarzer-turmalin",
+      "display_name": "Schwarzer Turmalin",
+      "audit_row": 10,
+      "target_path": "assets/crystals/schwarzer-turmalin.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-10-schwarzer-turmalin",
+          "selected": true,
+          "crystal_slug": "schwarzer-turmalin",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Tourmaline-MCG 79448-P4150859-black.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Tourmaline-MCG_79448-P4150859-black.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Tourmaline-MCG_79448-P4150859-black.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tourmaline-MCG_79448-P4150859-black.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 330,
+                "bytes": 20147,
+                "sha256": "48c9cac3a53083cd2455d3fb18b79ace43a1d49f15df2bce69168287e791dd01"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tourmaline-MCG_79448-P4150859-black.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 960,
+                "bytes": 150293,
+                "sha256": "45551b8f8f03b7cc4718fa1cb2a2903d5f215b169b37f0bbb4f615d5026c7664"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tourmaline-MCG_79448-P4150859-black.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1280,
+                "bytes": 256817,
+                "sha256": "a828c1f2d7daa7c616b8790bee050a7850695200d9e1a41d1b47a42166a19078"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Rama",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Rama",
+          "date": "Taken on 15 April 2017, 16:47 (according to Exif data)",
+          "description_excerpt": "",
+          "license": {
+            "name": "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 (fr-Portierung)",
+            "version": "3.0",
+            "class": "CC-BY-SA-3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": true,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Attribution-Share Alike 3.0 fr",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Tourmaline-MCG 79448-P4150859-black“ – Rama, lizenziert unter Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 (fr-Portierung) — https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en. Quelle: https://commons.wikimedia.org/wiki/File:Tourmaline-MCG_79448-P4150859-black.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Skalierung auf 320/640/960/1280 px (WebP). Bearbeitete Bildfassungen werden unter derselben Lizenz weitergegeben (ShareAlike).",
+          "attribution_text_short": "Foto: Rama · CC BY-SA 3.0 fr",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 4000,
+            "height_px": 4000,
+            "mime": "image/jpeg",
+            "bytes": 3075287,
+            "sha1": "26149d7f3a9f173b48696fa1d67101532f929d66"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1280,
+            "format": "JPEG",
+            "sha256": "a828c1f2d7daa7c616b8790bee050a7850695200d9e1a41d1b47a42166a19078",
+            "bytes": 256817
+          },
+          "aspect_ratio": 1.0,
+          "background": {
+            "measured_border_luminance": 0.0,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Einzelner, längs gestreifter Schörl-Kristall (schwarzer Turmalin) auf schwarzem Grund; Original bereits quadratisch (4000×4000).",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": true,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen",
+              "Bearbeitete Fassungen nur unter CC BY-SA weitergeben (ShareAlike)"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 43,
+      "selection_reason": "Quadratisches Original, kein Beschnitt nötig; Streifung als typisches Erkennungsmerkmal sichtbar."
+    },
+    {
+      "crystal_id": "crys-11",
+      "slug": "aventurin",
+      "display_name": "Aventurin (Grün)",
+      "audit_row": 11,
+      "target_path": "assets/crystals/aventurin.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-11-aventurin",
+          "selected": true,
+          "crystal_slug": "aventurin",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Aventurine 1.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Aventurine_1.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Aventurine_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aventurine_1.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 225,
+                "bytes": 23235,
+                "sha256": "16f3c1bd405c835ef2db9580133f5cd1d2c8bce4034120c7279fd91639763f13"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aventurine_1.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 654,
+                "bytes": 161835,
+                "sha256": "89486d12f8b8bbb2ed46fda23c750a15393b2728d7b700f24689d4aa357d9b7c"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aventurine_1.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 872,
+                "bytes": 261395,
+                "sha256": "44c35496033a5ab1a6c3c25a45b633fdc61181d236b2108ee085c5b430768863"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Bordercolliez",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Bordercolliez",
+          "date": "2011-10-05",
+          "description_excerpt": "An aventurine.",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Aventurine 1“ – Bordercolliez, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Aventurine_1.jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Bordercolliez · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 2232,
+            "height_px": 1520,
+            "mime": "image/jpeg",
+            "bytes": 321955,
+            "sha1": "48bfb8bc4f0faddd3863344214a08be42dbfe028"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 872,
+            "format": "JPEG",
+            "sha256": "44c35496033a5ab1a6c3c25a45b633fdc61181d236b2108ee085c5b430768863",
+            "bytes": 261395
+          },
+          "aspect_ratio": 1.468,
+          "background": {
+            "measured_border_luminance": 58.9,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Einzelner polierter grüner Aventurin-Trommelstein auf dunklem Stoffgrund; ruhig, zentriert.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 45,
+      "selection_reason": "Glanz und Grünwert entsprechen dem Datensatz; dunkler Grund, nur ein Objekt."
+    },
+    {
+      "crystal_id": "crys-12",
+      "slug": "karneol",
+      "display_name": "Karneol",
+      "audit_row": 12,
+      "target_path": "assets/crystals/karneol.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-12-karneol",
+          "selected": true,
+          "crystal_slug": "karneol",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Carnelian (GeoDIL number - 781).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Carnelian_(GeoDIL_number_-_781).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Carnelian_%28GeoDIL_number_-_781%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carnelian_%28GeoDIL_number_-_781%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 246,
+                "bytes": 16341,
+                "sha256": "9c00ffd5bedabc8fe8d552d3b24f6eb2dc4db7104241753d129475960c60df4a"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carnelian_%28GeoDIL_number_-_781%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 715,
+                "bytes": 121213,
+                "sha256": "3885c0776f8bc1f3d73644b22509657878f8337bc7476ea07746e136b6a92396"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carnelian_%28GeoDIL_number_-_781%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 953,
+                "bytes": 190835,
+                "sha256": "691731fe3fc428f8f9fba182466ffbf88a4485832baa2661333e5ea48139da5f"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Shannon Heinle",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: https://geodil.dperkins.org/h/781.html",
+          "credit": "https://geodil.dperkins.org/h/781.html",
+          "uploader": "DaxServer",
+          "date": "18 June 2001",
+          "description_excerpt": "Carnelian is a yellow to orange agate. Agate is a cryptocrystalline (crystals too small to be seen even by a microscope) variety of quartz. These varieties are divided more by character than by color. These different variatites are often us",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "Cc-zero"
+            ],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Carnelian (GeoDIL number - 781)“ – Shannon Heinle, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Carnelian_(GeoDIL_number_-_781).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Shannon Heinle · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 1772,
+            "height_px": 1320,
+            "mime": "image/jpeg",
+            "bytes": 238246,
+            "sha1": "737a28f3dc1f4f27fe9ad3b3b52afceb139775f3"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 953,
+            "format": "JPEG",
+            "sha256": "691731fe3fc428f8f9fba182466ffbf88a4485832baa2661333e5ea48139da5f",
+            "bytes": 190835
+          },
+          "aspect_ratio": 1.342,
+          "background": {
+            "measured_border_luminance": 255.0,
+            "class": "hell"
+          },
+          "square_crop": "gut",
+          "visual_note": "Orange-roter Karneol-Handstein (Achat) auf weißem Grund, deutliche Bänderung, keine Hilfsmittel im Bild.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 164,
+      "selection_reason": "Der Datensatz nennt „Orange / Rot“ — das Motiv zeigt beide Töne in einem Stück; Achatbänderung belegt die Mineralogie."
+    },
+    {
+      "crystal_id": "crys-13",
+      "slug": "tigerauge",
+      "display_name": "Tigerauge",
+      "audit_row": 13,
+      "target_path": "assets/crystals/tigerauge.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-13-tigerauge",
+          "selected": true,
+          "crystal_slug": "tigerauge",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Tigers eye egg shape.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Tigers_eye_egg_shape.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Tigers_eye_egg_shape.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tigers_eye_egg_shape.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 250,
+                "bytes": 27441,
+                "sha256": "51a5535e1585d3b069dc8cb9a5b862fce1e1280f270237f896606f806dd5857f"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tigers_eye_egg_shape.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 727,
+                "bytes": 164589,
+                "sha256": "2fc62676383d53bf55e3650e10902df1bb4ef6395318bc8cf7879d5603cb6a20"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tigers_eye_egg_shape.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 970,
+                "bytes": 274534,
+                "sha256": "424368fc09c8916ded3ab1b58cbc23de291c0737f17d23e8513980304293aa96"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Unnameduploads",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Unnameduploads",
+          "date": "2009-03-11",
+          "description_excerpt": "Tiger's eye gemstone as an egg shape with some iron stripes on it.",
+          "license": {
+            "name": "Public Domain (Freigabe durch den Urheber, PD-self)",
+            "version": null,
+            "class": "Public-Domain",
+            "url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+            "url_http_status": null,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "PD-self"
+            ],
+            "usage_terms_field": "Public domain",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Tigers eye egg shape“ – Unnameduploads, gemeinfrei (Public Domain, PD-self). Quelle: https://commons.wikimedia.org/wiki/File:Tigers_eye_egg_shape.jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Unnameduploads · Public domain",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 2138,
+            "height_px": 1620,
+            "mime": "image/jpeg",
+            "bytes": 632707,
+            "sha1": "080084de41dc170948e7925066bf63e31ccf2544"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 970,
+            "format": "JPEG",
+            "sha256": "424368fc09c8916ded3ab1b58cbc23de291c0737f17d23e8513980304293aa96",
+            "bytes": 274534
+          },
+          "aspect_ratio": 1.32,
+          "background": {
+            "measured_border_luminance": 188.0,
+            "class": "hell"
+          },
+          "square_crop": "gut",
+          "visual_note": "Großer polierter Tigerauge-Stein (Eiform) mit kräftigem goldbraunem Chatoyance-Band, heller Grund.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 69,
+      "selection_reason": "Der Lichtschimmer (Chatoyance) ist das Alleinstellungsmerkmal des Tigerauges und hier großformatig sichtbar."
+    },
+    {
+      "crystal_id": "crys-14",
+      "slug": "labradorit",
+      "display_name": "Labradorit",
+      "audit_row": 14,
+      "target_path": "assets/crystals/labradorit.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-14-labradorit",
+          "selected": true,
+          "crystal_slug": "labradorit",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Labradorite polie 1 (Madagascar).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Labradorite_polie_1_(Madagascar).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Labradorite_polie_1_%28Madagascar%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Labradorite_polie_1_%28Madagascar%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 219,
+                "bytes": 29700,
+                "sha256": "2ec90e63aac4a9dfcbe5ffd564d7732929a291eb956a8bc050a154e2b9ee8552"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Labradorite_polie_1_%28Madagascar%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 638,
+                "bytes": 203448,
+                "sha256": "9390c5a6f89ac0163801ee171fb66ded870a64d3fb127496f74a2b301eee4019"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Labradorite_polie_1_%28Madagascar%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 850,
+                "bytes": 334277,
+                "sha256": "b368448df5ffa6d268df950ed6bfa423000f6dafaa29011cbc28613ceaa0c071"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Parent Géry",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Slick-o-bot",
+          "date": "11/12/08",
+          "description_excerpt": "bloc de labradorite polie",
+          "license": {
+            "name": "Public Domain (Freigabe durch den Urheber, PD-self)",
+            "version": null,
+            "class": "Public-Domain",
+            "url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+            "url_http_status": null,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "PD-self"
+            ],
+            "usage_terms_field": "Public domain",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Labradorite polie 1 (Madagascar)“ – Parent Géry, gemeinfrei (Public Domain, PD-self). Quelle: https://commons.wikimedia.org/wiki/File:Labradorite_polie_1_(Madagascar).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Parent Géry · Public domain",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 4288,
+            "height_px": 2848,
+            "mime": "image/jpeg",
+            "bytes": 10273029,
+            "sha1": "37ff3320301f81a9a048162db047ebedd1b0e82b"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 850,
+            "format": "JPEG",
+            "sha256": "b368448df5ffa6d268df950ed6bfa423000f6dafaa29011cbc28613ceaa0c071",
+            "bytes": 334277
+          },
+          "aspect_ratio": 1.506,
+          "background": {
+            "measured_border_luminance": 34.7,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Polierte Labradorit-Platte mit intensivem blau-goldenem Labradoreszenz-Schimmer auf schwarzem Grund.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 68,
+      "selection_reason": "Der Blau-Gold-Schimmer ist das im Datensatz genannte Merkmal („Schwarz / Blau / Gold“); schwarzer Fond, plakative Wirkung."
+    },
+    {
+      "crystal_id": "crys-15",
+      "slug": "steinholz",
+      "display_name": "Petrified Wood",
+      "audit_row": 15,
+      "target_path": "assets/crystals/steinholz.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-15-steinholz",
+          "selected": true,
+          "crystal_slug": "steinholz",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Petrified wood close 052615.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Petrified_wood_close_052615.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Petrified_wood_close_052615.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Petrified_wood_close_052615.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 233,
+                "bytes": 26990,
+                "sha256": "535620be120f5e189dbb8bb8646060b59946f6214883e8e3242839806359c8ff"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Petrified_wood_close_052615.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 678,
+                "bytes": 180433,
+                "sha256": "73f8bdcb768de1fbe76f012ebba3caa5e3db423bc557b86c1fab12a79ae6689c"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Petrified_wood_close_052615.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 904,
+                "bytes": 306340,
+                "sha256": "9bfcd28e3f41392fa4ec116fe790f62a98c20c7bdfcad05dab2d9edb10a392f6"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Wilson44691",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Wilson44691",
+          "date": "2015-05-26 03:04:16",
+          "description_excerpt": "Polished section of petrified wood showing rings.",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Petrified wood close 052615“ – Wilson44691, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Petrified_wood_close_052615.jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Wilson44691 · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 3736,
+            "height_px": 2640,
+            "mime": "image/jpeg",
+            "bytes": 4922646,
+            "sha1": "947dea49c7aff4c8408c91d8dca8759f75fcf974"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 904,
+            "format": "JPEG",
+            "sha256": "9bfcd28e3f41392fa4ec116fe790f62a98c20c7bdfcad05dab2d9edb10a392f6",
+            "bytes": 306340
+          },
+          "aspect_ratio": 1.415,
+          "background": {
+            "measured_border_luminance": 80.0,
+            "class": "neutral"
+          },
+          "square_crop": "gut",
+          "visual_note": "Angeschnittene Petrified-Wood-Scheibe mit deutlicher Jahresring-/Zellstruktur in Rotbraun, schwarzer Grund.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 92,
+      "selection_reason": "Holzstruktur bleibt im Quadrat lesbar; warme Brauntöne passen zur Palette. Ersatz für reine Landschaftsaufnahmen versteinerten Holzes, die als Kachel unbrauchbar wären."
+    },
+    {
+      "crystal_id": "crys-16",
+      "slug": "bernstein",
+      "display_name": "Bernstein",
+      "audit_row": 16,
+      "target_path": "assets/crystals/bernstein.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-16-bernstein",
+          "selected": true,
+          "crystal_slug": "bernstein",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Amber Baltic MNHN Minéralogie.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 330,
+                "bytes": 29474,
+                "sha256": "cfb74ddf77d7b1e10f4f663686bb7ad1894a390567391ebdf94cd21f8ff6265b"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 960,
+                "bytes": 207179,
+                "sha256": "b1ffa042343720db4bcdbdc5fad4fe4bbd45cd0814cf0f4df4b1b7321e7a4f71"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1280,
+                "bytes": 364397,
+                "sha256": "b52aaf9a65938bf0cf7ebc55dfd75e516b4763b0eb4ab10e081cc93f2ecab0c2"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Marie-Lan Taÿ Pamart",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Jastrow",
+          "date": "2020-02-20 17:34:10",
+          "description_excerpt": "Amber from the Baltic shores, Poland. Gallery of Mineralogy and Geology of the French National Museum of Natural History in Paris.",
+          "license": {
+            "name": "Creative Commons Namensnennung 4.0",
+            "version": "4.0",
+            "class": "CC-BY-4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Attribution 4.0",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Amber Baltic MNHN Minéralogie“ – Marie-Lan Taÿ Pamart, lizenziert unter Creative Commons Namensnennung 4.0 — https://creativecommons.org/licenses/by/4.0. Quelle: https://commons.wikimedia.org/wiki/File:Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).",
+          "attribution_text_short": "Foto: Marie-Lan Taÿ Pamart · CC BY 4.0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 4500,
+            "height_px": 4500,
+            "mime": "image/jpeg",
+            "bytes": 9942698,
+            "sha1": "788d732e0942960d38e414fdf8e23240045f50ec"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1280,
+            "format": "JPEG",
+            "sha256": "b52aaf9a65938bf0cf7ebc55dfd75e516b4763b0eb4ab10e081cc93f2ecab0c2",
+            "bytes": 364397
+          },
+          "aspect_ratio": 1.0,
+          "background": {
+            "measured_border_luminance": 108.3,
+            "class": "neutral"
+          },
+          "square_crop": "gut",
+          "visual_note": "Einzelner polierter Baltischer Bernstein auf dunklem Sockel, leuchtend honiggelb, schwarzer Grund.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": false,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 25,
+      "selection_reason": "Leuchtkraft/Transluzenz kommt vor dunklem Grund am besten zur Geltung; quadratisches Original (4500×4500)."
+    },
+    {
+      "crystal_id": "crys-17",
+      "slug": "moonstone",
+      "display_name": "Moonstone (Mondstein)",
+      "audit_row": 17,
+      "target_path": "assets/crystals/moonstone.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-17-moonstone",
+          "selected": true,
+          "crystal_slug": "moonstone",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Kamień księżycowy (moonstone) - Larvik k. Oslo. Norwegia.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Kamie%C5%84_ksi%C4%99%C5%BCycowy_(moonstone)_-_Larvik_k._Oslo._Norwegia.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Kamie%C5%84_ksi%C4%99%C5%BCycowy_%28moonstone%29_-_Larvik_k._Oslo._Norwegia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamie%C5%84_ksi%C4%99%C5%BCycowy_%28moonstone%29_-_Larvik_k._Oslo._Norwegia.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 220,
+                "bytes": 20860,
+                "sha256": "699dd0e9f99990478693e222dca53fc25a2d5d22eb61c43d4de8fb395ae517a7"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamie%C5%84_ksi%C4%99%C5%BCycowy_%28moonstone%29_-_Larvik_k._Oslo._Norwegia.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 640,
+                "bytes": 113887,
+                "sha256": "16f805077c942e4dedf0c35e1ef2b690d7ff8ea8dde785424f5587442b0d8dd9"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamie%C5%84_ksi%C4%99%C5%BCycowy_%28moonstone%29_-_Larvik_k._Oslo._Norwegia.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 853,
+                "bytes": 173497,
+                "sha256": "811a595062c8ef58cdc9fd7d5a6cb93b1bb4367c4ec541275d394ab00ce50256"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Lech Darski",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Elade53",
+          "date": "2017-10-20 19:56:06",
+          "description_excerpt": "Kamień księżycowy (moonstone) - Larvik k. Oslo. Norwegia.",
+          "license": {
+            "name": "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0",
+            "version": "4.0",
+            "class": "CC-BY-SA-4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": true,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Attribution-Share Alike 4.0",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Kamień księżycowy (moonstone) - Larvik k. Oslo. Norwegia“ – Lech Darski, lizenziert unter Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 — https://creativecommons.org/licenses/by-sa/4.0. Quelle: https://commons.wikimedia.org/wiki/File:Kamie%C5%84_ksi%C4%99%C5%BCycowy_(moonstone)_-_Larvik_k._Oslo._Norwegia.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, eingebettete Maßstabs-Miniatur „56 mm“ entfernt, Skalierung auf 320/640/960/1280 px (WebP). Bearbeitete Bildfassungen werden unter derselben Lizenz weitergegeben (ShareAlike).",
+          "attribution_text_short": "Foto: Lech Darski · CC BY-SA 4.0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 4753,
+            "height_px": 3168,
+            "mime": "image/jpeg",
+            "bytes": 2018058,
+            "sha1": "a073c7f7928dd05d2255aa174ad6a59e41ede534"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 853,
+            "format": "JPEG",
+            "sha256": "811a595062c8ef58cdc9fd7d5a6cb93b1bb4367c4ec541275d394ab00ce50256",
+            "bytes": 173497
+          },
+          "aspect_ratio": 1.5,
+          "background": {
+            "measured_border_luminance": 17.4,
+            "class": "dunkel"
+          },
+          "square_crop": "bedingt",
+          "visual_note": "Angeschliffene Mondstein-Platte (Larvik, Norwegen) mit blauem Schimmer, in einer Vitrine aufgenommen; leichte Reflexe der Scheibe im Bild.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": true,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen",
+              "Bearbeitete Fassungen nur unter CC BY-SA weitergeben (ShareAlike)"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 49,
+      "selection_reason": "Der blaue Adular-Schimmer (bei Larvik-Mondstein petrologisch Labradorit) ist das beste verfügbare Freilizenz-Motiv; die übrigen Treffer waren Minen- oder Landschaftsfotos. Wegen der Vitrinenscheibe vor der Einbindung auf Reflexe prüfen und ggf. enger beschneiden."
+    },
+    {
+      "crystal_id": "crys-18",
+      "slug": "celestit",
+      "display_name": "Celestit",
+      "audit_row": 18,
+      "target_path": "assets/crystals/celestit.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-18-celestit",
+          "selected": true,
+          "crystal_slug": "celestit",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Celestine - Sakoany deposit, Katsepy, Mitsinjo, Boeny, Madagascar.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Celestine_-_Sakoany_deposit,_Katsepy,_Mitsinjo,_Boeny,_Madagascar.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Celestine_-_Sakoany_deposit%2C_Katsepy%2C_Mitsinjo%2C_Boeny%2C_Madagascar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Celestine_-_Sakoany_deposit%2C_Katsepy%2C_Mitsinjo%2C_Boeny%2C_Madagascar.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 244,
+                "bytes": 28399,
+                "sha256": "b59df472df6b0a07dd335d4e970958eb6f94babf3d78b354c1bb74b6a611c01a"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Celestine_-_Sakoany_deposit%2C_Katsepy%2C_Mitsinjo%2C_Boeny%2C_Madagascar.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 711,
+                "bytes": 135780,
+                "sha256": "d57c9e8145245c521be3bb53145a3932b4620f6d3a81ca92252435f85acc9fed"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Celestine_-_Sakoany_deposit%2C_Katsepy%2C_Mitsinjo%2C_Boeny%2C_Madagascar.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 948,
+                "bytes": 219886,
+                "sha256": "f0c01aecdd03da230e5bd90b7b9844d7149766f5d004669f4bb622bdfa5ab12a"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Ivar Leidus",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Iifar",
+          "date": "2021-03-18",
+          "description_excerpt": "Celestine crystals (field of view 3.5 × 2.6 cm). Found from Sakoany deposit, Katsepy, Mitsinjo District, Boeny region, Madagascar",
+          "license": {
+            "name": "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0",
+            "version": "4.0",
+            "class": "CC-BY-SA-4.0",
+            "url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": true,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Attribution-Share Alike 4.0",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Celestine - Sakoany deposit, Katsepy, Mitsinjo, Boeny, Madagascar“ – Ivar Leidus, lizenziert unter Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 — https://creativecommons.org/licenses/by-sa/4.0. Quelle: https://commons.wikimedia.org/wiki/File:Celestine_-_Sakoany_deposit,_Katsepy,_Mitsinjo,_Boeny,_Madagascar.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Skalierung auf 320/640/960/1280 px (WebP). Bearbeitete Bildfassungen werden unter derselben Lizenz weitergegeben (ShareAlike).",
+          "attribution_text_short": "Foto: Ivar Leidus · CC BY-SA 4.0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 5400,
+            "height_px": 4000,
+            "mime": "image/jpeg",
+            "bytes": 14914434,
+            "sha1": "7242e8edd3b9c55aa9a98e39872c2b037e14de5e"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 948,
+            "format": "JPEG",
+            "sha256": "f0c01aecdd03da230e5bd90b7b9844d7149766f5d004669f4bb622bdfa5ab12a",
+            "bytes": 219886
+          },
+          "aspect_ratio": 1.35,
+          "background": {
+            "measured_border_luminance": 55.2,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Hellblaue Celestin-Kristallgruppe auf Matrix vor schwarzem Grund; klare, tafelige Kristallformen.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": true,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen",
+              "Bearbeitete Fassungen nur unter CC BY-SA weitergeben (ShareAlike)"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 50,
+      "selection_reason": "Hellblau wie im Datensatz („Hals / Drittes Auge, Hellblau“), dunkler Fond, hohe Auflösung."
+    },
+    {
+      "crystal_id": "crys-19",
+      "slug": "granat",
+      "display_name": "Granat (Edelstein)",
+      "audit_row": 19,
+      "target_path": "assets/crystals/granat.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-19-granat",
+          "selected": true,
+          "crystal_slug": "granat",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Grossular (GeoDIL number - 303).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Grossular_(GeoDIL_number_-_303).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Grossular_%28GeoDIL_number_-_303%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grossular_%28GeoDIL_number_-_303%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 280,
+                "bytes": 17055,
+                "sha256": "9e0fd45438e20ca0f93b1842f847d90df184ad5d3988aee78511104a802ed880"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grossular_%28GeoDIL_number_-_303%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 816,
+                "bytes": 111954,
+                "sha256": "38cb8772c9f81e690c80f92b9938c79633277f00dede6d36d21d7bee8f265ba3"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grossular_%28GeoDIL_number_-_303%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1088,
+                "bytes": 181249,
+                "sha256": "215b1922a5eab490a177321a0ec46774fe88129ba0d0393e1b0aae4774a8d23c"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Nessa Eull",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: https://geodil.dperkins.org/h/303.html",
+          "credit": "https://geodil.dperkins.org/h/303.html",
+          "uploader": "DaxServer",
+          "date": "9 April 2001",
+          "description_excerpt": "Grossular is calcium-aluminum garnet, having ideal composition Ca3Al2Si3O12. Grossular, however, typically contains Fe, Mn and other elements in small amounts, so it comes in a variety of colors. It may be colorless, yellow, orange, green, ",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "Cc-zero"
+            ],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Grossular (GeoDIL number - 303)“ – Nessa Eull, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Grossular_(GeoDIL_number_-_303).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Nessa Eull · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 2080,
+            "height_px": 1768,
+            "mime": "image/jpeg",
+            "bytes": 294474,
+            "sha1": "0a2c0565476bec1bee438db5f997fbdd5c83a1a9"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1088,
+            "format": "JPEG",
+            "sha256": "215b1922a5eab490a177321a0ec46774fe88129ba0d0393e1b0aae4774a8d23c",
+            "bytes": 181249
+          },
+          "aspect_ratio": 1.176,
+          "background": {
+            "measured_border_luminance": 1.0,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Drei gelbgrüne Grossular-Granat-Kristalle (Ikosaeder) freigestellt auf schwarzem Grund.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 136,
+      "selection_reason": "Zeigt die Kristallform statt nur geschliffener Ware; die im Datensatz erlaubte Farbbreite („Rot / Grün / Gelb“) wird über Grün-Gelb bedient. Kein ShareAlike."
+    },
+    {
+      "crystal_id": "crys-20",
+      "slug": "smaragd",
+      "display_name": "Smaragd",
+      "audit_row": 20,
+      "target_path": "assets/crystals/smaragd.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-20-smaragd",
+          "selected": true,
+          "crystal_slug": "smaragd",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Béryl var. émeraude sur gangue (Muzo Mine Boyaca - Colombie) -2.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_(Muzo_Mine_Boyaca_-_Colombie)_-2.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_-2.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 219,
+                "bytes": 25250,
+                "sha256": "3e30f79336ed73e11ce109bf6f58b6bcfeebdc88fbe3d73c0a016735afbde7f8"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_-2.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 638,
+                "bytes": 163642,
+                "sha256": "57fc980a574b109d21d376f9f3dcb7b141630b362a683fe870c0a1fabcb5e07a"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_-2.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 850,
+                "bytes": 270885,
+                "sha256": "6bbb7dc813c2219246caa5cd2fcce816311d1436051528018f950d90eb6dfad5"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Géry PARENT",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Slick-o-bot",
+          "date": "2011-01-27",
+          "description_excerpt": "beryl var. emerald, parisite-(Ce) : Muzo Mine, Mun. de Muzo, Vasquez-Yacopí Mining District, Boyacá Department, Colombia",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Béryl var. émeraude sur gangue (Muzo Mine Boyaca - Colombie) -2“ – Géry PARENT, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_(Muzo_Mine_Boyaca_-_Colombie)_-2.jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Géry PARENT · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 4288,
+            "height_px": 2848,
+            "mime": "image/jpeg",
+            "bytes": 11085556,
+            "sha1": "de603f757178f63463a4dc8d8d33265370610590"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 850,
+            "format": "JPEG",
+            "sha256": "6bbb7dc813c2219246caa5cd2fcce816311d1436051528018f950d90eb6dfad5",
+            "bytes": 270885
+          },
+          "aspect_ratio": 1.506,
+          "background": {
+            "measured_border_luminance": 41.7,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Smaragdgrüne Beryll-Kristalle in heller Matrix (Muzo, Kolumbien), dunkler Grund.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 48,
+      "selection_reason": "Grüne Beryll-Kristalle in der Muttergestein-Matrix, nicht geschliffen — passend zur Seltenheitsangabe „sehr selten“; CC0."
+    },
+    {
+      "crystal_id": "crys-21",
+      "slug": "rosenquarz-milch",
+      "display_name": "Rosenquarz (Milch)",
+      "audit_row": 21,
+      "target_path": "assets/crystals/rosenquarz-milch.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-21-rosenquarz-milch",
+          "selected": true,
+          "crystal_slug": "rosenquarz-milch",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Stuk roze kwarts (2).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Stuk_roze_kwarts_(2).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Stuk_roze_kwarts_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stuk_roze_kwarts_%282%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 247,
+                "bytes": 9875,
+                "sha256": "8fed5cdd563a111f7d91364472896d4df200f93e80c5d770b2439d33f7be2cc2"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stuk_roze_kwarts_%282%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 720,
+                "bytes": 65219,
+                "sha256": "55ec0091ed33c4d3bbc184a9333ed66628d2e18fbdd00f7dd01832ae275f5d42"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stuk_roze_kwarts_%282%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 960,
+                "bytes": 114931,
+                "sha256": "d976754dfc424ed42b728796aa981742327b68c0d393bf1b595ad67539fca44f"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Romaine",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Romaine",
+          "date": "2023-01-12",
+          "description_excerpt": "stuk roze kwarts, herkomst onbekend",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Stuk roze kwarts (2)“ – Romaine, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Stuk_roze_kwarts_(2).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Romaine · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 4032,
+            "height_px": 3024,
+            "mime": "image/jpeg",
+            "bytes": 3166882,
+            "sha1": "7d76642e116b0cfec719a236ca3722ea8e3e51a1"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 960,
+            "format": "JPEG",
+            "sha256": "d976754dfc424ed42b728796aa981742327b68c0d393bf1b595ad67539fca44f",
+            "bytes": 114931
+          },
+          "aspect_ratio": 1.333,
+          "background": {
+            "measured_border_luminance": 198.8,
+            "class": "hell"
+          },
+          "square_crop": "gut",
+          "visual_note": "Blassrosa, milchig-trüber massiver Rosenquarz-Brocken auf weißem Grund.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 97,
+      "selection_reason": "Bewusst anderes Motiv als crys-02 (dort tiefrosa Handstein auf Schwarz): hier matte, milchige Masse auf hellem Grund, damit der Katalog nicht doppelt wirkt."
+    },
+    {
+      "crystal_id": "crys-22",
+      "slug": "amazonit",
+      "display_name": "Amazonit",
+      "audit_row": 22,
+      "target_path": "assets/crystals/amazonit.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-22-amazonit",
+          "selected": true,
+          "crystal_slug": "amazonit",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Amazonite and smoky quartz Lake George Minéraux SU.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 412,
+                "bytes": 34451,
+                "sha256": "ba7c2a62e9593a50d41a95e2d3f0b1b9a2e710b3f8161edec200c13b6115f29b"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 1200,
+                "bytes": 264476,
+                "sha256": "ae7100633a481a86a71db561ee6da9c5d8ee32a00629e1f66469cb43f60a186d"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1600,
+                "bytes": 461070,
+                "sha256": "29e748362243fc47d6f1ad3fb86675794d1d954547163ace82987adad3b7619e"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Marie-Lan Taÿ Pamart",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Jastrow",
+          "date": "2025-02-15 14:18:15",
+          "description_excerpt": "Amazonite and smoky quartz from Lake George, Colorado, USA. Sorbonne University mineral collection.",
+          "license": {
+            "name": "Creative Commons Namensnennung 4.0",
+            "version": "4.0",
+            "class": "CC-BY-4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Attribution 4.0",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Amazonite and smoky quartz Lake George Minéraux SU“ – Marie-Lan Taÿ Pamart, lizenziert unter Creative Commons Namensnennung 4.0 — https://creativecommons.org/licenses/by/4.0. Quelle: https://commons.wikimedia.org/wiki/File:Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Skalierung auf 320/640/960/1280 px (WebP).",
+          "attribution_text_short": "Foto: Marie-Lan Taÿ Pamart · CC BY 4.0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 5444,
+            "height_px": 6805,
+            "mime": "image/jpeg",
+            "bytes": 10652861,
+            "sha1": "415f81e0ae705b462541a065d6fa2885e75aeeba"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1600,
+            "format": "JPEG",
+            "sha256": "29e748362243fc47d6f1ad3fb86675794d1d954547163ace82987adad3b7619e",
+            "bytes": 461070
+          },
+          "aspect_ratio": 0.8,
+          "background": {
+            "measured_border_luminance": 28.4,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Türkisgrüner Amazonit-Feldspat mit dunklem Rauchquarz auf schwarzem Grund (Museumssammlung).",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": false,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 25,
+      "selection_reason": "Türkisgrün wie im Datensatz; dunkler Fond; Hochformat (5444×6805) mit mittigem Motiv, Beschnitt unkritisch."
+    },
+    {
+      "crystal_id": "crys-23",
+      "slug": "hematit",
+      "display_name": "Hematit",
+      "audit_row": 23,
+      "target_path": "assets/crystals/hematit.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-23-hematit",
+          "selected": true,
+          "crystal_slug": "hematit",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Hematite (20255007100).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Hematite_(20255007100).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Hematite_%2820255007100%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hematite_%2820255007100%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 220,
+                "bytes": 17176,
+                "sha256": "dd76f20918001e5fd84782e8fc60baa508b3e099ab1f3bc6bf0e245759413444"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hematite_%2820255007100%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 641,
+                "bytes": 114564,
+                "sha256": "f84e40f42638d6ff87ee5887c1b6ea270140518ad546b7165ea09a89715df770"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hematite_%2820255007100%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 854,
+                "bytes": 191129,
+                "sha256": "87c3ea5c2abbcb6318dabc3817c84caec6d1159c192abfcc330cb6e723a956e4"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Joe deSousa",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Hematite",
+          "credit": "Hematite",
+          "uploader": "Tm",
+          "date": "2015-08-10 01:17",
+          "description_excerpt": "Kidney ore from the Beckermet Mine, Egremont, West Cumberland Iron Field, Cumbria, England, UK",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "cc-zero"
+            ],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Hematite (20255007100)“ – Joe deSousa, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Hematite_(20255007100).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Joe deSousa · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 6016,
+            "height_px": 4016,
+            "mime": "image/jpeg",
+            "bytes": 1276601,
+            "sha1": "149998ea10bb51b372a8ab22aacc4a85abf04160"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 854,
+            "format": "JPEG",
+            "sha256": "87c3ea5c2abbcb6318dabc3817c84caec6d1159c192abfcc330cb6e723a956e4",
+            "bytes": 191129
+          },
+          "aspect_ratio": 1.498,
+          "background": {
+            "measured_border_luminance": 237.6,
+            "class": "hell"
+          },
+          "square_crop": "gut",
+          "visual_note": "Traubiger, metallisch grau-blau schillernder Hämatit auf weißem Grund; kompakter Einzelstein.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 83,
+      "selection_reason": "„Metallisch / Schwarz“ wird über den blaugrauen Metallglanz getragen; heller Fond wie bei crys-04, in der Galerie gleich zu behandeln."
+    },
+    {
+      "crystal_id": "crys-24",
+      "slug": "quarz-klar",
+      "display_name": "Kristallquarz (Klare)",
+      "audit_row": 24,
+      "target_path": "assets/crystals/quarz-klar.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-24-quarz-klar",
+          "selected": true,
+          "crystal_slug": "quarz-klar",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:2011-12-24 11-10-34-quartz-10f.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:2011-12-24_11-10-34-quartz-10f.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/2011-12-24_11-10-34-quartz-10f.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-12-24_11-10-34-quartz-10f.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 202,
+                "bytes": 15039,
+                "sha256": "373bf2ab05ae658de3d2292b086e3346879c6a3660fe8bdaab0b65a0e28c12d5"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-12-24_11-10-34-quartz-10f.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 587,
+                "bytes": 113782,
+                "sha256": "ac8df64e9bd9ea733dff506b4c5cd2c435f8f00ed5be32941bbcc793e148c69c"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-12-24_11-10-34-quartz-10f.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 783,
+                "bytes": 204514,
+                "sha256": "b33d9c79ba0d18d7f7419114a2e0c90adac23087ed4d65ed06963946d55c6626"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Thomas Bresson",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "ComputerHotline",
+          "date": "2011-12-24 11:10:34",
+          "description_excerpt": "This file was uploaded with Commonist . This photograph was taken with a Nikon D300 This image was created with CombineZP by 10 ( It was created out of 10 single images.) . Quartz (focus stacking). Image composée de 10 photos assemblées ave",
+          "license": {
+            "name": "Creative Commons Namensnennung 3.0",
+            "version": "3.0",
+            "class": "CC-BY-3.0",
+            "url": "https://creativecommons.org/licenses/by/3.0",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "cc-by-3.0"
+            ],
+            "usage_terms_field": "Creative Commons Attribution 3.0",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„2011-12-24 11-10-34-quartz-10f“ – Thomas Bresson, lizenziert unter Creative Commons Namensnennung 3.0 — https://creativecommons.org/licenses/by/3.0. Quelle: https://commons.wikimedia.org/wiki/File:2011-12-24_11-10-34-quartz-10f.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).",
+          "attribution_text_short": "Foto: Thomas Bresson · CC BY 3.0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 3991,
+            "height_px": 2441,
+            "mime": "image/jpeg",
+            "bytes": 9666355,
+            "sha1": "ca009c1b2feb74d31ea70487a580ef5008d9348e"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 783,
+            "format": "JPEG",
+            "sha256": "b33d9c79ba0d18d7f7419114a2e0c90adac23087ed4d65ed06963946d55c6626",
+            "bytes": 204514
+          },
+          "aspect_ratio": 1.635,
+          "background": {
+            "measured_border_luminance": 167.4,
+            "class": "neutral"
+          },
+          "square_crop": "gut",
+          "visual_note": "Einzelner klarer Bergkristall mit Endfläche auf neutralem Grau; klare Silhouette, leichter Gelbstich.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": false,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 362,
+      "selection_reason": "Einzelkristall statt geschliffenem Objekt oder Buchseite; wichtig, weil die Suche nach „rock crystal“ überwiegend Gefäßschliffe und Reproduktionen liefert."
+    },
+    {
+      "crystal_id": "crys-25",
+      "slug": "peridot",
+      "display_name": "Peridot",
+      "audit_row": 25,
+      "target_path": "assets/crystals/peridot.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-25-peridot",
+          "selected": true,
+          "crystal_slug": "peridot",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Péridot (= olivine) (Pakistan) 1.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:P%C3%A9ridot_(%3D_olivine)_(Pakistan)_1.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/P%C3%A9ridot_%28%3D_olivine%29_%28Pakistan%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/P%C3%A9ridot_%28%3D_olivine%29_%28Pakistan%29_1.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 333,
+                "bytes": 26121,
+                "sha256": "9524995508b5e34825f7fbcd7e27bf3d4c99a9b5cc779f8d137f6c742357b931"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/P%C3%A9ridot_%28%3D_olivine%29_%28Pakistan%29_1.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 968,
+                "bytes": 164444,
+                "sha256": "602f89df83f9343700318e890c7bffb9a864c474a0736299009d655230808b5c"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/P%C3%A9ridot_%28%3D_olivine%29_%28Pakistan%29_1.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1291,
+                "bytes": 270931,
+                "sha256": "ba658397d54446d235267684b2081abfc6623231b77a8c027ea87e8638c9e125"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Parent Géry",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Slick-o-bot",
+          "date": "2010-07-01",
+          "description_excerpt": "Cristal gemme de péridot",
+          "license": {
+            "name": "Public Domain (Freigabe durch den Urheber, PD-self)",
+            "version": null,
+            "class": "Public-Domain",
+            "url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+            "url_http_status": null,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "PD-self"
+            ],
+            "usage_terms_field": "Public domain",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Péridot (= olivine) (Pakistan) 1“ – Parent Géry, gemeinfrei (Public Domain, PD-self). Quelle: https://commons.wikimedia.org/wiki/File:P%C3%A9ridot_(%3D_olivine)_(Pakistan)_1.jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Parent Géry · Public domain",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 2598,
+            "height_px": 2621,
+            "mime": "image/jpeg",
+            "bytes": 5613139,
+            "sha1": "2fdfddb8908b1b0cfd384e5ee6a2b5d747f273e8"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1291,
+            "format": "JPEG",
+            "sha256": "ba658397d54446d235267684b2081abfc6623231b77a8c027ea87e8638c9e125",
+            "bytes": 270931
+          },
+          "aspect_ratio": 0.991,
+          "background": {
+            "measured_border_luminance": 38.8,
+            "class": "dunkel"
+          },
+          "square_crop": "bedingt",
+          "visual_note": "Einzelner grüner Peridot-/Olivinkristall auf schwarzem Grund, hohe Farbsättigung; das Motiv füllt die Fläche fast vollständig.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 47,
+      "selection_reason": "Kristall statt Trommelware, kräftiges Grün-Gelb wie im Datensatz. Original nahezu quadratisch (2598×2621), aber das Motiv füllt das Bild bis zum Rand — im 1:1-Beschnitt werden Spitze und Basis leicht angeschnitten, daher `contain` oder leichtes Herauszoomen prüfen."
+    },
+    {
+      "crystal_id": "crys-26",
+      "slug": "kunzit",
+      "display_name": "Kunzit",
+      "audit_row": 26,
+      "target_path": "assets/crystals/kunzit.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-26-kunzit",
+          "selected": true,
+          "crystal_slug": "kunzit",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Spodumene var. kunzite (Pakistan).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Spodumene_var._kunzite_(Pakistan).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Spodumene_var._kunzite_%28Pakistan%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spodumene_var._kunzite_%28Pakistan%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 219,
+                "bytes": 17909,
+                "sha256": "328e968490bf6c74b30f3b1433083a4a39e1a985c24e7cf0ffc6b5250252197f"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spodumene_var._kunzite_%28Pakistan%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 638,
+                "bytes": 107470,
+                "sha256": "4bf5d80a3f4bb44d3765c2e626e71a587e8f528f24d26d5eda1dda8cefa85ffb"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spodumene_var._kunzite_%28Pakistan%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 850,
+                "bytes": 176584,
+                "sha256": "27655d2f9e16dbf4f023077ea8e9b2ede81b084c52db9b4ca721e5ffc7018e3f"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Parent Géry",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Géry PARENT",
+          "date": "02/01/09",
+          "description_excerpt": "spodumene var. kunzite : Laghman Province (Lagman Province ; Nuristan), Afghanistan",
+          "license": {
+            "name": "Public Domain (Freigabe durch den Urheber, PD-self)",
+            "version": null,
+            "class": "Public-Domain",
+            "url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+            "url_http_status": null,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "PD-self"
+            ],
+            "usage_terms_field": "Public domain",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Spodumene var. kunzite (Pakistan)“ – Parent Géry, gemeinfrei (Public Domain, PD-self). Quelle: https://commons.wikimedia.org/wiki/File:Spodumene_var._kunzite_(Pakistan).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Parent Géry · Public domain",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 4288,
+            "height_px": 2848,
+            "mime": "image/jpeg",
+            "bytes": 3822706,
+            "sha1": "0474f02b3afb95ee66b5c6abcab92009f2f0b8df"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 850,
+            "format": "JPEG",
+            "sha256": "27655d2f9e16dbf4f023077ea8e9b2ede81b084c52db9b4ca721e5ffc7018e3f",
+            "bytes": 176584
+          },
+          "aspect_ratio": 1.506,
+          "background": {
+            "measured_border_luminance": 37.5,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Kräftig rosavioletter Kunzit-Kristall (Spodumen) auf schwarzem Grund.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 25,
+      "selection_reason": "Deutlich gesättigter als die übrigen Kunzit-Treffer (viele blasse Matrixstufen); schwarzer Fond."
+    },
+    {
+      "crystal_id": "crys-27",
+      "slug": "roter-jaspis",
+      "display_name": "Roter Jaspis",
+      "audit_row": 27,
+      "target_path": "assets/crystals/roter-jaspis.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-27-roter-jaspis",
+          "selected": true,
+          "crystal_slug": "roter-jaspis",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Jasper (GeoDIL number - 2520).jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Jasper_(GeoDIL_number_-_2520).jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Jasper_%28GeoDIL_number_-_2520%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jasper_%28GeoDIL_number_-_2520%29.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 236,
+                "bytes": 19090,
+                "sha256": "798921c273aa164c56ad7eba93468bb4983f1036f64266c2db4484e70b169005"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jasper_%28GeoDIL_number_-_2520%29.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 688,
+                "bytes": 148798,
+                "sha256": "82cb3c343fc1e4e9f9516b79f507416d475c2f272b552c4bc58ae9ada118727a"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jasper_%28GeoDIL_number_-_2520%29.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 917,
+                "bytes": 238847,
+                "sha256": "3df4069c4956f39f79e6a070575d75675b954229dbece8d3788b9931c37ed767"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Darla Sondrol",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: https://geodil.dperkins.org/h/2520.html",
+          "credit": "https://geodil.dperkins.org/h/2520.html",
+          "uploader": "DaxServer",
+          "date": "22 March 2002",
+          "description_excerpt": "Jasper is a variety of chert, which is the general term applied to granular cryptocrystalline quartz (SiO2) varieties. It is thought to form by the replacement of calcareous rock by silica-rich solutions and by direct marine precipitation o",
+          "license": {
+            "name": "CC0 1.0 Universell (Public Domain Dedication)",
+            "version": "1.0",
+            "class": "CC0-1.0",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": false,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "Cc-zero"
+            ],
+            "usage_terms_field": "Creative Commons Zero, Public Domain Dedication",
+            "attribution_required_field": "false",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Jasper (GeoDIL number - 2520)“ – Darla Sondrol, CC0 1.0 Universell (https://creativecommons.org/publicdomain/zero/1.0/deed.en). Quelle: https://commons.wikimedia.org/wiki/File:Jasper_(GeoDIL_number_-_2520).jpg. Namensnennung ist rechtlich nicht erforderlich, wird im Projekt aber ausgewiesen.",
+          "attribution_text_short": "Foto: Darla Sondrol · CC0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 1932,
+            "height_px": 1384,
+            "mime": "image/jpeg",
+            "bytes": 331880,
+            "sha1": "9d56a8342bb21ded72675b1357e8faf702c24b2e"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 917,
+            "format": "JPEG",
+            "sha256": "3df4069c4956f39f79e6a070575d75675b954229dbece8d3788b9931c37ed767",
+            "bytes": 238847
+          },
+          "aspect_ratio": 1.396,
+          "background": {
+            "measured_border_luminance": 0.7,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Roter Jaspis-Handstein mit grünen Einschlüssen auf schwarzem Grund, plattig.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": false,
+            "share_alike": false,
+            "obligations": [
+              "Keine Rechtspflicht; Projektstandard: Quelle und Urheber trotzdem nennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 89,
+      "selection_reason": "Sattes Ziegelrot; die grünen Einschlüsse sind mineralogisch plausibel und geben dem Stein Wiedererkennbarkeit."
+    },
+    {
+      "crystal_id": "crys-28",
+      "slug": "feueropal",
+      "display_name": "Opal (Feueropal)",
+      "audit_row": 28,
+      "target_path": "assets/crystals/feueropal.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-28-feueropal",
+          "selected": true,
+          "crystal_slug": "feueropal",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Fire opal in matrix (Juniper Ridge, Lake County, Oregon, USA) 11.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Fire_opal_in_matrix_(Juniper_Ridge,_Lake_County,_Oregon,_USA)_11.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Fire_opal_in_matrix_%28Juniper_Ridge%2C_Lake_County%2C_Oregon%2C_USA%29_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fire_opal_in_matrix_%28Juniper_Ridge%2C_Lake_County%2C_Oregon%2C_USA%29_11.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 201,
+                "bytes": 24127,
+                "sha256": "6f60db693e6b06058e4d10bb667a9a03eab8fdb7c5b5d74c04cca77f904d9970"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fire_opal_in_matrix_%28Juniper_Ridge%2C_Lake_County%2C_Oregon%2C_USA%29_11.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 586,
+                "bytes": 139535,
+                "sha256": "0af1e33f3d55584fbe32ea278c96cefe2994a6810486d896ac0bb748bc63b21c"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fire_opal_in_matrix_%28Juniper_Ridge%2C_Lake_County%2C_Oregon%2C_USA%29_11.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 781,
+                "bytes": 242474,
+                "sha256": "391bef34f79cf9ba9f75cb5102ea6b6f931287be9c52fed666879bd78fa3f21c"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "James St. John",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: https://www.flickr.com/photos/47445767@N05/54112909046/",
+          "credit": "https://www.flickr.com/photos/47445767@N05/54112909046/",
+          "uploader": "Ser Amantio di Nicolao",
+          "date": "2024-10-28 19:12:30",
+          "description_excerpt": "Fire opal in matrix from Oregon, USA. A mineral is a naturally-occurring, solid, inorganic, crystalline substance having a fairly definite chemical composition and having fairly definite physical properties. At its simplest, a mineral is a ",
+          "license": {
+            "name": "Creative Commons Namensnennung 2.0",
+            "version": "2.0",
+            "class": "CC-BY-2.0",
+            "url": "https://creativecommons.org/licenses/by/2.0",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [
+              "cc-by-2.0"
+            ],
+            "usage_terms_field": "Creative Commons Attribution 2.0",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Fire opal in matrix (Juniper Ridge, Lake County, Oregon, USA) 11“ – James St. John, lizenziert unter Creative Commons Namensnennung 2.0 — https://creativecommons.org/licenses/by/2.0. Quelle: https://commons.wikimedia.org/wiki/File:Fire_opal_in_matrix_(Juniper_Ridge,_Lake_County,_Oregon,_USA)_11.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).",
+          "attribution_text_short": "Foto: James St. John · CC BY 2.0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 3304,
+            "height_px": 2016,
+            "mime": "image/jpeg",
+            "bytes": 4777206,
+            "sha1": "1cd898a58a18419a540ab967f159a56b53457355"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 781,
+            "format": "JPEG",
+            "sha256": "391bef34f79cf9ba9f75cb5102ea6b6f931287be9c52fed666879bd78fa3f21c",
+            "bytes": 242474
+          },
+          "aspect_ratio": 1.639,
+          "background": {
+            "measured_border_luminance": 144.9,
+            "class": "neutral"
+          },
+          "square_crop": "gut",
+          "visual_note": "Oranger Feueropal in dunkler Matrix, leuchtendes Orange, Bild füllt die Fläche.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": false,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 25,
+      "selection_reason": "Feueropal-Charakter (oranger Körper, Matrix) statt Edelopal-Spiel; warmes Orange passt zur Palette."
+    },
+    {
+      "crystal_id": "crys-29",
+      "slug": "aquamarin",
+      "display_name": "Aquamarin",
+      "audit_row": 29,
+      "target_path": "assets/crystals/aquamarin.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-29-aquamarin",
+          "selected": true,
+          "crystal_slug": "aquamarin",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Aquamarine beryl-MCG 90158-P4150841-black.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Aquamarine_beryl-MCG_90158-P4150841-black.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Aquamarine_beryl-MCG_90158-P4150841-black.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aquamarine_beryl-MCG_90158-P4150841-black.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 330,
+                "bytes": 29090,
+                "sha256": "864719c1d16d9e54a378f229dca394cb344b54109629a090f8e2d043fb56f469"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aquamarine_beryl-MCG_90158-P4150841-black.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 960,
+                "bytes": 144084,
+                "sha256": "d2ff462dcf209101aab4d5cee467d931af2f1996b64ca47ed2a1d2000e1dd605"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aquamarine_beryl-MCG_90158-P4150841-black.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1280,
+                "bytes": 234608,
+                "sha256": "e7ea46909abd0b10944fb66678fcc81308b9110b6a78c04c8996f4fb6ba7b227"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Rama",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Rama",
+          "date": "Taken on 15 April 2017, 16:45 (according to Exif data)",
+          "description_excerpt": "",
+          "license": {
+            "name": "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 (fr-Portierung)",
+            "version": "3.0",
+            "class": "CC-BY-SA-3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": true,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Attribution-Share Alike 3.0 fr",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Aquamarine beryl-MCG 90158-P4150841-black“ – Rama, lizenziert unter Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 (fr-Portierung) — https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en. Quelle: https://commons.wikimedia.org/wiki/File:Aquamarine_beryl-MCG_90158-P4150841-black.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Skalierung auf 320/640/960/1280 px (WebP). Bearbeitete Bildfassungen werden unter derselben Lizenz weitergegeben (ShareAlike).",
+          "attribution_text_short": "Foto: Rama · CC BY-SA 3.0 fr",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 4000,
+            "height_px": 4000,
+            "mime": "image/jpeg",
+            "bytes": 1171152,
+            "sha1": "f836f671c5282943b6ffcf04ef1a46ffdbe89ab6"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1280,
+            "format": "JPEG",
+            "sha256": "e7ea46909abd0b10944fb66678fcc81308b9110b6a78c04c8996f4fb6ba7b227",
+            "bytes": 234608
+          },
+          "aspect_ratio": 1.0,
+          "background": {
+            "measured_border_luminance": 0.0,
+            "class": "dunkel"
+          },
+          "square_crop": "gut",
+          "visual_note": "Hellblauer Aquamarin-Kristall auf dunklem Muskovit vor schwarzem Grund; Original quadratisch (4000×4000).",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": true,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen",
+              "Bearbeitete Fassungen nur unter CC BY-SA weitergeben (ShareAlike)"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 25,
+      "selection_reason": "Kristall mit Matrixkontrast, quadratisches Original, schwarzer Fond."
+    },
+    {
+      "crystal_id": "crys-30",
+      "slug": "rauchquarz",
+      "display_name": "Rauchquarz",
+      "audit_row": 30,
+      "target_path": "assets/crystals/rauchquarz.jpg",
+      "documentation_status": "vollständig",
+      "repo_image_state": "kein Bild im Repository (nur Quelle dokumentiert)",
+      "candidates": [
+        {
+          "candidate_id": "crys-30-rauchquarz",
+          "selected": true,
+          "crystal_slug": "rauchquarz",
+          "source": {
+            "provider": "Wikimedia Commons",
+            "file_title": "File:Smoky quartz Rio Doce MNHN Minéralogie.jpg",
+            "page_url": "https://commons.wikimedia.org/wiki/File:Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg",
+            "direct_image_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "direct_image_url_type": "Originaldatei (volle Auflösung)",
+            "renditions": {
+              "w320": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg?width=320",
+                "delivered_width_px": 330,
+                "delivered_height_px": 495,
+                "bytes": 36413,
+                "sha256": "28e68020b59ab0a0735be4531828e2a24085ed34e36920896c68bcc2231ad4d0"
+              },
+              "w640": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg?width=640",
+                "delivered_width_px": 960,
+                "delivered_height_px": 1440,
+                "bytes": 297659,
+                "sha256": "487a9c264c60631e67bb54703bbded5ff8dd4ee490f9fc4b87efa9f41a3ab15a"
+              },
+              "w1280": {
+                "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg?width=1280",
+                "delivered_width_px": 1280,
+                "delivered_height_px": 1920,
+                "bytes": 575619,
+                "sha256": "121cd114c32790d58924e5fc39e1c2691300916f0b3730a620339e3ea596335d"
+              }
+            },
+            "rendition_note": "Wikimedia liefert angeforderte Breiten in Stufen aus; angefragt wurden 320/640/1280 px, ausgeliefert 330/960/1280 px. Die gemessenen Werte stehen in delivered_width_px."
+          },
+          "author": "Marie-Lan Taÿ Pamart",
+          "author_verification": "Artist-Feld der Bildbeschreibungsseite; Credit-Feld: Own work",
+          "credit": "Own work",
+          "uploader": "Jastrow",
+          "date": "2020-02-20 17:29:29",
+          "description_excerpt": "Smoky quartz from Rio Doce, Brazil (830 kg). Gallery of Mineralogy and Geology of the French National Museum of Natural History in Paris.",
+          "license": {
+            "name": "Creative Commons Namensnennung 4.0",
+            "version": "4.0",
+            "class": "CC-BY-4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0",
+            "url_http_status": 200,
+            "requires_attribution": true,
+            "share_alike": false,
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "verified_at": "Originalquelle (Bildbeschreibungsseite Wikimedia Commons)",
+            "verified_on": "2026-11-02",
+            "source_license_templates": [],
+            "usage_terms_field": "Creative Commons Attribution 4.0",
+            "attribution_required_field": "true",
+            "restrictions_field": null
+          },
+          "attribution_text_required": "„Smoky quartz Rio Doce MNHN Minéralogie“ – Marie-Lan Taÿ Pamart, lizenziert unter Creative Commons Namensnennung 4.0 — https://creativecommons.org/licenses/by/4.0. Quelle: https://commons.wikimedia.org/wiki/File:Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht, Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).",
+          "attribution_text_short": "Foto: Marie-Lan Taÿ Pamart · CC BY 4.0",
+          "retrieved_at": "2026-11-02",
+          "original": {
+            "width_px": 3333,
+            "height_px": 5000,
+            "mime": "image/jpeg",
+            "bytes": 8608149,
+            "sha1": "9d63b261c1c5d9fff9659f00c25cedf74988555f"
+          },
+          "master_rendition_used_for_check": {
+            "width_px": 1280,
+            "height_px": 1920,
+            "format": "JPEG",
+            "sha256": "121cd114c32790d58924e5fc39e1c2691300916f0b3730a620339e3ea596335d",
+            "bytes": 575619
+          },
+          "aspect_ratio": 0.667,
+          "background": {
+            "measured_border_luminance": 84.3,
+            "class": "neutral"
+          },
+          "square_crop": "bedingt",
+          "visual_note": "Hochkant stehender Rauchquarz-Kristall in Graubraun, heller Grund, leicht hinterleuchtet.",
+          "license_compatibility": {
+            "status": "kompatibel",
+            "policy": "Projekt-Allowlist (PD, CC0, CC BY, CC BY-SA); NC/ND ausgeschlossen",
+            "commercial_use": true,
+            "modifications_allowed": true,
+            "requires_attribution": true,
+            "share_alike": false,
+            "obligations": [
+              "Quelle, Urheber, Lizenzname und Lizenz-URL nennen; Änderungen benennen"
+            ]
+          }
+        }
+      ],
+      "alternatives_screened": 47,
+      "selection_reason": "Der einzige Rauchquarz mit klarer Einzelkristall-Silhouette; Hochformat (3333×5000), daher mittiger 1:1-Beschnitt oder `contain` nötig."
+    }
+  ]
+}
