@@ -1,13 +1,13 @@
 // Tarot deck registry.
 //
-// The website ships exactly one approved deck: "Nachtatelier" (v1, 78 cards,
-// 3:5, sRGB). The registry is keyed by deck id so a second deck can be added
-// without touching the gallery, the dialog or the draw logic — but no V2 deck is
-// registered, offered or advertised here: that is a separate human gate.
+// Two decks ship, both with the same 78 stable card ids (0-77 in the canonical
+// order): "Nachtatelier" (v1) stays the default, "Gartenbrevier" (v2) is an
+// optional, human-approved colour variant. Adding a third deck only needs an
+// entry here — the gallery, the dialog, the draws and the deck picker read every
+// path from this registry and never hardcode a deck id or a file name.
 //
 // Storage is deliberately forgiving: an unknown or outdated stored id falls back
-// to the default deck instead of breaking the view or losing history, because
-// the card ids are stable across decks (0-77 in the canonical order).
+// to the default deck instead of breaking the view or losing history.
 
 export const TAROT_DECK_STORAGE_KEY = 'esoterik_tarot_deck';
 
@@ -15,6 +15,8 @@ const DECKS = {
   'nachtatelier-v1': {
     id: 'nachtatelier-v1',
     label: 'Nachtatelier',
+    meta: '78 Karten · 3:5',
+    badge: 'Standard',
     version: '1.0.0',
     cardCount: 78,
     aspect: '3:5',
@@ -23,6 +25,22 @@ const DECKS = {
     basePath: 'assets/tarot/nachtatelier-v1/',
     levels: { thumb: '300', detail: '600', zoom: '1200' },
     backFile: 'Ruecken.jpg',
+    previewCardId: 0,
+    width: 3,
+    height: 5,
+  },
+  'gartenbrevier-v2': {
+    id: 'gartenbrevier-v2',
+    label: 'Gartenbrevier',
+    meta: 'Farbvariante · 78 Karten · 3:5',
+    badge: 'Optional',
+    version: '2026-11-02',
+    cardCount: 78,
+    aspect: '3:5',
+    basePath: 'assets/tarot/gartenbrevier-v2/',
+    levels: { thumb: '300', detail: '600', zoom: '1200' },
+    backFile: 'Ruecken.jpg',
+    previewCardId: 0,
     width: 3,
     height: 5,
   },
@@ -42,6 +60,11 @@ export function resolveDeckId(storedDeckId) {
 
 export function getDeck(deckId) {
   return DECKS[resolveDeckId(deckId)];
+}
+
+// Registry order = picker order; the default deck stays first.
+export function listDecks() {
+  return SUPPORTED_DECK_IDS.map((deckId) => DECKS[deckId]);
 }
 
 export function readStoredDeckId(storage) {
@@ -80,6 +103,13 @@ export function cardAssetPath(deck, cardId, level = 'thumb') {
 export function backAssetPath(deck, level = 'thumb') {
   const step = deck.levels[level] || deck.levels.thumb;
   return `${deck.basePath}${step}/${deck.backFile}`;
+}
+
+// The picker shows one small preview per deck: the first card of that deck,
+// never a master and never a second copy of the whole deck.
+export function deckPreviewPath(deck) {
+  const cardId = Object.prototype.hasOwnProperty.call(deck, 'previewCardId') ? deck.previewCardId : 0;
+  return cardAssetPath(deck, cardId, 'thumb');
 }
 
 export function cardAspectRatio(deck) {

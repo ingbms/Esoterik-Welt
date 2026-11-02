@@ -428,7 +428,18 @@ test('keyboard and reduced motion: Enter opens, Escape restores focus, draw sett
       await page.locator('#tarot.active').waitFor({ state: 'visible' });
 
       const card = page.locator('#tarotGrid .tarot-card').nth(17);
-      await card.focus();
+      // The route settles asynchronously: retry until the button really owns the
+      // focus instead of sampling a single instant.
+      await page.waitForFunction(
+        () => {
+          const node = document.querySelectorAll('#tarotGrid .tarot-card')[17];
+          if (!node) return false;
+          node.focus();
+          return document.activeElement === node;
+        },
+        null,
+        { timeout: 5000 }
+      );
       assert.equal(await card.evaluate((node) => node === document.activeElement), true, 'card is focusable');
       await page.keyboard.press('Enter');
       await page.locator('#cardModal.open').waitFor({ state: 'visible' });
@@ -439,11 +450,14 @@ test('keyboard and reduced motion: Enter opens, Escape restores focus, draw sett
       assert.equal(await page.locator('#cardModalTitle').textContent(), 'Der Stern');
       await page.keyboard.press('Escape');
       await page.waitForFunction(() => !document.getElementById('cardModal').classList.contains('open'));
-      const restored = await page.evaluate(() => {
-        const active = document.activeElement;
-        return active && active.classList.contains('tarot-card') && active.dataset.id === '17';
-      });
-      assert.equal(restored, true, 'focus returns to the card that opened the dialog');
+      await page.waitForFunction(
+        () => {
+          const active = document.activeElement;
+          return Boolean(active && active.classList.contains('tarot-card') && active.dataset.id === '17');
+        },
+        null,
+        { timeout: 2000 }
+      );
 
       // With reduced motion the shuffle phase is skipped instead of waiting 1.2 s.
       const started = Date.now();
@@ -482,7 +496,14 @@ test('stored deck id: unknown value falls back to v1 and old history keeps worki
         cards: document.querySelectorAll('#tarotGrid .tarot-card').length,
         historyName: document.querySelector('#tarotHistoryBox .tarot-history-name').textContent,
         historyCount: document.querySelectorAll('#tarotHistoryBox li').length,
-        firstImage: document.querySelector('#tarotGrid img').getAttribute('src'),
+        // The gallery promotes `data-src` to `src` from an IntersectionObserver,
+        // so the intended source must be read from either attribute — the old
+        // assertion raced with that promotion once the deck picker added work
+        // before the first grid paint.
+        firstImage: (() => {
+          const image = document.querySelector('#tarotGrid img');
+          return image.dataset.src || image.getAttribute('src');
+        })(),
       }));
       assert.equal(state.deckId, 'nachtatelier-v1');
       assert.equal(state.stored, 'nachtatelier-v1');
@@ -548,6 +569,96 @@ test('payload: first view loads no 1200 px master, zoom does', async () => {
       assert.deepEqual(zoomed.natural, [1200, 2000]);
       assert.ok(zoomed.displayed[0] >= 360, `zoomed image is displayed larger (${zoomed.displayed[0]} px)`);
       assert.ok(zoomed.displayed[0] <= 1200 && zoomed.displayed[1] <= 900, 'zoom stays inside the viewport');
+    } finally {
+      await browser.close();
+    }
+  });
+});
+
+// F1 der Gesamt-QA: a missing master image must be named in the dialog instead
+// of leaving a broken-image icon, and a failed zoom must not claim a larger view.
+test('missing artwork: the dialog names the failure instead of a broken icon', async () => {
+  await withServer(async (base) => {
+    const browser = await chromium.launch({ headless: true });
+    try {
+      // 600 px master blocked: named fallback, no painted broken bitmap.
+      const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+      const page = await context.newPage();
+      await page.route('**/600/13.jpg', (route) => route.abort());
+      await page.goto(base + '#tarot', { waitUntil: 'load' });
+      await page.locator('#tarot.active').waitFor({ state: 'visible' });
+      await page.locator('#tarotGrid .tarot-card[data-id="13"]').click();
+      await page.locator('#cardModal.open').waitFor({ state: 'visible' });
+      await page.waitForFunction(() => Boolean(document.querySelector('.tarot-detail-fallback')));
+      const detail = await page.evaluate(() => {
+        const image = document.querySelector('.tarot-detail-image');
+        const fallback = document.querySelector('.tarot-detail-fallback');
+        const box = fallback ? fallback.getBoundingClientRect() : null;
+        return {
+          fallback: fallback ? fallback.textContent.trim() : null,
+          fallbackHeight: box ? Math.round(box.height) : 0,
+          imageHidden: image.hidden,
+          imageDisplay: getComputedStyle(image).display,
+          pressed: document.querySelector('.tarot-detail-zoom').getAttribute('aria-pressed'),
+          note: document.querySelector('.tarot-detail-note'),
+          overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        };
+      });
+      assert.equal(detail.fallback, 'Bild nicht verfügbar', 'the missing detail image is named');
+      assert.ok(detail.fallbackHeight > 300, `the fallback keeps the 3:5 plate (${detail.fallbackHeight} px)`);
+      assert.equal(detail.imageHidden, true);
+      assert.equal(detail.imageDisplay, 'none', 'the broken bitmap is not painted');
+      assert.equal(detail.pressed, 'false', 'zoom stays off without an image');
+      assert.equal(detail.note, null, 'no zoom note for a detail failure');
+      assert.equal(detail.overflow, 0);
+      await page.keyboard.press('Escape');
+      await page.waitForFunction(() => !document.getElementById('cardModal').classList.contains('open'));
+      const restored = await page.evaluate(() => {
+        const active = document.activeElement;
+        return active && active.classList.contains('tarot-card') ? active.dataset.id : null;
+      });
+      assert.equal(restored, '13', 'Escape still restores focus to the card');
+      await context.close();
+
+      // 1200 px zoom master blocked: zoom resets, the working 600 px stays.
+      const zoomContext = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+      const zoomPage = await zoomContext.newPage();
+      let zoomRequests = 0;
+      await zoomPage.route('**/1200/15.jpg', (route) => {
+        zoomRequests += 1;
+        return route.abort();
+      });
+      await zoomPage.goto(base + '#tarot', { waitUntil: 'load' });
+      await zoomPage.locator('#tarot.active').waitFor({ state: 'visible' });
+      await zoomPage.locator('#tarotGrid .tarot-card[data-id="15"]').click();
+      await zoomPage.locator('#cardModal.open').waitFor({ state: 'visible' });
+      await zoomPage.locator('.tarot-detail-zoom').click();
+      await zoomPage.waitForFunction(() => Boolean(document.querySelector('.tarot-detail-note')));
+      await zoomPage.waitForFunction(() => document.querySelector('.tarot-detail-image').naturalWidth > 0);
+      const zoom = await zoomPage.evaluate(() => {
+        const image = document.querySelector('.tarot-detail-image');
+        const button = document.querySelector('.tarot-detail-zoom');
+        return {
+          note: document.querySelector('.tarot-detail-note').textContent.trim(),
+          pressed: button.getAttribute('aria-pressed'),
+          label: button.getAttribute('aria-label'),
+          hint: document.querySelector('.tarot-detail-hint').textContent.trim(),
+          isZoomed: document.querySelector('#cardModal .modal').classList.contains('is-zoomed'),
+          natural: [image.naturalWidth, image.naturalHeight],
+          brokenPainted: getComputedStyle(image).display !== 'none' && image.naturalWidth === 0,
+          fallback: Boolean(document.querySelector('.tarot-image-fallback')),
+        };
+      });
+      assert.equal(zoomRequests, 1, 'the zoom master is requested once');
+      assert.match(zoom.note, /nicht verfügbar/, 'the failed zoom is named');
+      assert.equal(zoom.pressed, 'false', 'zoom state is reset');
+      assert.match(zoom.label, /^Karte vergrößern: /, 'the label returns to the enlarging action');
+      assert.equal(zoom.hint, 'Vergrößern');
+      assert.equal(zoom.isZoomed, false);
+      assert.deepEqual(zoom.natural, [600, 1000], 'the readable detail master stays visible');
+      assert.equal(zoom.brokenPainted, false);
+      assert.equal(zoom.fallback, false, 'a working detail image is not replaced by the error plate');
+      await zoomContext.close();
     } finally {
       await browser.close();
     }

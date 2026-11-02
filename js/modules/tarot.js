@@ -16,7 +16,9 @@ import {
   DEFAULT_DECK_ID,
   backAssetPath,
   cardAssetPath,
+  deckPreviewPath,
   getDeck,
+  listDecks,
   readStoredDeckId,
   storeDeckId,
 } from '../data/tarot-decks.js';
@@ -49,6 +51,8 @@ export class TarotModule {
     this.cards = tarotCards || [];
     this.deck = getDeck(DEFAULT_DECK_ID);
     this.history = [];
+    this.drawnCards = [];
+    this.gridKey = null;
     this.filterValue = 'all';
     this.searchQuery = '';
     this.currentCardId = null;
@@ -60,9 +64,98 @@ export class TarotModule {
     this.deck = getDeck(readStoredDeckId());
     storeDeckId(this.deck.id);
     this.loadHistory();
+    this.renderDeckPicker();
     this.renderGrid();
     this.setupEventListeners();
     this.setupModalAccessibility();
+  }
+
+  // --- Deck selection -----------------------------------------------------
+
+  // The picker is generated from the registry, so a deck becomes selectable by
+  // being registered — there is no second list in the markup to keep in sync.
+  // Native radios carry the keyboard behaviour (arrow keys move the selection)
+  // and each option's accessible name is its visible label text.
+  renderDeckPicker() {
+    const host = document.getElementById('tarotDeckPicker');
+    if (!host) return;
+    const decks = listDecks();
+    if (decks.length < 2) {
+      host.innerHTML = '';
+      host.hidden = true;
+      return;
+    }
+    const options = decks
+      .map((deck) => {
+        const inputId = `tarotDeck-${deck.id}`;
+        const selected = deck.id === this.deck.id;
+        const badge = deck.badge ? `<span class="tarot-deck-badge">${esc(deck.badge)}</span>` : '';
+        return `<label class="tarot-deck-option${selected ? ' is-selected' : ''}">
+            <input class="tarot-deck-radio" type="radio" name="tarotDeck" id="${esc(inputId)}" value="${esc(
+              deck.id
+            )}"${selected ? ' checked' : ''} />
+            <span class="tarot-deck-preview">
+              <img src="${esc(deckPreviewPath(deck))}" width="60" height="100" loading="lazy" decoding="async" alt="" />
+            </span>
+            <span class="tarot-deck-copy">
+              <span class="tarot-deck-name">${esc(deck.label)}${badge}</span>
+              <span class="tarot-deck-meta">${esc(deck.meta)}</span>
+            </span>
+          </label>`;
+      })
+      .join('');
+    host.hidden = false;
+    host.innerHTML = `<fieldset class="tarot-deck-fieldset">
+        <legend class="tarot-deck-legend">Deck wählen</legend>
+        <p class="tarot-deck-hint" id="tarotDeckHint">
+          Beide Decks zeigen dieselben 78 Karten mit denselben Stichwörtern und Deutungen. Die Auswahl gilt für Galerie,
+          Karte des Tages, Legungen und Detailansicht und bleibt in diesem Browser gespeichert.
+        </p>
+        <div class="tarot-deck-options">${options}</div>
+        <p class="sr-only" id="tarotDeckStatus" role="status" aria-live="polite"></p>
+      </fieldset>`;
+    host.querySelectorAll('input[name="tarotDeck"]').forEach((input) => {
+      input.addEventListener('change', () => {
+        if (input.checked) this.setDeck(input.value);
+      });
+    });
+  }
+
+  syncDeckPicker() {
+    const host = document.getElementById('tarotDeckPicker');
+    if (!host) return;
+    host.querySelectorAll('input[name="tarotDeck"]').forEach((input) => {
+      const selected = input.value === this.deck.id;
+      input.checked = selected;
+      const option = input.closest('.tarot-deck-option');
+      if (option) option.classList.toggle('is-selected', selected);
+    });
+  }
+
+  // Switching decks re-renders every surface that shows artwork — the gallery,
+  // an existing draw and an open dialog — while interpretations, card ids and
+  // the draw history stay untouched.
+  setDeck(deckId) {
+    const nextDeck = getDeck(deckId);
+    const previousId = this.deck ? this.deck.id : null;
+    const changed = previousId !== nextDeck.id;
+    this.deck = nextDeck;
+    storeDeckId(nextDeck.id);
+    this.syncDeckPicker();
+    if (changed) {
+      this.renderGrid();
+      if (this.drawnCards.length) this.renderDrawnCards();
+      if (this.modal && this.modal.classList.contains('open') && this.currentCardId !== null) {
+        this.rerenderDetailForDeck();
+      }
+      this.announceDeck(nextDeck);
+    }
+    return changed;
+  }
+
+  announceDeck(deck) {
+    const status = document.getElementById('tarotDeckStatus');
+    if (status) status.textContent = `Deck gewechselt: ${deck.label} (${deck.meta}).`;
   }
 
   // --- Gallery ------------------------------------------------------------
@@ -71,6 +164,12 @@ export class TarotModule {
     const grid = document.getElementById('tarotGrid');
     if (!grid) return;
     const cards = this.getFilteredCards();
+    // Navigation calls onShow() right after init(), which used to rebuild the
+    // same 78 buttons a second time and threw keyboard focus away. An unchanged
+    // view (deck + filter + query + count) keeps the existing DOM.
+    const key = [this.deck.id, this.filterValue, this.searchQuery, cards.length].join('|');
+    if (key === this.gridKey && grid.childElementCount === cards.length) return;
+    this.gridKey = key;
     if (this.imageObserver) this.imageObserver.disconnect();
     grid.innerHTML = cards.map((card) => this.cardMarkup(card)).join('');
     this.observeImages(grid);
@@ -246,10 +345,14 @@ export class TarotModule {
           <button type="button" class="tarot-detail-zoom" aria-pressed="false"
             aria-label="Karte vergrößern: ${esc(card.name)}" data-zoom-src="${esc(zoomImage)}">
             <img class="tarot-detail-image" src="${esc(detailImage)}" width="600" height="1000"
-              decoding="async" alt="${esc(card.name)} · ${esc(card.numeral)} — Karte des Nachtatelier-Decks" />
+              decoding="async" alt="${esc(card.name)} · ${esc(card.numeral)} — Karte aus dem Deck „${esc(
+                this.deck.label
+              )}“" />
             <span class="tarot-detail-hint" aria-hidden="true">Vergrößern</span>
           </button>
-          <figcaption class="tarot-detail-caption">${esc(card.numeral)} · ${esc(arcanaLabel(card))} · 3:5</figcaption>
+          <figcaption class="tarot-detail-caption">${esc(card.numeral)} · ${esc(arcanaLabel(card))} · ${esc(
+            this.deck.aspect
+          )}</figcaption>
         </figure>
         <div class="tarot-detail-text">
           <p class="tarot-detail-kicker">${esc(arcanaLabel(card))}</p>
@@ -292,6 +395,14 @@ export class TarotModule {
   bindDetailControls() {
     const zoomButton = this.modalBody.querySelector('.tarot-detail-zoom');
     if (zoomButton) zoomButton.addEventListener('click', () => this.toggleZoom(zoomButton));
+    const detailImage = this.modalBody.querySelector('.tarot-detail-image');
+    if (detailImage) {
+      detailImage.addEventListener('load', () => this.settleDetailImage(detailImage, 'loaded'));
+      detailImage.addEventListener('error', () => this.settleDetailImage(detailImage, 'error'));
+      // A failure served from the cache fires no event: no pixels despite
+      // `complete` is the same error and is named right away.
+      if (detailImage.complete && detailImage.naturalWidth === 0) this.settleDetailImage(detailImage, 'error');
+    }
     const orientation = this.modalBody.querySelector('[data-orientation-toggle]');
     if (orientation) {
       orientation.addEventListener('click', () => {
@@ -303,6 +414,89 @@ export class TarotModule {
         if (again) again.focus();
       });
     }
+  }
+
+  // A missing artwork is named instead of leaving a broken icon in the dialog
+  // (F1 der Gesamt-QA): the bitmap is hidden, the fallback carries the text and
+  // the zoom state returns to the unzoomed default, so `aria-pressed`, the hint
+  // and the layout never claim a larger image that is not there.
+  settleDetailImage(image, state) {
+    const button = image.closest('.tarot-detail-zoom');
+    const panel = this.modal ? this.modal.querySelector('.modal') : null;
+    const hint = button ? button.querySelector('.tarot-detail-hint') : null;
+    const fallback = this.modalBody.querySelector('.tarot-detail-fallback');
+    if (state === 'loaded') {
+      image.hidden = false;
+      if (fallback) fallback.remove();
+      // A successful zoom clears the note; the reload of the 600 px master that
+      // follows a failed zoom keeps it.
+      if (button && button.getAttribute('aria-pressed') === 'true') this.setDetailNote('');
+      return;
+    }
+    image.hidden = true;
+    if (button && button.getAttribute('aria-pressed') === 'true') {
+      const card = this.cards.find((entry) => entry.id === this.currentCardId);
+      button.setAttribute('aria-pressed', 'false');
+      button.setAttribute('aria-label', `Karte vergrößern: ${card ? card.name : ''}`);
+      if (panel) panel.classList.remove('is-zoomed');
+      if (hint) hint.textContent = 'Vergrößern';
+      // Back to the detail master: the next click retries the zoom image from a
+      // clean state instead of reusing the failed 1200 px source. The working
+      // 600 px image stays visible, so the failure is named in words instead of
+      // replacing a readable card with an error plate.
+      const detailSrc = cardAssetPath(this.deck, this.currentCardId, 'detail');
+      if (image.getAttribute('src') !== detailSrc) image.src = detailSrc;
+      this.setDetailNote('Vergrößerte Ansicht nicht verfügbar.');
+    }
+    if (fallback) return;
+    const note = document.createElement('span');
+    note.className = 'tarot-image-fallback tarot-detail-fallback';
+    note.setAttribute('role', 'img');
+    note.setAttribute('aria-label', 'Bild nicht verfügbar');
+    note.textContent = 'Bild nicht verfügbar';
+    image.after(note);
+  }
+
+  // Names an unavailable zoom in words instead of leaving the click unexplained.
+  setDetailNote(text) {
+    const existing = this.modalBody.querySelector('.tarot-detail-note');
+    if (!text) {
+      if (existing) existing.remove();
+      return;
+    }
+    if (existing) {
+      existing.textContent = text;
+      return;
+    }
+    const note = document.createElement('p');
+    note.className = 'tarot-detail-note';
+    note.setAttribute('role', 'status');
+    note.textContent = text;
+    const figure = this.modalBody.querySelector('.tarot-detail-figure');
+    (figure || this.modalBody).append(note);
+  }
+
+  // Re-renders the open dialog for the newly selected deck: same card, same
+  // orientation, same zoom state, same focus target — only the artwork changes.
+  rerenderDetailForDeck() {
+    const card = this.cards.find((entry) => entry.id === this.currentCardId);
+    if (!card) return;
+    const panel = this.modal.querySelector('.modal');
+    const wasZoomed = Boolean(panel && panel.classList.contains('is-zoomed'));
+    const active = document.activeElement;
+    const zoomHadFocus = Boolean(active && active.classList && active.classList.contains('tarot-detail-zoom'));
+    const toggleHadFocus = Boolean(active && active.hasAttribute && active.hasAttribute('data-orientation-toggle'));
+    this.renderDetail(card);
+    if (wasZoomed) {
+      const zoomButton = this.modalBody.querySelector('.tarot-detail-zoom');
+      if (zoomButton) this.toggleZoom(zoomButton);
+    }
+    const focusTarget = toggleHadFocus
+      ? this.modalBody.querySelector('[data-orientation-toggle]')
+      : zoomHadFocus || wasZoomed
+        ? this.modalBody.querySelector('.tarot-detail-zoom')
+        : null;
+    if (focusTarget && focusTarget.focus) focusTarget.focus({ preventScroll: true });
   }
 
   toggleZoom(button) {
@@ -365,11 +559,12 @@ export class TarotModule {
     );
   }
 
-  showDrawnCards(cards, shuffling = false) {
+  showDrawnCards(cards, shuffling = false, { scroll = true } = {}) {
     const container = document.getElementById('drawnCardContainer');
     const drawn = document.getElementById('drawnCards');
     if (!container || !drawn) return;
     container.hidden = false;
+    if (!shuffling) this.drawnCards = cards;
     const back = backAssetPath(this.deck, 'thumb');
     drawn.innerHTML = cards
       .map((card, index) => {
@@ -397,10 +592,17 @@ export class TarotModule {
         });
       });
     });
+    if (!scroll) return;
     container.scrollIntoView({
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
       block: 'nearest',
     });
+  }
+
+  // Keeps an existing draw (ids + orientation) and swaps only the artwork.
+  renderDrawnCards() {
+    if (!this.drawnCards.length) return;
+    this.showDrawnCards(this.drawnCards, false, { scroll: false });
   }
 
   // --- History ------------------------------------------------------------

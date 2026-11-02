@@ -640,6 +640,17 @@
   aspect-ratio: 3 / 5;
   object-fit: contain;
 }
+/* The hidden attribute has to beat the display:block above, otherwise a failed
+   600/1200 px master keeps its broken-image icon next to the named fallback. */
+.tarot-detail-image[hidden] {
+  display: none;
+}
+/* The named fallback keeps the card's 3:5 plate so the dialog does not jump. */
+.tarot-detail-fallback {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 5;
+}
 .tarot-detail-zoom[aria-pressed='true'] {
   cursor: zoom-out;
 }
@@ -727,6 +738,15 @@
   font-size: var(--text-xs);
   letter-spacing: 0.06em;
   color: var(--color-text-secondary);
+}
+/* Named zoom failure: the caption keeps its place, the note sits under it. */
+.tarot-detail-note {
+  margin: 0;
+  padding-inline-start: var(--space-2);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  border-inline-start: 2px solid var(--color-primary);
 }
 .tarot-detail-kicker {
   margin: 0 0 var(--space-1);
@@ -816,6 +836,127 @@
   font-size: var(--text-xs);
   line-height: 1.6;
   color: var(--color-text-secondary);
+}
+
+/* --- Deck picker --------------------------------------------------------- */
+/* Two equal options, each with the first card of its deck as preview. The radio
+   stays a real form control (arrow keys move the selection, the visible label is
+   the hit area), so no custom keyboard handling can get out of sync. */
+.tarot-deck-picker {
+  margin: 0 0 var(--space-6);
+}
+.tarot-deck-fieldset {
+  margin: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-ghost);
+}
+.tarot-deck-legend {
+  padding: 0 var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+}
+.tarot-deck-hint {
+  max-width: 72ch;
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+.tarot-deck-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-3);
+}
+.tarot-deck-option {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  min-width: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+.tarot-deck-option:hover {
+  border-color: var(--color-line-strong);
+}
+.tarot-deck-option.is-selected {
+  border-color: var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-primary);
+}
+.tarot-deck-option:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.tarot-deck-radio {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+.tarot-deck-preview {
+  flex: none;
+  display: block;
+  width: 60px;
+}
+.tarot-deck-preview img {
+  display: block;
+  width: 60px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+}
+.tarot-deck-copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.tarot-deck-name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: baseline;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+.tarot-deck-badge {
+  padding: 1px 8px;
+  font-family: var(--font-body, inherit);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+}
+.tarot-deck-meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+@media (max-width: 420px) {
+  .tarot-deck-fieldset {
+    padding: var(--space-3);
+  }
+  .tarot-deck-option {
+    gap: var(--space-2);
+    padding: var(--space-2);
+  }
+  .tarot-deck-preview,
+  .tarot-deck-preview img {
+    width: 48px;
+  }
+  .tarot-deck-preview img {
+    height: 80px;
+  }
 }
 
 /* History */

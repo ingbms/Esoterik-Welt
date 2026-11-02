@@ -102,9 +102,16 @@ function relativeDays(date, now) {
 }
 
 function eventStamp(date) {
+  // Datum und Uhrzeit mit Komma statt Trenner: in den schmalen Spalten der
+  // Phasenleiste (106 px) konnte die Zeile sonst mit „·“ enden (F2).
   // Geschütztes Leerzeichen: "21:28 MEZ" soll nie getrennt umbrechen.
-  return `${api.formatDateLong(date, TZ)} · ${api.formatTime(date, TZ)}\u00A0${api.timeZoneAbbreviation(date, TZ)}`;
+  return `${api.formatDateLong(date, TZ)}, ${api.formatTime(date, TZ)}\u00A0${api.timeZoneAbbreviation(date, TZ)}`;
 }
+
+// Trennzeichen gehören an beide Nachbarn: mit einem normalen Leerzeichen davor
+// beginnt oder endet eine umbrechende Zeile mit „·“ (F2 aus der Gesamt-QA).
+const SEP = '\u00A0·\u00A0';
+const withSeparators = (text) => String(text).replace(/ · /g, SEP);
 
 function sampleIllumination(key) {
   switch (key) {
@@ -200,22 +207,30 @@ export class MoonModule {
     const next = state.next;
 
     if (this.els.stamp) {
-      this.els.stamp.textContent = `${api.formatWeekdayDate(now, TZ)} · ${api.formatTime(now, TZ)} ${tzAbbr} · ${TZ}`;
+      // Auch diese Zeile ist sichtbarer Fließtext: auf 320–428 px brach sie
+      // sonst vor bzw. nach dem Trenner (B1 aus dem Review zu t_67334ff1).
+      this.els.stamp.textContent = withSeparators(
+        `${api.formatWeekdayDate(now, TZ)} · ${api.formatTime(now, TZ)} ${tzAbbr} · ${TZ}`
+      );
     }
     if (this.els.tzLabel) this.els.tzLabel.textContent = `${TZ}, ${tzAbbr}`;
 
     if (this.els.phaseName) this.els.phaseName.textContent = content ? content.name : state.phaseKey;
     if (this.els.illumination) {
-      // „·“ bleibt mit dem folgenden Wort zusammen, damit das Trennzeichen bei
-      // 375 px nicht allein am Zeilenende steht (Review-Hinweis N2).
-      this.els.illumination.textContent = `${percent(state.illumination)} % beleuchtet ·\u00A0${state.waxing ? 'zunehmend' : 'abnehmend'}`;
+      // Beide Leerzeichen um „·“ sind geschützt, damit bei 375 px weder die
+      // Zeile mit dem Trennzeichen endet noch die nächste damit beginnt (F2).
+      this.els.illumination.textContent = withSeparators(
+        `${percent(state.illumination)} % beleuchtet · ${state.waxing ? 'zunehmend' : 'abnehmend'}`
+      );
     }
     if (this.els.age) {
       this.els.age.textContent =
         state.ageDays === null ? '—' : `${state.ageDays.toFixed(1).replace('.', ',')} Tage seit Neumond`;
     }
     if (this.els.cyclePos && content) {
-      this.els.cyclePos.textContent = `${content.sector} · ${Math.round(state.cycleFraction * 100)} % des Zyklus`;
+      this.els.cyclePos.textContent = withSeparators(
+        `${content.sector} · ${Math.round(state.cycleFraction * 100)} % des Zyklus`
+      );
     }
 
     if (this.els.nextIn) {
@@ -229,12 +244,12 @@ export class MoonModule {
       const parts = [];
       if (previous) {
         parts.push(
-          `<span class="moon-next-prev">Zuletzt: ${escapeHtml(api.EVENT_LABELS[previous.type])} am ${escapeHtml(eventStamp(previous.date))} · ${escapeHtml(relativeDays(previous.date, now))}</span>`
+          `<span class="moon-next-prev">${withSeparators(`Zuletzt: ${escapeHtml(api.EVENT_LABELS[previous.type])} am ${escapeHtml(eventStamp(previous.date))} · ${escapeHtml(relativeDays(previous.date, now))}`)}</span>`
         );
       }
       if (next) {
         parts.push(
-          `<span class="moon-next-main">Nächstes: ${escapeHtml(api.EVENT_LABELS[next.type])} am ${escapeHtml(eventStamp(next.date))} · ${escapeHtml(relativeDays(next.date, now))}</span>`
+          `<span class="moon-next-main">${withSeparators(`Nächstes: ${escapeHtml(api.EVENT_LABELS[next.type])} am ${escapeHtml(eventStamp(next.date))} · ${escapeHtml(relativeDays(next.date, now))}`)}</span>`
         );
       }
       this.els.nextStamp.innerHTML = parts.join('');
@@ -251,7 +266,9 @@ export class MoonModule {
       }
     }
     if (this.els.caption) {
-      this.els.caption.textContent = `Nordhalbkugel-Darstellung · ${state.waxing ? 'Licht von rechts' : 'Licht von links'}`;
+      // Komma statt „·“: Die Bildunterschrift ist auf 22ch begrenzt, ein
+      // Trenner müsste dort zwangsläufig am Zeilenrand stehen (F2).
+      this.els.caption.textContent = `Nordhalbkugel-Darstellung, ${state.waxing ? 'Licht von rechts' : 'Licht von links'}`;
     }
 
     this.renderTimeline(now, state);
@@ -283,7 +300,7 @@ export class MoonModule {
           <span class="moon-timeline-body">
             <span class="moon-timeline-name">${escapeHtml(api.EVENT_LABELS[event.type])}</span>
             <span class="moon-timeline-when">${escapeHtml(eventStamp(event.date))}</span>
-            <span class="moon-timeline-rel">${escapeHtml(relativeDays(event.date, now))}${isNext ? ' · nächste Hauptphase' : ''}</span>
+            <span class="moon-timeline-rel">${withSeparators(`${escapeHtml(relativeDays(event.date, now))}${isNext ? ' · nächste Hauptphase' : ''}`)}</span>
           </span>
         </li>`;
       })
@@ -300,7 +317,7 @@ export class MoonModule {
         (idea) => `<article class="moon-ritual">
           <h4 class="moon-ritual-title">${escapeHtml(idea.title)}</h4>
           <p class="moon-ritual-text">${escapeHtml(idea.description)}</p>
-          <p class="moon-ritual-meta">${escapeHtml(idea.duration)}${idea.items && idea.items.length ? ' · ' + escapeHtml(idea.items.join(', ')) : ''}</p>
+          <p class="moon-ritual-meta">${withSeparators(`${escapeHtml(idea.duration)}${idea.items && idea.items.length ? ' · ' + escapeHtml(idea.items.join(', ')) : ''}`)}</p>
         </article>`
       )
       .join('');
@@ -423,7 +440,7 @@ export class MoonModule {
 
     panel.innerHTML = `
       <h3 class="moon-detail-title">${escapeHtml(dateLabel)}</h3>
-      <p class="moon-detail-phase">${escapeHtml(content ? content.name : day.phaseKey)} · ${percent(day.illumination)} % beleuchtet ·\u00A0${day.waxing ? 'zunehmend' : 'abnehmend'}</p>
+      <p class="moon-detail-phase">${withSeparators(`${escapeHtml(content ? content.name : day.phaseKey)} · ${percent(day.illumination)} % beleuchtet · ${day.waxing ? 'zunehmend' : 'abnehmend'}`)}</p>
       <p class="moon-detail-event">${escapeHtml(events)}</p>
       ${content ? `<p class="moon-detail-text">${escapeHtml(content.appearance)}</p>` : ''}
       ${content ? `<p class="moon-detail-interp"><span class="moon-mode-label is-inline">Deutung</span>${escapeHtml(content.culture)}</p>` : ''}`;
@@ -540,7 +557,7 @@ export class MoonModule {
             <span class="moon-phase-figure" aria-hidden="true">${phaseGlyph(sampleIllumination(key), sampleWaxing(key), 34)}</span>
             <div>
               <h3 class="moon-phase-name">${escapeHtml(item.name)}</h3>
-              <p class="moon-phase-index">${index + 1} von 8 · ${escapeHtml(item.numbers)}</p>
+              <p class="moon-phase-index">${withSeparators(`${index + 1} von 8 · ${escapeHtml(item.numbers)}`)}</p>
             </div>
           </div>
           <p class="moon-phase-text">${escapeHtml(item.appearance)}</p>
