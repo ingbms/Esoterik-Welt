@@ -30,6 +30,7 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 | `js/modules/frequenzlabor.js` | Controller/View: Rendering der fünf Ansichten, Events, Fokus, Fehlertexte, Pause/Weiter, Sweep-Fortschritt, `halt()` beim Ansichtswechsel |
 | `js/modules/markdown-lite.js` | 275-Zeilen-Markdown-Leser für `#frequenzen/quellen`: escapter Text, nur sichere Linkziele, Tabellen/Zitate/Codeblöcke |
 | `js/modules/frequenz-presets.js` | Laden (HTTP `fetch` / eingebettetes JSON), Validierung, Wiedergabe-Mapping, Präferenzen |
+| `js/modules/frequenz-nav.js` | gemeinsame Bereichsnavigation aller fünf Ansichten (gleiche Reihenfolge und Beschriftung, genau ein `aria-current`, NFR-17) |
 | `js/modules/frequenz-visualisierung.js` | Canvas-Renderer, rAF nur bei laufendem Ton, statische Welle bei reduzierter Bewegung |
 | `js/modules/frequenz-flags.js` | Feature-Flags mit lokalem URL-Override (`?fq=+cymatics,-binaural`); `cymatics`/`meditation` sind seit dem ADR-Nachtrag §13 ausgeliefert |
 | `js/modules/frequenzlabor-loader.js` | 30-Zeilen-Lazy-Proxy, einziger statischer Import im Initialpfad |
@@ -149,11 +150,11 @@ Screenshots: `hub-360/768/1440.png`, `lab-360/768/1440.png`, `lab-360-scrolled.p
 | --- | --- | --- |
 | Engine + Presets/Flags + Modelle | `npm run test:frequenz` | **67 pass, 0 fail** (21 Engine E1–E20, 13 Presets P1–P8, 15 Markdown, 8 Chladni C1–C8, 10 Meditation M1–M9) |
 | UI-Browserfälle | `npx playwright test tests/frequenzlabor.spec.js` | **16 pass, 0 fail** (U1–U16; U15/U16 kamen mit `t_b78a89a5`/`t_f2a0868c` hinzu) |
-| Folgestufe P9/P10 (Browser) | `npx playwright test tests/frequenzlabor-p9-p10.spec.js` | **19 pass, 0 fail** |
-| Vollständige Browser-Suite | `E2E_PORT=3441 CI=1 npm run test:e2e` | **113 pass, 0 fail** in 11 Dateien (inkl. Astrologie, Mond, Tarot, Smoke, Link-Check) |
+| Folgestufe P9/P10 (Browser) | `npx playwright test tests/frequenzlabor-p9-p10.spec.js` | **20 pass, 0 fail** (19 Fälle + N1-Navigationstest) |
+| Vollständige Browser-Suite | `E2E_PORT=3441 CI=1 npm run test:e2e` | **114 pass, 0 fail** in 11 Dateien (inkl. Astrologie, Mond, Tarot, Smoke, Link-Check) |
 | Offline-Datei | `npm run test:offline` | **2 pass** (inkl. eingebettetem `#local-frequencies-data` und Quellendokument) |
 | Lokaler Einstieg | `node --test tests/local-entry.cjs` | **6 pass, 2 skip** (7 Karten, 6 Module) |
-| Budget | `npm run check:frequenz-budget` | NFR-1 85.822 B / 86.275 B (**WARN**, 99,5 % Auslastung, Reserve 453 B) · NFR-2 47.002 B / 100.000 B · NFR-3 3.951 B / 6.000 B (integrierter Stand, §2.1) |
+| Budget | `npm run check:frequenz-budget` | NFR-1 85.822 B / 86.275 B (**WARN**, 99,5 % Auslastung, Reserve 453 B) · NFR-2 46.888 B / 100.000 B · NFR-3 3.951 B / 6.000 B (integrierter Stand, §2.1) |
 | Lint/Format | `npm run lint`, `npm run format:check` | 0 Fehler, Prettier clean |
 
 Konsole: U1 prüft `console.error`/`pageerror` auf beiden Ansichten. Zusätzlich lief ein eigener Konsolen-Probe über beide Ansichten bei 360/768/1440 px mit Filterwechsel, Preset-Play, Sweep, Schwebung, Binaural, 432-Hz-Vergleich, Wellenform- und Pegelwechsel: **0 Meldungen** (`error`, `warning`, `pageerror`, `requestfailed`).
@@ -223,4 +224,4 @@ Die Links stehen in `.fq-prose`/`.fq-lede`/`.fq-note`, sind unterstrichen (WCAG 
 
 Der ADR-Nachtrag §13 liefert die zweite Stufe aus: `#frequenzen/cymatics` (Chladni-Muster als idealisiertes Modell, ohne Frequenzzuordnung) und `#frequenzen/meditation` (Sitzung mit Timer, Fades, lokalen Favoriten und Wiederaufnahme). Beide Ansichten hängen an den vorhandenen Flags, werden per dynamischem `import()` geladen und verändern den Initialgraphen nicht (NFR-1 im integrierten Build 85.822 B; der Zuwachs gegenüber 85.613 B stammt aus P11, nicht aus P9/P10).
 
-Umsetzung, Messwerte, Testmatrix und Grenzen stehen in [frequenzlabor-p9-p10.md](frequenzlabor-p9-p10.md). Für dieses Dokument ändern sich drei Punkte: die Kategorie hat fünf statt drei Ansichten, die Bereichsnavigation ergänzt bei aktiven Flags `Chladni-Muster` und `Meditation` (weiterhin genau ein `aria-current="page"`), und das Stylesheet wächst um die P9/P10-Regeln (im Build gemessen, Grenze 6.000 B).
+Umsetzung, Messwerte, Testmatrix und Grenzen stehen in [frequenzlabor-p9-p10.md](frequenzlabor-p9-p10.md). Für dieses Dokument ändern sich drei Punkte: die Kategorie hat fünf statt drei Ansichten, alle fünf Ansichten teilen sich die Navigation aus `js/modules/frequenz-nav.js` (drei feste Einträge, bei aktiven Flags zusätzlich `Chladni-Muster` und `Meditation`; genau ein `aria-current="page"`, geprüft durch Browserfall N1), und das Stylesheet wächst um die P9/P10-Regeln (im Build gemessen, Grenze 6.000 B).
