@@ -58,7 +58,7 @@ Die geologischen Quellen (Q01 — Behördenpublikation Württemberg; Q06 — Enz
 
 ## 8. Bovis-Skalen: Ordnungsschema oder Messung? (E)
 
-Die Bovis-Skalen behaupten eine numerische Bewertung von Orten oder Objekten (typisch: 6.500 = gut, < 6.500 = schlecht) und werden in der Praxis als „Messgerät“ verwendet [Q06, Q12]. Wissenschaftlich sind sie als Messgröße nicht definiert; Interrater- und Intrarater-Tests zeigen keine Stabilität [Q12, Q06]. Das Modul behandelt die Bovis-Skalen als **Ordnungsschema der Szene**, nicht als Messinstrument — mit klarer Klasse E und dem Hinweis, dass ein Demo als „Spielmarke“ (nicht als Messung) gedacht ist.
+Die Bovis-Skalen behaupten eine numerische Bewertung von Orten oder Objekten: Ein verbreiteter Bezugswert ist 6.500 Bovis-Einheiten, der in der Szene als neutral gilt; niedrigere Werte gelten als energieentziehend, höhere bis etwa 8.000 als günstig, noch höhere wieder als zu hoch [Q12]. Wissenschaftlich sind sie als Messgröße nicht definiert; Interrater- und Intrarater-Tests zeigen keine Stabilität [Q12, Q06]. Das Modul behandelt die Bovis-Skalen als **Ordnungsschema der Szene**, nicht als Messinstrument — mit klarer Klasse E und dem Hinweis, dass ein Demo als „Spielmarke“ (nicht als Messung) gedacht ist.
 
 ## 9. Redaktions-Hinweis zur Einordnung (Tradition vs. Evidenz)
 

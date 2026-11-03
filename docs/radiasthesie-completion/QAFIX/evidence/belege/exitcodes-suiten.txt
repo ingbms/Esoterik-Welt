@@ -1,0 +1,8 @@
+test:unit=0
+test:pages=0
+test:crystals=0
+test:astrologie=0
+test:radiasthesie=0
+test:tarot=0
+test:tarot:decks=1
+test:moon=0

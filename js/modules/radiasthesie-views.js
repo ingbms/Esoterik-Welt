@@ -38,7 +38,7 @@ const DESCRIPTIONS = {
   glossar:
     'Begriffe aus Radiästhesie, Pendeln und Orakel kurz erklärt — mit Evidenzstufe A–E und Quellenverweis, ohne Wirkungsversprechen.',
   quellen:
-    'Alle 33 Quellen des Themenmoduls mit Typ, Jahr, Prüftiefe, Interessenvermerk und den Seiten, die sie belegen.',
+    'Alle 33 Quellen des Themenmoduls mit Typ, Jahr, Prüftiefe, Interessenvermerk und, wo einschlägig, den Seiten, die sie belegen.',
   methodik: 'Wie dieses Modul prüft: Arbeitsannahme, Kennzeichnung A–E, Quelleninteressen, Grenzen und Datenschutz.',
   suche: 'Volltextsuche über Themen, Kapitel, Glossar und Quellen des Moduls Radiästhesie, Pendeln und Orakel.',
   notfound: 'Diese Adresse gehört nicht zum Themenmodul. Drei Wege zurück zu den Inhalten.',
@@ -102,10 +102,24 @@ function topicSection(entry) {
   </section>`;
 }
 
+function isHttpUrl(value) {
+  return /^https?:\/\//i.test(String(value || '').trim());
+}
+
+function firstHttpUrl(value) {
+  const match = /(https?:\/\/[^\s;]+)/i.exec(String(value || ''));
+  return match ? match[1] : '';
+}
+
+function locatorNote(source) {
+  if (!source.locator || isHttpUrl(source.locator)) return '';
+  return `<p class="astro-source-meta">${escapeHtml(source.locator)}</p>`;
+}
+
 function sourceItem(source) {
-  const link = source.url
-    ? `<a href="${escapeHtml(source.url)}" rel="noopener">${escapeHtml(source.id)} · ${escapeHtml(source.citation)}</a>`
-    : `<span>${escapeHtml(source.id)} · ${escapeHtml(source.citation)}</span>`;
+  const href = firstHttpUrl(source.url) || firstHttpUrl(source.locator);
+  const label = `${escapeHtml(source.id)} · ${escapeHtml(source.citation)}`;
+  const link = href ? `<a href="${escapeHtml(href)}" rel="noopener">${label}</a>` : `<span>${label}</span>`;
   return `<li class="astro-source" id="quelle-${escapeHtml(source.id)}">
     ${link}
     <span class="astro-source-meta">${escapeHtml(
@@ -113,6 +127,7 @@ function sourceItem(source) {
         .filter(Boolean)
         .join(' · ')
     )}</span>
+    ${locatorNote(source)}
   </li>`;
 }
 
@@ -432,8 +447,8 @@ export function renderQuellen(model, { sourceId = '' } = {}) {
       )}">
       <p class="astro-source-id">${escapeHtml(source.id)} ${levelChips(source.levels, { short: true })}</p>
       <h3>${
-        source.url
-          ? `<a href="${escapeHtml(source.url)}" rel="noopener">${escapeHtml(source.citation)}</a>`
+        firstHttpUrl(source.url) || firstHttpUrl(source.locator)
+          ? `<a href="${escapeHtml(firstHttpUrl(source.url) || firstHttpUrl(source.locator))}" rel="noopener">${escapeHtml(source.citation)}</a>`
           : escapeHtml(source.citation)
       }</h3>
       <p class="astro-source-meta">${escapeHtml(
@@ -441,6 +456,7 @@ export function renderQuellen(model, { sourceId = '' } = {}) {
           .filter(Boolean)
           .join(' · ')
       )}</p>
+      ${locatorNote(source)}
       ${source.interestNote ? `<p>${inlineText(source.interestNote)}</p>` : ''}
       ${source.note ? `<p class="astro-panel-note"><strong>Anmerkung:</strong> ${inlineText(source.note)}</p>` : ''}
       ${
@@ -448,7 +464,7 @@ export function renderQuellen(model, { sourceId = '' } = {}) {
           ? `<p class="astro-source-meta">Verwendet in ${usedIn
               .map((topic) => `<a href="${ROUTE.topic(topic.slug)}">${escapeHtml(topic.title)}</a>`)
               .join(', ')}</p>`
-          : ''
+          : `<p class="astro-source-meta">Nicht im Fließtext zitiert — Kontext- und Referenzliteratur.</p>`
       }
     </article>`;
     })
@@ -653,9 +669,9 @@ export function renderNotFound(model, slug) {
       lead: `Die Adresse „#pendeln/${escapeHtml(slug || '…')}“ gehört nicht zu diesem Modul. Drei Wege führen zurück.`,
     })}
     <ul class="rad-related">
-      <li class="rad-related-item"><span class="rad-related-type">Übersicht</span><h3><a href="${ROUTE.base}">Modul-Startseite</a></h3><p>Drei Themen, Kennzeichnung und Werkstatt.</p></li>
-      <li class="rad-related-item"><span class="rad-related-type">Nachschlagen</span><h3><a href="${ROUTE.glossar()}">Glossar</a></h3><p>Begriffe mit Stufe und Quellenverweis.</p></li>
-      <li class="rad-related-item"><span class="rad-related-type">Prüfstand</span><h3><a href="${ROUTE.methodik}">Methodik</a></h3><p>Wie hier gekennzeichnet und geprüft wird.</p></li>
+      <li class="rad-related-item"><span class="rad-related-type">Übersicht</span><h2><a href="${ROUTE.base}">Modul-Startseite</a></h2><p>Drei Themen, Kennzeichnung und Werkstatt.</p></li>
+      <li class="rad-related-item"><span class="rad-related-type">Nachschlagen</span><h2><a href="${ROUTE.glossar()}">Glossar</a></h2><p>Begriffe mit Stufe und Quellenverweis.</p></li>
+      <li class="rad-related-item"><span class="rad-related-type">Prüfstand</span><h2><a href="${ROUTE.methodik}">Methodik</a></h2><p>Wie hier gekennzeichnet und geprüft wird.</p></li>
     </ul>
   </div>`;
 

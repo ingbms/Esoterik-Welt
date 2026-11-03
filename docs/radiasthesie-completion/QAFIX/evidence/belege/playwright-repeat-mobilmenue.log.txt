@@ -1,0 +1,16 @@
+
+Running 12 tests using 1 worker
+
+[1/12] tests\radiasthesie.spec.js:206:1 › Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt
+[2/12] tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)
+[3/12] tests\radiasthesie.spec.js:206:1 › Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt
+[4/12] tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)
+[5/12] tests\radiasthesie.spec.js:206:1 › Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt
+[6/12] tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)
+[7/12] tests\radiasthesie.spec.js:206:1 › Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt
+[8/12] tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)
+[9/12] tests\radiasthesie.spec.js:206:1 › Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt
+[10/12] tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)
+[11/12] tests\radiasthesie.spec.js:206:1 › Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt
+[12/12] tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)
+  12 passed (12.5s)

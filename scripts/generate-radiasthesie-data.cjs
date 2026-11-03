@@ -487,8 +487,9 @@ function parseSources(source, registry) {
       shortName: row.shortName || entry.title,
       title: entry.title,
       url: entry.locator || '',
+      locator: entry.locator || '',
       type: row.type || entry.type,
-      year: row.year || (entry.year ? String(entry.year) : '—'),
+      year: row.year && row.year !== '—' && row.year !== '' ? row.year : entry.year ? String(entry.year) : '—',
       levels:
         String(row.level || (entry.evidence_use || []).join('/'))
           .match(/[A-E]/g)

@@ -86,6 +86,12 @@
             <span></span><span></span><span></span>
           </button>
         </nav>
+        <!-- Statisch im Markup: reserviert den Platz, bevor die Kristalle-Sektion
+             initialisiert. Würde der Zähler nachträglich eingefügt, verschöbe er
+             den Burger um ~83 px und schnelle Taps liefen ins Leere (B2). -->
+        <span id="favCounter" class="badge badge-primary" aria-label="Anzahl Kristall-Favoriten" aria-live="polite"
+          >♥ 0</span
+        >
       </div>
     </header>
 

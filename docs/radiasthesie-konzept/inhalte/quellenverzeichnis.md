@@ -40,7 +40,8 @@ pruefstand: 8 DOIs (Crossref), 3 ISBN-Bücher, 4 Behörde/Museum, 13 Enzyklopäd
 | Q27 | Ethylen — Skeptiker-Widerlegung | Skeptiker-Web | — | C/D | **Skeptikerorganisation** | VL | Interessenvermerk; kontrovers |
 | Q28 | Pendeldiagnostik — Übersichtsbeitrag | Online-Übersicht | — | D | Fach / Peer | VL / Reg.-Schranke | Keine primäre Studie gefunden |
 | Q29 | Forer 1949 — Persönlichkeitsdiagnose | Zeitschrift / DOI | 1949 | D | Fach / Peer | DOI/CF | Erklärt gefühlte Treffsicherheit |
-| Q31 | Blindtest / Pendel-Labor | Fach / Experiment | — | D | Skeptiker / Fach | VL | Verblindetes Design (T2) |
+| Q30 | Prokop/Wimmer 1985 — Wünschelrute, Erdstrahlen, Radiästhesie | Buch (Fachliteratur) | 1985 | D | Rechtsmedizin / Fach | ISBN (Sekundärquelle) | Standardkritik; ISBN aus Q06 übernommen |
+| Q31 | Lambeck 2003 — Irrt die Physik? | Buch (Fachliteratur) | 2003 | D | Physiker / Fach | ISBN / Katalog | Prüfbare Tests für Erdstrahlen; referiert in Q06 |
 | Q32 | Geschichte Wünschelrute (Enzyklopädie / Fach) | Enzyklopädie | — | A | Sekundär | VL | Bergbau, Kirche, Aufklärung |
 | Q33 | Runen — Schrift / Magie (Fach) | Fach / Enzyklopädie | — | A | Sekundär | VL | Schrift; moderne Divination 20. Jh. |
 

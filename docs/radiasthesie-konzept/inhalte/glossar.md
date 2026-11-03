@@ -1,5 +1,5 @@
 ---
-titel: "Glossar: Radiästhesie, Pendeln und Orakel — 15 Begriffe mit Evidenzklasse"
+titel: "Glossar: Radiästhesie, Pendeln und Orakel — 13 Begriffe mit Evidenzklasse"
 meta_description: "Kurzdefinitionen der zentralen Begriffe des Moduls — Radiästhesie, Wünschelrute, Pendel, Orakel, Tarot, I Ging, Runen, Bovis, Forer-Effekt — mit Evidenzklasse A–E und Quellenzuordnung."
 datum: 2026-11-02
 modul: ESOW-RAD-02 / Cluster A–C
@@ -41,7 +41,7 @@ autorin: Writer (t_059ba08e)
 
 **I Ging** — Chinesisches Orakelbuch (Hexagramme, 64 Muster) seit 8. Jh. v. Chr.; Westeuropa-Rezeption 20. Jh. **Klasse A** — Q21.
 
-**Bovis-Skalen** — Ordnungsschema der Szene (6.500 = gut); nicht als Messgröße validiert. **Klasse E** — Q06, Q12.
+**Bovis-Skalen** — Ordnungsschema der Szene (Bezugswert 6.500 = neutral); nicht als Messgröße validiert. **Klasse E** — Q12.
 
 **Divination** — Lesen von Zeichen; Grundfigur der Orakelpraxis. **Klasse A/D** — Q20, Q29.
 

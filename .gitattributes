@@ -6,3 +6,7 @@
 # Any end-of-line conversion would make that test fail on a Windows checkout
 # while passing on Linux CI, so the file must be stored and checked out verbatim.
 js/data/astrologie.js -text
+
+# Das V1-Manifest wird in tests/tarot-decks-v2.cjs bytegenau geprüft; eine
+# CRLF-Konvertierung beim Windows-Checkout würde den Hash verändern.
+assets/tarot/nachtatelier-v1/manifest.json -text

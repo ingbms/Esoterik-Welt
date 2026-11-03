@@ -1,0 +1,19 @@
+
+> esoterik-welt@1.0.0 test:offline
+> npm run build:local && node --test tests/offline-file.cjs
+
+
+> esoterik-welt@1.0.0 build:local
+> node scripts/build-local.cjs
+
+Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.
+✔ Lokal.html exists (npm run build:local) (0.6023ms)
+✔ offline file entry serves every route without network access (1974.1764ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2315.2113

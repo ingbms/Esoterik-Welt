@@ -495,6 +495,12 @@ hr {
 #favCounter {
   margin-left: var(--space-3);
   flex-shrink: 0;
+  /* Der Zähler steht statisch im Markup. Eine feste Mindestbreite hält die
+     Navigation auch dann an ihrem Platz, wenn die Zahl von 0 auf zweistellig
+     wächst — sonst verschiebt sich der Burger beim Favorisieren. */
+  min-width: 3rem;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
 }
 
 .nav-list {
@@ -574,6 +580,10 @@ hr {
     top: var(--header-height);
     left: 0;
     right: 0;
+    /* Gestapeltes Menü: ohne stretch erbt die Liste `align-items: center` aus
+       der Desktop-Regel, die Ziele schrumpfen auf Textbreite und stehen
+       mittig. Volle Breite = 44-px-Trefferfläche über die ganze Zeile. */
+    align-items: stretch;
     flex-direction: column;
     gap: 0;
     width: 100%;
@@ -709,7 +719,8 @@ button.card,
 .card[role='button']:hover,
 .card[role='link']:hover,
 button.card:hover,
-.crystal-card-interactive:hover {
+.crystal-card-interactive:hover,
+.crystal-card-interactive:focus-within {
   border-color: var(--color-line-strong);
 }
 
@@ -1426,6 +1437,16 @@ button.card:hover,
   font-size: var(--text-xl);
   margin-block: var(--space-8) var(--space-2);
   letter-spacing: 0;
+}
+/* Deck subsections in the imprint must read as subordinates of their h2
+   (--text-xl 20px). The global h3 (--text-2xl 28px) would invert the
+   hierarchy, so legal sub-headings take the next step down with their own
+   leading above, the way .article-prose h3 does. */
+.legal-prose h3 {
+  font-size: var(--text-lg);
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin-block: var(--space-6) var(--space-2);
 }
 .legal-prose p,
 .legal-prose li {
@@ -2232,6 +2253,13 @@ button.card:hover,
   line-height: 1.6;
   color: var(--color-text-secondary);
 }
+/* Inline links in running text must stay distinguishable without relying on colour
+   alone (WCAG 1.4.1): primary and secondary text sit at ~1.08:1 in this palette. */
+.tarot-deck-note a,
+.deck-credits a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
 
 /* --- Deck picker --------------------------------------------------------- */
 /* Two equal options, each with the first card of its deck as preview. The radio
@@ -2407,12 +2435,67 @@ button.card:hover,
   padding: 0;
   overflow: hidden;
 }
+/* Bildplatte: quadratisch, Basaltgrund, ganze Silhouette (Spec §3/E1/E2) */
+.crystal-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-border);
+}
 .crystal-image {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
   background: var(--color-bg-deep);
-  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+  border-bottom: 0;
+  position: relative;
+}
+/* Museumstafel: helle Studiofotos stehen als gerahmte Platte im Basaltgrund.
+   Die weiche Innenkante blendet die Fotokante in den Hintergrund, damit die
+   Kacheln als Montage und nicht als Leuchtflächen wirken (Review t_385afa1e,
+   P2.1 – bewusste Gestaltungsentscheidung, dokumentiert in
+   docs/kristalle/DESIGN-MUSEUMSTAFEL.md). */
+.crystal-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(186, 189, 183, 0.12);
+  box-shadow: inset 0 0 26px 12px rgba(11, 16, 18, 0.55);
+}
+.crystal-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Sicherheitsnetz; produziert wird bereits 1:1 */
+  object-position: center;
+}
+.crystal-credit {
+  margin: 0;
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere; /* lange Urhebernamen brechen, statt ueberzulaufen */
+}
+/* Ab zwei Spalten: Nachweisblock auf drei Zeilen reservieren, damit die
+   Kartennamen trotz langer Urhebernamen (crys-01: 73 Zeichen) gleich hoch stehen. */
+@media (min-width: 632px) {
+  .crystal-credit {
+    min-height: calc(3 * 1.4 * var(--text-xs) + var(--space-2) + var(--space-3));
+  }
+}
+.crystal-image.is-missing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crystal-credit-inline {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
 }
 .crystal-content {
   flex: 1;
@@ -2475,12 +2558,67 @@ button.card:hover,
   width: 100%;
   height: 100%;
   min-width: 0;
-  object-fit: cover;
+  object-fit: contain;
+}
+#crystalModal .modal {
+  max-width: min(92vw, 880px);
 }
 @container (min-width: 36rem) {
   .crystal-detail-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   }
+}
+.crystal-detail-figure {
+  margin: 0;
+  min-width: 0;
+}
+.crystal-detail-credit {
+  margin: var(--space-3) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+.crystal-detail-credit .credit-label {
+  color: var(--color-text-primary);
+}
+.crystal-detail-credit a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+/* Unter 380 px ist die Dialogplatte breiter als nötig: der vollständige
+   Nachweis (Urheber, Lizenz, Quelle, Änderungen) soll ohne Scrollen sichtbar
+   sein (Review t_385afa1e, P2.3). */
+@media (max-width: 380px) {
+  .crystal-detail-image {
+    width: min(100%, 240px);
+    margin-inline: auto;
+  }
+}
+/* Sammelnachweis unter dem Raster (Spec §9.2) */
+.crystal-sources {
+  margin: var(--space-6) 0 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+.crystal-sources a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+/* Sammelnachweis im Impressum: Links müssen ohne Farbe erkennbar sein
+   (WCAG 1.4.1) – Link- und Fließtextfarbe liegen nur 1,08:1 auseinander. */
+.crystal-credits a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* List view */
@@ -2488,12 +2626,19 @@ button.card:hover,
   flex-direction: row;
   height: auto;
 }
+.crystal-list .crystal-figure {
+  flex: 0 0 120px;
+  align-self: flex-start;
+  border-bottom: 0;
+  border-right: 1px solid var(--color-border);
+}
 .crystal-list .crystal-image {
   width: 120px;
   height: 120px;
   aspect-ratio: auto;
-  border-bottom: 0;
-  border-right: 1px solid var(--color-border);
+}
+.crystal-list .crystal-credit {
+  display: none;
 }
 .crystal-list .crystal-content {
   flex: 1;
@@ -3784,11 +3929,16 @@ button.card:hover,
   .crystal-list .crystal-card {
     flex-direction: column;
   }
-  .crystal-list .crystal-image {
+  .crystal-list .crystal-figure {
+    flex: 0 0 auto;
     width: 100%;
-    height: 200px;
     border-right: 0;
     border-bottom: 1px solid var(--color-border);
+  }
+  .crystal-list .crystal-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
   }
   .rune-card {
     padding: var(--space-3);
@@ -3844,6 +3994,10 @@ button.card:hover,
   }
   .crystal-image,
   .article-image {
+    display: none !important;
+  }
+  /* Nachweis nur mit Bild: Figur komplett ausblenden (Spec E12). */
+  .crystal-figure {
     display: none !important;
   }
   .card,
@@ -5097,6 +5251,33 @@ button.card:hover,
   }
   .header-inner {
     gap: var(--space-4);
+  }
+}
+
+/* --- Kopfzeile mit acht Navigationszielen -------------------------------
+   Das Themenmodul „Pendeln“ ist das achte Hauptziel. Acht Ziele plus
+   dreistelliger Favoritenzähler brauchen zwischen 781 und 900 px 21 px mehr,
+   als der Block oben hergibt (gemessen: docs/radiasthesie-konzept/messung/
+   nav-8-ziele.json). Kleineres Logo und engerer Listenabstand schaffen 53 px
+   Reserve; bei 781 px bleiben 31,8 px. */
+@media (min-width: 781px) and (max-width: 900px) {
+  .logo {
+    font-size: 24px;
+  }
+  .nav-list {
+    gap: var(--space-1);
+  }
+}
+
+/* Reflow bei 320 px (WCAG 1.4.10): Die Produktivseite lief mit Favoritenzähler
+   um 19 px über. Kleineres Logo und engerer Abstand beseitigen den Überlauf;
+   die Regel greift nur unterhalb von 361 px. */
+@media (max-width: 360px) {
+  .header-inner {
+    gap: var(--space-2);
+  }
+  .logo {
+    font-size: 22px;
   }
 }
 </style>

@@ -121,6 +121,13 @@ test('Quellenverzeichnis ist vollständig und ohne Platzhalter', () => {
       `${id} fehlt`
     );
   }
+  // Buchquellen: ISBN steht im Locator, Q31 trägt das belegte Erscheinungsjahr 2003.
+  const q30 = data.RADIASTHESIE.sources.find((source) => source.id === 'Q30');
+  assert.match(q30.locator, /ISBN 978-3-432-84473-2/);
+  const q31 = data.RADIASTHESIE.sources.find((source) => source.id === 'Q31');
+  assert.equal(q31.year, '2003');
+  assert.match(q31.locator, /ISBN 978-3-406-69119-5/);
+  assert.match(q31.locator, /lobid\.org/);
 });
 
 test('Glossar und Evidenzstufen sind vollständig', () => {
@@ -225,6 +232,10 @@ test('Themenseiten: Kapitel, Inhaltsverzeichnis, Quellenpanel und Einordnungskas
     assert.doesNotMatch(html, /\*\*/, `${slug}: ungeparstes Fettmarkup`);
     assert.doesNotMatch(html, /\[Dossier/, `${slug}: interner Dossier-Verweis`);
   }
+  // Bovis-Zahlen sind an die belegte Lesart gebunden (6.500 = neutral, nicht "gut").
+  const radiasthesieSeite = htmlOf(views.renderTopic(model, model.topics.radiasthesie));
+  assert.match(radiasthesieSeite, /Bezugswert ist 6\.500 Bovis-Einheiten/);
+  assert.doesNotMatch(radiasthesieSeite, /6\.500 = gut/);
 });
 
 test('Themenseite verlinkt nicht auf sich selbst als verwandt', () => {
@@ -254,6 +265,12 @@ test('Quellen: 33 Karten mit Sprungziel und Rückverweis', () => {
     assert.ok(html.includes(`id="quelle-${source.id}"`), `${source.id}: Anker fehlt`);
   }
   assert.ok(html.includes('Verwendet in'), 'Rückverweis auf die Seiten fehlt');
+  assert.ok(
+    html.includes('Nicht im Fließtext zitiert'),
+    'Referenzliteratur ohne Seitenzuordnung ist nicht gekennzeichnet'
+  );
+  assert.ok(html.includes('ISBN 978-3-406-69119-5'), 'ISBN von Q31 fehlt');
+  assert.ok(!html.includes('href="ISBN'), 'ISBN darf kein Linkziel sein');
   const target = htmlOf(views.renderQuellen(model, { sourceId: 'Q06' }));
   assert.ok(target.includes('id="quelle-Q06"') && target.includes('is-target'));
 });
@@ -288,6 +305,7 @@ test('Suche und Fehleransicht führen immer zurück', () => {
   const fehler = htmlOf(views.renderNotFound(model, 'xyz'));
   assert.equal(count(fehler, /class="rad-related-item"/g), 3);
   assert.ok(fehler.includes('href="#pendeln"'));
+  assert.doesNotMatch(fehler, /<h3/, 'Fehleransicht darf nicht von H1 auf H3 springen');
 });
 
 test('HTML wird escaped, Daten erscheinen nicht als Markup', async () => {

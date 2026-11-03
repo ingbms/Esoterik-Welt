@@ -487,6 +487,12 @@ hr {
 #favCounter {
   margin-left: var(--space-3);
   flex-shrink: 0;
+  /* Der Zähler steht statisch im Markup. Eine feste Mindestbreite hält die
+     Navigation auch dann an ihrem Platz, wenn die Zahl von 0 auf zweistellig
+     wächst — sonst verschiebt sich der Burger beim Favorisieren. */
+  min-width: 3rem;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
 }
 
 .nav-list {

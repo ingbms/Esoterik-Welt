@@ -206,6 +206,10 @@ test('Keine Überläufe an den definierten Breakpoints', async ({ page }) => {
 test('Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(url('#pendeln'));
+  await page.locator('#pendelnRoot h1').waitFor();
+
+  // Kein Warten auf eine stabile Position: der Platz des Favoriten-Zählers steht
+  // im Markup, der Burger darf sich nach dem Laden nicht mehr bewegen (B2).
   await page.locator('#navToggle').click();
   await expect(page.locator('#navToggle')).toHaveAttribute('aria-expanded', 'true');
   const rows = await page
@@ -214,6 +218,58 @@ test('Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt', async (
   expect(rows.length).toBe(8);
   expect(new Set(rows)).toEqual(new Set([342]));
   await expect(page.locator('#navList')).toBeVisible();
+});
+
+test('Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)', async ({ browser }) => {
+  const toggleX = (page) => page.locator('#navToggle').evaluate((node) => Math.round(node.getBoundingClientRect().x));
+  const counterWidth = (page) =>
+    page.locator('#favCounter').evaluate((node) => Math.round(node.getBoundingClientRect().width));
+  const viewport = { width: 390, height: 844 };
+
+  // 1. Ohne JavaScript kommt der Zähler aus dem Markup. Hängt ihn erst die
+  //    Kristalle-Sektion an (alter Zustand), fehlt das Element hier komplett.
+  const ohneJs = await browser.newContext({ javaScriptEnabled: false, viewport });
+  const ohneJsPage = await ohneJs.newPage();
+  await ohneJsPage.goto(url('#pendeln'));
+  await expect(ohneJsPage.locator('#favCounter')).toHaveText('♥ 0');
+  await ohneJs.close();
+
+  // 2. Die Kristalle-Daten werden gezielt verzögert: die Kopfzeile steht dann
+  //    garantiert, während der Zähler noch nicht nachgezogen ist — genau das
+  //    Zeitfenster, in dem der Burger früher um 83 px sprang.
+  const seite = await browser.newPage({ viewport });
+  let freigeben;
+  const verzoegerung = new Promise((resolve) => (freigeben = resolve));
+  await seite.route('**/data/crystals.json', async (route) => {
+    await verzoegerung;
+    await route.continue();
+  });
+  await seite.goto(url('#pendeln'), { waitUntil: 'domcontentloaded' });
+  await expect(seite.locator('#favCounter')).toHaveText('♥ 0');
+  const xVorInit = await toggleX(seite);
+  const breiteVorInit = await counterWidth(seite);
+  expect(breiteVorInit).toBeGreaterThanOrEqual(48);
+
+  // 3. Nach abgeschlossener Initialisierung (updateFavCounter ist ihr letzter
+  //    Schritt) sind Position und Breite unverändert.
+  freigeben();
+  await seite.waitForFunction(() => Boolean(window.crystalsModule?.favCounterEl));
+  expect(await toggleX(seite)).toBe(xVorInit);
+  expect(await counterWidth(seite)).toBe(breiteVorInit);
+
+  // 4. Ein zweistelliger Zähler (Normalfall ab dem zehnten Favoriten) bleibt
+  //    innerhalb der reservierten Mindestbreite.
+  await seite.evaluate(() => {
+    document.getElementById('favCounter').textContent = '♥ 30';
+  });
+  expect(await counterWidth(seite)).toBe(breiteVorInit);
+  expect(await toggleX(seite)).toBe(xVorInit);
+
+  const overflow = await seite.evaluate(
+    () => document.documentElement.scrollWidth - document.documentElement.clientWidth
+  );
+  expect(overflow).toBe(0);
+  await seite.close();
 });
 
 test('Tastatur: Skip-Link, Fokusring und Esc-freie Navigation', async ({ page }) => {
