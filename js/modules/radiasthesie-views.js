@@ -313,7 +313,7 @@ export function renderLanding(model) {
     <section class="rad-section" aria-labelledby="rad-verwandt-title">
       <p class="rad-kicker">05 · Nachbarschaft</p>
       <h2 id="rad-verwandt-title" tabindex="-1">Verwandte Themen</h2>
-      <p class="rad-section-lead">Acht Themenfelder aus dem Auftrag, jedes mit seinem Ort im Bestand und einem Satz Abgrenzung. Getrennte Systeme werden verlinkt, nicht eingemeindet.</p>
+      <p class="rad-section-lead">Sieben vorhandene Anschlüsse und zwei benannte Lücken — jeder Eintrag mit einem Satz Abgrenzung. Getrennte Systeme werden verlinkt, nicht eingemeindet.</p>
       ${relatedList(related)}
       ${
         gaps.length
