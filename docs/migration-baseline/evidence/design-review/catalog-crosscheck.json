@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-03T21:51:40.544Z",
+  "generated_at": "2026-11-03T22:13:07.559Z",
   "catalog": "docs/migration-baseline/design-catalog.json",
   "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
-  "entries": 275,
+  "entries": 277,
   "root_tokens_in_css": 170,
   "checked": {
     "tokens": 170,
-    "components": 92,
+    "components": 94,
     "breakpoints": 13
   },
   "counts_by_type": {
@@ -21,14 +21,14 @@
     "component": 59,
     "layout": 10,
     "pattern": 5,
-    "state": 10,
+    "state": 12,
     "icon": 2,
     "illustration": 6,
     "breakpoint": 13
   },
   "status_counts": {
-    "final": 268,
-    "veraltet": 7
+    "final": 269,
+    "veraltet": 8
   },
   "hardcoded_colors": {
     "occurrences": 25,

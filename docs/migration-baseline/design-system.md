@@ -7,11 +7,11 @@
 
 | Merkmal | Werte |
 | --- | --- |
-| Eintraege | 275 |
-| Status | final 268 · veraltet 7 |
-| Release-Relevanz | must 140 · none 28 · should 107 |
-| Auslieferung | shipped 275 |
-| Typen | breakpoint 13 · component 59 · icon 2 · illustration 6 · layout 10 · pattern 5 · state 10 · token-color 114 · token-motion 3 · token-radius 6 · token-shadow 6 · token-size 3 · token-space 14 · token-typography 18 · token-z 6 |
+| Eintraege | 277 |
+| Status | final 269 · veraltet 8 |
+| Release-Relevanz | must 143 · none 29 · should 105 |
+| Auslieferung | shipped 277 |
+| Typen | breakpoint 13 · component 59 · icon 2 · illustration 6 · layout 10 · pattern 5 · state 12 · token-color 114 · token-motion 3 · token-radius 6 · token-shadow 6 · token-size 3 · token-space 14 · token-typography 18 · token-z 6 |
 
 ## Tokens (170)
 
@@ -202,7 +202,7 @@
 | DES-CMP-008 | Karte (.card mit Kopf, Titel, Untertitel, Inhalt, Fuss) | component | css/design-system.css · `.card` · L925-L975 | 2026-11-03 | final | must | design_web_layout | default | Jede Karte rendert auf rgb(20, 28, 31) mit 1px-Rahmen in rgb(60, 72, 75) und 2px Radius; der Fuss ist durch eine obere Linie abgesetzt. |
 | DES-CMP-009 | Interaktive Karte (.card-interactive) | component | css/design-system.css · `.card-interactive` · L931-L947 | 2026-11-03 | final | should | design_web_layout | default, hover, focus | Beim Ueberfahren wechselt nur die Rahmenfarbe auf rgb(130, 146, 142); Position und Groesse der Karte bleiben unveraendert. |
 | DES-CMP-010 | Dialog (.modal-backdrop und .modal) | component | css/design-system.css · `.modal` · L984-L1055 | 2026-11-03 | final | must | design_web_layout | default, expanded | Beim Oeffnen ist der Hintergrund rgba(11,16,18,0.94) und der Dialog hoechstens 720px breit; Schliessen misst 44x44px, Hintergrundscrollen ist gesperrt. |
-| DES-CMP-011 | Tooltip (.tooltip mit data-tooltip) | component | css/design-system.css · `.tooltip::before` · L1065-L1101 | 2026-11-03 | final | should | design_web_layout | default, hover, focus | Bei Hover oder Tastaturfokus erscheint die Blase mit dem Text aus data-tooltip; ohne Interaktion ist sie unsichtbar und nicht fokussierbar. |
+| DES-CMP-011 | Tooltip (.tooltip mit data-tooltip) | component | css/design-system.css · `.tooltip::before` · L1065-L1101 | 2026-11-03 | veraltet | none | design_web_layout | default, hover, focus | Bei Hover oder Tastaturfokus erscheint die Blase mit dem Text aus data-tooltip; ohne Interaktion ist sie unsichtbar und nicht fokussierbar. |
 | DES-CMP-012 | Sprunglink (.skip-link) | component | css/design-system.css · `.skip-link` · L581-L603 | 2026-11-03 | final | must | design_web_layout | default, focus | Das erste Tab-Ereignis fokussiert den Sprunglink; er ist dann bei y=12px sichtbar, Enter setzt den Fokus auf #main. |
 | DES-CMP-013 | Formularfeld (.input, .select, .textarea) | component | css/design-system.css · `.input` · L1107-L1146 | 2026-11-03 | final | must | design_web_layout | default, hover, focus | Felder sind 48px hoch, haben einen 1px-Rahmen in rgb(130, 146, 142) und im Tastaturfokus einen 2px-Sandring mit 2px Abstand. |
 | DES-CMP-014 | Auswahlfeld (.select) | component | css/design-system.css · `.select` · L1140-L1142 | 2026-11-03 | final | should | design_web_layout | default, hover, focus | Das Auswahlfeld zeigt den Zeiger als Hand und oeffnet die native Liste; Groesse und Rahmen entsprechen .input. |
@@ -214,7 +214,7 @@
 | DES-CMP-020 | Badge-Variante .badge-chakra | component | css/design-system.css · `.badge-chakra` · L1182-L1184 | 2026-11-03 | final | should | design_web_layout | default | Das Badge bleibt in der neutralen Rahmenfarbe; die Chakra-Farbe wird nicht als Flaechenfarbe des Badges gerendert. |
 | DES-CMP-021 | Badge-Variante .badge-upright | component | css/design-system.css · `.badge-upright` · L1185-L1188 | 2026-11-03 | final | should | design_web_layout | default | Das Badge rendert Text und Rahmen in rgb(157, 179, 164) mit 7,75:1 Kontrast auf der Kartenflaeche. |
 | DES-CMP-022 | Badge-Variante .badge-reversed | component | css/design-system.css · `.badge-reversed` · L1189-L1192 | 2026-11-03 | final | should | design_web_layout | default | Das Badge rendert Text und Rahmen in rgb(192, 148, 137) mit 6,45:1 Kontrast auf der Kartenflaeche. |
-| DES-CMP-023 | Entfernen-Schaltflaeche im Badge (.badge-remove) | component | css/design-system.css · `.badge-remove` · L1193-L1204 | 2026-11-03 | final | should | design_web_layout | default, hover | Das Kreuz sitzt im Badge, erbt dessen Textfarbe und wechselt im Hover auf den Sandton; die Trefferflaeche bleibt das ganze Badge. |
+| DES-CMP-023 | Entfernen-Schaltflaeche im Badge (.badge-remove) | component | css/design-system.css · `.badge-remove` · L1193-L1204 | 2026-11-03 | final | must | design_web_layout | default, hover | Das Kreuz sitzt im Badge, erbt dessen Textfarbe und wechselt im Hover auf den Sandton; die Trefferflaeche bleibt das ganze Badge. |
 | DES-CMP-024 | Seitenkopf (.header) | component | css/design-system.css · `.header` · L664-L686 | 2026-11-03 | final | must | design_web_layout | default | Die Kopfzeile bleibt beim Scrollen bei y=0 stehen, ist 100px hoch und traegt dieselbe maximale Breite wie der Inhalt. |
 | DES-CMP-025 | Wortmarke (.logo) | component | css/design-system.css · `.logo` · L687-L705 | 2026-11-03 | final | must | design_web_layout | default, hover | Die Wortmarke ist mindestens 44px hoch, rendert in Fraunces 28px und verlinkt auf die Wurzelroute. |
 | DES-CMP-026 | Hauptnavigation (.nav, .nav-list) | component | css/design-system.css · `.nav` · L706-L731 | 2026-11-03 | final | must | design_web_layout | default | Die Navigation zeigt zehn Ziele in einer Zeile ab 900px Breite; die Abstaende zwischen den Zielen betragen 20px. |
@@ -277,7 +277,7 @@
 | DES-PAT-004 | Ein kursives Titelwort (em, .italic) | pattern | css/design-system.css · `em, .italic` · L530-L536 | 2026-11-03 | final | should | design_web_layout | default | In jeder Bereichsueberschrift ist hoechstens ein Wort kursiv und sandfarben gesetzt; Fliesstext enthaelt keine kursive Hervorhebung in Sand. |
 | DES-PAT-005 | Sternkarte mit Legende (.cosmos-figure, .star-key) | pattern | css/main.css · `.cosmos-figure` · L363-L391 | 2026-11-03 | final | should | design_web_layout | default | Die Sternkarte zeigt beschriftete Punkte, die Legende nennt dieselben Bezeichnungen; die Grafik skaliert ohne Beschnitt. |
 
-## Zustaende (10)
+## Zustaende (12)
 
 | ID | Name | Typ | Quelle | Stand | Status | Release | Owner | Zustaende | Pruefkriterium |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -291,6 +291,8 @@
 | DES-STA-008 | Reduzierte Bewegung (@media prefers-reduced-motion) | state | css/design-system.css · `prefers-reduced-motion` · L1600-L1611 | 2026-11-03 | final | must | design_web_layout | default | Mit prefers-reduced-motion: reduce erscheinen Karten ohne Animation und ohne Verzoegerung; der Dialog faehrt nicht ein. |
 | DES-STA-009 | Modulzustand ueber is-Klassen (.is-loading, .is-shuffling, .is-selected) | state | css/main.css · `.tarot-card.is-loading` · L436-L461 | 2026-11-03 | final | must | design_web_layout | loading, selected, error | Waehrend des Ladens liegt eine pulsierende Flaeche ueber dem Kartenbild; nach dem Ladeereignis verschwindet sie, ohne dass sich die Kartenhoehe aendert. |
 | DES-STA-010 | Druckzustand der Pendeltafel (html.ptf-print-active) | state | css/radiasthesie.css · `html.ptf-print-active` · L1886-L1920 | 2026-11-03 | final | should | design_web_layout | default | Im Druck mit gesetzter Marke erscheint nur die Pendeltafel, ohne Rand und ohne zweites leeres Blatt; die uebrigen Bereiche sind ausgeblendet. |
+| DES-STA-011 | Formular-Fehlerzustand ([aria-invalid=true]) | state | css/radiasthesie.css · `.jr-control input[aria-invalid='true']` · L2691-L2695 | 2026-11-03 | final | must | design_web_layout | error | Ein Feld mit aria-invalid=true im Journal zeigt Rosenrahmen und 2-px-Umriss; im Pendeltafel-Studio bleibt der Rahmen unveraendert (offener Befund D-02). |
+| DES-STA-012 | Hover-Zustand der Primaerschaltflaeche (.btn-primary:hover) | state | css/design-system.css · `.btn-primary:hover:not(:disabled)` · L871-L876 | 2026-11-03 | final | must | design_web_layout | hover | Beim Ueberfahren einer Primaerschaltflaeche wechselt die Flaeche auf --color-hover; der Text bleibt mit mindestens 4,5:1 lesbar. |
 
 ## Icons und Illustrationen (8)
 

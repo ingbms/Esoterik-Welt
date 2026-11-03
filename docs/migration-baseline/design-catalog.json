@@ -4033,9 +4033,9 @@
         "lines": "L1065-L1101"
       },
       "stand": "2026-11-03",
-      "status": "final",
+      "status": "veraltet",
       "owner": "design_web_layout",
-      "release_relevance": "should",
+      "release_relevance": "none",
       "delivery": "shipped",
       "acceptance_check": "Bei Hover oder Tastaturfokus erscheint die Blase mit dem Text aus data-tooltip; ohne Interaktion ist sie unsichtbar und nicht fokussierbar.",
       "states": [
@@ -4053,7 +4053,7 @@
       "evidence": [
         "cmd: grep -n \"tooltip\" css/design-system.css index.html"
       ],
-      "notes": "Rein visuell: der Text steht im Attribut und wird nicht von Screenreadern vorgelesen — fuer informationstragende Hinweise ist sichtbarer Text zu verwenden (Befund L-06)."
+      "notes": "Reserviert, nicht ausgeliefert: in allen 42 gemessenen Routen existiert kein Element mit [data-tooltip] oder .tooltip (a11y-messung.json, tooltips: 0). Der Befund L-06/L-08 beschreibt damit ein Risiko, das die Oberflaeche nicht hat (D-08)."
     },
     {
       "id": "DES-CMP-012",
@@ -4393,7 +4393,7 @@
       "stand": "2026-11-03",
       "status": "final",
       "owner": "design_web_layout",
-      "release_relevance": "should",
+      "release_relevance": "must",
       "delivery": "shipped",
       "acceptance_check": "Das Kreuz sitzt im Badge, erbt dessen Textfarbe und wechselt im Hover auf den Sandton; die Trefferflaeche bleibt das ganze Badge.",
       "states": [
@@ -4407,7 +4407,7 @@
       "evidence": [
         "cmd: grep -n \"badge-remove\" css/design-system.css"
       ],
-      "notes": "Die Trefferflaeche ist kleiner als 44px: das Kreuz ist 15px gross und nur ueber das Badge erreichbar (Befund L-07)."
+      "notes": "Trefferflaeche gemessen 13 x 15 px (Badge 27,5 px hoch) — WCAG 2.5.8 (24 x 24 px, AA) ist nicht erfuellt (probe-befunde.json D03_badgeRemove, Screenshot filterbadge-1440.png). Vor dem naechsten Push auf mindestens 24 x 24 px bringen (Befund L-07/D-03)."
     },
     {
       "id": "DES-CMP-024",
@@ -6688,6 +6688,64 @@
         "cmd: node scripts/migration-baseline/inventory-baseline.cjs --summary"
       ],
       "notes": "Vorkommen: 2 in css/main.css, css/radiasthesie.css. Bereichslokale Breiten, die nur in einer Datei vorkommen (380, 420, 520, 632, 701, 768, 781, 901, 1199px), erhalten nach Abschnitt 6.3 keinen eigenen Eintrag."
+    },
+    {
+      "id": "DES-STA-011",
+      "name": "Formular-Fehlerzustand ([aria-invalid=true])",
+      "description": "Fehlerzustand an Eingabefeldern: Rahmen und 2px-Umriss in Rosenfarbe. Wirksam im Radiästhesie-Journal; die Regel des Pendeltafel-Studios verliert gegen die Basisregel und bleibt unsichtbar.",
+      "type": "state",
+      "source": {
+        "path": "css/radiasthesie.css",
+        "selector": ".jr-control input[aria-invalid='true']",
+        "lines": "L2691-L2695"
+      },
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "design_web_layout",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Ein Feld mit aria-invalid=true im Journal zeigt Rosenrahmen und 2-px-Umriss; im Pendeltafel-Studio bleibt der Rahmen unveraendert (offener Befund D-02).",
+      "states": [
+        "error"
+      ],
+      "uses_tokens": [
+        "DES-TOK-016"
+      ],
+      "evidence": [
+        "docs/migration-baseline/evidence/design-review/probe-befunde.json",
+        "cmd: sed -n 2691,2695p css/radiasthesie.css",
+        "cmd: sed -n 1502,1504p css/radiasthesie.css"
+      ],
+      "notes": "Zwei Werkstaetten, zwei Verhalten: Journal setzt outline und border-color und gewinnt; .ptf-control [aria-invalid=true] setzt nur border-color und verliert gegen .ptf-control input[type=text] (Spezifitaet 0,2,1 gegen 0,2,0)."
+    },
+    {
+      "id": "DES-STA-012",
+      "name": "Hover-Zustand der Primaerschaltflaeche (.btn-primary:hover)",
+      "description": "Hover-Zustand der Primaerschaltflaeche: Flaeche und Rahmen wechseln auf den Hover-Ton, der Text bleibt auf der dunklen Grundfarbe. Gemessener Kontrast 11,16:1 (Ruhe 9,33:1).",
+      "type": "state",
+      "source": {
+        "path": "css/design-system.css",
+        "selector": ".btn-primary:hover:not(:disabled)",
+        "lines": "L871-L876"
+      },
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "design_web_layout",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Beim Ueberfahren einer Primaerschaltflaeche wechselt die Flaeche auf --color-hover; der Text bleibt mit mindestens 4,5:1 lesbar.",
+      "states": [
+        "hover"
+      ],
+      "uses_tokens": [
+        "DES-TOK-006",
+        "DES-TOK-001"
+      ],
+      "evidence": [
+        "docs/migration-baseline/evidence/design-review/a11y-messung.json",
+        "cmd: sed -n 871,876p css/design-system.css"
+      ],
+      "notes": "Zustandskontraste aus a11y-messung.json (interactions.states): .btn-primary 9,33 -> 11,16."
     }
   ]
 }

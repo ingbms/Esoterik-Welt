@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-11-03T22:07:52.243Z",
+  "card": "t_9c2a7824",
+  "input_commit": "8892586ff4f4a5819a89607e2d1295cfb4ff1546",
+  "entries_after": 277,
+  "changes": [
+    {
+      "id": "DES-CMP-011",
+      "field": "status",
+      "before": "final",
+      "after": "veraltet",
+      "reason": "Komponente existiert nur als Regel; kein Element mit [data-tooltip] in 42 Routen (D-08)."
+    },
+    {
+      "id": "DES-CMP-011",
+      "field": "release_relevance",
+      "before": "should",
+      "after": "none",
+      "reason": "Nicht ausgeliefert, daher nicht release-relevant (D-08)."
+    },
+    {
+      "id": "DES-CMP-011",
+      "field": "notes",
+      "before": "Rein visuell: der Text steht im Attribut und wird nicht von Screenreadern vorgelesen — fuer informationstragende Hinweise ist sichtbarer Text zu verwenden (Befund L-06).",
+      "after": "Reserviert, nicht ausgeliefert: in allen 42 gemessenen Routen existiert kein Element mit [data-tooltip] oder .tooltip (a11y-messung.json, tooltips: 0). Der Befund L-06/L-08 beschreibt damit ein Risiko, das die Oberflaeche nicht hat (D-08).",
+      "reason": "Katalognotiz an die Messung angepasst."
+    },
+    {
+      "id": "DES-CMP-023",
+      "field": "release_relevance",
+      "before": "should",
+      "after": "must",
+      "reason": "Ausgelieferte Komponente mit offenem AA-Verstoss (WCAG 2.5.8)."
+    },
+    {
+      "id": "DES-CMP-023",
+      "field": "notes",
+      "before": "Die Trefferflaeche ist kleiner als 44px: das Kreuz ist 15px gross und nur ueber das Badge erreichbar (Befund L-07).",
+      "after": "Trefferflaeche gemessen 13 x 15 px (Badge 27,5 px hoch) — WCAG 2.5.8 (24 x 24 px, AA) ist nicht erfuellt (probe-befunde.json D03_badgeRemove, Screenshot filterbadge-1440.png). Vor dem naechsten Push auf mindestens 24 x 24 px bringen (Befund L-07/D-03).",
+      "reason": "Frueher stand hier „15px gross\"; die Messung ergab 13 x 15 px."
+    },
+    {
+      "id": "DES-STA-011",
+      "field": "(entry)",
+      "before": null,
+      "after": "neu",
+      "reason": "D-07: Zustandsabdeckung war unvollstaendig (Fehler- und Hover-Zustand fehlten)."
+    },
+    {
+      "id": "DES-STA-012",
+      "field": "(entry)",
+      "before": null,
+      "after": "neu",
+      "reason": "D-07: Zustandsabdeckung war unvollstaendig (Fehler- und Hover-Zustand fehlten)."
+    },
+    {
+      "id": "DES-STA-011/012",
+      "field": "evidence",
+      "before": "Dateipfad mit Zeilenangabe",
+      "after": "cmd: sed -n ...",
+      "reason": "verify-design-catalog.cjs wertet evidence als Pfad; Zeilenangaben gehoeren in cmd: oder in source.lines."
+    }
+  ]
+}

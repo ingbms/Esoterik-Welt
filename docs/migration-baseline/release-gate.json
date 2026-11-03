@@ -1,0 +1,98 @@
+{
+  "card": "t_9c2a7824",
+  "generated_at": "2026-11-03",
+  "base_tag": "baseline/rubriken-2026-11-03",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "input_commit": "8892586ff4f4a5819a89607e2d1295cfb4ff1546",
+  "branch": "wt/t_cbbf71e0",
+  "decision": "go_with_conditions",
+  "decision_scope": "Katalog-Paket (docs/migration-baseline, scripts/migration-baseline); kein direkter Push auf main",
+  "not_released": [
+    "Eingangsstand c59a074 (70 Schemafehler, vier falsche Routen) — ueberholt",
+    "Produktivcode (index.html, css/, js/, data/, assets/, dist/) in diesem Arbeitspaket",
+    "VELARKANA-Umbenennung und Repository-Anlage"
+  ],
+  "counts": {
+    "design_entries": 277,
+    "design_tokens": 170,
+    "design_components": 59,
+    "design_states": 12,
+    "design_layouts": 10,
+    "design_patterns": 5,
+    "design_icons": 2,
+    "design_illustrations": 6,
+    "design_breakpoints": 13,
+    "content_entries": 54,
+    "content_pages": 10,
+    "content_subroutes": 15,
+    "content_articles": 22,
+    "content_legal": 3,
+    "content_ui_strings": 2,
+    "content_glossary": 2,
+    "claims": 6,
+    "media_rows": 644,
+    "media_must": 388,
+    "functions": 96,
+    "function_areas": 10,
+    "routes_checked": 39
+  },
+  "must_criteria": [
+    { "id": "M1", "weight": 5, "criterion": "Beide Kataloge entsprechen catalog.schema.json", "status": "pass", "evidence": "node scripts/migration-baseline/validate-schema.cjs (16 Pruefungen, 0 Abweichungen)" },
+    { "id": "M2", "weight": 5, "criterion": "Pflichtfelder, ID-Muster, Enums, Quellen und text_ref-Format", "status": "pass", "evidence": "node scripts/migration-baseline/validate-catalogs.cjs (0 Fehler, 3 benannte Warnungen)" },
+    { "id": "M3", "weight": 5, "criterion": "Generierte Artefakte aktuell", "status": "pass", "evidence": "node scripts/migration-baseline/render-catalogs.cjs --check" },
+    { "id": "M4", "weight": 5, "criterion": "Design-Katalog gegen CSS nachpruefbar", "status": "pass", "evidence": "verify-design-catalog.cjs + verify-design-catalog-independent.cjs (0 Fehler)" },
+    { "id": "M5", "weight": 5, "criterion": "Medien-Katalog vollstaendig (Bytes, Hashes, Lizenzen)", "status": "pass", "evidence": "verify-media-catalog.cjs (17/17, 644/644)" },
+    { "id": "M6", "weight": 5, "criterion": "Funktions-Katalog belegt", "status": "pass", "evidence": "verify-function-catalog.cjs (96 Funktionen, 10 Bereiche)" },
+    { "id": "M7", "weight": 5, "criterion": "Bestandsaufnahme entspricht Arbeitsbaum", "status": "pass", "evidence": "inventory-baseline.cjs --check" },
+    { "id": "M8", "weight": 5, "criterion": "Routen existieren und sind katalogisiert", "status": "pass", "evidence": "check-catalog-routes.cjs (39 Routen, 0/0)" },
+    { "id": "M9", "weight": 5, "criterion": "Laufzeitfakten stimmen mit dem Katalog", "status": "pass", "evidence": "verify-release-gate-facts.cjs (30 Kristalle, 12 Farben, #blog/6)" },
+    { "id": "M10", "weight": 5, "criterion": "Jeder Eintrag mit Quelle, Status, Owner, Pruefkriterium; text_ref aufloesbar", "status": "pass", "evidence": "Struktur-Audit in verify-release-gate.cjs (0 Fehler ueber 331 Eintraege, 6 Claims)" }
+  ],
+  "should_criteria": [
+    { "id": "S1", "weight": 3, "criterion": "verified-Aussagen mit Zitatangabe", "status": "pass", "evidence": "validate-catalogs.cjs (6/6)" },
+    { "id": "S2", "weight": 3, "criterion": "Keine must-Aussage unbelegt", "status": "open", "owner": "writer", "due": "2026-11-10", "evidence": "CLM-003" },
+    { "id": "S3", "weight": 3, "criterion": "Kein must-Eintrag ohne Abnahme", "status": "open", "owner": "default", "due": "2026-11-17", "evidence": "CNT-LEG-002" },
+    { "id": "S4", "weight": 3, "criterion": "Alle Medienlizenzen entschieden", "status": "open", "owner": "architect", "due": "2026-11-10", "evidence": "MED-0130" },
+    { "id": "S5", "weight": 3, "criterion": "Veraltete Komponenten nicht als ausgeliefert gefuehrt", "status": "pass", "evidence": "8 veraltet, 28 Tokens mit none" },
+    { "id": "S6", "weight": 3, "criterion": "Zielgroessen >= 24x24 px (WCAG 2.5.8)", "status": "open", "owner": "design_web_layout", "due": "2026-11-10", "evidence": "D-03, .badge-remove 13x15 px" },
+    { "id": "S7", "weight": 3, "criterion": "Fehlerzustand wirkt in allen Werkstaetten", "status": "open", "owner": "design_web_layout", "due": "2026-11-10", "evidence": "D-02" },
+    { "id": "S8", "weight": 1, "criterion": "Keine doppelten IDs, keine Ueberschriftsspruenge", "status": "open", "owner": "design_web_layout", "due": "2026-11-17", "evidence": "D-04, D-05" },
+    { "id": "S9", "weight": 1, "criterion": "Entscheidung zu den zwoelf Markdown-Artikeln", "status": "open", "owner": "default", "due": "2026-11-17", "evidence": "E-03" },
+    { "id": "S10", "weight": 1, "criterion": "Keine Altlast im Auslieferungspfad", "status": "open", "owner": "architect", "due": "2026-11-17", "evidence": "data/articles/article-010.md.bak" }
+  ],
+  "conditions": [
+    { "id": "A-1", "condition": ".badge-remove auf >= 24x24 px bringen, Katalognotiz DES-CMP-023 nachziehen", "owner": "design_web_layout", "due": "2026-11-10", "blocks": "naechster Produkt-Push" },
+    { "id": "A-2", "condition": "CLM-003 Quellenangabe ergaenzen oder als physikalischen Standardwert kennzeichnen", "owner": "writer", "due": "2026-11-10", "blocks": "Katalog-must, nicht den PR" },
+    { "id": "A-3", "condition": "datenschutz.html um Journal und Experimentlaeufe ergaenzen, rechtliche Abnahme dokumentieren", "owner": "default", "due": "2026-11-17", "blocks": "VELARKANA-Go-live" },
+    { "id": "A-4", "condition": "MED-0130 Lizenz klaeren oder Bild aus dem Release nehmen", "owner": "architect", "due": "2026-11-10", "blocks": "naechster Medien-Push" },
+    { "id": "A-5", "condition": "E-03 entscheiden: Markdown-Artikel veroeffentlichen oder entfernen", "owner": "default", "due": "2026-11-17", "blocks": "VELARKANA-Inhaltsmigration" }
+  ],
+  "rest_risks": [
+    "Keine Screenreader-Ausgabe geprueft (nur DOM-Semantik und Live-Regionen)",
+    "Kontrast auf Verlaufsflaechen rechnerisch aus Farbstops, nicht pixelweise",
+    "Produktbefunde D-02, D-04, D-05, D-06 offen (kein WCAG-Blocker, aber Design-System-Defekt)",
+    "28 ungenutzte Tokens, 25 hartkodierte Farben, 22 Umbruchbreiten als Design-Schuld",
+    "Nur Deutsch; keine Uebersetzungen vorhanden"
+  ],
+  "evidence": {
+    "checks": "docs/migration-baseline/evidence/release-gate/pruefungen.json",
+    "runtime_facts": "docs/migration-baseline/evidence/release-gate/runtime-fakten.json",
+    "content_repair": "docs/migration-baseline/evidence/release-gate/content-catalog-reparatur.json",
+    "design_followup": "docs/migration-baseline/evidence/release-gate/design-katalog-nachzug.json",
+    "design_review": "docs/migration-baseline/design-review.json",
+    "a11y_measurement": "docs/migration-baseline/evidence/design-review/a11y-messung.json",
+    "route_check": "docs/migration-baseline/evidence/design-review/route-check.json",
+    "catalog_crosscheck": "docs/migration-baseline/evidence/design-review/catalog-crosscheck.json",
+    "catalog_crosscheck_negative": "docs/migration-baseline/evidence/design-review/catalog-crosscheck-negative.json"
+  },
+  "self_control": {
+    "gate_self_test": "5/5 kuenstliche Strukturfehler erkannt",
+    "design_negative_control": "4/4 kuenstliche Katalogfehler erkannt",
+    "a11y_detector_self_test": "5/5 Detektoren bestanden"
+  },
+  "approval": {
+    "approved_by_this_card": false,
+    "recommendation": "Master (t_04d92b4a) fuehrt verify-release-gate.cjs auf dem PR-Kopf erneut aus und entscheidet ueber die Konsolidierung.",
+    "reason": "Die Karte hat die Reparaturen selbst ausgefuehrt; eine Selbstfreigabe waere kein unabhaengiger Nachweis."
+  }
+}

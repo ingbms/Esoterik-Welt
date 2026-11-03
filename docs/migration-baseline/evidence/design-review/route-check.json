@@ -1,13 +1,8 @@
 {
-  "generated_at": "2026-11-03T21:49:24.098Z",
+  "generated_at": "2026-11-03T22:13:55.205Z",
   "catalog": "docs/migration-baseline/content-catalog.json",
-  "routes_checked": 28,
-  "not_found": [
-    "#farbwelten/braun",
-    "#farbwelten/therapie",
-    "#farbwelten/psychologie",
-    "#farbwelten/licht"
-  ],
+  "routes_checked": 39,
+  "not_found": [],
   "measured": [
     {
       "route": "#home",
@@ -87,10 +82,87 @@
       "notFound": false
     },
     {
+      "route": "#blog/2",
+      "title": "Kristalle als Werkzeuge: Wie Steine unsere Energie beeinflussen — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "#blog/3",
+      "title": "Runenwerfen: Die drei Positionen der Vergangenheit, Gegenwart und Zukunft — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "#blog/4",
+      "title": "Die Mondphasen: Von Neumond bis Vollmond — Rituale für jeden Zyklus — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "#blog/5",
+      "title": "Die Geschichte des Tarot: Von Spielkarten zur spirituellen Praxis — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "#blog/6",
+      "title": "Einsteiger-Guide: Wie du mit Tarot, Kristallen und Runen beginnst — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "#blog/7",
+      "title": "Chakren & Kristalle: Welche Steine für welches Energiezentrum — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "#blog/8",
+      "title": "Die Bedeutung des Futhark: Von Fehu bis Othala — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "#blog/9",
+      "title": "Rituale für jede Mondphase: Ein praktischer Kalender — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "#blog/10",
+      "title": "Moldavit: Der Meteorit unter den Kristallen — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
       "route": "impressum.html",
       "title": "Impressum — Esoterik-Welt",
       "h1": "Impressum",
       "textLength": 14018,
+      "notFound": false
+    },
+    {
+      "route": "datenschutz.html",
+      "title": "Datenschutz — Esoterik-Welt",
+      "h1": "Datenschutz­erklärung",
+      "textLength": 775,
+      "notFound": false
+    },
+    {
+      "route": "haftung.html",
+      "title": "Haftungsausschluss — Esoterik-Welt",
+      "h1": "Haftungs­ausschluss",
+      "textLength": 542,
       "notFound": false
     },
     {
@@ -178,41 +250,35 @@
       "notFound": false
     },
     {
-      "route": "#farbwelten/braun",
-      "title": "Unbekannte Farbwelt | Esoterik-Welt",
-      "h1": "Diese Farbwelt gibt es nicht",
-      "textLength": 153,
-      "notFound": true
+      "route": "#farbwelten/indigo",
+      "title": "Indigo — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1": "Indigo",
+      "textLength": 7935,
+      "notFound": false
     },
     {
-      "route": "#farbwelten/therapie",
-      "title": "Unbekannte Farbwelt | Esoterik-Welt",
-      "h1": "Diese Farbwelt gibt es nicht",
-      "textLength": 156,
-      "notFound": true
+      "route": "#farbwelten/farbtherapie",
+      "title": "Farbtherapie — Evidenz und Grenzen | Esoterik-Welt",
+      "h1": "Farbtherapie und Chromotherapie",
+      "textLength": 10812,
+      "notFound": false
     },
     {
-      "route": "#farbwelten/psychologie",
-      "title": "Unbekannte Farbwelt | Esoterik-Welt",
-      "h1": "Diese Farbwelt gibt es nicht",
-      "textLength": 159,
-      "notFound": true
+      "route": "#farbwelten/farbpsychologie",
+      "title": "Farbpsychologie — Assoziation, nicht Wirkung | Esoterik-Welt",
+      "h1": "Farbpsychologie",
+      "textLength": 9627,
+      "notFound": false
     },
     {
-      "route": "#farbwelten/licht",
-      "title": "Unbekannte Farbwelt | Esoterik-Welt",
-      "h1": "Diese Farbwelt gibt es nicht",
-      "textLength": 153,
-      "notFound": true
+      "route": "#farbwelten/lichtmedizin",
+      "title": "Lichtmedizin — Chronobiologie und Grenzen | Esoterik-Welt",
+      "h1": "Lichtmedizin und Photobiologie",
+      "textLength": 10294,
+      "notFound": false
     }
   ],
-  "linked_but_not_cataloged": [
-    "#blog/6",
-    "#farbwelten/farbpsychologie",
-    "#farbwelten/farbtherapie",
-    "#farbwelten/indigo",
-    "#farbwelten/lichtmedizin"
-  ],
+  "linked_but_not_cataloged": [],
   "register_links": [
     "#farbwelten/blau",
     "#farbwelten/farbpsychologie",
