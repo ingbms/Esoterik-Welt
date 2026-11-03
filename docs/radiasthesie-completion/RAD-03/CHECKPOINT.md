@@ -7,6 +7,7 @@
 | Arbeitsbaum | `C:/Users/mas/Arbeit/esow-rad-t_878c59c7` |
 | Branch | `feature/radiasthesie-modul` |
 | Basis-Commit | `092add2b9a5d498ff37a1c4d895eb5b73f459746` (QAFIX, ohne Push) |
+| Commit | `66439e5` — 11 eigene Dateien, 0 fremde; kein Push |
 | Kanban-Karte | `t_02211b50`, Modell `deepseek/deepseek-flash` |
 | Ergebnis | **umgesetzt und verifiziert** — additive Taxonomie, versionierte Verträge, Lauf-/Journal-Lebenszyklus, Import/Export |
 | Push/Deploy | **keiner** |
@@ -96,6 +97,11 @@ Hinweise zur Reproduktion:
   (`ingbms.github.io`), nicht den Arbeitsbaum. Lokal ist der URL-Parameter Pflicht.
 - `TMP`/`TEMP`/`TMPDIR` waren für alle Läufe auf
   `C:/Users/mas/AppData/Local/hermes/cache/scratch` gesetzt.
+- Ein erster Commit-Versuch enthielt über den Index unbeabsichtigt fremde
+  `docs/radiasthesie-completion/RAD-04/`-Dateien. Er wurde vor dem Push
+  verworfen (`git reset --soft HEAD~1` + `git reset`, Dateien unverändert) und
+  durch `66439e5` mit ausschließlich eigenen Pfaden (`git commit --only`)
+  ersetzt. Die fremden Dateien sind weiterhin untracked und unangetastet.
 
 ## 5. Restpunkte
 
