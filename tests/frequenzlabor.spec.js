@@ -264,7 +264,7 @@ test('U14: die Engine wird erst mit der Kategorie geladen', async ({ page }) => 
   const requests = [];
   page.on('request', (request) => requests.push(request.url()));
   await page.goto(`${BASE}/`, { waitUntil: 'load' });
-  await expect(page.locator('#featureGrid > *')).toHaveCount(7);
+  await expect(page.locator('#featureGrid > *')).toHaveCount(9);
   expect(requests.some((url) => url.includes('frequenz-engine.js'))).toBe(false);
   await page.goto(`${BASE}/#frequenzen`, { waitUntil: 'load' });
   await expect(page.locator('#fqLibrary .fq-entry').first()).toBeVisible();

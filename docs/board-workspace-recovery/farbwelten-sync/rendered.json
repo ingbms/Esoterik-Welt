@@ -1,0 +1,195 @@
+{
+  "checkedAt": "2026-11-03T00:37:33.234Z",
+  "base": "http://127.0.0.1:8124/Esoterik-Welt/index.html",
+  "routes": [
+    {
+      "route": "farbwelten",
+      "h1": 1,
+      "quellenItems": 15,
+      "sourceIds": [
+        "24",
+        "31",
+        "3",
+        "4",
+        "5",
+        "1",
+        "2",
+        "7",
+        "15",
+        "17",
+        "18",
+        "10",
+        "9",
+        "14",
+        "19"
+      ],
+      "failures": []
+    },
+    {
+      "route": "rot",
+      "h1": 1,
+      "quellenItems": 11,
+      "sourceIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "20",
+        "24",
+        "31"
+      ],
+      "failures": []
+    },
+    {
+      "route": "orange",
+      "h1": 1,
+      "quellenItems": 9,
+      "sourceIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "failures": []
+    },
+    {
+      "route": "gelb",
+      "h1": 1,
+      "quellenItems": 10,
+      "sourceIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "failures": []
+    },
+    {
+      "route": "gruen",
+      "h1": 1,
+      "quellenItems": 11,
+      "sourceIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "20",
+        "24",
+        "31"
+      ],
+      "failures": []
+    },
+    {
+      "route": "blau",
+      "h1": 1,
+      "quellenItems": 10,
+      "sourceIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "14",
+        "24",
+        "31"
+      ],
+      "failures": []
+    },
+    {
+      "route": "indigo",
+      "h1": 1,
+      "quellenItems": 10,
+      "sourceIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "19",
+        "24",
+        "31"
+      ],
+      "failures": []
+    },
+    {
+      "route": "violett",
+      "h1": 1,
+      "quellenItems": 10,
+      "sourceIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "19",
+        "24",
+        "31"
+      ],
+      "failures": []
+    },
+    {
+      "route": "chakren",
+      "h1": 1,
+      "quellenItems": 11,
+      "sourceIds": [
+        "1",
+        "2",
+        "9",
+        "3",
+        "14",
+        "10",
+        "19",
+        "4",
+        "5",
+        "7",
+        "24"
+      ],
+      "failures": []
+    },
+    {
+      "route": "lichtfrequenzen",
+      "h1": 1,
+      "quellenItems": 10,
+      "sourceIds": [
+        "24",
+        "15",
+        "16",
+        "17",
+        "18",
+        "10",
+        "9",
+        "11",
+        "14",
+        "19"
+      ],
+      "failures": []
+    }
+  ],
+  "consoleErrors": [],
+  "failures": []
+}

@@ -24,6 +24,10 @@ const ENTRIES = [
   'data',
   'assets',
   'radiasthesie',
+  // Redaktionsquellen der Farbwelten (content/farbwelten/*.md). GitHub Pages
+  // liefert das Repository-Wurzelverzeichnis aus, also gehören sie auch in die
+  // Produktionsvorschau, damit build und Pages denselben Dokumentbestand haben.
+  'content',
 ];
 
 async function main() {

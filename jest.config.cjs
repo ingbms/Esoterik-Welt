@@ -12,8 +12,11 @@
 module.exports = {
   rootDir: __dirname,
   testEnvironment: 'node',
-  testMatch: ['<rootDir>/tests/**/*.test.js'],
-  testPathIgnorePatterns: ['/node_modules/', '<rootDir>/test-results/'],
+  // Relativ statt "<rootDir>/…": Worktree-Pfade mit Sonderzeichen (z. B.
+  // ".worktrees\t_1234") zerlegen ein absolutes Glob in Windows-Pfade, dann
+  // findet Jest keine Datei mehr. Das Muster "**/tests/**" bleibt identisch.
+  testMatch: ['**/tests/**/*.test.js'],
+  testPathIgnorePatterns: ['/node_modules/', '/test-results/'],
   moduleFileExtensions: ['js', 'cjs', 'json'],
   verbose: true,
 };

@@ -7,7 +7,7 @@
 
 const { test, expect } = require('playwright/test');
 
-const BASE = process.env.E2E_BASE || `http://127.0.0.1:${process.env.E2E_PORT || 3100}/Esoterik-Welt`;
+const { E2E_BASE_URL: BASE } = require('./helpers/e2e-target.cjs');
 const url = (hash = '') => `${BASE}/${hash}`;
 
 const TOPICS = ['radiasthesie', 'pendeln', 'orakel'];

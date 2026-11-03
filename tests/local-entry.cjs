@@ -8,7 +8,7 @@ const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'evidence/t_4f0ebfc2');
 
 async function exercise(page, events, interactions = true) {
-  await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 7, { timeout: 10000 });
+  await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 9, { timeout: 10000 });
   const metrics = await page.evaluate(() => {
     // Compare the painted body background against the design-system token instead
     // of a hard-coded literal, so a reviewed palette change cannot silently drift.
@@ -31,10 +31,19 @@ async function exercise(page, events, interactions = true) {
     };
   });
   assert.equal(metrics.background, metrics.tokenBackground, 'body background must use --color-bg-deep');
-  assert.equal(metrics.counts.featureGrid, 7);
+  assert.equal(metrics.counts.featureGrid, 9);
   assert.equal(metrics.counts.crystalGrid, 30);
   for (const [id, count] of Object.entries(metrics.counts)) assert.ok(count > 0, `${id} is empty`);
-  assert.deepEqual(metrics.modules.sort(), ['astrologie', 'blog', 'frequenzen', 'moon', 'pendeln', 'runes', 'tarot']);
+  assert.deepEqual(metrics.modules.sort(), [
+    'astrologie',
+    'blog',
+    'farbwelten',
+    'frequenzen',
+    'moon',
+    'pendeln',
+    'runes',
+    'tarot',
+  ]);
   // The astrology area is one page with sub-routes; it must render real content
   // in the offline bundle too (the data module is inlined by webpack).
   for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'frequenzen', 'runes', 'pendeln', 'blog', 'home']) {
@@ -257,9 +266,19 @@ test('Lokal.html works offline in an isolated directory, including legal links a
       );
       await page.locator('.logo').click();
       await page.waitForURL(url);
-      await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 7);
+      await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 9);
     }
-    for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'frequenzen', 'runes', 'blog']) {
+    for (const route of [
+      'tarot',
+      'crystals',
+      'moon',
+      'astrologie',
+      'frequenzen',
+      'runes',
+      'pendeln',
+      'farbwelten',
+      'blog',
+    ]) {
       await page.goto('about:blank');
       await page.goto(url + '#' + route, { waitUntil: 'load' });
       await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible' });
@@ -278,7 +297,7 @@ test('Lokal.html works offline in an isolated directory, including legal links a
     await page.goto(pathToFileURL(path.join(isolated, 'Lokal-404.html')).href);
     await page.locator('a.home').click();
     await page.waitForURL(url);
-    await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 7);
+    await page.waitForFunction(() => document.querySelector('#featureGrid')?.children.length === 9);
     assert.deepEqual(
       requests.filter((request) => !request.startsWith('file:')),
       []

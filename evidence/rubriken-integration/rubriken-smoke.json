@@ -1,0 +1,104 @@
+{
+  "base": "http://127.0.0.1:8377/Esoterik-Welt/",
+  "date": "2026-11-03T13:55:05.152Z",
+  "results": [
+    {
+      "step": "start",
+      "nav": 10,
+      "sections": 10,
+      "cards": 9,
+      "label": "Neun Zugänge",
+      "numbers": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ]
+    },
+    {
+      "step": "nav:home",
+      "hash": "#home",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "nav:tarot",
+      "hash": "#tarot",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "nav:crystals",
+      "hash": "#crystals",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "nav:moon",
+      "hash": "#moon",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "nav:astrologie",
+      "hash": "#astrologie",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "nav:frequenzen",
+      "hash": "#frequenzen",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "nav:runes",
+      "hash": "#runes",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "nav:pendeln",
+      "hash": "#pendeln",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "nav:farbwelten",
+      "hash": "#farbwelten",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "nav:blog",
+      "hash": "#blog",
+      "ariaCurrent": 1
+    },
+    {
+      "step": "deep:#pendeln",
+      "heading": "Radiästhesie, Pendeln und Orakel"
+    },
+    {
+      "step": "deep:#pendeln/radiasthesie",
+      "heading": "Radiästhesie"
+    },
+    {
+      "step": "deep:#farbwelten",
+      "heading": "Farbwelten"
+    },
+    {
+      "step": "deep:#farbwelten/rot",
+      "heading": "Rot"
+    },
+    {
+      "step": "deep:#frequenzen",
+      "heading": "Menschlicher Hörbereich20 Hz – 20.000 HzBelegtNormalhörende nehmen etwa 20 Hz bi"
+    },
+    {
+      "step": "deep:#frequenzen/labor",
+      "heading": "BibliothekFrequenzlaborQuellen & MethodikChladni-MusterMeditation\n      \n      \n"
+    },
+    {
+      "step": "mobile-menu",
+      "visibleLinks": 10
+    }
+  ],
+  "consoleEvents": [],
+  "problems": []
+}

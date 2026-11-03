@@ -9,7 +9,7 @@ const { test, expect } = require('playwright/test');
 
 // Der Modulbereich lebt unter dem Pages-Basispfad. Die Tests laden deshalb
 // dieselbe Adresse wie die Veröffentlichung (siehe playwright.config.cjs).
-const BASE = process.env.E2E_BASE || `http://127.0.0.1:${process.env.E2E_PORT || 3100}/Esoterik-Welt`;
+const { E2E_BASE_URL: BASE } = require('./helpers/e2e-target.cjs');
 const url = (hash = '') => `${BASE}/${hash}`;
 
 const ROUTES = [
@@ -216,7 +216,7 @@ test('Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt', async (
   const rows = await page
     .locator('#navList .nav-link')
     .evaluateAll((nodes) => nodes.map((node) => Math.round(node.getBoundingClientRect().width)));
-  expect(rows.length).toBe(8);
+  expect(rows.length).toBe(10);
   expect(new Set(rows)).toEqual(new Set([342]));
   await expect(page.locator('#navList')).toBeVisible();
 });

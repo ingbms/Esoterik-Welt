@@ -1,0 +1,947 @@
+/* ============================================================================
+   Farbwelten & Farbtherapie — Komponenten
+   ----------------------------------------------------------------------------
+   Farben ausschließlich über Tokens (css/design-system.css: --fw-*-Paletten und
+   [data-farbwelt]-Scoping). Keine Hex-Literale, keine Schatten, 1-px-Rahmen,
+   2-px-Radien. Referenz: docs/farbwelten-konzept/05-komponenten-specs.md.
+   ========================================================================== */
+
+/* --- Hero ---------------------------------------------------------------- */
+.fw-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--space-16);
+  /* Der Redaktions-H1 ist eine Zeile („Farbwelten“), im Mockup waren es vier.
+     Deshalb wird der Textblock mittig zur Farbtafel gesetzt, statt an ihrer
+     Unterkante zu kleben. */
+  align-items: center;
+  padding: var(--space-24) 0 var(--space-16);
+}
+
+.fw-hero__eyebrow {
+  margin-bottom: var(--space-6);
+}
+
+.fw-hero h1 {
+  max-width: 15ch;
+  margin-bottom: var(--space-6);
+}
+
+.fw-hero__lede {
+  max-width: 52ch;
+  font-size: var(--text-lg);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.fw-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.fw-tafel-wrap {
+  margin: 0;
+}
+
+.fw-tafel {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-bg-card);
+}
+
+.fw-tafel__band {
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+  border-bottom: 1px solid var(--color-bg-deep);
+}
+
+.fw-tafel__band:last-child {
+  border-bottom: 0;
+}
+
+.fw-tafel__field {
+  flex: 1 1 auto;
+  min-width: 40%;
+  background: linear-gradient(90deg, var(--band-core) 0%, var(--band-deep) 100%);
+}
+
+.fw-tafel__plate {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  min-width: 46%;
+  padding: 0 var(--space-4);
+  background: var(--band-deep);
+}
+
+.fw-tafel__nm {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.fw-tafel__name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: 1;
+  color: var(--color-text-primary);
+}
+
+.fw-tafel__hint {
+  max-width: 42ch;
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+/* Lange deutsche Komposita dürfen umbrechen (WCAG 1.4.10 Reflow bei 320 px). */
+.fw-hero h1,
+.fw-section h2,
+.fw-detail__band h1,
+.fw-detail__section h2,
+.fw-detail__section h3,
+.fw-card__title,
+.fw-facts dd,
+.fw-quote p,
+.fw-list li,
+.fw-register__name {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* --- Abschnitte ---------------------------------------------------------- */
+.fw-section {
+  padding: var(--space-16) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.fw-section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.fw-section__head h2 {
+  max-width: 26ch;
+  margin: 0;
+}
+
+.fw-section__head p {
+  margin: 0;
+}
+
+.fw-section__lede {
+  max-width: 62ch;
+  margin: 0 0 var(--space-8);
+  color: var(--color-text-secondary);
+}
+
+.fw-note {
+  max-width: 72ch;
+  margin: var(--space-6) 0 0;
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+/* --- Farbregister -------------------------------------------------------- */
+.fw-register {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.fw-register__row {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.fw-register__link {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1.3fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-6);
+  min-height: 96px;
+  padding: var(--space-4) var(--space-2);
+  color: inherit;
+  text-decoration: none;
+}
+
+.fw-register__link:hover,
+.fw-register__link:focus-visible {
+  background: var(--color-bg-card);
+  text-decoration: none;
+}
+
+.fw-register__field {
+  height: 64px;
+  border: 1px solid var(--color-line-strong);
+}
+
+.fw-register__name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  line-height: 1.1;
+  color: var(--color-text-primary);
+}
+
+.fw-register__meta {
+  display: block;
+  margin-top: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.fw-register__chakra {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.fw-register__arrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+}
+
+/* --- Farbkarten ---------------------------------------------------------- */
+.fw-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.fw-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.fw-card__field {
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--color-line-strong);
+}
+
+.fw-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+}
+
+.fw-card__title {
+  margin: 0;
+  font-size: var(--text-2xl);
+}
+
+.fw-card__text {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.fw-card__footer {
+  margin: auto 0 0;
+  padding-top: var(--space-2);
+}
+
+/* --- Brotkrümel ---------------------------------------------------------- */
+.fw-breadcrumb {
+  padding: var(--space-4) 0 0;
+}
+
+.fw-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.fw-breadcrumb li + li::before {
+  content: '›';
+  margin-right: var(--space-2);
+  color: var(--color-text-secondary);
+}
+
+.fw-breadcrumb a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.fw-breadcrumb [aria-current='page'] {
+  color: var(--color-text-primary);
+}
+
+/* --- Farbdetail --------------------------------------------------------- */
+.fw-detail__band {
+  margin-top: var(--space-4);
+  padding: var(--space-16) var(--space-12) var(--space-10);
+  border: 1px solid var(--color-line-strong);
+  border-bottom: 0;
+  background: linear-gradient(115deg, var(--fw-current-deep, var(--color-bg-card)) 0%, var(--color-bg-card) 62%);
+}
+
+.fw-detail__band > .label {
+  color: var(--fw-current-ink, var(--color-primary));
+}
+
+.fw-detail__band h1 {
+  margin-bottom: var(--space-4);
+}
+
+.fw-detail__lede {
+  max-width: 58ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-lg);
+  line-height: 1.65;
+}
+
+.fw-detail__band .astro-kennzeichnung {
+  margin-top: var(--space-8);
+  margin-bottom: 0;
+}
+
+.fw-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.fw-detail__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 280px);
+  gap: var(--space-12);
+  padding: var(--space-10) var(--space-12) var(--space-16);
+  border: 1px solid var(--color-line-strong);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+
+.fw-detail__main {
+  min-width: 0;
+}
+
+.fw-detail__section {
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.fw-detail__section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.fw-detail__section h2,
+.fw-detail__section h3 {
+  margin-top: 0;
+}
+
+.fw-detail__section p {
+  max-width: 62ch;
+  color: var(--color-text-secondary);
+}
+
+.fw-detail__section h2 {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+}
+
+.fw-subhead {
+  margin: var(--space-8) 0 var(--space-3);
+  font-size: var(--text-xl);
+}
+
+.fw-toc {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-6));
+  align-self: start;
+  max-height: calc(100vh - var(--header-height) - var(--space-12));
+  overflow: auto;
+  padding-left: var(--space-6);
+  border-left: 1px solid var(--color-border);
+}
+
+.fw-toc > summary {
+  display: none;
+}
+
+.fw-toc ol {
+  margin: 0;
+  padding-left: var(--space-5);
+  font-size: var(--text-sm);
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+}
+
+.fw-toc a {
+  display: inline-block;
+  min-height: 32px;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* --- Textbausteine ------------------------------------------------------ */
+.fw-facts {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-6) 0;
+}
+
+.fw-facts__row {
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.45fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.fw-facts dt {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.fw-facts dd {
+  margin: 0;
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+.fw-list {
+  max-width: 62ch;
+  margin: var(--space-4) 0;
+  padding-left: var(--space-5);
+  color: var(--color-text-secondary);
+}
+
+.fw-list li {
+  margin-bottom: var(--space-2);
+}
+
+.fw-list li::marker {
+  color: var(--color-primary);
+}
+
+.fw-list--links a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.fw-quote {
+  max-width: 62ch;
+  margin: var(--space-6) 0;
+  padding: var(--space-4) var(--space-6);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-deep);
+}
+
+.fw-quote p {
+  margin: 0;
+  max-width: 62ch;
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.fw-gap {
+  max-width: 62ch;
+  margin: var(--space-4) 0;
+  padding: var(--space-4) var(--space-6);
+  border: 1px dashed var(--color-line-strong);
+}
+
+.fw-gap p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+.fw-timeline {
+  max-width: 62ch;
+  margin: var(--space-6) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fw-timeline li {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.fw-timeline__year {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  padding-top: 2px;
+}
+
+.fw-timeline p {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+/* --- Farbfläche --------------------------------------------------------- */
+.fw-swatch {
+  margin: 0 0 var(--space-6);
+}
+
+.fw-swatch__strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: 96px;
+  border: 1px solid var(--color-line-strong);
+}
+
+.fw-swatch__strip > * + * {
+  border-left: 1px solid var(--color-bg-deep);
+}
+
+.fw-swatch figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* --- Chakra-Explorer ---------------------------------------------------- */
+.fw-chakra {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.fw-figure {
+  margin: 0;
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-deep);
+}
+
+.fw-figure__stage {
+  position: relative;
+  color: var(--color-line-strong);
+}
+
+.fw-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fw-figure figcaption {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.fw-node {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.fw-node:hover {
+  border-color: var(--color-primary);
+}
+
+.fw-node:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.fw-node[aria-pressed='true'] {
+  border: 2px solid var(--color-primary);
+  box-shadow: inset 0 0 0 2px var(--color-bg-deep);
+}
+
+.fw-node__dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  border-radius: 50%;
+}
+
+.fw-chakra__panel {
+  min-width: 0;
+  max-width: 62ch;
+}
+
+.fw-chakra__panel h3 {
+  margin-bottom: var(--space-2);
+}
+
+.fw-chakra__sanskrit {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+}
+
+.fw-chakra__history {
+  max-width: 62ch;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* --- Tradition / Forschung ---------------------------------------------- */
+.fw-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: var(--space-8);
+  border: 1px solid var(--color-line-strong);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-deep);
+}
+
+.fw-compare__col {
+  min-width: 0;
+  padding: var(--space-6);
+}
+
+.fw-compare__col + .fw-compare__col {
+  border-left: 1px solid var(--color-border);
+}
+
+.fw-compare__col h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-xl);
+}
+
+.fw-compare__col p {
+  margin: 0 0 var(--space-3);
+  max-width: 48ch;
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.fw-compare__foot {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+/* --- Quellen ------------------------------------------------------------ */
+.fw-sources {
+  max-width: 78ch;
+  margin: var(--space-4) 0 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.fw-sources li {
+  margin-bottom: var(--space-3);
+  padding-left: calc(var(--space-5) + var(--space-6));
+  text-indent: calc(-1 * (var(--space-5) + var(--space-6)));
+  overflow-wrap: anywhere;
+}
+
+.fw-sources a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* --- Tabelle ------------------------------------------------------------ */
+.fw-table-wrap {
+  max-width: 100%;
+  margin: var(--space-4) 0 var(--space-6);
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+}
+
+.fw-table-wrap:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.fw-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.fw-table caption {
+  padding: var(--space-4) var(--space-4) var(--space-2);
+  text-align: left;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.fw-table th,
+.fw-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid var(--color-border);
+}
+
+.fw-table thead th {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+}
+
+.fw-table tbody th {
+  font-weight: var(--font-weight-medium);
+}
+
+.fw-table a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* --- Spektrum-Explorer -------------------------------------------------- */
+.fw-spectrum {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-10);
+  align-items: start;
+  margin-top: var(--space-6);
+}
+
+.fw-spectrum__preview {
+  min-height: 220px;
+  border: 1px solid var(--color-line-strong);
+  background: var(--fw-gruen-core);
+}
+
+.fw-spectrum__controls label {
+  margin-bottom: var(--space-3);
+}
+
+.fw-spectrum input[type='range'] {
+  width: 100%;
+  min-height: 44px;
+  accent-color: var(--color-primary);
+}
+
+.fw-spectrum__readout {
+  margin: var(--space-2) 0 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.fw-disclaimer {
+  border-top: 1px solid var(--color-primary);
+}
+
+/* --- Responsiv ---------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .fw-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-10);
+    padding-top: var(--space-16);
+  }
+
+  .fw-tafel {
+    aspect-ratio: 16 / 9;
+  }
+
+  .fw-chakra,
+  .fw-spectrum {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-10);
+  }
+
+  .fw-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fw-detail__body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+
+  .fw-toc {
+    position: static;
+    order: -1;
+    max-height: none;
+    padding: 0 0 var(--space-4);
+    border-left: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .fw-toc > summary {
+    display: block;
+    min-height: 44px;
+    padding: var(--space-3) 0;
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 900px) {
+  .fw-register__link {
+    grid-template-columns: 72px minmax(0, 1fr) auto;
+    gap: var(--space-4);
+  }
+
+  .fw-register__chakra {
+    display: none;
+  }
+
+  .fw-detail__band,
+  .fw-detail__body {
+    padding-right: var(--space-8);
+    padding-left: var(--space-8);
+  }
+
+  .fw-table {
+    min-width: 640px;
+  }
+}
+
+@media (max-width: 700px) {
+  .fw-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fw-compare {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fw-compare__col + .fw-compare__col {
+    border-left: 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .fw-facts__row,
+  .fw-timeline li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+  }
+
+  .fw-node {
+    width: 36px;
+    height: 36px;
+    font-size: 11px;
+  }
+
+  .fw-tafel__name {
+    font-size: var(--text-base);
+  }
+
+  .fw-detail__band,
+  .fw-detail__body {
+    padding-right: var(--space-5);
+    padding-left: var(--space-5);
+  }
+}
+
+@media (max-width: 400px) {
+  .fw-register__link {
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    min-height: 80px;
+  }
+
+  .fw-register__field {
+    height: 48px;
+  }
+
+  .fw-node {
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
+  }
+
+  .fw-swatch__strip {
+    height: 64px;
+  }
+}
+
+/* --- Bewegung ----------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .fw-register__link,
+  .fw-node,
+  .fw-card a {
+    transition: none;
+  }
+}
+
+/* --- Druck -------------------------------------------------------------- */
+@media print {
+  .fw-toc,
+  .fw-spectrum__controls,
+  .fw-actions {
+    display: none !important;
+  }
+
+  .fw-detail__body {
+    display: block;
+    padding: 0;
+    border: 0;
+  }
+
+  .fw-detail__band,
+  .fw-compare,
+  .fw-figure {
+    border: 1px solid #777;
+    background: transparent;
+  }
+}

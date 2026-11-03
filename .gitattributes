@@ -10,3 +10,9 @@ js/data/astrologie.js -text
 # Das V1-Manifest wird in tests/tarot-decks-v2.cjs bytegenau geprüft; eine
 # CRLF-Konvertierung beim Windows-Checkout würde den Hash verändern.
 assets/tarot/nachtatelier-v1/manifest.json -text
+
+# js/data/farbwelten.js is generated from content/farbwelten/*.md by
+# scripts/generate-farbwelten-data.cjs; store it verbatim so regeneration stays
+# idempotent on Windows checkouts.
+js/data/farbwelten.js -text
+
