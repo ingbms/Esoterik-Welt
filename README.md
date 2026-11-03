@@ -19,7 +19,7 @@ npm run verify:pages -- http://localhost:3000/Esoterik-Welt/ evidence/preview
 - **Eine kanonische Website:** GitHub Pages veröffentlicht `main:/` mit `index.html`, `css/`, `js/`, `data/` und `assets/`. `npm run build` verpackt dieselben Quellen; die Express-Vorschau verwendet `/Esoterik-Welt/` statt des veralteten `public/`-Platzhalters. `npm start` baut vorher automatisch. Kein Astro/Vite/Tailwind/PostCSS und kein Webpack-Einstieg erforderlich.
 - **Live-Prüfung:** `npm run verify:pages -- https://ingbms.github.io/Esoterik-Welt/ evidence/live` erzeugt Screenshots, CSS-/JS-MIME- und Netzwerk-/Console-Protokolle für zehn Ansichten bei 375/768/1440 px. Bestehende `test-results/` und andere Tests werden nicht überschrieben. Screenshots separat prüfen; historische QA-Aussagen unten sind kein Beleg für einen aktuellen Deploy.
 
-- **Hash-Routing:** Keine Server-Side-Routing nötig; statisches Hosting reicht. Routen: `#tarot`, `#crystals`, `#runes`, `#blog`, `#moon`, `#astrologie`, `#frequenzen`, `#frequenzen/labor`, `#home`. Der Alias `#frequenzlabor` wird auf `#frequenzen/labor` normalisiert.
+- **Hash-Routing:** Keine Server-Side-Routing nötig; statisches Hosting reicht. Routen: `#tarot`, `#crystals`, `#runes`, `#blog`, `#moon`, `#astrologie`, `#frequenzen`, `#frequenzen/labor`, `#frequenzen/quellen`, `#frequenzen/cymatics`, `#frequenzen/meditation`, `#home`. Der Alias `#frequenzlabor` wird auf `#frequenzen/labor` normalisiert.
 - **Vanilla JS + ES-Module:** Keine Framework-Abhängigkeit; `blog.js`/`moon.js` nutzen `import/export`; `main.js` lädt dynamisch.
 - **Daten-Modell:** JSON/JS-Exports (`data/articles.js`, `data/crystals.json`, `data/runes.json`, `data/moon-phases.js`, `data/moon.js`).
 - **Design-System (`css/design-system.css`):** CSS-Variablen, Typografie (Cinzel, Inter), Reduced-Motion / Print / Kontrast.
@@ -68,14 +68,19 @@ npm run test:frequenz
 
 ## Frequenzlabor-Oberfläche
 
-Die Kategorie `#frequenzen` ist der Hub (Erklärstück, Bibliothek, Quellen, Disclaimer), `#frequenzen/labor` das Werkzeug. Beide Ansichten rendert `js/modules/frequenzlabor.js` in `#frequenzlaborRoot`; `js/modules/frequenzlabor-loader.js` ist der einzige statische Import im Initialpfad und lädt den Rest per `import()` erst beim ersten Aufruf.
+Die Kategorie `#frequenzen` ist der Hub (Erklärstück, Bibliothek, Quellen, Disclaimer), `#frequenzen/labor` das Werkzeug, `#frequenzen/quellen` die gerenderte Fassung von [`docs/frequenz-quellen.md`](docs/frequenz-quellen.md), `#frequenzen/cymatics` die Chladni-Muster und `#frequenzen/meditation` die Meditationssitzung. Alle Ansichten rendert `js/modules/frequenzlabor.js` in `#frequenzlaborRoot`; `js/modules/frequenzlabor-loader.js` ist der einzige statische Import im Initialpfad und lädt den Rest per `import()` erst beim ersten Aufruf. Die Ansichten der Folgestufe werden zusätzlich erst hinter ihrem Feature-Flag dynamisch importiert. `npm run build` legt `docs/frequenz-quellen.md` unter `dist/Esoterik-Welt/docs/` ab, damit die Quellenansicht und der Rohdatei-Link auch in der Vorschau antworten.
 
 | Datei | Aufgabe |
 | --- | --- |
 | `js/modules/frequenzlabor.js` | Controller/View: Slider, Presets, Transport, Sweep, Schwebung, binaural, 432/440, Fokus, Fehlertexte |
 | `js/modules/frequenz-presets.js` | `data/frequencies.json` laden/validieren, Wiedergabe-Mapping, Präferenzen in `localStorage` |
 | `js/modules/frequenz-visualisierung.js` | Canvas-Oszillogramm aus `getAnalyserData()`, statische Welle bei `prefers-reduced-motion` |
+| `js/modules/markdown-lite.js` | Markdown-Leser für die Quellenansicht: escapt, nur sichere Linkziele, Tabellen/Zitate/Codeblöcke |
 | `js/modules/frequenz-flags.js` | Feature-Flags; URL-Override nur auf `localhost`/`file:` |
+| `js/modules/frequenz-chladni.js` | P9: Chladni-Modell (Feldfunktion, Nulldurchgänge, Knotenlinien), DOM-frei |
+| `js/modules/frequenz-cymatics-view.js` | P9: Canvas-Ansicht `#frequenzen/cymatics`, lazy geladen |
+| `js/modules/frequenz-meditation-model.js` | P10: Sitzungsmodell, Fades, versionierter Speicher, DOM-frei |
+| `js/modules/frequenz-meditation-view.js` | P10: Timer, Favoriten, Wiederaufnahme `#frequenzen/meditation`, lazy geladen |
 | `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens |
 
 **Wiedergabe-Regeln (ADR §8.2):** Ein gültiges `playback`-Feld gewinnt. Ohne `playback` werden nur die Solfeggio-Töne sowie 432/440 Hz als Einzelton angeboten; `partner_hz` erzeugt zwei Stimmen mit halbiertem Gain. Alles andere — Schumann-Resonanzen, EEG-Bänder, 40-Hz-Stimulation, Obertonreihe, Ultraschall — bleibt `mode: "none"` und wird als „Zahlenwert zur Einordnung“ gekennzeichnet. Die binaurale Schwebung (440/444 Hz) läuft kanalgetrennt, weil der Datenbestand sie so beschreibt.
@@ -85,12 +90,12 @@ Die Kategorie `#frequenzen` ist der Hub (Erklärstück, Bibliothek, Quellen, Dis
 **Tests und Budget:**
 
 ```bash
-npm run test:frequenz          # Engine (E1–E20) + Presets/Flags (P1–P8)
-npx playwright test tests/frequenzlabor.spec.js   # U1–U16
+npm run test:frequenz          # Engine (E1–E20) + Presets/Flags (P1–P8) + Markdown-Leser (15) + P9/P10-Modelle (C1–C8, M1–M9)
+npx playwright test tests/frequenzlabor.spec.js tests/frequenzlabor-p9-p10.spec.js   # U1–U16 + P9/P10-Browserfälle
 npm run check:frequenz-budget  # NFR-1/2/3: Initialgraph, Feature-JS, Feature-CSS
 ```
 
-Die Messwerte, Screenshots und die Lighthouse-Accessibility-Prüfung stehen in `docs/frequenzlabor-ui.md` und `evidence/t_6b8164b3/`.
+Die Messwerte, Screenshots und die Lighthouse-Accessibility-Prüfung stehen in `docs/frequenzlabor-ui.md` und `evidence/t_6b8164b3/`; die Folgestufe P9/P10 (Chladni-Muster, Meditationssitzungen) ist in `docs/frequenzlabor-p9-p10.md` dokumentiert und im ADR-Nachtrag §13 verbindlich festgelegt.
 
 ## Projektstruktur
 

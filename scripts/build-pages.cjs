@@ -24,6 +24,19 @@ for (const entry of [
     filter: (source) => !/\.bak\d*$/.test(source) && !path.basename(source).startsWith('_'),
   });
 }
+// Das Quellendokument des Frequenzbereichs liegt im Repository unter docs/ und
+// wird einzeln ausgeliefert: die Ansicht #frequenzen/quellen lädt es per fetch,
+// und der Link auf die Markdown-Datei muss im Preview antworten. Bewusst keine
+// Kopie des ganzen docs/-Baums (ADRs, Reviews, Konzepte bleiben intern).
+const documentSources = ['docs/frequenz-quellen.md'];
+for (const source of documentSources) {
+  const from = path.join(root, source);
+  if (!fs.existsSync(from)) throw new Error(`Quellendokument fehlt: ${source}`);
+  const to = path.join(output, source);
+  fs.mkdirSync(path.dirname(to), { recursive: true });
+  fs.cpSync(from, to);
+}
+
 const { buildLocal } = require('./build-local.cjs');
 buildLocal(output)
   .then(() => {

@@ -1,0 +1,44 @@
+Review-Runde 4 (Prüfstand dbc1ccd) — Befund D6 und Abarbeitung
+================================================================
+
+Befund der Review (Zitat, gekürzt):
+  "docs/frequenzlabor-p9-p10.md §7, letzter Absatz: 'Frühere Tabellenstände
+   (44.168/44.414 B) gehörten zu 648910c; seither sind 32 Rohbytes für den
+   Rücksprung-Guard der Ansage hinzugekommen.' Gemessen (measure-nfr2.cjs,
+   Git-Blobs): 648910c 164.301 B/44.168 · 68648ca 164.333 B/44.180 (+32) ·
+   8d8124f 164.908 B/44.347 (+607). Die 32 Rohbytes stammen aus 68648ca,
+   nicht aus dem Rücksprung-Guard; der Guard in 8d8124f kostet 575 Rohbytes."
+
+Abarbeitung: Delta und Ursache auf 8d8124f bezogen, beide Commits getrennt
+benannt. Keine Code-Änderung, keine neue Messung (die vorhandene Messung
+wurde lediglich auf die drei Zwischenstände ausgedehnt und abgelegt).
+
+Eigene Nachmessung (Git-Blobs, LF-Basis der CI), siehe nfr2-commits.txt:
+
+  648910c  fix: Ton endet beim Ansichtswechsel, Fades ab Ist-Pegel
+           164.301 B roh / 44.168 B gz
+  68648ca  fix: Unterbrechung ohne Restzeit nicht als "Fortsetzen möglich"
+           164.333 B roh / 44.180 B gz      (+32 B)
+  8d8124f  fix: Ansage-Timer beim Verlassen der Ansicht abbrechen
+           164.908 B roh / 44.347 B gz      (+607 B gegenüber 648910c;
+                                             +575 B gegenüber 68648ca)
+  dbc1ccd  letzter Doku-Commit, Feature-JS unverändert
+           164.908 B roh / 44.347 B gz
+
+Ursachenzuordnung (Commit-Inhalte, git show --stat):
+  68648ca  js/modules/frequenz-meditation-view.js | 2 +-
+           (Unterbrechung ohne Restzeit nicht als Wiederaufnahme ansagen)
+  8d8124f  js/modules/frequenz-meditation-view.js | Rücksprung-Guard der
+           Ansage (announceTimer + clearTimeout in dispose() + erneute
+           Prüfung von refs.status in der Closure)
+
+Geänderte Stellen:
+  docs/frequenzlabor-p9-p10.md §7, letzter Absatz der NFR-2-Erläuterung
+  docs/adr-frequenzlabor.md §13.5, Absatz nach der NFR-Tabelle
+
+Messbefehl (aus jedem Klon):
+  node evidence/t_aa849c1c/measure-nfr2.cjs . 648910c
+  node evidence/t_aa849c1c/measure-nfr2.cjs . 68648ca
+  node evidence/t_aa849c1c/measure-nfr2.cjs . 8d8124f
+
+Feature-Code unberührt: git diff dbc1ccd -- js/ css/ ist leer.

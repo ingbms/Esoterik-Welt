@@ -230,17 +230,19 @@ Deaktivierte Features werden **nicht importiert** (dynamic `import()` erst hinte
 - **`#frequenzen`** ist die Hauptkategorie (Bibliothek, Erklärstück, Disclaimer, Einstieg ins Labor). Sie ist die neue `page`-ID `frequenzen` und erscheint in Hauptnavigation, Footer und Startseiten-Register.
 - **`#frequenzen/labor`** ist die Werkzeugansicht (Slider, Presets, Play/Stop, Sweep, Visualisierung, Binaural, 432/440).
 - **`#frequenzlabor`** (und `#frequenzlabor/...`) ist ein Alias und wird per `history.replaceState()` auf `#frequenzen/labor` normalisiert, ohne zusätzlichen History-Eintrag.
-- Weitere Unterseiten gibt es nicht. Abschnitte innerhalb des Labors sind Sprungmarken, keine Routen.
+- **`#frequenzen/quellen`** ist seit P11 (`t_9564a3d5`, Nachtrag unten) die dritte Ansicht: sie rendert `docs/frequenz-quellen.md` lesbar. Sie ist eine Ansicht der Kategorie, kein eigenes Dokument (kein Canonical, kein Sitemap-Eintrag).
+- Weitere Unterseiten gibt es nicht; unbekannte Segmente fallen auf die Bibliothek zurück und melden das sichtbar. Abschnitte innerhalb des Labors sind Sprungmarken, keine Routen.
 
 **Begründung:**
 
 - Der Master-Auftrag nennt `#frequenzen` ausdrücklich als direkten Zugang.
 - Das UI-Ticket `t_6b8164b3` nennt „Route /frequenzlabor“. Der Alias löst den Widerspruch ohne doppelte Ansicht und ohne toten Deep-Link.
 - Die Astrologie zeigt das Muster „eine Seite, Sub-Routen vom Modul gerendert“ bereits vor; das wird übernommen, statt einen zweiten Router zu bauen.
+- Die dritte Ansicht behebt Review-Befund B6 ohne zweite Textfassung: eine reine Kopie der Markdown-Datei in den Build hätte den 404 behoben, aber rohes Markdown ausgeliefert (P11).
 
 **Verworfen:** zwei unabhängige Seiten (`#frequenzen` und `#frequenzlabor`), reine Query-Parameter (`#frequenzen?view=labor`) — schlechter lesbar und nicht dem bestehenden Muster entsprechend.
 
-**Folgen:** `MAIN_PAGES` wächst um `frequenzen` (8 IDs), die Navigation um einen Eintrag. `parseRoute()` bekommt ein Frequenz-Muster; die Detailintegration steht in §6.2.
+**Folgen:** `MAIN_PAGES` wächst um `frequenzen` (8 IDs), die Navigation um einen Eintrag. `parseRoute()` bekommt ein Frequenz-Muster; die Detailintegration steht in §6.2. Das Modul rendert drei Ansichten aus derselben Route; die Dokumentansicht setzt eigene Metadaten (`PAGE_META.frequenzenQuellen`), aber keine eigene Canonical-URL.
 
 ### AD-7: Datenladen — `fetch` auf HTTP, eingebettetes JSON auf `file://`
 
@@ -265,6 +267,8 @@ Deaktivierte Features werden **nicht importiert** (dynamic `import()` erst hinte
 - Die Kategorie ist über Navigation, Footer und Startseiten-Register intern verlinkt; das ist für die Auffindbarkeit in dieser Stufe ausreichend.
 
 **Folgen:** Keine neuen indexierbaren URLs. Wenn P11 eine statische Landingpage beschließt, muss sie kanonisch auf `/Esoterik-Welt/` zeigen oder die Hash-Ansicht ersetzen — dann ist dieses ADR zu ändern.
+
+**Nachtrag P11 (2026-11-03, Ticket `t_9564a3d5`):** Die Bewertung ist abgeschlossen und bleibt bei **Nein**; die Begründung samt Canonical- und Sitemap-Folge steht in §10 („Entscheidung P11 — statische Landingpage“). AD-8 gilt unverändert weiter.
 
 ---
 
@@ -1165,11 +1169,29 @@ Fake-Context mit Aufzeichnung aller Aufrufe (`createOscillator`, `createGain`, `
 | Kopfhörer nicht vorhanden | binaurale Wirkung nicht hörbar | Pflichttext „Kopfhörer erforderlich“; keine Wirkbehauptung |
 | Wahrnehmbare Lautheit vs. dBFS | Sicherheitsgefühl trügt | Startpegel −20 dBFS, Deckel −6 dBFS, Wellenform-Trims, Gehörschutz-Hinweis |
 | `file://`-localStorage blockiert | Presets nicht gespeichert | `try/catch`, sichtbarer Hinweis, Labor bleibt funktionsfähig |
-| Hash-Routen nicht indexierbar | SEO-Schwäche | bewusst akzeptiert (AD-8), separates P11-Ticket |
+| Hash-Routen nicht indexierbar | SEO-Schwäche | bewusst akzeptiert (AD-8); P11 entschieden: keine Landingpage, interne Verlinkung ausgebaut (§10) |
 
 **Nicht-Scope dieser Architektur:** Chladni/Cymatics, Meditations-Timer, Audio-Export, Aufnahme, Mikrofon, serverseitige Speicherung, Native-Apps, räumliches Audio, MIDI.
 
-**Offene Entscheidung für P11 (nicht blockierend):** Ob eine statische, indexierbare Landingpage für „Frequenzen“ sinnvoll ist. Dann muss sie kanonisch eindeutig sein und dieses ADR (AD-8) ersetzt werden.
+### Entscheidung P11 — statische Landingpage für „Frequenzen“: Nein
+
+**Entscheidung (2026-11-03, Ticket `t_9564a3d5`):** Es wird keine eigene statische, indexierbare Landingpage `frequenzen.html` gebaut. `#frequenzen` bleibt die einzige Einstiegsfläche der Kategorie; die interne Verlinkung wird stattdessen inhaltlich ausgebaut.
+
+**Begründung**
+
+1. **Doppelter Inhalt.** Eine Landingpage müsste Erklärstück, Bibliothek und Disclaimer wiederholen. Zwei Fassungen derselben Aussagen driften auseinander, sobald `data/frequencies.json` oder das Quellendokument gepflegt werden; der Vertragstest prüft den Datensatz, nicht eine zweite HTML-Kopie.
+2. **Canonical-Konflikt statt SEO-Gewinn.** Die Seite ist eine SPA mit einer Dokument-URL. Eine zweite URL mit denselben Texten müsste kanonisch auf `/Esoterik-Welt/` zeigen — dann wird sie nicht indexiert; zeigt sie auf sich selbst, konkurrieren zwei Einstiegsseiten um dieselbe Suchintention.
+3. **Kein belegtes Suchvolumen.** Für „Frequenzbibliothek“, „432 Hz“ oder „Solfeggio“ dominieren kommerzielle und enzyklopädische Anbieter. Der belegbare Unterschied dieser Seite ist die Evidenzprüfung — und die ist bereits als Dokument verfügbar (siehe unten).
+4. **Dünner Text bleibt dünner Text.** Ohne eigenständige, verlinkbare Inhalte wäre eine Landingpage eine Zusammenfassung (Duplicate Content) und keine redaktionelle Leistung.
+
+**Was stattdessen umgesetzt ist (P11, `t_9564a3d5`)**
+
+- **Interne Verlinkung statt Landingpage:** Der Hub verlinkt im Abschnitt „Traditionelle Zuordnungen“ kontextuell auf `#astrologie`, `#blog/3` (Chakra-Artikel) und `#crystals`; der Quellen-Abschnitt verlinkt `#blog` (Wissensbereich). Das ist inhaltliche Nachbarschaft, keine Linkliste.
+- **Quellendokument im Build:** `scripts/build-pages.cjs` kopiert `docs/frequenz-quellen.md` nach `dist/Esoterik-Welt/docs/` (GitHub Pages liefert `docs/` aus der Wurzel ohnehin aus). Die neue Ansicht `#frequenzen/quellen` rendert dasselbe Dokument lesbar; der Link auf die Rohdatei antwortet damit auch im Preview (vorher 404).
+- **Canonical:** unverändert `https://ingbms.github.io/Esoterik-Welt/`. Die Ansicht `#frequenzen/quellen` setzt nur `document.title` und `meta[name=description]` (Router, `PAGE_META.frequenzenQuellen`) und erzeugt keine zweite Canonical-URL.
+- **Sitemap:** unverändert, keine neuen Dokument-URLs. Das Quellendokument wird bewusst nicht als eigene `Quellen.html` indexiert: es ist Prüfspur, keine Einstiegsseite, und steht als Markdown unter `docs/` zur Zitation bereit.
+
+**Folge, falls sich die Annahmen ändern:** Entsteht eigener, suchrelevanter Inhalt (z. B. eine redaktionelle Artikelserie mit belegtem Suchvolumen), ist eine statische Seite nur mit eigenständigem Text, selbstreferenziendem Canonical, Sitemap-Eintrag und Ersatz von AD-8 zulässig. Das ist dann ein neuer ADR-Nachtrag, keine stille Änderung.
 
 ---
 
@@ -1249,3 +1271,110 @@ NODE
 ```
 
 Der Vergleich entfernt nur den Dateikopf-Kommentar der `.d.ts`; alle Feldkommentare sind Teil des Blocks und damit ebenfalls geschützt. Bei Änderungen gilt: erst §4.1, dann die Datei (oder umgekehrt), dann den Vergleich ausführen.
+
+---
+
+## 13. Nachtrag P9/P10 — Chladni-Muster und Meditationssitzungen
+
+- **Status:** angenommen (Ergänzung zu ADR-0001, keine Änderung von §4 oder §7)
+- **Datum:** 2026-11-03
+- **Ticket:** Kanban `t_aa849c1c` (Folgestufe nach Review `t_a0f14bb2`)
+- **Wirkung:** §1 nimmt P9/P10 für die **erste** Stufe aus. Mit diesem Nachtrag sind beide als zweite bzw. dritte Stufe ausgeliefert; die Abgrenzung der ersten Stufe bleibt unverändert, der Engine-Vertrag (§4) wird nicht angefasst.
+
+### 13.1 N-1: Routen der Folgestufe
+
+**Entscheidung:** `#frequenzen/cymatics` und `#frequenzen/meditation` sind Sub-Routen derselben Kategorie (AD-6 bleibt gültig: ein Dokument, ein Router). `js/main.js` wird **nicht** geändert: `FREQUENZ_ROUTE` überträgt bereits beliebige Segmente an `FrequenzlaborModule.show()`, das die Ansicht wählt.
+
+- Unbekanntes Segment → Hub mit sichtbarem Hinweis (bestehendes Verhalten).
+- Bekanntes, aber per Flag deaktiviertes Segment → Hub mit dem Hinweis „ist in diesem Build nicht aktiviert“; es entsteht keine leere Seite und kein toter Deep-Link.
+- Die Bereichsnavigation zeigt einen Link nur bei aktivem Flag; die aktuelle Ansicht steht als Text mit `aria-current="page"`.
+
+**Begründung:** Kein zweiter Router, keine neuen indexierbaren URLs (AD-8), keine Änderung am Initialgraphen (NFR-1).
+
+### 13.2 N-2: Feature-Flags
+
+**Entscheidung:** `cymatics` und `meditation` stehen auf `true` (ausgeliefert). Die Flags bleiben als Kill-Switch erhalten; `?fq=-cymatics` bzw. `?fq=-meditation` gilt weiterhin nur auf `localhost`, `127.0.0.1` und `file:`. In Produktion wird der Override ignoriert (AD-5 unverändert).
+
+**Folgen:** Ein abgeschaltetes Feature erzeugt **keinen** Request auf sein Modul (NFR-6, E2E C6/M5). Nach zwei Releases werden die Flags nach AD-5 entfernt.
+
+### 13.3 N-3: P9 — Modell der Chladni-Muster (verbindlich)
+
+**Entscheidung:** Die Ansicht zeigt Knotenlinien der Modellfamilie
+
+```
+f(u, v) = cos(nπu)·cos(mπv) − cos(mπu)·cos(nπv),   u, v ∈ [0,1],   1 ≤ n, m ≤ 12, n ≠ m
+```
+
+für eine idealisierte quadratische Platte mit freien Rändern (Kennung `rect-free-edge-difference-v1`).
+
+Verbindliche Eigenschaften:
+
+1. **Keine Frequenzzuordnung.** Die Oberfläche bietet ausschließlich die Modenzahlen n und m. Es gibt keine Aussage „Frequenz X erzeugt Muster Y“, keine Hertz-Werte und keine berechnete Anregungsfrequenz; Material, Dicke, Halterung und Kantenlänge gehen nicht ein.
+2. **Entartung ist ein Fehler, kein Bild.** `n = m` ergibt in dieser Differenzform `f ≡ 0`; die Ansicht meldet das sichtbar (`role="alert"`) und zeichnet nichts.
+3. **Knotenlinien sind berechnet**, nicht gezeichnet: Marching Squares auf dem Nullniveau des normierten Feldes (Raster 200 × 200), Strecken in Einheitskoordinaten.
+4. **Die Textentsprechung steht im DOM:** Moden, Anzahl der Nulldurchgänge auf beiden Mittelachsen (bei zwei ungeraden Moden: „Mittelachse liegt vollständig auf einer Knotenlinie“) und die Symmetrieklasse. Das Canvas ist `aria-hidden="true"`.
+5. **Statische Darstellung.** Es gibt keine `requestAnimationFrame`-Schleife; neu gezeichnet wird nur bei Eingabe oder Größenänderung. `prefers-reduced-motion` ist damit strukturell erfüllt und wird zusätzlich als Hinweis benannt.
+6. **Zwei Vergleichsslots** A und B mit unabhängigen Moden; die Beschriftung sagt, dass beide derselben Modellfamilie folgen.
+
+**Verworfen:** eine Frequenz-zu-Muster-Tabelle (fachlich falsch), eine künstlerische Partikelsimulation (nicht unterscheidbar von einem Modell), eine Animation der Knotenlinien (NFR-18, kein Erkenntnisgewinn).
+
+### 13.4 N-4: P10 — Meditationssitzungen
+
+**Entscheidung:** Eine Sitzung ist ein Timer über ein Klangpreset der ADR-§8.2-Allowlist mit Ein- und Ausblendung.
+
+| Aspekt | Festlegung |
+| --- | --- |
+| Dauer | 3, 5, 10, 15, 20, 30, 45 Minuten; gültig sind 1–45 Minuten (ganzzahlig) |
+| Presets | 11 Einzeltöne (174, 285, 396, 417, 432, 440, 528, 639, 741, 852, 963 Hz) und 4 binaurale Differenzen (2, 6, 10, 20 Hz auf 200 Hz Träger) |
+| Fades | 0, 2, 5 oder 10 Sekunden, amplitudenlinear |
+| Timer | `performance.now()`-basiert, Anzeige alle 250 ms, `role="timer"` mit `aria-live="off"`; Ansage nur bei Start, einer Minute Restzeit und Ende |
+| Autoplay | Der erste `play()`-Aufruf erfolgt ausschließlich im Klick auf „Sitzung starten“/„Fortsetzen“ (NFR-12) |
+| Ende | Ausblenden, dann `stop()`; die Sitzung endet auch bei `visibilitychange → hidden`, `pagehide` und beim Verlassen der Ansicht |
+| Ansichtswechsel | `FrequenzlaborModule.show()` ruft vor dem Neuaufbau `halt(null)`: Audio stoppt **sofort** (interne 40-ms-Rampe), die Restzeit wird **genau einmal** gesichert, in der Zielansicht bleibt kein Oszillator ohne Bedienelement; `MeditationView.dispose()` stoppt zusätzlich selbst und verwirft eine noch ausstehende Statusmeldung (`announceTimer`), damit kein Timer ein entferntes Element anspricht |
+| Wiederaufnahme | Bei Unterbrechung wird die Restzeit lokal gesichert und beim nächsten Besuch als „Fortsetzen“ angeboten; ein ausdrückliches Beenden löscht sie |
+| Speicher | `esoterik-welt:frequenzlabor:meditation:v1`: `{version, favorites[], resume}`; maximal 8 Favoriten, Name ≤ 60 Zeichen, keine Zeitstempel, kein Verlauf |
+| Datenschutz | keine Registrierung, keine Cloud, keine Übertragung von Nutzungsdaten, keine Cookies (AD-4 gilt analog) |
+
+**Fades ohne neue Engine-Methode:** `setGain()` ist laut §4.4 synchron zulässig. Eine Sitzungsblende über 10 s wird deshalb als Folge von `setGain()`-Schritten (100 ms) ausgeführt: Einblenden startet bei `−60 dBFS` (Hörschwelle des Labors, `minGainDb`) und nähert sich amplitudenlinear `−20 dBFS` (`defaultGainDb`); Ausblenden startet beim **Ist-Pegel** (`engine.state.gainDb`, geklemmt auf `−60…−20 dBFS`) und endet bei `−60 dBFS`, danach `stop()`. Der Ist-Pegel ist verbindlich: Ein Ausblenden ab Sitzungsziel würde den Pegel beim Abbruch während der Einblendung erst anheben (gemessen +16 dB vor der Korrektur) und widerspräche dem Gehörschutz. Damit bleibt der Engine-Vertrag unverändert, und die Auflage „Pause/Weiter in der Engine“ (`t_f2a0868c`) kollidiert nicht mit P10 — die Meditation nutzt weder Pause noch einen dritten Audiozustand.
+
+**Blockiertes `localStorage`:** Sitzung, Timer und Audio funktionieren; Favoriten und Wiederaufnahme entfallen mit sichtbarem Hinweis. Es gibt keinen stillen Fehlschlag.
+
+### 13.5 N-5: Budget, Lazy Loading, Offline
+
+**Entscheidung:** Vier neue Module, alle ausschließlich per dynamischem `import()` aus `frequenzlabor.js` hinter dem Flag geladen:
+
+| Datei | Verantwortung | DOM |
+| --- | --- | --- |
+| `js/modules/frequenz-chladni.js` | Feldfunktion, Normierung, Nulldurchgänge, Symmetrie, Knotenlinien (Marching Squares) | nein |
+| `js/modules/frequenz-meditation-model.js` | Presets, Validierung, Countdown, Fade-Hüllkurve, versionierter Speicher | nein |
+| `js/modules/frequenz-cymatics-view.js` | Canvas-Darstellung, Modenwahl, Textentsprechung | ja |
+| `js/modules/frequenz-meditation-view.js` | Formular, Timer, Favoriten, Engine-Steuerung | ja |
+
+Gemessen nach §7.1 (`npm run check:frequenz-budget`, gzip -9):
+
+| Kennzahl | Wert | Grenze |
+| --- | --- | --- |
+| NFR-1 Initialgraph | 85.613 B (17 Dateien) — unverändert | 86.275 B |
+| NFR-2 Feature-JS | 44.347 B (10 Dateien, LF-Basis der CI; Arbeitsbaum 44.756 B, frischer CRLF-Klon 44.592 B) — gemessen an `8d8124f` | 100.000 B |
+| NFR-3 Feature-CSS | 3.338 B | 6.000 B |
+
+NFR-2 hängt an den Zeilenenden der Auscheckung, weil das Gate die Dateien so gzippt, wie sie auf der Platte liegen. Alle Varianten sind gemessen und in `docs/frequenzlabor-p9-p10.md` §7 belegt; `evidence/t_aa849c1c/measure-nfr2.cjs` rechnet sie für jeden Stand nach, mit Revisionsargument direkt aus den Git-Blobs (`node evidence/t_aa849c1c/measure-nfr2.cjs . 8d8124f`). Die frühere Angabe „43.472 B“ war ein Arbeitsbaum-Wert und deshalb nicht plattformneutral reproduzierbar; die Zwischenstände 44.168/44.414 B gehörten zu `648910c`. Von `648910c` bis `8d8124f` wächst die Rohbasis um 607 B: `68648ca` +32 B (Ansage der Unterbrechung ohne Restzeit), `8d8124f` +575 B (Rücksprung-Guard der Ansage).
+
+Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enthält beide Ansichten; `Lokal.html` wächst commit-gebunden von **790.818 B** (CRLF-Auscheckung von `71b895c`; Blob 784.220 B) auf **826.792 B** im Arbeitsbaum von `feda2c5` (Blob/LF 820.062 B, reine CRLF-Umrechnung 826.796 B; `8d8124f`: 826.607/819.873 B); nachmessbar mit `node evidence/t_aa849c1c/measure-lokal.cjs . 71b895c 8d8124f feda2c5`. Die frühere Angabe „826.083 B“ war ein zeilenenden-gemischter Zwischenstand vor `c5da9cc`. `file://` ist geprüft: Bibliothek mit 32 Einträgen, Cymatics zeichnet, Meditation startet und zählt.
+
+### 13.6 N-6: Tests und Barrierefreiheit
+
+| Ebene | Datei | Umfang |
+| --- | --- | --- |
+| Unit (node:test) | `tests/frequenz-chladni.mjs` | C1–C8: Gültigkeit, Antisymmetrie, Spiegelsymmetrie, Normierung, analytische Nulldurchgänge, Textentsprechung, Knotenlinienlage, keine Frequenzaussage |
+| Unit (node:test) | `tests/frequenz-meditation.mjs` | M1–M10: Allowlist, Validierung, Uhr/Restzeit, Fade-Hüllkurve, Speicher-Versionierung, blockierter Speicher, Favoriten-IDs, Wiederaufnahme, Dauern, Ausblenden ab Ist-Pegel |
+| Browser (Playwright) | `tests/frequenzlabor-p9-p10.spec.js` | C1–C6, M1–M8, M11, A1–A4 = 19 Fälle (axe-core WCAG 2.1 A/AA, Tastatur, 360 px, Lazy-Loading); M6–M8 decken den Ansichtswechsel, die Rückkehr und die Ausblendhüllkurve ab, M11 die Fehlerfreiheit des Ansichtswechsels während einer ausstehenden Ansage (`pageerror`/`console.error` = 0). Die Nummern M9/M10 sind Unit-Tests der Sitzungslogik und haben keinen Browserfall |
+
+`npm run test:frequenz` führt beide Unit-Suiten mit aus; die CI-Konfiguration bleibt unverändert.
+
+### 13.7 Grenzen dieses Nachtrags
+
+- Das Modell ist keine Eigenwertlösung: es liefert keine Frequenz zu einer Mode und keine Aussage über reale Platten.
+- Reale Chladni-Figuren weichen ab (endliche Dicke, nicht idealfreie Ränder, Anregungspunkt).
+- Keine Wirkaussagen zu Meditation, binauralen Tönen oder Solfeggio-Zahlen; die Presets sind Hörangebote.
+- Manuelle Screenreader-, Safari/iOS- und Hörtests bleiben beim QA-Ticket `t_4a8106de` (Auflage A5).

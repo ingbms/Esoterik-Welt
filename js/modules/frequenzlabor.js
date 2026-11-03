@@ -14,6 +14,7 @@ import {
   loadFrequencies,
 } from './frequenz-presets.js';
 import { FrequenzVisualisierung } from './frequenz-visualisierung.js';
+import { renderMarkdown, escapeHtml } from './markdown-lite.js';
 
 const WAVEFORMS = Object.freeze([
   ['sine', 'Sinus'],
@@ -48,6 +49,33 @@ const DISCLAIMER_FALLBACK = Object.freeze({
 });
 
 const SPEED_OF_SOUND_M_S = 343; // Luft bei 20 °C, gerundet (OpenStax College Physics 2e).
+
+// Bereichsnavigation für alle drei Ansichten: gleiche Reihenfolge, gleiche
+// Beschriftung, genau ein `aria-current` (ADR §7.4, NFR-17).
+const VIEWS = Object.freeze([
+  ['hub', '#frequenzen', 'Bibliothek'],
+  ['labor', '#frequenzen/labor', 'Frequenzlabor'],
+  ['quellen', '#frequenzen/quellen', 'Quellen & Methodik'],
+]);
+
+function viewNav(current, extra = '') {
+  const items = VIEWS.map(([view, href, label]) =>
+    view === current
+      ? `<span class="fq-nav-current" aria-current="page">${label}</span>`
+      : `<a href="${href}">${label}</a>`
+  );
+  return `<nav class="fq-nav" aria-label="Frequenzbereich">${items.join('')}${extra}</nav>`;
+}
+
+// Das Quellendokument liegt als Markdown im Repository. Relative Ziele werden
+// für die Ansicht auf den Build umgeschrieben; was nicht mit ausgeliefert wird
+// (tests/, scripts/), verweist auf die öffentliche Quelle im Repository.
+const REPOSITORY_BLOB = 'https://github.com/ingbms/Esoterik-Welt/blob/main/';
+
+function resolveDocHref(href) {
+  if (/^\.\.\/(?:tests|scripts)\//.test(href)) return REPOSITORY_BLOB + href.replace(/^\.\.\//, '');
+  return href.replace(/^\.\.\//, '');
+}
 
 // Statisches Erklärstück (<= 400 Wörter). Quellen sind im Datenbestand und in
 // docs/frequenz-quellen.md belegt; die Links zeigen auf die Primärquellen.
@@ -89,6 +117,14 @@ const EXPLAIN_HTML = `
       Eine Frequenz ist zuerst eine Messgröße. Ob eine Aussage darüber hinaus belegt ist, steht bei jedem Eintrag
       als Evidenzstatus – von „belegt“ bis „nicht belegt“. Das Labor macht Töne hörbar und Zahlen nachvollziehbar;
       es verspricht keine Wirkung.
+    </p>
+    <h3>Traditionelle Zuordnungen</h3>
+    <p>
+      Viele Frequenzlisten verbinden Töne mit Farben, Planeten oder Chakren. Diese Zuordnungen sind überliefert
+      oder gesetzt und folgen keiner akustischen Notwendigkeit. Wer sie als Symbolsystem weiterlesen will, findet
+      die Planeten- und Zeichendeutung im <a href="#astrologie">Astrologie-Bereich</a> und die Chakra-Zuordnung
+      der Steine im <a href="#blog/3">Wissensartikel „Kristalle für jedes Chakra“</a>; der
+      <a href="#crystals">Kristall-Katalog</a> filtert dieselben Steine nach Chakra und Farbe.
     </p>
   </div>
 `;
@@ -157,6 +193,7 @@ export class FrequenzlaborModule {
     this.announceTimer = 0;
     this.viz = null;
     this.refs = {};
+    this.featureView = null;
     this.unsubscribe = null;
     installDebugHandle(this.engine);
     this.reducedMotionQuery = typeof matchMedia === 'function' ? matchMedia('(prefers-reduced-motion: reduce)') : null;
@@ -200,9 +237,32 @@ export class FrequenzlaborModule {
   async show(segments = [], query = '', { focus = true } = {}) {
     const segment = Array.isArray(segments) && segments[0] ? segments[0] : '';
     this.query = String(query || '');
-    const nextView = segment === 'labor' ? 'labor' : 'hub';
-    const unknown = segment && segment !== 'labor';
+    // Ansichten der Kategorie: Labor und Quellendokument sind immer verfügbar,
+    // P9/P10 (ADR-Nachtrag §13) nur bei aktivem Feature-Flag. Unbekannte oder
+    // deaktivierte Segmente rendern den Hub mit sichtbarem Hinweis.
+    const known = ['labor', 'quellen', 'cymatics', 'meditation'];
+    const enabled = (name) => name === 'labor' || name === 'quellen' || Boolean(this.features[name]);
+    let nextView = 'hub';
+    let notice = '';
+    if (segment) {
+      if (!known.includes(segment)) {
+        notice = `„#frequenzen/${segment}“ ist keine eigene Ansicht. Du siehst die Bibliothek.`;
+      } else if (!enabled(segment)) {
+        notice = `„#frequenzen/${segment}“ ist in diesem Build nicht aktiviert. Du siehst die Bibliothek.`;
+      } else {
+        nextView = segment;
+      }
+    }
+    const previousView = this.view;
     this.view = nextView;
+    // Jeder Aufruf von show() baut die Kategorieansicht neu auf. Ein Ton aus
+    // der bisherigen Ansicht gehört zu Bedienelementen, die gleich verschwinden
+    // (ADR-Nachtrag §13.4, Doku §4.3): Er endet deshalb sofort, die Restzeit
+    // einer Sitzung wird genau einmal gesichert. Ohne diesen Schritt bliebe ein
+    // laufender Oszillator ohne Start/Stopp in der Zielansicht zurück.
+    if ((previousView === 'labor' && nextView !== 'labor') || this.featureView || this.engine.state.status !== 'idle') {
+      this.halt(null);
+    }
     if (!this.unsubscribe) {
       this.unsubscribe = this.engine.subscribe((state) => this.onEngineState(state));
       document.addEventListener('visibilitychange', this.onVisibility);
@@ -214,10 +274,22 @@ export class FrequenzlaborModule {
     await this.load();
     this.prefs = { ...this.prefs, view: nextView };
     this.store.write(this.prefs);
-    if (nextView === 'labor') this.renderLab();
-    else this.renderHub();
-    if (unknown && this.refs.notice) {
-      this.refs.notice.textContent = `„#frequenzen/${segment}“ ist keine eigene Ansicht. Du siehst die Bibliothek.`;
+    if (nextView === 'labor') {
+      this.disposeFeatureView();
+      this.renderLab();
+    } else if (nextView === 'quellen') {
+      this.disposeFeatureView();
+      await this.renderQuellen();
+    } else if (nextView === 'cymatics') {
+      await this.renderCymatics();
+    } else if (nextView === 'meditation') {
+      await this.renderMeditation();
+    } else {
+      this.disposeFeatureView();
+      this.renderHub();
+    }
+    if (notice && this.refs.notice) {
+      this.refs.notice.textContent = notice;
       this.refs.notice.hidden = false;
     }
     this.onEngineState(this.engine.state);
@@ -227,14 +299,45 @@ export class FrequenzlaborModule {
     }
   }
 
+  /** Baut eine Ansicht der Folgestufe (P9/P10) lazy auf. */
+  async renderCymatics() {
+    this.disposeFeatureView();
+    const { CymaticsView } = await import('./frequenz-cymatics-view.js');
+    this.featureView = new CymaticsView(this.root, {
+      reducedMotion: this.reducedMotion,
+      meditation: this.features.meditation,
+    });
+    this.featureView.render();
+    this.refs = { notice: document.getElementById('fqCyNotice') };
+  }
+
+  async renderMeditation() {
+    this.disposeFeatureView();
+    const { MeditationView } = await import('./frequenz-meditation-view.js');
+    this.featureView = new MeditationView(this.root, {
+      engine: this.engine,
+      reducedMotion: this.reducedMotion,
+      cymatics: this.features.cymatics,
+    });
+    this.featureView.render();
+    this.refs = { notice: null };
+  }
+
+  disposeFeatureView() {
+    if (this.featureView && typeof this.featureView.dispose === 'function') this.featureView.dispose();
+    this.featureView = null;
+  }
+
   onHide() {
     this.halt(null);
     if (this.viz) this.viz.stop();
     clearInterval(this.sweepTimer);
+    this.disposeFeatureView();
   }
 
   /** Stoppt Audio, Sweep und Animation; `message` wird angesagt, wenn gesetzt. */
   halt(message) {
+    if (this.featureView && typeof this.featureView.onInterrupt === 'function') this.featureView.onInterrupt();
     clearInterval(this.sweepTimer);
     this.sweepTimer = 0;
     // Jedes automatische oder ausdrückliche Stoppen beendet den Pause-Zustand;
@@ -285,14 +388,30 @@ export class FrequenzlaborModule {
 
   /* ---------------------------------------------------------------- Ansichten */
 
+  /**
+   * Navigationslinks der Folgestufe (P9/P10). Ein Link erscheint nur, wenn das
+   * Flag des Features aktiv ist; die aktuelle Ansicht wird als Text mit
+   * `aria-current` ausgezeichnet statt als Link auf sich selbst.
+   */
+  featureNavLinks(current) {
+    return [
+      ['cymatics', '#frequenzen/cymatics', 'Chladni-Muster'],
+      ['meditation', '#frequenzen/meditation', 'Meditation'],
+    ]
+      .filter(([name]) => Boolean(this.features[name]))
+      .map(([name, href, label]) =>
+        name === current
+          ? `<span class="fq-nav-current" aria-current="page">${label}</span>`
+          : `<a href="${href}">${label}</a>`
+      )
+      .join('');
+  }
+
   renderHub() {
     const entries = this.data ? this.data.entries : [];
     const playable = entries.filter((entry) => entry.playback.mode !== 'none').length;
     this.root.innerHTML = `
-      <nav class="fq-nav" aria-label="Frequenzbereich">
-        <a href="#frequenzen" aria-current="page">Bibliothek</a>
-        <a href="#frequenzen/labor">Zum Frequenzlabor <span aria-hidden="true">↗</span></a>
-      </nav>
+      ${viewNav('hub', this.featureNavLinks('hub'))}
       <p class="fq-notice" id="fqNotice" role="status" hidden></p>
       <div class="fq-disclaimer" role="note">
         <p class="fq-disclaimer-kurz" id="fqDisclaimerKurz"></p>
@@ -342,9 +461,14 @@ export class FrequenzlaborModule {
       <section class="fq-section" id="fq-quellen" aria-labelledby="fq-quellen-title">
         <h2 id="fq-quellen-title">Quellen und Methode</h2>
         <p class="fq-lede">
-          Der Datenbestand ist quellengeprüft; die Herleitung, Suchstrategie und Grenzen stehen im
-          <a href="docs/frequenz-quellen.md">Quellendokument</a>. Die Daten selbst liegen als
-          <a href="data/frequencies.json">data/frequencies.json</a> im Projekt.
+          Der Datenbestand ist quellengeprüft. Herleitung, Suchstrategie und Grenzen stehen im
+          <a href="#frequenzen/quellen">Quellendokument</a>; die Daten selbst in
+          <a href="data/frequencies.json">data/frequencies.json</a>.${this.offlineSource() ? '' : ' Die Rohfassung liegt als <a href="docs/frequenz-quellen.md">Markdown-Datei</a> im Projekt.'}
+        </p>
+        <p class="fq-note">
+          Ein Wert als „nicht belegt“ einzuordnen, ist eine Aussage über den Suchstand, keine Widerlegung –
+          Begründung und Quellenverzeichnis stehen im <a href="#frequenzen/quellen">Quellendokument</a>.
+          Hintergrundartikel zu Kristallen, Chakren und Planeten sammelt der <a href="#blog">Wissensbereich</a>.
         </p>
       </section>
       <section class="fq-section fq-hinweis" id="fq-hinweis" aria-labelledby="fq-hinweis-title">
@@ -497,15 +621,79 @@ export class FrequenzlaborModule {
     return h('li', { class: 'fq-entry card', dataset: { evidenz: entry.evidenzstatus } }, children);
   }
 
+  /* --------------------------------------------------- Quellendokument */
+
+  /** Im Offline-Exemplar ist das Markdown eingebettet (build-local.cjs). */
+  offlineSource() {
+    const node = document.getElementById('local-frequenz-quellen');
+    return node && node.textContent && node.textContent.trim() ? node.textContent : null;
+  }
+
+  async loadQuellen() {
+    // Ein Promise als Cache: Klick und hashchange lösen die Ansicht zweimal aus,
+    // beide Aufrufe müssen dasselbe Dokument sehen statt einmal leer zu bleiben.
+    if (!this.quellenPromise) this.quellenPromise = this.readQuellen();
+    return this.quellenPromise;
+  }
+
+  async readQuellen() {
+    const embedded = this.offlineSource();
+    if (embedded) return embedded;
+    try {
+      const response = await fetch(new URL('docs/frequenz-quellen.md', document.baseURI));
+      if (!response || !response.ok) throw new Error(`HTTP ${response ? response.status : '—'}`);
+      return await response.text();
+    } catch (error) {
+      this.quellenError = error && error.message ? error.message : 'unbekannter Fehler';
+      console.warn('Frequenzlabor: Quellendokument nicht geladen', error);
+      return null;
+    }
+  }
+
+  /** Dritte Ansicht: das geprüfte Quellendokument als lesbare Seite. */
+  async renderQuellen() {
+    const offline = Boolean(this.offlineSource());
+    this.root.innerHTML = `
+      ${viewNav('quellen')}
+      <p class="fq-notice" id="fqNotice" role="status" hidden></p>
+      <p class="fq-lede">
+        Das Quellendokument belegt für jeden Eintrag, woher der Wert stammt, was behauptet wird und wie
+        belastbar die Behauptung ist. Diese Ansicht gibt <code>docs/frequenz-quellen.md</code> wieder;${
+          offline
+            ? ' im Offline-Exemplar ist die Datei eingebettet.'
+            : ' verbindlich bleibt die <a href="docs/frequenz-quellen.md">Markdown-Datei im Projekt</a>.'
+        }
+      </p>
+      <p class="fq-note">
+        Tabellen lassen sich waagerecht scrollen und sind per Tastatur erreichbar; Quellen öffnen in einem neuen Tab.
+      </p>
+      <div class="fq-quellen-body" id="fqQuellenBody">
+        <p>Dokument wird geladen …</p>
+      </div>
+    `;
+    this.refs.notice = document.getElementById('fqNotice');
+    this.refs.status = null;
+    const body = document.getElementById('fqQuellenBody');
+    const text = await this.loadQuellen();
+    if (!body || !body.isConnected) return;
+    if (!text) {
+      body.innerHTML = `
+        <p class="fq-notice" role="status">
+          Das Quellendokument konnte nicht geladen werden (${escapeHtml(this.quellenError || 'unbekannter Fehler')}).
+          Die Datei liegt im Projekt unter <code>docs/frequenz-quellen.md</code>.
+        </p>
+      `;
+      return;
+    }
+    body.innerHTML = renderMarkdown(text, { headingOffset: 1, resolveHref: resolveDocHref });
+  }
+
   /* ------------------------------------------------------------------ Labor */
 
   renderLab() {
     const playable = this.data ? this.data.entries.filter((entry) => entry.playback.mode !== 'none') : [];
     this.root.innerHTML = `
-      <nav class="fq-nav" aria-label="Frequenzbereich">
-        <a href="#frequenzen">← Bibliothek</a>
-        <span class="fq-nav-current" aria-current="page">Frequenzlabor</span>
-      </nav>
+      ${viewNav('labor', this.featureNavLinks('labor'))}
       <p class="fq-notice" id="fqNotice" role="status" hidden></p>
       <div class="fq-disclaimer" role="note">
         <p class="fq-disclaimer-kurz" id="fqDisclaimerKurz"></p>
@@ -638,7 +826,7 @@ export class FrequenzlaborModule {
       <section class="fq-section" id="fq-hinweis" aria-labelledby="fq-hinweis-title">
         <h2 id="fq-hinweis-title">Hinweis zur Nutzung</h2>
         <p class="fq-disclaimer-lang" id="fqDisclaimerLang"></p>
-        <p class="fq-note">Quellen und Methodik: <a href="docs/frequenz-quellen.md">Quellendokument</a>.</p>
+        <p class="fq-note">Quellen und Methodik: <a href="#frequenzen/quellen">Quellendokument</a>.</p>
       </section>
     `;
     this.collectLabRefs();

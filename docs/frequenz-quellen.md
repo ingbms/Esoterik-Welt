@@ -1,6 +1,6 @@
 # Frequenzen: Quellen, Evidenzstatus und Methodik
 
-Stand: 2026-11-02 · Datenbestand: [`data/frequencies.json`](../data/frequencies.json) · Vertragstest: [`tests/frequencies-data.cjs`](../tests/frequencies-data.cjs)
+Stand: 2026-11-03 · Datenbestand: [`data/frequencies.json`](../data/frequencies.json) · Vertragstest: [`tests/frequencies-data.cjs`](../tests/frequencies-data.cjs)
 
 Dieses Dokument belegt für jeden Eintrag des Frequenzlabors, **woher die Zahl kommt**, **was genau behauptet wird** und **wie belastbar diese Behauptung ist**. Es ist die Prüfspur zum Datensatz, nicht die Nutzeroberfläche: Die UI zeigt `beschreibung_kurz`, `evidenzstatus`, `quelle_url` und den Disclaimer; die vollständige Herleitung steht hier.
 
@@ -42,7 +42,7 @@ Die Kategorie sagt **nichts über die Wirksamkeit** aus. Auch ein physikalisch b
 
 **Ausschlusskriterien:**
 
-- Werte ohne auffindbare Primärquelle (siehe § 7).
+- Werte ohne auffindbare Primärquelle (siehe § 7). Ausnahme sind die drei Solfeggio-Erweiterungen 174/285/963 Hz: Sie sind vom Master-Auftrag §3.1 und der ADR-Allowlist gefordert und werden als `nicht belegt` mit der populären Sekundärquelle [27] geführt (siehe 6.12).
 - Werte, die nur als Werbeversprechen existieren (z. B. „111 Hz – Klang der Tempel von Malta“).
 - Doppelte Einträge mit identischem Zahlenwert und identischer Aussage.
 
@@ -54,12 +54,12 @@ Die Kategorie sagt **nichts über die Wirksamkeit** aus. Auch ein physikalisch b
 
 | Status | Entscheidungsregel | Im Datensatz |
 |---|---|---|
-| `belegt` | Norm, Lehrbuch oder begutachtete Studie stützt die Aussage direkt; bei Messwerten reproduzierbar | 16 Einträge |
-| `plausibel` | Erste empirische Hinweise (Pilotstudien, Tiermodelle), aber keine belastbare Bestätigung am Menschen | 2 Einträge |
-| `nicht belegt` | Behauptung existiert, kontrollierte Evidenz fehlt | 6 Einträge |
-| `traditionell` | Zuordnung ist überliefert/gesetzt; Rechenregel nachvollziehbar, Bedeutung esoterisch | 8 Einträge |
+| `belegt` | Norm, Lehrbuch oder begutachtete Studie stützt die Aussage direkt; bei Messwerten reproduzierbar | 17 Einträge |
+| `plausibel` | Erste empirische Hinweise (Pilotstudien, Tiermodelle), aber keine belastbare Bestätigung am Menschen | 3 Einträge |
+| `nicht belegt` | Behauptung existiert, kontrollierte Evidenz fehlt | 11 Einträge |
+| `traditionell` | Zuordnung ist überliefert/gesetzt; Rechenregel nachvollziehbar, Bedeutung esoterisch | 10 Einträge |
 
-Summe: 32 Einträge, davon 17 `physikalisch` und 15 `esoterisch`.
+Summe: 41 Einträge, davon 19 `physikalisch` und 22 `esoterisch`.
 
 Zwei Regeln, die der Test maschinell prüft:
 
@@ -78,13 +78,14 @@ Zwei Regeln, die der Test maschinell prüft:
   "range_hz_min": 440,
   "range_hz_max": 440,
   "kategorie": "physikalisch | esoterisch",
-  "unterkategorie": "hoeren | eeg | stimmton | akustik | resonanz | solfeggio | planetarisch",
+  "unterkategorie": "hoeren | eeg | stimmton | akustik | resonanz | solfeggio | planetarisch | bioresonanz | klangschale | mantra | chakra",
   "evidenzstatus": "belegt | plausibel | nicht belegt | traditionell",
   "beschreibung_kurz": "max. 200 Zeichen, ohne Wirkversprechen",
   "quelle_titel": "Kurzzitat der Quelle",
   "quelle_url": "https://…",
   "partner_hz": null,
-  "warnhinweis": true
+  "warnhinweis": true,
+  "playback": { "mode": "none" }
 }
 ```
 
@@ -94,6 +95,7 @@ Konventionen:
 - **Bereich:** `hz = null`, Grenzen gesetzt (Hörbereich, EEG-Bänder, historische Kammertöne).
 - **Schwebungs-Demo:** `hz` ist der Grundton, `range_hz_max` und `partner_hz` der zweite Ton; die Differenz ist die Schwebungsfrequenz (440/444 → 4 Hz).
 - `warnhinweis` markiert Einträge, bei denen die UI den Hinweis „keine Wirkaussage“ bzw. einen Lautstärkehinweis einblenden muss.
+- `playback` ist optional und dokumentiert die Wiedergabe ausdrücklich (ADR §8.2). `mode: "none"` schließt eine hörbare Wiedergabe aus, auch wenn der Zahlenwert im Hörbereich liegt (Rife, Chladni, Klangschalen, Mantra, Chakren).
 
 ---
 
@@ -122,6 +124,8 @@ Legende: **Q** = Quelle im Datensatz, **Prüfung** = was beim Abruf tatsächlich
 | `kammerton-435` | 1859 Paris: 435 Hz (diapason normal) | belegt | [10] | „the standard of 435 (diapason normal) fixed in Paris in 1859 and confirmed in Vienna in 1885“ |
 | `schumann-783` | 1. Modus bei 7,83 Hz; Frequenz schwankt | belegt | [11] | „Their frequencies lie at 7.83 Hz (fundamental), 14.3, 20.8, 27.3 and 33.8 Hz“; „vary from day to day, even hourly“. Kein Hörschall. |
 | `gamma-40-stimulation` | 40 Hz reduziert Amyloid **im Mausmodell** | plausibel | [12] | Mausstudie (optogenetisch und 40-Hz-Flimmern); **keine** belegte Therapie am Menschen. |
+| `cymatics-chladni` | Sand zeigt Knotenlinien; Muster hängen von Plattenform und Resonanzfrequenz ab | belegt | [22] | Demonstrationsseite: „Sand on a vibrating plate collects along nodal lines“; Frequenzen 230–3.545 Hz (quadratisch), 631–5.201 Hz (dreieckig), 286–4.338 Hz (geigenförmig) — plattenspezifisch, keine feste Frequenz. |
+| `klangschale-obertoene` | Klangschalen: größenabhängige Grundtöne, unharmonische Obertöne | plausibel | [23] | Beobachtungsstudie (n = 62, keine Kontrollgruppe): weniger Spannung/Angst nach 60 Minuten Klangschalen-Meditation; die Autoren nennen die fehlende Randomisierung selbst als Limitation. Eine feste Schalenfrequenz gibt es nicht. |
 
 ### 5.2 Esoterisch / traditionell
 
@@ -142,6 +146,13 @@ Legende: **Q** = Quelle im Datensatz, **Prüfung** = was beim Abruf tatsächlich
 | `cousto-mars` | 144,72 Hz | traditionell | [15] | Dito. |
 | `cousto-jupiter` | 183,58 Hz | traditionell | [15] | Dito; der Shop führt abweichend 183,80 Hz (§ 6.6). |
 | `cousto-saturn` | 147,85 Hz | traditionell | [15] | Dito. |
+| `solfeggio-174` | 174 Hz, „beruhigend, erdend“ | nicht belegt | [27] | [27] führt 174/285/963 als „Erweiterung“ und nennt die Zuschreibungen; die Seite selbst schreibt, die Wirkung sei „not yet scientifically proven“. |
+| `solfeggio-285` | 285 Hz, „Erneuerung der Energiefelder“ | nicht belegt | [27] | Dito; keine Studie genannt. |
+| `solfeggio-963` | 963 Hz, „göttlich, Zirbeldrüse“ | nicht belegt | [27] | Dito; keine Studie genannt. |
+| `rife-frequenz-727` | 727/787/880 Hz seien „Rife-Frequenzen“ | nicht belegt | [24][25] | [24] ordnet 727/787/880 Hz der Crane-Ära (1950er) zu; Rife selbst arbeitete mit MHz-Trägerfrequenzen. [25] findet keine belastbare Evidenz und bezeichnet die meisten Behauptungen als Einzelfallberichte. |
+| `bioresonanz-geraete` | Bioresonanzgeräte diagnostizieren oder therapieren | nicht belegt | [26] | [26]: klinische Studien zeigen keine Zuverlässigkeit bei der Allergie-Diagnostik und keine Wirksamkeit bei Ekzem, Asthma, Krebs oder rheumatoider Arthritis. |
+| `chakra-frequenzzuordnungen` | Sieben Chakren; moderne Hz-Zuordnungen 174–963 Hz | traditionell | [29] | [29]: sieben Zentren, von der westlichen Medizin nicht anerkannt. Frequenzzuordnungen sind moderne Zusätze, variieren je nach Quelle und folgen den Solfeggio-Listen [27]. |
+| `mantra-om` | „Om“ ist eine überlieferte Rezitationssilbe | traditionell | [28] | [28] untersuchte hörbares OM-Chanting (n = 12) und beschreibt Vibrationsempfinden; eine feste Frequenz wird nicht genannt, die Pilotstudie ist keine Therapieaussage. |
 
 ---
 
@@ -232,17 +243,48 @@ Einordnung: Ein Unterschied von 2–5 Schlägen pro Minute bei kleinen Stichprob
 
 [12] zeigt im Mausmodell, dass 40-Hz-Stimulation (optogenetisch und als Lichtflimmern) Amyloid-β senkt und Mikroglia aktiviert. Das ist ein relevanter Grundlagenbefund, aber: Tiermodell, kein Audio, keine belegte Übertragbarkeit auf den Menschen. Status daher `plausibel` mit ausdrücklichem Hinweis, nicht `belegt`.
 
+### 6.9 Rife und Bioresonanz: Zahlen ohne Wirknachweis
+
+Rife-Geräte gehen auf die Behauptung zurück, Krankheitserreger hätten eine „Mortal Oscillatory Rate“, mit der sie sich zerstören ließen. Die heute kursierenden Audiozahlen sind davon abgeleitet: [24] ordnet 727, 787 und 880 Hz der Crane-Ära der 1950er-Jahre zu und weist darauf hin, dass Rife selbst mit Trägerfrequenzen im Megahertz-Bereich arbeitete; die „Consolidated Annotated Frequency List“ (CAFL) ist eine Hobbyisten-Sammlung mit tausenden, untereinander widersprüchlichen Einträgen. [25] (Cancer Research UK) findet keine belastbare Evidenz und bezeichnet die meisten Wirkbehauptungen als persönliche Berichte ohne wissenschaftliche Untersuchung. Deshalb: ein repräsentativer Eintrag `rife-frequenz-727` statt eines Listenimports, Status `nicht belegt`, `warnhinweis: true`, `playback: none`.
+
+Bioresonanz ist ein Gerätesegment, keine einzelne Frequenz. [26] (Memorial Sloan Kettering) fasst die klinische Evidenz zusammen: keine Zuverlässigkeit bei der Allergie-Diagnostik, keine Wirksamkeit bei atopischer Dermatitis, Asthma, Krebs oder rheumatoider Arthritis. Der Eintrag `bioresonanz-geraete` bildet deshalb einen Bereich 1 Hz–1 MHz ab (Modellgrenze, keine Gerätenorm) und ist nicht abspielbar.
+
+### 6.10 Cymatics und Chladni-Figuren: Figur statt Frequenz
+
+Chladni-Figuren entstehen, wenn eine Platte bei einer ihrer Resonanzfrequenzen schwingt und Sand sich an den Knotenlinien sammelt [22]. Die Muster sind plattenspezifisch: Die Demonstrationssammlung nennt für quadratische Platten 230–3.545 Hz, für dreieckige 631–5.201 Hz und für geigenförmige 286–4.338 Hz. Eine „Cymatics-Frequenz“ existiert damit nicht; der Eintrag `cymatics-chladni` ist ein Erklärungseintrag mit `hz: null` und dem Hörbereich als Modellgrenze. Er ist ausdrücklich nicht abspielbar, und die geplante Visualisierung (P9) bleibt nicht implementiert — der Eintrag behauptet keine Wirkung.
+
+### 6.11 Klangschalen, Mantras, Chakren
+
+- **Klangschalen:** Der Ton hängt von Größe, Form und Anschlagtechnik ab; Schalen haben unharmonische Teiltöne und keine feste Note. Die Beobachtungsstudie [23] (n = 62) berichtet weniger Spannung und Angst nach einer 60-minütigen Klangschalen-Meditation, hat aber keine Kontrollgruppe und keine Randomisierung. Status `plausibel`, `warnhinweis: true`. Der Bereich 60–2.000 Hz ist eine Modellgrenze für die Einordnung, keine Messung an einer konkreten Schale.
+- **Mantras:** „Om“ ist eine überlieferte Silbe, die in der eigenen Sprechstimme rezitiert wird; eine feste Frequenz ist nicht definiert. Die Pilotstudie [28] (n = 12) zeigt Aktivierungsmuster im fMRI, ist aber keine Therapieaussage. Status `traditionell`. Der Bereich 80–300 Hz entspricht der üblichen Grundfrequenz der Sprechstimme (Männer ca. 90–155 Hz, Frauen ca. 165–255 Hz) und ist keine „Mantra-Frequenz“.
+- **Chakren:** Das Sieben-Zentren-Modell ist überliefert und wird von der westlichen Medizin nicht anerkannt [29]. Frequenzzuordnungen sind moderne Zusätze: Die populären Solfeggio-Listen [27] verbinden 174–963 Hz mit einzelnen Zentren, andere Quellen nutzen 216–864 Hz oder Tuning-Fork-Sätze. Der Eintrag `chakra-frequenzzuordnungen` nennt deshalb nur den Bereich und den Querverweis auf die Kristallseite, ohne Wirkaussage und ohne Ton.
+
+### 6.12 Solfeggio-Erweiterungen 174/285/963 Hz
+
+Der Primärtext von 1999 [13] enthält ausschließlich die sechs Töne 396–852 Hz. 174, 285 und 963 Hz sind spätere Erweiterungen, für die sich 2026 keine Primärquelle finden ließ; die frühere Fassung dieses Dokuments hat sie deshalb ausgelassen (§ 7, alte Fassung). Der Master-Auftrag §3.1 fordert sie ausdrücklich, und ADR §8.2 führt sie in der Allowlist. Deshalb sind sie jetzt als eigene Einträge mit dem Status `nicht belegt` und der populären Herstellerliste [27] als Quelle aufgenommen — die Seite nennt die Zahlen und Zuschreibungen und schreibt selbst, die Wirkung sei nicht wissenschaftlich belegt. Damit ist keine Scope-Änderung des Master-Auftrags nötig; die Lücke ist gefüllt und bleibt als solche gekennzeichnet.
+
 ---
 
 ## 7. Bewusst nicht aufgenommene Einträge
 
 | Nicht aufgenommen | Grund |
 |---|---|
-| **174 Hz, 285 Hz, 963 Hz** | Diese drei Töne sind spätere Erweiterungen der Solfeggio-Liste. Im Primärtext von 1999 [13] stehen ausschließlich die sechs Töne 396–852; für 174/285/963 ließ sich keine Primärquelle finden, nur Sekundärlisten unterschiedlicher Zusammensetzung. Ohne belastbare Quelle kein Eintrag – die Lücke ist dokumentiert statt gefüllt. |
-| **Uranus, Neptun, Pluto (Cousto)** | Uranus/Neptun sind reine Wiederholungen des Verfahrens ohne zusätzlichen Erkenntniswert; Pluto hat in Coustos eigenen Publikationen zwei Werte (140,25/140,64 Hz, siehe 6.6). |
+| **Uranus, Neptun, Pluto (Cousto)** | Uranus und Neptun wiederholen nur das Oktavverfahren ohne zusätzlichen Erkenntniswert; Pluto hat in Coustos eigenen Publikationen zwei Werte (140,25/140,64 Hz, siehe 6.6). |
 | **„111 Hz – Tempelresonanz“** | Populäre Behauptung ohne nachvollziehbare Messung; keine Primärquelle gefunden. |
 | **„Beta-Beats für Fokus“, „Alpha für Entspannung“** | Das sind Wirkaussagen, nicht Frequenzen. Die Evidenzlage ist widersprüchlich [6]; solche Presets würden ein Versprechen in die UI tragen, das der Datensatz nicht deckt. |
 | **Infraschall-/Ultraschall-Presets zum Abspielen** | Vom Labor nicht reproduzierbar (Clamp 20–20.000 Hz) und für Lautsprecher/Wiedergabe ungeeignet; die Bereiche bleiben als Erklärungseinträge erhalten. |
+| **Vollständige Rife-/CAFL-Listen** | Tausende, untereinander widersprüchliche Einträge ohne kontrollierte Evidenz [24][25]. Ein repräsentativer Eintrag (`rife-frequenz-727`) dokumentiert das Thema, ohne eine Scheingenauigkeit zu erzeugen. |
+| **Chakra-Frequenztabellen einzelner Anbieter** | Die Zuordnungen widersprechen sich (174–963 Hz, 216–864 Hz, Tuning-Fork-Sätze) [27][29]. Der Datensatz nennt nur den Bereich und den traditionellen Status, keine Anbieterliste. |
+
+### 7.1 Bewusst aufgenommene Grenzfälle (Nachtrag zu Befund B2)
+
+| Aufgenommen | Begründung |
+|---|---|
+| `rife-frequenz-727`, `bioresonanz-geraete` | Master-Auftrag §3.1 und ADR §8.2 nennen Rife ausdrücklich. Status `nicht belegt`, nicht abspielbar. |
+| `cymatics-chladni` | Pflichtthema §3.1. Erklärungseintrag ohne Wirkaussage; P9 (Visualisierung) bleibt nicht implementiert. |
+| `klangschale-obertoene`, `mantra-om` | Pflichtthema §3.1; die Obertonreihe existiert bereits, Klangschalen und Mantras fehlten als eigene Einträge. |
+| `chakra-frequenzzuordnungen` | Pflichtthema §3.1; traditionell, ohne Wirkaussage, mit Querverweis auf die Kristallseite. |
+| `solfeggio-174`, `solfeggio-285`, `solfeggio-963` | Pflichtthema §3.1 und ADR-Allowlist; als `nicht belegt` mit populärer Sekundärquelle aufgenommen (siehe 6.12). |
 
 ---
 
@@ -286,7 +328,7 @@ node --test tests/frequencies-data.cjs
 npm run test:frequencies
 ```
 
-Der Test prüft 12 Punkte, darunter:
+Der Test prüft 14 Punkte, darunter:
 
 - valides JSON, mindestens 20 Einträge, eindeutige IDs, beide Kategorien
 - Pflichtfelder und Typen, Bereichslogik, `hz` innerhalb des Bereichs
@@ -296,6 +338,8 @@ Der Test prüft 12 Punkte, darunter:
 - Blacklist gegen Wirkformulierungen („heilt“, „hilft gegen“, „senkt den Blutdruck“ …); DNA-Aussagen nur mit Einordnung „unbelegt/beworben/Behauptung“
 - esoterische Einträge nie `belegt`; `warnhinweis` bei allen nicht-belegten Status gesetzt
 - Cousto-Werte aus astronomischen Perioden nachgerechnet
+- Themen-Abdeckung: Pflicht-IDs aus Master-Auftrag §3.1 (Rife/Bioresonanz, Cymatics/Chladni, Klangschalen/Mantras, Chakren, Solfeggio 174/285/963); fehlt ein Thema, schlägt der Test mit dem ID-Namen fehl
+- Wiedergaberegeln der Themen-Einträge: Rife, Bioresonanz, Chladni, Klangschalen, Mantra und Chakren tragen `playback: none` und eine https-Quelle; die drei Solfeggio-Erweiterungen tragen `nicht belegt` und `warnhinweis: true`
 
 **Manuelle Prüfungen, die der Test nicht leisten kann:** ob die Quelle den Wert tatsächlich nennt (Spalte „Prüfung“ in § 5), ob die Kurzbeschreibung den Quellinhalt verzerrt, und ob eine Quelle für die konkrete Behauptung taugt. Diese Prüfungen sind oben dokumentiert und bei Änderungen zu wiederholen.
 
@@ -309,13 +353,13 @@ Der Test prüft 12 Punkte, darunter:
 - **Schwebung:** Bei gesetztem `partner_hz` zwei Oszillatoren mischen, Gain entsprechend halbieren (Summe zweier Vollausschläge sonst +6 dB).
 - **Warnhinweis:** `warnhinweis: true` → Hinweis „Esoterische/traditionelle Zuordnung, keine belegte Wirkung – nicht zur Behandlung von Krankheiten“ in der Detailansicht.
 - **Barrierefreiheit:** Status nicht nur über Farbe codieren (Text + Icon), Frequenzwert als Text ausgeben („440 Hz“), Screenreader-Ansage bei Presetwechsel.
-- **Kein Autoplay**, AudioContext erst nach Nutzer-Interaktion; Hard-Cap bei −20 dBFS (siehe ADR).
+- **Kein Autoplay**, AudioContext erst nach Nutzer-Interaktion; Startpegel −20 dBFS, harte Ausgabegrenze −6 dBFS (siehe ADR und `data/frequencies.json` → `disclaimer.lautstaerke`).
 
 ---
 
 ## 12. Quellenverzeichnis
 
-Alle URLs abgerufen am 2026-11-02.
+Alle URLs abgerufen am 2026-11-02; [22]–[29] zusätzlich am 2026-11-03 geprüft (HTTP-Status und Inhalt).
 
 1. OpenStax, *College Physics 2e*, Kap. 17.6 „Hearing“ — https://openstax.org/books/college-physics-2e/pages/17-6-hearing (CC BY-NC-SA; nur als Nachweis zitiert)
 2. C. Kugler et al., „Temporal integration of infrasound at threshold“, *J. Assoc. Res. Otolaryngol.* (2023), PMC10389702 — https://pmc.ncbi.nlm.nih.gov/articles/PMC10389702/
@@ -338,6 +382,14 @@ Alle URLs abgerufen am 2026-11-02.
 19. T. Babayi & G. H. Riazi, „The Effects of 528 Hz Sound Wave to Reduce Cell Death in Human Astrocyte Primary Cell Culture Treated with Ethanol“, *J. Addict. Res. Ther.* 8:335 (2017) — https://doi.org/10.4172/2155-6105.1000335
 20. § 3 Heilmittelwerbegesetz (HWG) — https://www.gesetze-im-internet.de/heilmwerbg/__3.html
 21. WHO, „Deafness and hearing loss: Safe listening“ — https://www.who.int/news-room/questions-and-answers/item/deafness-and-hearing-loss-safe-listening
+22. University of Colorado Boulder, Physics Demonstrations, „Chladni Figures“ (Plattengeometrie, Resonanzfrequenzen 230–5.201 Hz) — https://physicslabs.colorado.edu/demos/oscillations-and-waves/instruments/resonance-in-plates-bars-solids/chladni-figures
+23. T. L. Goldsby, M. E. Goldsby, M. McWalters & P. J. Mills, „Effects of Singing Bowl Sound Meditation on Mood, Tension, and Well-being: An Observational Study“, *J. Evid. Based Complementary Altern. Med.* 22(3):401–406 (2017), PMC5871151 — https://pmc.ncbi.nlm.nih.gov/articles/PMC5871151/
+24. Radionics.pro, „Rife frequency lists: CAFL, origins and radionic rates“ (727/787/880 Hz als Crane-Ära; CAFL als Hobbyisten-Sammlung) — https://radionics.pro/glossary/rife-frequencies
+25. Cancer Research UK, „Rife machines and cancer“ (keine belastbare Evidenz; Einzelfallberichte) — https://www.cancerresearchuk.org/about-cancer/treatment/complementary-alternative-therapies/individual-therapies/rife-machine-and-cancer
+26. Memorial Sloan Kettering Cancer Center, „BioResonance Therapy“ (klinische Studien ohne Nutzen) — https://www.mskcc.org/cancer-care/integrative-medicine/herbs/bioresonance-therapy
+27. Meinl Sonic Energy, „Solfeggio-Frequencies“ (Herstellerliste mit 174/285/963 Hz und dem Hinweis, die Wirkung sei nicht wissenschaftlich belegt) — https://meinlsonicenergy.com/en/topics/Solfeggio-Frequencies
+28. B. G. Kalyani et al., „Neurohemodynamic correlates of ‚OM‘ chanting: A pilot functional magnetic resonance imaging study“, *Int. J. Yoga* 4(1):3–6 (2011), PMC3099099 — https://pmc.ncbi.nlm.nih.gov/articles/PMC3099099/
+29. Cleveland Clinic, „7 Chakras and What They Mean“ (sieben Zentren; von der westlichen Medizin nicht anerkannt) — https://health.clevelandclinic.org/chakras
 
 ---
 
@@ -346,3 +398,4 @@ Alle URLs abgerufen am 2026-11-02.
 | Datum | Änderung |
 |---|---|
 | 2026-11-02 | Erstfassung: 32 Einträge (17 physikalisch, 15 esoterisch), Schema, Vertragstest, Disclaimer |
+| 2026-11-03 | Befund B2 (Abschlussreview t_a0f14bb2): neun Pflichtthemen-Einträge ergänzt (Rife 727 Hz, Bioresonanzgeräte, Chladni/Cymatics, Klangschalen, Mantra „Om“, Chakren, Solfeggio 174/285/963). Neuer Stand 41 Einträge (19 physikalisch, 22 esoterisch), Status 17/3/11/10, 13 hörbar. § 7 dokumentiert die bewussten Auslassungen und die aufgenommenen Grenzfälle; Themen-Abdeckungstest in `tests/frequencies-data.cjs`. |
