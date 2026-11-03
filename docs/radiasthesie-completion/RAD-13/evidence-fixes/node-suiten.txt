@@ -1,0 +1,447 @@
+
+> esoterik-welt@1.0.0 test:all
+> npm run test:unit && npm run test:pages && npm run test:crystals && npm run test:astrologie && npm run test:radiasthesie && npm run test:radiasthesie:statisch && npm run test:radiasthesie:vertraege && npm run test:radiasthesie:simulator && npm run test:radiasthesie:tafeln && npm run test:radiasthesie:experiment && npm run test:radiasthesie:journal && npm run test:tarot && npm run test:tarot:decks && npm run test:moon && npm run test:offline && npm run test:e2e
+
+
+> esoterik-welt@1.0.0 test:unit
+> jest
+
+PASS tests/api.test.js
+  Esoterik-Welt API
+    √ GET /api/health should return ok status (112 ms)
+    √ GET / should serve index.html (15 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        4.446 s
+Ran all test suites.
+
+> esoterik-welt@1.0.0 test:pages
+> node --test tests/pages-regression.cjs
+
+✔ production preview serves the designed 404 for nested unknown paths (156.1242ms)
+✔ impressum.html shares the existing theme and stays within the Pages project (0.5635ms)
+✔ datenschutz.html shares the existing theme and stays within the Pages project (0.269ms)
+✔ haftung.html shares the existing theme and stays within the Pages project (0.1942ms)
+✔ all local module imports resolve to shipped files (4.2246ms)
+✔ footer and error-page navigation preserve the project base (0.3428ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 231.3205
+
+> esoterik-welt@1.0.0 test:crystals
+> node --test tests/crystals-attribution.cjs
+
+✔ 30 Bilder mit vier Ausgabestufen und vorhandenen WebP-Dateien (7.1252ms)
+✔ attribution_text_required ist aus credit/production generiert (0 Abweichungen) (1.3738ms)
+✔ änderungsbezogene Falschangaben sind ausgeschlossen (0.4587ms)
+✔ credit.changes steht wörtlich im Nachweis, Retusche wird genannt (0.2082ms)
+✔ namensnennungspflichtige Bilder sind vollständig und ShareAlike ausgewiesen (0.3441ms)
+✔ data/crystals.json und Sammelnachweis spiegeln das Manifest (0.5686ms)
+✔ crys-15 nennt den schwarzen Fotogrund (P2.4) (0.1843ms)
+✔ Alt-Texte widersprechen der gemessenen Grundhelligkeit nicht (P2.2) (1.7128ms)
+✔ Generator und Sync-Skript erzeugen denselben Text (0.3389ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 83.9924
+
+> esoterik-welt@1.0.0 test:astrologie
+> node --test tests/astrologie.mjs
+
+✔ generated data module matches the approved content package byte for byte (24.1307ms)
+✔ all required counts are present and rendered from the same data (0.5602ms)
+✔ every id, slug and cross reference resolves (1.2369ms)
+✔ every source reference and inline marker points at a real ledger entry (3.3522ms)
+✔ hub renders four entries, the legend and the no-calculation notice (0.3476ms)
+✔ learning path renders six stages and every stage detail (0.6728ms)
+✔ all twelve signs render fully in index and detail (1.9263ms)
+✔ sign filters and search return correct counts and an empty state (0.745ms)
+✔ ten factors render with astronomy, themes and questions (1.7016ms)
+✔ twelve houses render with themes, questions and the caution box (0.994ms)
+✔ five aspects render with angle and orb conventions (0.8351ms)
+✔ 24 basics render grouped in three levels with core points (1.4425ms)
+✔ four fictional examples render assumptions, steps, synthesis and limits (0.631ms)
+✔ 15 FAQ answers render with short and long answer and related links (0.5906ms)
+✔ 65 glossary terms render alphabetically with see-also links (9.1461ms)
+✔ source ledger renders all 25 sources and 28 claims with fetch status (2.1287ms)
+✔ method page states assumption, evidence, no-calculation and privacy (0.3635ms)
+✔ search is diacritic-insensitive, grouped and has a real empty state (1.7407ms)
+✔ unknown sub-route renders an in-area error view with real links (0.296ms)
+✔ every view avoids placeholders, dead hashes and unsafe markup (10.1103ms)
+✔ internal links only use known area routes (1.395ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 154.1758
+
+> esoterik-welt@1.0.0 test:radiasthesie
+> node --test tests/radiasthesie.mjs
+
+✔ drei Themenseiten mit vollständigem Kapitelinventar (5.3872ms)
+✔ jeder Quellenmarker im Text löst auf eine vorhandene Quelle auf (0.5017ms)
+✔ Quellenverzeichnis ist vollständig und ohne Platzhalter (0.53ms)
+✔ Glossar und Evidenzstufen sind vollständig (0.2183ms)
+✔ Router-Vokabular wird vollständig aufgelöst (0.3281ms)
+✔ Suche findet Themen, Kapitel, Glossar und Quellen — auch mit Umlauten (14.0861ms)
+✔ Glossarfilter grenzt auf Buchstabe und Suchbegriff ein (0.4753ms)
+✔ Landingpage: eine H1, drei Themenkarten, Einordnungsband und Stufenlegende (0.95ms)
+✔ Themenseiten: Kapitel, Inhaltsverzeichnis, Quellenpanel und Einordnungskasten (3.5034ms)
+✔ Themenseite verlinkt nicht auf sich selbst als verwandt (1.3418ms)
+✔ Themenvernetzung: alle acht Auftragsthemen sind verortet oder als Lücke entschieden (0.2785ms)
+✔ jede verlinkte Vernetzungsroute löst auf und ist eindeutig (0.2123ms)
+✔ Landingpage trennt vorhandene Anschlüsse von benannten Lücken (0.2368ms)
+✔ jede Themenseite verlinkt mindestens zwei andere Module (IA §9) (1.3886ms)
+✔ Frequenz, Schwingung und Bovis bleiben getrennt (Auftrag RAD-11) (0.8226ms)
+✔ Glossar: Buchstabenleiste, Suche und 17 Begriffe (0.7635ms)
+✔ Quellen: 66 Karten mit Sprungziel und Rückverweis (1.6137ms)
+✔ Methodik: Abschnitte inklusive Bildnachweise, keine Wirkversprechen (0.4944ms)
+✔ Bildnachweise nennen alle sechs Fotos mit Lizenz und Share-Alike-Hinweis (0.2361ms)
+✔ Fotos stehen im passenden Kapitel und tragen Alt-Text, Maße und Attributionszeile (1.2246ms)
+✔ Foto-Slot deklariert die gemessene Layoutbreite und skaliert nicht über die Quelle (RAD-13/F2) (1.4151ms)
+✔ Suche und Fehleransicht führen immer zurück (2.9018ms)
+✔ HTML wird escaped, Daten erscheinen nicht als Markup (0.3765ms)
+✔ BreadcrumbList ist gültiges JSON-LD ohne Fragmentadressen (0.3363ms)
+✔ Titelgrenze und Canonical-Zuordnung halten die Projektregeln (0.1734ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 141.5117
+
+> esoterik-welt@1.0.0 test:radiasthesie:statisch
+> node --test tests/radiasthesie-statisch.mjs
+
+✔ sieben Dokumente, je ein Titel unter 60 Zeichen, eindeutig (5.5745ms)
+✔ Meta-Description, Canonical und Open Graph sind konsistent (0.4639ms)
+✔ nur JSON-LD als Skript — keine JavaScript-Abhängigkeit (3.7863ms)
+✔ strukturierte Daten: WebPage/CollectionPage und BreadcrumbList ohne Fragmente (1.0945ms)
+✔ Themenseiten: Kapitel und Kerntexte stehen vollständig im HTML (15.1118ms)
+✔ Glossar: DefinedTermSet deckt alle Begriffe ab, keine Suchmaske ohne Funktion (1.9334ms)
+✔ Brotkrümel im HTML entsprechen der JSON-LD-Hierarchie (0.8951ms)
+✔ Überschriftenordnung und IDs sind eindeutig (0.8559ms)
+✔ Bilder: Alt-Text vorhanden, Dateien existieren, Maße gesetzt (2.139ms)
+✔ interne Links und Sprungziele sind auflösbar (70.0482ms)
+✔ Sitemap: nur echte Dokumente, vollständig, ohne Fragmente (0.7871ms)
+✔ Fotos deklarieren die gemessene Slotbreite (RAD-13/F2) (0.5106ms)
+✔ Fließtext-Links sind zusätzlich zur Farbe erkennbar (WCAG 1.4.1, RAD-13/F1) (0.7474ms)
+✔ keine erfundenen Titel- oder Beschreibungsbehauptungen (2.4959ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 194.2974
+
+> esoterik-welt@1.0.0 test:radiasthesie:vertraege
+> node --test tests/radiasthesie-vertraege.mjs
+
+✔ Taxonomie und Gesamtdatensatz sind vertragskonform (5.1057ms)
+✔ Vernetzung: offene Einträge brauchen eine Entscheidung und keine Route (4.3289ms)
+✔ bestehendes Artikel- und Quellenmodell bleibt unverändert nutzbar (0.2626ms)
+✔ jede Entität verweist nur auf vorhandene Quellen, Themen und Medien (0.4124ms)
+✔ verfügbare Medien zeigen auf existierende Dateien, geplante nicht (0.6031ms)
+✔ Werkstatt-Fassade liefert eingefrorene, aufgelöste Konfiguration (0.1633ms)
+✔ unbekannte Quelle, doppelte id und doppelter slug werden abgelehnt (7.3908ms)
+✔ ungültige Felder, Daten und Zustände werden abgelehnt (11.4088ms)
+✔ falscher Vertragsstand wird abgelehnt (2.4395ms)
+✔ alle Katalogprotokolle haben feste Fallzahl, Abbruchregel und Basiswahrscheinlichkeit 1/k (0.3183ms)
+✔ unvollständige oder widersprüchliche Protokolle werden abgelehnt (0.271ms)
+✔ Lauf: Commitment ohne Ziel, Sperre vor Enthüllung, Treffer wird berechnet (12.8734ms)
+✔ Enthüllung ohne Sperre und mit manipuliertem Secret ist nicht zulässig (0.8487ms)
+✔ manipulierte gespeicherte Läufe werden erkannt (1.2584ms)
+✔ vollständiger Lauf endet mit Status complete und auswertbarer Zusammenfassung (3.7004ms)
+✔ Tagebucheintrag: Pflichtfelder, Grenzen, Steuerzeichen und Datum (0.8593ms)
+✔ Journalbezug zum Lauf ist referenziell geprüft (3.3113ms)
+✔ Journal-Export und -Import sind verlustfrei und schemafest (0.6586ms)
+✔ Import lehnt falsches Schema, falsche App, falsche Art und ungültige Einträge atomar ab (2.1444ms)
+✔ Export verweigert ungültige Daten statt sie zu schreiben (0.2161ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 142.0047
+
+> esoterik-welt@1.0.0 test:radiasthesie:simulator
+> node --test tests/radiasthesie-simulator.mjs
+
+✔ Parameterbereiche entsprechen dem dokumentierten Gültigkeitsbereich (1.2522ms)
+✔ Ungültige Längen, Auslenkungen und Dämpfungswerte werden abgewiesen (0.6318ms)
+✔ Kleinwinkelformel trifft die Referenzwerte für 25 cm und 1 m (0.2151ms)
+✔ Startzustand ruht in der Anfangsauslenkung (0.2154ms)
+✔ Ein RK4-Schritt ist deterministisch und verändert den Zustand (0.2456ms)
+✔ Ungedämpft bei kleiner Auslenkung: gemessene Dauer entspricht T₀ (2.6315ms)
+✔ Große Auslenkung: gemessene Dauer folgt der exakten elliptischen Referenz (2.9447ms)
+✔ Kleinwinkelformel unterschätzt die Dauer mit wachsendem Winkel (1.6967ms)
+✔ Dämpfung: Amplitude klingt monoton ab und folgt dem logarithmischen Dekrement (1.1505ms)
+✔ Gedämpfte Dauer entspricht T_ged = 2π/(ω₀√(1−ζ²)) (0.8381ms)
+✔ Ohne Dämpfung bleibt die Energie erhalten, mit Dämpfung sinkt sie (0.9456ms)
+✔ advance() liefert nach gleicher simulierter Zeit denselben Zustand (0.56ms)
+✔ simulate() ist unabhängig von der Bildrate (0.6322ms)
+✔ advance() begrenzt einen Aufruf und ignoriert negative oder ungültige Zeit (0.1888ms)
+✔ Auslenkung 0 bleibt in Ruhe und erzeugt keine Periode (0.8596ms)
+✔ Starke Dämpfung bleibt über 30 s stabil und läuft nicht über (2.2043ms)
+✔ Periodenmesser interpoliert den Nulldurchgang und zählt nur Aufwärtswechsel (0.2898ms)
+✔ Anzeigeformate nutzen deutsches Dezimalkomma und typografisches Minus (0.1654ms)
+✔ Route #pendeln/labor liefert die Laboransicht, unbekannte Slugs bleiben 404 (0.2498ms)
+✔ Laboransicht: eine H1, Regler mit Labels, drei Darstellungen, Disclaimer (0.963ms)
+✔ Startseite verlinkt Pendellabor, Tafel-Studio, Labor und Tagebuch als verfügbare Werkzeuge (0.9345ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 109.168
+
+> esoterik-welt@1.0.0 test:radiasthesie:tafeln
+> node --test tests/pendeltafel-studio.mjs
+
+✔ sechs Vorlagen mit erwarteten Segmentzahlen und Beschriftungen (1.1868ms)
+✔ Standardkonfiguration ist eingefroren und schema-konform (0.4398ms)
+✔ Ja/Nein-Tafel: JA links, NEIN rechts, gleiche Winkel (0.2795ms)
+✔ Zahlenkreis: zehn Segmente, 0 oben, gleichmäßig verteilt (0.186ms)
+✔ Buchstabentafel: 26 eigene Positionen, alle innerhalb der Fläche (0.2612ms)
+✔ Segmenttafel: zwölf Segmente im 30-Grad-Raster (0.1614ms)
+✔ Zeichenlängen-Grenze folgt der Segmentzahl (0.1166ms)
+✔ Schriftgröße bleibt im zulässigen Band und wird bei mehr Segmenten kleiner (0.1454ms)
+✔ gültige Konfiguration wird übernommen und getrimmt (0.2743ms)
+✔ Nicht-Objekte werden abgelehnt (0.2213ms)
+✔ falscher Schema-Bezeichner wird abgelehnt (0.1198ms)
+✔ unbekannte Felder werden abgelehnt — auch onload, href und html (0.1879ms)
+✔ unbekannte Vorlage und unbekannter Farbstil werden abgelehnt (0.1553ms)
+✔ Segmentzahl außerhalb 2–48 wird abgelehnt (0.2347ms)
+✔ leere und zu lange Beschriftungen werden abgelehnt (0.1881ms)
+✔ Steuerzeichen und Zeilenumbrüche werden abgelehnt (0.1025ms)
+✔ Markup in Beschriftung und Überschrift wird abgelehnt (0.1476ms)
+✔ Überschrift: leer und zu lang werden abgelehnt (0.0681ms)
+✔ Umlaute und Sonderzeichen sind erlaubt und bleiben erhalten (0.3719ms)
+✔ doppelte Beschriftungen sind erlaubt, werden aber gemeldet (0.0868ms)
+✔ Importgröße: mehr als 32 KiB werden vor dem Parsen abgelehnt (0.2403ms)
+✔ JSON-Import: leer, kaputt und mit BOM (0.1704ms)
+✔ Export, Reimport und erneuter Export ergeben dieselbe Zeichnung (0.2237ms)
+✔ ungültige Konfiguration lässt sich nicht serialisieren (0.2884ms)
+✔ SVG ist deterministisch und eigenständig (0.7099ms)
+✔ SVG enthält keine Skripte, Eventhandler oder externen Verweise (1.3582ms)
+✔ jede Beschriftung steht genau einmal im SVG, dazu Titel und Fußzeile (0.2276ms)
+✔ escapeXml deckt alle fünf XML-Sonderzeichen ab (0.0754ms)
+✔ ungültige Eingaben werden auch beim Zeichnen abgelehnt (0.1427ms)
+✔ Farbstil ändert die Zeichnung, nicht die Geometrie (0.1258ms)
+✔ Farbstile erfüllen die Kontrastanforderungen (0.1905ms)
+✔ Dateiname wird aus der Überschrift gebildet und bleibt sicher (0.1679ms)
+✔ Route #pendeln/studio löst die Studio-Ansicht aus (0.18ms)
+✔ Studio-Ansicht enthält Bedienung, Vorschau und Druckansicht (0.5847ms)
+✔ Werkstatt-Karte des Studios ist verfügbar und verlinkt (0.6747ms)
+✔ Druckvariante enthält nur die Segmente, aber weiterhin Titel und Beschreibung (0.1804ms)
+✔ Styleheet enthält die A4-Druckregeln für die Tafel (0.6667ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 96.0334
+
+> esoterik-welt@1.0.0 test:radiasthesie:experiment
+> node --test tests/experiment-statistik.mjs
+
+✔ Binomialtest trifft unabhängig gerechnete Referenzwerte (1.0883ms)
+✔ Binomialtest ist symmetrisch und bleibt im gültigen Bereich (0.545ms)
+✔ ungültige Eingaben für die Statistik werfen RangeError (0.5155ms)
+✔ Wilson-Intervall trifft Referenzwerte und bleibt in [0,1] (0.6543ms)
+✔ analyseCounts rechnet Erwartung, Quote und Schwelle aus dem Protokoll (0.2806ms)
+✔ Formatierung nutzt deutsche Schreibweise und vier p-Nachkommastellen (12.3742ms)
+✔ Einordnung bleibt zurückhaltend und nennt Zwischenstand und Schwelle (1.2441ms)
+✔ Beschriftungen decken alle Testarten und k Ziele ab (0.208ms)
+✔ Grenzen des Protokolls sind 2–10 Ziele und 10–200 Versuche (0.1525ms)
+✔ vollständiger Lauf: Sperre vor Enthüllung, Auswertung stimmt mit den Versuchen (18.2585ms)
+✔ ohne enthülltes Ziel enthält der Lauf weder Zielindex noch Salt (0.575ms)
+✔ Sperre ist unveränderlich und die Reihenfolge ist Vertrag (1.0235ms)
+✔ CSV-Export: BOM, Semikolon, CRLF, Quoting und nur enthüllte Ziele (7.6661ms)
+✔ JSON-Export ist vertragskonform und wieder importierbar (4.3505ms)
+✔ Speicher: leerer Stand, Rundlauf und belegte Antworten (6.0102ms)
+✔ Speicher: defekter Umschlag wird gesichert und geleert (0.2804ms)
+✔ Speicher: neueres Schema wird nicht überschrieben (0.0752ms)
+✔ Speicher: Quota und fehlender Speicher liefern eine Meldung statt Throw (0.112ms)
+✔ gesperrte Antwort ist nach dem Schreiben nachweisbar gespeichert (0.989ms)
+✔ Zufallsquelle nutzt Web Crypto und wirft ohne Crypto (0.227ms)
+✔ drawIndex verwerfe unbrauchbare Rohwerte (Rejection Sampling) (0.1546ms)
+✔ Produktionsmodule enthalten keinen Math.random-Fallback (0.5883ms)
+✔ Route #pendeln/experiment löst die Ansicht aus (1.3556ms)
+✔ Werkstatt-Karte „Experimentierlabor“ ist verfügbar und verlinkt (0.8355ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 152.163
+
+> esoterik-welt@1.0.0 test:radiasthesie:journal
+> node --test tests/journal-speicher.mjs
+
+✔ Speicher: leerer Stand und Rundlauf mit Sortierung nach Datum (10.6739ms)
+✔ Speicher: defektes JSON wird gesichert und geleert, ohne Throw (0.3262ms)
+✔ Speicher: falscher Umschlag und fehlende Liste werden gesichert (0.1534ms)
+✔ Speicher: neueres Schema wird gemeldet, aber nicht überschrieben (0.8851ms)
+✔ Speicher: Quota und fehlender Speicher liefern eine Meldung statt Throw (0.3931ms)
+✔ Speicher: Obergrenze von 500 Einträgen wird nicht überschritten (0.6734ms)
+✔ vollständige Löschung entfernt alle esot_rad_-Schlüssel, fremde bleiben (0.2858ms)
+✔ Löschung meldet Schlüssel, die sich nicht entfernen lassen (0.1714ms)
+✔ Listen: ergänzen, ersetzen, entfernen, filtern, zählen (0.681ms)
+✔ Datum und Sicherheit werden deutsch formatiert, Unbekanntes bleibt sichtbar (0.3062ms)
+✔ buildEntry erzeugt Kennung und Erstellzeit und trimmt Rand-Leerzeichen (0.3068ms)
+✔ buildEntry lehnt ungültige Felder mit Feldnamen ab (0.3188ms)
+✔ buildEntry: Bearbeitung behält Kennung und Erstellzeit, leert optionale Felder (0.2676ms)
+✔ Laufbezug: runId erfordert experimentId und einen bekannten Lauf (20.0587ms)
+✔ Übernahme aus dem Labor: nur vollständig enthüllte Läufe, Bezug bleibt stabil (5.0465ms)
+✔ Bearbeitung mit gelöschtem Lauf: Struktur bleibt prüfbar, Bezug bleibt Text (4.9902ms)
+✔ CSV: BOM, Semikolon, CRLF, Quoting und deutsche Spalten (0.4646ms)
+✔ CSV: leere Liste erzeugt nur den Kopf, Sonderzeichen bleiben literal (0.1911ms)
+✔ JSON-Export ist vertragskonform und wieder importierbar (0.5693ms)
+✔ Import ist atomar: ein ungültiger Eintrag lehnt die ganze Datei ab (0.2124ms)
+✔ Import lehnt fremde Art, Schema, Größe und leeren Text ab (1.5485ms)
+✔ Import ignoriert unbekannte Felder und speichert sie nicht (Datensparsamkeit) (0.251ms)
+✔ Import über 500 Einträge wird abgelehnt (2.455ms)
+✔ Zusammenführung: gleiche Kennung ersetzt, neue ergänzt, Grenze gilt fürs Ergebnis (0.3886ms)
+✔ Route #pendeln/journal löst die Ansicht aus (1.2401ms)
+✔ Werkstatt-Karte „Pendeltagebuch“ ist verfügbar und verlinkt (0.6479ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 130.0026
+
+> esoterik-welt@1.0.0 test:tarot
+> node --test tests/tarot-deck.cjs
+
+✔ deck manifest: 78 stable ids, 22 + 4x14, no duplicates, canonical names (1.6625ms)
+✔ deck manifest: every declared file exists with the declared hash, bytes and 3:5 size (99.0852ms)
+✔ card content: individual keywords and both interpretations for all 78 cards (2.526ms)
+✔ HTTP edition: all 78 cards open with their own asset, name, numeral and interpretation (7444.3176ms)
+✔ file:// edition: all 78 cards open offline from Lokal.html (7976.8503ms)
+✔ filters and search: 22 / 56 / 14 per suit, empty state, reset (826.7446ms)
+✔ draws: single and three-card spread keep the drawn orientation and the back image (8577.8811ms)
+✔ keyboard and reduced motion: Enter opens, Escape restores focus, draw settles instantly (610.8514ms)
+✔ stored deck id: unknown value falls back to v1 and old history keeps working (555.0092ms)
+✔ payload: first view loads no 1200 px master, zoom does (3393.7226ms)
+✔ missing artwork: the dialog names the failure instead of a broken icon (1247.7518ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31095.0614
+
+> esoterik-welt@1.0.0 test:tarot:decks
+> node --test tests/tarot-decks-v2.cjs
+
+✔ registry: two decks, V1 stays the default, both carry the same 78 ids (1.2285ms)
+✔ shipped assets: 156 card mappings exist with declared bytes, hashes and 3:5 sizes (172.1368ms)
+✔ registry paths and filesystem agree for all 156 mappings and both card backs (11.1471ms)
+✔ V1 deck is untouched by the second deck (manifest, bytes and card count) (1.7633ms)
+✔ picker: labeled previews, V1 selected by default, gallery uses V1 (691.2721ms)
+✔ keyboard switch: arrow key changes deck, persists across reload, gallery follows (1205.622ms)
+✔ dialog and draw: 156 dialog mappings follow the deck, draw keeps ids and orientation (4553.6253ms)
+✔ stored deck id: unknown value falls back to V1, heals the key and keeps history (664.06ms)
+✔ payload: no second master set, no double initial load; the deck lazily loads its own thumbs (3663.7318ms)
+✔ missing asset: a broken V2 thumbnail is named instead of showing a broken icon (714.6299ms)
+✔ mobile 375/768: picker fits, switches, and the gallery stays inside the viewport (1167.0461ms)
+✔ file:// edition: both decks decode from disk, switch and reload work offline (1012.8358ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14183.9941
+
+> esoterik-welt@1.0.0 test:moon
+> node --test tests/moon-astro.cjs
+
+✔ Fixture-Dateien tragen ihre Herkunft (0.8773ms)
+✔ alle 192 Hauptphasen 2024–2027 liegen innerhalb 60 s der USNO-Zeit (11.8629ms)
+✔ Beleuchtungsgrad weicht höchstens 1 Prozentpunkt von JPL Horizons ab (1.6658ms)
+✔ Phasenfolge ist streng aufsteigend und hält die Viertel-Abstände ein (0.712ms)
+✔ Jahresgrenze: Dezember 2025 geht ohne Lücke in Januar 2026 über (14.6371ms)
+✔ Mittlerer synodischer Monat aus der eigenen Berechnung liegt bei 29,53 Tagen (0.5801ms)
+✔ Zeitzone Europe/Berlin: DST-Wechsel wird korrekt umgesetzt (0.8428ms)
+✔ Tagesgrenze: Vollmond am 29.06.2026 23:56 UTC ist in Berlin der 30. Juni (0.2495ms)
+✔ Monatsraster November 2026: Wochentage, Phasenvielfalt und Ereignisse (3.8264ms)
+✔ Regression: kein Tag mit hoher Beleuchtung wird als Neumond gelabelt (10.6577ms)
+✔ Zustand am 02.11.2026 02:15 MEZ stimmt mit Kalender und nächstem Ereignis überein (0.2739ms)
+✔ Phasenname folgt dem Beleuchtungsband und widerspricht der Prozentzahl nie (2.587ms)
+✔ Kalendertag-Differenz: 23:30 → 00:30 ist ein Tag, nicht null (0.5975ms)
+✔ iCal-Export: 49 Termine, CRLF, UTC-Zeitstempel, eindeutige UIDs (5.0683ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 135.3826
+
+> esoterik-welt@1.0.0 test:offline
+> npm run build:local && node --test tests/offline-file.cjs
+
+
+> esoterik-welt@1.0.0 build:local
+> node scripts/build-local.cjs
+
+Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.
+✔ Lokal.html exists (npm run build:local) (0.6461ms)
+✔ offline file entry serves every route without network access (2080.6519ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2377.7798
+
+> esoterik-welt@1.0.0 test:e2e
+> npm run build && playwright test
+
+
+> esoterik-welt@1.0.0 build
+> node scripts/build-pages.cjs
+
+Statische Seiten geschrieben: 7 Dokumente, Titel 45–59 Zeichen, Sitemap 11 Einträge.
+Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.
+Static production build ready: dist/Esoterik-Welt/ (canonical Pages sources; static module documents included).
+Error: http://127.0.0.1:3100/api/health is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer.
+
+EXIT:1

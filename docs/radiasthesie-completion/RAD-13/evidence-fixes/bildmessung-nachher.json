@@ -1,0 +1,13 @@
+{
+ "herkunft": "images-after2.json",
+ "breiten": [
+  320,
+  375,
+  768,
+  1440
+ ],
+ "routen": 20,
+ "laeufe": 80,
+ "befunde_IMG_RES": 0,
+ "befunde": []
+}

@@ -1,0 +1,438 @@
+{
+ "axeVersion": "4.14.0",
+ "widths": [
+  1440,
+  375
+ ],
+ "runs": [
+  {
+   "width": 1440,
+   "route": "module-landing",
+   "path": "/#pendeln",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    },
+    {
+     "id": "color-contrast",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "topic-pendeln",
+   "path": "/#pendeln/pendeln",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "path": "/#pendeln/quellen",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "glossar",
+   "path": "/#pendeln/glossar",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    },
+    {
+     "id": "color-contrast",
+     "count": 17
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "methodik",
+   "path": "/#pendeln/methodik",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "labor",
+   "path": "/#pendeln/labor",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "studio",
+   "path": "/#pendeln/studio",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 41
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 2
+    },
+    {
+     "id": "color-contrast",
+     "count": 7
+    },
+    {
+     "id": "duplicate-id-aria",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "experiment",
+   "path": "/#pendeln/experiment",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "journal",
+   "path": "/#pendeln/journal",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "doc-index",
+   "path": "/radiasthesie/",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "doc-pendeln",
+   "path": "/radiasthesie/pendeln.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "path": "/radiasthesie/quellen.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "path": "/radiasthesie/radiasthesie.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-orakel",
+   "path": "/radiasthesie/orakel.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-glossar",
+   "path": "/radiasthesie/glossar.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "path": "/radiasthesie/methodik.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "module-landing",
+   "path": "/#pendeln",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    },
+    {
+     "id": "color-contrast",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "topic-pendeln",
+   "path": "/#pendeln/pendeln",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "path": "/#pendeln/quellen",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "glossar",
+   "path": "/#pendeln/glossar",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    },
+    {
+     "id": "color-contrast",
+     "count": 17
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "methodik",
+   "path": "/#pendeln/methodik",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "labor",
+   "path": "/#pendeln/labor",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "studio",
+   "path": "/#pendeln/studio",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 41
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 2
+    },
+    {
+     "id": "color-contrast",
+     "count": 7
+    },
+    {
+     "id": "duplicate-id-aria",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "experiment",
+   "path": "/#pendeln/experiment",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "journal",
+   "path": "/#pendeln/journal",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "doc-index",
+   "path": "/radiasthesie/",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "count": 5
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "doc-pendeln",
+   "path": "/radiasthesie/pendeln.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "path": "/radiasthesie/quellen.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-radiasthesie",
+   "path": "/radiasthesie/radiasthesie.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-orakel",
+   "path": "/radiasthesie/orakel.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-glossar",
+   "path": "/radiasthesie/glossar.html",
+   "violations": [],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "path": "/radiasthesie/methodik.html",
+   "violations": [],
+   "incomplete": []
+  }
+ ],
+ "violations": []
+}

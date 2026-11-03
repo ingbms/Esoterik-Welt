@@ -108,3 +108,24 @@ zeitweises Zurücksetzen der `sizes`-Angabe, Fehlermeldung
   auf Port 3100 ein fremder Server lauschte — Testumgebung, nicht der Code).
 - `npm run lint`, `npm run format:check`: grün.
 - `npm run build`: 7 Dokumente, Sitemap 11 Einträge, `dist/` erzeugt.
+
+Nachprüfung auf dem Commit (Messskripte aus `evidence-fixes/` gegen den
+erzeugten Stand): axe 0 Verstöße, Bildfilter 0 Befunde (20 Routen ×
+320/375/768/1440), echte Pixelbreite 0 Hochskalierungen.
+
+
+## Evidenz
+
+`docs/radiasthesie-completion/RAD-13/evidence-fixes/`:
+
+| Datei | Inhalt |
+| --- | --- |
+| `axe-vorher.json` | 144 `link-in-text-block`-Knoten mit Zielselektor und Kontrastangabe |
+| `axe-nachher.json` | 0 Verstöße, 16 Ansichten × 1440/375 |
+| `bildmessung-vorher.json` | 24 Untergrößen-Befunde (Filter `nw + 8 < dw`) |
+| `bildmessung-nachher.json` | 0 Befunde, 20 Routen × 320/375/768/1440 |
+| `pixelmessung-zwischenstand.json` | 10 Hochskalierungen nach der `sizes`-Korrektur, aber vor der Spezifitätskorrektur — Beleg, warum `--rad-photo-max` auch in `.rad .astro-main .rad-plate` greifen muss |
+| `pixelmessung-nachher.json` | echte Pixelbreite gegen CSS-Breite, 0 Hochskalierungen |
+| `playwright-147.txt`, `node-suiten.txt` | Testläufe |
+| `probe-*.mjs` | Messskripte (Nachbau; Pfad `ROOT` oben in der Datei anpassen) |
+
