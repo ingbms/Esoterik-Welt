@@ -136,10 +136,12 @@ test('Segmenttafel: zwölf Segmente im 30-Grad-Raster', () => {
 });
 
 test('Zeichenlängen-Grenze folgt der Segmentzahl', () => {
-  assert.equal(maxLabelLengthFor(2), BOARD_LIMITS.maxLabelLength);
-  assert.ok(maxLabelLengthFor(12) >= 10);
-  assert.ok(maxLabelLengthFor(26) >= 5);
-  assert.ok(maxLabelLengthFor(48) <= 4);
+  // Die harte Obergrenze ist 40; geometrisch bleiben bei zwei Segmenten 38.
+  assert.equal(maxLabelLengthFor(2), 38);
+  assert.ok(maxLabelLengthFor(2) <= BOARD_LIMITS.maxLabelLength);
+  assert.equal(maxLabelLengthFor(12), 12);
+  assert.equal(maxLabelLengthFor(26), 6);
+  assert.equal(maxLabelLengthFor(48), 3);
   // monoton fallend: mehr Segmente, weniger Platz
   const counts = [2, 4, 6, 12, 26, 48];
   for (let index = 1; index < counts.length; index += 1) {
@@ -477,7 +479,9 @@ test('Studio-Ansicht enthält Bedienung, Vorschau und Druckansicht', () => {
     assert.ok(view.html.includes(`id="${id}"`), `fehlt: ${id}`);
   }
   assert.equal((view.html.match(/name="ptfPalette"/g) || []).length, 4);
-  assert.equal((view.html.match(/<option /g) || []).length, BOARD_PRESETS.length);
+  // Sechs Vorlagen plus der Anzeigezustand „Eigene Beschriftungen“.
+  assert.equal((view.html.match(/<option /g) || []).length, BOARD_PRESETS.length + 1);
+  assert.ok(view.html.includes('value="custom"'));
   assert.ok(view.html.includes('Druckansicht'));
   assert.ok(view.html.includes('32 KiB'));
   assert.ok(view.html.includes('Keine Messung'));

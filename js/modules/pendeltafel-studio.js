@@ -141,6 +141,7 @@ export function mountPendeltafelStudio(container) {
       }–${BOARD_LIMITS.maxSegments} Segmente`;
     }
     current = config;
+    syncPresetDisplay(config);
     if (announceChange) {
       announce(`Vorschau aktualisiert: ${layout.segments} Segmente, Farbstil ${PALETTES[config.palette].label}.`);
     }
@@ -148,15 +149,33 @@ export function mountPendeltafelStudio(container) {
 
   const draftFromForm = () => ({
     schema: 'esow.pendeltafel/1',
-    preset: presetSelect ? presetSelect.value : current.preset,
+    // „custom“ ist nur ein Anzeigezustand: Die Konfiguration behält die zuletzt
+    // geladene Vorlage, damit Schema und Dateiname gültig bleiben.
+    preset: presetSelect && presetSelect.value !== 'custom' ? presetSelect.value : current.preset,
     title: titleInput ? titleInput.value : current.title,
     palette: paletteInputs.find((input) => input.checked)?.value || current.palette,
     labels: labelsInput ? readLabels(labelsInput.value) : [...current.labels],
   });
 
+  /** Zeigt im Auswahlfeld, ob die Zeilen noch der geladenen Vorlage entsprechen. */
+  const syncPresetDisplay = (config) => {
+    if (!presetSelect) return;
+    const preset = presetById(config.preset);
+    const matches =
+      preset &&
+      preset.labels.length === config.labels.length &&
+      preset.labels.every((label, index) => label === config.labels[index]);
+    presetSelect.value = matches ? config.preset : 'custom';
+  };
+
   const applyPreset = (id, { silent = false } = {}) => {
     const preset = presetById(id);
-    if (!preset) return;
+    if (!preset) {
+      // „Eigene Beschriftungen“ ist keine Vorlage: Auswahl auf den echten
+      // Stand zurücksetzen, statt eine Änderung vorzutäuschen.
+      syncPresetDisplay(current);
+      return;
+    }
     const palette = paletteInputs.find((input) => input.checked)?.value || current.palette;
     const config = defaultConfigForPreset(preset.id, palette);
     if (titleInput) titleInput.value = config.title;

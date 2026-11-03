@@ -156,6 +156,7 @@ test('alle sechs Vorlagen füllen Beschriftungen und Zeichnung', async ({ page }
     expect(lines.length).toBe(preset.count);
     await expect(page.locator('#ptfStatus')).toContainText('Vorlage');
     await expect(page.locator('#ptfLabels')).not.toHaveAttribute('aria-invalid', 'true');
+    await expect(page.locator('#ptfPreset')).toHaveValue(preset.id);
   }
   await page.locator('#ptfPreset').selectOption('buchstaben');
   await expect(page.locator('#ptfPreview svg')).toBeVisible();
@@ -165,13 +166,17 @@ test('alle sechs Vorlagen füllen Beschriftungen und Zeichnung', async ({ page }
 test('freie Beschriftungen mit Umlauten und Sonderzeichen erscheinen korrekt', async ({ page }) => {
   const log = collect(page);
   await openStudio(page);
+  await page.locator('#ptfTitle').fill('Sechs Richtungen');
   await page.locator('#ptfLabels').fill('Nord\nOst\nSüd & West\nÜber\n„offen“\n50 %');
   await expect(page.locator('#ptfPreview svg text')).toHaveCount(9);
+  await expect(page.locator('#ptfSheetTitle')).toHaveText('Sechs Richtungen');
   await expect(page.locator('#ptfTitle')).toBeVisible();
   const texts = await previewTexts(page);
   expect(texts).toContain('Süd & West');
   expect(texts).toContain('„offen“');
   expect(texts).toContain('50 %');
+  // Eigene Zeilen werden nicht mehr als Ja/Nein-Vorlage ausgegeben.
+  await expect(page.locator('#ptfPreset')).toHaveValue('custom');
   const markup = await page.locator('#ptfPreview svg').innerHTML();
   expect(markup).toContain('Süd &amp; West');
   expect(markup).not.toContain('Süd & West<');

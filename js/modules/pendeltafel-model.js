@@ -50,8 +50,10 @@ export const BOARD_GEOMETRY = Object.freeze({
   maxFont: 34,
   // Konservative Breitenschätzung für Proportionalschrift (Bezug: Geviert).
   charWidth: 0.58,
-  // Anteil der Sehnenlänge, den ein Text höchstens füllen darf.
-  fitFactor: 0.86,
+  // Anteil der Sehnenlänge, den ein Text höchstens füllen darf. Der Rest ist
+  // Luft zum Ring: Beschriftungen wie „Süd & West“ sollen den Rand nicht
+  // berühren, auch wenn die Breitenschätzung ungenau ist.
+  fitFactor: 0.78,
 });
 
 // Farbstile aus den Tokens des Designsystems (css/design-system.css):

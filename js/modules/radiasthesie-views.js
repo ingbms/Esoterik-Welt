@@ -606,8 +606,8 @@ export function renderStudio() {
             <legend>Tafel</legend>
             <div class="ptf-control">
               <label for="ptfPreset">Vorlage</label>
-              <select id="ptfPreset" name="ptfPreset">${presetOptions}</select>
-              <p class="ptf-hint" id="ptfPresetHint">Der Wechsel der Vorlage ersetzt Überschrift und Beschriftungen.</p>
+              <select id="ptfPreset" name="ptfPreset">${presetOptions}<option value="custom">Eigene Beschriftungen</option></select>
+              <p class="ptf-hint" id="ptfPresetHint">Eine Vorlage laden ersetzt Überschrift und Beschriftungen. Eigene Zeilen stehen als „Eigene Beschriftungen“.</p>
             </div>
           </fieldset>
 
@@ -627,7 +627,7 @@ export function renderStudio() {
             <textarea id="ptfLabels" name="ptfLabels" rows="8" spellcheck="false" autocomplete="off" aria-describedby="ptfLabelsHint ptfLimits">JA
 NEIN</textarea>
             <p class="ptf-hint" id="ptfLabelsHint">Jede Zeile ist ein Segment. ${BOARD_LIMITS.minSegments} bis ${BOARD_LIMITS.maxSegments} Zeilen; wie viele Zeichen je Segment passen, hängt von der Segmentzahl ab.</p>
-            <p class="ptf-hint" id="ptfLimits" data-ptf-limits>2 Segmente · höchstens 40 Zeichen je Beschriftung</p>
+            <p class="ptf-hint" id="ptfLimits" data-ptf-limits>2 Segmente · höchstens 38 Zeichen je Beschriftung</p>
             <p class="ptf-error" id="ptfLabelError" role="alert" hidden></p>
           </div>
 
@@ -656,7 +656,7 @@ NEIN</textarea>
           </details>
 
           <ul class="ptf-errors" id="ptfErrors" role="alert" hidden></ul>
-          <p class="ptf-status" id="ptfStatus" role="status" aria-live="polite">Bereit. Vorlage „Ja/Nein-Tafel“ mit zwei Segmenten.</p>
+          <p class="ptf-status" id="ptfStatus" role="status" aria-live="polite">Bereit. Die Vorschau zeigt den aktuellen Stand.</p>
         </form>
 
         <div class="ptf-preview">
