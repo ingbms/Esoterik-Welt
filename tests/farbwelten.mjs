@@ -436,3 +436,125 @@ test('Redaktionstexte stehen nicht im Markup', () => {
     assert.equal(module.includes(needle), false, `Modul enthält Redaktionstext: ${needle}`);
   }
 });
+
+// --- P2-Werkzeuge: Farben-Kompass, Farbmeditation, Zeitleiste --------------
+
+test('Farben-Kompass deckt alle sieben Farbwelten ab und nennt Quellen', () => {
+  assert.equal(data.COMPASS.title, 'Farben-Kompass');
+  assert.deepEqual(Object.keys(data.COMPASS.worlds).sort(), data.FARBWELTEN.map((world) => world.id).sort());
+  for (const world of data.FARBWELTEN) {
+    const entry = data.COMPASS.worlds[world.id];
+    assert.ok(Array.isArray(entry.associations) && entry.associations.length >= 1, `${world.id}: Assoziationen`);
+    for (const label of entry.associations) assert.ok(label.length > 2, `${world.id}: leere Assoziation`);
+    assert.ok(entry.kulturell.length > 25, `${world.id}: kulturelle Variante fehlt`);
+    assert.equal(entry.hinweis === null || typeof entry.hinweis === 'string', true, `${world.id}: Hinweis`);
+    assert.deepEqual(entry.quellen, ['3', '4'], `${world.id}: Assoziationsquellen`);
+  }
+  assert.match(data.COMPASS.note, /nicht, was eine Farbe über eine Person aussagt/);
+  assert.match(data.COMPASS.note, /nicht belegt \[3\]\[9\]/);
+});
+
+test('Zeitleiste: chronologisch, jede Station mit Registerquelle', () => {
+  assert.ok(data.TIMELINE.events.length >= 15, `nur ${data.TIMELINE.events.length} Ereignisse`);
+  const strands = new Set(data.TIMELINE.strands.map((strand) => strand.id));
+  assert.equal(strands.size, data.TIMELINE.strands.length);
+  let previous = -Infinity;
+  for (const event of data.TIMELINE.events) {
+    assert.ok(Number.isInteger(event.year), `${event.title}: Jahr`);
+    assert.ok(event.year >= previous, `nicht chronologisch: ${event.title}`);
+    previous = event.year;
+    assert.ok(strands.has(event.strand), `${event.title}: unbekannter Strang ${event.strand}`);
+    assert.ok(event.label && event.title && event.text.length > 30, `${event.title}: Felder`);
+    assert.ok(Array.isArray(event.sources) && event.sources.length >= 1, `${event.title}: Quelle fehlt`);
+    for (const id of event.sources) {
+      assert.ok(data.SOURCES[id], `${event.title}: Quelle [${id}] fehlt im Register`);
+      assert.ok(data.TIMELINE.sources.includes(id), `${event.title}: [${id}] fehlt in der Quellenliste`);
+    }
+  }
+  assert.equal(data.TIMELINE.events[0].year, 1577);
+  assert.equal(data.TIMELINE.events[data.TIMELINE.events.length - 1].year, 2025);
+  // Keine Station ohne datierten Beleg (Newton/Goethe sind nicht im Register).
+  assert.equal(
+    data.TIMELINE.events.some((event) => /newton|goethe/i.test(`${event.title} ${event.text}`)),
+    false,
+    'Zeitleiste nennt Quellen, die nicht im Register stehen'
+  );
+});
+
+test('Zeitleisten-Struktur deckt alle fünf Themenstränge ab', () => {
+  const used = new Set(data.TIMELINE.events.map((event) => event.strand));
+  assert.deepEqual([...used].sort(), data.TIMELINE.strands.map((strand) => strand.id).sort());
+  for (const strand of data.TIMELINE.strands) {
+    assert.ok(strand.label.length > 3, `${strand.id}: Label`);
+    assert.ok(
+      data.TIMELINE.events.some((event) => event.strand === strand.id),
+      `${strand.id}: leer`
+    );
+  }
+});
+
+test('Farbmeditation: Dauerbereich, Einordnung und Quellen', () => {
+  const { min, max, default: preset, step } = data.MEDITATION.dauer;
+  assert.equal(min, 1);
+  assert.equal(max, 20);
+  assert.ok(preset >= min && preset <= max);
+  assert.equal(step, 1);
+  assert.match(data.MEDITATION.einordnung, /keine Behandlung/);
+  assert.match(data.MEDITATION.einordnung, /keine Musik/);
+  assert.match(data.MEDITATION.disclaimer, /medizinische Diagnose oder Behandlung/);
+  for (const id of data.MEDITATION.sources) assert.ok(data.SOURCES[id], `Quelle [${id}] fehlt`);
+});
+
+test('P2-Texte zitieren ausschließlich Nummern des Registers', () => {
+  for (const [name, payload] of [
+    ['COMPASS', data.COMPASS],
+    ['MEDITATION', data.MEDITATION],
+    ['TIMELINE', data.TIMELINE],
+  ]) {
+    const text = JSON.stringify(payload);
+    const cited = [...new Set([...text.matchAll(/\[(\d{1,2})\]/g)].map((match) => match[1]))];
+    for (const id of cited) {
+      assert.ok(data.SOURCES[id], `${name}: [${id}] ohne Registereintrag`);
+      assert.ok(payload.sources.includes(id), `${name}: [${id}] zitiert, aber nicht in der Quellenliste`);
+    }
+    for (const id of payload.sources) assert.ok(data.SOURCES[id], `${name}: Quelle [${id}] fehlt im Register`);
+  }
+});
+
+test('P2-Metadaten bleiben im Rahmen der IA', () => {
+  for (const [name, meta] of [
+    ['KOMPASS', data.COMPASS.meta],
+    ['MEDITATION', data.MEDITATION.meta],
+    ['TIMELINE', data.TIMELINE.meta],
+  ]) {
+    assert.ok(meta.title.length <= 80, `${name}: Titel zu lang (${meta.title.length})`);
+    assert.ok(meta.description.length <= 160, `${name}: Description zu lang (${meta.description.length})`);
+    assert.match(meta.title, /\| Esoterik-Welt$/);
+  }
+});
+
+test('Routen der P2-Werkzeuge und Zeitformat', () => {
+  const worlds = data.FARBWELTEN;
+  const anchors = data.SECTION_ORDER.map((section) => section.anchor);
+  assert.equal(model.resolveView(['kompass'], worlds, anchors).view, 'kompass');
+  assert.equal(model.resolveView(['farbmeditation'], worlds, anchors).view, 'meditation');
+  assert.equal(model.resolveView(['zeitleiste'], worlds, anchors).view, 'zeitleiste');
+  assert.equal(model.resolveView(['kompass', 'extra'], worlds, anchors).view, 'kompass');
+  assert.equal(model.resolveView(['unbekannt'], worlds, anchors).view, 'notfound');
+  assert.equal(model.ROUTE.compass(), '#farbwelten/kompass');
+  assert.equal(model.ROUTE.meditation(), '#farbwelten/farbmeditation');
+  assert.equal(model.ROUTE.timeline(), '#farbwelten/zeitleiste');
+  for (const page of ['kompass', 'farbmeditation', 'zeitleiste']) {
+    assert.ok(model.VIRTUAL_PAGES.includes(page), `${page} fehlt in VIRTUAL_PAGES`);
+  }
+
+  assert.equal(model.formatClock(0), '00:00');
+  assert.equal(model.formatClock(59), '00:59');
+  assert.equal(model.formatClock(60), '01:00');
+  assert.equal(model.formatClock(300), '05:00');
+  assert.equal(model.formatClock(1200), '20:00');
+  assert.equal(model.formatClock(59.4), '00:59');
+  assert.equal(model.formatClock(-5), '00:00');
+  assert.equal(model.formatClock(Number.NaN), '00:00');
+  assert.equal(model.formatClock(undefined), '00:00');
+});

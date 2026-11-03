@@ -316,6 +316,9 @@ test('Kein Überlauf an den Breakpoints 320/390/781/900/901/1440', async ({ page
       '#farbwelten/farbtherapie',
       '#farbwelten/farbpsychologie',
       '#farbwelten/lichtmedizin',
+      '#farbwelten/kompass',
+      '#farbwelten/farbmeditation',
+      '#farbwelten/zeitleiste',
     ]) {
       await page.goto(url(hash));
       await page.locator('#farbweltenRoot h1').waitFor();
@@ -338,4 +341,183 @@ test('Sitemap bleibt bei den echten Dokumenten (keine Fragment-URLs)', async ({ 
   const sitemap = await (await request.get(`${BASE}/sitemap.xml`)).text();
   expect(sitemap).not.toContain('farbwelten');
   expect(sitemap).toContain('https://ingbms.github.io/Esoterik-Welt/</loc>');
+});
+
+// --- P2-Werkzeuge: Farben-Kompass, Farbmeditation, Zeitleiste --------------
+
+const TOOLS = [
+  ['kompass', 'Farben-Kompass', /^Farben-Kompass — Assoziation, Tradition und Einordnung/],
+  ['farbmeditation', 'Farbmeditation', /^Farbmeditation — ruhige Visualisierungsübung/],
+  ['zeitleiste', 'Zeitleiste der Farbforschung', /^Zeitleiste — Farbforschung/],
+];
+
+for (const [slug, heading, title] of TOOLS) {
+  test(`P2-Route ${slug}: eine H1, Titel, keine Fremdrequests`, async ({ page }) => {
+    const log = collect(page);
+    await page.goto(url(`#farbwelten/${slug}`));
+    const root = page.locator('#farbweltenRoot');
+    await expect(root.locator('h1')).toHaveCount(1);
+    await expect(root.locator('h1')).toHaveText(heading);
+    await expect(page).toHaveTitle(title);
+    await expect(root.locator('.fw-breadcrumb')).toContainText('Farben');
+    await expect(root.locator('#quellen .fw-sources li')).not.toHaveCount(0);
+    expect(log.consoleErrors).toEqual([]);
+    expect(log.pageErrors).toEqual([]);
+    expect(log.external).toEqual([]);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(
+      0
+    );
+  });
+}
+
+test('Farben-Kompass: Pfeiltasten wechseln Farbwelt, Panel und Status folgen', async ({ page }) => {
+  await page.goto(url('#farbwelten/kompass'));
+  const root = page.locator('#farbweltenRoot');
+  await expect(root.locator('input[name="fwCompassColor"]')).toHaveCount(7);
+  await expect(root.locator('.fw-kompass__block')).toHaveCount(5);
+  // Grenze von Assoziationen ist Pflichtinhalt und steht vor der Auswahl.
+  await expect(root.locator('.astro-callout')).toContainText('nicht, was eine Farbe über eine Person aussagt');
+  const text = await root.innerText();
+  expect(text).not.toMatch(/bedeutet (bei )?dir\b|dein Farbtyp|das sagt deine Farbe/i);
+
+  await root.locator('input[name="fwCompassColor"]').first().focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(root.locator('input[name="fwCompassColor"][value="orange"]')).toBeChecked();
+  await expect(root.locator('input[name="fwCompassColor"][value="orange"]')).toBeFocused();
+  await expect(root.locator('#fwCompassName')).toHaveText('Orange');
+  await expect(root.locator('#fwCompassPanel')).toContainText('Begeisterung');
+  await expect(root.locator('#fwCompassSummary')).toContainText('Orange: Begeisterung');
+  await expect(root.locator('#fwCompassPanel a[href="#farbwelten/orange"]')).toHaveCount(1);
+
+  await root.locator('input[name="fwCompassColor"][value="indigo"]').check();
+  await expect(root.locator('#fwCompassName')).toHaveText('Indigo');
+  await expect(root.locator('.fw-kompass__block').first()).toContainText('nicht als eigene emotionale Kategorie');
+  await expect(root.locator('#fwCompassPanel a[href="#farbwelten/chakren"]')).not.toHaveCount(0);
+});
+
+test('Farbmeditation: Start, Pause, Beenden — ohne Netzwerk und Speicherung', async ({ page }) => {
+  const log = collect(page);
+  // Jeder Storage-Schreibzugriff wird protokolliert; die beim Seitenaufbau
+  // gesetzten Schlüssel anderer Module werden vor der Messung verworfen.
+  await page.addInitScript(() => {
+    window.__storageWrites = [];
+    const original = Storage.prototype.setItem;
+    Storage.prototype.setItem = function setItem(key, value) {
+      window.__storageWrites.push(key);
+      return original.call(this, key, value);
+    };
+  });
+  await page.goto(url('#farbwelten/farbmeditation'));
+  const root = page.locator('#farbweltenRoot');
+  await page.waitForTimeout(400);
+  await page.evaluate(() => {
+    window.__storageWrites = [];
+  });
+  const storageBefore = await page.evaluate(() => JSON.stringify({ ...localStorage }));
+
+  await expect(root.locator('#fwMedTimer')).toHaveText('05:00');
+  await expect(root.locator('#fwMedStatus')).toHaveText('Bereit — die Übung ist noch nicht gestartet.');
+  await expect(root.locator('#fwMedPause')).toBeDisabled();
+  await expect(root.locator('#fwMedStop')).toBeDisabled();
+  await expect(root.locator('label[for="fwMedDuration"]')).toHaveText('Dauer in Minuten');
+
+  // Dauer 1 Minute: Slider-Ereignis wie im Browser, ohne Tippen in ein Range-Feld.
+  await root.locator('#fwMedDuration').evaluate((input) => {
+    input.value = '1';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+  await expect(root.locator('#fwMedDurationOut')).toHaveText('1 Minute');
+  await expect(root.locator('#fwMedTimer')).toHaveText('01:00');
+
+  await root.locator('#fwMedStart').click();
+  await expect(root.locator('#fwMedStatus')).toHaveText('Übung läuft.');
+  await expect(root.locator('#fwMedStart')).toBeDisabled();
+  await expect(root.locator('#fwMedPause')).toBeEnabled();
+  await expect(root.locator('#fwMeditationStage')).toHaveClass(/is-running/);
+  await expect(root.locator('#fwMedDuration')).toBeDisabled();
+  await page.waitForTimeout(1300);
+  await expect(root.locator('#fwMedTimer')).not.toHaveText('01:00');
+
+  await root.locator('#fwMedPause').click();
+  await expect(root.locator('#fwMedStatus')).toHaveText('Pausiert.');
+  const paused = await root.locator('#fwMedTimer').textContent();
+  await page.waitForTimeout(1200);
+  await expect(root.locator('#fwMedTimer')).toHaveText(paused);
+  await expect(root.locator('#fwMedStart')).toHaveText('Fortsetzen');
+
+  await root.locator('#fwMedStop').click();
+  await expect(root.locator('#fwMedStatus')).toHaveText('Übung beendet.');
+  await expect(root.locator('#fwMedTimer')).toHaveText('01:00');
+  await expect(root.locator('#fwMedStart')).toHaveText('Start');
+  await expect(root.locator('#fwMedStart')).toBeEnabled();
+  await expect(root.locator('#fwMeditationStage')).not.toHaveClass(/is-running/);
+
+  const storageWrites = await page.evaluate(() => window.__storageWrites);
+  expect(storageWrites).toEqual([]);
+  const storageAfter = await page.evaluate(() => JSON.stringify({ ...localStorage }));
+  expect(Object.keys(JSON.parse(storageAfter)).sort()).toEqual(Object.keys(JSON.parse(storageBefore)).sort());
+  expect(log.external).toEqual([]);
+
+  // Farbwechsel aktualisiert Fläche und Anregung, startet aber nichts.
+  await root.locator('input[name="fwMedColor"][value="blau"]').check();
+  await expect(root.locator('#fwMedColorName')).toHaveText('Gewählte Farbwelt: Blau');
+  await expect(root.locator('#fwMedReflection')).toContainText(/blau/i);
+  await expect(root.locator('#fwMedTimer')).toHaveText('01:00');
+});
+
+test('Reduced Motion: Meditationsfläche bleibt statisch', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(url('#farbwelten/farbmeditation'));
+  await page.locator('#fwMedStart').click();
+  await expect(page.locator('#fwMeditationStage')).toHaveClass(/is-running/);
+  const animation = await page.evaluate(() => {
+    const stage = document.getElementById('fwMeditationStage');
+    const style = getComputedStyle(stage);
+    return {
+      stage: style.animationName,
+      after: getComputedStyle(stage, '::after').animationName,
+      transition: style.transitionDuration,
+    };
+  });
+  expect(animation.after).toBe('none');
+  expect(animation.stage).toBe('none');
+});
+
+test('Zeitleiste: 17 belegte Ereignisse, Filter per Tastatur', async ({ page }) => {
+  await page.goto(url('#farbwelten/zeitleiste'));
+  const root = page.locator('#farbweltenRoot');
+  await expect(root.locator('.fw-timeline__event')).toHaveCount(17);
+  await expect(root.locator('.fw-tl-filter')).toHaveCount(6);
+  await expect(root.locator('.fw-timeline__event').first()).toContainText('1577');
+  await expect(root.locator('.fw-timeline__event').last()).toContainText('2025');
+  for (const item of await root.locator('.fw-timeline__event').all()) {
+    await expect(item.locator('.fw-timeline__source').first()).toBeAttached();
+  }
+  const psychologie = root.locator('.fw-tl-filter[data-strand="psychologie"]');
+  await psychologie.focus();
+  await page.keyboard.press('Enter');
+  await expect(psychologie).toHaveAttribute('aria-pressed', 'true');
+  await expect(root.locator('.fw-timeline__event:not([hidden])')).toHaveCount(3);
+  await expect(root.locator('#fwTimelineStatus')).toHaveText('3 von 17 Ereignissen');
+  await expect(root.locator('.fw-tl-filter[data-strand="all"]')).toHaveAttribute('aria-pressed', 'false');
+
+  await root.locator('.fw-tl-filter[data-strand="all"]').click();
+  await expect(root.locator('.fw-timeline__event:not([hidden])')).toHaveCount(17);
+  await expect(root.locator('#fwTimelineStatus')).toHaveText('17 von 17 Ereignissen');
+});
+
+test('Einstieg verlinkt die drei Werkzeuge, unbekannte Route bleibt sauber', async ({ page }) => {
+  await page.goto(url('#farbwelten'));
+  const tools = page.locator('#farbweltenRoot #werkzeuge');
+  await expect(tools).toHaveCount(1);
+  await expect(tools.locator('a')).toHaveCount(3);
+  await tools.getByRole('link', { name: /Farben-Kompass/ }).click();
+  await expect(page).toHaveURL(/#farbwelten\/kompass$/);
+  await expect(page.locator('#farbweltenRoot h1')).toHaveText('Farben-Kompass');
+
+  await page.goto(url('#farbwelten/quatsch'));
+  const root = page.locator('#farbweltenRoot');
+  await expect(root.locator('h1')).toHaveCount(1);
+  await expect(root.locator('h1')).toHaveText('Diese Farbwelt gibt es nicht');
+  await expect(root.getByRole('link', { name: 'Zum Farbregister' })).toBeVisible();
 });

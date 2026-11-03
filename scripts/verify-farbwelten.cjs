@@ -44,6 +44,9 @@ const ROUTES = [
   { hash: 'farbwelten/farbpsychologie', kind: 'topic' },
   { hash: 'farbwelten/lichtmedizin', kind: 'topic' },
   { hash: 'farbwelten/farbtherapie/grenzen-und-risiken', kind: 'topic', anchor: 'grenzen-und-risiken' },
+  { hash: 'farbwelten/kompass', kind: 'kompass' },
+  { hash: 'farbwelten/farbmeditation', kind: 'meditation' },
+  { hash: 'farbwelten/zeitleiste', kind: 'timeline' },
   { hash: 'farbwelten/rot/physik', kind: 'color', anchor: 'physik' },
 ];
 const WIDTHS = [1440, 1100, 900, 390, 320];
@@ -196,6 +199,14 @@ const CONTRAST_HELPER = `
             nodeCount: document.querySelectorAll('.fw-node').length,
             svgTitle: Boolean(document.querySelector('.fw-figure svg title')),
             imagesWithoutAlt: [...document.querySelectorAll('img:not([alt])')].length,
+            tool: {
+              compassChoices: document.querySelectorAll('input[name="fwCompassColor"]').length,
+              compassPanelName: document.getElementById('fwCompassName')?.textContent || '',
+              medTimer: document.getElementById('fwMedTimer')?.textContent.trim() || '',
+              medDuration: document.getElementById('fwMedDuration')?.value || '',
+              timelineEvents: document.querySelectorAll('.fw-timeline__event').length,
+              timelineFilters: document.querySelectorAll('.fw-tl-filter').length,
+            },
             slider: (() => {
               const input = document.getElementById('fwWavelength');
               if (!input) return null;
@@ -300,6 +311,19 @@ const CONTRAST_HELPER = `
           if (!metrics.visibleSections.includes('quellen')) failures.push('Quellenabschnitt fehlt');
           if (route.anchor && !metrics.hash.endsWith(`/${route.anchor}`)) failures.push('Ankerroute verloren');
         }
+        if (route.kind === 'kompass') {
+          if (metrics.tool.compassChoices !== 7) failures.push(`Kompass-Auswahl: ${metrics.tool.compassChoices}`);
+          if (!metrics.tool.compassPanelName) failures.push('Kompass-Panel ohne Farbnamen');
+        }
+        if (route.kind === 'meditation') {
+          if (!/^05:00$/.test(metrics.tool.medTimer)) failures.push(`Startzeit: ${metrics.tool.medTimer}`);
+          if (metrics.tool.medDuration !== '5') failures.push(`Startdauer: ${metrics.tool.medDuration}`);
+        }
+        if (route.kind === 'timeline') {
+          if (metrics.tool.timelineEvents !== 17)
+            failures.push(`Zeitleisten-Ereignisse: ${metrics.tool.timelineEvents}`);
+          if (metrics.tool.timelineFilters !== 6) failures.push(`Zeitleisten-Filter: ${metrics.tool.timelineFilters}`);
+        }
         for (const check of metrics.contrast) {
           if (check.missing || check.skipped) continue;
           if (!check.pass) failures.push(`Kontrast ${check.selector}: ${check.ratio}:1 < ${check.required}:1`);
@@ -378,6 +402,59 @@ const CONTRAST_HELPER = `
         if (topicJump.focused !== 'grenzen-und-risiken-title')
           topicFailures.push(`Fokus nach TOC-Sprung: ${topicJump.focused || '—'}`);
 
+        // Kompass per Tastatur: Pfeiltaste wählt die nächste Farbwelt.
+        await page.goto('about:blank');
+        await page.goto(`${base}#farbwelten/kompass`, { waitUntil: 'networkidle' });
+        await page.locator('input[name="fwCompassColor"]').first().focus();
+        await page.keyboard.press('ArrowRight');
+        await page.waitForTimeout(80);
+        const compassState = await page.evaluate(() => ({
+          checked: document.querySelector('input[name="fwCompassColor"]:checked')?.value,
+          name: document.getElementById('fwCompassName')?.textContent,
+          focus: document.activeElement?.value,
+        }));
+        const compassFailures = [];
+        if (compassState.checked !== 'orange') compassFailures.push(`Pfeiltaste: ${compassState.checked}`);
+        if (compassState.name !== 'Orange') compassFailures.push(`Panel: ${compassState.name}`);
+        if (compassState.focus !== 'orange') compassFailures.push('Fokus folgt nicht');
+
+        // Zeitleiste per Tastatur filtern.
+        await page.goto('about:blank');
+        await page.goto(`${base}#farbwelten/zeitleiste`, { waitUntil: 'networkidle' });
+        await page.locator('.fw-tl-filter[data-strand="chakra"]').focus();
+        await page.keyboard.press('Enter');
+        await page.waitForTimeout(80);
+        const timelineState = await page.evaluate(() => ({
+          pressed: document.querySelector('.fw-tl-filter[aria-pressed="true"]')?.dataset.strand,
+          visible: [...document.querySelectorAll('.fw-timeline__event')].filter((node) => !node.hidden).length,
+          status: document.getElementById('fwTimelineStatus')?.textContent || '',
+        }));
+        const timelineFailures = [];
+        if (timelineState.pressed !== 'chakra') timelineFailures.push(`Filter: ${timelineState.pressed}`);
+        if (timelineState.visible !== 4) timelineFailures.push(`sichtbar: ${timelineState.visible}`);
+        if (!/^4 von 17/.test(timelineState.status)) timelineFailures.push(`Status: ${timelineState.status}`);
+
+        // Reduced Motion: keine Animation an der Meditationsfläche.
+        const reduceContext = await browser.newContext({
+          viewport: { width: 1440, height: 900 },
+          reducedMotion: 'reduce',
+        });
+        const reducePage = await reduceContext.newPage();
+        await reducePage.goto(`${base}#farbwelten/farbmeditation`, { waitUntil: 'networkidle' });
+        await reducePage.locator('#fwMedStart').click();
+        const reduceState = await reducePage.evaluate(() => ({
+          after: getComputedStyle(document.getElementById('fwMeditationStage'), '::after').animationName,
+          stage: getComputedStyle(document.getElementById('fwMeditationStage')).animationName,
+          running: document.getElementById('fwMeditationStage').classList.contains('is-running'),
+          status: document.getElementById('fwMedStatus').textContent,
+        }));
+        await reduceContext.close();
+        const reduceFailures = [];
+        if (reduceState.after !== 'none' || reduceState.stage !== 'none')
+          reduceFailures.push(`Animation: ${reduceState.stage}/${reduceState.after}`);
+        if (!reduceState.running) reduceFailures.push('Start setzt keinen Laufzustand');
+        if (reduceState.status !== 'Übung läuft.') reduceFailures.push(`Status: ${reduceState.status}`);
+
         results.push({
           route: 'interaktion',
           width,
@@ -385,10 +462,21 @@ const CONTRAST_HELPER = `
           spectrum,
           aliasHash,
           topicJump,
-          failures: [...chakraFailures, ...spectrumFailures, ...aliasFailures, ...topicFailures],
+          compassState,
+          timelineState,
+          reduceState,
+          failures: [
+            ...chakraFailures,
+            ...spectrumFailures,
+            ...aliasFailures,
+            ...topicFailures,
+            ...compassFailures,
+            ...timelineFailures,
+            ...reduceFailures,
+          ],
         });
         console.log(
-          `${results[results.length - 1].failures.length ? 'FAIL' : 'PASS'} 1440 Interaktion (Pfeiltasten, Spektrum, Alias, TOC)${
+          `${results[results.length - 1].failures.length ? 'FAIL' : 'PASS'} 1440 Interaktion (Pfeiltasten, Spektrum, Alias, TOC, Kompass, Zeitleiste, Reduced Motion)${
             results[results.length - 1].failures.length ? ' — ' + results[results.length - 1].failures.join(' | ') : ''
           }`
         );
@@ -442,6 +530,9 @@ const CONTRAST_HELPER = `
       ['farbwelten/farbtherapie', 'farbtherapie'],
       ['farbwelten/farbpsychologie', 'farbpsychologie'],
       ['farbwelten/lichtmedizin', 'lichtmedizin'],
+      ['farbwelten/kompass', 'kompass'],
+      ['farbwelten/farbmeditation', 'farbmeditation'],
+      ['farbwelten/zeitleiste', 'zeitleiste'],
     ]) {
       for (const width of [1440, 390]) {
         const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
