@@ -22,6 +22,8 @@ const TYPE_CODES = {
     'token-radius': 'TOK',
     'token-motion': 'TOK',
     'token-shadow': 'TOK',
+    'token-z': 'TOK',
+    'token-size': 'TOK',
     component: 'CMP',
     layout: 'LAY',
     pattern: 'PAT',

@@ -534,6 +534,8 @@ und ihren Auslöser**.
 | `token-radius` | `TOK` | Eckenradien | `value` |
 | `token-motion` | `TOK` | Dauer, Kurven | `value` |
 | `token-shadow` | `TOK` | Schatten und Glow | `value` |
+| `token-z` | `TOK` | Stapelreihenfolge (z-index) | `value` |
+| `token-size` | `TOK` | Feste Maße außerhalb des Abstandsrasters (Rahmenbreite, Kopfzeilenhöhe, Fußzeilenhöhe) | `value` |
 | `component` | `CMP` | Wiederverwendbarer Baustein (`.btn`, `.card`, `.badge`, `.nav`, `.modal`, …) | `states` empfohlen, `uses_tokens` empfohlen |
 | `layout` | `LAY` | Seitenvorlage, Raster, Bereichsaufbau | `uses_tokens` empfohlen |
 | `pattern` | `PAT` | Wiederkehrendes Muster ohne eigene Klasse (Kartenraster, Timeline, Filterleiste) | — |
@@ -1101,6 +1103,7 @@ weil sie zeigen, welche Aussagen des Entwurfs nicht belastbar waren:
 | K-06 | §6.3 (Umbruchpunkte) und §7.5 (Markdown-Artikel) waren als offene Fragen formuliert | Beide entschieden (§6.3, §7.5) |
 | K-07 | Die Behauptung „Markdown-Fassungen der Artikel 01–12" legte nahe, sie seien Quelle der gerenderten Artikel. Sie sind es nicht (§2.4) | §7.5 ersetzt die Annahme durch den gemessenen Befund |
 | K-08 | Der Prüfer stürzte bei Inhaltskatalogen ab (`void byId;` → `ReferenceError`) | Behoben; Ursache war ein Tippfehler im Entwurf |
+| K-09 | Die Typenliste kannte keinen Typ für `--z-*` (6 Tokens) und `--container-max`/`--header-height`/`--footer-height` (3 Tokens). Ohne eigenen Typ wären 9 der 170 Tokens nur mit einer falschen Bedeutung (z. B. als Abstand) katalogisierbar gewesen | `token-z` und `token-size` in `catalog.schema.json`, `lib/catalog.cjs`, `render-catalogs.cjs` und §6.1 ergänzt. Die Struktur-Version bleibt `1.0.0`, weil diese Fassung die erste mit echten Katalogen ist; §14.4 greift ab der Veröffentlichung des Katalogs |
 
 ### 13.1 Ausgeführte Prüfungen dieser Fassung
 

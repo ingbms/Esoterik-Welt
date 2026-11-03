@@ -15,7 +15,7 @@ const catalog = require('./lib/catalog.cjs');
 const HEADER_NOTE = 'Erzeugt von `scripts/migration-baseline/render-catalogs.cjs` aus';
 
 const DESIGN_SECTIONS = [
-  { title: 'Tokens', types: ['token-color', 'token-typography', 'token-space', 'token-radius', 'token-motion', 'token-shadow'] },
+  { title: 'Tokens', types: ['token-color', 'token-typography', 'token-space', 'token-radius', 'token-motion', 'token-shadow', 'token-z', 'token-size'] },
   { title: 'Komponenten', types: ['component'] },
   { title: 'Layouts und Seitenvorlagen', types: ['layout'] },
   { title: 'Wiederverwendete Muster', types: ['pattern'] },
@@ -288,21 +288,30 @@ function main() {
 
   const designFile = path.join(inputDir, 'design-catalog.json');
   const contentFile = path.join(inputDir, 'content-catalog.json');
-  const missing = [designFile, contentFile].filter((file) => !fs.existsSync(file));
-  if (missing.length) {
-    console.error(`Fehlende Quelle: ${missing.map((file) => catalog.relToRoot(file)).join(', ')}`);
+  const hasDesign = fs.existsSync(designFile);
+  const hasContent = fs.existsSync(contentFile);
+  if (!hasDesign && !hasContent) {
+    console.error(`Fehlende Quelle: ${[designFile, contentFile].map((file) => catalog.relToRoot(file)).join(', ')}`);
     process.exit(2);
   }
 
-  const design = catalog.readJson(designFile);
-  const content = catalog.readJson(contentFile);
+  const design = hasDesign ? catalog.readJson(designFile) : null;
+  const content = hasContent ? catalog.readJson(contentFile) : null;
   fs.mkdirSync(outDir, { recursive: true });
 
   const reportLines = [];
   let ok = true;
-  ok = writeOrCheck(path.join(outDir, 'design-tokens.json'), renderTokens(design), options, reportLines) && ok;
-  ok = writeOrCheck(path.join(outDir, 'design-system.md'), renderDesign(design), options, reportLines) && ok;
-  ok = writeOrCheck(path.join(outDir, 'content-catalog.md'), renderContent(content), options, reportLines) && ok;
+  if (design) {
+    ok = writeOrCheck(path.join(outDir, 'design-tokens.json'), renderTokens(design), options, reportLines) && ok;
+    ok = writeOrCheck(path.join(outDir, 'design-system.md'), renderDesign(design), options, reportLines) && ok;
+  } else {
+    reportLines.push(`uebersprungen design-tokens.json, design-system.md (design-catalog.json fehlt)`);
+  }
+  if (content) {
+    ok = writeOrCheck(path.join(outDir, 'content-catalog.md'), renderContent(content), options, reportLines) && ok;
+  } else {
+    reportLines.push(`uebersprungen content-catalog.md (content-catalog.json fehlt — Aufgabe der Inhalts-Karte)`);
+  }
 
   console.log(`Katalog-Render — ${catalog.relToRoot(inputDir)} → ${catalog.relToRoot(outDir)}`);
   console.log(reportLines.join('\n'));

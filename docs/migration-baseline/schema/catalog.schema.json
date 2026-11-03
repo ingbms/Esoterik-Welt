@@ -105,6 +105,8 @@
         "token-radius",
         "token-motion",
         "token-shadow",
+        "token-z",
+        "token-size",
         "component",
         "layout",
         "pattern",
