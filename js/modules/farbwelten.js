@@ -90,6 +90,7 @@ function appendInline(parent, text) {
       if (href) {
         parent.append(
           h('a', {
+            class: 'fw-inline-link',
             href,
             rel: /^https:/i.test(href) ? 'noopener' : null,
             text: link[1],
@@ -1128,7 +1129,10 @@ function compassPanel(world) {
           h('h3', { class: 'fw-kompass__name', id: 'fwCompassName', tabindex: '-1', text: world.name }),
           h('p', {
             class: 'fw-kompass__meta',
-            text: `${world.spectral ? 'Spektralfarbe' : 'Mischfarbe'} · ${world.wavelength.label} · ${world.frequency.label}`,
+            text:
+              world.wavelength && world.frequency
+                ? `${world.typeLabel} · ${world.wavelength.label} · ${world.frequency.label}`
+                : `${world.typeLabel} · keine Wellenlänge`,
           }),
         ]),
       ]),
@@ -1174,7 +1178,7 @@ function renderKompass() {
   const section = h('section', { class: 'fw-section', id: 'kompass', 'aria-labelledby': 'kompass-title' }, [
     h('div', { class: 'fw-section__head' }, [
       h('h2', { id: 'kompass-title', text: 'Farbwelt wählen' }),
-      h('p', { class: 'label', text: 'Sieben Farbwelten' }),
+      h('p', { class: 'label', text: `${FARBWELTEN.length} Farbwelten` }),
     ]),
     paragraph(
       'Die Auswahl ändert die Ausgabe, nicht die Person. Jede Angabe ist einer Quelle zugeordnet; die Tradition bleibt als Tradition gekennzeichnet.',

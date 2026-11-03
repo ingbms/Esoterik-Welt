@@ -160,7 +160,8 @@ const results = [];
       if (!/circadian/i.test(text)) record('B5: circadiane Einordnung fehlt');
     }
     if (route.id === 'farbwelten') {
-      if (registerRows !== COLOURS.length) record(`Register: ${registerRows} Zeilen statt ${COLOURS.length}`);
+      if (registerRows !== COLOURS.length + TOPICS.length)
+        record(`Register: ${registerRows} Zeilen statt ${COLOURS.length + TOPICS.length}`);
       if (!text.includes('keine Wellenlänge')) record('Register: Kennzeichnung „keine Wellenlänge" fehlt');
     }
     if (route.id === 'lichtfrequenzen') {

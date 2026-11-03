@@ -410,6 +410,16 @@
   color: var(--color-text-secondary);
 }
 
+/* Fließtext-Links: nicht nur über die Farbe unterscheidbar (WCAG 1.4.1).
+   Das Padding vergrößert die Trefferfläche auf mindestens 32 px Höhe, ohne
+   den Zeilenfluss zu verändern (Inline-Padding verschiebt keine Zeilen). */
+.fw-inline-link {
+  text-decoration: underline;
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.18em;
+  padding-block: 0.4em;
+}
+
 .fw-detail__section h2 {
   margin-bottom: var(--space-4);
   color: var(--color-text-primary);

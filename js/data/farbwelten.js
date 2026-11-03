@@ -3041,7 +3041,7 @@ export const COMPASS = {
   meta: {
     title: 'Farben-Kompass — Assoziation, Tradition und Einordnung | Esoterik-Welt',
     description:
-      'Sieben Farbwelten vergleichen: häufige Assoziationen, kulturelle Varianten, traditionelle Bedeutung und Forschungsstand — ohne Diagnose.',
+      'Zwölf Farbwelten vergleichen: häufige Assoziationen, kulturelle Varianten, traditionelle Bedeutung und Forschungsstand — ohne Diagnose.',
   },
   lede: 'Farben sind mit Emotionen assoziiert — über Kulturen hinweg ähnlich, aber nicht identisch [3][4]. Der Kompass stellt diese Assoziationen neben die Tradition und den Forschungsstand. Er ist kein Test, keine Typologie und keine Diagnose.',
   note: 'Assoziationen beschreiben, wie Farben in Studien und Kulturen verstanden werden — nicht, was eine Farbe über eine Person aussagt. Eine medizinische Wirkung von Farben als Behandlung ist nicht belegt [3][9].',
@@ -3072,6 +3072,17 @@ export const COMPASS = {
       hinweis: null,
       quellen: ['3', '4'],
     },
+    tuerkis: {
+      associations: [
+        'positive, niedrig erregte Emotionen (Kategorie GREEN–BLUE)',
+        'Ruhe (als Blauton)',
+        'Naturverbundenheit (als Grünton)',
+      ],
+      kulturell:
+        'Kein eigener Farbname in allen Sprachen; die Studienlage führt eine gemeinsame Kategorie GREEN–BLUE, und der Eindruck hängt vom Mischverhältnis ab [3][4][31].',
+      hinweis: 'Für Türkis gibt es keine eigene, von Blau und Grün getrennte emotionale Kategorie in der Forschung.',
+      quellen: ['3', '4'],
+    },
     blau: {
       associations: ['Ruhe', 'Vertrauen', 'Konzentration'],
       kulturell:
@@ -3093,8 +3104,36 @@ export const COMPASS = {
       hinweis: 'Für spektrales Violett gibt es keine eigene emotionale Kategorie in der Forschung.',
       quellen: ['3', '4'],
     },
+    magenta: {
+      associations: ['bestärkend („purple“, Bildschirm-Mix)', 'Übergang und Veränderung (Tradition, nicht belegt)'],
+      kulturell:
+        'In den Reviews nicht von Violett getrennt geführt; eine von Rot und Blau unabhängige Assoziation ist nicht belegt [3][31].',
+      hinweis: 'Für Magenta gibt es keine eigene emotionale Kategorie; die Forschung fasst es unter „purple / violet“.',
+      quellen: ['3', '4'],
+    },
+    rosa: {
+      associations: ['Sanftheit', 'Fürsorge', 'Zärtlichkeit'],
+      kulturell:
+        'Westlich lange Gender-Symbol, in anderen Kulturen Blüte, Heilung oder Frieden — die Varianz ist besonders hoch [4].',
+      hinweis: 'Rosa ist ein Alltagston mit reduzierter Sättigung, kein spektraler Reinstoff [31].',
+      quellen: ['3', '4'],
+    },
+    weiss: {
+      associations: ['Klarheit', 'Sauberkeit', 'Unschuld', 'Kälte oder Leere (kontextabhängig)'],
+      kulturell:
+        'In einigen Kulturen Trauer, in anderen Festlichkeit oder Ritual; eine universelle Bedeutung fehlt [4].',
+      hinweis: 'Weiß hat keine eigene emotionale Signatur unabhängig von Helligkeit und Kontrast [31].',
+      quellen: ['3', '4'],
+    },
+    schwarz: {
+      associations: ['Macht', 'Eleganz', 'Mysterium', 'Trauer oder Mangel (kontextabhängig)'],
+      kulturell:
+        'Westlich oft Tod oder Mangel, in afrikanischen und asiatischen Kontexten auch Fruchtbarkeit und Schutz [4].',
+      hinweis: 'Schwarz erzeugt keinen Farbreiz; die Wirkung entsteht aus Abwesenheit von Licht und Kontrast [31].',
+      quellen: ['3', '4'],
+    },
   },
-  sources: ['1', '2', '3', '4', '9'],
+  sources: ['1', '2', '3', '4', '9', '31'],
 };
 
 export const MEDITATION = {

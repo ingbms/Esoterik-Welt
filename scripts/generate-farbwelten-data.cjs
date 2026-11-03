@@ -322,7 +322,7 @@ const TOOL_META = {
   kompass: {
     title: 'Farben-Kompass — Assoziation, Tradition und Einordnung | Esoterik-Welt',
     description:
-      'Sieben Farbwelten vergleichen: häufige Assoziationen, kulturelle Varianten, traditionelle Bedeutung und Forschungsstand — ohne Diagnose.',
+      'Zwölf Farbwelten vergleichen: häufige Assoziationen, kulturelle Varianten, traditionelle Bedeutung und Forschungsstand — ohne Diagnose.',
   },
   meditation: {
     title: 'Farbmeditation — ruhige Visualisierungsübung | Esoterik-Welt',
@@ -343,9 +343,18 @@ const COMPASS_ASSOCIATIONS = {
   orange: ['Begeisterung', 'Spaß', 'Lebensfreude'],
   gelb: ['Freude', 'Optimismus', 'Energie'],
   gruen: ['Ruhe', 'Ausgewogenheit', 'Naturverbundenheit'],
+  tuerkis: [
+    'positive, niedrig erregte Emotionen (Kategorie GREEN–BLUE)',
+    'Ruhe (als Blauton)',
+    'Naturverbundenheit (als Grünton)',
+  ],
   blau: ['Ruhe', 'Vertrauen', 'Konzentration'],
   indigo: ['Ruhe (Blautöne)', 'Vertrauen (Blautöne)'],
   violett: ['bestärkend („purple“)'],
+  magenta: ['bestärkend („purple“, Bildschirm-Mix)', 'Übergang und Veränderung (Tradition, nicht belegt)'],
+  rosa: ['Sanftheit', 'Fürsorge', 'Zärtlichkeit'],
+  weiss: ['Klarheit', 'Sauberkeit', 'Unschuld', 'Kälte oder Leere (kontextabhängig)'],
+  schwarz: ['Macht', 'Eleganz', 'Mysterium', 'Trauer oder Mangel (kontextabhängig)'],
 };
 
 const COMPASS_CULTURE = {
@@ -353,16 +362,29 @@ const COMPASS_CULTURE = {
   orange: 'Westlich oft Energie und Freundlichkeit; in anderen Kontexten Warnung, etwa auf Verkehrsschildern [3][4].',
   gelb: 'In manchen Kulturen Glück, in anderen Vorsicht [4].',
   gruen: 'Interkulturell ähnlich, aber die Varianz zwischen Kulturen ist bei Grün besonders ausgeprägt [4].',
+  tuerkis:
+    'Kein eigener Farbname in allen Sprachen; die Studienlage führt eine gemeinsame Kategorie GREEN–BLUE, und der Eindruck hängt vom Mischverhältnis ab [3][4][31].',
   blau: 'Ruhe und Vertrauen erscheinen interkulturell ähnlich; die Varianz zwischen Probandengruppen bleibt hoch [4].',
   indigo:
     'Keine eigene emotionale Kategorie in der Forschung; Deutungen stammen aus Blautönen oder aus kultureller Tradition [3][4].',
   violett:
     '„Purple“ erscheint in der Forschung als eigene Kategorie; spektrales Violett wird davon nicht getrennt untersucht [3][4].',
+  magenta:
+    'In den Reviews nicht von Violett getrennt geführt; eine von Rot und Blau unabhängige Assoziation ist nicht belegt [3][31].',
+  rosa: 'Westlich lange Gender-Symbol, in anderen Kulturen Blüte, Heilung oder Frieden — die Varianz ist besonders hoch [4].',
+  weiss: 'In einigen Kulturen Trauer, in anderen Festlichkeit oder Ritual; eine universelle Bedeutung fehlt [4].',
+  schwarz:
+    'Westlich oft Tod oder Mangel, in afrikanischen und asiatischen Kontexten auch Fruchtbarkeit und Schutz [4].',
 };
 
 const COMPASS_HINTS = {
   indigo: 'Indigo wird in den großen Reviews nicht als eigene emotionale Kategorie geführt.',
   violett: 'Für spektrales Violett gibt es keine eigene emotionale Kategorie in der Forschung.',
+  tuerkis: 'Für Türkis gibt es keine eigene, von Blau und Grün getrennte emotionale Kategorie in der Forschung.',
+  magenta: 'Für Magenta gibt es keine eigene emotionale Kategorie; die Forschung fasst es unter „purple / violet“.',
+  rosa: 'Rosa ist ein Alltagston mit reduzierter Sättigung, kein spektraler Reinstoff [31].',
+  weiss: 'Weiß hat keine eigene emotionale Signatur unabhängig von Helligkeit und Kontrast [31].',
+  schwarz: 'Schwarz erzeugt keinen Farbreiz; die Wirkung entsteht aus Abwesenheit von Licht und Kontrast [31].',
 };
 
 const COMPASS = {
@@ -382,7 +404,7 @@ const COMPASS = {
       },
     ])
   ),
-  sources: ['1', '2', '3', '4', '9'],
+  sources: ['1', '2', '3', '4', '9', '31'],
 };
 
 const MEDITATION = {

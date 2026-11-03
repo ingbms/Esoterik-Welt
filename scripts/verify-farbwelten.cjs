@@ -34,6 +34,8 @@ const COLOURS = [
 // Farben ohne eigene Wellenlänge: sie dürfen nicht auf die λ-Achse gelegt
 // werden und müssen im Register als solche gekennzeichnet sein.
 const OHNE_WELLENLAENGE = ['magenta', 'rosa', 'weiss', 'schwarz'];
+// Register der Einstiegsseite: alle Farbwelten plus die drei Themenseiten.
+const REGISTER_ROWS = COLOURS.length + 3;
 const ROUTES = [
   { hash: 'farbwelten', kind: 'landing' },
   ...COLOURS.map((id) => ({ hash: `farbwelten/${id}`, kind: 'color' })),
@@ -260,8 +262,8 @@ const CONTRAST_HELPER = `
           if (route.anchor && !metrics.hash.endsWith(`/${route.anchor}`)) failures.push('Ankerroute verloren');
         }
         if (route.kind === 'landing') {
-          if (metrics.registerRows !== COLOURS.length)
-            failures.push(`Registerzeilen: ${metrics.registerRows} statt ${COLOURS.length}`);
+          if (metrics.registerRows !== REGISTER_ROWS)
+            failures.push(`Registerzeilen: ${metrics.registerRows} statt ${REGISTER_ROWS}`);
           if (metrics.tafelBands !== COLOURS.length)
             failures.push(`Farbtafel-Bänder: ${metrics.tafelBands} statt ${COLOURS.length}`);
           if (metrics.registerWithoutWavelength !== OHNE_WELLENLAENGE.length)
@@ -312,7 +314,8 @@ const CONTRAST_HELPER = `
           if (route.anchor && !metrics.hash.endsWith(`/${route.anchor}`)) failures.push('Ankerroute verloren');
         }
         if (route.kind === 'kompass') {
-          if (metrics.tool.compassChoices !== 7) failures.push(`Kompass-Auswahl: ${metrics.tool.compassChoices}`);
+          if (metrics.tool.compassChoices !== COLOURS.length)
+            failures.push(`Kompass-Auswahl: ${metrics.tool.compassChoices} statt ${COLOURS.length}`);
           if (!metrics.tool.compassPanelName) failures.push('Kompass-Panel ohne Farbnamen');
         }
         if (route.kind === 'meditation') {
@@ -524,6 +527,9 @@ const CONTRAST_HELPER = `
       ['farbwelten', 'landing'],
       ['farbwelten/rot', 'rot'],
       ['farbwelten/tuerkis', 'tuerkis'],
+      ['farbwelten/magenta', 'magenta'],
+      ['farbwelten/rosa', 'rosa'],
+      ['farbwelten/weiss', 'weiss'],
       ['farbwelten/schwarz', 'schwarz'],
       ['farbwelten/chakren', 'chakren'],
       ['farbwelten/lichtfrequenzen', 'lichtfrequenzen'],

@@ -439,7 +439,7 @@ test('Redaktionstexte stehen nicht im Markup', () => {
 
 // --- P2-Werkzeuge: Farben-Kompass, Farbmeditation, Zeitleiste --------------
 
-test('Farben-Kompass deckt alle sieben Farbwelten ab und nennt Quellen', () => {
+test('Farben-Kompass deckt alle zwölf Farbwelten ab und nennt Quellen', () => {
   assert.equal(data.COMPASS.title, 'Farben-Kompass');
   assert.deepEqual(Object.keys(data.COMPASS.worlds).sort(), data.FARBWELTEN.map((world) => world.id).sort());
   for (const world of data.FARBWELTEN) {

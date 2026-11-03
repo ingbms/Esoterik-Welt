@@ -1,0 +1,64 @@
+{
+  "axeVersion": "4.14.0",
+  "runs": [
+    {
+      "route": "farbwelten/farbtherapie",
+      "violations": []
+    },
+    {
+      "route": "farbwelten/farbpsychologie",
+      "violations": []
+    },
+    {
+      "route": "farbwelten/lichtmedizin",
+      "violations": []
+    },
+    {
+      "route": "farbwelten/kompass",
+      "violations": []
+    },
+    {
+      "route": "farbwelten/tuerkis",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "linkStyles": [
+    {
+      "route": "farbwelten/farbtherapie",
+      "text": "Lichtmedizin und Photobiologie",
+      "color": "rgb(198, 179, 142)",
+      "decoration": "underline",
+      "thickness": "1.12px"
+    },
+    {
+      "route": "farbwelten/farbtherapie",
+      "text": "Farbpsychologie",
+      "color": "rgb(198, 179, 142)",
+      "decoration": "underline",
+      "thickness": "1.12px"
+    },
+    {
+      "route": "farbwelten/farbtherapie",
+      "text": "Lichtmedizin und Photobiologie",
+      "color": "rgb(198, 179, 142)",
+      "decoration": "underline",
+      "thickness": "1.12px"
+    },
+    {
+      "route": "farbwelten/farbpsychologie",
+      "text": "Farbtherapie und Chromotherapie",
+      "color": "rgb(198, 179, 142)",
+      "decoration": "underline",
+      "thickness": "1.26px"
+    },
+    {
+      "route": "farbwelten/lichtmedizin",
+      "text": "Farbtherapie und Chromotherapie",
+      "color": "rgb(198, 179, 142)",
+      "decoration": "underline",
+      "thickness": "1.26px"
+    }
+  ]
+}

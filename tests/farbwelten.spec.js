@@ -211,7 +211,7 @@ test('Themenseite: TOC lässt sich per Tastatur auf- und zuklappen', async ({ pa
 test('Einstieg: Registergruppe „Themen" und Karten führen auf die drei Routen', async ({ page }) => {
   await page.goto(url('#farbwelten'));
   const root = page.locator('#farbweltenRoot');
-  await expect(root.locator('.fw-register__row')).toHaveCount(10);
+  await expect(root.locator('.fw-register__row')).toHaveCount(15);
   await expect(root.locator('.fw-register__group')).toHaveText('Themen');
   for (const [slug, name] of TOPICS) {
     await expect(root.locator(`#register a[href="#farbwelten/${slug}"]`)).toHaveCount(1);
@@ -373,7 +373,7 @@ for (const [slug, heading, title] of TOOLS) {
 test('Farben-Kompass: Pfeiltasten wechseln Farbwelt, Panel und Status folgen', async ({ page }) => {
   await page.goto(url('#farbwelten/kompass'));
   const root = page.locator('#farbweltenRoot');
-  await expect(root.locator('input[name="fwCompassColor"]')).toHaveCount(7);
+  await expect(root.locator('input[name="fwCompassColor"]')).toHaveCount(12);
   await expect(root.locator('.fw-kompass__block')).toHaveCount(5);
   // Grenze von Assoziationen ist Pflichtinhalt und steht vor der Auswahl.
   await expect(root.locator('.astro-callout')).toContainText('nicht, was eine Farbe über eine Person aussagt');
