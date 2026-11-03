@@ -184,7 +184,6 @@ const META_PAGES = {
 // gelieferten Text steht, und verweist auf den Evidenzreport.
 const SHORT_REFS = {
   14: 'ANSES — Bewertung zu Blaulicht und LED',
-  16: 'Nussbaumer-Streit et al. (2019) — Lichttherapie bei SAD',
   17: 'Phototherapie bei Neugeborenenikterus',
   18: 'NB-UVB bei Psoriasis',
   19: 'IARC — UV-Strahlung als Gruppe-1-Karzinogen',

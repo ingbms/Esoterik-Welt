@@ -18,16 +18,18 @@ Licht ist elektromagnetische Strahlung. Der sichtbare Bereich liegt bei ca. 380�
 
 Die evidenzbasierte Lichtmedizin umfasst:
 
-- **SAD-Lichttherapie:** Meta-Analyse 2020, SMD -0,37, wirksam bei saisonaler Depression [15]. Grenzen: Heterogenität, Dosierung wichtig [16].
+- **SAD-Lichttherapie:** Meta-Analyse 2020 (19 eingeschlossene Studien), SMD −0,37 (95 %-CI −0,63 bis −0,12), wirksam bei saisonaler Depression [15]. Grenzen: moderate Heterogenität der Studien und mittleres bis hohes Verzerrungsrisiko [15].
 - **Neonaten-Phototherapie:** Klare Evidenz bei Neugeborenenikterus [17].
 - **NB-UVB bei Psoriasis:** Wirksam, mit Risiko- und Qualitäts-Hinweis [18].
 - **Photobiomodulation:** Wirksam bei einzelnen Indikationen, niedrige bis moderate Evidenzsicherheit [10].
 
 Alle diese Verfahren arbeiten mit definierten Dosen, Wellenlängen und medizinischen Protokollen – nicht mit esoterischen "Frequenzen".
 
+Davon zu trennen ist die Vorbeugung: Die Cochrane-Review zur Prävention bei Menschen mit SAD-Vorgeschichte stützt sich auf eine einzige geeignete Studie mit 46 Teilnehmenden und bewertet die Evidenz als sehr unsicher (RR 0,64; 95 %-CI 0,30–1,38) [11].
+
 ## Chromotherapie – nicht belegt
 
-Die HTA-Bewertung des spanischen Gesundheitsministeriums (OSTEBA, 2025) fand für Chromotherapie als Krankheitsbehandlung keine geeignete RCT oder Systematische Review und stufte sie als Pseudotherapie ein [9]. Für eine heilende Wirkung von Lichtfrequenzen auf Organe oder eine feste Frequenzzuordnung der Farben gibt es keine belastbare Evidenz [9][11].
+Die HTA-Bewertung des spanischen Gesundheitsministeriums (OSTEBA, 2025) fand für Chromotherapie als Krankheitsbehandlung keine geeignete RCT oder Systematische Review und stufte sie als Pseudotherapie ein [9]. Für eine heilende Wirkung von Lichtfrequenzen auf Organe oder eine feste Frequenzzuordnung der Farben gibt es keine belastbare Evidenz [9].
 
 ## Blaulicht und UV
 
@@ -43,10 +45,9 @@ Die HTA-Bewertung des spanischen Gesundheitsministeriums (OSTEBA, 2025) fand fü
 
 - [9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf
 - [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
-- [11] Nussbaumer-Streit, B., et al. (2019). Light therapy for SAD — Cochrane Review / meta-analysis. https://doi.org/10.1002/14651858.CD012345.pub3
-- [14] ANSES (2020). Évaluation des risques liés aux lampes à LED. https://www.anses.fr
-- [15] Pjrek, E., et al. (2020). Lichttherapie bei SAD. https://doi.org/10.1159/000502891
-- [16] Nussbaumer-Streit, B., et al. (2019). Lichttherapie — Systematische Review. https://doi.org/10.1002/14651858.CD012345.pub3
+- [11] Nussbaumer-Streit, B., Forneris, C. A., Morgan, L. C., et al. (2019). Light therapy for preventing seasonal affective disorder. Cochrane Database of Systematic Reviews 2019(3), CD011269. https://doi.org/10.1002/14651858.CD011269.pub3
+- [14] ANSES (2019). Effets sur la santé humaine et sur l'environnement (faune et flore) des systèmes utilisant des diodes électroluminescentes (LED) – Avis et rapport. https://www.anses.fr/system/files/AP2014SA0253Ra.pdf
+- [15] Pjrek, E., Friedrich, M.-E., Cambioli, L., et al. (2020). The Efficacy of Light Therapy in the Treatment of Seasonal Affective Disorder: A Meta-Analysis of Randomized Controlled Trials. Psychotherapy and Psychosomatics 89(1), 17–24. https://doi.org/10.1159/000502891
 - [17] Bhutani, V. K., et al. (2011). Phototherapy to Prevent Severe Neonatal Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics 128(4), e1046–e1052. https://doi.org/10.1542/peds.2011-1494
 - [18] Elmets, C. A., et al. (2019). Joint American Academy of Dermatology–National Psoriasis Foundation guidelines of care for the management and treatment of psoriasis with phototherapy. J Am Acad Dermatol 81(3), 775–804. https://doi.org/10.1016/j.jaad.2019.04.042
 - [19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int

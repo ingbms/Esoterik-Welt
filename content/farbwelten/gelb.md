@@ -47,4 +47,4 @@ Wählen Sie einen gelben Gegenstand – eine Blume, ein Notizbuch, einen Himmel.
 - [9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf
 - [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
 - [24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).
-- [31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.
+- [31] Wyszecki, G. & Stiles, W. S. (2000). Color Science: Concepts and Methods, Quantitative Data and Formulae. 2. Aufl., Wiley Classics Library (Nachdruck). ISBN 978-0-471-39918-6.

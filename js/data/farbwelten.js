@@ -22,20 +22,23 @@ export const SOURCES = {
   },
   3: {
     id: '3',
-    label: 'Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486',
+    label:
+      'Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486',
     url: 'https://doi.org/10.3758/s13423-024-02615-z',
     shortRef: false,
   },
   4: {
     id: '4',
-    label: 'Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev',
+    label:
+      'Jonauskaite, D. et al. (2020). "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity." Psychological Science 31(10), 1245–1260',
     url: 'https://doi.org/10.1177/0956797620948810',
     shortRef: false,
   },
   5: {
     id: '5',
-    label: 'Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations."',
-    url: 'https://doi.org/10.1177/0956797620948810',
+    label:
+      'Jonauskaite, D., Tremea, A., Bürki, L., Diouf, C. N. & Mohr, C. (2020). "To see or not to see: Importance of color perception to color therapy." Color Research & Application 45(3), 450–464',
+    url: 'https://doi.org/10.1002/col.22490',
     shortRef: false,
   },
   7: {
@@ -60,26 +63,23 @@ export const SOURCES = {
   },
   11: {
     id: '11',
-    label: 'Nussbaumer-Streit, B., et al. (2019). Light therapy for SAD — Cochrane Review / meta-analysis',
-    url: 'https://doi.org/10.1002/14651858.CD012345.pub3',
+    label:
+      'Nussbaumer-Streit, B., Forneris, C. A., Morgan, L. C., et al. (2019). Light therapy for preventing seasonal affective disorder. Cochrane Database of Systematic Reviews 2019(3), CD011269',
+    url: 'https://doi.org/10.1002/14651858.CD011269.pub3',
     shortRef: false,
   },
   14: {
     id: '14',
-    label: 'ANSES (2020). Évaluation des risques liés aux lampes à LED',
-    url: 'https://www.anses.fr',
+    label:
+      "ANSES (2019). Effets sur la santé humaine et sur l'environnement (faune et flore) des systèmes utilisant des diodes électroluminescentes (LED) – Avis et rapport",
+    url: 'https://www.anses.fr/system/files/AP2014SA0253Ra.pdf',
     shortRef: false,
   },
   15: {
     id: '15',
-    label: 'Pjrek, E., et al. (2020). Lichttherapie bei SAD',
+    label:
+      'Pjrek, E., Friedrich, M.-E., Cambioli, L., et al. (2020). The Efficacy of Light Therapy in the Treatment of Seasonal Affective Disorder: A Meta-Analysis of Randomized Controlled Trials. Psychotherapy and Psychosomatics 89(1), 17–24',
     url: 'https://doi.org/10.1159/000502891',
-    shortRef: false,
-  },
-  16: {
-    id: '16',
-    label: 'Nussbaumer-Streit, B., et al. (2019). Lichttherapie — Systematische Review',
-    url: 'https://doi.org/10.1002/14651858.CD012345.pub3',
     shortRef: false,
   },
   17: {
@@ -102,12 +102,6 @@ export const SOURCES = {
     url: 'https://www.iarc.who.int',
     shortRef: false,
   },
-  20: {
-    id: '20',
-    label: 'OSTEBA (2025). Supplement: Heilversprechen und Evidenzprüfung (siehe [9])',
-    url: 'https://www.conprueba.es',
-    shortRef: false,
-  },
   24: {
     id: '24',
     label: 'NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s)',
@@ -116,7 +110,8 @@ export const SOURCES = {
   },
   31: {
     id: '31',
-    label: 'CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben',
+    label:
+      'Wyszecki, G. & Stiles, W. S. (2000). Color Science: Concepts and Methods, Quantitative Data and Formulae. 2. Aufl., Wiley Classics Library (Nachdruck). ISBN 978-0-471-39918-6',
     url: null,
     shortRef: false,
   },
@@ -260,7 +255,7 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: '**Grün (belegbar):** Wellenlänge, Assoziationen, PBM-Protokolle [3][4][10][24]. **Gelb (Tradition):** Rot als Wurzelchakra, Energie, Erd-Element – nur als Tradition darstellbar [1]. **Was die Studienlage nicht hergibt:** Der "Rot-Effekt" auf kognitive Leistung hat sich in der Meta-Analyse 2020 nicht als belastbar erwiesen [7]; Heilversprechen für Durchblutung oder Entzündungen sind nicht belegt [9][20]. Keine medizinische Wirkaussage.',
+          text: '**Belegt:** Wellenlänge, Assoziationen, PBM-Protokolle [3][4][10][24]. **Nur Tradition:** Rot als Wurzelchakra, Energie, Erd-Element – nur als Tradition darstellbar [1]. **Was die Studienlage nicht hergibt:** Der "Rot-Effekt" auf kognitive Leistung hat sich in der Meta-Analyse 2020 nicht als belastbar erwiesen [7]; Heilversprechen für Durchblutung oder Entzündungen sind nicht belegt [9]. Keine medizinische Wirkaussage.',
         },
         {
           type: 'quote',
@@ -292,16 +287,15 @@ export const FARBWELTEN = [
         {
           type: 'list',
           items: [
-            '[1] Leland, D. (2017). "The Rainbow Body." *Quest* 105.2. Link siehe [Einstieg](farbwelten.md).',
-            '[3] Jonauskaite & Mohr (2025). Farb-Emotions-Review. https://doi.org/10.3758/s13423-024-02615-z',
-            '[4] Jonauskaite et al. (2020). Universelle Muster. https://doi.org/10.1177/0956797620948810',
-            '[5] Jonauskaite et al. (2020). "To see or not to see." https://doi.org/10.1002/col.22490',
-            '[7] Gnambs (2020). Meta-Analyse Rot-Effekt. https://doi.org/10.3758/s13423-020-01772-1',
-            '[9] OSTEBA (2025). HTA Chromotherapie. Link siehe Einstiegsseite.',
+            '[1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." *Quest* 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
+            '[2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. *The Serpent Power*. https://archive.org/details/the-serpent-power-john-woodroffe',
+            '[3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity." Psychological Science 31(10), 1245–1260. https://doi.org/10.1177/0956797620948810',
+            '[5] Jonauskaite, D., Tremea, A., Bürki, L., Diouf, C. N. & Mohr, C. (2020). "To see or not to see: Importance of color perception to color therapy." Color Research & Application 45(3), 450–464. https://doi.org/10.1002/col.22490',
+            '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1',
+            '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
             '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
             '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
-            '[2] Woodroffe, J. G. (1919, Übers.). *The Serpent Power*. https://archive.org/details/the-serpent-power-john-woodroffe',
-            '[20] OSTEBA (2025). Supplement: Heilversprechen und Evidenzprüfung (siehe [9]). https://www.conprueba.es',
           ],
         },
       ],
@@ -317,7 +311,7 @@ export const FARBWELTEN = [
       researchChips: ['Empirie begrenzt'],
       note: 'Die Evidenzlage ist nicht symmetrisch: Die Tradition beschreibt eine Bedeutung, die Forschung untersucht Lichtwirkungen — nicht die Farbe als Heilmittel.',
     },
-    sources: ['1', '2', '3', '4', '5', '7', '9', '10', '20', '24', '31'],
+    sources: ['1', '2', '3', '4', '5', '7', '9', '10', '24', '31'],
     shortRefs: [],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
   },
@@ -437,12 +431,12 @@ export const FARBWELTEN = [
             '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
             '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
             '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
-            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity." Psychological Science 31(10), 1245–1260. https://doi.org/10.1177/0956797620948810',
             '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
             '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
             '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
             '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
-            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
+            '[31] Wyszecki, G. & Stiles, W. S. (2000). Color Science: Concepts and Methods, Quantitative Data and Formulae. 2. Aufl., Wiley Classics Library (Nachdruck). ISBN 978-0-471-39918-6.',
           ],
         },
       ],
@@ -588,7 +582,7 @@ export const FARBWELTEN = [
             '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
             '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
             '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
-            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
+            '[31] Wyszecki, G. & Stiles, W. S. (2000). Color Science: Concepts and Methods, Quantitative Data and Formulae. 2. Aufl., Wiley Classics Library (Nachdruck). ISBN 978-0-471-39918-6.',
           ],
         },
       ],
@@ -685,7 +679,7 @@ export const FARBWELTEN = [
       anwendung: [
         {
           type: 'p',
-          text: 'Photobiomodulation nutzt rotes/NIR-Licht; Grün spielt in medizinischen Lichtprotokollen keine spezifische Rolle [10]. Chromotherapie als Krankheitsbehandlung ist nicht belegt [9]. Für eine Heilwirkung von Grün auf das Herz liefert die geprüfte Literatur kein belastbares Ergebnis [9][20].',
+          text: 'Photobiomodulation nutzt rotes/NIR-Licht; Grün spielt in medizinischen Lichtprotokollen keine spezifische Rolle [10]. Chromotherapie als Krankheitsbehandlung ist nicht belegt [9]. Für eine Heilwirkung von Grün auf das Herz liefert die geprüfte Literatur kein belastbares Ergebnis [9].',
         },
         {
           type: 'quote',
@@ -724,14 +718,13 @@ export const FARBWELTEN = [
             '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
             '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
             '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
-            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity." Psychological Science 31(10), 1245–1260. https://doi.org/10.1177/0956797620948810',
             '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
             '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
             '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
             '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
-            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
-            '[5] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." https://doi.org/10.1177/0956797620948810',
-            '[20] OSTEBA (2025). Supplement (siehe [9]). https://www.conprueba.es',
+            '[31] Wyszecki, G. & Stiles, W. S. (2000). Color Science: Concepts and Methods, Quantitative Data and Formulae. 2. Aufl., Wiley Classics Library (Nachdruck). ISBN 978-0-471-39918-6.',
+            '[5] Jonauskaite, D., Tremea, A., Bürki, L., Diouf, C. N. & Mohr, C. (2020). "To see or not to see: Importance of color perception to color therapy." Color Research & Application 45(3), 450–464. https://doi.org/10.1002/col.22490',
           ],
         },
       ],
@@ -747,7 +740,7 @@ export const FARBWELTEN = [
       researchChips: ['Empirie begrenzt'],
       note: 'Die Evidenzlage ist nicht symmetrisch: Die Tradition beschreibt eine Bedeutung, die Forschung untersucht Lichtwirkungen — nicht die Farbe als Heilmittel.',
     },
-    sources: ['1', '2', '3', '4', '5', '7', '9', '10', '20', '24', '31'],
+    sources: ['1', '2', '3', '4', '5', '7', '9', '10', '24', '31'],
     shortRefs: [],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
   },
@@ -828,7 +821,7 @@ export const FARBWELTEN = [
       anwendung: [
         {
           type: 'p',
-          text: 'Blaulicht kann bei hoher akuter Dosis die Netzhaut schädigen und am Abend oder in der Nacht den circadianen Rhythmus und den Schlaf stören – Letzteres bereits bei niedrigen Dosen [14], dies ist differenziert nach Dosis und Zeitpunkt zu betrachten. Es ist nicht "immer gefährlich"; die Risikoaussage gilt für hohe Dosen und späte Tageszeiten [14]. Diese Aussage ist grün (belegbar), aber nur mit dem Differenzierungs-Hinweis.',
+          text: 'Blaulicht kann bei hoher akuter Dosis die Netzhaut schädigen und am Abend oder in der Nacht den circadianen Rhythmus und den Schlaf stören – Letzteres bereits bei niedrigen Dosen [14], dies ist differenziert nach Dosis und Zeitpunkt zu betrachten. Es ist nicht "immer gefährlich"; die Risikoaussage gilt für hohe Dosen und späte Tageszeiten [14].',
         },
         {
           type: 'quote',
@@ -879,13 +872,13 @@ export const FARBWELTEN = [
             '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
             '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
             '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
-            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity." Psychological Science 31(10), 1245–1260. https://doi.org/10.1177/0956797620948810',
             '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
             '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
             '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
             '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
-            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
-            '[14] ANSES (2020). Évaluation des risques LED. https://www.anses.fr',
+            '[31] Wyszecki, G. & Stiles, W. S. (2000). Color Science: Concepts and Methods, Quantitative Data and Formulae. 2. Aufl., Wiley Classics Library (Nachdruck). ISBN 978-0-471-39918-6.',
+            "[14] ANSES (2019). Effets sur la santé humaine et sur l'environnement (faune et flore) des systèmes utilisant des diodes électroluminescentes (LED) – Avis et rapport. https://www.anses.fr/system/files/AP2014SA0253Ra.pdf",
           ],
         },
       ],
@@ -932,11 +925,11 @@ export const FARBWELTEN = [
       description:
         'Indigo zwischen 425 und 450 nm: schmaler Spektralbereich, kulturelle Deutungen, Stirnchakra und die Herkunft der modernen Zuordnung.',
     },
-    lede: 'Indigo liegt bei ca. 420–450 nm, ca. 666–714 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].',
+    lede: 'Indigo liegt bei ca. 425–450 nm, ca. 666–706 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].',
     intro: [
       {
         type: 'p',
-        text: 'Indigo liegt bei ca. 420–450 nm, ca. 666–714 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].',
+        text: 'Indigo liegt bei ca. 425–450 nm, ca. 666–706 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].',
       },
     ],
     sections: {
@@ -970,11 +963,11 @@ export const FARBWELTEN = [
       psychologie: [
         {
           type: 'p',
-          text: 'Für Indigo liegt keine eigenständige Farb-Emotions-Forschung vor; die großen systematischen Reviews untersuchen Grundfarben – Blau, Grün, Rot, Gelb, Orange – und gruppieren Indigo nicht als separate emotionale Kategorie [3][4]. Das hat Konsequenzen für jede Aussage über Indigo: Was als "Indigo-Assoziation" beschrieben wird, ist entweder eine Konnotation der zugrunde liegenden Grundfarbe Blau oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter Effekt [7].',
+          text: 'Für Indigo liegt keine eigenständige Farb-Emotions-Forschung vor; die großen systematischen Reviews untersuchen Grundfarben und Farbfamilien – in [3] etwa Rot, Gelb, Orange, Blau, Grün, Blau-Grün, Rosa und Violett, dazu Hell/Dunkel, Grau, Schwarz und Weiß – und führen Indigo nicht als eigene emotionale Kategorie [3][4]. Das hat Konsequenzen für jede Aussage über Indigo: Was als "Indigo-Assoziation" beschrieben wird, ist entweder eine Konnotation der zugrunde liegenden Grundfarbe Blau oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter Effekt [7].',
         },
         {
           type: 'p',
-          text: 'Die Review [3] beschreibt Blau als assoziiert mit positiven, niedrig erregten Emotionen – Ruhe, Vertrauen, Konzentration – und betont, dass diese Assoziation interkulturell ähnlich, aber nicht identisch ist [4]. Wie bei allen Farben gilt: Assoziation ist nicht Wirkung [7]. Für Indigo, das physikalisch zwischen Blau und Violett liegt (ca. 420–450 nm, knapp am kurzwelligen Rand von Blau) [10][24], bedeutet das: Jede Assoziation, die einen "indigo-typischen" emotionalen Zustand behauptet, würde entweder vom Blauen abgeleitet oder als Spekulation formuliert – niemals als eigenständiger, reproduzierbarer Befund präsentiert. Die Studienlage erlaubt dies nicht.',
+          text: 'Die Review [3] beschreibt Blau als assoziiert mit positiven, niedrig erregten Emotionen – Ruhe, Vertrauen, Konzentration – und betont, dass diese Assoziation interkulturell ähnlich, aber nicht identisch ist [4]. Wie bei allen Farben gilt: Assoziation ist nicht Wirkung [7]. Für Indigo, das physikalisch zwischen Blau und Violett liegt (ca. 425–450 nm, knapp am kurzwelligen Rand von Blau) [10][24], bedeutet das: Jede Assoziation, die einen "indigo-typischen" emotionalen Zustand behauptet, würde entweder vom Blauen abgeleitet oder als Spekulation formuliert – niemals als eigenständiger, reproduzierbarer Befund präsentiert. Die Studienlage erlaubt dies nicht.',
         },
         {
           type: 'p',
@@ -982,7 +975,7 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: 'Abgrenzung Blau ↔ Indigo, quellenbasiert: Blau umfasst etwa 450–495 nm; Indigo liegt bei ca. 420–450 nm und grenzt an die violette Kante des sichtbaren Spektrums [10]. Die Forschung behandelt Indigo als Teil der Blautöne, nicht als eigene emotionale Klasse [3][4]. Eine Aussage wie "Indigo beruhigt stärker als Blau" wäre daher nicht belegt – sie würde die fehlende Eigenstudie mit einer künstlichen Differenzierung überspielen. Ehrlich formuliert lautet die Einordnung: Indigo hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.',
+          text: 'Abgrenzung Blau ↔ Indigo, quellenbasiert: Blau umfasst etwa 450–495 nm; Indigo liegt bei ca. 425–450 nm und grenzt an die violette Kante des sichtbaren Spektrums [10]. Die Forschung behandelt Indigo als Teil der Blautöne, nicht als eigene emotionale Klasse [3][4]. Eine Aussage wie "Indigo beruhigt stärker als Blau" wäre daher nicht belegt – sie würde die fehlende Eigenstudie mit einer künstlichen Differenzierung überspielen. Ehrlich formuliert lautet die Einordnung: Indigo hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.',
         },
       ],
       tradition: [
@@ -1002,13 +995,13 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: 'Farbspezifische Ergänzung: Der Indigo-Bereich (ca. 420–450 nm) verbindet hohe Photonenenergie mit niedriger Helligkeit; in der Tradition wird er mit dem dritten Auge und innerer Klarheit verknüpft – ohne medizinische Wirkaussage [1][19].',
+          text: 'Farbspezifische Ergänzung: Der Indigo-Bereich (ca. 425–450 nm) verbindet hohe Photonenenergie mit niedriger Helligkeit; in der Tradition wird er mit dem dritten Auge und innerer Klarheit verknüpft – ohne medizinische Wirkaussage [1][24].',
         },
       ],
       geschichte: [
         {
           type: 'p',
-          text: 'Das moderne Regenbogenmodell ordnet Indigo dem sechsten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Kombination existiert [1]. Die klassische *Sat-cakra-nirupana* (1577) kennt sechs Zentren und das Sahasrāra; sie ordnet Element- und Lotosfarben zu, aber keine Regenbogenfolge [1][2]. Indigo als eigene Stufe ist physikalisch fließend (ca. 420–450 nm) und liegt im Spektrum nahe Violett [10].',
+          text: 'Das moderne Regenbogenmodell ordnet Indigo dem sechsten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Kombination existiert [1]. Die klassische *Sat-cakra-nirupana* (1577) kennt sechs Zentren und das Sahasrāra; sie ordnet Element- und Lotosfarben zu, aber keine Regenbogenfolge [1][2]. Indigo als eigene Stufe ist physikalisch fließend (ca. 425–450 nm) und liegt im Spektrum nahe Violett [10].',
         },
         {
           type: 'h3',
@@ -1037,13 +1030,12 @@ export const FARBWELTEN = [
             '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
             '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
             '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
-            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity." Psychological Science 31(10), 1245–1260. https://doi.org/10.1177/0956797620948810',
             '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
             '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
             '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
             '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
-            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
-            '[19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int',
+            '[31] Wyszecki, G. & Stiles, W. S. (2000). Color Science: Concepts and Methods, Quantitative Data and Formulae. 2. Aufl., Wiley Classics Library (Nachdruck). ISBN 978-0-471-39918-6.',
           ],
         },
       ],
@@ -1059,7 +1051,7 @@ export const FARBWELTEN = [
       researchChips: ['Empirie begrenzt'],
       note: 'Die Evidenzlage ist nicht symmetrisch: Die Tradition beschreibt eine Bedeutung, die Forschung untersucht Lichtwirkungen — nicht die Farbe als Heilmittel.',
     },
-    sources: ['1', '2', '3', '4', '7', '9', '10', '19', '24', '31'],
+    sources: ['1', '2', '3', '4', '7', '9', '10', '24', '31'],
     shortRefs: [],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
   },
@@ -1090,11 +1082,11 @@ export const FARBWELTEN = [
       description:
         'Violett zwischen 380 und 425 nm: kurzwelliges Licht, Symbolik, Kronenchakra, Abgrenzung zu Magenta und der Stand der Forschung.',
     },
-    lede: 'Violett liegt bei ca. 380–450 nm (ca. 666–789 THz) [10][24] und grenzt damit an den UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
+    lede: 'Violett liegt am kurzwelligen Rand des sichtbaren Spektrums, konventionell bei ca. 380–425 nm (ca. 706–789 THz); die Grenze zum Indigo ist fließend und wird je nach Einteilung bis etwa 450 nm gezogen [10][24]. Unterhalb von 380 nm beginnt der UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
     intro: [
       {
         type: 'p',
-        text: 'Violett liegt bei ca. 380–450 nm (ca. 666–789 THz) [10][24] und grenzt damit an den UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
+        text: 'Violett liegt am kurzwelligen Rand des sichtbaren Spektrums, konventionell bei ca. 380–425 nm (ca. 706–789 THz); die Grenze zum Indigo ist fließend und wird je nach Einteilung bis etwa 450 nm gezogen [10][24]. Unterhalb von 380 nm beginnt der UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
       },
     ],
     sections: {
@@ -1128,19 +1120,19 @@ export const FARBWELTEN = [
       psychologie: [
         {
           type: 'p',
-          text: 'Für Violett liegt keine eigenständige Farb-Emotions-Forschung vor; die großen systematischen Reviews [3][4] untersuchen Grundfarben und gruppieren Violett nicht als eigene emotionale Kategorie [3][4]. Was als "Violett-Assoziation" beschrieben wird – oft als mystisch, achtsam, transzendent – ist entweder eine Konnotation der zugrunde liegenden Blautöne oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter Effekt [7]. Das muss klar unterschieden werden: Assoziation ist nicht Wirkung [7].',
+          text: 'Die großen systematischen Reviews [3][4] führen "Violett" durchaus als eigene Kategorie: In [3] erscheint "purple" mit eher bestärkenden ("empowering") Emotionen. Gemeint ist damit aber der alltägliche Farbton, wie er auf Bildschirmen als Magenta-Mix aus Rot- und Blauanteilen entsteht [31] – nicht das spektrale Violett am kurzwelligen Rand des sichtbaren Bereichs (ca. 380–425 nm) [10][24]. Eine Studie, die spektrales Violett isoliert und seine emotionale Zuordnung von Blau und Magenta trennt, führen [3][4] nicht. Was als "Violett-Assoziation" beschrieben wird – oft als mystisch, achtsam, transzendent – ist entweder eine Konnotation der zugrunde liegenden Blau- oder Magentaanteile oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter eigener Effekt. Das muss klar unterschieden werden: Assoziation ist nicht Wirkung [7].',
         },
         {
           type: 'p',
-          text: 'Die Review [3] beschreibt Blau als assoziiert mit Ruhe, Vertrauen und Konzentration, und betont, dass diese Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Violett, das physikalisch zwischen Blau und dem UV-Rand liegt (ca. 380–450 nm) [10][24], teilt die Blautöne-Charakteristik, aber seine Wahrnehmung ist stärker vom spektralen Mix und vom Bildschirm-Rendering abhängig: Ein "Violett" auf einem Monitor ist typischerweise ein Magenta-Mix (rotes + blaues Licht), kein Spektralreinstoff [31]. Zwei Beobachter können dieselbe Bildschirmfarbe als eher blau-violett oder eher rot-violett wahrnehmen – ein Metamerie-Phänomen, das emotionale Aussagen zusätzlich fraglich macht [24][31].',
+          text: 'Die Review [3] beschreibt Blau als assoziiert mit Ruhe, Vertrauen und Konzentration, und betont, dass diese Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Violett, das physikalisch zwischen Blau und dem UV-Rand liegt (ca. 380–425 nm) [10][24], teilt die Blautöne-Charakteristik, aber seine Wahrnehmung ist stärker vom spektralen Mix und vom Bildschirm-Rendering abhängig: Ein "Violett" auf einem Monitor ist typischerweise ein Magenta-Mix (rotes + blaues Licht), kein Spektralreinstoff [31]. Zwei Beobachter können dieselbe Bildschirmfarbe als eher blau-violett oder eher rot-violett wahrnehmen – ein Metamerie-Phänomen, das emotionale Aussagen zusätzlich fraglich macht [24][31].',
         },
         {
           type: 'p',
-          text: 'Abgrenzung Violett ↔ Magenta, quellenbasiert: Violett (ca. 380–450 nm) ist eine spektrale Farbe im sichtbaren Bereich; Magenta (Additiv-Mix ~ 620 nm rot + 450 nm blau) ist nicht spektral, sondern entsteht nur durch simultane Stimulation zweier Rezeptoren [24][31]. Die Forschung [3][4] unterscheidet diese nicht systematisch – die meisten Studien sprechen von "purple/violet" als einer Kategorie – und liefert damit keine eigenständige emotionale Differenzierung zwischen spektralem Violett und additivem Magenta. Ehrlich formuliert heißt das: Für Violett als spektrale Farbe und Magenta als Mischfarbe gibt es keine getrennte emotionale Forschung; jede Aussage über "violett-typische" emotionale Wirkung würde entweder vom Blauen abgeleitet oder als spekulativ formuliert – nie als eigenständiger Befund.',
+          text: 'Abgrenzung Violett ↔ Magenta, quellenbasiert: Violett (ca. 380–425 nm) ist eine spektrale Farbe im sichtbaren Bereich; Magenta (Additiv-Mix ~ 620 nm rot + 450 nm blau) ist nicht spektral, sondern entsteht nur durch simultane Stimulation zweier Rezeptoren [24][31]. Die Forschung [3][4] unterscheidet diese nicht systematisch – die meisten Studien sprechen von "purple/violet" als einer Kategorie – und liefert damit keine eigenständige emotionale Differenzierung zwischen spektralem Violett und additivem Magenta. Ehrlich formuliert heißt das: Für Violett als spektrale Farbe und Magenta als Mischfarbe gibt es keine getrennte emotionale Forschung; jede Aussage über "violett-typische" emotionale Wirkung würde entweder vom Blauen abgeleitet oder als spekulativ formuliert – nie als eigenständiger Befund.',
         },
         {
           type: 'p',
-          text: 'Interkulturell sind Blautöne- und Violett-Assoziationen ähnlich (Ruhe, Tiefe), aber die Varianz bleibt hoch [4]. Eine Aussage wie "Violett fördert Spiritualität stärker als Blau" wäre nicht belegt – sie würde die fehlende Eigenstudie durch eine künstliche Differenzierung ersetzen. Die ehrliche Einordnung lautet: Violett hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.',
+          text: 'Interkulturell sind Blautöne- und Violett-Assoziationen ähnlich (Ruhe, Tiefe), aber die Varianz bleibt hoch [4]. Eine Aussage wie "Violett fördert Spiritualität stärker als Blau" wäre nicht belegt – sie würde eine fehlende Eigenstudie durch eine künstliche Differenzierung ersetzen. Die ehrliche Einordnung lautet: Für "purple" als Bildschirm- und Alltagsfarbe gibt es in [3] eine belegte emotionale Kategorie; für spektrales Violett als eigene, von Blau und Magenta getrennte Kategorie gibt es sie nicht. Seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.',
         },
       ],
       tradition: [
@@ -1160,13 +1152,13 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: 'Farbspezifische Ergänzung: Violett (ca. 380–450 nm, ca. 666–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich, wird aber am schwächsten wahrgenommen; in der Tradition steht es für das Kronenchakra – ohne medizinische Wirkaussage [1][10][24].',
+          text: 'Farbspezifische Ergänzung: Violett (ca. 380–425 nm, ca. 706–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich, wird aber am schwächsten wahrgenommen; in der Tradition steht es für das Kronenchakra – ohne medizinische Wirkaussage [1][10][24].',
         },
       ],
       geschichte: [
         {
           type: 'p',
-          text: 'Das moderne Regenbogenmodell ordnet Violett dem siebten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Kombination existiert [1]. Die klassische *Sat-cakra-nirupana* (1577) kennt sechs Zentren und das Sahasrāra; sie ordnet Element- und Lotosfarben zu, aber keine Regenbogenfolge [1][2]. Violett liegt mit ca. 380–450 nm am kurzwelligen Rand des sichtbaren Spektrums und grenzt an den UV-Bereich [10][19].',
+          text: 'Das moderne Regenbogenmodell ordnet Violett dem siebten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Kombination existiert [1]. Die klassische *Sat-cakra-nirupana* (1577) kennt sechs Zentren und das Sahasrāra; sie ordnet Element- und Lotosfarben zu, aber keine Regenbogenfolge [1][2]. Violett liegt mit ca. 380–425 nm am kurzwelligen Rand des sichtbaren Spektrums und grenzt an den UV-Bereich [10][19].',
         },
         {
           type: 'h3',
@@ -1195,12 +1187,12 @@ export const FARBWELTEN = [
             '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
             '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
             '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
-            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity." Psychological Science 31(10), 1245–1260. https://doi.org/10.1177/0956797620948810',
             '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
             '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
             '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
             '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
-            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
+            '[31] Wyszecki, G. & Stiles, W. S. (2000). Color Science: Concepts and Methods, Quantitative Data and Formulae. 2. Aufl., Wiley Classics Library (Nachdruck). ISBN 978-0-471-39918-6.',
             '[19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int',
           ],
         },
@@ -1331,7 +1323,7 @@ export const CHAKREN_PAGE = {
     },
     {
       type: 'p',
-      text: 'In der Tradition heißt es, die sieben Regenbogen-Chakren seien eine uralte indische Lehre – das ist historisch nicht belegbar [1][9].',
+      text: 'In der Tradition heißt es, die sieben Regenbogen-Chakren seien eine uralte indische Lehre – das ist historisch nicht belegbar [1][2].',
     },
   ],
   model: [
@@ -1386,7 +1378,7 @@ export const CHAKREN_PAGE = {
       text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
     },
   ],
-  sources: ['1', '2', '9', '3', '14', '10', '19', '4', '5', '7', '24'],
+  sources: ['1', '2', '3', '9', '14', '10', '19', '4'],
   related: ['rot', 'orange', 'gelb', 'gruen', 'blau', 'indigo', 'violett'],
 };
 
@@ -1412,7 +1404,7 @@ export const LIGHT_PAGE = {
         {
           type: 'list',
           items: [
-            '**SAD-Lichttherapie:** Meta-Analyse 2020, SMD -0,37, wirksam bei saisonaler Depression [15]. Grenzen: Heterogenität, Dosierung wichtig [16].',
+            '**SAD-Lichttherapie:** Meta-Analyse 2020 (19 eingeschlossene Studien), SMD −0,37 (95 %-CI −0,63 bis −0,12), wirksam bei saisonaler Depression [15]. Grenzen: moderate Heterogenität der Studien und mittleres bis hohes Verzerrungsrisiko [15].',
             '**Neonaten-Phototherapie:** Klare Evidenz bei Neugeborenenikterus [17].',
             '**NB-UVB bei Psoriasis:** Wirksam, mit Risiko- und Qualitäts-Hinweis [18].',
             '**Photobiomodulation:** Wirksam bei einzelnen Indikationen, niedrige bis moderate Evidenzsicherheit [10].',
@@ -1422,6 +1414,10 @@ export const LIGHT_PAGE = {
           type: 'p',
           text: 'Alle diese Verfahren arbeiten mit definierten Dosen, Wellenlängen und medizinischen Protokollen – nicht mit esoterischen "Frequenzen".',
         },
+        {
+          type: 'p',
+          text: 'Davon zu trennen ist die Vorbeugung: Die Cochrane-Review zur Prävention bei Menschen mit SAD-Vorgeschichte stützt sich auf eine einzige geeignete Studie mit 46 Teilnehmenden und bewertet die Evidenz als sehr unsicher (RR 0,64; 95 %-CI 0,30–1,38) [11].',
+        },
       ],
     },
     {
@@ -1430,7 +1426,7 @@ export const LIGHT_PAGE = {
       blocks: [
         {
           type: 'p',
-          text: 'Die HTA-Bewertung des spanischen Gesundheitsministeriums (OSTEBA, 2025) fand für Chromotherapie als Krankheitsbehandlung keine geeignete RCT oder Systematische Review und stufte sie als Pseudotherapie ein [9]. Für eine heilende Wirkung von Lichtfrequenzen auf Organe oder eine feste Frequenzzuordnung der Farben gibt es keine belastbare Evidenz [9][11].',
+          text: 'Die HTA-Bewertung des spanischen Gesundheitsministeriums (OSTEBA, 2025) fand für Chromotherapie als Krankheitsbehandlung keine geeignete RCT oder Systematische Review und stufte sie als Pseudotherapie ein [9]. Für eine heilende Wirkung von Lichtfrequenzen auf Organe oder eine feste Frequenzzuordnung der Farben gibt es keine belastbare Evidenz [9].',
         },
       ],
     },
@@ -1459,5 +1455,5 @@ export const LIGHT_PAGE = {
       ],
     },
   ],
-  sources: ['24', '15', '16', '17', '18', '10', '9', '11', '14', '19'],
+  sources: ['24', '15', '17', '18', '10', '11', '9', '14', '19'],
 };
