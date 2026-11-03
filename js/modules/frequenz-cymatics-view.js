@@ -16,6 +16,7 @@ import {
   describeMode,
   nodeSegments,
 } from './frequenz-chladni.js';
+import { renderViewNav } from './frequenz-nav.js';
 
 const FIELD_RESOLUTION = 200;
 
@@ -67,19 +68,13 @@ export class CymaticsView {
     };
   }
 
-  navHtml(current) {
-    const link = (href, label, id) => `<a href="${href}"${current === id ? ' aria-current="page"' : ''}>${label}</a>`;
-    return `<nav class="fq-nav" aria-label="Frequenzbereich">
-      ${link('#frequenzen', '← Bibliothek', 'hub')}
-      ${link('#frequenzen/labor', 'Frequenzlabor', 'labor')}
-      ${link('#frequenzen/cymatics', 'Chladni-Muster', 'cymatics')}
-      ${this.meditation ? link('#frequenzen/meditation', 'Meditation', 'meditation') : ''}
-    </nav>`;
+  navHtml() {
+    return renderViewNav('cymatics', { cymatics: true, meditation: this.meditation });
   }
 
   render() {
     this.root.innerHTML = `
-      ${this.navHtml('cymatics')}
+      ${this.navHtml()}
       <p class="fq-notice" id="fqCyNotice" role="status" hidden></p>
       <section class="fq-section" aria-labelledby="fqCyTitle">
         <div class="fq-section-head">

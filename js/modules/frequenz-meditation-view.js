@@ -9,6 +9,7 @@
 // Wechsel in eine andere Ansicht stoppt der Ton; die Restzeit wird – wenn
 // localStorage verfügbar ist – lokal als Wiederaufnahme angeboten.
 import { FREQUENCY_LIMITS } from './frequenz-engine.js';
+import { renderViewNav } from './frequenz-nav.js';
 import {
   DEFAULT_SESSION,
   DURATION_OPTIONS,
@@ -73,14 +74,7 @@ export class MeditationView {
   /* ------------------------------------------------------------------ Aufbau */
 
   navHtml() {
-    const link = (href, label, current = false) =>
-      `<a href="${href}"${current ? ' aria-current="page"' : ''}>${label}</a>`;
-    return `<nav class="fq-nav" aria-label="Frequenzbereich">
-      ${link('#frequenzen', '← Bibliothek')}
-      ${link('#frequenzen/labor', 'Frequenzlabor')}
-      ${this.cymatics ? link('#frequenzen/cymatics', 'Chladni-Muster') : ''}
-      ${link('#frequenzen/meditation', 'Meditation', true)}
-    </nav>`;
+    return renderViewNav('meditation', { cymatics: this.cymatics, meditation: true });
   }
 
   render() {

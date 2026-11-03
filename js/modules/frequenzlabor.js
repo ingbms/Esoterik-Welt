@@ -14,6 +14,7 @@ import {
   loadFrequencies,
 } from './frequenz-presets.js';
 import { FrequenzVisualisierung } from './frequenz-visualisierung.js';
+import { renderViewNav } from './frequenz-nav.js';
 import { renderMarkdown, escapeHtml } from './markdown-lite.js';
 
 const WAVEFORMS = Object.freeze([
@@ -49,23 +50,6 @@ const DISCLAIMER_FALLBACK = Object.freeze({
 });
 
 const SPEED_OF_SOUND_M_S = 343; // Luft bei 20 °C, gerundet (OpenStax College Physics 2e).
-
-// Bereichsnavigation für alle drei Ansichten: gleiche Reihenfolge, gleiche
-// Beschriftung, genau ein `aria-current` (ADR §7.4, NFR-17).
-const VIEWS = Object.freeze([
-  ['hub', '#frequenzen', 'Bibliothek'],
-  ['labor', '#frequenzen/labor', 'Frequenzlabor'],
-  ['quellen', '#frequenzen/quellen', 'Quellen & Methodik'],
-]);
-
-function viewNav(current, extra = '') {
-  const items = VIEWS.map(([view, href, label]) =>
-    view === current
-      ? `<span class="fq-nav-current" aria-current="page">${label}</span>`
-      : `<a href="${href}">${label}</a>`
-  );
-  return `<nav class="fq-nav" aria-label="Frequenzbereich">${items.join('')}${extra}</nav>`;
-}
 
 // Das Quellendokument liegt als Markdown im Repository. Relative Ziele werden
 // für die Ansicht auf den Build umgeschrieben; was nicht mit ausgeliefert wird
@@ -388,30 +372,11 @@ export class FrequenzlaborModule {
 
   /* ---------------------------------------------------------------- Ansichten */
 
-  /**
-   * Navigationslinks der Folgestufe (P9/P10). Ein Link erscheint nur, wenn das
-   * Flag des Features aktiv ist; die aktuelle Ansicht wird als Text mit
-   * `aria-current` ausgezeichnet statt als Link auf sich selbst.
-   */
-  featureNavLinks(current) {
-    return [
-      ['cymatics', '#frequenzen/cymatics', 'Chladni-Muster'],
-      ['meditation', '#frequenzen/meditation', 'Meditation'],
-    ]
-      .filter(([name]) => Boolean(this.features[name]))
-      .map(([name, href, label]) =>
-        name === current
-          ? `<span class="fq-nav-current" aria-current="page">${label}</span>`
-          : `<a href="${href}">${label}</a>`
-      )
-      .join('');
-  }
-
   renderHub() {
     const entries = this.data ? this.data.entries : [];
     const playable = entries.filter((entry) => entry.playback.mode !== 'none').length;
     this.root.innerHTML = `
-      ${viewNav('hub', this.featureNavLinks('hub'))}
+      ${renderViewNav('hub', this.features)}
       <p class="fq-notice" id="fqNotice" role="status" hidden></p>
       <div class="fq-disclaimer" role="note">
         <p class="fq-disclaimer-kurz" id="fqDisclaimerKurz"></p>
@@ -654,7 +619,7 @@ export class FrequenzlaborModule {
   async renderQuellen() {
     const offline = Boolean(this.offlineSource());
     this.root.innerHTML = `
-      ${viewNav('quellen')}
+      ${renderViewNav('quellen', this.features)}
       <p class="fq-notice" id="fqNotice" role="status" hidden></p>
       <p class="fq-lede">
         Das Quellendokument belegt für jeden Eintrag, woher der Wert stammt, was behauptet wird und wie
@@ -693,7 +658,7 @@ export class FrequenzlaborModule {
   renderLab() {
     const playable = this.data ? this.data.entries.filter((entry) => entry.playback.mode !== 'none') : [];
     this.root.innerHTML = `
-      ${viewNav('labor', this.featureNavLinks('labor'))}
+      ${renderViewNav('labor', this.features)}
       <p class="fq-notice" id="fqNotice" role="status" hidden></p>
       <div class="fq-disclaimer" role="note">
         <p class="fq-disclaimer-kurz" id="fqDisclaimerKurz"></p>

@@ -20,6 +20,7 @@ async function openRoute(page, route, search = '') {
   // Messungen aussagekräftig.
   if (route.startsWith('frequenzen/cymatics')) await expect(page.locator('#fqCyCanvasA')).toBeVisible();
   else if (route.startsWith('frequenzen/meditation')) await expect(page.locator('#fqMedStart')).toBeVisible();
+  else if (route.startsWith('frequenzen/quellen')) await expect(page.locator('#fqQuellenBody')).toBeVisible();
   else if (route === 'frequenzen/labor') await expect(page.locator('#fqPlay')).toBeVisible();
   else await expect(page.locator('#fqLibrary')).toBeVisible();
 }
@@ -507,5 +508,26 @@ test.describe('P9/P10 — Barrierefreiheit und Mobil', () => {
     await expect(page.locator('#fqLibrary')).toBeVisible();
     const featureModules = requests.filter((url) => /frequenz-(cymatics|meditation)(-view)?\.js/.test(url));
     expect(featureModules, 'kein P9/P10-Modul vor der Navigation').toEqual([]);
+  });
+
+  test('N1: alle fünf Ansichten tragen dieselbe Bereichsnavigation (NFR-17)', async ({ page }) => {
+    // ADR §7.4/NFR-17: gleiche Reihenfolge, gleiche Beschriftung, genau ein
+    // aria-current. Nach dem Zusammenführen von Quellenansicht (P11) und
+    // Folgestufe (P9/P10) liefen die Leisten auseinander (drei, vier und fünf
+    // Einträge); dieser Fall hält sie zusammen.
+    const erwartet = ['Bibliothek', 'Frequenzlabor', 'Quellen & Methodik', 'Chladni-Muster', 'Meditation'];
+    for (const route of [
+      'frequenzen',
+      'frequenzen/labor',
+      'frequenzen/quellen',
+      'frequenzen/cymatics',
+      'frequenzen/meditation',
+    ]) {
+      await openRoute(page, route);
+      const nav = page.locator('.fq-nav').first();
+      const labels = (await nav.locator('a, .fq-nav-current').allInnerTexts()).map((label) => label.trim());
+      expect(labels, `${route}: Navigation`).toEqual(erwartet);
+      await expect(nav.locator('[aria-current="page"]'), `${route}: genau ein aria-current`).toHaveCount(1);
+    }
   });
 });
