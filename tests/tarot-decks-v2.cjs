@@ -240,6 +240,15 @@ test('picker: labeled previews, V1 selected by default, gallery uses V1', async 
         .getByRole('radio')
         .evaluateAll((nodes) => nodes.map((node) => node.closest('label').innerText.replace(/\s+/g, ' ').trim()));
       assert.ok(names[0].includes('Nachtatelier') && names[1].includes('Gartenbrevier'), 'radios carry the labels');
+      // The accessible name is one properly separated string; the visual badge and
+      // meta line must never be concatenated ("NachtatelierStandard 78 Karten · 3:5").
+      for (const name of [
+        'Nachtatelier — Standard, 78 Karten, 3:5',
+        'Gartenbrevier — Optional, Farbvariante, 78 Karten, 3:5',
+      ]) {
+        const matched = await page.getByRole('radio', { name, exact: true }).count();
+        assert.equal(matched, 1, `radio accessible name: ${name}`);
+      }
       const previews = await page
         .locator('#tarotDeckPicker img')
         .evaluateAll((nodes) =>

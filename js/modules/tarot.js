@@ -34,6 +34,16 @@ function arcanaLabel(card) {
   return `Kleine Arkana · ${suit}`;
 }
 
+// The visible option is a badge next to the deck name, followed by a meta line.
+// Read straight through, screen readers ran the parts together ("NachtatelierStandard
+// 78 Karten · 3:5"). The visual composition is therefore marked aria-hidden and the
+// radio itself carries this one string, with real separators, as its accessible name —
+// the same information, announced once and in a readable order.
+function deckAccessibleName(deck) {
+  const meta = deck.meta.replace(/\s*·\s*/g, ', ');
+  return deck.badge ? `${deck.label} — ${deck.badge}, ${meta}` : `${deck.label}, ${meta}`;
+}
+
 function matchesQuery(card, query) {
   if (!query) return true;
   const haystack = [card.name, card.numeral, arcanaLabel(card), ...(card.keywords || [])].join(' ').toLowerCase();
@@ -74,8 +84,9 @@ export class TarotModule {
 
   // The picker is generated from the registry, so a deck becomes selectable by
   // being registered — there is no second list in the markup to keep in sync.
-  // Native radios carry the keyboard behaviour (arrow keys move the selection)
-  // and each option's accessible name is its visible label text.
+  // Native radios carry the keyboard behaviour (arrow keys move the selection);
+  // each option's accessible name is one string with real separators (see
+  // deckAccessibleName), never the visual badge and name run together.
   renderDeckPicker() {
     const host = document.getElementById('tarotDeckPicker');
     if (!host) return;
@@ -93,11 +104,11 @@ export class TarotModule {
         return `<label class="tarot-deck-option${selected ? ' is-selected' : ''}">
             <input class="tarot-deck-radio" type="radio" name="tarotDeck" id="${esc(inputId)}" value="${esc(
               deck.id
-            )}"${selected ? ' checked' : ''} />
+            )}" aria-label="${esc(deckAccessibleName(deck))}"${selected ? ' checked' : ''} />
             <span class="tarot-deck-preview">
               <img src="${esc(deckPreviewPath(deck))}" width="60" height="100" loading="lazy" decoding="async" alt="" />
             </span>
-            <span class="tarot-deck-copy">
+            <span class="tarot-deck-copy" aria-hidden="true">
               <span class="tarot-deck-name">${esc(deck.label)}${badge}</span>
               <span class="tarot-deck-meta">${esc(deck.meta)}</span>
             </span>

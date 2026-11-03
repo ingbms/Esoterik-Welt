@@ -17,9 +17,9 @@
 - Prüfungen gelten nur für den tatsächlich geprüften Commit und Arbeitsbaum. Historische Screenshots sind keine aktuelle Abnahme. Eine Karte nicht allein aufgrund grüner Feature-Tests als vollständige Website-Integration abschließen.
 - Wiederverwendbare Prüfskripte und notwendige Belege mit Herkunft sichern; wiederholte Prüfungen in vorhandenen Prüfumgebungen ausführen. Vor späterer Bereinigung Änderungen, untracked Dateien, ignorierte Dateien und noch laufende Aufgaben prüfen.
 
-## Hermes und Pause
+## Hermes und Fortsetzung
 
 - Das Esoterik-Board heißt technisch weiterhin `hermes-adaptive-router`; sein Repository ist nicht das Router-Pluginprojekt. Board bei CLI-Aufrufen ausdrücklich angeben. Technische Karten-IDs sind `t_...`.
 - Das bestehende Esoterik-Board wurde am 03.11.2026 auf Nutzerwunsch während der Verzeichnisanalyse pausiert. Vorherige Zustände und Nachweise liegen unter `docs/arbeitsverzeichnis-analyse-2026-11-03/`.
-- Der Nutzer hat Codex anschließend ausdrücklich mit der manuellen Fertigstellung der Reparatur und dem Abschluss ihrer Unterkarten beauftragt. Katalog und VELARKANA bleiben pausiert. Keine automatischen Worker starten oder Ersatzaufgaben anlegen. Andere Karten erst auf ausdrücklichen Nutzerauftrag wieder aufnehmen.
+- Nach Prüfung der lokalen Vorschau hat der Nutzer am 03.11.2026 Veröffentlichung, Festschreiben des Stands und das Fortsetzen der logisch nächsten Board-Aufgaben ausdrücklich freigegeben. Reihenfolge: Reparaturabschluss und veröffentlichte Baseline → vollständiger Katalog samt Review und Freigabe → VELARKANA-Umstellung. Bestehende Aufgaben und Arbeitskopien wiederverwenden; keine Ersatzaufgaben oder neuen Geschwisterklone anlegen.
 - Die Rubriken-Reparatur wird im vorhandenen Zweig `feature/rubriken-vollstaendig` bearbeitet. Ihr überprüfbarer Abschlussnachweis ist `docs/reparatur-codex-t_33cdf5ec.md`; den tatsächlichen PR-/Integrationsstatus daraus und aus Git feststellen. Historische Bestandsaufnahmen sind keine aktuelle Freigabe.

@@ -1,0 +1,10 @@
+
+> esoterik-welt@1.0.0 check:frequenz-budget
+> node scripts/check-frequenz-budget.cjs
+
+Budget-Prüfung Frequenzlabor (gzip -9)
+WARN NFR-1 Initialgraph (statisch)    19 Dateien                297210 B roh   89171 B gz  Limit 92000 B
+ok   NFR-2 Feature-JS                 11 Dateien                176168 B roh   46884 B gz  Limit 100000 B
+ok   NFR-3 Feature-CSS                css/frequenzlabor.css      19865 B roh    3951 B gz  Limit 6000 B
+⚠ Reserve unter 5 %: NFR-1 Initialgraph (statisch): 96,9 % ausgelastet, Reserve 2829 B (89171 B / 92000 B)
+✓ Alle Budgets eingehalten, aber 1 Warnung(en) wegen kleiner Reserve (bewusst überwacht, siehe docs/frequenzlabor-ui.md §2.1 „Budget und Reserve").

@@ -29,8 +29,8 @@ implementiert und kein Direkt-Push auf `main` vorgenommen.
   Parser für Generator und Prüfung. Drei Regressionstests sichern Links,
   lokale/global unterschiedliche Kennungen und echte lokale Divergenzen ab.
 - **Reserve:** Das ausdrücklich freigegebene NFR-1-Gesamtlimit von 92.000 Byte
-  ist in Gate und ADR §14 festgehalten. Aktuell 88.855 Byte gzip, Reserve
-  3.145 Byte. NFR-2 46.884/100.000 Byte, NFR-3 3.951/6.000 Byte. Die Warnung
+  ist in Gate und ADR §14 festgehalten. Aktuell 89.171 Byte gzip, Reserve
+  2.829 Byte. NFR-2 46.884/100.000 Byte, NFR-3 3.951/6.000 Byte. Die Warnung
   bei weniger als fünf Prozent Reserve bleibt sichtbar; Überschreitung des
   Limits bleibt ein Fehler.
 - **Startseite:** Die alte Angabe „Sieben Farbwelten“ nennt jetzt korrekt zwölf.
@@ -75,8 +75,27 @@ Anschließend wird die übergeordnete Reparaturkarte abgeschlossen. Der genaue
 Abschlusscommit, CI-Lauf und Veröffentlichungsnachweis werden in den jeweiligen
 Karten als strukturierter Handoff hinterlegt.
 
-Katalog, VELARKANA und der separate allgemeine Releaseauftrag bleiben geparkt.
+Nach Freigabe der lokalen Vorschau hat der Eigentümer Veröffentlichung,
+Festschreiben und Fortsetzung der Folgeaufgaben beauftragt. Nach abgeschlossenem
+Reparatur-Release folgen zuerst Katalog und Dokumentation, danach VELARKANA.
 Eine neue Gesamtprüfung per Safari/iOS, manuellem Screenreader oder Hörtest wird
 nicht behauptet; die bisherigen entsprechenden Auflagen bleiben separat
-dokumentiert. Die vorhandenen lokalen Tarot-Änderungen im Hauptverzeichnis
-werden bei dessen Aktualisierung gesichert und wieder angewendet.
+dokumentiert. Die zuvor lokalen und in der Vorschau geprüften Tarot-Korrekturen sind nun
+Bestandteil des freigegebenen Stands: getrennt lesbare Namen der Deckauswahl,
+inklusive Browser-Assertions. Die vollständige ursprüngliche Änderung bleibt
+zusätzlich in der lokalen Sicherung erhalten.
+
+
+## Eigentümerfreigabe und Baseline
+
+Die lokale Vorschau wurde am 03.11.2026 vom Eigentümer geprüft. Anschließend
+wurden Veröffentlichung, Festschreiben dieses Stands und Fortsetzung der logisch
+nächsten Aufgaben ausdrücklich freigegeben. Der Merge-Commit wird durch einen
+annotierten Baseline-Tag festgehalten; der exakte Tag, Commit, CI- und
+Veröffentlichungsnachweis werden im Kanban-Handoff dokumentiert.
+
+Alle Folgeaufgaben verwenden diese veröffentlichte Baseline. Alte feste Zahlen
+und Pfade in ihren früheren Auftragsbeschreibungen müssen am tatsächlichen
+Bestand überprüft werden. Katalogänderungen betreffen Dokumentation. Die spätere
+VELARKANA-Umstellung migriert die vollständige funktionierende Website; ein
+leeres Scaffold oder eine Platzhalter-CI ersetzt keine vorhandene Funktion.
