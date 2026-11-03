@@ -43,6 +43,13 @@ async function buildLocal(output) {
     ? JSON.stringify(JSON.parse(read('data/frequencies.json'))).replace(/</g, '\\u003c')
     : null;
   if (!freqJson) console.warn('data/frequencies.json fehlt — Offline-Labor startet ohne Presets.');
+  // Das Quellendokument wird für die Ansicht #frequenzen/quellen eingebettet:
+  // eine file://-Seite kann keine docs/-Datei per fetch nachladen.
+  const quellenPath = path.join(root, 'docs/frequenz-quellen.md');
+  const quellenText = fs.existsSync(quellenPath)
+    ? read('docs/frequenz-quellen.md').replace(/<\/script/gi, '<\\/script')
+    : null;
+  if (!quellenText) console.warn('docs/frequenz-quellen.md fehlt — Offline-Quellenansicht bleibt leer.');
   for (const file of pages) {
     let html = read(file)
       .replace(/\s*<!-- LOCAL-ENTRY:[\s\S]*?<!-- \/LOCAL-ENTRY -->/, '')
@@ -88,6 +95,8 @@ async function buildLocal(output) {
         () =>
           `<script id="local-crystals-data" type="application/json">${json}</script>\n${
             freqJson ? `<script id="local-frequencies-data" type="application/json">${freqJson}</script>\n` : ''
+          }${
+            quellenText ? `<script id="local-frequenz-quellen" type="text/plain">${quellenText}</script>\n` : ''
           }<script>${bundle}</script>\n</body>`
       );
     }

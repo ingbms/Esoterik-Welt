@@ -77,6 +77,11 @@ const PAGE_META = {
     description:
       'Frequenzbibliothek mit Evidenzstatus und interaktives Frequenzlabor: Tongenerator, Oszillogramm, binaurale Demonstration und 432/440-Vergleich.',
   },
+  frequenzenQuellen: {
+    title: 'Quellen & Methodik der Frequenzbibliothek | Esoterik-Welt',
+    description:
+      'Quellendokument zum Frequenzbereich: Suchstrategie, Aufnahmekriterien, Evidenzstatus, Claim-Quelle-Matrix und Quellenverzeichnis.',
+  },
 };
 
 function setMetaContent(selector, value) {
@@ -442,6 +447,9 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
       silent,
       hash: route.alias ? '#frequenzen/labor' : `#${route.raw}`,
       subroute: { segments: route.segments, query: route.query },
+      // Die Quellen-Ansicht ist ein eigenes Dokument und braucht eigene
+      // Metadaten (Titel/Beschreibung), bleibt aber Teil der Kategorie.
+      metaPage: route.segments[0] === 'quellen' ? 'frequenzenQuellen' : 'frequenzen',
     });
     // navigateTo() writes the URL only for fresh user navigations. A cold start,
     // an in-document hash change and Back/Forward must still end up canonical.
@@ -461,7 +469,7 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
 function navigateTo(
   pageId,
   replace = false,
-  { fromHistory = false, instant = false, silent = false, hash = null, subroute = null } = {}
+  { fromHistory = false, instant = false, silent = false, hash = null, subroute = null, metaPage = null } = {}
 ) {
   // Leaving a page must release its resources: the frequency lab stops audio
   // on any route change instead of playing on in the background.
@@ -481,7 +489,7 @@ function navigateTo(
   });
 
   state.currentPage = pageId;
-  applyRouteMeta(pageId);
+  applyRouteMeta(metaPage || pageId);
 
   // Scroll to top
   window.scrollTo({

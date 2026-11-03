@@ -504,6 +504,124 @@
   overflow-wrap: anywhere;
 }
 
+/* --- Quellenansicht (#frequenzen/quellen) ---------------------------------- */
+/* Rendert docs/frequenz-quellen.md. Lesebreite wie der Fließtext, Tabellen als
+   per Tastatur scrollbare Region (WCAG 2.1.1), Code ohne Silbentrennung. */
+.fq-quellen-body {
+  max-width: 82ch;
+}
+.fq-quellen-body h2,
+.fq-quellen-body h3,
+.fq-quellen-body h4 {
+  font-family: var(--font-body);
+  line-height: 1.3;
+  margin: var(--space-6) 0 var(--space-2);
+}
+.fq-quellen-body h2 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-4);
+}
+.fq-quellen-body h3 {
+  font-size: var(--text-lg);
+}
+.fq-quellen-body h4 {
+  font-size: var(--text-base);
+}
+.fq-quellen-body p,
+.fq-quellen-body li {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+.fq-quellen-body p {
+  margin: 0 0 var(--space-4);
+}
+.fq-quellen-body ul,
+.fq-quellen-body ol {
+  margin: 0 0 var(--space-4);
+  padding-left: var(--space-6);
+}
+.fq-quellen-body li {
+  margin-bottom: var(--space-2);
+  overflow-wrap: anywhere;
+}
+.fq-quellen-body a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+.fq-quellen-body code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+}
+.fq-quellen-body pre.fq-code {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+  margin: 0 0 var(--space-4);
+  overflow-x: auto;
+  font-size: var(--text-sm);
+}
+.fq-quellen-body pre.fq-code code {
+  color: var(--color-text-secondary);
+  overflow-wrap: normal;
+}
+.fq-quellen-body blockquote {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-card);
+}
+.fq-quellen-body blockquote p {
+  margin: 0;
+}
+.fq-quellen-body hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-8) 0;
+}
+.fq-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0 0 var(--space-6);
+  border: 1px solid var(--color-border);
+}
+.fq-table-scroll table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 44rem;
+  font-size: var(--text-sm);
+}
+.fq-table-scroll th,
+.fq-table-scroll td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+/* Die erste Spalte trägt Status oder id; ohne Mindestbreite bricht dort ein
+   einzelnes Wort mitten im Buchstaben ("traditione/ll"). */
+.fq-table-scroll th:first-child,
+.fq-table-scroll td:first-child {
+  min-width: 10ch;
+}
+.fq-table-scroll th {
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+.fq-table-scroll td {
+  color: var(--color-text-secondary);
+}
+.fq-quellen-body .fq-align-center {
+  text-align: center;
+}
+.fq-quellen-body .fq-align-right {
+  text-align: right;
+}
+
 /* --- Responsive: 1024, 700, 360 ----------------------------------------- */
 @media (max-width: 1024px) {
   .fq-lab-grid {
