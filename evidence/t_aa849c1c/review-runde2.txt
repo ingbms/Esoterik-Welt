@@ -58,5 +58,10 @@ und aus den Blobs die LF-Zeile (164.908 / 44.347); Arbeitsbaum des Implementiere
 | `npm run lint` / `format:check` | 0 / alle Dateien formatiert |
 | `npm run test:pages` / `test:offline` | 6/6 bzw. 2/2 |
 | CI 41576387364 auf `67586a9` | Lint, Unit, Browser-E2E, Static Build — alle success |
+| CI 41576949235 auf `e7093b8` (nur Nachweisdateien) | vier Jobs success |
+| CI 41577443814 auf `c5da9cc` (nur `Lokal.html` neu gebaut) | vier Jobs success |
+
+Feature-JS unverändert seit `8d8124f`: die Doku-, Nachweis- und Offline-Build-Commits danach ändern
+keine Datei unter `js/modules/`, die NFR-2-Werte bleiben 164.908 B roh / 44.347 B gz (LF).
 
 Nicht geprüft (unverändert A5, `t_4a8106de`): manueller Screenreader, Safari/iOS, Hörtest.
