@@ -86,7 +86,7 @@ function main() {
       badPath += 1;
       continue;
     }
-    const buf = fs.readFileSync(abs);
+    const buf = lib.canonicalBytes(row.path);
     if (buf.length !== Number(row.bytes)) badBytes += 1;
     if (crypto.createHash('sha256').update(buf).digest('hex') !== row.sha256) badSha += 1;
   }

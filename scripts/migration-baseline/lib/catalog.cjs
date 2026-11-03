@@ -160,6 +160,28 @@ function sha256(relPath) {
     .digest('hex');
 }
 
+// Textformate werden für Größe und Hash mit LF gerechnet. Ein Windows-Checkout
+// mit core.autocrlf=true legt dieselben Dateien mit CRLF ab; ohne
+// Normalisierung wären bytes/sha256 im Medien-Katalog vom Checkout abhängig und
+// die Prüfung schlüge auf Linux-CI anders aus als lokal. Binärformate bleiben
+// bytegenau.
+const CANONICAL_TEXT_FORMATS = new Set(['md', 'htm', 'html', 'json', 'txt', 'csv']);
+
+function canonicalBytes(relPath) {
+  const buffer = fs.readFileSync(path.join(ROOT, relPath));
+  const format = path.extname(relPath).slice(1).toLowerCase();
+  if (!CANONICAL_TEXT_FORMATS.has(format)) return buffer;
+  return Buffer.from(buffer.toString('utf8').replace(/\r\n/g, '\n'), 'utf8');
+}
+
+function canonicalSize(relPath) {
+  return canonicalBytes(relPath).length;
+}
+
+function canonicalSha256(relPath) {
+  return crypto.createHash('sha256').update(canonicalBytes(relPath)).digest('hex');
+}
+
 function today() {
   return new Date().toISOString().slice(0, 10);
 }
@@ -586,14 +608,14 @@ function validateMedia(rows, options = {}) {
     if (!ENUMS.delivery.includes(row.delivery)) out.error('ENUM', where, `delivery ${row.delivery} ist nicht erlaubt.`);
     if (!SHA256.test(row.sha256)) out.error('SHA256_FORMAT', where, 'sha256 muss 64 Hexzeichen sein.');
     else if (opts.fs && REPO_PATH.test(row.path) && exists(row.path)) {
-      const actual = sha256(row.path);
+      const actual = canonicalSha256(row.path);
       if (actual !== row.sha256) out.error('SHA256_MISMATCH', where, `sha256 passt nicht zu ${row.path}.`);
     }
     const size = Number(row.bytes);
     if (!Number.isInteger(size) || size <= 0)
       out.error('BYTES_FORMAT', where, 'bytes muss eine positive Ganzzahl sein.');
     else if (opts.fs && REPO_PATH.test(row.path) && exists(row.path)) {
-      const actualSize = fs.statSync(path.join(ROOT, row.path)).size;
+      const actualSize = canonicalSize(row.path);
       if (actualSize !== size) out.error('BYTES_MISMATCH', where, `bytes=${size}, Datei hat ${actualSize}.`);
     }
     const isVector = MEDIA_VECTOR_FORMATS.has(row.format.toLowerCase());
@@ -682,6 +704,9 @@ module.exports = {
   relToRoot,
   exists,
   sha256,
+  canonicalBytes,
+  canonicalSize,
+  canonicalSha256,
   validateDesign,
   validateContent,
   validateMedia,

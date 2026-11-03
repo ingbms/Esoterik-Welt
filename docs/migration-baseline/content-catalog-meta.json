@@ -65,9 +65,7 @@
   "gaps_and_placeholders": {
     "open_entries": [
       "CLM-003 Rot-Wellenlaenge ohne Quellenangabe auf der Seite (physikalischer Standardwert, unbelegt).",
-      "CNT-LEG-002 Datenschutzerklaerung nennt Journal und Experimentlaeufe nicht (rechtliche Abnahme offen).",
-      "E-03 Entscheidung zu den zwoelf Markdown-Artikeln (veroeffentlichen oder entfernen) steht aus.",
-      "data/articles/article-010.md.bak liegt versioniert im Bestand (Altlast, kein Release-Inhalt)."
+      "CNT-LEG-002 Datenschutzerklaerung nennt Journal und Experimentlaeufe nicht (rechtliche Abnahme offen)."
     ],
     "missing_translations": "Alle (de nur).",
     "placeholder_texts": [
@@ -78,5 +76,33 @@
       "«Farbwelten» vs «Farbsymbolik» — Seite verwendet konsistent «Farbwelten»; kein Korrekturbedarf.",
       "«Pendeln» und «Radiästhesie» werden als Synonyme verwendet; Glossar klärt Terminologie."
     ]
-  }
+  },
+  "entscheidungen": [
+    {
+      "id": "E-03",
+      "titel": "Zwoelf Markdown-Artikel",
+      "entscheidung": "veroeffentlicht",
+      "variante": "A",
+      "datum": "2026-11-03",
+      "karte": "t_44e58074",
+      "umsetzung": "data/articles/article-01.md … article-12.md → js/data/articles-markdown.js, IDs 11–22, Routen #blog/11–#blog/22",
+      "folge": "Die Quellen bleiben versioniert. Die HTML-Doppelseiten aus der Jekyll-Verarbeitung entfallen durch den Ausschluss in `_config.yml`; die Quellen bleiben versioniert, aber oeffentlich nicht abrufbar."
+    }
+  ],
+  "aenderungsprotokoll": [
+    {
+      "datum": "2026-11-03",
+      "karte": "t_44e58074",
+      "aenderung": "E-03/A-5 umgesetzt: zwoelf Markdown-Artikel als Blogartikel 11–22 veroeffentlicht.",
+      "details": [
+        "Datumsreparatur: Reihe von 2026-10-23 bis 2026-11-03 verschoben (vorher 2026-11-01 bis 2026-11-12, davon neun in der Zukunft).",
+        "readTime neu berechnet (200 Woerter/Minute, aufgerundet); die alten Werte 5–6 Min bei 112–356 Woertern waren falsch.",
+        "excerpt aus dem ersten Absatz erzeugt (200–240 Zeichen, Satzgrenze); das Frontmatter-Feld excerpt entfaellt, damit es nur eine Wahrheit gibt.",
+        "Textlaenge auf 600–704 Woerter erweitert, ausschliesslich mit Material aus dem eigenen Bestand (Tarot-, Runen-, Kristall-, Mond- und Astrologiedaten, radiasthesie/orakel.html, content/farbwelten).",
+        "Blockquote in article-01.md und Tabelle in article-06.md in renderer-konforme Absaetze/Listen ueberfuehrt.",
+        "Kategorie-Mapping dokumentiert: Tarot→tarot, Kristalle→crystals, Mond→moon, Runen→runes, Praxis→rituals, Astrologie→astrologie, Vergleich→tarot.",
+        "data/articles/article-010.md.bak entfernt (E-04/S10)."
+      ]
+    }
+  ]
 }

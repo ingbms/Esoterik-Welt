@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-03T22:42:45.826Z",
+  "generated_at": "2026-11-03T23:57:55.442Z",
   "card": "t_9c2a7824",
   "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
-  "head_commit": "eda2ba3517b9cdc6f76642f8bcf5c298a28b61fc",
+  "head_commit": "a3ffe38efcabdaac2972e3bf935409458a7b9247",
   "counts": {
     "design_entries": 277,
     "design_states": 12,
@@ -23,7 +23,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/0 Abweichung/)",
-      "duration_ms": 350
+      "duration_ms": 349
     },
     {
       "id": "M2",
@@ -32,7 +32,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/0 Fehler/)",
-      "duration_ms": 910
+      "duration_ms": 2205
     },
     {
       "id": "M3",
@@ -41,7 +41,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/OK\\s+docs\\/migration-baseline\\/content-catalog\\.md/)",
-      "duration_ms": 93
+      "duration_ms": 136
     },
     {
       "id": "M4",
@@ -50,7 +50,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/OK, 0 Warnungen/)",
-      "duration_ms": 235
+      "duration_ms": 520
     },
     {
       "id": "M5",
@@ -59,7 +59,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/\"errors\": 0/)",
-      "duration_ms": 213
+      "duration_ms": 362
     },
     {
       "id": "M6",
@@ -68,7 +68,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/17\\/17 (Pruefungen|Prüfungen) bestanden/)",
-      "duration_ms": 732
+      "duration_ms": 3568
     },
     {
       "id": "M7",
@@ -77,7 +77,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/alle Quellen und Nachweise vorhanden/)",
-      "duration_ms": 231
+      "duration_ms": 197
     },
     {
       "id": "M8",
@@ -86,7 +86,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/^OK:/m)",
-      "duration_ms": 369
+      "duration_ms": 233
     },
     {
       "id": "M9",
@@ -94,8 +94,8 @@
       "command": "node scripts/migration-baseline/check-catalog-routes.cjs",
       "status": "pass",
       "exit_code": 0,
-      "detail": "39 Routen, 0 nicht gefunden, 0 verlinkt aber nicht katalogisiert",
-      "duration_ms": 49385
+      "detail": "51 Routen, 0 nicht gefunden, 0 verlinkt aber nicht katalogisiert",
+      "duration_ms": 63008
     },
     {
       "id": "M10",
@@ -104,7 +104,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0",
-      "duration_ms": 9825
+      "duration_ms": 11814
     }
   ],
   "structural_findings": [

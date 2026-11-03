@@ -246,17 +246,19 @@ Zwölf Farbwelten, drei Themenseiten und fünf Werkzeug- bzw. Registerrouten. Di
 
 ### 2.10 BLG — Wissen und Artikel
 
-Zehn Artikel liegen gerendert in `js/data/articles.js`; zwölf weitere Markdown-Dateien unter
-`data/articles/` sind abrufbar, aber von keiner Ansicht verlinkt (Abgrenzung in §7, B-07).
+Zehn kuratierte Artikel liegen gerendert in `js/data/articles.js`; zwölf weitere entstehen über
+`npm run data:articles` aus `data/articles/article-01…12.md` und stehen als
+`js/data/articles-markdown.js` bereit. Beide Bestände werden im Blog zu 22 Artikeln zusammengeführt
+(Routen `#blog/1`–`#blog/22`); die Katalogführung der zwölf Markdown-Artikel ist `CNT-ART-011…022`.
 
 | ID | Funktion | Auslöser | Quelle | Zustände | Prüfkriterium | Status | Release | Owner | Nachweis |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| FUN-BLG-001 | Artikelliste ansehen | `#blog` | `js/modules/blog.js` · `renderCards` · L25-L61 | gefüllt, leer | Die Liste zeigt die zehn Artikel mit Titel, Kategorie, Datum und Lesezeit; ohne Artikel erscheint ein leerer Zustand | final | must | writer | `tests/pages-regression.cjs` |
-| FUN-BLG-002 | Nach Kategorie filtern | `#categoryFilter` | `blog.js` · `filterArticles` · L122-L136; `setupEventListeners` · L114-L120 | alle, eine Kategorie | Die Auswahl einer Kategorie zeigt nur deren Artikel und aktualisiert die Statuszeile | final | must | design_web_layout | `cmd: grep -n "categoryFilter" index.html js/modules/blog.js` |
-| FUN-BLG-003 | Artikel durchsuchen | `#articleSearch` | `blog.js` · `filterArticles` · L122-L136 | Treffer, keine Treffer | Die Eingabe filtert nach 300 ms Entprellung über Titel und Text; „keine Treffer“ wird als Text ausgegeben, nicht als leere Fläche | final | must | design_web_layout | `cmd: grep -n "searchTimeout" js/modules/blog.js` |
-| FUN-BLG-004 | Artikel lesen | Klick auf eine Artikelkarte, `#blog/<id>` | `blog.js` · `openArticleModal` · L87-L112; `findArticle` · L83-L85; `js/article-content.js` · `renderArticleContent` · L16-L63 | offen, Markdown gerendert | Der Dialog rendert Überschriften, Listen und Absätze aus Markdown; die Adresse wird zu `#blog/<id>`; Schließen stellt die Liste wieder her | final | must | writer | `tests/markdown-lite.mjs` |
-| FUN-BLG-005 | Weitere Artikel nachladen | `#loadMoreArticles` | `blog.js` · `syncArticleStatus` · L65-L81; `updateGrid` · L138-L148 | verborgen, bedienbar, erschöpft | Der Knopf erscheint nur, wenn weitere Artikel vorhanden sind; nach dem Nachladen wächst die Liste; am Ende wird er deaktiviert | final | should | design_web_layout | `cmd: grep -n "loadMoreArticles" index.html js/modules/blog.js` |
-| FUN-BLG-006 | Ergebnisstand anzeigen | nach Filter oder Suche | `blog.js` · `updateGrid` · L138-L148 | Statuszeile gefüllt | `#articleListStatus` nennt die sichtbare Anzahl; die Zeile ist `aria-live="polite"` und wird bei jeder Änderung aktualisiert | final | should | design_web_layout | `cmd: grep -n "articleListStatus" index.html` |
+| FUN-BLG-001 | Artikelliste ansehen | `#blog` | `js/modules/blog.js` · `renderCards` · L34-L70 | gefüllt, leer | Die Liste zeigt alle 22 Artikel (zehn kuratiert, zwölf aus Markdown) mit Titel, Kategorie, Datum und Lesezeit, sortiert nach Datum absteigend; ohne Artikel erscheint ein leerer Zustand | final | must | writer | `tests/blog-articles.spec.js` |
+| FUN-BLG-002 | Nach Kategorie filtern | `#categoryFilter` | `blog.js` · `filterArticles` · L131-L145; `setupEventListeners` · L123-L129 | alle, eine Kategorie | Die Auswahl einer Kategorie zeigt nur deren Artikel und aktualisiert die Statuszeile; die sieben Filterwerte (`tarot`, `crystals`, `runes`, `moon`, `astrologie`, `rituals`, `history`) liefern je mindestens einen Treffer | final | must | design_web_layout | `tests/blog-articles.spec.js` |
+| FUN-BLG-003 | Artikel durchsuchen | `#articleSearch` | `blog.js` · `filterArticles` · L131-L145 | Treffer, keine Treffer | Die Eingabe filtert nach 300 ms Entprellung über Titel und Tags; „keine Treffer“ wird als Text ausgegeben, nicht als leere Fläche | final | must | design_web_layout | `tests/blog-articles.spec.js` |
+| FUN-BLG-004 | Artikel lesen | Klick auf eine Artikelkarte, `#blog/<id>` | `blog.js` · `openArticleModal` · L96-L121; `findArticle` · L92-L94; `js/article-content.js` · `renderArticleContent` · L16-L63 | offen, Markdown gerendert | Der Dialog rendert Überschriften, Listen und Absätze aus Markdown; die Adresse wird zu `#blog/<id>`; Schließen stellt die Liste wieder her und gibt den Fokus an die Karte zurück | final | must | writer | `tests/blog-articles.spec.js` |
+| FUN-BLG-005 | Ergebnisstand anzeigen | nach Filter, Suche oder Erstaufbau | `blog.js` · `syncArticleStatus` · L74-L90; `updateGrid` · L147-L157 | Statuszeile gefüllt | `#articleListStatus` nennt die sichtbare Anzahl („Alle 22 Artikel werden angezeigt.“ bzw. „N von 22 Artikeln werden angezeigt.“); der Knopf `#loadMoreArticles` bleibt verborgen und deaktiviert, weil alle Artikel sofort gerendert werden | final | should | design_web_layout | `tests/blog-articles.spec.js` |
+| FUN-BLG-006 | Ergebnisstand aktualisieren | nach Filter oder Suche | `blog.js` · `updateGrid` · L147-L157 | Statuszeile gefüllt | `#articleListStatus` nennt die sichtbare Anzahl; die Zeile ist `aria-live="polite"` und wird bei jeder Änderung aktualisiert | final | should | design_web_layout | `cmd: grep -n "articleListStatus" index.html` |
 
 ## 3. Datenquellen und Generatoren
 
@@ -273,8 +275,9 @@ Tests bytegenau geprüft. `produced_by` folgt §5.6.
 | `Lokal.html`, `Lokal-*.html` | `npm run build:local` (`scripts/build-local.cjs`) | `index.html`, Module, `data/crystals.json`, CSS, Schriften | `tests/offline-file.cjs` | erzeugt |
 | `js/data/tarot.js` | `node scripts/generate-tarot-data.cjs` | `docs/tarot-deck-nachtatelier/…` — **fehlt im Release** | `--check` schlägt fehl (B-01) | blockiert |
 | `data/crystals.json` | von Hand gepflegt; `node scripts/sync-crystal-attribution.cjs` schreibt nur die Attributionsfelder | `assets/crystals/manifest.json` | `tests/crystals-attribution.cjs` | gepflegt |
+| `js/data/articles-markdown.js` | `npm run data:articles` (`scripts/generate-articles-data.cjs`) | `data/articles/article-01…12.md` | `npm run verify:articles`, `tests/generate-articles-data.test.js` | erzeugt |
 
-Weitere Datenbestände ohne Erzeuger: `js/data/articles.js` (10 gerenderte Artikel),
+Weitere Datenbestände ohne Erzeuger: `js/data/articles.js` (10 kuratierte gerenderte Artikel),
 `js/data/tarot-decks.js` (Deck-Registry), `js/data/chakren.js`, `js/data/moon.js`, `js/data/runes.js`,
 `js/data/radiasthesie-werkstatt.js`.
 
@@ -459,12 +462,12 @@ eine existierende Testdatei oder beginnt mit `cmd:`.
 
 ### 9.3 Testabdeckung
 
-Der Katalog enthält 96 Funktionen. 65 davon sind über eine der 43 Testdateien abgedeckt; 31 haben
+Der Katalog enthält 96 Funktionen. 68 davon sind über eine der 44 Testdateien abgedeckt; 28 haben
 keinen verhaltensprüfenden Test und sind deshalb nur mit `cmd:`-Nachweis belegt: FUN-GLO-002,
 FUN-GLO-006, FUN-GLO-009, FUN-GLO-010, FUN-TAR-002, FUN-TAR-003, FUN-TAR-004, FUN-TAR-007,
 FUN-TAR-008, FUN-KRY-001, FUN-KRY-002, FUN-KRY-003, FUN-KRY-005, FUN-KRY-006, FUN-MON-002,
 FUN-MON-006, FUN-MON-007, FUN-MON-008, FUN-AST-013, FUN-RUN-001 bis FUN-RUN-007, FUN-FBW-009,
-FUN-BLG-002, FUN-BLG-003, FUN-BLG-005, FUN-BLG-006. Diese Lücke ist selbst ein Befund: die Zeilen
+FUN-BLG-006. Diese Lücke ist selbst ein Befund: die Zeilen
 belegen die Verdrahtung, nicht das Verhalten. Ein späterer Regressionstest je Bereich sollte
 mindestens eine Ziehung (TAR), einen Filter (KRY), einen Monatswechsel (MON), einen Wurf (RUN) und
 den Artikel-Dialog (BLG) abdecken.

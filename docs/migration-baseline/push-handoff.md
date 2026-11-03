@@ -32,7 +32,7 @@ Nur Dokumentation und Prüfwerkzeuge. Kein Produktivcode.
 | --- | --- |
 | `index.html`, `css/`, `js/`, `data/`, `assets/`, `dist/` | Produktdateien; in diesem Arbeitspaket nicht verändert |
 | `public/` (17 Dateien) | wird von `build-pages.cjs` nicht kopiert, daher nicht öffentlich |
-| `data/articles/article-01…12.md` | eigener Textbestand ohne Route; Entscheidung E-03 offen (A-5) |
+| `data/articles/article-01…12.md` | **nicht mehr ausgenommen** (A-5, `t_44e58074`): als Blogartikel 11–22 veröffentlicht; Quelle bleibt versioniert |
 | Fünf Altdateien (33 KB) | von der Baseline nicht genutzt, als Restbestand dokumentiert |
 | Unversionierte Entwürfe unter `docs/` und `evidence/` | nicht freigegeben; nur lesend für Herkunft geprüft |
 | VELARKANA-Umbenennung, Repository-Anlage | eigenes Arbeitspaket nach diesem Gate |

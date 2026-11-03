@@ -117,7 +117,7 @@ b40a753  Befunde B-1 und B-2 behoben, CI-Lint gruen
 | A-2 | `CLM-003`: Quelle für 620–750 nm oder Kennzeichnung als physikalischer Standard | `writer` | 2026-11-10 | Katalog-`must` |
 | A-3 | `datenschutz.html` um Radiästhesie-Journal und Experimentläufe ergänzen, rechtlich abnehmen | Eigentümer (`default`) | 2026-11-17 | VELARKANA-Go-live |
 | A-4 | `MED-0130` (`assets/mineral/mineral-detail-1000.jpg`): Lizenz klären oder Bild aus dem Release nehmen | `architect` | 2026-11-10 | Medien-Push |
-| A-5 | E-03 entscheiden: zwölf Markdown-Artikel veröffentlichen oder entfernen | Eigentümer (`default`) | 2026-11-17 | VELARKANA-Inhaltsmigration |
+| A-5 | E-03 entschieden (2026-11-03, Variante A: veröffentlichen) und umgesetzt in `t_44e58074`: zwölf Markdown-Artikel als Blogartikel 11–22, Katalog `CNT-ART-011…022` auf `final`/`must`/`shipped` | Eigentümer (`default`) | 2026-11-17 | entfällt (erledigt 2026-11-03) |
 
 ## 5. Restrisiken, die bewusst getragen werden
 

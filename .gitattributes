@@ -16,6 +16,12 @@ assets/tarot/nachtatelier-v1/manifest.json -text
 # idempotent on Windows checkouts.
 js/data/farbwelten.js -text
 
+# js/data/articles-markdown.js is generated from data/articles/*.md by
+# scripts/generate-articles-data.cjs and compared byte for byte in --check.
+# Store and check it out verbatim so a Windows autocrlf checkout cannot break
+# the comparison while Linux CI stays green.
+js/data/articles-markdown.js -text
+
 # Der Medien-Katalog wird bytegenau gegen die Erzeugung geprueft
 # (scripts/migration-baseline/build-media-catalog.cjs --check). Eine
 # CRLF-Konvertierung beim Windows-Checkout wuerde den Vergleich brechen.

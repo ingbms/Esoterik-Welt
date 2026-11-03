@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-03T22:42:45.653Z",
-  "base": "http://127.0.0.1:32110/Esoterik-Welt/",
-  "base_commit": "eda2ba3517b9cdc6f76642f8bcf5c298a28b61fc",
+  "generated_at": "2026-11-03T23:57:54.272Z",
+  "base": "http://127.0.0.1:16934/Esoterik-Welt/",
+  "base_commit": "a3ffe38efcabdaac2972e3bf935409458a7b9247",
   "facts": {
     "crystals": {
       "cards": 30,
@@ -38,8 +38,8 @@
         "crys-10"
       ],
       "dataRequests": [
-        "http://127.0.0.1:32110/Esoterik-Welt/js/modules/crystals.js",
-        "http://127.0.0.1:32110/Esoterik-Welt/data/crystals.json"
+        "http://127.0.0.1:16934/Esoterik-Welt/js/modules/crystals.js",
+        "http://127.0.0.1:16934/Esoterik-Welt/data/crystals.json"
       ]
     },
     "farbwelten": {
@@ -125,10 +125,14 @@
       }
     ],
     "blog": {
-      "listItems": 10,
+      "listItems": 22,
       "article6": {
         "modalOpen": true,
         "title": "Einsteiger-Guide: Wie du mit Tarot, Kristallen und Runen beginnst"
+      },
+      "article22": {
+        "modalOpen": true,
+        "title": "Kristall-Grids für Manifestation"
       }
     },
     "datenschutz": {
@@ -154,7 +158,10 @@
     "braunIsNotARoute": true,
     "topicPagesResolve": true,
     "oldTopicSlugsAreNotRoutes": true,
-    "blog6Opens": true
+    "blog6Opens": true,
+    "blogListIs22": true,
+    "blog22Opens": true,
+    "blog22IsKristallGrids": true
   },
   "ok": true
 }

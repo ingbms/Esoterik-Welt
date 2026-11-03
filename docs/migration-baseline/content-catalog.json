@@ -574,277 +574,713 @@
     {
       "id": "CNT-ART-011",
       "name": "Die Major Arcana: Vom Narr bis zur Welt",
-      "description": "Markdown-Artikel article-01.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 11 aus data/articles/article-01.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/11 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-01.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-01.md#L10",
+      "text_ref": "data/articles/article-01.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/11 oeffnet \"Die Major Arcana: Vom Narr bis zur Welt\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-01.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/11",
+      "evidence": [
+        "data/articles/article-01.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Die Major Arcana: Vom Narr bis zur Welt"
+        },
+        {
+          "level": 2,
+          "text": "Die Reihe in Kurzform"
+        },
+        {
+          "level": 2,
+          "text": "Woher das Tarot kommt"
+        },
+        {
+          "level": 2,
+          "text": "Wie eine Lesung aufgebaut wird"
+        },
+        {
+          "level": 2,
+          "text": "Was die Datenbasis hergibt und was nicht"
+        },
+        {
+          "level": 2,
+          "text": "Wie man anfängt"
+        }
       ]
     },
     {
       "id": "CNT-ART-012",
       "name": "Minor Arcana: Die vier Suits verstehen",
-      "description": "Markdown-Artikel article-02.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 12 aus data/articles/article-02.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/12 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-02.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-02.md#L10",
+      "text_ref": "data/articles/article-02.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/12 oeffnet \"Minor Arcana: Die vier Suits verstehen\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-02.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/12",
+      "evidence": [
+        "data/articles/article-02.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Minor Arcana: Die vier Suits verstehen"
+        },
+        {
+          "level": 2,
+          "text": "Die vier Farben"
+        },
+        {
+          "level": 3,
+          "text": "Stäbe (Wand / Feuer)"
+        },
+        {
+          "level": 3,
+          "text": "Kelche (Wasser / Emotion)"
+        },
+        {
+          "level": 3,
+          "text": "Schwerter (Luft / Verstand)"
+        },
+        {
+          "level": 3,
+          "text": "Münzen (Erde / Materie)"
+        },
+        {
+          "level": 2,
+          "text": "Der Aufbau einer Farbe"
+        },
+        {
+          "level": 2,
+          "text": "Lesen im Kontext"
+        },
+        {
+          "level": 2,
+          "text": "Woher die Farben kommen"
+        },
+        {
+          "level": 2,
+          "text": "Was die Datenbasis hergibt"
+        },
+        {
+          "level": 2,
+          "text": "Ein Einstieg mit vier Karten"
+        }
       ]
     },
     {
       "id": "CNT-ART-013",
       "name": "Kristalle für jedes Chakra: Ein Leitfaden",
-      "description": "Markdown-Artikel article-03.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 13 aus data/articles/article-03.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/13 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-03.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-03.md#L10",
+      "text_ref": "data/articles/article-03.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/13 oeffnet \"Kristalle für jedes Chakra: Ein Leitfaden\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-03.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/13",
+      "evidence": [
+        "data/articles/article-03.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Kristalle für jedes Chakra: Ein Leitfaden"
+        },
+        {
+          "level": 2,
+          "text": "Die sieben Zentren und die Steine des Bestands"
+        },
+        {
+          "level": 3,
+          "text": "1. Wurzel – Sicherheit, Boden"
+        },
+        {
+          "level": 3,
+          "text": "2. Sakral – Kreativität, Lust"
+        },
+        {
+          "level": 3,
+          "text": "3. Solarplexus – Wille, Selbstwert"
+        },
+        {
+          "level": 3,
+          "text": "4. Herz – Liebe, Mitgefühl"
+        },
+        {
+          "level": 3,
+          "text": "5. Hals – Kommunikation, Wahrheit"
+        },
+        {
+          "level": 3,
+          "text": "6. Drittes Auge – Intuition, Klarheit"
+        },
+        {
+          "level": 3,
+          "text": "7. Krone – Verbindung, Sinn"
+        },
+        {
+          "level": 2,
+          "text": "Die Farbzuordnung ist jünger als ihr Ruf"
+        },
+        {
+          "level": 2,
+          "text": "Was Härte und Formel praktisch bedeuten"
+        },
+        {
+          "level": 2,
+          "text": "Praxis: ein Stein, eine Frage, sieben Tage"
+        }
       ]
     },
     {
       "id": "CNT-ART-014",
       "name": "Mondphasen-Rituale für Anfänger",
-      "description": "Markdown-Artikel article-04.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 14 aus data/articles/article-04.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/14 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-04.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-04.md#L10",
+      "text_ref": "data/articles/article-04.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/14 oeffnet \"Mondphasen-Rituale für Anfänger\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-04.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/14",
+      "evidence": [
+        "data/articles/article-04.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Mondphasen-Rituale für Anfänger"
+        },
+        {
+          "level": 2,
+          "text": "Die acht Phasen"
+        },
+        {
+          "level": 2,
+          "text": "Wie die Berechnung geprüft wird"
+        },
+        {
+          "level": 2,
+          "text": "Was eine Mondphase nicht ist"
+        },
+        {
+          "level": 2,
+          "text": "Ein einfaches Ritual in vier Schritten"
+        },
+        {
+          "level": 2,
+          "text": "Warum ein fester Zeitpunkt hilft"
+        },
+        {
+          "level": 2,
+          "text": "Für den Einstieg"
+        }
       ]
     },
     {
       "id": "CNT-ART-015",
       "name": "Runenlesen: Die 3-Runen-Legung erklärt",
-      "description": "Markdown-Artikel article-05.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 15 aus data/articles/article-05.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/15 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-05.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-05.md#L10",
+      "text_ref": "data/articles/article-05.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/15 oeffnet \"Runenlesen: Die 3-Runen-Legung erklärt\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-05.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/15",
+      "evidence": [
+        "data/articles/article-05.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Runenlesen: Die 3-Runen-Legung erklärt"
+        },
+        {
+          "level": 2,
+          "text": "Die 24 Runen"
+        },
+        {
+          "level": 2,
+          "text": "Die drei Positionen"
+        },
+        {
+          "level": 2,
+          "text": "Ein Beispiel"
+        },
+        {
+          "level": 2,
+          "text": "Was historisch belegt ist"
+        },
+        {
+          "level": 2,
+          "text": "Umgekehrte Runen"
+        },
+        {
+          "level": 2,
+          "text": "Praxis: drei Runen, eine Frage"
+        }
       ]
     },
     {
       "id": "CNT-ART-016",
       "name": "Tarot vs. Runen: Unterschiede und Gemeinsamkeiten",
-      "description": "Markdown-Artikel article-06.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 16 aus data/articles/article-06.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/16 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-06.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-06.md#L10",
+      "text_ref": "data/articles/article-06.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/16 oeffnet \"Tarot vs. Runen: Unterschiede und Gemeinsamkeiten\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-06.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/16",
+      "evidence": [
+        "data/articles/article-06.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Tarot vs. Runen: Unterschiede und Gemeinsamkeiten"
+        },
+        {
+          "level": 2,
+          "text": "Die Unterschiede"
+        },
+        {
+          "level": 2,
+          "text": "Die Gemeinsamkeiten"
+        },
+        {
+          "level": 2,
+          "text": "Die Herkunft im Detail"
+        },
+        {
+          "level": 2,
+          "text": "Was beide nicht leisten"
+        },
+        {
+          "level": 2,
+          "text": "Die Wahl nach Anlass"
+        }
       ]
     },
     {
       "id": "CNT-ART-017",
       "name": "Wie man einen Kristall reinigt und auflädt",
-      "description": "Markdown-Artikel article-07.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 17 aus data/articles/article-07.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/17 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-07.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-07.md#L10",
+      "text_ref": "data/articles/article-07.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/17 oeffnet \"Wie man einen Kristall reinigt und auflädt\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-07.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/17",
+      "evidence": [
+        "data/articles/article-07.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Wie man einen Kristall reinigt und auflädt"
+        },
+        {
+          "level": 2,
+          "text": "Warum die Härte zählt"
+        },
+        {
+          "level": 2,
+          "text": "Was Wasser nicht mag"
+        },
+        {
+          "level": 2,
+          "text": "Die vier Methoden"
+        },
+        {
+          "level": 2,
+          "text": "Aufladen als Reflexionsschritt"
+        },
+        {
+          "level": 2,
+          "text": "Was dabei nicht behauptet wird"
+        },
+        {
+          "level": 2,
+          "text": "Ein einfacher Pflegeplan"
+        }
       ]
     },
     {
       "id": "CNT-ART-018",
       "name": "Die Bedeutung der Mondknoten in der Astrologie",
-      "description": "Markdown-Artikel article-08.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 18 aus data/articles/article-08.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/18 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-08.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-08.md#L10",
+      "text_ref": "data/articles/article-08.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/18 oeffnet \"Die Bedeutung der Mondknoten in der Astrologie\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-08.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/18",
+      "evidence": [
+        "data/articles/article-08.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Die Bedeutung der Mondknoten in der Astrologie"
+        },
+        {
+          "level": 2,
+          "text": "Astronomisch: ein Schnittpunkt"
+        },
+        {
+          "level": 2,
+          "text": "Die Deutungstradition"
+        },
+        {
+          "level": 2,
+          "text": "Die Achse lesen"
+        },
+        {
+          "level": 2,
+          "text": "Was die Datenbasis hergibt"
+        },
+        {
+          "level": 2,
+          "text": "Einordnung: Tradition und Befund"
+        },
+        {
+          "level": 2,
+          "text": "Praxis: eine Achse, ein Satz"
+        }
       ]
     },
     {
       "id": "CNT-ART-019",
       "name": "Tageskarte ziehen: Eine Morgenroutine",
-      "description": "Markdown-Artikel article-09.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 19 aus data/articles/article-09.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/19 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-09.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-09.md#L10",
+      "text_ref": "data/articles/article-09.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/19 oeffnet \"Tageskarte ziehen: Eine Morgenroutine\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-09.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/19",
+      "evidence": [
+        "data/articles/article-09.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Tageskarte ziehen: Eine Morgenroutine"
+        },
+        {
+          "level": 2,
+          "text": "Die Routine in vier Schritten"
+        },
+        {
+          "level": 2,
+          "text": "Warum eine Karte und nicht drei"
+        },
+        {
+          "level": 2,
+          "text": "Was die Datenbasis liefert"
+        },
+        {
+          "level": 2,
+          "text": "Was die Routine nicht ist"
+        },
+        {
+          "level": 2,
+          "text": "Nach sieben Tagen"
+        },
+        {
+          "level": 2,
+          "text": "Ein Anfang, der bleibt"
+        }
       ]
     },
     {
       "id": "CNT-ART-020",
       "name": "Ein eigenes Orakel-Deck erstellen",
-      "description": "Markdown-Artikel article-10.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 20 aus data/articles/article-10.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/20 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-10.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-10.md#L10",
+      "text_ref": "data/articles/article-10.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/20 oeffnet \"Ein eigenes Orakel-Deck erstellen\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-10.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/20",
+      "evidence": [
+        "data/articles/article-10.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ein eigenes Orakel-Deck erstellen"
+        },
+        {
+          "level": 2,
+          "text": "Weg 1: Tarot-basiert (78 Karten)"
+        },
+        {
+          "level": 2,
+          "text": "Weg 2: Kombiniert (Tarot und Runen)"
+        },
+        {
+          "level": 2,
+          "text": "Weg 3: Ein kleines Deck"
+        },
+        {
+          "level": 2,
+          "text": "Aufbau und Nummerierung"
+        },
+        {
+          "level": 2,
+          "text": "Rechte und Herkunft"
+        },
+        {
+          "level": 2,
+          "text": "Die erste Legung"
+        },
+        {
+          "level": 2,
+          "text": "Was ein Deck nicht leisten muss"
+        }
       ]
     },
     {
       "id": "CNT-ART-021",
       "name": "Schattenarbeit mit Tarot",
-      "description": "Markdown-Artikel article-11.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 21 aus data/articles/article-11.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/21 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-11.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-11.md#L10",
+      "text_ref": "data/articles/article-11.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/21 oeffnet \"Schattenarbeit mit Tarot\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-11.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/21",
+      "evidence": [
+        "data/articles/article-11.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Schattenarbeit mit Tarot"
+        },
+        {
+          "level": 2,
+          "text": "Was Schattenarbeit meint"
+        },
+        {
+          "level": 2,
+          "text": "Drei Karten als Spiegel"
+        },
+        {
+          "level": 2,
+          "text": "Die Methode"
+        },
+        {
+          "level": 2,
+          "text": "Wo die Grenzen liegen"
+        },
+        {
+          "level": 2,
+          "text": "Was übrig bleibt"
+        }
       ]
     },
     {
       "id": "CNT-ART-022",
       "name": "Kristall-Grids für Manifestation",
-      "description": "Markdown-Artikel article-12.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "description": "Blogartikel 22 aus data/articles/article-12.md: eigene Redaktionsquelle mit Frontmatter (Titel, Datum, Kategorie, Tags). Route #blog/22 oeffnet den Dialog ueber alle 22 Blogeintraege; der Body wird mit dem kleinen Markdown-Renderer gesetzt.",
       "type": "article",
       "source": {
         "path": "data/articles/article-12.md",
         "selector": "h1",
-        "lines": "L10"
+        "lines": "L9"
       },
-      "text_ref": "data/articles/article-12.md#L10",
+      "text_ref": "data/articles/article-12.md#L9",
       "language": "de",
       "stand": "2026-11-03",
-      "status": "offen",
+      "status": "final",
       "owner": "writer",
-      "release_relevance": "none",
-      "delivery": "source-only",
-      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
-      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
-      "open_questions": [
-        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/22 oeffnet \"Kristall-Grids für Manifestation\" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-12.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles).",
+      "notes": "Quelle bleibt versioniert und oeffentlich abrufbar; seit A-5 (t_44e58074) tritt sie nicht mehr als eigene Jekyll-HTML-Seite auf (Ausschluss ueber _config.yml). IDs 11-22 in Dateireihenfolge.",
+      "route": "#blog/22",
+      "evidence": [
+        "data/articles/article-12.md#L9",
+        "js/data/articles-markdown.js",
+        "js/modules/blog.js",
+        "cmd: npm run verify:articles"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Kristall-Grids für Manifestation"
+        },
+        {
+          "level": 2,
+          "text": "Was ein Grid ist"
+        },
+        {
+          "level": 2,
+          "text": "Die Steine auswählen"
+        },
+        {
+          "level": 2,
+          "text": "Ein einfaches Grid mit fünf Steinen"
+        },
+        {
+          "level": 2,
+          "text": "Der Ablauf"
+        },
+        {
+          "level": 2,
+          "text": "Was das Grid nicht leistet"
+        },
+        {
+          "level": 2,
+          "text": "Ein Grid, das bleibt"
+        }
       ]
     },
     {

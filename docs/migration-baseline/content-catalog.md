@@ -9,9 +9,9 @@
 | --- | --- |
 | Eintraege | 54 |
 | Aussagen (Claims) | 6 |
-| Status | entwurf 2 · final 40 · offen 12 |
-| Release-Relevanz | must 41 · none 12 · should 1 |
-| Auslieferung | shipped 41 · source-only 13 |
+| Status | entwurf 2 · final 52 |
+| Release-Relevanz | must 53 · should 1 |
+| Auslieferung | shipped 53 · source-only 1 |
 | Typen | article 22 · glossary 2 · legal 3 · page 10 · subroute 15 · ui-string 2 |
 | Sprache | de 54 |
 
@@ -59,18 +59,18 @@
 | CNT-ART-008 | Die Bedeutung des Futhark: Von Fehu bis Othala | #blog/8 | js/data/articles.js · `articles[7]` · L138-L156 | js/data/articles.js#L138-L156 | 2026-11-03 | final | must | writer | Route #blog/8 oeffnet Artikel 8 im Dialog; Titel und Excerpt stammen aus articles[7]. |
 | CNT-ART-009 | Rituale für jede Mondphase: Ein praktischer Kalender | #blog/9 | js/data/articles.js · `articles[8]` · L157-L173 | js/data/articles.js#L157-L173 | 2026-11-03 | final | must | writer | Route #blog/9 oeffnet Artikel 9 im Dialog; Titel und Excerpt stammen aus articles[8]. |
 | CNT-ART-010 | Moldavit: Der Meteorit unter den Kristallen | #blog/10 | js/data/articles.js · `articles[9]` · L174-L199 | js/data/articles.js#L174-L199 | 2026-11-03 | final | must | writer | Route #blog/10 oeffnet Artikel 10 im Dialog; Titel und Excerpt stammen aus articles[9]. |
-| CNT-ART-011 | Die Major Arcana: Vom Narr bis zur Welt | — | data/articles/article-01.md · `h1` · L10 | data/articles/article-01.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-012 | Minor Arcana: Die vier Suits verstehen | — | data/articles/article-02.md · `h1` · L10 | data/articles/article-02.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-013 | Kristalle für jedes Chakra: Ein Leitfaden | — | data/articles/article-03.md · `h1` · L10 | data/articles/article-03.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-014 | Mondphasen-Rituale für Anfänger | — | data/articles/article-04.md · `h1` · L10 | data/articles/article-04.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-015 | Runenlesen: Die 3-Runen-Legung erklärt | — | data/articles/article-05.md · `h1` · L10 | data/articles/article-05.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-016 | Tarot vs. Runen: Unterschiede und Gemeinsamkeiten | — | data/articles/article-06.md · `h1` · L10 | data/articles/article-06.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-017 | Wie man einen Kristall reinigt und auflädt | — | data/articles/article-07.md · `h1` · L10 | data/articles/article-07.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-018 | Die Bedeutung der Mondknoten in der Astrologie | — | data/articles/article-08.md · `h1` · L10 | data/articles/article-08.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-019 | Tageskarte ziehen: Eine Morgenroutine | — | data/articles/article-09.md · `h1` · L10 | data/articles/article-09.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-020 | Ein eigenes Orakel-Deck erstellen | — | data/articles/article-10.md · `h1` · L10 | data/articles/article-10.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-021 | Schattenarbeit mit Tarot | — | data/articles/article-11.md · `h1` · L10 | data/articles/article-11.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
-| CNT-ART-022 | Kristall-Grids für Manifestation | — | data/articles/article-12.md · `h1` · L10 | data/articles/article-12.md#L10 | 2026-11-03 | offen | none | writer | Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie. |
+| CNT-ART-011 | Die Major Arcana: Vom Narr bis zur Welt | #blog/11 | data/articles/article-01.md · `h1` · L9 | data/articles/article-01.md#L9 | 2026-11-03 | final | must | writer | #blog/11 oeffnet "Die Major Arcana: Vom Narr bis zur Welt" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-01.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-012 | Minor Arcana: Die vier Suits verstehen | #blog/12 | data/articles/article-02.md · `h1` · L9 | data/articles/article-02.md#L9 | 2026-11-03 | final | must | writer | #blog/12 oeffnet "Minor Arcana: Die vier Suits verstehen" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-02.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-013 | Kristalle für jedes Chakra: Ein Leitfaden | #blog/13 | data/articles/article-03.md · `h1` · L9 | data/articles/article-03.md#L9 | 2026-11-03 | final | must | writer | #blog/13 oeffnet "Kristalle für jedes Chakra: Ein Leitfaden" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-03.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-014 | Mondphasen-Rituale für Anfänger | #blog/14 | data/articles/article-04.md · `h1` · L9 | data/articles/article-04.md#L9 | 2026-11-03 | final | must | writer | #blog/14 oeffnet "Mondphasen-Rituale für Anfänger" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-04.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-015 | Runenlesen: Die 3-Runen-Legung erklärt | #blog/15 | data/articles/article-05.md · `h1` · L9 | data/articles/article-05.md#L9 | 2026-11-03 | final | must | writer | #blog/15 oeffnet "Runenlesen: Die 3-Runen-Legung erklärt" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-05.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-016 | Tarot vs. Runen: Unterschiede und Gemeinsamkeiten | #blog/16 | data/articles/article-06.md · `h1` · L9 | data/articles/article-06.md#L9 | 2026-11-03 | final | must | writer | #blog/16 oeffnet "Tarot vs. Runen: Unterschiede und Gemeinsamkeiten" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-06.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-017 | Wie man einen Kristall reinigt und auflädt | #blog/17 | data/articles/article-07.md · `h1` · L9 | data/articles/article-07.md#L9 | 2026-11-03 | final | must | writer | #blog/17 oeffnet "Wie man einen Kristall reinigt und auflädt" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-07.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-018 | Die Bedeutung der Mondknoten in der Astrologie | #blog/18 | data/articles/article-08.md · `h1` · L9 | data/articles/article-08.md#L9 | 2026-11-03 | final | must | writer | #blog/18 oeffnet "Die Bedeutung der Mondknoten in der Astrologie" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-08.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-019 | Tageskarte ziehen: Eine Morgenroutine | #blog/19 | data/articles/article-09.md · `h1` · L9 | data/articles/article-09.md#L9 | 2026-11-03 | final | must | writer | #blog/19 oeffnet "Tageskarte ziehen: Eine Morgenroutine" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-09.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-020 | Ein eigenes Orakel-Deck erstellen | #blog/20 | data/articles/article-10.md · `h1` · L9 | data/articles/article-10.md#L9 | 2026-11-03 | final | must | writer | #blog/20 oeffnet "Ein eigenes Orakel-Deck erstellen" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-10.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-021 | Schattenarbeit mit Tarot | #blog/21 | data/articles/article-11.md · `h1` · L9 | data/articles/article-11.md#L9 | 2026-11-03 | final | must | writer | #blog/21 oeffnet "Schattenarbeit mit Tarot" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-11.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
+| CNT-ART-022 | Kristall-Grids für Manifestation | #blog/22 | data/articles/article-12.md · `h1` · L9 | data/articles/article-12.md#L9 | 2026-11-03 | final | must | writer | #blog/22 oeffnet "Kristall-Grids für Manifestation" im Dialog; Titel, Excerpt, Datum und readTime stammen aus data/articles/article-12.md (Erzeugung: npm run data:articles, Pruefung: npm run verify:articles). |
 
 ## Rechtstexte (3)
 
@@ -111,17 +111,5 @@
 
 ## Nicht abgeschlossen oder fehlend
 
-- `CNT-ART-011` (offen) Die Major Arcana: Vom Narr bis zur Welt — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-012` (offen) Minor Arcana: Die vier Suits verstehen — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-013` (offen) Kristalle für jedes Chakra: Ein Leitfaden — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-014` (offen) Mondphasen-Rituale für Anfänger — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-015` (offen) Runenlesen: Die 3-Runen-Legung erklärt — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-016` (offen) Tarot vs. Runen: Unterschiede und Gemeinsamkeiten — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-017` (offen) Wie man einen Kristall reinigt und auflädt — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-018` (offen) Die Bedeutung der Mondknoten in der Astrologie — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-019` (offen) Tageskarte ziehen: Eine Morgenroutine — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-020` (offen) Ein eigenes Orakel-Deck erstellen — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-021` (offen) Schattenarbeit mit Tarot — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
-- `CNT-ART-022` (offen) Kristall-Grids für Manifestation — Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03).
 - `CNT-GLO-002` (entwurf) Tarot-Glossar (implizit, nicht als eigene Seite)
 - `CNT-LEG-002` (entwurf) Datenschutzerklaerung — Die Erklaerung nennt Kristall-Favoriten, Runen-Historie, Frequenzlabor und Meditation, aber nicht das Radiästhesie-Journal (esot_rad_journal_v) und die Experimentlaeufe (esot_rad_experiment_v).

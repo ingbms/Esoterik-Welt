@@ -351,7 +351,9 @@ const errors = structural.filter((finding) => finding.level === 'error');
 
 const report = {
   generated_at: new Date().toISOString(),
-  card: 't_9c2a7824',
+  // Die Karte, die den Lauf ausgelöst hat: im Dispatcher-Betrieb gesetzt,
+  // sonst der historische Ursprung des Gate-Pakets.
+  card: process.env.HERMES_KANBAN_TASK || 't_9c2a7824',
   base_commit: content.base_commit,
   head_commit: spawnSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' }).stdout.trim(),
   counts,

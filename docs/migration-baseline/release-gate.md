@@ -99,8 +99,8 @@ Zusammenfassung: `docs/migration-baseline/evidence/release-gate/pruefungen.json`
 | S6 | 3 | Zielgrößen ≥ 24 × 24 px (WCAG 2.5.8) | **offen** (`.badge-remove` 13 × 15 px, Auflage A-1) | `probe-befunde.json` `D03_badgeRemove` |
 | S7 | 3 | Schreib- und Fehlerzustände wirken in allen Werkstätten gleich | **offen** (Studio-Regel wirkungslos, D-02) | `probe-befunde.json` `D02_studio` |
 | S8 | 1 | Keine doppelten IDs, keine Überschriften-Sprünge | offen (D-04, D-05), ohne Release-Wirkung | `detail-befunde.json`, `a11y-messung.json` |
-| S9 | 1 | Entscheidung zu den zwölf Markdown-Artikeln | offen (E-03, Auflage A-5) | `00-schema-und-scope.md` §7.5 |
-| S10 | 1 | Keine Altlasten im Auslieferungspfad | offen (`data/articles/article-010.md.bak` ist versioniert und über Pages abrufbar) | `git ls-files data/articles/` |
+| S9 | 1 | Entscheidung zu den zwölf Markdown-Artikeln | **entschieden und erledigt** (E-03/A-5: veröffentlicht als Blogartikel 11–22, `t_44e58074`) | `content-catalog.json` `CNT-ART-011…022` |
+| S10 | 1 | Keine Altlasten im Auslieferungspfad | **erledigt**: `article-010.md.bak` entfernt; Artikelquellen sind über `_config.yml` aus dem Jekyll-Pfad ausgeschlossen (keine HTML-Doppelseite) | `git ls-files data/articles/`, `_config.yml`, `npm run test:offline` |
 
 Die drei Warnungen aus M2 sind genau S2, S3 und S4 — dieselben drei Punkte, nicht mehr und nicht
 weniger. Es gibt keinen unbenannten Rest.
@@ -114,8 +114,8 @@ weniger. Es gibt keinen unbenannten Rest.
 | Punkt | Umfang | Einordnung |
 | --- | --- | --- |
 | `MED-0130` `assets/mineral/mineral-detail-1000.jpg` | 1 von 644 Dateien (388 davon `must`) | Lizenz ungeklärt; als Gate-Punkt geführt, nicht als Katalogfehler |
-| Zwölf Markdown-Artikel ohne Route | 12 Dateien, 27 KB | abrufbar, aber von keiner Seite verlinkt (§7.5) |
-| `data/articles/article-010.md.bak` | 1 Datei | Altlast im Auslieferungspfad |
+| Zwölf Markdown-Artikel | 12 Dateien | **erledigt** (A-5): als Blogartikel 11–22 veröffentlicht, Routen `#blog/11`–`#blog/22` |
+| `data/articles/article-010.md.bak` | 1 Datei | **entfernt** (E-04/S10) |
 
 ### 3.2 Fehlende Quellen und Claims
 
@@ -150,7 +150,7 @@ geführt, nicht als Blindtext.
 | **A-2** | `CLM-003`: Quellenangabe für 620–750 nm ergänzen oder den Wert als physikalischen Standard kennzeichnen | `writer` | 2026-11-10 | Katalog-`must`, nicht den PR |
 | **A-3** | `datenschutz.html`: Radiästhesie-Journal (`esot_rad_journal_v`) und Experimentläufe (`esot_rad_experiment_v`) ergänzen; rechtliche Abnahme dokumentieren | Eigentümer (`default`) | 2026-11-17 | VELARKANA-Go-live |
 | **A-4** | `MED-0130`: Lizenz klären oder Bild bewusst aus dem Release nehmen | `architect` | 2026-11-10 | nächsten Medien-Push |
-| **A-5** | E-03 entscheiden: zwölf Markdown-Artikel veröffentlichen oder entfernen (beides zugleich geht nicht) | Eigentümer (`default`) | 2026-11-17 | VELARKANA-Inhaltsmigration |
+| **A-5** | E-03 entschieden: zwölf Markdown-Artikel veröffentlichen oder entfernen (beides zugleich geht nicht) — **entschieden am 2026-11-03 (Variante A: veröffentlichen)**, umgesetzt in `t_44e58074`: Blogartikel 11–22, Katalog `CNT-ART-011…022` auf `final`/`must`/`shipped` | Eigentümer (`default`) | 2026-11-17 | entfällt (erledigt am 2026-11-03) |
 
 Kein Blocker dieser Prüfung ist ohne Owner und Termin. Die Auflagen sind bewusst so formuliert, dass
 sie den Katalog-PR nicht aufhalten: der Katalog beschreibt sie als offen, statt sie zu verschweigen.
@@ -177,8 +177,9 @@ Kurzfassung:
 - **Ausgeliefert** (dokumentarisch): vier Kataloge, ihre generierten Fassungen, das Schema, die
   Prüfwerkzeuge und die Belegdateien unter `docs/migration-baseline/` und `scripts/migration-baseline/`.
 - **Bewusst ausgenommen:** Produktivcode (`index.html`, `css/`, `js/`, `data/`, `assets/`, `dist/`),
-  `public/` (17 Dateien, von `build-pages.cjs` nicht kopiert), die zwölf Markdown-Artikel (keine Route),
-  die fünf Altdateien (33 KB) und alle unversionierten Entwürfe außerhalb des Katalogordners.
+  `public/` (17 Dateien, von `build-pages.cjs` nicht kopiert), die fünf Altdateien (33 KB) und alle
+  unversionierten Entwürfe außerhalb des Katalogordners. Die zwölf Markdown-Artikel sind seit A-5
+  (`t_44e58074`) nicht mehr ausgenommen: Sie sind als Blogartikel 11–22 ausgeliefert.
 
 ---
 

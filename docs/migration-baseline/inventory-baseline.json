@@ -4,7 +4,7 @@
   "scope_document": "docs/migration-baseline/00-schema-und-scope.md",
   "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
   "base_tag": "baseline/rubriken-2026-11-03",
-  "collected_at": "2026-11-03T15:52:42.986Z",
+  "collected_at": "2026-11-03T23:39:54.964Z",
   "pages": {
     "main_pages": [
       "home",
@@ -151,7 +151,7 @@
         "text": "Wissen & Artikel"
       }
     ],
-    "index_html_lines": 880
+    "index_html_lines": 881
   },
   "static_documents": {
     "root_documents": [
@@ -165,7 +165,7 @@
         "path": "datenschutz.html",
         "title": "Datenschutzerklärung",
         "h1_line": 37,
-        "bytes": 3115
+        "bytes": 3049
       },
       {
         "path": "haftung.html",
@@ -1060,7 +1060,7 @@
   },
   "assets": {
     "files_total": 644,
-    "bytes_total": 96961218,
+    "bytes_total": 96960064,
     "by_top_directory": {
       "assets/cosmos": 2,
       "assets/crystals": 121,
@@ -1095,7 +1095,7 @@
     },
     {
       "path": "data/frequencies.json",
-      "bytes": 32893
+      "bytes": 32233
     },
     {
       "path": "data/moon-astro.mjs",
@@ -1156,8 +1156,9 @@
       "js/modules/runes.js",
       "js/modules/tarot.js"
     ],
-    "data_modules_count": 11,
+    "data_modules_count": 12,
     "data_modules": [
+      "js/data/articles-markdown.js",
       "js/data/articles.js",
       "js/data/astrologie.js",
       "js/data/chakren.js",
@@ -1228,7 +1229,7 @@
       },
       {
         "path": "dist",
-        "exists": false,
+        "exists": true,
         "in_baseline_commit": null
       }
     ],
@@ -1242,23 +1243,23 @@
   "hashes": {
     "css": {
       "files": 7,
-      "sha256": "434eee4bde0a2fa9b47af44eaae648b637c5a63eac34e6cac6cce38e7fd17a62"
+      "sha256": "25632dc6400e3cd280e6780a858e1d67fc0c8621c676dee9ea281c9e6e4e18d0"
     },
     "js": {
-      "files": 64,
-      "sha256": "08086789bb7994efd62b27c10c272fca60524d4549aa6bc71df394b420be79de"
+      "files": 65,
+      "sha256": "c5433098934b63e00437ddaea95477091509098f85c30dc6f20b71ff30b6764b"
     },
     "js/data": {
-      "files": 11,
-      "sha256": "54f0c5c4d38c2b53279980d8a196c2faec0ea895c5049af253acc769ba1cd0eb"
+      "files": 12,
+      "sha256": "87d918a05cbd91474beeef6f99994b09a3480e43930e8a377f2d8755a33d65e5"
     },
     "content": {
       "files": 18,
-      "sha256": "c0a8334e91875eb0155a409522ccac3bcf5fe3ec267df2eeead8c17571f67216"
+      "sha256": "2c909f42c0e126ce7abb167bbe2fc39da2ae506e089060414b8df859f79f92b7"
     },
     "radiasthesie": {
       "files": 7,
-      "sha256": "4ca15b535102ce2ae9873392551a78c19efed9c951946487c4bcf11faea535c7"
+      "sha256": "b63f7521d809007fbfd4e575e2338157406e09bbd9dbf6889adafc56660a5bb7"
     }
   }
 }

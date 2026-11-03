@@ -8,7 +8,7 @@ und `node scripts/migration-baseline/verify-media-catalog.cjs` (17 Abnahmeprüfu
 ## 1. Umfang
 
 - Zeilen im Katalog: **644** (eine Zeile je Datei unter `assets/`, §3.2/§8 Regel 1).
-- Gesamtgröße: **96.961.218 Byte** (92,5 MiB).
+- Gesamtgröße: **96.960.064 Byte** (92,5 MiB).
 - `license_status`: geklaert 637 · nicht_erforderlich 6 · ungeklaert 1
 - `release_relevance`: should 242 · none 14 · must 388
 - `delivery`: alle 644 Dateien `shipped` (Pages liefert die Repository-Wurzel aus, §2.9).
@@ -18,7 +18,7 @@ und `node scripts/migration-baseline/verify-media-catalog.cjs` (17 Abnahmeprüfu
 | Gruppe | Dateien | Byte | Anteil |
 | --- | ---: | ---: | ---: |
 | `assets/tarot` | 476 | 58.231.562 | 60.1 % |
-| `assets/radiasthesie` | 37 | 30.591.395 | 31.6 % |
+| `assets/radiasthesie` | 37 | 30.590.241 | 31.5 % |
 | `assets/crystals` | 121 | 6.603.196 | 6.8 % |
 | `assets/fonts` | 5 | 948.822 | 1.0 % |
 | `assets/mineral` | 2 | 581.529 | 0.6 % |

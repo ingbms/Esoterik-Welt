@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-03T22:16:49.677Z",
+  "generated_at": "2026-11-03T23:57:43.606Z",
   "catalog": "docs/migration-baseline/content-catalog.json",
-  "routes_checked": 39,
+  "routes_checked": 51,
   "not_found": [],
   "measured": [
     {
@@ -71,77 +71,161 @@
       "route": "#blog",
       "title": "Wissen & Artikel — Esoterik, Rituale, Geschichte | Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/1",
       "title": "Die 78 Tarot-Karten: Eine Reise durch die Major & Minor Arcana — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/2",
       "title": "Kristalle als Werkzeuge: Wie Steine unsere Energie beeinflussen — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/3",
       "title": "Runenwerfen: Die drei Positionen der Vergangenheit, Gegenwart und Zukunft — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/4",
       "title": "Die Mondphasen: Von Neumond bis Vollmond — Rituale für jeden Zyklus — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/5",
       "title": "Die Geschichte des Tarot: Von Spielkarten zur spirituellen Praxis — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/6",
       "title": "Einsteiger-Guide: Wie du mit Tarot, Kristallen und Runen beginnst — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/7",
       "title": "Chakren & Kristalle: Welche Steine für welches Energiezentrum — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/8",
       "title": "Die Bedeutung des Futhark: Von Fehu bis Othala — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/9",
       "title": "Rituale für jede Mondphase: Ein praktischer Kalender — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
       "notFound": false
     },
     {
       "route": "#blog/10",
       "title": "Moldavit: Der Meteorit unter den Kristallen — Esoterik-Welt",
       "h1": "Wissen & Artikel",
-      "textLength": 3403,
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/11",
+      "title": "Die Major Arcana: Vom Narr bis zur Welt — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/12",
+      "title": "Minor Arcana: Die vier Suits verstehen — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/13",
+      "title": "Kristalle für jedes Chakra: Ein Leitfaden — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/14",
+      "title": "Mondphasen-Rituale für Anfänger — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/15",
+      "title": "Runenlesen: Die 3-Runen-Legung erklärt — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/16",
+      "title": "Tarot vs. Runen: Unterschiede und Gemeinsamkeiten — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/17",
+      "title": "Wie man einen Kristall reinigt und auflädt — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/18",
+      "title": "Die Bedeutung der Mondknoten in der Astrologie — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/19",
+      "title": "Tageskarte ziehen: Eine Morgenroutine — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/20",
+      "title": "Ein eigenes Orakel-Deck erstellen — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/21",
+      "title": "Schattenarbeit mit Tarot — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
+      "notFound": false
+    },
+    {
+      "route": "#blog/22",
+      "title": "Kristall-Grids für Manifestation — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 7416,
       "notFound": false
     },
     {

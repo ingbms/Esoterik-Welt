@@ -66,6 +66,10 @@ test('offline file entry serves every route without network access', async (t) =
   for (const key of ['tarotCards', 'crystals', 'runes', 'articles']) {
     assert.ok(startup[key] > 0, `${key} must render offline`);
   }
+  // Zehn kuratierte Einträge (js/data/articles.js) plus zwölf Markdown-Artikel
+  // (data/articles/*.md → js/data/articles-markdown.js). Der Offline-Build muss
+  // beide Bestände inlining und vollständig rendern.
+  assert.equal(startup.articles, 22, 'all 22 blog articles must render offline');
   // ADR §6.4: the frequency dataset is embedded so the lab works without fetch.
   assert.equal(
     await page.evaluate(() => Boolean(document.getElementById('local-frequencies-data'))),

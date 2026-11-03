@@ -152,13 +152,28 @@ async function main() {
     facts.probeder.push(await probe(hash));
   }
 
-  // --- Blog: Artikelliste und Einzelartikel #blog/6
+  // --- Blog: Artikelliste und Einzelartikel #blog/6 sowie der letzte Markdown-Artikel #blog/22
   await page.goto(`${base}index.html#blog`, { waitUntil: 'networkidle' });
   await page.waitForTimeout(500);
   facts.blog = { listItems: await count(page, '[data-article-id], .article-card, .blog-card') };
   await page.goto(`${base}index.html#blog/6`, { waitUntil: 'networkidle' });
   await page.waitForTimeout(700);
   facts.blog.article6 = {
+    modalOpen: await page
+      .locator('#articleModal.open')
+      .isVisible()
+      .catch(() => false),
+    title:
+      (await page
+        .locator('#articleModal h2, #articleModal .modal-title')
+        .first()
+        .textContent({ timeout: 2000 })
+        .catch(() => null)) || null,
+  };
+  // A-5: Der letzte der zwölf Markdown-Artikel muss über seine Route erreichbar sein.
+  await page.goto(`${base}index.html#blog/22`, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(700);
+  facts.blog.article22 = {
     modalOpen: await page
       .locator('#articleModal.open')
       .isVisible()
@@ -223,6 +238,9 @@ async function main() {
       .filter((item) => ['#farbwelten/therapie', '#farbwelten/psychologie', '#farbwelten/licht'].includes(item.hash))
       .every((item) => item.notFound),
     blog6Opens: facts.blog.article6.modalOpen,
+    blogListIs22: facts.blog.listItems === 22,
+    blog22Opens: facts.blog.article22.modalOpen,
+    blog22IsKristallGrids: /Kristall-Grids/i.test(facts.blog.article22.title || ''),
   };
 
   const result = {

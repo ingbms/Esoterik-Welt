@@ -23,6 +23,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const lib = require('./lib/catalog.cjs');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const OUT_CSV = path.join(ROOT, 'docs', 'migration-baseline', 'media-catalog.csv');
@@ -564,12 +565,11 @@ function buildRows() {
     const info = meta.get(file);
     if (!info) return null;
     const format = path.extname(file).slice(1).toLowerCase();
-    const size = fs.statSync(path.join(ROOT, file)).size;
+    // Textformate mit LF rechnen: CRLF-Checkouts dürfen die Katalogwerte nicht ändern.
+    const content = lib.canonicalBytes(file);
+    const size = content.length;
     const dim = dimensions(file);
-    const sha = crypto
-      .createHash('sha256')
-      .update(fs.readFileSync(path.join(ROOT, file)))
-      .digest('hex');
+    const sha = crypto.createHash('sha256').update(content).digest('hex');
     return {
       id: `MED-${String(index + 1).padStart(4, '0')}`,
       path: file,

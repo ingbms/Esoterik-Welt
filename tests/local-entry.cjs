@@ -81,6 +81,7 @@ async function exercise(page, events, interactions = true) {
       await page.locator('#castRunesBtn').click();
       assert.equal(await page.locator('#castRunes > *').count(), 3);
     } else if (route === 'blog') {
+      assert.equal(await page.locator('#articleGrid > *').count(), 22, 'all 22 blog articles must render');
       await page.locator('#articleGrid .article-card').first().click();
       await page.locator('#articleModal.open:not([hidden])').waitFor({ state: 'visible' });
       assert.ok((await page.locator('#articleModalBody').textContent()).length > 100);
