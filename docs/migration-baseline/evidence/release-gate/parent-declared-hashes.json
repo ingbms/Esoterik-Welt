@@ -7,7 +7,8 @@
   ],
   "_excluded_reason": "Beide Dateien werden bei jedem Gate-Lauf neu geschrieben (Zeitstempel, Port, Laufzeit). Der Master hat sie auf dem PR-Eingangsstand fdef1aa neu gemessen; ein Hash-Vergleich gegen die Vorlage waere ein Vergleich von Messzeitpunkten, nicht von Inhalten.",
   "superseded": {
-    "scripts/migration-baseline/verify-release-gate.cjs": "Vom Master korrigiert (Befund B-1: falscher CSV-Trenner in der Lizenz-Kennzahl). Der Vorlagen-Hash gilt fuer den Eingangsstand fdef1aa, nicht fuer den korrigierten Stand."
+    "scripts/migration-baseline/verify-release-gate.cjs": "Vom Master korrigiert (Befund B-1: falscher CSV-Trenner in der Lizenz-Kennzahl). Der Vorlagen-Hash gilt fuer den Eingangsstand fdef1aa, nicht fuer den korrigierten Stand.",
+    "scripts/migration-baseline/verify-release-gate-facts.cjs": "Nur Prettier-Formatierung (npm run format:check war rot). AST-Vergleich gegen den Eingangsstand ist identisch; keine Semantikaenderung."
   },
   "hashes": {
     "docs/migration-baseline/content-catalog-meta.json": "4982d1d54bbaff7f4aba5d364b9e065d82426083b9aaebdaa0b9d440834c2b62",

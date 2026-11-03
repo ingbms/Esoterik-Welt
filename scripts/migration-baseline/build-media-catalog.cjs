@@ -146,9 +146,7 @@ function buildMeta() {
     if (!image.credit || !image.credit.license) problems.push(`Lizenz fehlt für ${image.id}`);
     for (const [level, relLevelPath] of Object.entries(image.levels)) {
       const usedOn =
-        level === '960'
-          ? '#crystals (Detaildialog, 960 px)'
-          : `#crystals (Kartenraster, srcset ${level} px)`;
+        level === '960' ? '#crystals (Detaildialog, 960 px)' : `#crystals (Kartenraster, srcset ${level} px)`;
       put(`assets/crystals/${relLevelPath}`, {
         used_on: usedOn,
         alt_text: alt,
@@ -177,10 +175,8 @@ function buildMeta() {
   // --- Tarot: zwei Decks x (78 Karten x 3 Stufen + Ruecken x 3) ------------
   const deckLicense = {
     'nachtatelier-v1': {
-      credit:
-        'Esoterik-Welt Art Direction, nach Pamela Colman Smith (gemeinfrei); Mineraltextur Didier Descouens',
-      license:
-        'CC BY-SA 4.0 (bearbeitete Deckfassung wegen ShareAlike der Textur; impressum.html#tarot-decks)',
+      credit: 'Esoterik-Welt Art Direction, nach Pamela Colman Smith (gemeinfrei); Mineraltextur Didier Descouens',
+      license: 'CC BY-SA 4.0 (bearbeitete Deckfassung wegen ShareAlike der Textur; impressum.html#tarot-decks)',
       license_status: 'geklaert',
     },
     'gartenbrevier-v2': {
@@ -570,7 +566,10 @@ function buildRows() {
     const format = path.extname(file).slice(1).toLowerCase();
     const size = fs.statSync(path.join(ROOT, file)).size;
     const dim = dimensions(file);
-    const sha = crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, file))).digest('hex');
+    const sha = crypto
+      .createHash('sha256')
+      .update(fs.readFileSync(path.join(ROOT, file)))
+      .digest('hex');
     return {
       id: `MED-${String(index + 1).padStart(4, '0')}`,
       path: file,
@@ -609,9 +608,8 @@ function formatBytes(bytes) {
   return `${mib.toFixed(1).replace('.', ',')} MiB`;
 }
 
-function buildGapDoc(rows, files) {
+function buildGapDoc(rows) {
   const by = (fn) => rows.reduce((acc, row) => acc.set(fn(row), (acc.get(fn(row)) || 0) + 1), new Map());
-  const count = (fn) => by(fn).size;
 
   const groups = new Map();
   for (const row of rows) {
@@ -642,10 +640,14 @@ function buildGapDoc(rows, files) {
   lines.push('## 1. Umfang');
   lines.push('');
   lines.push(`- Zeilen im Katalog: **${rows.length}** (eine Zeile je Datei unter \`assets/\`, §3.2/§8 Regel 1).`);
-  lines.push(`- Gesamtgröße: **${rows.reduce((sum, row) => sum + Number(row.bytes), 0).toLocaleString('de-DE')} Byte** (${formatBytes(rows.reduce((sum, row) => sum + Number(row.bytes), 0))}).`);
+  lines.push(
+    `- Gesamtgröße: **${rows.reduce((sum, row) => sum + Number(row.bytes), 0).toLocaleString('de-DE')} Byte** (${formatBytes(rows.reduce((sum, row) => sum + Number(row.bytes), 0))}).`
+  );
   lines.push(`- \`license_status\`: ${[...statusCounts.entries()].map(([k, v]) => `${k} ${v}`).join(' · ')}`);
   lines.push(`- \`release_relevance\`: ${[...relevanceCounts.entries()].map(([k, v]) => `${k} ${v}`).join(' · ')}`);
-  lines.push(`- \`delivery\`: alle ${rows.length} Dateien \`shipped\` (Pages liefert die Repository-Wurzel aus, §2.9).`);
+  lines.push(
+    `- \`delivery\`: alle ${rows.length} Dateien \`shipped\` (Pages liefert die Repository-Wurzel aus, §2.9).`
+  );
   lines.push('');
   lines.push('### 1.1 Gewicht je Gruppe');
   lines.push('');
@@ -740,9 +742,13 @@ function buildGapDoc(rows, files) {
   lines.push('');
   lines.push('## 7. Was dieser Katalog nicht leistet');
   lines.push('');
-  lines.push('- Keine juristische Freigabe. `geklaert` heißt: ein Nachweis im Repository existiert und ist hier verlinkt.');
+  lines.push(
+    '- Keine juristische Freigabe. `geklaert` heißt: ein Nachweis im Repository existiert und ist hier verlinkt.'
+  );
   lines.push('- Keine Bewertung der Bildqualität oder der Motivwahl, nur Erfassung und Rechte-Nachweis.');
-  lines.push('- Keine Messung der Ladezeit. Die Byte-Summen sind Dateigrößen; der Lighthouse-Wert ist eine getrennte Prüfung.');
+  lines.push(
+    '- Keine Messung der Ladezeit. Die Byte-Summen sind Dateigrößen; der Lighthouse-Wert ist eine getrennte Prüfung.'
+  );
   lines.push('');
   return `${lines.join('\n')}\n`;
 }
@@ -751,7 +757,7 @@ function buildGapDoc(rows, files) {
 
 function main() {
   const argv = new Set(process.argv.slice(2));
-  const { rows, unmatched, stale, files } = buildRows();
+  const { rows, unmatched, stale } = buildRows();
 
   const { mismatches, checked } = compareWithManifests(rows);
   if (mismatches.length) {
@@ -787,11 +793,17 @@ function main() {
   }
 
   fs.writeFileSync(OUT_CSV, csv);
-  fs.writeFileSync(OUT_GAPS, buildGapDoc(rows, files));
+  fs.writeFileSync(OUT_GAPS, buildGapDoc(rows));
 
   const totalBytes = rows.reduce((sum, row) => sum + Number(row.bytes), 0);
-  const byStatus = rows.reduce((acc, row) => acc.set(row.license_status, (acc.get(row.license_status) || 0) + 1), new Map());
-  const byRelevance = rows.reduce((acc, row) => acc.set(row.release_relevance, (acc.get(row.release_relevance) || 0) + 1), new Map());
+  const byStatus = rows.reduce(
+    (acc, row) => acc.set(row.license_status, (acc.get(row.license_status) || 0) + 1),
+    new Map()
+  );
+  const byRelevance = rows.reduce(
+    (acc, row) => acc.set(row.release_relevance, (acc.get(row.release_relevance) || 0) + 1),
+    new Map()
+  );
   console.log(`media-catalog.csv: ${rows.length} Zeilen, ${totalBytes} Byte`);
   console.log(`Gegenprobe Manifeste: ${checked} Dateien gegen Byte/SHA-256/Maße geprüft, 0 Abweichungen.`);
   console.log(`license_status: ${[...byStatus].map(([k, v]) => `${k}=${v}`).join(' ')}`);

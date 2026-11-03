@@ -31,10 +31,29 @@ const ROOT = path.resolve(__dirname, '..', '..');
 const DOC = process.argv[2] || 'docs/migration-baseline/funktionen-katalog.md';
 
 const AREAS = ['GLO', 'TAR', 'KRY', 'MON', 'AST', 'FRQ', 'RUN', 'PEN', 'FBW', 'BLG'];
-const EXPECTED_HEADER = ['ID', 'Funktion', 'Auslöser', 'Quelle', 'Zustände', 'Prüfkriterium', 'Status', 'Release', 'Owner', 'Nachweis'];
+const EXPECTED_HEADER = [
+  'ID',
+  'Funktion',
+  'Auslöser',
+  'Quelle',
+  'Zustände',
+  'Prüfkriterium',
+  'Status',
+  'Release',
+  'Owner',
+  'Nachweis',
+];
 const STATUS = ['final', 'entwurf', 'offen', 'veraltet'];
 const RELEASE = ['must', 'should', 'none'];
-const OWNER = ['structured_output', 'design_web_layout', 'design_critique', 'writer', 'review_approval', 'architect', 'default'];
+const OWNER = [
+  'structured_output',
+  'design_web_layout',
+  'design_critique',
+  'writer',
+  'review_approval',
+  'architect',
+  'default',
+];
 const REQUIRED_CHAPTERS = [
   ['## 1. Routing', 'Routing'],
   ['## 2. Interaktive Module', 'Interaktive Module'],
@@ -44,7 +63,13 @@ const REQUIRED_CHAPTERS = [
   ['## 6. SEO und Metadaten', 'SEO und Metadaten'],
   ['## 7. Befunde', 'Befunde'],
 ];
-const REQUIRED_FINDINGS = ['docs/tarot-deck-nachtatelier', 'js/data/crystals.js', 'data/crystals.json', 'sitemap.xml', 'README.md'];
+const REQUIRED_FINDINGS = [
+  'docs/tarot-deck-nachtatelier',
+  'js/data/crystals.js',
+  'data/crystals.json',
+  'sitemap.xml',
+  'README.md',
+];
 
 const errors = [];
 const warnings = [];
@@ -73,7 +98,10 @@ for (const area of AREAS) {
 function splitRow(line) {
   const trimmed = line.trim();
   if (!trimmed.startsWith('|') || !trimmed.endsWith('|')) return null;
-  return trimmed.slice(1, -1).split('|').map((cell) => cell.trim());
+  return trimmed
+    .slice(1, -1)
+    .split('|')
+    .map((cell) => cell.trim());
 }
 
 for (const section of sections) {
@@ -149,7 +177,10 @@ function declarationEnd(rel, startLine, name) {
 
 function checkSourceEntry(area, id, entry, state) {
   const tokens = [...entry.matchAll(/`([^`]+)`/g)].map((m) => m[1]);
-  const ranges = [...entry.matchAll(/L(\d+)(?:-L(\d+))?/g)].map((m) => ({ start: Number(m[1]), end: m[2] ? Number(m[2]) : Number(m[1]) }));
+  const ranges = [...entry.matchAll(/L(\d+)(?:-L(\d+))?/g)].map((m) => ({
+    start: Number(m[1]),
+    end: m[2] ? Number(m[2]) : Number(m[1]),
+  }));
   if (!tokens.length) {
     fail(`${area}/${id}: Quelle ohne Dateipfad: ${entry.trim()}`);
     return;
@@ -172,14 +203,18 @@ function checkSourceEntry(area, id, entry, state) {
   }
   for (const range of ranges) {
     if (range.start < 1 || range.end > fileLines.length || range.end < range.start) {
-      fail(`${area}/${id}: Zeilenbereich L${range.start}-L${range.end} liegt nicht in ${rel} (${fileLines.length} Zeilen)`);
+      fail(
+        `${area}/${id}: Zeilenbereich L${range.start}-L${range.end} liegt nicht in ${rel} (${fileLines.length} Zeilen)`
+      );
       return;
     }
     if (!name) continue;
     const startText = fileLines[range.start - 1] || '';
     const wordRe = new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`);
     if (!wordRe.test(startText)) {
-      fail(`${area}/${id}: L${range.start} in ${rel} nennt „${name}“ nicht: ${JSON.stringify(startText.trim().slice(0, 70))}`);
+      fail(
+        `${area}/${id}: L${range.start} in ${rel} nennt „${name}“ nicht: ${JSON.stringify(startText.trim().slice(0, 70))}`
+      );
       return;
     }
     const expectedEnd = declarationEnd(rel, range.start, name);
@@ -191,7 +226,10 @@ function checkSourceEntry(area, id, entry, state) {
 }
 
 function checkEvidence(area, id, cell) {
-  const entries = cell.split(';').map((s) => s.trim().replace(/`/g, '')).filter(Boolean);
+  const entries = cell
+    .split(';')
+    .map((s) => s.trim().replace(/`/g, ''))
+    .filter(Boolean);
   if (!entries.length) fail(`${area}/${id}: Nachweis fehlt`);
   for (const entry of entries) {
     if (entry.startsWith('cmd:')) {
@@ -243,7 +281,8 @@ const total = [...allIds.keys()].length;
 // --- 7. Pflichtbefunde ------------------------------------------------------
 const findingsStart = lines.findIndex((line) => line.trim() === '## 7. Befunde');
 const findingsEnd = lines.findIndex((line, index) => index > findingsStart && /^## \d\./.test(line));
-const findingsText = findingsStart < 0 ? '' : lines.slice(findingsStart, findingsEnd < 0 ? lines.length : findingsEnd).join('\n');
+const findingsText =
+  findingsStart < 0 ? '' : lines.slice(findingsStart, findingsEnd < 0 ? lines.length : findingsEnd).join('\n');
 for (const needle of REQUIRED_FINDINGS) {
   if (!findingsText.includes(needle)) fail(`Kapitel 7 nennt den Pflichtbefund nicht: ${needle}`);
 }
@@ -254,7 +293,8 @@ if (!stated) {
   fail('§9.3 nennt keine Summen („Der Katalog enthält X Funktionen. Y davon sind …“)');
 } else {
   if (Number(stated[1]) !== total) fail(`§9.3 nennt ${stated[1]} Funktionen, die Tabellen enthalten ${total}`);
-  if (Number(stated[2]) !== testBacked) fail(`§9.3 nennt ${stated[2]} testgestützte Funktionen, gezählt sind ${testBacked}`);
+  if (Number(stated[2]) !== testBacked)
+    fail(`§9.3 nennt ${stated[2]} testgestützte Funktionen, gezählt sind ${testBacked}`);
 }
 
 // --- Ergebnis ---------------------------------------------------------------

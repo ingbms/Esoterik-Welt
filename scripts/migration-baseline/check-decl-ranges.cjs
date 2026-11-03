@@ -7,7 +7,10 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..');
 const data = JSON.parse(
-  fs.readFileSync(path.join(ROOT, 'docs', 'migration-baseline', 'evidence', 'functions', 'functions-baseline.json'), 'utf8')
+  fs.readFileSync(
+    path.join(ROOT, 'docs', 'migration-baseline', 'evidence', 'functions', 'functions-baseline.json'),
+    'utf8'
+  )
 );
 
 let checked = 0;
@@ -20,7 +23,9 @@ function check(modPath, entry, kind) {
   checked += 1;
   if (!start.includes(entry.name)) problems.push(`${modPath}:L${entry.line} Startzeile nennt ${entry.name} nicht`);
   if (!/\}\s*;?\s*$/.test(end.trim())) {
-    problems.push(`${modPath}:L${entry.end_line} Ende von ${kind} ${entry.name} schliesst nicht: ${JSON.stringify(end.trim().slice(0, 60))}`);
+    problems.push(
+      `${modPath}:L${entry.end_line} Ende von ${kind} ${entry.name} schliesst nicht: ${JSON.stringify(end.trim().slice(0, 60))}`
+    );
   }
   if (!entry.end_line || entry.end_line < entry.line) problems.push(`${modPath}:${entry.name} ohne gueltiges Ende`);
 }

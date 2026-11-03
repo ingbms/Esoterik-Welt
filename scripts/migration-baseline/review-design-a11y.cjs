@@ -499,7 +499,7 @@ async function interactions(browser, base) {
   // Zustandskontraste (Ruhe und Hover) auf derselben Seite.
   await page.goto(base, { waitUntil: 'load' });
   await page.waitForTimeout(700);
-  result.states = await stateContrasts(page, base);
+  result.states = await stateContrasts(page);
 
   // Autoritative Farbwelten-Routen aus dem Register lesen (keine geratenen Slugs).
   await page.goto(`${base}#farbwelten`, { waitUntil: 'load' });
@@ -852,7 +852,7 @@ function contrastRatio(foreground, background) {
   return Math.round(((high + 0.05) / (low + 0.05)) * 100) / 100;
 }
 
-async function stateContrasts(page, base) {
+async function stateContrasts(page) {
   const selectors = ['.btn-primary', '.btn-secondary', '.btn-ghost', '.nav-link', '.feature-card', '.card'];
   const results = [];
   for (const selector of selectors) {

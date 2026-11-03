@@ -36,7 +36,11 @@ const cases = [
   },
   {
     name: 'unbekannter Owner',
-    mutate: (text) => text.replace('| final | must | architect | `tests/pages-regression.cjs` |', '| final | must | chief | `tests/pages-regression.cjs` |'),
+    mutate: (text) =>
+      text.replace(
+        '| final | must | architect | `tests/pages-regression.cjs` |',
+        '| final | must | chief | `tests/pages-regression.cjs` |'
+      ),
     expect: /unzulässiger Owner/,
   },
   {
@@ -46,7 +50,11 @@ const cases = [
   },
   {
     name: 'falscher Spaltenkopf',
-    mutate: (text) => text.replace('| ID | Funktion | Auslöser | Quelle | Zustände | Prüfkriterium | Status | Release | Owner | Nachweis |', '| ID | Funktion | Auslöser | Quelle | Zustand | Prüfkriterium | Status | Release | Owner | Nachweis |'),
+    mutate: (text) =>
+      text.replace(
+        '| ID | Funktion | Auslöser | Quelle | Zustände | Prüfkriterium | Status | Release | Owner | Nachweis |',
+        '| ID | Funktion | Auslöser | Quelle | Zustand | Prüfkriterium | Status | Release | Owner | Nachweis |'
+      ),
     expect: /Spaltenkopf weicht ab/,
   },
   {

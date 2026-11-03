@@ -14,6 +14,12 @@ const evaluateGlobals = {
   innerWidth: 'readonly',
   innerHeight: 'readonly',
   Image: 'readonly',
+  // Used by the catalogue review scripts inside page.evaluate():
+  // CSS.escape for selector building, NodeFilter for TreeWalker, matchMedia
+  // for prefers-reduced-motion.
+  CSS: 'readonly',
+  NodeFilter: 'readonly',
+  matchMedia: 'readonly',
 };
 
 module.exports = [

@@ -15,7 +15,19 @@ const catalog = require('./lib/catalog.cjs');
 const HEADER_NOTE = 'Erzeugt von `scripts/migration-baseline/render-catalogs.cjs` aus';
 
 const DESIGN_SECTIONS = [
-  { title: 'Tokens', types: ['token-color', 'token-typography', 'token-space', 'token-radius', 'token-motion', 'token-shadow', 'token-z', 'token-size'] },
+  {
+    title: 'Tokens',
+    types: [
+      'token-color',
+      'token-typography',
+      'token-space',
+      'token-radius',
+      'token-motion',
+      'token-shadow',
+      'token-z',
+      'token-size',
+    ],
+  },
   { title: 'Komponenten', types: ['component'] },
   { title: 'Layouts und Seitenvorlagen', types: ['layout'] },
   { title: 'Wiederverwendete Muster', types: ['pattern'] },
@@ -154,8 +166,11 @@ function renderDesign(doc) {
     lines.push('| ID | Name | Status | Release | Grund |');
     lines.push('| --- | --- | --- | --- | --- |');
     for (const entry of open) {
-      const reason = Array.isArray(entry.open_questions) && entry.open_questions.length ? entry.open_questions.join(' ') : '';
-      lines.push(`| ${cell(entry.id)} | ${cell(entry.name)} | ${cell(entry.status)} | ${cell(entry.release_relevance)} | ${cell(reason)} |`);
+      const reason =
+        Array.isArray(entry.open_questions) && entry.open_questions.length ? entry.open_questions.join(' ') : '';
+      lines.push(
+        `| ${cell(entry.id)} | ${cell(entry.name)} | ${cell(entry.status)} | ${cell(entry.release_relevance)} | ${cell(reason)} |`
+      );
     }
   } else {
     lines.push('Keine offenen oder Entwurfs-Eintraege.');
@@ -173,7 +188,8 @@ function renderTokens(doc) {
     groups[group][token.name] = token.value;
   }
   const payload = {
-    $comment: 'Erzeugt von scripts/migration-baseline/render-catalogs.cjs aus design-catalog.json. Nicht von Hand bearbeiten.',
+    $comment:
+      'Erzeugt von scripts/migration-baseline/render-catalogs.cjs aus design-catalog.json. Nicht von Hand bearbeiten.',
     schema_version: doc.schema_version,
     base_commit: doc.base_commit,
     stand: doc.stand,
@@ -248,7 +264,10 @@ function renderContent(doc) {
     lines.push('## Nicht abgeschlossen oder fehlend');
     lines.push('');
     for (const entry of openEntries) {
-      const reason = Array.isArray(entry.open_questions) && entry.open_questions.length ? ` — ${entry.open_questions.join(' ')}` : '';
+      const reason =
+        Array.isArray(entry.open_questions) && entry.open_questions.length
+          ? ` — ${entry.open_questions.join(' ')}`
+          : '';
       lines.push(`- \`${entry.id}\` (${entry.status}) ${entry.name}${reason}`);
     }
     lines.push('');
@@ -280,7 +299,9 @@ function main() {
     process.exit(2);
   }
   if (options.help) {
-    console.log('Rendert design-system.md, design-tokens.json und content-catalog.md. Optionen: --check --input <dir> --out <dir>');
+    console.log(
+      'Rendert design-system.md, design-tokens.json und content-catalog.md. Optionen: --check --input <dir> --out <dir>'
+    );
     return;
   }
   const inputDir = options.input ? path.resolve(catalog.ROOT, options.input) : catalog.CATALOG_DIR;

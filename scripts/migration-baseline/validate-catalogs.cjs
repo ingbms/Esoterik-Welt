@@ -64,14 +64,26 @@ function load(dir, kind, options, results, missing) {
       results.push({ label, kind, result: catalog.validateMedia(rows, { fs: options.fs }) });
     } else {
       const doc = catalog.readJson(file);
-      const result = kind === 'design' ? catalog.validateDesign(doc, { fs: options.fs }) : catalog.validateContent(doc, { fs: options.fs });
+      const result =
+        kind === 'design'
+          ? catalog.validateDesign(doc, { fs: options.fs })
+          : catalog.validateContent(doc, { fs: options.fs });
       results.push({ label, kind, result });
     }
   } catch (error) {
     results.push({
       label,
       kind,
-      result: { total: 0, byStatus: {}, byRelevance: {}, byDelivery: {}, byType: {}, errors: [{ code: 'PARSE', where: label, message: error.message }], warnings: [], ok: false },
+      result: {
+        total: 0,
+        byStatus: {},
+        byRelevance: {},
+        byDelivery: {},
+        byType: {},
+        errors: [{ code: 'PARSE', where: label, message: error.message }],
+        warnings: [],
+        ok: false,
+      },
     });
   }
   return file;

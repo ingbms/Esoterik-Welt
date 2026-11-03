@@ -47,7 +47,10 @@ function dependencies(mod) {
   const names = mod.imports.map((entry) => entry.specifier.replace(/^\.\//, '../').replace(/^\.\.\/\.\.\//, '../../'));
   if (!names.length) return 'keine';
   // Nur Dateinamen, damit die Spalte schmal bleibt; der Pfad steht in der Quelle.
-  return [...new Set(names)].map((name) => name.split('/').pop()).sort().join(', ');
+  return [...new Set(names)]
+    .map((name) => name.split('/').pop())
+    .sort()
+    .join(', ');
 }
 
 function evidence(mod) {
@@ -62,10 +65,7 @@ const rows = data.modules
   // ausgeliefert (Kapitel 8) und gehören nicht in eine Übersicht der
   // ausgelieferten Module.
   .filter((mod) => !path.basename(mod.path).startsWith('_'))
-  .map(
-    (mod) =>
-      `| \`${mod.path}\` | ${mod.lines} | ${entryPoint(mod)} | ${dependencies(mod)} | ${evidence(mod)} |`
-  );
+  .map((mod) => `| \`${mod.path}\` | ${mod.lines} | ${entryPoint(mod)} | ${dependencies(mod)} | ${evidence(mod)} |`);
 
 const table = [
   '| Modul | Zeilen | Einstiegspunkt (Klasse oder erste Deklaration) | Importiert | Nachweis |',

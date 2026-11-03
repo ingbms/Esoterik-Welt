@@ -57,7 +57,7 @@ function extractDeclarations(rel) {
   const classMethods = [];
   for (const decl of decls) {
     if (decl.kind !== 'class') continue;
-    const methodRe = /^  (?:async\s+|static\s+|get\s+|set\s+)*([A-Za-z_$][\w$]*)\s*\(/;
+    const methodRe = /^ {2}(?:async\s+|static\s+|get\s+|set\s+)*([A-Za-z_$][\w$]*)\s*\(/;
     const bodyEnd = decl.end_line || lines.length;
     for (let i = decl.line; i < bodyEnd; i += 1) {
       const mm = methodRe.exec(lines[i]);
@@ -171,7 +171,7 @@ if (aliasBlock) {
 const pageMetaBlock = /const PAGE_META = \{([\s\S]*?)\n\};/.exec(mainText);
 if (pageMetaBlock) {
   const base = mainText.slice(0, pageMetaBlock.index).split('\n').length;
-  const keyRe = /^  ([\w]+):\s*\{/gm;
+  const keyRe = /^ {2}([\w]+):\s*\{/gm;
   let km;
   while ((km = keyRe.exec(pageMetaBlock[1]))) {
     const chunk = pageMetaBlock[1].slice(km.index, km.index + 900);
@@ -383,7 +383,9 @@ if (process.argv.includes('--check')) {
   // Der Commit-Hash aendert sich mit jedem Commit und ist kein Messwert.
   const comparable = `${JSON.stringify({ ...current, measured_at_commit: out.measured_at_commit }, null, 2)}\n`;
   if (comparable !== serialized) {
-    console.error('ABWEICHUNG: Messung weicht von docs/migration-baseline/evidence/functions/functions-baseline.json ab.');
+    console.error(
+      'ABWEICHUNG: Messung weicht von docs/migration-baseline/evidence/functions/functions-baseline.json ab.'
+    );
     process.exit(1);
   }
   console.log(`OK: ${path.relative(ROOT, OUT_FILE)} ist deckungsgleich (${serialized.length} Byte, Commit ignoriert).`);

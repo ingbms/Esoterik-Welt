@@ -29,11 +29,12 @@ Alle Angaben unten stammen aus Läufen dieses Masterlaufs auf `fdef1aa`, nicht a
 | Negativkontrolle des Gate-Prüfers | `verify-release-gate.cjs --self-test` | 5/5 künstliche Strukturfehler erkannt, `clean_run_errors: 0` |
 | Eigener Gegenprüfer, unabhängig von `lib/` und allen `validate-*`/`verify-*` | `crosscheck-master-package.cjs` (neu) | 0 Fehler: 277 Design- und 54 Inhalts-Einträge, IDs eindeutig, **331** `source.path` im Baseline-Commit vorhanden |
 | Medien-Katalog mit eigenem CSV-Leser, SHA-256 neu gerechnet | `crosscheck-master-package.cjs` | 644 Zeilen, **0** Hash- und **0** Byte-Abweichungen, **1** offene Lizenz (`MED-0130`) |
-| Behauptete Datei-Hashes des Eltern-Handoffs | `crosscheck-master-package.cjs --expect-hashes` | **9 von 9** vergleichbaren Dateien bitgenau; die zehnte hat der Master selbst korrigiert (B-1, Abschnitt 2.1) |
+| Behauptete Datei-Hashes des Eltern-Handoffs | `crosscheck-master-package.cjs --expect-hashes` | **8 von 8** vergleichbaren Dateien bitgenau; die beiden übrigen hat der Master selbst geändert (B-1, Prettier-Formatierung) |
 | Negativkontrolle des eigenen Gegenprüfers | derselbe Aufruf mit absichtlich falschem Hash | 1/1 erkannt, Exit 1 — der Prüfer meldet nicht bedingungslos „ok" |
 | Produktdateien unberührt | `git diff 9f58439 -- index.html css js data assets dist public` | 0 Änderungen |
 | Secret-Muster im Diff | Muster für Private Keys, API-Keys, Passwörter, Tokens | keine Treffer |
 | Absolute Benutzerpfade in den Katalogdateien | `git grep` auf `C:/Users` | keine Treffer |
+| CI-Lint des Repositories | `npm run lint` (ESLint) und `npm run format:check` (Prettier) | beide Exit 0 nach B-2 |
 | Umfang des Diffs | `git diff --stat origin/main...HEAD` | 82 Dateien, 67 746 Zeilen, ausschließlich `docs/migration-baseline/`, `scripts/migration-baseline/` und vier Zeilen `.gitattributes` |
 
 **Warum der eigene Gegenprüfer:** Projektprüfer und Katalog stammen aus derselben
@@ -56,6 +57,22 @@ fehlt. Nach dem Lauf steht in `pruefungen.json` „644 Medienzeilen, 1 ohne gekl
 deckungsgleich mit Auflage A-4. Der Vorlagen-Hash dieser Datei ist damit überholt; er ist in
 `evidence/release-gate/parent-declared-hashes.json` unter `superseded` dokumentiert statt still
 überschrieben.
+
+### 2.2 Befund B-2 (in diesem Lauf gefunden und behoben)
+
+Die CI des Repositories war auf diesem Branch rot, bevor der Master etwas geändert hat:
+`npm run lint` meldete **17 ESLint-Fehler** in acht Werkzeugen des Katalogs, `npm run
+format:check` wich in **18 Dateien** von Prettier ab. Kein Fehler betraf Produktcode, alle betrafen
+`scripts/migration-baseline/`. Ursachen: fehlende Browser-Globals (`CSS`, `NodeFilter`,
+`matchMedia`) in der ESLint-Konfiguration für `page.evaluate`-Blöcke, ungenutzte Variablen und
+Regexe mit literalen Leerzeichen (`no-regex-spaces`).
+
+Behoben: `eslint.config.cjs` deklariert die drei Globals in `evaluateGlobals` (der dafür vorgesehene
+Ort), die ungenutzten Variablen sind entfernt, die Regexe nutzen `{2}`/`{4}`, und die 18 Dateien
+sind mit Prettier formatiert. Nachweis, dass dabei keine Semantik verloren ging: ein
+AST-Vergleich (acorn, ohne Positions- und Rohstring-Angaben) gegen den Eingangsstand zeigt 14 von
+21 Dateien unverändert; die 7 abweichenden sind genau die 7 bewusst korrigierten. Danach:
+`npm run lint` Exit 0, `npm run format:check` „All matched files use Prettier code style!".
 
 **Belege:** `evidence/release-gate/pruefungen.json` und `evidence/release-gate/runtime-fakten.json`
 wurden in diesem Lauf neu geschrieben (vorher auf `debd50e`, jetzt auf `fdef1aa`). Die
@@ -87,7 +104,7 @@ c59a074  Inhalts-Katalog
 137375d  Belege auf 627c463
 debd50e  Katalog-Metadaten außerhalb des Schemas
 fdef1aa  Belege auf debd50e
-<dieser> Masterabschluss, Belege auf fdef1aa, Befund B-1 behoben
+<dieser> Masterabschluss, Belege auf fdef1aa, Befunde B-1 und B-2 behoben
 ```
 
 ## 4. Offene Auflagen (unverändert aus dem Release-Gate)

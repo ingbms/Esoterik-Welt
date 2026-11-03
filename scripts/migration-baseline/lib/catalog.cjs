@@ -51,7 +51,15 @@ const ENUMS = {
   status: ['final', 'entwurf', 'offen', 'veraltet'],
   releaseRelevance: ['must', 'should', 'none'],
   delivery: ['shipped', 'source-only', 'excluded'],
-  owners: ['structured_output', 'design_web_layout', 'design_critique', 'writer', 'review_approval', 'architect', 'default'],
+  owners: [
+    'structured_output',
+    'design_web_layout',
+    'design_critique',
+    'writer',
+    'review_approval',
+    'architect',
+    'default',
+  ],
   states: ['default', 'hover', 'focus', 'active', 'disabled', 'error', 'empty', 'loading', 'selected', 'expanded'],
   claimKinds: ['number', 'date', 'name', 'attribution', 'effect', 'legal', 'other'],
   verification: ['verified', 'unverified', 'unverifiable'],
@@ -146,7 +154,10 @@ function exists(relPath) {
 }
 
 function sha256(relPath) {
-  return crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, relPath))).digest('hex');
+  return crypto
+    .createHash('sha256')
+    .update(fs.readFileSync(path.join(ROOT, relPath)))
+    .digest('hex');
 }
 
 function today() {
@@ -305,14 +316,21 @@ function checkCommon(entry, kind, out, options, index) {
   if (entry.evidence !== undefined && (!Array.isArray(entry.evidence) || entry.evidence.length === 0)) {
     out.error('EVIDENCE_EMPTY', where, 'evidence muss, wenn gesetzt, mindestens einen Nachweis enthalten.');
   }
-  if (entry.open_questions !== undefined && (!Array.isArray(entry.open_questions) || entry.open_questions.length === 0)) {
+  if (
+    entry.open_questions !== undefined &&
+    (!Array.isArray(entry.open_questions) || entry.open_questions.length === 0)
+  ) {
     out.error('OPEN_QUESTIONS_EMPTY', where, 'open_questions muss, wenn gesetzt, mindestens einen Punkt enthalten.');
   }
   if (entry.status === 'offen' && entry.open_questions === undefined) {
     out.warn('OPEN_STATUS_WITHOUT_QUESTION', where, 'status=offen ohne open_questions: Grund der Lücke fehlt.');
   }
   if (entry.release_relevance === 'must' && entry.status !== 'final') {
-    out.warn('BLOCKER_NOT_FINAL', where, `release_relevance=must bei status=${entry.status} — Blocker für das Release-Gate.`);
+    out.warn(
+      'BLOCKER_NOT_FINAL',
+      where,
+      `release_relevance=must bei status=${entry.status} — Blocker für das Release-Gate.`
+    );
   }
   if (entry.delivery === 'excluded' && entry.release_relevance === 'must') {
     out.error('EXCLUDED_MUST', where, 'delivery=excluded verträgt sich nicht mit release_relevance=must.');
@@ -346,7 +364,8 @@ function checkCommon(entry, kind, out, options, index) {
       if (!Array.isArray(entry.uses_tokens)) out.error('USES_TOKENS_SHAPE', where, 'uses_tokens muss ein Array sein.');
       else
         for (const tokenId of entry.uses_tokens) {
-          if (!ID_PATTERNS.token.test(tokenId)) out.error('USES_TOKENS_PATTERN', where, `${tokenId} ist keine Token-ID.`);
+          if (!ID_PATTERNS.token.test(tokenId))
+            out.error('USES_TOKENS_PATTERN', where, `${tokenId} ist keine Token-ID.`);
         }
     }
   }
@@ -370,7 +389,11 @@ function checkCommon(entry, kind, out, options, index) {
     if (entry.source && typeof entry.source.path === 'string' && typeof entry.text_ref === 'string') {
       const refPath = entry.text_ref.split('#')[0];
       if (refPath !== entry.source.path) {
-        out.warn('TEXT_REF_PATH_MISMATCH', where, `text_ref zeigt auf ${refPath}, source.path auf ${entry.source.path}.`);
+        out.warn(
+          'TEXT_REF_PATH_MISMATCH',
+          where,
+          `text_ref zeigt auf ${refPath}, source.path auf ${entry.source.path}.`
+        );
       }
     }
   }
@@ -391,11 +414,14 @@ function checkUnique(entries, kind, out) {
 }
 
 function checkTokenRefs(entries, out) {
-  const tokenIds = new Set(entries.filter((e) => typeof e.id === 'string' && e.id.startsWith('DES-TOK-')).map((e) => e.id));
+  const tokenIds = new Set(
+    entries.filter((e) => typeof e.id === 'string' && e.id.startsWith('DES-TOK-')).map((e) => e.id)
+  );
   for (const entry of entries) {
     if (!Array.isArray(entry.uses_tokens)) continue;
     for (const tokenId of entry.uses_tokens) {
-      if (!tokenIds.has(tokenId)) out.error('TOKEN_REF_MISSING', entry.id, `uses_tokens verweist auf ${tokenId}, das fehlt.`);
+      if (!tokenIds.has(tokenId))
+        out.error('TOKEN_REF_MISSING', entry.id, `uses_tokens verweist auf ${tokenId}, das fehlt.`);
     }
   }
 }
@@ -438,7 +464,11 @@ function checkClaims(claims, out, options) {
       out.error('ENUM', where, `owner ${claim.owner} ist kein bekanntes Profil.`);
     }
     if (claim.release_relevance === 'must' && claim.verification !== 'verified') {
-      out.warn('CLAIM_BLOCKER_UNBELEGT', where, `release_relevance=must bei verification=${claim.verification} — Blocker für das Release-Gate.`);
+      out.warn(
+        'CLAIM_BLOCKER_UNBELEGT',
+        where,
+        `release_relevance=must bei verification=${claim.verification} — Blocker für das Release-Gate.`
+      );
     }
     if (claim.verification === 'verified' && claim.evidence === undefined && options.fs) {
       out.warn('CLAIM_EVIDENCE', where, 'verified ohne evidence — Nachweis fehlt.');
@@ -454,7 +484,8 @@ function validateDesign(doc, options = {}) {
     out.error('DOC_SHAPE', 'design-catalog.json', 'Wurzel muss ein Objekt sein.');
     return out;
   }
-  if (doc.schema_version !== SCHEMA_VERSION) out.error('SCHEMA_VERSION', 'design-catalog.json', `schema_version muss ${SCHEMA_VERSION} sein.`);
+  if (doc.schema_version !== SCHEMA_VERSION)
+    out.error('SCHEMA_VERSION', 'design-catalog.json', `schema_version muss ${SCHEMA_VERSION} sein.`);
   if (doc.catalog !== 'design') out.error('CATALOG_KIND', 'design-catalog.json', 'catalog muss "design" sein.');
   if (typeof doc.base_commit !== 'string' || !/^[0-9a-f]{7,40}$/.test(doc.base_commit)) {
     out.error('BASE_COMMIT', 'design-catalog.json', 'base_commit fehlt oder ist kein Git-Commit-Hash.');
@@ -479,7 +510,8 @@ function validateContent(doc, options = {}) {
     out.error('DOC_SHAPE', 'content-catalog.json', 'Wurzel muss ein Objekt sein.');
     return out;
   }
-  if (doc.schema_version !== SCHEMA_VERSION) out.error('SCHEMA_VERSION', 'content-catalog.json', `schema_version muss ${SCHEMA_VERSION} sein.`);
+  if (doc.schema_version !== SCHEMA_VERSION)
+    out.error('SCHEMA_VERSION', 'content-catalog.json', `schema_version muss ${SCHEMA_VERSION} sein.`);
   if (doc.catalog !== 'content') out.error('CATALOG_KIND', 'content-catalog.json', 'catalog muss "content" sein.');
   if (typeof doc.base_commit !== 'string' || !/^[0-9a-f]{7,40}$/.test(doc.base_commit)) {
     out.error('BASE_COMMIT', 'content-catalog.json', 'base_commit fehlt oder ist kein Git-Commit-Hash.');
@@ -491,7 +523,8 @@ function validateContent(doc, options = {}) {
     out.error('ENTRIES_SHAPE', 'content-catalog.json', 'entries muss ein nicht-leeres Array sein.');
     return out;
   }
-  if (!Array.isArray(doc.claims)) out.error('CLAIMS_SHAPE', 'content-catalog.json', 'claims muss ein Array sein (leer erlaubt).');
+  if (!Array.isArray(doc.claims))
+    out.error('CLAIMS_SHAPE', 'content-catalog.json', 'claims muss ein Array sein (leer erlaubt).');
 
   const entries = doc.entries;
   entries.forEach((entry, index) => checkCommon(entry, 'content', out, opts, index));
@@ -502,7 +535,8 @@ function validateContent(doc, options = {}) {
     if (!Array.isArray(entry.claims)) continue;
     for (const claimId of entry.claims) {
       if (!ID_PATTERNS.claim.test(claimId)) out.error('CLAIM_REF_PATTERN', entry.id, `${claimId} ist keine Claim-ID.`);
-      else if (!claimIds.has(claimId)) out.error('CLAIM_REF_MISSING', entry.id, `verweist auf ${claimId}, das in claims[] fehlt.`);
+      else if (!claimIds.has(claimId))
+        out.error('CLAIM_REF_MISSING', entry.id, `verweist auf ${claimId}, das in claims[] fehlt.`);
     }
   }
   // Jede Aussage muss von mindestens einem Eintrag referenziert sein, sonst ist sie im Katalog verwaist.
@@ -556,7 +590,8 @@ function validateMedia(rows, options = {}) {
       if (actual !== row.sha256) out.error('SHA256_MISMATCH', where, `sha256 passt nicht zu ${row.path}.`);
     }
     const size = Number(row.bytes);
-    if (!Number.isInteger(size) || size <= 0) out.error('BYTES_FORMAT', where, 'bytes muss eine positive Ganzzahl sein.');
+    if (!Number.isInteger(size) || size <= 0)
+      out.error('BYTES_FORMAT', where, 'bytes muss eine positive Ganzzahl sein.');
     else if (opts.fs && REPO_PATH.test(row.path) && exists(row.path)) {
       const actualSize = fs.statSync(path.join(ROOT, row.path)).size;
       if (actualSize !== size) out.error('BYTES_MISMATCH', where, `bytes=${size}, Datei hat ${actualSize}.`);
@@ -565,16 +600,26 @@ function validateMedia(rows, options = {}) {
     for (const dimension of ['width_px', 'height_px']) {
       const value = row[dimension];
       if (isVector) {
-        if (value !== 'n/a' && !/^[0-9]+$/.test(value)) out.error('DIMENSION_FORMAT', where, `${dimension} muss "n/a" oder eine Zahl sein.`);
+        if (value !== 'n/a' && !/^[0-9]+$/.test(value))
+          out.error('DIMENSION_FORMAT', where, `${dimension} muss "n/a" oder eine Zahl sein.`);
       } else if (!/^[0-9]+$/.test(value) || Number(value) <= 0) {
         out.error('DIMENSION_MISSING', where, `${dimension} fehlt für Rasterformat ${row.format}.`);
       }
     }
-    if (!row.alt_text) out.error('ALT_TEXT', where, 'alt_text fehlt (bei dekorativen Dateien "dekorativ" oder "n/a (Grund)" eintragen).');
+    if (!row.alt_text)
+      out.error(
+        'ALT_TEXT',
+        where,
+        'alt_text fehlt (bei dekorativen Dateien "dekorativ" oder "n/a (Grund)" eintragen).'
+      );
     if (!row.used_on) out.error('USED_ON', where, 'used_on fehlt.');
     if (!row.license) out.error('LICENSE', where, 'license fehlt; ungeklärt als "ungeklaert" eintragen.');
     if (row.license_status === 'ungeklaert') {
-      out.warn('LICENSE_OPEN', where, `${row.path}: Lizenz ungeklärt — vor Push klären oder bewusst als Restrisiko führen.`);
+      out.warn(
+        'LICENSE_OPEN',
+        where,
+        `${row.path}: Lizenz ungeklärt — vor Push klären oder bewusst als Restrisiko führen.`
+      );
     }
     if (!row.sha256 && row.status === 'final') out.warn('MEDIA_UNHASHED', where, 'final ohne sha256.');
   });

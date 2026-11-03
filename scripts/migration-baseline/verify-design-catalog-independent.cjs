@@ -188,18 +188,6 @@ function main() {
 
   const findings = [];
   const checked = { tokens: 0, components: 0, breakpoints: 0 };
-  const tokenTypes = new Set([
-    'token-color',
-    'token-space',
-    'token-radius',
-    'token-shadow',
-    'token-font',
-    'token-z',
-    'token-size',
-    'token-breakpoint',
-    'token',
-  ]);
-
   for (const entry of entries) {
     const type = String(entry.type || '');
     const source = entry.source || {};

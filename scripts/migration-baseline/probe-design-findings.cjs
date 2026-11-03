@@ -269,7 +269,12 @@ async function main() {
         };
         const parse = (value) => {
           const nums = String(value).match(/[\d.]+/g) || [];
-          return { r: Number(nums[0]), g: Number(nums[1]), b: Number(nums[2]), a: nums[3] === undefined ? 1 : Number(nums[3]) };
+          return {
+            r: Number(nums[0]),
+            g: Number(nums[1]),
+            b: Number(nums[2]),
+            a: nums[3] === undefined ? 1 : Number(nums[3]),
+          };
         };
         const nodes = [...band.querySelectorAll('p, h1, h2, h3, span, a, li')].filter(
           (el) => el.getClientRects().length && (el.textContent || '').trim()
@@ -304,9 +309,9 @@ async function main() {
       });
       perRoute.push({ slug, ...measured });
     }
-    const worstOverall = perRoute
-      .flatMap((r) => (r.worst ? [{ slug: r.slug, ...r.worst }] : []))
-      .sort((a, b) => a.ratio - b.ratio)[0] || null;
+    const worstOverall =
+      perRoute.flatMap((r) => (r.worst ? [{ slug: r.slug, ...r.worst }] : [])).sort((a, b) => a.ratio - b.ratio)[0] ||
+      null;
     const failing = perRoute.flatMap((r) =>
       r.worst && r.worst.ratio < r.worst.required ? [{ slug: r.slug, ...r.worst }] : []
     );

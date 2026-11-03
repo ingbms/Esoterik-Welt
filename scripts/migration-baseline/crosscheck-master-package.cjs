@@ -107,7 +107,9 @@ function checkCatalog(name, requiredField) {
     }
   }
   if (missingSource.length) {
-    err(`${name}: ${missingSource.length} Quellen fehlen im Baseline-Commit: ${JSON.stringify(missingSource.slice(0, 5))}`);
+    err(
+      `${name}: ${missingSource.length} Quellen fehlen im Baseline-Commit: ${JSON.stringify(missingSource.slice(0, 5))}`
+    );
   }
   return { file: name, entries: entries.length, types, sources_checked: entries.length - missingSource.length };
 }
@@ -133,27 +135,51 @@ function checkMedia() {
     }
     if (sha256(file) !== row.sha256) hashMismatch.push(row.path);
     if (String(fs.statSync(file).size) !== String(row.bytes)) sizeMismatch.push(row.path);
-    if (OPEN_LICENSE.has(String(row.license_status || '').trim().toLowerCase())) {
+    if (
+      OPEN_LICENSE.has(
+        String(row.license_status || '')
+          .trim()
+          .toLowerCase()
+      )
+    ) {
       open += 1;
       if (openSamples.length < 3) openSamples.push(row.path);
     }
   }
-  if (missing.length) err(`media-catalog.csv: ${missing.length} Dateien fehlen, z. B. ${JSON.stringify(missing.slice(0, 3))}`);
-  if (hashMismatch.length) err(`media-catalog.csv: ${hashMismatch.length} SHA-256-Abweichungen, z. B. ${JSON.stringify(hashMismatch.slice(0, 3))}`);
-  if (sizeMismatch.length) err(`media-catalog.csv: ${sizeMismatch.length} Byte-Abweichungen, z. B. ${JSON.stringify(sizeMismatch.slice(0, 3))}`);
-  return { rows: rows.length, hashes_checked: rows.length - missing.length, license_open: open, license_open_samples: openSamples };
+  if (missing.length)
+    err(`media-catalog.csv: ${missing.length} Dateien fehlen, z. B. ${JSON.stringify(missing.slice(0, 3))}`);
+  if (hashMismatch.length)
+    err(
+      `media-catalog.csv: ${hashMismatch.length} SHA-256-Abweichungen, z. B. ${JSON.stringify(hashMismatch.slice(0, 3))}`
+    );
+  if (sizeMismatch.length)
+    err(
+      `media-catalog.csv: ${sizeMismatch.length} Byte-Abweichungen, z. B. ${JSON.stringify(sizeMismatch.slice(0, 3))}`
+    );
+  return {
+    rows: rows.length,
+    hashes_checked: rows.length - missing.length,
+    license_open: open,
+    license_open_samples: openSamples,
+  };
 }
 
 function checkClaims(content) {
   const claims = Array.isArray(content.claims) ? content.claims : [];
-  const unbacked = claims.filter((claim) => claim.verification === 'verified' && !claim.citation).map((claim) => claim.id);
+  const unbacked = claims
+    .filter((claim) => claim.verification === 'verified' && !claim.citation)
+    .map((claim) => claim.id);
   if (unbacked.length) err(`content-catalog: verifizierte Claims ohne citation ${JSON.stringify(unbacked)}`);
   return { claims: claims.length, verified: claims.filter((claim) => claim.verification === 'verified').length };
 }
 
 function checkProduct() {
-  const result = spawnSync('git', ['-C', ROOT, 'diff', '--name-only', BASE, '--', ...PRODUCT_PATHS], { encoding: 'utf8' });
-  const changed = String(result.stdout || '').split('\n').filter((line) => line.trim() !== '');
+  const result = spawnSync('git', ['-C', ROOT, 'diff', '--name-only', BASE, '--', ...PRODUCT_PATHS], {
+    encoding: 'utf8',
+  });
+  const changed = String(result.stdout || '')
+    .split('\n')
+    .filter((line) => line.trim() !== '');
   if (changed.length) err(`Produktdateien gegenueber Baseline geaendert: ${JSON.stringify(changed.slice(0, 10))}`);
   return { product_changes: changed.length };
 }
@@ -176,7 +202,10 @@ function checkExpectedHashes(file) {
     const got = sha256(target);
     if (got !== want) mismatch.push(`${relative}: erwartet ${want.slice(0, 16)}, ist ${got.slice(0, 16)}`);
   }
-  if (mismatch.length) err(`Vorlage-Hashes: ${mismatch.length} von ${Object.keys(table).length} weichen ab: ${JSON.stringify(mismatch.slice(0, 5))}`);
+  if (mismatch.length)
+    err(
+      `Vorlage-Hashes: ${mismatch.length} von ${Object.keys(table).length} weichen ab: ${JSON.stringify(mismatch.slice(0, 5))}`
+    );
   return { declared: Object.keys(table).length, checked, superseded: skipped, mismatch };
 }
 

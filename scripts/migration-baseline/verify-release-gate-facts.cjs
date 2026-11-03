@@ -92,9 +92,11 @@ async function main() {
   await page.waitForTimeout(600);
   facts.crystals = {
     cards: await count(page, '.crystal-card'),
-    cardIds: await page.locator('.crystal-card').evaluateAll((nodes) =>
-      nodes.map((node) => node.dataset.id || node.getAttribute('data-id') || '').filter(Boolean)
-    ),
+    cardIds: await page
+      .locator('.crystal-card')
+      .evaluateAll((nodes) =>
+        nodes.map((node) => node.dataset.id || node.getAttribute('data-id') || '').filter(Boolean)
+      ),
     dataRequests: requests.filter((url) => url.includes('crystals.json') || url.includes('crystals.js')),
   };
 
@@ -106,7 +108,12 @@ async function main() {
     registerLinks: await page
       .locator('a[href^="#farbwelten/"]')
       .evaluateAll((nodes) => [...new Set(nodes.map((node) => node.getAttribute('href')))].sort()),
-    h1: (await page.locator('main h1').first().textContent({ timeout: 3000 }).catch(() => null)) || null,
+    h1:
+      (await page
+        .locator('main h1')
+        .first()
+        .textContent({ timeout: 3000 })
+        .catch(() => null)) || null,
   };
 
   // --- Themenseiten und Indigo direkt adressieren.
@@ -121,7 +128,10 @@ async function main() {
       .textContent({ timeout: 3000 })
       .catch(() => null);
     const headingText = heading ? heading.replace(/\s+/g, ' ').trim().slice(0, 100) : null;
-    const body = await page.locator('#farbweltenRoot').innerText().catch(() => '');
+    const body = await page
+      .locator('#farbweltenRoot')
+      .innerText()
+      .catch(() => '');
     return {
       hash,
       heading: headingText,
@@ -149,13 +159,27 @@ async function main() {
   await page.goto(`${base}index.html#blog/6`, { waitUntil: 'networkidle' });
   await page.waitForTimeout(700);
   facts.blog.article6 = {
-    modalOpen: await page.locator('#articleModal.open').isVisible().catch(() => false),
-    title: (await page.locator('#articleModal h2, #articleModal .modal-title').first().textContent({ timeout: 2000 }).catch(() => null)) || null,
+    modalOpen: await page
+      .locator('#articleModal.open')
+      .isVisible()
+      .catch(() => false),
+    title:
+      (await page
+        .locator('#articleModal h2, #articleModal .modal-title')
+        .first()
+        .textContent({ timeout: 2000 })
+        .catch(() => null)) || null,
   };
 
   // --- Datenschutzerklaerung: deckt sie die tatsaechlich verwendeten Speicherorte?
   const datenschutz = fs.readFileSync(path.join(ROOT, 'datenschutz.html'), 'utf8');
-  const storageKeys = ['esot_crystals_fav', 'esot_rad_journal_v', 'esot_rad_experiment_v', 'esoterik_runes_history', 'esoterik_tarot_deck'];
+  const storageKeys = [
+    'esot_crystals_fav',
+    'esot_rad_journal_v',
+    'esot_rad_experiment_v',
+    'esoterik_runes_history',
+    'esoterik_tarot_deck',
+  ];
   facts.datenschutz = {
     mentionsJournal: /Journal|Radi[äa]sthesie/i.test(datenschutz),
     mentionsExperiment: /Experiment/i.test(datenschutz),
@@ -164,7 +188,20 @@ async function main() {
     trackedKeys: storageKeys,
   };
 
-  const COLOR_SLUGS = ['rot', 'orange', 'gelb', 'gruen', 'tuerkis', 'blau', 'indigo', 'violett', 'magenta', 'rosa', 'weiss', 'schwarz'];
+  const COLOR_SLUGS = [
+    'rot',
+    'orange',
+    'gelb',
+    'gruen',
+    'tuerkis',
+    'blau',
+    'indigo',
+    'violett',
+    'magenta',
+    'rosa',
+    'weiss',
+    'schwarz',
+  ];
   const registerColors = facts.farbwelten.registerLinks
     .map((href) => String(href).replace('#farbwelten/', ''))
     .filter((slug) => COLOR_SLUGS.includes(slug));
@@ -178,7 +215,9 @@ async function main() {
     indigoResolves: !facts.probeder.find((item) => item.hash === '#farbwelten/indigo').notFound,
     braunIsNotARoute: facts.probeder.find((item) => item.hash === '#farbwelten/braun').notFound,
     topicPagesResolve: facts.probeder
-      .filter((item) => ['#farbwelten/farbtherapie', '#farbwelten/farbpsychologie', '#farbwelten/lichtmedizin'].includes(item.hash))
+      .filter((item) =>
+        ['#farbwelten/farbtherapie', '#farbwelten/farbpsychologie', '#farbwelten/lichtmedizin'].includes(item.hash)
+      )
       .every((item) => !item.notFound),
     oldTopicSlugsAreNotRoutes: facts.probeder
       .filter((item) => ['#farbwelten/therapie', '#farbwelten/psychologie', '#farbwelten/licht'].includes(item.hash))
@@ -189,10 +228,7 @@ async function main() {
   const result = {
     generated_at: new Date().toISOString(),
     base,
-    base_commit: require('node:child_process')
-      .execSync('git rev-parse HEAD', { cwd: ROOT })
-      .toString()
-      .trim(),
+    base_commit: require('node:child_process').execSync('git rev-parse HEAD', { cwd: ROOT }).toString().trim(),
     facts,
     expectations,
     ok: Object.values(expectations).every(Boolean),
@@ -200,7 +236,13 @@ async function main() {
 
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'runtime-fakten.json'), `${JSON.stringify(result, null, 2)}\n`);
-  console.log(JSON.stringify({ expectations, crystals: facts.crystals.cards, register: facts.farbwelten.registerLinks.length }, null, 2));
+  console.log(
+    JSON.stringify(
+      { expectations, crystals: facts.crystals.cards, register: facts.farbwelten.registerLinks.length },
+      null,
+      2
+    )
+  );
   await browser.close();
   server.close();
   process.exit(result.ok ? 0 : 1);

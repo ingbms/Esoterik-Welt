@@ -144,7 +144,6 @@ function main() {
   }
   const options = { examples: argv.includes('--examples') };
   const onlyNegatives = argv.includes('--negativ');
-  const onlyPositives = argv.includes('--examples') && !onlyNegatives;
   const ajvModule = loadAjv();
 
   if (!ajvModule.available) {

@@ -5,7 +5,10 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..');
 const data = JSON.parse(
-  fs.readFileSync(path.join(ROOT, 'docs', 'migration-baseline', 'evidence', 'functions', 'functions-baseline.json'), 'utf8')
+  fs.readFileSync(
+    path.join(ROOT, 'docs', 'migration-baseline', 'evidence', 'functions', 'functions-baseline.json'),
+    'utf8'
+  )
 );
 
 const only = process.argv.slice(2);

@@ -55,7 +55,9 @@ function decodeEntities(text) {
 }
 
 function cleanText(html) {
-  return decodeEntities(html.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+  return decodeEntities(html.replace(/<[^>]+>/g, ''))
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function exists(rel) {
@@ -91,9 +93,7 @@ function pages() {
   const mainJs = read('js/main.js');
 
   const mainPagesBlock = /const MAIN_PAGES = \[([\s\S]*?)\];/.exec(mainJs);
-  const mainPages = mainPagesBlock
-    ? [...mainPagesBlock[1].matchAll(/'([a-z-]+)'/g)].map((match) => match[1])
-    : [];
+  const mainPages = mainPagesBlock ? [...mainPagesBlock[1].matchAll(/'([a-z-]+)'/g)].map((match) => match[1]) : [];
 
   const navBlock = /<nav class="nav"[\s\S]*?<\/nav>/.exec(indexHtml);
   const nav = navBlock
@@ -183,12 +183,14 @@ function farbwelten() {
   const farbBlock = between('export const FARBWELTEN = [', 'export const LANDING');
   const topicBlock = between('export const TOPIC_PAGES = [', 'export const COMPASS');
 
-  const colours = [...farbBlock.matchAll(/\n    id: '([a-z]+)',\n    name: '([^']+)',\n    route: '#([^']+)',/g)].map((match) => ({
-    id: match[1],
-    name: match[2],
-    route: `#${match[3]}`,
-  }));
-  const topics = [...topicBlock.matchAll(/\n    slug: '([a-z-]+)',\n    title: '([^']+)',/g)].map((match) => ({
+  const colours = [...farbBlock.matchAll(/\n {4}id: '([a-z]+)',\n {4}name: '([^']+)',\n {4}route: '#([^']+)',/g)].map(
+    (match) => ({
+      id: match[1],
+      name: match[2],
+      route: `#${match[3]}`,
+    })
+  );
+  const topics = [...topicBlock.matchAll(/\n {4}slug: '([a-z-]+)',\n {4}title: '([^']+)',/g)].map((match) => ({
     slug: match[1],
     title: match[2],
     route: `#farbwelten/${match[1]}`,
@@ -219,7 +221,7 @@ function farbwelten() {
 
 function articles() {
   const source = read('js/data/articles.js');
-  const ids = [...source.matchAll(/^    id: ([0-9]+),$/gm)].map((match) => Number(match[1]));
+  const ids = [...source.matchAll(/^ {4}id: ([0-9]+),$/gm)].map((match) => Number(match[1]));
   const rendered = ids.length;
   const markdown = walk('data/articles', (file) => file.endsWith('.md'));
   return {
@@ -249,7 +251,10 @@ function designTokens() {
   const lightNames = names(lightBlock);
   const families = {};
   for (const name of rootNames) {
-    const family = /^--(color|space|radius|font|text|line|weight|transition|shadow|z|container|dur|ease|tracking|breakpoint)/.exec(name);
+    const family =
+      /^--(color|space|radius|font|text|line|weight|transition|shadow|z|container|dur|ease|tracking|breakpoint)/.exec(
+        name
+      );
     const key = family ? family[1] : 'sonstige';
     families[key] = (families[key] || 0) + 1;
   }
@@ -362,7 +367,10 @@ function dataFiles() {
 }
 
 function jsModules() {
-  const modules = walk('js/modules', (file) => file.endsWith('.js') && !file.endsWith('.bak') && !file.endsWith('.bak2'));
+  const modules = walk(
+    'js/modules',
+    (file) => file.endsWith('.js') && !file.endsWith('.bak') && !file.endsWith('.bak2')
+  );
   const data = walk('js/data', (file) => file.endsWith('.js') && !file.endsWith('.bak') && !file.endsWith('.bak2'));
   return {
     modules_count: modules.length,
@@ -387,7 +395,8 @@ function scope() {
     legacy_public_placeholder: {
       path: 'public',
       exists: exists('public'),
-      reason: 'build-pages.cjs kopiert public/ nicht; der Ordner ist ein alter Platzhalter (public/index.html, public/styles.css) und wird nicht ausgeliefert.',
+      reason:
+        'build-pages.cjs kopiert public/ nicht; der Ordner ist ein alter Platzhalter (public/index.html, public/styles.css) und wird nicht ausgeliefert.',
       file_count: exists('public') ? walk('public').length : 0,
     },
   };
@@ -467,7 +476,9 @@ function main() {
     console.log(`Hauptseiten:            ${p.main_pages_count} (${p.main_pages.join(', ')})`);
     console.log(`Startseitenzugaenge:    ${p.nav_entries_count}`);
     console.log(`Farbwelten:             ${inventory.farbwelten.colours_count}`);
-    console.log(`Farbwelten-Themenseiten:${inventory.farbwelten.topic_pages_count} (${inventory.farbwelten.topic_pages.map((t) => t.slug).join(', ')})`);
+    console.log(
+      `Farbwelten-Themenseiten:${inventory.farbwelten.topic_pages_count} (${inventory.farbwelten.topic_pages.map((t) => t.slug).join(', ')})`
+    );
     console.log(`Markdown-Farbquellen:   ${inventory.farbwelten.markdown_sources_count}`);
     console.log(`Radiasthesie-Dokumente: ${inventory.static_documents.radiasthesie_documents_count}`);
     console.log(`Artikel gerendert:      ${inventory.articles.rendered_count}`);
@@ -476,7 +487,9 @@ function main() {
     console.log(`Klassen-Selektoren:     ${inventory.design_tokens.class_selectors_count}`);
     console.log(`Klassen-Praefixe:      ${inventory.design_tokens.class_prefixes_count}`);
     console.log(`Umbruchpunkte:          ${inventory.breakpoints.distinct_widths_count} verschiedene Breiten`);
-    console.log(`Assets:                 ${inventory.assets.files_total} Dateien, ${Math.round(inventory.assets.bytes_total / 1024)} KiB`);
+    console.log(
+      `Assets:                 ${inventory.assets.files_total} Dateien, ${Math.round(inventory.assets.bytes_total / 1024)} KiB`
+    );
     return;
   }
   if (argv.includes('--write')) {

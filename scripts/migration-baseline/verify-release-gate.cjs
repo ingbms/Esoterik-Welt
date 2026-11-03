@@ -151,8 +151,34 @@ const readJson = (name) => JSON.parse(fs.readFileSync(path.join(DOCS, name), 'ut
 const repoFile = (relative) => path.join(ROOT, relative);
 const lineCount = (file) => fs.readFileSync(file, 'utf8').split(/\r?\n/).length;
 
-const CONTENT_REQUIRED = ['id', 'name', 'description', 'type', 'source', 'text_ref', 'language', 'stand', 'status', 'owner', 'release_relevance', 'delivery', 'acceptance_check'];
-const DESIGN_REQUIRED = ['id', 'name', 'description', 'type', 'source', 'stand', 'status', 'owner', 'release_relevance', 'delivery', 'acceptance_check'];
+const CONTENT_REQUIRED = [
+  'id',
+  'name',
+  'description',
+  'type',
+  'source',
+  'text_ref',
+  'language',
+  'stand',
+  'status',
+  'owner',
+  'release_relevance',
+  'delivery',
+  'acceptance_check',
+];
+const DESIGN_REQUIRED = [
+  'id',
+  'name',
+  'description',
+  'type',
+  'source',
+  'stand',
+  'status',
+  'owner',
+  'release_relevance',
+  'delivery',
+  'acceptance_check',
+];
 
 /**
  * Prueft beide Kataloge rein strukturell gegen den Arbeitsbaum.
@@ -184,7 +210,11 @@ function auditCatalogs(design, content) {
           const total = lineCount(repoFile(file));
           const numbers = anchor.match(/\d+/g).map(Number);
           if (Math.max(...numbers) > total) {
-            add('error', entry.id, `text_ref ${entry.text_ref} verweist auf Zeile ${Math.max(...numbers)}, Datei hat ${total}`);
+            add(
+              'error',
+              entry.id,
+              `text_ref ${entry.text_ref} verweist auf Zeile ${Math.max(...numbers)}, Datei hat ${total}`
+            );
           }
         }
       }
@@ -210,7 +240,8 @@ function auditCatalogs(design, content) {
       else if (/^L\d+(-L\d+)?$/.test(anchor)) {
         const total = lineCount(repoFile(file));
         const numbers = anchor.match(/\d+/g).map(Number);
-        if (Math.max(...numbers) > total) add('error', claim.id, `text_ref ${claim.text_ref} liegt hinter dem Dateiende (${total})`);
+        if (Math.max(...numbers) > total)
+          add('error', claim.id, `text_ref ${claim.text_ref} liegt hinter dem Dateiende (${total})`);
       }
     }
   }
@@ -224,11 +255,41 @@ if (process.argv.includes('--self-test')) {
   const content = readJson('content-catalog.json');
   const clone = (value) => JSON.parse(JSON.stringify(value));
   const cases = [
-    ['fehlender owner', (d, c) => { delete d.entries[0].owner; }, 'Pflichtfeld owner fehlt'],
-    ['Quelle existiert nicht', (d) => { d.entries[1].source.path = 'css/gibt-es-nicht.css'; }, 'Quelle css/gibt-es-nicht.css existiert nicht'],
-    ['text_ref hinter dem Dateiende', (d, c) => { c.entries[0].text_ref = 'index.html#L99999'; }, 'verweist auf Zeile 99999'],
-    ['unbekannte Claim-Referenz', (d, c) => { c.entries[0].claims = ['CLM-999']; }, 'Claim CLM-999 existiert nicht'],
-    ['verified ohne citation', (d, c) => { c.claims[0].citation = ''; }, 'verified ohne citation'],
+    [
+      'fehlender owner',
+      (d) => {
+        delete d.entries[0].owner;
+      },
+      'Pflichtfeld owner fehlt',
+    ],
+    [
+      'Quelle existiert nicht',
+      (d) => {
+        d.entries[1].source.path = 'css/gibt-es-nicht.css';
+      },
+      'Quelle css/gibt-es-nicht.css existiert nicht',
+    ],
+    [
+      'text_ref hinter dem Dateiende',
+      (d, c) => {
+        c.entries[0].text_ref = 'index.html#L99999';
+      },
+      'verweist auf Zeile 99999',
+    ],
+    [
+      'unbekannte Claim-Referenz',
+      (d, c) => {
+        c.entries[0].claims = ['CLM-999'];
+      },
+      'Claim CLM-999 existiert nicht',
+    ],
+    [
+      'verified ohne citation',
+      (d, c) => {
+        c.claims[0].citation = '';
+      },
+      'verified ohne citation',
+    ],
   ];
   const outcome = [];
   for (const [name, mutate, expected] of cases) {
@@ -241,7 +302,9 @@ if (process.argv.includes('--self-test')) {
   }
   const clean = auditCatalogs(design, content).filter((finding) => finding.level === 'error');
   const ok = outcome.every((item) => item.caught) && clean.length === 0;
-  console.log(JSON.stringify({ self_test: 'release-gate', cases: outcome, clean_run_errors: clean.length, ok }, null, 2));
+  console.log(
+    JSON.stringify({ self_test: 'release-gate', cases: outcome, clean_run_errors: clean.length, ok }, null, 2)
+  );
   process.exit(ok ? 0 : 1);
 }
 
@@ -260,7 +323,9 @@ const mediaHeader = mediaTable[0];
 const mediaRows = mediaTable.slice(1);
 const licenseIndex = mediaHeader.indexOf('license_status');
 if (licenseIndex < 0) throw new Error('media-catalog.csv: Spalte license_status fehlt');
-const openLicenses = mediaRows.filter((row) => row[licenseIndex] && row[licenseIndex] !== 'geklaert' && row[licenseIndex] !== 'nicht_erforderlich');
+const openLicenses = mediaRows.filter(
+  (row) => row[licenseIndex] && row[licenseIndex] !== 'geklaert' && row[licenseIndex] !== 'nicht_erforderlich'
+);
 structural.push({
   level: 'info',
   id: 'MED-LIZENZ',
@@ -300,5 +365,17 @@ const report = {
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(path.join(OUT, 'pruefungen.json'), `${JSON.stringify(report, null, 2)}\n`);
 
-console.log(JSON.stringify({ ok: report.ok, must_failed: report.must_failed, structural_errors: errors.length, counts, checks: results.map((result) => `${result.id} ${result.status} ${result.detail}`) }, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      ok: report.ok,
+      must_failed: report.must_failed,
+      structural_errors: errors.length,
+      counts,
+      checks: results.map((result) => `${result.id} ${result.status} ${result.detail}`),
+    },
+    null,
+    2
+  )
+);
 process.exit(report.ok ? 0 : 1);

@@ -18,7 +18,27 @@
  */
 'use strict';
 
-const REGEX_PRECEDERS = new Set(['', '(', ',', '=', ':', '[', '!', '&', '|', '?', '{', '}', ';', '+', '-', '*', '%', '<', '>']);
+const REGEX_PRECEDERS = new Set([
+  '',
+  '(',
+  ',',
+  '=',
+  ':',
+  '[',
+  '!',
+  '&',
+  '|',
+  '?',
+  '{',
+  '}',
+  ';',
+  '+',
+  '-',
+  '*',
+  '%',
+  '<',
+  '>',
+]);
 const REGEX_KEYWORDS = /(?:^|[\s(,=:[!&|?{};])(?:return|typeof|instanceof|case|in|of)$/;
 
 function findBlockEnd(lines, startLine) {
