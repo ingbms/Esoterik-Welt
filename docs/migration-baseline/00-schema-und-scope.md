@@ -776,11 +776,22 @@ Regeln:
 2. `verified` ohne `citation` ist nicht zulässig; `verified` ohne `evidence` erzeugt eine
    Warnung (`CLAIM_EVIDENCE`).
 3. `release_relevance: must` bei `verification: unverified` ist ein **Blocker** und erzeugt
-   eine Warnung (`CLAIM_BLOCKER_UNBELEGT`). Genau so ist `CLM-002` („30 Kristalle") heute
-   eingestuft.
+   eine Warnung (`CLAIM_BLOCKER_UNBELEGT`). So ist `CLM-003` (Rot-Wellenlänge ohne
+   Quellenangabe auf der Seite) eingestuft; `CLM-002` („30 Kristalle") ist seit dem
+   Release-Gate belegt und auf `verified`/`final` gestellt.
 4. Eine Aussage ohne referenzierenden Eintrag ist verwaist (`CLAIM_ORPHAN`-Warnung).
 5. `unverifiable` ist eine zulässige, ehrliche Einstufung — sie darf nur nicht als
    `verified` getarnt werden.
+
+#### Katalog-Metadaten ausserhalb des Schemas
+
+`catalog.schema.json` setzt für die Katalogwurzel `additionalProperties: false` und erlaubt nur
+`schema_version`, `catalog`, `base_commit`, `stand`, `scope_document`, `entries` und `claims`.
+Alles, was den Katalog beschreibt, ohne ein Eintrag zu sein — Herkunft (`produced_by`),
+Quellinventar, Lokalisierung, Tonalität, offene Lücken — steht deshalb in
+`docs/migration-baseline/content-catalog-meta.json`. Diese Datei ist **kein** Katalog, wird nicht
+gegen das Schema geprüft und darf frei ergänzt werden; sie hält die Aussagen fest, die sonst
+zwischen den Karten verloren gehen würden.
 
 ### 7.7 Beispielzeilen
 
