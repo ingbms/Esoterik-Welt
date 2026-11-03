@@ -1003,3 +1003,374 @@
     border-bottom: 0;
   }
 }
+
+/* ============================================================================
+   Pendellabor (RAD-07)
+   ----------------------------------------------------------------------------
+   Bühne als SVG (skaliert ohne Pixeltricks), Regler als native range-Inputs,
+   Messwerte als <output> in einer Definitionsliste. Touch-Ziele mindestens
+   44 px, Fokusringe auf Bühne und Reglern, keine Farbe als einziger Träger
+   einer Aussage. Die Bewegung selbst erzeugt JavaScript; hier steht nur das
+   Aussehen.
+   ============================================================================ */
+
+.psim {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--space-6);
+  align-items: start;
+  margin: var(--space-6) 0 var(--space-8);
+}
+
+.psim-stage {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  min-width: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.psim-scene {
+  min-width: 0;
+  border-radius: var(--radius-sm);
+  background: radial-gradient(ellipse at 50% 8%, #1b2629 0%, #0e1517 70%);
+}
+
+.psim-scene:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.psim-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.psim-beam {
+  stroke: var(--color-line-strong);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.psim-support {
+  stroke: var(--color-border);
+  stroke-width: 2;
+}
+
+.psim-guide {
+  stroke: var(--color-border);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+}
+
+.psim-pivot {
+  fill: var(--color-primary);
+}
+
+.psim-thread {
+  stroke: var(--color-text-secondary);
+  stroke-width: 1.5;
+}
+
+.psim-arc {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1.5;
+  opacity: 0.75;
+}
+
+.psim-bob-brass {
+  stroke: #6f6042;
+  stroke-width: 1;
+}
+
+.psim-bob-cap {
+  fill: var(--color-primary);
+}
+
+/* Kugel und Kegel beziehen ihre Füllung als SVG-Paint-Server direkt aus dem
+   Markup: der Offline-Build verbietet Asset-Verweise in Stylesheets, und ein
+   Gradient gehört ohnehin zur Zeichnung, nicht zum Farbschema. */
+
+.psim-bob-shine {
+  fill: rgba(255, 255, 255, 0.35);
+}
+
+.psim-bob-ring {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 5;
+}
+
+.psim-bob-core {
+  fill: var(--color-primary);
+}
+
+/* Nur die gewählte Pendeldarstellung ist sichtbar. */
+[data-psim-bob] {
+  display: none;
+}
+
+[data-psim-bob][data-active] {
+  display: inline;
+}
+
+.psim-readout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3) var(--space-4);
+  margin: 0;
+}
+
+.psim-readout > div {
+  min-width: 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+}
+
+.psim-readout dt {
+  margin-bottom: var(--space-1);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+.psim-readout dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+}
+
+.psim-status {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-deep);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.psim-controls {
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+  min-width: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.psim-field {
+  display: grid;
+  gap: var(--space-4);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.psim-field legend {
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.psim-control {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-2) var(--space-3);
+  align-items: center;
+}
+
+.psim-control label {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.psim-control input[type='range'] {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  accent-color: var(--color-primary);
+  background: transparent;
+}
+
+.psim-value {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+}
+
+.psim-hint {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.psim-control .psim-hint {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+.psim-choice {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.psim-choice input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.psim-choice:hover span {
+  color: var(--color-text-primary);
+}
+
+.psim-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.psim-actions .btn {
+  min-height: 44px;
+}
+
+.psim-formula {
+  max-width: 60ch;
+  margin: 0 0 var(--space-4);
+  padding: var(--space-4);
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-card);
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+.psim-limits {
+  display: grid;
+  margin: var(--space-4) 0;
+}
+
+.psim-limits > div {
+  display: grid;
+  grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.psim-limits dt {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.psim-limits dd {
+  max-width: 60ch;
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.psim-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* Verfügbare Werkstatt-Karte: durchgezogener Rahmen und Link am Titel. */
+.rad-werk-state--ready {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.rad-werk-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 55%, transparent);
+}
+
+.rad-werk-link:hover {
+  color: var(--color-hover);
+  border-bottom-color: var(--color-hover);
+}
+
+@media (max-width: 1000px) {
+  .psim {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .psim-stage,
+  .psim-controls {
+    padding: var(--space-4);
+  }
+  .psim-limits > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .psim-readout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media print {
+  .psim {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .psim-controls,
+  .psim-actions,
+  .psim-hint {
+    display: none;
+  }
+  .psim-stage {
+    border: 1px solid #777;
+    background: transparent;
+  }
+  .psim-readout dd {
+    color: #000;
+  }
+}
+
+/* Modellzeichnung: gleiche Maßbreite wie die Artikel-Tafeln, damit die
+   Zeichnung nicht über die halbe Seite läuft. */
+#psim-modell .rad-plate {
+  max-width: 680px;
+}

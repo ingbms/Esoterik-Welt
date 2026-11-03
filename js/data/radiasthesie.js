@@ -758,19 +758,20 @@ export const RADIASTHESIE = {
     ],
     workshop: [
       {
+        state: 'Verfügbar',
         title: 'Pendellabor',
         text: 'Länge, Auslenkung und Dämpfung einstellen; Schwingungsdauer ablesen und mit der Formel vergleichen.',
-        state: 'In Vorbereitung',
+        href: '#pendeln/labor',
       },
       {
+        state: 'In Vorbereitung',
         title: 'Pendeltafel-Studio',
         text: 'Tafeln beschriften, Farbstil wählen, als SVG oder Druckvorlage ausgeben.',
-        state: 'In Vorbereitung',
       },
       {
+        state: 'In Vorbereitung',
         title: 'Experimentierlabor',
         text: 'Verblindete Testreihe mit festgelegtem Ziel, Zufallserwartung und Konfidenzintervall.',
-        state: 'In Vorbereitung',
       },
     ],
     related: [

@@ -28,6 +28,8 @@ export const ROUTE = {
   quellen: (id) => (id ? `#pendeln/quellen/${id}` : '#pendeln/quellen'),
   methodik: '#pendeln/methodik',
   suche: (q) => (q ? `#pendeln/suche?q=${encodeURIComponent(q)}` : '#pendeln/suche'),
+  // Werkstatt Pendellabor (RAD-07). Reine Seite, kein Query-Zustand.
+  labor: '#pendeln/labor',
 };
 
 // --- Kennzeichnung --------------------------------------------------------

@@ -197,8 +197,14 @@ export function renderLanding(model) {
   const workshop = landing.workshop
     .map(
       (entry) => `<li class="rad-werk">
-        <span class="rad-werk-state rad-werk-state--planned">${escapeHtml(entry.state)}</span>
-        <h3>${escapeHtml(entry.title)}</h3>
+        <span class="rad-werk-state${entry.href ? ' rad-werk-state--ready' : ' rad-werk-state--planned'}">${escapeHtml(
+          entry.state
+        )}</span>
+        <h3>${
+          entry.href
+            ? `<a class="rad-werk-link" href="${escapeHtml(entry.href)}">${escapeHtml(entry.title)}</a>`
+            : escapeHtml(entry.title)
+        }</h3>
         <p>${inlineText(entry.text)}</p>
       </li>`
     )
@@ -348,6 +354,194 @@ export function renderTopic(model, topic, { anchor = '' } = {}) {
     description: topic.description,
     h1: topic.title,
     anchor,
+  };
+}
+
+/**
+ * Pendellabor (RAD-07): echte Route mit Reglern, Bühne und Erklärtext.
+ * Die Bühne ist reines Markup; die Physik und die Ereignisse hängt
+ * js/modules/pendel-simulator.js beim Rendern an (#pendelLabor).
+ */
+export function renderLabor() {
+  const html = `<div class="rad">
+    ${breadcrumb([{ label: 'Pendeln', href: ROUTE.base }, { label: 'Pendellabor' }])}
+    ${pageHead({
+      eyebrow: 'Werkstatt · Mechanik',
+      title: 'Pendellabor',
+      subtitle: 'Fadenpendel: Länge, Auslenkung, Dämpfung',
+      lead: 'Ein Pendel, das nach einer Gleichung schwingt — nicht nach einer Antwort. Länge, Startauslenkung und Dämpfung sind einstellbar; die Anzeige vergleicht die gemessene Schwingungsdauer mit der Kleinwinkelformel.',
+      meta: [
+        'Modell: nichtlineares Fadenpendel, Punktmasse am masselosen Faden',
+        'Integrator: Runge-Kutta 4. Ordnung, fester Schritt 1/480 s',
+        'Simulation, keine Messung und keine Informationsgewinnung',
+      ],
+    })}
+
+    <section class="psim-section" aria-labelledby="psim-heading">
+      <p class="rad-kicker">01 · Simulator</p>
+      <h2 id="psim-heading" tabindex="-1">Bewegung einstellen und ablesen</h2>
+      <p class="rad-section-lead">Die Bewegung startet erst auf Klick. Ohne Dämpfung bleibt die Amplitude erhalten, mit Dämpfung klingt sie ab. Die gemessene Dauer stammt aus der berechneten Bewegung, nicht aus der Formel.</p>
+      <noscript><p class="astro-text">Der Simulator braucht JavaScript. Die Gleichungen, Grenzwerte und die Einordnung darunter stehen auch ohne Skript.</p></noscript>
+
+      <div class="psim" id="pendelLabor" data-psim-state="idle">
+        <div class="psim-stage">
+          <div class="psim-scene" id="psimScene" tabindex="0" role="group" aria-label="Pendelbühne. Leertaste oder Eingabetaste startet und pausiert.">
+            <svg class="psim-svg" viewBox="0 0 480 360" role="img" aria-labelledby="psimSvgTitle psimSvgDesc" focusable="false">
+              <title id="psimSvgTitle">Fadenpendel mit Aufhängepunkt, Faden und Pendelkörper</title>
+              <desc id="psimSvgDesc">Das Pendel schwingt aus der senkrechten Ruhelage heraus. Die Grafik zeigt die berechnete Bewegung, keine Messung und keine Anzeige verborgener Informationen.</desc>
+              <defs>
+                <radialGradient id="psimBrass" cx="35%" cy="30%" r="75%">
+                  <stop offset="0%" stop-color="#e9dbba"></stop>
+                  <stop offset="60%" stop-color="#c6b38e"></stop>
+                  <stop offset="100%" stop-color="#8b7957"></stop>
+                </radialGradient>
+                <radialGradient id="psimSteel" cx="35%" cy="30%" r="75%">
+                  <stop offset="0%" stop-color="#e6e9e4"></stop>
+                  <stop offset="55%" stop-color="#9aa5a1"></stop>
+                  <stop offset="100%" stop-color="#5d6a66"></stop>
+                </radialGradient>
+              </defs>
+              <g class="psim-rig" aria-hidden="true">
+                <line class="psim-beam" x1="88" y1="52" x2="392" y2="52"></line>
+                <line class="psim-support" x1="120" y1="52" x2="120" y2="26"></line>
+                <line class="psim-support" x1="360" y1="52" x2="360" y2="26"></line>
+                <line class="psim-guide" x1="240" y1="52" x2="240" y2="336"></line>
+                <circle class="psim-pivot" cx="240" cy="52" r="5"></circle>
+              </g>
+              <path class="psim-arc" id="psimArc" d="" aria-hidden="true"></path>
+              <g class="psim-arm" id="psimArm" aria-hidden="true">
+                <line class="psim-thread" id="psimThread" x1="240" y1="52" x2="240" y2="148"></line>
+                <g data-psim-bob="klassisch" data-active transform="translate(240 148)">
+                  <path class="psim-bob-brass" fill="url(#psimBrass)" d="M-9,-9 L9,-9 L0,10 Z"></path>
+                  <circle class="psim-bob-cap" cx="0" cy="-10.5" r="3.5"></circle>
+                </g>
+                <g data-psim-bob="kugel" transform="translate(240 148)">
+                  <circle class="psim-bob-steel" fill="url(#psimSteel)" r="15"></circle>
+                  <circle class="psim-bob-shine" cx="-5" cy="-5" r="4"></circle>
+                </g>
+                <g data-psim-bob="ring" transform="translate(240 148)">
+                  <circle class="psim-bob-ring" r="13"></circle>
+                  <circle class="psim-bob-core" r="3"></circle>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <p class="psim-hint">Tastatur: Tab erreicht die Regler und die Bühne; Leertaste oder Eingabetaste auf der Bühne startet und pausiert.</p>
+
+          <dl class="psim-readout" aria-label="Messwerte der Simulation">
+            <div><dt>Simulierte Zeit</dt><dd><output id="psimTime">0,00 s</output></dd></div>
+            <div><dt>Auslenkung</dt><dd><output id="psimTheta">25,0°</output></dd></div>
+            <div><dt>Schwingungsdauer gemessen</dt><dd><output id="psimPeriodMeasured">—</output></dd></div>
+            <div><dt>Schwingungsdauer T₀ (Kleinwinkel)</dt><dd><output id="psimPeriodIdeal">1,003 s</output></dd></div>
+          </dl>
+          <p class="psim-status" id="psimStatus" role="status" aria-live="polite">Ruhelage bei 25,0°. Start setzt die Bewegung in Gang.</p>
+        </div>
+
+        <div class="psim-controls">
+          <fieldset class="psim-field">
+            <legend>Parameter</legend>
+            <div class="psim-control">
+              <label for="psimLength">Pendellänge</label>
+              <input type="range" id="psimLength" name="psimLength" min="5" max="200" step="1" value="25" aria-describedby="psimLengthHint" />
+              <output class="psim-value" id="psimLengthValue" for="psimLength">25 cm</output>
+              <p class="psim-hint" id="psimLengthHint">5 bis 200 cm. Die Länge steht unter der Wurzel: vierfache Länge, doppelte Dauer.</p>
+            </div>
+            <div class="psim-control">
+              <label for="psimAmplitude">Anfangsauslenkung</label>
+              <input type="range" id="psimAmplitude" name="psimAmplitude" min="0" max="80" step="1" value="25" aria-describedby="psimAmplitudeHint" />
+              <output class="psim-value" id="psimAmplitudeValue" for="psimAmplitude">25,0°</output>
+              <p class="psim-hint" id="psimAmplitudeHint">0 bis 80 Grad. Ab etwa 15 Grad weicht die Dauer messbar von der Kleinwinkelformel ab.</p>
+            </div>
+            <div class="psim-control">
+              <label for="psimDamping">Dämpfungsgrad ζ</label>
+              <input type="range" id="psimDamping" name="psimDamping" min="0" max="0.2" step="0.005" value="0.02" aria-describedby="psimDampingHint" />
+              <output class="psim-value" id="psimDampingValue" for="psimDamping">0,020</output>
+              <p class="psim-hint" id="psimDampingHint">0 bis 0,20. Bei 0 schwingt das Pendel ungedämpft weiter, darüber klingt die Amplitude ab.</p>
+            </div>
+          </fieldset>
+
+          <fieldset class="psim-field">
+            <legend>Pendeldarstellung</legend>
+            <label class="psim-choice"><input type="radio" name="psimStyle" value="klassisch" checked /> <span>Klassisch — Faden und Messingkegel</span></label>
+            <label class="psim-choice"><input type="radio" name="psimStyle" value="kugel" /> <span>Kugel — Faden und Stahlkugel</span></label>
+            <label class="psim-choice"><input type="radio" name="psimStyle" value="ring" /> <span>Ring — Faden und Metallring</span></label>
+          </fieldset>
+
+          <div class="psim-actions">
+            <button type="button" class="btn btn-primary" id="psimToggle" aria-pressed="false">Start</button>
+            <button type="button" class="btn btn-secondary" id="psimReset">Zurücksetzen</button>
+            <button type="button" class="btn btn-secondary" id="psimStep" hidden>Schritt 0,5 s</button>
+          </div>
+          <p class="psim-hint">Die Darstellung ändert nur die Zeichnung. Alle drei Varianten rechnen dasselbe Modell.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="astro-section" id="psim-modell" aria-labelledby="psim-modell-title">
+      <p class="rad-kicker">02 · Modell</p>
+      <h2 id="psim-modell-title" tabindex="-1">Wie die Bewegung berechnet wird</h2>
+      <p class="astro-text">Das Pendel ist als Punktmasse an einem masselosen Faden modelliert. Die Rückstellkraft ist proportional zu sin θ, nicht zu θ — deshalb ist die Bewegung bei großen Auslenkungen nicht mehr exakt harmonisch. Gerechnet wird mit der vollen Gleichung, nicht mit der Näherung.</p>
+      <h3>Bewegungsgleichung</h3>
+      <p class="psim-formula">θ″(t) = −(g/L) · sin θ(t) − 2ζω₀ · θ′(t)</p>
+      <p class="astro-text">Dabei ist θ der Winkel gegen die Senkrechte, L die Fadenlänge, g die Fallbeschleunigung und ω₀ = √(g/L) die Eigenkreisfrequenz. Der zweite Term beschreibt eine viskose Dämpfung, die proportional zur Winkelgeschwindigkeit wirkt.</p>
+      <h3>Kleinwinkel-Näherung als Vergleichswert</h3>
+      <p class="psim-formula">T₀ = 2π · √(L/g)</p>
+      <p class="astro-text">Für θ → 0 gilt sin θ ≈ θ, und die Dauer hängt nur noch von der Länge ab. Diese Formel steht als Vergleich in der Anzeige. Bei 25 Grad liegt die echte Dauer rund 1,2 Prozent darüber, bei 60 Grad rund 7,3 Prozent, bei 80 Grad rund 13,7 Prozent. Wer die Abweichung sieht, sieht auch, warum die Näherung nur für kleine Winkel taugt.</p>
+      <h3>Numerische Integration</h3>
+      <p class="astro-text">Die Gleichung wird mit Runge-Kutta 4. Ordnung und einem festen Zeitschritt von 1/480 Sekunde (etwa 2,08 ms) integriert. Ein Akkumulator sammelt die verstrichene Echtzeit ein und führt nur ganze Schritte aus. Dadurch hängt das Ergebnis weder von der Bildrate noch von der Frame-Aufteilung ab: 30 und 144 Bilder pro Sekunde liefern nach derselben simulierten Zeit denselben Zustand.</p>
+      <h3>Dämpfung</h3>
+      <p class="psim-formula">T_ζ = 2π / (ω₀ · √(1 − ζ²))</p>
+      <p class="astro-text">Der Dämpfungsgrad ζ ist dimensionslos. Bei ζ = 0 bleibt die Amplitude erhalten (abgesehen vom kleinen Fehler des Integrators), bei ζ = 0,05 verliert das Pendel pro Periode etwa 27 Prozent seiner Auslenkung. Die angezeigte gemessene Dauer ist die Zeit zwischen zwei Nulldurchgängen der berechneten Bewegung.</p>
+      ${plate(
+        {
+          src: 'assets/radiasthesie/pendel-geometrie.svg',
+          alt: 'Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Theta zwischen Ruhelage und Faden.',
+          caption:
+            '**Pendelgeometrie.** Länge L, Auslenkung θ, Schwingungsdauer T. Eigene Zeichnung; sie zeigt die Modellgrößen und ist keine Messung.',
+        },
+        { className: 'rad-plate--article' }
+      )}
+    </section>
+
+    <section class="astro-section" id="psim-grenzen" aria-labelledby="psim-grenzen-title">
+      <p class="rad-kicker">03 · Grenzen</p>
+      <h2 id="psim-grenzen-title" tabindex="-1">Gültigkeitsbereich und Annahmen</h2>
+      <dl class="psim-limits">
+        <div><dt>Pendellänge L</dt><dd>0,05 bis 2,00 m</dd></div>
+        <div><dt>Anfangsauslenkung θ₀</dt><dd>0 bis 80°</dd></div>
+        <div><dt>Dämpfungsgrad ζ</dt><dd>0 bis 0,20</dd></div>
+        <div><dt>Fallbeschleunigung g</dt><dd>9,81 m/s², fest gesetzt — keine Ortsabhängigkeit, kein Eingabefeld</dd></div>
+        <div><dt>Modell</dt><dd>Punktmasse, masseloser Faden, viskose Dämpfung proportional zur Winkelgeschwindigkeit</dd></div>
+        <div><dt>Nicht enthalten</dt><dd>Fadenmasse, elastische Aufhängung, Luftwiderstand als quadratischer Term, Antrieb, chaotische Anregung</dd></div>
+        <div><dt>Zeitschritt</dt><dd>1/480 s fest; ein Frame verarbeitet höchstens 0,25 s, damit ein Tab-Wechsel keinen Sprung erzeugt</dd></div>
+        <div><dt>Reproduzierbarkeit</dt><dd>gleiche Parameter und gleiche simulierte Zeit ergeben denselben Zustand, unabhängig von der Bildrate</dd></div>
+      </dl>
+      <p class="astro-text">Die Anzeige „gemessen“ meint die Dauer der berechneten Bewegung, nicht die Dauer eines physischen Pendels. Ein reales Pendel weicht zusätzlich durch Luftwiderstand, Steifigkeit des Fadens und die Ausdehnung des Pendelkörpers ab.</p>
+      ${paragraph(
+        'Ein von Hand gehaltenes Pendel folgt dieser Gleichung nicht allein: Unwillkürliche Handbewegungen durch Erwartung und Aufmerksamkeit (Carpenter-Effekt) und eine Muskelkontraktion nach vorheriger Spannung und visueller Fixierung (Kohnstamm-Effekt) erklären den Ausschlag, ohne dass eine Information übertragen wird [Q03, Q07]. Dieses Labor zeigt den freien, nicht angetriebenen Fall — nicht die Hand.'
+      )}
+    </section>
+
+    <aside class="rad-disclaimer" aria-labelledby="psim-nicht-title">
+      <h2 class="rad-disclaimer-title" id="psim-nicht-title">Was diese Simulation nicht tut</h2>
+      <p><strong>Keine Informationsgewinnung:</strong> Das Pendel bewegt sich nach einer Differentialgleichung. Es beantwortet keine Fragen, zeigt keine verborgenen Felder und liefert keine Angaben über Personen, Orte oder Ereignisse.</p>
+      <p><strong>Keine Vorhersage:</strong> Die Ausgabe ist aus den eingestellten Parametern berechenbar. Wer die Regler kennt, kennt das Ergebnis; es gibt keinen zusätzlichen Kanal.</p>
+      <p><strong>Kein Messgerät:</strong> Die Zahlen sind Simulationswerte. Sie sagen nichts über radiästhetische Praktiken aus und ersetzen keine Untersuchung.</p>
+    </aside>
+
+    <p class="astro-text psim-links">
+      <a class="btn btn-secondary" href="${ROUTE.topic('pendeln')}">Zum Thema Pendeln</a>
+      <a class="textlink" href="${ROUTE.methodik}">Methodik &amp; Prüfregeln lesen</a>
+    </p>
+  </div>`;
+
+  return {
+    html,
+    title: 'Pendellabor — Mechanik des Fadenpendels',
+    description:
+      'Interaktiver Pendelsimulator: Länge, Auslenkung und Dämpfung einstellen, Dauer messen und mit der Kleinwinkelformel vergleichen — ohne Wirkungsversprechen.',
+    h1: 'Pendellabor',
+    simulator: true,
   };
 }
 

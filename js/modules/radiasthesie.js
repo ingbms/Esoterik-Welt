@@ -8,10 +8,12 @@
 
 import { ROUTE } from './radiasthesie-format.js';
 import { createModel } from './radiasthesie-model.js';
+import { mountPendulumSimulator } from './pendel-simulator.js';
 import {
   breadcrumbStructuredData,
   renderFailure,
   renderGlossar,
+  renderLabor,
   renderLanding,
   renderMethodik,
   renderNotFound,
@@ -46,6 +48,7 @@ export class RadiasthesieModule {
     this.loading = null;
     this.renderToken = 0;
     this.view = null;
+    this.simulator = null;
     this.bound = false;
     if (root) this.bind();
   }
@@ -89,8 +92,15 @@ export class RadiasthesieModule {
       console.error('Radiästhesie-Inhalte nicht verfügbar', error);
       view = renderFailure('Die Datendatei des Moduls konnte nicht geladen werden.');
     }
+    this.teardownSimulator();
     this.root.innerHTML = view.html;
     this.view = view;
+    // Das Pendellabor hängt seine Physik erst nach dem Einsetzen ins Dokument
+    // an. Ein vorheriger Lauf wird vorher beendet, damit nie zwei Schleifen
+    // auf denselben Container zeigen.
+    if (view.simulator) {
+      this.simulator = mountPendulumSimulator(this.root.querySelector('#pendelLabor'));
+    }
     this.applyMeta(view);
     this.placeStructuredData(view);
     if (focus) this.focusTarget(view);
@@ -99,6 +109,14 @@ export class RadiasthesieModule {
 
   onShow() {
     return this.show([], '', { focus: false });
+  }
+
+  /** Beendet eine laufende Simulation, bevor das DOM ersetzt wird. */
+  teardownSimulator() {
+    if (this.simulator) {
+      this.simulator.destroy();
+      this.simulator = null;
+    }
   }
 
   resolveView(model, segments, query) {
@@ -112,6 +130,8 @@ export class RadiasthesieModule {
         return renderQuellen(model, { sourceId: route.sourceId || '' });
       case 'methodik':
         return renderMethodik(model);
+      case 'labor':
+        return renderLabor();
       case 'suche':
         return renderSuche(model, route.q || '');
       case 'notfound':

@@ -162,6 +162,8 @@ const WORKSHOP = [
   {
     title: 'Pendellabor',
     text: 'Länge, Auslenkung und Dämpfung einstellen; Schwingungsdauer ablesen und mit der Formel vergleichen.',
+    state: 'Verfügbar',
+    href: '#pendeln/labor',
   },
   {
     title: 'Pendeltafel-Studio',
@@ -681,7 +683,7 @@ async function main() {
         figure: config.figure,
         lead: topics[config.slug].lead,
       })),
-      workshop: WORKSHOP.map((entry) => ({ ...entry, state: 'In Vorbereitung' })),
+      workshop: WORKSHOP.map((entry) => ({ state: 'In Vorbereitung', ...entry })),
       related: RELATED,
       disclaimer: {
         title: 'Einordnung dieses Bereichs',

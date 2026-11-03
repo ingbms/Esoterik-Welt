@@ -13,6 +13,7 @@ const VIEW = {
   quellen: 'quellen',
   methodik: 'methodik',
   suche: 'suche',
+  labor: 'labor',
   notfound: 'notfound',
 };
 
@@ -101,6 +102,11 @@ export function createModel(raw) {
       }
       case 'methodik':
         return { view: VIEW.methodik, params };
+      // Werkstatt-Route des Pendellabors (RAD-07). Bewusst ohne Query-Zustand:
+      // die Parameter liegen in den Reglern und werden nicht in die Adresse
+      // geschrieben, damit ein Deep-Link nie eine andere Bewegung vortäuscht.
+      case 'labor':
+        return { view: VIEW.labor, params };
       case 'suche':
         return { view: VIEW.suche, q: params.get('q') || '', params };
       default:
