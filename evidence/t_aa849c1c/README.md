@@ -27,6 +27,8 @@ npm run check:frequenz-budget
 | `measure-lokal.cjs` | Größe von `Lokal.html` commit-gebunden: Blob (LF), reine CRLF-Umrechnung und — bei gleichem Blob im Arbeitsbaum — die Ist-Größe samt Zeilenenden; `node evidence/t_aa849c1c/measure-lokal.cjs . 71b895c 8d8124f feda2c5` |
 | `review-runde2.txt` | Rot-/Grün-Nachweis der Review-Runde 2 (D1–D3): Befehle, Fehlermeldungen, NFR-2-Messreihen über vier Commits, Klon- und CI-Ergebnis |
 | `review-runde3.txt` | Review-Runde 3 (D4/D5): Zählung der Testfälle je Datei, geänderte Doku-Stellen, Offline-Größen über vier Commits, M8-Messreihe und Testhärtung |
+| `review-runde4.txt` | Review-Runde 4 (D6): Ursachenzuordnung der NFR-2-Zuwächse je Commit (`68648ca` +32 B, `8d8124f` +575 B) und geänderte Doku-Stellen |
+| `nfr2-commits.txt` | Rohausgabe von `measure-nfr2.cjs` für `648910c`, `68648ca`, `8d8124f`, `dbc1ccd` (Git-Blobs, LF- und CRLF-Variante) |
 
 ## Ergebnisse (Lauf vom 2026-11-03, Chromium, lokaler Build)
 
@@ -40,4 +42,4 @@ npm run check:frequenz-budget
 
 Die Testläufe selbst (52 Unit-Tests, 19 Browserfälle der Folgestufe, 108 Fälle der vollen Browser-Suite) sind in [`docs/frequenzlabor-p9-p10.md`](../../docs/frequenzlabor-p9-p10.md) tabelliert; die Ausgaben entstehen reproduzierbar mit den Befehlen oben. Die Messwerte oben wurden nach der Review-Runde 1 (R1–R4) neu erhoben: axe `[]`, kleinster Kontrast 9,09 : 1, Canvas 1.942 / 2.788 helle Pixel, 360 px ohne Überlauf. Nach Review-Runde 2 (D1) zählt der Fallsatz zusätzlich `pageerror`/`console.error` beim Ansichtswechsel (M6, M11).
 
-NFR-2 ist seit Review-Runde 2 commit-gebunden: `node evidence/t_aa849c1c/measure-nfr2.cjs . 8d8124f` liest die Git-Blobs und meldet LF 164.908 B roh / 44.347 B gz, CRLF 169.067 B / 44.592 B (Arbeitsbaum 167.655 B / 44.756 B). Die früheren 44.168/44.414 B gehörten zu `648910c`.
+NFR-2 ist seit Review-Runde 2 commit-gebunden: `node evidence/t_aa849c1c/measure-nfr2.cjs . 8d8124f` liest die Git-Blobs und meldet LF 164.908 B roh / 44.347 B gz, CRLF 169.067 B / 44.592 B (Arbeitsbaum 167.655 B / 44.756 B). Die früheren 44.168/44.414 B gehörten zu `648910c`. Der Zuwachs dazwischen (607 B roh) verteilt sich auf zwei Commits: `68648ca` +32 B (Ansage ohne Restzeit), `8d8124f` +575 B (Rücksprung-Guard der Ansage) — Rohausgabe in `nfr2-commits.txt`.
