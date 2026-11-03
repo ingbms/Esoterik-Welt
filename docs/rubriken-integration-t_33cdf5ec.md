@@ -81,7 +81,30 @@ Summe der Node-Suiten: 335 Tests grün, 1 Gate rot (NFR-1). Browser: 201 Fälle 
 - Mobilmenü (390 px) zeigt alle 10 Ziele,
 - keine Konsolenfehler/-warnungen, keine fehlgeschlagenen Requests.
 
-Screenshots und JSON: `evidence/rubriken-integration/` (`start-1440.png`, `pendeln-1440.png`, `farbwelten-1440.png`, `farbwelten-rot-1440.png`, `frequenzen-1440.png`, `frequenzen-labor-1440.png`, `start-390-menue.png`, `rubriken-smoke.json`).
+Screenshots und JSON: `evidence/rubriken-integration/` (`start-1440.png`, `pendeln-1440.png`, `farbwelten-1440.png`, `farbwelten-rot-1440.png`, `frequenzen-1440.png`, `frequenzen-labor-1440.png`, `start-390-menue.png`, `rubriken-smoke.json`), dazu `verify-pages/` und `verify-farbwelten/` mit den JSON-/Markdown-Ergebnissen.
+
+## 6a. Unveränderte Inhalte
+
+Gegenprobe der freigegebenen Stände gegen den Integrationsstand (leere Ausgabe = byte-identisch):
+
+```
+git diff --name-status feature/radiasthesie-modul HEAD -- content radiasthesie \
+  css/radiasthesie.css css/radiasthesie-statisch.css js/data docs/radiasthesie-konzept \
+  docs/radiasthesie-completion assets/radiasthesie js/modules/radiasthesie*.js \
+  js/modules/pendel*.js js/modules/pendeltafel*.js js/modules/experiment*.js \
+  js/modules/journal-speicher.js
+# → nur die von feature/farbwelten-modul hinzugefügten Dateien (A), sonst nichts
+
+git diff --name-status feature/farbwelten-modul HEAD -- content css/farbwelten.css \
+  js/data/farbwelten.js js/data/chakren.js js/modules/farbwelten.js js/modules/farbwelten-model.js \
+  docs/farbwelten-konzept evidence/farbwelten
+# → leer
+```
+
+Konfliktauflösung betraf ausschließlich Integrationsdateien (`index.html`, `js/main.js`,
+`package.json`, `scripts/*.cjs`, `tests/*`, `.gitattributes`, `Lokal*.html`).
+Die vom Browsertest erzeugten Screenshots unter `docs/radiasthesie-completion/**/evidence/`
+wurden nach den Testläufen auf den Stand der Abnahme zurückgesetzt.
 
 ## 7. Offener Punkt: NFR-1 des Frequenz-ADR
 
