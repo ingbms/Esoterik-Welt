@@ -8,11 +8,11 @@
  */
 import { test, expect } from 'playwright/test';
 import path from 'node:path';
+import { E2E_BASE_URL as BASE } from './helpers/e2e-target.cjs';
 
 // Playwright lädt .spec.js in diesem Paket als CommonJS; `import.meta` ist
 // deshalb nicht verfügbar. axe-core liegt als Dev-Abhängigkeit im Projekt.
 const AXE_PATH = path.resolve('node_modules/axe-core/axe.min.js');
-const BASE = process.env.BASE_URL || `http://127.0.0.1:${process.env.E2E_PORT || 3100}/Esoterik-Welt`;
 
 async function openRoute(page, route, search = '') {
   await page.goto(`${BASE}/${search}#${route}`, { waitUntil: 'load' });
