@@ -1,0 +1,345 @@
+{
+  "base": "http://127.0.0.1:3313/Esoterik-Welt/",
+  "home": {
+    "loadWallMs": 334,
+    "nav": {
+      "domContentLoadedMs": 21.9,
+      "loadEventMs": 50,
+      "transferSize": 9904
+    },
+    "resources": [
+      {
+        "name": "assets/mineral/quartz-light-2400.jpg",
+        "type": "img",
+        "encoded": 423128,
+        "transfer": 423428,
+        "decoded": 423128,
+        "durationMs": 4.1
+      },
+      {
+        "name": "assets/cosmos/orion-chart.svg",
+        "type": "img",
+        "encoded": 819,
+        "transfer": 1119,
+        "decoded": 2877,
+        "durationMs": 4.9
+      },
+      {
+        "name": "assets/fonts/Fraunces.ttf",
+        "type": "link",
+        "encoded": 360440,
+        "transfer": 360740,
+        "decoded": 360440,
+        "durationMs": 8.8
+      },
+      {
+        "name": "assets/fonts/Manrope.ttf",
+        "type": "link",
+        "encoded": 164700,
+        "transfer": 165000,
+        "decoded": 164700,
+        "durationMs": 11.7
+      },
+      {
+        "name": "css/design-system.css",
+        "type": "link",
+        "encoded": 10139,
+        "transfer": 10439,
+        "decoded": 42190,
+        "durationMs": 15.2
+      },
+      {
+        "name": "css/main.css",
+        "type": "link",
+        "encoded": 15223,
+        "transfer": 15523,
+        "decoded": 89068,
+        "durationMs": 21.9
+      },
+      {
+        "name": "css/radiasthesie.css",
+        "type": "link",
+        "encoded": 5903,
+        "transfer": 6203,
+        "decoded": 25348,
+        "durationMs": 25.1
+      },
+      {
+        "name": "css/farbwelten.css",
+        "type": "link",
+        "encoded": 3982,
+        "transfer": 4282,
+        "decoded": 21280,
+        "durationMs": 28.5
+      },
+      {
+        "name": "js/main.js",
+        "type": "script",
+        "encoded": 7966,
+        "transfer": 8266,
+        "decoded": 25591,
+        "durationMs": 30.2
+      },
+      {
+        "name": "assets/fonts/Fraunces-Italic.ttf",
+        "type": "css",
+        "encoded": 414904,
+        "transfer": 415204,
+        "decoded": 414904,
+        "durationMs": 87.6
+      },
+      {
+        "name": "js/modules/tarot.js",
+        "type": "script",
+        "encoded": 8514,
+        "transfer": 8814,
+        "decoded": 30249,
+        "durationMs": 7.2
+      },
+      {
+        "name": "js/modules/crystals.js",
+        "type": "script",
+        "encoded": 6562,
+        "transfer": 6862,
+        "decoded": 23533,
+        "durationMs": 10
+      },
+      {
+        "name": "js/modules/moon.js",
+        "type": "script",
+        "encoded": 9377,
+        "transfer": 9677,
+        "decoded": 30258,
+        "durationMs": 13.2
+      },
+      {
+        "name": "js/modules/runes.js",
+        "type": "script",
+        "encoded": 3104,
+        "transfer": 3404,
+        "decoded": 10337,
+        "durationMs": 15.2
+      },
+      {
+        "name": "js/modules/blog.js",
+        "type": "script",
+        "encoded": 1771,
+        "transfer": 2071,
+        "decoded": 5317,
+        "durationMs": 17.3
+      },
+      {
+        "name": "js/modules/astrologie.js",
+        "type": "script",
+        "encoded": 3410,
+        "transfer": 3710,
+        "decoded": 10979,
+        "durationMs": 20.1
+      },
+      {
+        "name": "js/modules/radiasthesie.js",
+        "type": "script",
+        "encoded": 3097,
+        "transfer": 3397,
+        "decoded": 8933,
+        "durationMs": 22.1
+      },
+      {
+        "name": "js/modules/farbwelten.js",
+        "type": "script",
+        "encoded": 11652,
+        "transfer": 11952,
+        "decoded": 43935,
+        "durationMs": 26.6
+      },
+      {
+        "name": "js/dialog.js",
+        "type": "script",
+        "encoded": 1247,
+        "transfer": 1547,
+        "decoded": 3496,
+        "durationMs": 29.4
+      },
+      {
+        "name": "assets/mineral/mineral-detail-1000.jpg",
+        "type": "img",
+        "encoded": 158401,
+        "transfer": 158701,
+        "decoded": 158401,
+        "durationMs": 5.6
+      },
+      {
+        "name": "js/data/tarot.js",
+        "type": "script",
+        "encoded": 12251,
+        "transfer": 12551,
+        "decoded": 42560,
+        "durationMs": 6.1
+      },
+      {
+        "name": "js/data/tarot-decks.js",
+        "type": "script",
+        "encoded": 1517,
+        "transfer": 1817,
+        "decoded": 3947,
+        "durationMs": 8.7
+      },
+      {
+        "name": "js/data/moon.js",
+        "type": "script",
+        "encoded": 6165,
+        "transfer": 6465,
+        "decoded": 17242,
+        "durationMs": 10.8
+      },
+      {
+        "name": "js/article-content.js",
+        "type": "script",
+        "encoded": 814,
+        "transfer": 1114,
+        "decoded": 2002,
+        "durationMs": 13
+      },
+      {
+        "name": "js/modules/astrologie-format.js",
+        "type": "script",
+        "encoded": 2411,
+        "transfer": 2711,
+        "decoded": 6578,
+        "durationMs": 15
+      },
+      {
+        "name": "js/modules/astrologie-model.js",
+        "type": "script",
+        "encoded": 3159,
+        "transfer": 3459,
+        "decoded": 9276,
+        "durationMs": 17.3
+      },
+      {
+        "name": "js/modules/astrologie-views.js",
+        "type": "script",
+        "encoded": 9189,
+        "transfer": 9489,
+        "decoded": 35715,
+        "durationMs": 21.1
+      },
+      {
+        "name": "js/modules/astrologie-views-reference.js",
+        "type": "script",
+        "encoded": 8023,
+        "transfer": 8323,
+        "decoded": 29593,
+        "durationMs": 24.6
+      },
+      {
+        "name": "js/modules/radiasthesie-format.js",
+        "type": "script",
+        "encoded": 2712,
+        "transfer": 3012,
+        "decoded": 7060,
+        "durationMs": 27.8
+      },
+      {
+        "name": "js/modules/radiasthesie-model.js",
+        "type": "script",
+        "encoded": 2690,
+        "transfer": 2990,
+        "decoded": 7503,
+        "durationMs": 30.7
+      },
+      {
+        "name": "js/modules/radiasthesie-views.js",
+        "type": "script",
+        "encoded": 9545,
+        "transfer": 9845,
+        "decoded": 32560,
+        "durationMs": 34.6
+      },
+      {
+        "name": "js/data/farbwelten.js",
+        "type": "script",
+        "encoded": 26393,
+        "transfer": 26693,
+        "decoded": 153413,
+        "durationMs": 10.9
+      },
+      {
+        "name": "js/data/chakren.js",
+        "type": "script",
+        "encoded": 1276,
+        "transfer": 1576,
+        "decoded": 4025,
+        "durationMs": 13.1
+      },
+      {
+        "name": "js/modules/farbwelten-model.js",
+        "type": "script",
+        "encoded": 1972,
+        "transfer": 2272,
+        "decoded": 4902,
+        "durationMs": 15.2
+      },
+      {
+        "name": "data/crystals.json",
+        "type": "fetch",
+        "encoded": 6792,
+        "transfer": 7092,
+        "decoded": 47716,
+        "durationMs": 4.7
+      },
+      {
+        "name": "data/moon-astro.mjs",
+        "type": "script",
+        "encoded": 7662,
+        "transfer": 7962,
+        "decoded": 23164,
+        "durationMs": 4.6
+      },
+      {
+        "name": "js/data/runes.js",
+        "type": "script",
+        "encoded": 3085,
+        "transfer": 3385,
+        "decoded": 9437,
+        "durationMs": 6.7
+      },
+      {
+        "name": "js/data/articles.js",
+        "type": "script",
+        "encoded": 4112,
+        "transfer": 4412,
+        "decoded": 9998,
+        "durationMs": 8.9
+      }
+    ],
+    "scriptSummary": {
+      "files": 27,
+      "encoded": 159676,
+      "transfer": 167776
+    },
+    "farbweltenData": {
+      "name": "js/data/farbwelten.js",
+      "type": "script",
+      "encoded": 26393,
+      "transfer": 26693,
+      "decoded": 153413,
+      "durationMs": 10.9
+    }
+  },
+  "coldColourPage": {
+    "h1VisibleMs": 325,
+    "title": "Rot",
+    "transferTotal": 1735507,
+    "requests": 38,
+    "farbweltenData": {
+      "name": "js/data/farbwelten.js",
+      "type": "script",
+      "encoded": 26393,
+      "transfer": 26693,
+      "decoded": 153413,
+      "durationMs": 21
+    }
+  },
+  "warmColourNavigationMs": 66
+}

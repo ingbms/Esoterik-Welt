@@ -1,0 +1,46 @@
+{
+  "cpu1x": {
+    "js/data/farbwelten.js": {
+      "samplesMs": [
+        6.3,
+        6.3,
+        5.4,
+        8.1,
+        12.6
+      ],
+      "medianMs": 6.3
+    },
+    "js/data/astrologie.js": {
+      "samplesMs": [
+        10.5,
+        7.7,
+        7.8,
+        6.3,
+        6.1
+      ],
+      "medianMs": 7.7
+    }
+  },
+  "cpu4x": {
+    "js/data/farbwelten.js": {
+      "samplesMs": [
+        7.6,
+        9.8,
+        8.3,
+        8.6,
+        8.2
+      ],
+      "medianMs": 8.3
+    },
+    "js/data/astrologie.js": {
+      "samplesMs": [
+        11.3,
+        12,
+        9.9,
+        9.4,
+        8.8
+      ],
+      "medianMs": 9.9
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "exports": [
+    "CHAKREN_PAGE",
+    "FARBWELTEN",
+    "LANDING",
+    "LIGHT_PAGE",
+    "SECTION_ORDER",
+    "SOURCES"
+  ],
+  "module": {
+    "bytes": 153413,
+    "gzip": 26393,
+    "brotli": 21843
+  },
+  "asJson": {
+    "bytes": 133357,
+    "gzip": 25526,
+    "brotli": 21200
+  },
+  "leadingWhitespaceBytes": 17774,
+  "lines": 2472
+}
