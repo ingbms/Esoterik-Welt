@@ -1,0 +1,1484 @@
+{
+  "schema_version": "1.0.0",
+  "catalog": "content",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "stand": "2026-11-03",
+  "scope_document": "docs/migration-baseline/00-schema-und-scope.md",
+  "entries": [
+    {
+      "id": "CNT-PAG-001",
+      "name": "Startseite (#home)",
+      "description": "Einstiegsseite mit Hero, Themenuebersicht und Wegweiser in die neun Hauptbereiche; Traeger der Seitenmetadaten fuer die Wurzel-URL.",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#home",
+        "lines": "L110"
+      },
+      "text_ref": "index.html#home",
+      "route": "#home",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Wurzel-URL zeigt #home als aktive Seite; Titel/Description entsprechen PAGE_META.home in js/main.js.",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Entdecke die verborgene Sprache des Universums"
+        },
+        {
+          "level": 2,
+          "text": "Ein leiser Bezug zum großen Ganzen."
+        }
+      ],
+      "links": {
+        "internal": [
+          "#tarot",
+          "#crystals",
+          "#moon",
+          "#astrologie",
+          "#frequenzen",
+          "#runes",
+          "#pendeln",
+          "#farbwelten",
+          "#blog"
+        ]
+      },
+      "evidence": [
+        "index.html#L110",
+        "js/main.js#L83"
+      ],
+      "notes": "Kanonische Seitenliste: js/main.js MAIN_PAGES (10); neun Navigationseintraege fuehren in andere Rubriken."
+    },
+    {
+      "id": "CNT-PAG-003",
+      "name": "Tarot (#tarot)",
+      "description": "Tarot-Seite mit 78 Karten-Struktur, Major/Minor Arcana und Suiten. Datenquelle data/tarot.json / js/data/tarot.js.",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#tarot"
+      },
+      "text_ref": "index.html#tarot",
+      "route": "#tarot",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route zeigt Tarot-Inhalt; 78 Kartenobjekte in Datenquellen verifizierbar.",
+      "claims": [
+        "CLM-001"
+      ],
+      "evidence": [
+        "index.html#tarot",
+        "data/tarot.json",
+        "js/data/tarot.js"
+      ]
+    },
+    {
+      "id": "CNT-PAG-004",
+      "name": "Kristalle und Steine (#crystals)",
+      "description": "Katalogseite mit Steinen, Filtern nach Chakra und Farbe, Detaildialog. Datenquelle data/crystals.json (30 Objekte) vs js/data/crystals.js (36, nicht importiert).",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#crystals"
+      },
+      "text_ref": "index.html#crystals",
+      "route": "#crystals",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Seite rendert 30 Karten aus data/crystals.json; keine Karte fehlt gegenueber der Datenquelle und der Filter reduziert ohne Datenverlust.",
+      "claims": [
+        "CLM-002"
+      ],
+      "evidence": [
+        "index.html#crystals",
+        "data/crystals.json",
+        "js/data/crystals.js",
+        "js/modules/crystals.js"
+      ]
+    },
+    {
+      "id": "CNT-PAG-005",
+      "name": "Mond und Mondzyklen (#moon)",
+      "description": "Seite zu Mondphasen, Zyklus, Kalender-Bezug.",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#moon"
+      },
+      "text_ref": "index.html#moon",
+      "route": "#moon",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "index.html#moon",
+        "sitemap.xml"
+      ],
+      "acceptance_check": "Mondmodul zeigt aktuelle Phase mit Beleuchtungsgrad, Kalender und iCal-Export; Monatswechsel rendert ohne Konsolenfehler."
+    },
+    {
+      "id": "CNT-PAG-006",
+      "name": "Astrologie (#astrologie)",
+      "description": "Astrologische Rubrik (Planeten, Zeichen, Aspekte).",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#astrologie"
+      },
+      "text_ref": "index.html#astrologie",
+      "route": "#astrologie",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "index.html#astrologie",
+        "sitemap.xml"
+      ],
+      "acceptance_check": "Bereich laedt zwoelf Zeichen, zehn Faktoren, zwoelf Haeuser und fuenf Hauptaspekte; Suche liefert Treffer ohne Geburtsdaten."
+    },
+    {
+      "id": "CNT-PAG-007",
+      "name": "Frequenzen (#frequenzen)",
+      "description": "Frequenz-/Schwingungs-Rubrik mit Werkzeugen und Hinweisen.",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#frequenzen"
+      },
+      "text_ref": "index.html#frequenzen",
+      "route": "#frequenzen",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "index.html#frequenzen",
+        "sitemap.xml"
+      ],
+      "acceptance_check": "Bibliothek listet Eintraege mit Evidenzstatus; Labor laedt Tongenerator und Oszillogramm ohne externen Dienst."
+    },
+    {
+      "id": "CNT-PAG-008",
+      "name": "Runen (#runes)",
+      "description": "Runen-Rubrik mit Zeichen, Bedeutungen, Werkzeugen.",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#runes"
+      },
+      "text_ref": "index.html#runes",
+      "route": "#runes",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "index.html#runes",
+        "sitemap.xml"
+      ],
+      "acceptance_check": "24 Runen des aelteren Futhark sind waehlbar; 3-Runen-Wurf erzeugt eine Deutung, Historie bleibt lokal."
+    },
+    {
+      "id": "CNT-PAG-009",
+      "name": "Pendeln / Radiästhesie (#pendeln)",
+      "description": "Radiästhesie-Seite mit Werkzeugen (Pendel, Rahmen, Skalen, Winkelschritt) und Glossar. 7 Dokumente unter radiasthesie/.",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#pendeln"
+      },
+      "text_ref": "index.html#pendeln",
+      "route": "#pendeln",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "index.html#pendeln",
+        "radiasthesie/",
+        "sitemap.xml"
+      ],
+      "notes": "Glossar radiasthesie/glossar.html ist separate Route (CNT-GLO-001).",
+      "acceptance_check": "Bereich laedt Werkzeuge, Methodik und Orakel; das Radiästhesie-Glossar ist von hier aus verlinkt.",
+      "claims": [
+        "CLM-006"
+      ]
+    },
+    {
+      "id": "CNT-PAG-010",
+      "name": "Farbwelten (#farbwelten)",
+      "description": "Uebersichtsseite der 12 Farbwelten mit Einstieg in die 3 Themenseiten (Farbtherapie, Farbpsychologie, Lichtmedizin). 18 Markdown-Quellen, 3 Topic-Seiten, 12 Subroutes.",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#farbwelten"
+      },
+      "text_ref": "index.html#farbwelten",
+      "route": "#farbwelten",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "index.html#farbwelten",
+        "content/farbwelten/*.md",
+        "js/data/farbwelten.js",
+        "sitemap.xml"
+      ],
+      "notes": "12 Farbseiten (z.B. rot, tuerkis, magenta, blau, gruen, gelb, weiss, schwarz, violett, orange, rosa, braun) als CNT-SUB-*. 3 Themen als CNT-TOP-*.",
+      "acceptance_check": "Register zeigt zwoelf Farbwelten inklusive Indigo und drei Themenseiten; jede Farbe oeffnet ihre eigene Route.",
+      "claims": [
+        "CLM-005"
+      ]
+    },
+    {
+      "id": "CNT-PAG-011",
+      "name": "Blog / Artikel (#blog)",
+      "description": "Blog-Listen- und Detailansicht; 10 gerenderte Artikel (js/data/articles.js) und 12 Markdown-Artikel (data/articles/*.md) als separate Bestaende.",
+      "type": "page",
+      "source": {
+        "path": "index.html",
+        "selector": "#blog"
+      },
+      "text_ref": "index.html#blog",
+      "route": "#blog",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "index.html#blog",
+        "js/data/articles.js",
+        "data/articles/*.md",
+        "sitemap.xml"
+      ],
+      "notes": "Siehe CNT-ART-* fuer Artikel; Markdown-Quellen nicht ueber Hash-Route erreichbar (offen/none).",
+      "acceptance_check": "Artikelliste zeigt zehn gerenderte Artikel; #blog/6 oeffnet den sechsten Artikel im Dialog.",
+      "claims": [
+        "CLM-004"
+      ]
+    },
+    {
+      "id": "CNT-ART-001",
+      "name": "Die 78 Tarot-Karten: Eine Reise durch die Major & Minor Arcana",
+      "description": "Erster gerenderter Blogartikel (articles[0]); Volltext als Template-Literal in js/data/articles.js L3-L27.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[0]",
+        "lines": "L3-L27"
+      },
+      "text_ref": "js/data/articles.js#L3-L27",
+      "route": "#blog/1",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#blog/1 zeigt Titel/Excerpt aus articles[0]; unbekannte ID bleibt auf Artikelliste mit Hinweis.",
+      "claims": [
+        "CLM-001"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Die 78 Tarot-Karten: Eine Reise durch die Major & Minor Arcana"
+        },
+        {
+          "level": 2,
+          "text": "Die Struktur des Tarot"
+        },
+        {
+          "level": 3,
+          "text": "Die vier Suiten (Elemente)"
+        }
+      ],
+      "evidence": [
+        "js/data/articles.js#L3-L27",
+        "js/modules/blog.js"
+      ],
+      "notes": "Nicht mit data/articles/article-01.md zu verwechseln (anderer Titel, andere Fassung, kein Bezug)."
+    },
+    {
+      "id": "CNT-ART-002",
+      "name": "Kristalle als Werkzeuge: Wie Steine unsere Energie beeinflussen",
+      "description": "Gerenderter Blogartikel 2: Titel, Excerpt und Inhalt stehen in articles[1]; Route #blog/2 oeffnet den Dialog.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[1]",
+        "lines": "L29-L43"
+      },
+      "text_ref": "js/data/articles.js#L29-L43",
+      "route": "#blog/2",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route #blog/2 oeffnet Artikel 2 im Dialog; Titel und Excerpt stammen aus articles[1].",
+      "claims": [
+        "CLM-004"
+      ],
+      "evidence": [
+        "js/data/articles.js",
+        "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+      ]
+    },
+    {
+      "id": "CNT-ART-003",
+      "name": "Runenwerfen: Die drei Positionen der Vergangenheit, Gegenwart und Zukunft",
+      "description": "Gerenderter Blogartikel 3: Titel, Excerpt und Inhalt stehen in articles[2]; Route #blog/3 oeffnet den Dialog.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[2]",
+        "lines": "L44-L62"
+      },
+      "text_ref": "js/data/articles.js#L44-L62",
+      "route": "#blog/3",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route #blog/3 oeffnet Artikel 3 im Dialog; Titel und Excerpt stammen aus articles[2].",
+      "claims": [
+        "CLM-004"
+      ],
+      "evidence": [
+        "js/data/articles.js",
+        "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+      ]
+    },
+    {
+      "id": "CNT-ART-004",
+      "name": "Die Mondphasen: Von Neumond bis Vollmond — Rituale für jeden Zyklus",
+      "description": "Gerenderter Blogartikel 4: Titel, Excerpt und Inhalt stehen in articles[3]; Route #blog/4 oeffnet den Dialog.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[3]",
+        "lines": "L63-L82"
+      },
+      "text_ref": "js/data/articles.js#L63-L82",
+      "route": "#blog/4",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route #blog/4 oeffnet Artikel 4 im Dialog; Titel und Excerpt stammen aus articles[3].",
+      "claims": [
+        "CLM-004"
+      ],
+      "evidence": [
+        "js/data/articles.js",
+        "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+      ]
+    },
+    {
+      "id": "CNT-ART-005",
+      "name": "Die Geschichte des Tarot: Von Spielkarten zur spirituellen Praxis",
+      "description": "Gerenderter Blogartikel 5: Titel, Excerpt und Inhalt stehen in articles[4]; Route #blog/5 oeffnet den Dialog.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[4]",
+        "lines": "L83-L97"
+      },
+      "text_ref": "js/data/articles.js#L83-L97",
+      "route": "#blog/5",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route #blog/5 oeffnet Artikel 5 im Dialog; Titel und Excerpt stammen aus articles[4].",
+      "claims": [
+        "CLM-004"
+      ],
+      "evidence": [
+        "js/data/articles.js",
+        "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+      ]
+    },
+    {
+      "id": "CNT-ART-006",
+      "name": "Einsteiger-Guide: Wie du mit Tarot, Kristallen und Runen beginnst",
+      "description": "Gerenderter Blogartikel 6: Titel, Excerpt und Inhalt stehen in articles[5]; Route #blog/6 oeffnet den Dialog.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[5]",
+        "lines": "L98-L116"
+      },
+      "text_ref": "js/data/articles.js#L98-L116",
+      "route": "#blog/6",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route #blog/6 oeffnet Artikel 6 im Dialog; Titel und Excerpt stammen aus articles[5].",
+      "claims": [
+        "CLM-004"
+      ],
+      "evidence": [
+        "js/data/articles.js",
+        "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+      ]
+    },
+    {
+      "id": "CNT-ART-007",
+      "name": "Chakren & Kristalle: Welche Steine für welches Energiezentrum",
+      "description": "Gerenderter Blogartikel 7: Titel, Excerpt und Inhalt stehen in articles[6]; Route #blog/7 oeffnet den Dialog.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[6]",
+        "lines": "L117-L137"
+      },
+      "text_ref": "js/data/articles.js#L117-L137",
+      "route": "#blog/7",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route #blog/7 oeffnet Artikel 7 im Dialog; Titel und Excerpt stammen aus articles[6].",
+      "claims": [
+        "CLM-004"
+      ],
+      "evidence": [
+        "js/data/articles.js",
+        "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+      ]
+    },
+    {
+      "id": "CNT-ART-008",
+      "name": "Die Bedeutung des Futhark: Von Fehu bis Othala",
+      "description": "Gerenderter Blogartikel 8: Titel, Excerpt und Inhalt stehen in articles[7]; Route #blog/8 oeffnet den Dialog.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[7]",
+        "lines": "L138-L156"
+      },
+      "text_ref": "js/data/articles.js#L138-L156",
+      "route": "#blog/8",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route #blog/8 oeffnet Artikel 8 im Dialog; Titel und Excerpt stammen aus articles[7].",
+      "claims": [
+        "CLM-004"
+      ],
+      "evidence": [
+        "js/data/articles.js",
+        "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+      ]
+    },
+    {
+      "id": "CNT-ART-009",
+      "name": "Rituale für jede Mondphase: Ein praktischer Kalender",
+      "description": "Gerenderter Blogartikel 9: Titel, Excerpt und Inhalt stehen in articles[8]; Route #blog/9 oeffnet den Dialog.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[8]",
+        "lines": "L157-L173"
+      },
+      "text_ref": "js/data/articles.js#L157-L173",
+      "route": "#blog/9",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route #blog/9 oeffnet Artikel 9 im Dialog; Titel und Excerpt stammen aus articles[8].",
+      "claims": [
+        "CLM-004"
+      ],
+      "evidence": [
+        "js/data/articles.js",
+        "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+      ]
+    },
+    {
+      "id": "CNT-ART-010",
+      "name": "Moldavit: Der Meteorit unter den Kristallen",
+      "description": "Gerenderter Blogartikel 10: Titel, Excerpt und Inhalt stehen in articles[9]; Route #blog/10 oeffnet den Dialog.",
+      "type": "article",
+      "source": {
+        "path": "js/data/articles.js",
+        "selector": "articles[9]",
+        "lines": "L174-L199"
+      },
+      "text_ref": "js/data/articles.js#L174-L199",
+      "route": "#blog/10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Route #blog/10 oeffnet Artikel 10 im Dialog; Titel und Excerpt stammen aus articles[9].",
+      "claims": [
+        "CLM-004"
+      ],
+      "evidence": [
+        "js/data/articles.js",
+        "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+      ]
+    },
+    {
+      "id": "CNT-ART-011",
+      "name": "Die Major Arcana: Vom Narr bis zur Welt",
+      "description": "Markdown-Artikel article-01.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-01.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-01.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-012",
+      "name": "Minor Arcana: Die vier Suits verstehen",
+      "description": "Markdown-Artikel article-02.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-02.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-02.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-013",
+      "name": "Kristalle für jedes Chakra: Ein Leitfaden",
+      "description": "Markdown-Artikel article-03.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-03.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-03.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-014",
+      "name": "Mondphasen-Rituale für Anfänger",
+      "description": "Markdown-Artikel article-04.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-04.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-04.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-015",
+      "name": "Runenlesen: Die 3-Runen-Legung erklärt",
+      "description": "Markdown-Artikel article-05.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-05.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-05.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-016",
+      "name": "Tarot vs. Runen: Unterschiede und Gemeinsamkeiten",
+      "description": "Markdown-Artikel article-06.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-06.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-06.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-017",
+      "name": "Wie man einen Kristall reinigt und auflädt",
+      "description": "Markdown-Artikel article-07.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-07.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-07.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-018",
+      "name": "Die Bedeutung der Mondknoten in der Astrologie",
+      "description": "Markdown-Artikel article-08.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-08.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-08.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-019",
+      "name": "Tageskarte ziehen: Eine Morgenroutine",
+      "description": "Markdown-Artikel article-09.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-09.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-09.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-020",
+      "name": "Ein eigenes Orakel-Deck erstellen",
+      "description": "Markdown-Artikel article-10.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-10.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-10.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-021",
+      "name": "Schattenarbeit mit Tarot",
+      "description": "Markdown-Artikel article-11.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-11.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-11.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-ART-022",
+      "name": "Kristall-Grids für Manifestation",
+      "description": "Markdown-Artikel article-12.md: eigener Textbestand, oeffentlich abrufbar, aber von keiner ausgelieferten Seite verlinkt.",
+      "type": "article",
+      "source": {
+        "path": "data/articles/article-12.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "text_ref": "data/articles/article-12.md#L10",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "none",
+      "delivery": "source-only",
+      "acceptance_check": "Datei bleibt unveraendert im Bestand; keine ausgelieferte Seite verlinkt sie.",
+      "notes": "Nicht gerendert; keine Referenz aus js/modules/blog.js. Entscheidung ueber Veroeffentlichung oder Entfernung offen (§7.5, E-03).",
+      "open_questions": [
+        "Veroeffentlichen oder entfernen? Beides ist vertretbar, aber nicht beides gleichzeitig (E-03)."
+      ]
+    },
+    {
+      "id": "CNT-STR-001",
+      "name": "Sprunglink „Zum Hauptinhalt springen“",
+      "description": "Erstes fokussierbares Element jeder Seite; springt auf #main, nur bei Tastaturfokus sichtbar.",
+      "type": "ui-string",
+      "source": {
+        "path": "index.html",
+        "selector": ".skip-link",
+        "lines": "L64"
+      },
+      "text_ref": "index.html#L64",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Erstes Tab-Ereignis fokussiert Sprunglink, Enter -> #main; Text wortgleich.",
+      "evidence": [
+        "index.html#L64"
+      ]
+    },
+    {
+      "id": "CNT-STR-002",
+      "name": "Navigation Hauptbereiche (10 Eintraege)",
+      "description": "Hauptnavigation mit den 10 Rubriken (Start, Tarot, Kristalle, Mond, Astrologie, Frequenzen, Runen, Pendeln, Farbwelten, Blog).",
+      "type": "ui-string",
+      "source": {
+        "path": "index.html",
+        "selector": "nav.main-nav"
+      },
+      "text_ref": "index.html#nav",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "index.html#nav",
+        "js/main.js#MAIN_PAGES",
+        "inventory-baseline.json"
+      ],
+      "acceptance_check": "Die Hauptnavigation zeigt zehn Bereiche in fester Reihenfolge; jeder Eintrag setzt aria-current auf der aktiven Seite."
+    },
+    {
+      "id": "CNT-LEG-001",
+      "name": "Impressum",
+      "description": "Rechtstext mit Anbieterkennzeichnung, Decklizenz und Haftungshinweisen; eigene HTML-Seite ausserhalb Hash-Routings.",
+      "type": "legal",
+      "source": {
+        "path": "impressum.html",
+        "selector": "h1",
+        "lines": "L34"
+      },
+      "text_ref": "impressum.html#L34",
+      "route": "impressum.html",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Direkt erreichbar, nicht im Hash-Routing, im Footer verlinkt.",
+      "evidence": [
+        "impressum.html#L34",
+        "sitemap.xml"
+      ]
+    },
+    {
+      "id": "CNT-LEG-002",
+      "name": "Datenschutzerklaerung",
+      "description": "Eigenstaendige Datenschutzerklaerung: keine Tracker und Cookies, lokale Schriften und Bilder, Speicherung im Browser. Text vorhanden, rechtliche Abnahme offen.",
+      "type": "legal",
+      "source": {
+        "path": "datenschutz.html",
+        "selector": "h1",
+        "lines": "L37"
+      },
+      "text_ref": "datenschutz.html#L37",
+      "route": "datenschutz.html",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "entwurf",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "datenschutz.html ist im Footer verlinkt, direkt erreichbar und nennt alle tatsaechlich verwendeten localStorage-Bereiche.",
+      "open_questions": [
+        "Die Erklaerung nennt Kristall-Favoriten, Runen-Historie, Frequenzlabor und Meditation, aber nicht das Radiästhesie-Journal (esot_rad_journal_v) und die Experimentlaeufe (esot_rad_experiment_v)."
+      ],
+      "evidence": [
+        "grep -i datenschutz impressum.html index.html"
+      ]
+    },
+    {
+      "id": "CNT-LEG-003",
+      "name": "Haftungsausschluss",
+      "description": "Eigenstaendige Haftungsseite: Abgrenzung zu medizinischen, rechtlichen und finanziellen Aussagen sowie Hinweis auf externe Links.",
+      "type": "legal",
+      "source": {
+        "path": "haftung.html",
+        "selector": "h1",
+        "lines": "L37"
+      },
+      "text_ref": "haftung.html#L37",
+      "route": "haftung.html",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "haftung.html ist im Footer verlinkt und direkt erreichbar; der Text bleibt unveraendert gegenueber der Baseline.",
+      "evidence": [
+        "haftung.html",
+        "index.html#L805"
+      ],
+      "notes": "Fehlte im Katalog, obwohl im Footer jeder Hauptseite verlinkt."
+    },
+    {
+      "id": "CNT-GLO-001",
+      "name": "Radiästhesie-Glossar",
+      "description": "Alphabetisch gruppiertes Glossar der Radiästhesie mit Buchstaben-Navigation; eigenes indexierbares Dokument (radiasthesie/glossar.html).",
+      "type": "glossary",
+      "source": {
+        "path": "radiasthesie/glossar.html",
+        "selector": "h1",
+        "lines": "L44"
+      },
+      "text_ref": "radiasthesie/glossar.html#L44",
+      "route": "radiasthesie/glossar.html",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Direkt erreichbar, in sitemap.xml, Kopfanzahl entspricht model.stats.glossary.",
+      "evidence": [
+        "radiasthesie/glossar.html#L44",
+        "sitemap.xml",
+        "cmd: node scripts/generate-radiasthesie-pages.cjs"
+      ]
+    },
+    {
+      "id": "CNT-GLO-002",
+      "name": "Tarot-Glossar (implizit, nicht als eigene Seite)",
+      "description": "Tarot-Begriffserklaerungen leben in den Artikeltexten und Datenobjekten (data/tarot.json), nicht als eigenes Glossar-Dokument.",
+      "type": "glossary",
+      "source": {
+        "path": "data/tarot.json",
+        "selector": "entries[0]"
+      },
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "entwurf",
+      "owner": "writer",
+      "release_relevance": "should",
+      "evidence": [
+        "data/tarot.json",
+        "js/data/tarot.js"
+      ],
+      "text_ref": "data/tarot.json#L1",
+      "delivery": "source-only",
+      "acceptance_check": "Kein eigener Glossareintrag und keine eigene Route; Begriffserklaerungen erscheinen nur im Karten-Dialog."
+    },
+    {
+      "id": "CNT-SUB-101",
+      "name": "Farbwelt Rot (#farbwelten/rot)",
+      "description": "Farbseite Rot: Physik 620-750 nm, kulturelle Assoziation, Chakra-Zuordnung, Grenzen farbtherapeutischer Aussagen.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/rot.md",
+        "selector": "h1",
+        "lines": "L10"
+      },
+      "produced_by": {
+        "command": "npm run data:farbwelten",
+        "from": [
+          "content/farbwelten/rot.md"
+        ]
+      },
+      "text_ref": "content/farbwelten/rot.md#L10",
+      "route": "#farbwelten/rot",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "#farbwelten/rot zeigt H1 Rot und Lede; Seite nennt 620-750 nm und 400-484 THz.",
+      "claims": [
+        "CLM-003"
+      ],
+      "headings": [
+        {
+          "level": 1,
+          "text": "Rot"
+        },
+        {
+          "level": 2,
+          "text": "Einführung"
+        }
+      ],
+      "evidence": [
+        "content/farbwelten/rot.md#L10",
+        "js/data/farbwelten.js"
+      ],
+      "notes": "Fliesstext nur in Markdown; js/data/farbwelten.js ist generierte Projektion."
+    },
+    {
+      "id": "CNT-SUB-102",
+      "name": "Farbwelt Tuerkis (#farbwelten/tuerkis)",
+      "description": "Farbseite Tuerkis.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/tuerkis.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/tuerkis.md#L10",
+      "route": "#farbwelten/tuerkis",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/tuerkis.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/tuerkis zeigt H1 Tuerkis und die Lede aus content/farbwelten/tuerkis.md."
+    },
+    {
+      "id": "CNT-SUB-103",
+      "name": "Farbwelt Magenta (#farbwelten/magenta)",
+      "description": "Farbseite Magenta.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/magenta.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/magenta.md#L10",
+      "route": "#farbwelten/magenta",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/magenta.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/magenta zeigt H1 Magenta und die Lede aus content/farbwelten/magenta.md."
+    },
+    {
+      "id": "CNT-SUB-104",
+      "name": "Farbwelt Rose (#farbwelten/rosa)",
+      "description": "Farbseite Rosa.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/rosa.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/rosa.md#L10",
+      "route": "#farbwelten/rosa",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/rosa.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/rosa zeigt H1 Rosa und die Lede aus content/farbwelten/rosa.md."
+    },
+    {
+      "id": "CNT-SUB-105",
+      "name": "Farbwelt Weiss (#farbwelten/weiss)",
+      "description": "Farbseite Weiss.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/weiss.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/weiss.md#L10",
+      "route": "#farbwelten/weiss",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/weiss.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/weiss zeigt H1 Weiss und die Lede aus content/farbwelten/weiss.md."
+    },
+    {
+      "id": "CNT-SUB-106",
+      "name": "Farbwelt Schwarz (#farbwelten/schwarz)",
+      "description": "Farbseite Schwarz.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/schwarz.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/schwarz.md#L10",
+      "route": "#farbwelten/schwarz",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/schwarz.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/schwarz zeigt H1 Schwarz und die Lede aus content/farbwelten/schwarz.md."
+    },
+    {
+      "id": "CNT-SUB-107",
+      "name": "Farbwelt Blau (#farbwelten/blau)",
+      "description": "Farbseite Blau.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/blau.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/blau.md#L9",
+      "route": "#farbwelten/blau",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/blau.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/blau zeigt H1 Blau und die Lede aus content/farbwelten/blau.md."
+    },
+    {
+      "id": "CNT-SUB-108",
+      "name": "Farbwelt Gruen (#farbwelten/gruen)",
+      "description": "Farbseite Gruen.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/gruen.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/gruen.md#L9",
+      "route": "#farbwelten/gruen",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/gruen.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/gruen zeigt H1 Gruen und die Lede aus content/farbwelten/gruen.md."
+    },
+    {
+      "id": "CNT-SUB-109",
+      "name": "Farbwelt Gelb (#farbwelten/gelb)",
+      "description": "Farbseite Gelb.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/gelb.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/gelb.md#L9",
+      "route": "#farbwelten/gelb",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/gelb.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/gelb zeigt H1 Gelb und die Lede aus content/farbwelten/gelb.md."
+    },
+    {
+      "id": "CNT-SUB-110",
+      "name": "Farbwelt Violett (#farbwelten/violett)",
+      "description": "Farbseite Violett.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/violett.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/violett.md#L9",
+      "route": "#farbwelten/violett",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/violett.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/violett zeigt H1 Violett und die Lede aus content/farbwelten/violett.md."
+    },
+    {
+      "id": "CNT-SUB-111",
+      "name": "Farbwelt Orange (#farbwelten/orange)",
+      "description": "Farbseite Orange.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/orange.md",
+        "selector": "h1"
+      },
+      "text_ref": "content/farbwelten/orange.md#L9",
+      "route": "#farbwelten/orange",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/orange.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/orange zeigt H1 Orange und die Lede aus content/farbwelten/orange.md."
+    },
+    {
+      "id": "CNT-SUB-112",
+      "name": "Farbwelt Indigo (#farbwelten/indigo)",
+      "description": "Indigo als Farbwelt zwischen Blau und Violett: Wellenlaengenbereich, Assoziationen, Chakrenbezug und Forschungsstand, belegt aus der Markdown-Quelle.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/indigo.md",
+        "selector": "h1",
+        "lines": "L9"
+      },
+      "text_ref": "content/farbwelten/indigo.md#L9",
+      "route": "#farbwelten/indigo",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/braun.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/indigo zeigt H1 Indigo und die Lede aus content/farbwelten/indigo.md."
+    },
+    {
+      "id": "CNT-SUB-201",
+      "name": "Farbtherapie und Chromotherapie (#farbwelten/farbtherapie)",
+      "description": "Was Chromotherapie behauptet, was dazu geprueft wurde und wo die Grenze zur belegten Lichtmedizin verlaeuft; belegt aus der Markdown-Quelle.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/farbtherapie.md",
+        "selector": "h1",
+        "lines": "L8"
+      },
+      "text_ref": "content/farbwelten/farbtherapie.md#L8",
+      "route": "#farbwelten/farbtherapie",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/farbtherapie.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/farbtherapie zeigt H1 Farbtherapie und Chromotherapie mit ihren Abschnittsankern und ist direkt adressierbar."
+    },
+    {
+      "id": "CNT-SUB-202",
+      "name": "Farbpsychologie (#farbwelten/farbpsychologie)",
+      "description": "Farbpsychologie als Themenseite: Wahrnehmung, Assoziation und Evidenzlage der Farbdeutung, belegt aus der Markdown-Quelle.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/farbpsychologie.md",
+        "selector": "h1",
+        "lines": "L8"
+      },
+      "text_ref": "content/farbwelten/farbpsychologie.md#L8",
+      "route": "#farbwelten/farbpsychologie",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/farbpsychologie.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/farbpsychologie zeigt H1 Farbpsychologie mit ihren Abschnittsankern und ist direkt adressierbar."
+    },
+    {
+      "id": "CNT-SUB-203",
+      "name": "Lichtmedizin und Photobiologie (#farbwelten/lichtmedizin)",
+      "description": "Lichtmedizin als abgegrenzte Themenseite: definierte Wellenlaengen, Bestrahlungsstaerke und Studienlage, belegt aus der Markdown-Quelle.",
+      "type": "subroute",
+      "source": {
+        "path": "content/farbwelten/lichtmedizin.md",
+        "selector": "h1",
+        "lines": "L8"
+      },
+      "text_ref": "content/farbwelten/lichtmedizin.md#L8",
+      "route": "#farbwelten/lichtmedizin",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "evidence": [
+        "content/farbwelten/lichtmedizin.md",
+        "js/data/farbwelten.js"
+      ],
+      "acceptance_check": "Route #farbwelten/lichtmedizin zeigt H1 Lichtmedizin und Photobiologie mit ihren Abschnittsankern und ist direkt adressierbar."
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "claim": "78 Tarot-Karten: 22 Grosse Arkana und vier Farben mit je 14 Karten",
+      "kind": "number",
+      "text_ref": "index.html#L240",
+      "verification": "verified",
+      "citation": "data/tarot.json und js/data/tarot.js enthalten je 78 Kartenobjekte; README Datenquellen (Rider-Waite-Smith, Public Domain).",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "evidence": [
+        "data/tarot.json",
+        "js/data/tarot.js"
+      ]
+    },
+    {
+      "id": "CLM-002",
+      "claim": "30 Kristalle im Katalog",
+      "kind": "number",
+      "text_ref": "index.html#crystals",
+      "verification": "verified",
+      "citation": "data/crystals.json enthaelt 30 Objekte; js/modules/crystals.js L32 laedt ./data/crystals.json. In Chromium gemessen: 30 Karten auf #crystals (evidence/release-gate/runtime-fakten.json). js/data/crystals.js (36) laedt keine Seite.",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "evidence": [
+        "cmd: grep -c '\"id\"' data/crystals.json",
+        "cmd: grep -oE \"id: '[^']+'\" js/data/crystals.js | wc -l"
+      ]
+    },
+    {
+      "id": "CLM-003",
+      "claim": "Rot ist die Farbe mit der laengsten Wellenlaenge im sichtbaren Spektrum (620-750 nm)",
+      "kind": "number",
+      "text_ref": "content/farbwelten/rot.md#L10",
+      "verification": "unverified",
+      "citation": "content/farbwelten/rot.md L10 nennt 620-750 nm und 400-484 THz ohne Quellenangabe; der Wert entspricht dem physikalischen Standardbereich fuer Rot, die Seite belegt ihn nicht.",
+      "status": "entwurf",
+      "owner": "writer",
+      "release_relevance": "must",
+      "open_questions": [
+        "Quellenangabe zur Wellenlaengendefinition erganzend einfuegen oder als physikalischer Standard kennzeichnen."
+      ],
+      "evidence": [
+        "content/farbwelten/rot.md#L10",
+        "js/data/farbwelten.js"
+      ]
+    },
+    {
+      "id": "CLM-004",
+      "claim": "10 gerenderte Blogartikel (js/data/articles.js) und 12 Markdown-Artikel (data/articles/*.md)",
+      "kind": "number",
+      "text_ref": "js/data/articles.js#L3-L189",
+      "verification": "verified",
+      "citation": "js/data/articles.js enthaelt 10 Artikelobjekte (articles[0..9]); data/articles/ enthaelt 12 Markdown-Dateien; inventory-baseline.json L417-L432: rendered_count 10, markdown_count 12.",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "evidence": [
+        "inventory-baseline.json",
+        "js/data/articles.js",
+        "ls data/articles/*.md | wc -l"
+      ]
+    },
+    {
+      "id": "CLM-005",
+      "claim": "12 Farbwelten mit 18 Markdown-Quellen und 3 Themenseiten",
+      "kind": "number",
+      "text_ref": "docs/migration-baseline/inventory-baseline.json#L302-L415",
+      "verification": "verified",
+      "citation": "inventory-baseline.json L302-L415: zwoelf Farbwelten, 18 Markdown-Quellen (markdown_sources_count), drei Themenseiten (topic_pages_count).",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "evidence": [
+        "inventory-baseline.json",
+        "ls content/farbwelten/*.md | wc -l"
+      ]
+    },
+    {
+      "id": "CLM-006",
+      "claim": "7 Radiästhesie-Dokumente unter radiasthesie/ (Glossar, Anleitung, Werkzeuge)",
+      "kind": "number",
+      "text_ref": "docs/migration-baseline/inventory-baseline.json#L183-L220",
+      "verification": "verified",
+      "citation": "inventory-baseline.json L183-L220 listet sieben Radiästhesie-Dokumente (radiasthesie_documents_count 7).",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "evidence": [
+        "inventory-baseline.json",
+        "ls radiasthesie/ | wc -l"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7223 @@
+{
+  "schema": "esow.migration-baseline.functions/1",
+  "measured_at_commit": "6baa2697be7b35ee2816566cd5eaece6c6ec9a73",
+  "counts": {
+    "modules": 43,
+    "modules_js": 42,
+    "module_lines": 19933,
+    "exported_classes": 17,
+    "exported_functions": 372,
+    "storage_keys": 8,
+    "storage_patterns": 1,
+    "external_request_sites": 2,
+    "tests": 43
+  },
+  "routes": {
+    "main_pages": [
+      {
+        "id": "home",
+        "line": 25
+      },
+      {
+        "id": "tarot",
+        "line": 26
+      },
+      {
+        "id": "crystals",
+        "line": 27
+      },
+      {
+        "id": "moon",
+        "line": 28
+      },
+      {
+        "id": "astrologie",
+        "line": 29
+      },
+      {
+        "id": "frequenzen",
+        "line": 30
+      },
+      {
+        "id": "runes",
+        "line": 31
+      },
+      {
+        "id": "pendeln",
+        "line": 32
+      },
+      {
+        "id": "farbwelten",
+        "line": 33
+      },
+      {
+        "id": "blog",
+        "line": 34
+      }
+    ],
+    "skip_anchor": {
+      "value": "main",
+      "line": 37
+    },
+    "article_route": {
+      "pattern": "/^blog\\/([^/]+)$/",
+      "line": 38
+    },
+    "area_routes": [
+      {
+        "area": "astrologie",
+        "name": "ASTROLOGIE_ROUTE",
+        "pattern": "/^astrologie(?:\\/([^?]*))?(?:\\?(.*))?$/",
+        "line": 44
+      },
+      {
+        "area": "frequenzen",
+        "name": "FREQUENZ_ROUTE",
+        "pattern": "/^frequenzen(?:\\/([^?]*))?(?:\\?(.*))?$/",
+        "line": 48
+      },
+      {
+        "area": "frequenzlabor",
+        "name": "FREQUENZ_ALIAS",
+        "pattern": "/^frequenzlabor(?:\\/([^?]*))?(?:\\?(.*))?$/",
+        "line": 49
+      },
+      {
+        "area": "pendeln",
+        "name": "PENDELN_ROUTE",
+        "pattern": "/^pendeln(?:\\/([^?]*))?(?:\\?(.*))?$/",
+        "line": 55
+      },
+      {
+        "area": "farbwelten",
+        "name": "FARBWELTEN_ROUTE",
+        "pattern": "/^farbwelten(?:\\/([^?]*))?(?:\\?(.*))?$/",
+        "line": 60
+      }
+    ],
+    "aliases": [
+      {
+        "alias": "chakren",
+        "target_area": "farbwelten",
+        "line": 63
+      },
+      {
+        "alias": "lichtfrequenzen",
+        "target_area": "farbwelten",
+        "line": 63
+      }
+    ],
+    "page_meta": [
+      {
+        "key": "home",
+        "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+        "line": 85
+      },
+      {
+        "key": "tarot",
+        "title": "Tarot — 78 Karten, Tageskarte & Legungen | Esoterik-Welt",
+        "line": 89
+      },
+      {
+        "key": "crystals",
+        "title": "Kristalle & Steine — Chakra, Farbe, Wirkung | Esoterik-Welt",
+        "line": 94
+      },
+      {
+        "key": "moon",
+        "title": "Mondphasen, Kalender & Deutung | Esoterik-Welt",
+        "line": 98
+      },
+      {
+        "key": "runes",
+        "title": "Runen — Das ältere Futhark | Esoterik-Welt",
+        "line": 103
+      },
+      {
+        "key": "astrologie",
+        "title": "Astrologie — Zeichen, Faktoren, Häuser, Aspekte | Esoterik-Welt",
+        "line": 107
+      },
+      {
+        "key": "blog",
+        "title": "Wissen & Artikel — Esoterik, Rituale, Geschichte | Esoterik-Welt",
+        "line": 112
+      },
+      {
+        "key": "frequenzen",
+        "title": "Frequenzen & Schwingungen — Bibliothek und Frequenzlabor | Esoterik-Welt",
+        "line": 117
+      },
+      {
+        "key": "frequenzenQuellen",
+        "title": "Quellen & Methodik der Frequenzbibliothek | Esoterik-Welt",
+        "line": 122
+      },
+      {
+        "key": "pendeln",
+        "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+        "line": 127
+      },
+      {
+        "key": "farbwelten",
+        "title": "Farbwelten — Bedeutung, Physik und Tradition der Farben | Esoterik-Welt",
+        "line": 132
+      }
+    ]
+  },
+  "subroutes": {
+    "astrologie": {
+      "module": "js/modules/astrologie.js",
+      "kind": "case",
+      "views": [
+        {
+          "value": "lernpfad",
+          "line": 128,
+          "kind": "case"
+        },
+        {
+          "value": "zeichen",
+          "line": 133,
+          "kind": "case"
+        },
+        {
+          "value": "faktoren",
+          "line": 144,
+          "kind": "case"
+        },
+        {
+          "value": "haeuser",
+          "line": 149,
+          "kind": "case"
+        },
+        {
+          "value": "aspekte",
+          "line": 154,
+          "kind": "case"
+        },
+        {
+          "value": "grundlagen",
+          "line": 159,
+          "kind": "case"
+        },
+        {
+          "value": "beispiele",
+          "line": 166,
+          "kind": "case"
+        },
+        {
+          "value": "faq",
+          "line": 171,
+          "kind": "case"
+        },
+        {
+          "value": "glossar",
+          "line": 173,
+          "kind": "case"
+        },
+        {
+          "value": "quellen",
+          "line": 175,
+          "kind": "case"
+        },
+        {
+          "value": "methodik",
+          "line": 177,
+          "kind": "case"
+        },
+        {
+          "value": "suche",
+          "line": 179,
+          "kind": "case"
+        }
+      ]
+    },
+    "pendeln": {
+      "module": "js/modules/radiasthesie-model.js",
+      "kind": "case",
+      "views": [
+        {
+          "value": "glossar",
+          "line": 100,
+          "kind": "case"
+        },
+        {
+          "value": "quellen",
+          "line": 102,
+          "kind": "case"
+        },
+        {
+          "value": "methodik",
+          "line": 106,
+          "kind": "case"
+        },
+        {
+          "value": "labor",
+          "line": 111,
+          "kind": "case"
+        },
+        {
+          "value": "studio",
+          "line": 116,
+          "kind": "case"
+        },
+        {
+          "value": "experiment",
+          "line": 120,
+          "kind": "case"
+        },
+        {
+          "value": "journal",
+          "line": 125,
+          "kind": "case"
+        },
+        {
+          "value": "suche",
+          "line": 127,
+          "kind": "case"
+        }
+      ]
+    },
+    "farbwelten": {
+      "module": "js/modules/farbwelten-model.js",
+      "kind": "view-const",
+      "views": [
+        {
+          "value": "landing",
+          "line": 20,
+          "kind": "view-const"
+        },
+        {
+          "value": "color",
+          "line": 21,
+          "kind": "view-const"
+        },
+        {
+          "value": "chakren",
+          "line": 22,
+          "kind": "view-const"
+        },
+        {
+          "value": "light",
+          "line": 23,
+          "kind": "view-const"
+        },
+        {
+          "value": "topic",
+          "line": 24,
+          "kind": "view-const"
+        },
+        {
+          "value": "kompass",
+          "line": 25,
+          "kind": "view-const"
+        },
+        {
+          "value": "meditation",
+          "line": 26,
+          "kind": "view-const"
+        },
+        {
+          "value": "zeitleiste",
+          "line": 27,
+          "kind": "view-const"
+        },
+        {
+          "value": "notfound",
+          "line": 28,
+          "kind": "view-const"
+        }
+      ]
+    },
+    "frequenzen": {
+      "module": "js/modules/frequenzlabor.js",
+      "kind": "known-list",
+      "views": [
+        {
+          "value": "hub",
+          "line": 154,
+          "kind": "default"
+        },
+        {
+          "value": "labor",
+          "line": 227,
+          "kind": "known-list"
+        },
+        {
+          "value": "quellen",
+          "line": 228,
+          "kind": "known-list"
+        },
+        {
+          "value": "cymatics",
+          "line": 229,
+          "kind": "known-list"
+        },
+        {
+          "value": "meditation",
+          "line": 230,
+          "kind": "known-list"
+        }
+      ]
+    }
+  },
+  "storage": [
+    {
+      "file": "js/modules/crystals.js",
+      "line": 134,
+      "key": "esot_crystals_fav",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/crystals.js",
+      "line": 145,
+      "key": "esot_crystals_fav",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/experiment-speicher.js",
+      "line": 71,
+      "key": "esot_rad_experiment_v1",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/experiment-speicher.js",
+      "line": 111,
+      "key": "esot_rad_corrupt_*",
+      "resolved": true,
+      "pattern": "esot_rad_corrupt_<STORAGE_KEY>_<stamp>"
+    },
+    {
+      "file": "js/modules/experiment-speicher.js",
+      "line": 113,
+      "key": null,
+      "resolved": false
+    },
+    {
+      "file": "js/modules/experiment-speicher.js",
+      "line": 114,
+      "key": "esot_rad_experiment_v1",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/experiment-speicher.js",
+      "line": 153,
+      "key": "esot_rad_experiment_v1",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/frequenz-meditation-model.js",
+      "line": 226,
+      "key": "esoterik-welt:frequenzlabor:meditation:v1",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/frequenz-meditation-model.js",
+      "line": 274,
+      "key": "esoterik-welt:frequenzlabor:meditation:v1",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/frequenz-presets.js",
+      "line": 237,
+      "key": "esoterik-welt:frequenzlabor:v1",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/journal-speicher.js",
+      "line": 151,
+      "key": "esot_rad_journal_v1",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/journal-speicher.js",
+      "line": 199,
+      "key": "esot_rad_corrupt_*",
+      "resolved": true,
+      "pattern": "esot_rad_corrupt_<STORAGE_KEY>_<stamp>"
+    },
+    {
+      "file": "js/modules/journal-speicher.js",
+      "line": 201,
+      "key": null,
+      "resolved": false
+    },
+    {
+      "file": "js/modules/journal-speicher.js",
+      "line": 202,
+      "key": "esot_rad_journal_v1",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/journal-speicher.js",
+      "line": 245,
+      "key": "esot_rad_journal_v1",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/journal-speicher.js",
+      "line": 453,
+      "key": null,
+      "resolved": false
+    },
+    {
+      "file": "js/modules/journal-speicher.js",
+      "line": 475,
+      "key": null,
+      "resolved": false
+    },
+    {
+      "file": "js/modules/runes.js",
+      "line": 149,
+      "key": "esoterik_runes_history",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/runes.js",
+      "line": 156,
+      "key": "esoterik_runes_history",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/runes.js",
+      "line": 162,
+      "key": "esoterik_runes_history",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/runes.js",
+      "line": 164,
+      "key": "esoterik_runes_history",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/runes.js",
+      "line": 172,
+      "key": "esoterik_runes_history",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/runes.js",
+      "line": 192,
+      "key": "esoterik_runes_history",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/runes.js",
+      "line": 194,
+      "key": "esoterik_runes_history",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/tarot.js",
+      "line": 623,
+      "key": "esoterik_tarot_history",
+      "resolved": true
+    },
+    {
+      "file": "js/modules/tarot.js",
+      "line": 633,
+      "key": "esoterik_tarot_history",
+      "resolved": true
+    },
+    {
+      "file": "js/data/tarot-decks.js",
+      "line": 74,
+      "key": "esoterik_tarot_deck",
+      "resolved": true
+    },
+    {
+      "file": "js/data/tarot-decks.js",
+      "line": 87,
+      "key": "esoterik_tarot_deck",
+      "resolved": true
+    }
+  ],
+  "requests": [
+    {
+      "file": "js/modules/crystals.js",
+      "line": 32,
+      "snippet": "const data = embedded ? JSON.parse(embedded.textContent) : await (await fetch('./data/crystals.json')).json();"
+    },
+    {
+      "file": "js/modules/frequenzlabor.js",
+      "line": 608,
+      "snippet": "const response = await fetch(new URL('docs/frequenz-quellen.md', document.baseURI));"
+    }
+  ],
+  "seo": {
+    "sitemap_urls": 11,
+    "robots": "User-agent: *",
+    "html_files": [
+      {
+        "file": "404.html",
+        "bytes": 1366,
+        "jsonld": 0,
+        "og": 0,
+        "twitter": 0,
+        "canonical": false
+      },
+      {
+        "file": "Lokal-404.html",
+        "bytes": 137606,
+        "jsonld": 0,
+        "og": 0,
+        "twitter": 0,
+        "canonical": false
+      },
+      {
+        "file": "Lokal-datenschutz.html",
+        "bytes": 139085,
+        "jsonld": 0,
+        "og": 0,
+        "twitter": 0,
+        "canonical": true
+      },
+      {
+        "file": "Lokal-haftung.html",
+        "bytes": 138836,
+        "jsonld": 0,
+        "og": 0,
+        "twitter": 0,
+        "canonical": true
+      },
+      {
+        "file": "Lokal-impressum.html",
+        "bytes": 166405,
+        "jsonld": 0,
+        "og": 0,
+        "twitter": 0,
+        "canonical": true
+      },
+      {
+        "file": "Lokal.html",
+        "bytes": 1652947,
+        "jsonld": 2,
+        "og": 14,
+        "twitter": 11,
+        "canonical": true
+      },
+      {
+        "file": "datenschutz.html",
+        "bytes": 3115,
+        "jsonld": 0,
+        "og": 0,
+        "twitter": 0,
+        "canonical": true
+      },
+      {
+        "file": "haftung.html",
+        "bytes": 2797,
+        "jsonld": 0,
+        "og": 0,
+        "twitter": 0,
+        "canonical": true
+      },
+      {
+        "file": "impressum.html",
+        "bytes": 29936,
+        "jsonld": 0,
+        "og": 0,
+        "twitter": 0,
+        "canonical": true
+      },
+      {
+        "file": "index.html",
+        "bytes": 41530,
+        "jsonld": 0,
+        "og": 5,
+        "twitter": 3,
+        "canonical": true
+      }
+    ],
+    "jsonld_blocks": 2,
+    "og_tags": 19
+  },
+  "build_scripts": [
+    {
+      "name": "prestart",
+      "command": "npm run build"
+    },
+    {
+      "name": "build",
+      "command": "node scripts/build-pages.cjs"
+    },
+    {
+      "name": "build:local",
+      "command": "node scripts/build-local.cjs"
+    },
+    {
+      "name": "verify:sync",
+      "command": "node scripts/verify-farbwelten-sync.cjs"
+    },
+    {
+      "name": "data:astrologie",
+      "command": "node scripts/generate-astrologie-data.cjs"
+    },
+    {
+      "name": "data:radiasthesie",
+      "command": "node scripts/generate-radiasthesie-data.cjs && npx prettier --write js/data/radiasthesie.js"
+    },
+    {
+      "name": "data:farbwelten",
+      "command": "node scripts/generate-farbwelten-data.cjs && npx prettier --write js/data/farbwelten.js"
+    },
+    {
+      "name": "verify:pages",
+      "command": "node scripts/verify-pages.cjs"
+    },
+    {
+      "name": "verify:farbwelten",
+      "command": "node scripts/verify-farbwelten.cjs"
+    },
+    {
+      "name": "verify:build",
+      "command": "node scripts/verify-build.cjs"
+    }
+  ],
+  "generators": [
+    {
+      "file": "scripts/generate-astrologie-data.cjs",
+      "bytes": 9116,
+      "path_literals": [
+        "docs/astrologie-konzept/content/*.json"
+      ]
+    },
+    {
+      "file": "scripts/generate-farbwelten-data.cjs",
+      "bytes": 58345,
+      "path_literals": [
+        "content/farbwelten/",
+        "content/farbwelten/*.md",
+        "content/farbwelten/*.md.",
+        "content/farbwelten/chakren.md.",
+        "docs/farbwelten-konzept/02",
+        "docs/farbwelten-konzept/05",
+        "docs/farbwelten-konzept/08-umsetzungsleitfaden.md"
+      ]
+    },
+    {
+      "file": "scripts/generate-radiasthesie-data.cjs",
+      "bytes": 38955,
+      "path_literals": [
+        "assets/radiasthesie/media/media-manifest.json",
+        "assets/radiasthesie/orakel-karten.svg",
+        "assets/radiasthesie/pendeltafel.svg",
+        "assets/radiasthesie/winkelrute.svg",
+        "docs/radiasthesie-konzept/daten/taxonomie.json",
+        "docs/radiasthesie-konzept/inhalte",
+        "docs/radiasthesie-konzept/inhalte/",
+        "docs/radiasthesie-konzept/inhalte/*.md",
+        "docs/radiasthesie-konzept/inhalte/.",
+        "docs/radiasthesie-konzept/recherche/quellen.json"
+      ]
+    },
+    {
+      "file": "scripts/generate-radiasthesie-pages.cjs",
+      "bytes": 20842,
+      "path_literals": [
+        "assets/favicon.svg"
+      ]
+    },
+    {
+      "file": "scripts/generate-tarot-data.cjs",
+      "bytes": 7416,
+      "path_literals": [
+        "docs/tarot-deck-nachtatelier",
+        "docs/tarot-deck-nachtatelier.",
+        "docs/tarot-deck-nachtatelier/_work/texts.json",
+        "docs/tarot-deck-nachtatelier/manifest-assets.json"
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "path": "js/modules/_tarot_old.js",
+      "lines": 137,
+      "bytes": 5897,
+      "classes": [
+        {
+          "name": "TarotModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 2,
+          "end_line": 136,
+          "lines": 135
+        }
+      ],
+      "functions": [],
+      "class_methods": [
+        {
+          "class": "TarotModule",
+          "name": "constructor",
+          "line": 3,
+          "end_line": 8
+        },
+        {
+          "class": "TarotModule",
+          "name": "init",
+          "line": 10,
+          "end_line": 15
+        },
+        {
+          "class": "TarotModule",
+          "name": "renderGrid",
+          "line": 17,
+          "end_line": 46
+        },
+        {
+          "class": "TarotModule",
+          "name": "openCardModal",
+          "line": 48,
+          "end_line": 77
+        },
+        {
+          "class": "TarotModule",
+          "name": "setupEventListeners",
+          "line": 79,
+          "end_line": 89
+        },
+        {
+          "class": "TarotModule",
+          "name": "showDrawnCards",
+          "line": 91,
+          "end_line": 110
+        },
+        {
+          "class": "TarotModule",
+          "name": "filterCards",
+          "line": 112,
+          "end_line": 131
+        },
+        {
+          "class": "TarotModule",
+          "name": "onShow",
+          "line": 133,
+          "end_line": 135
+        }
+      ],
+      "imports": []
+    },
+    {
+      "path": "js/modules/astrologie-format.js",
+      "lines": 157,
+      "bytes": 6578,
+      "classes": [],
+      "functions": [
+        {
+          "name": "kennzeichnung",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 54,
+          "end_line": 62,
+          "lines": 9
+        },
+        {
+          "name": "sourceMarker",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 65,
+          "end_line": 67,
+          "lines": 3
+        },
+        {
+          "name": "inlineText",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 70,
+          "end_line": 74,
+          "lines": 5
+        },
+        {
+          "name": "richText",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 77,
+          "end_line": 84,
+          "lines": 8
+        },
+        {
+          "name": "bulletList",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 88,
+          "end_line": 91,
+          "lines": 4
+        },
+        {
+          "name": "numberedList",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 93,
+          "end_line": 96,
+          "lines": 4
+        },
+        {
+          "name": "metaList",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 99,
+          "end_line": 110,
+          "lines": 12
+        },
+        {
+          "name": "details",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 112,
+          "end_line": 117,
+          "lines": 6
+        },
+        {
+          "name": "badge",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 119,
+          "end_line": 121,
+          "lines": 3
+        },
+        {
+          "name": "chip",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 123,
+          "end_line": 125,
+          "lines": 3
+        },
+        {
+          "name": "breadcrumb",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 127,
+          "end_line": 138,
+          "lines": 12
+        },
+        {
+          "name": "sourcesPanel",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 140,
+          "end_line": 144,
+          "lines": 5
+        },
+        {
+          "name": "glyph",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 147,
+          "end_line": 151,
+          "lines": 5
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/astrologie-model.js",
+      "lines": 286,
+      "bytes": 9276,
+      "classes": [],
+      "functions": [
+        {
+          "name": "normalize",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 97,
+          "end_line": 106,
+          "lines": 10
+        },
+        {
+          "name": "createModel",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 120,
+          "end_line": 285,
+          "lines": 166
+        }
+      ],
+      "class_methods": [],
+      "imports": [
+        {
+          "specifier": "./astrologie-format.js",
+          "names": [
+            "ROUTE"
+          ],
+          "line": 9
+        }
+      ]
+    },
+    {
+      "path": "js/modules/astrologie-views-reference.js",
+      "lines": 615,
+      "bytes": 29593,
+      "classes": [],
+      "functions": [
+        {
+          "name": "renderGrundlagenIndex",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 26,
+          "end_line": 82,
+          "lines": 57
+        },
+        {
+          "name": "renderGrundlagenDetail",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 84,
+          "end_line": 116,
+          "lines": 33
+        },
+        {
+          "name": "renderBeispieleIndex",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 120,
+          "end_line": 148,
+          "lines": 29
+        },
+        {
+          "name": "renderBeispieleDetail",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 150,
+          "end_line": 203,
+          "lines": 54
+        },
+        {
+          "name": "renderFaq",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 207,
+          "end_line": 243,
+          "lines": 37
+        },
+        {
+          "name": "renderGlossar",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 249,
+          "end_line": 331,
+          "lines": 83
+        },
+        {
+          "name": "renderQuellen",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 335,
+          "end_line": 396,
+          "lines": 62
+        },
+        {
+          "name": "renderMethodik",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 400,
+          "end_line": 483,
+          "lines": 84
+        },
+        {
+          "name": "renderSuche",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 487,
+          "end_line": 551,
+          "lines": 65
+        },
+        {
+          "name": "renderNotFound",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 555,
+          "end_line": 594,
+          "lines": 40
+        },
+        {
+          "name": "renderFailure",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 596,
+          "end_line": 612,
+          "lines": 17
+        }
+      ],
+      "class_methods": [],
+      "imports": [
+        {
+          "specifier": "./astrologie-format.js",
+          "names": [
+            "ROUTE",
+            "badge",
+            "bulletList",
+            "escapeHtml",
+            "inlineText",
+            "kennzeichnung",
+            "metaList",
+            "numberedList",
+            "richText"
+          ],
+          "line": 4
+        },
+        {
+          "specifier": "./astrologie-model.js",
+          "names": [
+            "CATEGORY",
+            "label"
+          ],
+          "line": 15
+        },
+        {
+          "specifier": "./astrologie-views.js",
+          "names": [
+            "crossReferences",
+            "pageShell",
+            "section",
+            "sourcesPanel"
+          ],
+          "line": 16
+        }
+      ]
+    },
+    {
+      "path": "js/modules/astrologie-views.js",
+      "lines": 767,
+      "bytes": 35715,
+      "classes": [],
+      "functions": [
+        {
+          "name": "pageShell",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 30,
+          "end_line": 69,
+          "lines": 40
+        },
+        {
+          "name": "section",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 72,
+          "end_line": 77,
+          "lines": 6
+        },
+        {
+          "name": "sourcesPanel",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 80,
+          "end_line": 108,
+          "lines": 29
+        },
+        {
+          "name": "crossReferences",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 111,
+          "end_line": 121,
+          "lines": 11
+        },
+        {
+          "name": "pairList",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 124,
+          "end_line": 129,
+          "lines": 6
+        },
+        {
+          "name": "renderHub",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 139,
+          "end_line": 259,
+          "lines": 121
+        },
+        {
+          "name": "renderLernpfadIndex",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 263,
+          "end_line": 298,
+          "lines": 36
+        },
+        {
+          "name": "renderLernpfadDetail",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 300,
+          "end_line": 355,
+          "lines": 56
+        },
+        {
+          "name": "renderZeichenIndex",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 359,
+          "end_line": 437,
+          "lines": 79
+        },
+        {
+          "name": "renderZeichenDetail",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 439,
+          "end_line": 502,
+          "lines": 64
+        },
+        {
+          "name": "renderFaktorenIndex",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 506,
+          "end_line": 558,
+          "lines": 53
+        },
+        {
+          "name": "renderFaktorenDetail",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 560,
+          "end_line": 610,
+          "lines": 51
+        },
+        {
+          "name": "renderHaeuserIndex",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 614,
+          "end_line": 644,
+          "lines": 31
+        },
+        {
+          "name": "renderHaeuserDetail",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 646,
+          "end_line": 691,
+          "lines": 46
+        },
+        {
+          "name": "renderAspekteIndex",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 695,
+          "end_line": 721,
+          "lines": 27
+        },
+        {
+          "name": "renderAspekteDetail",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 723,
+          "end_line": 766,
+          "lines": 44
+        }
+      ],
+      "class_methods": [],
+      "imports": [
+        {
+          "specifier": "./astrologie-format.js",
+          "names": [
+            "ROUTE",
+            "breadcrumb",
+            "details",
+            "escapeHtml",
+            "inlineText",
+            "kennzeichnung",
+            "metaList",
+            "richText",
+            "badge",
+            "bulletList",
+            "numberedList",
+            "textGlyph"
+          ],
+          "line": 7
+        },
+        {
+          "specifier": "./astrologie-model.js",
+          "names": [
+            "CATEGORY",
+            "label"
+          ],
+          "line": 21
+        }
+      ]
+    },
+    {
+      "path": "js/modules/astrologie.js",
+      "lines": 311,
+      "bytes": 10979,
+      "classes": [
+        {
+          "name": "AstrologieModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 53,
+          "end_line": 308,
+          "lines": 256
+        }
+      ],
+      "functions": [
+        {
+          "name": "debounce",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 42,
+          "end_line": 51,
+          "lines": 10
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "AstrologieModule",
+          "name": "constructor",
+          "line": 54,
+          "end_line": 60
+        },
+        {
+          "class": "AstrologieModule",
+          "name": "load",
+          "line": 68,
+          "end_line": 82
+        },
+        {
+          "class": "AstrologieModule",
+          "name": "show",
+          "line": 89,
+          "end_line": 108
+        },
+        {
+          "class": "AstrologieModule",
+          "name": "onShow",
+          "line": 110,
+          "end_line": 112
+        },
+        {
+          "class": "AstrologieModule",
+          "name": "focusTitle",
+          "line": 114,
+          "end_line": 118
+        },
+        {
+          "class": "AstrologieModule",
+          "name": "resolveView",
+          "line": 120,
+          "end_line": 184
+        },
+        {
+          "class": "AstrologieModule",
+          "name": "syncState",
+          "line": 193,
+          "end_line": 196
+        },
+        {
+          "class": "AstrologieModule",
+          "name": "currentRoute",
+          "line": 199,
+          "end_line": 203
+        },
+        {
+          "class": "AstrologieModule",
+          "name": "bind",
+          "line": 205,
+          "end_line": 273
+        },
+        {
+          "class": "AstrologieModule",
+          "name": "rerenderPreservingFocus",
+          "line": 276,
+          "end_line": 307
+        }
+      ],
+      "imports": [
+        {
+          "specifier": "./astrologie-format.js",
+          "names": [
+            "ROUTE"
+          ],
+          "line": 8
+        },
+        {
+          "specifier": "./astrologie-model.js",
+          "names": [
+            "createModel"
+          ],
+          "line": 9
+        },
+        {
+          "specifier": "./astrologie-views.js",
+          "names": [
+            "renderAspekteDetail",
+            "renderAspekteIndex",
+            "renderFaktorenDetail",
+            "renderFaktorenIndex",
+            "renderHaeuserDetail",
+            "renderHaeuserIndex",
+            "renderHub",
+            "renderLernpfadDetail",
+            "renderLernpfadIndex",
+            "renderZeichenDetail",
+            "renderZeichenIndex"
+          ],
+          "line": 10
+        },
+        {
+          "specifier": "./astrologie-views-reference.js",
+          "names": [
+            "renderBeispieleDetail",
+            "renderBeispieleIndex",
+            "renderFaq",
+            "renderFailure",
+            "renderGlossar",
+            "renderGrundlagenDetail",
+            "renderGrundlagenIndex",
+            "renderMethodik",
+            "renderNotFound",
+            "renderQuellen",
+            "renderSuche"
+          ],
+          "line": 23
+        }
+      ]
+    },
+    {
+      "path": "js/modules/blog.js",
+      "lines": 152,
+      "bytes": 5317,
+      "classes": [
+        {
+          "name": "BlogModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 3,
+          "end_line": 151,
+          "lines": 149
+        }
+      ],
+      "functions": [],
+      "class_methods": [
+        {
+          "class": "BlogModule",
+          "name": "constructor",
+          "line": 4,
+          "end_line": 10
+        },
+        {
+          "class": "BlogModule",
+          "name": "init",
+          "line": 12,
+          "end_line": 17
+        },
+        {
+          "class": "BlogModule",
+          "name": "renderGrid",
+          "line": 19,
+          "end_line": 23
+        },
+        {
+          "class": "BlogModule",
+          "name": "renderCards",
+          "line": 25,
+          "end_line": 61
+        },
+        {
+          "class": "BlogModule",
+          "name": "syncArticleStatus",
+          "line": 65,
+          "end_line": 81
+        },
+        {
+          "class": "BlogModule",
+          "name": "findArticle",
+          "line": 83,
+          "end_line": 85
+        },
+        {
+          "class": "BlogModule",
+          "name": "openArticleModal",
+          "line": 87,
+          "end_line": 112
+        },
+        {
+          "class": "BlogModule",
+          "name": "setupEventListeners",
+          "line": 114,
+          "end_line": 120
+        },
+        {
+          "class": "BlogModule",
+          "name": "filterArticles",
+          "line": 122,
+          "end_line": 136
+        },
+        {
+          "class": "BlogModule",
+          "name": "updateGrid",
+          "line": 138,
+          "end_line": 148
+        },
+        {
+          "class": "BlogModule",
+          "name": "onShow",
+          "line": 150,
+          "end_line": 150
+        }
+      ],
+      "imports": [
+        {
+          "specifier": "../article-content.js",
+          "names": [
+            "renderArticleContent"
+          ],
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "js/modules/crystals.js",
+      "lines": 556,
+      "bytes": 23533,
+      "classes": [
+        {
+          "name": "CrystalsModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 2,
+          "end_line": 549,
+          "lines": 548
+        }
+      ],
+      "functions": [
+        {
+          "name": "initCrystalsModule",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 552,
+          "end_line": 555,
+          "lines": 4
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "CrystalsModule",
+          "name": "constructor",
+          "line": 3,
+          "end_line": 16
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "init",
+          "line": 18,
+          "end_line": 26
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "loadData",
+          "line": 28,
+          "end_line": 40
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "normalize",
+          "line": 42,
+          "end_line": 85
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "mapColor",
+          "line": 87,
+          "end_line": 113
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "emojiForName",
+          "line": 115,
+          "end_line": 130
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "loadFavorites",
+          "line": 132,
+          "end_line": 140
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "saveFavorites",
+          "line": 142,
+          "end_line": 147
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "toggleFavorite",
+          "line": 149,
+          "end_line": 155
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "updateFavCounter",
+          "line": 157,
+          "end_line": 174
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "buildFilterUI",
+          "line": 176,
+          "end_line": 238
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "renderFilterChips",
+          "line": 240,
+          "end_line": 282
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "applyFilters",
+          "line": 284,
+          "end_line": 303
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "escapeHtml",
+          "line": 305,
+          "end_line": 311
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "levelPaths",
+          "line": 314,
+          "end_line": 317
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "figureHtml",
+          "line": 320,
+          "end_line": 339
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "renderGrid",
+          "line": 341,
+          "end_line": 460
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "setViewMode",
+          "line": 462,
+          "end_line": 469
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "creditHtml",
+          "line": 471,
+          "end_line": 485
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "figureDetailHtml",
+          "line": 487,
+          "end_line": 499
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "openCrystalModal",
+          "line": 501,
+          "end_line": 533
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "closeCrystalModal",
+          "line": 535,
+          "end_line": 537
+        },
+        {
+          "class": "CrystalsModule",
+          "name": "setupEventListeners",
+          "line": 539,
+          "end_line": 548
+        }
+      ],
+      "imports": []
+    },
+    {
+      "path": "js/modules/experiment-labor.js",
+      "lines": 794,
+      "bytes": 30473,
+      "classes": [],
+      "functions": [
+        {
+          "name": "mountExperimentLabor",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 56,
+          "end_line": 793,
+          "lines": 738
+        }
+      ],
+      "class_methods": [],
+      "imports": [
+        {
+          "specifier": "../data/radiasthesie-werkstatt.js",
+          "names": [
+            "WERKSTATT"
+          ],
+          "line": 19
+        },
+        {
+          "specifier": "./radiasthesie-vertraege.js",
+          "names": [
+            "beginTrial",
+            "createRun",
+            "lockPrediction",
+            "revealResult",
+            "serializeEnvelope",
+            "validateRun"
+          ],
+          "line": 20
+        },
+        {
+          "specifier": "./experiment-zufall.js",
+          "names": [
+            "createCryptoRng",
+            "cryptoAvailable",
+            "drawIndex",
+            "randomToken"
+          ],
+          "line": 28
+        },
+        {
+          "specifier": "./experiment-statistik.js",
+          "names": [
+            "answerLabels",
+            "analyseRun",
+            "exportFileName",
+            "formatInterval",
+            "formatNumber",
+            "formatPercent",
+            "formatPValue",
+            "interpretation",
+            "multipleTestingNote",
+            "runsToCsv",
+            "trialRows"
+          ],
+          "line": 29
+        },
+        {
+          "specifier": "./experiment-speicher.js",
+          "names": [
+            "MAX_ANSWERS",
+            "countAnswers",
+            "getLocalStorage",
+            "readRuns",
+            "removeRun",
+            "upsertRun",
+            "verifyStored",
+            "writeRuns"
+          ],
+          "line": 42
+        }
+      ]
+    },
+    {
+      "path": "js/modules/experiment-speicher.js",
+      "lines": 177,
+      "bytes": 6681,
+      "classes": [],
+      "functions": [
+        {
+          "name": "getLocalStorage",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 19,
+          "end_line": 27,
+          "lines": 9
+        },
+        {
+          "name": "countAnswers",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 29,
+          "end_line": 35,
+          "lines": 7
+        },
+        {
+          "name": "upsertRun",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 37,
+          "end_line": 42,
+          "lines": 6
+        },
+        {
+          "name": "removeRun",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 44,
+          "end_line": 46,
+          "lines": 3
+        },
+        {
+          "name": "findRun",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 48,
+          "end_line": 50,
+          "lines": 3
+        },
+        {
+          "name": "isRunArray",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 52,
+          "end_line": 54,
+          "lines": 3
+        },
+        {
+          "name": "readRuns",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 60,
+          "end_line": 107,
+          "lines": 48
+        },
+        {
+          "name": "backup",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 109,
+          "end_line": 126,
+          "lines": 18
+        },
+        {
+          "name": "safeStamp",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 128,
+          "end_line": 136,
+          "lines": 9
+        },
+        {
+          "name": "writeRuns",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 142,
+          "end_line": 164,
+          "lines": 23
+        },
+        {
+          "name": "verifyStored",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 167,
+          "end_line": 176,
+          "lines": 10
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/experiment-statistik.js",
+      "lines": 350,
+      "bytes": 15235,
+      "classes": [],
+      "functions": [
+        {
+          "name": "logFactorial",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 34,
+          "end_line": 40,
+          "lines": 7
+        },
+        {
+          "name": "assertCounts",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 42,
+          "end_line": 49,
+          "lines": 8
+        },
+        {
+          "name": "binomialPmf",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 52,
+          "end_line": 62,
+          "lines": 11
+        },
+        {
+          "name": "binomialExactTwoSided",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 73,
+          "end_line": 89,
+          "lines": 17
+        },
+        {
+          "name": "wilsonInterval",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 92,
+          "end_line": 108,
+          "lines": 17
+        },
+        {
+          "name": "analyseCounts",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 114,
+          "end_line": 135,
+          "lines": 22
+        },
+        {
+          "name": "analyseRun",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 138,
+          "end_line": 157,
+          "lines": 20
+        },
+        {
+          "name": "trialRows",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 160,
+          "end_line": 170,
+          "lines": 11
+        },
+        {
+          "name": "testTypeLabel",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 183,
+          "end_line": 185,
+          "lines": 3
+        },
+        {
+          "name": "answerLabels",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 187,
+          "end_line": 198,
+          "lines": 12
+        },
+        {
+          "name": "formatPercent",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 206,
+          "end_line": 209,
+          "lines": 4
+        },
+        {
+          "name": "formatNumber",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 211,
+          "end_line": 214,
+          "lines": 4
+        },
+        {
+          "name": "formatPValue",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 217,
+          "end_line": 221,
+          "lines": 5
+        },
+        {
+          "name": "formatInterval",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 223,
+          "end_line": 226,
+          "lines": 4
+        },
+        {
+          "name": "interpretation",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 232,
+          "end_line": 270,
+          "lines": 39
+        },
+        {
+          "name": "multipleTestingNote",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 276,
+          "end_line": 282,
+          "lines": 7
+        },
+        {
+          "name": "csvCell",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 302,
+          "end_line": 305,
+          "lines": 4
+        },
+        {
+          "name": "csvNumber",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 307,
+          "end_line": 309,
+          "lines": 3
+        },
+        {
+          "name": "runsToCsv",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 316,
+          "end_line": 343,
+          "lines": 28
+        },
+        {
+          "name": "exportFileName",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 346,
+          "end_line": 349,
+          "lines": 4
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/experiment-zufall.js",
+      "lines": 67,
+      "bytes": 2663,
+      "classes": [],
+      "functions": [
+        {
+          "name": "createCryptoRng",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 19,
+          "end_line": 28,
+          "lines": 10
+        },
+        {
+          "name": "cryptoAvailable",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 31,
+          "end_line": 33,
+          "lines": 3
+        },
+        {
+          "name": "drawIndex",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 39,
+          "end_line": 51,
+          "lines": 13
+        },
+        {
+          "name": "randomToken",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 57,
+          "end_line": 66,
+          "lines": 10
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/farbwelten-loader.js",
+      "lines": 38,
+      "bytes": 1134,
+      "classes": [
+        {
+          "name": "FarbweltenLoader",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 4,
+          "end_line": 37,
+          "lines": 34
+        }
+      ],
+      "functions": [],
+      "class_methods": [
+        {
+          "class": "FarbweltenLoader",
+          "name": "constructor",
+          "line": 5,
+          "end_line": 9
+        },
+        {
+          "class": "FarbweltenLoader",
+          "name": "load",
+          "line": 11,
+          "end_line": 20
+        },
+        {
+          "class": "FarbweltenLoader",
+          "name": "show",
+          "line": 22,
+          "end_line": 32
+        },
+        {
+          "class": "FarbweltenLoader",
+          "name": "onHide",
+          "line": 34,
+          "end_line": 36
+        }
+      ],
+      "imports": []
+    },
+    {
+      "path": "js/modules/farbwelten-model.js",
+      "lines": 187,
+      "bytes": 6670,
+      "classes": [],
+      "functions": [
+        {
+          "name": "resolveView",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 53,
+          "end_line": 78,
+          "lines": 26
+        },
+        {
+          "name": "frequencyThz",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 81,
+          "end_line": 83,
+          "lines": 3
+        },
+        {
+          "name": "photonEnergyEv",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 86,
+          "end_line": 88,
+          "lines": 3
+        },
+        {
+          "name": "formatClock",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 94,
+          "end_line": 100,
+          "lines": 7
+        },
+        {
+          "name": "bandFor",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 113,
+          "end_line": 128,
+          "lines": 16
+        },
+        {
+          "name": "wavelengthToRgb",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 134,
+          "end_line": 166,
+          "lines": 33
+        },
+        {
+          "name": "spectrumAt",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 168,
+          "end_line": 186,
+          "lines": 19
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/farbwelten.js",
+      "lines": 1936,
+      "bytes": 78162,
+      "classes": [
+        {
+          "name": "FarbweltenModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 1461,
+          "end_line": 1935,
+          "lines": 475
+        }
+      ],
+      "functions": [
+        {
+          "name": "h",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 36,
+          "end_line": 54,
+          "lines": 19
+        },
+        {
+          "name": "resolveHref",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 58,
+          "end_line": 72,
+          "lines": 15
+        },
+        {
+          "name": "appendInline",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 75,
+          "end_line": 107,
+          "lines": 33
+        },
+        {
+          "name": "paragraph",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 109,
+          "end_line": 112,
+          "lines": 4
+        },
+        {
+          "name": "facts",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 114,
+          "end_line": 120,
+          "lines": 7
+        },
+        {
+          "name": "timeline",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 122,
+          "end_line": 133,
+          "lines": 12
+        },
+        {
+          "name": "table",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 135,
+          "end_line": 154,
+          "lines": 20
+        },
+        {
+          "name": "swatch",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 156,
+          "end_line": 177,
+          "lines": 22
+        },
+        {
+          "name": "blocks",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 179,
+          "end_line": 240,
+          "lines": 62
+        },
+        {
+          "name": "levelChips",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 242,
+          "end_line": 255,
+          "lines": 14
+        },
+        {
+          "name": "breadcrumb",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 257,
+          "end_line": 272,
+          "lines": 16
+        },
+        {
+          "name": "toc",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 274,
+          "end_line": 283,
+          "lines": 10
+        },
+        {
+          "name": "sourceList",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 285,
+          "end_line": 304,
+          "lines": 20
+        },
+        {
+          "name": "sourcesSection",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 306,
+          "end_line": 312,
+          "lines": 7
+        },
+        {
+          "name": "hero",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 316,
+          "end_line": 366,
+          "lines": 51
+        },
+        {
+          "name": "topicRegisterRow",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 368,
+          "end_line": 382,
+          "lines": 15
+        },
+        {
+          "name": "registerSection",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 384,
+          "end_line": 437,
+          "lines": 54
+        },
+        {
+          "name": "entrySection",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 439,
+          "end_line": 478,
+          "lines": 40
+        },
+        {
+          "name": "toolsSection",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 480,
+          "end_line": 538,
+          "lines": 59
+        },
+        {
+          "name": "methodSection",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 540,
+          "end_line": 558,
+          "lines": 19
+        },
+        {
+          "name": "relatedSection",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 560,
+          "end_line": 568,
+          "lines": 9
+        },
+        {
+          "name": "renderLanding",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 570,
+          "end_line": 592,
+          "lines": 23
+        },
+        {
+          "name": "renderColor",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 594,
+          "end_line": 670,
+          "lines": 77
+        },
+        {
+          "name": "compareBox",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 672,
+          "end_line": 689,
+          "lines": 18
+        },
+        {
+          "name": "otherColors",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 691,
+          "end_line": 728,
+          "lines": 38
+        },
+        {
+          "name": "chakraFigure",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 730,
+          "end_line": 779,
+          "lines": 50
+        },
+        {
+          "name": "chakraPanel",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 781,
+          "end_line": 800,
+          "lines": 20
+        },
+        {
+          "name": "renderChakren",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 802,
+          "end_line": 855,
+          "lines": 54
+        },
+        {
+          "name": "tableWithCaption",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 857,
+          "end_line": 861,
+          "lines": 5
+        },
+        {
+          "name": "spectrumExplorer",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 863,
+          "end_line": 943,
+          "lines": 81
+        },
+        {
+          "name": "renderLight",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 945,
+          "end_line": 986,
+          "lines": 42
+        },
+        {
+          "name": "renderTopic",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 991,
+          "end_line": 1025,
+          "lines": 35
+        },
+        {
+          "name": "toolNav",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1050,
+          "end_line": 1065,
+          "lines": 16
+        },
+        {
+          "name": "colorChoices",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1067,
+          "end_line": 1098,
+          "lines": 32
+        },
+        {
+          "name": "compassPanel",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1100,
+          "end_line": 1164,
+          "lines": 65
+        },
+        {
+          "name": "renderKompass",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1166,
+          "end_line": 1222,
+          "lines": 57
+        },
+        {
+          "name": "meditationReflection",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1224,
+          "end_line": 1231,
+          "lines": 8
+        },
+        {
+          "name": "renderMeditation",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1233,
+          "end_line": 1349,
+          "lines": 117
+        },
+        {
+          "name": "timelineEventSource",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1351,
+          "end_line": 1363,
+          "lines": 13
+        },
+        {
+          "name": "renderTimeline",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1365,
+          "end_line": 1446,
+          "lines": 82
+        },
+        {
+          "name": "renderNotFound",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1448,
+          "end_line": 1457,
+          "lines": 10
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "FarbweltenModule",
+          "name": "constructor",
+          "line": 1462,
+          "end_line": 1468
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "load",
+          "line": 1470,
+          "end_line": 1474
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "show",
+          "line": 1476,
+          "end_line": 1503
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "render",
+          "line": 1505,
+          "end_line": 1529
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "metaFor",
+          "line": 1531,
+          "end_line": 1542
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "canonicalFor",
+          "line": 1546,
+          "end_line": 1561
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "applyMeta",
+          "line": 1563,
+          "end_line": 1579
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "placeStructuredData",
+          "line": 1581,
+          "end_line": 1631
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "focusHeading",
+          "line": 1633,
+          "end_line": 1660
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "scrollToAnchor",
+          "line": 1662,
+          "end_line": 1665
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "syncExplorer",
+          "line": 1667,
+          "end_line": 1669
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "bind",
+          "line": 1672,
+          "end_line": 1740
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "selectCompass",
+          "line": 1744,
+          "end_line": 1754
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "initMeditation",
+          "line": 1758,
+          "end_line": 1770
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "clearMeditationTimer",
+          "line": 1772,
+          "end_line": 1777
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "setMeditationDuration",
+          "line": 1779,
+          "end_line": 1791
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "startMeditation",
+          "line": 1793,
+          "end_line": 1802
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "tickMeditation",
+          "line": 1804,
+          "end_line": 1814
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "pauseMeditation",
+          "line": 1816,
+          "end_line": 1823
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "finishMeditation",
+          "line": 1825,
+          "end_line": 1832
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "stopMeditation",
+          "line": 1834,
+          "end_line": 1842
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "updateMeditationUI",
+          "line": 1844,
+          "end_line": 1874
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "selectMeditationColor",
+          "line": 1876,
+          "end_line": 1886
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "filterTimeline",
+          "line": 1890,
+          "end_line": 1904
+        },
+        {
+          "class": "FarbweltenModule",
+          "name": "selectChakra",
+          "line": 1906,
+          "end_line": 1934
+        }
+      ],
+      "imports": [
+        {
+          "specifier": "../data/farbwelten.js",
+          "names": [
+            "CHAKREN_PAGE",
+            "COMPASS",
+            "FARBWELTEN",
+            "LANDING",
+            "LIGHT_PAGE",
+            "MEDITATION",
+            "SECTION_ORDER",
+            "SOURCES",
+            "TIMELINE",
+            "TOPIC_PAGES"
+          ],
+          "line": 13
+        },
+        {
+          "specifier": "../data/chakren.js",
+          "names": [
+            "CHAKRA_POSITIONS",
+            "CHAKREN"
+          ],
+          "line": 25
+        },
+        {
+          "specifier": "./farbwelten-model.js",
+          "names": [
+            "ROUTE",
+            "VIEW",
+            "formatClock",
+            "resolveView",
+            "spectrumAt"
+          ],
+          "line": 26
+        }
+      ]
+    },
+    {
+      "path": "js/modules/frequenz-chladni.js",
+      "lines": 201,
+      "bytes": 7983,
+      "classes": [],
+      "functions": [
+        {
+          "name": "isValidMode",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 30,
+          "end_line": 33,
+          "lines": 4
+        },
+        {
+          "name": "assertMode",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 39,
+          "end_line": 50,
+          "lines": 12
+        },
+        {
+          "name": "modeValue",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 53,
+          "end_line": 59,
+          "lines": 7
+        },
+        {
+          "name": "buildField",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 66,
+          "end_line": 83,
+          "lines": 18
+        },
+        {
+          "name": "midlineCrossings",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 90,
+          "end_line": 114,
+          "lines": 25
+        },
+        {
+          "name": "modeSymmetry",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 128,
+          "end_line": 139,
+          "lines": 12
+        },
+        {
+          "name": "describeMode",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 146,
+          "end_line": 166,
+          "lines": 21
+        },
+        {
+          "name": "nodeSegments",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 174,
+          "end_line": 200,
+          "lines": 27
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/frequenz-cymatics-view.js",
+      "lines": 280,
+      "bytes": 11187,
+      "classes": [
+        {
+          "name": "CymaticsView",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 51,
+          "end_line": 279,
+          "lines": 229
+        }
+      ],
+      "functions": [
+        {
+          "name": "selectOptions",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 23,
+          "end_line": 29,
+          "lines": 7
+        },
+        {
+          "name": "parseHex",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 31,
+          "end_line": 36,
+          "lines": 6
+        },
+        {
+          "name": "css",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 38,
+          "end_line": 40,
+          "lines": 3
+        },
+        {
+          "name": "mix",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 42,
+          "end_line": 49,
+          "lines": 8
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "CymaticsView",
+          "name": "constructor",
+          "line": 56,
+          "end_line": 69
+        },
+        {
+          "class": "CymaticsView",
+          "name": "navHtml",
+          "line": 71,
+          "end_line": 73
+        },
+        {
+          "class": "CymaticsView",
+          "name": "render",
+          "line": 75,
+          "end_line": 155
+        },
+        {
+          "class": "CymaticsView",
+          "name": "bind",
+          "line": 157,
+          "end_line": 172
+        },
+        {
+          "class": "CymaticsView",
+          "name": "update",
+          "line": 174,
+          "end_line": 196
+        },
+        {
+          "class": "CymaticsView",
+          "name": "drawAll",
+          "line": 198,
+          "end_line": 201
+        },
+        {
+          "class": "CymaticsView",
+          "name": "draw",
+          "line": 203,
+          "end_line": 259
+        },
+        {
+          "class": "CymaticsView",
+          "name": "readPalette",
+          "line": 261,
+          "end_line": 271
+        },
+        {
+          "class": "CymaticsView",
+          "name": "dispose",
+          "line": 273,
+          "end_line": 278
+        }
+      ],
+      "imports": [
+        {
+          "specifier": "./frequenz-chladni.js",
+          "names": [
+            "CHLADNI_MODEL_LABEL",
+            "DEFAULT_MODE_A",
+            "DEFAULT_MODE_B",
+            "MAX_MODE",
+            "MIN_MODE",
+            "assertMode",
+            "buildField",
+            "describeMode",
+            "nodeSegments"
+          ],
+          "line": 8
+        },
+        {
+          "specifier": "./frequenz-nav.js",
+          "names": [
+            "renderViewNav"
+          ],
+          "line": 19
+        }
+      ]
+    },
+    {
+      "path": "js/modules/frequenz-engine.d.ts",
+      "lines": 260,
+      "bytes": 9884,
+      "classes": [],
+      "functions": [],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/frequenz-engine.js",
+      "lines": 1085,
+      "bytes": 39151,
+      "classes": [
+        {
+          "name": "FrequencyEngineImpl",
+          "kind": "class",
+          "exported": false,
+          "top_level": true,
+          "line": 104,
+          "end_line": 1065,
+          "lines": 962
+        }
+      ],
+      "functions": [
+        {
+          "name": "classifyBrowserError",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 69,
+          "end_line": 75,
+          "lines": 7
+        },
+        {
+          "name": "errorInfo",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 77,
+          "end_line": 79,
+          "lines": 3
+        },
+        {
+          "name": "isWebAudioSupported",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 82,
+          "end_line": 86,
+          "lines": 5
+        },
+        {
+          "name": "initialState",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 88,
+          "end_line": 102,
+          "lines": 15
+        },
+        {
+          "name": "createFrequencyEngine",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1068,
+          "end_line": 1070,
+          "lines": 3
+        },
+        {
+          "name": "getFrequencyEngine",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1079,
+          "end_line": 1084,
+          "lines": 6
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "constructor",
+          "line": 128,
+          "end_line": 135
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "state",
+          "line": 137,
+          "end_line": 139
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "subscribe",
+          "line": 169,
+          "end_line": 180
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "isSupported",
+          "line": 275,
+          "end_line": 283
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "play",
+          "line": 684,
+          "end_line": 692
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "playTones",
+          "line": 694,
+          "end_line": 702
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "playBinaural",
+          "line": 704,
+          "end_line": 728
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "stop",
+          "line": 761,
+          "end_line": 770
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "setFrequency",
+          "line": 777,
+          "end_line": 814
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "setWaveform",
+          "line": 816,
+          "end_line": 821
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "setGain",
+          "line": 823,
+          "end_line": 828
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "setBeatDelta",
+          "line": 830,
+          "end_line": 855
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "cancelSweep",
+          "line": 880,
+          "end_line": 883
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "sweep",
+          "line": 933,
+          "end_line": 975
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "getAnalyserData",
+          "line": 998,
+          "end_line": 1009
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "getSpectrumData",
+          "line": 1011,
+          "end_line": 1022
+        },
+        {
+          "class": "FrequencyEngineImpl",
+          "name": "dispose",
+          "line": 1026,
+          "end_line": 1064
+        }
+      ],
+      "imports": []
+    },
+    {
+      "path": "js/modules/frequenz-flags.js",
+      "lines": 52,
+      "bytes": 2242,
+      "classes": [],
+      "functions": [
+        {
+          "name": "resolveFeatures",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 25,
+          "end_line": 40,
+          "lines": 16
+        },
+        {
+          "name": "activeFeatures",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 45,
+          "end_line": 51,
+          "lines": 7
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/frequenz-meditation-model.js",
+      "lines": 283,
+      "bytes": 11409,
+      "classes": [],
+      "functions": [
+        {
+          "name": "findPreset",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 83,
+          "end_line": 85,
+          "lines": 3
+        },
+        {
+          "name": "presetNeedsHeadphones",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 88,
+          "end_line": 90,
+          "lines": 3
+        },
+        {
+          "name": "integerBetween",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 92,
+          "end_line": 94,
+          "lines": 3
+        },
+        {
+          "name": "validateSession",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 101,
+          "end_line": 114,
+          "lines": 14
+        },
+        {
+          "name": "remainingSeconds",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 117,
+          "end_line": 120,
+          "lines": 4
+        },
+        {
+          "name": "formatClock",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 123,
+          "end_line": 130,
+          "lines": 8
+        },
+        {
+          "name": "fadeGainSteps",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 141,
+          "end_line": 159,
+          "lines": 19
+        },
+        {
+          "name": "summarizeSession",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 162,
+          "end_line": 166,
+          "lines": 5
+        },
+        {
+          "name": "nextFavoriteId",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 169,
+          "end_line": 174,
+          "lines": 6
+        },
+        {
+          "name": "cleanName",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 176,
+          "end_line": 180,
+          "lines": 5
+        },
+        {
+          "name": "sanitizeFavorite",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 183,
+          "end_line": 198,
+          "lines": 16
+        },
+        {
+          "name": "sanitizeResume",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 201,
+          "end_line": 212,
+          "lines": 12
+        },
+        {
+          "name": "createMeditationStore",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 219,
+          "end_line": 282,
+          "lines": 64
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/frequenz-meditation-view.js",
+      "lines": 641,
+      "bytes": 25063,
+      "classes": [
+        {
+          "name": "MeditationView",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 53,
+          "end_line": 640,
+          "lines": 588
+        }
+      ],
+      "functions": [
+        {
+          "name": "formatDb",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 41,
+          "end_line": 45,
+          "lines": 5
+        },
+        {
+          "name": "optionList",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 47,
+          "end_line": 51,
+          "lines": 5
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "MeditationView",
+          "name": "constructor",
+          "line": 58,
+          "end_line": 72
+        },
+        {
+          "class": "MeditationView",
+          "name": "navHtml",
+          "line": 76,
+          "end_line": 78
+        },
+        {
+          "class": "MeditationView",
+          "name": "render",
+          "line": 80,
+          "end_line": 208
+        },
+        {
+          "class": "MeditationView",
+          "name": "bind",
+          "line": 210,
+          "end_line": 231
+        },
+        {
+          "class": "MeditationView",
+          "name": "readForm",
+          "line": 235,
+          "end_line": 242
+        },
+        {
+          "class": "MeditationView",
+          "name": "fillForm",
+          "line": 244,
+          "end_line": 251
+        },
+        {
+          "class": "MeditationView",
+          "name": "renderPresetNote",
+          "line": 253,
+          "end_line": 259
+        },
+        {
+          "class": "MeditationView",
+          "name": "showError",
+          "line": 261,
+          "end_line": 266
+        },
+        {
+          "class": "MeditationView",
+          "name": "clearError",
+          "line": 268,
+          "end_line": 270
+        },
+        {
+          "class": "MeditationView",
+          "name": "announce",
+          "line": 272,
+          "end_line": 291
+        },
+        {
+          "class": "MeditationView",
+          "name": "syncControls",
+          "line": 295,
+          "end_line": 303
+        },
+        {
+          "class": "MeditationView",
+          "name": "renderTimer",
+          "line": 305,
+          "end_line": 307
+        },
+        {
+          "class": "MeditationView",
+          "name": "startSession",
+          "line": 309,
+          "end_line": 367
+        },
+        {
+          "class": "MeditationView",
+          "name": "startTimer",
+          "line": 369,
+          "end_line": 383
+        },
+        {
+          "class": "MeditationView",
+          "name": "runFade",
+          "line": 385,
+          "end_line": 403
+        },
+        {
+          "class": "MeditationView",
+          "name": "safeGain",
+          "line": 405,
+          "end_line": 411
+        },
+        {
+          "class": "MeditationView",
+          "name": "finishSession",
+          "line": 413,
+          "end_line": 422
+        },
+        {
+          "class": "MeditationView",
+          "name": "stopSession",
+          "line": 424,
+          "end_line": 432
+        },
+        {
+          "class": "MeditationView",
+          "name": "stopAudio",
+          "line": 434,
+          "end_line": 464
+        },
+        {
+          "class": "MeditationView",
+          "name": "currentGainDb",
+          "line": 471,
+          "end_line": 477
+        },
+        {
+          "class": "MeditationView",
+          "name": "saveInterrupted",
+          "line": 485,
+          "end_line": 497
+        },
+        {
+          "class": "MeditationView",
+          "name": "onInterrupt",
+          "line": 503,
+          "end_line": 509
+        },
+        {
+          "class": "MeditationView",
+          "name": "renderFavorites",
+          "line": 513,
+          "end_line": 536
+        },
+        {
+          "class": "MeditationView",
+          "name": "renderResume",
+          "line": 538,
+          "end_line": 545
+        },
+        {
+          "class": "MeditationView",
+          "name": "saveFavorite",
+          "line": 547,
+          "end_line": 584
+        },
+        {
+          "class": "MeditationView",
+          "name": "loadFavorite",
+          "line": 586,
+          "end_line": 591
+        },
+        {
+          "class": "MeditationView",
+          "name": "deleteFavorite",
+          "line": 593,
+          "end_line": 607
+        },
+        {
+          "class": "MeditationView",
+          "name": "clearResume",
+          "line": 609,
+          "end_line": 613
+        },
+        {
+          "class": "MeditationView",
+          "name": "dispose",
+          "line": 625,
+          "end_line": 639
+        }
+      ],
+      "imports": [
+        {
+          "specifier": "./frequenz-engine.js",
+          "names": [
+            "FREQUENCY_LIMITS"
+          ],
+          "line": 11
+        },
+        {
+          "specifier": "./frequenz-nav.js",
+          "names": [
+            "renderViewNav"
+          ],
+          "line": 12
+        },
+        {
+          "specifier": "./frequenz-meditation-model.js",
+          "names": [
+            "DEFAULT_SESSION",
+            "DURATION_OPTIONS",
+            "FADE_OPTIONS",
+            "MAX_FAVORITES",
+            "MAX_NAME_LENGTH",
+            "SESSION_PRESETS",
+            "createMeditationStore",
+            "fadeGainSteps",
+            "findPreset",
+            "formatClock",
+            "nextFavoriteId",
+            "presetNeedsHeadphones",
+            "remainingSeconds",
+            "summarizeSession",
+            "validateSession"
+          ],
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "js/modules/frequenz-nav.js",
+      "lines": 30,
+      "bytes": 1453,
+      "classes": [],
+      "functions": [
+        {
+          "name": "renderViewNav",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 21,
+          "end_line": 29,
+          "lines": 9
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/frequenz-presets.js",
+      "lines": 289,
+      "bytes": 11964,
+      "classes": [],
+      "functions": [
+        {
+          "name": "isFiniteNumber",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 56,
+          "end_line": 58,
+          "lines": 3
+        },
+        {
+          "name": "text",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 60,
+          "end_line": 63,
+          "lines": 4
+        },
+        {
+          "name": "safeSourceUrl",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 66,
+          "end_line": 75,
+          "lines": 10
+        },
+        {
+          "name": "normalizePlayback",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 77,
+          "end_line": 92,
+          "lines": 16
+        },
+        {
+          "name": "resolvePlayback",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 99,
+          "end_line": 112,
+          "lines": 14
+        },
+        {
+          "name": "normalizeEntry",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 115,
+          "end_line": 146,
+          "lines": 32
+        },
+        {
+          "name": "formatHz",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 149,
+          "end_line": 153,
+          "lines": 5
+        },
+        {
+          "name": "formatRange",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 155,
+          "end_line": 159,
+          "lines": 5
+        },
+        {
+          "name": "parseFrequencyFile",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 165,
+          "end_line": 199,
+          "lines": 35
+        },
+        {
+          "name": "loadFrequencies",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 206,
+          "end_line": 220,
+          "lines": 15
+        },
+        {
+          "name": "createPreferenceStore",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 223,
+          "end_line": 288,
+          "lines": 66
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/frequenz-visualisierung.js",
+      "lines": 180,
+      "bytes": 6215,
+      "classes": [
+        {
+          "name": "FrequenzVisualisierung",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 9,
+          "end_line": 179,
+          "lines": 171
+        }
+      ],
+      "functions": [],
+      "class_methods": [
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "constructor",
+          "line": 10,
+          "end_line": 21
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "setReducedMotion",
+          "line": 23,
+          "end_line": 26
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "render",
+          "line": 29,
+          "end_line": 66
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "drawSamples",
+          "line": 68,
+          "end_line": 86
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "drawStaticWave",
+          "line": 88,
+          "end_line": 108
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "drawSilence",
+          "line": 110,
+          "end_line": 121
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "readColors",
+          "line": 123,
+          "end_line": 139
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "resize",
+          "line": 141,
+          "end_line": 154
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "start",
+          "line": 157,
+          "end_line": 166
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "stop",
+          "line": 168,
+          "end_line": 172
+        },
+        {
+          "class": "FrequenzVisualisierung",
+          "name": "dispose",
+          "line": 174,
+          "end_line": 178
+        }
+      ],
+      "imports": []
+    },
+    {
+      "path": "js/modules/frequenzlabor-loader.js",
+      "lines": 38,
+      "bytes": 1083,
+      "classes": [
+        {
+          "name": "FrequenzlaborLoader",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 4,
+          "end_line": 37,
+          "lines": 34
+        }
+      ],
+      "functions": [],
+      "class_methods": [
+        {
+          "class": "FrequenzlaborLoader",
+          "name": "constructor",
+          "line": 5,
+          "end_line": 9
+        },
+        {
+          "class": "FrequenzlaborLoader",
+          "name": "load",
+          "line": 11,
+          "end_line": 20
+        },
+        {
+          "class": "FrequenzlaborLoader",
+          "name": "show",
+          "line": 22,
+          "end_line": 32
+        },
+        {
+          "class": "FrequenzlaborLoader",
+          "name": "onHide",
+          "line": 34,
+          "end_line": 36
+        }
+      ],
+      "imports": []
+    },
+    {
+      "path": "js/modules/frequenzlabor.js",
+      "lines": 1243,
+      "bytes": 58418,
+      "classes": [
+        {
+          "name": "FrequenzlaborModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 144,
+          "end_line": 1226,
+          "lines": 1083
+        }
+      ],
+      "functions": [
+        {
+          "name": "resolveDocHref",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 59,
+          "end_line": 62,
+          "lines": 4
+        },
+        {
+          "name": "h",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 116,
+          "end_line": 133,
+          "lines": 18
+        },
+        {
+          "name": "clamp",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 135,
+          "end_line": 137,
+          "lines": 3
+        },
+        {
+          "name": "formatDb",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 139,
+          "end_line": 142,
+          "lines": 4
+        },
+        {
+          "name": "installDebugHandle",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1235,
+          "end_line": 1242,
+          "lines": 8
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "FrequenzlaborModule",
+          "name": "constructor",
+          "line": 145,
+          "end_line": 202
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "load",
+          "line": 205,
+          "end_line": 219
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "show",
+          "line": 221,
+          "end_line": 284
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "renderCymatics",
+          "line": 287,
+          "end_line": 296
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "renderMeditation",
+          "line": 298,
+          "end_line": 308
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "disposeFeatureView",
+          "line": 310,
+          "end_line": 313
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "onHide",
+          "line": 315,
+          "end_line": 320
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "halt",
+          "line": 323,
+          "end_line": 337
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "announce",
+          "line": 339,
+          "end_line": 351
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "engineErrorText",
+          "line": 353,
+          "end_line": 356
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "showError",
+          "line": 358,
+          "end_line": 366
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "persist",
+          "line": 368,
+          "end_line": 371
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "renderHub",
+          "line": 375,
+          "end_line": 456
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "collectHubRefs",
+          "line": 458,
+          "end_line": 473
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "fillPresetSelect",
+          "line": 475,
+          "end_line": 494
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "fillDisclaimer",
+          "line": 496,
+          "end_line": 504
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "bindHub",
+          "line": 506,
+          "end_line": 523
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "renderLibrary",
+          "line": 525,
+          "end_line": 540
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "entryNode",
+          "line": 542,
+          "end_line": 587
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "offlineSource",
+          "line": 592,
+          "end_line": 595
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "loadQuellen",
+          "line": 597,
+          "end_line": 602
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "readQuellen",
+          "line": 604,
+          "end_line": 616
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "renderQuellen",
+          "line": 619,
+          "end_line": 654
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "renderLab",
+          "line": 658,
+          "end_line": 808
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "collectLabRefs",
+          "line": 810,
+          "end_line": 854
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "bindLab",
+          "line": 856,
+          "end_line": 927
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "hzToSlider",
+          "line": 931,
+          "end_line": 934
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "sliderToHz",
+          "line": 936,
+          "end_line": 939
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "roundedHz",
+          "line": 941,
+          "end_line": 943
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "setFrequency",
+          "line": 945,
+          "end_line": 956
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "play",
+          "line": 958,
+          "end_line": 968
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "playFixed",
+          "line": 970,
+          "end_line": 980
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "playBeat",
+          "line": 982,
+          "end_line": 993
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "playBinaural",
+          "line": 995,
+          "end_line": 1012
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "playEntry",
+          "line": 1014,
+          "end_line": 1039
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "stopTone",
+          "line": 1041,
+          "end_line": 1046
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "pause",
+          "line": 1053,
+          "end_line": 1060
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "resume",
+          "line": 1063,
+          "end_line": 1070
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "startSweep",
+          "line": 1072,
+          "end_line": 1093
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "syncFrequency",
+          "line": 1097,
+          "end_line": 1104
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "syncGain",
+          "line": 1106,
+          "end_line": 1111
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "syncMetrics",
+          "line": 1113,
+          "end_line": 1121
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "syncTransport",
+          "line": 1128,
+          "end_line": 1142
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "syncControls",
+          "line": 1144,
+          "end_line": 1153
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "updateBeatInfo",
+          "line": 1155,
+          "end_line": 1160
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "onEngineState",
+          "line": 1162,
+          "end_line": 1198
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "startSweepProgress",
+          "line": 1200,
+          "end_line": 1215
+        },
+        {
+          "class": "FrequenzlaborModule",
+          "name": "stopSweepProgress",
+          "line": 1217,
+          "end_line": 1225
+        }
+      ],
+      "imports": [
+        {
+          "specifier": "./frequenz-engine.js",
+          "names": [
+            "FREQUENCY_LIMITS",
+            "getFrequencyEngine"
+          ],
+          "line": 6
+        },
+        {
+          "specifier": "./frequenz-flags.js",
+          "names": [
+            "activeFeatures"
+          ],
+          "line": 7
+        },
+        {
+          "specifier": "./frequenz-presets.js",
+          "names": [
+            "BINAURAL_PRESETS",
+            "EVIDENZ_STUFEN",
+            "createPreferenceStore",
+            "formatHz",
+            "formatRange",
+            "loadFrequencies"
+          ],
+          "line": 8
+        },
+        {
+          "specifier": "./frequenz-visualisierung.js",
+          "names": [
+            "FrequenzVisualisierung"
+          ],
+          "line": 16
+        },
+        {
+          "specifier": "./frequenz-nav.js",
+          "names": [
+            "renderViewNav"
+          ],
+          "line": 17
+        },
+        {
+          "specifier": "./markdown-lite.js",
+          "names": [
+            "renderMarkdown",
+            "escapeHtml"
+          ],
+          "line": 18
+        }
+      ]
+    },
+    {
+      "path": "js/modules/journal-speicher.js",
+      "lines": 492,
+      "bytes": 17573,
+      "classes": [],
+      "functions": [
+        {
+          "name": "confidenceLabel",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 38,
+          "end_line": 42,
+          "lines": 5
+        },
+        {
+          "name": "getLocalStorage",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 47,
+          "end_line": 55,
+          "lines": 9
+        },
+        {
+          "name": "sortEntries",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 60,
+          "end_line": 69,
+          "lines": 10
+        },
+        {
+          "name": "filterEntries",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 71,
+          "end_line": 75,
+          "lines": 5
+        },
+        {
+          "name": "countExperimentEntries",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 77,
+          "end_line": 79,
+          "lines": 3
+        },
+        {
+          "name": "findEntry",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 81,
+          "end_line": 83,
+          "lines": 3
+        },
+        {
+          "name": "sanitizeEntry",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 104,
+          "end_line": 111,
+          "lines": 8
+        },
+        {
+          "name": "upsertEntry",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 113,
+          "end_line": 116,
+          "lines": 4
+        },
+        {
+          "name": "removeEntry",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 118,
+          "end_line": 120,
+          "lines": 3
+        },
+        {
+          "name": "formatDateDe",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 123,
+          "end_line": 127,
+          "lines": 5
+        },
+        {
+          "name": "isEntryArray",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 131,
+          "end_line": 133,
+          "lines": 3
+        },
+        {
+          "name": "readEntries",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 140,
+          "end_line": 195,
+          "lines": 56
+        },
+        {
+          "name": "backup",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 197,
+          "end_line": 212,
+          "lines": 16
+        },
+        {
+          "name": "safeStamp",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 214,
+          "end_line": 222,
+          "lines": 9
+        },
+        {
+          "name": "writeEntries",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 228,
+          "end_line": 256,
+          "lines": 29
+        },
+        {
+          "name": "trimmed",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 260,
+          "end_line": 262,
+          "lines": 3
+        },
+        {
+          "name": "buildEntry",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 272,
+          "end_line": 312,
+          "lines": 41
+        },
+        {
+          "name": "csvCell",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 329,
+          "end_line": 332,
+          "lines": 4
+        },
+        {
+          "name": "toCsv",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 339,
+          "end_line": 361,
+          "lines": 23
+        },
+        {
+          "name": "toJsonText",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 364,
+          "end_line": 367,
+          "lines": 4
+        },
+        {
+          "name": "parseImport",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 373,
+          "end_line": 401,
+          "lines": 29
+        },
+        {
+          "name": "mergeEntries",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 407,
+          "end_line": 430,
+          "lines": 24
+        },
+        {
+          "name": "listStoredKeys",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 435,
+          "end_line": 458,
+          "lines": 24
+        },
+        {
+          "name": "deleteAllStoredData",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 466,
+          "end_line": 491,
+          "lines": 26
+        }
+      ],
+      "class_methods": [],
+      "imports": [
+        {
+          "specifier": "./radiasthesie-vertraege.js",
+          "names": [
+            "JOURNAL_LIMITS",
+            "createEntry",
+            "importEnvelope",
+            "serializeEnvelope",
+            "validateJournalEntry"
+          ],
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "js/modules/markdown-lite.js",
+      "lines": 274,
+      "bytes": 10201,
+      "classes": [],
+      "functions": [
+        {
+          "name": "escapeHtml",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 21,
+          "end_line": 23,
+          "lines": 3
+        },
+        {
+          "name": "safeHref",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 26,
+          "end_line": 31,
+          "lines": 6
+        },
+        {
+          "name": "trimUrl",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 33,
+          "end_line": 49,
+          "lines": 17
+        },
+        {
+          "name": "renderEmphasis",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 51,
+          "end_line": 55,
+          "lines": 5
+        },
+        {
+          "name": "renderInline",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 57,
+          "end_line": 81,
+          "lines": 25
+        },
+        {
+          "name": "restore",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 83,
+          "end_line": 89,
+          "lines": 7
+        },
+        {
+          "name": "splitRow",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 100,
+          "end_line": 118,
+          "lines": 19
+        },
+        {
+          "name": "alignmentOf",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 120,
+          "end_line": 127,
+          "lines": 8
+        },
+        {
+          "name": "plainText",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 129,
+          "end_line": 135,
+          "lines": 7
+        },
+        {
+          "name": "isTableStart",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 137,
+          "end_line": 139,
+          "lines": 3
+        },
+        {
+          "name": "renderMarkdown",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 150,
+          "end_line": 273,
+          "lines": 124
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/moon.js",
+      "lines": 704,
+      "bytes": 30258,
+      "classes": [
+        {
+          "name": "MoonModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 141,
+          "end_line": 703,
+          "lines": 563
+        }
+      ],
+      "functions": [
+        {
+          "name": "moonPath",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 37,
+          "end_line": 57,
+          "lines": 21
+        },
+        {
+          "name": "moonDisc",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 61,
+          "end_line": 82,
+          "lines": 22
+        },
+        {
+          "name": "phaseGlyph",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 85,
+          "end_line": 92,
+          "lines": 8
+        },
+        {
+          "name": "relativeDays",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 96,
+          "end_line": 102,
+          "lines": 7
+        },
+        {
+          "name": "eventStamp",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 104,
+          "end_line": 109,
+          "lines": 6
+        },
+        {
+          "name": "sampleIllumination",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 116,
+          "end_line": 135,
+          "lines": 20
+        },
+        {
+          "name": "sampleWaxing",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 137,
+          "end_line": 139,
+          "lines": 3
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "MoonModule",
+          "name": "constructor",
+          "line": 142,
+          "end_line": 152
+        },
+        {
+          "class": "MoonModule",
+          "name": "init",
+          "line": 154,
+          "end_line": 200
+        },
+        {
+          "class": "MoonModule",
+          "name": "renderNow",
+          "line": 203,
+          "end_line": 279
+        },
+        {
+          "class": "MoonModule",
+          "name": "renderTimeline",
+          "line": 281,
+          "end_line": 308
+        },
+        {
+          "class": "MoonModule",
+          "name": "renderRituals",
+          "line": 310,
+          "end_line": 328
+        },
+        {
+          "class": "MoonModule",
+          "name": "renderCalendar",
+          "line": 331,
+          "end_line": 399
+        },
+        {
+          "class": "MoonModule",
+          "name": "monthName",
+          "line": 401,
+          "end_line": 405
+        },
+        {
+          "class": "MoonModule",
+          "name": "renderLegend",
+          "line": 407,
+          "end_line": 415
+        },
+        {
+          "class": "MoonModule",
+          "name": "renderDayDetail",
+          "line": 417,
+          "end_line": 447
+        },
+        {
+          "class": "MoonModule",
+          "name": "selectDay",
+          "line": 449,
+          "end_line": 464
+        },
+        {
+          "class": "MoonModule",
+          "name": "shiftMonth",
+          "line": 466,
+          "end_line": 495
+        },
+        {
+          "class": "MoonModule",
+          "name": "focusFirstDay",
+          "line": 497,
+          "end_line": 504
+        },
+        {
+          "class": "MoonModule",
+          "name": "goToday",
+          "line": 506,
+          "end_line": 514
+        },
+        {
+          "class": "MoonModule",
+          "name": "bindControls",
+          "line": 516,
+          "end_line": 548
+        },
+        {
+          "class": "MoonModule",
+          "name": "renderStaticContent",
+          "line": 551,
+          "end_line": 602
+        },
+        {
+          "class": "MoonModule",
+          "name": "setupIcal",
+          "line": 605,
+          "end_line": 632
+        },
+        {
+          "class": "MoonModule",
+          "name": "startClock",
+          "line": 634,
+          "end_line": 644
+        },
+        {
+          "class": "MoonModule",
+          "name": "syncClock",
+          "line": 653,
+          "end_line": 680
+        },
+        {
+          "class": "MoonModule",
+          "name": "renderFailure",
+          "line": 682,
+          "end_line": 693
+        },
+        {
+          "class": "MoonModule",
+          "name": "onShow",
+          "line": 695,
+          "end_line": 702
+        }
+      ],
+      "imports": [
+        {
+          "specifier": "../data/moon.js",
+          "names": [
+            "DEEP_DIVE",
+            "PHASE_CONTENT",
+            "PHASE_ORDER",
+            "SOURCES",
+            "moonRituals"
+          ],
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "js/modules/pendel-journal.js",
+      "lines": 939,
+      "bytes": 36554,
+      "classes": [],
+      "functions": [
+        {
+          "name": "mountPendelJournal",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 75,
+          "end_line": 938,
+          "lines": 864
+        }
+      ],
+      "class_methods": [],
+      "imports": [
+        {
+          "specifier": "../data/radiasthesie-werkstatt.js",
+          "names": [
+            "WERKSTATT"
+          ],
+          "line": 16
+        },
+        {
+          "specifier": "./radiasthesie-vertraege.js",
+          "names": [
+            "entryFromRun",
+            "runSummary",
+            "serializeEnvelope",
+            "validateJournalEntry",
+            "validateRun"
+          ],
+          "line": 17
+        },
+        {
+          "specifier": "./experiment-statistik.js",
+          "names": [
+            "exportFileName",
+            "formatNumber",
+            "formatPercent"
+          ],
+          "line": 24
+        },
+        {
+          "specifier": "./experiment-speicher.js",
+          "names": [
+            "readRuns"
+          ],
+          "line": 25
+        },
+        {
+          "specifier": "./journal-speicher.js",
+          "names": [
+            "MAX_ENTRIES",
+            "MAX_IMPORT_BYTES",
+            "buildEntry",
+            "confidenceLabel",
+            "countExperimentEntries",
+            "deleteAllStoredData",
+            "filterEntries",
+            "findEntry",
+            "formatDateDe",
+            "getLocalStorage",
+            "listStoredKeys",
+            "mergeEntries",
+            "parseImport",
+            "readEntries",
+            "removeEntry",
+            "sortEntries",
+            "toCsv",
+            "toJsonText",
+            "upsertEntry",
+            "writeEntries"
+          ],
+          "line": 26
+        }
+      ]
+    },
+    {
+      "path": "js/modules/pendel-simulator.js",
+      "lines": 626,
+      "bytes": 23736,
+      "classes": [],
+      "functions": [
+        {
+          "name": "assertFinite",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 56,
+          "end_line": 61,
+          "lines": 6
+        },
+        {
+          "name": "assertRange",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 63,
+          "end_line": 69,
+          "lines": 7
+        },
+        {
+          "name": "validateLength",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 71,
+          "end_line": 73,
+          "lines": 3
+        },
+        {
+          "name": "validateAmplitudeDeg",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 75,
+          "end_line": 77,
+          "lines": 3
+        },
+        {
+          "name": "validateDamping",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 79,
+          "end_line": 81,
+          "lines": 3
+        },
+        {
+          "name": "validateGravity",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 83,
+          "end_line": 87,
+          "lines": 5
+        },
+        {
+          "name": "normalizeParams",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 90,
+          "end_line": 96,
+          "lines": 7
+        },
+        {
+          "name": "periodSmallAngle",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 104,
+          "end_line": 108,
+          "lines": 5
+        },
+        {
+          "name": "angularFrequency",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 111,
+          "end_line": 115,
+          "lines": 5
+        },
+        {
+          "name": "periodDamped",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 121,
+          "end_line": 127,
+          "lines": 7
+        },
+        {
+          "name": "createState",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 136,
+          "end_line": 148,
+          "lines": 13
+        },
+        {
+          "name": "derivatives",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 151,
+          "end_line": 154,
+          "lines": 4
+        },
+        {
+          "name": "stepFixed",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 157,
+          "end_line": 171,
+          "lines": 15
+        },
+        {
+          "name": "advance",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 180,
+          "end_line": 197,
+          "lines": 18
+        },
+        {
+          "name": "specificEnergy",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 200,
+          "end_line": 203,
+          "lines": 4
+        },
+        {
+          "name": "createPeriodMeter",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 215,
+          "end_line": 217,
+          "lines": 3
+        },
+        {
+          "name": "updatePeriodMeter",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 219,
+          "end_line": 231,
+          "lines": 13
+        },
+        {
+          "name": "simulate",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 237,
+          "end_line": 271,
+          "lines": 35
+        },
+        {
+          "name": "formatNumber",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 278,
+          "end_line": 281,
+          "lines": 4
+        },
+        {
+          "name": "mountPendulumSimulator",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 302,
+          "end_line": 625,
+          "lines": 324
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/pendeltafel-model.js",
+      "lines": 591,
+      "bytes": 22036,
+      "classes": [],
+      "functions": [
+        {
+          "name": "escapeXml",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 176,
+          "end_line": 191,
+          "lines": 16
+        },
+        {
+          "name": "utf8Bytes",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 193,
+          "end_line": 198,
+          "lines": 6
+        },
+        {
+          "name": "isPlainObject",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 200,
+          "end_line": 202,
+          "lines": 3
+        },
+        {
+          "name": "hasControlCharacter",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 204,
+          "end_line": 210,
+          "lines": 7
+        },
+        {
+          "name": "hasMarkupCharacter",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 212,
+          "end_line": 214,
+          "lines": 3
+        },
+        {
+          "name": "labelRadiusFor",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 217,
+          "end_line": 220,
+          "lines": 4
+        },
+        {
+          "name": "chordFor",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 223,
+          "end_line": 225,
+          "lines": 3
+        },
+        {
+          "name": "maxLabelLengthFor",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 232,
+          "end_line": 238,
+          "lines": 7
+        },
+        {
+          "name": "labelFontSize",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 241,
+          "end_line": 246,
+          "lines": 6
+        },
+        {
+          "name": "fitSingleLine",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 248,
+          "end_line": 251,
+          "lines": 4
+        },
+        {
+          "name": "presetById",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 253,
+          "end_line": 255,
+          "lines": 3
+        },
+        {
+          "name": "defaultConfigForPreset",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 258,
+          "end_line": 267,
+          "lines": 10
+        },
+        {
+          "name": "freezeConfig",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 269,
+          "end_line": 277,
+          "lines": 9
+        },
+        {
+          "name": "validateText",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 279,
+          "end_line": 291,
+          "lines": 13
+        },
+        {
+          "name": "validateBoard",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 298,
+          "end_line": 387,
+          "lines": 90
+        },
+        {
+          "name": "parseBoardJson",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 393,
+          "end_line": 418,
+          "lines": 26
+        },
+        {
+          "name": "serializeBoard",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 421,
+          "end_line": 437,
+          "lines": 17
+        },
+        {
+          "name": "fileStem",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 440,
+          "end_line": 450,
+          "lines": 11
+        },
+        {
+          "name": "layoutBoard",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 461,
+          "end_line": 501,
+          "lines": 41
+        },
+        {
+          "name": "segmentLines",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 503,
+          "end_line": 514,
+          "lines": 12
+        },
+        {
+          "name": "buildSvg",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 526,
+          "end_line": 573,
+          "lines": 48
+        },
+        {
+          "name": "contrastRatio",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 576,
+          "end_line": 590,
+          "lines": 15
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/pendeltafel-studio.js",
+      "lines": 351,
+      "bytes": 13274,
+      "classes": [],
+      "functions": [
+        {
+          "name": "readLabels",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 31,
+          "end_line": 39,
+          "lines": 9
+        },
+        {
+          "name": "formatDate",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 41,
+          "end_line": 47,
+          "lines": 7
+        },
+        {
+          "name": "mountPendeltafelStudio",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 49,
+          "end_line": 350,
+          "lines": 302
+        }
+      ],
+      "class_methods": [],
+      "imports": [
+        {
+          "specifier": "./pendeltafel-model.js",
+          "names": [
+            "BOARD_LIMITS",
+            "BOARD_PRESETS",
+            "PALETTES",
+            "PRESET_IDS",
+            "buildSvg",
+            "defaultConfigForPreset",
+            "fileStem",
+            "layoutBoard",
+            "maxLabelLengthFor",
+            "parseBoardJson",
+            "presetById",
+            "serializeBoard",
+            "validateBoard"
+          ],
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "js/modules/radiasthesie-format.js",
+      "lines": 208,
+      "bytes": 8068,
+      "classes": [],
+      "functions": [
+        {
+          "name": "levelChip",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 55,
+          "end_line": 64,
+          "lines": 10
+        },
+        {
+          "name": "levelChips",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 66,
+          "end_line": 68,
+          "lines": 3
+        },
+        {
+          "name": "citation",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 72,
+          "end_line": 75,
+          "lines": 4
+        },
+        {
+          "name": "inlineText",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 82,
+          "end_line": 95,
+          "lines": 14
+        },
+        {
+          "name": "richText",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 98,
+          "end_line": 105,
+          "lines": 8
+        },
+        {
+          "name": "bulletList",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 109,
+          "end_line": 112,
+          "lines": 4
+        },
+        {
+          "name": "renderBlock",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 117,
+          "end_line": 130,
+          "lines": 14
+        },
+        {
+          "name": "renderBlocks",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 132,
+          "end_line": 134,
+          "lines": 3
+        },
+        {
+          "name": "section",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 138,
+          "end_line": 147,
+          "lines": 10
+        },
+        {
+          "name": "breadcrumb",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 149,
+          "end_line": 160,
+          "lines": 12
+        },
+        {
+          "name": "statusBand",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 162,
+          "end_line": 177,
+          "lines": 16
+        },
+        {
+          "name": "disclaimerBox",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 179,
+          "end_line": 187,
+          "lines": 9
+        },
+        {
+          "name": "relatedList",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 189,
+          "end_line": 202,
+          "lines": 14
+        },
+        {
+          "name": "metaList",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 204,
+          "end_line": 207,
+          "lines": 4
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/radiasthesie-loader.js",
+      "lines": 43,
+      "bytes": 1261,
+      "classes": [
+        {
+          "name": "RadiasthesieLoader",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 5,
+          "end_line": 42,
+          "lines": 38
+        }
+      ],
+      "functions": [],
+      "class_methods": [
+        {
+          "class": "RadiasthesieLoader",
+          "name": "constructor",
+          "line": 6,
+          "end_line": 10
+        },
+        {
+          "class": "RadiasthesieLoader",
+          "name": "load",
+          "line": 12,
+          "end_line": 21
+        },
+        {
+          "class": "RadiasthesieLoader",
+          "name": "show",
+          "line": 23,
+          "end_line": 33
+        },
+        {
+          "class": "RadiasthesieLoader",
+          "name": "onShow",
+          "line": 35,
+          "end_line": 37
+        },
+        {
+          "class": "RadiasthesieLoader",
+          "name": "onHide",
+          "line": 39,
+          "end_line": 41
+        }
+      ],
+      "imports": []
+    },
+    {
+      "path": "js/modules/radiasthesie-model.js",
+      "lines": 250,
+      "bytes": 8963,
+      "classes": [],
+      "functions": [
+        {
+          "name": "normalize",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 24,
+          "end_line": 34,
+          "lines": 11
+        },
+        {
+          "name": "sourceIdsIn",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 36,
+          "end_line": 38,
+          "lines": 3
+        },
+        {
+          "name": "blocksToText",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 40,
+          "end_line": 46,
+          "lines": 7
+        },
+        {
+          "name": "createModel",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 48,
+          "end_line": 249,
+          "lines": 202
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/radiasthesie-seo.js",
+      "lines": 178,
+      "bytes": 6101,
+      "classes": [],
+      "functions": [
+        {
+          "name": "absoluteUrl",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 103,
+          "end_line": 105,
+          "lines": 3
+        },
+        {
+          "name": "breadcrumbList",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 113,
+          "end_line": 129,
+          "lines": 17
+        },
+        {
+          "name": "pageTitle",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 136,
+          "end_line": 141,
+          "lines": 6
+        },
+        {
+          "name": "docForRoute",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 144,
+          "end_line": 155,
+          "lines": 12
+        },
+        {
+          "name": "canonicalForRoute",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 161,
+          "end_line": 164,
+          "lines": 4
+        },
+        {
+          "name": "sitemapDocs",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 167,
+          "end_line": 177,
+          "lines": 11
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/radiasthesie-vertraege.js",
+      "lines": 1202,
+      "bytes": 52327,
+      "classes": [],
+      "functions": [
+        {
+          "name": "hasControlChars",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 81,
+          "end_line": 91,
+          "lines": 11
+        },
+        {
+          "name": "isObject",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 93,
+          "end_line": 95,
+          "lines": 3
+        },
+        {
+          "name": "isInteger",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 97,
+          "end_line": 99,
+          "lines": 3
+        },
+        {
+          "name": "isFiniteNumber",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 101,
+          "end_line": 103,
+          "lines": 3
+        },
+        {
+          "name": "isSlug",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 105,
+          "end_line": 107,
+          "lines": 3
+        },
+        {
+          "name": "isSourceRef",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 109,
+          "end_line": 111,
+          "lines": 3
+        },
+        {
+          "name": "isIsoDate",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 113,
+          "end_line": 119,
+          "lines": 7
+        },
+        {
+          "name": "isIsoDateTime",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 121,
+          "end_line": 124,
+          "lines": 4
+        },
+        {
+          "name": "push",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 126,
+          "end_line": 129,
+          "lines": 4
+        },
+        {
+          "name": "checkText",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 131,
+          "end_line": 149,
+          "lines": 19
+        },
+        {
+          "name": "checkEnum",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 151,
+          "end_line": 156,
+          "lines": 6
+        },
+        {
+          "name": "checkStringList",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 158,
+          "end_line": 176,
+          "lines": 19
+        },
+        {
+          "name": "freezeDeep",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 178,
+          "end_line": 184,
+          "lines": 7
+        },
+        {
+          "name": "validateBase",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 188,
+          "end_line": 235,
+          "lines": 48
+        },
+        {
+          "name": "validateInstrument",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 237,
+          "end_line": 247,
+          "lines": 11
+        },
+        {
+          "name": "validateMethode",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 249,
+          "end_line": 258,
+          "lines": 10
+        },
+        {
+          "name": "validateEreignis",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 260,
+          "end_line": 280,
+          "lines": 21
+        },
+        {
+          "name": "validateErklaerungsmodell",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 282,
+          "end_line": 291,
+          "lines": 10
+        },
+        {
+          "name": "validateStudie",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 293,
+          "end_line": 319,
+          "lines": 27
+        },
+        {
+          "name": "validateMedium",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 321,
+          "end_line": 352,
+          "lines": 32
+        },
+        {
+          "name": "validateExperiment",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 354,
+          "end_line": 374,
+          "lines": 21
+        },
+        {
+          "name": "validateEntity",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 390,
+          "end_line": 401,
+          "lines": 12
+        },
+        {
+          "name": "validateProtocol",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 404,
+          "end_line": 443,
+          "lines": 40
+        },
+        {
+          "name": "validateVernetzung",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 449,
+          "end_line": 489,
+          "lines": 41
+        },
+        {
+          "name": "validateTaxonomie",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 496,
+          "end_line": 569,
+          "lines": 74
+        },
+        {
+          "name": "validateDataset",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 576,
+          "end_line": 605,
+          "lines": 30
+        },
+        {
+          "name": "defaultNow",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 609,
+          "end_line": 611,
+          "lines": 3
+        },
+        {
+          "name": "defaultRng",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 613,
+          "end_line": 619,
+          "lines": 7
+        },
+        {
+          "name": "randomIndex",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 621,
+          "end_line": 630,
+          "lines": 10
+        },
+        {
+          "name": "randomHex",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 632,
+          "end_line": 636,
+          "lines": 5
+        },
+        {
+          "name": "sha256Hex",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 638,
+          "end_line": 647,
+          "lines": 10
+        },
+        {
+          "name": "commitmentPayload",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 649,
+          "end_line": 651,
+          "lines": 3
+        },
+        {
+          "name": "protocolFromExperiment",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 653,
+          "end_line": 662,
+          "lines": 10
+        },
+        {
+          "name": "createRun",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 670,
+          "end_line": 692,
+          "lines": 23
+        },
+        {
+          "name": "beginTrial",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 699,
+          "end_line": 718,
+          "lines": 20
+        },
+        {
+          "name": "lockPrediction",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 724,
+          "end_line": 746,
+          "lines": 23
+        },
+        {
+          "name": "revealResult",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 752,
+          "end_line": 780,
+          "lines": 29
+        },
+        {
+          "name": "validateRun",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 783,
+          "end_line": 875,
+          "lines": 93
+        },
+        {
+          "name": "publicSnapshot",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 878,
+          "end_line": 901,
+          "lines": 24
+        },
+        {
+          "name": "runSummary",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 904,
+          "end_line": 921,
+          "lines": 18
+        },
+        {
+          "name": "assertRun",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 923,
+          "end_line": 926,
+          "lines": 4
+        },
+        {
+          "name": "validateJournalBase",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 930,
+          "end_line": 983,
+          "lines": 54
+        },
+        {
+          "name": "validateJournalEntry",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 986,
+          "end_line": 990,
+          "lines": 5
+        },
+        {
+          "name": "createEntry",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 993,
+          "end_line": 1020,
+          "lines": 28
+        },
+        {
+          "name": "entryFromRun",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1027,
+          "end_line": 1056,
+          "lines": 30
+        },
+        {
+          "name": "byteLength",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 1060,
+          "end_line": 1062,
+          "lines": 3
+        },
+        {
+          "name": "exportEnvelope",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1068,
+          "end_line": 1097,
+          "lines": 30
+        },
+        {
+          "name": "serializeEnvelope",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1099,
+          "end_line": 1103,
+          "lines": 5
+        },
+        {
+          "name": "importEnvelope",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1109,
+          "end_line": 1171,
+          "lines": 63
+        },
+        {
+          "name": "journalMethods",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1173,
+          "end_line": 1175,
+          "lines": 3
+        }
+      ],
+      "class_methods": [],
+      "imports": []
+    },
+    {
+      "path": "js/modules/radiasthesie-views.js",
+      "lines": 1666,
+      "bytes": 104053,
+      "classes": [],
+      "functions": [
+        {
+          "name": "heroTitle",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 58,
+          "end_line": 63,
+          "lines": 6
+        },
+        {
+          "name": "plate",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 65,
+          "end_line": 73,
+          "lines": 9
+        },
+        {
+          "name": "photoFigure",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 83,
+          "end_line": 117,
+          "lines": 35
+        },
+        {
+          "name": "pageHead",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 119,
+          "end_line": 129,
+          "lines": 11
+        },
+        {
+          "name": "toc",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 131,
+          "end_line": 146,
+          "lines": 16
+        },
+        {
+          "name": "topicSection",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 148,
+          "end_line": 157,
+          "lines": 10
+        },
+        {
+          "name": "isHttpUrl",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 159,
+          "end_line": 161,
+          "lines": 3
+        },
+        {
+          "name": "firstHttpUrl",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 163,
+          "end_line": 166,
+          "lines": 4
+        },
+        {
+          "name": "locatorNote",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 168,
+          "end_line": 171,
+          "lines": 4
+        },
+        {
+          "name": "sourceItem",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 173,
+          "end_line": 186,
+          "lines": 14
+        },
+        {
+          "name": "sourcesPanel",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 188,
+          "end_line": 197,
+          "lines": 10
+        },
+        {
+          "name": "aiDisclosure",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 199,
+          "end_line": 209,
+          "lines": 11
+        },
+        {
+          "name": "renderLanding",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 213,
+          "end_line": 349,
+          "lines": 137
+        },
+        {
+          "name": "renderTopic",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 351,
+          "end_line": 436,
+          "lines": 86
+        },
+        {
+          "name": "renderLabor",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 443,
+          "end_line": 624,
+          "lines": 182
+        },
+        {
+          "name": "renderStudio",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 634,
+          "end_line": 814,
+          "lines": 181
+        },
+        {
+          "name": "renderExperiment",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 824,
+          "end_line": 1060,
+          "lines": 237
+        },
+        {
+          "name": "renderJournal",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1069,
+          "end_line": 1274,
+          "lines": 206
+        },
+        {
+          "name": "renderGlossar",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1276,
+          "end_line": 1360,
+          "lines": 85
+        },
+        {
+          "name": "renderQuellen",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1362,
+          "end_line": 1439,
+          "lines": 78
+        },
+        {
+          "name": "renderMethodik",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1441,
+          "end_line": 1558,
+          "lines": 118
+        },
+        {
+          "name": "renderSuche",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1560,
+          "end_line": 1629,
+          "lines": 70
+        },
+        {
+          "name": "renderNotFound",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1631,
+          "end_line": 1647,
+          "lines": 17
+        },
+        {
+          "name": "renderFailure",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1649,
+          "end_line": 1661,
+          "lines": 13
+        },
+        {
+          "name": "siteName",
+          "kind": "function",
+          "exported": true,
+          "top_level": true,
+          "line": 1663,
+          "end_line": 1665,
+          "lines": 3
+        }
+      ],
+      "class_methods": [],
+      "imports": [
+        {
+          "specifier": "./radiasthesie-format.js",
+          "names": [
+            "ROUTE",
+            "breadcrumb",
+            "disclaimerBox",
+            "escapeHtml",
+            "inlineText",
+            "levelChip",
+            "levelChips",
+            "metaList",
+            "paragraph",
+            "relatedList",
+            "renderBlocks",
+            "statusBand"
+          ],
+          "line": 10
+        },
+        {
+          "specifier": "./pendeltafel-model.js",
+          "names": [
+            "BOARD_LIMITS",
+            "BOARD_PRESETS",
+            "PALETTES",
+            "PALETTE_IDS"
+          ],
+          "line": 24
+        },
+        {
+          "specifier": "../data/radiasthesie-werkstatt.js",
+          "names": [
+            "WERKSTATT"
+          ],
+          "line": 25
+        },
+        {
+          "specifier": "./experiment-statistik.js",
+          "names": [
+            "ALPHA",
+            "TRIAL_LIMITS",
+            "answerLabels",
+            "formatPercent",
+            "testTypeLabel"
+          ],
+          "line": 26
+        },
+        {
+          "specifier": "./radiasthesie-vertraege.js",
+          "names": [
+            "JOURNAL_LIMITS"
+          ],
+          "line": 27
+        },
+        {
+          "specifier": "./journal-speicher.js",
+          "names": [
+            "CONFIDENCE_LABELS"
+          ],
+          "line": 28
+        }
+      ]
+    },
+    {
+      "path": "js/modules/radiasthesie.js",
+      "lines": 345,
+      "bytes": 12566,
+      "classes": [
+        {
+          "name": "RadiasthesieModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 49,
+          "end_line": 344,
+          "lines": 296
+        }
+      ],
+      "functions": [
+        {
+          "name": "debounce",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 33,
+          "end_line": 42,
+          "lines": 10
+        },
+        {
+          "name": "setMeta",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 44,
+          "end_line": 47,
+          "lines": 4
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "RadiasthesieModule",
+          "name": "constructor",
+          "line": 50,
+          "end_line": 62
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "load",
+          "line": 69,
+          "end_line": 83
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "show",
+          "line": 90,
+          "end_line": 135
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "onShow",
+          "line": 137,
+          "end_line": 139
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "teardownSimulator",
+          "line": 142,
+          "end_line": 147
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "teardownStudio",
+          "line": 150,
+          "end_line": 155
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "teardownExperiment",
+          "line": 158,
+          "end_line": 163
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "teardownJournal",
+          "line": 166,
+          "end_line": 171
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "resolveView",
+          "line": 173,
+          "end_line": 199
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "applyMeta",
+          "line": 207,
+          "end_line": 220
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "placeStructuredData",
+          "line": 228,
+          "end_line": 249
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "focusTarget",
+          "line": 251,
+          "end_line": 265
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "scrollToTarget",
+          "line": 267,
+          "end_line": 279
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "currentHash",
+          "line": 282,
+          "end_line": 285
+        },
+        {
+          "class": "RadiasthesieModule",
+          "name": "bind",
+          "line": 291,
+          "end_line": 343
+        }
+      ],
+      "imports": [
+        {
+          "specifier": "./radiasthesie-format.js",
+          "names": [
+            "ROUTE"
+          ],
+          "line": 9
+        },
+        {
+          "specifier": "./radiasthesie-model.js",
+          "names": [
+            "createModel"
+          ],
+          "line": 10
+        },
+        {
+          "specifier": "./radiasthesie-seo.js",
+          "names": [
+            "breadcrumbList",
+            "canonicalForRoute",
+            "pageTitle"
+          ],
+          "line": 11
+        },
+        {
+          "specifier": "./pendel-simulator.js",
+          "names": [
+            "mountPendulumSimulator"
+          ],
+          "line": 12
+        },
+        {
+          "specifier": "./pendeltafel-studio.js",
+          "names": [
+            "mountPendeltafelStudio"
+          ],
+          "line": 13
+        },
+        {
+          "specifier": "./experiment-labor.js",
+          "names": [
+            "mountExperimentLabor"
+          ],
+          "line": 14
+        },
+        {
+          "specifier": "./pendel-journal.js",
+          "names": [
+            "mountPendelJournal"
+          ],
+          "line": 15
+        },
+        {
+          "specifier": "./radiasthesie-views.js",
+          "names": [
+            "renderExperiment",
+            "renderFailure",
+            "renderGlossar",
+            "renderJournal",
+            "renderLabor",
+            "renderLanding",
+            "renderMethodik",
+            "renderNotFound",
+            "renderQuellen",
+            "renderStudio",
+            "renderSuche",
+            "renderTopic"
+          ],
+          "line": 16
+        }
+      ]
+    },
+    {
+      "path": "js/modules/runes.js",
+      "lines": 200,
+      "bytes": 10337,
+      "classes": [
+        {
+          "name": "RunesModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 2,
+          "end_line": 198,
+          "lines": 197
+        }
+      ],
+      "functions": [],
+      "class_methods": [
+        {
+          "class": "RunesModule",
+          "name": "constructor",
+          "line": 3,
+          "end_line": 9
+        },
+        {
+          "class": "RunesModule",
+          "name": "init",
+          "line": 10,
+          "end_line": 21
+        },
+        {
+          "class": "RunesModule",
+          "name": "_sym",
+          "line": 22,
+          "end_line": 50
+        },
+        {
+          "class": "RunesModule",
+          "name": "shuffle",
+          "line": 51,
+          "end_line": 58
+        },
+        {
+          "class": "RunesModule",
+          "name": "renderGrid",
+          "line": 59,
+          "end_line": 76
+        },
+        {
+          "class": "RunesModule",
+          "name": "openRuneModal",
+          "line": 77,
+          "end_line": 83
+        },
+        {
+          "class": "RunesModule",
+          "name": "setupEventListeners",
+          "line": 84,
+          "end_line": 95
+        },
+        {
+          "class": "RunesModule",
+          "name": "setupKeyboard",
+          "line": 96,
+          "end_line": 106
+        },
+        {
+          "class": "RunesModule",
+          "name": "castThree",
+          "line": 107,
+          "end_line": 114
+        },
+        {
+          "class": "RunesModule",
+          "name": "castSingle",
+          "line": 115,
+          "end_line": 122
+        },
+        {
+          "class": "RunesModule",
+          "name": "showSpread",
+          "line": 123,
+          "end_line": 146
+        },
+        {
+          "class": "RunesModule",
+          "name": "saveHistory",
+          "line": 147,
+          "end_line": 159
+        },
+        {
+          "class": "RunesModule",
+          "name": "saveNoteFromForm",
+          "line": 160,
+          "end_line": 167
+        },
+        {
+          "class": "RunesModule",
+          "name": "renderHistory",
+          "line": 168,
+          "end_line": 189
+        },
+        {
+          "class": "RunesModule",
+          "name": "deleteHistory",
+          "line": 190,
+          "end_line": 197
+        }
+      ],
+      "imports": []
+    },
+    {
+      "path": "js/modules/tarot.js",
+      "lines": 752,
+      "bytes": 31741,
+      "classes": [
+        {
+          "name": "TarotModule",
+          "kind": "class",
+          "exported": true,
+          "top_level": true,
+          "line": 56,
+          "end_line": 751,
+          "lines": 696
+        }
+      ],
+      "functions": [
+        {
+          "name": "arcanaLabel",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 31,
+          "end_line": 35,
+          "lines": 5
+        },
+        {
+          "name": "deckAccessibleName",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 42,
+          "end_line": 45,
+          "lines": 4
+        },
+        {
+          "name": "matchesQuery",
+          "kind": "function",
+          "exported": false,
+          "top_level": true,
+          "line": 47,
+          "end_line": 54,
+          "lines": 8
+        }
+      ],
+      "class_methods": [
+        {
+          "class": "TarotModule",
+          "name": "constructor",
+          "line": 57,
+          "end_line": 71
+        },
+        {
+          "class": "TarotModule",
+          "name": "init",
+          "line": 73,
+          "end_line": 81
+        },
+        {
+          "class": "TarotModule",
+          "name": "renderDeckPicker",
+          "line": 90,
+          "end_line": 133
+        },
+        {
+          "class": "TarotModule",
+          "name": "syncDeckPicker",
+          "line": 135,
+          "end_line": 144
+        },
+        {
+          "class": "TarotModule",
+          "name": "setDeck",
+          "line": 149,
+          "end_line": 165
+        },
+        {
+          "class": "TarotModule",
+          "name": "announceDeck",
+          "line": 167,
+          "end_line": 170
+        },
+        {
+          "class": "TarotModule",
+          "name": "renderGrid",
+          "line": 174,
+          "end_line": 188
+        },
+        {
+          "class": "TarotModule",
+          "name": "cardMarkup",
+          "line": 190,
+          "end_line": 205
+        },
+        {
+          "class": "TarotModule",
+          "name": "observeImages",
+          "line": 215,
+          "end_line": 262
+        },
+        {
+          "class": "TarotModule",
+          "name": "getFilteredCards",
+          "line": 264,
+          "end_line": 271
+        },
+        {
+          "class": "TarotModule",
+          "name": "setSearch",
+          "line": 273,
+          "end_line": 278
+        },
+        {
+          "class": "TarotModule",
+          "name": "filterCards",
+          "line": 280,
+          "end_line": 284
+        },
+        {
+          "class": "TarotModule",
+          "name": "updateResultStatus",
+          "line": 286,
+          "end_line": 302
+        },
+        {
+          "class": "TarotModule",
+          "name": "openModalById",
+          "line": 306,
+          "end_line": 328
+        },
+        {
+          "class": "TarotModule",
+          "name": "renderDetail",
+          "line": 330,
+          "end_line": 404
+        },
+        {
+          "class": "TarotModule",
+          "name": "bindDetailControls",
+          "line": 406,
+          "end_line": 428
+        },
+        {
+          "class": "TarotModule",
+          "name": "settleDetailImage",
+          "line": 434,
+          "end_line": 469
+        },
+        {
+          "class": "TarotModule",
+          "name": "setDetailNote",
+          "line": 472,
+          "end_line": 488
+        },
+        {
+          "class": "TarotModule",
+          "name": "rerenderDetailForDeck",
+          "line": 492,
+          "end_line": 511
+        },
+        {
+          "class": "TarotModule",
+          "name": "toggleZoom",
+          "line": 513,
+          "end_line": 536
+        },
+        {
+          "class": "TarotModule",
+          "name": "drawCard",
+          "line": 540,
+          "end_line": 542
+        },
+        {
+          "class": "TarotModule",
+          "name": "drawThree",
+          "line": 544,
+          "end_line": 546
+        },
+        {
+          "class": "TarotModule",
+          "name": "runDraw",
+          "line": 548,
+          "end_line": 571
+        },
+        {
+          "class": "TarotModule",
+          "name": "showDrawnCards",
+          "line": 573,
+          "end_line": 611
+        },
+        {
+          "class": "TarotModule",
+          "name": "renderDrawnCards",
+          "line": 614,
+          "end_line": 617
+        },
+        {
+          "class": "TarotModule",
+          "name": "loadHistory",
+          "line": 621,
+          "end_line": 629
+        },
+        {
+          "class": "TarotModule",
+          "name": "saveHistory",
+          "line": 631,
+          "end_line": 637
+        },
+        {
+          "class": "TarotModule",
+          "name": "addHistory",
+          "line": 639,
+          "end_line": 643
+        },
+        {
+          "class": "TarotModule",
+          "name": "renderHistory",
+          "line": 645,
+          "end_line": 671
+        },
+        {
+          "class": "TarotModule",
+          "name": "setupModalAccessibility",
+          "line": 675,
+          "end_line": 687
+        },
+        {
+          "class": "TarotModule",
+          "name": "closeModal",
+          "line": 689,
+          "end_line": 703
+        },
+        {
+          "class": "TarotModule",
+          "name": "setupEventListeners",
+          "line": 705,
+          "end_line": 745
+        },
+        {
+          "class": "TarotModule",
+          "name": "onShow",
+          "line": 747,
+          "end_line": 750
+        }
+      ],
+      "imports": [
+        {
+          "specifier": "../data/tarot.js",
+          "names": [
+            "tarotCards",
+            "getRandomCards",
+            "getMajorArcana",
+            "getCardsBySuit",
+            "SUIT_LABELS",
+            "TAROT_DISCLAIMER"
+          ],
+          "line": 7
+        },
+        {
+          "specifier": "../data/tarot-decks.js",
+          "names": [
+            "DEFAULT_DECK_ID",
+            "backAssetPath",
+            "cardAssetPath",
+            "deckPreviewPath",
+            "getDeck",
+            "listDecks",
+            "readStoredDeckId",
+            "storeDeckId"
+          ],
+          "line": 15
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "path": "tests/api.test.js",
+      "imports": []
+    },
+    {
+      "path": "tests/astrologie.mjs",
+      "imports": [
+        "../scripts/generate-astrologie-data.cjs"
+      ]
+    },
+    {
+      "path": "tests/astrologie.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/capture-screenshots.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/console-check.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/crystals-attribution.cjs",
+      "imports": [
+        "../scripts/lib/crystal-attribution.cjs"
+      ]
+    },
+    {
+      "path": "tests/experiment-labor.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/experiment-statistik.mjs",
+      "imports": [
+        "../js/data/radiasthesie-werkstatt.js",
+        "../js/data/radiasthesie.js",
+        "../js/modules/experiment-speicher.js",
+        "../js/modules/experiment-statistik.js",
+        "../js/modules/experiment-zufall.js",
+        "../js/modules/radiasthesie-format.js",
+        "../js/modules/radiasthesie-model.js",
+        "../js/modules/radiasthesie-vertraege.js",
+        "../js/modules/radiasthesie-views.js"
+      ]
+    },
+    {
+      "path": "tests/f4-fixes-verification.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/farbwelten-sources.mjs",
+      "imports": [
+        "../scripts/lib/farbwelten-sources.cjs"
+      ]
+    },
+    {
+      "path": "tests/farbwelten.mjs",
+      "imports": []
+    },
+    {
+      "path": "tests/farbwelten.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/frequencies-data.cjs",
+      "imports": []
+    },
+    {
+      "path": "tests/frequenz-chladni.mjs",
+      "imports": []
+    },
+    {
+      "path": "tests/frequenz-engine.mjs",
+      "imports": []
+    },
+    {
+      "path": "tests/frequenz-meditation.mjs",
+      "imports": []
+    },
+    {
+      "path": "tests/frequenz-presets.mjs",
+      "imports": [
+        "../js/modules/frequenz-flags.js",
+        "../js/modules/frequenz-presets.js"
+      ]
+    },
+    {
+      "path": "tests/frequenzlabor-p9-p10.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/frequenzlabor.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/journal-speicher.mjs",
+      "imports": [
+        "../js/data/radiasthesie-werkstatt.js",
+        "../js/data/radiasthesie.js",
+        "../js/modules/journal-speicher.js",
+        "../js/modules/radiasthesie-format.js",
+        "../js/modules/radiasthesie-model.js",
+        "../js/modules/radiasthesie-vertraege.js",
+        "../js/modules/radiasthesie-views.js"
+      ]
+    },
+    {
+      "path": "tests/link-check.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/local-entry.cjs",
+      "imports": []
+    },
+    {
+      "path": "tests/markdown-lite.mjs",
+      "imports": [
+        "../js/modules/markdown-lite.js"
+      ]
+    },
+    {
+      "path": "tests/moon-astro.cjs",
+      "imports": []
+    },
+    {
+      "path": "tests/moon-calendar.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/offline-file.cjs",
+      "imports": []
+    },
+    {
+      "path": "tests/pages-regression.cjs",
+      "imports": []
+    },
+    {
+      "path": "tests/pendel-journal.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/pendeltafel-studio.mjs",
+      "imports": [
+        "../js/data/radiasthesie.js",
+        "../js/modules/pendeltafel-model.js",
+        "../js/modules/radiasthesie-format.js",
+        "../js/modules/radiasthesie-model.js",
+        "../js/modules/radiasthesie-views.js"
+      ]
+    },
+    {
+      "path": "tests/pendeltafel-studio.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/radiasthesie-simulator.mjs",
+      "imports": [
+        "../js/data/radiasthesie.js",
+        "../js/modules/pendel-simulator.js",
+        "../js/modules/radiasthesie-model.js",
+        "../js/modules/radiasthesie-views.js"
+      ]
+    },
+    {
+      "path": "tests/radiasthesie-simulator.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/radiasthesie-statisch.mjs",
+      "imports": []
+    },
+    {
+      "path": "tests/radiasthesie-statisch.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/radiasthesie-vernetzung.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/radiasthesie-vertraege.mjs",
+      "imports": []
+    },
+    {
+      "path": "tests/radiasthesie.mjs",
+      "imports": []
+    },
+    {
+      "path": "tests/radiasthesie.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/regression-f4-links-staging.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/regression-f4-links.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/smoke-test-production.spec.js",
+      "imports": []
+    },
+    {
+      "path": "tests/tarot-deck.cjs",
+      "imports": []
+    },
+    {
+      "path": "tests/tarot-decks-v2.cjs",
+      "imports": []
+    }
+  ]
+}

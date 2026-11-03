@@ -1,0 +1,830 @@
+{
+  "generated_at": "2026-11-03T22:04:48.612Z",
+  "card": "t_9c2a7824",
+  "input_commit": "8892586ff4f4a5819a89607e2d1295cfb4ff1546",
+  "entries_before": 33,
+  "entries_after": 54,
+  "claims": 6,
+  "changes": [
+    {
+      "id": "CNT-CLAIMS",
+      "field": "(entry)",
+      "before": "Sammel-Eintrag mit 6 Claim-Objekten",
+      "after": "entfernt",
+      "rule": "TYPE_UNKNOWN/ID_PATTERN/CLAIM_REF_PATTERN",
+      "reason": "Typ \"claims\" ist im Schema nicht vorgesehen; die Aussagen stehen in claims[] und werden dort geprueft."
+    },
+    {
+      "id": "CNT-PAG-005",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Mondmodul zeigt aktuelle Phase mit Beleuchtungsgrad, Kalender und iCal-Export; Monatswechsel rendert ohne Konsolenfehler.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte (Schema: contentEntry.required)."
+    },
+    {
+      "id": "CNT-PAG-006",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Bereich laedt zwoelf Zeichen, zehn Faktoren, zwoelf Haeuser und fuenf Hauptaspekte; Suche liefert Treffer ohne Geburtsdaten.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte (Schema: contentEntry.required)."
+    },
+    {
+      "id": "CNT-PAG-007",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Bibliothek listet Eintraege mit Evidenzstatus; Labor laedt Tongenerator und Oszillogramm ohne externen Dienst.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte (Schema: contentEntry.required)."
+    },
+    {
+      "id": "CNT-PAG-008",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "24 Runen des aelteren Futhark sind waehlbar; 3-Runen-Wurf erzeugt eine Deutung, Historie bleibt lokal.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte (Schema: contentEntry.required)."
+    },
+    {
+      "id": "CNT-PAG-009",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Bereich laedt Werkzeuge, Methodik und Orakel; das Radiästhesie-Glossar ist von hier aus verlinkt.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte (Schema: contentEntry.required)."
+    },
+    {
+      "id": "CNT-PAG-010",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Register zeigt zwoelf Farbwelten inklusive Indigo und drei Themenseiten; jede Farbe oeffnet ihre eigene Route.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte (Schema: contentEntry.required)."
+    },
+    {
+      "id": "CNT-PAG-011",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Artikelliste zeigt zehn gerenderte Artikel; #blog/6 oeffnet den sechsten Artikel im Dialog.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte (Schema: contentEntry.required)."
+    },
+    {
+      "id": "CNT-SUB-102",
+      "field": "text_ref",
+      "before": "content/farbwelten/tuerkis.md",
+      "after": "content/farbwelten/tuerkis.md#L10",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-102",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/tuerkis zeigt H1 Tuerkis und die Lede aus content/farbwelten/tuerkis.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-103",
+      "field": "text_ref",
+      "before": "content/farbwelten/magenta.md",
+      "after": "content/farbwelten/magenta.md#L10",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-103",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/magenta zeigt H1 Magenta und die Lede aus content/farbwelten/magenta.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-104",
+      "field": "text_ref",
+      "before": "content/farbwelten/rosa.md",
+      "after": "content/farbwelten/rosa.md#L10",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-104",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/rosa zeigt H1 Rosa und die Lede aus content/farbwelten/rosa.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-105",
+      "field": "text_ref",
+      "before": "content/farbwelten/weiss.md",
+      "after": "content/farbwelten/weiss.md#L10",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-105",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/weiss zeigt H1 Weiss und die Lede aus content/farbwelten/weiss.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-106",
+      "field": "text_ref",
+      "before": "content/farbwelten/schwarz.md",
+      "after": "content/farbwelten/schwarz.md#L10",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-106",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/schwarz zeigt H1 Schwarz und die Lede aus content/farbwelten/schwarz.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-107",
+      "field": "text_ref",
+      "before": "content/farbwelten/blau.md",
+      "after": "content/farbwelten/blau.md#L9",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-107",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/blau zeigt H1 Blau und die Lede aus content/farbwelten/blau.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-108",
+      "field": "text_ref",
+      "before": "content/farbwelten/gruen.md",
+      "after": "content/farbwelten/gruen.md#L9",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-108",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/gruen zeigt H1 Gruen und die Lede aus content/farbwelten/gruen.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-109",
+      "field": "text_ref",
+      "before": "content/farbwelten/gelb.md",
+      "after": "content/farbwelten/gelb.md#L9",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-109",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/gelb zeigt H1 Gelb und die Lede aus content/farbwelten/gelb.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-110",
+      "field": "text_ref",
+      "before": "content/farbwelten/violett.md",
+      "after": "content/farbwelten/violett.md#L9",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-110",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/violett zeigt H1 Violett und die Lede aus content/farbwelten/violett.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-111",
+      "field": "text_ref",
+      "before": "content/farbwelten/orange.md",
+      "after": "content/farbwelten/orange.md#L9",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "text_ref ohne Anker; Zeile ist die H1 der Datei (grep -n \"^# \")."
+    },
+    {
+      "id": "CNT-SUB-111",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/orange zeigt H1 Orange und die Lede aus content/farbwelten/orange.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-SUB-112",
+      "field": "name",
+      "before": "Farbwelt Braun (#farbwelten/braun)",
+      "after": "Farbwelt Indigo (#farbwelten/indigo)",
+      "rule": "SOURCE_NOT_FOUND",
+      "reason": "content/farbwelten/braun.md existiert im Release-Stand nicht."
+    },
+    {
+      "id": "CNT-SUB-112",
+      "field": "description",
+      "before": "Farbseite Braun.",
+      "after": "Indigo als Farbwelt zwischen Blau und Violett: Wellenlaengenbereich, Assoziationen, Chakrenbezug und Forschungsstand, belegt aus der Markdown-Quelle.",
+      "rule": "SOURCE_NOT_FOUND",
+      "reason": "Beschreibung folgte der falschen Farbe."
+    },
+    {
+      "id": "CNT-SUB-112",
+      "field": "source",
+      "before": {
+        "path": "content/farbwelten/braun.md",
+        "selector": "h1"
+      },
+      "after": {
+        "path": "content/farbwelten/indigo.md",
+        "selector": "h1",
+        "lines": "L9"
+      },
+      "rule": "SOURCE_NOT_FOUND",
+      "reason": "Quelldatei korrigiert."
+    },
+    {
+      "id": "CNT-SUB-112",
+      "field": "text_ref",
+      "before": "content/farbwelten/braun.md",
+      "after": "content/farbwelten/indigo.md#L9",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Anker ergaenzt."
+    },
+    {
+      "id": "CNT-SUB-112",
+      "field": "route",
+      "before": "#farbwelten/braun",
+      "after": "#farbwelten/indigo",
+      "rule": "ROUTE",
+      "reason": "Registerroute der Oberflaeche (route-check.json, runtime-fakten.json)."
+    },
+    {
+      "id": "CNT-SUB-112",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/indigo zeigt H1 Indigo und die Lede aus content/farbwelten/indigo.md.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-TOP-201",
+      "field": "id",
+      "before": "CNT-TOP-201",
+      "after": "CNT-SUB-201",
+      "rule": "ID_PATTERN/ID_TYPE_MISMATCH",
+      "reason": "Praefix TOP ist nicht vergeben; Unterrouten fuehren SUB."
+    },
+    {
+      "id": "CNT-SUB-201",
+      "field": "type",
+      "before": "topic-page",
+      "after": "subroute",
+      "rule": "TYPE_UNKNOWN",
+      "reason": "Typ topic-page ist im Schema nicht definiert."
+    },
+    {
+      "id": "CNT-SUB-201",
+      "field": "name",
+      "before": "Farbtherapie (Thema)",
+      "after": "Farbtherapie und Chromotherapie (#farbwelten/farbtherapie)",
+      "rule": "TYPE_UNKNOWN",
+      "reason": "Name folgt der neuen Einordnung."
+    },
+    {
+      "id": "CNT-SUB-201",
+      "field": "description",
+      "before": "Themenseite Farbtherapie: Physik, Anwendung, Grenzen; gebildet aus 6 Farbseiten-Quellen.",
+      "after": "Was Chromotherapie behauptet, was dazu geprueft wurde und wo die Grenze zur belegten Lichtmedizin verlaeuft; belegt aus der Markdown-Quelle.",
+      "rule": "TYPE_UNKNOWN",
+      "reason": "Beschreibung praezisiert."
+    },
+    {
+      "id": "CNT-SUB-201",
+      "field": "source",
+      "before": {
+        "path": "content/farbwelten/farbtherapie.md",
+        "selector": "h1"
+      },
+      "after": {
+        "path": "content/farbwelten/farbtherapie.md",
+        "selector": "h1",
+        "lines": "L8"
+      },
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Anker ergaenzt."
+    },
+    {
+      "id": "CNT-SUB-201",
+      "field": "text_ref",
+      "before": "content/farbwelten/farbtherapie.md",
+      "after": "content/farbwelten/farbtherapie.md#L8",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Anker ergaenzt (H1-Zeile)."
+    },
+    {
+      "id": "CNT-SUB-201",
+      "field": "route",
+      "before": "#farbwelten/therapie",
+      "after": "#farbwelten/farbtherapie",
+      "rule": "ROUTE",
+      "reason": "Tatsaechlicher Slug der Oberflaeche (TOPIC_PAGES in js/data/farbwelten.js)."
+    },
+    {
+      "id": "CNT-SUB-201",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/farbtherapie zeigt H1 Farbtherapie und Chromotherapie mit ihren Abschnittsankern und ist direkt adressierbar.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-TOP-202",
+      "field": "id",
+      "before": "CNT-TOP-202",
+      "after": "CNT-SUB-202",
+      "rule": "ID_PATTERN/ID_TYPE_MISMATCH",
+      "reason": "Praefix TOP ist nicht vergeben; Unterrouten fuehren SUB."
+    },
+    {
+      "id": "CNT-SUB-202",
+      "field": "type",
+      "before": "topic-page",
+      "after": "subroute",
+      "rule": "TYPE_UNKNOWN",
+      "reason": "Typ topic-page ist im Schema nicht definiert."
+    },
+    {
+      "id": "CNT-SUB-202",
+      "field": "name",
+      "before": "Farbpsychologie (Thema)",
+      "after": "Farbpsychologie (#farbwelten/farbpsychologie)",
+      "rule": "TYPE_UNKNOWN",
+      "reason": "Name folgt der neuen Einordnung."
+    },
+    {
+      "id": "CNT-SUB-202",
+      "field": "description",
+      "before": "Themenseite Farbpsychologie.",
+      "after": "Farbpsychologie als Themenseite: Wahrnehmung, Assoziation und Evidenzlage der Farbdeutung, belegt aus der Markdown-Quelle.",
+      "rule": "TYPE_UNKNOWN",
+      "reason": "Beschreibung praezisiert."
+    },
+    {
+      "id": "CNT-SUB-202",
+      "field": "source",
+      "before": {
+        "path": "content/farbwelten/farbpsychologie.md",
+        "selector": "h1"
+      },
+      "after": {
+        "path": "content/farbwelten/farbpsychologie.md",
+        "selector": "h1",
+        "lines": "L8"
+      },
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Anker ergaenzt."
+    },
+    {
+      "id": "CNT-SUB-202",
+      "field": "text_ref",
+      "before": "content/farbwelten/farbpsychologie.md",
+      "after": "content/farbwelten/farbpsychologie.md#L8",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Anker ergaenzt (H1-Zeile)."
+    },
+    {
+      "id": "CNT-SUB-202",
+      "field": "route",
+      "before": "#farbwelten/psychologie",
+      "after": "#farbwelten/farbpsychologie",
+      "rule": "ROUTE",
+      "reason": "Tatsaechlicher Slug der Oberflaeche (TOPIC_PAGES in js/data/farbwelten.js)."
+    },
+    {
+      "id": "CNT-SUB-202",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/farbpsychologie zeigt H1 Farbpsychologie mit ihren Abschnittsankern und ist direkt adressierbar.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-TOP-203",
+      "field": "id",
+      "before": "CNT-TOP-203",
+      "after": "CNT-SUB-203",
+      "rule": "ID_PATTERN/ID_TYPE_MISMATCH",
+      "reason": "Praefix TOP ist nicht vergeben; Unterrouten fuehren SUB."
+    },
+    {
+      "id": "CNT-SUB-203",
+      "field": "type",
+      "before": "topic-page",
+      "after": "subroute",
+      "rule": "TYPE_UNKNOWN",
+      "reason": "Typ topic-page ist im Schema nicht definiert."
+    },
+    {
+      "id": "CNT-SUB-203",
+      "field": "name",
+      "before": "Lichtmedizin (Thema)",
+      "after": "Lichtmedizin und Photobiologie (#farbwelten/lichtmedizin)",
+      "rule": "TYPE_UNKNOWN",
+      "reason": "Name folgt der neuen Einordnung."
+    },
+    {
+      "id": "CNT-SUB-203",
+      "field": "description",
+      "before": "Themenseite Lichtmedizin.",
+      "after": "Lichtmedizin als abgegrenzte Themenseite: definierte Wellenlaengen, Bestrahlungsstaerke und Studienlage, belegt aus der Markdown-Quelle.",
+      "rule": "TYPE_UNKNOWN",
+      "reason": "Beschreibung praezisiert."
+    },
+    {
+      "id": "CNT-SUB-203",
+      "field": "source",
+      "before": {
+        "path": "content/farbwelten/lichtmedizin.md",
+        "selector": "h1"
+      },
+      "after": {
+        "path": "content/farbwelten/lichtmedizin.md",
+        "selector": "h1",
+        "lines": "L8"
+      },
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Anker ergaenzt."
+    },
+    {
+      "id": "CNT-SUB-203",
+      "field": "text_ref",
+      "before": "content/farbwelten/lichtmedizin.md",
+      "after": "content/farbwelten/lichtmedizin.md#L8",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Anker ergaenzt (H1-Zeile)."
+    },
+    {
+      "id": "CNT-SUB-203",
+      "field": "route",
+      "before": "#farbwelten/licht",
+      "after": "#farbwelten/lichtmedizin",
+      "rule": "ROUTE",
+      "reason": "Tatsaechlicher Slug der Oberflaeche (TOPIC_PAGES in js/data/farbwelten.js)."
+    },
+    {
+      "id": "CNT-SUB-203",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Route #farbwelten/lichtmedizin zeigt H1 Lichtmedizin und Photobiologie mit ihren Abschnittsankern und ist direkt adressierbar.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-LEG-002",
+      "field": "name",
+      "before": "Datenschutzerklaerung (Verweis / nicht separater Eintrag)",
+      "after": "Datenschutzerklaerung",
+      "rule": "ENUM",
+      "reason": "Name behauptete, es gaebe kein eigenes Dokument."
+    },
+    {
+      "id": "CNT-LEG-002",
+      "field": "description",
+      "before": "Hinweis: Keine separate Datenschutzerklaerungs-Seite im Baseline-Commit gefunden; nur Verweis im Impressum oder Footer. Offene Luecke.",
+      "after": "Eigenstaendige Datenschutzerklaerung: keine Tracker und Cookies, lokale Schriften und Bilder, Speicherung im Browser. Text vorhanden, rechtliche Abnahme offen.",
+      "rule": "ENUM",
+      "reason": "Datei existiert und ist im Footer verlinkt."
+    },
+    {
+      "id": "CNT-LEG-002",
+      "field": "source",
+      "before": {
+        "path": "impressum.html",
+        "selector": "footer"
+      },
+      "after": {
+        "path": "datenschutz.html",
+        "selector": "h1",
+        "lines": "L37"
+      },
+      "rule": "ENUM",
+      "reason": "Quelle ist die eigene Seite, nicht der Footer-Verweis."
+    },
+    {
+      "id": "CNT-LEG-002",
+      "field": "text_ref",
+      "before": "impressum.html#footer",
+      "after": "datenschutz.html#L37",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Anker auf die H1 der Seite."
+    },
+    {
+      "id": "CNT-LEG-002",
+      "field": "route",
+      "before": "impressum.html",
+      "after": "datenschutz.html",
+      "rule": "ENUM",
+      "reason": "Direkt erreichbares Dokument."
+    },
+    {
+      "id": "CNT-LEG-002",
+      "field": "status",
+      "before": "fehlt",
+      "after": "entwurf",
+      "rule": "ENUM",
+      "reason": "status \"fehlt\" ist kein gueltiger Wert; Dokument vorhanden, rechtliche Abnahme offen."
+    },
+    {
+      "id": "CNT-LEG-002",
+      "field": "delivery",
+      "before": "missing",
+      "after": "shipped",
+      "rule": "ENUM",
+      "reason": "delivery \"missing\" ist kein gueltiger Wert; Seite wird ausgeliefert."
+    },
+    {
+      "id": "CNT-LEG-002",
+      "field": "acceptance_check",
+      "before": "Wenn erforderlich, eigene Seite oder klarer Verweis etablieren; aktuell nicht als eigenstaendiges Dokument ausgewiesen.",
+      "after": "datenschutz.html ist im Footer verlinkt, direkt erreichbar und nennt alle tatsaechlich verwendeten localStorage-Bereiche.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-LEG-002",
+      "field": "open_questions",
+      "before": [
+        "Gibt es eine separate Datenschutzerklaerung? Im Baseline-Commit nicht sichtbar. Vor Release klären."
+      ],
+      "after": [
+        "Die Erklaerung nennt Kristall-Favoriten, Runen-Historie, Frequenzlabor und Meditation, aber nicht das Radiästhesie-Journal (esot_rad_journal_v) und die Experimentlaeufe (esot_rad_experiment_v)."
+      ],
+      "rule": "REQUIRED",
+      "reason": "Gemessene Luecke: localStorage-Schluessel in js/ vs. Text der Seite."
+    },
+    {
+      "id": "CNT-LEG-003",
+      "field": "(entry)",
+      "before": null,
+      "after": "neu",
+      "rule": "COMPLETENESS",
+      "reason": "Rechtstext war nicht katalogisiert, obwohl verlinkt und ausgeliefert."
+    },
+    {
+      "id": "CNT-GLO-002",
+      "field": "text_ref",
+      "before": null,
+      "after": "data/tarot.json#L1",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte; Beleg ist die Kartenbeschreibung."
+    },
+    {
+      "id": "CNT-GLO-002",
+      "field": "delivery",
+      "before": null,
+      "after": "source-only",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte; kein eigenes Dokument ausgeliefert."
+    },
+    {
+      "id": "CNT-GLO-002",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Kein eigener Glossareintrag und keine eigene Route; Begriffserklaerungen erscheinen nur im Karten-Dialog.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-UI-002",
+      "field": "id",
+      "before": "CNT-UI-002",
+      "after": "CNT-STR-002",
+      "rule": "ID_PATTERN/ID_TYPE_MISMATCH",
+      "reason": "Typ ui-string verlangt den Code STR."
+    },
+    {
+      "id": "CNT-STR-002",
+      "field": "acceptance_check",
+      "before": null,
+      "after": "Die Hauptnavigation zeigt zehn Bereiche in fester Reihenfolge; jeder Eintrag setzt aria-current auf der aktiven Seite.",
+      "rule": "REQUIRED",
+      "reason": "Pflichtfeld fehlte."
+    },
+    {
+      "id": "CNT-ART-002..010",
+      "field": "(entries)",
+      "before": null,
+      "after": "9 neue Eintraege",
+      "rule": "COMPLETENESS",
+      "reason": "Der Katalog fuehrte nur articles[0]; die uebrigen neun gerenderten Artikel fehlten (§7.5: 10 gerenderte Artikel, Typ article, final, must)."
+    },
+    {
+      "id": "CNT-ART-011..022",
+      "field": "(entries)",
+      "before": null,
+      "after": "12 neue Eintraege",
+      "rule": "COMPLETENESS",
+      "reason": "Die 12 Markdown-Artikel waren als Bestand genannt, aber nicht als Eintraege gefuehrt (§7.5 reserviert genau diese ID-Gruppe)."
+    },
+    {
+      "id": "CLM-001",
+      "field": "text_ref",
+      "before": "index.html#L240 / data/tarot.json",
+      "after": "index.html#L240",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Zwei Belege in einem Feld; die Textstelle ist index.html L240."
+    },
+    {
+      "id": "CLM-002",
+      "field": "verification",
+      "before": "unverified",
+      "after": "verified",
+      "rule": "CLAIM_BLOCKER_UNBELEGT",
+      "reason": "Quelle entschieden und im Browser gemessen (30 Karten)."
+    },
+    {
+      "id": "CLM-002",
+      "field": "status",
+      "before": "offen",
+      "after": "final",
+      "rule": "BLOCKER_NOT_FINAL",
+      "reason": "Quellenfrage aufgeloest."
+    },
+    {
+      "id": "CLM-002",
+      "field": "citation",
+      "before": "offene Quellenfrage 30 vs 36",
+      "after": "data/crystals.json enthaelt 30 Objekte; js/modules/crystals.js L32 laedt ./data/crystals.json. In Chromium gemessen: 30 Karten auf #crystals (evidence/release-gate/runtime-fakten.json). js/data/crystals.js (36) laedt keine Seite.",
+      "rule": "CLAIM_BLOCKER_UNBELEGT",
+      "reason": "Beleg ergaenzt."
+    },
+    {
+      "id": "CNT-PAG-004",
+      "field": "status",
+      "before": "offen",
+      "after": "final",
+      "rule": "BLOCKER_NOT_FINAL",
+      "reason": "Kristallzahl belegt: 30 (gemessen)."
+    },
+    {
+      "id": "CNT-PAG-004",
+      "field": "open_questions",
+      "before": "Quellenfrage 30 vs 36",
+      "after": "entfernt",
+      "rule": "BLOCKER_NOT_FINAL",
+      "reason": "Frage entschieden."
+    },
+    {
+      "id": "CLM-003",
+      "field": "text_ref",
+      "before": "content/farbwelten/rot.md",
+      "after": "content/farbwelten/rot.md#L10",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Anker ergaenzt."
+    },
+    {
+      "id": "CLM-003",
+      "field": "citation",
+      "before": "Physikalische Standardwert",
+      "after": "content/farbwelten/rot.md L10 nennt 620-750 nm und 400-484 THz ohne Quellenangabe; der Wert entspricht dem physikalischen Standardbereich fuer Rot, die Seite belegt ihn nicht.",
+      "rule": "CLAIM_BLOCKER_UNBELEGT",
+      "reason": "Befund praezisiert: Seite belegt den Wert nicht."
+    },
+    {
+      "id": "CLM-004",
+      "field": "text_ref",
+      "before": "js/data/articles.js / data/articles/*.md",
+      "after": "js/data/articles.js#L3-L189",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Ein Pfad statt zwei; zweiter Bestand steht in der Zitatangabe und in eigenen Eintraegen."
+    },
+    {
+      "id": "CLM-004",
+      "field": "verification",
+      "before": "verified (Zeilenzahlen; Inhalte nicht voll geprueft)",
+      "after": "verified",
+      "rule": "ENUM",
+      "reason": "Freitext im Enum-Feld; Einschraenkung gehoert in die Zitatangabe."
+    },
+    {
+      "id": "CLM-004",
+      "field": "citation",
+      "before": "inventory-baseline.json: articles_rendered=10",
+      "after": "js/data/articles.js enthaelt 10 Artikelobjekte (articles[0..9]); data/articles/ enthaelt 12 Markdown-Dateien; inventory-baseline.json L417-L432: rendered_count 10, markdown_count 12.",
+      "rule": "CLAIM_BLOCKER_UNBELEGT",
+      "reason": "Beide Bestaende getrennt belegt."
+    },
+    {
+      "id": "CLM-005",
+      "field": "text_ref",
+      "before": "content/farbwelten/*.md / inventory-baseline.json",
+      "after": "inventory-baseline.json#L302-L415",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Glob-Pfade sind nicht wohlgeformt; der Bestand ist im Inventar belegt."
+    },
+    {
+      "id": "CLM-005",
+      "field": "citation",
+      "before": "inventory-baseline.json: farbwelten=12",
+      "after": "inventory-baseline.json L302-L415: zwoelf Farbwelten, 18 Markdown-Quellen (markdown_sources_count), drei Themenseiten (topic_pages_count).",
+      "rule": "CLAIM_BLOCKER_UNBELEGT",
+      "reason": "Zitat auf konkrete Zeilen bezogen."
+    },
+    {
+      "id": "CLM-006",
+      "field": "text_ref",
+      "before": "radiasthesie/",
+      "after": "inventory-baseline.json#L183-L220",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Verzeichnis ist keine wohlgeformte Referenz."
+    },
+    {
+      "id": "CLM-006",
+      "field": "citation",
+      "before": "inventory-baseline.json: radiathesie_documents=7",
+      "after": "inventory-baseline.json L183-L220 listet sieben Radiästhesie-Dokumente (radiasthesie_documents_count 7).",
+      "rule": "CLAIM_BLOCKER_UNBELEGT",
+      "reason": "Zitat auf konkrete Zeilen bezogen."
+    },
+    {
+      "id": "CNT-PAG-010",
+      "field": "claims",
+      "before": "ohne",
+      "after": "CLM-005",
+      "rule": "CLAIM_ORPHAN",
+      "reason": "Aussage CLM-005 wird von diesem Eintrag getragen."
+    },
+    {
+      "id": "CNT-PAG-009",
+      "field": "claims",
+      "before": "ohne",
+      "after": "CLM-006",
+      "rule": "CLAIM_ORPHAN",
+      "reason": "Aussage CLM-006 wird von diesem Eintrag getragen."
+    },
+    {
+      "id": "CNT-PAG-011",
+      "field": "claims",
+      "before": "ohne",
+      "after": "CLM-004",
+      "rule": "CLAIM_ORPHAN",
+      "reason": "Aussage CLM-004 wird von diesem Eintrag getragen."
+    },
+    {
+      "id": "content-catalog.json",
+      "field": "(Wurzel)",
+      "before": [
+        "source_inventory",
+        "produced_by",
+        "localization",
+        "tone_and_style",
+        "gaps_and_placeholders"
+      ],
+      "after": "nach content-catalog-meta.json verschoben",
+      "rule": "ROOT_ADDITIONAL_PROPERTIES",
+      "reason": "catalog.schema.json L381-L395 erlaubt an der Wurzel nur sieben Felder. Die Bloecke sind Katalog-Metadaten (Lokalisierung, Tonalitaet, Luecken, Herkunft) und bleiben als eigene Datei lesbar."
+    },
+    {
+      "id": "CLM-005/006",
+      "field": "text_ref",
+      "before": "inventory-baseline.json#L...",
+      "after": "docs/migration-baseline/inventory-baseline.json#L...",
+      "rule": "TEXT_REF_FORMAT",
+      "reason": "Das Inventar liegt unter docs/migration-baseline/; ohne Verzeichnis ist die Referenz nicht aufloesbar (Gate-Pruefung M-Struktur)."
+    },
+    {
+      "id": "CNT-PAG-004",
+      "field": "acceptance_check",
+      "before": "Seitenzahl muss mit masgeblicher Kristallquelle uebereinstimmen; offene Quelle entscheiden.",
+      "after": "Seite rendert 30 Karten aus data/crystals.json; keine Karte fehlt gegenueber der Datenquelle und der Filter reduziert ohne Datenverlust.",
+      "rule": "BLOCKER_NOT_FINAL",
+      "reason": "Quelle ist entschieden (30); das Pruefkriterium beschrieb noch die offene Frage."
+    }
+  ],
+  "root_fields_moved": [
+    "source_inventory",
+    "produced_by",
+    "localization",
+    "tone_and_style",
+    "gaps_and_placeholders"
+  ]
+}

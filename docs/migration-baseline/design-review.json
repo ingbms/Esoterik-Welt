@@ -1,0 +1,305 @@
+{
+  "review": "design-katalog-usability-barrierefreiheit",
+  "task": "t_0c70fb30",
+  "generated_at": "2026-11-03T18:13:00Z",
+  "base_tag": "baseline/rubriken-2026-11-03",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "input_commit": "55c92bc611198bc2dd50af377cf254c5606b9623",
+  "branch": "wt/t_cbbf71e0",
+  "environment": {
+    "node": "v24.13.0",
+    "playwright": "1.64.1",
+    "os": "Windows 11"
+  },
+  "recommendation": {
+    "design_catalog": "GO mit Auflagen",
+    "website_accessibility": "kein Blocker in gemessenen Zustaenden, zwei Auflagen (D-02, D-03)",
+    "push": "NO-GO solange content-catalog.json das Schema verletzt (D-09)",
+    "conditions": ["D-01", "D-03", "D-07", "D-08", "D-09", "D-10"]
+  },
+  "measured": {
+    "routes": 42,
+    "measurements": 84,
+    "viewports": ["1440x900", "390x844"],
+    "reflow_viewport": "320x640",
+    "text_nodes_checked": 14493,
+    "contrast_failures_aa": 0,
+    "lowest_text_contrast": 6.45,
+    "lowest_gradient_band_contrast_computed": 4.8,
+    "gradient_band_text_nodes": 108,
+    "gradient_band_routes": 12,
+    "gradient_band_failures": 0,
+    "state_contrast_min": 9.33,
+    "target_violations_24px": 0,
+    "targets_below_44px": 796,
+    "images_without_alt": 0,
+    "images_total": 262,
+    "svg_without_name": 0,
+    "form_controls": 78,
+    "form_controls_without_name": 0,
+    "reflow_overflows": 0,
+    "console_errors": 0,
+    "focus_steps": 36,
+    "focus_steps_without_indicator": 0,
+    "placeholder_below_45": 0,
+    "skip_link_enter_focuses_main": true,
+    "modal_focus_trap_steps": 14,
+    "modal_focus_trap_ok": 14,
+    "modal_focus_returns_to_trigger": true,
+    "reduced_motion_long_animations": 0
+  },
+  "catalog_crosscheck": {
+    "entries": 275,
+    "tokens": 170,
+    "tokens_matching_value_and_line": 170,
+    "non_token_entries_resolved": 92,
+    "breakpoints_in_two_media_queries": 13,
+    "hardcoded_colors_occurrences": 25,
+    "hardcoded_colors_distinct": 17,
+    "negative_controls_caught": 4,
+    "negative_controls_total": 4,
+    "errors": 0,
+    "warnings": 0
+  },
+  "detector_self_test": {
+    "checks": {
+      "contrastDetectorFindsInjectedFailure": true,
+      "targetDetectorFindsInjectedSmallTarget": true,
+      "focusDetectorRejectsInvisibleRing": true,
+      "gradientDetectorMarksUncertain": true,
+      "closedDetailsContentIgnored": true
+    },
+    "ok": true
+  },
+  "findings": [
+    {
+      "id": "D-01",
+      "severity": "blocker",
+      "scope": "design-catalog",
+      "title": "Befund L-03 ist sachlich falsch: aria-invalid-Regeln existieren",
+      "evidence": [
+        "docs/migration-baseline/design-katalog-luecken.md L-03 (P1)",
+        "css/radiasthesie.css L1502 (.ptf-control [aria-invalid='true'])",
+        "css/radiasthesie.css L2691-L2695 (.jr-control input[aria-invalid='true'])",
+        "Messung: #jrDate mit aria-invalid -> border-color rgb(192,148,137), outline 2px solid rgb(192,148,137)"
+      ],
+      "impact": "Der Katalog behauptet eine Luecke, die nur fuer die generischen .input/.select/.textarea gilt, und uebersieht die wirkungslose Studio-Regel.",
+      "fix": "L-03 auf generische Komponenten begrenzen; Studio-Regel als wirkungslos benennen; Fehlerzustand als DES-STA ergaenzen.",
+      "owner": "Katalog-Nachzug",
+      "deadline": "vor Katalog-Freigabe im Release-Gate",
+      "status": "offen"
+    },
+    {
+      "id": "D-02",
+      "severity": "major",
+      "scope": "product-a11y",
+      "title": "Fehlerzustand des Pendeltafel-Studios ist wirkungslos (Spezifitaet)",
+      "evidence": [
+        "css/radiasthesie.css L1502: .ptf-control [aria-invalid='true'] { border-color } -> (0,2,0)",
+        "css/radiasthesie.css L1467-L1478: .ptf-control input[type='text'] { border: 1px solid ... } -> (0,2,1)",
+        "Messung #ptfTitle: vor/nach Fehler und nach blur() jeweils border rgb(130,146,142)",
+        "aria-describedby='ptfTitleHint', Fehlermeldung nicht verknuepft (errorLinkedToField false)",
+        "Regelabgleich im Browser: .ptf-control input[type='text'] (0,2,1) gewinnt gegen .ptf-control [aria-invalid='true'] (0,2,0)",
+        "Zwei role=alert-Meldungen mit identischem Text"
+      ],
+      "impact": "Kein WCAG-Verstoss (Textmeldung vorhanden), aber kein sichtbarer Feldzustand und inkonsistent zum Journal.",
+      "fix": "Spezifitaet erhoehen (z. B. input[type='text'][aria-invalid='true']) oder Basisregel mit :where(); outline wie im Journal ergaenzen; Fehler-ID in aria-describedby.",
+      "owner": "design_web_layout",
+      "deadline": "vor naechstem Push",
+      "status": "offen"
+    },
+    {
+      "id": "D-03",
+      "severity": "major",
+      "scope": "product-a11y",
+      "title": ".badge-remove ist 13x15 px und verletzt WCAG 2.5.8",
+      "evidence": [
+        "js/modules/crystals.js L258 erzeugt Filterbadge mit .badge-remove",
+        "css/design-system.css L1193-L1204: font-size 15px, line-height 1, padding 0 0 0 4px, border 0",
+        "Messung im gerenderten DOM nach Filteraktion (probe-befunde.json): remove 13x15 px, Badge 115,13x27,5 px (Breite labelabhaengig)",
+        "Bestaetigt Katalogsbefund L-07 (dort '15px'), dessen Querverweis DES-CMP-025 aber falsch ist (D-12)"
+      ],
+      "impact": "AA-Verstoss 2.5.8 im Filterzustand; in den 84 Routenmessungen nicht sichtbar, weil Filterbadges erst nach Filteraktion entstehen.",
+      "fix": "Trefferflaeche >= 24x24 px (padding 4px 8px; min-width/min-height 24px); Katalognotiz DES-CMP-023 nachziehen.",
+      "owner": "design_web_layout",
+      "deadline": "vor naechstem Push",
+      "status": "offen"
+    },
+    {
+      "id": "D-04",
+      "severity": "minor",
+      "scope": "product",
+      "title": "Doppelte IDs ptf-title/ptf-desc im Pendeltafel-Studio",
+      "evidence": [
+        "js/modules/pendeltafel-model.js L546-L548: <svg role='img' aria-labelledby='ptf-title ptf-desc'><title id='ptf-title'>",
+        "Vorschau und Druckblatt erzeugen dieselben IDs; Messung findet beide je zweimal"
+      ],
+      "impact": "Ungueltiges HTML, IDREF-Ambiguitaet; heute kein falscher Name, weil beide SVGs dieselbe Tafel zeigen.",
+      "fix": "ID-Praefix pro Instanz vergeben und aria-labelledby anpassen.",
+      "owner": "design_web_layout",
+      "deadline": "mit naechstem Werkstatt-Umbau",
+      "status": "offen"
+    },
+    {
+      "id": "D-05",
+      "severity": "minor",
+      "scope": "product",
+      "title": "Ueberschriften-Sprung H2 -> H4 auf #tarot",
+      "evidence": ["a11y-messung.json: tarot headings.skips = 'H2 Deine Ziehung -> H4 Ziehungsverlauf' bei 1440 und 390"],
+      "impact": "Strukturhinweis fuer Screenreader-Navigation.",
+      "fix": "Zwischenueberschrift auf H3 setzen.",
+      "owner": "design_web_layout",
+      "deadline": "naechste Tarot-Aenderung",
+      "status": "offen"
+    },
+    {
+      "id": "D-06",
+      "severity": "minor",
+      "scope": "product-a11y",
+      "title": "Fehlermeldung doppelt angesagt und nicht am Feld verknuepft",
+      "evidence": [
+        "Messung: liveMessages enthaelt 'Ueberschrift darf nicht leer sein.' zweimal (#ptfLabelError, #ptfErrors)",
+        "aria-describedby='ptfTitleHint' ohne Fehler-ID"
+      ],
+      "impact": "Doppelte Ansage, Fehler nicht feldbezogen.",
+      "fix": "Eine Live-Region je Formular; aria-describedby/aria-errormessage auf die Fehlermeldung.",
+      "owner": "design_web_layout",
+      "deadline": "mit D-02",
+      "status": "offen"
+    },
+    {
+      "id": "D-07",
+      "severity": "minor",
+      "scope": "design-catalog",
+      "title": "Zustandsliste ohne Fehler- und Hover-Zustand",
+      "evidence": [
+        "design-catalog.json DES-STA-001..010",
+        "Fehlerregeln: css/radiasthesie.css L1502, L2691",
+        "Hoverregeln: css/design-system.css L871-L905"
+      ],
+      "impact": "Migration erhielte keine Vorgabe fuer die wichtigsten interaktiven Zustaende.",
+      "fix": "Zwei DES-STA-Eintraege ergaenzen (Fehlerzustand Feld, Hover), release_relevance must.",
+      "owner": "Katalog-Nachzug",
+      "deadline": "mit D-01",
+      "status": "offen"
+    },
+    {
+      "id": "D-08",
+      "severity": "minor",
+      "scope": "design-catalog",
+      "title": ".tooltip ist katalogisiert, wird aber nicht gerendert",
+      "evidence": [
+        "DES-CMP-011 (.tooltip::before), release_relevance should, delivery shipped",
+        "a11y-messung.json: tooltips = 0 in allen 42 Routen",
+        "grep data-tooltip in index.html, js/, radiasthesie/ ohne Treffer"
+      ],
+      "impact": "L-08 beschreibt ein Risiko ohne Produktbezug; der Katalog fuehrt ungenutzten Code als ausgelieferte Komponente.",
+      "fix": "Als reserviert/ungenutzt kennzeichnen oder entfernen; L-08 herabstufen.",
+      "owner": "Katalog-Nachzug",
+      "deadline": "mit D-01",
+      "status": "offen"
+    },
+    {
+      "id": "D-09",
+      "severity": "blocker",
+      "scope": "content-catalog",
+      "title": "content-catalog.json verletzt das eigene Schema (70 Fehler)",
+      "evidence": [
+        "validate-catalogs.cjs: Gesamt 3 Dateien, 70 Fehler, 11 Warnungen; alle 70 im content-catalog; Exitcode 1",
+        "validate-schema.cjs: 16 Pruefungen, 1 Abweichung (content root); Exitcode 1",
+        "verify-design-catalog.cjs, render-catalogs.cjs --check, inventory-baseline.cjs --check: Exitcode 0",
+        "Verteilung: 30 Pflichtfelder (24x acceptance_check), 19 TEXT_REF_FORMAT, 6 CLAIM_REF_PATTERN, 5 ID_PATTERN, 4 TYPE_UNKNOWN, 3 ENUM (CNT-LEG-002 status/delivery)"
+      ],
+      "impact": "Der Katalogverbund ist nicht pruefbar; die im Handoff gemeldeten 0 Fehler galten fuer einen Stand ohne Medien-/Inhaltskatalog.",
+      "fix": "Inhalts-Katalog schema-konform machen (Pflichtfelder, Enums, IDs, text_ref).",
+      "owner": "Inhalts-Katalog / review_approval",
+      "deadline": "vor Push",
+      "status": "offen"
+    },
+    {
+      "id": "D-10",
+      "severity": "major",
+      "scope": "content-catalog",
+      "title": "Vier katalogisierte Farbwelten-Routen existieren nicht, vier echte fehlen",
+      "evidence": [
+        "route-check.json: not_found = #farbwelten/braun, /therapie, /psychologie, /licht (Titel 'Unbekannte Farbwelt', 153-159 Zeichen)",
+        "route-check.json: linked_but_not_cataloged = #farbwelten/indigo, /lichtmedizin, /farbpsychologie, /farbtherapie, #blog/6",
+        "Farbregister der Oberflaeche: 12 Farben inkl. Indigo, kein Braun; TOPIC_PAGES = farbtherapie, farbpsychologie, lichtmedizin"
+      ],
+      "impact": "Der Inhalts-Katalog wuerde eine Migration auf nicht existierende Routen fuehren und echte Seiten verlieren.",
+      "fix": "Routen auf die tatsaechlichen Slugs korrigieren; #blog/6 ergaenzen.",
+      "owner": "Inhalts-Katalog",
+      "deadline": "vor Push",
+      "status": "offen"
+    },
+    {
+      "id": "D-11",
+      "severity": "observation",
+      "scope": "content-legal",
+      "title": "Datenschutz- und Haftungsseite sehr kurz",
+      "evidence": [
+        "a11y-messung.json: doc-datenschutz textLength 775, doc-haftung 542",
+        "Deckung mit CNT-LEG-002 (status fehlt) und CLM-002/003 im content-catalog"
+      ],
+      "impact": "Kein Design-Befund; bei lokaler Speicherung (Favoriten, Journal, Experimentlaeufe) ein rechtliches Risiko.",
+      "fix": "Im Release-Gate als offener Punkt behandeln.",
+      "owner": "Inhalts-Katalog / Release-Gate",
+      "deadline": "vor Push",
+      "status": "gemeldet"
+    },
+    {
+      "id": "D-12",
+      "severity": "minor",
+      "scope": "design-catalog",
+      "title": "L-07 verweist mit DES-CMP-025 auf die Wortmarke statt auf .badge-remove",
+      "evidence": [
+        "design-katalog-luecken.md L99: L-07 nennt DES-CMP-025",
+        "design-catalog.json: DES-CMP-023 = Entfernen-Schaltflaeche im Badge (.badge-remove), DES-CMP-025 = Wortmarke (.logo)"
+      ],
+      "impact": "Ein Nachziehen des Befunds ueber den Querverweis aendert die Wortmarke statt der Trefferflaeche.",
+      "fix": "L-07 auf DES-CMP-023 umstellen.",
+      "owner": "Katalog-Nachzug",
+      "deadline": "mit D-01",
+      "status": "offen"
+    }
+  ],
+  "no_finding": [
+    {
+      "topic": "Leerer alt-Text an 220 Bildnennungen",
+      "reason": "Kristallfotos stehen neben dem Kartentitel (H2), der Detaildialog liefert vollstaendigen Alt-Text; Tarot-Deckvorschauen liegen in beschrifteten Radio-Labels. Dekorativ zulaessig."
+    },
+    {
+      "topic": "Kein data-theme, Light-Block ungenutzt",
+      "reason": "Im Katalog korrekt als nicht ausgeliefert dokumentiert; prefers-color-scheme wird nicht bedient (Produktentscheidung)."
+    },
+    {
+      "topic": "796 Ziele unter 44px",
+      "reason": "Nur AAA (2.5.5), kein AA-Verstoss."
+    }
+  ],
+  "artifacts": [
+    "docs/migration-baseline/design-review-usability-a11y.md",
+    "docs/migration-baseline/design-review.json",
+    "docs/migration-baseline/evidence/design-review/a11y-messung.json",
+    "docs/migration-baseline/evidence/design-review/detail-befunde.json",
+    "docs/migration-baseline/evidence/design-review/route-check.json",
+    "docs/migration-baseline/evidence/design-review/catalog-crosscheck.json",
+    "docs/migration-baseline/evidence/design-review/catalog-crosscheck-negative.json",
+    "docs/migration-baseline/evidence/design-review/probe-befunde.json",
+    "docs/migration-baseline/evidence/design-review/filterbadge-1440.png",
+    "docs/migration-baseline/evidence/design-review/studio-fehlerzustand-1440.png",
+    "docs/migration-baseline/evidence/design-review/journal-fehlerzustand-1440.png",
+    "scripts/migration-baseline/review-design-a11y.cjs",
+    "scripts/migration-baseline/check-design-details.cjs",
+    "scripts/migration-baseline/check-catalog-routes.cjs",
+    "scripts/migration-baseline/probe-design-findings.cjs",
+    "scripts/migration-baseline/verify-design-catalog-independent.cjs"
+  ],
+  "tooling_fix": {
+    "file": "scripts/migration-baseline/verify-design-catalog-independent.cjs",
+    "problem": "Der Negativlauf ueberschrieb catalog-crosscheck.json mit dem mutierten Katalog (279 Eintraege, 4 erwartete Fehler).",
+    "fix": "Negativlauf schreibt nach catalog-crosscheck-negative.json und meldet Erfolg ueber die vier erkannten NEG-IDs.",
+    "reverified": "Sauberer Lauf: 275 Eintraege, 0 Fehler, 0 Warnungen; Negativlauf: 4/4 erkannt."
+  },
+  "scope_note": "Nur Pruefung und Belege; design-catalog.json, design-katalog-luecken.md und alle Produktivdateien in diesem Lauf unveraendert. Befunde D-01/D-07/D-08/D-12 sind Nachziehauftraege fuer die Konsolidierung."
+}
