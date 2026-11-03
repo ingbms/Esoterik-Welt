@@ -1,0 +1,701 @@
+{
+  "generated_at": "2026-11-03T21:57:34.533Z",
+  "base": "http://127.0.0.1:22363/Esoterik-Welt",
+  "findings": {
+    "D03_badgeRemove": {
+      "controls": {
+        "present": true,
+        "sample": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Drittes Auge",
+            "dataset": {
+              "value": "Drittes Auge"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Hals / Drittes Auge",
+            "dataset": {
+              "value": "Hals / Drittes Auge"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Herz",
+            "dataset": {
+              "value": "Herz"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Herz / Hals",
+            "dataset": {
+              "value": "Herz / Hals"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Herz / Sakral",
+            "dataset": {
+              "value": "Herz / Sakral"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Kronen",
+            "dataset": {
+              "value": "Kronen"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Kronen / Alle",
+            "dataset": {
+              "value": "Kronen / Alle"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Kronen- & Drittes Auge",
+            "dataset": {
+              "value": "Kronen- & Drittes Auge"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Sakral",
+            "dataset": {
+              "value": "Sakral"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Solare Plexus",
+            "dataset": {
+              "value": "Solare Plexus"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Solarplexus",
+            "dataset": {
+              "value": "Solarplexus"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Wurzel",
+            "dataset": {
+              "value": "Wurzel"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Wurzel / Sakral",
+            "dataset": {
+              "value": "Wurzel / Sakral"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Braun / Rot",
+            "dataset": {
+              "value": "Braun / Rot"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Dunkelblau / Gold",
+            "dataset": {
+              "value": "Dunkelblau / Gold"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Gelb / Orange",
+            "dataset": {
+              "value": "Gelb / Orange"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Gelb-Gold",
+            "dataset": {
+              "value": "Gelb-Gold"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Gold / Braun",
+            "dataset": {
+              "value": "Gold / Braun"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Gold-Gelb",
+            "dataset": {
+              "value": "Gold-Gelb"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Graubrau / Rauch",
+            "dataset": {
+              "value": "Graubrau / Rauch"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Grün",
+            "dataset": {
+              "value": "Grün"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Grün-Gelb",
+            "dataset": {
+              "value": "Grün-Gelb"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Hellblau",
+            "dataset": {
+              "value": "Hellblau"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Hellblau / Türkis",
+            "dataset": {
+              "value": "Hellblau / Türkis"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Klar",
+            "dataset": {
+              "value": "Klar"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Metallisch / Schwarz",
+            "dataset": {
+              "value": "Metallisch / Schwarz"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Orange / Rot",
+            "dataset": {
+              "value": "Orange / Rot"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Orange / Rot / Feuer",
+            "dataset": {
+              "value": "Orange / Rot / Feuer"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Rosa",
+            "dataset": {
+              "value": "Rosa"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Rosa / Milchig",
+            "dataset": {
+              "value": "Rosa / Milchig"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Rosa / Violett",
+            "dataset": {
+              "value": "Rosa / Violett"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Rot / Braun",
+            "dataset": {
+              "value": "Rot / Braun"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Rot / Grün / Gelb",
+            "dataset": {
+              "value": "Rot / Grün / Gelb"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Schwarz",
+            "dataset": {
+              "value": "Schwarz"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Schwarz / Blau / Gold",
+            "dataset": {
+              "value": "Schwarz / Blau / Gold"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Türkis",
+            "dataset": {
+              "value": "Türkis"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Violett",
+            "dataset": {
+              "value": "Violett"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Violett / Grün",
+            "dataset": {
+              "value": "Violett / Grün"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Weiß / Blau / Pfirsich",
+            "dataset": {
+              "value": "Weiß / Blau / Pfirsich"
+            },
+            "id": ""
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "text": "Weiß / Perlmutter",
+            "dataset": {
+              "value": "Weiß / Perlmutter"
+            },
+            "id": ""
+          }
+        ]
+      },
+      "clicked": {
+        "kind": "button",
+        "label": "Drittes Auge"
+      },
+      "badgeWrapVisible": true,
+      "badgeCount": 1,
+      "chip": {
+        "w": 115.13,
+        "h": 27.5
+      },
+      "remove": {
+        "w": 13,
+        "h": 15
+      },
+      "removeStyle": {
+        "fontSize": "15px",
+        "lineHeight": "15px",
+        "padding": "0px 0px 0px 4px",
+        "minWidth": "auto",
+        "minHeight": "auto",
+        "border": "0px",
+        "ariaLabel": "Entfernen"
+      },
+      "chipLabel": "Drittes Auge ×"
+    },
+    "D02_studioErrorState": {
+      "route": "#pendeln/studio",
+      "selector": "#ptfTitle",
+      "identity": {
+        "count": 1,
+        "tag": "INPUT",
+        "markup": "<input type=\"text\" id=\"ptfTitle\" name=\"ptfTitle\" maxlength=\"60\" value=\"Ja/Nein-Tafel\" autocomplete=\"off\" aria-describedby=\"ptfTitleHint\" aria-invalid=\"true\">",
+        "label": "Überschrift der Tafel"
+      },
+      "before": {
+        "borderTopColor": "rgb(130, 146, 142)",
+        "borderTopWidth": "1px",
+        "outlineWidth": "3px",
+        "ariaInvalid": null,
+        "describedBy": "ptfTitleHint"
+      },
+      "after": {
+        "tag": "INPUT",
+        "id": "ptfTitle",
+        "ariaInvalid": "true",
+        "borderTopColor": "rgb(130, 146, 142)",
+        "borderTopWidth": "1px",
+        "borderStyle": "solid",
+        "outlineColor": "rgb(234, 230, 220)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "boxShadow": "none",
+        "describedBy": "ptfTitleHint"
+      }
+    },
+    "D01_journalErrorState": {
+      "route": "#pendeln/journal",
+      "selector": "#jrDate",
+      "identity": {
+        "count": 1,
+        "tag": "INPUT",
+        "markup": "<input type=\"date\" id=\"jrDate\" name=\"date\" required=\"\" aria-describedby=\"jrDateHint\" aria-invalid=\"true\">",
+        "label": "Datum"
+      },
+      "before": {
+        "borderTopColor": "rgb(130, 146, 142)",
+        "borderTopWidth": "1px",
+        "outlineWidth": "3px",
+        "ariaInvalid": null,
+        "describedBy": "jrDateHint"
+      },
+      "after": {
+        "tag": "INPUT",
+        "id": "jrDate",
+        "ariaInvalid": "true",
+        "borderTopColor": "rgb(192, 148, 137)",
+        "borderTopWidth": "1px",
+        "borderStyle": "solid",
+        "outlineColor": "rgb(192, 148, 137)",
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "boxShadow": "none",
+        "describedBy": "jrDateHint"
+      }
+    },
+    "gradientBand": {
+      "routes": [
+        {
+          "slug": "rot",
+          "gradient": "linear-gradient(115deg, rgb(40, 23, 21) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(40, 23, 21)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 4.81,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 01 / 12 · Spektralfarbe",
+            "fg": "rgb(207, 106, 96)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(40, 23, 21)"
+          }
+        },
+        {
+          "slug": "orange",
+          "gradient": "linear-gradient(115deg, rgb(38, 24, 15) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(38, 24, 15)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 4.9,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 02 / 12 · Spektralfarbe",
+            "fg": "rgb(199, 116, 52)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(38, 24, 15)"
+          }
+        },
+        {
+          "slug": "gelb",
+          "gradient": "linear-gradient(115deg, rgb(32, 28, 12) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(32, 28, 12)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 5.06,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 03 / 12 · Spektralfarbe",
+            "fg": "rgb(160, 139, 50)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(32, 28, 12)"
+          }
+        },
+        {
+          "slug": "gruen",
+          "gradient": "linear-gradient(115deg, rgb(19, 31, 20) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(19, 31, 20)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 5.33,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 04 / 12 · Spektralfarbe",
+            "fg": "rgb(77, 161, 93)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(19, 31, 20)"
+          }
+        },
+        {
+          "slug": "tuerkis",
+          "gradient": "linear-gradient(115deg, rgb(10, 32, 32) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(10, 32, 32)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 5.22,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 05 / 12 · Spektralfarbe",
+            "fg": "rgb(56, 157, 157)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(10, 32, 32)"
+          }
+        },
+        {
+          "slug": "blau",
+          "gradient": "linear-gradient(115deg, rgb(17, 29, 40) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(17, 29, 40)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 5.1,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 06 / 12 · Spektralfarbe",
+            "fg": "rgb(67, 145, 215)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(17, 29, 40)"
+          }
+        },
+        {
+          "slug": "indigo",
+          "gradient": "linear-gradient(115deg, rgb(26, 26, 40) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(26, 26, 40)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 4.92,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 07 / 12 · Spektralfarbe",
+            "fg": "rgb(133, 127, 215)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(26, 26, 40)"
+          }
+        },
+        {
+          "slug": "violett",
+          "gradient": "linear-gradient(115deg, rgb(33, 24, 36) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(33, 24, 36)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 4.83,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 08 / 12 · Spektralfarbe",
+            "fg": "rgb(173, 113, 191)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(33, 24, 36)"
+          }
+        },
+        {
+          "slug": "magenta",
+          "gradient": "linear-gradient(115deg, rgb(37, 22, 31) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(37, 22, 31)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 4.8,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 09 / 12 · nicht spektral",
+            "fg": "rgb(195, 105, 158)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(20, 28, 31)"
+          }
+        },
+        {
+          "slug": "rosa",
+          "gradient": "linear-gradient(115deg, rgb(35, 24, 27) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(35, 24, 27)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 6.19,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 10 / 12 · nicht spektral",
+            "fg": "rgb(201, 137, 156)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(35, 24, 27)"
+          }
+        },
+        {
+          "slug": "weiss",
+          "gradient": "linear-gradient(115deg, rgb(30, 28, 20) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(30, 28, 20)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 7.86,
+            "required": 4.5,
+            "selector": "span.astro-badge",
+            "text": "Empirie begrenzt",
+            "fg": "rgb(157, 179, 196)",
+            "fontSize": "13px",
+            "weight": 400,
+            "stop": "rgb(30, 28, 20)"
+          }
+        },
+        {
+          "slug": "schwarz",
+          "gradient": "linear-gradient(115deg, rgb(30, 28, 20) 0%, rgb(20, 28, 31) 62%)",
+          "stops": [
+            "rgb(30, 28, 20)",
+            "rgb(20, 28, 31)"
+          ],
+          "texts": 9,
+          "worst": {
+            "ratio": 7.43,
+            "required": 4.5,
+            "selector": "p.label",
+            "text": "Farbwelt 12 / 12 · Neutralfarbe",
+            "fg": "rgb(176, 171, 156)",
+            "fontSize": "13px",
+            "weight": 500,
+            "stop": "rgb(30, 28, 20)"
+          }
+        }
+      ],
+      "worstOverall": {
+        "slug": "magenta",
+        "ratio": 4.8,
+        "required": 4.5,
+        "selector": "p.label",
+        "text": "Farbwelt 09 / 12 · nicht spektral",
+        "fg": "rgb(195, 105, 158)",
+        "fontSize": "13px",
+        "weight": 500,
+        "stop": "rgb(20, 28, 31)"
+      },
+      "failing": []
+    }
+  }
+}

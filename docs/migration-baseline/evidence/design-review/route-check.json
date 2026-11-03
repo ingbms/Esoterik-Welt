@@ -1,0 +1,233 @@
+{
+  "generated_at": "2026-11-03T21:49:24.098Z",
+  "catalog": "docs/migration-baseline/content-catalog.json",
+  "routes_checked": 28,
+  "not_found": [
+    "#farbwelten/braun",
+    "#farbwelten/therapie",
+    "#farbwelten/psychologie",
+    "#farbwelten/licht"
+  ],
+  "measured": [
+    {
+      "route": "#home",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1": "Entdecke die verborgene Sprache des Universums",
+      "textLength": 2140,
+      "notFound": false
+    },
+    {
+      "route": "#tarot",
+      "title": "Tarot — 78 Karten, Tageskarte & Legungen | Esoterik-Welt",
+      "h1": "Tarot — Der Spiegel der Seele",
+      "textLength": 4570,
+      "notFound": false
+    },
+    {
+      "route": "#crystals",
+      "title": "Kristalle & Steine — Chakra, Farbe, Wirkung | Esoterik-Welt",
+      "h1": "Kristalle & Steine",
+      "textLength": 7401,
+      "notFound": false
+    },
+    {
+      "route": "#moon",
+      "title": "Mondphasen, Kalender & Deutung | Esoterik-Welt",
+      "h1": "Mondphasen",
+      "textLength": 7415,
+      "notFound": false
+    },
+    {
+      "route": "#astrologie",
+      "title": "Astrologie — Zeichen, Faktoren, Häuser, Aspekte | Esoterik-Welt",
+      "h1": "Astrologie verstehen",
+      "textLength": 2940,
+      "notFound": false
+    },
+    {
+      "route": "#frequenzen",
+      "title": "Frequenzen & Schwingungen — Bibliothek und Frequenzlabor | Esoterik-Welt",
+      "h1": "Frequenzen & Schwingungen",
+      "textLength": 20209,
+      "notFound": false
+    },
+    {
+      "route": "#runes",
+      "title": "Runen — Das ältere Futhark | Esoterik-Welt",
+      "h1": "Runen — Das ältere Futhark",
+      "textLength": 1283,
+      "notFound": false
+    },
+    {
+      "route": "#pendeln",
+      "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+      "h1": "Radiästhesie, Pendeln und Orakel",
+      "textLength": 8197,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten",
+      "title": "Farbwelten — Bedeutung, Physik und Tradition der Farben | Esoterik-Welt",
+      "h1": "Farbwelten",
+      "textLength": 12273,
+      "notFound": false
+    },
+    {
+      "route": "#blog",
+      "title": "Wissen & Artikel — Esoterik, Rituale, Geschichte | Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "#blog/1",
+      "title": "Die 78 Tarot-Karten: Eine Reise durch die Major & Minor Arcana — Esoterik-Welt",
+      "h1": "Wissen & Artikel",
+      "textLength": 3403,
+      "notFound": false
+    },
+    {
+      "route": "impressum.html",
+      "title": "Impressum — Esoterik-Welt",
+      "h1": "Impressum",
+      "textLength": 14018,
+      "notFound": false
+    },
+    {
+      "route": "radiasthesie/glossar.html",
+      "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+      "h1": "Glossar",
+      "textLength": 3537,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/rot",
+      "title": "Rot — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1": "Rot",
+      "textLength": 7431,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/tuerkis",
+      "title": "Türkis (Cyan) — Übergang zwischen Grün und Blau | Esoterik-Welt",
+      "h1": "Türkis (Cyan)",
+      "textLength": 9539,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/magenta",
+      "title": "Magenta — Mischfarbe aus Rot und Blau | Esoterik-Welt",
+      "h1": "Magenta",
+      "textLength": 9540,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/rosa",
+      "title": "Rosa — Mischfarbe aus Rot und Weiß | Esoterik-Welt",
+      "h1": "Rosa",
+      "textLength": 8677,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/weiss",
+      "title": "Weiß — Neutralfarbe aus allen Wellenlängen | Esoterik-Welt",
+      "h1": "Weiß",
+      "textLength": 9341,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/schwarz",
+      "title": "Schwarz — Neutralfarbe ohne Lichtreiz | Esoterik-Welt",
+      "h1": "Schwarz",
+      "textLength": 9576,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/blau",
+      "title": "Blau — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1": "Blau",
+      "textLength": 6126,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/gruen",
+      "title": "Grün — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1": "Grün",
+      "textLength": 5984,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/gelb",
+      "title": "Gelb — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1": "Gelb",
+      "textLength": 6025,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/violett",
+      "title": "Violett — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1": "Violett",
+      "textLength": 8561,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/orange",
+      "title": "Orange — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1": "Orange",
+      "textLength": 5969,
+      "notFound": false
+    },
+    {
+      "route": "#farbwelten/braun",
+      "title": "Unbekannte Farbwelt | Esoterik-Welt",
+      "h1": "Diese Farbwelt gibt es nicht",
+      "textLength": 153,
+      "notFound": true
+    },
+    {
+      "route": "#farbwelten/therapie",
+      "title": "Unbekannte Farbwelt | Esoterik-Welt",
+      "h1": "Diese Farbwelt gibt es nicht",
+      "textLength": 156,
+      "notFound": true
+    },
+    {
+      "route": "#farbwelten/psychologie",
+      "title": "Unbekannte Farbwelt | Esoterik-Welt",
+      "h1": "Diese Farbwelt gibt es nicht",
+      "textLength": 159,
+      "notFound": true
+    },
+    {
+      "route": "#farbwelten/licht",
+      "title": "Unbekannte Farbwelt | Esoterik-Welt",
+      "h1": "Diese Farbwelt gibt es nicht",
+      "textLength": 153,
+      "notFound": true
+    }
+  ],
+  "linked_but_not_cataloged": [
+    "#blog/6",
+    "#farbwelten/farbpsychologie",
+    "#farbwelten/farbtherapie",
+    "#farbwelten/indigo",
+    "#farbwelten/lichtmedizin"
+  ],
+  "register_links": [
+    "#farbwelten/blau",
+    "#farbwelten/farbpsychologie",
+    "#farbwelten/farbtherapie",
+    "#farbwelten/gelb",
+    "#farbwelten/gruen",
+    "#farbwelten/indigo",
+    "#farbwelten/lichtmedizin",
+    "#farbwelten/magenta",
+    "#farbwelten/orange",
+    "#farbwelten/rosa",
+    "#farbwelten/rot",
+    "#farbwelten/schwarz",
+    "#farbwelten/tuerkis",
+    "#farbwelten/violett",
+    "#farbwelten/weiss"
+  ]
+}
