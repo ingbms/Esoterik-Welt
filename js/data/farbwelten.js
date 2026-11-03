@@ -3,6 +3,10 @@
 // Erzeugt von scripts/generate-farbwelten-data.cjs.
 // Neu erzeugen: node scripts/generate-farbwelten-data.cjs
 //
+// COMPASS, MEDITATION und TIMELINE sind kuratierte Konstanten des Generators:
+// Sie fassen bereits belegte Aussagen der Farbseiten zusammen und verweisen
+// ausschließlich auf Nummern des Registers (Prüfung beim Erzeugen).
+//
 // Texte sind Redaktionsinhalt und werden ausschließlich mit textContent
 // gerendert (siehe js/modules/farbwelten.js). Inline-Formatierung:
 // **fett**, *kursiv*, [Text](url) — keine HTML-Fragmente.
@@ -1456,4 +1460,270 @@ export const LIGHT_PAGE = {
     },
   ],
   sources: ['24', '15', '17', '18', '10', '11', '9', '14', '19'],
+};
+
+export const COMPASS = {
+  title: 'Farben-Kompass',
+  seoTitle: 'Farben-Kompass — Assoziation, Tradition und Einordnung | Esoterik-Welt',
+  meta: {
+    title: 'Farben-Kompass — Assoziation, Tradition und Einordnung | Esoterik-Welt',
+    description:
+      'Sieben Farbwelten vergleichen: häufige Assoziationen, kulturelle Varianten, traditionelle Bedeutung und Forschungsstand — ohne Diagnose.',
+  },
+  lede: 'Farben sind mit Emotionen assoziiert — über Kulturen hinweg ähnlich, aber nicht identisch [3][4]. Der Kompass stellt diese Assoziationen neben die Tradition und den Forschungsstand. Er ist kein Test, keine Typologie und keine Diagnose.',
+  note: 'Assoziationen beschreiben, wie Farben in Studien und Kulturen verstanden werden — nicht, was eine Farbe über eine Person aussagt. Eine medizinische Wirkung von Farben als Behandlung ist nicht belegt [3][9].',
+  worlds: {
+    rot: {
+      associations: ['Erregung', 'Aufmerksamkeit', 'Gefahr oder Leidenschaft (in vielen Kulturen)'],
+      kulturell:
+        'In vielen Kulturen mit Gefahr oder Leidenschaft verbunden; die Assoziation ist robust, aber kulturabhängig [3][4].',
+      hinweis: null,
+      quellen: ['3', '4'],
+    },
+    orange: {
+      associations: ['Begeisterung', 'Spaß', 'Lebensfreude'],
+      kulturell:
+        'Westlich oft Energie und Freundlichkeit; in anderen Kontexten Warnung, etwa auf Verkehrsschildern [3][4].',
+      hinweis: null,
+      quellen: ['3', '4'],
+    },
+    gelb: {
+      associations: ['Freude', 'Optimismus', 'Energie'],
+      kulturell: 'In manchen Kulturen Glück, in anderen Vorsicht [4].',
+      hinweis: null,
+      quellen: ['3', '4'],
+    },
+    gruen: {
+      associations: ['Ruhe', 'Ausgewogenheit', 'Naturverbundenheit'],
+      kulturell: 'Interkulturell ähnlich, aber die Varianz zwischen Kulturen ist bei Grün besonders ausgeprägt [4].',
+      hinweis: null,
+      quellen: ['3', '4'],
+    },
+    blau: {
+      associations: ['Ruhe', 'Vertrauen', 'Konzentration'],
+      kulturell:
+        'Ruhe und Vertrauen erscheinen interkulturell ähnlich; die Varianz zwischen Probandengruppen bleibt hoch [4].',
+      hinweis: null,
+      quellen: ['3', '4'],
+    },
+    indigo: {
+      associations: ['Ruhe (Blautöne)', 'Vertrauen (Blautöne)'],
+      kulturell:
+        'Keine eigene emotionale Kategorie in der Forschung; Deutungen stammen aus Blautönen oder aus kultureller Tradition [3][4].',
+      hinweis: 'Indigo wird in den großen Reviews nicht als eigene emotionale Kategorie geführt.',
+      quellen: ['3', '4'],
+    },
+    violett: {
+      associations: ['bestärkend („purple“)'],
+      kulturell:
+        '„Purple“ erscheint in der Forschung als eigene Kategorie; spektrales Violett wird davon nicht getrennt untersucht [3][4].',
+      hinweis: 'Für spektrales Violett gibt es keine eigene emotionale Kategorie in der Forschung.',
+      quellen: ['3', '4'],
+    },
+  },
+  sources: ['1', '2', '3', '4', '9'],
+};
+
+export const MEDITATION = {
+  title: 'Farbmeditation',
+  seoTitle: 'Farbmeditation — ruhige Visualisierungsübung | Esoterik-Welt',
+  meta: {
+    title: 'Farbmeditation — ruhige Visualisierungsübung | Esoterik-Welt',
+    description:
+      'Farbmeditation als ruhige Visualisierungsübung: Farbwelt wählen, Dauer einstellen, bewusst starten. Ohne Musik, ohne Blinken, ohne Datenspeicherung.',
+  },
+  lede: 'Eine ruhige Visualisierungsübung mit einer Farbe Ihrer Wahl. Wählen Sie eine Farbwelt und eine Dauer zwischen einer und zwanzig Minuten; gestartet wird nur auf Ihren Klick.',
+  einordnung:
+    'Entspannungs- und Visualisierungsübung, keine Behandlung. Es gibt keine Musik, kein Blinken und keinen Autoplay; die Übung speichert keine personenbezogenen Daten.',
+  ablauf: [
+    'Bequem sitzen und ruhig atmen.',
+    'Die Farbfläche betrachten, ohne ein Ergebnis zu erwarten.',
+    'Jederzeit über „Beenden“ abbrechen.',
+  ],
+  reflexionHinweis: 'Optional: Notieren Sie nach der Übung eine Beobachtung — ohne sie zu deuten.',
+  dauer: {
+    min: 1,
+    max: 20,
+    default: 5,
+    step: 1,
+  },
+  disclaimer:
+    'Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
+  sources: ['9'],
+};
+
+export const TIMELINE = {
+  title: 'Zeitleiste der Farbforschung',
+  seoTitle: 'Zeitleiste — Farbforschung, Chromotherapie und Lichtmedizin | Esoterik-Welt',
+  meta: {
+    title: 'Zeitleiste — Farbforschung, Chromotherapie und Lichtmedizin | Esoterik-Welt',
+    description:
+      'Belegte Stationen von 1577 bis 2025: Chakra-Geschichte, Farbpsychologie, Chromotherapie und Lichtmedizin — jedes Ereignis mit Quelle.',
+  },
+  lede: 'Jede Station ist mindestens einer Quelle aus dem Register dieser Sektion zugeordnet: Chakra-Geschichte, Farbpsychologie, Chromotherapie, Lichtmedizin und Farbmetrik.',
+  hinweis:
+    'Aufgenommen sind nur Ereignisse, die im Quellenregister belegt sind. Für ältere Farbtheorien liegt hier keine eigene Quelle vor; sie werden deshalb nicht datiert aufgeführt.',
+  fallback:
+    'Die Liste ist chronologisch geordnet und vollständig. Die Filterleiste blendet lediglich Einträge aus; sie ist keine Voraussetzung, um die Zeitleiste zu lesen.',
+  strands: [
+    {
+      id: 'chakra',
+      label: 'Chakra-Geschichte',
+    },
+    {
+      id: 'psychologie',
+      label: 'Farbpsychologie',
+    },
+    {
+      id: 'chromotherapie',
+      label: 'Chromotherapie',
+    },
+    {
+      id: 'lichtmedizin',
+      label: 'Lichtmedizin',
+    },
+    {
+      id: 'spektrum',
+      label: 'Spektrum & Farbmetrik',
+    },
+  ],
+  events: [
+    {
+      year: 1577,
+      label: '1577',
+      strand: 'chakra',
+      title: 'Sat-cakra-nirupana',
+      text: 'Der klassische Text beschreibt sechs Zentren und das Sahasrāra; zugeordnet werden Element- und Lotosfarben, keine Regenbogenfolge.',
+      sources: ['1', '2'],
+    },
+    {
+      year: 1919,
+      label: '1919',
+      strand: 'chakra',
+      title: 'Woodroffe/Avalon: The Serpent Power',
+      text: 'Die westliche Übersetzung wird zur Autoritätsquelle für fast alle späteren Chakratexte.',
+      sources: ['2'],
+    },
+    {
+      year: 1920,
+      label: '1920er',
+      strand: 'chakra',
+      title: 'Theosophie und westliche Esoterik',
+      text: 'Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren.',
+      sources: ['1'],
+    },
+    {
+      year: 1977,
+      label: '1977',
+      strand: 'chakra',
+      title: 'Regenbogen-Chakramodell',
+      text: 'Das Modell mit sieben Farben von Rot bis Violett erscheint in dieser Kombination.',
+      sources: ['1'],
+    },
+    {
+      year: 2000,
+      label: '2000',
+      strand: 'spektrum',
+      title: 'Color Science (Wyszecki & Stiles)',
+      text: 'Das Standardwerk zur Farbmetrik beschreibt Metamerie und die Grenzen der Farbmessung.',
+      sources: ['31'],
+    },
+    {
+      year: 2011,
+      label: '2011',
+      strand: 'lichtmedizin',
+      title: 'Leitlinie zur Neonaten-Phototherapie',
+      text: 'Die Leitlinie beschreibt Phototherapie zur Vorbeugung schwerer Hyperbilirubinämie bei Neugeborenen ab 35 Wochen.',
+      sources: ['17'],
+    },
+    {
+      year: 2019,
+      label: '2019',
+      strand: 'lichtmedizin',
+      title: 'Leitlinie zur Psoriasis-Phototherapie',
+      text: 'Die gemeinsame Leitlinie bewertet NB-UVB-Phototherapie bei Psoriasis.',
+      sources: ['18'],
+    },
+    {
+      year: 2019,
+      label: '2019',
+      strand: 'lichtmedizin',
+      title: 'Cochrane-Review zur Prävention',
+      text: 'Zur Vorbeugung bei SAD-Vorgeschichte stützt sich die Review auf eine geeignete Studie mit 46 Teilnehmenden; die Evidenz ist sehr unsicher.',
+      sources: ['11'],
+    },
+    {
+      year: 2019,
+      label: '2019',
+      strand: 'lichtmedizin',
+      title: 'ANSES-Bewertung zu Blaulicht und LED',
+      text: 'Die Bewertung ordnet Blaulicht-Risiken nach Dosis und Expositionszeitpunkt ein.',
+      sources: ['14'],
+    },
+    {
+      year: 2020,
+      label: '2020',
+      strand: 'psychologie',
+      title: 'Farb-Emotionen über 64 Länder',
+      text: 'Die Studie zeigt: Assoziationen sind interkulturell ähnlich, aber durch Sprache und geografische Nähe geprägt.',
+      sources: ['4'],
+    },
+    {
+      year: 2020,
+      label: '2020',
+      strand: 'psychologie',
+      title: 'Meta-Analyse zum Rot-Effekt',
+      text: 'Für einen Effekt roter Farbe auf kognitive Leistung findet die Meta-Analyse keine belastbare Evidenz.',
+      sources: ['7'],
+    },
+    {
+      year: 2020,
+      label: '2020',
+      strand: 'chromotherapie',
+      title: 'Farbwahrnehmung und Farbtherapie',
+      text: 'Die Untersuchung zeigt, dass Entspannungseffekte auch ohne sichtbare Farbe auftreten können.',
+      sources: ['5'],
+    },
+    {
+      year: 2020,
+      label: '2020',
+      strand: 'lichtmedizin',
+      title: 'Meta-Analyse zur SAD-Lichttherapie',
+      text: '19 Studien, SMD −0,37 (95 %-CI −0,63 bis −0,12); Heterogenität und Verzerrungsrisiko bleiben Grenzen.',
+      sources: ['15'],
+    },
+    {
+      year: 2023,
+      label: '2023',
+      strand: 'lichtmedizin',
+      title: 'IARC-Monographie zu optischer Strahlung',
+      text: 'UV-Strahlung wird als Gruppe-1-Karzinogen geführt.',
+      sources: ['19'],
+    },
+    {
+      year: 2025,
+      label: '2025',
+      strand: 'psychologie',
+      title: 'Systematische Review über 128 Jahre',
+      text: '132 Studien, 42.266 Personen und 64 Länder: Farb-Emotions-Assoziationen sind robust — aber Assoziationen.',
+      sources: ['3'],
+    },
+    {
+      year: 2025,
+      label: '2025',
+      strand: 'chromotherapie',
+      title: 'OSTEBA-HTA zur Chromotherapie',
+      text: 'Für Chromotherapie als Krankheitsbehandlung fand die Bewertung keine geeignete randomisierte Studie oder systematische Review und stufte sie als Pseudotherapie ein.',
+      sources: ['9'],
+    },
+    {
+      year: 2025,
+      label: '2025',
+      strand: 'lichtmedizin',
+      title: 'Umbrella-Review zur Photobiomodulation',
+      text: 'Photobiomodulation ist bei einzelnen Indikationen untersucht — mit niedriger bis moderater Evidenzsicherheit.',
+      sources: ['10'],
+    },
+  ],
+  sources: ['1', '2', '3', '4', '5', '7', '9', '10', '11', '14', '15', '17', '18', '19', '31'],
 };

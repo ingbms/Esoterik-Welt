@@ -785,6 +785,395 @@
   border-top: 1px solid var(--color-primary);
 }
 
+/* --- Farben-Kompass ----------------------------------------------------- */
+.fw-fieldset {
+  margin: var(--space-6) 0 var(--space-8);
+  padding: 0;
+  border: 0;
+}
+
+.fw-fieldset > legend {
+  margin-bottom: var(--space-4);
+  padding: 0;
+}
+
+.fw-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-2);
+}
+
+.fw-choice {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 48px;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  cursor: pointer;
+}
+
+.fw-choice:hover {
+  border-color: var(--color-line-strong);
+}
+
+.fw-choice:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.fw-choice:has(.fw-choice__input:checked) {
+  border-color: var(--color-primary);
+  background: var(--color-bg-card-hover);
+}
+
+.fw-choice__input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.fw-choice__dot {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--color-bg-deep);
+}
+
+.fw-choice__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.fw-choice__name {
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+.fw-choice__meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.fw-kompass__panel {
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  border: 1px solid var(--color-line-strong);
+  border-top: 3px solid var(--fw-compass-core, var(--color-primary));
+  background: var(--color-bg-card);
+}
+
+.fw-kompass__head {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: center;
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.fw-kompass__field {
+  height: 72px;
+  border: 1px solid var(--color-bg-deep);
+}
+
+.fw-kompass__name {
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-2xl);
+  line-height: 1.2;
+}
+
+.fw-kompass__meta {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.fw-kompass__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8) var(--space-10);
+  margin-top: var(--space-6);
+}
+
+.fw-kompass__block-title {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.fw-kompass__block p {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.fw-kompass__block .fw-note {
+  margin-top: var(--space-3);
+}
+
+.fw-kompass__assoc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-2) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fw-kompass__assoc li {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.fw-kompass__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+/* --- Farbmeditation ----------------------------------------------------- */
+.fw-meditation {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--space-10);
+  align-items: start;
+  margin-top: var(--space-6);
+}
+
+.fw-meditation__stage {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 320px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--color-line-strong);
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    var(--fw-meditation-core) 0%,
+    var(--fw-meditation-core) 30%,
+    var(--fw-meditation-deep) 100%
+  );
+}
+
+/* Sehr langsame Bewegung, nur wenn keine Bewegungsreduktion gewünscht ist.
+   Kein Blinken: die Animation dauert 90 s und ändert nur Position/Deckkraft. */
+@media (prefers-reduced-motion: no-preference) {
+  .fw-meditation__stage.is-running::after {
+    content: '';
+    position: absolute;
+    inset: -12%;
+    background: radial-gradient(ellipse at 50% 50%, var(--fw-meditation-core) 0%, transparent 62%);
+    animation: fw-drift 90s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes fw-drift {
+  from {
+    transform: translate3d(-2%, 1%, 0) scale(1);
+    opacity: 0.25;
+  }
+  to {
+    transform: translate3d(2%, -1%, 0) scale(1.05);
+    opacity: 0.45;
+  }
+}
+
+.fw-meditation__controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.fw-meditation__duration {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.fw-meditation__duration input[type='range'] {
+  width: 100%;
+  min-height: 44px;
+  accent-color: var(--color-primary);
+}
+
+.fw-meditation__duration-out {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.fw-meditation__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.fw-meditation__buttons .btn {
+  min-width: 96px;
+}
+
+.fw-meditation__timer {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-3xl);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+}
+
+.fw-meditation__status {
+  min-height: 1.5em;
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.fw-meditation__color {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.fw-meditation__reflection {
+  max-width: 62ch;
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.fw-meditation__reflection summary {
+  min-height: 32px;
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+}
+
+.fw-meditation__reflection-body p {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* --- Zeitleiste --------------------------------------------------------- */
+.fw-timeline__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-5) 0 var(--space-2);
+}
+
+.fw-tl-filter {
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.fw-tl-filter:hover {
+  border-color: var(--color-line-strong);
+  color: var(--color-text-primary);
+}
+
+.fw-tl-filter[aria-pressed='true'] {
+  border-color: var(--color-primary);
+  background: var(--color-bg-card-hover);
+  color: var(--color-text-primary);
+}
+
+.fw-timeline__status {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.fw-timeline--events {
+  max-width: 78ch;
+  margin-top: var(--space-2);
+}
+
+.fw-timeline--events .fw-timeline__event {
+  grid-template-columns: 6rem minmax(0, 1fr);
+  padding: var(--space-4) 0;
+}
+
+.fw-timeline--events .fw-timeline__strand {
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.fw-timeline--events .fw-timeline__title {
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.35;
+  color: var(--color-text-primary);
+}
+
+.fw-timeline--events .fw-timeline__text {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.fw-timeline--events .fw-timeline__meta {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.fw-timeline__sources {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.fw-timeline__source {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Screenreader-only: kompakte Statusmeldung, ohne das Layout zu verschieben. */
+.fw-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* --- Responsiv ---------------------------------------------------------- */
 @media (max-width: 1100px) {
   .fw-hero {
@@ -798,7 +1187,9 @@
   }
 
   .fw-chakra,
-  .fw-spectrum {
+  .fw-spectrum,
+  .fw-meditation,
+  .fw-kompass__grid {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-10);
   }
@@ -869,9 +1260,28 @@
   }
 
   .fw-facts__row,
-  .fw-timeline li {
+  .fw-timeline li,
+  .fw-timeline--events .fw-timeline__event {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-1);
+  }
+
+  .fw-kompass__panel {
+    padding: var(--space-4);
+  }
+
+  .fw-kompass__head {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+
+  .fw-kompass__field {
+    height: 48px;
+  }
+
+  .fw-kompass__foot {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .fw-node {
@@ -916,8 +1326,17 @@
 @media (prefers-reduced-motion: reduce) {
   .fw-register__link,
   .fw-node,
-  .fw-card a {
+  .fw-card a,
+  .fw-tl-filter,
+  .fw-choice,
+  .btn {
     transition: none;
+  }
+
+  /* Keine Bewegung in der Meditation: Fläche bleibt vollständig statisch. */
+  .fw-meditation__stage,
+  .fw-meditation__stage::after {
+    animation: none !important;
   }
 }
 
@@ -925,7 +1344,9 @@
 @media print {
   .fw-toc,
   .fw-spectrum__controls,
-  .fw-actions {
+  .fw-actions,
+  .fw-timeline__filters,
+  .fw-meditation__controls {
     display: none !important;
   }
 
@@ -937,7 +1358,8 @@
 
   .fw-detail__band,
   .fw-compare,
-  .fw-figure {
+  .fw-figure,
+  .fw-meditation__stage {
     border: 1px solid #777;
     background: transparent;
   }

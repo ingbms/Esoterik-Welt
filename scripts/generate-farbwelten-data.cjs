@@ -189,6 +189,257 @@ const SHORT_REFS = {
   19: 'IARC — UV-Strahlung als Gruppe-1-Karzinogen',
 };
 
+// ---------------------------------------------------------------------------
+// P2-Werkzeuge (FW-12): Farben-Kompass, Farbmeditation, Zeitleiste.
+//
+// Diese Konstanten sind hier kuratiert, weil sie nicht aus den Redaktions-
+// dateien stammen: Sie fassen bereits belegte Aussagen der Farbseiten zusammen
+// und verweisen ausschließlich auf Nummern des Registers. Der Generator prüft
+// beim Lauf, dass jede genannte Nummer existiert (assertSources).
+// ---------------------------------------------------------------------------
+
+const TOOL_META = {
+  kompass: {
+    title: 'Farben-Kompass — Assoziation, Tradition und Einordnung | Esoterik-Welt',
+    description:
+      'Sieben Farbwelten vergleichen: häufige Assoziationen, kulturelle Varianten, traditionelle Bedeutung und Forschungsstand — ohne Diagnose.',
+  },
+  meditation: {
+    title: 'Farbmeditation — ruhige Visualisierungsübung | Esoterik-Welt',
+    description:
+      'Farbmeditation als ruhige Visualisierungsübung: Farbwelt wählen, Dauer einstellen, bewusst starten. Ohne Musik, ohne Blinken, ohne Datenspeicherung.',
+  },
+  timeline: {
+    title: 'Zeitleiste — Farbforschung, Chromotherapie und Lichtmedizin | Esoterik-Welt',
+    description:
+      'Belegte Stationen von 1577 bis 2025: Chakra-Geschichte, Farbpsychologie, Chromotherapie und Lichtmedizin — jedes Ereignis mit Quelle.',
+  },
+};
+
+// Häufige Assoziationen und kulturelle Varianten: verdichtete Aussagen aus den
+// Farbpsychologie-Abschnitten der Farbseiten [3][4]. Keine Wirkaussage.
+const COMPASS_ASSOCIATIONS = {
+  rot: ['Erregung', 'Aufmerksamkeit', 'Gefahr oder Leidenschaft (in vielen Kulturen)'],
+  orange: ['Begeisterung', 'Spaß', 'Lebensfreude'],
+  gelb: ['Freude', 'Optimismus', 'Energie'],
+  gruen: ['Ruhe', 'Ausgewogenheit', 'Naturverbundenheit'],
+  blau: ['Ruhe', 'Vertrauen', 'Konzentration'],
+  indigo: ['Ruhe (Blautöne)', 'Vertrauen (Blautöne)'],
+  violett: ['bestärkend („purple“)'],
+};
+
+const COMPASS_CULTURE = {
+  rot: 'In vielen Kulturen mit Gefahr oder Leidenschaft verbunden; die Assoziation ist robust, aber kulturabhängig [3][4].',
+  orange: 'Westlich oft Energie und Freundlichkeit; in anderen Kontexten Warnung, etwa auf Verkehrsschildern [3][4].',
+  gelb: 'In manchen Kulturen Glück, in anderen Vorsicht [4].',
+  gruen: 'Interkulturell ähnlich, aber die Varianz zwischen Kulturen ist bei Grün besonders ausgeprägt [4].',
+  blau: 'Ruhe und Vertrauen erscheinen interkulturell ähnlich; die Varianz zwischen Probandengruppen bleibt hoch [4].',
+  indigo:
+    'Keine eigene emotionale Kategorie in der Forschung; Deutungen stammen aus Blautönen oder aus kultureller Tradition [3][4].',
+  violett:
+    '„Purple“ erscheint in der Forschung als eigene Kategorie; spektrales Violett wird davon nicht getrennt untersucht [3][4].',
+};
+
+const COMPASS_HINTS = {
+  indigo: 'Indigo wird in den großen Reviews nicht als eigene emotionale Kategorie geführt.',
+  violett: 'Für spektrales Violett gibt es keine eigene emotionale Kategorie in der Forschung.',
+};
+
+const COMPASS = {
+  title: 'Farben-Kompass',
+  seoTitle: TOOL_META.kompass.title,
+  meta: TOOL_META.kompass,
+  lede: 'Farben sind mit Emotionen assoziiert — über Kulturen hinweg ähnlich, aber nicht identisch [3][4]. Der Kompass stellt diese Assoziationen neben die Tradition und den Forschungsstand. Er ist kein Test, keine Typologie und keine Diagnose.',
+  note: 'Assoziationen beschreiben, wie Farben in Studien und Kulturen verstanden werden — nicht, was eine Farbe über eine Person aussagt. Eine medizinische Wirkung von Farben als Behandlung ist nicht belegt [3][9].',
+  worlds: Object.fromEntries(
+    Object.keys(COMPASS_ASSOCIATIONS).map((id) => [
+      id,
+      {
+        associations: COMPASS_ASSOCIATIONS[id],
+        kulturell: COMPASS_CULTURE[id],
+        hinweis: COMPASS_HINTS[id] || null,
+        quellen: ['3', '4'],
+      },
+    ])
+  ),
+  sources: ['1', '2', '3', '4', '9'],
+};
+
+const MEDITATION = {
+  title: 'Farbmeditation',
+  seoTitle: TOOL_META.meditation.title,
+  meta: TOOL_META.meditation,
+  lede: 'Eine ruhige Visualisierungsübung mit einer Farbe Ihrer Wahl. Wählen Sie eine Farbwelt und eine Dauer zwischen einer und zwanzig Minuten; gestartet wird nur auf Ihren Klick.',
+  einordnung:
+    'Entspannungs- und Visualisierungsübung, keine Behandlung. Es gibt keine Musik, kein Blinken und keinen Autoplay; die Übung speichert keine personenbezogenen Daten.',
+  ablauf: [
+    'Bequem sitzen und ruhig atmen.',
+    'Die Farbfläche betrachten, ohne ein Ergebnis zu erwarten.',
+    'Jederzeit über „Beenden“ abbrechen.',
+  ],
+  reflexionHinweis: 'Optional: Notieren Sie nach der Übung eine Beobachtung — ohne sie zu deuten.',
+  dauer: { min: 1, max: 20, default: 5, step: 1 },
+  disclaimer: HEALTH_NOTE,
+  sources: ['9'],
+};
+
+const TIMELINE = {
+  title: 'Zeitleiste der Farbforschung',
+  seoTitle: TOOL_META.timeline.title,
+  meta: TOOL_META.timeline,
+  lede: 'Jede Station ist mindestens einer Quelle aus dem Register dieser Sektion zugeordnet: Chakra-Geschichte, Farbpsychologie, Chromotherapie, Lichtmedizin und Farbmetrik.',
+  hinweis:
+    'Aufgenommen sind nur Ereignisse, die im Quellenregister belegt sind. Für ältere Farbtheorien liegt hier keine eigene Quelle vor; sie werden deshalb nicht datiert aufgeführt.',
+  fallback:
+    'Die Liste ist chronologisch geordnet und vollständig. Die Filterleiste blendet lediglich Einträge aus; sie ist keine Voraussetzung, um die Zeitleiste zu lesen.',
+  strands: [
+    { id: 'chakra', label: 'Chakra-Geschichte' },
+    { id: 'psychologie', label: 'Farbpsychologie' },
+    { id: 'chromotherapie', label: 'Chromotherapie' },
+    { id: 'lichtmedizin', label: 'Lichtmedizin' },
+    { id: 'spektrum', label: 'Spektrum & Farbmetrik' },
+  ],
+  events: [
+    {
+      year: 1577,
+      label: '1577',
+      strand: 'chakra',
+      title: 'Sat-cakra-nirupana',
+      text: 'Der klassische Text beschreibt sechs Zentren und das Sahasrāra; zugeordnet werden Element- und Lotosfarben, keine Regenbogenfolge.',
+      sources: ['1', '2'],
+    },
+    {
+      year: 1919,
+      label: '1919',
+      strand: 'chakra',
+      title: 'Woodroffe/Avalon: The Serpent Power',
+      text: 'Die westliche Übersetzung wird zur Autoritätsquelle für fast alle späteren Chakratexte.',
+      sources: ['2'],
+    },
+    {
+      year: 1920,
+      label: '1920er',
+      strand: 'chakra',
+      title: 'Theosophie und westliche Esoterik',
+      text: 'Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren.',
+      sources: ['1'],
+    },
+    {
+      year: 1977,
+      label: '1977',
+      strand: 'chakra',
+      title: 'Regenbogen-Chakramodell',
+      text: 'Das Modell mit sieben Farben von Rot bis Violett erscheint in dieser Kombination.',
+      sources: ['1'],
+    },
+    {
+      year: 2000,
+      label: '2000',
+      strand: 'spektrum',
+      title: 'Color Science (Wyszecki & Stiles)',
+      text: 'Das Standardwerk zur Farbmetrik beschreibt Metamerie und die Grenzen der Farbmessung.',
+      sources: ['31'],
+    },
+    {
+      year: 2011,
+      label: '2011',
+      strand: 'lichtmedizin',
+      title: 'Leitlinie zur Neonaten-Phototherapie',
+      text: 'Die Leitlinie beschreibt Phototherapie zur Vorbeugung schwerer Hyperbilirubinämie bei Neugeborenen ab 35 Wochen.',
+      sources: ['17'],
+    },
+    {
+      year: 2019,
+      label: '2019',
+      strand: 'lichtmedizin',
+      title: 'Leitlinie zur Psoriasis-Phototherapie',
+      text: 'Die gemeinsame Leitlinie bewertet NB-UVB-Phototherapie bei Psoriasis.',
+      sources: ['18'],
+    },
+    {
+      year: 2019,
+      label: '2019',
+      strand: 'lichtmedizin',
+      title: 'Cochrane-Review zur Prävention',
+      text: 'Zur Vorbeugung bei SAD-Vorgeschichte stützt sich die Review auf eine geeignete Studie mit 46 Teilnehmenden; die Evidenz ist sehr unsicher.',
+      sources: ['11'],
+    },
+    {
+      year: 2019,
+      label: '2019',
+      strand: 'lichtmedizin',
+      title: 'ANSES-Bewertung zu Blaulicht und LED',
+      text: 'Die Bewertung ordnet Blaulicht-Risiken nach Dosis und Expositionszeitpunkt ein.',
+      sources: ['14'],
+    },
+    {
+      year: 2020,
+      label: '2020',
+      strand: 'psychologie',
+      title: 'Farb-Emotionen über 64 Länder',
+      text: 'Die Studie zeigt: Assoziationen sind interkulturell ähnlich, aber durch Sprache und geografische Nähe geprägt.',
+      sources: ['4'],
+    },
+    {
+      year: 2020,
+      label: '2020',
+      strand: 'psychologie',
+      title: 'Meta-Analyse zum Rot-Effekt',
+      text: 'Für einen Effekt roter Farbe auf kognitive Leistung findet die Meta-Analyse keine belastbare Evidenz.',
+      sources: ['7'],
+    },
+    {
+      year: 2020,
+      label: '2020',
+      strand: 'chromotherapie',
+      title: 'Farbwahrnehmung und Farbtherapie',
+      text: 'Die Untersuchung zeigt, dass Entspannungseffekte auch ohne sichtbare Farbe auftreten können.',
+      sources: ['5'],
+    },
+    {
+      year: 2020,
+      label: '2020',
+      strand: 'lichtmedizin',
+      title: 'Meta-Analyse zur SAD-Lichttherapie',
+      text: '19 Studien, SMD −0,37 (95 %-CI −0,63 bis −0,12); Heterogenität und Verzerrungsrisiko bleiben Grenzen.',
+      sources: ['15'],
+    },
+    {
+      year: 2023,
+      label: '2023',
+      strand: 'lichtmedizin',
+      title: 'IARC-Monographie zu optischer Strahlung',
+      text: 'UV-Strahlung wird als Gruppe-1-Karzinogen geführt.',
+      sources: ['19'],
+    },
+    {
+      year: 2025,
+      label: '2025',
+      strand: 'psychologie',
+      title: 'Systematische Review über 128 Jahre',
+      text: '132 Studien, 42.266 Personen und 64 Länder: Farb-Emotions-Assoziationen sind robust — aber Assoziationen.',
+      sources: ['3'],
+    },
+    {
+      year: 2025,
+      label: '2025',
+      strand: 'chromotherapie',
+      title: 'OSTEBA-HTA zur Chromotherapie',
+      text: 'Für Chromotherapie als Krankheitsbehandlung fand die Bewertung keine geeignete randomisierte Studie oder systematische Review und stufte sie als Pseudotherapie ein.',
+      sources: ['9'],
+    },
+    {
+      year: 2025,
+      label: '2025',
+      strand: 'lichtmedizin',
+      title: 'Umbrella-Review zur Photobiomodulation',
+      text: 'Photobiomodulation ist bei einzelnen Indikationen untersucht — mit niedriger bis moderater Evidenzsicherheit.',
+      sources: ['10'],
+    },
+  ].sort((a, b) => a.year - b.year),
+  sources: ['1', '2', '3', '4', '5', '7', '9', '10', '11', '14', '15', '17', '18', '19', '31'],
+};
+
 // Zeitleiste der Chakra-Geschichte, wörtlich aus content/farbwelten/chakren.md.
 const HISTORY_TIMELINE = [
   '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
@@ -669,6 +920,28 @@ function buildLightPage() {
   };
 }
 
+function assertToolSources(name, payload, sourceObject) {
+  const text = JSON.stringify(payload);
+  const cited = [...new Set([...text.matchAll(/\[(\d{1,2})\]/g)].map((match) => match[1]))];
+  const missing = cited.filter((id) => !sourceObject[id]);
+  if (missing.length)
+    throw new Error(`${name}: Quellen ohne Registereintrag: ${missing.map((id) => `[${id}]`).join(' ')}`);
+  for (const id of payload.sources || []) {
+    if (!sourceObject[id]) throw new Error(`${name}: Quelle [${id}] fehlt im Register`);
+  }
+}
+
+function assertTimeline() {
+  const strands = new Set(TIMELINE.strands.map((strand) => strand.id));
+  let previous = -Infinity;
+  for (const event of TIMELINE.events) {
+    if (!strands.has(event.strand)) throw new Error(`Zeitleiste: unbekannter Strang „${event.strand}“`);
+    if (!event.sources.length) throw new Error(`Zeitleiste: Ereignis ohne Quelle: ${event.title}`);
+    if (event.year < previous) throw new Error(`Zeitleiste: nicht chronologisch bei „${event.title}“`);
+    previous = event.year;
+  }
+}
+
 function main() {
   const { worlds, sourceRegistry, reports, landingDoc } = buildColors();
   const landingPage = buildLanding(landingDoc, worlds);
@@ -679,10 +952,22 @@ function main() {
     [...sourceRegistry.values()].sort((a, b) => Number(a.id) - Number(b.id)).map((entry) => [entry.id, entry])
   );
 
+  assertToolSources('COMPASS', COMPASS, sourceObject);
+  assertToolSources('MEDITATION', MEDITATION, sourceObject);
+  assertToolSources('TIMELINE', TIMELINE, sourceObject);
+  assertTimeline();
+  for (const id of Object.keys(COMPASS.worlds)) {
+    if (!worlds.some((world) => world.id === id)) throw new Error(`Kompass: unbekannte Farbwelt ${id}`);
+  }
+
   const banner = `// AUTO-GENERATED — nicht von Hand bearbeiten.
 // Quelle: content/farbwelten/*.md (Redaktionsstand Task 3)
 // Erzeugt von scripts/generate-farbwelten-data.cjs.
 // Neu erzeugen: node scripts/generate-farbwelten-data.cjs
+//
+// COMPASS, MEDITATION und TIMELINE sind kuratierte Konstanten des Generators:
+// Sie fassen bereits belegte Aussagen der Farbseiten zusammen und verweisen
+// ausschließlich auf Nummern des Registers (Prüfung beim Erzeugen).
 //
 // Texte sind Redaktionsinhalt und werden ausschließlich mit textContent
 // gerendert (siehe js/modules/farbwelten.js). Inline-Formatierung:
@@ -702,6 +987,12 @@ function main() {
     `export const CHAKREN_PAGE = ${JSON.stringify(chakrenPage, null, 2)};`,
     '',
     `export const LIGHT_PAGE = ${JSON.stringify(lightPage, null, 2)};`,
+    '',
+    `export const COMPASS = ${JSON.stringify(COMPASS, null, 2)};`,
+    '',
+    `export const MEDITATION = ${JSON.stringify(MEDITATION, null, 2)};`,
+    '',
+    `export const TIMELINE = ${JSON.stringify(TIMELINE, null, 2)};`,
     '',
   ].join('\n');
 
