@@ -11,6 +11,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
+const lib = require('./lib/catalog.cjs');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const DOCS = path.join(ROOT, 'docs', 'migration-baseline');
@@ -251,10 +252,14 @@ const content = readJson('content-catalog.json');
 const structural = auditCatalogs(design, content);
 
 // Medien-CSV: jede Zeile mit Pflichtfeldern, jede Lizenz entschieden.
-const mediaLines = fs.readFileSync(path.join(DOCS, 'media-catalog.csv'), 'utf8').trim().split(/\r?\n/);
-const mediaHeader = mediaLines[0].split(';');
-const mediaRows = mediaLines.slice(1).map((line) => line.split(';'));
+// Gelesen mit dem gemeinsamen CSV-Leser (Anfuehrungszeichen, Kommas in Feldern).
+// Ein split(';') war hier falsch: die Datei ist komma-separiert, dadurch fiel die
+// Lizenzspalte aus und die Kennzahl meldete 0 offene Lizenzen statt 1.
+const mediaTable = lib.parseCsv(fs.readFileSync(path.join(DOCS, 'media-catalog.csv'), 'utf8'));
+const mediaHeader = mediaTable[0];
+const mediaRows = mediaTable.slice(1);
 const licenseIndex = mediaHeader.indexOf('license_status');
+if (licenseIndex < 0) throw new Error('media-catalog.csv: Spalte license_status fehlt');
 const openLicenses = mediaRows.filter((row) => row[licenseIndex] && row[licenseIndex] !== 'geklaert' && row[licenseIndex] !== 'nicht_erforderlich');
 structural.push({
   level: 'info',
