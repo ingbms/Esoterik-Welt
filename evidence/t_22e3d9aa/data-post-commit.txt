@@ -1,0 +1,20 @@
+
+> esoterik-welt@1.0.0 data:farbwelten
+> node scripts/generate-farbwelten-data.cjs && prettier --write js/data/farbwelten.js
+
+js/data/farbwelten.js geschrieben (158.5 KB)
+  rot: Traditionelle / esoterische Bedeutung → tradition; Farbpsychologie – heutige Studienlage → psychologie; Anwendung in der Farbtherapie – und ihre Grenzen → anwendung; Praktische Übung → uebung; Was Wissenschaft sagt – und was nicht → anwendung; Quellen → quellen
+  orange: Traditionelle Bedeutung → tradition; Farbpsychologie → psychologie; Anwendung und Grenzen → anwendung; Übung → uebung; Interkulturelle und wahrnehmungspsychologische Anmerkungen → geschichte; Quellen → quellen
+  gelb: Traditionelle Bedeutung → tradition; Ergänzende Anmerkung zur Tradition → tradition; Farbpsychologie → psychologie; Anwendung und Grenzen → anwendung; Praktische Übung → uebung; Quellen → quellen
+  gruen: Traditionelle Bedeutung → tradition; Farbpsychologie → psychologie; Anwendung und Grenzen → anwendung; Praktische Übung → uebung; Interkulturelle und wahrnehmungspsychologische Anmerkungen → geschichte; Quellen → quellen
+  tuerkis: Traditionelle / esoterische Bedeutung → tradition; Farbpsychologie – heutige Studienlage → psychologie; Anwendung in der Farbtherapie – und ihre Grenzen → anwendung; Praktische Übung → uebung; Was Wissenschaft sagt – und was nicht → anwendung; Quellen → quellen
+  blau: Traditionelle Bedeutung → tradition; Farbpsychologie → psychologie; Blaulicht – differenziert (ANSES) → anwendung; Anwendung und Grenzen → anwendung; Übung → uebung; Interkulturelle und wahrnehmungspsychologische Anmerkungen → geschichte; Quellen → quellen
+  indigo: Traditionelle Bedeutung → tradition; Farbpsychologie → psychologie; Was die Studienlage nicht hergibt → anwendung; Traditionshistorische Einordnung → geschichte; Übung → uebung; Quellen → quellen
+  violett: Traditionelle Bedeutung → tradition; Farbpsychologie → psychologie; Was die Studienlage nicht hergibt → anwendung; Traditionshistorische Einordnung → geschichte; Übung → uebung; Quellen → quellen
+  magenta: Traditionelle / esoterische Bedeutung → tradition; Farbpsychologie – heutige Studienlage → psychologie; Anwendung in der Farbtherapie – und ihre Grenzen → anwendung; Praktische Übung → uebung; Was Wissenschaft sagt – und was nicht → anwendung; Quellen → quellen
+  rosa: Traditionelle / esoterische Bedeutung → tradition; Farbpsychologie – heutige Studienlage → psychologie; Anwendung in der Farbtherapie – und ihre Grenzen → anwendung; Praktische Übung → uebung; Was Wissenschaft sagt – und was nicht → anwendung; Quellen → quellen
+  weiss: Traditionelle / esoterische Bedeutung → tradition; Farbpsychologie – heutige Studienlage → psychologie; Anwendung in der Farbtherapie – und ihre Grenzen → anwendung; Praktische Übung → uebung; Was Wissenschaft sagt – und was nicht → anwendung; Quellen → quellen
+  schwarz: Traditionelle / esoterische Bedeutung → tradition; Farbpsychologie – heutige Studienlage → psychologie; Anwendung in der Farbtherapie – und ihre Grenzen → anwendung; Praktische Übung → uebung; Was Wissenschaft sagt – und was nicht → anwendung; Quellen → quellen
+Quellen im Register: 16
+Farbwelten: 12, Abschnitte je Seite: 8
+js/data/farbwelten.js 115ms
