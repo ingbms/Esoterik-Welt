@@ -20,8 +20,8 @@ Damit ist **A5 nicht erfüllt**. Die Auflage verlangt Nachweise auf echter Hardw
 | Element | Wert |
 | --- | --- |
 | Host | `Mini_IT12`, Windows 11, Benutzer `mas` |
-| Node / npm | Node v24.13.0, npm 11.x |
-| Browser (Playwright 1.64) | Chromium 156.0.8078.4, Firefox 157.0, WebKit 27.2 |
+| Node / npm | Node v24.13.0, npm 11.8.0 |
+| Browser (Playwright 1.64.1) | Chromium 156.0.8078.4, Firefox 157.0, WebKit 27.2 |
 | Mobile Emulation | Chromium, 390 × 844, Touch, DPR 3 (keine iOS-Emulation der Audio-API) |
 | Aufbau | `npm ci`, `npm run build`, `PORT=3333 node index.js` → `http://127.0.0.1:3333/Esoterik-Welt/` |
 | Datensatz | `data/frequencies.json`, 32 Einträge |
