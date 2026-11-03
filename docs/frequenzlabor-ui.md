@@ -9,12 +9,14 @@ Dieses Dokument beschreibt, **was gebaut wurde**, **wie es gemessen wurde** und 
 
 ## 1. Umfang
 
-Die Kategorie „Frequenzen & Schwingungen“ besteht aus zwei Ansichten derselben Seite:
+Die Kategorie „Frequenzen & Schwingungen“ besteht aus vier Ansichten derselben Seite:
 
 | Route | Ansicht | Inhalt |
 | --- | --- | --- |
 | `#frequenzen` | Hub | Erklärstück „Was ist Schwingung?“ (308 Wörter), Frequenzbibliothek mit 32 Einträgen, Quellen, dauerhafter Disclaimer |
 | `#frequenzen/labor` | Werkzeug | Frequenz-Slider + Zahlenfeld, Wellenform, Pegel mit sichtbarem Deckel, Play/Stopp, Sweep, Schwebung, Presets, binaurale Demo, 432/440-Vergleich, Oszillogramm |
+| `#frequenzen/cymatics` | Folgestufe P9 | Chladni-Muster für zwei Modenpaare, Knotenlinien, Textentsprechung, Modellgrenzen — siehe [frequenzlabor-p9-p10.md](frequenzlabor-p9-p10.md) |
+| `#frequenzen/meditation` | Folgestufe P10 | Meditationssitzung mit Dauer, Preset, Fades, Timer, lokalen Favoriten und Wiederaufnahme — siehe [frequenzlabor-p9-p10.md](frequenzlabor-p9-p10.md) |
 | `#frequenzlabor` | Alias | wird per `history.replaceState()` auf `#frequenzen/labor` normalisiert — beim Kaltstart, bei In-Document-Sprüngen und bei Back/Forward |
 
 Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den Bereich.
@@ -26,12 +28,15 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 | `js/modules/frequenzlabor.js` | Controller/View, 1.018 Zeilen: Rendering beider Ansichten, Events, Fokus, Fehlertexte, Sweep-Fortschritt |
 | `js/modules/frequenz-presets.js` | Laden (HTTP `fetch` / eingebettetes JSON), Validierung, Wiedergabe-Mapping, Präferenzen |
 | `js/modules/frequenz-visualisierung.js` | Canvas-Renderer, rAF nur bei laufendem Ton, statische Welle bei reduzierter Bewegung |
-| `js/modules/frequenz-flags.js` | Feature-Flags mit lokalem URL-Override (`?fq=+cymatics,-binaural`) |
+| `js/modules/frequenz-flags.js` | Feature-Flags mit lokalem URL-Override (`?fq=+cymatics,-binaural`); `cymatics`/`meditation` sind seit dem ADR-Nachtrag §13 ausgeliefert |
 | `js/modules/frequenzlabor-loader.js` | 30-Zeilen-Lazy-Proxy, einziger statischer Import im Initialpfad |
-| `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens (2.883 B gzip) |
+| `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens (3.338 B gzip; Folgestufe P9/P10 eingerechnet) |
 | `scripts/check-frequenz-budget.cjs` | Budget-Gate NFR-1/2/3 |
 | `tests/frequenz-presets.mjs` | 13 Vertragstests für Mapping, Flags, Storage, Laden |
-| `tests/frequenzlabor.spec.js` | 14 Playwright-Fälle U1–U14 |
+| `tests/frequenzlabor.spec.js` | 15 Playwright-Fälle U1–U15 |
+| `js/modules/frequenz-chladni.js`, `js/modules/frequenz-meditation-model.js` | Folgestufe P9/P10 (DOM-frei) |
+| `js/modules/frequenz-cymatics-view.js`, `js/modules/frequenz-meditation-view.js` | Folgestufe P9/P10 (Ansichten, lazy) |
+| `tests/frequenz-chladni.mjs`, `tests/frequenz-meditation.mjs`, `tests/frequenzlabor-p9-p10.spec.js` | Tests der Folgestufe (C1–C8, M1–M9, Browserfälle) |
 
 Zehn bestehende Teststellen zählten sechs Startseiten-Karten; sie erwarten jetzt sieben und führen `frequenzen` in der Modul- und Routenliste (ADR §6.6). `tests/astrologie.spec.js` nutzt außerdem wie `playwright.config.cjs` den `E2E_PORT`, statt fest auf 3100 zu zeigen.
 
@@ -154,3 +159,9 @@ Konsole: U1 prüft `console.error`/`pageerror` auf beiden Ansichten. Zusätzlich
 - Hash-Routen bleiben nicht indexierbar (ADR AD-8, P11 entscheidet über eine statische Landingpage).
 - `localStorage` wird nur auf `change`/`blur` geschrieben; blockierte Speicherung deaktiviert die Persistenz, nicht das Labor.
 - Die 1-Hz-Frequenzgenauigkeit ist keine UI-Eigenschaft; sie wird über `OfflineAudioContext` im Engine-Ticket gemessen (ADR §9.1/E18), nicht über den AnalyserNode.
+
+## 12. Folgestufe P9/P10
+
+Der ADR-Nachtrag §13 liefert die zweite Stufe aus: `#frequenzen/cymatics` (Chladni-Muster als idealisiertes Modell, ohne Frequenzzuordnung) und `#frequenzen/meditation` (Sitzung mit Timer, Fades, lokalen Favoriten und Wiederaufnahme). Beide Ansichten hängen an den vorhandenen Flags, werden per dynamischem `import()` geladen und verändern den Initialgraphen nicht (NFR-1 unverändert 85.613 B).
+
+Umsetzung, Messwerte, Testmatrix und Grenzen stehen in [frequenzlabor-p9-p10.md](frequenzlabor-p9-p10.md). Für dieses Dokument ändern sich nur zwei Punkte: die Kategorie hat vier statt zwei Ansichten, und das Stylesheet wächst um die P9/P10-Regeln (3.338 B gzip, Grenze 6.000 B).

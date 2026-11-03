@@ -1219,3 +1219,107 @@ NODE
 ```
 
 Der Vergleich entfernt nur den Dateikopf-Kommentar der `.d.ts`; alle Feldkommentare sind Teil des Blocks und damit ebenfalls geschützt. Bei Änderungen gilt: erst §4.1, dann die Datei (oder umgekehrt), dann den Vergleich ausführen.
+
+---
+
+## 13. Nachtrag P9/P10 — Chladni-Muster und Meditationssitzungen
+
+- **Status:** angenommen (Ergänzung zu ADR-0001, keine Änderung von §4 oder §7)
+- **Datum:** 2026-11-03
+- **Ticket:** Kanban `t_aa849c1c` (Folgestufe nach Review `t_a0f14bb2`)
+- **Wirkung:** §1 nimmt P9/P10 für die **erste** Stufe aus. Mit diesem Nachtrag sind beide als zweite bzw. dritte Stufe ausgeliefert; die Abgrenzung der ersten Stufe bleibt unverändert, der Engine-Vertrag (§4) wird nicht angefasst.
+
+### 13.1 N-1: Routen der Folgestufe
+
+**Entscheidung:** `#frequenzen/cymatics` und `#frequenzen/meditation` sind Sub-Routen derselben Kategorie (AD-6 bleibt gültig: ein Dokument, ein Router). `js/main.js` wird **nicht** geändert: `FREQUENZ_ROUTE` überträgt bereits beliebige Segmente an `FrequenzlaborModule.show()`, das die Ansicht wählt.
+
+- Unbekanntes Segment → Hub mit sichtbarem Hinweis (bestehendes Verhalten).
+- Bekanntes, aber per Flag deaktiviertes Segment → Hub mit dem Hinweis „ist in diesem Build nicht aktiviert“; es entsteht keine leere Seite und kein toter Deep-Link.
+- Die Bereichsnavigation zeigt einen Link nur bei aktivem Flag; die aktuelle Ansicht steht als Text mit `aria-current="page"`.
+
+**Begründung:** Kein zweiter Router, keine neuen indexierbaren URLs (AD-8), keine Änderung am Initialgraphen (NFR-1).
+
+### 13.2 N-2: Feature-Flags
+
+**Entscheidung:** `cymatics` und `meditation` stehen auf `true` (ausgeliefert). Die Flags bleiben als Kill-Switch erhalten; `?fq=-cymatics` bzw. `?fq=-meditation` gilt weiterhin nur auf `localhost`, `127.0.0.1` und `file:`. In Produktion wird der Override ignoriert (AD-5 unverändert).
+
+**Folgen:** Ein abgeschaltetes Feature erzeugt **keinen** Request auf sein Modul (NFR-6, E2E C6/M5). Nach zwei Releases werden die Flags nach AD-5 entfernt.
+
+### 13.3 N-3: P9 — Modell der Chladni-Muster (verbindlich)
+
+**Entscheidung:** Die Ansicht zeigt Knotenlinien der Modellfamilie
+
+```
+f(u, v) = cos(nπu)·cos(mπv) − cos(mπu)·cos(nπv),   u, v ∈ [0,1],   1 ≤ n, m ≤ 12, n ≠ m
+```
+
+für eine idealisierte quadratische Platte mit freien Rändern (Kennung `rect-free-edge-difference-v1`).
+
+Verbindliche Eigenschaften:
+
+1. **Keine Frequenzzuordnung.** Die Oberfläche bietet ausschließlich die Modenzahlen n und m. Es gibt keine Aussage „Frequenz X erzeugt Muster Y“, keine Hertz-Werte und keine berechnete Anregungsfrequenz; Material, Dicke, Halterung und Kantenlänge gehen nicht ein.
+2. **Entartung ist ein Fehler, kein Bild.** `n = m` ergibt in dieser Differenzform `f ≡ 0`; die Ansicht meldet das sichtbar (`role="alert"`) und zeichnet nichts.
+3. **Knotenlinien sind berechnet**, nicht gezeichnet: Marching Squares auf dem Nullniveau des normierten Feldes (Raster 200 × 200), Strecken in Einheitskoordinaten.
+4. **Die Textentsprechung steht im DOM:** Moden, Anzahl der Nulldurchgänge auf beiden Mittelachsen (bei zwei ungeraden Moden: „Mittelachse liegt vollständig auf einer Knotenlinie“) und die Symmetrieklasse. Das Canvas ist `aria-hidden="true"`.
+5. **Statische Darstellung.** Es gibt keine `requestAnimationFrame`-Schleife; neu gezeichnet wird nur bei Eingabe oder Größenänderung. `prefers-reduced-motion` ist damit strukturell erfüllt und wird zusätzlich als Hinweis benannt.
+6. **Zwei Vergleichsslots** A und B mit unabhängigen Moden; die Beschriftung sagt, dass beide derselben Modellfamilie folgen.
+
+**Verworfen:** eine Frequenz-zu-Muster-Tabelle (fachlich falsch), eine künstlerische Partikelsimulation (nicht unterscheidbar von einem Modell), eine Animation der Knotenlinien (NFR-18, kein Erkenntnisgewinn).
+
+### 13.4 N-4: P10 — Meditationssitzungen
+
+**Entscheidung:** Eine Sitzung ist ein Timer über ein Klangpreset der ADR-§8.2-Allowlist mit Ein- und Ausblendung.
+
+| Aspekt | Festlegung |
+| --- | --- |
+| Dauer | 3, 5, 10, 15, 20, 30, 45 Minuten; gültig sind 1–45 Minuten (ganzzahlig) |
+| Presets | 11 Einzeltöne (174, 285, 396, 417, 432, 440, 528, 639, 741, 852, 963 Hz) und 4 binaurale Differenzen (2, 6, 10, 20 Hz auf 200 Hz Träger) |
+| Fades | 0, 2, 5 oder 10 Sekunden, amplitudenlinear |
+| Timer | `performance.now()`-basiert, Anzeige alle 250 ms, `role="timer"` mit `aria-live="off"`; Ansage nur bei Start, einer Minute Restzeit und Ende |
+| Autoplay | Der erste `play()`-Aufruf erfolgt ausschließlich im Klick auf „Sitzung starten“/„Fortsetzen“ (NFR-12) |
+| Ende | Ausblenden, dann `stop()`; die Sitzung endet auch bei `visibilitychange → hidden`, `pagehide` und beim Verlassen der Ansicht |
+| Wiederaufnahme | Bei Unterbrechung wird die Restzeit lokal gesichert und beim nächsten Besuch als „Fortsetzen“ angeboten; ein ausdrückliches Beenden löscht sie |
+| Speicher | `esoterik-welt:frequenzlabor:meditation:v1`: `{version, favorites[], resume}`; maximal 8 Favoriten, Name ≤ 60 Zeichen, keine Zeitstempel, kein Verlauf |
+| Datenschutz | keine Registrierung, keine Cloud, keine Übertragung von Nutzungsdaten, keine Cookies (AD-4 gilt analog) |
+
+**Fades ohne neue Engine-Methode:** `setGain()` ist laut §4.4 synchron zulässig. Eine Sitzungsblende über 10 s wird deshalb als Folge von `setGain()`-Schritten (100 ms) ausgeführt: Start bei `−60 dBFS` (Hörschwelle des Labors, `minGainDb`), dann amplitudenlineare Annäherung an `−20 dBFS` (`defaultGainDb`); Ausblenden umgekehrt, danach `stop()`. Damit bleibt der Engine-Vertrag unverändert, und die Auflage „Pause/Weiter in der Engine“ (`t_f2a0868c`) kollidiert nicht mit P10 — die Meditation nutzt weder Pause noch einen dritten Audiozustand.
+
+**Blockiertes `localStorage`:** Sitzung, Timer und Audio funktionieren; Favoriten und Wiederaufnahme entfallen mit sichtbarem Hinweis. Es gibt keinen stillen Fehlschlag.
+
+### 13.5 N-5: Budget, Lazy Loading, Offline
+
+**Entscheidung:** Vier neue Module, alle ausschließlich per dynamischem `import()` aus `frequenzlabor.js` hinter dem Flag geladen:
+
+| Datei | Verantwortung | DOM |
+| --- | --- | --- |
+| `js/modules/frequenz-chladni.js` | Feldfunktion, Normierung, Nulldurchgänge, Symmetrie, Knotenlinien (Marching Squares) | nein |
+| `js/modules/frequenz-meditation-model.js` | Presets, Validierung, Countdown, Fade-Hüllkurve, versionierter Speicher | nein |
+| `js/modules/frequenz-cymatics-view.js` | Canvas-Darstellung, Modenwahl, Textentsprechung | ja |
+| `js/modules/frequenz-meditation-view.js` | Formular, Timer, Favoriten, Engine-Steuerung | ja |
+
+Gemessen nach §7.1 (`npm run check:frequenz-budget`, gzip -9):
+
+| Kennzahl | Wert | Grenze |
+| --- | --- | --- |
+| NFR-1 Initialgraph | 85.613 B (17 Dateien) — unverändert | 86.275 B |
+| NFR-2 Feature-JS | 43.390 B (10 Dateien) | 100.000 B |
+| NFR-3 Feature-CSS | 3.338 B | 6.000 B |
+
+Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enthält beide Ansichten; `Lokal.html` wächst von 790.818 B auf 825.909 B. `file://` ist geprüft: Bibliothek mit 32 Einträgen, Cymatics zeichnet, Meditation startet und zählt.
+
+### 13.6 N-6: Tests und Barrierefreiheit
+
+| Ebene | Datei | Umfang |
+| --- | --- | --- |
+| Unit (node:test) | `tests/frequenz-chladni.mjs` | C1–C8: Gültigkeit, Antisymmetrie, Spiegelsymmetrie, Normierung, analytische Nulldurchgänge, Textentsprechung, Knotenlinienlage, keine Frequenzaussage |
+| Unit (node:test) | `tests/frequenz-meditation.mjs` | M1–M9: Allowlist, Validierung, Uhr/Restzeit, Fade-Hüllkurve, Speicher-Versionierung, blockierter Speicher, Favoriten-IDs, Wiederaufnahme, Dauern |
+| Browser (Playwright) | `tests/frequenzlabor-p9-p10.spec.js` | C1–C6, M1–M5, A1–A4 (axe-core WCAG 2.1 A/AA, Tastatur, 360 px, Lazy-Loading) |
+
+`npm run test:frequenz` führt beide Unit-Suiten mit aus; die CI-Konfiguration bleibt unverändert.
+
+### 13.7 Grenzen dieses Nachtrags
+
+- Das Modell ist keine Eigenwertlösung: es liefert keine Frequenz zu einer Mode und keine Aussage über reale Platten.
+- Reale Chladni-Figuren weichen ab (endliche Dicke, nicht idealfreie Ränder, Anregungspunkt).
+- Keine Wirkaussagen zu Meditation, binauralen Tönen oder Solfeggio-Zahlen; die Presets sind Hörangebote.
+- Manuelle Screenreader-, Safari/iOS- und Hörtests bleiben beim QA-Ticket `t_4a8106de` (Auflage A5).
