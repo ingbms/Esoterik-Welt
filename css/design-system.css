@@ -81,12 +81,17 @@
   --color-chakra-crown: #8e24aa;
 
   /* --- Farbwelten (Sektion „Farben“) -------------------------------------
-     Inhaltsfarben der sieben Farbwelten. Automatisch erzeugt von
+     Inhaltsfarben der zwölf Farbwelten. Automatisch erzeugt von
      docs/farbwelten-konzept/scripts/generate-palette.py; Kontraste und Rollen
-     sind in docs/farbwelten-konzept/03-farbwelten-und-paletten.md belegt:
-     -ink ≥ 4,81:1 auf allen drei dunklen Flächen, -line ≥ 3,22:1, Text auf
-     -deep ≥ 8,96:1. Text steht nie auf -core oder -soft. Nicht von Hand
-     ändern; bei Änderung das Skript erneut ausführen. */
+     sind in docs/farbwelten-konzept/03-farbwelten-und-paletten.md und in
+     docs/farbwelten-konzept/messung/palette.json belegt: -ink ≥ 4,81:1 auf
+     allen drei dunklen Flächen, -line ≥ 3,22:1, Text auf -deep ≥ 7,43:1.
+     Text steht nie auf -core oder -soft. Nicht von Hand ändern; bei Änderung
+     das Skript erneut ausführen.
+     Nichtspektrale (magenta, rosa) und neutrale (weiss, schwarz) Farben haben
+     keine Wellenlängenrolle; ihre Tokens sind reine Flächenfarben. Die
+     Abgrenzung dieser Flächen zum Seitenhintergrund ist bewusst gemessen und
+     in palette.json (swatch_separation) dokumentiert. */
   --fw-rot-ink: #cf6a60;
   --fw-rot-core: #bc4a41;
   --fw-rot-core-deep: #853630;
@@ -119,6 +124,14 @@
   --fw-gruen-deep: #131f14;
   --fw-gruen-deep-alt: #0d170e;
 
+  --fw-tuerkis-ink: #389d9d;
+  --fw-tuerkis-core: #1b8585;
+  --fw-tuerkis-core-deep: #185e5e;
+  --fw-tuerkis-soft: #6fbab9;
+  --fw-tuerkis-line: #3f7776;
+  --fw-tuerkis-deep: #0a2020;
+  --fw-tuerkis-deep-alt: #071717;
+
   --fw-blau-ink: #4391d7;
   --fw-blau-core: #1678c3;
   --fw-blau-core-deep: #15568a;
@@ -142,6 +155,43 @@
   --fw-violett-line: #82608d;
   --fw-violett-deep: #211824;
   --fw-violett-deep-alt: #18111a;
+
+  /* Nicht spektral: additiver Rot-Blau-Mix, keine eigene Wellenlänge. */
+  --fw-magenta-ink: #c3699e;
+  --fw-magenta-core: #af4a88;
+  --fw-magenta-core-deep: #7b3660;
+  --fw-magenta-soft: #ce98b6;
+  --fw-magenta-line: #905b79;
+  --fw-magenta-deep: #25161f;
+  --fw-magenta-deep-alt: #1b1016;
+
+  --fw-rosa-ink: #c9899c;
+  --fw-rosa-core: #a15c72;
+  --fw-rosa-core-deep: #714251;
+  --fw-rosa-soft: #c59fa9;
+  --fw-rosa-line: #8e6973;
+  --fw-rosa-deep: #23181b;
+  --fw-rosa-deep-alt: #191113;
+
+  /* Neutralfarben: keine Wellenlänge. -core ist die Fläche, die den
+     Farbeindruck trägt; die 1-px-Rahmen (--color-line-strong) trennen sie vom
+     Seitenhintergrund, weil ein fast schwarzer Ton gegen einen fast schwarzen
+     Grund keine 3:1-Trennung erreichen kann. */
+  --fw-weiss-ink: #c9c4b5;
+  --fw-weiss-core: #f1ebda;
+  --fw-weiss-core-deep: #d9d4c8;
+  --fw-weiss-soft: #fbf8f0;
+  --fw-weiss-line: #95928a;
+  --fw-weiss-deep: #1e1c14;
+  --fw-weiss-deep-alt: #16140e;
+
+  --fw-schwarz-ink: #b0ab9c;
+  --fw-schwarz-core: #383225;
+  --fw-schwarz-core-deep: #201d13;
+  --fw-schwarz-soft: #55524b;
+  --fw-schwarz-line: #6f6c64;
+  --fw-schwarz-deep: #1e1c14;
+  --fw-schwarz-deep-alt: #16140e;
 
   /* --- Typography -------------------------------------------------------- */
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
@@ -301,6 +351,15 @@
   --fw-current-deep: var(--fw-gruen-deep);
   --fw-current-deep-alt: var(--fw-gruen-deep-alt);
 }
+[data-farbwelt='tuerkis'] {
+  --fw-current-ink: var(--fw-tuerkis-ink);
+  --fw-current-core: var(--fw-tuerkis-core);
+  --fw-current-core-deep: var(--fw-tuerkis-core-deep);
+  --fw-current-soft: var(--fw-tuerkis-soft);
+  --fw-current-line: var(--fw-tuerkis-line);
+  --fw-current-deep: var(--fw-tuerkis-deep);
+  --fw-current-deep-alt: var(--fw-tuerkis-deep-alt);
+}
 [data-farbwelt='blau'] {
   --fw-current-ink: var(--fw-blau-ink);
   --fw-current-core: var(--fw-blau-core);
@@ -327,6 +386,42 @@
   --fw-current-line: var(--fw-violett-line);
   --fw-current-deep: var(--fw-violett-deep);
   --fw-current-deep-alt: var(--fw-violett-deep-alt);
+}
+[data-farbwelt='magenta'] {
+  --fw-current-ink: var(--fw-magenta-ink);
+  --fw-current-core: var(--fw-magenta-core);
+  --fw-current-core-deep: var(--fw-magenta-core-deep);
+  --fw-current-soft: var(--fw-magenta-soft);
+  --fw-current-line: var(--fw-magenta-line);
+  --fw-current-deep: var(--fw-magenta-deep);
+  --fw-current-deep-alt: var(--fw-magenta-deep-alt);
+}
+[data-farbwelt='rosa'] {
+  --fw-current-ink: var(--fw-rosa-ink);
+  --fw-current-core: var(--fw-rosa-core);
+  --fw-current-core-deep: var(--fw-rosa-core-deep);
+  --fw-current-soft: var(--fw-rosa-soft);
+  --fw-current-line: var(--fw-rosa-line);
+  --fw-current-deep: var(--fw-rosa-deep);
+  --fw-current-deep-alt: var(--fw-rosa-deep-alt);
+}
+[data-farbwelt='weiss'] {
+  --fw-current-ink: var(--fw-weiss-ink);
+  --fw-current-core: var(--fw-weiss-core);
+  --fw-current-core-deep: var(--fw-weiss-core-deep);
+  --fw-current-soft: var(--fw-weiss-soft);
+  --fw-current-line: var(--fw-weiss-line);
+  --fw-current-deep: var(--fw-weiss-deep);
+  --fw-current-deep-alt: var(--fw-weiss-deep-alt);
+}
+[data-farbwelt='schwarz'] {
+  --fw-current-ink: var(--fw-schwarz-ink);
+  --fw-current-core: var(--fw-schwarz-core);
+  --fw-current-core-deep: var(--fw-schwarz-core-deep);
+  --fw-current-soft: var(--fw-schwarz-soft);
+  --fw-current-line: var(--fw-schwarz-line);
+  --fw-current-deep: var(--fw-schwarz-deep);
+  --fw-current-deep-alt: var(--fw-schwarz-deep-alt);
 }
 
 /* ============================================================================

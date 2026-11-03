@@ -1,0 +1,193 @@
+{
+  "base": "http://127.0.0.1:8237/Esoterik-Welt/",
+  "options": 12,
+  "mouse": [
+    {
+      "id": "tuerkis",
+      "name": "Türkis (Cyan)",
+      "meta": "Spektralfarbe · 490–520 nm · 577–612 THz",
+      "assoc": [
+        "positive, niedrig erregte Emotionen (Kategorie GREEN–BLUE)",
+        "Ruhe (als Blauton)",
+        "Naturverbundenheit (als Grünton)"
+      ],
+      "status": "Türkis (Cyan): positive, niedrig erregte Emotionen (Kategorie GREEN–BLUE), Ruhe (als Blauton), Naturverbundenheit (als Grünton)",
+      "ok": true
+    },
+    {
+      "id": "magenta",
+      "name": "Magenta",
+      "meta": "nicht spektral · keine Wellenlänge",
+      "assoc": [
+        "bestärkend („purple“, Bildschirm-Mix)",
+        "Übergang und Veränderung (Tradition, nicht belegt)"
+      ],
+      "status": "Magenta: bestärkend („purple“, Bildschirm-Mix), Übergang und Veränderung (Tradition, nicht belegt)",
+      "ok": true
+    },
+    {
+      "id": "rosa",
+      "name": "Rosa",
+      "meta": "nicht spektral · keine Wellenlänge",
+      "assoc": [
+        "Sanftheit",
+        "Fürsorge",
+        "Zärtlichkeit"
+      ],
+      "status": "Rosa: Sanftheit, Fürsorge, Zärtlichkeit",
+      "ok": true
+    },
+    {
+      "id": "weiss",
+      "name": "Weiß",
+      "meta": "Neutralfarbe · keine Wellenlänge",
+      "assoc": [
+        "Klarheit",
+        "Sauberkeit",
+        "Unschuld",
+        "Kälte oder Leere (kontextabhängig)"
+      ],
+      "status": "Weiß: Klarheit, Sauberkeit, Unschuld, Kälte oder Leere (kontextabhängig)",
+      "ok": true
+    },
+    {
+      "id": "schwarz",
+      "name": "Schwarz",
+      "meta": "Neutralfarbe · keine Wellenlänge",
+      "assoc": [
+        "Macht",
+        "Eleganz",
+        "Mysterium",
+        "Trauer oder Mangel (kontextabhängig)"
+      ],
+      "status": "Schwarz: Macht, Eleganz, Mysterium, Trauer oder Mangel (kontextabhängig)",
+      "ok": true
+    }
+  ],
+  "keys": [
+    {
+      "id": "tuerkis",
+      "checked": "tuerkis",
+      "focused": "tuerkis",
+      "name": "Türkis (Cyan)",
+      "meta": "Spektralfarbe · 490–520 nm · 577–612 THz",
+      "assoc": [
+        "positive, niedrig erregte Emotionen (Kategorie GREEN–BLUE)",
+        "Ruhe (als Blauton)",
+        "Naturverbundenheit (als Grünton)"
+      ],
+      "status": "Türkis (Cyan): positive, niedrig erregte Emotionen (Kategorie GREEN–BLUE), Ruhe (als Blauton), Naturverbundenheit (als Grünton)",
+      "ok": true
+    },
+    {
+      "id": "magenta",
+      "checked": "magenta",
+      "focused": "magenta",
+      "name": "Magenta",
+      "meta": "nicht spektral · keine Wellenlänge",
+      "assoc": [
+        "bestärkend („purple“, Bildschirm-Mix)",
+        "Übergang und Veränderung (Tradition, nicht belegt)"
+      ],
+      "status": "Magenta: bestärkend („purple“, Bildschirm-Mix), Übergang und Veränderung (Tradition, nicht belegt)",
+      "ok": true
+    },
+    {
+      "id": "rosa",
+      "checked": "rosa",
+      "focused": "rosa",
+      "name": "Rosa",
+      "meta": "nicht spektral · keine Wellenlänge",
+      "assoc": [
+        "Sanftheit",
+        "Fürsorge",
+        "Zärtlichkeit"
+      ],
+      "status": "Rosa: Sanftheit, Fürsorge, Zärtlichkeit",
+      "ok": true
+    },
+    {
+      "id": "weiss",
+      "checked": "weiss",
+      "focused": "weiss",
+      "name": "Weiß",
+      "meta": "Neutralfarbe · keine Wellenlänge",
+      "assoc": [
+        "Klarheit",
+        "Sauberkeit",
+        "Unschuld",
+        "Kälte oder Leere (kontextabhängig)"
+      ],
+      "status": "Weiß: Klarheit, Sauberkeit, Unschuld, Kälte oder Leere (kontextabhängig)",
+      "ok": true
+    },
+    {
+      "id": "schwarz",
+      "checked": "schwarz",
+      "focused": "schwarz",
+      "name": "Schwarz",
+      "meta": "Neutralfarbe · keine Wellenlänge",
+      "assoc": [
+        "Macht",
+        "Eleganz",
+        "Mysterium",
+        "Trauer oder Mangel (kontextabhängig)"
+      ],
+      "status": "Schwarz: Macht, Eleganz, Mysterium, Trauer oder Mangel (kontextabhängig)",
+      "ok": true
+    }
+  ],
+  "touch": {
+    "links": [
+      {
+        "route": "farbtherapie",
+        "text": "Lichtmedizin und Photobiologie",
+        "href": "#farbwelten/lichtmedizin",
+        "width": 274,
+        "height": 62,
+        "decoration": "underline",
+        "underlineOffset": "2.88px"
+      },
+      {
+        "route": "farbtherapie",
+        "text": "Farbpsychologie",
+        "href": "#farbwelten/farbpsychologie",
+        "width": 120,
+        "height": 34.8,
+        "decoration": "underline",
+        "underlineOffset": "2.88px"
+      },
+      {
+        "route": "farbtherapie",
+        "text": "Lichtmedizin und Photobiologie",
+        "href": "#farbwelten/lichtmedizin",
+        "width": 297,
+        "height": 62,
+        "decoration": "underline",
+        "underlineOffset": "2.88px"
+      },
+      {
+        "route": "farbpsychologie",
+        "text": "Farbtherapie und Chromotherapie",
+        "href": "#farbwelten/farbtherapie",
+        "width": 285,
+        "height": 38.4,
+        "decoration": "underline",
+        "underlineOffset": "3.24px"
+      },
+      {
+        "route": "lichtmedizin",
+        "text": "Farbtherapie und Chromotherapie",
+        "href": "#farbwelten/farbtherapie",
+        "width": 285,
+        "height": 38.4,
+        "decoration": "underline",
+        "underlineOffset": "3.24px"
+      }
+    ],
+    "minHeight": 34.8
+  },
+  "errors": [],
+  "failures": [],
+  "label": "12 Farbwelten"
+}

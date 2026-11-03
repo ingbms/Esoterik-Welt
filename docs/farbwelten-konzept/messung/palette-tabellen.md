@@ -8,9 +8,14 @@
 | Orange | `#c77434` | `#ad5c13` | `#7a4213` | `#d09f7d` | `#936240` | `#26180f` | `#1c110a` |
 | Gelb | `#a08b32` | `#887315` | `#605213` | `#b9ab74` | `#786c3a` | `#201c0c` | `#171408` |
 | Grün | `#4da15d` | `#1d8b3d` | `#1b622d` | `#8bb890` | `#47764e` | `#131f14` | `#0d170e` |
+| Türkis | `#389d9d` | `#1b8585` | `#185e5e` | `#6fbab9` | `#3f7776` | `#0a2020` | `#071717` |
 | Blau | `#4391d7` | `#1678c3` | `#15568a` | `#85afd8` | `#447098` | `#111d28` | `#0c151d` |
 | Indigo | `#857fd7` | `#6e64c8` | `#4d478c` | `#a5a5d9` | `#6a689c` | `#1a1a28` | `#13121d` |
 | Violett | `#ad71bf` | `#9853ad` | `#6b3c79` | `#bf9cca` | `#82608d` | `#211824` | `#18111a` |
+| Magenta | `#c3699e` | `#af4a88` | `#7b3660` | `#ce98b6` | `#905b79` | `#25161f` | `#1b1016` |
+| Rosa | `#c9899c` | `#a15c72` | `#714251` | `#c59fa9` | `#8e6973` | `#23181b` | `#191113` |
+| Weiß | `#c9c4b5` | `#f1ebda` | `#d9d4c8` | `#fbf8f0` | `#95928a` | `#1e1c14` | `#16140e` |
+| Schwarz | `#b0ab9c` | `#383225` | `#201d13` | `#55524b` | `#6f6c64` | `#1e1c14` | `#16140e` |
 
 ## B. Gemessene Kontraste (WCAG-Formel)
 
@@ -20,9 +25,14 @@
 | Orange | 5.45:1 | 4.92:1 | 4.90:1 | 13.81:1 | 9.06:1 | 3.33:1 | 3.34:1 |
 | Gelb | 5.68:1 | 5.13:1 | 5.06:1 | 13.67:1 | 8.96:1 | 3.25:1 | 3.29:1 |
 | Grün | 5.99:1 | 5.41:1 | 5.33:1 | 13.66:1 | 8.96:1 | 3.22:1 | 3.27:1 |
+| Türkis | 5.90:1 | 5.33:1 | 5.22:1 | 13.59:1 | 8.91:1 | 3.31:1 | 3.38:1 |
 | Blau | 5.72:1 | 5.16:1 | 5.10:1 | 13.70:1 | 8.98:1 | 3.27:1 | 3.30:1 |
 | Indigo | 5.48:1 | 4.95:1 | 4.92:1 | 13.79:1 | 9.04:1 | 3.33:1 | 3.35:1 |
 | Violett | 5.37:1 | 4.85:1 | 4.83:1 | 13.80:1 | 9.05:1 | 3.28:1 | 3.30:1 |
+| Magenta | 5.32:1 | 4.80:1 | 4.81:1 | 13.89:1 | 9.11:1 | 3.26:1 | 3.26:1 |
+| Rosa | 6.87:1 | 6.20:1 | 6.19:1 | 13.84:1 | 9.07:1 | 3.63:1 | 3.63:1 |
+| Weiß | 10.98:1 | 9.91:1 | 9.78:1 | 13.68:1 | 8.97:1 | 5.49:1 | 5.56:1 |
+| Schwarz | 8.34:1 | 7.53:1 | 7.43:1 | 13.68:1 | 8.97:1 | 3.25:1 | 3.29:1 |
 
 ## C. Prüfentscheid je Farbwelt
 
@@ -32,17 +42,34 @@
 | Orange | ja | ja | ja | ja | ja |
 | Gelb | ja | ja | ja | ja | ja |
 | Grün | ja | ja | ja | ja | ja |
+| Türkis | ja | ja | ja | ja | ja |
 | Blau | ja | ja | ja | ja | ja |
 | Indigo | ja | ja | ja | ja | ja |
 | Violett | ja | ja | ja | ja | ja |
+| Magenta | ja | ja | ja | ja | ja |
+| Rosa | ja | ja | ja | ja | ja |
+| Weiß | ja | ja | ja | ja | ja |
+| Schwarz | ja | ja | ja | ja | ja |
 
-## D. Ausbaustufe 2 (vorbereitet, nicht Teil der ersten Lieferung)
+## D. Flächenabgrenzung zum Seitenhintergrund
 
-| Farbwelt | `-ink` Text | `-core` Fläche | `-core-deep` | `-soft` | `-line` | `-deep` Fläche | `-deep-alt` |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Türkis | `#389d9d` | `#1b8585` | `#185e5e` | `#6fbab9` | `#3f7776` | `#0a2020` | `#071717` |
-| Magenta | `#c66897` | `#b24981` | `#7d355b` | `#d098b1` | `#925b75` | `#26161e` | `#1b1015` |
-| Rosa | `#cd677d` | `#ba4764` | `#833447` | `#d597a2` | `#975a66` | `#271619` | `#1c1012` |
+| Farbwelt | Typ | `-core` | core auf `#0b1012` | core auf `#141c1f` | Rahmen `#82928e` auf `#0b1012` |
+| --- | --- | --- | ---: | ---: | ---: |
+| Rot | spectral | `#bc4a41` | 3.82:1 | 3.45:1 | 5.88:1 |
+| Orange | spectral | `#ad5c13` | 3.94:1 | 3.55:1 | 5.88:1 |
+| Gelb | spectral | `#887315` | 4.11:1 | 3.71:1 | 5.88:1 |
+| Grün | spectral | `#1d8b3d` | 4.39:1 | 3.96:1 | 5.88:1 |
+| Türkis | spectral | `#1b8585` | 4.32:1 | 3.90:1 | 5.88:1 |
+| Blau | spectral | `#1678c3` | 4.11:1 | 3.71:1 | 5.88:1 |
+| Indigo | spectral | `#6e64c8` | 3.94:1 | 3.55:1 | 5.88:1 |
+| Violett | spectral | `#9853ad` | 3.81:1 | 3.44:1 | 5.88:1 |
+| Magenta | non-spectral | `#af4a88` | 3.79:1 | 3.42:1 | 5.88:1 |
+| Rosa | non-spectral | `#a15c72` | 3.91:1 | 3.53:1 | 5.88:1 |
+| Weiß | neutral | `#f1ebda` | 16.08:1 | 14.51:1 | 5.88:1 |
+| Schwarz | neutral | `#383225` | 1.50:1 | 1.36:1 | 5.88:1 |
+
+> Für Schwarz ist gegen den fast schwarzen Grund keine 3:1-Trennung möglich; die Fläche
+> wird dort durch den 1-px-Rahmen und die textliche Kennzeichnung getragen.
 
 ## E. Bestehende Systemflächen (unverändert)
 

@@ -131,7 +131,7 @@ const PAGE_META = {
   farbwelten: {
     title: 'Farbwelten — Bedeutung, Physik und Tradition der Farben | Esoterik-Welt',
     description:
-      'Sieben Farbwelten zwischen Licht, Wahrnehmung und Tradition: Wellenlängen, Assoziationen, Chakren und Forschungsstand differenziert erklärt.',
+      'Zwölf Farbwelten zwischen Licht, Wahrnehmung und Tradition: Wellenlängen, Assoziationen, Chakren und Forschungsstand differenziert erklärt.',
   },
 };
 

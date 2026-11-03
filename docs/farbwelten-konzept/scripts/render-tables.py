@@ -68,6 +68,21 @@ def table_spectrum(stops: list[dict]) -> str:
     return " · ".join(parts)
 
 
+def table_separation(worlds: list[dict]) -> str:
+    lines = [
+        "| Farbwelt | Typ | `-core` | core auf `#0b1012` | core auf `#141c1f` | Rahmen `#82928e` auf `#0b1012` |",
+        "| --- | --- | --- | ---: | ---: | ---: |",
+    ]
+    for world in worlds:
+        s = world["swatch_separation"]
+        lines.append(
+            f"| {world['name']} | {world['type']} | `{world['tokens']['core']}` | "
+            f"{s['core_auf_bg_deep']:.2f}:1 | {s['core_auf_bg_card']:.2f}:1 | "
+            f"{s['line_strong_auf_bg_deep']:.2f}:1 |"
+        )
+    return "\n".join(lines)
+
+
 def main() -> None:
     base = DATA["base"]
     base_contrast = base["base_contrast"]
@@ -86,9 +101,12 @@ def main() -> None:
         "",
         table_checks(DATA["worlds"]),
         "",
-        "## D. Ausbaustufe 2 (vorbereitet, nicht Teil der ersten Lieferung)",
+        "## D. Flächenabgrenzung zum Seitenhintergrund",
         "",
-        table_worlds(DATA["phase2"]),
+        table_separation(DATA["worlds"]),
+        "",
+        "> Für Schwarz ist gegen den fast schwarzen Grund keine 3:1-Trennung möglich; die Fläche",
+        "> wird dort durch den 1-px-Rahmen und die textliche Kennzeichnung getragen.",
         "",
         "## E. Bestehende Systemflächen (unverändert)",
         "",

@@ -1,0 +1,143 @@
+{
+  "meditation": [
+    {
+      "id": "rot",
+      "heading": "Gewählte Farbwelt: Rot",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "orange",
+      "heading": "Gewählte Farbwelt: Orange",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "gelb",
+      "heading": "Gewählte Farbwelt: Gelb",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "gruen",
+      "heading": "Gewählte Farbwelt: Grün",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "tuerkis",
+      "heading": "Gewählte Farbwelt: Türkis (Cyan)",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "blau",
+      "heading": "Gewählte Farbwelt: Blau",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "indigo",
+      "heading": "Gewählte Farbwelt: Indigo",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "violett",
+      "heading": "Gewählte Farbwelt: Violett",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "magenta",
+      "heading": "Gewählte Farbwelt: Magenta",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "rosa",
+      "heading": "Gewählte Farbwelt: Rosa",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "weiss",
+      "heading": "Gewählte Farbwelt: Weiß",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    },
+    {
+      "id": "schwarz",
+      "heading": "Gewählte Farbwelt: Schwarz",
+      "snippet": "FARBWELT FÜR DIE ÜBUNG Rot Wurzelchakra · moderne Zuordnung Orange Sakralchakra · moderne Zuordnung Gelb Solarplexuschakra · moderne Zuordnung Grün Herzchakra · moderne Zuordnung T",
+      "timer": "05:00"
+    }
+  ],
+  "meditationFailures": [],
+  "filters": [
+    {
+      "strand": "all",
+      "pressed": [
+        "all"
+      ],
+      "visible": 17,
+      "total": 17,
+      "status": "17 von 17 Ereignissen"
+    },
+    {
+      "strand": "chakra",
+      "pressed": [
+        "chakra"
+      ],
+      "visible": 4,
+      "total": 17,
+      "status": "4 von 17 Ereignissen"
+    },
+    {
+      "strand": "psychologie",
+      "pressed": [
+        "psychologie"
+      ],
+      "visible": 3,
+      "total": 17,
+      "status": "3 von 17 Ereignissen"
+    },
+    {
+      "strand": "chromotherapie",
+      "pressed": [
+        "chromotherapie"
+      ],
+      "visible": 2,
+      "total": 17,
+      "status": "2 von 17 Ereignissen"
+    },
+    {
+      "strand": "lichtmedizin",
+      "pressed": [
+        "lichtmedizin"
+      ],
+      "visible": 7,
+      "total": 17,
+      "status": "7 von 17 Ereignissen"
+    },
+    {
+      "strand": "spektrum",
+      "pressed": [
+        "spektrum"
+      ],
+      "visible": 1,
+      "total": 17,
+      "status": "1 von 17 Ereignissen"
+    },
+    {
+      "strand": "alle",
+      "pressed": [
+        "all"
+      ],
+      "visible": 17,
+      "total": 17,
+      "status": "17 von 17 Ereignissen"
+    }
+  ],
+  "errors": []
+}

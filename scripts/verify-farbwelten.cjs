@@ -17,12 +17,38 @@ const path = require('node:path');
 const base = process.argv[2] || 'http://127.0.0.1:8099/Esoterik-Welt/';
 const output = path.resolve(process.argv[3] || 'evidence/farbwelten');
 const SECTION_IDS = ['erleben', 'physik', 'psychologie', 'tradition', 'anwendung', 'geschichte', 'uebung', 'quellen'];
-const COLOURS = ['rot', 'orange', 'gelb', 'gruen', 'blau', 'indigo', 'violett'];
+const COLOURS = [
+  'rot',
+  'orange',
+  'gelb',
+  'gruen',
+  'tuerkis',
+  'blau',
+  'indigo',
+  'violett',
+  'magenta',
+  'rosa',
+  'weiss',
+  'schwarz',
+];
+// Farben ohne eigene Wellenlänge: sie dürfen nicht auf die λ-Achse gelegt
+// werden und müssen im Register als solche gekennzeichnet sein.
+const OHNE_WELLENLAENGE = ['magenta', 'rosa', 'weiss', 'schwarz'];
+// Register der Einstiegsseite: alle Farbwelten plus die drei Themenseiten.
+const REGISTER_ROWS = COLOURS.length + 3;
 const ROUTES = [
   { hash: 'farbwelten', kind: 'landing' },
   ...COLOURS.map((id) => ({ hash: `farbwelten/${id}`, kind: 'color' })),
   { hash: 'farbwelten/chakren', kind: 'chakren' },
   { hash: 'farbwelten/lichtfrequenzen', kind: 'light' },
+  // Themenseiten (FW-10/FW-11) ohne A–H-Skelett.
+  { hash: 'farbwelten/farbtherapie', kind: 'topic' },
+  { hash: 'farbwelten/farbpsychologie', kind: 'topic' },
+  { hash: 'farbwelten/lichtmedizin', kind: 'topic' },
+  { hash: 'farbwelten/farbtherapie/grenzen-und-risiken', kind: 'topic', anchor: 'grenzen-und-risiken' },
+  { hash: 'farbwelten/kompass', kind: 'kompass' },
+  { hash: 'farbwelten/farbmeditation', kind: 'meditation' },
+  { hash: 'farbwelten/zeitleiste', kind: 'timeline' },
   { hash: 'farbwelten/rot/physik', kind: 'color', anchor: 'physik' },
 ];
 const WIDTHS = [1440, 1100, 900, 390, 320];
@@ -120,12 +146,41 @@ const CONTRAST_HELPER = `
             ogTitle: document.querySelector('meta[property="og:title"]')?.content || '',
             ogDescription: document.querySelector('meta[property="og:description"]')?.content || '',
             twitterTitle: document.querySelector('meta[name="twitter:title"]')?.content || '',
+            canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
+            ogUrl: document.querySelector('meta[property="og:url"]')?.getAttribute('content') || '',
+            tocHrefs: [...document.querySelectorAll('#farbweltenRoot .fw-toc a')].map((node) =>
+              node.getAttribute('href')
+            ),
+            sectionNodes: [...document.querySelectorAll('#farbweltenRoot section[id]')].map((node) => ({
+              id: node.id,
+              headingId: node.querySelector('h2')?.id || '',
+              visible: node.offsetParent !== null,
+            })),
+            breadcrumb: [...document.querySelectorAll('#farbweltenRoot .fw-breadcrumb li')].map((node) =>
+              node.textContent.trim()
+            ),
+            jsonLdNames: (() => {
+              const script = document.getElementById('farbwelten-breadcrumb-ld');
+              if (!script) return [];
+              try {
+                return JSON.parse(script.textContent).itemListElement.map((entry) => entry.name);
+              } catch {
+                return [];
+              }
+            })(),
             jsonLd: [...document.querySelectorAll('#farbweltenRoot script[type="application/ld+json"]')].length,
             activePage: document.querySelector('.page.active')?.id,
             rootChildren: document.getElementById('farbweltenRoot')?.children.length || 0,
             h1Count: document.querySelectorAll('#farbweltenRoot h1').length,
             headings,
             skips,
+            registerRows: document.querySelectorAll('#farbweltenRoot .fw-register__row').length,
+            registerWithoutWavelength: [...document.querySelectorAll('#farbweltenRoot .fw-register__meta')].filter(
+              (node) => /keine Wellenlänge/.test(node.textContent)
+            ).length,
+            tafelBands: document.querySelectorAll('#farbweltenRoot .fw-tafel__band').length,
+            offAxisLinks: document.querySelectorAll('#farbweltenRoot .fw-spectrum__offaxis a[href^="#farbwelten/"]')
+              .length,
             sectionIds: [...document.querySelectorAll('#farbweltenRoot [id]')].map((node) => node.id),
             visibleSections: sectionIds.filter((id) => {
               const node = document.getElementById(id);
@@ -146,6 +201,14 @@ const CONTRAST_HELPER = `
             nodeCount: document.querySelectorAll('.fw-node').length,
             svgTitle: Boolean(document.querySelector('.fw-figure svg title')),
             imagesWithoutAlt: [...document.querySelectorAll('img:not([alt])')].length,
+            tool: {
+              compassChoices: document.querySelectorAll('input[name="fwCompassColor"]').length,
+              compassPanelName: document.getElementById('fwCompassName')?.textContent || '',
+              medTimer: document.getElementById('fwMedTimer')?.textContent.trim() || '',
+              medDuration: document.getElementById('fwMedDuration')?.value || '',
+              timelineEvents: document.querySelectorAll('.fw-timeline__event').length,
+              timelineFilters: document.querySelectorAll('.fw-tl-filter').length,
+            },
             slider: (() => {
               const input = document.getElementById('fwWavelength');
               if (!input) return null;
@@ -169,12 +232,15 @@ const CONTRAST_HELPER = `
             '#farbweltenRoot p',
             '#farbweltenRoot .fw-register__meta',
             '#farbweltenRoot .fw-register__name',
+            '#farbweltenRoot .fw-register__desc',
+            '#farbweltenRoot .fw-register__chakra',
             '#farbweltenRoot .fw-card__text',
             '#farbweltenRoot .fw-breadcrumb a',
             '#farbweltenRoot .fw-toc a',
             '#farbweltenRoot .fw-quote p',
             '#farbweltenRoot .fw-facts dt',
             '#farbweltenRoot .fw-facts dd',
+            '#farbweltenRoot .fw-spectrum__offaxis p',
             '#farbweltenRoot .astro-badge',
           ].map((selector) => measure(selector));
         }, CONTRAST_HELPER);
@@ -195,6 +261,20 @@ const CONTRAST_HELPER = `
           if (missing.length) failures.push(`fehlende Abschnitte: ${missing.join(', ')}`);
           if (route.anchor && !metrics.hash.endsWith(`/${route.anchor}`)) failures.push('Ankerroute verloren');
         }
+        if (route.kind === 'landing') {
+          if (metrics.registerRows !== REGISTER_ROWS)
+            failures.push(`Registerzeilen: ${metrics.registerRows} statt ${REGISTER_ROWS}`);
+          if (metrics.tafelBands !== COLOURS.length)
+            failures.push(`Farbtafel-Bänder: ${metrics.tafelBands} statt ${COLOURS.length}`);
+          if (metrics.registerWithoutWavelength !== OHNE_WELLENLAENGE.length)
+            failures.push(
+              `Register ohne Wellenlänge: ${metrics.registerWithoutWavelength} statt ${OHNE_WELLENLAENGE.length}`
+            );
+        }
+        if (route.kind === 'light' && metrics.offAxisLinks !== OHNE_WELLENLAENGE.length)
+          failures.push(
+            `Nichtspektrale Verweise im Explorer: ${metrics.offAxisLinks} statt ${OHNE_WELLENLAENGE.length}`
+          );
         if (route.kind === 'chakren') {
           if (metrics.nodeCount !== 7) failures.push(`Chakra-Knoten: ${metrics.nodeCount}`);
           if (metrics.pressedCount !== 1) failures.push(`aria-pressed aktiv: ${metrics.pressedCount}`);
@@ -207,6 +287,45 @@ const CONTRAST_HELPER = `
             if (!/530 Nanometer/.test(metrics.slider.valueText)) failures.push('Startwert 530 nm fehlt');
             if (!/565,6 Terahertz/.test(metrics.spectrumText)) failures.push('Frequenz 530 nm falsch');
           }
+        }
+        if (route.kind === 'topic') {
+          const slug = route.hash.split('/')[1];
+          if (!metrics.canonical.endsWith(`#farbwelten/${slug}`)) failures.push(`Canonical: ${metrics.canonical}`);
+          if (metrics.ogUrl !== metrics.canonical) failures.push('og:url weicht vom Canonical ab');
+          if (metrics.sectionNodes.length < 6) failures.push(`Abschnitte: ${metrics.sectionNodes.length}`);
+          const hidden = metrics.sectionNodes.filter((node) => !node.visible).map((node) => node.id);
+          if (hidden.length) failures.push(`unsichtbare Abschnitte: ${hidden.join(', ')}`);
+          const brokenHeadings = metrics.sectionNodes
+            .filter((node) => node.headingId !== `${node.id}-title`)
+            .map((node) => node.id);
+          if (brokenHeadings.length) failures.push(`H2 nicht Sprungziel: ${brokenHeadings.join(', ')}`);
+          if (metrics.tocHrefs.length !== metrics.sectionNodes.length)
+            failures.push(`TOC ${metrics.tocHrefs.length} Einträge für ${metrics.sectionNodes.length} Abschnitte`);
+          const unknownTargets = metrics.tocHrefs.filter(
+            (href) => !metrics.sectionNodes.some((node) => href.endsWith(`/${node.id}`))
+          );
+          if (unknownTargets.length) failures.push(`TOC-Ziele ohne Abschnitt: ${unknownTargets.join(', ')}`);
+          if (metrics.breadcrumb.length !== 3) failures.push(`Brotkrümel: ${metrics.breadcrumb.join(' › ')}`);
+          if (metrics.breadcrumb.join('|') !== metrics.jsonLdNames.join('|'))
+            failures.push(
+              `BreadcrumbList weicht ab: ${metrics.jsonLdNames.join(' › ')} statt ${metrics.breadcrumb.join(' › ')}`
+            );
+          if (!metrics.visibleSections.includes('quellen')) failures.push('Quellenabschnitt fehlt');
+          if (route.anchor && !metrics.hash.endsWith(`/${route.anchor}`)) failures.push('Ankerroute verloren');
+        }
+        if (route.kind === 'kompass') {
+          if (metrics.tool.compassChoices !== COLOURS.length)
+            failures.push(`Kompass-Auswahl: ${metrics.tool.compassChoices} statt ${COLOURS.length}`);
+          if (!metrics.tool.compassPanelName) failures.push('Kompass-Panel ohne Farbnamen');
+        }
+        if (route.kind === 'meditation') {
+          if (!/^05:00$/.test(metrics.tool.medTimer)) failures.push(`Startzeit: ${metrics.tool.medTimer}`);
+          if (metrics.tool.medDuration !== '5') failures.push(`Startdauer: ${metrics.tool.medDuration}`);
+        }
+        if (route.kind === 'timeline') {
+          if (metrics.tool.timelineEvents !== 17)
+            failures.push(`Zeitleisten-Ereignisse: ${metrics.tool.timelineEvents}`);
+          if (metrics.tool.timelineFilters !== 6) failures.push(`Zeitleisten-Filter: ${metrics.tool.timelineFilters}`);
         }
         for (const check of metrics.contrast) {
           if (check.missing || check.skipped) continue;
@@ -267,16 +386,100 @@ const CONTRAST_HELPER = `
         const aliasHash = await page.evaluate(() => location.hash);
         const aliasFailures = aliasHash === '#farbwelten/chakren' ? [] : [`Alias: ${aliasHash}`];
 
+        // Themenseite: TOC-Sprung per Tastatur auf die Zielüberschrift.
+        await page.goto('about:blank');
+        await page.goto(`${base}#farbwelten/farbtherapie`, { waitUntil: 'networkidle' });
+        await page.waitForTimeout(150);
+        const tocLink = page.locator('.fw-toc a', { hasText: 'Grenzen und Risiken' });
+        await tocLink.focus();
+        await page.keyboard.press('Enter');
+        await page.waitForTimeout(150);
+        const topicJump = await page.evaluate(() => ({
+          hash: location.hash,
+          focused: document.activeElement?.id || '',
+          headingFocusable: document.getElementById('grenzen-und-risiken-title')?.getAttribute('tabindex'),
+        }));
+        const topicFailures = [];
+        if (!topicJump.hash.endsWith('/farbtherapie/grenzen-und-risiken'))
+          topicFailures.push(`TOC-Sprung: ${topicJump.hash}`);
+        if (topicJump.focused !== 'grenzen-und-risiken-title')
+          topicFailures.push(`Fokus nach TOC-Sprung: ${topicJump.focused || '—'}`);
+
+        // Kompass per Tastatur: Pfeiltaste wählt die nächste Farbwelt.
+        await page.goto('about:blank');
+        await page.goto(`${base}#farbwelten/kompass`, { waitUntil: 'networkidle' });
+        await page.locator('input[name="fwCompassColor"]').first().focus();
+        await page.keyboard.press('ArrowRight');
+        await page.waitForTimeout(80);
+        const compassState = await page.evaluate(() => ({
+          checked: document.querySelector('input[name="fwCompassColor"]:checked')?.value,
+          name: document.getElementById('fwCompassName')?.textContent,
+          focus: document.activeElement?.value,
+        }));
+        const compassFailures = [];
+        if (compassState.checked !== 'orange') compassFailures.push(`Pfeiltaste: ${compassState.checked}`);
+        if (compassState.name !== 'Orange') compassFailures.push(`Panel: ${compassState.name}`);
+        if (compassState.focus !== 'orange') compassFailures.push('Fokus folgt nicht');
+
+        // Zeitleiste per Tastatur filtern.
+        await page.goto('about:blank');
+        await page.goto(`${base}#farbwelten/zeitleiste`, { waitUntil: 'networkidle' });
+        await page.locator('.fw-tl-filter[data-strand="chakra"]').focus();
+        await page.keyboard.press('Enter');
+        await page.waitForTimeout(80);
+        const timelineState = await page.evaluate(() => ({
+          pressed: document.querySelector('.fw-tl-filter[aria-pressed="true"]')?.dataset.strand,
+          visible: [...document.querySelectorAll('.fw-timeline__event')].filter((node) => !node.hidden).length,
+          status: document.getElementById('fwTimelineStatus')?.textContent || '',
+        }));
+        const timelineFailures = [];
+        if (timelineState.pressed !== 'chakra') timelineFailures.push(`Filter: ${timelineState.pressed}`);
+        if (timelineState.visible !== 4) timelineFailures.push(`sichtbar: ${timelineState.visible}`);
+        if (!/^4 von 17/.test(timelineState.status)) timelineFailures.push(`Status: ${timelineState.status}`);
+
+        // Reduced Motion: keine Animation an der Meditationsfläche.
+        const reduceContext = await browser.newContext({
+          viewport: { width: 1440, height: 900 },
+          reducedMotion: 'reduce',
+        });
+        const reducePage = await reduceContext.newPage();
+        await reducePage.goto(`${base}#farbwelten/farbmeditation`, { waitUntil: 'networkidle' });
+        await reducePage.locator('#fwMedStart').click();
+        const reduceState = await reducePage.evaluate(() => ({
+          after: getComputedStyle(document.getElementById('fwMeditationStage'), '::after').animationName,
+          stage: getComputedStyle(document.getElementById('fwMeditationStage')).animationName,
+          running: document.getElementById('fwMeditationStage').classList.contains('is-running'),
+          status: document.getElementById('fwMedStatus').textContent,
+        }));
+        await reduceContext.close();
+        const reduceFailures = [];
+        if (reduceState.after !== 'none' || reduceState.stage !== 'none')
+          reduceFailures.push(`Animation: ${reduceState.stage}/${reduceState.after}`);
+        if (!reduceState.running) reduceFailures.push('Start setzt keinen Laufzustand');
+        if (reduceState.status !== 'Übung läuft.') reduceFailures.push(`Status: ${reduceState.status}`);
+
         results.push({
           route: 'interaktion',
           width,
           chakraState,
           spectrum,
           aliasHash,
-          failures: [...chakraFailures, ...spectrumFailures, ...aliasFailures],
+          topicJump,
+          compassState,
+          timelineState,
+          reduceState,
+          failures: [
+            ...chakraFailures,
+            ...spectrumFailures,
+            ...aliasFailures,
+            ...topicFailures,
+            ...compassFailures,
+            ...timelineFailures,
+            ...reduceFailures,
+          ],
         });
         console.log(
-          `${results[results.length - 1].failures.length ? 'FAIL' : 'PASS'} 1440 Interaktion (Pfeiltasten, Spektrum, Alias)${
+          `${results[results.length - 1].failures.length ? 'FAIL' : 'PASS'} 1440 Interaktion (Pfeiltasten, Spektrum, Alias, TOC, Kompass, Zeitleiste, Reduced Motion)${
             results[results.length - 1].failures.length ? ' — ' + results[results.length - 1].failures.join(' | ') : ''
           }`
         );
@@ -323,8 +526,19 @@ const CONTRAST_HELPER = `
     for (const [hash, suffix] of [
       ['farbwelten', 'landing'],
       ['farbwelten/rot', 'rot'],
+      ['farbwelten/tuerkis', 'tuerkis'],
+      ['farbwelten/magenta', 'magenta'],
+      ['farbwelten/rosa', 'rosa'],
+      ['farbwelten/weiss', 'weiss'],
+      ['farbwelten/schwarz', 'schwarz'],
       ['farbwelten/chakren', 'chakren'],
       ['farbwelten/lichtfrequenzen', 'lichtfrequenzen'],
+      ['farbwelten/farbtherapie', 'farbtherapie'],
+      ['farbwelten/farbpsychologie', 'farbpsychologie'],
+      ['farbwelten/lichtmedizin', 'lichtmedizin'],
+      ['farbwelten/kompass', 'kompass'],
+      ['farbwelten/farbmeditation', 'farbmeditation'],
+      ['farbwelten/zeitleiste', 'zeitleiste'],
     ]) {
       for (const width of [1440, 390]) {
         const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
@@ -358,7 +572,11 @@ const CONTRAST_HELPER = `
         const measured = (entry.metrics?.contrast || []).filter((check) => !check.missing && !check.skipped);
         const min = measured.length ? Math.min(...measured.map((check) => check.ratio)) : null;
         return `| #${entry.route} | ${entry.width} | ${entry.metrics?.h1Count ?? '–'} | ${
-          entry.kind === 'color' ? `${entry.metrics?.visibleSections?.length ?? '–'}/8` : '–'
+          entry.kind === 'color'
+            ? `${entry.metrics?.visibleSections?.length ?? '–'}/8`
+            : entry.kind === 'topic'
+              ? `${entry.metrics?.sectionNodes?.length ?? '–'}`
+              : '–'
         } | ${entry.metrics?.docOverflowX ?? '–'} | ${measured.filter((check) => check.pass).length}/${
           measured.length
         } | ${min === null ? '–' : min + ':1'} | ${entry.failures.length ? 'FAIL: ' + entry.failures.join('; ') : 'PASS'} |`;

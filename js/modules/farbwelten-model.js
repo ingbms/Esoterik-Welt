@@ -9,6 +9,10 @@ export const ROUTE = {
   color: (id, anchor) => `#farbwelten/${id}${anchor ? `/${anchor}` : ''}`,
   chakren: (anchor) => `#farbwelten/chakren${anchor ? `/${anchor}` : ''}`,
   light: (anchor) => `#farbwelten/lichtfrequenzen${anchor ? `/${anchor}` : ''}`,
+  topic: (slug, anchor) => `#farbwelten/${slug}${anchor ? `/${anchor}` : ''}`,
+  compass: () => '#farbwelten/kompass',
+  meditation: () => '#farbwelten/farbmeditation',
+  timeline: () => '#farbwelten/zeitleiste',
 };
 
 export const VIEW = {
@@ -16,6 +20,10 @@ export const VIEW = {
   COLOR: 'color',
   CHAKREN: 'chakren',
   LIGHT: 'light',
+  TOPIC: 'topic',
+  COMPASS: 'kompass',
+  MEDITATION: 'meditation',
+  TIMELINE: 'zeitleiste',
   NOTFOUND: 'notfound',
 };
 
@@ -23,7 +31,15 @@ export const VIEW = {
 // Deep-Link auf „Farbregister“ nicht als unbekannte Seite endet.
 export const LANDING_ANCHORS = ['register', 'einstiege', 'methodik'];
 
-export const VIRTUAL_PAGES = ['chakren', 'lichtfrequenzen'];
+export const VIRTUAL_PAGES = ['chakren', 'lichtfrequenzen', 'kompass', 'farbmeditation', 'zeitleiste'];
+
+// Werkzeug-Routen der Sektion. Sie tragen keinen Anker: der Fokus landet auf
+// der H1, nicht auf einem Sprungziel.
+const TOOL_ROUTES = {
+  kompass: VIEW.COMPASS,
+  farbmeditation: VIEW.MEDITATION,
+  zeitleiste: VIEW.TIMELINE,
+};
 
 const C = 299792458; // m/s
 const PLANCK_EV_NM = 1239.841984; // eV·nm
@@ -32,12 +48,21 @@ const PLANCK_EV_NM = 1239.841984; // eV·nm
  * @param {string[]} segments Pfadsegmente hinter #farbwelten
  * @param {Array<{id:string}>} worlds
  * @param {string[]} sectionKeys Abschnittsschlüssel der Farbseiten
+ * @param {Array<{slug:string, sections:Array<{anchor:string}>}>} topics Themenseiten
  */
-export function resolveView(segments, worlds, sectionKeys = []) {
+export function resolveView(segments, worlds, sectionKeys = [], topics = []) {
   const [first, second] = segments || [];
   if (!first) return { view: VIEW.LANDING, anchor: '' };
   if (first === 'chakren') return { view: VIEW.CHAKREN, anchor: second || '', raw: 'chakren' };
   if (first === 'lichtfrequenzen') return { view: VIEW.LIGHT, anchor: second || '', raw: 'lichtfrequenzen' };
+  if (TOOL_ROUTES[first]) return { view: TOOL_ROUTES[first], anchor: '', raw: first };
+  // Themenseiten haben kein festes Skelett; ihr Anker ist ein Abschnitt ihrer
+  // eigenen H2-Reihenfolge.
+  const topic = (topics || []).find((entry) => entry.slug === first);
+  if (topic) {
+    const anchors = (topic.sections || []).map((section) => section.anchor);
+    return { view: VIEW.TOPIC, topic, anchor: anchors.includes(second) ? second : '', raw: first };
+  }
   const world = (worlds || []).find((entry) => entry.id === first);
   if (world) {
     return {
@@ -60,6 +85,18 @@ export function frequencyThz(nm) {
 /** Photonenenergie in eV (E = hc/λ, mit hc in eV·nm). */
 export function photonEnergyEv(nm) {
   return PLANCK_EV_NM / Number(nm);
+}
+
+/**
+ * Sekunden → mm:ss für die Meditationsuhr. Negative oder ungültige Werte
+ * ergeben 00:00; gerundet wird auf ganze Sekunden.
+ */
+export function formatClock(seconds) {
+  const value = Number(seconds);
+  const total = Number.isFinite(value) && value > 0 ? Math.round(value) : 0;
+  const minutes = Math.floor(total / 60);
+  const rest = total % 60;
+  return `${String(minutes).padStart(2, '0')}:${String(rest).padStart(2, '0')}`;
 }
 
 // Farbnamen-Grenzen: konventionelle Näherung, keine kolorimetrische Aussage.

@@ -1,0 +1,133 @@
+{
+  "steps": [
+    {
+      "checked": "orange",
+      "focused": "orange",
+      "panelName": "Orange",
+      "panelMeta": "Spektralfarbe · 590–620 nm · 484–508 THz"
+    },
+    {
+      "checked": "gelb",
+      "focused": "gelb",
+      "panelName": "Gelb",
+      "panelMeta": "Spektralfarbe · 570–590 nm · 508–526 THz"
+    },
+    {
+      "checked": "gruen",
+      "focused": "gruen",
+      "panelName": "Grün",
+      "panelMeta": "Spektralfarbe · 490–570 nm · 526–612 THz"
+    },
+    {
+      "checked": "tuerkis",
+      "focused": "tuerkis",
+      "panelName": "Grün",
+      "panelMeta": "Spektralfarbe · 490–570 nm · 526–612 THz"
+    },
+    {
+      "checked": "blau",
+      "focused": "blau",
+      "panelName": "Blau",
+      "panelMeta": "Spektralfarbe · 450–490 nm · 612–666 THz"
+    },
+    {
+      "checked": "indigo",
+      "focused": "indigo",
+      "panelName": "Indigo",
+      "panelMeta": "Spektralfarbe · 425–450 nm · 666–705 THz"
+    },
+    {
+      "checked": "violett",
+      "focused": "violett",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    },
+    {
+      "checked": "magenta",
+      "focused": "magenta",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    },
+    {
+      "checked": "rosa",
+      "focused": "rosa",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    },
+    {
+      "checked": "weiss",
+      "focused": "weiss",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    },
+    {
+      "checked": "schwarz",
+      "focused": "schwarz",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    }
+  ],
+  "errors": [
+    "TypeError: Cannot read properties of undefined (reading 'associations')",
+    "TypeError: Cannot read properties of undefined (reading 'associations')",
+    "TypeError: Cannot read properties of undefined (reading 'associations')",
+    "TypeError: Cannot read properties of undefined (reading 'associations')",
+    "TypeError: Cannot read properties of undefined (reading 'associations')"
+  ],
+  "mismatches": [
+    {
+      "checked": "orange",
+      "focused": "orange",
+      "panelName": "Orange",
+      "panelMeta": "Spektralfarbe · 590–620 nm · 484–508 THz"
+    },
+    {
+      "checked": "gruen",
+      "focused": "gruen",
+      "panelName": "Grün",
+      "panelMeta": "Spektralfarbe · 490–570 nm · 526–612 THz"
+    },
+    {
+      "checked": "tuerkis",
+      "focused": "tuerkis",
+      "panelName": "Grün",
+      "panelMeta": "Spektralfarbe · 490–570 nm · 526–612 THz"
+    },
+    {
+      "checked": "indigo",
+      "focused": "indigo",
+      "panelName": "Indigo",
+      "panelMeta": "Spektralfarbe · 425–450 nm · 666–705 THz"
+    },
+    {
+      "checked": "violett",
+      "focused": "violett",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    },
+    {
+      "checked": "magenta",
+      "focused": "magenta",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    },
+    {
+      "checked": "rosa",
+      "focused": "rosa",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    },
+    {
+      "checked": "weiss",
+      "focused": "weiss",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    },
+    {
+      "checked": "schwarz",
+      "focused": "schwarz",
+      "panelName": "Violett",
+      "panelMeta": "Spektralfarbe · 380–425 nm · 705–789 THz"
+    }
+  ]
+}

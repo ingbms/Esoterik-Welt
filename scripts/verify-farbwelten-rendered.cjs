@@ -20,12 +20,40 @@ const base = (
 const jsonIndex = process.argv.indexOf('--json');
 const jsonTarget = jsonIndex >= 0 ? process.argv[jsonIndex + 1] : null;
 
-const COLOURS = ['rot', 'orange', 'gelb', 'gruen', 'blau', 'indigo', 'violett'];
+const COLOURS = [
+  'rot',
+  'orange',
+  'gelb',
+  'gruen',
+  'tuerkis',
+  'blau',
+  'indigo',
+  'violett',
+  'magenta',
+  'rosa',
+  'weiss',
+  'schwarz',
+];
+// Farben ohne Wellenlänge: im gerenderten Text darf keine Messwertzeile
+// erscheinen, dafür das Typ-Label.
+const OHNE_WELLENLAENGE = {
+  magenta: 'nicht spektral',
+  rosa: 'nicht spektral',
+  weiss: 'Neutralfarbe',
+  schwarz: 'Neutralfarbe',
+};
+// Themenseiten (FW-10/FW-11): eigene Seiten ohne A–H-Skelett.
+const TOPICS = [
+  { id: 'farbtherapie', hash: '#farbwelten/farbtherapie' },
+  { id: 'farbpsychologie', hash: '#farbwelten/farbpsychologie' },
+  { id: 'lichtmedizin', hash: '#farbwelten/lichtmedizin' },
+];
 const ROUTES = [
   { id: 'farbwelten', hash: '#farbwelten' },
   ...COLOURS.map((id) => ({ id, hash: `#farbwelten/${id}` })),
   { id: 'chakren', hash: '#farbwelten/chakren' },
   { id: 'lichtfrequenzen', hash: '#farbwelten/lichtfrequenzen' },
+  ...TOPICS.map((topic) => ({ ...topic, topic: true })),
 ];
 
 const DISCLAIMER =
@@ -69,6 +97,8 @@ const results = [];
       .locator('#quellen .fw-sources a')
       .evaluateAll((nodes) => nodes.map((node) => node.getAttribute('href') || ''));
     const linkIndex = sourceLinks.join(' ');
+    const registerRows = await page.locator('#farbweltenRoot .fw-register__row').count();
+    const offAxisLinks = await page.locator('#farbweltenRoot .fw-spectrum__offaxis a[href^="#farbwelten/"]').count();
 
     const entry = { route: route.id, h1: headings, quellenItems, sourceIds, failures: [] };
     const record = (message) => {
@@ -77,8 +107,21 @@ const results = [];
     };
 
     if (headings !== 1) record(`${headings} H1 statt 1`);
-    const disclaimerHits = text.split(DISCLAIMER).length - 1;
-    if (disclaimerHits !== 1) record(`S16-Vorgabetext ${disclaimerHits}× statt 1×`);
+    if (route.topic) {
+      // Die Themenseiten tragen ihren eigenen Health-Disclaimer als letzten
+      // Absatz des Quellenabschnitts (Redaktionsstand FW-10/FW-11).
+      const paragraphs = await page
+        .locator('#farbweltenRoot .fw-topic__quellen p')
+        .evaluateAll((nodes) => nodes.map((node) => node.textContent.trim()));
+      const last = paragraphs.at(-1) || '';
+      if ((last.match(/Health-Disclaimer:/g) || []).length !== 1)
+        record(`Health-Disclaimer nicht genau einmal am Seitenende: „${last.slice(0, 60)}“`);
+      if (!/medizinische Diagnose oder Behandlung/.test(last))
+        record('Health-Disclaimer ohne Hinweis auf medizinische Diagnose/Behandlung');
+    } else {
+      const disclaimerHits = text.split(DISCLAIMER).length - 1;
+      if (disclaimerHits !== 1) record(`S16-Vorgabetext ${disclaimerHits}× statt 1×`);
+    }
     if (quellenItems < 5) record(`nur ${quellenItems} gerenderte Quellen`);
     for (const pattern of FORBIDDEN) if (pattern.test(text)) record(`verbotene Aussage ${pattern}`);
 
@@ -115,6 +158,24 @@ const results = [];
     if (route.id === 'blau') {
       // B5: circadiane Wirkung differenziert benannt.
       if (!/circadian/i.test(text)) record('B5: circadiane Einordnung fehlt');
+    }
+    if (route.id === 'farbwelten') {
+      if (registerRows !== COLOURS.length + TOPICS.length)
+        record(`Register: ${registerRows} Zeilen statt ${COLOURS.length + TOPICS.length}`);
+      if (!text.includes('keine Wellenlänge')) record('Register: Kennzeichnung „keine Wellenlänge" fehlt');
+    }
+    if (route.id === 'lichtfrequenzen') {
+      if (offAxisLinks !== 4) record(`Nichtspektrale Verweise im Explorer: ${offAxisLinks} statt 4`);
+      if (!text.includes('380 bis 780 nm')) record('λ-Achse: Bereich 380 bis 780 nm nicht benannt');
+    }
+    if (OHNE_WELLENLAENGE[route.id]) {
+      if (!text.includes(OHNE_WELLENLAENGE[route.id])) record(`Typ-Label „${OHNE_WELLENLAENGE[route.id]}" fehlt`);
+      if (!text.includes('keine eigene Wellenlänge')) record('Physik: „keine eigene Wellenlänge" fehlt');
+      if (/Wellenlängenbereich\s/.test(text)) record('Physik: Wellenlängenzeile trotz fehlender Wellenlänge');
+    }
+    if (route.id === 'tuerkis') {
+      if (!/490\s*–\s*520\s*nm/.test(text)) record('Türkis: Bereich 490–520 nm fehlt');
+      if (!/Konvention/.test(text)) record('Türkis: Kennzeichnung als Konvention fehlt');
     }
     if (COLOURS.includes(route.id)) {
       // B8: korrigierte Kennungen müssen als gerenderter Link erscheinen.
