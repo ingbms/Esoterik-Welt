@@ -4,9 +4,9 @@ Stand: 2026-11-02 · Ticket: Kanban `t_835bd1e9` · Prüfobjekt: `origin/feature
 Auftrag: unabhängige Qualitätssicherung gegen Auftrag und [ADR-0001](adr-frequenzlabor.md).
 Methode: eigener Testplan, eigene Messroutinen, echte Browser — keine Übernahme der Umsetzer-Tests als Nachweis.
 
-**Ergebnis: keine Blocker. Ein Major-Befund (M-1), drei Minor-Befunde. Freigabeempfehlung mit Auflage: M-1 vor dem Merge beheben.**
+**Ergebnis: keine Blocker. Ein Major-Befund (M-1), fünf Minor-Befunde (m-1 bis m-5). Freigabeempfehlung mit Auflage: M-1 vor dem Merge beheben.**
 
-**Nachtrag (Kanban `t_b78a89a5`): M-1, m-1 und m-2 sind behoben und mit Tests belegt — siehe 8.1. Die Auflage aus Abschnitt 9 ist damit erfüllt.**
+**Nachtrag (Kanban `t_b78a89a5`): M-1, m-1 und m-2 sind behoben und mit Tests belegt — siehe 8.1. Nachtrag (Kanban `t_8e62434e`): m-3, m-4 und m-5 sind behoben — siehe 8.2. Die Auflage aus Abschnitt 9 ist damit erfüllt.**
 
 ---
 
@@ -197,12 +197,12 @@ Die Überschreitung von 5–8 % ist Mess- und Poll-Overhead (Klick → Statusabf
 | `npm run test:frequenz` (Engine + Presets) | 34/34 |
 | `npm run test:astrologie` | 21/21 |
 | `npm run test:tarot` | 11/11 |
-| `npm run test:tarot:decks` | 11/12 — **einziger Fehlschlag, CRLF-bedingt** (m-4) |
+| `npm run test:tarot:decks` | 12/12 (nach LF-Normalisierung im Hash; m-4 behoben) |
 | `npm run test:moon` | 14/14 |
 | `npm run test:offline` | 2/2 |
 | `npm run test:local` | bestanden |
 | `npx jest` | 2/2 |
-| `E2E_PORT=3310 npm run test:e2e` (Chromium, 88 Fälle) | 88/88 |
+| `npm run test:e2e` (Chromium, 89 Fälle, eigener Port 3310) | 89/89 |
 | `npm run check:frequenz-budget` | bestanden (4.7) |
 | Unabhängige QA-Suite (`npx playwright test --config=playwright.qa.config.js`) | **111 bestanden, 0 fehlgeschlagen, 29 übersprungen** (WebKit ohne Web Audio); darunter 3 als bekannt markierte Expected-Failures für M-1 |
 
@@ -234,12 +234,15 @@ Nach „Sweep starten" läuft der Ton, `#fqStatus` (aria-live) zeigt aber weiter
 
 **m-3 — Testkonfiguration kann einen fremden Server übernehmen.**
 `playwright.config.js` setzt `reuseExistingServer: !process.env.CI`. Lokal führte ein veralteter Server auf Port 3100 zu 14 falschen Fehlschlägen (archiviert). Die QA-Konfiguration nutzt `false` und einen eigenen Port; für die Feature-Suite wäre dieselbe Härtung sinnvoll.
+- **Status: behoben in `t_8e62434e`** — alle Specs nutzen den dedizierten Port 3310, `reuseExistingServer: false` gilt lokal und in CI, belegter Port bricht ab (siehe 8.2).
 
 **m-4 — `test:tarot:decks` ist unter Windows CRLF-anfällig (kein Produktfehler).**
 Der Test vergleicht den SHA-256 der Rohdatei mit einem LF-Baseline. Mit `core.autocrlf=true` enthält die Datei 3014 CRLF-Paare; der LF-normalisierte Hash ist exakt der erwartete (`e3d0548a…`), `git diff origin/main` für die Datei ist leer. CI unter Linux ist grün. Empfehlung: im Test `\r\n` → `\n` normalisieren.
+- **Status: behoben in `t_8e62434e`** — `sha256Text` normalisiert vor dem Hash; 12/12 auf Windows und Linux (siehe 8.2).
 
 **m-5 — Sehr kleine Reserve im Initialgraph.**
 NFR-1 liegt bei 85 613 / 86 275 B (662 B, 0,8 %). Jede weitere statische Zeile im Initialpfad sprengt das Budget; das Gate schlägt dann zwar korrekt an, die Reserve sollte aber bewusst überwacht werden.
+- **Status: behoben in `t_8e62434e`** — Warnschwelle bei 95 % Auslastung im Gate, Reserve in `docs/frequenzlabor-ui.md` §2.1 dokumentiert (siehe 8.2).
 
 ### 8.1 Nachbesserung der Befunde (Kanban `t_b78a89a5`)
 
@@ -262,7 +265,31 @@ Branch `fix/frequenzlabor-qa-m1`, aufbauend auf `docs/qa-frequenzlabor` (`b1bf1d
 | `npm run test:e2e` (Chromium, 89 Fälle inkl. neuem U15) | 89/89 | `e2e-feature-chromium.txt` |
 | `npx playwright test --config=playwright.qa.config.js --project=chromium-desktop --project=firefox-desktop` | **72/72** (36 je Browser), keine Expected-Failures mehr | `qa-chromium-firefox.txt` |
 
-**Porthinweis:** Auf Port 3100 lief während der Nachbesserung erneut der fremde Vorschauserver aus Befund m-3. Der ungefilterte Aufruf `npm run test:e2e` hat ihn übernommen und 14 Fälle falsch als „failed" gemeldet (`e2e-feature-stale-server-invalid.txt`); der Nachweis oben stammt von einem freien Port (`E2E_PORT=3311`, `CI=1`, also `reuseExistingServer: false`). m-3 bleibt als Aufgabe für die Testinfrastruktur offen.
+**Porthinweis:** Auf Port 3100 lief während der Nachbesserung erneut der fremde Vorschauserver aus Befund m-3. Der ungefilterte Aufruf `npm run test:e2e` hat ihn übernommen und 14 Fälle falsch als „failed" gemeldet (`e2e-feature-stale-server-invalid.txt`); der Nachweis oben stammt von einem freien Port (`E2E_PORT=3311`, `CI=1`, also `reuseExistingServer: false`). m-3 wurde anschließend in `t_8e62434e` behoben (siehe 8.2).
+
+### 8.2 Nachbesserung der Testinfrastruktur (Kanban `t_8e62434e`)
+
+Branch `chore/frequenzlabor-testinfra`, aufbauend auf `fix/frequenzlabor-qa-m1` (`71b895c`). Kein Produktcode geändert: `js/`, `css/`, `index.html`, `data/` und die Build-Skripte sind unberührt; geändert sind Testkonfiguration, Testhilfen, das Budget-Skript und die Dokumentation.
+
+| Befund | Status | Änderung | Nachweis |
+| --- | --- | --- | --- |
+| m-3 | **behoben** | (1) `tests/helpers/e2e-target.cjs` ist jetzt die einzige Quelle für Port und Basis-URL: Standard **3310** statt 3100, `E2E_PORT`/`BASE_URL` bleiben Overrides. (2) **Alle zehn** Browser-Specs beziehen ihre Basis-URL daraus. Acht davon (Smoke, Link-Check, Screenshots, F4-Regression, Mond) hatten `3100` fest eingebaut und zeigten damit unabhängig von `playwright.config.cjs` auf den Vorschau-Port — im QA-Lauf traf das genau den dort belegten fremden Server. (3) `reuseExistingServer: false` gilt lokal und in CI; `scripts/serve-e2e.cjs` prüft den Port und bricht mit klarer Meldung ab; `playwright.qa.config.js` nutzt denselben Serverstart; Servermeldungen erscheinen per `stdout: 'pipe'` im Log. | Lauf mit belegtem 3100 → **89/89 grün** auf 3310 (`e2e-final-89.txt`, Zeile `[WebServer] [e2e-server] exklusiv auf …3310…`). Lauf mit belegtem 3310 → Abbruch vor dem ersten Test (`e2e-m3-portkollision.txt`, `e2e-m3-waechter-kollision.txt`), fremder Server danach unverändert (`e2e-m3-fremder-server-3310-unveraendert.txt`). |
+| m-4 | **behoben** | `tests/tarot-decks-v2.cjs` hasht Textdateien über `sha256Text` (LF-normalisiert); Binärassets bleiben roh gehasht, ihre Prüfsummen sind unverändert. | `npm run test:tarot:decks` → **12/12** auf Windows mit `core.autocrlf=true` (vorher 11/12). |
+| m-5 | **behoben** | `scripts/check-frequenz-budget.cjs` warnt ab 95 % Auslastung (`WARN_RATIO`): Zeile `WARN`, Warnzeile im Log, Exitcode bleibt 0; die Reserve ist in `docs/frequenzlabor-ui.md` §2.1 als bewusst überwacht dokumentiert. | `npm run check:frequenz-budget` → NFR-1 85 613 / 86 275 B = 99,2 %, Reserve 662 B, `WARN`, Exit 0. |
+
+**Nachweis der Nachbesserung** (Windows 11, Node v24.13.0, `core.autocrlf=true`, Arbeitsbaum `Esoterik-Welt-testinfra`; Protokolle unter `evidence/t_8e62434e/protokolle/`):
+
+| Prüfung | Ergebnis | Protokoll |
+| --- | --- | --- |
+| `npm run test:e2e` (89 Fälle; fremder Server belegt 3100) | **89/89**, Exit 0 | `e2e-final-89.txt` |
+| `npm run test:tarot:decks` | **12/12** | `tarot-decks-12-12.txt` |
+| `npm run check:frequenz-budget` | Budgets eingehalten, 1 Warnung (NFR-1) | `budget-warnung.txt` |
+| `npx playwright test` bei belegtem E2E-Port | Abbruch vor dem ersten Test, kein Reuse | `e2e-m3-portkollision.txt` |
+| Wächter direkt auf belegtem Port | klare Meldung, Exit 1 | `e2e-m3-waechter-kollision.txt` |
+| `npm run lint`, `npm run format:check` | 0 Fehler, Format sauber | `lint-prettier-suites.txt` |
+| `npm run test:frequenz`, `npm run test:pages` | 34/34, 6/6 | `lint-prettier-suites.txt` |
+
+**Grenzen:** Das sind Windows-Lokalläufe; die Linux-CI lief in diesem Arbeitsbaum nicht (der PR löst sie aus). Die m-4-Normalisierung ist plattformneutral, weil sie vor dem Hash auf LF vereinheitlicht — Linux hasht denselben Wert wie zuvor. Weiterhin gilt für m-3: Ein belegter Port wird erkannt und der Lauf bricht ab; die Suite weicht nicht automatisch auf einen anderen Port aus, damit ein Lauf nie unbemerkt gegen einen anderen Build geht.
 
 ## 9. Entscheidung
 
@@ -274,7 +301,9 @@ Branch `fix/frequenzlabor-qa-m1`, aufbauend auf `docs/qa-frequenzlabor` (`b1bf1d
 - **Auflage:** M-1 vor dem Merge beheben (kleiner, lokaler Fix) und U5 um die Slider→Zahlenfeld-Richtung erweitern. Ohne Behebung ist die Abnahme von U5/NFR-14 nicht vollständig.
 - m-1 bis m-5 sind Minor und können als Folgearbeiten laufen; m-3/m-4 betreffen die Testinfrastruktur.
 
-**Nachtrag nach Nachbesserung (`t_b78a89a5`, siehe 8.1):** Die Auflage ist erfüllt. M-1 ist behoben und mit der zuvor fehlenden Gegenrichtung Slider → Zahlenfeld belegt; m-1 und m-2 sind ebenfalls umgesetzt. Feature-Suite 89/89 und QA-Suite 72/72 (Chromium + Firefox) sind grün, die drei Expected-Failures für M-1 sind entfernt. **Damit ist das Frequenzlabor ohne offene Auflage freigabefähig**; offen bleiben nur die Minor-Befunde m-3 (Testserver-Übernahme), m-4 (CRLF im Tarot-Hash-Test) und m-5 (Budgetreserve) sowie die Restrisiken aus Abschnitt 10.
+**Nachtrag nach Nachbesserung (`t_b78a89a5`, siehe 8.1):** Die Auflage ist erfüllt. M-1 ist behoben und mit der zuvor fehlenden Gegenrichtung Slider → Zahlenfeld belegt; m-1 und m-2 sind ebenfalls umgesetzt. Feature-Suite 89/89 und QA-Suite 72/72 (Chromium + Firefox) sind grün, die drei Expected-Failures für M-1 sind entfernt. **Damit ist das Frequenzlabor ohne offene Auflage freigabefähig**; offen bleiben nur die Restrisiken aus Abschnitt 10.
+
+**Nachtrag Testinfrastruktur (`t_8e62434e`, siehe 8.2):** m-3, m-4 und m-5 sind behoben. `npm run test:e2e` läuft auf dem dedizierten Port 3310 (89/89 auch bei belegtem 3100) und bricht bei belegtem Testport ab, statt einen fremden Server zu übernehmen; `npm run test:tarot:decks` ist auf Windows und Linux grün (12/12); das Budget-Gate warnt ab 95 % Auslastung. Alle fünf Minor-Befunde sind damit geschlossen.
 
 ## 10. Restrisiken und nicht geprüfte Punkte
 
@@ -282,7 +311,7 @@ Branch `fix/frequenzlabor-qa-m1`, aufbauend auf `docs/qa-frequenzlabor` (`b1bf1d
 - **R-2 — Kein manueller Screenreader-Test.** Geprüft wurde der Accessibility-Baum (Namen, Rollen, Live-Regionen), nicht die tatsächliche Aussprache mit NVDA/VoiceOver.
 - **R-3 — Kein Hörtest auf echter Hardware.** Gemessen wurde der Signalpfad; Klangqualität, Kanaltrennung bei binauralen Presets und Verhalten mit realen Audiogeräten (Bluetooth-Latenz) sind nicht bewertet.
 - **R-4 — Hash-Routen bleiben nicht indexierbar** (ADR AD-8, bewusst).
-- **R-5 — Testserver-Übernahme** (m-3) kann lokal weiterhin falsche Ergebnisse erzeugen, wenn die Feature-Suite auf einem belegten Port läuft.
+- **R-5 — Testserver-Übernahme: geschlossen (m-3 behoben).** Die Suiten laufen auf dem dedizierten Port 3310 mit `reuseExistingServer: false`; ein belegter Port bricht den Lauf ab. Restrisiko: Ein absichtlich gesetzter `BASE_URL` zeigt weiterhin auf ein fremdes Ziel — das ist gewollt und im Log des Laufs nicht sichtbar unterscheidbar.
 
 ## 11. Evidenzverzeichnis
 
@@ -303,3 +332,10 @@ Branch `fix/frequenzlabor-qa-m1`, aufbauend auf `docs/qa-frequenzlabor` (`b1bf1d
 | `evidence/t_b78a89a5/protokolle/e2e-feature-chromium.txt` | Feature-E2E 89/89 nach der Nachbesserung |
 | `evidence/t_b78a89a5/protokolle/qa-chromium-firefox.txt` | QA-Suite 72/72 (Chromium + Firefox) nach der Nachbesserung |
 | `evidence/t_b78a89a5/protokolle/e2e-feature-stale-server-invalid.txt` | verworfener Lauf, der den fremden Server auf Port 3100 übernommen hat (m-3) |
+| `evidence/t_8e62434e/protokolle/e2e-final-89.txt` | Feature-Suite 89/89 auf Port 3310 bei belegtem 3100, inkl. `[WebServer] [e2e-server] exklusiv auf …3310…` |
+| `evidence/t_8e62434e/protokolle/e2e-m3-portkollision.txt` | Playwright-Abbruch bei belegtem E2E-Port (kein Reuse) |
+| `evidence/t_8e62434e/protokolle/e2e-m3-waechter-kollision.txt` | Meldung des Server-Wächters auf belegtem Port, Exit 1 |
+| `evidence/t_8e62434e/protokolle/e2e-m3-fremder-server-3310-unveraendert.txt` | fremder Server nach den Abbrüchen unverändert |
+| `evidence/t_8e62434e/protokolle/tarot-decks-12-12.txt` | `npm run test:tarot:decks` 12/12 auf Windows-Checkout |
+| `evidence/t_8e62434e/protokolle/budget-warnung.txt` | Budget-Gate mit Warnschwelle (NFR-1 `WARN`, Reserve 662 B, Exit 0) |
+| `evidence/t_8e62434e/protokolle/lint-prettier-suites.txt` | Lint, Format, `test:frequenz` 34/34, `test:pages` 6/6 |
