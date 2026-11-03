@@ -1,0 +1,69 @@
+{
+  "textspacing_1440": {
+    "docOverflowX": 0,
+    "clippedElements": 0
+  },
+  "textspacing_390": {
+    "docOverflowX": 0,
+    "clippedElements": 0
+  },
+  "reflow_320_landing": {
+    "docOverflowX": 0,
+    "tooWide": []
+  },
+  "reflow_320_thema": {
+    "docOverflowX": 0,
+    "tooWide": []
+  },
+  "reflow_320_glossar": {
+    "docOverflowX": 0,
+    "tooWide": []
+  },
+  "targets": {
+    "total": 33,
+    "under24": [
+      {
+        "tag": "a",
+        "text": "so funktioniert die Kennzeichn",
+        "w": 214,
+        "h": 20
+      },
+      {
+        "tag": "a",
+        "text": "Methodik",
+        "w": 68,
+        "h": 22
+      }
+    ]
+  },
+  "focusObscured": {
+    "headerHeight": 101,
+    "results": [
+      {
+        "text": "Belege",
+        "top": 498,
+        "obscured": false
+      },
+      {
+        "text": "Belege",
+        "top": 498,
+        "obscured": false
+      },
+      {
+        "text": "Pendeln lernen",
+        "top": 486,
+        "obscured": false
+      },
+      {
+        "text": "Geschichte der Radiästhe",
+        "top": 486,
+        "obscured": false
+      },
+      {
+        "text": "Untersuchungen im Überbl",
+        "top": 486,
+        "obscured": false
+      }
+    ]
+  }
+}

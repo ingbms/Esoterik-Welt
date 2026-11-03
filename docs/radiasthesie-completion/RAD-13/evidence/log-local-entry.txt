@@ -1,0 +1,16 @@
+✔ Explorer index.html entry redirects to functional file application without CORS/asset errors (4023.1728ms)
+✔ production package index.html opens the generated file app with normal motion (4534.6662ms)
+✔ tarot modal restores the captured focus after clearing its instance field (3.115ms)
+✔ generated local files match the production package (38.5094ms)
+✔ Lokal.html works offline in an isolated directory, including legal links and cold routes (6782.924ms)
+✔ production build HTTP preserves the Pages base and interactive modules (2948.7567ms)
+﹣ existing 4178 preview remains functional (0.3331ms) # SKIP
+﹣ published GitHub Pages base remains functional (read-only navigation) (0.149ms) # SKIP
+ℹ tests 8
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 2
+ℹ todo 0
+ℹ duration_ms 18701.6399

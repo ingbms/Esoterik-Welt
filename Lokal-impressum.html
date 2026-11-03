@@ -496,6 +496,12 @@ hr {
 #favCounter {
   margin-left: var(--space-3);
   flex-shrink: 0;
+  /* Der Zähler steht statisch im Markup. Eine feste Mindestbreite hält die
+     Navigation auch dann an ihrem Platz, wenn die Zahl von 0 auf zweistellig
+     wächst — sonst verschiebt sich der Burger beim Favorisieren. */
+  min-width: 3rem;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
 }
 
 .nav-list {
@@ -575,6 +581,10 @@ hr {
     top: var(--header-height);
     left: 0;
     right: 0;
+    /* Gestapeltes Menü: ohne stretch erbt die Liste `align-items: center` aus
+       der Desktop-Regel, die Ziele schrumpfen auf Textbreite und stehen
+       mittig. Volle Breite = 44-px-Trefferfläche über die ganze Zeile. */
+    align-items: stretch;
     flex-direction: column;
     gap: 0;
     width: 100%;
@@ -710,7 +720,8 @@ button.card,
 .card[role='button']:hover,
 .card[role='link']:hover,
 button.card:hover,
-.crystal-card-interactive:hover {
+.crystal-card-interactive:hover,
+.crystal-card-interactive:focus-within {
   border-color: var(--color-line-strong);
 }
 
@@ -1427,6 +1438,16 @@ button.card:hover,
   font-size: var(--text-xl);
   margin-block: var(--space-8) var(--space-2);
   letter-spacing: 0;
+}
+/* Deck subsections in the imprint must read as subordinates of their h2
+   (--text-xl 20px). The global h3 (--text-2xl 28px) would invert the
+   hierarchy, so legal sub-headings take the next step down with their own
+   leading above, the way .article-prose h3 does. */
+.legal-prose h3 {
+  font-size: var(--text-lg);
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin-block: var(--space-6) var(--space-2);
 }
 .legal-prose p,
 .legal-prose li {
@@ -2233,6 +2254,13 @@ button.card:hover,
   line-height: 1.6;
   color: var(--color-text-secondary);
 }
+/* Inline links in running text must stay distinguishable without relying on colour
+   alone (WCAG 1.4.1): primary and secondary text sit at ~1.08:1 in this palette. */
+.tarot-deck-note a,
+.deck-credits a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
 
 /* --- Deck picker --------------------------------------------------------- */
 /* Two equal options, each with the first card of its deck as preview. The radio
@@ -2408,12 +2436,67 @@ button.card:hover,
   padding: 0;
   overflow: hidden;
 }
+/* Bildplatte: quadratisch, Basaltgrund, ganze Silhouette (Spec §3/E1/E2) */
+.crystal-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-border);
+}
 .crystal-image {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
   background: var(--color-bg-deep);
-  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+  border-bottom: 0;
+  position: relative;
+}
+/* Museumstafel: helle Studiofotos stehen als gerahmte Platte im Basaltgrund.
+   Die weiche Innenkante blendet die Fotokante in den Hintergrund, damit die
+   Kacheln als Montage und nicht als Leuchtflächen wirken (Review t_385afa1e,
+   P2.1 – bewusste Gestaltungsentscheidung, dokumentiert in
+   docs/kristalle/DESIGN-MUSEUMSTAFEL.md). */
+.crystal-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(186, 189, 183, 0.12);
+  box-shadow: inset 0 0 26px 12px rgba(11, 16, 18, 0.55);
+}
+.crystal-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Sicherheitsnetz; produziert wird bereits 1:1 */
+  object-position: center;
+}
+.crystal-credit {
+  margin: 0;
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere; /* lange Urhebernamen brechen, statt ueberzulaufen */
+}
+/* Ab zwei Spalten: Nachweisblock auf drei Zeilen reservieren, damit die
+   Kartennamen trotz langer Urhebernamen (crys-01: 73 Zeichen) gleich hoch stehen. */
+@media (min-width: 632px) {
+  .crystal-credit {
+    min-height: calc(3 * 1.4 * var(--text-xs) + var(--space-2) + var(--space-3));
+  }
+}
+.crystal-image.is-missing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crystal-credit-inline {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
 }
 .crystal-content {
   flex: 1;
@@ -2476,12 +2559,67 @@ button.card:hover,
   width: 100%;
   height: 100%;
   min-width: 0;
-  object-fit: cover;
+  object-fit: contain;
+}
+#crystalModal .modal {
+  max-width: min(92vw, 880px);
 }
 @container (min-width: 36rem) {
   .crystal-detail-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   }
+}
+.crystal-detail-figure {
+  margin: 0;
+  min-width: 0;
+}
+.crystal-detail-credit {
+  margin: var(--space-3) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+.crystal-detail-credit .credit-label {
+  color: var(--color-text-primary);
+}
+.crystal-detail-credit a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+/* Unter 380 px ist die Dialogplatte breiter als nötig: der vollständige
+   Nachweis (Urheber, Lizenz, Quelle, Änderungen) soll ohne Scrollen sichtbar
+   sein (Review t_385afa1e, P2.3). */
+@media (max-width: 380px) {
+  .crystal-detail-image {
+    width: min(100%, 240px);
+    margin-inline: auto;
+  }
+}
+/* Sammelnachweis unter dem Raster (Spec §9.2) */
+.crystal-sources {
+  margin: var(--space-6) 0 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+.crystal-sources a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+/* Sammelnachweis im Impressum: Links müssen ohne Farbe erkennbar sein
+   (WCAG 1.4.1) – Link- und Fließtextfarbe liegen nur 1,08:1 auseinander. */
+.crystal-credits a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* List view */
@@ -2489,12 +2627,19 @@ button.card:hover,
   flex-direction: row;
   height: auto;
 }
+.crystal-list .crystal-figure {
+  flex: 0 0 120px;
+  align-self: flex-start;
+  border-bottom: 0;
+  border-right: 1px solid var(--color-border);
+}
 .crystal-list .crystal-image {
   width: 120px;
   height: 120px;
   aspect-ratio: auto;
-  border-bottom: 0;
-  border-right: 1px solid var(--color-border);
+}
+.crystal-list .crystal-credit {
+  display: none;
 }
 .crystal-list .crystal-content {
   flex: 1;
@@ -3785,11 +3930,16 @@ button.card:hover,
   .crystal-list .crystal-card {
     flex-direction: column;
   }
-  .crystal-list .crystal-image {
+  .crystal-list .crystal-figure {
+    flex: 0 0 auto;
     width: 100%;
-    height: 200px;
     border-right: 0;
     border-bottom: 1px solid var(--color-border);
+  }
+  .crystal-list .crystal-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
   }
   .rune-card {
     padding: var(--space-3);
@@ -3845,6 +3995,10 @@ button.card:hover,
   }
   .crystal-image,
   .article-image {
+    display: none !important;
+  }
+  /* Nachweis nur mit Bild: Figur komplett ausblenden (Spec E12). */
+  .crystal-figure {
     display: none !important;
   }
   .card,
@@ -5100,6 +5254,33 @@ button.card:hover,
     gap: var(--space-4);
   }
 }
+
+/* --- Kopfzeile mit acht Navigationszielen -------------------------------
+   Das Themenmodul „Pendeln“ ist das achte Hauptziel. Acht Ziele plus
+   dreistelliger Favoritenzähler brauchen zwischen 781 und 900 px 21 px mehr,
+   als der Block oben hergibt (gemessen: docs/radiasthesie-konzept/messung/
+   nav-8-ziele.json). Kleineres Logo und engerer Listenabstand schaffen 53 px
+   Reserve; bei 781 px bleiben 31,8 px. */
+@media (min-width: 781px) and (max-width: 900px) {
+  .logo {
+    font-size: 24px;
+  }
+  .nav-list {
+    gap: var(--space-1);
+  }
+}
+
+/* Reflow bei 320 px (WCAG 1.4.10): Die Produktivseite lief mit Favoritenzähler
+   um 19 px über. Kleineres Logo und engerer Abstand beseitigen den Überlauf;
+   die Regel greift nur unterhalb von 361 px. */
+@media (max-width: 360px) {
+  .header-inner {
+    gap: var(--space-2);
+  }
+  .logo {
+    font-size: 22px;
+  }
+}
 </style>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmI4NmZjIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTEyIDJMMiA3bDEwIDUgMTAtNS0xMC01eiIvPjxwYXRoIGQ9Ik0yIDE3bDEwIDUgMTAtNSIvPjxwYXRoIGQ9Ik0yIDEybDEwIDUgMTAtNSIvPjwvc3ZnPg==" />
   </head>
@@ -5160,6 +5341,400 @@ button.card:hover,
             </li>
             <li>Rechte an der Zeichnung: Esoterik-Welt Art Direction, CC BY 4.0.</li>
           </ul>
+
+          <h2 id="tarot-decks">Tarotdecks: „Nachtatelier“ (Standard) und „Gartenbrevier“ (optional)</h2>
+          <p>
+            Beide Decks zeigen dieselben 78 Karten mit denselben IDs, Stichwörtern und Deutungstexten; die Deutungstexte
+            stehen in <code>js/data/tarot.js</code> und stammen aus diesem Projekt. Ausgeliefert werden ausschließlich
+            Web-Derivate als JPEG (1200, 600 und 300 px Breite, Seitenverhältnis 3:5, sRGB-Arbeitsraum) — keine
+            Druckvorlagen, keine Druckfreigabe.
+          </p>
+
+          <h3>Deck „Nachtatelier“</h3>
+          <ul class="deck-credits">
+            <li>Umfang: 78 Karten und ein Kartenrücken als bearbeitete Reliefcollage.</li>
+            <li>
+              Bildvorlagen: Rider-Waite-Smith-Tarot, Zeichnungen von Pamela Colman Smith (1878–1951), Erstausgabe
+              1909/1910; am 01.11.2026 über Wikimedia Commons abgerufen. Die Vorlagen sind gemeinfrei (Public domain);
+              die Dateiliste mit Prüfsummen steht in
+              <code>docs/tarot-deck-nachtatelier/QUELLEN-RECHTS-MANIFEST.md</code>.
+            </li>
+            <li>
+              Mineraltextur: „Quartz Brésil“ von Didier Descouens, Wikimedia Commons,
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>.
+            </li>
+            <li>
+              Änderungen: Illustrationsfeld ausgeschnitten (bei 42 Karten wurde die gedruckte englische Titelzeile
+              entfernt), Fragmentkante ausgerissen, Zeichnung in eine Mineralpalette getönt, Bühne, Sockel und Stufen
+              ergänzt, Textur in Graustufen multiplikativ eingebunden, Nummer und Titel neu gesetzt.
+            </li>
+            <li>
+              Lizenz der bearbeiteten Deckfassung:
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> — wegen der
+              ShareAlike-Bedingung der Textur. Eigene Texte, Layoutgeometrie und Skripte: CC BY 4.0.
+            </li>
+            <li>
+              Empfohlene Namensnennung: „Nachtatelier-Reliefcollage — Esoterik-Welt Art Direction, nach historischen
+              Fragmenten von Pamela Colman Smith (gemeinfrei), mit bearbeiteter Mineraltextur von Didier Descouens, CC
+              BY-SA 4.0“.
+            </li>
+          </ul>
+
+          <h3>Deck „Gartenbrevier“</h3>
+          <ul class="deck-credits">
+            <li>
+              Motive: eigener, codegenerierter Vektor für alle 78 Karten und den Kartenrücken (SVG, anschließend
+              gerastert), erzeugt aus den Skripten des Projekts. Keine fremden Bilddateien, keine Scans historischer
+              Decks, keine Stockbilder, keine KI-Bilddienste.
+            </li>
+            <li>
+              Kartenidentitäten und Deutungstexte: unverändert aus <code>js/data/tarot.js</code> dieses Projekts; die
+              Bildsprache ist eine Eigenentwicklung des Projekts.
+            </li>
+            <li>
+              Rechte: Eigengestaltung von Esoterik-Welt; an den Motiven sind keine fremden Urheber- oder
+              Leistungsschutzrechte berührt. Eine über die Nutzung auf dieser Website hinausgehende Weiterlizenzierung
+              der V2-Motive ist im Quellenmanifest (<code>docs/tarot-deck-v2/QUELLEN-RECHTS-MANIFEST.md</code>) nicht
+              erklärt.
+            </li>
+            <li>
+              Schriften beider Decks: Fraunces und Manrope, SIL Open Font License 1.1 (siehe Abschnitt Schriften).
+            </li>
+          </ul>
+
+          <!-- KRISTALLE-CREDITS:START -->
+          <h2 id="kristalle-fotos">Fotografie: Kristalle &amp; Steine</h2>
+          <p>
+            Die Kristallgalerie zeigt 30 Fotografien von Wikimedia Commons. Je Bild sind Urheber und Lizenz unter der
+            Karte und vollständig im Detaildialog genannt; hier stehen alle Nachweise dauerhaft. Bearbeitung aller
+            Bilder: 1:1-Leinwand mit 6 % Rand auf <code>#0b1012</code>, Skalierung auf 320/640/960/1280 px, WebP. Kein
+            Motiv wurde beschnitten. Bei Bildern unter CC BY-SA steht die bearbeitete Fassung unter derselben Lizenz.
+            Maschinenlesbar: <code>assets/crystals/manifest.json</code>.
+          </p>
+          <ul class="crystal-credits">
+            <li>
+              <strong>crys-01 · Amethyst Quartz Crystals.jpg</strong> — CopyrightFreePhotos
+              CopyrightFreePhotos.HQ101.com,
+              <a href="https://commons.wikimedia.org/wiki/Template:PD-self" rel="noopener"
+                >Public Domain (Freigabe durch den Urheber, PD-self)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Amethyst_Quartz_Crystals.jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-09 · Gypsum 7.jpg</strong> — Géry PARENT,
+              <a href="https://commons.wikimedia.org/wiki/Template:PD-self" rel="noopener"
+                >Public Domain (Freigabe durch den Urheber, PD-self)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Gypsum_7.jpg" rel="noopener">Wikimedia Commons</a>,
+              abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-24 · 2011-12-24 11-10-34-quartz-10f.jpg</strong> — Thomas Bresson,
+              <a href="https://creativecommons.org/licenses/by/3.0" rel="noopener">Creative Commons Namensnennung 3.0</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:2011-12-24_11-10-34-quartz-10f.jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-28 · Fire opal in matrix (Juniper Ridge, Lake County, Oregon, USA) 11.jpg</strong> — James
+              St. John,
+              <a href="https://creativecommons.org/licenses/by/2.0" rel="noopener">Creative Commons Namensnennung 2.0</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Fire_opal_in_matrix_(Juniper_Ridge,_Lake_County,_Oregon,_USA)_11.jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-08 · Fluorite Xianghuapu Minéraux SU.jpg</strong> — Marie-Lan Taÿ Pamart,
+              <a href="https://creativecommons.org/licenses/by/4.0" rel="noopener">Creative Commons Namensnennung 4.0</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Fluorite_Xianghuapu_Min%C3%A9raux_SU.jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-05 · Lapis-lazuli hg.jpg</strong> — Hannes Grobe,
+              <a href="https://creativecommons.org/licenses/by-sa/2.5" rel="noopener"
+                >Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 2.5</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Lapis-lazuli_hg.jpg" rel="noopener">Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Motiv freigestellt, Skalierung auf 320/640/960/1280 px (WebP). Die bearbeitete Fassung steht ebenfalls
+              unter dieser Lizenz (ShareAlike).
+            </li>
+            <li>
+              <strong>crys-14 · Labradorite polie 1 (Madagascar).jpg</strong> — Parent Géry,
+              <a href="https://commons.wikimedia.org/wiki/Template:PD-self" rel="noopener"
+                >Public Domain (Freigabe durch den Urheber, PD-self)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Labradorite_polie_1_(Madagascar).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-18 · Celestine - Sakoany deposit, Katsepy, Mitsinjo, Boeny, Madagascar.jpg</strong> — Ivar
+              Leidus,
+              <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener"
+                >Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Celestine_-_Sakoany_deposit,_Katsepy,_Mitsinjo,_Boeny,_Madagascar.jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP). Die bearbeitete Fassung steht ebenfalls unter dieser Lizenz
+              (ShareAlike).
+            </li>
+            <li>
+              <strong>crys-29 · Aquamarine beryl-MCG 90158-P4150841-black.jpg</strong> — Rama,
+              <a href="https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en" rel="noopener"
+                >Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 (fr-Portierung)</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Aquamarine_beryl-MCG_90158-P4150841-black.jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP). Die bearbeitete Fassung steht ebenfalls unter dieser Lizenz
+              (ShareAlike).
+            </li>
+            <li>
+              <strong>crys-11 · Aventurine 1.jpg</strong> — Bordercolliez,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Aventurine_1.jpg" rel="noopener">Wikimedia Commons</a>,
+              abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-06 · Malachite on dolomite (GeoDIL number - 759).jpg</strong> — Twyla Baker,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Malachite_on_dolomite_(GeoDIL_number_-_759).jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-20 · Béryl var. émeraude sur gangue (Muzo Mine Boyaca - Colombie) -2.jpg</strong> — Géry
+              PARENT,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_(Muzo_Mine_Boyaca_-_Colombie)_-2.jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-22 · Amazonite and smoky quartz Lake George Minéraux SU.jpg</strong> — Marie-Lan Taÿ Pamart,
+              <a href="https://creativecommons.org/licenses/by/4.0" rel="noopener">Creative Commons Namensnennung 4.0</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Amazonite_and_smoky_quartz_Lake_George_Min%C3%A9raux_SU.jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-26 · Spodumene var. kunzite (Pakistan).jpg</strong> — Parent Géry,
+              <a href="https://commons.wikimedia.org/wiki/Template:PD-self" rel="noopener"
+                >Public Domain (Freigabe durch den Urheber, PD-self)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Spodumene_var._kunzite_(Pakistan).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-02 · Rose quartz (GeoDIL number - 2521).jpg</strong> — Darla Sondrol,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Rose_quartz_(GeoDIL_number_-_2521).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-17 · Kamień księżycowy (moonstone) - Larvik k. Oslo. Norwegia.jpg</strong> — Lech Darski,
+              <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener"
+                >Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Kamie%C5%84_ksi%C4%99%C5%BCycowy_(moonstone)_-_Larvik_k._Oslo._Norwegia.jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              eingebettete Maßstabs-Miniatur „56 mm“ entfernt, Skalierung auf 320/640/960/1280 px (WebP). Die
+              bearbeitete Fassung steht ebenfalls unter dieser Lizenz (ShareAlike).
+            </li>
+            <li>
+              <strong>crys-21 · Stuk roze kwarts (2).jpg</strong> — Romaine,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Stuk_roze_kwarts_(2).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-25 · Péridot (= olivine) (Pakistan) 1.jpg</strong> — Parent Géry,
+              <a href="https://commons.wikimedia.org/wiki/Template:PD-self" rel="noopener"
+                >Public Domain (Freigabe durch den Urheber, PD-self)</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:P%C3%A9ridot_(%3D_olivine)_(Pakistan)_1.jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-03 · Citrine (GeoDIL number - 310).jpg</strong> — Shannon Heinle,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Citrine_(GeoDIL_number_-_310).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-13 · Tigers eye egg shape.jpg</strong> — Unnameduploads,
+              <a href="https://commons.wikimedia.org/wiki/Template:PD-self" rel="noopener"
+                >Public Domain (Freigabe durch den Urheber, PD-self)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Tigers_eye_egg_shape.jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Motiv freigestellt, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-07 · Citrine 1 (Russie).jpg</strong> — Parent Géry,
+              <a href="https://commons.wikimedia.org/wiki/Template:PD-self" rel="noopener"
+                >Public Domain (Freigabe durch den Urheber, PD-self)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Citrine_1_(Russie).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-16 · Amber Baltic MNHN Minéralogie.jpg</strong> — Marie-Lan Taÿ Pamart,
+              <a href="https://creativecommons.org/licenses/by/4.0" rel="noopener">Creative Commons Namensnennung 4.0</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Amber_Baltic_MNHN_Min%C3%A9ralogie.jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-12 · Carnelian (GeoDIL number - 781).jpg</strong> — Shannon Heinle,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Carnelian_(GeoDIL_number_-_781).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Motiv freigestellt, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-27 · Jasper (GeoDIL number - 2520).jpg</strong> — Darla Sondrol,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Jasper_(GeoDIL_number_-_2520).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-15 · Petrified wood close 052615.jpg</strong> — Wilson44691,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Petrified_wood_close_052615.jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Bildrand weich in den Grund überblendet, Maßstabsbalken „1.0 cm“ retuschiert, Skalierung auf
+              320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-30 · Smoky quartz Rio Doce MNHN Minéralogie.jpg</strong> — Marie-Lan Taÿ Pamart,
+              <a href="https://creativecommons.org/licenses/by/4.0" rel="noopener">Creative Commons Namensnennung 4.0</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Smoky_quartz_Rio_Doce_MNHN_Min%C3%A9ralogie.jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Bildrand weich in den Grund überblendet, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-19 · Grossular (GeoDIL number - 303).jpg</strong> — Nessa Eull,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Grossular_(GeoDIL_number_-_303).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-23 · Hematite (20255007100).jpg</strong> — Joe deSousa,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Hematite_(20255007100).jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Motiv freigestellt, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-04 · Snowflake obsidian with white background.jpg</strong> — Bordercolliez,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="noopener"
+                >CC0 1.0 Universell (Public Domain Dedication)</a
+              >. Quelle:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Snowflake_obsidian_with_white_background.jpg"
+                rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Motiv freigestellt, Skalierung auf 320/640/960/1280 px (WebP).
+            </li>
+            <li>
+              <strong>crys-10 · Tourmaline-MCG 79448-P4150859-black.jpg</strong> — Rama,
+              <a href="https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en" rel="noopener"
+                >Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 (fr-Portierung)</a
+              >. Quelle:
+              <a href="https://commons.wikimedia.org/wiki/File:Tourmaline-MCG_79448-P4150859-black.jpg" rel="noopener"
+                >Wikimedia Commons</a
+              >, abgerufen 2026-11-02. Änderungen: 1:1-Leinwand mit 6 % Rand, Hintergrund auf #0b1012 vereinheitlicht,
+              Skalierung auf 320/640/960/1280 px (WebP). Die bearbeitete Fassung steht ebenfalls unter dieser Lizenz
+              (ShareAlike).
+            </li>
+          </ul>
+          <!-- KRISTALLE-CREDITS:END -->
 
           <h2>Schriften</h2>
           <ul>

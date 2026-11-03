@@ -1,0 +1,32 @@
+
+Running 1 test using 1 worker
+
+[1/1] tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)
+  1) tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2) ──
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('#favCounter')
+    Expected: "♥ 0"
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('#favCounter') with timeout 10000ms
+      - waiting for locator('#favCounter')
+
+
+      232 |   const ohneJsPage = await ohneJs.newPage();
+      233 |   await ohneJsPage.goto(url('#pendeln'));
+    > 234 |   await expect(ohneJsPage.locator('#favCounter')).toHaveText('♥ 0');
+          |                                                   ^
+      235 |   await ohneJs.close();
+      236 |
+      237 |   // 2. Die Kristalle-Daten werden gezielt verzögert: die Kopfzeile steht dann
+        at C:\Users\mas\Arbeit\esow-rad-t_878c59c7\tests\radiasthesie.spec.js:234:51
+
+    Error Context: test-results\playwright\radiasthesie-Kopfzeilen-La-05f50-schiebt-sich-nicht-mehr-B2-\error-context.md
+
+
+  1 failed
+    tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2) ───

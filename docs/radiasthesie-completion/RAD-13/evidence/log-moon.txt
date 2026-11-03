@@ -1,0 +1,22 @@
+✔ Fixture-Dateien tragen ihre Herkunft (0.7825ms)
+✔ alle 192 Hauptphasen 2024–2027 liegen innerhalb 60 s der USNO-Zeit (11.3997ms)
+✔ Beleuchtungsgrad weicht höchstens 1 Prozentpunkt von JPL Horizons ab (1.3267ms)
+✔ Phasenfolge ist streng aufsteigend und hält die Viertel-Abstände ein (0.5669ms)
+✔ Jahresgrenze: Dezember 2025 geht ohne Lücke in Januar 2026 über (17.3956ms)
+✔ Mittlerer synodischer Monat aus der eigenen Berechnung liegt bei 29,53 Tagen (0.5467ms)
+✔ Zeitzone Europe/Berlin: DST-Wechsel wird korrekt umgesetzt (0.9073ms)
+✔ Tagesgrenze: Vollmond am 29.06.2026 23:56 UTC ist in Berlin der 30. Juni (0.3038ms)
+✔ Monatsraster November 2026: Wochentage, Phasenvielfalt und Ereignisse (3.4916ms)
+✔ Regression: kein Tag mit hoher Beleuchtung wird als Neumond gelabelt (9.856ms)
+✔ Zustand am 02.11.2026 02:15 MEZ stimmt mit Kalender und nächstem Ereignis überein (0.2832ms)
+✔ Phasenname folgt dem Beleuchtungsband und widerspricht der Prozentzahl nie (2.3097ms)
+✔ Kalendertag-Differenz: 23:30 → 00:30 ist ein Tag, nicht null (0.5249ms)
+✔ iCal-Export: 49 Termine, CRLF, UTC-Zeitstempel, eindeutige UIDs (4.005ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 126.0762

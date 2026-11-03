@@ -1,0 +1,954 @@
+{
+  "generatedAt": "2026-11-03T01:55:18.146Z",
+  "chrome": "Chrome/155.0.8059.85",
+  "tool1440": [
+    {
+      "tool": "simulator",
+      "state": "bereit",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "studio",
+      "state": "standard",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(11,16,18)",
+        "ratio": 15.36,
+        "lineColor": "rgb(198,179,142)",
+        "lineRatio": 9.33
+      }
+    },
+    {
+      "tool": "experiment",
+      "state": "verdeckt",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "journal",
+      "state": "liste",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null
+    },
+    {
+      "tool": "simulator",
+      "state": "laeuft",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 8.42
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "simulator",
+      "state": "reduziert",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "simulator",
+      "state": "fehler",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(192,148,137)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 6.45
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "studio",
+      "state": "leer",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null
+    },
+    {
+      "tool": "studio",
+      "state": "fehler",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(11,16,18)",
+        "ratio": 15.36,
+        "lineColor": "rgb(198,179,142)",
+        "lineRatio": 9.33
+      }
+    },
+    {
+      "tool": "studio",
+      "state": "violett",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(20,28,31)",
+        "ratio": 13.86,
+        "lineColor": "rgb(170,147,139)",
+        "lineRatio": 5.97
+      }
+    },
+    {
+      "tool": "studio",
+      "state": "pergament",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(11,16,18)",
+        "bg": "rgb(234,230,220)",
+        "ratio": 15.36,
+        "lineColor": "rgb(82,76,60)",
+        "lineRatio": 6.86
+      }
+    },
+    {
+      "tool": "experiment",
+      "state": "vorbereitet",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "experiment",
+      "state": "antwort",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "experiment",
+      "state": "enthuellt",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "experiment",
+      "state": "abgeschlossen",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "experiment",
+      "state": "leer",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "experiment",
+      "state": "demo",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null
+    },
+    {
+      "tool": "journal",
+      "state": "leer",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null
+    },
+    {
+      "tool": "journal",
+      "state": "fehler",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null
+    },
+    {
+      "tool": "journal",
+      "state": "voll",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null
+    },
+    {
+      "tool": "journal",
+      "state": "bestaetigung",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null
+    },
+    {
+      "tool": "journal",
+      "state": "geloescht",
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null
+    }
+  ]
+}

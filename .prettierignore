@@ -11,6 +11,10 @@ docs/
 public/
 Lokal*.html
 package-lock.json
+# Erzeugt von scripts/generate-radiasthesie-pages.cjs (wie Lokal*.html):
+# Formatierung würde bei jedem Build neue Diffs erzeugen. Geprüft werden die
+# Dateien in tests/radiasthesie-statisch.mjs, nicht mit Prettier.
+radiasthesie/
 
 # Legacy backup module: excluded from the production build by the `_` prefix
 # convention in scripts/build-pages.cjs, so it is not part of the shipped code

@@ -1,0 +1,7 @@
+
+> esoterik-welt@1.0.0 build
+> node scripts/build-pages.cjs
+
+Statische Seiten geschrieben: 7 Dokumente, Titel 45–59 Zeichen, Sitemap 11 Einträge.
+Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.
+Static production build ready: dist/Esoterik-Welt/ (canonical Pages sources; static module documents included).

@@ -1,0 +1,6 @@
+
+> esoterik-welt@1.0.0 build
+> node scripts/build-pages.cjs
+
+Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.
+Static production build ready: dist/Esoterik-Welt/ (canonical Pages sources; no public/ placeholder).

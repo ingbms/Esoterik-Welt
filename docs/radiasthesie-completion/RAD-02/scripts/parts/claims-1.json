@@ -1,0 +1,179 @@
+[
+  {
+    "id": "C01",
+    "text": "Die Wünschelrute ist seit dem 16. Jahrhundert schriftlich belegt; die früheste bekannte gedruckte Beschreibung der Rute zur Erz- und Wassersuche steht bei Agricola (1556).",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q34", "locator": "Buch II, Hoover-Übersetzung 1912, Fußnote [21] zu S. 38", "quote": "So far as we are able to discover, this is the first published description of the divining rod as applied to minerals or water."},
+      {"source_id": "Q35", "locator": "Introductory Note, S. 5", "quote": "a curious superstition that has been a subject of discussion since the middle of the sixteenth century"}
+    ],
+    "counter_evidence": "Ältere chinesische und antike Bezüge werden in der Literatur behauptet (Q39 nennt eine chinesische Darstellung von 147 n. Chr.), sind aber nicht als kontinuierliche Überlieferung der neuzeitlichen Rute belegt.",
+    "confidence": "hoch",
+    "relevance": ["radiasthesie", "geschichte"]
+  },
+  {
+    "id": "C02",
+    "text": "Agricola erklärt die Bewegung der Rute bereits 1556 mechanisch durch die Handhabung des Rutengängers und nicht durch eine Kraft der Erze.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q34", "locator": "Buch II, Hoover-Übersetzung 1912, S. 39-40", "quote": "it must necessarily follow that the manipulation is the cause of the twig's twisting motion"}
+    ],
+    "counter_evidence": "Zeitgenössische und spätere Vertreter führten die Bewegung auf Ausdünstungen oder 'Ausstrahlungen' der Erze zurück (vgl. Q36, Q49, Q50).",
+    "confidence": "hoch",
+    "relevance": ["radiasthesie", "ideomotorik", "geschichte"]
+  },
+  {
+    "id": "C03",
+    "text": "Die wissenschaftliche Kontroverse ist mindestens seit dem 19. Jahrhundert dokumentiert; der USGS-Bericht von 1917 bilanziert die Rute als praktisch nutzlos und verweist auf Chevreul und Faraday.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q35", "locator": "Introductory Note (Meinzer), S. 5", "quote": "will probably enable most honest inquirers to appreciate the practical uselessness of \"water witching\" and other applications of the divining rod"},
+      {"source_id": "Q35", "locator": "Inhaltsverzeichnis, S. 3", "quote": "Chevreul and Faraday ... 21"}
+    ],
+    "counter_evidence": "Der Bericht ist eine Behördenposition, kein eigenes Experiment; seine Wirkungsliteratur ist bis 1917 begrenzt.",
+    "confidence": "hoch",
+    "relevance": ["radiasthesie", "forschungsstand"]
+  },
+  {
+    "id": "C04",
+    "text": "Die Münchner Scheunenversuche (1986-1988) prüften 43 aus rund 500 vorausgewählte Rutengänger in 843 Einzeltests (104 Serien) an einer 10-Meter-Linie mit doppelblinder Zielsetzung.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q42", "locator": "Abschnitt 'Experimental Design'", "quote": "the forty-three selected dowsers participated in 843 single tests, grouped into 104 test-series"},
+      {"source_id": "Q42", "locator": "Abschnitt 'Planning an Experimental Study'", "quote": "some 500 candidate dowsers were recruited for preliminary testing"},
+      {"source_id": "Q42", "locator": "Abschnitt 'Experimental Design'", "quote": "a ten-meter test line was established"}
+    ],
+    "counter_evidence": "Die Zahlen stammen aus der Reanalyse eines Kritikers (Q42); der Originalbericht (Q43) wurde nicht eingesehen.",
+    "confidence": "hoch (Zahlen), mittel (Deutung)",
+    "relevance": ["radiasthesie", "experimentspezifik"]
+  },
+  {
+    "id": "C05",
+    "text": "Die Münchner Autoren deuteten ihre Daten als Beleg eines Ruteneffekts; die kritische Reanalyse kommt zum gegenteiligen Schluss (Zufall, nicht reproduzierbar). Der Konflikt ist bis heute nicht konsensual aufgelöst.",
+    "status": "widersprüchlich",
+    "evidence": [
+      {"source_id": "Q42", "locator": "Abschnitt 'Results and Interpretation by the Experimenters' (übersetztes Zitat aus Wagner/Betz/König 1990)", "quote": "a real core of dowser-phenomena can be regarded as empirically proven"},
+      {"source_id": "Q42", "locator": "Abschnitt 'Conclusion'", "quote": "the Munich experiments constitute as decisive and complete a failure as can be imagined of dowsers to do what they claim"}
+    ],
+    "counter_evidence": "Betz et al. 1996 (Q04) halten den Effekt aufrecht; Q05 (2003) bewertet die Studienlage als 'unentschieden'.",
+    "confidence": "hoch für den Konflikt, offen für die Deutung",
+    "relevance": ["radiasthesie", "kontroverse"]
+  },
+  {
+    "id": "C06",
+    "text": "Die Erwiderung von Betz et al. (1996) behauptet einen persistierenden Effekt; eine unabhängige Replikation der Münchner Befunde durch eine andere Gruppe ist nicht dokumentiert.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q04", "locator": "Titel und Publikationsdaten (Naturwissenschaften 83: 272-275)", "quote": "Dowsing reviewed – the effect persists"},
+      {"source_id": "Q41", "locator": "Metadaten (Replik auf Enright)", "quote": "Dowsers lost in a Barn"}
+    ],
+    "counter_evidence": "Q42 dokumentiert, dass die sechs 'besten' Rutengänger ihre Treffer in anderen Serien nicht reproduzierten.",
+    "confidence": "hoch",
+    "relevance": ["radiasthesie", "kontroverse"]
+  },
+  {
+    "id": "C07",
+    "text": "Fern-/Kartenmutung wurde militärisch geprüft: Rutengänger sollten verdeckte Minen anhand von Karten lokalisieren; die Ergebnisse lagen nicht über Zufall. Die Serie umfasste nach Hansen (Q40) 20 Attrappen-Minen und sieben Rutengänger, nach Foulkes (Q39) u. a. eine 3.400-Fuß-Strecke mit fünf Minen.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q39", "locator": "Abschnitt 'Map Dowsing'", "quote": "To sum up on map dowsing, the results from all the trials are really failures and there is no evidence that this is a practical method for locating mines."},
+      {"source_id": "Q39", "locator": "Kopfspalte/Abstract", "quote": "results obtained by dowsing are no more reliable than a series of guesses"},
+      {"source_id": "Q40", "locator": "Abschnitt zu Foulkes (Kartentests)", "quote": "For the map dowsing tests, 20 inert mines were buried along several military roads. Seven dowsers were given maps of the roads and asked to locate the mines. Only chance results were obtained."}
+    ],
+    "counter_evidence": "Einzelne parapsychologische Kartentests (Cadoret/Osis) werden in Q40 als marginal signifikant referiert; Hitching/Lewis-Anekdoten ohne Kontrolle.",
+    "confidence": "hoch",
+    "relevance": ["radiasthesie", "fernmutung"]
+  },
+  {
+    "id": "C08",
+    "text": "Der Review von 1982 findet unter den Kartentests nur drei methodisch gut kontrollierte; nur einer erreicht knappe Signifikanz. Die Gesamtbilanz bleibt uneindeutig.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q40", "locator": "Abschnitt zu Kartentests/Fazit", "quote": "Of the tests reviewed, only three stand out as well conducted—the map dowsing tests of Cadoret, Osis, and Foulkes. Of these, only one produced significant results, and that barely significant."}
+    ],
+    "counter_evidence": "Q40 ist selbst psi-offen; die Einschätzung stammt aus der Parapsychologie, nicht aus einer skeptischen Quelle.",
+    "confidence": "hoch",
+    "relevance": ["radiasthesie", "fernmutung", "forschungsstand"]
+  },
+  {
+    "id": "C09",
+    "text": "Die Chevreul-Pendeltäuschung ist experimentell als ideomotorisches Phänomen quantifiziert; Bewegungsumfang und -richtung hängen von Muskelspannung, Aufmerksamkeit und Pendellänge ab.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q52", "locator": "Abstract", "quote": "strong parametric influences of the pendulum's sinusoidal motion were isolated"},
+      {"source_id": "Q03", "locator": "Titel/Abstract", "quote": "Amount of finger movement and pendulum length determine success in the Chevreul pendulum illusion"},
+      {"source_id": "Q54", "locator": "Abstract", "quote": "supporting the elbow does facilitate responding, but only on the initial trial"}
+    ],
+    "counter_evidence": "Praktiker deuten dieselbe Bewegung als Anzeige eines externen Feldes (Q50, Q56); eine Übertragung der Laborbefunde auf alle Pendelanwendungen ist damit nicht automatisch gegeben.",
+    "confidence": "hoch",
+    "relevance": ["pendeln", "ideomotorik"]
+  },
+  {
+    "id": "C10",
+    "text": "Ideomotorische Antworten liefern in kontrollierten Paradigmen keinen Zugang zu Informationen, die verbal nicht verfügbar sind; die Treffer liegen auf Zufallsniveau.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q53", "locator": "Abstract", "quote": "questions whose answer was previously rated as a guess, were answered equally well and at about chance levels by ideomotor action and verbal responses"}
+    ],
+    "counter_evidence": "Das Paradigma testet Allgemeinwissen, nicht radiästhetische Diagnose; ein Nullresultat dort widerlegt nicht jede denkbare Anwendung.",
+    "confidence": "hoch (für das Paradigma)",
+    "relevance": ["pendeln", "ideomotorik"]
+  },
+  {
+    "id": "C11",
+    "text": "Der 'Biotensor' ist eine kommerzielle Weiterentwicklung der Einhandrute und wird in der Heilpraxis zur Diagnostik eingesetzt; die Wirkung wird von Anwendern selbst als wissenschaftlich nicht bewiesen bezeichnet.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q56", "locator": "S. 32", "quote": "Viele Heilpraktiker bevorzugen das Radiästhesie-Instrument Biotensor ®, eine Weiterentwicklung der Einhandrute."},
+      {"source_id": "Q56", "locator": "S. 32-33", "quote": "Wie Radiästhesie funktioniert, ist auch heute noch nicht wissenschaftlich bewiesen"}
+    ],
+    "counter_evidence": "Keine.",
+    "confidence": "hoch",
+    "relevance": ["radiasthesie", "biotensor"]
+  },
+  {
+    "id": "C12",
+    "text": "Für den Biotensor existiert keine peer-reviewte Validierungsstudie; der dokumentierte Doppelblindtest eines Anwenders endete mit 0 von 13 Treffern.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q55", "locator": "Absatz zu Emil Siebke", "quote": "Das gelang ihm jedoch bei keinem der 13 Durchgänge."},
+      {"source_id": "Q55", "locator": "Testanlage", "quote": "Unter zehn Apfelhälften in gleich aussehenden verschlossenen Dosen"}
+    ],
+    "counter_evidence": "Ein Einzeltestergebnis ist kein Studienbefund; die Verallgemeinerung auf alle Biotensor-Nutzer ist damit nicht belegt (siehe data_quality Q55).",
+    "confidence": "hoch (Einzelfall), offen (Verallgemeinerung)",
+    "relevance": ["radiasthesie", "biotensor"]
+  },
+  {
+    "id": "C13",
+    "text": "Sechs mutende Homöopathen konnten Bryonia C12 nicht von Placebo unterscheiden (48,1 % Treffer, n = 156 Paare, p = 0,689).",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q44", "locator": "Abstract", "quote": "The homeopathic medicine Bryonia was correctly identified in 48.1% of bottle pairs (n=156; 95% confidence interval 40.2%, 56.0%; P=0.689)."}
+    ],
+    "counter_evidence": "Der Test betrifft homöopathische Arzneimittel, nicht Wasseradern oder Erdstrahlen; Übertragbarkeit begrenzt.",
+    "confidence": "hoch",
+    "relevance": ["pendeln", "biotensor", "medizin"]
+  },
+  {
+    "id": "C14",
+    "text": "In der archäologischen Prospektion lokalisierte Rutengehen Metallobjekte, versagte aber bei bodengefüllten Strukturen; nicht zuordenbare Anomalien blieben häufig.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q45", "locator": "Abstract", "quote": "dowsing could locate buried metal features, but performed poorly at identifying soil-filled features"}
+    ],
+    "counter_evidence": "Einzelfallstudie; positives Teilergebnis bei Metall zeigt, dass die Methode nicht pauschal 'nichts' findet.",
+    "confidence": "mittel",
+    "relevance": ["radiasthesie", "archaeologie"]
+  },
+  {
+    "id": "C15",
+    "text": "Ein kontrollierter Blindtest mit ungeübten Rutengängern fand keine bessere Trefferquote als visuelle Inspektion und keine Beziehung zum tatsächlichen Knochenversteck.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q46", "locator": "Abstract", "quote": "Matthew's Correlation Coefficient –0.19 for the control group and 0.00 for the test group ... p = 0.36"}
+    ],
+    "counter_evidence": "Ungeübte Anwender; erfahrene Rutengänger könnten anders abschneiden (nicht getestet).",
+    "confidence": "hoch (für die Stichprobe)",
+    "relevance": ["radiasthesie", "forensik"]
+  }
+]

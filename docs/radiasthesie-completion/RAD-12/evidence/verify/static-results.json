@@ -1,0 +1,86 @@
+{
+  "base": "http://127.0.0.1:4500/Esoterik-Welt/",
+  "date": "2026-11-03T07:18:32.640Z",
+  "documents": [
+    {
+      "route": "radiasthesie/",
+      "url": "http://127.0.0.1:4500/Esoterik-Welt/radiasthesie/",
+      "status": 200,
+      "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+      "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+      "descriptionLength": 149,
+      "failures": []
+    },
+    {
+      "route": "radiasthesie/radiasthesie.html",
+      "url": "http://127.0.0.1:4500/Esoterik-Welt/radiasthesie/radiasthesie.html",
+      "status": 200,
+      "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+      "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+      "descriptionLength": 134,
+      "failures": []
+    },
+    {
+      "route": "radiasthesie/pendeln.html",
+      "url": "http://127.0.0.1:4500/Esoterik-Welt/radiasthesie/pendeln.html",
+      "status": 200,
+      "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+      "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+      "descriptionLength": 144,
+      "failures": []
+    },
+    {
+      "route": "radiasthesie/orakel.html",
+      "url": "http://127.0.0.1:4500/Esoterik-Welt/radiasthesie/orakel.html",
+      "status": 200,
+      "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+      "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+      "descriptionLength": 123,
+      "failures": []
+    },
+    {
+      "route": "radiasthesie/glossar.html",
+      "url": "http://127.0.0.1:4500/Esoterik-Welt/radiasthesie/glossar.html",
+      "status": 200,
+      "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+      "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+      "descriptionLength": 127,
+      "failures": []
+    },
+    {
+      "route": "radiasthesie/quellen.html",
+      "url": "http://127.0.0.1:4500/Esoterik-Welt/radiasthesie/quellen.html",
+      "status": 200,
+      "title": "Quellen und Belege — Radiästhesie und Pendeln",
+      "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+      "descriptionLength": 126,
+      "failures": []
+    },
+    {
+      "route": "radiasthesie/methodik.html",
+      "url": "http://127.0.0.1:4500/Esoterik-Welt/radiasthesie/methodik.html",
+      "status": 200,
+      "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+      "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+      "descriptionLength": 102,
+      "failures": []
+    }
+  ],
+  "sitemap": {
+    "url": "http://127.0.0.1:4500/Esoterik-Welt/sitemap.xml",
+    "entries": [
+      "https://ingbms.github.io/Esoterik-Welt/",
+      "https://ingbms.github.io/Esoterik-Welt/impressum.html",
+      "https://ingbms.github.io/Esoterik-Welt/datenschutz.html",
+      "https://ingbms.github.io/Esoterik-Welt/haftung.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html"
+    ]
+  },
+  "failures": []
+}

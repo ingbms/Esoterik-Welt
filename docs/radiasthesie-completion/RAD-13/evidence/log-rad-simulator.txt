@@ -1,0 +1,29 @@
+✔ Parameterbereiche entsprechen dem dokumentierten Gültigkeitsbereich (1.1123ms)
+✔ Ungültige Längen, Auslenkungen und Dämpfungswerte werden abgewiesen (0.4983ms)
+✔ Kleinwinkelformel trifft die Referenzwerte für 25 cm und 1 m (0.1653ms)
+✔ Startzustand ruht in der Anfangsauslenkung (0.1716ms)
+✔ Ein RK4-Schritt ist deterministisch und verändert den Zustand (0.1887ms)
+✔ Ungedämpft bei kleiner Auslenkung: gemessene Dauer entspricht T₀ (2.2322ms)
+✔ Große Auslenkung: gemessene Dauer folgt der exakten elliptischen Referenz (2.578ms)
+✔ Kleinwinkelformel unterschätzt die Dauer mit wachsendem Winkel (1.7294ms)
+✔ Dämpfung: Amplitude klingt monoton ab und folgt dem logarithmischen Dekrement (1.017ms)
+✔ Gedämpfte Dauer entspricht T_ged = 2π/(ω₀√(1−ζ²)) (0.6201ms)
+✔ Ohne Dämpfung bleibt die Energie erhalten, mit Dämpfung sinkt sie (0.7541ms)
+✔ advance() liefert nach gleicher simulierter Zeit denselben Zustand (0.5488ms)
+✔ simulate() ist unabhängig von der Bildrate (0.5797ms)
+✔ advance() begrenzt einen Aufruf und ignoriert negative oder ungültige Zeit (0.1862ms)
+✔ Auslenkung 0 bleibt in Ruhe und erzeugt keine Periode (0.7132ms)
+✔ Starke Dämpfung bleibt über 30 s stabil und läuft nicht über (1.9763ms)
+✔ Periodenmesser interpoliert den Nulldurchgang und zählt nur Aufwärtswechsel (0.7067ms)
+✔ Anzeigeformate nutzen deutsches Dezimalkomma und typografisches Minus (0.2362ms)
+✔ Route #pendeln/labor liefert die Laboransicht, unbekannte Slugs bleiben 404 (0.2775ms)
+✔ Laboransicht: eine H1, Regler mit Labels, drei Darstellungen, Disclaimer (1.0302ms)
+✔ Startseite verlinkt Pendellabor, Tafel-Studio, Labor und Tagebuch als verfügbare Werkzeuge (0.9862ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 95.9939

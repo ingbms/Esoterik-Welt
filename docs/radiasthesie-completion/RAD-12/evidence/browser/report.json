@@ -1,0 +1,492 @@
+[
+  {
+    "name": "landing",
+    "width": 1440,
+    "route": "radiasthesie/",
+    "status": 200,
+    "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+    "titleLength": 58,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+    "descriptionLength": 149,
+    "h1": [
+      "Radiästhesie, Pendeln und Orakel"
+    ],
+    "h2Count": 6,
+    "textLength": 8601,
+    "images": 4,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "CollectionPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 46
+  },
+  {
+    "name": "radiasthesie",
+    "width": 1440,
+    "route": "radiasthesie/radiasthesie.html",
+    "status": 200,
+    "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+    "titleLength": 52,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+    "descriptionLength": 134,
+    "h1": [
+      "Radiästhesie"
+    ],
+    "h2Count": 13,
+    "textLength": 28988,
+    "images": 3,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Radiästhesie"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 190
+  },
+  {
+    "name": "pendeln",
+    "width": 1440,
+    "route": "radiasthesie/pendeln.html",
+    "status": 200,
+    "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+    "titleLength": 53,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+    "descriptionLength": 144,
+    "h1": [
+      "Pendeln"
+    ],
+    "h2Count": 13,
+    "textLength": 21144,
+    "images": 3,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Pendeln"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 115
+  },
+  {
+    "name": "orakel",
+    "width": 1440,
+    "route": "radiasthesie/orakel.html",
+    "status": 200,
+    "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+    "titleLength": 59,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+    "descriptionLength": 123,
+    "h1": [
+      "Orakel"
+    ],
+    "h2Count": 15,
+    "textLength": 12985,
+    "images": 3,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Orakel"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 76
+  },
+  {
+    "name": "glossar",
+    "width": 1440,
+    "route": "radiasthesie/glossar.html",
+    "status": 200,
+    "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+    "titleLength": 54,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+    "descriptionLength": 127,
+    "h1": [
+      "Glossar"
+    ],
+    "h2Count": 10,
+    "textLength": 3537,
+    "images": 0,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList",
+      "DefinedTermSet"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Glossar"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 59
+  },
+  {
+    "name": "quellen",
+    "width": 1440,
+    "route": "radiasthesie/quellen.html",
+    "status": 200,
+    "title": "Quellen und Belege — Radiästhesie und Pendeln",
+    "titleLength": 45,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+    "descriptionLength": 126,
+    "h1": [
+      "Quellen & Belege"
+    ],
+    "h2Count": 3,
+    "textLength": 26520,
+    "images": 0,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Quellen & Belege"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 99
+  },
+  {
+    "name": "methodik",
+    "width": 1440,
+    "route": "radiasthesie/methodik.html",
+    "status": 200,
+    "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+    "titleLength": 47,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+    "descriptionLength": 102,
+    "h1": [
+      "Methodik & Grenzen"
+    ],
+    "h2Count": 8,
+    "textLength": 9986,
+    "images": 0,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Methodik & Grenzen"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 19
+  },
+  {
+    "name": "landing",
+    "width": 390,
+    "route": "radiasthesie/",
+    "status": 200,
+    "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+    "titleLength": 58,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+    "descriptionLength": 149,
+    "h1": [
+      "Radiästhesie, Pendeln und Orakel"
+    ],
+    "h2Count": 6,
+    "textLength": 8601,
+    "images": 4,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "CollectionPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 46
+  },
+  {
+    "name": "radiasthesie",
+    "width": 390,
+    "route": "radiasthesie/radiasthesie.html",
+    "status": 200,
+    "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+    "titleLength": 52,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+    "descriptionLength": 134,
+    "h1": [
+      "Radiästhesie"
+    ],
+    "h2Count": 13,
+    "textLength": 28878,
+    "images": 3,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Radiästhesie"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 190
+  },
+  {
+    "name": "pendeln",
+    "width": 390,
+    "route": "radiasthesie/pendeln.html",
+    "status": 200,
+    "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+    "titleLength": 53,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+    "descriptionLength": 144,
+    "h1": [
+      "Pendeln"
+    ],
+    "h2Count": 13,
+    "textLength": 21034,
+    "images": 3,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Pendeln"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 115
+  },
+  {
+    "name": "orakel",
+    "width": 390,
+    "route": "radiasthesie/orakel.html",
+    "status": 200,
+    "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+    "titleLength": 59,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+    "descriptionLength": 123,
+    "h1": [
+      "Orakel"
+    ],
+    "h2Count": 15,
+    "textLength": 12875,
+    "images": 3,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Orakel"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 76
+  },
+  {
+    "name": "glossar",
+    "width": 390,
+    "route": "radiasthesie/glossar.html",
+    "status": 200,
+    "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+    "titleLength": 54,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+    "descriptionLength": 127,
+    "h1": [
+      "Glossar"
+    ],
+    "h2Count": 10,
+    "textLength": 3537,
+    "images": 0,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList",
+      "DefinedTermSet"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Glossar"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 59
+  },
+  {
+    "name": "quellen",
+    "width": 390,
+    "route": "radiasthesie/quellen.html",
+    "status": 200,
+    "title": "Quellen und Belege — Radiästhesie und Pendeln",
+    "titleLength": 45,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+    "descriptionLength": 126,
+    "h1": [
+      "Quellen & Belege"
+    ],
+    "h2Count": 3,
+    "textLength": 26520,
+    "images": 0,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Quellen & Belege"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 99
+  },
+  {
+    "name": "methodik",
+    "width": 390,
+    "route": "radiasthesie/methodik.html",
+    "status": 200,
+    "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+    "titleLength": 47,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+    "descriptionLength": 102,
+    "h1": [
+      "Methodik & Grenzen"
+    ],
+    "h2Count": 8,
+    "textLength": 9986,
+    "images": 0,
+    "emptyAlts": 0,
+    "brokenImages": 0,
+    "scripts": [
+      "application/ld+json"
+    ],
+    "jsonLdTypes": [
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      "Start",
+      "Radiästhesie, Pendeln und Orakel",
+      "Methodik & Grenzen"
+    ],
+    "hasSearchInput": false,
+    "overflow": 0,
+    "errors": [],
+    "failed": [],
+    "internalLinks": 19
+  }
+]

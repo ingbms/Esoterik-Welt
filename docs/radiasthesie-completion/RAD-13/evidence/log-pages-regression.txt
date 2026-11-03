@@ -1,0 +1,14 @@
+✔ production preview serves the designed 404 for nested unknown paths (177.4869ms)
+✔ impressum.html shares the existing theme and stays within the Pages project (0.3806ms)
+✔ datenschutz.html shares the existing theme and stays within the Pages project (0.1742ms)
+✔ haftung.html shares the existing theme and stays within the Pages project (0.1593ms)
+✔ all local module imports resolve to shipped files (3.5695ms)
+✔ footer and error-page navigation preserve the project base (1.5387ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 250.2039

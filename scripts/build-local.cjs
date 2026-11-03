@@ -9,6 +9,7 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 
 async function buildLocal(output) {
   const bundleDir = path.join(root, 'dist', '.local-build');
+  fs.mkdirSync(output, { recursive: true });
   const compiler = webpack({
     mode: 'production',
     context: root,
@@ -106,6 +107,14 @@ async function buildLocal(output) {
     );
     fs.writeFileSync(path.join(root, localName(file)), html);
     fs.writeFileSync(path.join(output, localName(file)), html);
+  }
+  // Die statischen Themenseiten sind eigenständige Dokumente ohne Skript. Sie
+  // werden unverändert übernommen, damit `npm run build:local` denselben
+  // Dokumentbestand liefert wie `npm run build`.
+  const staticDir = path.join(root, 'radiasthesie');
+  const staticTarget = path.join(output, 'radiasthesie');
+  if (fs.existsSync(staticDir) && path.resolve(staticTarget) !== path.resolve(staticDir)) {
+    fs.cpSync(staticDir, staticTarget, { recursive: true });
   }
   fs.rmSync(bundleDir, { recursive: true, force: true });
   console.log('Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.');

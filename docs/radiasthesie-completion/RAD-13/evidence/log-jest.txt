@@ -1,0 +1,14 @@
+
+> esoterik-welt@1.0.0 test:unit
+> jest
+
+PASS tests/api.test.js
+  Esoterik-Welt API
+    √ GET /api/health should return ok status (37 ms)
+    √ GET / should serve index.html (7 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.796 s
+Ran all test suites.

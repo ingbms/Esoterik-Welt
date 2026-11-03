@@ -1,0 +1,75 @@
+=== npm run test:tarot:decks ===
+
+> esoterik-welt@1.0.0 test:tarot:decks
+> node --test tests/tarot-decks-v2.cjs
+
+✔ registry: two decks, V1 stays the default, both carry the same 78 ids (1.1054ms)
+✔ shipped assets: 156 card mappings exist with declared bytes, hashes and 3:5 sizes (210.6351ms)
+✔ registry paths and filesystem agree for all 156 mappings and both card backs (10.5372ms)
+✔ V1 deck is untouched by the second deck (manifest, bytes and card count) (2.0773ms)
+✔ picker: labeled previews, V1 selected by default, gallery uses V1 (634.4756ms)
+✔ keyboard switch: arrow key changes deck, persists across reload, gallery follows (1133.9351ms)
+✔ dialog and draw: 156 dialog mappings follow the deck, draw keeps ids and orientation (4398.8615ms)
+✔ stored deck id: unknown value falls back to V1, heals the key and keeps history (612.7843ms)
+✔ payload: no second master set, no double initial load; the deck lazily loads its own thumbs (3700.5008ms)
+✔ missing asset: a broken V2 thumbnail is named instead of showing a broken icon (663.4047ms)
+✔ mobile 375/768: picker fits, switches, and the gallery stays inside the viewport (978.9391ms)
+✔ file:// edition: both decks decode from disk, switch and reload work offline (2932.7053ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15571.3931
+exit=0 :: test:tarot:decks
+=== npm run test:moon ===
+
+> esoterik-welt@1.0.0 test:moon
+> node --test tests/moon-astro.cjs
+
+✔ Fixture-Dateien tragen ihre Herkunft (0.8784ms)
+✔ alle 192 Hauptphasen 2024–2027 liegen innerhalb 60 s der USNO-Zeit (10.8973ms)
+✔ Beleuchtungsgrad weicht höchstens 1 Prozentpunkt von JPL Horizons ab (1.2827ms)
+✔ Phasenfolge ist streng aufsteigend und hält die Viertel-Abstände ein (0.5915ms)
+✔ Jahresgrenze: Dezember 2025 geht ohne Lücke in Januar 2026 über (15.0578ms)
+✔ Mittlerer synodischer Monat aus der eigenen Berechnung liegt bei 29,53 Tagen (0.4946ms)
+✔ Zeitzone Europe/Berlin: DST-Wechsel wird korrekt umgesetzt (0.6921ms)
+✔ Tagesgrenze: Vollmond am 29.06.2026 23:56 UTC ist in Berlin der 30. Juni (0.2243ms)
+✔ Monatsraster November 2026: Wochentage, Phasenvielfalt und Ereignisse (3.0473ms)
+✔ Regression: kein Tag mit hoher Beleuchtung wird als Neumond gelabelt (10.4883ms)
+✔ Zustand am 02.11.2026 02:15 MEZ stimmt mit Kalender und nächstem Ereignis überein (0.2839ms)
+✔ Phasenname folgt dem Beleuchtungsband und widerspricht der Prozentzahl nie (2.9316ms)
+✔ Kalendertag-Differenz: 23:30 → 00:30 ist ein Tag, nicht null (0.67ms)
+✔ iCal-Export: 49 Termine, CRLF, UTC-Zeitstempel, eindeutige UIDs (4.3703ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.7783
+exit=0 :: test:moon
+=== npm run test:offline ===
+
+> esoterik-welt@1.0.0 test:offline
+> npm run build:local && node --test tests/offline-file.cjs
+
+
+> esoterik-welt@1.0.0 build:local
+> node scripts/build-local.cjs
+
+Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.
+✔ Lokal.html exists (npm run build:local) (0.6693ms)
+✔ offline file entry serves every route without network access (2008.929ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2311.4542
+exit=0 :: test:offline

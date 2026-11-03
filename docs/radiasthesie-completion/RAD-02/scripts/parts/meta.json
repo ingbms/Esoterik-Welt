@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.1-delta",
+  "generated_for": "ESOW-RAD-02 / Kanban t_54bbde93 (Delta-Karte)",
+  "generated_at": "2026-11-03",
+  "base": {
+    "repository": "C:/Users/mas/Arbeit/Esoterik-Welt",
+    "worktree": "C:/Users/mas/Arbeit/esow-rad-t_878c59c7",
+    "branch": "feature/radiasthesie-modul",
+    "commit": "e44fa5c54c80cb39383fa4177aa587236dc87596",
+    "existing_library": "docs/radiasthesie-konzept/recherche/quellen.json",
+    "existing_ids_preserved": "Q01-Q33 unverändert; dieses Delta ergänzt ausschließlich Q34-Q66",
+    "predecessor_card": "t_0fe70b63"
+  },
+  "rules": {
+    "id_policy": "Bestehende Q-IDs werden nicht umnummeriert, nicht umgedeutet und nicht überschrieben.",
+    "evidence_policy": "Jede Aussage trägt eine Quelle mit Locator; Volltext, Abstract und Metadaten sind getrennt ausgewiesen.",
+    "no_fabrication": "Nicht beschaffte Volltexte sind als nicht beschafft markiert und stützen keine Inhaltsaussage.",
+    "interest_policy": "Interessenvermerke sind beschreibend, kein Wahrheitsurteil."
+  },
+  "verification_levels": {
+    "full_text": "Volltext vollständig abgerufen und gelesen (HTML/PDF/TXT)",
+    "full_text_partial": "Volltext abgerufen, aber nur teilweise auswertbar (Scan-OCR, Auszug, Sperre)",
+    "abstract": "Abstract im Volltext abgerufen und gelesen; Volltext nicht beschafft",
+    "metadata_doi_csl": "Bibliografische Metadaten über DOI-Content-Negotiation (CSL-JSON) geprüft",
+    "metadata_crossref": "Metadaten über Crossref geprüft",
+    "metadata_openalex": "Metadaten über OpenAlex geprüft",
+    "library_record": "ISBN/Publikationsdaten über lobid/hbz-Verbundkatalog geprüft",
+    "page_loaded": "Webseite geladen und im Text geprüft",
+    "not_obtained": "Existenz belegt (Referenzliste), Publikation selbst nicht beschafft"
+  },
+  "corrections": [
+    {
+      "id": "K01",
+      "target": "docs/radiasthesie-konzept/inhalte/quellenverzeichnis.md, Zeile Q05",
+      "issue": "Q05 wird dort als 'Rutengehen — Forschungsstand (Betz 2003)' geführt.",
+      "finding": "Die Seite ist von Gerhard Mayer, 10. Juni 2003, Gesellschaft für Anomalistik (Studie des Monats); Betz wird nur zitiert.",
+      "evidence": "Q05-Seite, Autorenzeile 'Gerhard Mayer' und Datum '10. Juni 2003'; quellen.json führt Mayer korrekt.",
+      "action": "RAD-06: Tabellenzeile Q05 auf Mayer korrigieren; keine inhaltliche Änderung."
+    },
+    {
+      "id": "K02",
+      "target": "Q02 Enright 1995",
+      "issue": "Zwei DOI-Varianten im Umlauf: 10.1007/s001140050198 (Startquelle, Q02) und 10.1007/bf01134560.",
+      "finding": "OpenAlex indexiert beide unter demselben Titel/Autoren/Jahr; die Startquelle ist gültig.",
+      "evidence": "OpenAlex-Suche 'water dowsing' listet beide DOIs; Crossref-Abruf der Startquelle lieferte HTTP 200.",
+      "action": "Q02 unverändert lassen; in RAD-06 als Dublette dokumentieren, nicht ersetzen."
+    },
+    {
+      "id": "K03",
+      "target": "Q01 USGS Water Dowsing",
+      "issue": "Q01 hat kein Jahr; die Webseite nennt 'September 17, 2026' als Aktualisierung.",
+      "finding": "Die Webseite ist eine aktualisierte Fassung; die zugehörige Druckpublikation ist USGS GIP 'Water Dowsing' (1977), DOI 10.3133/7000104.",
+      "evidence": "Q01-Seite (Abruf 2026-11-03) nennt das Datum; OpenAlex/DOI 10.3133/7000104 für die Publikation von 1977.",
+      "action": "RAD-06: Q01 um 'Webfassung, aktualisiert 2026-09-17; Printoriginal 1977' ergänzen."
+    },
+    {
+      "id": "K04",
+      "target": "Q30 Prokop/Wimmer 1985",
+      "issue": "Q30 verweist auf ISBN aus Q06 (Sekundärquelle).",
+      "finding": "lobid bestätigt: 'Wünschelrute, Erdstrahlen, Radiästhesie', 3. Aufl., Enke 1985, ISBN 3-432-84473-5.",
+      "evidence": "lobid-Ressource TT002048267.",
+      "action": "RAD-06: Verifikationsstufe von 'secondary_isbn' auf 'library_record' heben."
+    },
+    {
+      "id": "K05",
+      "target": "Q05 Literaturangabe zu Betz & König 1989",
+      "issue": "Q05 nennt 'Herold-Verlag, München'; Katalog nennt 'König und Betz'.",
+      "finding": "lobid: München: König und Betz, 1989, ISBN 3-923819-05-6 (Selbstverlag).",
+      "evidence": "lobid-Ressource HT004087743.",
+      "action": "RAD-06: Verlagsangabe präzisieren; als Selbstverlag kennzeichnen."
+    },
+    {
+      "id": "K06",
+      "target": "Quellenverzeichnis, Kopfzeile",
+      "issue": "Kopfzeile nennt 'Lücken: Enright (404)'.",
+      "finding": "Der DOI ist bei Crossref/OpenAlex registriert; die Verlagsseite lieferte 2026-11-02 HTTP 404. Der Befund ist ein Zugriffs-, kein Existenzproblem.",
+      "evidence": "Crossref-Abruf 10.1007/s001140050198 (HTTP 200, JSON 1.575 Bytes); OpenAlex-Treffer.",
+      "action": "RAD-06: Formulierung 'Volltext über Verlag nicht erreichbar' statt '404' verwenden."
+    }
+  ],
+  "gaps_remaining": [
+    "Walach & Schmidt (1997) und Houtkooper & Vaitl (1997) sind nur über Q05 referenziert; keine eigene Metadaten- oder Volltextprüfung erfolgt.",
+    "Der Münchner Schlussbericht (Wagner, Betz & König 1990, BMFT 01 KB8602) wurde nicht beschafft; alle Aufbaudaten stammen aus der Rezeption (Q42).",
+    "Die Betz & König 1989-Monografie wurde nur katalogisiert, nicht gelesen; die positive Deutung ist über Q05/Q42 referiert.",
+    "Für den Biotensor existiert keine peer-reviewte Studie; die Aussage 'keine Validierung' beruht auf negativer Recherche (OpenAlex-Suche 'biotensor' ohne einschlägige Treffer) und ist keine bewiesene Nichtexistenz.",
+    "Der amerikanische ASD-Gründungsdatensatz (1961) ist nur tertiär belegt; die ASD-Website blockierte den Abruf.",
+    "Die NS-Zeit (1933-1945) ist im Delta nicht durch eine neu geprüfte Primärquelle abgedeckt; Q15 (bestehend) bleibt dafür die Referenz.",
+    "Spanischsprachige und afrikanische Literatur außer Marokko wurde nicht systematisch durchsucht (Sprachgrenze).",
+    "Eine unabhängige Replikation der Münchner Befunde durch Dritte wurde nicht gefunden; die Suche war auf OpenAlex/Crossref beschränkt."
+  ],
+  "coverage_map": {
+    "historische_primärquelle": ["Q34", "Q35", "Q36", "Q63", "Q64"],
+    "wissenschaftliche_originalstudien": ["Q39", "Q42", "Q44", "Q45", "Q46", "Q47", "Q48", "Q49", "Q50", "Q51", "Q52", "Q53", "Q54"],
+    "experimentelle_kontroversen": ["C04", "C05", "C06", "C16"],
+    "vertreter_und_kritiker": ["Q43", "Q04", "Q05", "Q42", "Q40", "Q55", "Q56"],
+    "moderne_verfahren": ["Q56", "Q55", "Q38"],
+    "instrumententypen": ["Q34", "Q39", "Q56", "Q06"],
+    "nationale_kulturelle_unterschiede": ["Q59", "Q60", "Q61", "Q62", "Q63", "Q64", "Q66", "Q57"],
+    "biotensoren": ["Q55", "Q56", "Q44"],
+    "fernmutung": ["Q39", "Q40", "Q65"],
+    "datenqualitaet": ["Q47", "Q48", "Q49", "Q50", "Q42"],
+    "experimentspezifik": ["Q39", "Q42", "Q44", "Q46"]
+  }
+}

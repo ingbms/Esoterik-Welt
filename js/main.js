@@ -8,6 +8,7 @@ import { RunesModule } from './modules/runes.js';
 import { BlogModule } from './modules/blog.js';
 import { AstrologieModule } from './modules/astrologie.js';
 import { FrequenzlaborLoader } from './modules/frequenzlabor-loader.js';
+import { RadiasthesieModule } from './modules/radiasthesie.js';
 import { DialogController } from './dialog.js';
 
 // --- State ---
@@ -19,7 +20,17 @@ const state = {
 // --- Routes ---
 // Only these ids are pages. #main is the skip target inside the document and
 // must never become a page id; unknown fragments must never hide every section.
-const MAIN_PAGES = ['home', 'tarot', 'crystals', 'moon', 'runes', 'astrologie', 'frequenzen', 'blog'];
+const MAIN_PAGES = [
+  'home',
+  'tarot',
+  'crystals',
+  'moon',
+  'astrologie',
+  'frequenzen',
+  'runes',
+  'pendeln',
+  'blog',
+];
 const PAGE_IDS = new Set(MAIN_PAGES);
 const SKIP_ANCHOR = 'main';
 const ARTICLE_ROUTE = /^blog\/([^/]+)$/;
@@ -34,11 +45,20 @@ const ASTROLOGIE_ROUTE = /^astrologie(?:\/([^?]*))?(?:\?(.*))?$/;
 // to the canonical route, so a shared old link never becomes a second page.
 const FREQUENZ_ROUTE = /^frequenzen(?:\/([^?]*))?(?:\?(.*))?$/;
 const FREQUENZ_ALIAS = /^frequenzlabor(?:\/([^?]*))?(?:\?(.*))?$/;
+// The dowsing area is one page with its own sub-routes:
+// #pendeln, #pendeln/radiasthesie, #pendeln/radiasthesie/befunde,
+// #pendeln/glossar?b=R, #pendeln/suche?q=pendel … Everything after "pendeln"
+// goes to the area module, which answers unknown slugs with its own in-area
+// error view instead of the site-wide route notice.
+const PENDELN_ROUTE = /^pendeln(?:\/([^?]*))?(?:\?(.*))?$/;
 
 // --- Per-route metadata ---
 // Every view lives in one document, so the title and the description have to
 // follow the active route instead of claiming the start page on all of them.
 const SITE_NAME = 'Esoterik-Welt';
+// Kanonische Adresse des Einzeldokuments; die Module setzen für ihre
+// statischen Seiten eine eigene Adresse.
+const SITE_CANONICAL = 'https://ingbms.github.io/Esoterik-Welt/';
 const PAGE_META = {
   home: {
     title: 'Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr',
@@ -82,6 +102,11 @@ const PAGE_META = {
     description:
       'Quellendokument zum Frequenzbereich: Suchstrategie, Aufnahmekriterien, Evidenzstatus, Claim-Quelle-Matrix und Quellenverzeichnis.',
   },
+  pendeln: {
+    title: 'Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand',
+    description:
+      'Radiästhesie, Pendeln und Orakel: Instrumente, Geschichte und Handhabung im Überblick — mit Kennzeichnung von Tradition, Hypothese und geprüftem Befund, ohne Wirkungsversprechen.',
+  },
 };
 
 function setMetaContent(selector, value) {
@@ -100,6 +125,13 @@ function applyRouteMeta(pageId, article = null) {
   setMetaContent('meta[property="og:description"]', description);
   setMetaContent('meta[name="twitter:title"]', title);
   setMetaContent('meta[name="twitter:description"]', description);
+  // Alle übrigen Ansichten sind Ansichten von index.html. Das Modul setzt für
+  // seine statischen Dokumente gleich danach eine eigene kanonische Adresse;
+  // ohne dieses Zurücksetzen bliebe sie beim Seitenwechsel stehen.
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  if (canonicalLink) canonicalLink.setAttribute('href', SITE_CANONICAL);
+  setMetaContent('meta[property="og:url"]', SITE_CANONICAL);
+  setMetaContent('meta[name="twitter:url"]', SITE_CANONICAL);
 }
 
 // A dialog close may only rewrite history when it was not itself caused by a
@@ -154,6 +186,18 @@ function parseRoute(hash) {
       raw,
     };
   }
+  const pendeln = PENDELN_ROUTE.exec(raw);
+  if (pendeln) {
+    return {
+      type: 'pendeln',
+      page: 'pendeln',
+      segments: String(pendeln[1] || '')
+        .split('/')
+        .filter(Boolean),
+      query: pendeln[2] || '',
+      raw,
+    };
+  }
   if (PAGE_IDS.has(raw)) return { type: 'page', page: raw, raw };
   return { type: 'unknown', raw };
 }
@@ -192,6 +236,9 @@ const elements = {
 
 // --- Initialize ---
 async function init() {
+  // Adresse beim Start merken: Ändert sie sich während der asynchronen
+  // Initialisierung, hat der hashchange-Handler die Route bereits gesetzt.
+  const hashAtStart = location.hash;
   // Setup navigation
   setupNavigation();
 
@@ -223,6 +270,8 @@ async function init() {
   // The frequency area is lazy: only this proxy is part of the initial graph,
   // the engine and the view are loaded on the first visit (ADR AD-5/§5.2).
   state.modules.frequenzen = new FrequenzlaborLoader(document.getElementById('frequenzlaborRoot'));
+  // The dowsing area renders into its own container, after the runes section.
+  state.modules.pendeln = new RadiasthesieModule(document.getElementById('pendelnRoot'));
   // A card-opened article becomes its own history entry, so Back/Forward,
   // reload and the dialog close action stay consistent with the address bar.
   state.modules.blog.onArticleOpened = (id) => {
@@ -258,8 +307,25 @@ async function init() {
       console.error('Astrologie-Daten nicht verfügbar', error); // the module shows its own error view
     }
   }
-  applyRoute(initialRoute, { instant: true, silent: true });
-  if (initialRoute.type !== 'skip') settleRouteScroll(state.currentPage);
+  // Same for a cold deep link into the dowsing area: render real content
+  // before the route settles, so no empty page is focused or announced.
+  if (initialRoute.type === 'pendeln') {
+    try {
+      await state.modules.pendeln.load();
+    } catch (error) {
+      console.error('Radiästhesie-Daten nicht verfügbar', error); // the module shows its own error view
+    }
+  }
+  // Der Hash kann sich während des Ladens ändern (Klick auf einen Deep-Link,
+  // Zurück-Taste). Dann hat der hashchange-Handler die Route bereits gesetzt:
+  // Ein erneutes Anwenden des alten Stands würde die frische Ansicht ausblenden
+  // und den Fokus auf ein verstecktes Element setzen. Nur ein unveränderter
+  // Hash wird hier abgeschlossen.
+  const settledRoute = parseRoute(location.hash);
+  if (location.hash === hashAtStart) {
+    applyRoute(settledRoute, { instant: true, silent: true });
+    if (settledRoute.type !== 'skip') settleRouteScroll(state.currentPage);
+  }
 
   // Populate home feature grid
   populateFeatureGrid();
@@ -459,6 +525,24 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
     return;
   }
 
+  // The dowsing area owns its sub-routes, exactly like the astrology area.
+  if (route.type === 'pendeln') {
+    clearRouteNotice();
+    navigateTo('pendeln', replace, {
+      fromHistory,
+      instant,
+      silent,
+      hash: `#${route.raw}`,
+      subroute: { segments: route.segments, query: route.query },
+      // Kaltstart mit Kapitel-Anker (RAD-11): Ein Deep-Link soll nicht nur
+      // scrollen, sondern den Fokus auf die Zielüberschrift setzen. Der Router
+      // rendert hier still, damit die Adresse nicht erneut geschrieben wird;
+      // ohne dieses Flag bliebe der Fokus auf <body>.
+      deepLinkFocus: route.segments.length > 0,
+    });
+    return;
+  }
+
   // Unknown fragment: keep a readable page and explain the dead link instead of
   // hiding every section, which left the site looking empty.
   const page = PAGE_IDS.has(state.currentPage) ? state.currentPage : 'home';
@@ -469,7 +553,15 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
 function navigateTo(
   pageId,
   replace = false,
-  { fromHistory = false, instant = false, silent = false, hash = null, subroute = null, metaPage = null } = {}
+  {
+    fromHistory = false,
+    instant = false,
+    silent = false,
+    hash = null,
+    subroute = null,
+    metaPage = null,
+    deepLinkFocus = false,
+  } = {}
 ) {
   // Leaving a page must release its resources: the frequency lab stops audio
   // on any route change instead of playing on in the background.
@@ -502,7 +594,7 @@ function navigateTo(
   const module = state.modules[pageId];
   if (module && typeof module.show === 'function') {
     const pending = module.show(subroute ? subroute.segments : [], subroute ? subroute.query : '', {
-      focus: !silent,
+      focus: !silent || deepLinkFocus,
     });
     if (pending && typeof pending.catch === 'function') {
       pending.catch((error) => console.error('Ansicht konnte nicht gerendert werden', error));

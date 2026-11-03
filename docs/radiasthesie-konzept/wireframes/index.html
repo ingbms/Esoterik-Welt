@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wireframes — Radiästhesie, Pendeln und Orakel</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="wire.css" />
+  </head>
+  <body>
+    <div class="wf-page">
+      <header class="wf-header">
+        <div class="wf-logo" aria-hidden="true"></div>
+        <nav class="wf-nav" aria-label="Hauptnavigation (Platzhalter)">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span class="is-active"></span><span></span>
+        </nav>
+      </header>
+
+      <div class="wf-body">
+        <!-- ============================================================
+             Wireframe 1 · Modul-Landingpage
+             ============================================================ -->
+        <section class="wf-view" id="landing" aria-label="Wireframe Landingpage">
+          <div class="wf-hero">
+            <div class="wf-block wf-block--solid" style="margin: 0; border: 0; padding: 0">
+              <span class="pin">1</span>
+              <p class="wf-label">Eyebrow · 13 px Mono</p>
+              <div class="wf-line is-title w-88"></div>
+              <div class="wf-line is-title w-60"></div>
+              <p class="wf-label" style="margin-top: 16px">Lead · 18 px, max. 58 Zeichen</p>
+              <div class="wf-line w-95"></div>
+              <div class="wf-line w-88"></div>
+              <div class="wf-line w-45"></div>
+              <p class="wf-label" style="margin-top: 16px">Primäraktion + Textlink</p>
+              <div style="display: flex; gap: 16px; align-items: center">
+                <div class="wf-chip" style="width: 190px; height: 44px; display: grid; place-items: center">Button</div>
+                <div class="wf-line w-30" style="margin: 0"></div>
+              </div>
+              <p class="wf-label" style="margin-top: 24px">3 Kennzahlen · 13 px / 20 px</p>
+              <div style="display: flex; gap: 40px; border-top: 1px solid var(--wf-line-soft); padding-top: 12px">
+                <div><div class="wf-line w-30" style="width: 60px"></div><div class="wf-line is-strong" style="width: 90px"></div></div>
+                <div><div class="wf-line w-30" style="width: 60px"></div><div class="wf-line is-strong" style="width: 80px"></div></div>
+                <div><div class="wf-line w-30" style="width: 60px"></div><div class="wf-line is-strong" style="width: 80px"></div></div>
+              </div>
+            </div>
+            <div class="wf-block wf-block--solid" style="margin: 0; padding: 0; border: 0">
+              <span class="pin">2</span>
+              <div class="wf-plate">Instrumententafel · 4:3, eigenes SVG<br />Rahmen 1 px, Fläche Karte, Innenabstand 20 px</div>
+              <p class="wf-note">Bildunterschrift 13 px Mono, 2–3 Zeilen, nennt Quelle und Grenze</p>
+            </div>
+          </div>
+
+          <div class="wf-status">
+            <span class="pin">3</span>
+            <div class="wf-chip">Einordnung</div>
+            <div>
+              <p class="wf-label" style="margin-bottom: 4px">Pflichtband · nicht schließbar · 14 px, 78 Zeichen</p>
+              <div class="wf-line w-95"></div>
+              <div class="wf-line w-75"></div>
+            </div>
+          </div>
+
+          <div class="wf-section" style="position: relative">
+            <span class="pin">4</span>
+            <p class="wf-label">01 · Einstiege — H2 34 px, Abschnittsabstand 64 px</p>
+            <div class="wf-grid3">
+              <div class="wf-card">
+                <div class="wf-card-img">Instrument 4:3</div>
+                <div class="wf-card-body">
+                  <div class="wf-line w-30"></div>
+                  <div class="wf-line is-strong w-60"></div>
+                  <div class="wf-line w-95"></div>
+                  <div class="wf-line w-88"></div>
+                  <div class="wf-line w-60"></div>
+                  <div class="wf-line w-45" style="margin-top: 12px"></div>
+                </div>
+              </div>
+              <div class="wf-card">
+                <div class="wf-card-img">Instrument 4:3</div>
+                <div class="wf-card-body">
+                  <div class="wf-line w-30"></div>
+                  <div class="wf-line is-strong w-45"></div>
+                  <div class="wf-line w-95"></div>
+                  <div class="wf-line w-75"></div>
+                  <div class="wf-line w-88"></div>
+                  <div class="wf-line w-45" style="margin-top: 12px"></div>
+                </div>
+              </div>
+              <div class="wf-card">
+                <div class="wf-card-img">Instrument 4:3</div>
+                <div class="wf-card-body">
+                  <div class="wf-line w-30"></div>
+                  <div class="wf-line is-strong w-45"></div>
+                  <div class="wf-line w-95"></div>
+                  <div class="wf-line w-88"></div>
+                  <div class="wf-line w-60"></div>
+                  <div class="wf-line w-45" style="margin-top: 12px"></div>
+                </div>
+              </div>
+            </div>
+            <p class="wf-note">Karten: 1 px Rahmen, Titel ist der Link, ganze Karte kein Klickziel. 701–900 px als Liste (Bild links).</p>
+          </div>
+
+          <div class="wf-section" style="position: relative">
+            <span class="pin">5</span>
+            <p class="wf-label">02 · Lesart — Stufenlegende A–E, 5 Zeilen</p>
+            <div class="wf-rows">
+              <div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px"><div class="wf-chip">A · Historisch</div><div><div class="wf-line w-95"></div><div class="wf-line w-60"></div></div></div>
+              <div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px"><div class="wf-chip">B · Tradition</div><div><div class="wf-line w-95"></div><div class="wf-line w-75"></div></div></div>
+              <div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px"><div class="wf-chip">C · Hypothese</div><div><div class="wf-line w-88"></div><div class="wf-line w-60"></div></div></div>
+              <div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px"><div class="wf-chip">D · Befund</div><div><div class="wf-line w-95"></div><div class="wf-line w-45"></div></div></div>
+              <div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px"><div class="wf-chip">E · Widerlegt</div><div><div class="wf-line w-88"></div><div class="wf-line w-60"></div></div></div>
+            </div>
+          </div>
+
+          <div class="wf-section" style="position: relative">
+            <span class="pin">6</span>
+            <p class="wf-label">03 · Werkstatt — 3 Teaser, Zustand im Text</p>
+            <div class="wf-grid3">
+              <div class="wf-block" style="min-height: 140px; margin: 0">
+                <div class="wf-chip" style="width: 110px">In Vorbereitung</div>
+                <div class="wf-line is-strong w-60" style="margin-top: 12px"></div>
+                <div class="wf-line w-95"></div>
+                <div class="wf-line w-75"></div>
+              </div>
+              <div class="wf-block" style="min-height: 140px; margin: 0">
+                <div class="wf-chip" style="width: 110px">In Vorbereitung</div>
+                <div class="wf-line is-strong w-60" style="margin-top: 12px"></div>
+                <div class="wf-line w-88"></div>
+                <div class="wf-line w-60"></div>
+              </div>
+              <div class="wf-block" style="min-height: 140px; margin: 0">
+                <div class="wf-chip" style="width: 110px">In Vorbereitung</div>
+                <div class="wf-line is-strong w-45" style="margin-top: 12px"></div>
+                <div class="wf-line w-95"></div>
+                <div class="wf-line w-88"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wf-section" style="position: relative">
+            <span class="pin">7</span>
+            <p class="wf-label">04 · Verwandte Bereiche — 3 Verweise mit Typzeile</p>
+            <div class="wf-grid3">
+              <div class="wf-block" style="margin: 0; border-left: 2px solid var(--wf-line)"><div class="wf-line w-30"></div><div class="wf-line is-strong w-60"></div><div class="wf-line w-95"></div></div>
+              <div class="wf-block" style="margin: 0; border-left: 2px solid var(--wf-line)"><div class="wf-line w-30"></div><div class="wf-line is-strong w-60"></div><div class="wf-line w-95"></div></div>
+              <div class="wf-block" style="margin: 0; border-left: 2px solid var(--wf-line)"><div class="wf-line w-30"></div><div class="wf-line is-strong w-60"></div><div class="wf-line w-95"></div></div>
+            </div>
+          </div>
+
+          <div class="wf-block" style="position: relative; border-left: 3px solid var(--wf-ink); padding: 20px">
+            <span class="pin">8</span>
+            <p class="wf-label">Einordnungskasten · 3 Absätze: Was hier steht / Was nicht behauptet wird / Wie prüfbar</p>
+            <div class="wf-line w-95"></div>
+            <div class="wf-line w-88"></div>
+            <div class="wf-line w-75"></div>
+          </div>
+
+          <div class="wf-legend">
+            <h2>Erläuterung · Landingpage</h2>
+            <ol>
+              <li><strong>Hero:</strong> zwei Spalten 6,4fr / 5,6fr, Abstand 48 px, H1 <code>clamp(34px, 4,2vw, 56px)</code>; unter 900 px einspaltig, Tafel unter dem Text.</li>
+              <li><strong>Instrumententafel:</strong> eigenes SVG im 4:3-Rahmen, 1 px Rahmen, Fläche <code>--color-bg-card</code>; Bildunterschrift nennt Maß und Grenze.</li>
+              <li><strong>Einordnungsband:</strong> Pflicht auf jeder Modulseite, direkt unter dem Kopf, nicht schließbar; linke 2-px-Linie in Sand.</li>
+              <li><strong>Themenkarten:</strong> drei Karten, je Instrument, Titel als einziger Link; 901 px+ dreispaltig, 701–900 px Liste, ≤700 px gestapelt.</li>
+              <li><strong>Stufenlegende:</strong> fünf Stufen mit Textmarke, Farbe nie allein; Kontrast ≥ 6,45:1 auf Kartenfläche.</li>
+              <li><strong>Werkstatt:</strong> Zustand („In Vorbereitung“) steht als Text in der Karte, nicht als Farbe.</li>
+              <li><strong>Verwandte Bereiche:</strong> Typzeile plus ein Satz Abgrenzung; keine Kachelgleichheit mit den Themenkarten.</li>
+              <li><strong>Einordnungskasten:</strong> drei feste Absätze (Bestand, Nicht-Behauptung, Prüfbarkeit) am Seitenende.</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- ============================================================
+             Wireframe 2 · Themenseite
+             ============================================================ -->
+        <section class="wf-view" id="thema" aria-label="Wireframe Themenseite" hidden>
+          <div class="wf-section" style="position: relative; margin-bottom: 16px">
+            <span class="pin">1</span>
+            <p class="wf-label">Brotkrümel · 13 px, „Pendeln / Radiästhesie“</p>
+            <div class="wf-line w-30"></div>
+          </div>
+
+          <div class="wf-section" style="position: relative; border-bottom: 1px solid var(--wf-line); padding-bottom: 24px">
+            <span class="pin">2</span>
+            <p class="wf-label">Eyebrow · H1 56 px · Untertitel Mono · Lead 18 px · Stufen-Chips · Metazeile</p>
+            <div class="wf-line w-30"></div>
+            <div class="wf-line is-title w-45" style="height: 44px"></div>
+            <div class="wf-line w-45" style="height: 12px; margin-bottom: 12px"></div>
+            <div class="wf-line w-95"></div>
+            <div class="wf-line w-88"></div>
+            <div style="display: flex; gap: 8px; margin-top: 12px">
+              <div class="wf-chip">A</div><div class="wf-chip">B</div><div class="wf-chip">C</div>
+            </div>
+            <div class="wf-line w-45" style="margin-top: 14px; height: 8px"></div>
+          </div>
+
+          <div class="wf-status" style="position: relative">
+            <span class="pin">3</span>
+            <div class="wf-chip">Einordnung</div>
+            <div>
+              <p class="wf-label" style="margin-bottom: 4px">Pflichtband · 3 Zeilen</p>
+              <div class="wf-line w-95"></div>
+              <div class="wf-line w-88"></div>
+              <div class="wf-line w-45"></div>
+            </div>
+          </div>
+
+          <div class="wf-layout">
+            <div>
+              <div class="wf-section" style="position: relative">
+                <span class="pin">4</span>
+                <p class="wf-label">H2 28 px · Fließtext 16 px, 60 ch (gemessen 69 Zeichen)</p>
+                <div class="wf-line is-strong w-45"></div>
+                <div class="wf-line w-95"></div>
+                <div class="wf-line w-88"></div>
+                <div class="wf-line w-95"></div>
+                <div class="wf-line w-60"></div>
+                <div class="wf-block wf-block--fill" style="margin-top: 16px; position: relative">
+                  <span class="pin">5</span>
+                  <p class="wf-label">Hinweisbox „Drei Grenzen“ · Rand 2 px links</p>
+                  <div class="wf-line w-95"></div>
+                  <div class="wf-line w-75"></div>
+                </div>
+                <div class="wf-plate" style="min-height: 220px; margin-top: 16px">
+                  Instrumententafel · max. 680 px<br />Abbildung 4:3, Bildunterschrift darunter
+                </div>
+              </div>
+
+              <div class="wf-section" style="position: relative">
+                <span class="pin">6</span>
+                <p class="wf-label">H2 · Schrittliste mit 3 Schritten (H3 16 px halbfett)</p>
+                <div class="wf-line is-strong w-45"></div>
+                <div class="wf-rows">
+                  <div style="display: grid; grid-template-columns: 3px minmax(0, 1fr); gap: 16px"><div style="background: var(--wf-line)"></div><div><div class="wf-line w-30"></div><div class="wf-line w-95"></div><div class="wf-line w-88"></div></div></div>
+                  <div style="display: grid; grid-template-columns: 3px minmax(0, 1fr); gap: 16px"><div style="background: var(--wf-line)"></div><div><div class="wf-line w-30"></div><div class="wf-line w-95"></div><div class="wf-line w-75"></div></div></div>
+                  <div style="display: grid; grid-template-columns: 3px minmax(0, 1fr); gap: 16px"><div style="background: var(--wf-line)"></div><div><div class="wf-line w-30"></div><div class="wf-line w-88"></div><div class="wf-line w-60"></div></div></div>
+                </div>
+              </div>
+
+              <div class="wf-section" style="position: relative">
+                <span class="pin">7</span>
+                <p class="wf-label">H2 · Evidenztafel: 3 Spalten (Stufe/ID · Aussage · Einordnung)</p>
+                <div class="wf-line is-strong w-45"></div>
+                <div class="wf-claim"><div class="wf-chip">A · H-01</div><div><div class="wf-line w-95"></div></div><div><div class="wf-line w-95"></div><div class="wf-line w-60"></div></div></div>
+                <div class="wf-claim"><div class="wf-chip">B · T-04</div><div><div class="wf-line w-88"></div></div><div><div class="wf-line w-88"></div><div class="wf-line w-45"></div></div></div>
+                <div class="wf-claim"><div class="wf-chip">C · C-02</div><div><div class="wf-line w-95"></div></div><div><div class="wf-line w-95"></div><div class="wf-line w-60"></div></div></div>
+                <div class="wf-claim"><div class="wf-chip">D · D-07</div><div><div class="wf-line w-88"></div></div><div><div class="wf-line w-88"></div><div class="wf-line w-45"></div></div></div>
+                <div class="wf-claim"><div class="wf-chip">E · E-03</div><div><div class="wf-line w-95"></div></div><div><div class="wf-line w-95"></div><div class="wf-line w-60"></div></div></div>
+                <p class="wf-note">Unter 480 px werden die drei Spalten zu drei Zeilen; kein horizontaler Scroll.</p>
+              </div>
+
+              <div class="wf-section" style="position: relative">
+                <p class="wf-label">H2 · „Was daraus folgt“ · 2 Absätze + Einschränkungsbox</p>
+                <div class="wf-line is-strong w-45"></div>
+                <div class="wf-line w-95"></div>
+                <div class="wf-line w-88"></div>
+                <div class="wf-line w-95"></div>
+                <div class="wf-line w-45"></div>
+              </div>
+
+              <div class="wf-section" style="position: relative">
+                <span class="pin">8</span>
+                <p class="wf-label">Aufklappbar: Quellen &amp; Belege · 3 Quellen, 5 Aussagen · <code>details</code></p>
+                <div class="wf-block" style="margin: 0"><div class="wf-line is-strong w-60" style="margin: 0"></div></div>
+              </div>
+
+              <div class="wf-block" style="position: relative; border-left: 3px solid var(--wf-ink); padding: 20px">
+                <span class="pin">9</span>
+                <p class="wf-label">Einordnungskasten · 3 Absätze (Tradition / Evidenz / Konsequenz)</p>
+                <div class="wf-line w-95"></div>
+                <div class="wf-line w-88"></div>
+                <div class="wf-line w-60"></div>
+              </div>
+            </div>
+
+            <aside class="wf-aside" style="position: relative">
+              <span class="pin">10</span>
+              <p class="wf-label">Inhaltsverzeichnis · 4 Sprünge</p>
+              <div class="wf-line w-95"></div>
+              <div class="wf-line w-88"></div>
+              <div class="wf-line w-75"></div>
+              <div class="wf-line w-88"></div>
+              <div style="border-top: 1px solid var(--wf-line-soft); margin: 12px 0"></div>
+              <p class="wf-label">Kasten „Auf einen Blick“ · 4 Zahlen</p>
+              <div class="wf-line w-60"></div>
+              <div class="wf-line w-45"></div>
+              <div class="wf-line w-45"></div>
+            </aside>
+          </div>
+
+          <div class="wf-legend">
+            <h2>Erläuterung · Themenseite</h2>
+            <ol>
+              <li><strong>Brotkrümel:</strong> Modul → Thema; letztes Element mit <code>aria-current="page"</code>, 44 px Trefferfläche.</li>
+              <li><strong>Seitenkopf:</strong> genau eine H1, Untertitel in Mono, Lead 18 px, Stufen-Chips, Metazeile mit Stand und Prüfstatus.</li>
+              <li><strong>Einordnungsband:</strong> identisch zur Landingpage; auf Artikelseiten direkt vor dem Text.</li>
+              <li><strong>Fließtext:</strong> 16 px / 1,65, maximal 60 ch (gemessen 69 Zeichen je Zeile); Absatzabstand 12 px.</li>
+              <li><strong>Hinweisbox:</strong> 1 px Rahmen, 2 px linke Kante, Fläche Karte; für Begriffsgrenzen und Warnungen.</li>
+              <li><strong>Schrittliste:</strong> 1 px linke Linie, H3 in der Body-Schrift; Schritte sind Handlungen, keine Kapitel.</li>
+              <li><strong>Evidenztafel:</strong> Stufe als Textmarke, Aussage, Einordnung; trennt Tradition von Befund.</li>
+              <li><strong>Quellenpanel:</strong> <code>&lt;details&gt;</code> standardmäßig geschlossen; Quelle, Typ, Abrufdatum, Prüftiefe.</li>
+              <li><strong>Einordnungskasten:</strong> Abschluss jedes Artikels, drei feste Absätze.</li>
+              <li><strong>Seitenleiste:</strong> ab 1200 px sticky, darunter als erstes Element vor dem Text; Kasten „Auf einen Blick“ nur ab 1200 px.</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- ============================================================
+             Wireframe 3 · Glossar
+             ============================================================ -->
+        <section class="wf-view" id="glossar" aria-label="Wireframe Glossar" hidden>
+          <div class="wf-section" style="position: relative; margin-bottom: 16px">
+            <span class="pin">1</span>
+            <p class="wf-label">Brotkrümel · „Pendeln / Glossar“</p>
+            <div class="wf-line w-30"></div>
+          </div>
+
+          <div class="wf-section" style="position: relative; border-bottom: 1px solid var(--wf-line); padding-bottom: 20px">
+            <span class="pin">2</span>
+            <p class="wf-label">H1 56 px · Lead 2–3 Zeilen</p>
+            <div class="wf-line is-title w-30" style="height: 44px"></div>
+            <div class="wf-line w-88"></div>
+            <div class="wf-line w-60"></div>
+          </div>
+
+          <div class="wf-section" style="position: relative">
+            <span class="pin">3</span>
+            <p class="wf-label">Suche · 560 px max · Buchstabenleiste 44 × 44 px</p>
+            <div class="wf-search"><div class="wf-input"></div><div class="wf-btn"></div></div>
+            <div class="wf-letters">
+              <span>A</span><span>B</span><span class="is-empty">C</span><span class="is-empty">D</span><span class="is-empty">E</span>
+              <span class="is-empty">F</span><span class="is-empty">G</span><span class="is-empty">H</span><span class="is-empty">I</span>
+              <span class="is-empty">J</span><span class="is-empty">K</span><span class="is-empty">L</span><span class="is-empty">M</span>
+              <span class="is-empty">N</span><span class="is-empty">O</span><span>P</span><span class="is-empty">Q</span><span>R</span>
+              <span>S</span><span>T</span><span class="is-empty">U</span><span class="is-empty">V</span><span>W</span><span class="is-empty">X</span>
+              <span class="is-empty">Y</span><span class="is-empty">Z</span>
+            </div>
+            <p class="wf-note">Leere Buchstaben bleiben sichtbar, sind aber nicht fokussierbar (kein Link).</p>
+          </div>
+
+          <div class="wf-section" style="position: relative">
+            <span class="pin">4</span>
+            <p class="wf-label">Buchstabengruppe B · Kopf mit Zähler, 2 Begriffe</p>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--wf-line); padding-bottom: 6px; margin-bottom: 12px">
+              <div class="wf-line is-strong w-30" style="margin: 0; width: 40px"></div>
+              <div class="wf-line w-30" style="margin: 0; width: 80px"></div>
+            </div>
+            <div class="wf-rows">
+              <div><div style="display: flex; gap: 8px; align-items: center"><div class="wf-line is-strong w-30" style="margin: 0; width: 140px"></div><div class="wf-chip">B</div></div><div class="wf-line w-88" style="margin-top: 6px"></div><div class="wf-line w-60"></div></div>
+              <div><div style="display: flex; gap: 8px; align-items: center"><div class="wf-line is-strong w-30" style="margin: 0; width: 160px"></div><div class="wf-chip">E</div></div><div class="wf-line w-88" style="margin-top: 6px"></div><div class="wf-line w-45"></div></div>
+            </div>
+          </div>
+
+          <div class="wf-section" style="position: relative">
+            <p class="wf-label">Buchstabengruppe P · 3 Begriffe · gleiche Struktur</p>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--wf-line); padding-bottom: 6px; margin-bottom: 12px">
+              <div class="wf-line is-strong w-30" style="margin: 0; width: 40px"></div>
+              <div class="wf-line w-30" style="margin: 0; width: 80px"></div>
+            </div>
+            <div class="wf-rows">
+              <div><div class="wf-line is-strong w-30" style="width: 120px; margin-bottom: 6px"></div><div class="wf-line w-88"></div><div class="wf-line w-60"></div></div>
+              <div><div class="wf-line is-strong w-30" style="width: 150px; margin-bottom: 6px"></div><div class="wf-line w-88"></div><div class="wf-line w-45"></div></div>
+              <div><div class="wf-line is-strong w-30" style="width: 140px; margin-bottom: 6px"></div><div class="wf-line w-88"></div><div class="wf-line w-60"></div></div>
+            </div>
+          </div>
+
+          <div class="wf-section" style="position: relative">
+            <span class="pin">5</span>
+            <p class="wf-label">Abschluss · „Begriffe fehlen?“ + Button zur Themenseite</p>
+            <div class="wf-line is-strong w-30"></div>
+            <div class="wf-line w-88"></div>
+            <div class="wf-line w-60"></div>
+            <div class="wf-chip" style="width: 190px; height: 40px; display: grid; place-items: center; margin-top: 12px">Button</div>
+          </div>
+
+          <div class="wf-legend">
+            <h2>Erläuterung · Glossar</h2>
+            <ol>
+              <li><strong>Brotkrümel:</strong> gleiche Struktur wie Themenseite, 44 px Trefferfläche.</li>
+              <li><strong>Seitenkopf:</strong> H1 als Dokumenttitel (56 px), Lead erklärt, dass die Stufe die Herkunft nennt, nicht die Gültigkeit.</li>
+              <li><strong>Suche und Buchstaben:</strong> clientseitig, Trefferzahl in <code>aria-live</code>; Suchfeld max. 560 px; Buchstaben 44 × 44 px.</li>
+              <li><strong>Gruppen:</strong> je Buchstabe ein Kopf mit Zähler; Begriff, Stufen-Chip, Definition (60 ch), „Siehe“-Verweis.</li>
+              <li><strong>Abschluss:</strong> ein Satz zur Pflege des Glossars, ein Rückweg zur Themenseite.</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+
+      <footer class="wf-footer" aria-label="Fußzeile (Platzhalter)">
+        <div></div><div></div><div></div><div></div>
+      </footer>
+    </div>
+
+    <nav class="wf-viewbar" aria-label="Wireframe-Ansichten">
+      <strong>Wireframes</strong>
+      <a href="#landing" data-wf="landing">Landingpage</a>
+      <a href="#thema" data-wf="thema">Themenseite</a>
+      <a href="#glossar" data-wf="glossar">Glossar</a>
+      <span style="margin-left: auto">Graustufen = Struktur, nicht Gestaltung</span>
+    </nav>
+
+    <script>
+      (function () {
+        const names = ['landing', 'thema', 'glossar'];
+        const links = [...document.querySelectorAll('.wf-viewbar a[data-wf]')];
+        function show(name) {
+          if (!names.includes(name)) name = 'landing';
+          names.forEach((n) => {
+            const el = document.getElementById(n);
+            if (el) el.hidden = n !== name;
+          });
+          links.forEach((a) => a.setAttribute('aria-current', String(a.dataset.wf === name)));
+          document.title = 'Wireframe ' + name + ' — Radiästhesie, Pendeln und Orakel';
+        }
+        links.forEach((a) =>
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            history.replaceState(null, '', '#' + a.dataset.wf);
+            show(a.dataset.wf);
+            window.scrollTo({ top: 0 });
+          })
+        );
+        show(new URLSearchParams(location.search).get('view') || (location.hash ? location.hash.slice(1) : 'landing'));
+        if (new URLSearchParams(location.search).get('bare') === '1') document.body.classList.add('bare');
+      })();
+    </script>
+  </body>
+</html>

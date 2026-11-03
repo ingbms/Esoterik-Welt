@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radiästhesie, Pendeln und Orakel — Design-Mockup</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="../../../css/design-system.css" />
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <link rel="stylesheet" href="rad.css" />
+    <style>
+      /* Nur Mockup-Rahmen: Bedienleiste zum Umschalten der drei Ansichten.
+         Diese Regeln gehören NICHT in die Website. */
+      body {
+        padding-bottom: 0;
+      }
+      body:not(.bare) {
+        padding-bottom: 64px;
+      }
+      .mockbar {
+        position: fixed;
+        inset: auto 0 0 0;
+        z-index: 700;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        padding: 8px 16px;
+        background: #0b1012;
+        border-top: 1px solid #82928e;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: #babdb7;
+      }
+      .mockbar strong {
+        color: #c6b38e;
+        font-weight: normal;
+        margin-right: 8px;
+      }
+      .mockbar a,
+      .mockbar button {
+        min-height: 32px;
+        padding: 4px 10px;
+        border: 1px solid #3c484b;
+        border-radius: 2px;
+        background: transparent;
+        color: #eae6dc;
+        font: inherit;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .mockbar a[aria-current='true'] {
+        border-color: #c6b38e;
+        color: #c6b38e;
+      }
+      body.bare .mockbar {
+        display: none;
+      }
+      [hidden] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
+
+    <header class="header" role="banner">
+      <div class="header-inner">
+        <a href="#landing" class="logo" aria-label="Esoterik-Welt Startseite" data-view="landing">Esoterik-Welt</a>
+        <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link" data-page="home">Start</a></li>
+            <li><a href="#tarot" class="nav-link" data-page="tarot">Tarot</a></li>
+            <li><a href="#crystals" class="nav-link" data-page="crystals">Kristalle</a></li>
+            <li><a href="#moon" class="nav-link" data-page="moon">Mondphasen</a></li>
+            <li><a href="#astrologie" class="nav-link" data-page="astrologie">Astrologie</a></li>
+            <li><a href="#runes" class="nav-link" data-page="runes">Runen</a></li>
+            <li>
+              <a
+                href="#landing"
+                class="nav-link active"
+                data-page="pendeln"
+                data-view="landing"
+                aria-current="page"
+                >Pendeln</a
+              >
+            </li>
+            <li><a href="#blog" class="nav-link" data-page="blog">Wissen</a></li>
+          </ul>
+          <span id="favCounter" class="badge badge-primary" aria-label="Anzahl Kristall-Favoriten" aria-live="polite">♥ 3</span>
+          <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navList">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" role="main" tabindex="-1">
+      <!-- ================================================================
+           Ansicht 1 · Modul-Landingpage
+           ================================================================ -->
+      <section id="landing" class="page active" aria-labelledby="landing-title">
+        <div class="container rad-root">
+          <div class="rad">
+            <div class="rad-hero">
+              <div class="rad-hero-grid">
+                <div class="rad-hero-copy">
+                  <p class="label">Themenmodul · Instrumente und Deutung</p>
+                  <h1 id="landing-title" class="rad-hero-title">Radiästhesie, Pendeln und <em>Orakel</em></h1>
+                  <p class="rad-hero-lead">
+                    Wie Rute, Pendel und Tafel gedeutet werden, was darüber dokumentiert ist — und wo die Grenze
+                    zwischen Erfahrung und Beleg verläuft. Ein Bereich über Tradition, Instrumente und prüfbare
+                    Fragen.
+                  </p>
+                  <div class="rad-hero-actions">
+                    <a href="#thema" class="btn btn-primary" data-view="thema">Mit Radiästhesie beginnen</a>
+                    <a href="#methodik" class="textlink" data-view="thema">Einordnung lesen <span aria-hidden="true">↓</span></a>
+                  </div>
+                  <dl class="rad-hero-facts">
+                    <div class="rad-hero-fact">
+                      <dt>Bereiche</dt>
+                      <dd>3 Themen</dd>
+                    </div>
+                    <div class="rad-hero-fact">
+                      <dt>Kapitel</dt>
+                      <dd>11 Seiten</dd>
+                    </div>
+                    <div class="rad-hero-fact">
+                      <dt>Kennzeichnung</dt>
+                      <dd>5 Stufen</dd>
+                    </div>
+                  </dl>
+                </div>
+                <figure class="rad-plate">
+                  <div class="rad-plate-frame">
+                    <img
+                      src="../assets/pendel-geometrie.svg"
+                      width="520"
+                      height="400"
+                      alt="Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+                    />
+                  </div>
+                  <figcaption>
+                    <strong>Pendelgeometrie.</strong> Länge L, Auslenkung α, Schwingungsdauer T. Eigene Zeichnung,
+                    kein Messgerät und kein Beleg für eine Fernwirkung.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <aside class="rad-status" aria-labelledby="status-label-1">
+              <span class="rad-status-label" id="status-label-1">Einordnung</span>
+              <p class="rad-status-body">
+                <strong>Alle Verfahren dieses Bereichs stammen aus Tradition und Anwenderberichten.</strong>
+                Eine physikalische Wirkung ist nicht belegt; kontrollierte Tests wie Enright (1995) fanden keine
+                Treffer über dem Zufall. Wir kennzeichnen jede Aussage nach Herkunft und Prüfstand —
+                <a class="rad-status-link" href="#methodik" data-view="thema">so funktioniert die Kennzeichnung</a>.
+              </p>
+            </aside>
+
+            <section class="rad-section" aria-labelledby="zugang-title">
+              <p class="rad-kicker">01 · Einstiege</p>
+              <h2 id="zugang-title">Drei Zugänge, ein Zusammenhang</h2>
+              <p class="rad-section-lead">
+                Radiästhesie ist der Oberbegriff für die Arbeit mit Rute und Pendel. Orakel ist der weitere Bereich
+                der Deutung. Die Seiten trennen beides, statt es zu einem Sammelthema zu verrühren.
+              </p>
+              <ul class="rad-topics">
+                <li>
+                  <article class="rad-topic">
+                    <figure class="rad-topic-figure">
+                      <img
+                        src="../assets/winkelrute.svg"
+                        width="520"
+                        height="400"
+                        alt="Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+                      />
+                    </figure>
+                    <div class="rad-topic-body">
+                      <p class="rad-topic-meta">Thema 1 · Instrument</p>
+                      <h3 class="rad-topic-title"><a href="#thema" data-view="thema">Radiästhesie</a></h3>
+                      <p class="rad-topic-text">
+                        Rute, Winkelrute und Biotensor: wie sie geführt werden, welche Formen überliefert sind und
+                        was Feldversuche dazu ergeben haben.
+                      </p>
+                      <ul class="rad-topic-facts">
+                        <li>Rute, Winkelrute, Biotensor</li>
+                        <li>Geschichte seit dem Bergbau</li>
+                        <li>Feldtests und Ideomotorik</li>
+                      </ul>
+                      <p class="rad-topic-cta"><a href="#thema" data-view="thema">Zum Thema Radiästhesie <span aria-hidden="true">→</span></a></p>
+                    </div>
+                  </article>
+                </li>
+                <li>
+                  <article class="rad-topic">
+                    <figure class="rad-topic-figure">
+                      <img
+                        src="../assets/pendeltafel.svg"
+                        width="520"
+                        height="400"
+                        alt="Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+                      />
+                    </figure>
+                    <div class="rad-topic-body">
+                      <p class="rad-topic-meta">Thema 2 · Praxis</p>
+                      <h3 class="rad-topic-title"><a href="#thema" data-view="thema">Pendeln</a></h3>
+                      <p class="rad-topic-text">
+                        Pendelarten, Materialien, Tafeln und Skalen. Woher die Bovis-Skala kommt, warum sie keine
+                        SI-Einheit ist und wie ein Pendel mechanisch schwingt.
+                      </p>
+                      <ul class="rad-topic-facts">
+                        <li>Pendelarten und Materialien</li>
+                        <li>Pendeltafeln und Bovis-Skalen</li>
+                        <li>Pendellabor (in Vorbereitung)</li>
+                      </ul>
+                      <p class="rad-topic-cta"><a href="#thema" data-view="thema">Zum Thema Pendeln <span aria-hidden="true">→</span></a></p>
+                    </div>
+                  </article>
+                </li>
+                <li>
+                  <article class="rad-topic">
+                    <figure class="rad-topic-figure">
+                      <img
+                        src="../assets/orakel-karten.svg"
+                        width="520"
+                        height="400"
+                        alt="Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+                      />
+                    </figure>
+                    <div class="rad-topic-body">
+                      <p class="rad-topic-meta">Thema 3 · Deutung</p>
+                      <h3 class="rad-topic-title"><a href="#thema" data-view="thema">Orakel</a></h3>
+                      <p class="rad-topic-text">
+                        Vom Pendelorakel zu Tarot, Runen und I Ging: was mantische Verfahren verbindet, was sie
+                        unterscheidet und welche Erklärungen es für ihre Wirkung gibt.
+                      </p>
+                      <ul class="rad-topic-facts">
+                        <li>Pendel- und Tafelorakel</li>
+                        <li>Tarot, Runen, I Ging</li>
+                        <li>Psychologische Erklärungen</li>
+                      </ul>
+                      <p class="rad-topic-cta"><a href="#thema" data-view="thema">Zum Thema Orakel <span aria-hidden="true">→</span></a></p>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </section>
+
+            <section class="rad-section" aria-labelledby="stufen-title">
+              <p class="rad-kicker">02 · Lesart</p>
+              <h2 id="stufen-title">Fünf Stufen der Kennzeichnung</h2>
+              <p class="rad-section-lead">
+                Jede längere Aussage trägt eine dieser Marken. Sie sagt, auf welcher Ebene die Aussage gilt — nicht,
+                wie überzeugend sie ist. Reine Traditionsdeutung bleibt unmarkiert und steht im Fließtext.
+              </p>
+              <dl class="rad-levels">
+                <div class="rad-level">
+                  <dt><span class="rad-chip rad-chip--a">A · Historisch</span></dt>
+                  <dd>Dokumentierte Überlieferung, Datum, Quelle oder Fundlage. Belegt die Existenz der Praxis, nicht ihre Wirkung.</dd>
+                </div>
+                <div class="rad-level">
+                  <dt><span class="rad-chip rad-chip--b">B · Tradition</span></dt>
+                  <dd>Vorstellungen und Anwenderberichte aus der Praxis. Als Erfahrung wiedergegeben, nicht als Befund.</dd>
+                </div>
+                <div class="rad-level">
+                  <dt><span class="rad-chip rad-chip--c">C · Hypothese</span></dt>
+                  <dd>Vorgeschlagene Wirkmechanismen, die noch nicht geprüft sind — einschließlich physikalischer Annahmen.</dd>
+                </div>
+                <div class="rad-level">
+                  <dt><span class="rad-chip rad-chip--d">D · Befund</span></dt>
+                  <dd>Ergebnis einer nachvollziehbaren Untersuchung, mit Methode, Stichprobe und Grenzen.</dd>
+                </div>
+                <div class="rad-level">
+                  <dt><span class="rad-chip rad-chip--e">E · Widerlegt</span></dt>
+                  <dd>Aussagen, die geprüft und nicht bestätigt wurden, oder die einer belegten Größe widersprechen.</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="rad-section" aria-labelledby="werkstatt-title">
+              <p class="rad-kicker">03 · Werkstatt</p>
+              <h2 id="werkstatt-title">Werkzeuge zum Ausprobieren</h2>
+              <p class="rad-section-lead">
+                Die Werkstatt zeigt Mechanik und Statistik, nicht verborgene Informationen. Jede Karte nennt ihren
+                Stand, bevor sie angeklickt wird.
+              </p>
+              <ul class="rad-workshop">
+                <li class="rad-werk">
+                  <span class="rad-werk-state rad-werk-state--planned">In Vorbereitung</span>
+                  <h3>Pendellabor</h3>
+                  <p>Länge, Auslenkung und Dämpfung einstellen; Schwingungsdauer ablesen und mit der Formel vergleichen.</p>
+                </li>
+                <li class="rad-werk">
+                  <span class="rad-werk-state rad-werk-state--planned">In Vorbereitung</span>
+                  <h3>Pendeltafel-Studio</h3>
+                  <p>Tafeln beschriften, Farbstil wählen, als SVG oder Druckvorlage ausgeben.</p>
+                </li>
+                <li class="rad-werk">
+                  <span class="rad-werk-state rad-werk-state--planned">In Vorbereitung</span>
+                  <h3>Experimentierlabor</h3>
+                  <p>Verblindete Testreihe mit festgelegtem Ziel, Zufallserwartung und Konfidenzintervall.</p>
+                </li>
+              </ul>
+            </section>
+
+            <section class="rad-section" aria-labelledby="verwandt-title">
+              <p class="rad-kicker">04 · Nachbarschaft</p>
+              <h2 id="verwandt-title">Verwandte Bereiche</h2>
+              <p class="rad-section-lead">Getrennte Systeme, keine Vermischung: Diese Bereiche werden verlinkt, nicht eingemeindet.</p>
+              <ul class="rad-related">
+                <li class="rad-related-item">
+                  <span class="rad-related-type">Deutung</span>
+                  <h3><a href="#tarot" data-page="tarot">Tarot</a></h3>
+                  <p>Bildkarten und Legesysteme. Eigene Symbolsprache, eigene Geschichte.</p>
+                </li>
+                <li class="rad-related-item">
+                  <span class="rad-related-type">System</span>
+                  <h3><a href="#astrologie" data-page="astrologie">Astrologie</a></h3>
+                  <p>Tierkreiszeichen, Faktoren und Aspekte — mit eigener Evidenzdebatte.</p>
+                </li>
+                <li class="rad-related-item">
+                  <span class="rad-related-type">Material</span>
+                  <h3><a href="#crystals" data-page="crystals">Kristalle</a></h3>
+                  <p>Mineralien, Farben und überlieferte Zuordnungen, ohne Heilversprechen.</p>
+                </li>
+              </ul>
+            </section>
+
+            <aside class="rad-disclaimer" aria-labelledby="disclaimer-1">
+              <h2 class="rad-disclaimer-title" id="disclaimer-1">Einordnung dieses Bereichs</h2>
+              <p>
+                <strong>Was hier steht:</strong> Radiästhesie, Pendeln und Orakel sind kulturell überlieferte
+                Praktiken. Sie werden beschrieben, historisch eingeordnet und in ihrer heutigen Verbreitung gezeigt.
+              </p>
+              <p>
+                <strong>Was hier nicht behauptet wird:</strong> dass Ruten, Pendel oder Tafeln physikalische Felder,
+                Wasseradern oder Krankheiten anzeigen. Es gibt keine belastbare Evidenz für eine solche Wirkung; wo
+                Untersuchungen vorliegen, werden sie mit Methode und Grenzen genannt.
+              </p>
+              <p>
+                <strong>Wie Sie das prüfen können:</strong> Jede Seite führt Quellen mit Abrufdatum. Aussagen tragen
+                eine Stufe von A bis E. Der Bereich <a href="#methodik" data-view="thema">Methodik</a> erklärt die
+                Regeln, nach denen Texte geprüft und freigegeben werden.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           Ansicht 2 · Themenseite (repräsentativ: Radiästhesie)
+           ================================================================ -->
+      <section id="thema" class="page" aria-labelledby="thema-title" hidden>
+        <div class="container rad-root">
+          <div class="rad">
+            <nav class="astro-breadcrumb" aria-label="Brotkrümelnavigation">
+              <ol>
+                <li><a href="#landing" data-view="landing">Pendeln</a></li>
+                <li><a href="#thema" aria-current="page">Radiästhesie</a></li>
+              </ol>
+            </nav>
+
+            <header class="astro-head">
+              <p class="label">Radiästhesie · Instrument und Geste</p>
+              <h1 id="thema-title" class="astro-title" tabindex="-1">Radiästhesie</h1>
+              <p class="astro-subtitle">Oberbegriff für Ruten- und Pendelpraxis</p>
+              <p class="astro-lead">
+                Ruten und Pendel sind Werkzeuge der Hand. Der Bereich zeigt, wie sie geführt werden, welche
+                Instrumente überliefert sind und was kontrollierte Untersuchungen über die Treffer ergeben haben.
+              </p>
+              <div class="astro-badges">
+                <span class="rad-chip rad-chip--a">A · Historisch belegt</span>
+                <span class="rad-chip rad-chip--b">B · Tradition</span>
+                <span class="rad-chip rad-chip--c">C · Hypothese</span>
+              </div>
+              <ul class="rad-meta">
+                <li>Stand 2. November 2026</li>
+                <li>Mustertext zur Maßprüfung</li>
+                <li>Redaktion und Prüfung ausstehend</li>
+              </ul>
+            </header>
+
+            <aside class="rad-status" aria-labelledby="status-label-2">
+              <span class="rad-status-label" id="status-label-2">Einordnung</span>
+              <p class="rad-status-body">
+                <strong>Die beschriebenen Anzeigen sind nicht naturwissenschaftlich belegt.</strong>
+                Der Ausschlag von Rute und Pendel lässt sich durch unwillkürliche Handbewegungen erklären; blinde
+                Feldtests erbrachten keine Treffer über dem Zufall. Die Seite trennt diese Befunde von der
+                traditionellen Deutung.
+              </p>
+            </aside>
+
+            <div class="astro-layout">
+              <!-- DOM-Reihenfolge: Seitenleiste vor dem Text. Auf Desktop steht sie
+                   per grid-area rechts; auf schmalen Geräten erscheint sie damit
+                   in derselben Reihenfolge, in der sie gelesen wird. -->
+              <aside class="astro-aside">
+                <details class="astro-toc" open>
+                  <summary>Auf dieser Seite</summary>
+                  <nav aria-label="Inhaltsverzeichnis">
+                    <ol>
+                      <li><a href="#was">Was der Begriff bezeichnet</a></li>
+                      <li><a href="#fuehrung">Wie die Rute geführt wird</a></li>
+                      <li><a href="#befunde">Was Untersuchungen zeigen</a></li>
+                      <li><a href="#folgen">Was daraus folgt</a></li>
+                    </ol>
+                  </nav>
+                </details>
+                <div class="astro-aside-box">
+                  <h2>Auf einen Blick</h2>
+                  <ul class="astro-facts">
+                    <li><strong>3</strong> Instrumente</li>
+                    <li><strong>5</strong> Kennzeichnungsstufen</li>
+                    <li><strong>3</strong> Quellen</li>
+                    <li><strong>1</strong> offene Forschungsfrage</li>
+                  </ul>
+                  <p class="astro-panel-note"><a href="#methodik" data-view="thema">Methodik &amp; Prüfregeln</a></p>
+                </div>
+              </aside>
+              <div class="astro-main">
+                <section class="astro-section" id="was" aria-labelledby="was-title">
+                  <h2 id="was-title">Was der Begriff bezeichnet</h2>
+                  <p class="astro-text">
+                    Radiästhesie ist der Sammelbegriff für Praktiken, bei denen mit Rute, Pendel oder Biotensor
+                    verborgene Strukturen, Stoffe oder Zustände angezeigt werden sollen. Der Begriff bündelt sehr
+                    unterschiedliche Werkzeuge: die gegabelte Wünschelrute, die schwenkbare Winkelrute, den
+                    teleskopierbaren Biotensor und das an einem Faden hängende Pendel. [S1]
+                  </p>
+                  <p class="astro-text">
+                    Der gemeinsame Kern ist eine Geste: Das Instrument wird locker gefasst, der Körper bleibt ruhig,
+                    und ein Ausschlag — Schwingung, Drehung, Neigen — wird als Anzeige gelesen. Diese Anzeige ist
+                    keine ablesbare Zahl. Sie muss gedeutet werden, und genau deshalb ist die Praxis von Schulen und
+                    Absprachen abhängig.
+                  </p>
+                  <div class="astro-callout">
+                    <p>
+                      <strong>Drei Grenzen, die auf jeder Seite gelten.</strong> Radiästhesie ist nicht dasselbe wie
+                      Divination. Bovis-Werte sind keine physikalische Einheit. Ein Ausschlag ist kein Messwert, ohne
+                      dass Kalibrierung, Blindprotokoll und Fehlerbereich benannt sind.
+                    </p>
+                  </div>
+                  <figure class="rad-plate" id="fuehrung-plate">
+                    <div class="rad-plate-frame">
+                      <img
+                        src="../assets/winkelrute.svg"
+                        width="520"
+                        height="400"
+                        alt="Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+                      />
+                    </div>
+                    <figcaption>
+                      <strong>Winkelrute in Aufsicht.</strong> Der Winkel zwischen den Ruten wird als Ausschlag
+                      gedeutet. Eigene Zeichnung nach der überlieferten Form; keine Messung.
+                    </figcaption>
+                  </figure>
+                </section>
+
+                <section class="astro-section" id="fuehrung" aria-labelledby="fuehrung-title">
+                  <h2 id="fuehrung-title">Wie die Rute geführt wird</h2>
+                  <p class="astro-text">
+                    Die überlieferte Handhabung ist in drei Schritte gegliedert. Sie ist körperlich beschrieben, nicht
+                    energetisch begründet — jede Deutung steht als Tradition daneben.
+                  </p>
+                  <ol class="astro-step-list">
+                    <li class="astro-step">
+                      <h3>Fassen</h3>
+                      <p class="astro-text">
+                        Die Rute liegt locker in den Handflächen, die Daumen zeigen nach oben. Die Ellbogen bleiben
+                        nah am Körper, damit der Ausschlag nicht von der Schulter kommt.
+                      </p>
+                    </li>
+                    <li class="astro-step">
+                      <h3>Ruhen</h3>
+                      <p class="astro-text">
+                        Erst wenn das Instrument ruhig liegt, beginnt der Gang. Wer zu schnell geht, erzeugt den
+                        Ausschlag selbst — dieser Einwand ist Teil der Praxisdiskussion, nicht nur der Kritik.
+                      </p>
+                    </li>
+                    <li class="astro-step">
+                      <h3>Lesen</h3>
+                      <p class="astro-text">
+                        Über einer vermuteten Stelle kippt die Rute nach oben oder unten. Ob das „ja“, „nein“ oder
+                        „hier“ bedeutet, legt die Anwenderin vorher fest — oft mit einer Probe an bekanntem Ort.
+                      </p>
+                    </li>
+                  </ol>
+                </section>
+
+                <section class="astro-section" id="befunde" aria-labelledby="befunde-title">
+                  <h2 id="befunde-title">Was Untersuchungen zeigen</h2>
+                  <p class="astro-text">
+                    Die Prüfbarkeit ist der Knackpunkt: Eine Rute schlägt immer aus, auch über einer leeren Fläche.
+                    Aussagekräftig wird sie erst, wenn Ziel und Erwartung vor dem Versuch feststehen und die Person
+                    nicht weiß, wo das Ziel liegt.
+                  </p>
+                  <ul class="rad-claims">
+                    <li class="rad-claim">
+                      <span class="rad-claim-id"><span class="rad-chip rad-chip--a">A</span> H-01</span>
+                      <p class="rad-claim-text">Ruten wurden historisch bei Wasser- und Erzsuche eingesetzt.</p>
+                      <p class="rad-claim-note">In Quellen des 16. bis 19. Jahrhunderts dokumentiert. Belegt die Praxis, nicht die Trefferquote.</p>
+                    </li>
+                    <li class="rad-claim">
+                      <span class="rad-claim-id"><span class="rad-chip rad-chip--b">B</span> T-04</span>
+                      <p class="rad-claim-text">Anwender berichten von wiederkehrenden Ausschlägen an bestimmten Orten.</p>
+                      <p class="rad-claim-note">Erfahrungsbericht. Ohne Protokoll nicht von Erwartungseffekten zu trennen.</p>
+                    </li>
+                    <li class="rad-claim">
+                      <span class="rad-claim-id"><span class="rad-chip rad-chip--c">C</span> C-02</span>
+                      <p class="rad-claim-text">Ein „Erdstrahlen“-Feld soll den Ausschlag verursachen.</p>
+                      <p class="rad-claim-note">Hypothese ohne physikalische Grundlage; kein Messaufbau hat ein solches Feld gezeigt.</p>
+                    </li>
+                    <li class="rad-claim">
+                      <span class="rad-claim-id"><span class="rad-chip rad-chip--d">D</span> D-07</span>
+                      <p class="rad-claim-text">Der Ausschlag entsteht durch unwillkürliche Handbewegungen.</p>
+                      <p class="rad-claim-note">Bewegungsanalysen und Blindversuche stützen den ideomotorischen Mechanismus. <a href="#quellen">Belege</a></p>
+                    </li>
+                    <li class="rad-claim">
+                      <span class="rad-claim-id"><span class="rad-chip rad-chip--e">E</span> E-03</span>
+                      <p class="rad-claim-text">Rutengehen findet Wasser zuverlässiger als der Zufall.</p>
+                      <p class="rad-claim-note">In kontrollierten Feldtests nicht bestätigt; Trefferquote auf Zufallsniveau. <a href="#quellen">Belege</a></p>
+                    </li>
+                  </ul>
+                  <p class="astro-note">
+                    Die Kennungen sind Beispiele für die Darstellung. Die endgültigen Aussagen und Belege legt die
+                    Redaktion im Rechercheauftrag ESOW-RAD-02 fest.
+                  </p>
+                </section>
+
+                <section class="astro-section" id="folgen" aria-labelledby="folgen-title">
+                  <h2 id="folgen-title">Was daraus folgt</h2>
+                  <p class="astro-text">
+                    Wer die Instrumente ausprobiert, sollte das mit einer eigenen Fragestellung tun: Ziel vorher
+                    notieren, Reihenfolge zufällig wählen, Ergebnis danach vergleichen. Das ist kein Angriff auf die
+                    Praxis — es ist die einzige Art, aus einer Erfahrung eine überprüfbare Aussage zu machen.
+                  </p>
+                  <p class="astro-text">
+                    Für die weitere Lektüre heißt das: Die historischen und handwerklichen Teile dieses Bereichs sind
+                    gut belegt. Die Wirkungsaussagen sind es nicht, und werden es ohne belastbare Tests auch nicht.
+                  </p>
+                  <div class="astro-callout astro-callout--limit">
+                    <p>
+                      <strong>Kein Ersatz für ärztliche oder technische Prüfung.</strong> Ruten und Pendel eignen
+                      sich nicht zur Suche nach Leitungen, zur Bewertung von Bauplätzen oder zur Beurteilung von
+                      Gesundheit. Für solche Fragen gibt es zugelassene Verfahren.
+                    </p>
+                  </div>
+                </section>
+
+                <details class="astro-details astro-details--sources" id="quellen">
+                  <summary>Quellen &amp; Belege (3 Quellen, 5 Aussagen)</summary>
+                  <div class="astro-details-body">
+                    <ul class="astro-source-list">
+                      <li class="astro-source">
+                        <a href="https://www.usgs.gov/water-science-school/science/water-dowsing" rel="noopener">S1 · USGS, Water Science School: Water Dowsing</a>
+                        <span class="astro-source-meta">U.S. Geological Survey · Behördenpublikation · abgerufen 2.11.2026 · Volltext geprüft</span>
+                      </li>
+                      <li class="astro-source">
+                        <a href="https://doi.org/10.1007/s001140050198" rel="noopener">S2 · Enright (1995): Water dowsing — the Scheunen experiments</a>
+                        <span class="astro-source-meta">Naturwissenschaften 82 · peer review · abgerufen 2.11.2026 · Abstract geprüft</span>
+                      </li>
+                      <li class="astro-source">
+                        <a href="https://doi.org/10.1016/j.humov.2021.102879" rel="noopener">S3 · Cantergi, Awasthi &amp; Friedman (2021)</a>
+                        <span class="astro-source-meta">Human Movement Science · peer review · abgerufen 2.11.2026 · Auswertung ausstehend</span>
+                      </li>
+                    </ul>
+                    <p class="astro-panel-note">
+                      Musterstand: Die Redaktion prüft jede Quelle vor Veröffentlichung erneut auf Volltext,
+                      Interessenlage und Abrufdatum. Marker wie [S1] im Text springen hierher.
+                    </p>
+                  </div>
+                </details>
+
+                <section class="astro-section" aria-labelledby="weiter-title">
+                  <h2 id="weiter-title">Weiterlesen</h2>
+                  <ul class="rad-related">
+                    <li class="rad-related-item">
+                      <span class="rad-related-type">Praxis</span>
+                      <h3><a href="#thema">Pendeln lernen</a></h3>
+                      <p>Haltung, Frage, Tafel — und die Fehler, die dabei entstehen.</p>
+                    </li>
+                    <li class="rad-related-item">
+                      <span class="rad-related-type">Geschichte</span>
+                      <h3><a href="#thema">Geschichte der Radiästhesie</a></h3>
+                      <p>Vom Bergbau des 16. Jahrhunderts zur Esoterikmesse.</p>
+                    </li>
+                    <li class="rad-related-item">
+                      <span class="rad-related-type">Prüfung</span>
+                      <h3><a href="#thema">Untersuchungen im Überblick</a></h3>
+                      <p>Feldtests, Blindprotokolle und was sie messbar machen.</p>
+                    </li>
+                  </ul>
+                </section>
+
+                <aside class="rad-disclaimer" aria-labelledby="disclaimer-2">
+                  <h2 class="rad-disclaimer-title" id="disclaimer-2">Einordnung dieser Seite</h2>
+                  <p>
+                    <strong>Tradition:</strong> Die beschriebene Handhabung ist überliefert und wird bis heute
+                    unterrichtet. Sie ist hier als Praxis dargestellt, nicht als Technik mit nachgewiesener Wirkung.
+                  </p>
+                  <p>
+                    <strong>Evidenz:</strong> Für eine Anzeige verborgener Strukturen gibt es keinen belastbaren
+                    Nachweis. Kontrollierte Tests kommen nicht über die Zufallserwartung hinaus; der Ausschlag selbst
+                    ist als unwillkürliche Bewegung gut erklärbar.
+                  </p>
+                  <p>
+                    <strong>Konsequenz:</strong> Der Bereich dient der Bildung und der kritischen Einordnung. Er
+                    ersetzt keine fachliche Prüfung und keine medizinische Beratung.
+                  </p>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           Ansicht 3 · Glossar
+           ================================================================ -->
+      <section id="glossar" class="page" aria-labelledby="glossar-title" hidden>
+        <div class="container rad-root">
+          <div class="rad">
+            <nav class="astro-breadcrumb" aria-label="Brotkrümelnavigation">
+              <ol>
+                <li><a href="#landing" data-view="landing">Pendeln</a></li>
+                <li><a href="#glossar" aria-current="page">Glossar</a></li>
+              </ol>
+            </nav>
+
+            <header class="astro-head">
+              <p class="label">Service · Nachschlagen</p>
+              <h1 id="glossar-title" class="astro-title" tabindex="-1">Glossar</h1>
+              <p class="astro-lead">
+                Begriffe aus Radiästhesie, Pendeln und Orakel — kurz erklärt, mit Verweis auf die Stelle, an der sie
+                ausführlich stehen. Die Stufe nennt die Herkunft des Begriffs, nicht seine Gültigkeit.
+              </p>
+            </header>
+
+            <div class="astro-controls">
+              <form class="astro-search" role="search" onsubmit="return false">
+                <label class="sr-only" for="glossarSuche">Begriff suchen</label>
+                <input class="input" id="glossarSuche" type="search" placeholder="Begriff suchen, z. B. Biotensor" />
+                <button class="btn btn-secondary" type="submit">Suchen</button>
+              </form>
+              <nav class="astro-letters" aria-label="Sprung zu Buchstaben">
+                <a class="astro-letter" href="#g-a">A</a>
+                <a class="astro-letter" href="#g-b">B</a>
+                <span class="astro-letter is-empty" aria-hidden="true">C</span>
+                <span class="astro-letter is-empty" aria-hidden="true">D</span>
+                <span class="astro-letter is-empty" aria-hidden="true">E</span>
+                <span class="astro-letter is-empty" aria-hidden="true">F</span>
+                <span class="astro-letter is-empty" aria-hidden="true">G</span>
+                <span class="astro-letter is-empty" aria-hidden="true">H</span>
+                <span class="astro-letter is-empty" aria-hidden="true">I</span>
+                <span class="astro-letter is-empty" aria-hidden="true">J</span>
+                <span class="astro-letter is-empty" aria-hidden="true">K</span>
+                <span class="astro-letter is-empty" aria-hidden="true">L</span>
+                <span class="astro-letter is-empty" aria-hidden="true">M</span>
+                <span class="astro-letter is-empty" aria-hidden="true">N</span>
+                <span class="astro-letter is-empty" aria-hidden="true">O</span>
+                <a class="astro-letter" href="#g-p">P</a>
+                <span class="astro-letter is-empty" aria-hidden="true">Q</span>
+                <a class="astro-letter" href="#g-r">R</a>
+                <a class="astro-letter" href="#g-s">S</a>
+                <a class="astro-letter" href="#g-t">T</a>
+                <span class="astro-letter is-empty" aria-hidden="true">U</span>
+                <span class="astro-letter is-empty" aria-hidden="true">V</span>
+                <a class="astro-letter" href="#g-w">W</a>
+                <span class="astro-letter is-empty" aria-hidden="true">X</span>
+                <span class="astro-letter is-empty" aria-hidden="true">Y</span>
+                <span class="astro-letter is-empty" aria-hidden="true">Z</span>
+              </nav>
+            </div>
+
+            <section class="astro-glossgroup" id="g-b" aria-labelledby="g-b-title">
+              <div class="rad-gloss-head">
+                <h2 id="g-b-title">B</h2>
+                <p class="rad-gloss-count">2 Begriffe</p>
+              </div>
+              <dl class="astro-glosslist">
+                <div class="astro-term">
+                  <dt><a href="#g-b">Biotensor</a> <span class="rad-chip rad-chip--b">B</span></dt>
+                  <dd>
+                    Teleskopierbares Handinstrument mit gefedertem Zeiger. Wird wie eine Rute geführt; die Anzeige ist
+                    ein Ausschlag des Zeigers, kein Messwert.
+                  </dd>
+                  <span class="astro-term-links">Siehe <a href="#thema">Radiästhesie</a></span>
+                </div>
+                <div class="astro-term">
+                  <dt><a href="#g-b">Bovis-Einheit</a> <span class="rad-chip rad-chip--e">E</span></dt>
+                  <dd>
+                    Traditionelle Skala zur „Beurteilung“ von Orten und Lebensmitteln. Sie hat keinen Bezug zu
+                    SI-Einheiten und ist keine physikalische Messgröße.
+                  </dd>
+                  <span class="astro-term-links">Siehe <a href="#befunde">Was Untersuchungen zeigen</a></span>
+                </div>
+              </dl>
+            </section>
+
+            <section class="astro-glossgroup" id="g-p" aria-labelledby="g-p-title">
+              <div class="rad-gloss-head">
+                <h2 id="g-p-title">P</h2>
+                <p class="rad-gloss-count">3 Begriffe</p>
+              </div>
+              <dl class="astro-glosslist">
+                <div class="astro-term">
+                  <dt><a href="#g-p">Pendel</a> <span class="rad-chip rad-chip--a">A</span></dt>
+                  <dd>
+                    Körper an einem Faden, der nach einer Auslenkung um seine Ruhelage schwingt. Die Schwingungsdauer
+                    hängt von der Länge ab, nicht von der Person, die es hält.
+                  </dd>
+                  <span class="astro-term-links">Siehe <a href="#thema">Radiästhesie</a></span>
+                </div>
+                <div class="astro-term">
+                  <dt><a href="#g-p">Pendeltafel</a> <span class="rad-chip rad-chip--b">B</span></dt>
+                  <dd>
+                    Bedruckte oder gezeichnete Fläche mit Segmenten, über der das Pendel gehalten wird. Die Bedeutung
+                    der Segmente wird vorher festgelegt.
+                  </dd>
+                </div>
+                <div class="astro-term">
+                  <dt><a href="#g-p">Pendelorakel</a> <span class="rad-chip rad-chip--b">B</span></dt>
+                  <dd>
+                    Deutung von Ja/Nein- oder Auswahlfragen mit dem Pendel. Überschneidet sich mit Divination, ist aber
+                    ein eigenes Verfahren mit eigener Fragetechnik.
+                  </dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="astro-glossgroup" id="g-r" aria-labelledby="g-r-title">
+              <div class="rad-gloss-head">
+                <h2 id="g-r-title">R</h2>
+                <p class="rad-gloss-count">2 Begriffe</p>
+              </div>
+              <dl class="astro-glosslist">
+                <div class="astro-term">
+                  <dt><a href="#g-r">Radiästhesie</a> <span class="rad-chip rad-chip--a">A</span></dt>
+                  <dd>
+                    Oberbegriff für Ruten- und Pendelpraxis. Der Begriff entstand im Frankreich der 1920er-Jahre und
+                    bündelt sehr unterschiedliche Instrumente und Schulen.
+                  </dd>
+                  <span class="astro-term-links">Siehe <a href="#thema">Radiästhesie</a></span>
+                </div>
+                <div class="astro-term">
+                  <dt><a href="#g-r">Rutengänger</a> <span class="rad-chip rad-chip--a">A</span></dt>
+                  <dd>
+                    Person, die mit einer Rute arbeitet. Historisch ein Beruf in Bergbau und Brunnenbau, heute meist
+                    freiberuflich oder als Dienstleistung.
+                  </dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="astro-glossgroup" id="g-w" aria-labelledby="g-w-title">
+              <div class="rad-gloss-head">
+                <h2 id="g-w-title">W</h2>
+                <p class="rad-gloss-count">2 Begriffe</p>
+              </div>
+              <dl class="astro-glosslist">
+                <div class="astro-term">
+                  <dt><a href="#g-w">Winkelrute</a> <span class="rad-chip rad-chip--a">A</span></dt>
+                  <dd>
+                    Zwei lose verbundene Ruten, die beim Ausschlag nach oben oder unten kippen. Weit verbreitete Form
+                    neben der gegabelten Wünschelrute.
+                  </dd>
+                </div>
+                <div class="astro-term">
+                  <dt><a href="#g-w">Wünschelrute</a> <span class="rad-chip rad-chip--a">A</span></dt>
+                  <dd>
+                    Gegabelter Zweig, traditionell aus Hasel oder Weide. Die älteste dokumentierte Form der
+                    Rutenpraxis.
+                  </dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="astro-section" aria-labelledby="glossar-weiter">
+              <h2 id="glossar-weiter">Begriffe fehlen?</h2>
+              <p class="astro-text">
+                Das Glossar wächst mit der Redaktion. Vorschläge werden im Quellenverzeichnis vermerkt, damit
+                nachvollziehbar bleibt, wer welchen Begriff ergänzt hat.
+              </p>
+              <p class="astro-text">
+                <a class="btn btn-secondary btn-sm" href="#thema" data-view="thema">Zur Themenseite Radiästhesie</a>
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Esoterik-Welt</div>
+          <p class="footer-tagline">
+            Eine Sammlung esoterischer Werkzeuge und Wissens für moderne Suchende. Kein Dogma — nur Werkzeuge für
+            deine eigene Reise.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h2>Tools</h2>
+          <ul class="footer-links">
+            <li><a href="#tarot">Tarot-Karten</a></li>
+            <li><a href="#crystals">Kristall-Katalog</a></li>
+            <li><a href="#moon">Mondkalender</a></li>
+            <li><a href="#runes">Runen-Wurf</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Wissen</h2>
+          <ul class="footer-links">
+            <li><a href="#astrologie">Astrologie-Bereich</a></li>
+            <li><a href="#landing" data-view="landing">Radiästhesie &amp; Pendeln</a></li>
+            <li><a href="#blog">Artikel-Archiv</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Rechtliches</h2>
+          <ul class="footer-links">
+            <li><a href="../../../impressum.html">Impressum</a></li>
+            <li><a href="../../../datenschutz.html">Datenschutz</a></li>
+            <li><a href="../../../haftung.html">Haftungsausschluss</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Esoterik-Welt — Statische Website, keine Tracker, keine Cookies.</p>
+        <p><a href="https://github.com/ingbms/Esoterik-Welt" rel="noopener">Open Source auf GitHub</a></p>
+      </div>
+    </footer>
+
+    <div class="mockbar" role="region" aria-label="Mockup-Bedienung">
+      <strong>Design-Mockup</strong>
+      <a href="#landing" data-view="landing">Landingpage</a>
+      <a href="#thema" data-view="thema">Themenseite</a>
+      <a href="#glossar" data-view="glossar">Glossar</a>
+      <a href="../wireframes/index.html">Wireframes</a>
+      <button type="button" id="toggleBare">Nur Seite zeigen</button>
+    </div>
+
+    <script>
+      (function () {
+        const views = ['landing', 'thema', 'glossar'];
+        const barLinks = [...document.querySelectorAll('.mockbar a[data-view]')];
+        const params = new URLSearchParams(location.search);
+        if (params.get('bare') === '1') document.body.classList.add('bare');
+        function show(view) {
+          if (!views.includes(view)) view = 'landing';
+          views.forEach((name) => {
+            const section = document.getElementById(name);
+            if (!section) return;
+            section.hidden = name !== view;
+            section.classList.toggle('active', name === view);
+          });
+          barLinks.forEach((a) => a.setAttribute('aria-current', String(a.dataset.view === view)));
+          document.title =
+            view === 'thema'
+              ? 'Radiästhesie — Esoterik-Welt'
+              : view === 'glossar'
+                ? 'Glossar — Esoterik-Welt'
+                : 'Radiästhesie, Pendeln und Orakel — Esoterik-Welt';
+        }
+
+        document.addEventListener('click', (event) => {
+          const target = event.target.closest('[data-view]');
+          if (!target) return;
+          event.preventDefault();
+          const view = target.dataset.view;
+          history.replaceState(null, '', '#' + view);
+          show(view);
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        });
+
+        document.getElementById('toggleBare').addEventListener('click', () => {
+          const bare = document.body.classList.toggle('bare');
+          history.replaceState(null, '', location.pathname + (bare ? '?bare=1' : '') + location.hash);
+        });
+
+        const nav = document.querySelector('.nav');
+        const navToggle = document.querySelector('.nav-toggle');
+        if (nav && navToggle) {
+          navToggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', String(open));
+            navToggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+          });
+        }
+
+        const initial = params.get('view') || (location.hash || '#landing').slice(1);
+        show(initial);
+        window.addEventListener('hashchange', () => show(location.hash.slice(1)));
+      })();
+    </script>
+  </body>
+</html>

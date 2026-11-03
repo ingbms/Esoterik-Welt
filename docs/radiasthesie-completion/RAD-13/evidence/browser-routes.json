@@ -1,0 +1,2999 @@
+{
+ "base": "http://127.0.0.1:15128/Esoterik-Welt",
+ "runs": [
+  {
+   "width": 320,
+   "route": "landing",
+   "path": "/",
+   "pictures": [],
+   "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+   "h1": [
+    "Entdecke die verborgene Sprache des Universums"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 0,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 1847,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "module-landing",
+   "path": "/#pendeln",
+   "pictures": [],
+   "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+   "h1": [
+    "Radiästhesie, Pendeln und Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 117,
+   "imgsWithSrc": 9,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8197,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "topic-radiasthesie",
+   "path": "/#pendeln/radiasthesie",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    }
+   ],
+   "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+   "h1": [
+    "Radiästhesie"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 28483,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "topic-pendeln",
+   "path": "/#pendeln/pendeln",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    }
+   ],
+   "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+   "h1": [
+    "Pendeln"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 20641,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "topic-orakel",
+   "path": "/#pendeln/orakel",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/ouija-historisch.avif",
+     "dw": 272,
+     "nw": 320
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    }
+   ],
+   "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+   "h1": [
+    "Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 12480,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "quellen",
+   "path": "/#pendeln/quellen",
+   "pictures": [],
+   "title": "Quellen und Belege — Radiästhesie und Pendeln",
+   "h1": [
+    "Quellen & Belege"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 26125,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "glossar",
+   "path": "/#pendeln/glossar",
+   "pictures": [],
+   "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+   "h1": [
+    "Glossar"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 3159,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "methodik",
+   "path": "/#pendeln/methodik",
+   "pictures": [],
+   "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+   "h1": [
+    "Methodik & Grenzen"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 9591,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "labor",
+   "path": "/#pendeln/labor",
+   "pictures": [],
+   "title": "Pendellabor — Mechanik des Fadenpendels | Esoterik-Welt",
+   "h1": [
+    "Pendellabor"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 114,
+   "imgsWithSrc": 6,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 5324,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "studio",
+   "path": "/#pendeln/studio",
+   "pictures": [],
+   "title": "Pendeltafel-Studio — Tafeln beschriften und exportieren",
+   "h1": [
+    "Pendeltafel-Studio"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 5912,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "experiment",
+   "path": "/#pendeln/experiment",
+   "pictures": [],
+   "title": "Experimentierlabor — verblindete Testreihe mit Statistik",
+   "h1": [
+    "Experimentierlabor"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8468,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "journal",
+   "path": "/#pendeln/journal",
+   "pictures": [],
+   "title": "Pendeltagebuch — Experimente lokal festhalten",
+   "h1": [
+    "Pendeltagebuch"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 6835,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "notfound",
+   "path": "/#pendeln/gibtsnicht",
+   "pictures": [],
+   "title": "Seite nicht gefunden — Radiästhesie, Pendeln und Orakel",
+   "h1": [
+    "Diese Seite gibt es nicht"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 365,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "doc-index",
+   "path": "/radiasthesie/",
+   "pictures": [],
+   "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+   "h1": [
+    "Radiästhesie, Pendeln und Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 4,
+   "imgsWithSrc": 4,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8601,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "doc-radiasthesie",
+   "path": "/radiasthesie/radiasthesie.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    }
+   ],
+   "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+   "h1": [
+    "Radiästhesie"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 28878,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "doc-pendeln",
+   "path": "/radiasthesie/pendeln.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    }
+   ],
+   "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+   "h1": [
+    "Pendeln"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 21034,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "doc-orakel",
+   "path": "/radiasthesie/orakel.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/ouija-historisch.avif",
+     "dw": 272,
+     "nw": 320
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 272,
+     "nw": 0
+    }
+   ],
+   "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+   "h1": [
+    "Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 12875,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "doc-glossar",
+   "path": "/radiasthesie/glossar.html",
+   "pictures": [],
+   "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+   "h1": [
+    "Glossar"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 3537,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "doc-quellen",
+   "path": "/radiasthesie/quellen.html",
+   "pictures": [],
+   "title": "Quellen und Belege — Radiästhesie und Pendeln",
+   "h1": [
+    "Quellen & Belege"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 26520,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 320,
+   "route": "doc-methodik",
+   "path": "/radiasthesie/methodik.html",
+   "pictures": [],
+   "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+   "h1": [
+    "Methodik & Grenzen"
+   ],
+   "overflow": 0,
+   "scrollWidth": 320,
+   "clientWidth": 320,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 9986,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "landing",
+   "path": "/",
+   "pictures": [],
+   "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+   "h1": [
+    "Entdecke die verborgene Sprache des Universums"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 0,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 1847,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "module-landing",
+   "path": "/#pendeln",
+   "pictures": [],
+   "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+   "h1": [
+    "Radiästhesie, Pendeln und Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 117,
+   "imgsWithSrc": 9,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8197,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "topic-radiasthesie",
+   "path": "/#pendeln/radiasthesie",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 327,
+     "nw": 0
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 327,
+     "nw": 0
+    }
+   ],
+   "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+   "h1": [
+    "Radiästhesie"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 28483,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "topic-pendeln",
+   "path": "/#pendeln/pendeln",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 327,
+     "nw": 0
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 327,
+     "nw": 0
+    }
+   ],
+   "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+   "h1": [
+    "Pendeln"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 20641,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "topic-orakel",
+   "path": "/#pendeln/orakel",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/ouija-historisch.avif",
+     "dw": 327,
+     "nw": 375
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/tarot.avif",
+     "dw": 327,
+     "nw": 375
+    }
+   ],
+   "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+   "h1": [
+    "Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 12480,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "path": "/#pendeln/quellen",
+   "pictures": [],
+   "title": "Quellen und Belege — Radiästhesie und Pendeln",
+   "h1": [
+    "Quellen & Belege"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 26125,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "glossar",
+   "path": "/#pendeln/glossar",
+   "pictures": [],
+   "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+   "h1": [
+    "Glossar"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 3159,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "methodik",
+   "path": "/#pendeln/methodik",
+   "pictures": [],
+   "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+   "h1": [
+    "Methodik & Grenzen"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 9591,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "labor",
+   "path": "/#pendeln/labor",
+   "pictures": [],
+   "title": "Pendellabor — Mechanik des Fadenpendels | Esoterik-Welt",
+   "h1": [
+    "Pendellabor"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 114,
+   "imgsWithSrc": 6,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 5324,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "studio",
+   "path": "/#pendeln/studio",
+   "pictures": [],
+   "title": "Pendeltafel-Studio — Tafeln beschriften und exportieren",
+   "h1": [
+    "Pendeltafel-Studio"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 5912,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "experiment",
+   "path": "/#pendeln/experiment",
+   "pictures": [],
+   "title": "Experimentierlabor — verblindete Testreihe mit Statistik",
+   "h1": [
+    "Experimentierlabor"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8468,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "journal",
+   "path": "/#pendeln/journal",
+   "pictures": [],
+   "title": "Pendeltagebuch — Experimente lokal festhalten",
+   "h1": [
+    "Pendeltagebuch"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 6835,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "notfound",
+   "path": "/#pendeln/gibtsnicht",
+   "pictures": [],
+   "title": "Seite nicht gefunden — Radiästhesie, Pendeln und Orakel",
+   "h1": [
+    "Diese Seite gibt es nicht"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 365,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "doc-index",
+   "path": "/radiasthesie/",
+   "pictures": [],
+   "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+   "h1": [
+    "Radiästhesie, Pendeln und Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 4,
+   "imgsWithSrc": 4,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8601,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "doc-radiasthesie",
+   "path": "/radiasthesie/radiasthesie.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 327,
+     "nw": 0
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 327,
+     "nw": 0
+    }
+   ],
+   "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+   "h1": [
+    "Radiästhesie"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 28878,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "doc-pendeln",
+   "path": "/radiasthesie/pendeln.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 327,
+     "nw": 0
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 327,
+     "nw": 0
+    }
+   ],
+   "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+   "h1": [
+    "Pendeln"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 21034,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "doc-orakel",
+   "path": "/radiasthesie/orakel.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/ouija-historisch.avif",
+     "dw": 327,
+     "nw": 375
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/tarot.avif",
+     "dw": 327,
+     "nw": 375
+    }
+   ],
+   "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+   "h1": [
+    "Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 12875,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "doc-glossar",
+   "path": "/radiasthesie/glossar.html",
+   "pictures": [],
+   "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+   "h1": [
+    "Glossar"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 3537,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "path": "/radiasthesie/quellen.html",
+   "pictures": [],
+   "title": "Quellen und Belege — Radiästhesie und Pendeln",
+   "h1": [
+    "Quellen & Belege"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 26520,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "path": "/radiasthesie/methodik.html",
+   "pictures": [],
+   "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+   "h1": [
+    "Methodik & Grenzen"
+   ],
+   "overflow": 0,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 9986,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "landing",
+   "path": "/",
+   "pictures": [],
+   "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+   "h1": [
+    "Entdecke die verborgene Sprache des Universums"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 0,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 1847,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "module-landing",
+   "path": "/#pendeln",
+   "pictures": [],
+   "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+   "h1": [
+    "Radiästhesie, Pendeln und Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 117,
+   "imgsWithSrc": 9,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8197,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "topic-radiasthesie",
+   "path": "/#pendeln/radiasthesie",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/wuenschelrute-historisch.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 680,
+     "nw": 0
+    }
+   ],
+   "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+   "h1": [
+    "Radiästhesie"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "wuenschelrute-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 28483,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "topic-pendeln",
+   "path": "/#pendeln/pendeln",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/klassisches-pendel.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 680,
+     "nw": 0
+    }
+   ],
+   "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+   "h1": [
+    "Pendeln"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "klassisches-pendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 20641,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "topic-orakel",
+   "path": "/#pendeln/orakel",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/ouija-historisch.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/tarot.avif",
+     "dw": 680,
+     "nw": 520
+    }
+   ],
+   "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+   "h1": [
+    "Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "ouija-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "tarot.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 12480,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "quellen",
+   "path": "/#pendeln/quellen",
+   "pictures": [],
+   "title": "Quellen und Belege — Radiästhesie und Pendeln",
+   "h1": [
+    "Quellen & Belege"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 26125,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "glossar",
+   "path": "/#pendeln/glossar",
+   "pictures": [],
+   "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+   "h1": [
+    "Glossar"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 3159,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "methodik",
+   "path": "/#pendeln/methodik",
+   "pictures": [],
+   "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+   "h1": [
+    "Methodik & Grenzen"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 9591,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "labor",
+   "path": "/#pendeln/labor",
+   "pictures": [],
+   "title": "Pendellabor — Mechanik des Fadenpendels | Esoterik-Welt",
+   "h1": [
+    "Pendellabor"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 114,
+   "imgsWithSrc": 6,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 5324,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "studio",
+   "path": "/#pendeln/studio",
+   "pictures": [],
+   "title": "Pendeltafel-Studio — Tafeln beschriften und exportieren",
+   "h1": [
+    "Pendeltafel-Studio"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 5912,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "experiment",
+   "path": "/#pendeln/experiment",
+   "pictures": [],
+   "title": "Experimentierlabor — verblindete Testreihe mit Statistik",
+   "h1": [
+    "Experimentierlabor"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8468,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "journal",
+   "path": "/#pendeln/journal",
+   "pictures": [],
+   "title": "Pendeltagebuch — Experimente lokal festhalten",
+   "h1": [
+    "Pendeltagebuch"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 6835,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "notfound",
+   "path": "/#pendeln/gibtsnicht",
+   "pictures": [],
+   "title": "Seite nicht gefunden — Radiästhesie, Pendeln und Orakel",
+   "h1": [
+    "Diese Seite gibt es nicht"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 365,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "doc-index",
+   "path": "/radiasthesie/",
+   "pictures": [],
+   "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+   "h1": [
+    "Radiästhesie, Pendeln und Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 4,
+   "imgsWithSrc": 4,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8601,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "doc-radiasthesie",
+   "path": "/radiasthesie/radiasthesie.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/wuenschelrute-historisch.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 680,
+     "nw": 0
+    }
+   ],
+   "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+   "h1": [
+    "Radiästhesie"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "wuenschelrute-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 28878,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "doc-pendeln",
+   "path": "/radiasthesie/pendeln.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/klassisches-pendel.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 680,
+     "nw": 0
+    }
+   ],
+   "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+   "h1": [
+    "Pendeln"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "klassisches-pendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 21034,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "doc-orakel",
+   "path": "/radiasthesie/orakel.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/ouija-historisch.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/tarot.avif",
+     "dw": 680,
+     "nw": 520
+    }
+   ],
+   "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+   "h1": [
+    "Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "ouija-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "tarot.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 12875,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "doc-glossar",
+   "path": "/radiasthesie/glossar.html",
+   "pictures": [],
+   "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+   "h1": [
+    "Glossar"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 3537,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "doc-quellen",
+   "path": "/radiasthesie/quellen.html",
+   "pictures": [],
+   "title": "Quellen und Belege — Radiästhesie und Pendeln",
+   "h1": [
+    "Quellen & Belege"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 26520,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 768,
+   "route": "doc-methodik",
+   "path": "/radiasthesie/methodik.html",
+   "pictures": [],
+   "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+   "h1": [
+    "Methodik & Grenzen"
+   ],
+   "overflow": 0,
+   "scrollWidth": 768,
+   "clientWidth": 768,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 9986,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "landing",
+   "path": "/",
+   "pictures": [],
+   "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+   "h1": [
+    "Entdecke die verborgene Sprache des Universums"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 0,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 1847,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "module-landing",
+   "path": "/#pendeln",
+   "pictures": [],
+   "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+   "h1": [
+    "Radiästhesie, Pendeln und Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 117,
+   "imgsWithSrc": 9,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8197,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "topic-radiasthesie",
+   "path": "/#pendeln/radiasthesie",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/wuenschelrute-historisch.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 680,
+     "nw": 0
+    }
+   ],
+   "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+   "h1": [
+    "Radiästhesie"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "wuenschelrute-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 28593,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "topic-pendeln",
+   "path": "/#pendeln/pendeln",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/klassisches-pendel.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/universalpendel.avif",
+     "dw": 680,
+     "nw": 520
+    }
+   ],
+   "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+   "h1": [
+    "Pendeln"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "klassisches-pendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "universalpendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 20751,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "topic-orakel",
+   "path": "/#pendeln/orakel",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/ouija-historisch.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/tarot.avif",
+     "dw": 680,
+     "nw": 520
+    }
+   ],
+   "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+   "h1": [
+    "Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 116,
+   "imgsWithSrc": 8,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "ouija-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "tarot.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 12590,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "path": "/#pendeln/quellen",
+   "pictures": [],
+   "title": "Quellen und Belege — Radiästhesie und Pendeln",
+   "h1": [
+    "Quellen & Belege"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 26125,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "glossar",
+   "path": "/#pendeln/glossar",
+   "pictures": [],
+   "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+   "h1": [
+    "Glossar"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 3159,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "methodik",
+   "path": "/#pendeln/methodik",
+   "pictures": [],
+   "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+   "h1": [
+    "Methodik & Grenzen"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 9591,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "labor",
+   "path": "/#pendeln/labor",
+   "pictures": [],
+   "title": "Pendellabor — Mechanik des Fadenpendels | Esoterik-Welt",
+   "h1": [
+    "Pendellabor"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 114,
+   "imgsWithSrc": 6,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 5324,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "studio",
+   "path": "/#pendeln/studio",
+   "pictures": [],
+   "title": "Pendeltafel-Studio — Tafeln beschriften und exportieren",
+   "h1": [
+    "Pendeltafel-Studio"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 5912,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "experiment",
+   "path": "/#pendeln/experiment",
+   "pictures": [],
+   "title": "Experimentierlabor — verblindete Testreihe mit Statistik",
+   "h1": [
+    "Experimentierlabor"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8468,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "journal",
+   "path": "/#pendeln/journal",
+   "pictures": [],
+   "title": "Pendeltagebuch — Experimente lokal festhalten",
+   "h1": [
+    "Pendeltagebuch"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 6835,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "notfound",
+   "path": "/#pendeln/gibtsnicht",
+   "pictures": [],
+   "title": "Seite nicht gefunden — Radiästhesie, Pendeln und Orakel",
+   "h1": [
+    "Diese Seite gibt es nicht"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 113,
+   "imgsWithSrc": 5,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 365,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-index",
+   "path": "/radiasthesie/",
+   "pictures": [],
+   "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+   "h1": [
+    "Radiästhesie, Pendeln und Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 4,
+   "imgsWithSrc": 4,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 8601,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "path": "/radiasthesie/radiasthesie.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/wuenschelrute-historisch.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "",
+     "dw": 680,
+     "nw": 0
+    }
+   ],
+   "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+   "h1": [
+    "Radiästhesie"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "wuenschelrute-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 28988,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-pendeln",
+   "path": "/radiasthesie/pendeln.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/klassisches-pendel.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/universalpendel.avif",
+     "dw": 680,
+     "nw": 520
+    }
+   ],
+   "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+   "h1": [
+    "Pendeln"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "klassisches-pendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "universalpendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 21144,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-orakel",
+   "path": "/radiasthesie/orakel.html",
+   "pictures": [
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/ouija-historisch.avif",
+     "dw": 680,
+     "nw": 520
+    },
+    {
+     "sizes": "(max-width: 640px) 100vw, 520px",
+     "chosen": "520/tarot.avif",
+     "dw": 680,
+     "nw": 520
+    }
+   ],
+   "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+   "h1": [
+    "Orakel"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 3,
+   "imgsWithSrc": 3,
+   "brokenImages": [],
+   "undersized": [
+    {
+     "src": "ouija-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "tarot.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 12985,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-glossar",
+   "path": "/radiasthesie/glossar.html",
+   "pictures": [],
+   "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+   "h1": [
+    "Glossar"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 3537,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "path": "/radiasthesie/quellen.html",
+   "pictures": [],
+   "title": "Quellen und Belege — Radiästhesie und Pendeln",
+   "h1": [
+    "Quellen & Belege"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 26520,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "path": "/radiasthesie/methodik.html",
+   "pictures": [],
+   "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+   "h1": [
+    "Methodik & Grenzen"
+   ],
+   "overflow": 0,
+   "scrollWidth": 1440,
+   "clientWidth": 1440,
+   "imgs": 0,
+   "imgsWithSrc": 0,
+   "brokenImages": [],
+   "undersized": [],
+   "lang": "de",
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "jsonldStatic": 1,
+   "mainLandmarks": 1,
+   "skipLink": true,
+   "bodyTextLen": 9986,
+   "consoleErrors": [],
+   "consoleWarnings": [],
+   "pageErrors": [],
+   "badResponses": [],
+   "failedRequests": [],
+   "external": []
+  }
+ ],
+ "findings": [
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 768,
+   "route": "topic-radiasthesie",
+   "detail": [
+    {
+     "src": "wuenschelrute-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 768,
+   "route": "topic-pendeln",
+   "detail": [
+    {
+     "src": "klassisches-pendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 768,
+   "route": "topic-orakel",
+   "detail": [
+    {
+     "src": "ouija-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "tarot.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 768,
+   "route": "doc-radiasthesie",
+   "detail": [
+    {
+     "src": "wuenschelrute-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 768,
+   "route": "doc-pendeln",
+   "detail": [
+    {
+     "src": "klassisches-pendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 768,
+   "route": "doc-orakel",
+   "detail": [
+    {
+     "src": "ouija-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "tarot.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 1440,
+   "route": "topic-radiasthesie",
+   "detail": [
+    {
+     "src": "wuenschelrute-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 1440,
+   "route": "topic-pendeln",
+   "detail": [
+    {
+     "src": "klassisches-pendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "universalpendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 1440,
+   "route": "topic-orakel",
+   "detail": [
+    {
+     "src": "ouija-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "tarot.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "detail": [
+    {
+     "src": "wuenschelrute-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 1440,
+   "route": "doc-pendeln",
+   "detail": [
+    {
+     "src": "klassisches-pendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "universalpendel.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  },
+  {
+   "severity": "warn",
+   "id": "IMG-RES",
+   "width": 1440,
+   "route": "doc-orakel",
+   "detail": [
+    {
+     "src": "ouija-historisch.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    },
+    {
+     "src": "tarot.avif",
+     "nw": 520,
+     "dw": 680,
+     "dpr": 680,
+     "hasSrcset": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+✔ Binomialtest trifft unabhängig gerechnete Referenzwerte (0.9575ms)
+✔ Binomialtest ist symmetrisch und bleibt im gültigen Bereich (0.4802ms)
+✔ ungültige Eingaben für die Statistik werfen RangeError (0.5885ms)
+✔ Wilson-Intervall trifft Referenzwerte und bleibt in [0,1] (0.6447ms)
+✔ analyseCounts rechnet Erwartung, Quote und Schwelle aus dem Protokoll (0.1849ms)
+✔ Formatierung nutzt deutsche Schreibweise und vier p-Nachkommastellen (12.6469ms)
+✔ Einordnung bleibt zurückhaltend und nennt Zwischenstand und Schwelle (1.162ms)
+✔ Beschriftungen decken alle Testarten und k Ziele ab (0.211ms)
+✔ Grenzen des Protokolls sind 2–10 Ziele und 10–200 Versuche (0.1297ms)
+✔ vollständiger Lauf: Sperre vor Enthüllung, Auswertung stimmt mit den Versuchen (22.4757ms)
+✔ ohne enthülltes Ziel enthält der Lauf weder Zielindex noch Salt (0.6172ms)
+✔ Sperre ist unveränderlich und die Reihenfolge ist Vertrag (1.1958ms)
+✔ CSV-Export: BOM, Semikolon, CRLF, Quoting und nur enthüllte Ziele (8.1997ms)
+✔ JSON-Export ist vertragskonform und wieder importierbar (5.1788ms)
+✔ Speicher: leerer Stand, Rundlauf und belegte Antworten (6.072ms)
+✔ Speicher: defekter Umschlag wird gesichert und geleert (0.331ms)
+✔ Speicher: neueres Schema wird nicht überschrieben (0.09ms)
+✔ Speicher: Quota und fehlender Speicher liefern eine Meldung statt Throw (0.1274ms)
+✔ gesperrte Antwort ist nach dem Schreiben nachweisbar gespeichert (0.9368ms)
+✔ Zufallsquelle nutzt Web Crypto und wirft ohne Crypto (0.2929ms)
+✔ drawIndex verwerfe unbrauchbare Rohwerte (Rejection Sampling) (0.1893ms)
+✔ Produktionsmodule enthalten keinen Math.random-Fallback (0.6693ms)
+✔ Route #pendeln/experiment löst die Ansicht aus (1.5281ms)
+✔ Werkstatt-Karte „Experimentierlabor“ ist verfügbar und verlinkt (0.8248ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 149.7901

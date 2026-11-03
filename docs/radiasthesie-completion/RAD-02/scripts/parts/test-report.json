@@ -1,0 +1,87 @@
+{
+ "tests": [
+  {
+   "test": "T1 JSON lädt und hat Pflichtfelder",
+   "ok": true,
+   "detail": "schema=1.1-delta"
+  },
+  {
+   "test": "T2 Quellen-IDs exakt Q34-Q66",
+   "ok": true,
+   "detail": "33 Einträge"
+  },
+  {
+   "test": "T3 Claim-IDs exakt C01-C30",
+   "ok": true,
+   "detail": "30 Claims"
+  },
+  {
+   "test": "T4 Jeder Claim hat Quelle, Locator und Zitat >=15 Zeichen",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "T5 Alle Verifikationsniveaus definiert",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "T6 Zählwerte konsistent",
+   "ok": true,
+   "detail": "{\"existing_sources\": 33, \"delta_sources\": 33, \"total_sources\": 66, \"claims\": 30, \"claims_belegt\": 25, \"claims_widerspruechlich\": 2, \"claims_unbelegt\": 3}"
+  },
+  {
+   "test": "T7 CSV: 1 Kopfzeile + 33 Datenzeilen, 13 Spalten",
+   "ok": true,
+   "detail": "34 Zeilen"
+  },
+  {
+   "test": "T8 Claim-Matrix enthält alle 30 Claims",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "T9 Quellen-Delta enthält alle 33 Quellen",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "T10 Bestandsbibliothek unverändert (33 Quellen Q01-Q33)",
+   "ok": true,
+   "detail": "sha256=c09cbcf61b352f71"
+  },
+  {
+   "test": "T11 Keine ID-Überschneidung Bestand/Delta",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "T12 Alle Quellen haben Pflichtfelder",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "T13 Alle Locators sind http(s)-URLs",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "T14 Interessenvermerk je Quelle vorhanden",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "T15 Keine neuen Dateien in Produktions-/Konzeptpfaden",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "T16 Delta-Verzeichnis ist als neue Dateigruppe sichtbar",
+   "ok": true,
+   "detail": "git-untracked"
+  }
+ ],
+ "failed": 0,
+ "total": 16,
+ "timestamp": "2026-11-03"
+}

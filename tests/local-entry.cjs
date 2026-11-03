@@ -34,10 +34,10 @@ async function exercise(page, events, interactions = true) {
   assert.equal(metrics.counts.featureGrid, 7);
   assert.equal(metrics.counts.crystalGrid, 30);
   for (const [id, count] of Object.entries(metrics.counts)) assert.ok(count > 0, `${id} is empty`);
-  assert.deepEqual(metrics.modules.sort(), ['astrologie', 'blog', 'frequenzen', 'moon', 'runes', 'tarot']);
+  assert.deepEqual(metrics.modules.sort(), ['astrologie', 'blog', 'frequenzen', 'moon', 'pendeln', 'runes', 'tarot']);
   // The astrology area is one page with sub-routes; it must render real content
   // in the offline bundle too (the data module is inlined by webpack).
-  for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'frequenzen', 'runes', 'blog', 'home']) {
+  for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'frequenzen', 'runes', 'pendeln', 'blog', 'home']) {
     if (await page.locator('#navToggle').isVisible()) await page.locator('#navToggle').click();
     await page.locator(`.nav-link[data-page="${route}"]`).click();
     await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible' });
@@ -46,6 +46,9 @@ async function exercise(page, events, interactions = true) {
     if (route === 'astrologie') {
       await page.locator('#astrologieRoot h1#astro-title').waitFor({ state: 'visible' });
       assert.ok((await page.locator('#astrologieRoot').textContent()).length > 800, 'astrology hub must render');
+    } else if (route === 'pendeln') {
+      await page.locator('#pendelnRoot h1#pendeln-title').waitFor({ state: 'visible' });
+      assert.ok((await page.locator('#pendelnRoot').textContent()).length > 2000, 'dowsing landing must render');
     } else if (route === 'tarot') {
       await page.locator('#drawThreeBtn').click();
       await page.locator('#cardModal:not([hidden])').waitFor({ state: 'visible' });
