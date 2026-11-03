@@ -175,6 +175,58 @@ test('warnhinweis ist bei Wirkaussagen gesetzt', () => {
 // Coustos Planetenfrequenzen sind reine Oktavarithmetik: f = (1/T) * 2^n.
 // Der Test rechnet sie aus astronomischen Perioden nach, damit im Datensatz
 // kein abgetippter Zahlenwert steht, der sich nicht reproduzieren lässt.
+// Themen-Abdeckung nach Master-Auftrag §3.1. Der Abschlussreview (Befund B2)
+// hatte festgestellt, dass Pflichtthemen stillschweigend fehlten. Diese Liste
+// macht die Lücke beim nächsten Mal zu einem namentlichen Testfehler.
+const PFLICHT_THEMEN = {
+  'Rife-Frequenzen und Bioresonanz': ['rife-frequenz-727', 'bioresonanz-geraete'],
+  'Cymatics / Chladni-Klangfiguren': ['cymatics-chladni'],
+  'Klangschalen, Obertöne und Mantras': ['klangschale-obertoene', 'mantra-om'],
+  'Chakren und Frequenzzuordnungen': ['chakra-frequenzzuordnungen'],
+  'Solfeggio 174/285/963 Hz': ['solfeggio-174', 'solfeggio-285', 'solfeggio-963'],
+};
+
+test('alle Pflichtthemen des Master-Auftrags §3.1 sind abgedeckt', () => {
+  const ids = new Set(entries.map((e) => e.id));
+  for (const [thema, pflicht] of Object.entries(PFLICHT_THEMEN)) {
+    for (const id of pflicht) {
+      assert.ok(ids.has(id), `${thema}: Eintrag ${id} fehlt im Datensatz`);
+    }
+  }
+});
+
+test('Themen-Einträge halten Evidenz- und Wiedergaberegeln ein', () => {
+  const byId = new Map(entries.map((e) => [e.id, e]));
+  const ohneTon = [
+    'rife-frequenz-727',
+    'bioresonanz-geraete',
+    'cymatics-chladni',
+    'klangschale-obertoene',
+    'mantra-om',
+    'chakra-frequenzzuordnungen',
+  ];
+  for (const id of ohneTon) {
+    const e = byId.get(id);
+    assert.ok(e, `${id}: Eintrag fehlt`);
+    assert.deepEqual(e.playback, { mode: 'none' }, `${id}: playback muss ausdrücklich none sein`);
+    assert.match(e.quelle_url, /^https:\/\//, `${id}: Quelle muss https sein`);
+  }
+  assert.equal(byId.get('rife-frequenz-727').evidenzstatus, 'nicht belegt');
+  assert.equal(byId.get('bioresonanz-geraete').evidenzstatus, 'nicht belegt');
+  assert.equal(byId.get('cymatics-chladni').evidenzstatus, 'belegt');
+  assert.equal(byId.get('klangschale-obertoene').evidenzstatus, 'plausibel');
+  assert.equal(byId.get('mantra-om').evidenzstatus, 'traditionell');
+  assert.equal(byId.get('chakra-frequenzzuordnungen').evidenzstatus, 'traditionell');
+  for (const hz of [174, 285, 963]) {
+    const e = byId.get(`solfeggio-${hz}`);
+    assert.ok(e, `solfeggio-${hz}: Eintrag fehlt`);
+    assert.equal(e.hz, hz, `solfeggio-${hz}: falscher Zahlenwert`);
+    assert.equal(e.evidenzstatus, 'nicht belegt', `solfeggio-${hz}: Status muss nicht belegt sein`);
+    assert.equal(e.warnhinweis, true, `solfeggio-${hz}: warnhinweis fehlt`);
+    assert.match(e.quelle_url, /^https:\/\//, `solfeggio-${hz}: Quelle muss https sein`);
+  }
+});
+
 test('Cousto-Frequenzen sind aus astronomischen Perioden reproduzierbar', () => {
   const DAY = 86400;
   const perioden = {

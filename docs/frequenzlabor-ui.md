@@ -13,7 +13,7 @@ Die Kategorie „Frequenzen & Schwingungen“ besteht aus zwei Ansichten derselb
 
 | Route | Ansicht | Inhalt |
 | --- | --- | --- |
-| `#frequenzen` | Hub | Erklärstück „Was ist Schwingung?“ (308 Wörter), Frequenzbibliothek mit 32 Einträgen, Quellen, dauerhafter Disclaimer |
+| `#frequenzen` | Hub | Erklärstück „Was ist Schwingung?“ (308 Wörter), Frequenzbibliothek mit 41 Einträgen, Quellen, dauerhafter Disclaimer |
 | `#frequenzen/labor` | Werkzeug | Frequenz-Slider + Zahlenfeld, Wellenform, Pegel mit sichtbarem Deckel, Play/Stopp, Sweep, Schwebung, Presets, binaurale Demo, 432/440-Vergleich, Oszillogramm |
 | `#frequenzlabor` | Alias | wird per `history.replaceState()` auf `#frequenzen/labor` normalisiert — beim Kaltstart, bei In-Document-Sprüngen und bei Back/Forward |
 
@@ -62,7 +62,7 @@ Reihenfolge (ADR §8.2 plus Datenhinweis aus `t_2b60eff1`):
 3. Allowlist hörbarer Einzeltöne: 9 Solfeggio-Werte + 432 + 440 Hz,
 4. sonst `mode: "none"` mit dem Text „Nicht abspielbar: Zahlenwert zur Einordnung.“
 
-Ergebnis für den gelieferten Datensatz: **10 von 32 Einträgen hörbar** (6 Solfeggio, 440, 432, 440+444 Schwebung, binaurale Schwebung). Schumann (7,83 Hz), EEG-Bänder, 40-Hz-Stimulation, Obertonreihe (110 Hz), Infraschall und Ultraschall bleiben ausdrücklich ohne Ton.
+Ergebnis für den gelieferten Datensatz: **13 von 41 Einträgen hörbar** (9 Solfeggio inklusive 174/285/963 Hz, 440, 432, 440+444 Schwebung, binaurale Schwebung). Schumann (7,83 Hz), EEG-Bänder, 40-Hz-Stimulation, Obertonreihe (110 Hz), Infraschall und Ultraschall sowie die neuen Themen Rife 727 Hz, Bioresonanz, Chladni/Cymatics, Klangschalen, Mantra „Om“ und Chakren bleiben ausdrücklich ohne Ton — die letzten sechs tragen dafür `playback: {"mode": "none"}` im Datensatz.
 
 ## 5. Gestaltung
 
