@@ -1,0 +1,127 @@
+{
+  "generatedAt": "2026-11-03T03:29:09.592Z",
+  "base": "http://127.0.0.1:3905/Esoterik-Welt",
+  "views": {
+    "cymatics": {
+      "route": "frequenzen/cymatics",
+      "axe": [],
+      "consoleErrors": [],
+      "canvasA": {
+        "width": 528,
+        "bright": 1942,
+        "sum": 30519606
+      },
+      "canvasAAfterModeChange": {
+        "width": 528,
+        "bright": 2788,
+        "sum": 30805046
+      },
+      "contrast": [
+        {
+          "selector": "#fqCyTitle",
+          "ratio": 15.36,
+          "required": 3
+        },
+        {
+          "selector": "#fqCyTextA",
+          "ratio": 9.09,
+          "required": 4.5
+        },
+        {
+          "selector": ".fq-figcaption",
+          "ratio": 9.09,
+          "required": 4.5
+        },
+        {
+          "selector": ".fq-note",
+          "ratio": 10.07,
+          "required": 4.5
+        },
+        {
+          "selector": ".fq-figure-title",
+          "ratio": 9.09,
+          "required": 4.5
+        }
+      ],
+      "moduleRequests": [
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenzlabor-loader.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenzlabor.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-engine.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-flags.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-presets.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-visualisierung.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-cymatics-view.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-chladni.js"
+      ]
+    },
+    "meditation": {
+      "route": "frequenzen/meditation",
+      "axe": [],
+      "consoleErrors": [],
+      "contrast": [
+        {
+          "selector": "#fqMedTitle",
+          "ratio": 15.36,
+          "required": 3
+        },
+        {
+          "selector": "#fqMedTimer",
+          "ratio": 13.86,
+          "required": 3
+        },
+        {
+          "selector": "#fqMedPresetNote",
+          "ratio": 9.09,
+          "required": 4.5
+        },
+        {
+          "selector": "#fqMedStatus",
+          "ratio": 10.07,
+          "required": 4.5
+        }
+      ],
+      "touchTargets": [
+        {
+          "selector": "#fqMedStart",
+          "height": 48
+        },
+        {
+          "selector": "#fqMedStop",
+          "height": 48
+        },
+        {
+          "selector": "#fqMedDuration",
+          "height": 50
+        },
+        {
+          "selector": "#fqMedPreset",
+          "height": 50
+        },
+        {
+          "selector": "#fqMedFavSave",
+          "height": 44
+        }
+      ],
+      "moduleRequests": [
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenzlabor-loader.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenzlabor.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-engine.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-flags.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-presets.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-visualisierung.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-meditation-view.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-meditation-model.js"
+      ]
+    }
+  },
+  "mobile": {
+    "frequenzen/cymatics": {
+      "scrollWidth": 360,
+      "innerWidth": 360
+    },
+    "frequenzen/meditation": {
+      "scrollWidth": 360,
+      "innerWidth": 360
+    }
+  }
+}

@@ -2,13 +2,18 @@
 // Flags sind Teil des Builds, werden nie persistiert und dürfen nur auf lokalen
 // Origins per URL überschrieben werden (?fq=+cymatics,-binaural). Ein
 // deaktiviertes Feature wird nicht importiert; die Importe stehen hinter dem Flag.
+//
+// P9 (`cymatics`) und P10 (`meditation`) sind mit dem ADR-Nachtrag §13
+// ausgeliefert und stehen deshalb auf `true`. Das Flag bleibt vorerst als
+// Kill-Switch erhalten: `?fq=-meditation` bzw. `?fq=-cymatics` auf lokalen
+// Origins schaltet die Ansicht ab, ohne Bytes im Initialgraphen zu ändern.
 export const FEATURES = Object.freeze({
   labor: true,
   binaural: true,
   visualisierung: true,
   vergleich432440: true,
-  cymatics: false, // P9, nicht implementiert
-  meditation: false, // P10, nicht implementiert
+  cymatics: true, // P9, ausgeliefert (ADR-Nachtrag §13)
+  meditation: true, // P10, ausgeliefert (ADR-Nachtrag §13)
 });
 
 const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '[::1]', '::1']);

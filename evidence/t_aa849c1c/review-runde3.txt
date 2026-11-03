@@ -1,0 +1,102 @@
+Review-Runde 3 (D4, D5) — Umsetzung und Nachweise
+Ticket t_aa849c1c · Branch feature/frequenzlabor-p9-p10 · Stand vor dieser Runde: feda2c5
+Datum: 2026-11-03
+
+Alle Befehle im Arbeitsbaum C:/Users/mas/Arbeit/Esoterik-Welt-p9p10, git-bash, node v24.13.0.
+
+1. D4 — Testfall-Bereiche an den Ist-Bestand angeglichen
+--------------------------------------------------------
+Eigene Zählung der Testdateien (vor der Korrektur, unverändert nach der Korrektur):
+
+    grep -oE "test\('(C|M|A)[0-9]+[:.]" tests/frequenzlabor-p9-p10.spec.js | sort -u
+      -> A1 .. A4 (4), C1 .. C6 (6), M1 .. M8 (8), M11 (1)  = 19 Browserfälle
+
+    grep -oE "test\('(C|M)[0-9]+[:.]" tests/frequenz-chladni.mjs    -> C1 .. C8   (8)
+    grep -oE "test\('M[0-9]+[:.]"      tests/frequenz-meditation.mjs -> M1 .. M10 (10)
+
+Keine Browserfälle M9/M10; M11 existiert nur im Browser.
+
+Geänderte Stellen (fünf):
+ 1. docs/frequenzlabor-p9-p10.md §2, Spec-Zeile
+    alt: 19 Browserfälle (C1–C6, M1–M11, A1–A4)
+    neu: 19 Browserfälle (C1–C6, M1–M8, M11, A1–A4; M9/M10 sind Unit-Tests)
+ 2. docs/frequenzlabor-p9-p10.md §8, Tabellenzeile "Neue Browserfälle"
+    alt: **19 pass, 0 fail** (C1–C6, M1–M11, A1–A4)
+    neu: **19 pass, 0 fail** (C1–C6, M1–M8, M11, A1–A4)
+ 3. docs/frequenzlabor-p9-p10.md §8, Aufzählung "Sitzungstests"
+    alt: ... M9 Dauern/Fades.            (M10 fehlte)
+    neu: ... M9 Dauern/Fades, M10 Ausblenden ab Ist-Pegel.
+         + neuer Absatz "Browserfälle der Spec: C1–C6 (P9), M1–M8 und M11 (P10),
+           A1–A4 — 19 Fälle", mit dem Hinweis, dass die M-Nummern je Datei gelten.
+ 4. docs/frequenzlabor-ui.md §2, letzte Zeile
+    alt: (C1–C8, M1–M9, Browserfälle)
+    neu: (C1–C8, M1–M10, Browserfälle)
+ 5. docs/adr-frequenzlabor.md §13.6, Zeile "Browser (Playwright)"
+    alt: C1–C6, M1–M11, A1–A4
+    neu: C1–C6, M1–M8, M11, A1–A4 = 19 Fälle ... (+ Satz, dass M9/M10 Unit-Tests sind)
+
+Gegenprobe: grep -rn "M1–M11" docs/  ->  nur noch die Zitatstelle in der neuen
+Befundtabelle (docs/frequenzlabor-p9-p10.md §13), sonst nichts.
+
+2. D5 — Offline-Größe commit-gebunden erhoben
+---------------------------------------------
+Neues Messskript evidence/t_aa849c1c/measure-lokal.cjs (Revisionsargument, liest
+den Blob über git cat-file, meldet zusätzlich die Ist-Datei, wenn derselbe Blob
+im Arbeitsbaum liegt):
+
+    node evidence/t_aa849c1c/measure-lokal.cjs . 71b895c 8d8124f c5da9cc feda2c5
+
+Ergebnis (Lokal.html):
+    Stand      Commit                                    Blob (LF)   CRLF-Umrechnung   Arbeitsbaum
+    71b895c    71b895c691c51d19e92b81f056c0ae546801f79d   784.220 B   790.818 B         (andere Basis)
+    8d8124f    8d8124f05853238764f0746a09647be90621d9c6   819.873 B   826.607 B         -
+    c5da9cc    c5da9cccc3c4a898d03b23b608f9579208eaa849   820.062 B   826.796 B         826.792 B
+    feda2c5    feda2c5377de90d7db6aaed1eaa21b902b63c17c   820.062 B   826.796 B         826.792 B
+
+Arbeitsbaum/CRLF an c5da9cc und feda2c5: 6.730 CRLF-Zeilen + 4 LF-Zeilen
+(826.792 B). Die vier LF-Zeilen schreibt der Build so; die reine Umrechnung des
+Blobs ergibt 826.796 B. Beide Werte stehen deshalb in der Doku nebeneinander.
+
+Damit ist 826.083 B aus keinem Commit reproduzierbar — der Wert lag zwischen dem
+gemischten Zwischenstand und der Neuerzeugung in c5da9cc, wie im Review berichtet.
+
+Geänderte Stellen (zwei):
+ - docs/frequenzlabor-p9-p10.md §7: 790.818 B (CRLF, 71b895c) -> 826.792 B
+   (Arbeitsbaum feda2c5; Blob 820.062 B, reine CRLF-Umrechnung 826.796 B),
+   8d8124f mit 826.607/819.873 B, Messbefehl, Hinweis auf den alten Wert.
+ - docs/adr-frequenzlabor.md §13.5: gleiche Zahlen in einem Satz.
+
+3. Zusatz: M8 war unter Last messabhängig (kein Produktfehler)
+--------------------------------------------------------------
+Beobachtung: ein Lauf von `npx playwright test tests/frequenzlabor-p9-p10.spec.js`
+in einem Durchgang der vollen Suite (parallele Worker) endete 18/19; M8 scheiterte an
+    expect(Math.max(...gains)).toBeLessThanOrEqual(before + 0.5)
+Einzeln lief M8 3/3 grün, die Spec danach 2/2 grün (19/19).
+
+Sonde (temporäre Spec, wieder entfernt) misst den Pegel während der Einblendung
+(10 s Einblendung, 100-ms-Raster ab 1,5 s):
+    PROBE_GAINS=[-36.478,-35.918,-35.391,-34.895,-34.425,-33.979]  dBFS
+=> ca. 0,5 dB je 100 ms. Die alte Fassung las `before` in einem eigenen
+page.evaluate und klickte erst im nächsten Protokoll-Umlauf; bei >= 250 ms
+Abstand liegt die Referenz > 1 dB unter dem Pegel beim Klick, die Zusicherung
+scheitert dann ohne Fehler im Ausblenden.
+
+Korrektur (nur Testdatei tests/frequenzlabor-p9-p10.spec.js): Messbeginn
+(setInterval) und Klick auf #fqMedStop liegen in derselben page.evaluate-Aufgabe;
+die Referenz ist damit exakt der Pegel, ab dem ausgeblendet wird. Zusicherungen
+unverändert: kein Wert über der Referenz (+0,5 dB Toleranz), monoton fallend,
+Ende < -55 dBFS.
+
+4. Läufe auf dem korrigierten Stand (Arbeitsbaum, Chromium)
+----------------------------------------------------------
+    npm run test:frequenz              -> 52/52 pass (340 ms)
+    npx playwright test tests/frequenzlabor-p9-p10.spec.js   -> 19/19 (50,8 s; zweiter Lauf 19/19, 50,4 s)
+    E2E_PORT=<frei> CI=1 npx playwright test                 -> 108/108 (2,1 min)
+    npm run lint                       -> 0 Fehler
+    npm run format:check               -> alle Dateien formatiert
+    npm run check:frequenz-budget      -> NFR-1 85.613/86.275 · NFR-2 44.756/100.000 (Arbeitsbaum) · NFR-3 3.338/6.000
+    git diff feda2c5 -- js/ css/       -> leer (Feature-Code unverändert)
+
+Geänderte Dateien dieser Runde: docs/frequenzlabor-p9-p10.md, docs/frequenzlabor-ui.md,
+docs/adr-frequenzlabor.md, evidence/t_aa849c1c/README.md, evidence/t_aa849c1c/measure-lokal.cjs (neu),
+tests/frequenzlabor-p9-p10.spec.js (nur M8-Messanordnung).

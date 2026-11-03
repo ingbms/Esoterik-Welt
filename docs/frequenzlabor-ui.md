@@ -10,13 +10,15 @@ Dieses Dokument beschreibt, **was gebaut wurde**, **wie es gemessen wurde** und 
 
 ## 1. Umfang
 
-Die Kategorie „Frequenzen & Schwingungen“ besteht aus drei Ansichten derselben Seite:
+Die Kategorie „Frequenzen & Schwingungen“ besteht aus fünf Ansichten derselben Seite:
 
 | Route | Ansicht | Inhalt |
 | --- | --- | --- |
 | `#frequenzen` | Hub | Erklärstück „Was ist Schwingung?“ (366 Wörter, gemessen am gerenderten Abschnitt), Frequenzbibliothek mit 41 Einträgen, Quellen, dauerhafter Disclaimer |
 | `#frequenzen/labor` | Werkzeug | Frequenz-Slider + Zahlenfeld, Wellenform, Pegel mit sichtbarem Deckel, Play/Pause/Weiter/Stopp, Sweep, Schwebung, Presets, binaurale Demo, 432/440-Vergleich, Oszillogramm |
 | `#frequenzen/quellen` | Dokument | rendert `docs/frequenz-quellen.md` lesbar (Überschriften, Tabellen, Codeblöcke, Quellenverzeichnis); Rohdatei bleibt verlinkt |
+| `#frequenzen/cymatics` | Folgestufe P9 | Chladni-Muster für zwei Modenpaare, Knotenlinien, Textentsprechung, Modellgrenzen — siehe [frequenzlabor-p9-p10.md](frequenzlabor-p9-p10.md) |
+| `#frequenzen/meditation` | Folgestufe P10 | Meditationssitzung mit Dauer, Preset, Fades, Timer, lokalen Favoriten und Wiederaufnahme — siehe [frequenzlabor-p9-p10.md](frequenzlabor-p9-p10.md) |
 | `#frequenzlabor` | Alias | wird per `history.replaceState()` auf `#frequenzen/labor` normalisiert — beim Kaltstart, bei In-Document-Sprüngen und bei Back/Forward |
 
 Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den Bereich; zusätzlich verlinkt der Hub kontextuell in Astrologie, Kristalle und Wissensbereich (§12).
@@ -25,18 +27,21 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 
 | Datei | Verantwortung |
 | --- | --- |
-| `js/modules/frequenzlabor.js` | Controller/View: Rendering der drei Ansichten, Events, Fokus, Fehlertexte, Pause/Weiter, Sweep-Fortschritt |
+| `js/modules/frequenzlabor.js` | Controller/View: Rendering der fünf Ansichten, Events, Fokus, Fehlertexte, Pause/Weiter, Sweep-Fortschritt, `halt()` beim Ansichtswechsel |
 | `js/modules/markdown-lite.js` | 275-Zeilen-Markdown-Leser für `#frequenzen/quellen`: escapter Text, nur sichere Linkziele, Tabellen/Zitate/Codeblöcke |
 | `js/modules/frequenz-presets.js` | Laden (HTTP `fetch` / eingebettetes JSON), Validierung, Wiedergabe-Mapping, Präferenzen |
 | `js/modules/frequenz-visualisierung.js` | Canvas-Renderer, rAF nur bei laufendem Ton, statische Welle bei reduzierter Bewegung |
-| `js/modules/frequenz-flags.js` | Feature-Flags mit lokalem URL-Override (`?fq=+cymatics,-binaural`) |
+| `js/modules/frequenz-flags.js` | Feature-Flags mit lokalem URL-Override (`?fq=+cymatics,-binaural`); `cymatics`/`meditation` sind seit dem ADR-Nachtrag §13 ausgeliefert |
 | `js/modules/frequenzlabor-loader.js` | 30-Zeilen-Lazy-Proxy, einziger statischer Import im Initialpfad |
-| `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens (2.883 B gzip, mit Quellenansicht 3.521 B) |
+| `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens (3.521 B gzip ohne, mit P9/P10-Regeln gemessen im Build) |
 | `scripts/check-frequenz-budget.cjs` | Budget-Gate NFR-1/2/3 |
 | `tests/frequenz-presets.mjs` | 13 Vertragstests für Mapping, Flags, Storage, Laden |
 | `tests/markdown-lite.mjs` | 15 Vertragstests für den Markdown-Leser (inkl. Render des echten Quellendokuments) |
 | `tests/link-check.spec.js` | Interne Linkprüfung; um vier Fälle für Frequenzverlinkung und Quellendokument erweitert (P11) |
 | `tests/frequenzlabor.spec.js` | 16 Playwright-Fälle U1–U16 (U15/U16 aus der M-1- und der Pause-Nachbesserung) |
+| `js/modules/frequenz-chladni.js`, `js/modules/frequenz-meditation-model.js` | Folgestufe P9/P10 (DOM-frei) |
+| `js/modules/frequenz-cymatics-view.js`, `js/modules/frequenz-meditation-view.js` | Folgestufe P9/P10 (Ansichten, lazy) |
+| `tests/frequenz-chladni.mjs`, `tests/frequenz-meditation.mjs`, `tests/frequenzlabor-p9-p10.spec.js` | Tests der Folgestufe (C1–C8, M1–M9, Browserfälle) |
 
 Zehn bestehende Teststellen zählten sechs Startseiten-Karten; sie erwarten jetzt sieben und führen `frequenzen` in der Modul- und Routenliste (ADR §6.6). `tests/astrologie.spec.js` nutzt außerdem wie `playwright.config.cjs` den `E2E_PORT`, statt fest auf 3100 zu zeigen.
 
@@ -184,7 +189,7 @@ Konsole: U1 prüft `console.error`/`pageerror` auf beiden Ansichten. Zusätzlich
 | dito | `#crystals` | „Kristall-Katalog“ | derselbe Steinbestand, gefiltert nach Chakra/Farbe |
 | Abschnitt „Quellen und Methode“ | `#blog` | „Wissensbereich“ | Hintergrundartikel statt Rohdaten |
 
-Die Links stehen in `.fq-prose`/`.fq-lede`/`.fq-note`, sind unterstrichen (WCAG 1.4.1, Farbe allein trägt nicht), haben beschreibenden Linktext und keine Wiederholung von Schlüsselwörtern. Die Bereichsnavigation hat jetzt drei Einträge (`Bibliothek`, `Frequenzlabor`, `Quellen & Methodik`) mit genau einem `aria-current="page"`.
+Die Links stehen in `.fq-prose`/`.fq-lede`/`.fq-note`, sind unterstrichen (WCAG 1.4.1, Farbe allein trägt nicht), haben beschreibenden Linktext und keine Wiederholung von Schlüsselwörtern. Die Bereichsnavigation führt die drei festen Einträge (`Bibliothek`, `Frequenzlabor`, `Quellen & Methodik`); bei aktiven Flags kommen `Chladni-Muster` und `Meditation` hinzu. Genau ein Eintrag trägt `aria-current="page"`.
 
 **Quellendokument im Build:**
 
@@ -212,3 +217,8 @@ Die Links stehen in `.fq-prose`/`.fq-lede`/`.fq-note`, sind unterstrichen (WCAG 
 | Lighthouse Accessibility | `npx lighthouse … --only-categories=accessibility` | `#frequenzen` **100**, `#frequenzen/labor` **100**, `#frequenzen/quellen` **100** (jeweils 0 fehlgeschlagene Audits, Lighthouse 12.6.1) |
 
 **Grenzen:** Der Markdown-Leser deckt die im Dokument verwendeten Konstrukte ab (Überschriften, Absätze, Listen, Tabellen, Codeblöcke, Zitate, Trennlinien, inline Code/Fett/Kursiv/Links, nackte URLs). Neue Konstrukte wie Bilder, Fußnoten oder Referenzlinks würden als Text erscheinen statt zu brechen; der Test „Das echte Quellendokument rendert vollständig“ schlägt fehl, sobald eine künftige Fassung Elemente einführt, die er nicht kennt.
+## 13. Folgestufe P9/P10
+
+Der ADR-Nachtrag §13 liefert die zweite Stufe aus: `#frequenzen/cymatics` (Chladni-Muster als idealisiertes Modell, ohne Frequenzzuordnung) und `#frequenzen/meditation` (Sitzung mit Timer, Fades, lokalen Favoriten und Wiederaufnahme). Beide Ansichten hängen an den vorhandenen Flags, werden per dynamischem `import()` geladen und verändern den Initialgraphen nicht (NFR-1 unverändert 85.613 B).
+
+Umsetzung, Messwerte, Testmatrix und Grenzen stehen in [frequenzlabor-p9-p10.md](frequenzlabor-p9-p10.md). Für dieses Dokument ändern sich drei Punkte: die Kategorie hat fünf statt drei Ansichten, die Bereichsnavigation ergänzt bei aktiven Flags `Chladni-Muster` und `Meditation` (weiterhin genau ein `aria-current="page"`), und das Stylesheet wächst um die P9/P10-Regeln (im Build gemessen, Grenze 6.000 B).
