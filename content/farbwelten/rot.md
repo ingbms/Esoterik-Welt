@@ -15,7 +15,7 @@ chakra_modern: Wurzelchakra (in modernen Regenbogenmodellen seit 1977)
 
 ## Einführung
 
-Rot ist die Farbe mit der längsten Wellenlänge im sichtbaren Spektrum: etwa 620 bis 750 Nanometer, 400 bis 484 Terahertz [10][24]. Es ist die Farbe, die zuerst sichtbar wird, wenn wir die Augen öffnen, und die zuletzt verschwindet, wenn das Licht erlischt. Physikalisch ist Rot nichts Besonderes – nur ein Bereich des Spektrums. Wahrgenommen wird es als besonders, weil unser Sehsystem darauf besonders empfindlich ist und weil Kultur dieser Farbe eine lange Geschichte der Bedeutung gegeben hat.
+Rot ist die Farbe mit der längsten Wellenlänge im sichtbaren Spektrum: etwa 620 bis 750 Nanometer, 400 bis 484 Terahertz [10][24]. Das Auge ist dafür deutlich weniger empfindlich als für Gelbgrün (Maximum bei 555 nm); bei abnehmendem Licht wirkt Rot deshalb früh dunkel, während sich die Wahrnehmung zum Blaugrünen verschiebt. Was Rot kulturell so präsent macht, ist also nicht die Physiologie, sondern die Bedeutung.
 
 ## Traditionelle / esoterische Bedeutung
 
@@ -43,7 +43,7 @@ Wählen Sie einen Ort, in dem Sie viel Rot sehen – ein Zimmer, ein Bild, eine 
 
 **Grün (belegbar):** Wellenlänge, Assoziationen, PBM-Protokolle [3][4][10][24].
 **Gelb (Tradition):** Rot als Wurzelchakra, Energie, Erd-Element – nur als Tradition darstellbar [1].
-**Rot (nicht verwenden):** "Rot steigert die Durchblutung", "Rot heilt Entzündungen", "Rot ersetzt Medikamente" – nicht belegt [9][20]. Keine medizinische Wirkaussage.
+**Was die Studienlage nicht hergibt:** Der "Rot-Effekt" auf kognitive Leistung hat sich in der Meta-Analyse 2020 nicht als belastbar erwiesen [7]; Heilversprechen für Durchblutung oder Entzündungen sind nicht belegt [9][20]. Keine medizinische Wirkaussage.
 
 > **Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].
 
@@ -57,5 +57,7 @@ Wählen Sie einen Ort, in dem Sie viel Rot sehen – ein Zimmer, ein Bild, eine 
 - [5] Jonauskaite et al. (2020). "To see or not to see." https://doi.org/10.1002/col.22490
 - [7] Gnambs (2020). Meta-Analyse Rot-Effekt. https://doi.org/10.3758/s13423-020-01772-1
 - [9] OSTEBA (2025). HTA Chromotherapie. Link siehe Einstiegsseite.
-- [10] Son et al. (2025). Photobiomodulation. https://doi.org/10.1186/s13643-025-02902-3
-- [24] Physik, sichtbarer Bereich. Siehe Report §5.1.
+- [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
+- [24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).
+- [2] Woodroffe, J. G. (1919, Übers.). *The Serpent Power*. https://archive.org/details/the-serpent-power-john-woodroffe
+- [20] OSTEBA (2025). Supplement: Heilversprechen und Evidenzprüfung (siehe [9]). https://www.conprueba.es

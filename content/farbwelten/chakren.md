@@ -16,12 +16,12 @@ Das Wort "Chakra" (Sanskrit: "Rad", "Kreis") beschreibt in mehreren indischen Tr
 
 ## Die Geschichte der Zentren (Zeitleiste mit Belegen)
 
-- 1577: *Sat-cakra-nirupana* – sechs Zentren + Sahasrāra, keine Farbzuordnung [1].
+- 1577: *Sat-cakra-nirupana* – sechs Zentren + Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].
 - 1919: Woodroffe/Avalon – westliche Übersetzung, Autoritätsquelle [2].
 - 1927/1930er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen [1].
 - 1977: Regenbogen-Chakramodell mit sieben Farben als "traditionelle Lehre" zusammengeführt [1].
 
-In der Tradition heißt es, die sieben Regenbogen-Chakren seien eine uralte indische Lehre – das ist eine rote Aussage (nicht verwendet), denn sie ist historisch nicht belegbar [1][9].
+In der Tradition heißt es, die sieben Regenbogen-Chakren seien eine uralte indische Lehre – das ist historisch nicht belegbar [1][9].
 
 ## Das Regenbogenmodell – was es ist und was nicht
 
@@ -39,18 +39,26 @@ Das moderne Modell ordnet jedem der sieben Zentren eine Farbe zu (Rot → Violet
 | Indigo | Stirn (6) | Intuition [1] | Erst 1977 [1] | Übergang, kein medizinisches Protokoll [10] |
 | Violett | Krone (7) | Spiritualität [1] | Erst 1977 [1] | UV außerhalb sichtbar [19]; keine Heilwirkung [9] |
 
-> **Hinweis:** Die Tabelle folgt der Farb-Matrix aus dem Report §10 und der Ampelliste §8. Grüne Aussagen (Assoziationen) stehen als Behauptung, gelbe (Tradition) als "In der Tradition heißt es", rote werden nicht verwendet.
+> **Hinweis:** Die Tabelle trennt drei Ebenen: gesicherte Assoziationen (als Behauptung mit Quelle), Tradition (als "In der Tradition heißt es") und Aussagen, die nicht verwendet werden.
 
 ## Wissenschaftliche Einordnung
 
 - Chakren sind nicht wissenschaftlich messbar [1][2].
-- "Chakra-Blockaden verursachen Krankheit" ist eine rote Aussage [9] – nicht verwendet.
+- Für einen kausalen Zusammenhang zwischen Chakra-Blockaden und Krankheit liefert die geprüfte Literatur keine belastbare Evidenz [9].
 - Die Regenbogen-Farbzuordnung ist modern (1977) [1]; klassische Lehre kennt sie nicht [2].
 - Farb-Emotions-Assoziationen sind belegt [3][4]; keine medizinische Wirkung der Farben als Behandlung [9].
 
-> **Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Farben und Chakren sind Traditions- und Wahrnehmungsthemen, keine medizinischen Verfahren [9].
-
----
+> **Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].
 
 ## Quellen
-- [1] Leland (2017) · [2] Woodroffe (1919) · [3][4] Jonauskaite · [9] OSTEBA 2025 · [10] Son 2025 · [14] ANSES · [19] IARC · [24] Physik.
+- [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+- [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+- [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours?" https://doi.org/10.3758/s13423-024-02615-z
+- [4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." https://doi.org/10.1177/0956797620948810
+- [5] Jonauskaite, D. et al. (2020). "To see or not to see..." https://doi.org/10.1002/col.22490
+- [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+- [9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf
+- [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
+- [14] ANSES (2020). Évaluation des risques liés aux lampes à LED. https://www.anses.fr
+- [19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int
+- [24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).

@@ -17,7 +17,7 @@ Grün liegt bei etwa 495–570 nm, 525–606 THz [10][24]. Es ist die Farbe der 
 
 ## Traditionelle Bedeutung
 
-In der Tradition heißt es, Grün stehe für das Herzchakra, für Natur, Harmonie und Heilung [1]. Das moderne Regenbogenmodell ordnet Grün dem vierten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination besteht [1][2]. In der klassischen Lehre (1577) gab es keine Farbzuordnung zu den Zentren [1].
+In der Tradition heißt es, Grün stehe für das Herzchakra, für Natur, Harmonie und Heilung [1]. Das moderne Regenbogenmodell ordnet Grün dem vierten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination besteht [1][2]. Die klassischen Texte ordnen den Zentren Farben zu – Element- und Lotosfarben. Eine Regenbogenfolge von Rot bis Violett kennen sie nicht; sie entsteht erst im 20. Jahrhundert [1][2].
 
 ## Farbpsychologie
 
@@ -25,23 +25,27 @@ In der großen Review [3][4] wird Grün als assoziiert mit positiven, niedrig er
 
 ## Anwendung und Grenzen
 
-Photobiomodulation nutzt rotes/NIR-Licht; Grün spielt in medizinischen Lichtprotokollen keine spezifische Rolle [10]. Chromotherapie als Krankheitsbehandlung ist nicht belegt [9]. Keine medizinische Wirkung wird behauptet – insbesondere nicht "Grün heilt das Herz" [9][20].
+Photobiomodulation nutzt rotes/NIR-Licht; Grün spielt in medizinischen Lichtprotokollen keine spezifische Rolle [10]. Chromotherapie als Krankheitsbehandlung ist nicht belegt [9]. Für eine Heilwirkung von Grün auf das Herz liefert die geprüfte Literatur kein belastbares Ergebnis [9][20].
 
-> **Health-Disclaimer:** Keine medizinische Wirkung behauptet. Keine Diagnose oder Behandlung wird ersetzt [9].
+> **Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].
 
 ## Praktische Übung
 
 Gehen Sie 10 Minuten durch einen grünen Raum – einen Park, einen Garten, einen Raum mit Pflanzen. Beobachten Sie, ohne zu deuten: Was passiert? Notieren Sie eine Assoziation, keine Diagnose.
 
----
+## Interkulturelle und wahrnehmungspsychologische Anmerkungen
+
+Die große systematische Review [3] zeigt, dass Farb-Emotions-Assoziationen interkulturell ähnlich, aber nicht identisch sind – bei Grün fällt die Varianz zwischen Kulturen besonders auf [4]. Metamerie zeigt, dass Farbe ein Wahrnehmungsereignis ist, kein Objekt [31]. Bildschirme erzeugen Metamere der Spektralfarben [24][31].
 
 ## Quellen
-
-- [1][2][3][4][5][7][9][10][24]
-
-## Anmerkung zur ehrlichen Einordnung
-
-Diese Seite folgt dem einheitlichen Skelett aller Farbseiten: Einführung, Tradition (gelb, als "In der Tradition heißt es"), Farbpsychologie nach heutiger Studienlage (grün, mit Quellen [3][4][7]), Anwendung mit klaren Grenzen, praktische Übung ohne therapeutischen Anspruch und ein Abschnitt "Was Wissenschaft sagt – und was nicht". Keine medizinischen Wirkaussagen und keine roten Aussagen werden verwendet [9][20].
-
-## Interkulturelle und wahrnehmungspsychologische Anmerkungen
-Die große systematische Review [3] zeigt, dass Farb-Emotions-Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Metamerie zeigt, dass Farbe ein Wahrnehmungsereignis ist, kein Objekt [31]. Bildschirme erzeugen Metamere der Spektralfarben [24][31].
+- [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+- [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+- [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+- [4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810
+- [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+- [9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf
+- [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
+- [24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).
+- [31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.
+- [5] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." https://doi.org/10.1177/0956797620948810
+- [20] OSTEBA (2025). Supplement (siehe [9]). https://www.conprueba.es

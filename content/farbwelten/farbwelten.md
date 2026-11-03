@@ -15,7 +15,7 @@ Farbe ist das erste, was wir wahrnehmen – lange bevor wir einen Namen dafür h
 
 ## Einführung: Warum Farben uns berühren
 
-Die Physik ist unkompliziert: Licht ist elektromagnetische Strahlung; der sichtbare Bereich liegt bei etwa 380 bis 750 Nanometern [24]. Was wir als Farbe erleben, entsteht erst im Gehirn, durch Kontrast, Kontext und Erinnerung. Metamerie – dass zwei verschiedene Spektren als gleiche Farbe erscheinen – ist ein Beleg dafür, dass Farbe kein Objekt, sondern ein Erlebnis ist [31]. Magenta, eine Farbe, die im Spektrum gar nicht vorkommt, zeigt das besonders deutlich.
+Die Physik ist unkompliziert: Licht ist elektromagnetische Strahlung; der sichtbare Bereich liegt bei etwa 380–780 Nanometern [24]. Was wir als Farbe erleben, entsteht erst im Gehirn, durch Kontrast, Kontext und Erinnerung. Metamerie – dass zwei verschiedene Spektren als gleiche Farbe erscheinen – ist ein Beleg dafür, dass Farbe kein Objekt, sondern ein Erlebnis ist [31]. Magenta, eine Farbe, die im Spektrum gar nicht vorkommt, zeigt das besonders deutlich.
 
 Über Kulturgrenzen hinweg zeigen sich **systematische Assoziationen** zwischen Farben und Emotionen: Gelb und Freude, Blau und Ruhe, Rot und Erregung – das lässt sich mit großem Datenmaterial beschreiben [3][4]. Gleichzeitig ist diese Assoziation keine feste Naturkonstante: Kultur moduliert sie, und einzelne Studien zeigen, dass ein Effekt ohne sichtbare Farbe sogar stärker ausfällt als mit [5]. Die starke Aussage ist daher nicht "Rot macht dich aktiv", sondern: "In vielen Kulturen wird Rot mit Erregung assoziiert – und diese Assoziation lässt sich messen."
 
@@ -37,13 +37,15 @@ Es gibt **belegte Lichtmedizin**: die Lichttherapie bei saisonaler Depression (S
 
 **Chromotherapie als Krankheitsbehandlung** – also der Versuch, Farben als direktes Heilmittel gegen Krankheiten einzusetzen – wurde vom spanischen Gesundheitsministerium (OSTEBA, 2025) in einer HTA-Bewertung geprüft: Keine geeignete Randomisierte Studie oder Systematische Review wurde gefunden; das Verfahren wird als Pseudotherapie eingestuft [9]. Das ist kein Werturteil über Tradition, sondern eine klare Aussage zur medizinischen Evidenz.
 
+> **Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9]. Die genannten Lichttherapien (SAD, Neonaten-Phototherapie, NB-UVB, Photobiomodulation) sind medizinische Verfahren, keine Alternative zu ärztlich verordneten Therapien, und dürfen nur unter fachlicher Anleitung durchgeführt werden [14][19].
+
 ## Praktische Übung: Farbe als Alltagserfahrung
 
 Wählen Sie einen Tag aus, an dem Sie bewusst auf Farbe achten – nicht als Therapie, sondern als Wahrnehmung. Notieren Sie drei Farberlebnisse und die Stimmung, die sie begleiten. Vergleichen Sie mit der Beschreibung der jeweiligen Farbseite. Die Übung hat keinen therapeutischen Anspruch; sie öffnet nur einen Raum für Beobachtung.
 
 ---
 
-## Quellen (einheitliches Format, alle aus dem Evidenzreport t_2dd7d588)
+## Quellen
 
 - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." *Quest* 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
 - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. *The Serpent Power*. https://archive.org/details/the-serpent-power-john-woodroffe
@@ -52,9 +54,11 @@ Wählen Sie einen Tag aus, an dem Sie bewusst auf Farbe achten – nicht als The
 - [5] Jonauskaite, D. et al. (2020). "To see or not to see..." https://doi.org/10.1002/col.22490
 - [7] Gnambs, T. (2020). "Limited evidence for the red effect." Meta-Analyse. https://doi.org/10.3758/s13423-020-01772-1
 - [9] OSTEBA (2025). *Eficacia y seguridad de la cromoterapia* (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf
-- [24] Physikalische Grundlagen (sichtbarer Bereich, c, f = c/λ). Siehe Report §5.1.
-- [31] Metamerie, Magenta als nichtspektrale Farbe. Siehe Report §4.1 / Glossar.
+- [24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).
+- [31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.
 - [15] Pjrek et al. (2020). Lichttherapie bei SAD. https://doi.org/10.1159/000502891
-- [17] Neugeborenen-Phototherapie (siehe Report §5.4).
-- [18] NB-UVB bei Psoriasis (§5.5).
-- [10] Son et al. (2025). Photobiomodulation. https://doi.org/10.1186/s13643-025-02902-3
+- [17] Bhutani, V. K., et al. (2011). Phototherapy to Prevent Severe Neonatal Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics 128(4), e1046–e1052. https://doi.org/10.1542/peds.2011-1494
+- [18] Elmets, C. A., et al. (2019). Joint American Academy of Dermatology–National Psoriasis Foundation guidelines of care for the management and treatment of psoriasis with phototherapy. J Am Acad Dermatol 81(3), 775–804. https://doi.org/10.1016/j.jaad.2019.04.042
+- [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
+- [14] ANSES (2020). Évaluation des risques liés aux lampes à LED. https://www.anses.fr
+- [19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int

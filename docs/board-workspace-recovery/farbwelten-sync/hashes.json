@@ -1,0 +1,75 @@
+{
+  "task": "t_d76d0853",
+  "branch": "feature/farbwelten-modul",
+  "head_commit": "466eb6c47e0c635f14a34dcec56a097293624f01",
+  "pages": {
+    "blau": {
+      "head_466eb6c": "49b09bd5ebc8e93eb68863af3e845c47ab662d2f25b622cb590c8591acb669d5",
+      "rework_t_bc152d77": "937e49416847c388f9146c005f2d552a20885bd3a611da26f3f26c3806fcf423",
+      "workspace_t_bad71f2c": "b9f7f4c4fa9794b4ab0479b37831a7f743398bbb7bb6769bd3b930d60f8ad41b",
+      "content_final": "b9f7f4c4fa9794b4ab0479b37831a7f743398bbb7bb6769bd3b930d60f8ad41b"
+    },
+    "chakren": {
+      "head_466eb6c": "f240aae74972fb3cafe4992166e2110bb96fdba995bf5b832fdc8e72fc4c6161",
+      "rework_t_bc152d77": "c1e52fa6f038cb1d872ed5a00804324f67a82f3f513618e047245b63f585fea7",
+      "workspace_t_bad71f2c": "771ad5483e566a048fa43739b0842ed717757c2c011c2cfc1c237b94b05deb76",
+      "content_final": "771ad5483e566a048fa43739b0842ed717757c2c011c2cfc1c237b94b05deb76"
+    },
+    "farbwelten": {
+      "head_466eb6c": "2e99adf716b87077e89d06f20f6ef3c7b6fcc36a68df1545b2f8723ba810d845",
+      "rework_t_bc152d77": "cb6dc0e0925c28b185988f15a95ed31aad395c45e4172a34fd061a4950f00fe4",
+      "workspace_t_bad71f2c": "110776419387bf53d6563daf633a0dc67c5115e797b73b27dcd41a9c6a3167ea",
+      "content_final": "110776419387bf53d6563daf633a0dc67c5115e797b73b27dcd41a9c6a3167ea"
+    },
+    "gelb": {
+      "head_466eb6c": "8d4964aeb469907adb70b2b7a668b638eabef7d1953fe224aae82317acf1fde9",
+      "rework_t_bc152d77": "c629478f4758e87439ddc02c76695056ac364cc2660ef080b0fc3e3f7e661dda",
+      "workspace_t_bad71f2c": "1ee9025b8777d29d1d542e4aa18485796ea122ee739f87d10e14e3437671e11f",
+      "content_final": "1ee9025b8777d29d1d542e4aa18485796ea122ee739f87d10e14e3437671e11f"
+    },
+    "gruen": {
+      "head_466eb6c": "aba3cf85213ad7c8b0b8aa9c041c60dde27f2972d0367cbd964eec27dcac84e1",
+      "rework_t_bc152d77": "125d51340d4d14b2c7676900d90352ebcf86d129e66de68c20e6df17f60b8168",
+      "workspace_t_bad71f2c": "e7f4cc4ca759540aef61f875e555f18e4f775f4c9303b1b2a7e8b7dcf7380e2c",
+      "content_final": "e7f4cc4ca759540aef61f875e555f18e4f775f4c9303b1b2a7e8b7dcf7380e2c"
+    },
+    "indigo": {
+      "head_466eb6c": "40f7d2d6ea47e9d92794091f7ef6b7717400b7ef4575a57ce74b39ba6b5f98c3",
+      "rework_t_bc152d77": "71fe1a29123b25fc2d2fd16152d07e42f87a8fd87db671191847ef274ecf821a",
+      "workspace_t_bad71f2c": "b07f5dafcc2ebb18ebcbad51a5042fa0aeef24f99e22ab01f540ddee6cad5b01",
+      "content_final": "b07f5dafcc2ebb18ebcbad51a5042fa0aeef24f99e22ab01f540ddee6cad5b01"
+    },
+    "lichtfrequenzen": {
+      "head_466eb6c": "db581e4f7a8c110ccd7dbd7db5346ff45444b0cc13f07a42db147fa29e1f3423",
+      "rework_t_bc152d77": "e1bbb7ac7b35509d560966588f5acba60cb883b7ad359c88515a8051a2089f21",
+      "workspace_t_bad71f2c": "59bc5cebbc0b392954630bf78eb279293790acd81be4163f8e2b308ffedc123c",
+      "content_final": "59bc5cebbc0b392954630bf78eb279293790acd81be4163f8e2b308ffedc123c"
+    },
+    "orange": {
+      "head_466eb6c": "36f9183eaee51c33ed03c804f32507e7112ddc8d1c2d12d724072f6446c0562b",
+      "rework_t_bc152d77": "15e7da486e3d3c803b77762dc36da464b0d1482c0c271d4e30582c769eeae199",
+      "workspace_t_bad71f2c": "5043257eca2cf6cf8b5d83ed13fdacee03223de523bb0c9416352c90781b87f5",
+      "content_final": "5043257eca2cf6cf8b5d83ed13fdacee03223de523bb0c9416352c90781b87f5"
+    },
+    "rot": {
+      "head_466eb6c": "8389f48609409b5d2d92c8e54c8e031f98b64c0adff75d6868a1c8fe76365cc1",
+      "rework_t_bc152d77": "0b5fa01917d160cfaca59b44fa25d563e9d791428274cbb95de885e7b61f5163",
+      "workspace_t_bad71f2c": "f45bf604dfa785dc5629bf8495ba24d09d6ee064fd9cdeb9a67b686eade4e8f2",
+      "content_final": "f45bf604dfa785dc5629bf8495ba24d09d6ee064fd9cdeb9a67b686eade4e8f2"
+    },
+    "violett": {
+      "head_466eb6c": "d8d2d9a65075baba6e597ac5f7d51cd89e7b3d458532190ccc4fc68554dad278",
+      "rework_t_bc152d77": "7257b8a2d5a6c297764a4509cf268a395aea009aaac39877ee56999f004c41ae",
+      "workspace_t_bad71f2c": "81bfc6db3a120c759c0325d0eb47e4e81eb6d4e1f46f78b8ad710483af3410fb",
+      "content_final": "81bfc6db3a120c759c0325d0eb47e4e81eb6d4e1f46f78b8ad710483af3410fb"
+    }
+  },
+  "artifacts": {
+    "js/data/farbwelten.js": "34377129ef3bc9dc70b3620751ea21b5e1bfb1771660674c95b1577a875902f7",
+    "scripts/generate-farbwelten-data.cjs": "2a4c27c68d9ffa5ba8466ef57941a20b1918164260f7de6a48e09734b877421d",
+    "scripts/verify-farbwelten-sync.cjs": "c7899da94a3cfae5d825f27a140ac6396ee646b856eba22591a968ea3e08cabc",
+    "scripts/verify-farbwelten-rendered.cjs": "095a5a807798af8aea714709d1a27be625ecbacd6ace12722d2f1a3097982cc5",
+    "rendered.json": "e2d3b01c9af509887b3f1ab6c8ee9b3dabe9a104dccf2e6e0f97295fb9ec1def",
+    "verify-farbwelten report.md": "8cb643a5bd7bf42e8c63f0766385866200c37228a9b8fe70ee15cdba8f5c4a06"
+  }
+}

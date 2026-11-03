@@ -13,44 +13,46 @@ farbe: Violett
 
 ## Einführung
 
-Violett liegt bei ca. 380–450 nm, ca. 666–789 THz [10][24]. Es hat die höchste Photonenenergie im sichtbaren Bereich und die geringste Sichtbarkeit – ein Paradox, das es besonders macht. Physikalisch ist es am Übergang zum UV; UV selbst liegt außerhalb des sichtbaren Spektrums, und die Aussage "UV liegt im Violettbereich" ist falsch [9][19].
+Violett liegt bei ca. 380–450 nm (ca. 666–789 THz) [10][24] und grenzt damit an den UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].
 
 ## Traditionelle Bedeutung
 
-In der Tradition heißt es, Violett stehe für das Kronenchakra und für Spiritualität [1]. Das moderne Regenbogenmodell ordnet Violett dem siebten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination existiert [1][2]. In der klassischen Lehre (1577) gab es keine Farbzuordnung zu den Zentern [1].
+In der Tradition heißt es, Violett stehe für das Kronenchakra und für Spiritualität [1]. Das moderne Regenbogenmodell ordnet Violett dem siebten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination existiert [1][2]. Die klassischen Texte ordnen den Zentren Farben zu – Element- und Lotosfarben; eine Regenbogenfolge von Rot bis Violett kennen sie nicht [1][2].
 
 ## Farbpsychologie
 
 Für Violett liegt keine eigenständige Farb-Emotions-Forschung vor; die großen systematischen Reviews [3][4] untersuchen Grundfarben und gruppieren Violett nicht als eigene emotionale Kategorie [3][4]. Was als "Violett-Assoziation" beschrieben wird – oft als mystisch, achtsam, transzendent – ist entweder eine Konnotation der zugrunde liegenden Blautöne oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter Effekt [7]. Das muss klar unterschieden werden: Assoziation ist nicht Wirkung [7].
 
-Die Review [3] beschreibt Blau als assoziiert mit Ruhe, Vertrauen und Konzentration, und betont, dass diese Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Violett, das physikalisch zwischen Blau und dem UV-Rand liegt (ca. 380–450 nm) [10][24], teilt die Blautöne-Charakteristik, aber seine Wahrnehmung ist stärker vom spektralen Mix und vom Bildschirm-Rendering abhängig: Ein "Violett" auf einem Monitor ist typischerweise ein Magenta-Mix (rotes + blaues Licht), kein Spektralreinstoff [31]. Zwei Beobachter können dieselbe Bildschirmfarbe als eher blau-violett oder eher rot-violett wahrnehmen – ein Metamerie-Phänomen, das emotionale Aussagen zusätzlich fraglich macht [24][31]. Die Studie [4] zeigt, dass solche Wahrnehmungsvarianzen die emotionale Interpretation stärker beeinflussen als bei Grundfarben mit klarerem Spektralspektrum.
+Die Review [3] beschreibt Blau als assoziiert mit Ruhe, Vertrauen und Konzentration, und betont, dass diese Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Violett, das physikalisch zwischen Blau und dem UV-Rand liegt (ca. 380–450 nm) [10][24], teilt die Blautöne-Charakteristik, aber seine Wahrnehmung ist stärker vom spektralen Mix und vom Bildschirm-Rendering abhängig: Ein "Violett" auf einem Monitor ist typischerweise ein Magenta-Mix (rotes + blaues Licht), kein Spektralreinstoff [31]. Zwei Beobachter können dieselbe Bildschirmfarbe als eher blau-violett oder eher rot-violett wahrnehmen – ein Metamerie-Phänomen, das emotionale Aussagen zusätzlich fraglich macht [24][31].
 
 Abgrenzung Violett ↔ Magenta, quellenbasiert: Violett (ca. 380–450 nm) ist eine spektrale Farbe im sichtbaren Bereich; Magenta (Additiv-Mix ~ 620 nm rot + 450 nm blau) ist nicht spektral, sondern entsteht nur durch simultane Stimulation zweier Rezeptoren [24][31]. Die Forschung [3][4] unterscheidet diese nicht systematisch – die meisten Studien sprechen von "purple/violet" als einer Kategorie – und liefert damit keine eigenständige emotionale Differenzierung zwischen spektralem Violett und additivem Magenta. Ehrlich formuliert heißt das: Für Violett als spektrale Farbe und Magenta als Mischfarbe gibt es keine getrennte emotionale Forschung; jede Aussage über "violett-typische" emotionale Wirkung würde entweder vom Blauen abgeleitet oder als spekulativ formuliert – nie als eigenständiger Befund.
 
-Interkulturell sind Blautöne- und Violett-Assoziationen ähnlich (Ruhe, Tiefe), aber die Varianz bleibt hoch [4]. Eine Aussage wie "Violett fördert Spiritualität stärker als Blau" wäre nicht belegt – sie würde die fehlende Eigenstudie durch eine künstliche Differenzierung ersetzen. Die ehrliche Einordnung lautet: Violett hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen (gelb, [1][2]), nicht als Wirkung.
+Interkulturell sind Blautöne- und Violett-Assoziationen ähnlich (Ruhe, Tiefe), aber die Varianz bleibt hoch [4]. Eine Aussage wie "Violett fördert Spiritualität stärker als Blau" wäre nicht belegt – sie würde die fehlende Eigenstudie durch eine künstliche Differenzierung ersetzen. Die ehrliche Einordnung lautet: Violett hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.
 
-> **Red-Tabu beachtet:** Keine medizinische Wirkung, keine "Violett heilt Krebs", keine "UV liegt im Violettbereich"-Falschbehauptung [9][19]. Keine roten Aussagen zur Farbwirkung.
+## Was die Studienlage nicht hergibt
 
-## Was nicht verwendet wird (Rot-Tabu)
+Für eine Heilwirkung von Violett gegen Krebs oder als spezifische Lichttherapie gibt es keine belastbare Evidenz [9][19].
 
-"Violett heilt Krebs", "UV liegt im Violettbereich" [9][19] – nicht verwendet. Keine medizinische Wirkung behauptet.
+> **Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].
 
-> **Health-Disclaimer:** Keine medizinische Wirkung behauptet. Kein Ersatz für medizinische Behandlung [9][19].
+Farbspezifische Ergänzung: Violett (ca. 380–450 nm, ca. 666–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich, wird aber am schwächsten wahrgenommen; in der Tradition steht es für das Kronenchakra – ohne medizinische Wirkaussage [1][10][24].
+
+## Traditionshistorische Einordnung
+
+Das moderne Regenbogenmodell ordnet Violett dem siebten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Kombination existiert [1]. Die klassische *Sat-cakra-nirupana* (1577) kennt sechs Zentren und das Sahasrāra; sie ordnet Element- und Lotosfarben zu, aber keine Regenbogenfolge [1][2]. Violett liegt mit ca. 380–450 nm am kurzwelligen Rand des sichtbaren Spektrums und grenzt an den UV-Bereich [10][19].
 
 ## Übung
 
 Betrachten Sie einen violetten Farbton – ein Bild, eine Blume, ein Licht. Notieren Sie eine Assoziation, nicht eine Diagnose.
 
----
-
-## Quellen – [1][2][3][4][7][9][10][19][24][31]
-
-## Anmerkung zur ehrlichen Einordnung
-
-Diese Seite folgt dem einheitlichen Skelett aller Farbseiten: Einführung, Tradition (gelb, als "In der Tradition heißt es"), Farbpsychologie nach heutiger Studienlage (grün, mit Quellen [3][4][7]), Anwendung mit klaren Grenzen, praktische Übung ohne therapeutischen Anspruch und ein Abschnitt "Was Wissenschaft sagt – und was nicht". Keine medizinischen Wirkaussagen und keine roten Aussagen werden verwendet [9][20].
-
-## Interkulturelle und wahrnehmungspsychologische Anmerkungen
-Die große systematische Review [3] zeigt, dass Farb-Emotions-Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Metamerie zeigt, dass Farbe ein Wahrnehmungsereignis ist, kein Objekt [31]. Bildschirme erzeugen Metamere der Spektralfarben [24][31].
-
-## Physikalisch und traditionell
-Violett (ca. 380–450 nm, ca. 666–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich und die geringste Sichtbarkeit [10][24]. Der Übergang zum UV ist fließend; UV selbst liegt außerhalb des sichtbaren Spektrums [19]. Die Aussage, "UV liegt im Violettbereich", ist falsch und nicht verwendet [9][19]. In der Tradition heißt es, Violett stehe für das Kronenchakra und Spiritualität [1] – das moderne Modell ordnet es dem siebten Zentrum zu (erst 1977) [1][2]. Keine medizinische Wirkung wird behauptet [9][20].
+## Quellen
+- [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+- [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+- [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+- [4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810
+- [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+- [9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf
+- [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
+- [24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).
+- [31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.
+- [19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int

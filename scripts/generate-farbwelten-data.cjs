@@ -68,6 +68,9 @@ const SECTION_ORDER = [
 // Zuordnung der gelieferten H2-Überschriften auf das A–H-Skelett. Alles, was
 // hier nicht greift, bricht den Generator ab — keine stillen Textverluste.
 const SECTION_MAP = [
+  // Muss vor /^tradition/ stehen: „Traditionshistorische Einordnung" ist ein
+  // Geschichtsabschnitt, kein zweiter Traditionsblock.
+  { key: 'geschichte', test: /^traditionshistorisch/i },
   { key: 'tradition', test: /^tradition/i },
   { key: 'tradition', test: /^ergänzende anmerkung zur tradition/i },
   { key: 'tradition', test: /^physikalisch und traditionell/i },
@@ -75,6 +78,8 @@ const SECTION_MAP = [
   { key: 'anwendung', test: /^anwendung/i },
   { key: 'anwendung', test: /^was nicht verwendet/i },
   { key: 'anwendung', test: /^was wissenschaft sagt/i },
+  { key: 'anwendung', test: /^was die studienlage/i },
+  { key: 'anwendung', test: /^health-disclaimer/i },
   { key: 'anwendung', test: /^blaulicht/i },
   { key: 'geschichte', test: /^(interkulturell|traditionshistorisch)/i },
   { key: 'uebung', test: /^(praktische übung|übung)/i },
@@ -187,7 +192,7 @@ const SHORT_REFS = {
 
 // Zeitleiste der Chakra-Geschichte, wörtlich aus content/farbwelten/chakren.md.
 const HISTORY_TIMELINE = [
-  '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra, keine Farbzuordnung [1].',
+  '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
   '1919: Woodroffe/Avalon — westliche Übersetzung, Autoritätsquelle für fast alle späteren Chakratexte [2].',
   '1920er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren [1].',
   '1977: Das Regenbogen-Chakramodell mit sieben Farben erscheint in dieser Kombination [1].',
@@ -388,30 +393,66 @@ function mapSections(document, id) {
   return { sections, mapped };
 }
 
+function parseSourceEntry(item) {
+  const match = /^\[(\d{1,2})\]\s*(.+)$/.exec(item);
+  if (!match) return null;
+  const [, id, rest] = match;
+  const urlMatch = /(https?:\/\/\S+)$/.exec(rest);
+  const url = urlMatch ? urlMatch[1].replace(/[).,;]+$/, '') : null;
+  const label = (url ? rest.slice(0, rest.length - urlMatch[1].length) : rest)
+    .replace(/\*+/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/[.\s]+$/, '');
+  return { id, label, url };
+}
+
+// Jede Redaktionsseite führt ihre eigene Bibliografie. Für das Quellenregister
+// zählt der vollständigste Eintrag (URL vor ohne URL, danach das längere Label).
+// Nur so erscheinen auch Quellen, die ausschließlich eine Unterseite zitiert
+// (z. B. [20] auf rot/gruen), im gerenderten Modul als vollständige Angabe.
+function registerSources(document, registry) {
+  const quellen = document.sections.find((section) => /^quellen/i.test(section.heading || ''));
+  for (const block of quellen?.blocks || []) {
+    if (block.type !== 'list') continue;
+    for (const item of block.items) {
+      const entry = parseSourceEntry(item);
+      if (!entry) continue;
+      // Ketten wie „- [1][2][3] – siehe Einstiegsseite" sind keine bibliografische
+      // Angabe und dürfen das Register nicht mit einem falschen Label füllen.
+      if (/^\[\d{1,2}\]/.test(entry.label) || entry.label.length < 10) continue;
+      const candidate = { id: entry.id, label: entry.label, url: entry.url, shortRef: false };
+      const score = (value) => (value.url ? 100000 : 0) + value.label.length;
+      const existing = registry.get(entry.id);
+      if (!existing || score(candidate) > score(existing)) registry.set(entry.id, candidate);
+    }
+  }
+}
+
+function readDocument(name) {
+  const parsed = parseFrontmatter(read(`${name}.md`));
+  return { parsed, document: mergeIntroHeading(splitDocument(parsed.body)) };
+}
+
 function buildColors() {
   const sourceRegistry = new Map();
   const worlds = [];
   const reports = [];
 
-  // Zuerst die Einstiegsseite: sie trägt die vollständige Quellenliste.
+  // Zuerst die Einstiegsseite: sie trägt die kanonische Quellenliste.
   const landingSource = read('farbwelten.md');
   const landing = parseFrontmatter(landingSource);
   const landingDoc = splitDocument(landing.body);
-  for (const block of landingDoc.sections.find((s) => /^quellen/i.test(s.heading))?.blocks || []) {
-    if (block.type !== 'list') continue;
-    for (const item of block.items) {
-      const entry = /^\[(\d{1,2})\]\s*(.+)$/.exec(item);
-      if (!entry) continue;
-      const [, id, rest] = entry;
-      const urlMatch = /(https?:\/\/\S+)$/.exec(rest);
-      const url = urlMatch ? urlMatch[1].replace(/[).,;]+$/, '') : null;
-      const label = (url ? rest.slice(0, rest.length - urlMatch[1].length) : rest)
-        .replace(/\*+/g, '')
-        .replace(/\s+/g, ' ')
-        .trim()
-        .replace(/[.\s]+$/, '');
-      sourceRegistry.set(id, { id, label, url, shortRef: false });
-    }
+  registerSources(landingDoc, sourceRegistry);
+  // Danach alle Unterseiten, damit das Register jede zitierte Quelle auflöst.
+  const documents = new Map();
+  for (const id of COLOR_FILES) {
+    const entry = readDocument(id);
+    documents.set(id, entry);
+    registerSources(entry.document, sourceRegistry);
+  }
+  for (const name of ['chakren', 'lichtfrequenzen']) {
+    registerSources(splitDocument(parseFrontmatter(read(`${name}.md`)).body), sourceRegistry);
   }
   for (const [id, label] of Object.entries(SHORT_REFS)) {
     if (!sourceRegistry.has(id))
@@ -424,9 +465,7 @@ function buildColors() {
   }
 
   for (const id of COLOR_FILES) {
-    const file = `${id}.md`;
-    const parsed = parseFrontmatter(read(file));
-    const document = mergeIntroHeading(splitDocument(parsed.body));
+    const { parsed, document } = documents.get(id);
     const { sections, mapped } = mapSections(document, id);
 
     const [min, max] = WAVELENGTHS[id];

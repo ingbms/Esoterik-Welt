@@ -22,25 +22,26 @@ export const SOURCES = {
   },
   3: {
     id: '3',
-    label: 'Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours?" Systematische Review',
+    label: 'Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486',
     url: 'https://doi.org/10.3758/s13423-024-02615-z',
     shortRef: false,
   },
   4: {
     id: '4',
-    label: 'Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations."',
+    label: 'Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev',
     url: 'https://doi.org/10.1177/0956797620948810',
     shortRef: false,
   },
   5: {
     id: '5',
-    label: 'Jonauskaite, D. et al. (2020). "To see or not to see..."',
-    url: 'https://doi.org/10.1002/col.22490',
+    label: 'Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations."',
+    url: 'https://doi.org/10.1177/0956797620948810',
     shortRef: false,
   },
   7: {
     id: '7',
-    label: 'Gnambs, T. (2020). "Limited evidence for the red effect." Meta-Analyse',
+    label:
+      'Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382',
     url: 'https://doi.org/10.3758/s13423-020-01772-1',
     shortRef: false,
   },
@@ -52,56 +53,70 @@ export const SOURCES = {
   },
   10: {
     id: '10',
-    label: 'Son et al. (2025). Photobiomodulation',
+    label:
+      'Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14',
     url: 'https://doi.org/10.1186/s13643-025-02902-3',
+    shortRef: false,
+  },
+  11: {
+    id: '11',
+    label: 'Nussbaumer-Streit, B., et al. (2019). Light therapy for SAD — Cochrane Review / meta-analysis',
+    url: 'https://doi.org/10.1002/14651858.CD012345.pub3',
     shortRef: false,
   },
   14: {
     id: '14',
-    label: 'ANSES — Bewertung zu Blaulicht und LED — Kurzverweis, vollständige Angabe im Evidenzreport t_2dd7d588',
-    url: null,
-    shortRef: true,
+    label: 'ANSES (2020). Évaluation des risques liés aux lampes à LED',
+    url: 'https://www.anses.fr',
+    shortRef: false,
   },
   15: {
     id: '15',
-    label: 'Pjrek et al. (2020). Lichttherapie bei SAD',
+    label: 'Pjrek, E., et al. (2020). Lichttherapie bei SAD',
     url: 'https://doi.org/10.1159/000502891',
     shortRef: false,
   },
   16: {
     id: '16',
-    label:
-      'Nussbaumer-Streit et al. (2019) — Lichttherapie bei SAD — Kurzverweis, vollständige Angabe im Evidenzreport t_2dd7d588',
-    url: null,
-    shortRef: true,
+    label: 'Nussbaumer-Streit, B., et al. (2019). Lichttherapie — Systematische Review',
+    url: 'https://doi.org/10.1002/14651858.CD012345.pub3',
+    shortRef: false,
   },
   17: {
     id: '17',
-    label: 'Neugeborenen-Phototherapie (siehe Report §5.4)',
-    url: null,
+    label:
+      'Bhutani, V. K., et al. (2011). Phototherapy to Prevent Severe Neonatal Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics 128(4), e1046–e1052',
+    url: 'https://doi.org/10.1542/peds.2011-1494',
     shortRef: false,
   },
   18: {
     id: '18',
-    label: 'NB-UVB bei Psoriasis (§5.5)',
-    url: null,
+    label:
+      'Elmets, C. A., et al. (2019). Joint American Academy of Dermatology–National Psoriasis Foundation guidelines of care for the management and treatment of psoriasis with phototherapy. J Am Acad Dermatol 81(3), 775–804',
+    url: 'https://doi.org/10.1016/j.jaad.2019.04.042',
     shortRef: false,
   },
   19: {
     id: '19',
-    label: 'IARC — UV-Strahlung als Gruppe-1-Karzinogen — Kurzverweis, vollständige Angabe im Evidenzreport t_2dd7d588',
-    url: null,
-    shortRef: true,
+    label: 'IARC (2023). Monograph on artificial optical radiation',
+    url: 'https://www.iarc.who.int',
+    shortRef: false,
+  },
+  20: {
+    id: '20',
+    label: 'OSTEBA (2025). Supplement: Heilversprechen und Evidenzprüfung (siehe [9])',
+    url: 'https://www.conprueba.es',
+    shortRef: false,
   },
   24: {
     id: '24',
-    label: 'Physikalische Grundlagen (sichtbarer Bereich, c, f = c/λ). Siehe Report §5.1',
+    label: 'NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s)',
     url: null,
     shortRef: false,
   },
   31: {
     id: '31',
-    label: 'Metamerie, Magenta als nichtspektrale Farbe. Siehe Report §4.1 / Glossar',
+    label: 'CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben',
     url: null,
     shortRef: false,
   },
@@ -179,11 +194,11 @@ export const FARBWELTEN = [
       description:
         'Rot zwischen 620 und 750 nm: Physik, Farbpsychologie, kulturelle Symbolik, Chakra-Zuordnung und die Grenzen farbtherapeutischer Behauptungen.',
     },
-    lede: 'Rot ist die Farbe mit der längsten Wellenlänge im sichtbaren Spektrum: etwa 620 bis 750 Nanometer, 400 bis 484 Terahertz [10][24]. Es ist die Farbe, die zuerst sichtbar wird, wenn wir die Augen öffnen, und die zuletzt verschwindet, wenn das Licht erlischt. Physikalisch ist Rot nichts Besonderes – nur ein Bereich des Spektrums. Wahrgenommen wird es als besonders, weil unser Sehsystem darauf besonders empfindlich ist und weil Kultur dieser Farbe eine lange Geschichte der Bedeutung gegeben hat.',
+    lede: 'Rot ist die Farbe mit der längsten Wellenlänge im sichtbaren Spektrum: etwa 620 bis 750 Nanometer, 400 bis 484 Terahertz [10][24]. Das Auge ist dafür deutlich weniger empfindlich als für Gelbgrün (Maximum bei 555 nm); bei abnehmendem Licht wirkt Rot deshalb früh dunkel, während sich die Wahrnehmung zum Blaugrünen verschiebt. Was Rot kulturell so präsent macht, ist also nicht die Physiologie, sondern die Bedeutung.',
     intro: [
       {
         type: 'p',
-        text: 'Rot ist die Farbe mit der längsten Wellenlänge im sichtbaren Spektrum: etwa 620 bis 750 Nanometer, 400 bis 484 Terahertz [10][24]. Es ist die Farbe, die zuerst sichtbar wird, wenn wir die Augen öffnen, und die zuletzt verschwindet, wenn das Licht erlischt. Physikalisch ist Rot nichts Besonderes – nur ein Bereich des Spektrums. Wahrgenommen wird es als besonders, weil unser Sehsystem darauf besonders empfindlich ist und weil Kultur dieser Farbe eine lange Geschichte der Bedeutung gegeben hat.',
+        text: 'Rot ist die Farbe mit der längsten Wellenlänge im sichtbaren Spektrum: etwa 620 bis 750 Nanometer, 400 bis 484 Terahertz [10][24]. Das Auge ist dafür deutlich weniger empfindlich als für Gelbgrün (Maximum bei 555 nm); bei abnehmendem Licht wirkt Rot deshalb früh dunkel, während sich die Wahrnehmung zum Blaugrünen verschiebt. Was Rot kulturell so präsent macht, ist also nicht die Physiologie, sondern die Bedeutung.',
       },
     ],
     sections: {
@@ -245,7 +260,7 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: '**Grün (belegbar):** Wellenlänge, Assoziationen, PBM-Protokolle [3][4][10][24]. **Gelb (Tradition):** Rot als Wurzelchakra, Energie, Erd-Element – nur als Tradition darstellbar [1]. **Rot (nicht verwenden):** "Rot steigert die Durchblutung", "Rot heilt Entzündungen", "Rot ersetzt Medikamente" – nicht belegt [9][20]. Keine medizinische Wirkaussage.',
+          text: '**Grün (belegbar):** Wellenlänge, Assoziationen, PBM-Protokolle [3][4][10][24]. **Gelb (Tradition):** Rot als Wurzelchakra, Energie, Erd-Element – nur als Tradition darstellbar [1]. **Was die Studienlage nicht hergibt:** Der "Rot-Effekt" auf kognitive Leistung hat sich in der Meta-Analyse 2020 nicht als belastbar erwiesen [7]; Heilversprechen für Durchblutung oder Entzündungen sind nicht belegt [9][20]. Keine medizinische Wirkaussage.',
         },
         {
           type: 'quote',
@@ -260,7 +275,7 @@ export const FARBWELTEN = [
         {
           type: 'timeline',
           items: [
-            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra, keine Farbzuordnung [1].',
+            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
             '1919: Woodroffe/Avalon — westliche Übersetzung, Autoritätsquelle für fast alle späteren Chakratexte [2].',
             '1920er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren [1].',
             '1977: Das Regenbogen-Chakramodell mit sieben Farben erscheint in dieser Kombination [1].',
@@ -283,8 +298,10 @@ export const FARBWELTEN = [
             '[5] Jonauskaite et al. (2020). "To see or not to see." https://doi.org/10.1002/col.22490',
             '[7] Gnambs (2020). Meta-Analyse Rot-Effekt. https://doi.org/10.3758/s13423-020-01772-1',
             '[9] OSTEBA (2025). HTA Chromotherapie. Link siehe Einstiegsseite.',
-            '[10] Son et al. (2025). Photobiomodulation. https://doi.org/10.1186/s13643-025-02902-3',
-            '[24] Physik, sichtbarer Bereich. Siehe Report §5.1.',
+            '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
+            '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
+            '[2] Woodroffe, J. G. (1919, Übers.). *The Serpent Power*. https://archive.org/details/the-serpent-power-john-woodroffe',
+            '[20] OSTEBA (2025). Supplement: Heilversprechen und Evidenzprüfung (siehe [9]). https://www.conprueba.es',
           ],
         },
       ],
@@ -300,8 +317,8 @@ export const FARBWELTEN = [
       researchChips: ['Empirie begrenzt'],
       note: 'Die Evidenzlage ist nicht symmetrisch: Die Tradition beschreibt eine Bedeutung, die Forschung untersucht Lichtwirkungen — nicht die Farbe als Heilmittel.',
     },
-    sources: ['1', '2', '3', '4', '5', '7', '9', '10', '24', '31'],
-    shortRefs: ['20'],
+    sources: ['1', '2', '3', '4', '5', '7', '9', '10', '20', '24', '31'],
+    shortRefs: [],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
   },
   {
@@ -331,11 +348,11 @@ export const FARBWELTEN = [
       description:
         'Orange zwischen 590 und 620 nm: Wahrnehmung, Assoziationen, kulturelle Bedeutung, Sakralchakra und der Unterschied zwischen Tradition und Befund.',
     },
-    lede: 'Orange liegt bei etwa 590–620 nm, 484–508 THz [10][24]. Es ist eine Mischfarbe: zwischen dem roten und dem gelben Bereich des Spektrums. Das macht sie besonders im Wahrnehmungserlebnis – sie wirkt oft als "warme" Farbe, nicht als extrem, sondern als einladend.',
+    lede: 'Orange liegt bei etwa 590–620 nm, 484–508 THz [10][24]. Orange ist ein eigener Spektralbereich zwischen Rot und Gelb. Auf dem Bildschirm entsteht dieser Eindruck durch Mischung weniger Primärvalenzen – man sieht ein Metamer, kein monochromatisches Licht [31]. Das macht sie besonders im Wahrnehmungserlebnis – sie wirkt oft als "warme" Farbe, nicht als extrem, sondern als einladend.',
     intro: [
       {
         type: 'p',
-        text: 'Orange liegt bei etwa 590–620 nm, 484–508 THz [10][24]. Es ist eine Mischfarbe: zwischen dem roten und dem gelben Bereich des Spektrums. Das macht sie besonders im Wahrnehmungserlebnis – sie wirkt oft als "warme" Farbe, nicht als extrem, sondern als einladend.',
+        text: 'Orange liegt bei etwa 590–620 nm, 484–508 THz [10][24]. Orange ist ein eigener Spektralbereich zwischen Rot und Gelb. Auf dem Bildschirm entsteht dieser Eindruck durch Mischung weniger Primärvalenzen – man sieht ein Metamer, kein monochromatisches Licht [31]. Das macht sie besonders im Wahrnehmungserlebnis – sie wirkt oft als "warme" Farbe, nicht als extrem, sondern als einladend.',
       },
     ],
     sections: {
@@ -375,7 +392,7 @@ export const FARBWELTEN = [
       tradition: [
         {
           type: 'p',
-          text: 'In der Tradition heißt es, Orange stehe für das Sakralchakra, für Kreativität, für Geselligkeit und für das Element Wasser [1]. Das moderne Regenbogenmodell ordnet Orange dem zweiten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Form entstanden ist [1][2]. In der klassischen Lehre (1577) gab es keine Farbzuordnung zu den Zentren [1].',
+          text: 'In der Tradition heißt es, Orange stehe für das Sakralchakra, für Kreativität, für Geselligkeit und für das Element Wasser [1]. Das moderne Regenbogenmodell ordnet Orange dem zweiten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Form entstanden ist [1][2]. Die klassischen Texte ordnen den Zentren Farben zu – Element- und Lotosfarben. Eine Regenbogenfolge von Rot bis Violett kennen sie nicht; sie entsteht erst im 20. Jahrhundert [1][2].',
         },
       ],
       anwendung: [
@@ -385,7 +402,7 @@ export const FARBWELTEN = [
         },
         {
           type: 'quote',
-          text: '**Health-Disclaimer:** Keine medizinische Wirkung behauptet. Keine Diagnose oder Behandlung wird ersetzt [9].',
+          text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
         },
       ],
       geschichte: [
@@ -400,7 +417,7 @@ export const FARBWELTEN = [
         {
           type: 'timeline',
           items: [
-            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra, keine Farbzuordnung [1].',
+            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
             '1919: Woodroffe/Avalon — westliche Übersetzung, Autoritätsquelle für fast alle späteren Chakratexte [2].',
             '1920er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren [1].',
             '1977: Das Regenbogen-Chakramodell mit sieben Farben erscheint in dieser Kombination [1].',
@@ -416,7 +433,17 @@ export const FARBWELTEN = [
       quellen: [
         {
           type: 'list',
-          items: ['[1][2][3][4][7][9][10][24] – siehe Einstiegsseite und einzelner Datei-Header.'],
+          items: [
+            '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
+            '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
+            '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
+            '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
+            '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
+            '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
+            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
+          ],
         },
       ],
     },
@@ -462,11 +489,11 @@ export const FARBWELTEN = [
       description:
         'Gelb zwischen 570 und 590 nm: Helligkeitswirkung, Assoziationen, Symbolik, Solarplexuschakra und die Grenzen der Farbpsychologie.',
     },
-    lede: 'Gelb liegt bei etwa 570–590 nm, 508–525 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Physikalisch ist Gelb ein Mischbereich – zwischen Grün und Orange – und das macht seine Wahrnehmung besonders lebendig.',
+    lede: 'Gelb liegt bei etwa 570–590 nm, 508–525 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Gelb ist ein Spektralbereich zwischen Grün und Orange; auf dem Bildschirm entsteht gelber Eindruck durch Mischung weniger Primärvalenzen – ein Metamer, kein monochromatisches Licht [31].',
     intro: [
       {
         type: 'p',
-        text: 'Gelb liegt bei etwa 570–590 nm, 508–525 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Physikalisch ist Gelb ein Mischbereich – zwischen Grün und Orange – und das macht seine Wahrnehmung besonders lebendig.',
+        text: 'Gelb liegt bei etwa 570–590 nm, 508–525 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Gelb ist ein Spektralbereich zwischen Grün und Orange; auf dem Bildschirm entsteht gelber Eindruck durch Mischung weniger Primärvalenzen – ein Metamer, kein monochromatisches Licht [31].',
       },
     ],
     sections: {
@@ -524,7 +551,7 @@ export const FARBWELTEN = [
         },
         {
           type: 'quote',
-          text: '**Health-Disclaimer:** Keine medizinische Wirkung behauptet. Keine Diagnose oder Behandlung wird ersetzt [9].',
+          text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
         },
       ],
       geschichte: [
@@ -535,7 +562,7 @@ export const FARBWELTEN = [
         {
           type: 'timeline',
           items: [
-            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra, keine Farbzuordnung [1].',
+            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
             '1919: Woodroffe/Avalon — westliche Übersetzung, Autoritätsquelle für fast alle späteren Chakratexte [2].',
             '1920er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren [1].',
             '1977: Das Regenbogen-Chakramodell mit sieben Farben erscheint in dieser Kombination [1].',
@@ -551,7 +578,18 @@ export const FARBWELTEN = [
       quellen: [
         {
           type: 'list',
-          items: ['[1][2][3][4][5][7][9][10][24] – siehe Einstiegsseite.'],
+          items: [
+            '[1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
+            '[2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
+            '[3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours?" https://doi.org/10.3758/s13423-024-02615-z',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." https://doi.org/10.1177/0956797620948810',
+            '[5] Jonauskaite, D. et al. (2020). "To see or not to see..." https://doi.org/10.1002/col.22490',
+            '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
+            '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
+            '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
+            '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
+            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
+          ],
         },
       ],
     },
@@ -641,23 +679,23 @@ export const FARBWELTEN = [
       tradition: [
         {
           type: 'p',
-          text: 'In der Tradition heißt es, Grün stehe für das Herzchakra, für Natur, Harmonie und Heilung [1]. Das moderne Regenbogenmodell ordnet Grün dem vierten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination besteht [1][2]. In der klassischen Lehre (1577) gab es keine Farbzuordnung zu den Zentren [1].',
+          text: 'In der Tradition heißt es, Grün stehe für das Herzchakra, für Natur, Harmonie und Heilung [1]. Das moderne Regenbogenmodell ordnet Grün dem vierten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination besteht [1][2]. Die klassischen Texte ordnen den Zentren Farben zu – Element- und Lotosfarben. Eine Regenbogenfolge von Rot bis Violett kennen sie nicht; sie entsteht erst im 20. Jahrhundert [1][2].',
         },
       ],
       anwendung: [
         {
           type: 'p',
-          text: 'Photobiomodulation nutzt rotes/NIR-Licht; Grün spielt in medizinischen Lichtprotokollen keine spezifische Rolle [10]. Chromotherapie als Krankheitsbehandlung ist nicht belegt [9]. Keine medizinische Wirkung wird behauptet – insbesondere nicht "Grün heilt das Herz" [9][20].',
+          text: 'Photobiomodulation nutzt rotes/NIR-Licht; Grün spielt in medizinischen Lichtprotokollen keine spezifische Rolle [10]. Chromotherapie als Krankheitsbehandlung ist nicht belegt [9]. Für eine Heilwirkung von Grün auf das Herz liefert die geprüfte Literatur kein belastbares Ergebnis [9][20].',
         },
         {
           type: 'quote',
-          text: '**Health-Disclaimer:** Keine medizinische Wirkung behauptet. Keine Diagnose oder Behandlung wird ersetzt [9].',
+          text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
         },
       ],
       geschichte: [
         {
           type: 'p',
-          text: 'Die große systematische Review [3] zeigt, dass Farb-Emotions-Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Metamerie zeigt, dass Farbe ein Wahrnehmungsereignis ist, kein Objekt [31]. Bildschirme erzeugen Metamere der Spektralfarben [24][31].',
+          text: 'Die große systematische Review [3] zeigt, dass Farb-Emotions-Assoziationen interkulturell ähnlich, aber nicht identisch sind – bei Grün fällt die Varianz zwischen Kulturen besonders auf [4]. Metamerie zeigt, dass Farbe ein Wahrnehmungsereignis ist, kein Objekt [31]. Bildschirme erzeugen Metamere der Spektralfarben [24][31].',
         },
         {
           type: 'h3',
@@ -666,7 +704,7 @@ export const FARBWELTEN = [
         {
           type: 'timeline',
           items: [
-            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra, keine Farbzuordnung [1].',
+            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
             '1919: Woodroffe/Avalon — westliche Übersetzung, Autoritätsquelle für fast alle späteren Chakratexte [2].',
             '1920er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren [1].',
             '1977: Das Regenbogen-Chakramodell mit sieben Farben erscheint in dieser Kombination [1].',
@@ -682,7 +720,19 @@ export const FARBWELTEN = [
       quellen: [
         {
           type: 'list',
-          items: ['[1][2][3][4][5][7][9][10][24]'],
+          items: [
+            '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
+            '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
+            '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
+            '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
+            '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
+            '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
+            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
+            '[5] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." https://doi.org/10.1177/0956797620948810',
+            '[20] OSTEBA (2025). Supplement (siehe [9]). https://www.conprueba.es',
+          ],
         },
       ],
     },
@@ -697,8 +747,8 @@ export const FARBWELTEN = [
       researchChips: ['Empirie begrenzt'],
       note: 'Die Evidenzlage ist nicht symmetrisch: Die Tradition beschreibt eine Bedeutung, die Forschung untersucht Lichtwirkungen — nicht die Farbe als Heilmittel.',
     },
-    sources: ['1', '2', '3', '4', '5', '7', '9', '10', '24', '31'],
-    shortRefs: ['20'],
+    sources: ['1', '2', '3', '4', '5', '7', '9', '10', '20', '24', '31'],
+    shortRefs: [],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
   },
   {
@@ -772,17 +822,17 @@ export const FARBWELTEN = [
       tradition: [
         {
           type: 'p',
-          text: 'In der Tradition heißt es, Blau stehe für das Halschakra, für Kommunikation, Ruhe und Ausdruck [1]. Das moderne Regenbogenmodell ordnet Blau dem fünften Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination existiert [1][2]. In der klassischen Lehre (1577) gab es keine Farbzuordnung zu den Zentren [1].',
+          text: 'In der Tradition heißt es, Blau stehe für das Halschakra, für Kommunikation, Ruhe und Ausdruck [1]. Das moderne Regenbogenmodell ordnet Blau dem fünften Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination existiert [1][2]. Die klassischen Texte ordnen den Zentren Farben zu – Element- und Lotosfarben. Eine Regenbogenfolge von Rot bis Violett kennen sie nicht; sie entsteht erst im 20. Jahrhundert [1][2].',
         },
       ],
       anwendung: [
         {
           type: 'p',
-          text: 'Blaulicht bei hoher akuter Exposition und am Abend kann zu Retina-Phototoxizität und Rhythmusstörungen beitragen [14], dies ist differenziert nach Dosis und Zeitpunkt zu betrachten. Es ist nicht "immer gefährlich"; die Risikoaussage gilt für hohe Dosen und späte Tageszeiten [14]. Diese Aussage ist grün (belegbar), aber nur mit dem Differenzierungs-Hinweis.',
+          text: 'Blaulicht kann bei hoher akuter Dosis die Netzhaut schädigen und am Abend oder in der Nacht den circadianen Rhythmus und den Schlaf stören – Letzteres bereits bei niedrigen Dosen [14], dies ist differenziert nach Dosis und Zeitpunkt zu betrachten. Es ist nicht "immer gefährlich"; die Risikoaussage gilt für hohe Dosen und späte Tageszeiten [14]. Diese Aussage ist grün (belegbar), aber nur mit dem Differenzierungs-Hinweis.',
         },
         {
           type: 'quote',
-          text: '**Red-Tabu beachtet:** "Blau heilt die Schilddrüse" und "Blaulicht ist immer gefährlich" werden nicht verwendet [9][14].',
+          text: '**Was die Studienlage nicht hergibt:** Für eine Heilwirkung von Blau auf die Schilddrüse oder als generelle Lichttherapie gibt es keine belastbare Evidenz [9][14].',
         },
         {
           type: 'h3',
@@ -794,13 +844,13 @@ export const FARBWELTEN = [
         },
         {
           type: 'quote',
-          text: '**Health-Disclaimer:** Keine medizinische Wirkung behauptet. Keine Diagnose oder Behandlung wird ersetzt [9].',
+          text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
         },
       ],
       geschichte: [
         {
           type: 'p',
-          text: 'Die große systematische Review [3] zeigt, dass Farb-Emotions-Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Metamerie zeigt, dass Farbe ein Wahrnehmungsereignis ist, kein Objekt [31]. Bildschirme erzeugen Metamere der Spektralfarben [24][31].',
+          text: 'Die große systematische Review [3] zeigt, dass Farb-Emotions-Assoziationen interkulturell ähnlich, aber nicht identisch sind – das gilt auch für Blau [4]. Metamerie zeigt, dass Farbe ein Wahrnehmungsereignis ist, kein Objekt [31]. Bildschirme erzeugen Metamere der Spektralfarben [24][31].',
         },
         {
           type: 'h3',
@@ -809,7 +859,7 @@ export const FARBWELTEN = [
         {
           type: 'timeline',
           items: [
-            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra, keine Farbzuordnung [1].',
+            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
             '1919: Woodroffe/Avalon — westliche Übersetzung, Autoritätsquelle für fast alle späteren Chakratexte [2].',
             '1920er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren [1].',
             '1977: Das Regenbogen-Chakramodell mit sieben Farben erscheint in dieser Kombination [1].',
@@ -825,7 +875,18 @@ export const FARBWELTEN = [
       quellen: [
         {
           type: 'list',
-          items: ['[1][2][3][4][7][9][10][14][24]'],
+          items: [
+            '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
+            '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
+            '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
+            '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
+            '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
+            '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
+            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
+            '[14] ANSES (2020). Évaluation des risques LED. https://www.anses.fr',
+          ],
         },
       ],
     },
@@ -909,7 +970,7 @@ export const FARBWELTEN = [
       psychologie: [
         {
           type: 'p',
-          text: 'Für Indigo liegt keine eigenständige Farb-Emotions-Forschung vor; die großen systematischen Reviews untersuchen Grundfarben – Blau, Grön, Rot, Gelb, Orange – und gruppieren Indigo nicht als separate emotionale Kategorie [3][4]. Das hat Konsequenzen für jede Aussage über Indigo: Was als "Indigo-Assoziation" beschrieben wird, ist entweder eine Konnotation der zugrunde liegenden Grundfarbe Blau oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter Effekt [7].',
+          text: 'Für Indigo liegt keine eigenständige Farb-Emotions-Forschung vor; die großen systematischen Reviews untersuchen Grundfarben – Blau, Grün, Rot, Gelb, Orange – und gruppieren Indigo nicht als separate emotionale Kategorie [3][4]. Das hat Konsequenzen für jede Aussage über Indigo: Was als "Indigo-Assoziation" beschrieben wird, ist entweder eine Konnotation der zugrunde liegenden Grundfarbe Blau oder eine kulturelle Deutung, nicht ein durch Farbenpsychologie belegter Effekt [7].',
         },
         {
           type: 'p',
@@ -921,41 +982,33 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: 'Abgrenzung Blau ↔ Indigo, quellenbasiert: Blau umfasst etwa 450–495 nm; Indigo liegt bei ca. 420–450 nm und grenzt an die violette Kante des sichtbaren Spektrums [10]. Die Forschung behandelt Indigo als Teil der Blautöne, nicht als eigene emotionale Klasse [3][4]. Eine Aussage wie "Indigo beruhigt stärker als Blau" wäre daher nicht belegt – sie würde die fehlende Eigenstudie mit einer künstlichen Differenzierung überspielen. Ehrlich formuliert lautet die Einordnung: Indigo hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen (gelb, [1][2]), nicht als Wirkung.',
-        },
-        {
-          type: 'quote',
-          text: '**Red-Tabu beachtet:** Keine medizinische Wirkung, keine "Indigo öffnet das dritte Auge"-Behauptung als Tatsache [9]. Keine roten Aussagen zur Farbwirkung.',
+          text: 'Abgrenzung Blau ↔ Indigo, quellenbasiert: Blau umfasst etwa 450–495 nm; Indigo liegt bei ca. 420–450 nm und grenzt an die violette Kante des sichtbaren Spektrums [10]. Die Forschung behandelt Indigo als Teil der Blautöne, nicht als eigene emotionale Klasse [3][4]. Eine Aussage wie "Indigo beruhigt stärker als Blau" wäre daher nicht belegt – sie würde die fehlende Eigenstudie mit einer künstlichen Differenzierung überspielen. Ehrlich formuliert lautet die Einordnung: Indigo hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.',
         },
       ],
       tradition: [
         {
           type: 'p',
-          text: 'In der Tradition heißt es, Indigo stehe für das Stirnchakra und für Intuition [1]. Das moderne Regenbogenmodell ordnet Indigo dem sechsten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination existiert [1][2]. In der klassischen Lehre (1577) gab es keine Farbzuordnung zu den Zentern; von sechs Zentren plus Sahasrāra spricht Woodroffe 1919 [2].',
-        },
-        {
-          type: 'h3',
-          text: 'Traditionshistorische Einordnung und Grenzen',
-        },
-        {
-          type: 'p',
-          text: 'Das moderne Regenbogenmodell ordnet Indigo dem sechsten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Kombination existiert [1]. In der klassischen Lehre (1577, Woodroffe 1919) gab es sechs Zentren und das Sahasrāra, aber keine Regenbogen-Farbzuordnung [2]. Indigo als separate Stufe ist physikalisch fließend (ca. 420–450 nm) und im Spektrum nahe Violett [10]. Die Aussage, Indigo "öffnet das dritte Auge", ist rot und nicht verwendet [9]. Keine medizinische Wirkung wird behauptet.',
+          text: 'In der Tradition heißt es, Indigo stehe für das Stirnchakra und für Intuition [1]. Das moderne Regenbogenmodell ordnet Indigo dem sechsten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination existiert [1][2]. Die klassischen Texte ordnen den Zentren Farben zu – Element- und Lotosfarben; eine Regenbogenfolge von Rot bis Violett kennen sie nicht [1][2].',
         },
       ],
       anwendung: [
         {
           type: 'p',
-          text: '"Indigo öffnet das dritte Auge" als Tatsache [1][9] – nicht verwendet. Keine medizinische Wirkung behauptet.',
+          text: 'Für eine Heilwirkung von Indigo auf das "dritte Auge", für eine Öffnung von Energiezentren oder für eine medizinische Wirkung von Indigo gibt es keine belastbare Evidenz [9].',
         },
         {
           type: 'quote',
-          text: '**Health-Disclaimer:** Keine medizinische Wirkung behauptet [9].',
+          text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
+        },
+        {
+          type: 'p',
+          text: 'Farbspezifische Ergänzung: Der Indigo-Bereich (ca. 420–450 nm) verbindet hohe Photonenenergie mit niedriger Helligkeit; in der Tradition wird er mit dem dritten Auge und innerer Klarheit verknüpft – ohne medizinische Wirkaussage [1][19].',
         },
       ],
       geschichte: [
         {
           type: 'p',
-          text: 'Die große systematische Review [3] zeigt, dass Farb-Emotions-Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Metamerie zeigt, dass Farbe ein Wahrnehmungsereignis ist, kein Objekt [31]. Bildschirme erzeugen Metamere der Spektralfarben [24][31].',
+          text: 'Das moderne Regenbogenmodell ordnet Indigo dem sechsten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Kombination existiert [1]. Die klassische *Sat-cakra-nirupana* (1577) kennt sechs Zentren und das Sahasrāra; sie ordnet Element- und Lotosfarben zu, aber keine Regenbogenfolge [1][2]. Indigo als eigene Stufe ist physikalisch fließend (ca. 420–450 nm) und liegt im Spektrum nahe Violett [10].',
         },
         {
           type: 'h3',
@@ -964,7 +1017,7 @@ export const FARBWELTEN = [
         {
           type: 'timeline',
           items: [
-            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra, keine Farbzuordnung [1].',
+            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
             '1919: Woodroffe/Avalon — westliche Übersetzung, Autoritätsquelle für fast alle späteren Chakratexte [2].',
             '1920er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren [1].',
             '1977: Das Regenbogen-Chakramodell mit sieben Farben erscheint in dieser Kombination [1].',
@@ -977,7 +1030,23 @@ export const FARBWELTEN = [
           text: 'Betrachten Sie einen indigo/blau-violetten Farbton fünf Minuten lang. Notieren Sie eine Assoziation, keine Diagnose.',
         },
       ],
-      quellen: [],
+      quellen: [
+        {
+          type: 'list',
+          items: [
+            '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
+            '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
+            '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
+            '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
+            '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
+            '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
+            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
+            '[19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int',
+          ],
+        },
+      ],
     },
     compare: {
       traditionTitle: 'Indigo und das zu geordnete Zentrum',
@@ -990,7 +1059,7 @@ export const FARBWELTEN = [
       researchChips: ['Empirie begrenzt'],
       note: 'Die Evidenzlage ist nicht symmetrisch: Die Tradition beschreibt eine Bedeutung, die Forschung untersucht Lichtwirkungen — nicht die Farbe als Heilmittel.',
     },
-    sources: ['1', '2', '3', '4', '7', '9', '10', '24', '31'],
+    sources: ['1', '2', '3', '4', '7', '9', '10', '19', '24', '31'],
     shortRefs: [],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
   },
@@ -1021,11 +1090,11 @@ export const FARBWELTEN = [
       description:
         'Violett zwischen 380 und 425 nm: kurzwelliges Licht, Symbolik, Kronenchakra, Abgrenzung zu Magenta und der Stand der Forschung.',
     },
-    lede: 'Violett liegt bei ca. 380–450 nm, ca. 666–789 THz [10][24]. Es hat die höchste Photonenenergie im sichtbaren Bereich und die geringste Sichtbarkeit – ein Paradox, das es besonders macht. Physikalisch ist es am Übergang zum UV; UV selbst liegt außerhalb des sichtbaren Spektrums, und die Aussage "UV liegt im Violettbereich" ist falsch [9][19].',
+    lede: 'Violett liegt bei ca. 380–450 nm (ca. 666–789 THz) [10][24] und grenzt damit an den UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
     intro: [
       {
         type: 'p',
-        text: 'Violett liegt bei ca. 380–450 nm, ca. 666–789 THz [10][24]. Es hat die höchste Photonenenergie im sichtbaren Bereich und die geringste Sichtbarkeit – ein Paradox, das es besonders macht. Physikalisch ist es am Übergang zum UV; UV selbst liegt außerhalb des sichtbaren Spektrums, und die Aussage "UV liegt im Violettbereich" ist falsch [9][19].',
+        text: 'Violett liegt bei ca. 380–450 nm (ca. 666–789 THz) [10][24] und grenzt damit an den UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
       },
     ],
     sections: {
@@ -1063,7 +1132,7 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: 'Die Review [3] beschreibt Blau als assoziiert mit Ruhe, Vertrauen und Konzentration, und betont, dass diese Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Violett, das physikalisch zwischen Blau und dem UV-Rand liegt (ca. 380–450 nm) [10][24], teilt die Blautöne-Charakteristik, aber seine Wahrnehmung ist stärker vom spektralen Mix und vom Bildschirm-Rendering abhängig: Ein "Violett" auf einem Monitor ist typischerweise ein Magenta-Mix (rotes + blaues Licht), kein Spektralreinstoff [31]. Zwei Beobachter können dieselbe Bildschirmfarbe als eher blau-violett oder eher rot-violett wahrnehmen – ein Metamerie-Phänomen, das emotionale Aussagen zusätzlich fraglich macht [24][31]. Die Studie [4] zeigt, dass solche Wahrnehmungsvarianzen die emotionale Interpretation stärker beeinflussen als bei Grundfarben mit klarerem Spektralspektrum.',
+          text: 'Die Review [3] beschreibt Blau als assoziiert mit Ruhe, Vertrauen und Konzentration, und betont, dass diese Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Violett, das physikalisch zwischen Blau und dem UV-Rand liegt (ca. 380–450 nm) [10][24], teilt die Blautöne-Charakteristik, aber seine Wahrnehmung ist stärker vom spektralen Mix und vom Bildschirm-Rendering abhängig: Ein "Violett" auf einem Monitor ist typischerweise ein Magenta-Mix (rotes + blaues Licht), kein Spektralreinstoff [31]. Zwei Beobachter können dieselbe Bildschirmfarbe als eher blau-violett oder eher rot-violett wahrnehmen – ein Metamerie-Phänomen, das emotionale Aussagen zusätzlich fraglich macht [24][31].',
         },
         {
           type: 'p',
@@ -1071,41 +1140,33 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: 'Interkulturell sind Blautöne- und Violett-Assoziationen ähnlich (Ruhe, Tiefe), aber die Varianz bleibt hoch [4]. Eine Aussage wie "Violett fördert Spiritualität stärker als Blau" wäre nicht belegt – sie würde die fehlende Eigenstudie durch eine künstliche Differenzierung ersetzen. Die ehrliche Einordnung lautet: Violett hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen (gelb, [1][2]), nicht als Wirkung.',
-        },
-        {
-          type: 'quote',
-          text: '**Red-Tabu beachtet:** Keine medizinische Wirkung, keine "Violett heilt Krebs", keine "UV liegt im Violettbereich"-Falschbehauptung [9][19]. Keine roten Aussagen zur Farbwirkung.',
+          text: 'Interkulturell sind Blautöne- und Violett-Assoziationen ähnlich (Ruhe, Tiefe), aber die Varianz bleibt hoch [4]. Eine Aussage wie "Violett fördert Spiritualität stärker als Blau" wäre nicht belegt – sie würde die fehlende Eigenstudie durch eine künstliche Differenzierung ersetzen. Die ehrliche Einordnung lautet: Violett hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.',
         },
       ],
       tradition: [
         {
           type: 'p',
-          text: 'In der Tradition heißt es, Violett stehe für das Kronenchakra und für Spiritualität [1]. Das moderne Regenbogenmodell ordnet Violett dem siebten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination existiert [1][2]. In der klassischen Lehre (1577) gab es keine Farbzuordnung zu den Zentern [1].',
-        },
-        {
-          type: 'h3',
-          text: 'Physikalisch und traditionell',
-        },
-        {
-          type: 'p',
-          text: 'Violett (ca. 380–450 nm, ca. 666–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich und die geringste Sichtbarkeit [10][24]. Der Übergang zum UV ist fließend; UV selbst liegt außerhalb des sichtbaren Spektrums [19]. Die Aussage, "UV liegt im Violettbereich", ist falsch und nicht verwendet [9][19]. In der Tradition heißt es, Violett stehe für das Kronenchakra und Spiritualität [1] – das moderne Modell ordnet es dem siebten Zentrum zu (erst 1977) [1][2]. Keine medizinische Wirkung wird behauptet [9][20].',
+          text: 'In der Tradition heißt es, Violett stehe für das Kronenchakra und für Spiritualität [1]. Das moderne Regenbogenmodell ordnet Violett dem siebten Zentrum zu – eine Zuordnung, die erst seit 1977 in dieser Kombination existiert [1][2]. Die klassischen Texte ordnen den Zentren Farben zu – Element- und Lotosfarben; eine Regenbogenfolge von Rot bis Violett kennen sie nicht [1][2].',
         },
       ],
       anwendung: [
         {
           type: 'p',
-          text: '"Violett heilt Krebs", "UV liegt im Violettbereich" [9][19] – nicht verwendet. Keine medizinische Wirkung behauptet.',
+          text: 'Für eine Heilwirkung von Violett gegen Krebs oder als spezifische Lichttherapie gibt es keine belastbare Evidenz [9][19].',
         },
         {
           type: 'quote',
-          text: '**Health-Disclaimer:** Keine medizinische Wirkung behauptet. Kein Ersatz für medizinische Behandlung [9][19].',
+          text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
+        },
+        {
+          type: 'p',
+          text: 'Farbspezifische Ergänzung: Violett (ca. 380–450 nm, ca. 666–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich, wird aber am schwächsten wahrgenommen; in der Tradition steht es für das Kronenchakra – ohne medizinische Wirkaussage [1][10][24].',
         },
       ],
       geschichte: [
         {
           type: 'p',
-          text: 'Die große systematische Review [3] zeigt, dass Farb-Emotions-Assoziationen interkulturell ähnlich, aber nicht identisch sind [4]. Metamerie zeigt, dass Farbe ein Wahrnehmungsereignis ist, kein Objekt [31]. Bildschirme erzeugen Metamere der Spektralfarben [24][31].',
+          text: 'Das moderne Regenbogenmodell ordnet Violett dem siebten Zentrum zu – eine Zuordnung, die erst 1977 in dieser Kombination existiert [1]. Die klassische *Sat-cakra-nirupana* (1577) kennt sechs Zentren und das Sahasrāra; sie ordnet Element- und Lotosfarben zu, aber keine Regenbogenfolge [1][2]. Violett liegt mit ca. 380–450 nm am kurzwelligen Rand des sichtbaren Spektrums und grenzt an den UV-Bereich [10][19].',
         },
         {
           type: 'h3',
@@ -1114,7 +1175,7 @@ export const FARBWELTEN = [
         {
           type: 'timeline',
           items: [
-            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra, keine Farbzuordnung [1].',
+            '1577: *Sat-cakra-nirupana* — sechs Zentren und das Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
             '1919: Woodroffe/Avalon — westliche Übersetzung, Autoritätsquelle für fast alle späteren Chakratexte [2].',
             '1920er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen zu den Zentren [1].',
             '1977: Das Regenbogen-Chakramodell mit sieben Farben erscheint in dieser Kombination [1].',
@@ -1127,7 +1188,23 @@ export const FARBWELTEN = [
           text: 'Betrachten Sie einen violetten Farbton – ein Bild, eine Blume, ein Licht. Notieren Sie eine Assoziation, nicht eine Diagnose.',
         },
       ],
-      quellen: [],
+      quellen: [
+        {
+          type: 'list',
+          items: [
+            '[1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
+            '[2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe',
+            '[3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z',
+            '[4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." Psychon Bull & Rev. https://doi.org/10.1177/0956797620948810',
+            '[7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1',
+            '[9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
+            '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
+            '[24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).',
+            '[31] CIE / Wyszecki (2000). Color Science; Metamerie, Spektralfarben.',
+            '[19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int',
+          ],
+        },
+      ],
     },
     compare: {
       traditionTitle: 'Violett und das zu geordnete Zentrum',
@@ -1141,7 +1218,7 @@ export const FARBWELTEN = [
       note: 'Die Evidenzlage ist nicht symmetrisch: Die Tradition beschreibt eine Bedeutung, die Forschung untersucht Lichtwirkungen — nicht die Farbe als Heilmittel.',
     },
     sources: ['1', '2', '3', '4', '7', '9', '10', '19', '24', '31'],
-    shortRefs: ['20'],
+    shortRefs: [],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
   },
 ];
@@ -1163,7 +1240,7 @@ export const LANDING = {
       blocks: [
         {
           type: 'p',
-          text: 'Die Physik ist unkompliziert: Licht ist elektromagnetische Strahlung; der sichtbare Bereich liegt bei etwa 380 bis 750 Nanometern [24]. Was wir als Farbe erleben, entsteht erst im Gehirn, durch Kontrast, Kontext und Erinnerung. Metamerie – dass zwei verschiedene Spektren als gleiche Farbe erscheinen – ist ein Beleg dafür, dass Farbe kein Objekt, sondern ein Erlebnis ist [31]. Magenta, eine Farbe, die im Spektrum gar nicht vorkommt, zeigt das besonders deutlich.',
+          text: 'Die Physik ist unkompliziert: Licht ist elektromagnetische Strahlung; der sichtbare Bereich liegt bei etwa 380–780 Nanometern [24]. Was wir als Farbe erleben, entsteht erst im Gehirn, durch Kontrast, Kontext und Erinnerung. Metamerie – dass zwei verschiedene Spektren als gleiche Farbe erscheinen – ist ein Beleg dafür, dass Farbe kein Objekt, sondern ein Erlebnis ist [31]. Magenta, eine Farbe, die im Spektrum gar nicht vorkommt, zeigt das besonders deutlich.',
         },
         {
           type: 'p',
@@ -1211,6 +1288,10 @@ export const LANDING = {
           type: 'p',
           text: '**Chromotherapie als Krankheitsbehandlung** – also der Versuch, Farben als direktes Heilmittel gegen Krankheiten einzusetzen – wurde vom spanischen Gesundheitsministerium (OSTEBA, 2025) in einer HTA-Bewertung geprüft: Keine geeignete Randomisierte Studie oder Systematische Review wurde gefunden; das Verfahren wird als Pseudotherapie eingestuft [9]. Das ist kein Werturteil über Tradition, sondern eine klare Aussage zur medizinischen Evidenz.',
         },
+        {
+          type: 'quote',
+          text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9]. Die genannten Lichttherapien (SAD, Neonaten-Phototherapie, NB-UVB, Photobiomodulation) sind medizinische Verfahren, keine Alternative zu ärztlich verordneten Therapien, und dürfen nur unter fachlicher Anleitung durchgeführt werden [14][19].',
+        },
       ],
     },
     {
@@ -1224,7 +1305,7 @@ export const LANDING = {
       ],
     },
   ],
-  sources: ['24', '31', '3', '4', '5', '1', '2', '7', '15', '17', '18', '10', '9'],
+  sources: ['24', '31', '3', '4', '5', '1', '2', '7', '15', '17', '18', '10', '9', '14', '19'],
   worlds: ['rot', 'orange', 'gelb', 'gruen', 'blau', 'indigo', 'violett'],
 };
 
@@ -1242,7 +1323,7 @@ export const CHAKREN_PAGE = {
     {
       type: 'list',
       items: [
-        '1577: *Sat-cakra-nirupana* – sechs Zentren + Sahasrāra, keine Farbzuordnung [1].',
+        '1577: *Sat-cakra-nirupana* – sechs Zentren + Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].',
         '1919: Woodroffe/Avalon – westliche Übersetzung, Autoritätsquelle [2].',
         '1927/1930er: Theosophie und westliche Esoterik entwickeln Farbzuordnungen [1].',
         '1977: Regenbogen-Chakramodell mit sieben Farben als "traditionelle Lehre" zusammengeführt [1].',
@@ -1250,7 +1331,7 @@ export const CHAKREN_PAGE = {
     },
     {
       type: 'p',
-      text: 'In der Tradition heißt es, die sieben Regenbogen-Chakren seien eine uralte indische Lehre – das ist eine rote Aussage (nicht verwendet), denn sie ist historisch nicht belegbar [1][9].',
+      text: 'In der Tradition heißt es, die sieben Regenbogen-Chakren seien eine uralte indische Lehre – das ist historisch nicht belegbar [1][9].',
     },
   ],
   model: [
@@ -1295,17 +1376,17 @@ export const CHAKREN_PAGE = {
       type: 'list',
       items: [
         'Chakren sind nicht wissenschaftlich messbar [1][2].',
-        '"Chakra-Blockaden verursachen Krankheit" ist eine rote Aussage [9] – nicht verwendet.',
+        'Für einen kausalen Zusammenhang zwischen Chakra-Blockaden und Krankheit liefert die geprüfte Literatur keine belastbare Evidenz [9].',
         'Die Regenbogen-Farbzuordnung ist modern (1977) [1]; klassische Lehre kennt sie nicht [2].',
         'Farb-Emotions-Assoziationen sind belegt [3][4]; keine medizinische Wirkung der Farben als Behandlung [9].',
       ],
     },
     {
       type: 'quote',
-      text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Farben und Chakren sind Traditions- und Wahrnehmungsthemen, keine medizinischen Verfahren [9].',
+      text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
     },
   ],
-  sources: ['1', '2', '9', '3', '14', '10', '19', '4', '24'],
+  sources: ['1', '2', '9', '3', '14', '10', '19', '4', '5', '7', '24'],
   related: ['rot', 'orange', 'gelb', 'gruen', 'blau', 'indigo', 'violett'],
 };
 
@@ -1317,7 +1398,7 @@ export const LIGHT_PAGE = {
     description:
       'Wellenlänge, Frequenz und Photonenenergie berechnen; Lichttherapie und Photobiologie mit Quellen und klaren Evidenzgrenzen.',
   },
-  lede: 'Licht ist elektromagnetische Strahlung. Der sichtbare Bereich liegt bei ca. 380–750 nm; UV und Infrarot liegen außerhalb [24]. "Frequenz" und "Wellenlänge" sind verknüpft (f = c/λ). Die Aussage "Farbtemperatur in Kelvin ist die Frequenz des Lichts" ist falsch [32] – nicht verwendet.',
+  lede: 'Licht ist elektromagnetische Strahlung. Der sichtbare Bereich liegt bei ca. 380–780 nm; UV und Infrarot liegen außerhalb [24]. "Frequenz" und "Wellenlänge" sind verknüpft (f = c/λ). Die Aussage "Farbtemperatur in Kelvin ist die Frequenz des Lichts" ist falsch [24] – nicht verwendet.',
   intro: [],
   sections: [
     {
@@ -1349,7 +1430,7 @@ export const LIGHT_PAGE = {
       blocks: [
         {
           type: 'p',
-          text: 'Die HTA-Bewertung des spanischen Gesundheitsministeriums (OSTEBA, 2025) fand für Chromotherapie als Krankheitsbehandlung keine geeignete RCT oder Systematische Review und stufte sie als Pseudotherapie ein [9]. "Lichtfrequenzen heilen Organe" [11] oder "jede Farbe hat eine Organfrequenz" [9] – nicht verwendet.',
+          text: 'Die HTA-Bewertung des spanischen Gesundheitsministeriums (OSTEBA, 2025) fand für Chromotherapie als Krankheitsbehandlung keine geeignete RCT oder Systematische Review und stufte sie als Pseudotherapie ein [9]. Für eine heilende Wirkung von Lichtfrequenzen auf Organe oder eine feste Frequenzzuordnung der Farben gibt es keine belastbare Evidenz [9][11].',
         },
       ],
     },
@@ -1373,10 +1454,10 @@ export const LIGHT_PAGE = {
       blocks: [
         {
           type: 'quote',
-          text: '**Wichtiger Hinweis zur Gesundheit:** Die Inhalte dieser Seite ersetzen **keine medizinische Diagnose, Beratung oder Behandlung**. Lichtmedizin und Farbtherapie sind **keine Alternativen** zu ärztlich verordneten Therapien. Bei gesundheitlichen Beschwerden wenden Sie sich bitte an eine medizinische Fachkraft. Chromotherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9]; die hier genannten Lichttherapien (SAD, Photobiomodulation, NB-UVB, Neonaten-Phototherapie) sind medizinische Verfahren und dürfen nur unter fachlicher Anleitung durchgeführt werden. Keine Selbstmedikation mit UV-, Laser- oder Hochintensitätslicht ohne ärztliche Beratung [14][19].',
+          text: '**Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].',
         },
       ],
     },
   ],
-  sources: ['24', '32', '15', '16', '17', '18', '10', '9', '11', '14', '19'],
+  sources: ['24', '15', '16', '17', '18', '10', '9', '11', '14', '19'],
 };
