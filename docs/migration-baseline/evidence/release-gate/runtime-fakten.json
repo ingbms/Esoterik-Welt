@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-03T22:14:04.801Z",
-  "base": "http://127.0.0.1:47229/Esoterik-Welt/",
-  "base_commit": "8892586ff4f4a5819a89607e2d1295cfb4ff1546",
+  "generated_at": "2026-11-03T22:15:21.924Z",
+  "base": "http://127.0.0.1:18382/Esoterik-Welt/",
+  "base_commit": "627c463986456618c96a65f919045d126ab04a57",
   "facts": {
     "crystals": {
       "cards": 30,
@@ -38,8 +38,8 @@
         "crys-10"
       ],
       "dataRequests": [
-        "http://127.0.0.1:47229/Esoterik-Welt/js/modules/crystals.js",
-        "http://127.0.0.1:47229/Esoterik-Welt/data/crystals.json"
+        "http://127.0.0.1:18382/Esoterik-Welt/js/modules/crystals.js",
+        "http://127.0.0.1:18382/Esoterik-Welt/data/crystals.json"
       ]
     },
     "farbwelten": {
