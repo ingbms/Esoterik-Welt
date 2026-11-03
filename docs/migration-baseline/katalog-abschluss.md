@@ -35,7 +35,7 @@ Alle Angaben unten stammen aus Läufen dieses Masterlaufs auf `fdef1aa`, nicht a
 | Secret-Muster im Diff | Muster für Private Keys, API-Keys, Passwörter, Tokens | keine Treffer |
 | Absolute Benutzerpfade in den Katalogdateien | `git grep` auf `C:/Users` | keine Treffer |
 | CI-Lint des Repositories | `npm run lint` (ESLint) und `npm run format:check` (Prettier) | beide Exit 0 nach B-2 |
-| Umfang des Diffs | `git diff --stat origin/main...HEAD` | 82 Dateien, 67 746 Zeilen, ausschließlich `docs/migration-baseline/`, `scripts/migration-baseline/` und vier Zeilen `.gitattributes` |
+| Umfang des Diffs | `git diff --stat origin/main...HEAD` | 86 Dateien, 68 504 Zeilen; ausschließlich `docs/migration-baseline/`, `scripts/migration-baseline/`, vier Zeilen `.gitattributes` und drei Globals in `eslint.config.cjs` |
 
 **Warum der eigene Gegenprüfer:** Projektprüfer und Katalog stammen aus derselben
 Werkzeugkette. Ein zweiter Leser mit eigener Implementierung (eigener CSV-Leser, eigene
@@ -104,7 +104,9 @@ c59a074  Inhalts-Katalog
 137375d  Belege auf 627c463
 debd50e  Katalog-Metadaten außerhalb des Schemas
 fdef1aa  Belege auf debd50e
-<dieser> Masterabschluss, Belege auf fdef1aa, Befunde B-1 und B-2 behoben
+eda2ba3  Masterabschluss und Belege auf fdef1aa
+b40a753  Befunde B-1 und B-2 behoben, CI-Lint gruen
+<dieser> Diffumfang auf den PR-Kopf nachgezogen
 ```
 
 ## 4. Offene Auflagen (unverändert aus dem Release-Gate)
