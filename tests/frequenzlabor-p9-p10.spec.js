@@ -264,6 +264,11 @@ test.describe('P10 — Meditationssitzung', () => {
   test('M6: Verlassen der Ansicht stoppt den Ton sofort und sichert genau einmal', async ({ page }) => {
     // Zählt jeden Schreibzugriff auf den Meditations-Schlüssel: die Restzeit
     // darf beim Ansichtswechsel genau einmal gesichert werden (R1).
+    const errors = [];
+    page.on('pageerror', (error) => errors.push(`pageerror: ${error.message}`));
+    page.on('console', (message) => {
+      if (message.type() === 'error') errors.push(`console: ${message.text()}`);
+    });
     await page.addInitScript(() => {
       window.__medWrites = [];
       const original = Storage.prototype.setItem;
@@ -313,6 +318,10 @@ test.describe('P10 — Meditationssitzung', () => {
     await page.locator('.fq-nav a[href="#frequenzen"]').click();
     await expect(page.locator('#fqLibrary')).toBeVisible();
     await expect.poll(status).toBe('idle');
+    // Die Statusmeldung wird mit bis zu 1 s Verzögerung angewendet; erst danach
+    // wäre ein Timer-Fehler aus der abgebauten Ansicht sichtbar.
+    await page.waitForTimeout(1200);
+    expect(errors, `Fehler beim Ansichtswechsel: ${errors.join(' | ')}`).toEqual([]);
   });
 
   test('M7: die Rückkehr zeigt keine laufende Sitzung und setzt genau einmal fort', async ({ page }) => {
@@ -377,6 +386,46 @@ test.describe('P10 — Meditationssitzung', () => {
       expect(distinct[index], `Sprung in ${distinct.join(', ')}`).toBeLessThanOrEqual(distinct[index - 1] + 1e-6);
     }
     expect(distinct[distinct.length - 1], 'Ausblenden endet bei der Hörschwelle').toBeLessThan(-55);
+  });
+
+  test('M11: jeder Ansichtswechsel während einer Ansage wirft keinen Fehler', async ({ page }) => {
+    // D1: `announce()` plant die Statusmeldung mit bis zu 1 s Verzögerung ein.
+    // Wer die Ansicht in dieser Zeit verlässt, darf keinen TypeError aus dem
+    // Timer bekommen — weder als pageerror noch als console.error.
+    const errors = [];
+    page.on('pageerror', (error) => errors.push(`pageerror: ${error.message}`));
+    page.on('console', (message) => {
+      if (message.type() === 'error') errors.push(`console: ${message.text()}`);
+    });
+    const status = () => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status);
+
+    const cases = [
+      { dwell: 300, hash: '#frequenzen/cymatics', marker: '#fqCyCanvasA', label: 'Cymatics' },
+      { dwell: 700, hash: '#frequenzen', marker: '#fqLibrary', label: 'Hub' },
+      { dwell: 300, hash: '#frequenzen/labor', marker: '#fqPlay', label: 'Labor' },
+      { dwell: 700, hash: '#home', marker: '#home-title', label: 'andere Kategorie' },
+    ];
+
+    for (const item of cases) {
+      await openRoute(page, 'frequenzen/meditation');
+      await page.locator('#fqMedDuration').selectOption('3');
+      await page.locator('#fqMedFadeIn').selectOption('0');
+      await page.locator('#fqMedStart').click();
+      await expect.poll(status).toBe('running');
+      // Verweildauer so wählen, dass die Ansage noch aussteht (1-s-Drosselung).
+      await page.waitForTimeout(item.dwell);
+
+      const mark = errors.length;
+      await page.evaluate((hash) => {
+        window.location.hash = hash;
+      }, item.hash);
+      await expect(page.locator(item.marker).first()).toBeVisible();
+      // Länger als die Drosselung warten: der ehemals offene Timer wäre jetzt fällig.
+      await page.waitForTimeout(1300);
+
+      expect(await status(), `${item.label}: Audio endet beim Wechsel`).toBe('idle');
+      expect(errors.slice(mark), `${item.label} nach ${item.dwell} ms: ${errors.slice(mark).join(' | ')}`).toEqual([]);
+    }
   });
 });
 

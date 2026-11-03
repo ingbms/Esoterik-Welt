@@ -65,6 +65,7 @@ export class MeditationView {
     this.refs = {};
     this.timer = 0;
     this.fadeTimer = 0;
+    this.announceTimer = 0;
     this.lastAnnounce = 0;
     this.nextPresetId = DEFAULT_SESSION.presetId;
   }
@@ -279,11 +280,20 @@ export class MeditationView {
     const now = Date.now();
     const wait = Math.max(0, 1000 - (now - this.lastAnnounce));
     const apply = () => {
+      this.announceTimer = 0;
+      // Die Ansicht kann zwischen Einplanung und Ausführung abgebaut werden
+      // (Routenwechsel). Dann gibt es kein status-Element mehr: Die Ansage
+      // entfällt, statt einen TypeError im Timer zu werfen.
+      if (!this.refs.status) return;
       this.refs.status.textContent = message;
       this.lastAnnounce = Date.now();
     };
+    // Nur eine Ansage steht aus; eine neuere ersetzt die ältere, statt sie
+    // später zu überschreiben.
+    clearTimeout(this.announceTimer);
+    this.announceTimer = 0;
     if (wait === 0) apply();
-    else setTimeout(apply, wait);
+    else this.announceTimer = setTimeout(apply, wait);
   }
 
   /* ------------------------------------------------------------- Sitzungen */
@@ -622,8 +632,10 @@ export class MeditationView {
     this.saveInterrupted();
     clearInterval(this.timer);
     clearInterval(this.fadeTimer);
+    clearTimeout(this.announceTimer);
     this.timer = 0;
     this.fadeTimer = 0;
+    this.announceTimer = 0;
     try {
       this.engine.stop().catch(() => {});
     } catch {
