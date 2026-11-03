@@ -1,0 +1,468 @@
+{
+  "summary": {
+    "findings": [
+      {
+        "id": "P1-2",
+        "severity": "blocking",
+        "message": "Seitenfehler: [{\"url\":\"http://127.0.0.1:3291/Esoterik-Welt/#farbwelten/kompass\",\"text\":\"TypeError: Cannot read properties of undefined (reading 'associations')\"},{\"url\":\"http://127.0.0.1:3291/Esoterik-Welt/#farbwelten/kompass\",\"text\":\"TypeError: Cannot read properties of undefined (reading 'associations')\"},{\"url\":\"http://127.0.0.1:3291/Esoterik-Welt/#farbwelten/kompass\",\"text\":\"TypeError: Cannot read properties of undefined (reading 'associations')\"},{\"url\":\"http://127.0.0.1:3291/Esoterik-Welt/#farbwelten/kompass\",\"text\":\"TypeError: Cannot read properties of undefined (reading 'associations')\"},{\"url\":\"http://127.0.0.1:3291/Esoterik-Welt/#farbwelten/kompass\",\"text\":\"TypeError: Cannot read properties of undefined (reading 'associations')\"}]",
+        "repro": "neue Routen"
+      }
+    ],
+    "blocking": 1,
+    "major": 0,
+    "minor": 0
+  },
+  "notes": {
+    "physics": {
+      "magenta": {
+        "rows": [
+          {
+            "label": "Einordnung",
+            "value": "nicht spektral"
+          },
+          {
+            "label": "Wellenlänge",
+            "value": "keine eigene Wellenlänge"
+          },
+          {
+            "label": "Einordnung",
+            "value": "nicht spektral — keine eigene Wellenlänge"
+          },
+          {
+            "label": "Zustandekommen",
+            "value": "additive Mischung aus Rot und Blau (Licht) bzw. Remission bei Pigmenten"
+          }
+        ],
+        "factsText": "Einordnung: nicht spektral | Wellenlänge: keine eigene Wellenlänge | Einordnung: nicht spektral — keine eigene Wellenlänge | Zustandekommen: additive Mischung aus Rot und Blau (Licht) bzw. Remission bei Pigmenten",
+        "typLabel": "Farbwelt 09 / 12 · nicht spektral"
+      },
+      "rosa": {
+        "rows": [
+          {
+            "label": "Einordnung",
+            "value": "nicht spektral"
+          },
+          {
+            "label": "Wellenlänge",
+            "value": "keine eigene Wellenlänge"
+          },
+          {
+            "label": "Einordnung",
+            "value": "nicht spektral — keine eigene Wellenlänge"
+          },
+          {
+            "label": "Zustandekommen",
+            "value": "additive Mischung aus Rot und Blau (Licht) bzw. Remission bei Pigmenten"
+          }
+        ],
+        "factsText": "Einordnung: nicht spektral | Wellenlänge: keine eigene Wellenlänge | Einordnung: nicht spektral — keine eigene Wellenlänge | Zustandekommen: additive Mischung aus Rot und Blau (Licht) bzw. Remission bei Pigmenten",
+        "typLabel": "Farbwelt 10 / 12 · nicht spektral"
+      },
+      "weiss": {
+        "rows": [
+          {
+            "label": "Einordnung",
+            "value": "Neutralfarbe"
+          },
+          {
+            "label": "Wellenlänge",
+            "value": "keine eigene Wellenlänge"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Neutralfarbe — keine eigene Wellenlänge"
+          },
+          {
+            "label": "Zustandekommen",
+            "value": "Superposition aller sichtbaren Wellenlängen (Licht) bzw. breite Remission (Oberfläche)"
+          }
+        ],
+        "factsText": "Einordnung: Neutralfarbe | Wellenlänge: keine eigene Wellenlänge | Einordnung: Neutralfarbe — keine eigene Wellenlänge | Zustandekommen: Superposition aller sichtbaren Wellenlängen (Licht) bzw. breite Remission (Oberfläche)",
+        "typLabel": "Farbwelt 11 / 12 · Neutralfarbe"
+      },
+      "schwarz": {
+        "rows": [
+          {
+            "label": "Einordnung",
+            "value": "Neutralfarbe"
+          },
+          {
+            "label": "Wellenlänge",
+            "value": "keine eigene Wellenlänge"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Neutralfarbe — keine eigene Wellenlänge"
+          },
+          {
+            "label": "Zustandekommen",
+            "value": "nahezu vollständige Absorption des sichtbaren Lichts, minimale Remission"
+          }
+        ],
+        "factsText": "Einordnung: Neutralfarbe | Wellenlänge: keine eigene Wellenlänge | Einordnung: Neutralfarbe — keine eigene Wellenlänge | Zustandekommen: nahezu vollständige Absorption des sichtbaren Lichts, minimale Remission",
+        "typLabel": "Farbwelt 12 / 12 · Neutralfarbe"
+      },
+      "tuerkis": {
+        "rows": [
+          {
+            "label": "Wellenlängenbereich",
+            "value": "490–520 nm (Übergangsbereich, Konvention)"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Spektralfarbe im Übergangsbereich zwischen Grün und Blau"
+          },
+          {
+            "label": "Wellenlängenbereich",
+            "value": "490–520 nm (Übergangsbereich, Konvention)"
+          },
+          {
+            "label": "Frequenz",
+            "value": "577–612 THz"
+          },
+          {
+            "label": "Photonenenergie",
+            "value": "ca. 2,38–2,53 eV"
+          },
+          {
+            "label": "Entstehung",
+            "value": "Spektralfarbe im Übergangsbereich zwischen Grün und Blau; die Grenzen 490 und 520 nm sind Konvention"
+          }
+        ],
+        "factsText": "Wellenlängenbereich: 490–520 nm (Übergangsbereich, Konvention) | Einordnung: Spektralfarbe im Übergangsbereich zwischen Grün und Blau | Wellenlängenbereich: 490–520 nm (Übergangsbereich, Konvention) | Frequenz: 577–612 THz | Photonenenergie: ca. 2,38–2,53 eV | Entstehung: Spektralfarbe im Übergangsbereich zwischen Grün und Blau; die Grenzen 490 und 520 nm sind Konvention",
+        "typLabel": "Farbwelt 05 / 12 · Spektralfarbe"
+      },
+      "rot": {
+        "rows": [
+          {
+            "label": "Wellenlängenbereich",
+            "value": "620–750 nm"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Spektralfarbe im sichtbaren Bereich"
+          },
+          {
+            "label": "Wellenlängenbereich",
+            "value": "620–750 nm (konventionelle Näherung)"
+          },
+          {
+            "label": "Frequenz",
+            "value": "400–484 THz"
+          },
+          {
+            "label": "Photonenenergie",
+            "value": "ca. 1,65–2,00 eV"
+          },
+          {
+            "label": "Entstehung",
+            "value": "Spektralfarbe innerhalb des sichtbaren Bereichs"
+          }
+        ],
+        "factsText": "Wellenlängenbereich: 620–750 nm | Einordnung: Spektralfarbe im sichtbaren Bereich | Wellenlängenbereich: 620–750 nm (konventionelle Näherung) | Frequenz: 400–484 THz | Photonenenergie: ca. 1,65–2,00 eV | Entstehung: Spektralfarbe innerhalb des sichtbaren Bereichs",
+        "typLabel": "Farbwelt 01 / 12 · Spektralfarbe"
+      }
+    },
+    "explorer": {
+      "min": "380",
+      "max": "780",
+      "value": "530",
+      "offaxisText": "Die Achse dieses Explorers führt ausschließlich Wellenlängen von 380 bis 780 nm. Nichtspektrale und neutrale Farben haben keine eigene Wellenlänge und werden deshalb nicht auf die Achse gelegt; ihre Seiten sind hier direkt erreichbar. Magenta — nicht spektral Rosa — nicht spektral Weiß — Neutralfarbe Schwarz — Neutralfarbe Türkis ist ein spektraler Übergangsbereich zwischen Grün und Blau (ca. 490–520 nm, Konvention) und erscheint deshalb nicht als eigene Stufe der Achse.",
+      "offaxisLinks": [
+        "#farbwelten/magenta",
+        "#farbwelten/rosa",
+        "#farbwelten/weiss",
+        "#farbwelten/schwarz"
+      ],
+      "axisLabels": [],
+      "axisText": ""
+    },
+    "slider": [
+      {
+        "nm": 420,
+        "expectedThz": 713.7915666666667,
+        "expectedEv": 2.9520047238095235,
+        "gotThz": 713.8,
+        "gotEv": 2.95,
+        "readout": "420 Nanometer, Violett, 713,8 Terahertz, 2,95 Elektronenvolt",
+        "valueText": "420 Nanometer, Violett, 713,8 Terahertz, 2,95 Elektronenvolt",
+        "value": "420"
+      },
+      {
+        "nm": 530,
+        "expectedThz": 565.6461471698112,
+        "expectedEv": 2.3393244981132075,
+        "gotThz": 565.6,
+        "gotEv": 2.34,
+        "readout": "530 Nanometer, Grün, 565,6 Terahertz, 2,34 Elektronenvolt",
+        "valueText": "530 Nanometer, Grün, 565,6 Terahertz, 2,34 Elektronenvolt",
+        "value": "530"
+      },
+      {
+        "nm": 650,
+        "expectedThz": 461.2191661538461,
+        "expectedEv": 1.907449206153846,
+        "gotThz": 461.2,
+        "gotEv": 1.91,
+        "readout": "650 Nanometer, Rot, 461,2 Terahertz, 1,91 Elektronenvolt",
+        "valueText": "650 Nanometer, Rot, 461,2 Terahertz, 1,91 Elektronenvolt",
+        "value": "650"
+      }
+    ],
+    "compass": {
+      "radios": [
+        {
+          "value": "rot",
+          "label": "RotWurzelchakra · moderne Zuordnung"
+        },
+        {
+          "value": "orange",
+          "label": "OrangeSakralchakra · moderne Zuordnung"
+        },
+        {
+          "value": "gelb",
+          "label": "GelbSolarplexuschakra · moderne Zuordnung"
+        },
+        {
+          "value": "gruen",
+          "label": "GrünHerzchakra · moderne Zuordnung"
+        },
+        {
+          "value": "tuerkis",
+          "label": "Türkis (Cyan)ohne Chakra-Zuordnung"
+        },
+        {
+          "value": "blau",
+          "label": "BlauHalschakra · moderne Zuordnung"
+        },
+        {
+          "value": "indigo",
+          "label": "IndigoStirnchakra · moderne Zuordnung"
+        },
+        {
+          "value": "violett",
+          "label": "ViolettKronenchakra · moderne Zuordnung"
+        },
+        {
+          "value": "magenta",
+          "label": "Magentaohne Chakra-Zuordnung"
+        },
+        {
+          "value": "rosa",
+          "label": "Rosaohne Chakra-Zuordnung"
+        },
+        {
+          "value": "weiss",
+          "label": "Weißohne Chakra-Zuordnung"
+        },
+        {
+          "value": "schwarz",
+          "label": "Schwarzohne Chakra-Zuordnung"
+        }
+      ],
+      "live": [],
+      "panelName": "Rot",
+      "statusText": "Rot: Erregung, Aufmerksamkeit, Gefahr oder Leidenschaft (in vielen Kulturen)",
+      "blocks": 5
+    },
+    "compassPanels": [
+      {
+        "id": "rot",
+        "name": "Rot",
+        "text": "AUSGEWÄHLTE FARBWELT Rot Spektralfarbe · 620–750 nm · 400–484 THz Häufige Assoziationen Erregung Aufmerksamkeit Gefahr oder Leidenschaft (in vielen Kulturen) Assoziation, keine Wirkung — die Befunde beschreiben Muster, nicht Ursachen [3][4]. Traditionelle Bedeutung Deutungstradition In der Tradition",
+        "blocks": 5,
+        "status": "Rot: Erregung, Aufmerksamkeit, Gefahr oder Leidenschaft (in vielen Kulturen)"
+      },
+      {
+        "id": "tuerkis",
+        "name": "Rot",
+        "text": "AUSGEWÄHLTE FARBWELT Rot Spektralfarbe · 620–750 nm · 400–484 THz Häufige Assoziationen Erregung Aufmerksamkeit Gefahr oder Leidenschaft (in vielen Kulturen) Assoziation, keine Wirkung — die Befunde beschreiben Muster, nicht Ursachen [3][4]. Traditionelle Bedeutung Deutungstradition In der Tradition",
+        "blocks": 5,
+        "status": "Rot: Erregung, Aufmerksamkeit, Gefahr oder Leidenschaft (in vielen Kulturen)"
+      },
+      {
+        "id": "magenta",
+        "name": "Rot",
+        "text": "AUSGEWÄHLTE FARBWELT Rot Spektralfarbe · 620–750 nm · 400–484 THz Häufige Assoziationen Erregung Aufmerksamkeit Gefahr oder Leidenschaft (in vielen Kulturen) Assoziation, keine Wirkung — die Befunde beschreiben Muster, nicht Ursachen [3][4]. Traditionelle Bedeutung Deutungstradition In der Tradition",
+        "blocks": 5,
+        "status": "Rot: Erregung, Aufmerksamkeit, Gefahr oder Leidenschaft (in vielen Kulturen)"
+      },
+      {
+        "id": "rosa",
+        "name": "Rot",
+        "text": "AUSGEWÄHLTE FARBWELT Rot Spektralfarbe · 620–750 nm · 400–484 THz Häufige Assoziationen Erregung Aufmerksamkeit Gefahr oder Leidenschaft (in vielen Kulturen) Assoziation, keine Wirkung — die Befunde beschreiben Muster, nicht Ursachen [3][4]. Traditionelle Bedeutung Deutungstradition In der Tradition",
+        "blocks": 5,
+        "status": "Rot: Erregung, Aufmerksamkeit, Gefahr oder Leidenschaft (in vielen Kulturen)"
+      },
+      {
+        "id": "weiss",
+        "name": "Rot",
+        "text": "AUSGEWÄHLTE FARBWELT Rot Spektralfarbe · 620–750 nm · 400–484 THz Häufige Assoziationen Erregung Aufmerksamkeit Gefahr oder Leidenschaft (in vielen Kulturen) Assoziation, keine Wirkung — die Befunde beschreiben Muster, nicht Ursachen [3][4]. Traditionelle Bedeutung Deutungstradition In der Tradition",
+        "blocks": 5,
+        "status": "Rot: Erregung, Aufmerksamkeit, Gefahr oder Leidenschaft (in vielen Kulturen)"
+      },
+      {
+        "id": "schwarz",
+        "name": "Rot",
+        "text": "AUSGEWÄHLTE FARBWELT Rot Spektralfarbe · 620–750 nm · 400–484 THz Häufige Assoziationen Erregung Aufmerksamkeit Gefahr oder Leidenschaft (in vielen Kulturen) Assoziation, keine Wirkung — die Befunde beschreiben Muster, nicht Ursachen [3][4]. Traditionelle Bedeutung Deutungstradition In der Tradition",
+        "blocks": 5,
+        "status": "Rot: Erregung, Aufmerksamkeit, Gefahr oder Leidenschaft (in vielen Kulturen)"
+      }
+    ],
+    "keyboard": {
+      "compass": {
+        "checked": "orange",
+        "focused": "orange",
+        "name": "Orange"
+      }
+    },
+    "focusVisible": {
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "boxShadow": "none",
+      "labelOutline": "solid",
+      "labelShadow": "none"
+    },
+    "meditation": {
+      "medStart": {
+        "exists": true,
+        "label": "Start",
+        "duration": "5"
+      },
+      "medRunning": {
+        "timer": "04:59",
+        "status": "Übung läuft.",
+        "pauseVisible": true,
+        "stopVisible": true,
+        "live": [
+          {
+            "live": "off",
+            "role": "timer",
+            "id": "fwMedTimer"
+          }
+        ]
+      },
+      "medPaused": {
+        "timer": "04:59",
+        "status": "Pausiert.",
+        "pauseLabel": "Pause"
+      },
+      "medPausedLater": "04:59",
+      "medStopped": {
+        "timer": "05:00",
+        "status": "Übung beendet.",
+        "storage": []
+      }
+    },
+    "storageBaseline": [],
+    "reducedMotion": {
+      "reduceState": {
+        "stageAnimation": "none",
+        "afterAnimation": "none",
+        "innerAnimation": null,
+        "running": true,
+        "timer": "05:00",
+        "status": "Übung läuft.",
+        "transitions": [
+          "1e-05s",
+          "1e-05s",
+          "1e-05s",
+          "1e-05s",
+          "1e-05s"
+        ]
+      },
+      "timelineAnimations": {
+        "animated": [],
+        "marquee": false,
+        "blink": 0
+      }
+    },
+    "audio": {
+      "autoplay": 0,
+      "media": 0
+    },
+    "timeline": {
+      "timeline": {
+        "count": 17,
+        "filters": [
+          {
+            "strand": "all",
+            "pressed": "true",
+            "label": "Alle (17)"
+          },
+          {
+            "strand": "chakra",
+            "pressed": "false",
+            "label": "Chakra-Geschichte (4)"
+          },
+          {
+            "strand": "psychologie",
+            "pressed": "false",
+            "label": "Farbpsychologie (3)"
+          },
+          {
+            "strand": "chromotherapie",
+            "pressed": "false",
+            "label": "Chromotherapie (2)"
+          },
+          {
+            "strand": "lichtmedizin",
+            "pressed": "false",
+            "label": "Lichtmedizin (7)"
+          },
+          {
+            "strand": "spektrum",
+            "pressed": "false",
+            "label": "Spektrum & Farbmetrik (1)"
+          }
+        ],
+        "years": [
+          1577,
+          1919,
+          1920,
+          1977,
+          2000,
+          2011,
+          2019,
+          2019,
+          2019,
+          2020,
+          2020,
+          2020,
+          2020,
+          2023,
+          2025,
+          2025,
+          2025
+        ],
+        "sorted": true,
+        "status": "17 von 17 Ereignissen",
+        "listTag": "OL"
+      },
+      "timelineFiltered": {
+        "pressed": [
+          "chakra"
+        ],
+        "visible": 4,
+        "status": "4 von 17 Ereignissen"
+      }
+    },
+    "network": {
+      "external": [],
+      "fonts": [
+        {
+          "family": "Fraunces",
+          "status": "loaded"
+        },
+        {
+          "family": "Fraunces",
+          "status": "loaded"
+        },
+        {
+          "family": "Manrope",
+          "status": "loaded"
+        }
+      ]
+    }
+  }
+}

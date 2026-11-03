@@ -1,0 +1,2235 @@
+{
+  "summary": {
+    "pages": 12,
+    "globalMin": 1.83,
+    "belowThree": [
+      {
+        "page": "rot",
+        "cls": "fw-detail__section",
+        "tag": "SECTION",
+        "width": "1px",
+        "ratio": 1.83,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(20, 28, 31)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-detail__section",
+        "tag": "SECTION",
+        "width": "1px",
+        "ratio": 1.83,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(20, 28, 31)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-detail__section",
+        "tag": "SECTION",
+        "width": "1px",
+        "ratio": 1.83,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(20, 28, 31)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-detail__section",
+        "tag": "SECTION",
+        "width": "1px",
+        "ratio": 1.83,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(20, 28, 31)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-detail__section",
+        "tag": "SECTION",
+        "width": "1px",
+        "ratio": 1.83,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(20, 28, 31)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-detail__section",
+        "tag": "SECTION",
+        "width": "1px",
+        "ratio": 1.83,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(20, 28, 31)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-detail__section",
+        "tag": "SECTION",
+        "width": "1px",
+        "ratio": 1.83,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(20, 28, 31)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-detail__section",
+        "tag": "SECTION",
+        "width": "1px",
+        "ratio": 1.83,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(20, 28, 31)"
+      },
+      {
+        "page": "rot",
+        "cls": "astro-toc fw-toc",
+        "tag": "DETAILS",
+        "width": "1px",
+        "ratio": 1.83,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(20, 28, 31)"
+      },
+      {
+        "page": "rot",
+        "cls": "astro-kennzeichnung",
+        "tag": "DIV",
+        "width": "1px",
+        "ratio": 2.02,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(11, 16, 18)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-detail__body",
+        "tag": "DIV",
+        "width": "1px",
+        "ratio": 2.02,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(11, 16, 18)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-compare__foot",
+        "tag": "P",
+        "width": "1px",
+        "ratio": 2.02,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(11, 16, 18)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-section",
+        "tag": "SECTION",
+        "width": "1px",
+        "ratio": 2.02,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(11, 16, 18)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-card",
+        "tag": "ARTICLE",
+        "width": "1px",
+        "ratio": 2.02,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(11, 16, 18)"
+      },
+      {
+        "page": "rot",
+        "cls": "fw-card",
+        "tag": "ARTICLE",
+        "width": "1px",
+        "ratio": 2.02,
+        "border": "rgb(60, 72, 75)",
+        "background": "rgb(11, 16, 18)"
+      }
+    ],
+    "perPage": [
+      {
+        "id": "rot",
+        "checked": 50,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "orange",
+        "checked": 50,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "gelb",
+        "checked": 50,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "gruen",
+        "checked": 50,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "tuerkis",
+        "checked": 50,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "blau",
+        "checked": 51,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "indigo",
+        "checked": 50,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "violett",
+        "checked": 50,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "magenta",
+        "checked": 48,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "rosa",
+        "checked": 48,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "weiss",
+        "checked": 48,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      },
+      {
+        "id": "schwarz",
+        "checked": 48,
+        "min": 1.83,
+        "worst": {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      }
+    ]
+  },
+  "rows": [
+    {
+      "id": "rot",
+      "checked": 50,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "orange",
+      "checked": 50,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "gelb",
+      "checked": 50,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "gruen",
+      "checked": 50,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "tuerkis",
+      "checked": 50,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "blau",
+      "checked": 51,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "indigo",
+      "checked": 50,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "violett",
+      "checked": 50,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "magenta",
+      "checked": 48,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "rosa",
+      "checked": 48,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "weiss",
+      "checked": 48,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    },
+    {
+      "id": "schwarz",
+      "checked": 48,
+      "min": 1.83,
+      "worst": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        }
+      ],
+      "belowThree": [
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "fw-detail__section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-toc fw-toc",
+          "tag": "DETAILS",
+          "width": "1px",
+          "ratio": 1.83,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(20, 28, 31)"
+        },
+        {
+          "cls": "astro-kennzeichnung",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-detail__body",
+          "tag": "DIV",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-compare__foot",
+          "tag": "P",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-section",
+          "tag": "SECTION",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        },
+        {
+          "cls": "fw-card",
+          "tag": "ARTICLE",
+          "width": "1px",
+          "ratio": 2.02,
+          "border": "rgb(60, 72, 75)",
+          "background": "rgb(11, 16, 18)"
+        }
+      ]
+    }
+  ]
+}

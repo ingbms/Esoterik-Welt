@@ -1,0 +1,407 @@
+{
+  "summary": {
+    "cells": 24,
+    "min": 24,
+    "violations": 2,
+    "byRoute": [
+      {
+        "width": 320,
+        "hash": "#farbwelten",
+        "count": 41,
+        "min": 43,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/tuerkis",
+        "count": 30,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/magenta",
+        "count": 29,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/rosa",
+        "count": 29,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/weiss",
+        "count": 30,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/schwarz",
+        "count": 30,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/farbtherapie",
+        "count": 11,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/farbpsychologie",
+        "count": 11,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/lichtmedizin",
+        "count": 11,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/kompass",
+        "count": 22,
+        "min": 34,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/farbmeditation",
+        "count": 18,
+        "min": 34,
+        "tooSmall": 0
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/zeitleiste",
+        "count": 23,
+        "min": 34,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten",
+        "count": 40,
+        "min": 43,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/tuerkis",
+        "count": 26,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/magenta",
+        "count": 25,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/rosa",
+        "count": 25,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/weiss",
+        "count": 26,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/schwarz",
+        "count": 26,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/farbtherapie",
+        "count": 11,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/farbpsychologie",
+        "count": 11,
+        "min": 24,
+        "tooSmall": 1
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/lichtmedizin",
+        "count": 11,
+        "min": 24,
+        "tooSmall": 1
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/kompass",
+        "count": 22,
+        "min": 34,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/farbmeditation",
+        "count": 18,
+        "min": 32,
+        "tooSmall": 0
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/zeitleiste",
+        "count": 23,
+        "min": 34,
+        "tooSmall": 0
+      }
+    ],
+    "small": [
+      {
+        "width": 390,
+        "hash": "#farbwelten/farbpsychologie",
+        "tag": "A",
+        "type": "",
+        "name": "Farbtherapie und Chromotherapie",
+        "w": 285,
+        "h": 24
+      },
+      {
+        "width": 390,
+        "hash": "#farbwelten/lichtmedizin",
+        "tag": "A",
+        "type": "",
+        "name": "Farbtherapie und Chromotherapie",
+        "w": 285,
+        "h": 24
+      }
+    ]
+  },
+  "rows": [
+    {
+      "width": 320,
+      "hash": "#farbwelten",
+      "count": 41,
+      "min": 43,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/tuerkis",
+      "count": 30,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/magenta",
+      "count": 29,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/rosa",
+      "count": 29,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/weiss",
+      "count": 30,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/schwarz",
+      "count": 30,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/farbtherapie",
+      "count": 11,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/farbpsychologie",
+      "count": 11,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/lichtmedizin",
+      "count": 11,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/kompass",
+      "count": 22,
+      "min": 34,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/farbmeditation",
+      "count": 18,
+      "min": 34,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/zeitleiste",
+      "count": 23,
+      "min": 34,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten",
+      "count": 40,
+      "min": 43,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/tuerkis",
+      "count": 26,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/magenta",
+      "count": 25,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/rosa",
+      "count": 25,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/weiss",
+      "count": 26,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/schwarz",
+      "count": 26,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/farbtherapie",
+      "count": 11,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/farbpsychologie",
+      "count": 11,
+      "min": 24,
+      "tooSmall": [
+        {
+          "tag": "A",
+          "type": "",
+          "name": "Farbtherapie und Chromotherapie",
+          "w": 285,
+          "h": 24
+        }
+      ],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/lichtmedizin",
+      "count": 11,
+      "min": 24,
+      "tooSmall": [
+        {
+          "tag": "A",
+          "type": "",
+          "name": "Farbtherapie und Chromotherapie",
+          "w": 285,
+          "h": 24
+        }
+      ],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/kompass",
+      "count": 22,
+      "min": 34,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/farbmeditation",
+      "count": 18,
+      "min": 32,
+      "tooSmall": [],
+      "slider": null
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/zeitleiste",
+      "count": 23,
+      "min": 34,
+      "tooSmall": [],
+      "slider": null
+    }
+  ]
+}

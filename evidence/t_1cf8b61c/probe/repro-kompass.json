@@ -1,0 +1,36 @@
+{
+  "before": {
+    "radios": [
+      "rot",
+      "orange",
+      "gelb",
+      "gruen",
+      "tuerkis",
+      "blau",
+      "indigo",
+      "violett",
+      "magenta",
+      "rosa",
+      "weiss",
+      "schwarz"
+    ],
+    "selected": "rot",
+    "panelName": "Rot",
+    "sectionLabel": [
+      "Sieben Farbwelten",
+      "Farbwelt für den Kompass",
+      "Ausgewählte Farbwelt"
+    ]
+  },
+  "after": {
+    "checked": "tuerkis",
+    "panelName": "Rot",
+    "panelMeta": "Spektralfarbe · 620–750 nm · 400–484 THz",
+    "status": "Rot: Erregung, Aufmerksamkeit, Gefahr oder Leidenschaft (in vielen Kulturen)",
+    "focus": "tuerkis"
+  },
+  "errors": [
+    "TypeError: Cannot read properties of undefined (reading 'associations')"
+  ],
+  "repro": "kompass → Türkis wählen"
+}
