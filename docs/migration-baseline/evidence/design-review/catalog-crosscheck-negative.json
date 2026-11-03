@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-11-03T21:51:40.954Z",
+  "catalog": "docs/migration-baseline/design-catalog.json",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "entries": 279,
+  "root_tokens_in_css": 170,
+  "checked": {
+    "tokens": 172,
+    "components": 93,
+    "breakpoints": 14
+  },
+  "counts_by_type": {
+    "token-color": 116,
+    "token-typography": 18,
+    "token-space": 14,
+    "token-radius": 6,
+    "token-shadow": 6,
+    "token-motion": 3,
+    "token-z": 6,
+    "token-size": 3,
+    "component": 60,
+    "layout": 10,
+    "pattern": 5,
+    "state": 10,
+    "icon": 2,
+    "illustration": 6,
+    "breakpoint": 14
+  },
+  "status_counts": {
+    "final": 268,
+    "veraltet": 7,
+    "undefined": 4
+  },
+  "hardcoded_colors": {
+    "occurrences": 25,
+    "distinct": 17,
+    "colors": [
+      "#9db3c4",
+      "#c0a889",
+      "#1b2629",
+      "#0e1517",
+      "#6f6042",
+      "#141c1f",
+      "#c6b38e",
+      "#101a17",
+      "#9db3a4",
+      "#0d141b",
+      "#c09489",
+      "#fbf9f4",
+      "#6b5b3e",
+      "#eae6dc",
+      "#e7eee8",
+      "#e8e6e1",
+      "#2b2a26"
+    ]
+  },
+  "findings": [
+    {
+      "check": "C2",
+      "id": "NEG-01",
+      "level": "error",
+      "detail": "Selektor .gibt-es-nicht nicht in css/design-system.css"
+    },
+    {
+      "check": "T2",
+      "id": "NEG-02",
+      "level": "error",
+      "detail": "Katalogwert #123456 != CSS #0b1012 (--color-bg-deep)"
+    },
+    {
+      "check": "T1",
+      "id": "NEG-03",
+      "level": "error",
+      "detail": "Token --token-den-es-nicht-gibt fehlt in :root"
+    },
+    {
+      "check": "B1",
+      "id": "NEG-04",
+      "level": "error",
+      "detail": "999px nur in keiner Datei"
+    }
+  ],
+  "errors": 4,
+  "warnings": 0
+}

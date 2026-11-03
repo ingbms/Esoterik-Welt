@@ -1,0 +1,2369 @@
+{
+  "generated_at": "2026-11-03T21:48:40.529Z",
+  "summary": {
+    "routes": 34,
+    "nameless_interactive": 0,
+    "below_44": 173,
+    "duplicate_id_routes": [
+      "pendeln-studio@1440",
+      "pendeln-studio@390"
+    ],
+    "empty_alt_without_control_name": [
+      "tarot@1440 assets/tarot/nachtatelier-v1/300/00.jpg",
+      "tarot@1440 assets/tarot/gartenbrevier-v2/300/00.jpg",
+      "crystals@1440 assets/crystals/320/amethyst.webp",
+      "crystals@1440 assets/crystals/320/selenit.webp",
+      "crystals@1440 assets/crystals/320/quarz-klar.webp",
+      "crystals@1440 assets/crystals/320/feueropal.webp",
+      "crystals@1440 ",
+      "crystals@1440 ",
+      "crystals@1440 ",
+      "crystals@1440 ",
+      "crystals@1440 ",
+      "crystals@1440 ",
+      "crystals@1440 ",
+      "crystals@1440 ",
+      "tarot@390 assets/tarot/nachtatelier-v1/300/00.jpg",
+      "tarot@390 assets/tarot/gartenbrevier-v2/300/00.jpg",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 ",
+      "crystals@390 "
+    ],
+    "routes_without_main": [],
+    "navToggle": {
+      "ariaLabel": "Menü öffnen",
+      "ariaExpanded": "false",
+      "ariaControls": "navList"
+    }
+  },
+  "dialogs": {
+    "crystal": {
+      "modalPresent": true,
+      "open": true,
+      "role": "dialog",
+      "ariaModal": "true",
+      "ariaLabelledby": "crystalModalTitle",
+      "dialogTitle": "Amethyst",
+      "imageAlt": "Amethyst — violette Kristallstufe über gelboranger Matrix, vollständig im Bild, Spitzen und Bruchflächen sichtbar",
+      "imageSrc": "amethyst.webp",
+      "focusInside": true
+    },
+    "tarot": {
+      "open": true,
+      "imageAlt": "Der Narr · 0 — Karte aus dem Deck „Nachtatelier“",
+      "imageSrc": "00.jpg"
+    },
+    "importButtons": [
+      {
+        "selector": "#ptfImportApply",
+        "present": true,
+        "text": "Importieren",
+        "innerText": "",
+        "rect": {
+          "w": 134,
+          "h": 44
+        },
+        "display": "flex",
+        "visibility": "visible",
+        "detailsOpen": false
+      },
+      {
+        "selector": "#ptfImportFile",
+        "present": true,
+        "text": "",
+        "innerText": "",
+        "rect": {
+          "w": 627,
+          "h": 44
+        },
+        "display": "block",
+        "visibility": "visible",
+        "detailsOpen": false
+      },
+      {
+        "selector": "#ptfImportText",
+        "present": true,
+        "text": "",
+        "innerText": "",
+        "rect": {
+          "w": 627,
+          "h": 110
+        },
+        "display": "block",
+        "visibility": "visible",
+        "detailsOpen": false
+      }
+    ]
+  },
+  "results": [
+    {
+      "route": "home",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 31,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 7
+      }
+    },
+    {
+      "route": "tarot",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 110,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/00.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "assets/tarot/gartenbrevier-v2/300/00.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/00.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Der Narr · 0 · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/01.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Der Magier · I · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/02.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Die Hohepriesterin · II · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/03.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Die Herrscherin · III · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/04.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Der Herrscher · IV · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/05.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Der Hierophant · V · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/06.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Die Liebenden · VI · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/07.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Der Wagen · VII · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/08.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Die Kraft · VIII · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/09.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Der Eremit · IX · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          }
+        ],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 7
+      }
+    },
+    {
+      "route": "crystals",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 180,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [
+          {
+            "src": "assets/crystals/320/amethyst.webp",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "assets/crystals/320/selenit.webp",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "assets/crystals/320/quarz-klar.webp",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "assets/crystals/320/feueropal.webp",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          }
+        ],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 7
+      }
+    },
+    {
+      "route": "moon",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 38,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "USNO — Astronomical Applications Departm",
+            "w": 1312,
+            "h": 27
+          },
+          {
+            "selector": "a",
+            "text": "NASA/JPL Horizons (DE441)",
+            "w": 1312,
+            "h": 27
+          },
+          {
+            "selector": "a",
+            "text": "Jean Meeus, Astronomical Algorithms, 2. ",
+            "w": 1312,
+            "h": 27
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 7
+      }
+    },
+    {
+      "route": "astrologie",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 2,
+          "footer": 1
+        },
+        "interactiveCount": 44,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Neu hier? Lernpfad",
+            "w": 173,
+            "h": 25
+          },
+          {
+            "selector": "a",
+            "text": "Etwas nachschlagen",
+            "w": 182,
+            "h": 25
+          },
+          {
+            "selector": "a",
+            "text": "Verstehen, warum",
+            "w": 165,
+            "h": 25
+          },
+          {
+            "selector": "a",
+            "text": "Vorsichtig lesen",
+            "w": 143,
+            "h": 25
+          },
+          {
+            "selector": "a",
+            "text": "FAQ",
+            "w": 38,
+            "h": 44
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 8
+      }
+    },
+    {
+      "route": "frequenzen",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 2,
+          "header": 2,
+          "footer": 1
+        },
+        "interactiveCount": 105,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a.fq-source-link",
+            "text": "OpenStax College Physics 2e, Kap. 17.6 „",
+            "w": 256,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 254,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 254,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 254,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 254,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 254,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "OpenStax College Physics 2e, Kap. 16.10 ",
+            "w": 256,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Ingendoh, Posny & Heine 2023, PLOS ONE, ",
+            "w": 234,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "ISO 16:1975 „Acoustics — Standard tuning",
+            "w": 254,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "ISO Focus, Nov.–Dez. 2012, „Tuning up“ (",
+            "w": 254,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Iaccarino et al. 2016, Nature 540:230–23",
+            "w": 212,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Calamassi & Pomponi 2019, Explore 15(4):",
+            "w": 258,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Radionics.pro, „Rife frequency lists: CA",
+            "w": 263,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Memorial Sloan Kettering Cancer Center, ",
+            "w": 246,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "University of Colorado Boulder, Physics ",
+            "w": 260,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Cleveland Clinic, „7 Chakras and What Th",
+            "w": 239,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Meinl Sonic Energy, „Solfeggio-Frequenci",
+            "w": 236,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Meinl Sonic Energy, „Solfeggio-Frequenci",
+            "w": 236,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Meinl Sonic Energy, „Solfeggio-Frequenci",
+            "w": 236,
+            "h": 38
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 8
+      }
+    },
+    {
+      "route": "runes",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 2,
+          "header": 2,
+          "footer": 1
+        },
+        "interactiveCount": 53,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 8
+      }
+    },
+    {
+      "route": "pendeln-studio",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 34,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 39
+          }
+        ],
+        "duplicates": [
+          {
+            "id": "ptf-title",
+            "owners": [
+              "title#ptf-title",
+              "title#ptf-title"
+            ]
+          },
+          {
+            "id": "ptf-desc",
+            "owners": [
+              "desc#ptf-desc",
+              "desc#ptf-desc"
+            ]
+          }
+        ],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 9
+      }
+    },
+    {
+      "route": "pendeln-journal",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 38,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 39
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 9
+      }
+    },
+    {
+      "route": "pendeln-labor",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 34,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 39
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 9
+      }
+    },
+    {
+      "route": "pendeln-experiment",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 34,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 39
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 9
+      }
+    },
+    {
+      "route": "farbwelten",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 70,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "[3] Jonauskaite, D. & Mohr, C. (2025). \"",
+            "w": 685,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[4] Jonauskaite, D. et al. (2020). \"Univ",
+            "w": 671,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[5] Jonauskaite, D., Tremea, I., Bürki, ",
+            "w": 671,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[7] Gnambs, T. (2020). \"Limited evidence",
+            "w": 651,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[17] Bhutani, V. K., et al. (2011). Phot",
+            "w": 687,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[10] Son, Y., et al. (2025). Effects of ",
+            "w": 673,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[14] ANSES (2019). Effets sur la santé h",
+            "w": 691,
+            "h": 43
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 10
+      }
+    },
+    {
+      "route": "fw-rot",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 5,
+          "header": 4,
+          "footer": 1
+        },
+        "interactiveCount": 60,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Start",
+            "w": 34,
+            "h": 44
+          },
+          {
+            "selector": "a",
+            "text": "[3] Jonauskaite, D. & Mohr, C. (2025). \"",
+            "w": 685,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[4] Jonauskaite, D. et al. (2020). \"Univ",
+            "w": 671,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[5] Jonauskaite, D., Tremea, I., Bürki, ",
+            "w": 671,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[7] Gnambs, T. (2020). \"Limited evidence",
+            "w": 651,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[10] Son, Y., et al. (2025). Effects of ",
+            "w": 673,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "Die Farbe erleben",
+            "w": 110,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Physikalische Eigenschaften",
+            "w": 181,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Farbpsychologie",
+            "w": 104,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Spirituelle Bedeutung",
+            "w": 138,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Kultur und Geschichte",
+            "w": 142,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Entdecken und ausprobieren",
+            "w": 183,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Quellen und verwandte Themen",
+            "w": 202,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Orange",
+            "w": 93,
+            "h": 34
+          },
+          {
+            "selector": "a",
+            "text": "Gelb",
+            "w": 58,
+            "h": 34
+          },
+          {
+            "selector": "a",
+            "text": "Grün",
+            "w": 66,
+            "h": 34
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 10
+      }
+    },
+    {
+      "route": "blog",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 5,
+          "header": 4,
+          "footer": 1
+        },
+        "interactiveCount": 37,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 10
+      }
+    },
+    {
+      "route": "radiasthesie-glossar",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 2,
+          "footer": 1
+        },
+        "interactiveCount": 59,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a.rad-static-brand",
+            "text": "Esoterik-Welt Startseite",
+            "w": 116,
+            "h": 30
+          },
+          {
+            "selector": "a",
+            "text": "Übersicht",
+            "w": 63,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Radiästhesie",
+            "w": 83,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Orakel",
+            "w": 41,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Glossar",
+            "w": 48,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Quellen",
+            "w": 48,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Methodik",
+            "w": 60,
+            "h": 28
+          },
+          {
+            "selector": "a.rad-static-app",
+            "text": "Interaktive Ansicht",
+            "w": 147,
+            "h": 33
+          },
+          {
+            "selector": "a",
+            "text": "Start",
+            "w": 30,
+            "h": 38
+          },
+          {
+            "selector": "a",
+            "text": "Radiästhesie, Pendeln und Orakel",
+            "w": 204,
+            "h": 38
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": null,
+        "h1Count": 1
+      }
+    },
+    {
+      "route": "radiasthesie-index",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 2,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 46,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a.rad-static-brand",
+            "text": "Esoterik-Welt Startseite",
+            "w": 116,
+            "h": 30
+          },
+          {
+            "selector": "a",
+            "text": "Übersicht",
+            "w": 63,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Radiästhesie",
+            "w": 83,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Orakel",
+            "w": 41,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Glossar",
+            "w": 48,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Quellen",
+            "w": 48,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Methodik",
+            "w": 60,
+            "h": 28
+          },
+          {
+            "selector": "a.rad-static-app",
+            "text": "Interaktive Ansicht",
+            "w": 147,
+            "h": 33
+          },
+          {
+            "selector": "a",
+            "text": "Start",
+            "w": 30,
+            "h": 38
+          },
+          {
+            "selector": "a",
+            "text": "Radiästhesie",
+            "w": 161,
+            "h": 35
+          },
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 102,
+            "h": 35
+          },
+          {
+            "selector": "a",
+            "text": "Orakel",
+            "w": 85,
+            "h": 35
+          },
+          {
+            "selector": "a.rad-werk-link",
+            "text": "Pendellabor",
+            "w": 111,
+            "h": 26
+          },
+          {
+            "selector": "a.rad-werk-link",
+            "text": "Pendeltafel-Studio",
+            "w": 169,
+            "h": 26
+          },
+          {
+            "selector": "a.rad-werk-link",
+            "text": "Experimentierlabor",
+            "w": 180,
+            "h": 26
+          },
+          {
+            "selector": "a.rad-werk-link",
+            "text": "Pendeltagebuch",
+            "w": 145,
+            "h": 26
+          },
+          {
+            "selector": "a",
+            "text": "Tarot",
+            "w": 40,
+            "h": 44
+          },
+          {
+            "selector": "a",
+            "text": "I Ging",
+            "w": 42,
+            "h": 44
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": null,
+        "h1Count": 1
+      }
+    },
+    {
+      "route": "datenschutz",
+      "viewport": "1440",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 8,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": null,
+        "h1Count": 1
+      }
+    },
+    {
+      "route": "home",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 22,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 7
+      }
+    },
+    {
+      "route": "tarot",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 101,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/00.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "assets/tarot/gartenbrevier-v2/300/00.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/00.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Der Narr · 0 · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "assets/tarot/nachtatelier-v1/300/01.jpg",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card",
+              "name": {
+                "value": "Der Magier · I · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card.is-loading",
+              "name": {
+                "value": "Die Hohepriesterin · II · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card.is-loading",
+              "name": {
+                "value": "Die Herrscherin · III · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card.is-loading",
+              "name": {
+                "value": "Der Herrscher · IV · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card.is-loading",
+              "name": {
+                "value": "Der Hierophant · V · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card.is-loading",
+              "name": {
+                "value": "Die Liebenden · VI · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card.is-loading",
+              "name": {
+                "value": "Der Wagen · VII · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card.is-loading",
+              "name": {
+                "value": "Die Kraft · VIII · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": {
+              "selector": "button.tarot-card.is-loading",
+              "name": {
+                "value": "Der Eremit · IX · Große Arkana",
+                "source": "aria-label"
+              }
+            }
+          }
+        ],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 7
+      }
+    },
+    {
+      "route": "crystals",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 171,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          },
+          {
+            "src": "",
+            "alt": "",
+            "role": null,
+            "parentControl": null
+          }
+        ],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 7
+      }
+    },
+    {
+      "route": "moon",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 29,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "NASA/JPL Horizons (DE441)",
+            "w": 342,
+            "h": 27
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 7
+      }
+    },
+    {
+      "route": "astrologie",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 2,
+          "footer": 1
+        },
+        "interactiveCount": 25,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Neu hier? Lernpfad",
+            "w": 173,
+            "h": 25
+          },
+          {
+            "selector": "a",
+            "text": "Etwas nachschlagen",
+            "w": 182,
+            "h": 25
+          },
+          {
+            "selector": "a",
+            "text": "Verstehen, warum",
+            "w": 165,
+            "h": 25
+          },
+          {
+            "selector": "a",
+            "text": "Vorsichtig lesen",
+            "w": 143,
+            "h": 25
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 8
+      }
+    },
+    {
+      "route": "frequenzen",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 2,
+          "header": 2,
+          "footer": 1
+        },
+        "interactiveCount": 96,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a.fq-source-link",
+            "text": "OpenStax College Physics 2e, Kap. 17.6 „",
+            "w": 281,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Kugler et al. 2023, „Temporal integratio",
+            "w": 288,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 288,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 288,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 288,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 288,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Newson & Thiagarajan 2019, Front. Hum. N",
+            "w": 288,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "OpenStax College Physics 2e, Kap. 16.10 ",
+            "w": 286,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Ingendoh, Posny & Heine 2023, PLOS ONE, ",
+            "w": 269,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "OpenStax University Physics Vol. 1, Kap.",
+            "w": 286,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "ISO 16:1975 „Acoustics — Standard tuning",
+            "w": 254,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "ISO Focus, Nov.–Dez. 2012, „Tuning up“ (",
+            "w": 278,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "The Concise Oxford Dictionary of Music, ",
+            "w": 291,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "The Concise Oxford Dictionary of Music, ",
+            "w": 291,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Iaccarino et al. 2016, Nature 540:230–23",
+            "w": 272,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Calamassi & Pomponi 2019, Explore 15(4):",
+            "w": 258,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "H. Cousto, „The Cosmic Octave Tuning For",
+            "w": 279,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "H. Cousto, „The Cosmic Octave Tuning For",
+            "w": 279,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "H. Cousto, „The Cosmic Octave Tuning For",
+            "w": 279,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "H. Cousto, „The Cosmic Octave Tuning For",
+            "w": 279,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "H. Cousto, „The Cosmic Octave Tuning For",
+            "w": 279,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "H. Cousto, „The Cosmic Octave Tuning For",
+            "w": 279,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "H. Cousto, „The Cosmic Octave Tuning For",
+            "w": 279,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "H. Cousto, „The Cosmic Octave Tuning For",
+            "w": 279,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Radionics.pro, „Rife frequency lists: CA",
+            "w": 263,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Memorial Sloan Kettering Cancer Center, ",
+            "w": 246,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "University of Colorado Boulder, Physics ",
+            "w": 286,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Goldsby et al. 2017, „Effects of Singing",
+            "w": 276,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Cleveland Clinic, „7 Chakras and What Th",
+            "w": 274,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Meinl Sonic Energy, „Solfeggio-Frequenci",
+            "w": 236,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Meinl Sonic Energy, „Solfeggio-Frequenci",
+            "w": 236,
+            "h": 38
+          },
+          {
+            "selector": "a.fq-source-link",
+            "text": "Meinl Sonic Energy, „Solfeggio-Frequenci",
+            "w": 236,
+            "h": 38
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 8
+      }
+    },
+    {
+      "route": "runes",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 2,
+          "header": 2,
+          "footer": 1
+        },
+        "interactiveCount": 44,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 8
+      }
+    },
+    {
+      "route": "pendeln-studio",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 25,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 39
+          }
+        ],
+        "duplicates": [
+          {
+            "id": "ptf-title",
+            "owners": [
+              "title#ptf-title",
+              "title#ptf-title"
+            ]
+          },
+          {
+            "id": "ptf-desc",
+            "owners": [
+              "desc#ptf-desc",
+              "desc#ptf-desc"
+            ]
+          }
+        ],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 9
+      }
+    },
+    {
+      "route": "pendeln-journal",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 29,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 39
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 9
+      }
+    },
+    {
+      "route": "pendeln-labor",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 25,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 39
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 9
+      }
+    },
+    {
+      "route": "pendeln-experiment",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 25,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 39
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 9
+      }
+    },
+    {
+      "route": "farbwelten",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 3,
+          "footer": 1
+        },
+        "interactiveCount": 61,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "[31] MIT Vision Book, Color (Metamerie, ",
+            "w": 250,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[2] Woodroffe, J. G. (1919, Übers.) / Av",
+            "w": 313,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[9] OSTEBA (2025). Eficacia y seguridad ",
+            "w": 292,
+            "h": 43
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 10
+      }
+    },
+    {
+      "route": "fw-rot",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 5,
+          "header": 4,
+          "footer": 1
+        },
+        "interactiveCount": 52,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a",
+            "text": "Start",
+            "w": 34,
+            "h": 44
+          },
+          {
+            "selector": "a",
+            "text": "[2] Woodroffe, J. G. (1919, Übers.) / Av",
+            "w": 286,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[9] OSTEBA (2025). Eficacia y seguridad ",
+            "w": 292,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "[31] MIT Vision Book, Color (Metamerie, ",
+            "w": 250,
+            "h": 43
+          },
+          {
+            "selector": "a",
+            "text": "Die Farbe erleben",
+            "w": 110,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Physikalische Eigenschaften",
+            "w": 181,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Farbpsychologie",
+            "w": 104,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Spirituelle Bedeutung",
+            "w": 138,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Farbtherapeutische Anwendung",
+            "w": 206,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Kultur und Geschichte",
+            "w": 142,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Entdecken und ausprobieren",
+            "w": 183,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Quellen und verwandte Themen",
+            "w": 202,
+            "h": 32
+          },
+          {
+            "selector": "a",
+            "text": "Orange",
+            "w": 93,
+            "h": 34
+          },
+          {
+            "selector": "a",
+            "text": "Gelb",
+            "w": 58,
+            "h": 34
+          },
+          {
+            "selector": "a",
+            "text": "Grün",
+            "w": 66,
+            "h": 34
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 10
+      }
+    },
+    {
+      "route": "blog",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 5,
+          "header": 4,
+          "footer": 1
+        },
+        "interactiveCount": 28,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": {
+          "ariaLabel": "Menü öffnen",
+          "ariaExpanded": "false",
+          "ariaControls": "navList"
+        },
+        "h1Count": 10
+      }
+    },
+    {
+      "route": "radiasthesie-glossar",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 3,
+          "header": 2,
+          "footer": 1
+        },
+        "interactiveCount": 59,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a.rad-static-brand",
+            "text": "Esoterik-Welt Startseite",
+            "w": 116,
+            "h": 30
+          },
+          {
+            "selector": "a",
+            "text": "Übersicht",
+            "w": 63,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Radiästhesie",
+            "w": 83,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Orakel",
+            "w": 41,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Glossar",
+            "w": 48,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Quellen",
+            "w": 48,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Methodik",
+            "w": 60,
+            "h": 28
+          },
+          {
+            "selector": "a.rad-static-app",
+            "text": "Interaktive Ansicht",
+            "w": 147,
+            "h": 33
+          },
+          {
+            "selector": "a",
+            "text": "Start",
+            "w": 30,
+            "h": 38
+          },
+          {
+            "selector": "a",
+            "text": "Radiästhesie, Pendeln und Orakel",
+            "w": 204,
+            "h": 38
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": null,
+        "h1Count": 1
+      }
+    },
+    {
+      "route": "radiasthesie-index",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 2,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 46,
+        "nameless": [],
+        "small": [
+          {
+            "selector": "a.rad-static-brand",
+            "text": "Esoterik-Welt Startseite",
+            "w": 116,
+            "h": 30
+          },
+          {
+            "selector": "a",
+            "text": "Übersicht",
+            "w": 63,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Radiästhesie",
+            "w": 83,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 51,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Orakel",
+            "w": 41,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Glossar",
+            "w": 48,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Quellen",
+            "w": 48,
+            "h": 28
+          },
+          {
+            "selector": "a",
+            "text": "Methodik",
+            "w": 60,
+            "h": 28
+          },
+          {
+            "selector": "a.rad-static-app",
+            "text": "Interaktive Ansicht",
+            "w": 147,
+            "h": 33
+          },
+          {
+            "selector": "a",
+            "text": "Start",
+            "w": 30,
+            "h": 38
+          },
+          {
+            "selector": "a",
+            "text": "Radiästhesie",
+            "w": 161,
+            "h": 35
+          },
+          {
+            "selector": "a",
+            "text": "Pendeln",
+            "w": 102,
+            "h": 35
+          },
+          {
+            "selector": "a",
+            "text": "Orakel",
+            "w": 85,
+            "h": 35
+          },
+          {
+            "selector": "a.rad-werk-link",
+            "text": "Pendellabor",
+            "w": 111,
+            "h": 26
+          },
+          {
+            "selector": "a.rad-werk-link",
+            "text": "Pendeltafel-Studio",
+            "w": 169,
+            "h": 26
+          },
+          {
+            "selector": "a.rad-werk-link",
+            "text": "Experimentierlabor",
+            "w": 180,
+            "h": 26
+          },
+          {
+            "selector": "a.rad-werk-link",
+            "text": "Pendeltagebuch",
+            "w": 145,
+            "h": 26
+          },
+          {
+            "selector": "a",
+            "text": "Tarot",
+            "w": 40,
+            "h": 44
+          },
+          {
+            "selector": "a",
+            "text": "I Ging",
+            "w": 42,
+            "h": 44
+          }
+        ],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": null,
+        "h1Count": 1
+      }
+    },
+    {
+      "route": "datenschutz",
+      "viewport": "390",
+      "data": {
+        "landmarks": {
+          "main": 1,
+          "nav": 1,
+          "header": 1,
+          "footer": 1
+        },
+        "interactiveCount": 8,
+        "nameless": [],
+        "small": [],
+        "duplicates": [],
+        "emptyAltImages": [],
+        "navToggle": null,
+        "h1Count": 1
+      }
+    }
+  ]
+}

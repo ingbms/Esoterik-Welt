@@ -1,0 +1,154 @@
+{
+  "base": "http://127.0.0.1:47404/Esoterik-Welt/",
+  "measured_at": "2026-11-03T16:25:31.251Z",
+  "viewports": {
+    "390": {
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyOverflowX": false,
+      "bodyBackground": "rgb(11, 16, 18)",
+      "gutter": "24px",
+      "textH1": "52px",
+      "textPageTitle": "34px",
+      "headerHeight": "84px",
+      "containerPaddingLeft": "24px",
+      "containerWidth": 390,
+      "h1FontSize": "52px",
+      "cardBorderRadius": "0px",
+      "btnMinHeight": "44px",
+      "activeElement": "body.",
+      "skipTransform": "matrix(1, 0, 0, 1, 0, -95.5938)",
+      "dataTheme": null,
+      "visiblePages": [
+        "home"
+      ]
+    },
+    "780": {
+      "innerWidth": 780,
+      "scrollWidth": 780,
+      "bodyOverflowX": false,
+      "bodyBackground": "rgb(11, 16, 18)",
+      "gutter": "32px",
+      "textH1": "66px",
+      "textPageTitle": "56px",
+      "headerHeight": "100px",
+      "containerPaddingLeft": "32px",
+      "containerWidth": 780,
+      "h1FontSize": "66px",
+      "cardBorderRadius": "0px",
+      "btnMinHeight": "44px",
+      "activeElement": "body.",
+      "skipTransform": "matrix(1, 0, 0, 1, 0, -95.5938)",
+      "dataTheme": null,
+      "visiblePages": [
+        "home"
+      ]
+    },
+    "1024": {
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "bodyOverflowX": false,
+      "bodyBackground": "rgb(11, 16, 18)",
+      "gutter": "32px",
+      "textH1": "66px",
+      "textPageTitle": "56px",
+      "headerHeight": "100px",
+      "containerPaddingLeft": "32px",
+      "containerWidth": 1024,
+      "h1FontSize": "66px",
+      "cardBorderRadius": "0px",
+      "btnMinHeight": "44px",
+      "activeElement": "body.",
+      "skipTransform": "matrix(1, 0, 0, 1, 0, -95.5938)",
+      "dataTheme": null,
+      "visiblePages": [
+        "home"
+      ]
+    },
+    "1440": {
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyOverflowX": false,
+      "bodyBackground": "rgb(11, 16, 18)",
+      "gutter": "64px",
+      "textH1": "80px",
+      "textPageTitle": "56px",
+      "headerHeight": "100px",
+      "containerPaddingLeft": "64px",
+      "containerWidth": 1440,
+      "h1FontSize": "80px",
+      "cardBorderRadius": "0px",
+      "btnMinHeight": "44px",
+      "activeElement": "body.",
+      "skipTransform": "matrix(1, 0, 0, 1, 0, -95.5938)",
+      "dataTheme": null,
+      "visiblePages": [
+        "home"
+      ]
+    }
+  },
+  "tokens": {
+    "--color-bg-deep": "#0b1012",
+    "--color-bg-card": "#141c1f",
+    "--color-text-primary": "#eae6dc",
+    "--color-text-secondary": "#babdb7",
+    "--color-primary": "#c6b38e",
+    "--color-hover": "#d5c4a2",
+    "--color-border": "#3c484b",
+    "--color-line-strong": "#82928e",
+    "--fw-rot-ink": "#cf6a60",
+    "--fw-rot-core": "#bc4a41",
+    "--fw-rot-deep": "#281715",
+    "--fw-rot-deep-alt": "#1d100e",
+    "--fw-rot-soft": "#d69991",
+    "--radius-sm": "2px",
+    "--space-3": "12px",
+    "--container-max": "1360px",
+    "--color-accent-emerald": "#9db3a4",
+    "--color-accent-rose": "#c09489"
+  },
+  "interactions": {
+    "skipLink": {
+      "focused": true,
+      "text": "Zum Hauptinhalt springen",
+      "transform": "none",
+      "outline": "rgb(234, 230, 220) solid 2px",
+      "rectTop": 12
+    },
+    "tarotGrid": {
+      "cards": 78,
+      "firstTag": "BUTTON"
+    },
+    "modal": {
+      "backdropPresent": true,
+      "open": true,
+      "dialogRole": "dialog",
+      "ariaModal": "true",
+      "closeSize": {
+        "w": 44,
+        "h": 44
+      },
+      "activeInDialog": true,
+      "bodyOverflow": "hidden"
+    },
+    "modalClosed": true,
+    "mobileNav": {
+      "toggled": true,
+      "listDisplay": "flex",
+      "linkHeight": 48
+    }
+  },
+  "contrast": {
+    "text-primary auf bg-deep": 15.36,
+    "text-secondary auf bg-card": 9.09,
+    "primary auf bg-deep": 9.33,
+    "border auf bg-deep": 2.02,
+    "line-strong auf bg-deep": 5.88,
+    "fw-rot-ink auf fw-rot-deep": 4.81,
+    "fw-rot-ink auf fw-rot-core": 1.4,
+    "fw-rot-soft auf fw-rot-deep": 7.21,
+    "accent-emerald auf bg-card": 7.75,
+    "accent-rose auf bg-card": 6.45
+  },
+  "consoleErrors": []
+}

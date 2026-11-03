@@ -1,0 +1,1264 @@
+{
+  "$comment": "Erzeugt von scripts/migration-baseline/inventory-baseline.cjs. Zahlen sind Messwerte des Arbeitsbaums, nicht Behauptungen. base_commit ist der Commit, gegen den der Katalog erhoben wird.",
+  "schema_version": "1.0.0",
+  "scope_document": "docs/migration-baseline/00-schema-und-scope.md",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "base_tag": "baseline/rubriken-2026-11-03",
+  "collected_at": "2026-11-03T15:52:42.986Z",
+  "pages": {
+    "main_pages": [
+      "home",
+      "tarot",
+      "crystals",
+      "moon",
+      "astrologie",
+      "frequenzen",
+      "runes",
+      "pendeln",
+      "farbwelten",
+      "blog"
+    ],
+    "main_pages_count": 10,
+    "nav_entries": [
+      {
+        "route": "#home",
+        "page": "home",
+        "label": "Start"
+      },
+      {
+        "route": "#tarot",
+        "page": "tarot",
+        "label": "Tarot"
+      },
+      {
+        "route": "#crystals",
+        "page": "crystals",
+        "label": "Kristalle"
+      },
+      {
+        "route": "#moon",
+        "page": "moon",
+        "label": "Mondphasen"
+      },
+      {
+        "route": "#astrologie",
+        "page": "astrologie",
+        "label": "Astrologie"
+      },
+      {
+        "route": "#frequenzen",
+        "page": "frequenzen",
+        "label": "Frequenzen"
+      },
+      {
+        "route": "#runes",
+        "page": "runes",
+        "label": "Runen"
+      },
+      {
+        "route": "#pendeln",
+        "page": "pendeln",
+        "label": "Pendeln"
+      },
+      {
+        "route": "#farbwelten",
+        "page": "farbwelten",
+        "label": "Farben"
+      },
+      {
+        "route": "#blog",
+        "page": "blog",
+        "label": "Wissen"
+      }
+    ],
+    "nav_entries_count": 10,
+    "page_sections": [
+      {
+        "id": "home",
+        "line": 110
+      },
+      {
+        "id": "tarot",
+        "line": 234
+      },
+      {
+        "id": "crystals",
+        "line": 340
+      },
+      {
+        "id": "moon",
+        "line": 444
+      },
+      {
+        "id": "astrologie",
+        "line": 583
+      },
+      {
+        "id": "frequenzen",
+        "line": 603
+      },
+      {
+        "id": "runes",
+        "line": 633
+      },
+      {
+        "id": "pendeln",
+        "line": 687
+      },
+      {
+        "id": "farbwelten",
+        "line": 707
+      },
+      {
+        "id": "blog",
+        "line": 727
+      }
+    ],
+    "h1_headings": [
+      {
+        "id": "home-title",
+        "line": 116,
+        "text": "Entdecke die verborgene Sprache des Universums"
+      },
+      {
+        "id": "tarot-title",
+        "line": 238,
+        "text": "Tarot — Der Spiegel der Seele"
+      },
+      {
+        "id": "crystals-title",
+        "line": 345,
+        "text": "Kristalle & Steine"
+      },
+      {
+        "id": "moon-title",
+        "line": 448,
+        "text": "Mondphasen"
+      },
+      {
+        "id": "frequenzen-title",
+        "line": 607,
+        "text": "Frequenzen & Schwingungen"
+      },
+      {
+        "id": "runes-title",
+        "line": 637,
+        "text": "Runen — Das ältere Futhark"
+      },
+      {
+        "id": "blog-title",
+        "line": 731,
+        "text": "Wissen & Artikel"
+      }
+    ],
+    "index_html_lines": 880
+  },
+  "static_documents": {
+    "root_documents": [
+      {
+        "path": "impressum.html",
+        "title": "Impressum",
+        "h1_line": 34,
+        "bytes": 29936
+      },
+      {
+        "path": "datenschutz.html",
+        "title": "Datenschutzerklärung",
+        "h1_line": 37,
+        "bytes": 3115
+      },
+      {
+        "path": "haftung.html",
+        "title": "Haftungsausschluss",
+        "h1_line": 37,
+        "bytes": 2797
+      },
+      {
+        "path": "404.html",
+        "title": "404",
+        "h1_line": 17,
+        "bytes": 1366
+      }
+    ],
+    "radiasthesie_documents": [
+      {
+        "path": "radiasthesie/glossar.html",
+        "title": "Glossar",
+        "h1_line": 44
+      },
+      {
+        "path": "radiasthesie/index.html",
+        "title": "Radiästhesie, Pendeln und Orakel",
+        "h1_line": 46
+      },
+      {
+        "path": "radiasthesie/methodik.html",
+        "title": "Methodik & Grenzen",
+        "h1_line": 45
+      },
+      {
+        "path": "radiasthesie/orakel.html",
+        "title": "Orakel",
+        "h1_line": 45
+      },
+      {
+        "path": "radiasthesie/pendeln.html",
+        "title": "Pendeln",
+        "h1_line": 45
+      },
+      {
+        "path": "radiasthesie/quellen.html",
+        "title": "Quellen & Belege",
+        "h1_line": 45
+      },
+      {
+        "path": "radiasthesie/radiasthesie.html",
+        "title": "Radiästhesie",
+        "h1_line": 45
+      }
+    ],
+    "radiasthesie_documents_count": 7,
+    "sitemap_urls": [
+      "https://ingbms.github.io/Esoterik-Welt/",
+      "https://ingbms.github.io/Esoterik-Welt/impressum.html",
+      "https://ingbms.github.io/Esoterik-Welt/datenschutz.html",
+      "https://ingbms.github.io/Esoterik-Welt/haftung.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html"
+    ],
+    "generated_by": "scripts/generate-radiasthesie-pages.cjs"
+  },
+  "farbwelten": {
+    "data_module": "js/data/farbwelten.js",
+    "generated_by": "scripts/generate-farbwelten-data.cjs",
+    "colours": [
+      {
+        "id": "rot",
+        "name": "Rot",
+        "route": "#farbwelten/rot"
+      },
+      {
+        "id": "orange",
+        "name": "Orange",
+        "route": "#farbwelten/orange"
+      },
+      {
+        "id": "gelb",
+        "name": "Gelb",
+        "route": "#farbwelten/gelb"
+      },
+      {
+        "id": "gruen",
+        "name": "Grün",
+        "route": "#farbwelten/gruen"
+      },
+      {
+        "id": "tuerkis",
+        "name": "Türkis (Cyan)",
+        "route": "#farbwelten/tuerkis"
+      },
+      {
+        "id": "blau",
+        "name": "Blau",
+        "route": "#farbwelten/blau"
+      },
+      {
+        "id": "indigo",
+        "name": "Indigo",
+        "route": "#farbwelten/indigo"
+      },
+      {
+        "id": "violett",
+        "name": "Violett",
+        "route": "#farbwelten/violett"
+      },
+      {
+        "id": "magenta",
+        "name": "Magenta",
+        "route": "#farbwelten/magenta"
+      },
+      {
+        "id": "rosa",
+        "name": "Rosa",
+        "route": "#farbwelten/rosa"
+      },
+      {
+        "id": "weiss",
+        "name": "Weiß",
+        "route": "#farbwelten/weiss"
+      },
+      {
+        "id": "schwarz",
+        "name": "Schwarz",
+        "route": "#farbwelten/schwarz"
+      }
+    ],
+    "colours_count": 12,
+    "topic_pages": [
+      {
+        "slug": "farbtherapie",
+        "title": "Farbtherapie und Chromotherapie",
+        "route": "#farbwelten/farbtherapie"
+      },
+      {
+        "slug": "farbpsychologie",
+        "title": "Farbpsychologie",
+        "route": "#farbwelten/farbpsychologie"
+      },
+      {
+        "slug": "lichtmedizin",
+        "title": "Lichtmedizin und Photobiologie",
+        "route": "#farbwelten/lichtmedizin"
+      }
+    ],
+    "topic_pages_count": 3,
+    "has_landing": true,
+    "has_chakren_page": true,
+    "has_light_page": true,
+    "markdown_sources": [
+      {
+        "path": "content/farbwelten/blau.md",
+        "slug": "blau",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/chakren.md",
+        "slug": "chakren",
+        "seite": "uebersicht"
+      },
+      {
+        "path": "content/farbwelten/farbpsychologie.md",
+        "slug": "farbpsychologie",
+        "seite": "thema"
+      },
+      {
+        "path": "content/farbwelten/farbtherapie.md",
+        "slug": "farbtherapie",
+        "seite": "thema"
+      },
+      {
+        "path": "content/farbwelten/farbwelten.md",
+        "slug": "farbwelten",
+        "seite": "einstieg"
+      },
+      {
+        "path": "content/farbwelten/gelb.md",
+        "slug": "gelb",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/gruen.md",
+        "slug": "gruen",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/indigo.md",
+        "slug": "indigo",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/lichtfrequenzen.md",
+        "slug": "lichtfrequenzen",
+        "seite": "einordnung"
+      },
+      {
+        "path": "content/farbwelten/lichtmedizin.md",
+        "slug": "lichtmedizin",
+        "seite": "thema"
+      },
+      {
+        "path": "content/farbwelten/magenta.md",
+        "slug": "magenta",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/orange.md",
+        "slug": "orange",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/rosa.md",
+        "slug": "rosa",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/rot.md",
+        "slug": "rot",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/schwarz.md",
+        "slug": "schwarz",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/tuerkis.md",
+        "slug": "tuerkis",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/violett.md",
+        "slug": "violett",
+        "seite": "farbe"
+      },
+      {
+        "path": "content/farbwelten/weiss.md",
+        "slug": "weiss",
+        "seite": "farbe"
+      }
+    ],
+    "markdown_sources_count": 18
+  },
+  "articles": {
+    "rendered_source": "js/data/articles.js",
+    "rendered_count": 10,
+    "rendered_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "markdown_source_dir": "data/articles",
+    "markdown_count": 12,
+    "markdown_files": [
+      "data/articles/article-01.md",
+      "data/articles/article-02.md",
+      "data/articles/article-03.md",
+      "data/articles/article-04.md",
+      "data/articles/article-05.md",
+      "data/articles/article-06.md",
+      "data/articles/article-07.md",
+      "data/articles/article-08.md",
+      "data/articles/article-09.md",
+      "data/articles/article-10.md",
+      "data/articles/article-11.md",
+      "data/articles/article-12.md"
+    ],
+    "markdown_read_by_blog_module": false
+  },
+  "design_tokens": {
+    "file": "css/design-system.css",
+    "total_lines": 1628,
+    "root_block_line": 40,
+    "light_block_line": 297,
+    "root_token_count": 170,
+    "root_tokens": [
+      "--color-bg-deep",
+      "--color-bg-card",
+      "--color-text-primary",
+      "--color-text-secondary",
+      "--color-primary",
+      "--color-hover",
+      "--color-border",
+      "--color-line-strong",
+      "--color-bg-card-hover",
+      "--color-primary-light",
+      "--color-primary-dark",
+      "--color-secondary",
+      "--color-secondary-dark",
+      "--color-secondary-text",
+      "--color-accent-gold",
+      "--color-accent-rose",
+      "--color-accent-emerald",
+      "--color-border-glow",
+      "--color-text-muted",
+      "--color-text",
+      "--color-text-on-primary",
+      "--surface-ghost",
+      "--border-glow-subtle",
+      "--color-chakra-root",
+      "--color-chakra-sacral",
+      "--color-chakra-solar",
+      "--color-chakra-heart",
+      "--color-chakra-throat",
+      "--color-chakra-third-eye",
+      "--color-chakra-crown",
+      "--fw-rot-ink",
+      "--fw-rot-core",
+      "--fw-rot-core-deep",
+      "--fw-rot-soft",
+      "--fw-rot-line",
+      "--fw-rot-deep",
+      "--fw-rot-deep-alt",
+      "--fw-orange-ink",
+      "--fw-orange-core",
+      "--fw-orange-core-deep",
+      "--fw-orange-soft",
+      "--fw-orange-line",
+      "--fw-orange-deep",
+      "--fw-orange-deep-alt",
+      "--fw-gelb-ink",
+      "--fw-gelb-core",
+      "--fw-gelb-core-deep",
+      "--fw-gelb-soft",
+      "--fw-gelb-line",
+      "--fw-gelb-deep",
+      "--fw-gelb-deep-alt",
+      "--fw-gruen-ink",
+      "--fw-gruen-core",
+      "--fw-gruen-core-deep",
+      "--fw-gruen-soft",
+      "--fw-gruen-line",
+      "--fw-gruen-deep",
+      "--fw-gruen-deep-alt",
+      "--fw-tuerkis-ink",
+      "--fw-tuerkis-core",
+      "--fw-tuerkis-core-deep",
+      "--fw-tuerkis-soft",
+      "--fw-tuerkis-line",
+      "--fw-tuerkis-deep",
+      "--fw-tuerkis-deep-alt",
+      "--fw-blau-ink",
+      "--fw-blau-core",
+      "--fw-blau-core-deep",
+      "--fw-blau-soft",
+      "--fw-blau-line",
+      "--fw-blau-deep",
+      "--fw-blau-deep-alt",
+      "--fw-indigo-ink",
+      "--fw-indigo-core",
+      "--fw-indigo-core-deep",
+      "--fw-indigo-soft",
+      "--fw-indigo-line",
+      "--fw-indigo-deep",
+      "--fw-indigo-deep-alt",
+      "--fw-violett-ink",
+      "--fw-violett-core",
+      "--fw-violett-core-deep",
+      "--fw-violett-soft",
+      "--fw-violett-line",
+      "--fw-violett-deep",
+      "--fw-violett-deep-alt",
+      "--fw-magenta-ink",
+      "--fw-magenta-core",
+      "--fw-magenta-core-deep",
+      "--fw-magenta-soft",
+      "--fw-magenta-line",
+      "--fw-magenta-deep",
+      "--fw-magenta-deep-alt",
+      "--fw-rosa-ink",
+      "--fw-rosa-core",
+      "--fw-rosa-core-deep",
+      "--fw-rosa-soft",
+      "--fw-rosa-line",
+      "--fw-rosa-deep",
+      "--fw-rosa-deep-alt",
+      "--fw-weiss-ink",
+      "--fw-weiss-core",
+      "--fw-weiss-core-deep",
+      "--fw-weiss-soft",
+      "--fw-weiss-line",
+      "--fw-weiss-deep",
+      "--fw-weiss-deep-alt",
+      "--fw-schwarz-ink",
+      "--fw-schwarz-core",
+      "--fw-schwarz-core-deep",
+      "--fw-schwarz-soft",
+      "--fw-schwarz-line",
+      "--fw-schwarz-deep",
+      "--fw-schwarz-deep-alt",
+      "--font-display",
+      "--font-body",
+      "--font-mono",
+      "--text-xs",
+      "--text-sm",
+      "--text-base",
+      "--text-lg",
+      "--text-xl",
+      "--text-2xl",
+      "--text-3xl",
+      "--text-4xl",
+      "--text-h1",
+      "--text-page-title",
+      "--font-weight-light",
+      "--font-weight-normal",
+      "--font-weight-medium",
+      "--font-weight-semibold",
+      "--font-weight-bold",
+      "--space-0",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-8",
+      "--space-10",
+      "--space-12",
+      "--space-16",
+      "--space-20",
+      "--space-24",
+      "--radius-sm",
+      "--radius-md",
+      "--radius-lg",
+      "--radius-xl",
+      "--radius-2xl",
+      "--radius-full",
+      "--shadow-sm",
+      "--shadow-md",
+      "--shadow-lg",
+      "--shadow-xl",
+      "--shadow-glow",
+      "--shadow-glow-strong",
+      "--transition-fast",
+      "--transition-base",
+      "--transition-slow",
+      "--z-dropdown",
+      "--z-sticky",
+      "--z-modal-backdrop",
+      "--z-modal",
+      "--z-tooltip",
+      "--z-toast",
+      "--container-max",
+      "--gutter",
+      "--header-height",
+      "--footer-height"
+    ],
+    "root_token_families": {
+      "color": 28,
+      "sonstige": 89,
+      "font": 8,
+      "text": 10,
+      "space": 13,
+      "radius": 6,
+      "shadow": 6,
+      "transition": 3,
+      "z": 6,
+      "container": 1
+    },
+    "light_block_token_count": 14,
+    "light_block_overrides_root": [
+      "--color-bg-deep",
+      "--color-bg-card",
+      "--color-bg-card-hover",
+      "--color-border",
+      "--color-border-glow",
+      "--color-text-primary",
+      "--color-text-secondary",
+      "--color-text-muted",
+      "--color-text-on-primary",
+      "--color-primary",
+      "--color-primary-light",
+      "--color-primary-dark",
+      "--color-secondary-text",
+      "--shadow-glow"
+    ],
+    "light_block_only": [],
+    "class_selectors_count": 115,
+    "class_selectors": [
+      "absolute",
+      "animate-fade-in",
+      "animate-slide-up",
+      "badge",
+      "badge-chakra",
+      "badge-primary",
+      "badge-remove",
+      "badge-reversed",
+      "badge-secondary",
+      "badge-upright",
+      "btn",
+      "btn-full",
+      "btn-ghost",
+      "btn-lg",
+      "btn-primary",
+      "btn-secondary",
+      "btn-sm",
+      "btn-small",
+      "card",
+      "card-body",
+      "card-footer",
+      "card-header",
+      "card-interactive",
+      "card-subtitle",
+      "card-title",
+      "container",
+      "crystal-card-interactive",
+      "fixed",
+      "flex",
+      "flex-1",
+      "flex-col",
+      "flex-wrap",
+      "footer",
+      "footer-bottom",
+      "footer-brand",
+      "footer-column",
+      "footer-inner",
+      "footer-links",
+      "footer-logo",
+      "footer-tagline",
+      "gap-2",
+      "gap-3",
+      "gap-4",
+      "gap-6",
+      "grid",
+      "grid-2",
+      "grid-3",
+      "grid-4",
+      "grid-auto",
+      "h-full",
+      "header",
+      "header-inner",
+      "input",
+      "inset-0",
+      "italic",
+      "items-center",
+      "items-end",
+      "items-start",
+      "justify-between",
+      "justify-center",
+      "label",
+      "logo",
+      "mb-0",
+      "mb-1",
+      "mb-2",
+      "mb-3",
+      "mb-4",
+      "mb-6",
+      "mb-8",
+      "modal",
+      "modal-backdrop",
+      "modal-body",
+      "modal-close",
+      "modal-footer",
+      "modal-header",
+      "modal-title",
+      "mt-0",
+      "mt-1",
+      "mt-2",
+      "mt-3",
+      "mt-4",
+      "mt-6",
+      "mt-8",
+      "mx-auto",
+      "nav",
+      "nav-link",
+      "nav-list",
+      "nav-toggle",
+      "overflow-hidden",
+      "relative",
+      "rounded",
+      "rounded-full",
+      "rounded-lg",
+      "rounded-xl",
+      "section",
+      "section--ruled",
+      "select",
+      "skip-link",
+      "sr-only",
+      "stagger-1",
+      "stagger-2",
+      "stagger-3",
+      "stagger-4",
+      "stagger-5",
+      "stagger-6",
+      "text-center",
+      "text-gold",
+      "text-muted",
+      "text-primary",
+      "text-secondary",
+      "text-sm",
+      "text-xs",
+      "textarea",
+      "tooltip",
+      "w-full"
+    ],
+    "class_prefixes_count": 38,
+    "class_prefixes": [
+      "absolute",
+      "animate",
+      "badge",
+      "btn",
+      "card",
+      "container",
+      "crystal",
+      "fixed",
+      "flex",
+      "footer",
+      "gap",
+      "grid",
+      "h",
+      "header",
+      "input",
+      "inset",
+      "italic",
+      "items",
+      "justify",
+      "label",
+      "logo",
+      "mb",
+      "modal",
+      "mt",
+      "mx",
+      "nav",
+      "overflow",
+      "relative",
+      "rounded",
+      "section",
+      "select",
+      "skip",
+      "sr",
+      "stagger",
+      "text",
+      "textarea",
+      "tooltip",
+      "w"
+    ],
+    "light_theme_used_by_html": false
+  },
+  "breakpoints": {
+    "files_with_media_queries": {
+      "css/design-system.css": 10,
+      "css/farbwelten.css": 4,
+      "css/frequenzlabor.css": 5,
+      "css/main.css": 27,
+      "css/radiasthesie-statisch.css": 1,
+      "css/radiasthesie.css": 18
+    },
+    "distinct_widths_count": 22,
+    "distinct_widths_by_frequency": [
+      {
+        "width": "700px",
+        "count": 14,
+        "files": 5
+      },
+      {
+        "width": "900px",
+        "count": 6,
+        "files": 4
+      },
+      {
+        "width": "480px",
+        "count": 5,
+        "files": 3
+      },
+      {
+        "width": "360px",
+        "count": 4,
+        "files": 3
+      },
+      {
+        "width": "1000px",
+        "count": 4,
+        "files": 2
+      },
+      {
+        "width": "1100px",
+        "count": 4,
+        "files": 4
+      },
+      {
+        "width": "640px",
+        "count": 3,
+        "files": 2
+      },
+      {
+        "width": "1024px",
+        "count": 3,
+        "files": 3
+      },
+      {
+        "width": "400px",
+        "count": 2,
+        "files": 2
+      },
+      {
+        "width": "420px",
+        "count": 2,
+        "files": 1
+      },
+      {
+        "width": "560px",
+        "count": 2,
+        "files": 2
+      },
+      {
+        "width": "720px",
+        "count": 2,
+        "files": 2
+      },
+      {
+        "width": "768px",
+        "count": 2,
+        "files": 1
+      },
+      {
+        "width": "780px",
+        "count": 2,
+        "files": 2
+      },
+      {
+        "width": "901px",
+        "count": 2,
+        "files": 1
+      },
+      {
+        "width": "1200px",
+        "count": 2,
+        "files": 2
+      },
+      {
+        "width": "380px",
+        "count": 1,
+        "files": 1
+      },
+      {
+        "width": "520px",
+        "count": 1,
+        "files": 1
+      },
+      {
+        "width": "632px",
+        "count": 1,
+        "files": 1
+      },
+      {
+        "width": "701px",
+        "count": 1,
+        "files": 1
+      },
+      {
+        "width": "781px",
+        "count": 1,
+        "files": 1
+      },
+      {
+        "width": "1199px",
+        "count": 1,
+        "files": 1
+      }
+    ],
+    "widths_used_in_two_or_more_files": [
+      {
+        "width": "700px",
+        "occurrences": 14,
+        "files": [
+          "css/design-system.css",
+          "css/farbwelten.css",
+          "css/frequenzlabor.css",
+          "css/main.css",
+          "css/radiasthesie.css"
+        ]
+      },
+      {
+        "width": "900px",
+        "occurrences": 6,
+        "files": [
+          "css/design-system.css",
+          "css/farbwelten.css",
+          "css/main.css",
+          "css/radiasthesie.css"
+        ]
+      },
+      {
+        "width": "480px",
+        "occurrences": 5,
+        "files": [
+          "css/design-system.css",
+          "css/main.css",
+          "css/radiasthesie.css"
+        ]
+      },
+      {
+        "width": "360px",
+        "occurrences": 4,
+        "files": [
+          "css/design-system.css",
+          "css/frequenzlabor.css",
+          "css/main.css"
+        ]
+      },
+      {
+        "width": "1000px",
+        "occurrences": 4,
+        "files": [
+          "css/main.css",
+          "css/radiasthesie.css"
+        ]
+      },
+      {
+        "width": "1100px",
+        "occurrences": 4,
+        "files": [
+          "css/design-system.css",
+          "css/farbwelten.css",
+          "css/main.css",
+          "css/radiasthesie.css"
+        ]
+      },
+      {
+        "width": "640px",
+        "occurrences": 3,
+        "files": [
+          "css/design-system.css",
+          "css/main.css"
+        ]
+      },
+      {
+        "width": "1024px",
+        "occurrences": 3,
+        "files": [
+          "css/design-system.css",
+          "css/frequenzlabor.css",
+          "css/main.css"
+        ]
+      },
+      {
+        "width": "400px",
+        "occurrences": 2,
+        "files": [
+          "css/farbwelten.css",
+          "css/frequenzlabor.css"
+        ]
+      },
+      {
+        "width": "560px",
+        "occurrences": 2,
+        "files": [
+          "css/main.css",
+          "css/radiasthesie.css"
+        ]
+      },
+      {
+        "width": "720px",
+        "occurrences": 2,
+        "files": [
+          "css/main.css",
+          "css/radiasthesie-statisch.css"
+        ]
+      },
+      {
+        "width": "780px",
+        "occurrences": 2,
+        "files": [
+          "css/design-system.css",
+          "css/radiasthesie.css"
+        ]
+      },
+      {
+        "width": "1200px",
+        "occurrences": 2,
+        "files": [
+          "css/main.css",
+          "css/radiasthesie.css"
+        ]
+      }
+    ],
+    "widths_used_in_two_or_more_files_count": 13,
+    "most_frequent_width": "700px",
+    "main_700px_line": 1933
+  },
+  "assets": {
+    "files_total": 644,
+    "bytes_total": 96961218,
+    "by_top_directory": {
+      "assets/cosmos": 2,
+      "assets/crystals": 121,
+      "assets/favicon.svg": 1,
+      "assets/fonts": 5,
+      "assets/mineral": 2,
+      "assets/radiasthesie": 37,
+      "assets/tarot": 476
+    },
+    "by_extension": {
+      "jpg": 481,
+      "webp": 131,
+      "avif": 11,
+      "svg": 6,
+      "json": 5,
+      "ttf": 3,
+      "png": 3,
+      "txt": 2,
+      "md": 1,
+      "html": 1
+    },
+    "tarot_decks": {
+      "nachtatelier-v1": 238,
+      "gartenbrevier-v2": 238
+    },
+    "tarot_decks_registry": "js/data/tarot-decks.js"
+  },
+  "data_files": [
+    {
+      "path": "data/crystals.json",
+      "bytes": 47716
+    },
+    {
+      "path": "data/frequencies.json",
+      "bytes": 32893
+    },
+    {
+      "path": "data/moon-astro.mjs",
+      "bytes": 23164
+    },
+    {
+      "path": "data/runes.json",
+      "bytes": 6437
+    },
+    {
+      "path": "data/tarot.json",
+      "bytes": 30437
+    }
+  ],
+  "js": {
+    "modules_count": 42,
+    "modules": [
+      "js/modules/_tarot_old.js",
+      "js/modules/astrologie-format.js",
+      "js/modules/astrologie-model.js",
+      "js/modules/astrologie-views-reference.js",
+      "js/modules/astrologie-views.js",
+      "js/modules/astrologie.js",
+      "js/modules/blog.js",
+      "js/modules/crystals.js",
+      "js/modules/experiment-labor.js",
+      "js/modules/experiment-speicher.js",
+      "js/modules/experiment-statistik.js",
+      "js/modules/experiment-zufall.js",
+      "js/modules/farbwelten-loader.js",
+      "js/modules/farbwelten-model.js",
+      "js/modules/farbwelten.js",
+      "js/modules/frequenz-chladni.js",
+      "js/modules/frequenz-cymatics-view.js",
+      "js/modules/frequenz-engine.js",
+      "js/modules/frequenz-flags.js",
+      "js/modules/frequenz-meditation-model.js",
+      "js/modules/frequenz-meditation-view.js",
+      "js/modules/frequenz-nav.js",
+      "js/modules/frequenz-presets.js",
+      "js/modules/frequenz-visualisierung.js",
+      "js/modules/frequenzlabor-loader.js",
+      "js/modules/frequenzlabor.js",
+      "js/modules/journal-speicher.js",
+      "js/modules/markdown-lite.js",
+      "js/modules/moon.js",
+      "js/modules/pendel-journal.js",
+      "js/modules/pendel-simulator.js",
+      "js/modules/pendeltafel-model.js",
+      "js/modules/pendeltafel-studio.js",
+      "js/modules/radiasthesie-format.js",
+      "js/modules/radiasthesie-loader.js",
+      "js/modules/radiasthesie-model.js",
+      "js/modules/radiasthesie-seo.js",
+      "js/modules/radiasthesie-vertraege.js",
+      "js/modules/radiasthesie-views.js",
+      "js/modules/radiasthesie.js",
+      "js/modules/runes.js",
+      "js/modules/tarot.js"
+    ],
+    "data_modules_count": 11,
+    "data_modules": [
+      "js/data/articles.js",
+      "js/data/astrologie.js",
+      "js/data/chakren.js",
+      "js/data/crystals.js",
+      "js/data/farbwelten.js",
+      "js/data/moon.js",
+      "js/data/radiasthesie-werkstatt.js",
+      "js/data/radiasthesie.js",
+      "js/data/runes.js",
+      "js/data/tarot-decks.js",
+      "js/data/tarot.js"
+    ]
+  },
+  "scope": {
+    "shipped_entries_from_build_pages": [
+      "index.html",
+      "impressum.html",
+      "datenschutz.html",
+      "haftung.html",
+      "404.html",
+      "robots.txt",
+      "sitemap.xml",
+      "css",
+      "js",
+      "data",
+      "assets",
+      "radiasthesie",
+      "content"
+    ],
+    "shipped_single_documents": [
+      "docs/frequenz-quellen.md"
+    ],
+    "not_shipped_candidates": [
+      {
+        "path": "docs",
+        "exists": true,
+        "in_baseline_commit": null
+      },
+      {
+        "path": "evidence",
+        "exists": true,
+        "in_baseline_commit": null
+      },
+      {
+        "path": "public",
+        "exists": true,
+        "in_baseline_commit": null
+      },
+      {
+        "path": "scripts",
+        "exists": true,
+        "in_baseline_commit": null
+      },
+      {
+        "path": "tests",
+        "exists": true,
+        "in_baseline_commit": null
+      },
+      {
+        "path": "qa",
+        "exists": true,
+        "in_baseline_commit": null
+      },
+      {
+        "path": "node_modules",
+        "exists": true,
+        "in_baseline_commit": null
+      },
+      {
+        "path": "dist",
+        "exists": false,
+        "in_baseline_commit": null
+      }
+    ],
+    "legacy_public_placeholder": {
+      "path": "public",
+      "exists": true,
+      "reason": "build-pages.cjs kopiert public/ nicht; der Ordner ist ein alter Platzhalter (public/index.html, public/styles.css) und wird nicht ausgeliefert.",
+      "file_count": 17
+    }
+  },
+  "hashes": {
+    "css": {
+      "files": 7,
+      "sha256": "434eee4bde0a2fa9b47af44eaae648b637c5a63eac34e6cac6cce38e7fd17a62"
+    },
+    "js": {
+      "files": 64,
+      "sha256": "08086789bb7994efd62b27c10c272fca60524d4549aa6bc71df394b420be79de"
+    },
+    "js/data": {
+      "files": 11,
+      "sha256": "54f0c5c4d38c2b53279980d8a196c2faec0ea895c5049af253acc769ba1cd0eb"
+    },
+    "content": {
+      "files": 18,
+      "sha256": "c0a8334e91875eb0155a409522ccac3bcf5fe3ec267df2eeead8c17571f67216"
+    },
+    "radiasthesie": {
+      "files": 7,
+      "sha256": "4ca15b535102ce2ae9873392551a78c19efed9c951946487c4bcf11faea535c7"
+    }
+  }
+}
