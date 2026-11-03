@@ -94,8 +94,7 @@ Geändert: `radiasthesie-views.js` (`renderJournal`), `radiasthesie-model.js`
 
 SHA-256 (Kurzform, committeter Stand): `journal-speicher.js`
 `b0980168706df717`, `pendel-journal.js` `1d86e341a796f7b5`,
-`css/radiasthesie.css` `a70c74560d303dc8`, `radiasthesie-views.js`
-`36e8d83e9f4b3888`.
+`css/radiasthesie.css` `a70c74560d303dc8`.
 
 ## 3. Commits
 
