@@ -41,7 +41,7 @@ test('U1: #frequenzen zeigt die Bibliothek mit einem H1 und ohne Konsolenfehler'
   expect(await page.locator('#frequenzen h1:visible').count()).toBe(1);
   await expect(page.locator('#frequenzen-title')).toHaveText(/Frequenzen/);
   await expect(page.locator('.nav-link[data-page="frequenzen"]')).toHaveAttribute('aria-current', 'page');
-  expect(await page.locator('#fqLibrary .fq-entry').count()).toBe(32);
+  expect(await page.locator('#fqLibrary .fq-entry').count()).toBe(41);
   expect(await page.locator('.fq-badge').first().textContent()).not.toBe('');
   expect(await page.title()).toContain('Frequenzen');
   await expect(page.locator('#fqDisclaimerKurz')).toContainText('kein Medizinprodukt');

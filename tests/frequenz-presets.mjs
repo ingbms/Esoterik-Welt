@@ -26,7 +26,7 @@ const raw = JSON.parse(fs.readFileSync(path.join(root, 'data/frequencies.json'),
 test('P1: der Datenbestand wird vollständig normalisiert', () => {
   const data = parseFrequencyFile(raw);
   assert.equal(data.error, null);
-  assert.equal(data.entries.length, 32);
+  assert.equal(data.entries.length, 41);
   assert.equal(data.rejected, 0);
   for (const entry of data.entries) {
     assert.ok(entry.id && entry.name, 'id und name sind Pflicht');
@@ -38,21 +38,21 @@ test('P1: der Datenbestand wird vollständig normalisiert', () => {
     // Quellen sind nur als https-Link verwendbar; alles andere bleibt Text.
     if (entry.quelleUrl !== null) assert.match(entry.quelleUrl, /^https:\/\//);
   }
-  assert.equal(data.entries.filter((entry) => entry.hz === null).length, 9);
+  assert.equal(data.entries.filter((entry) => entry.hz === null).length, 14);
   assert.ok(data.disclaimer.kurz.includes('kein Medizinprodukt'));
 });
 
 test('P2: nur die Allowlist und Partner-Töne werden abgespielt', () => {
   const data = parseFrequencyFile(raw);
   const playable = data.entries.filter((entry) => entry.playback.mode !== 'none');
-  assert.equal(playable.length, 10);
+  assert.equal(playable.length, 13);
   for (const entry of playable) {
     if (entry.playback.mode === 'tone' && !entry.playback.partnerHz) {
       assert.ok(TONE_ALLOWLIST_HZ.includes(entry.playback.hz), `${entry.hz} fehlt in der Allowlist`);
     }
   }
   const solfeggio = playable.filter((entry) => entry.id.startsWith('solfeggio-'));
-  assert.equal(solfeggio.length, 6);
+  assert.equal(solfeggio.length, 9);
   for (const entry of solfeggio) assert.equal(entry.playback.mode, 'tone');
 });
 
@@ -65,6 +65,18 @@ test('P3: Schumann, EEG-Bänder und andere Zahlen bleiben ohne Ton', () => {
   assert.equal(byId.get('gamma-40-stimulation').playback.mode, 'none');
   assert.equal(byId.get('harmonische-obertonreihe').playback.mode, 'none');
   assert.equal(byId.get('ultraschall-medizin').playback.mode, 'none');
+  // Pflichtthemen aus Master-Auftrag §3.1 bleiben ohne hörbare Wiedergabe (ADR §8.2).
+  for (const id of [
+    'rife-frequenz-727',
+    'bioresonanz-geraete',
+    'cymatics-chladni',
+    'klangschale-obertoene',
+    'mantra-om',
+    'chakra-frequenzzuordnungen',
+  ]) {
+    assert.ok(byId.has(id), `${id} fehlt im Datensatz`);
+    assert.equal(byId.get(id).playback.mode, 'none', `${id} darf nicht hörbar sein`);
+  }
 });
 
 test('P4: ein gültiges playback-Feld gewinnt gegen die Allowlist', () => {
@@ -240,5 +252,5 @@ test('Datenladen nutzt das eingebettete JSON vor fetch (file://-Pfad)', async ()
     },
   });
   assert.equal(fetched, 0);
-  assert.equal(data.entries.length, 32);
+  assert.equal(data.entries.length, 41);
 });
