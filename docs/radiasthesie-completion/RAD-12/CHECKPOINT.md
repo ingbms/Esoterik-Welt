@@ -35,7 +35,7 @@ alle unter der 600-px-Näherung. Beschreibungen 102–149 Zeichen.
 - `css/radiasthesie-statisch.css` — Rahmen der Dokumente (Tokens aus design-system)
 - `radiasthesie/*.html` — sieben erzeugte Dokumente (versioniert, weil GitHub Pages
   das Wurzelverzeichnis veröffentlicht)
-- `tests/radiasthesie-statisch.mjs` — 11 Prüfungen des erzeugten HTML ohne Server
+- `tests/radiasthesie-statisch.mjs` — 12 Prüfungen des erzeugten HTML ohne Server
 - `tests/radiasthesie-statisch.spec.js` — 9 Browsertests, davon 7 mit deaktiviertem JavaScript
 
 **Geändert**
@@ -62,7 +62,7 @@ alle unter der 600-px-Näherung. Beschreibungen 102–149 Zeichen.
 | --- | --- |
 | `npm run lint` | 0 Fehler, 0 Warnungen |
 | `npm run format:check` | alle Dateien konform |
-| `node --test` (Radiästhesie, Verträge, Simulator, Tafeln, Experiment, Journal, statisch) | **163/163** |
+| `node --test` (Radiästhesie, Verträge, Simulator, Tafeln, Experiment, Journal, statisch) | **164/164** |
 | `npm run test:pages` | **6/6** |
 | `npm run test:offline` | **2/2** |
 | `npx playwright test` (gesamte Suite, Port 3402) | **147/147** |

@@ -213,6 +213,20 @@ test('Brotkrümel im HTML entsprechen der JSON-LD-Hierarchie', () => {
   }
 });
 
+test('Überschriftenordnung und IDs sind eindeutig', () => {
+  for (const page of pages.values()) {
+    const ids = [...page.html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+    assert.equal(new Set(ids).size, ids.length, `${page.id}: doppelte IDs`);
+    const levels = [...page.html.matchAll(/<h([1-3])\b[^>]*>/g)].map((match) => Number(match[1]));
+    assert.ok(levels.length >= 2, `${page.id}: zu wenige Überschriften`);
+    let previous = levels[0];
+    for (const level of levels) {
+      assert.ok(level - previous <= 1, `${page.id}: Überschriftensprung h${previous} → h${level}`);
+      previous = level;
+    }
+  }
+});
+
 test('Bilder: Alt-Text vorhanden, Dateien existieren, Maße gesetzt', () => {
   for (const page of pages.values()) {
     const images = [...page.html.matchAll(/<img\b([^>]*)>/g)].map((match) => match[1]);
