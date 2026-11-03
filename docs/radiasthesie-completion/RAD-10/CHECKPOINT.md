@@ -106,7 +106,9 @@ SHA-256 (Kurzform, committeter Stand): `journal-speicher.js`
 | `ac143e7` | Checkpoint und erste Browser-Nachweise |
 | dieser Commit | aktualisierte Nachweise und Testzahlen |
 
-Basis: `589a387` (RAD-09 Checkpoint). Kein Push.
+Basis: `589a387` (RAD-09 Checkpoint). Kein Push. Weitere Commits dieser Karte
+(Textkorrekturen, aktualisierte Nachweise) stehen in
+`git log --oneline 589a387..HEAD`.
 
 ## 4. Wirklich ausgeführt
 
