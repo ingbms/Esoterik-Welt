@@ -30,6 +30,8 @@ import { CONFIDENCE_LABELS } from './journal-speicher.js';
 const SITE = 'Esoterik-Welt';
 const UPDATED_LABEL = 'Stand 3. November 2026';
 const H1_ID = 'pendeln-title';
+// Gemessene Slotbreite der Fotos (max-width in css/radiasthesie.css).
+const PHOTO_SLOT = 680;
 
 // Auch der statische Generator liest diese Texte: Er benutzt dieselben Titel
 // und Beschreibungen wie die Modulansicht, damit beide nicht auseinanderlaufen.
@@ -80,12 +82,26 @@ function plate(figure, { className = '' } = {}) {
  */
 function photoFigure(item) {
   const web = item.web;
-  const sizes = '(max-width: 640px) 100vw, 520px';
+  // Gemessene Layoutbreite des Foto-Slots: 680 CSS px ab 768 px Viewport,
+  // darunter 100vw minus 48 px Innenabstand (bei 320/375/640 px geprüft).
+  // Die frühere Angabe „520px“ unterschätzte den Slot um 160 px, der Browser
+  // wählte deshalb die 520er-Datei und skalierte sie 1,31-fach hoch.
+  const sizes = '(max-width: 728px) calc(100vw - 48px), 680px';
+  // Liegt die größte verfügbare Variante unter der Slotbreite, wird der Slot
+  // auf deren echte Breite begrenzt, damit nichts über die Quelle hinaus
+  // skaliert wird (RAD-13/F2, Motiv rad-media-03: nur 520 px verfügbar).
+  const largest = Math.max(
+    ...[web.srcset, web.srcsetAvif]
+      .filter(Boolean)
+      .map((set) => Math.max(0, ...(String(set).match(/(\d+)w\b/g) || []).map((w) => Number.parseInt(w, 10))))
+  );
+  const nativeWidth = largest > 0 && largest < PHOTO_SLOT ? largest : 0;
+  const slotStyle = nativeWidth ? ` style="--rad-photo-max:${nativeWidth}px"` : '';
   const avif = web.srcsetAvif
     ? `<source type="image/avif" srcset="${escapeHtml(web.srcsetAvif)}" sizes="${sizes}" />`
     : '';
   const webp = web.srcset ? `<source type="image/webp" srcset="${escapeHtml(web.srcset)}" sizes="${sizes}" />` : '';
-  return `<figure class="rad-plate rad-plate--photo" id="bild-${escapeHtml(item.id)}">
+  return `<figure class="rad-plate rad-plate--photo"${slotStyle} id="bild-${escapeHtml(item.id)}">
     <picture>
       ${avif}${webp}
       <img src="${escapeHtml(web.src)}" width="${web.width}" height="${web.height}" alt="${escapeHtml(

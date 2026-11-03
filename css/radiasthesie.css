@@ -172,7 +172,9 @@
 /* Instrumententafeln im Artikel bleiben schmaler als die Textspalte,
    damit die Zeichnung nicht in leerer Fläche steht. */
 .rad .astro-main .rad-plate {
-  max-width: 680px;
+  /* Fotos: --rad-photo-max begrenzt auf die größte verfügbare Bildvariante,
+     damit nichts über die Quelle hinaus skaliert wird (RAD-13/F2). */
+  max-width: var(--rad-photo-max, 680px);
 }
 
 /* --- Artikel-Layout: Lesereihenfolge = DOM-Reihenfolge ------------------
@@ -3055,7 +3057,9 @@
    Motive haben eigene Seitenverhältnisse, und ein Beschnitt würde das
    Motiv verändern. Die Maße kommen als width/height aus den Daten. */
 .rad-plate--photo {
-  max-width: 680px;
+  /* --rad-photo-max setzt die Grenze auf die größte verfügbare Bildvariante,
+     wenn diese schmaler ist als der Slot (siehe radiasthesie-views.js). */
+  max-width: var(--rad-photo-max, 680px);
 }
 .rad-plate--photo picture {
   display: block;
@@ -3072,6 +3076,19 @@
   margin-top: var(--space-2);
   font-size: var(--text-xs);
   line-height: 1.6;
+}
+/* --- Link-Erkennbarkeit im Fließtext (WCAG 1.4.1, RAD-13/F1) --------------
+   Links in Textblöcken und Metazeilen waren nur durch die Farbe vom
+   umgebenden Text unterschieden (Kontrast 1,07:1, gefordert sind 3:1).
+   Sie werden deshalb zusätzlich unterstrichen. Bedienflächen mit eigener
+   Form (.btn, .textlink, .rad-status-link mit Unterkante) bleiben unverändert. */
+.astro-source-meta a,
+.rad-photo-credit a,
+.astro-text a:not(.btn):not(.textlink),
+.astro-panel-note a,
+.rad-media-credits a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 .rad-media-credits li {
   margin-bottom: var(--space-3);

@@ -296,6 +296,42 @@ test('Sitemap: nur echte Dokumente, vollständig, ohne Fragmente', () => {
   assert.ok(robots.includes(`Sitemap: ${SITE}sitemap.xml`));
 });
 
+test('Fotos deklarieren die gemessene Slotbreite (RAD-13/F2)', () => {
+  // Gemessen im Browser: 680 CSS px ab 768 px Viewport, darunter 100vw - 48 px.
+  // Die alte Angabe „(max-width: 640px) 100vw, 520px“ ließ den Browser die
+  // 520er-Datei in einen 680er-Slot laden (1,31-fache Hochskalierung).
+  const sizes = '(max-width: 728px) calc(100vw - 48px), 680px';
+  let quellen = 0;
+  for (const page of pages.values()) {
+    assert.doesNotMatch(page.html, /sizes="\(max-width: 640px\) 100vw, 520px"/, `${page.id}: alte Slotbreite`);
+    for (const match of page.html.matchAll(/<source [^>]*sizes="([^"]+)"/g)) {
+      quellen += 1;
+      assert.equal(match[1], sizes, `${page.id}: sizes passt nicht zur gemessenen Slotbreite`);
+    }
+  }
+  assert.ok(quellen >= 8, `zu wenige Bildquellen geprüft: ${quellen}`);
+});
+
+test('Fließtext-Links sind zusätzlich zur Farbe erkennbar (WCAG 1.4.1, RAD-13/F1)', () => {
+  // axe-core meldete link-in-text-block mit 1,07:1 Kontrast; Unterstreichung
+  // ist die zulässige zweite Kennzeichnung. Die Regeln müssen in beiden
+  // Stylesheets stehen, weil Modul und statische Dokumente sie laden.
+  const modul = fs.readFileSync(path.join(root, 'css/radiasthesie.css'), 'utf8');
+  for (const selektor of [
+    '.astro-source-meta a',
+    '.rad-photo-credit a',
+    '.astro-text a:not(.btn):not(.textlink)',
+    '.astro-panel-note a',
+    '.rad-media-credits a',
+  ]) {
+    assert.ok(modul.includes(selektor), `css/radiasthesie.css: Regel für ${selektor} fehlt`);
+  }
+  assert.match(modul, /\.astro-source-meta a,[\s\S]{0,400}?text-decoration: underline/);
+  const statisch = fs.readFileSync(path.join(root, 'css/radiasthesie-statisch.css'), 'utf8');
+  assert.match(statisch, /\.rad-static-footer a \{[^}]*text-decoration: underline/);
+  assert.match(statisch, /\.rad-static-main p a[^{]*\{[^}]*text-decoration: underline/);
+});
+
 test('keine erfundenen Titel- oder Beschreibungsbehauptungen', () => {
   for (const page of pages.values()) {
     const content = text(page.html).toLowerCase();

@@ -146,6 +146,17 @@ body.rad-static {
 
 .rad-static-footer a {
   color: var(--color-primary);
+  /* WCAG 1.4.1 (RAD-13/F1): Fußzeilenlinks im Textblock zusätzlich
+     zur Farbe durch Unterstreichung erkennbar. */
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Fließtextlinks der statischen Dokumente: gleiche Regel wie im Modul,
+   hier für die Absätze, die keine .astro-text-Klasse tragen. */
+.rad-static-main p a:not(.btn):not(.textlink) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 @media (max-width: 720px) {

@@ -433,6 +433,43 @@ test('Fotos stehen im passenden Kapitel und tragen Alt-Text, Maße und Attributi
   }
 });
 
+test('Foto-Slot deklariert die gemessene Layoutbreite und skaliert nicht über die Quelle (RAD-13/F2)', () => {
+  // Gemessen: 680 CSS px ab 768 px Viewport, darunter 100vw minus 48 px.
+  // Vorher stand dort 520px; der Browser lud die 520er-Datei und skalierte
+  // sie 1,31-fach hoch (axe/Bildmessung RAD-13, Befund F2).
+  const sizes = '(max-width: 728px) calc(100vw - 48px), 680px';
+  let quellen = 0;
+  let begrenzt = 0;
+  for (const slug of TOPIC_SLUGS) {
+    const html = htmlOf(views.renderTopic(model, data.RADIASTHESIE.topics[slug]));
+    const gefunden = [...html.matchAll(/<source [^>]*sizes="([^"]+)"/g)];
+    assert.ok(gefunden.length > 0, `${slug}: keine Bildquelle mit sizes`);
+    for (const match of gefunden) {
+      quellen += 1;
+      assert.equal(match[1], sizes, `${slug}: sizes passt nicht zur gemessenen Slotbreite`);
+    }
+    for (const match of html.matchAll(/<figure class="rad-plate rad-plate--photo"([^>]*)id="bild-([^"]+)"/g)) {
+      const [, attribute, id] = match;
+      const item = data.RADIASTHESIE.media.items.find((entry) => entry.id === id);
+      assert.ok(item, `${slug}: Foto ${id} steht nicht im Manifest`);
+      const set = [item.web.srcset, item.web.srcsetAvif].filter(Boolean).join(',');
+      const largest = Math.max(0, ...(set.match(/(\d+)w\b/g) || []).map((w) => Number.parseInt(w, 10)));
+      if (largest > 0 && largest < 680) {
+        begrenzt += 1;
+        assert.match(
+          attribute,
+          new RegExp(`style="--rad-photo-max:${largest}px"`),
+          `${slug}/${id}: Slot muss auf die größte verfügbare Variante (${largest} px) begrenzt sein`
+        );
+      } else {
+        assert.doesNotMatch(attribute, /--rad-photo-max/, `${slug}/${id}: unnötige Begrenzung des Slots`);
+      }
+    }
+  }
+  assert.ok(quellen >= 6, `zu wenige Bildquellen geprüft: ${quellen}`);
+  assert.ok(begrenzt >= 1, 'Motiv ohne 1040er-Variante nicht gefunden');
+});
+
 test('Suche und Fehleransicht führen immer zurück', () => {
   const treffer = htmlOf(views.renderSuche(model, 'bovis'));
   assert.ok(treffer.includes('<h1'));
