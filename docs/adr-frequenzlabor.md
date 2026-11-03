@@ -228,17 +228,19 @@ Deaktivierte Features werden **nicht importiert** (dynamic `import()` erst hinte
 - **`#frequenzen`** ist die Hauptkategorie (Bibliothek, Erklärstück, Disclaimer, Einstieg ins Labor). Sie ist die neue `page`-ID `frequenzen` und erscheint in Hauptnavigation, Footer und Startseiten-Register.
 - **`#frequenzen/labor`** ist die Werkzeugansicht (Slider, Presets, Play/Stop, Sweep, Visualisierung, Binaural, 432/440).
 - **`#frequenzlabor`** (und `#frequenzlabor/...`) ist ein Alias und wird per `history.replaceState()` auf `#frequenzen/labor` normalisiert, ohne zusätzlichen History-Eintrag.
-- Weitere Unterseiten gibt es nicht. Abschnitte innerhalb des Labors sind Sprungmarken, keine Routen.
+- **`#frequenzen/quellen`** ist seit P11 (`t_9564a3d5`, Nachtrag unten) die dritte Ansicht: sie rendert `docs/frequenz-quellen.md` lesbar. Sie ist eine Ansicht der Kategorie, kein eigenes Dokument (kein Canonical, kein Sitemap-Eintrag).
+- Weitere Unterseiten gibt es nicht; unbekannte Segmente fallen auf die Bibliothek zurück und melden das sichtbar. Abschnitte innerhalb des Labors sind Sprungmarken, keine Routen.
 
 **Begründung:**
 
 - Der Master-Auftrag nennt `#frequenzen` ausdrücklich als direkten Zugang.
 - Das UI-Ticket `t_6b8164b3` nennt „Route /frequenzlabor“. Der Alias löst den Widerspruch ohne doppelte Ansicht und ohne toten Deep-Link.
 - Die Astrologie zeigt das Muster „eine Seite, Sub-Routen vom Modul gerendert“ bereits vor; das wird übernommen, statt einen zweiten Router zu bauen.
+- Die dritte Ansicht behebt Review-Befund B6 ohne zweite Textfassung: eine reine Kopie der Markdown-Datei in den Build hätte den 404 behoben, aber rohes Markdown ausgeliefert (P11).
 
 **Verworfen:** zwei unabhängige Seiten (`#frequenzen` und `#frequenzlabor`), reine Query-Parameter (`#frequenzen?view=labor`) — schlechter lesbar und nicht dem bestehenden Muster entsprechend.
 
-**Folgen:** `MAIN_PAGES` wächst um `frequenzen` (8 IDs), die Navigation um einen Eintrag. `parseRoute()` bekommt ein Frequenz-Muster; die Detailintegration steht in §6.2.
+**Folgen:** `MAIN_PAGES` wächst um `frequenzen` (8 IDs), die Navigation um einen Eintrag. `parseRoute()` bekommt ein Frequenz-Muster; die Detailintegration steht in §6.2. Das Modul rendert drei Ansichten aus derselben Route; die Dokumentansicht setzt eigene Metadaten (`PAGE_META.frequenzenQuellen`), aber keine eigene Canonical-URL.
 
 ### AD-7: Datenladen — `fetch` auf HTTP, eingebettetes JSON auf `file://`
 
