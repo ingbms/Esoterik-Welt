@@ -150,6 +150,9 @@ export class FrequenzlaborModule {
     this.sweepTimer = 0;
     this.sweepStartedAt = 0;
     this.sweepSeconds = 0;
+    // Reine UI-Merke: „Pause“ ist stop() plus dieses Merkzeichen, es gibt
+    // keinen dritten Audiozustand (ADR §4.4).
+    this.paused = false;
     this.lastAnnounce = 0;
     this.announceTimer = 0;
     this.viz = null;
@@ -234,12 +237,16 @@ export class FrequenzlaborModule {
   halt(message) {
     clearInterval(this.sweepTimer);
     this.sweepTimer = 0;
+    // Jedes automatische oder ausdrückliche Stoppen beendet den Pause-Zustand;
+    // nur `pause()` setzt das Merkzeichen danach wieder (ADR §4.4).
+    this.paused = false;
     this.engine.stop().catch(() => {});
     if (this.viz) {
       this.viz.stop();
       this.viz.render(this.engine.state);
     }
     if (message) this.announce(message);
+    this.syncTransport();
   }
 
   announce(message) {
@@ -505,6 +512,7 @@ export class FrequenzlaborModule {
       </div>
       <div class="fq-transport" role="group" aria-label="Wiedergabe">
         <button type="button" class="btn btn-primary" id="fqPlay">Ton starten</button>
+        <button type="button" class="btn btn-secondary" id="fqPause" disabled title="Hält den Ton an; die Einstellungen bleiben erhalten">Pause</button>
         <button type="button" class="btn btn-secondary" id="fqStop">Stopp</button>
         <p class="fq-live" id="fqLiveStatus">bereit</p>
         <p class="fq-live-hz" id="fqLiveHz">${formatHz(this.freqHz)}</p>
@@ -652,6 +660,7 @@ export class FrequenzlaborModule {
     this.refs.status = byId('fqStatus');
     this.refs.error = byId('fqError');
     this.refs.play = byId('fqPlay');
+    this.refs.pause = byId('fqPause');
     this.refs.stop = byId('fqStop');
     this.refs.live = byId('fqLiveStatus');
     this.refs.liveHz = byId('fqLiveHz');
@@ -693,6 +702,10 @@ export class FrequenzlaborModule {
 
   bindLab() {
     this.refs.play.addEventListener('click', () => this.play());
+    this.refs.pause.addEventListener('click', () => {
+      if (this.paused) this.resume();
+      else this.pause();
+    });
     this.refs.stop.addEventListener('click', () => this.stopTone());
     this.refs.freqRange.addEventListener('input', () => {
       this.setFrequency(this.sliderToHz(Number(this.refs.freqRange.value)));
@@ -789,13 +802,15 @@ export class FrequenzlaborModule {
     }
   }
 
-  async play() {
+  async play(options = {}) {
     this.refs.error.hidden = true;
     try {
       await this.engine.play(this.freqHz, { waveform: this.waveform, gainDb: this.gainDb });
-      this.announce(`Ton läuft: ${formatHz(this.freqHz)}, ${formatDb(this.gainDb)}.`);
+      this.announce(options.message || `Ton läuft: ${formatHz(this.freqHz)}, ${formatDb(this.gainDb)}.`);
+      return true;
     } catch (error) {
       this.showError(error);
+      return false;
     }
   }
 
@@ -871,8 +886,34 @@ export class FrequenzlaborModule {
   }
 
   stopTone() {
+    this.paused = false;
     this.engine.stop().catch(() => {});
     this.announce('Ton gestoppt.');
+    this.syncTransport();
+  }
+
+  /**
+   * „Pause“ ist keine Engine-Methode: der Ton wird über `stop()` beendet, die
+   * Einstellungen bleiben im Controller. Es entsteht kein dritter Audiozustand
+   * (ADR §4.4, Review B3).
+   */
+  pause() {
+    const status = this.engine.state.status;
+    if (status !== 'running' && status !== 'starting') return;
+    this.halt(null);
+    this.paused = true;
+    this.announce(`Ton pausiert bei ${formatHz(this.freqHz)}. „Weiter“ setzt mit denselben Werten fort.`);
+    this.syncTransport();
+  }
+
+  /** „Weiter“ ruft `play()` mit den aktuell gemerkten Werten des Controllers. */
+  async resume() {
+    if (!this.paused) return;
+    const ok = await this.play({
+      message: `Weiter: Ton läuft: ${formatHz(this.freqHz)}, ${formatDb(this.gainDb)}.`,
+    });
+    if (ok) this.paused = false;
+    this.syncTransport();
   }
 
   startSweep() {
@@ -926,9 +967,31 @@ export class FrequenzlaborModule {
     }
   }
 
+  /**
+   * Transportleiste aus dem Engine-Zustand plus dem Pause-Merkzeichen ableiten.
+   * Es gibt bewusst nur die Engine-Zustände; „pausiert“ ist kein Statuswert,
+   * sondern nur die Beschriftung des zweiten Knopfs (ADR §4.4, Review B3).
+   */
+  syncTransport() {
+    const status = this.engine.state.status;
+    const running = status === 'running';
+    const starting = status === 'starting';
+    const paused = this.paused && !running && !starting;
+    if (this.refs.play) this.refs.play.disabled = running || starting;
+    if (this.refs.pause) {
+      this.refs.pause.disabled = !(running || starting || paused);
+      this.refs.pause.textContent = paused ? 'Weiter' : 'Pause';
+      this.refs.pause.title = paused
+        ? 'Setzt den Ton mit den aktuellen Einstellungen fort'
+        : 'Hält den Ton an; die Einstellungen bleiben erhalten';
+    }
+    if (this.refs.stop) this.refs.stop.disabled = !(running || starting || paused);
+  }
+
   syncControls() {
     this.syncFrequency(true);
     this.syncGain();
+    this.syncTransport();
     if (this.refs.waveform) this.refs.waveform.value = this.waveform;
     if (this.refs.notice && this.dataError) {
       this.refs.notice.hidden = false;
@@ -946,9 +1009,9 @@ export class FrequenzlaborModule {
   onEngineState(state) {
     if (!state) return;
     const running = state.status === 'running';
+    if (running) this.paused = false;
     if (this.view === 'labor') {
-      if (this.refs.play) this.refs.play.disabled = running || state.status === 'starting';
-      if (this.refs.stop) this.refs.stop.disabled = !running && state.status !== 'starting';
+      this.syncTransport();
       if (this.refs.live) this.refs.live.textContent = STATE_TEXTS[state.status] || state.status;
       if (this.refs.readState) this.refs.readState.textContent = STATE_TEXTS[state.status] || state.status;
       if (Number.isFinite(state.freqHz) && state.status === 'running' && Math.abs(state.freqHz - this.freqHz) > 0.5) {
