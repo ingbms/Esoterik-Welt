@@ -3,8 +3,8 @@
 **Projekt:** Esoterik Welt · Themenmodul Radiästhesie, Pendeln und Orakel
 **Master:** `t_878c59c7` / ESOW-RAD-000 · **Paket:** RAD-14 (Dokumentation und Übergabe)
 **Arbeitsbaum:** `C:/Users/mas/Arbeit/esow-rad-t_878c59c7`, Branch `feature/radiasthesie-modul`
-**Datenstand dieser Dokumentation:** Commit `5fe5301` (`docs(radiasthesie): unabhaengige Abnahme RAD-13 — Bericht, Checkpoint und Evidenz`)
-**Freigabestatus:** **nicht freigegeben** — siehe `../RELEASE-CANDIDATE.md`. Die unabhängige Abnahme von RAD-01…12 endete mit **NICHT ABGENOMMEN** (Befund F1, Korrekturkarte `t_b1641fc1`).
+**Datenstand dieser Dokumentation:** Kandidat `ceddc84cfca44d53f1995dfd0981b7d70a554724`; Erstübergabe `1f78942`.
+**Status:** F1/F2 unabhängig bestätigt behoben; Übergabe aktualisiert. Kein Gesamt- oder Veröffentlichungsrecht. Siehe [Nachabnahme](NACHABNAHME.md) und [Release-Kandidat](../RELEASE-CANDIDATE.md).
 
 ## 1. Was hier steht
 
@@ -24,12 +24,15 @@ Testprotokolle, Änderungen, Grenzen, Ausbaustufen und die Paketmatrix.
 | `BEDIENUNG-EXPERIMENTIERLABOR.md` | Bedienungsanleitung `#pendeln/experiment` | dito |
 | `BEDIENUNG-PENDELTAGEBUCH.md` | Bedienungsanleitung `#pendeln/journal` | dito |
 | `TESTPROTOKOLLE.md` | Befehle, Ergebnisse, Umgebung, exakte SHAs, was fehlt | Testprotokolle |
-| `AENDERUNGEN.md` | 28 Commits, Dateigruppen, Was sich für Nutzer ändert | Änderungsübersicht |
+| `AENDERUNGEN.md` | Kandidatenumfang (31 Commits), historische Detailgruppen und aktuelles F1/F2-Delta | Änderungsübersicht |
 | `GRENZEN.md` | Verblindung, Speicher, Forschung, Browser, Barrierefreiheit, Betrieb | bekannte Einschränkungen |
 | `AUSBAUSTUFEN.md` | Vorschläge mit Aufwand und Risiko | Vorschläge für weitere Ausbaustufen |
 | `PAKETMATRIX.md` | 14 Zeilen, Evidenzlinks, Reviewer-Verdikt | Paketmatrix |
 | `scripts/build-uebersichten.cjs` | erzeugt `QUELLENBIBLIOTHEK.md` und `MEDIEN-LIZENZEN.md` aus den Daten | Reproduzierbarkeit |
 | `../RELEASE-CANDIDATE.md` | Freigabekandidat mit Bedingungen und Verdict | Übergabe |
+| [NACHABNAHME.md](NACHABNAHME.md) | aktueller F1/F2-Review, erneute Tests, Rohlogs, Reproduktion, Provenienz | Abschlussdelta |
+| [SHA256SUMS.txt](SHA256SUMS.txt) | Fingerabdrücke der aktuellen Übergabedateien | Integrität |
+| [scripts/verify-handoff.py](scripts/verify-handoff.py) | Matrix, Tabellen, lokale Verweise, Hashes und ZIP prüfen | Validierung |
 | `../CHECKPOINT.md` | Stand, Dateien, SHA, Tests, Restpunkte, nächster Schritt | Checkpoint |
 
 ## 2. Was diese Dokumentation nicht ist
@@ -42,9 +45,10 @@ Testprotokolle, Änderungen, Grenzen, Ausbaustufen und die Paketmatrix.
   den Daten erzeugt; Redaktionsquelle bleibt
   `docs/radiasthesie-konzept/` (Inhalte, `recherche/quellen.json`,
   `daten/taxonomie.json`) und `assets/radiasthesie/media/media-manifest.json`.
-- **Keine Messung ohne Lauf.** Alle Zahlen in `TESTPROTOKOLLE.md` stammen aus
-  Läufen, die in dieser Sitzung auf `5fe5301` ausgeführt wurden; was nicht
-  gelaufen ist, steht als „nicht ausgeführt“ dort.
+- **Keine Messung ohne Lauf.** Historischer RAD-14-Erstlauf auf `5fe5301`,
+  unabhängige Nachabnahme und erneute Autorenläufe auf `ceddc84` sind getrennt
+  zugeordnet. Auch der erste fehlgeschlagene `test:all`-Versuch bleibt sichtbar.
+  Aktuelle Rohlogs: [NACHABNAHME.md](NACHABNAHME.md).
 
 ## 3. Lesereihenfolge
 

@@ -4,9 +4,9 @@
 | --- | --- |
 | Paket | ESOW-RAD-14 (Dokumentation und Übergabe) |
 | Karte | `t_10d41018`, Master `t_878c59c7` / ESOW-RAD-000 |
-| Profil / Modell | `writer` / deepseek-flash (Kartenvorgabe) |
+| Profil / Modell | `writer`; Kartenvorgabe deepseek-flash, Laufzeitabweichung dieser Wiederaufnahme siehe NACHABNAHME.md §4 |
 | Arbeitsbaum | `C:/Users/mas/Arbeit/esow-rad-t_878c59c7`, Branch `feature/radiasthesie-modul` |
-| Bezugsstand | `5fe5301` (`git rev-parse HEAD` bei Beginn der Dokumentation) |
+| Bezugsstand | `ceddc84cfca44d53f1995dfd0981b7d70a554724`; Erstübergabe `1f78942` |
 | Stand | 3. November 2026 |
 | Dokumentationscommit | der Commit, der diesen Ordner enthält (`git log -1 -- docs/radiasthesie-completion/RAD-14/`) |
 | Push / Deployment | keiner |
@@ -19,35 +19,25 @@ Testprotokolle, Änderungsübersicht, Grenzen, Ausbaustufen und Paketmatrix —
 zusammen mit `docs/radiasthesie-completion/RELEASE-CANDIDATE.md` und diesem
 Checkpoint.
 
-**Freigabestatus: nicht freigegeben.** Die unabhängige Abnahme (`t_29535d62`)
-lautet **NICHT ABGENOMMEN**; F1 (WCAG 1.4.1) ist blockierend und wird in
-`t_b1641fc1` bearbeitet. RAD-14 dokumentiert diesen Stand, statt ihn zu glätten.
+**Status:** Übergabe aktualisiert. F1/F2 sind auf dem Kandidaten unabhängig
+freigegeben, siehe [Nachabnahme](NACHABNAHME.md). Das historische negative
+Gesamtverdikt wird nicht umgeschrieben. Gesamt-DoD und Veröffentlichung sind
+weiterhin getrennte Entscheidungen des Masters bzw. Eigentümers.
 
-## 2. Dateien und SHA-256 (Stand dieses Checkpoints)
+## 2. Dateien und SHA-256
 
-Alle Hashes gelten für den Arbeitsbaum (UTF-8, LF). Ein frischer Windows-Checkout
-mit `core.autocrlf=true` erzeugt CRLF und damit andere Hashes — das ist kein
-Unterschied im Inhalt.
+Aktuelle Dateiliste, Größen und SHA-256 stehen maschinell erzeugt in
+[SHA256SUMS.txt](SHA256SUMS.txt). Textdateien werden vor Größen-/Hashberechnung
+auf LF normalisiert, das ZIP wird bytegenau geprüft. Das verhindert Unterschiede
+durch Windows-Checkout-CRLF. Ausgenommen sind dieses Summenverzeichnis,
+die Checkpoints und der sich selbst beschreibende Prüfbericht. Diese sind über
+den Dokumentationscommit identifizierbar (`git log -1 -- docs/radiasthesie-completion/RAD-14`).
 
-| Datei | Bytes | SHA-256 |
-| --- | --- | --- |
-| `README.md` | 3 978 | `decd655b6f4827c60c0cf442d6c164cc001abd2e5dcf7fd3c8026fad95495a48` |
-| `ARCHITEKTUR.md` | 10 546 | `7611d0a7c20d2587f742c489ab50ab30249787e47114d5f6112d32b5455c543e` |
-| `SEITEN.md` | 6 177 | `b5f1cf66142f85224eedbd1bd1efe8e00e1b3214a85808604ac3c4bd55e19dc8` |
-| `DATENMODELL.md` | 9 209 | `f36c5b3e92f5e289c513311f898e29671f91a54b516d5b2ec854559c71b1c4cb` |
-| `QUELLENBIBLIOTHEK.md` | 12 167 | `95fd4ce5fdaf7a622a507cbef289cc7a3c085eb563f29320bd512fbcb14fc61d` |
-| `MEDIEN-LIZENZEN.md` | 12 426 | `e432dfa015aa1aad465c8f1c3a0c77fe63f01a18b206089837e9f049b02b631a` |
-| `BEDIENUNG-PENDELLABOR.md` | 5 586 | `98c3fee1bc4cf833e4bac501a0633c2a42793142087178ac183116d14f64387f` |
-| `BEDIENUNG-TAFEL-STUDIO.md` | 6 329 | `fa173c28feec2751bef95452ffcf14f65dc65205ce6e585d23727334ac3248db` |
-| `BEDIENUNG-EXPERIMENTIERLABOR.md` | 7 670 | `3bcc301414f59f80dfc0c00a9da6b3f4e0adafde5aa225610cd08c313ffaaf4c` |
-| `BEDIENUNG-PENDELTAGEBUCH.md` | 6 878 | `262250694f482a19b083633adbb88f0ccb9f71afcb79eecc45093992777693e1` |
-| `TESTPROTOKOLLE.md` | 11 099 | `6c161cc3f77d6bab348d4ae7412fd84752851d19385445a174fc7e4d61e77ec8` |
-| `AENDERUNGEN.md` | 7 500 | `9ce40bbf013bc2ce84da60aacb117648a13e641b69bb70d9f7ec8912f62d9a9b` |
-| `GRENZEN.md` | 7 838 | `8136b036588d95e3b549acf4917cd980648b51bec6be5bfdb20fc3d77670d586` |
-| `AUSBAUSTUFEN.md` | 5 458 | `2da6c6fa0cfbf76a3f7f774d7cea107a411f9d1cc256f331a91978ee2ca0ebda` |
-| `PAKETMATRIX.md` | 6 482 | `1843c3cfdc57abc5691fa7763c9c851d460fb9f05d3f38a0a074bf146b2c4b45` |
-| `scripts/build-uebersichten.cjs` | 10 858 | `2d2acaa453f8cb46260f80080f974f09acd6a3f73c88ecea87a4cd2025e5f726` |
-| `../RELEASE-CANDIDATE.md` | 5 252 | `fd02dc8c8c6a8b4ea8a08814641f68d451cc044c8f71b4948f636360efc56e09` |
+Die Produktfingerabdrücke verwenden Git-Blob-Bytes des geprüften Kandidaten,
+nicht plattformabhängige CRLF/LF-Checkout-Bytes:
+[product-sha256.json](evidence/product-sha256.json).
+Die historische Hash-Tabelle des Erstlaufs bleibt in `1f78942` abrufbar;
+sie ist kein aktueller Integritätsnachweis.
 
 Die beiden erzeugten Dateien (`QUELLENBIBLIOTHEK.md`, `MEDIEN-LIZENZEN.md`)
 entstehen reproduzierbar mit:
@@ -60,6 +50,17 @@ Der Lauf meldet: `QUELLENBIBLIOTHEK.md: 66 Quellen · MEDIEN-LIZENZEN.md: 6 Foto
 4 SVGs, 24 Varianten`.
 
 ## 3. Ausgeführte Prüfungen
+
+Aktueller Autoren-Nachtest auf dem Kandidaten: Lint/Format/Build/verify grün,
+167/167 Modultests; vollständiger `test:all`-Nachlauf mit Jest 2/2,
+Node 242/242, Playwright 147/147. Erster Gesamtlauf Exit 1 (Tarot-Fokus-Timeout),
+zwei Einzelläufe danach grün. Rohlogs und getrennte Review-Ergebnisse:
+[NACHABNAHME.md](NACHABNAHME.md). Übergabeprüfung:
+`scripts/verify-handoff.py`, Ergebnis in `evidence/handoff-validation.json`.
+Kein Docs-Renderer im Projekt; Markdown-Struktur geprüft, Darstellung nicht
+als in einem Docs-Renderer getestet behauptet.
+
+Die folgende Tabelle dokumentiert nur den historischen Erstlauf auf `5fe5301`:
 
 | Prüfung | Ergebnis |
 | --- | --- |
@@ -74,37 +75,27 @@ Der Lauf meldet: `QUELLENBIBLIOTHEK.md: 66 Quellen · MEDIEN-LIZENZEN.md: 6 Foto
 
 Details, Umgebung und Datei-Fingerabdrücke: `TESTPROTOKOLLE.md`.
 
-## 4. Was während der Arbeit im Arbeitsbaum passierte
+## 4. Arbeitsbaum und Provenienz
 
-Die Korrekturkarte `t_b1641fc1` arbeitet parallel im selben Baum. Sie hat
-während dieser Dokumentation F1/F2 umgesetzt (Unterstreichung für Fließtext-Links,
-`--rad-photo-max` statt fester Breite), die statischen Dokumente neu erzeugt und
-Diagnoseskripte unter `probe-t_b1641fc1/` abgelegt. Diese Änderungen sind
-**uncommittet**, gehören **nicht** zu diesem Commit und sind in den Testprotokollen
-nicht enthalten. Folge: `npm run lint` auf dem heutigen Arbeitsbaum schlägt mit
-34 Fehlern in diesen Probenskripten fehl; RAD-14 hat keine davon verursacht und
-keine angefasst.
+F1/F2 wurden in `b420a79` committet und auf `ceddc84` unabhängig nachgeprüft.
+Die früheren temporären Probenskripte/Lintfehler sind kein aktueller Zustand;
+der Nachtest ist lint-grün. Der gemeinsame Arbeitsbaum enthält sieben geänderte
+versionierte PDF/PNG-Evidenzdateien und unversioniertes `evidence/`. Die Tests
+schreiben selbst dieselben Ziele, daher keine pauschale Herkunftsbehauptung
+„fremd“. Diese Dateien wurden in dieser Wiederaufnahme nicht verändert,
+gestaged, gelöscht oder zurückgesetzt. Prüfungen liefen isoliert.
 
-Fremde, bereits vorher vorhandene Änderungen (RAD-08/09/10-Evidenz, `evidence/`)
-wurden nicht gestaged, nicht resettet und nicht verändert.
+## 5. Restpunkte und nächster Schritt
 
-## 5. Restpunkte
-
-1. **F1 ist offen** (WCAG 1.4.1, 7/12 Ansichten); ohne Nachabnahme kein Release.
-2. **F2** (`sizes`) und **F3** (`og:image`) sind offen, F3 bewusst.
-3. **R-1** (keine `LICENSE`-Datei) und **R-7** (Datenschutzerklärung nennt die
-   lokalen Speicher nicht) sind Eigentümerentscheidungen.
-4. **T-1**: CI ruft die Radiästhesie-Suiten nicht auf.
-5. **Keine Prüfung** von Firefox/Safari, Screenreader, Lighthouse oder echtem
-   Druck in diesem Lauf.
-6. Nach der F1-Korrektur sind `TESTPROTOKOLLE.md` (§2, §6) und `PAKETMATRIX.md`
-   auf den neuen Commit zu aktualisieren.
-
-## 6. Nächster Schritt
-
-1. `t_b1641fc1` abschließen (F1 + F2, Regression 147/147 + `test:all`).
-2. Nachabnahme durch `tester` auf dem neuen Commit.
-3. RAD-14-Dokumente auf den neuen SHA nachziehen (Testprotokolle, Matrix,
-   Release-Kandidat).
-4. Erst danach Master-Entscheidung; Veröffentlichung bleibt eine separate
-   Eigentümerentscheidung — aus dieser Dokumentation folgt kein Recht dazu.
+1. F1/F2 **erledigt, unabhängig bestätigt**. F3/B7 und F4 sowie frühere
+   Nicht-F1/F2-Restpunkte bleiben offen.
+2. R-1 (Lizenz), R-7 (Datenschutz) und T-1 (CI) brauchen Entscheidungen;
+   keine daraus abgeleitete Veröffentlichungsfreigabe.
+3. Kein neuer Screenreader-/Firefox-/Safari-/Touch-/DPR>1-/Lighthouse-Nachweis.
+   Forschungs-, Verblindungs- und Speichergrenzen bleiben dokumentiert.
+4. Sporadischer Tarot-Fokus-Timeout an `t_73ccd862` (`tester`) übergeben;
+   vollständiger unveränderter Nachlauf grün, erster Fehler nicht gelöscht.
+5. Bestehenden Master `t_878c59c7` für die abschließende 14-Pakete-DoD freigeben;
+   diese Karte schließt nur die Übergabephase, nicht den Master.
+6. Kein Push/Deployment. Erst ausdrückliche Eigentümerentscheidung erlaubt
+   Veröffentlichung. Aktuelle Matrix und Review-Nachweise sind verlinkt.

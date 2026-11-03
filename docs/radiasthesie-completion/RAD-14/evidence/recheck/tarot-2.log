@@ -1,0 +1,23 @@
+
+> esoterik-welt@1.0.0 test:tarot
+> node --test tests/tarot-deck.cjs
+
+✔ deck manifest: 78 stable ids, 22 + 4x14, no duplicates, canonical names (1.6897ms)
+✔ deck manifest: every declared file exists with the declared hash, bytes and 3:5 size (65.3577ms)
+✔ card content: individual keywords and both interpretations for all 78 cards (2.2095ms)
+✔ HTTP edition: all 78 cards open with their own asset, name, numeral and interpretation (7401.5723ms)
+✔ file:// edition: all 78 cards open offline from Lokal.html (7711.0749ms)
+✔ filters and search: 22 / 56 / 14 per suit, empty state, reset (775.7614ms)
+✔ draws: single and three-card spread keep the drawn orientation and the back image (8622.8755ms)
+✔ keyboard and reduced motion: Enter opens, Escape restores focus, draw settles instantly (671.1021ms)
+✔ stored deck id: unknown value falls back to v1 and old history keeps working (509.2939ms)
+✔ payload: first view loads no 1200 px master, zoom does (3382.9969ms)
+✔ missing artwork: the dialog names the failure instead of a broken icon (1232.1004ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30712.0617

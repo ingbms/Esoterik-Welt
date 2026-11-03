@@ -1,0 +1,17 @@
+{
+  "candidate": "ceddc84cfca44d53f1995dfd0981b7d70a554724",
+  "counts": {
+    "markdown_files": 17,
+    "manuals": 4,
+    "matrix_rows": 14,
+    "tables": 69,
+    "local_links": 68,
+    "product_fingerprints": 16,
+    "review_zip_entries": 47,
+    "manifest_files_checked": 31,
+    "preserved_files_checked": 71
+  },
+  "errors": [],
+  "status": "PASS",
+  "docs_renderer": "not tested; no project docs renderer"
+}

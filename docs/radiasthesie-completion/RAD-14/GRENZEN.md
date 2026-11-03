@@ -1,6 +1,6 @@
 # Bekannte Einschränkungen
 
-**Stand:** `5fe5301` · Diese Datei sammelt, was das Modul **nicht** kann oder nicht
+**Stand:** `ceddc84cfca44d53f1995dfd0981b7d70a554724` · Diese Datei sammelt, was das Modul **nicht** kann oder nicht
 belegt — unabhängig davon, ob es sich beheben lässt. Nichts hier ist eine
 Vermutung: jede Zeile nennt Beleg oder Prüfstand.
 
@@ -28,11 +28,11 @@ Vermutung: jede Zeile nennt Beleg oder Prüfstand.
 | S-6 | Ein Lauf ist nur **einmal** ins Tagebuch übernehmbar; ein Duplikat ist nicht vorgesehen. | RAD-10 |
 | S-7 | CSV-**Import** fehlt bewusst (Typverlust); nur JSON. | RAD-10 §1 |
 
-## 3. Barrierefreiheit (offener Blocker)
+## 3. Barrierefreiheit (F1 behoben, weitere Prüfgrenzen)
 
 | # | Einschränkung | Status |
 | --- | --- | --- |
-| A-1 | **F1 (P2):** Links im Fließtext sind nur farblich unterschieden (WCAG 1.4.1); axe-core 4.14.0 meldet `link-in-text-block` in 7 von 12 Ansichten. | **offen**, Korrekturkarte `t_b1641fc1`; blockiert die Abnahme |
+| A-1 | Ursprünglich F1 (P2, WCAG 1.4.1, Link-Erkennbarkeit). | **behoben, unabhängig bestätigt** auf `ceddc84`: 32 axe-Läufe ohne Verstoß; [Review](evidence/REVIEW-F1-F2.md) |
 | A-2 | `color-contrast` bleibt bei dekorativen Glyphen und SVG-Text im Studio „incomplete“ (kein Fehler, aber auch keine Freigabe). | offen, F4 |
 | A-3 | **Kein echter Screenreader-Lauf** in irgendeinem Paket. Geprüft sind Struktur, Labels, `aria-*`, Live-Regionen und Fokusreihenfolge — nicht die Ansage. | RAD-04, 07, 08, 09, 10, 12, 13 |
 | A-4 | Keine Prüfung mit **Zoom 200/400 %**, Forced Colors oder Windows-Kontrastmodus. | RAD-04 §6 |
@@ -42,8 +42,8 @@ Vermutung: jede Zeile nennt Beleg oder Prüfstand.
 
 | # | Einschränkung | Beleg |
 | --- | --- | --- |
-| B-1 | **Nur Chromium 155** (Playwright 1.64). Firefox, Safari und WebKit wurden nie gefahren. | alle Pakete |
-| B-2 | Nur **ein** vollständiger Playwright-Lauf pro Prüfrunde; Flakes sind dadurch nicht ausgeschlossen, auch wenn der Fokus-Flake über die Router-Korrektur behoben wurde. | RAD-09 §5.9, RAD-13 |
+| B-1 | **Nur Chromium** (historisch 155, unabhängiger F1/F2-Review 156.0.8078.4). Kein Firefox-/Safari-/WebKit-Nachweis. | [Review](evidence/REVIEW-F1-F2.md) |
+| B-2 | Wiederholte Läufe sind grün, aber im ersten RAD-14-`test:all` trat ein Tarot-Fokus-Timeout auf. Zwei Einzelläufe und der vollständige Nachlauf bestanden ohne Teständerung. | [Nachabnahme](NACHABNAHME.md), Follow-up `t_73ccd862` |
 | B-3 | **`::details-content`** wird je Browser unterschiedlich behandelt; für ältere Browser ist ein `beforeprint`-Weg eingebaut, aber nicht in diesen Browsern getestet. | RAD-04 §5 |
 | B-4 | Der UA-Fokusring am Kalendersymbol im Datumsfeld ist Chromium-spezifisch. | RAD-04 §5.5 |
 
@@ -71,13 +71,13 @@ Vermutung: jede Zeile nennt Beleg oder Prüfstand.
 | T-4 | **Ein Datenmodul mit 255 kB** wird beim ersten Aufruf mitgeladen; die Taxonomie (~93 kB) wird nur für Detailansichten gebraucht. Kein Code-Splitting. | RAD-03 §5 |
 | T-5 | **Zwei Ausgabewege** (Browser und statischer Generator) müssen synchron bleiben; abgesichert durch Tests, nicht durch Konstruktion. | RAD-12 |
 | T-6 | `npm run test:e2e` nutzt ohne `E2E_PORT` Port 3100 und kann einen fremden Server wiederverwenden. | RAD-10 §6.10 |
-| T-7 | F2 (P3): `sizes` der Fotos deklariert 520 px, die Layoutbreite ist 680 CSS px — der Browser wählt eine zu kleine Datei (1,31-fache Hochskalierung). | Befund F2, 12 Messungen |
+| T-7 | Ursprünglich F2 (P3): zu kleine Bildauswahl/Hochskalierung. | **behoben, unabhängig bestätigt**: 60 Läufe/120 Fotos, 0 IMG-RES/Hochskalierung bei DPR 1; [Review](evidence/REVIEW-F1-F2.md) |
 | T-8 | Statische Dokumente und `Lokal.html` sind **erzeugt und versioniert**; ein vergessener Build hinterlässt einen veralteten Stand im Repository. | RAD-12 |
 
 ## 7. Was daraus für die Übergabe folgt
 
-1. **Kein Veröffentlichungsrecht.** A-1 blockiert die Abnahme; T-1 und T-2 sind
-   Betriebsentscheidungen, die nicht in diesem Modul liegen.
+1. **Kein Veröffentlichungsrecht.** A-1/F1 und T-7/F2 sind behoben und unabhängig
+   nachgeprüft; die übrigen Grenzen und Betriebsentscheidungen bleiben bestehen.
 2. **Keine Forschungsbehauptung.** F-1 bis F-5 sind keine Mängel, die man
    wegprogrammieren könnte, sondern Eigenschaften eines clientseitigen Werkzeugs.
    Sie stehen auf der Seite und in dieser Datei.

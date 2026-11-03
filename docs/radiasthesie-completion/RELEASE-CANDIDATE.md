@@ -1,18 +1,19 @@
 # Release-Kandidat — ESOW-RAD (Radiästhesie, Pendeln und Orakel)
 
-**Stand:** Commit `5fe5301` · Branch `feature/radiasthesie-modul` · Basis `e44fa5c`
-**Dokumentation:** `docs/radiasthesie-completion/RAD-14/` (15 Dateien + Generator)
-**Erstellt:** 3. November 2026, RAD-14
+**Stand:** geprüfter Kandidat `ceddc84cfca44d53f1995dfd0981b7d70a554724` · Branch `feature/radiasthesie-modul` · Basis `e44fa5c`
+**Dokumentation:** [RAD-14-Index](RAD-14/README.md), [Nachabnahme](RAD-14/NACHABNAHME.md), [Paketmatrix](RAD-14/PAKETMATRIX.md)
+**Aktualisiert:** 3. November 2026, RAD-14-Wiederaufnahme
 
 ## 1. Urteil
 
-> ### NICHT FREIGEGEBEN
+> ### KEINE VERÖFFENTLICHUNGSFREIGABE
 >
-> Die unabhängige Abnahme von RAD-01…12 (`t_29535d62`, Stand `9bf5f73`) endete mit
-> **NICHT ABGENOMMEN**. Blockierend ist **F1**: Links im Fließtext sind nur
-> farblich unterschieden (WCAG 1.4.1), axe-core 4.14.0 meldet
-> `link-in-text-block` in 7 von 12 Ansichten. Die Korrektur läuft unter
-> `t_b1641fc1`; eine Nachabnahme hat noch nicht stattgefunden.
+> Die ursprüngliche Vollumfangsprüfung (`t_29535d62`, `9bf5f73`) lautete
+> **NICHT ABGENOMMEN**. Der unabhängige Nachreview (`t_b1641fc1`) bestätigt auf
+> `ceddc84cfca44d53f1995dfd0981b7d70a554724`: **F1/F2 freigegeben. Keine Gesamt-
+> oder Veröffentlichungsfreigabe. RAD-14 bleibt offen.** F1/F2 sind damit
+> nicht mehr offene Blocker. Die Übergabe ist hiermit aktualisiert; die
+> abschließende Master-DoD und Eigentümerentscheidungen werden nicht vorweggenommen.
 
 Dieses Dokument beschreibt, **was** ein Release wäre, **warum** es derzeit keines
 ist und **welche Bedingungen** gelten. Aus ihm folgt **kein** Recht zu pushen,
@@ -30,18 +31,19 @@ zu veröffentlichen oder zu deployen.
 | Medien | 6 Fotos (CC0/PD/CC BY-SA 3.0), 24 Varianten, 4 eigene SVGs |
 | Bildrechte | Manifest, Attributionsseite, Share-Alike-Absatz auf der Methodik-Seite |
 | Datenmodell | Schema 1.0, 7 Entitätstypen, Verträge, Speicher-/Exportschemata |
-| Tests | 164 Node-Tests (7 Suiten), 147 Browsertests (16 Specs) auf `5fe5301` |
+| Tests | aktueller RAD-14-Nachtest: 167 Modultests; test:all-Wiederholung Jest 2/2, Node 242/242, Playwright 147/147 auf `ceddc84`; erster Tarot-Fokus-Timeout separat dokumentiert |
 | Dokumentation | RAD-01…RAD-14, Testberichte, Evidenz, diese Übergabe |
 
-**Umfang des Diffs gegen `e44fa5c`:** 431 Dateien, +99 983 / −664 Zeilen, 28 Commits.
-Davon 328 Dateien allein Dokumentation und Evidenz.
+**Umfang des Kandidaten-Diffs `e44fa5c..ceddc84`:** 463 Dateien,
++107 893 / −665 Zeilen, 31 Commits (per Git ermittelt). Die nachfolgende
+RAD-14-Dokumentationsaktualisierung ist noch nicht Teil dieser Kandidatenzahlen.
 
 ## 3. Blockierende und offene Befunde
 
 | ID | Schwere | Befund | Status | Karte |
 | --- | --- | --- | --- | --- |
-| F1 | P2, **blockierend** | Links im Fließtext nur farblich unterschieden (WCAG 1.4.1), 7/12 Ansichten | offen, in Arbeit | `t_b1641fc1` |
-| F2 | P3 | Foto-`sizes` deklariert 520 px bei 680 CSS px Layoutbreite (12 Messungen) | offen | `t_b1641fc1` |
+| F1 | P2, ursprünglich blockierend | Link-Erkennbarkeit WCAG 1.4.1 | **behoben, unabhängig bestätigt**: 32 axe-Läufe, 0 Verstöße | `t_b1641fc1` |
+| F2 | P3 | Foto-Slot und Dateiauswahl | **behoben, unabhängig bestätigt**: 60 Bildläufe/120 Fotos, 0 IMG-RES/Hochskalierung (DPR 1) | `t_b1641fc1` |
 | F3 / B7 | P3 | `og:image` fehlt in allen 8 Dokumenten | offen, bewusst | RAD-12 |
 | F4 | – | `color-contrast` bleibt bei dekorativen Glyphen/SVG-Text „incomplete“ | offen | RAD-13 |
 | R-1 | P2 (rechtlich) | keine `LICENSE`-Datei; Rechte der eigenen Inhalte ungeklärt | offen, Eigentümerentscheidung | RAD-05/14 |
@@ -50,7 +52,7 @@ Davon 328 Dateien allein Dokumentation und Evidenz.
 
 Vollständige Liste mit Belegen: `RAD-14/GRENZEN.md`.
 
-## 4. Was grün belegt ist (Bezugsstand)
+## 4. Historische Prüfnachweise (aktueller Nachtest siehe §5 und RAD-14/NACHABNAHME.md)
 
 | Prüfung | Ergebnis | Quelle |
 | --- | --- | --- |
@@ -67,20 +69,23 @@ Vollständige Liste mit Belegen: `RAD-14/GRENZEN.md`.
 
 ## 5. Bedingungen für ein Release
 
-1. **F1 behoben** und per axe-Lauf über die 12 Ansichten ohne
-   `link-in-text-block` belegt.
-2. **F2 behoben** und Bildmessung ohne `IMG-RES`-Befund wiederholt.
-3. **Regression grün:** `CI=1 npx playwright test` 147/147, `npm run test:all`
-   grün, Arbeitsbaum sauber.
-4. **Nachabnahme** durch `tester` auf dem neuen Commit — nicht durch den
-   Umsetzer selbst.
-5. **R-1 und R-7 entschieden** (Lizenztext, Datenschutzerklärung). Beides ist
-   eine Eigentümerentscheidung; ein Agent darf sie nicht erfinden.
-6. **T-1 entschieden** (CI-Aufnahme) oder ausdrücklich als Risiko akzeptiert.
-7. **Aktualisierung** von `RAD-14/TESTPROTOKOLLE.md` (§2, §6) und
-   `RAD-14/PAKETMATRIX.md` auf den neuen Commit.
-8. **Freigabe zur Veröffentlichung** durch den Eigentümer. Bis dahin: kein Push,
-   kein Deployment.
+1. **Erfüllt:** F1/F2 behoben und unabhängig nachgeprüft auf dem exakten
+   Kandidaten (32 axe-Läufe, 60 Bildläufe).
+2. **Erfüllt mit offengelegter Wiederholung:** test:all grün (Jest 2/2,
+   Node 242/242, Playwright 147/147); erster Autorenlauf mit Tarot-Fokus-Timeout
+   bleibt belegt, Folgekarte `t_73ccd862`. Keine Testabschwächung.
+3. **Erfüllt:** gezieltes unabhängiges Reviewer-Verdikt und aktualisierte
+   Testprotokolle/Fingerabdrücke/Paketmatrix. Der isolierte Reviewer-Checkout
+   war sauber; der gemeinsame Baum enthält weiterhin Testartefakte.
+4. **Offen:** abschließende Master-DoD einschließlich RAD-14. Kein separates
+   unabhängiges Inhaltsverdikt für die Übergabe ist vorhanden.
+5. **Offen:** Eigentümerentscheidungen zu R-1 (Lizenz), R-7 (Datenschutz) und
+   T-1 (CI-Aufnahme oder ausdrücklich akzeptiertes Risiko).
+6. **Offen:** ausdrückliche Veröffentlichungsfreigabe. Bis dahin kein Push,
+   kein Deployment; F3/F4 und weitere dokumentierte Grenzen bleiben sichtbar.
+
+Aktuelle Rohbelege, Reproduktionsbefehle und genaue Abgrenzung:
+[RAD-14/NACHABNAHME.md](RAD-14/NACHABNAHME.md).
 
 ## 6. Rücknahme (falls doch veröffentlicht würde)
 

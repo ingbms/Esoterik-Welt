@@ -1,20 +1,21 @@
 # Vorschläge für weitere Ausbaustufen
 
-**Stand:** `5fe5301` · Reihung nach Nutzen für die Abnahme, nicht nach Attraktivität.
+**Stand:** `ceddc84cfca44d53f1995dfd0981b7d70a554724` · Reihung nach Nutzen für die Abnahme, nicht nach Attraktivität.
 Aufwandsangaben sind Schätzungen aus dem Umfang der betroffenen Dateien, keine
-Messung. Nichts hier ist beauftragt oder begonnen.
+Messung. Erledigte F1/F2-Arbeiten sind ausdrücklich markiert; die übrigen
+Vorschläge sind nicht durch diese Übergabe beauftragt.
 
 ## 1. Vor jedem Ausbau: die Abnahme schließen
 
 | Nr. | Vorhaben | Aufwand | Warum zuerst |
 | --- | --- | --- | --- |
-| V-1 | **F1 beheben** (Link-Erkennbarkeit im Fließtext, WCAG 1.4.1) und **nachabnehmen** | S | blockiert die Abnahme; Korrekturkarte `t_b1641fc1` läuft |
+| V-1 | F1 beheben und nachabnehmen | erledigt | unabhängig freigegeben auf `ceddc84`, 32 axe-Läufe ohne Verstoß; [Review](evidence/REVIEW-F1-F2.md) |
 | V-2 | **Radiästhesie-Suiten in die CI aufnehmen** (`test:radiasthesie*`, Playwright) | S | ohne Pipeline sind rote Modultests unsichtbar (T-1) |
 | V-3 | **Datenschutzerklärung um die lokalen Speicher ergänzen** (`esot_rad_*`, Zweck, Löschweg) | S | Rechtsseite ist derzeit unvollständig (R-7) |
 | V-4 | **Lizenz der eigenen Inhalte und SVGs klären** (`LICENSE` oder ausdrücklicher Vermerk) | S, Entscheidung des Eigentümers | ohne Lizenztext ist „MIT“ in `package.json` wirkungslos (R-1) |
 
-Diese vier Punkte sind keine Ausbaustufen, sondern Abschlussarbeiten. Solange sie
-offen sind, ist jede Erweiterung zusätzliche Fläche ohne Freigabe.
+F1/F2 sind abgeschlossen und unabhängig nachgeprüft. Die übrigen
+Abschlussentscheidungen sind offen; Erweiterungen ersetzen diese nicht.
 
 ## 2. Qualität und Messbarkeit
 
@@ -23,7 +24,7 @@ offen sind, ist jede Erweiterung zusätzliche Fläche ohne Freigabe.
 | Q-1 | **Firefox und WebKit** in die Playwright-Konfiguration aufnehmen und die 147 Tests dort fahren | M | deckt B-1 auf; `::details-content` und Druckpfade sind browserabhängig | neue Flakes, längere Laufzeit |
 | Q-2 | **Screenreader-Prüfung** (NVDA/VoiceOver) für die vier Werkzeuge und die Quellenseite | M | A-3 ist die größte ungemessene Fläche | braucht geschulte Bedienung, nicht automatisierbar |
 | Q-3 | **Lighthouse CI** mit Budgets (LCP, CLS, JS-Größe) | M | T-3; das Datenmodul mit 255 kB ist der wahrscheinlichste Befund | Budgets können den Build blockieren, bevor Optimierung passiert |
-| Q-4 | **F2 beheben** (`sizes` an 680 px messen) und Bildmessung wiederholen | S | behebt die 1,31-fache Hochskalierung | keine |
+| Q-4 | F2 beheben und Bildmessung wiederholen | erledigt | unabhängig freigegeben, 60 Bildläufe ohne IMG-RES/Hochskalierung (DPR 1) | DPR > 1 nicht geprüft |
 | Q-5 | **`og:image`** als freigegebenes Rastermotiv (1200×630) erzeugen und einbinden | S–M | F3/B7; Social-Preview fehlt projektweit | braucht eine Freigabeentscheidung, kein Agent darf sie erfinden |
 
 ## 3. Architektur und Performance

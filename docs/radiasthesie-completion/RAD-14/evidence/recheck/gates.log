@@ -1,0 +1,253 @@
+=== npm run lint ===
+
+> esoterik-welt@1.0.0 lint
+> eslint . --max-warnings 0
+
+exit=0 :: npm run lint
+=== npm run format:check ===
+
+> esoterik-welt@1.0.0 format:check
+> prettier --check "**/*.{js,cjs,mjs,html,css}" --ignore-unknown
+
+Checking formatting...
+All matched files use Prettier code style!
+exit=0 :: npm run format:check
+=== node --test tests/radiasthesie.mjs tests/radiasthesie-vertraege.mjs tests/radiasthesie-simulator.mjs tests/pendeltafel-studio.mjs tests/experiment-statistik.mjs tests/journal-speicher.mjs tests/radiasthesie-statisch.mjs ===
+✔ Binomialtest trifft unabhängig gerechnete Referenzwerte (1.9145ms)
+✔ Binomialtest ist symmetrisch und bleibt im gültigen Bereich (0.7958ms)
+✔ ungültige Eingaben für die Statistik werfen RangeError (0.8006ms)
+✔ Wilson-Intervall trifft Referenzwerte und bleibt in [0,1] (0.8754ms)
+✔ analyseCounts rechnet Erwartung, Quote und Schwelle aus dem Protokoll (0.3467ms)
+✔ Formatierung nutzt deutsche Schreibweise und vier p-Nachkommastellen (17.1836ms)
+✔ Einordnung bleibt zurückhaltend und nennt Zwischenstand und Schwelle (1.5442ms)
+✔ Beschriftungen decken alle Testarten und k Ziele ab (0.3069ms)
+✔ Grenzen des Protokolls sind 2–10 Ziele und 10–200 Versuche (0.1916ms)
+✔ vollständiger Lauf: Sperre vor Enthüllung, Auswertung stimmt mit den Versuchen (34.3747ms)
+✔ ohne enthülltes Ziel enthält der Lauf weder Zielindex noch Salt (0.9041ms)
+✔ Sperre ist unveränderlich und die Reihenfolge ist Vertrag (1.6741ms)
+✔ CSV-Export: BOM, Semikolon, CRLF, Quoting und nur enthüllte Ziele (12.5536ms)
+✔ JSON-Export ist vertragskonform und wieder importierbar (9.506ms)
+✔ Speicher: leerer Stand, Rundlauf und belegte Antworten (12.1719ms)
+✔ Speicher: defekter Umschlag wird gesichert und geleert (0.4194ms)
+✔ Speicher: neueres Schema wird nicht überschrieben (0.1177ms)
+✔ Speicher: Quota und fehlender Speicher liefern eine Meldung statt Throw (0.1874ms)
+✔ gesperrte Antwort ist nach dem Schreiben nachweisbar gespeichert (1.4342ms)
+✔ Zufallsquelle nutzt Web Crypto und wirft ohne Crypto (0.3628ms)
+✔ drawIndex verwerfe unbrauchbare Rohwerte (Rejection Sampling) (0.258ms)
+✔ Produktionsmodule enthalten keinen Math.random-Fallback (0.8902ms)
+✔ Route #pendeln/experiment löst die Ansicht aus (1.9597ms)
+✔ Werkstatt-Karte „Experimentierlabor“ ist verfügbar und verlinkt (1.0723ms)
+✔ Speicher: leerer Stand und Rundlauf mit Sortierung nach Datum (17.0359ms)
+✔ Speicher: defektes JSON wird gesichert und geleert, ohne Throw (0.4815ms)
+✔ Speicher: falscher Umschlag und fehlende Liste werden gesichert (1.3486ms)
+✔ Speicher: neueres Schema wird gemeldet, aber nicht überschrieben (0.2237ms)
+✔ Speicher: Quota und fehlender Speicher liefern eine Meldung statt Throw (0.5441ms)
+✔ Speicher: Obergrenze von 500 Einträgen wird nicht überschritten (0.9913ms)
+✔ vollständige Löschung entfernt alle esot_rad_-Schlüssel, fremde bleiben (0.454ms)
+✔ Löschung meldet Schlüssel, die sich nicht entfernen lassen (0.1743ms)
+✔ Listen: ergänzen, ersetzen, entfernen, filtern, zählen (0.8831ms)
+✔ Datum und Sicherheit werden deutsch formatiert, Unbekanntes bleibt sichtbar (0.4418ms)
+✔ buildEntry erzeugt Kennung und Erstellzeit und trimmt Rand-Leerzeichen (0.4652ms)
+✔ buildEntry lehnt ungültige Felder mit Feldnamen ab (0.5208ms)
+✔ buildEntry: Bearbeitung behält Kennung und Erstellzeit, leert optionale Felder (0.398ms)
+✔ Laufbezug: runId erfordert experimentId und einen bekannten Lauf (28.0753ms)
+✔ Übernahme aus dem Labor: nur vollständig enthüllte Läufe, Bezug bleibt stabil (14.2563ms)
+✔ Bearbeitung mit gelöschtem Lauf: Struktur bleibt prüfbar, Bezug bleibt Text (10.157ms)
+✔ CSV: BOM, Semikolon, CRLF, Quoting und deutsche Spalten (0.8844ms)
+✔ CSV: leere Liste erzeugt nur den Kopf, Sonderzeichen bleiben literal (0.4756ms)
+✔ JSON-Export ist vertragskonform und wieder importierbar (0.9188ms)
+✔ Import ist atomar: ein ungültiger Eintrag lehnt die ganze Datei ab (0.3292ms)
+✔ Import lehnt fremde Art, Schema, Größe und leeren Text ab (2.2734ms)
+✔ Import ignoriert unbekannte Felder und speichert sie nicht (Datensparsamkeit) (0.4292ms)
+✔ Import über 500 Einträge wird abgelehnt (4.975ms)
+✔ Zusammenführung: gleiche Kennung ersetzt, neue ergänzt, Grenze gilt fürs Ergebnis (0.8864ms)
+✔ Route #pendeln/journal löst die Ansicht aus (1.81ms)
+✔ Werkstatt-Karte „Pendeltagebuch“ ist verfügbar und verlinkt (1.4374ms)
+✔ sechs Vorlagen mit erwarteten Segmentzahlen und Beschriftungen (1.8143ms)
+✔ Standardkonfiguration ist eingefroren und schema-konform (0.7339ms)
+✔ Ja/Nein-Tafel: JA links, NEIN rechts, gleiche Winkel (0.4389ms)
+✔ Zahlenkreis: zehn Segmente, 0 oben, gleichmäßig verteilt (0.2765ms)
+✔ Buchstabentafel: 26 eigene Positionen, alle innerhalb der Fläche (0.4072ms)
+✔ Segmenttafel: zwölf Segmente im 30-Grad-Raster (0.2666ms)
+✔ Zeichenlängen-Grenze folgt der Segmentzahl (0.1947ms)
+✔ Schriftgröße bleibt im zulässigen Band und wird bei mehr Segmenten kleiner (0.174ms)
+✔ gültige Konfiguration wird übernommen und getrimmt (0.4662ms)
+✔ Nicht-Objekte werden abgelehnt (0.3087ms)
+✔ falscher Schema-Bezeichner wird abgelehnt (0.1696ms)
+✔ unbekannte Felder werden abgelehnt — auch onload, href und html (0.2989ms)
+✔ unbekannte Vorlage und unbekannter Farbstil werden abgelehnt (0.2053ms)
+✔ Segmentzahl außerhalb 2–48 wird abgelehnt (0.3833ms)
+✔ leere und zu lange Beschriftungen werden abgelehnt (0.3009ms)
+✔ Steuerzeichen und Zeilenumbrüche werden abgelehnt (0.1718ms)
+✔ Markup in Beschriftung und Überschrift wird abgelehnt (0.1758ms)
+✔ Überschrift: leer und zu lang werden abgelehnt (0.098ms)
+✔ Umlaute und Sonderzeichen sind erlaubt und bleiben erhalten (0.5647ms)
+✔ doppelte Beschriftungen sind erlaubt, werden aber gemeldet (0.1286ms)
+✔ Importgröße: mehr als 32 KiB werden vor dem Parsen abgelehnt (0.3621ms)
+✔ JSON-Import: leer, kaputt und mit BOM (0.3141ms)
+✔ Export, Reimport und erneuter Export ergeben dieselbe Zeichnung (0.3807ms)
+✔ ungültige Konfiguration lässt sich nicht serialisieren (0.5279ms)
+✔ SVG ist deterministisch und eigenständig (0.4621ms)
+✔ SVG enthält keine Skripte, Eventhandler oder externen Verweise (2.5702ms)
+✔ jede Beschriftung steht genau einmal im SVG, dazu Titel und Fußzeile (0.3472ms)
+✔ escapeXml deckt alle fünf XML-Sonderzeichen ab (0.1043ms)
+✔ ungültige Eingaben werden auch beim Zeichnen abgelehnt (0.1778ms)
+✔ Farbstil ändert die Zeichnung, nicht die Geometrie (0.2142ms)
+✔ Farbstile erfüllen die Kontrastanforderungen (0.3958ms)
+✔ Dateiname wird aus der Überschrift gebildet und bleibt sicher (0.2987ms)
+✔ Route #pendeln/studio löst die Studio-Ansicht aus (0.3976ms)
+✔ Studio-Ansicht enthält Bedienung, Vorschau und Druckansicht (1.0999ms)
+✔ Werkstatt-Karte des Studios ist verfügbar und verlinkt (1.428ms)
+✔ Druckvariante enthält nur die Segmente, aber weiterhin Titel und Beschreibung (0.3459ms)
+✔ Styleheet enthält die A4-Druckregeln für die Tafel (2.3278ms)
+✔ Parameterbereiche entsprechen dem dokumentierten Gültigkeitsbereich (1.807ms)
+✔ Ungültige Längen, Auslenkungen und Dämpfungswerte werden abgewiesen (0.8733ms)
+✔ Kleinwinkelformel trifft die Referenzwerte für 25 cm und 1 m (0.4697ms)
+✔ Startzustand ruht in der Anfangsauslenkung (0.2859ms)
+✔ Ein RK4-Schritt ist deterministisch und verändert den Zustand (0.3644ms)
+✔ Ungedämpft bei kleiner Auslenkung: gemessene Dauer entspricht T₀ (3.7972ms)
+✔ Große Auslenkung: gemessene Dauer folgt der exakten elliptischen Referenz (5.5622ms)
+✔ Kleinwinkelformel unterschätzt die Dauer mit wachsendem Winkel (3.5173ms)
+✔ Dämpfung: Amplitude klingt monoton ab und folgt dem logarithmischen Dekrement (1.6512ms)
+✔ Gedämpfte Dauer entspricht T_ged = 2π/(ω₀√(1−ζ²)) (1.736ms)
+✔ Ohne Dämpfung bleibt die Energie erhalten, mit Dämpfung sinkt sie (2.6526ms)
+✔ advance() liefert nach gleicher simulierter Zeit denselben Zustand (1.3759ms)
+✔ simulate() ist unabhängig von der Bildrate (0.8728ms)
+✔ advance() begrenzt einen Aufruf und ignoriert negative oder ungültige Zeit (0.2986ms)
+✔ Auslenkung 0 bleibt in Ruhe und erzeugt keine Periode (1.1158ms)
+✔ Starke Dämpfung bleibt über 30 s stabil und läuft nicht über (3.2307ms)
+✔ Periodenmesser interpoliert den Nulldurchgang und zählt nur Aufwärtswechsel (0.5441ms)
+✔ Anzeigeformate nutzen deutsches Dezimalkomma und typografisches Minus (0.3053ms)
+✔ Route #pendeln/labor liefert die Laboransicht, unbekannte Slugs bleiben 404 (0.4499ms)
+✔ Laboransicht: eine H1, Regler mit Labels, drei Darstellungen, Disclaimer (1.7486ms)
+✔ Startseite verlinkt Pendellabor, Tafel-Studio, Labor und Tagebuch als verfügbare Werkzeuge (1.1227ms)
+✔ sieben Dokumente, je ein Titel unter 60 Zeichen, eindeutig (5.0215ms)
+✔ Meta-Description, Canonical und Open Graph sind konsistent (0.5219ms)
+✔ nur JSON-LD als Skript — keine JavaScript-Abhängigkeit (6.4583ms)
+✔ strukturierte Daten: WebPage/CollectionPage und BreadcrumbList ohne Fragmente (1.615ms)
+✔ Themenseiten: Kapitel und Kerntexte stehen vollständig im HTML (27.5951ms)
+✔ Glossar: DefinedTermSet deckt alle Begriffe ab, keine Suchmaske ohne Funktion (2.9039ms)
+✔ Brotkrümel im HTML entsprechen der JSON-LD-Hierarchie (0.8873ms)
+✔ Überschriftenordnung und IDs sind eindeutig (0.9892ms)
+✔ Bilder: Alt-Text vorhanden, Dateien existieren, Maße gesetzt (1.9847ms)
+✔ interne Links und Sprungziele sind auflösbar (86.1211ms)
+✔ Sitemap: nur echte Dokumente, vollständig, ohne Fragmente (0.8827ms)
+✔ Fotos deklarieren die gemessene Slotbreite (RAD-13/F2) (0.5768ms)
+✔ Fließtext-Links sind zusätzlich zur Farbe erkennbar (WCAG 1.4.1, RAD-13/F1) (2.1147ms)
+✔ keine erfundenen Titel- oder Beschreibungsbehauptungen (3.0278ms)
+✔ Taxonomie und Gesamtdatensatz sind vertragskonform (7.2867ms)
+✔ Vernetzung: offene Einträge brauchen eine Entscheidung und keine Route (5.2167ms)
+✔ bestehendes Artikel- und Quellenmodell bleibt unverändert nutzbar (0.3148ms)
+✔ jede Entität verweist nur auf vorhandene Quellen, Themen und Medien (0.4315ms)
+✔ verfügbare Medien zeigen auf existierende Dateien, geplante nicht (0.8545ms)
+✔ Werkstatt-Fassade liefert eingefrorene, aufgelöste Konfiguration (0.2314ms)
+✔ unbekannte Quelle, doppelte id und doppelter slug werden abgelehnt (13.564ms)
+✔ ungültige Felder, Daten und Zustände werden abgelehnt (14.5248ms)
+✔ falscher Vertragsstand wird abgelehnt (3.2786ms)
+✔ alle Katalogprotokolle haben feste Fallzahl, Abbruchregel und Basiswahrscheinlichkeit 1/k (0.3241ms)
+✔ unvollständige oder widersprüchliche Protokolle werden abgelehnt (0.3617ms)
+✔ Lauf: Commitment ohne Ziel, Sperre vor Enthüllung, Treffer wird berechnet (13.9704ms)
+✔ Enthüllung ohne Sperre und mit manipuliertem Secret ist nicht zulässig (0.9475ms)
+✔ manipulierte gespeicherte Läufe werden erkannt (1.5761ms)
+✔ vollständiger Lauf endet mit Status complete und auswertbarer Zusammenfassung (3.914ms)
+✔ Tagebucheintrag: Pflichtfelder, Grenzen, Steuerzeichen und Datum (1.041ms)
+✔ Journalbezug zum Lauf ist referenziell geprüft (4.9292ms)
+✔ Journal-Export und -Import sind verlustfrei und schemafest (0.6759ms)
+✔ Import lehnt falsches Schema, falsche App, falsche Art und ungültige Einträge atomar ab (2.3415ms)
+✔ Export verweigert ungültige Daten statt sie zu schreiben (0.2126ms)
+✔ drei Themenseiten mit vollständigem Kapitelinventar (10.2158ms)
+✔ jeder Quellenmarker im Text löst auf eine vorhandene Quelle auf (0.7953ms)
+✔ Quellenverzeichnis ist vollständig und ohne Platzhalter (0.8409ms)
+✔ Glossar und Evidenzstufen sind vollständig (0.5452ms)
+✔ Router-Vokabular wird vollständig aufgelöst (0.8435ms)
+✔ Suche findet Themen, Kapitel, Glossar und Quellen — auch mit Umlauten (20.1025ms)
+✔ Glossarfilter grenzt auf Buchstabe und Suchbegriff ein (0.5256ms)
+✔ Landingpage: eine H1, drei Themenkarten, Einordnungsband und Stufenlegende (1.3233ms)
+✔ Themenseiten: Kapitel, Inhaltsverzeichnis, Quellenpanel und Einordnungskasten (4.8297ms)
+✔ Themenseite verlinkt nicht auf sich selbst als verwandt (1.5731ms)
+✔ Themenvernetzung: alle acht Auftragsthemen sind verortet oder als Lücke entschieden (0.4117ms)
+✔ jede verlinkte Vernetzungsroute löst auf und ist eindeutig (0.2767ms)
+✔ Landingpage trennt vorhandene Anschlüsse von benannten Lücken (0.304ms)
+✔ jede Themenseite verlinkt mindestens zwei andere Module (IA §9) (1.7564ms)
+✔ Frequenz, Schwingung und Bovis bleiben getrennt (Auftrag RAD-11) (1.3076ms)
+✔ Glossar: Buchstabenleiste, Suche und 17 Begriffe (0.6862ms)
+✔ Quellen: 66 Karten mit Sprungziel und Rückverweis (1.9781ms)
+✔ Methodik: Abschnitte inklusive Bildnachweise, keine Wirkversprechen (0.5675ms)
+✔ Bildnachweise nennen alle sechs Fotos mit Lizenz und Share-Alike-Hinweis (0.3967ms)
+✔ Fotos stehen im passenden Kapitel und tragen Alt-Text, Maße und Attributionszeile (1.6055ms)
+✔ Foto-Slot deklariert die gemessene Layoutbreite und skaliert nicht über die Quelle (RAD-13/F2) (1.7653ms)
+✔ Suche und Fehleransicht führen immer zurück (3.3249ms)
+✔ HTML wird escaped, Daten erscheinen nicht als Markup (0.4331ms)
+✔ BreadcrumbList ist gültiges JSON-LD ohne Fragmentadressen (0.4106ms)
+✔ Titelgrenze und Canonical-Zuordnung halten die Projektregeln (0.207ms)
+ℹ tests 167
+ℹ suites 0
+ℹ pass 167
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 285.0739
+exit=0 :: node --test tests/radiasthesie.mjs tests/radiasthesie-vertraege.mjs tests/radiasthesie-simulator.mjs tests/pendeltafel-studio.mjs tests/experiment-statistik.mjs tests/journal-speicher.mjs tests/radiasthesie-statisch.mjs
+=== npm run build ===
+
+> esoterik-welt@1.0.0 build
+> node scripts/build-pages.cjs
+
+Statische Seiten geschrieben: 7 Dokumente, Titel 45–59 Zeichen, Sitemap 11 Einträge.
+Offline file build ready: Lokal.html (+ generated legal pages); no module/fetch/font requests.
+Static production build ready: dist/Esoterik-Welt/ (canonical Pages sources; static module documents included).
+exit=0 :: npm run build
+=== npm run verify:build ===
+
+> esoterik-welt@1.0.0 verify:build
+> node scripts/verify-build.cjs
+
+Verifying local build at http://127.0.0.1:1904/Esoterik-Welt/ (output: test-results/verify-pages)
+PASS static radiasthesie/: 
+PASS static radiasthesie/radiasthesie.html: 
+PASS static radiasthesie/pendeln.html: 
+PASS static radiasthesie/orakel.html: 
+PASS static radiasthesie/glossar.html: 
+PASS static radiasthesie/quellen.html: 
+PASS static radiasthesie/methodik.html: 
+PASS sitemap: 
+7 statische Dokumente geprüft; 0 Fehler
+PASS 375 home: 
+PASS 375 tarot: 
+PASS 375 crystals: 
+PASS 375 moon: 
+PASS 375 astrologie: 
+PASS 375 runes: 
+PASS 375 pendeln: 
+PASS 375 blog: 
+PASS 375 impressum.html: 
+PASS 375 datenschutz.html: 
+PASS 375 haftung.html: 
+PASS 375 404.html: 
+PASS 768 home: 
+PASS 768 tarot: 
+PASS 768 crystals: 
+PASS 768 moon: 
+PASS 768 astrologie: 
+PASS 768 runes: 
+PASS 768 pendeln: 
+PASS 768 blog: 
+PASS 768 impressum.html: 
+PASS 768 datenschutz.html: 
+PASS 768 haftung.html: 
+PASS 768 404.html: 
+PASS 1440 home: 
+PASS 1440 tarot: 
+PASS 1440 crystals: 
+PASS 1440 moon: 
+PASS 1440 astrologie: 
+PASS 1440 runes: 
+PASS 1440 pendeln: 
+PASS 1440 blog: 
+PASS 1440 impressum.html: 
+PASS 1440 datenschutz.html: 
+PASS 1440 haftung.html: 
+PASS 1440 404.html: 
+36 pages/viewports checked; 0 failures; 7 statische Dokumente, 0 Fehler
+exit=0 :: npm run verify:build

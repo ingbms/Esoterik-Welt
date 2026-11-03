@@ -1,11 +1,12 @@
 # Testprotokolle
 
-**Bezugsstand:** Commit `5fe5301` (`docs(radiasthesie): unabhaengige Abnahme RAD-13 — Bericht, Checkpoint und Evidenz`), Branch `feature/radiasthesie-modul`
-**Umgebung:** Windows 11 · Node v24.13.0 · npm 11.8.0 · Chromium 155 (Playwright 1.64) · `TMPDIR=TEMP=TMP=C:/Users/mas/AppData/Local/hermes/cache/scratch` · Browsersuite mit `CI=1 E2E_PORT=3455`
+**Aktueller geprüfter Kandidat:** `ceddc84cfca44d53f1995dfd0981b7d70a554724`, Branch `feature/radiasthesie-modul`. Der erste Dokumentationslauf unten gilt historisch für `5fe5301`; aktuelle Nachtests und Reviewer-Verdikt sind getrennt in §2 und [NACHABNAHME.md](NACHABNAHME.md) belegt.
+**Vollständig qualifizierter historischer Laufkontext (`5fe5301`):** Windows 11 · Node v24.13.0 · npm 11.8.0 · Chromium 155 (Playwright 1.64) · `TMPDIR=TEMP=TMP=C:/Users/mas/AppData/Local/hermes/cache/scratch` · `CI=1 E2E_PORT=3455`.
 
-Alle Läufe in §2 wurden in dieser Sitzung (RAD-14) ausgeführt; Exitcodes wurden
-nicht durch Pipes maskiert. §3 fasst die unabhängige Abnahme zusammen, §4 die
-Nachweise der einzelnen Pakete, §5 sagt, was **nicht** gelaufen ist.
+Die Tabelle des Erstlaufs ist historisch. Aktuelle §2-Läufe und der unabhängige
+Review sind zusätzlich mit Rohlogs in NACHABNAHME.md belegt. Exitcodes wurden
+nicht durch Pipes maskiert. §3 beschreibt die ursprüngliche Prüfung, §4 die
+Paketnachweise, §5 die historischen Prüfgrenzen.
 
 ## 1. Reproduktion
 
@@ -37,7 +38,16 @@ Der Generator ist separat prüfbar:
 npm run data:radiasthesie    # validiert Quellen, Taxonomie, Medien; deterministisch
 ```
 
-## 2. In dieser Sitzung ausgeführte Läufe
+## 2. Aktueller Nachtest auf `ceddc84cfca44d53f1995dfd0981b7d70a554724`
+
+RAD-14 hat erneut ausgeführt: Lint, Format, Build, verify:build (36/36 + 7/7),
+167/167 Modultests und 147/147 Playwright. Erster `test:all`-Versuch Exit 1
+(Tarot-Fokus-Timeout); zwei unveränderte Tarot-Wiederholungen jeweils 11/11,
+vollständiger `test:all`-Nachlauf Exit 0: Jest 2/2, Node 242/242,
+Playwright 147/147. Alle Rohlogs, Umgebung und Reproduktionsbefehle:
+[NACHABNAHME.md](NACHABNAHME.md). Flake-Nachfolgekarte `t_73ccd862`.
+
+### Historischer Erstlauf auf `5fe5301` (nicht auf neue SHA übertragbar)
 
 | # | Befehl | Exit | Ergebnis |
 | --- | --- | --- | --- |
@@ -105,7 +115,9 @@ Playwright-Report) · Prüfskripte `docs/radiasthesie-completion/RAD-13/scripts/
 **Blockierend:** F1 (P2) — axe-core 4.14.0 meldet `link-in-text-block`
 (WCAG 1.4.1) in 7 von 12 Ansichten: Links im Fließtext unterscheiden sich nur
 durch Farbe (< 3:1) und sind nicht unterstrichen. Korrekturkarte **`t_b1641fc1`**
-(läuft zum Zeitpunkt dieser Dokumentation).
+(damals in Arbeit; inzwischen gezielt unabhängig freigegeben, siehe
+[Nachabnahme](NACHABNAHME.md)). Der folgende Befundtext ist historisch,
+kein aktueller Offenstatus für F1/F2.
 
 **Weitere Befunde:** F2 (P3) `picture`-`sizes` unterschätzt die Layoutbreite
 (520 px deklariert, 680 CSS px gemessen, 12 Messungen); F3 (P3) `og:image` fehlt
@@ -135,7 +147,12 @@ und B11 offen dokumentiert.
 | RAD-13 QA | siehe §3 | `RAD-13/TESTBERICHT.md` |
 | RAD-14 Übergabe | diese Sammlung, 164 Node-Tests + 147 Browsertests erneut ausgeführt | `RAD-14/`, `../RELEASE-CANDIDATE.md` |
 
-## 5. Was nicht ausgeführt wurde
+## 5. Was im historischen Erstlauf nicht ausgeführt wurde
+
+Aktuelle Abgrenzung: `test:all` ist nun vollständig grün wiederholt;
+F1/F2-axe/Bildmessung sind unabhängig nachgetestet. Die damalige Liste unten
+bleibt historische Laufdokumentation, keine aktuelle F1-Blockade.
+Siehe [Nachabnahme](NACHABNAHME.md) für alle neuen Ergebnisse und Grenzen.
 
 | Prüfung | Grund / Status |
 | --- | --- |
@@ -148,7 +165,12 @@ und B11 offen dokumentiert.
 | Deployment-/Produktionsprüfung | kein Push, kein Deployment; `verify:pages` gegen die Produktions-URL ist erwartungsgemäß rot |
 | Journal-Export zeilenweise | Exportstruktur geprüft, Inhalt nicht Zeile für Zeile nachgerechnet |
 
-### 5.1 Fremde Änderungen während dieser Dokumentation
+### 5.1 Historischer Parallelzustand während des Erstlaufs
+
+**Heute überholt:** F1/F2 sind in `b420a79` committed und auf `ceddc84`
+unabhängig nachgeprüft. Aktueller Lintlauf Exit 0. Der folgende Text beschreibt
+nur den Erstlauf. Die Herkunft der sieben PDF/PNG-Änderungen ist nicht pauschal
+„fremd“: die Tests schreiben diese Ziele selbst (Review-Korrektur).
 
 Die Korrekturkarte `t_b1641fc1` arbeitet **parallel im selben Arbeitsbaum**. Während
 RAD-14 dokumentierte, hat sie F1 (Unterstreichung für Links im Fließtext) und F2
@@ -162,7 +184,16 @@ Diagnoseskripten der Korrekturkarte (`no-undef` für `process`, `document`,
 `window`). Die Produktionsdateien und die RAD-14-Dateien sind lint-frei; der Lauf
 in §2 (Zeile 1) fand vor dem Erscheinen dieser Skripte statt.
 
-## 6. Datei-Fingerabdrücke des Bezugsstands
+## 6. Datei-Fingerabdrücke
+
+**Aktuell:** [product-sha256.json](evidence/product-sha256.json) enthält 16
+SHA-256-Fingerabdrücke der exakten Git-Blob-Bytes von
+`ceddc84cfca44d53f1995dfd0981b7d70a554724` (`git show SHA:path`). Die Prüfung
+mit `scripts/verify-handoff.py` vermeidet CRLF/LF-Verwechslungen.
+[SHA256SUMS.txt](SHA256SUMS.txt) verzeichnet separat die Übergabedateien
+(Text auf LF normalisiert, ZIP bytegenau; Größen beziehen sich auf dieselben Bytes).
+
+### Historische Arbeitsbaum-Fingerabdrücke (`5fe5301`)
 
 SHA-256 im Arbeitsbaum (UTF-8/LF; ein frischer Windows-Checkout mit
 `core.autocrlf=true` erzeugt CRLF und damit andere Hashes, siehe RAD-04 §2):
@@ -186,6 +217,6 @@ SHA-256 im Arbeitsbaum (UTF-8/LF; ein frischer Windows-Checkout mit
 | `scripts/generate-radiasthesie-data.cjs` | `59daa16deb4264b0f840b7445bbb8351c81b70939f8127faa44dcf721ef53348` |
 | `scripts/generate-radiasthesie-pages.cjs` | `c91ec02835bde14145cf0b123717bde8b6ff794bf9bbc9c1d65bd628ebfba2eb` |
 
-Nach der F1-Korrektur (`t_b1641fc1`) sind mindestens `css/radiasthesie.css` und
-`js/modules/radiasthesie-views.js` betroffen; dann sind §2 und §6 zu wiederholen.
-**Diese Protokolle gelten ausschließlich für `5fe5301`.**
+Die historische Tabelle gilt ausschließlich für den damaligen Arbeitsbaum.
+Der erforderliche Nachtest und die neuen Git-Blob-Fingerabdrücke sind jetzt
+oben sowie in [NACHABNAHME.md](NACHABNAHME.md) belegt; F1/F2 sind nicht mehr offen.

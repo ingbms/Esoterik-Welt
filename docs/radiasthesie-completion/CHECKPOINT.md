@@ -5,8 +5,8 @@
 | Vorhaben | ESOW-RAD-000 · Radiästhesie, Pendeln und Orakel (14 Pakete) |
 | Master | `t_878c59c7` |
 | Arbeitsbaum | `C:/Users/mas/Arbeit/esow-rad-t_878c59c7`, Branch `feature/radiasthesie-modul` |
-| Bezugsstand | `5fe5301` |
-| Abnahmestand | `9bf5f73` (unabhängige Abnahme `t_29535d62`) |
+| Bezugsstand | `ceddc84cfca44d53f1995dfd0981b7d70a554724` |
+| Abnahmestand | Vollumfang `9bf5f73`; gezielter F1/F2-Review auf `ceddc84`, unabhängig freigegeben |
 | Stand | 3. November 2026 |
 | Freigabe | **nicht erteilt** — siehe `RELEASE-CANDIDATE.md` |
 | Push / Deployment | keiner; `main` unberührt |
@@ -23,15 +23,24 @@
 | Pakete | Stand |
 | --- | --- |
 | RAD-01, 02, 03, 06, 07, 08, 09, 10, 11 | Pass (unabhängige Abnahme) |
-| RAD-04 | Pass mit blockierendem F1 (WCAG 1.4.1, Link-Erkennbarkeit) |
-| RAD-05 | Pass mit F2 (Foto-`sizes`) |
+| RAD-04 | Pass; F1 danach unabhängig bestätigt behoben |
+| RAD-05 | Pass; F2 danach unabhängig bestätigt behoben |
 | RAD-12 | Pass mit offenem B7 (`og:image`) |
-| RAD-13 | Abnahmelauf; Urteil **NICHT ABGENOMMEN** |
-| RAD-14 | Übergabe geliefert; Abnahme nach F1-Nachtest offen |
+| RAD-13 | historisches negatives Vollumfangsverdikt; ergänzend F1/F2 gezielt freigegeben auf `ceddc84` |
+| RAD-14 | Übergabe aktualisiert, Nachtest belegt; abschließende Master-DoD ausstehend |
 
 Details, Evidenzlinks und Bedingungen: `RAD-14/PAKETMATRIX.md`.
 
-## 3. Ausgeführte Prüfungen (RAD-14, Bezugsstand `5fe5301`)
+## 3. Ausgeführte Prüfungen
+
+**Aktuell auf `ceddc84cfca44d53f1995dfd0981b7d70a554724`:** Lint/Format/Build,
+verify:build 36/36 + 7/7, 167 Modultests bestanden. Vollständiger `test:all`-
+Nachlauf: Jest 2/2, Node 242/242, Playwright 147/147. Erster Gesamtlauf mit
+Tarot-Fokus-Timeout bleibt offengelegt, Folgekarte `t_73ccd862`.
+Unabhängig bestätigt: F1/F2 freigegeben, 32 axe-Läufe und 60 Bildläufe ohne
+entsprechenden Befund. [Nachabnahme mit Rohlogs](RAD-14/NACHABNAHME.md).
+
+Historischer Erstlauf auf `5fe5301` (nicht auf den Kandidaten umetikettiert):
 
 | Prüfung | Ergebnis |
 | --- | --- |
@@ -47,8 +56,10 @@ Vollständige Befehle, Umgebung und Datei-Fingerabdrücke: `RAD-14/TESTPROTOKOLL
 
 ## 4. Offene Risiken und Entscheidungen
 
-1. **F1 blockiert die Abnahme** (P2, WCAG 1.4.1, 7/12 Ansichten); Korrektur in `t_b1641fc1`, uncommittet im Arbeitsbaum.
-2. **F2** (Foto-`sizes`) und **F3** (`og:image`) offen; F3 bewusst, weil kein freigegebenes Rastermotiv existiert.
+1. **F1/F2 sind unabhängig bestätigt behoben**; gezielter Review auf dem Kandidaten,
+   keine pauschale Gesamtfreigabe daraus abgeleitet.
+2. **F3/B7** (`og:image`) und **F4** (Kontrast „incomplete“) sowie frühere
+   Nicht-F1/F2-Restpunkte bleiben offen.
 3. **Rechtlich:** keine `LICENSE`-Datei (R-1) und die Datenschutzerklärung nennt die lokalen Speicher nicht (R-7) — Eigentümerentscheidungen.
 4. **Betrieb:** CI ruft die Radiästhesie-Suiten nicht auf (T-1); kein Deployment.
 5. **Nicht gemessen:** Firefox/Safari, Screenreader, Lighthouse, echter Druck, tatsächlich volle Speicherquota.
@@ -56,7 +67,14 @@ Vollständige Befehle, Umgebung und Datei-Fingerabdrücke: `RAD-14/TESTPROTOKOLL
 
 ## 5. Nächster Schritt
 
-1. `t_b1641fc1` abschließen und die Nachabnahme durch `tester` durchführen lassen.
-2. Danach `RAD-14/TESTPROTOKOLLE.md` (§2, §6) und `RAD-14/PAKETMATRIX.md` auf den neuen Commit nachziehen.
-3. Master `t_878c59c7` erst nach belegter DoD aller 14 Pakete schließen.
-4. Veröffentlichung nur als ausdrückliche Eigentümerentscheidung; aus dieser Dokumentation folgt kein Recht dazu.
+1. Die Übergabe ist auf den unabhängig nachgeprüften Kandidaten aktualisiert;
+   [Paketmatrix](RAD-14/PAKETMATRIX.md), [Fingerabdrücke](RAD-14/SHA256SUMS.txt)
+   und [Review](RAD-14/evidence/REVIEW-F1-F2.md) liegen vor.
+2. Bestehender Master `t_878c59c7` entscheidet die finale DoD aller 14 Pakete;
+   kein separates unabhängiges RAD-14-Inhaltsverdikt wird behauptet.
+3. Folgekarte `t_73ccd862` untersucht den sporadischen Tarot-Fokus-Timeout.
+4. Gemeinsame PDF/PNG-Testartefakte und unversioniertes `evidence/` bleiben
+   unbereinigt erhalten. Tests können selbst diese Änderungen erzeugen;
+   ein sauberer Reviewer-Checkout ist nicht dasselbe wie ein sauberer gemeinsamer Baum.
+5. Veröffentlichung nur nach ausdrücklicher Eigentümerentscheidung; aus der
+   Dokumentation folgt kein Push-/Deployment-Recht.

@@ -1,8 +1,14 @@
 # Änderungsübersicht
 
 **Basis:** `e44fa5c` (erster Teilumfang: 3 Themenseiten, 30 Kapitel, 33 Quellen, Glossar/Suche/Methodik, 4 SVGs)
-**Ziel:** `5fe5301` (`HEAD` von `feature/radiasthesie-modul`)
-**Umfang:** 431 Dateien, +99 983 / −664 Zeilen, 28 Commits · **kein Push, kein Deployment**
+**Ziel:** `ceddc84cfca44d53f1995dfd0981b7d70a554724` (unabhängig geprüfter Kandidat)
+**Kandidatenumfang:** 463 Dateien, +107 893 / −665 Zeilen, 31 Commits · **kein Push, kein Deployment**
+
+Die folgenden Detailgruppen und ersten 28 Commitzeilen sind die historische
+Aufstellung bis `5fe5301`. Aktuelles Delta zum Kandidaten: zusätzlich `1f78942`
+(erste RAD-14-Übergabe), `b420a79` (F1/F2-Fix) und `ceddc84` (Nachtest-Evidenz).
+Die aktuelle Dokumentationsfortschreibung kommt danach und ist nicht in den
+Kandidatenzahlen enthalten.
 
 ## 1. Was sich für Nutzer ändert
 
@@ -68,8 +74,10 @@
 | 27 | `9bf5f73` | test | Überschriftenordnung und eindeutige IDs der statischen Dokumente |
 | 28 | `5fe5301` | test | unabhängige Abnahme RAD-13: Bericht, Checkpoint, Evidenz |
 
-Nach `5fe5301` folgt die Korrektur von F1/F2 (`t_b1641fc1`) auf einer eigenen
-Karte; sie ist **nicht** Teil dieses Stands.
+Die F1/F2-Korrektur ist im aktuellen Kandidaten enthalten: zusätzliche
+Unterstreichung von Textlinks, responsive Foto-Slots, Begrenzung des einzigen
+520er-Motivs und ergänzte Regressionstests. Die unabhängige Bestätigung ist in
+[NACHABNAHME.md](NACHABNAHME.md) belegt.
 
 ## 4. Wesentliche technische Entscheidungen
 
