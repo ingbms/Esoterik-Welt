@@ -2,10 +2,8 @@
 import { test, expect } from 'playwright/test';
 
 // Parameterised target: default is the local Pages build (npm run test:e2e).
-// Set BASE_URL to run the same suite against a deployment. E2E_PORT must be
-// honoured like in playwright.config.cjs, otherwise a foreign preview server on
-// the default port answers these checks (QA-Befund m-3).
-const BASE = process.env.BASE_URL || `http://127.0.0.1:${process.env.E2E_PORT || 3100}/Esoterik-Welt`;
+// Set BASE_URL to run the same suite against a deployment.
+import { E2E_BASE_URL as BASE } from './helpers/e2e-target.cjs';
 
 test.describe('Internal link verification', () => {
   test('All internal links from home page return 200', async ({ page }) => {

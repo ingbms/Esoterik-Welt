@@ -13,7 +13,7 @@
 // gegen USNO/JPL geprüft ist.
 import { test, expect } from 'playwright/test';
 
-const BASE = process.env.BASE_URL || 'http://127.0.0.1:3100/Esoterik-Welt';
+import { E2E_BASE_URL as BASE } from './helpers/e2e-target.cjs';
 
 async function openMoon(page, iso) {
   await page.clock.install({ time: new Date(iso) });

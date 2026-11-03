@@ -20,6 +20,13 @@ const DECKS = {
 };
 const LEVELS = { thumb: ['300', 300, 500], detail: ['600', 600, 1000], zoom: ['1200', 1200, 2000] };
 const sha256 = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+// Textdateien liegen im Repository als LF und erreichen einen Windows-Checkout
+// mit core.autocrlf=true als CRLF (git ls-files --eol: i/lf, w/crlf). Ein Hash
+// über die Rohdatei wäre damit plattformabhängig; deshalb wird vor dem Hash auf
+// LF normalisiert. Binärassets werden weiterhin roh gehasht, ihre Prüfsummen
+// bleiben unverändert (QA-Befund m-4).
+const sha256Text = (file) =>
+  crypto.createHash('sha256').update(fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n')).digest('hex');
 
 function loadRegistry() {
   const source = fs.readFileSync(path.join(root, 'js/data/tarot-decks.js'), 'utf8');
@@ -134,8 +141,10 @@ test('V1 deck is untouched by the second deck (manifest, bytes and card count)',
   assert.equal(v1.deck_id, 'nachtatelier-v1');
   assert.equal(v1.card_count, 78);
   // Fingerprint recorded before the V2 integration (evidence/t_937ab9cf/baseline.txt).
+  // Text hash: LF-normalisiert, damit der Windows-Checkout (CRLF) denselben Wert
+  // liefert wie Linux-CI (Befund m-4).
   assert.equal(
-    sha256(path.join(root, 'assets/tarot/nachtatelier-v1/manifest.json')),
+    sha256Text(path.join(root, 'assets/tarot/nachtatelier-v1/manifest.json')),
     'e3d0548a1db46cc135e05697ef4805823724dcbed4c5efa58f2cc54d86330a80',
     'V1 manifest is byte-identical to the published state'
   );

@@ -1,0 +1,160 @@
+MATCH_REDUCED: true
+MOTION_NOTE_HIDDEN: true
+H1S: [ { id: 'frequenzen-title', text: 'Frequenzen & Schwingungen' } ]
+ACTIVE: { id: '', tag: 'BODY' }
+STATE0: {
+  status: 'idle',
+  mode: null,
+  freqHz: 440,
+  frequenciesHz: [],
+  waveform: 'sine',
+  gainDb: -20,
+  binaural: null,
+  sweep: null,
+  contextState: 'none',
+  lastError: null,
+  revision: 0
+}
+SLIDER: {
+  slider: '449',
+  number: '440',
+  readout: '444,7 Hz',
+  stateHz: 444.66197813028066
+}
+AFTER_PLAY: {
+  state: {
+    status: 'running',
+    mode: 'tone',
+    freqHz: 444.66197813028066,
+    frequenciesHz: [ 444.66197813028066 ],
+    waveform: 'sine',
+    gainDb: -20,
+    binaural: null,
+    sweep: null,
+    contextState: 'running',
+    lastError: null,
+    revision: 5
+  },
+  status: 'Ton läuft: 444,7 Hz, −20 dBFS.',
+  live: 'läuft'
+}
+AFTER_STOP: {
+  status: 'idle',
+  mode: null,
+  freqHz: 444.66197813028066,
+  frequenciesHz: [],
+  waveform: 'sine',
+  gainDb: -20,
+  binaural: null,
+  sweep: null,
+  contextState: 'running',
+  lastError: null,
+  revision: 6
+}
+SWEEP@200 {
+  state: {
+    status: 'running',
+    mode: 'tone',
+    freqHz: 200,
+    frequenciesHz: [ 200 ],
+    waveform: 'sine',
+    gainDb: -20,
+    binaural: null,
+    sweep: {
+      fromHz: 200,
+      toHz: 400,
+      seconds: 1,
+      curve: 'exponential',
+      startedAtMs: 2523.2999999523163
+    },
+    contextState: 'running',
+    lastError: null,
+    revision: 9
+  },
+  status: 'Ton gestoppt.',
+  live: 'läuft',
+  progressHidden: false,
+  cancelDisabled: false
+}
+SWEEP@800 {
+  state: {
+    status: 'running',
+    mode: 'tone',
+    freqHz: 200,
+    frequenciesHz: [ 200 ],
+    waveform: 'sine',
+    gainDb: -20,
+    binaural: null,
+    sweep: {
+      fromHz: 200,
+      toHz: 400,
+      seconds: 1,
+      curve: 'exponential',
+      startedAtMs: 2523.2999999523163
+    },
+    contextState: 'running',
+    lastError: null,
+    revision: 9
+  },
+  status: 'Ton gestoppt.',
+  live: 'läuft',
+  progressHidden: false,
+  cancelDisabled: false
+}
+SWEEP@1500 {
+  state: {
+    status: 'running',
+    mode: 'tone',
+    freqHz: 400,
+    frequenciesHz: [ 400 ],
+    waveform: 'sine',
+    gainDb: -20,
+    binaural: null,
+    sweep: null,
+    contextState: 'running',
+    lastError: null,
+    revision: 10
+  },
+  status: 'Sweep beendet bei 400 Hz.',
+  live: 'läuft',
+  progressHidden: true,
+  cancelDisabled: true
+}
+SWEEP@2500 {
+  state: {
+    status: 'running',
+    mode: 'tone',
+    freqHz: 400,
+    frequenciesHz: [ 400 ],
+    waveform: 'sine',
+    gainDb: -20,
+    binaural: null,
+    sweep: null,
+    contextState: 'running',
+    lastError: null,
+    revision: 10
+  },
+  status: 'Sweep beendet bei 400 Hz.',
+  live: 'läuft',
+  progressHidden: true,
+  cancelDisabled: true
+}
+HUB_BUTTON_COUNT: 1
+HUB_AFTER_CLICK: {
+  hash: '#frequenzen',
+  state: {
+    status: 'running',
+    mode: 'tone',
+    freqHz: 528,
+    frequenciesHz: [ 528 ],
+    waveform: 'sine',
+    gainDb: -20,
+    binaural: null,
+    sweep: null,
+    contextState: 'running',
+    lastError: null,
+    revision: 3
+  },
+  status: undefined,
+  playingPanel: false
+}

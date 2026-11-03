@@ -1,0 +1,44 @@
+{
+  "duringSweep": {
+    "progress": {
+      "selector": "#fqSweepProgress",
+      "role": "progressbar",
+      "name": "Sweep-Fortschritt",
+      "value": 24,
+      "ignored": false,
+      "properties": {
+        "valuemin": 0,
+        "valuemax": 100,
+        "valuetext": ""
+      }
+    },
+    "cancel": {
+      "selector": "#fqSweepCancel",
+      "role": "button",
+      "name": "Sweep abbrechen",
+      "ignored": false,
+      "properties": {}
+    },
+    "status": {
+      "selector": "#fqStatus",
+      "role": "status",
+      "name": "",
+      "ignored": false,
+      "properties": {
+        "live": "polite"
+      }
+    },
+    "statusText": "Sweep läuft: 200 → 2.000 Hz, 6 s.",
+    "wrapHidden": false
+  },
+  "afterCancel": {
+    "statusText": "Sweep abgebrochen.",
+    "progress": {
+      "selector": "#fqSweepProgress",
+      "role": "none",
+      "ignored": true,
+      "properties": {}
+    },
+    "wrapHidden": true
+  }
+}

@@ -1,0 +1,31 @@
+FOCUS_AFTER_SWITCH: { id: 'frequenzen-title', tag: 'H1' }
+REDUCED: { matches: true, raf: 5, noteHidden: false, status: 'running' }
+SWEEP_RUNNING: { status: 'running', sweep: true, cancel: false }
+AFTER_CANCEL: {
+  status: 'running',
+  sweep: null,
+  msg: 'Sweep abgebrochen.',
+  live: 'läuft'
+}
+CONTRAST_IDS: [
+  'home-title',        'pfade-title',
+  'material-title',    'kosmos-title',
+  'tarot-title',       'tarotDeckHint',
+  'tarotDeckStatus',   'crystals-title',
+  'moon-title',        'moonTimelineTitle',
+  'moonCalendarTitle', 'moonPhasesTitle',
+  'moonCultureTitle',  'moonSourcesTitle',
+  'icalStatus',        'frequenzen-title',
+  'fqDisclaimerKurz',  'fqLiveStatus',
+  'fqStatus',          'fq-freq-title',
+  'fqFreqReadout',     'fq-sound-title',
+  'fqGainRange',       'fqGainReadout',
+  'fq-sweep-title',    'fq-beat-title',
+  'fq-preset-title',   'fq-binaural-title',
+  'fq-compare-title',  'fq-visual-title',
+  'fqReadGain',        'fqMotionNote',
+  'fq-hinweis-title',  'fqDisclaimerLang',
+  'runes-title',       'blog-title',
+  'articleListStatus', 'cardModalTitle',
+  'crystalModalTitle', 'runeModalTitle'
+]

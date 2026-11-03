@@ -1,0 +1,2 @@
+[e2e-server] ✗ Port 3310 ist bereits belegt. Die Browser-Suite startet bewusst keinen Lauf gegen einen fremden Server (QA-Befund m-3). Belegenden Prozess beenden oder mit E2E_PORT einen freien Port wählen.
+exit=1

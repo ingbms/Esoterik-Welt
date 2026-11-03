@@ -1,0 +1,156 @@
+{
+  "webkitNoWebAudio": {
+    "browserVersion": "27.2",
+    "before": {
+      "AudioContext": "undefined",
+      "webkitAudioContext": "undefined",
+      "playDisabled": false,
+      "stopDisabled": true,
+      "status": ""
+    },
+    "after": {
+      "status": "Dieser Browser unterstützt die Web Audio API nicht. Das Frequenzlabor zeigt die Inhalte ohne Ton.",
+      "error": "Dieser Browser unterstützt die Web Audio API nicht. Das Frequenzlabor zeigt die Inhalte ohne Ton.",
+      "errorHidden": false,
+      "notice": "",
+      "noticeHidden": true,
+      "playDisabled": false,
+      "stopDisabled": true,
+      "liveStatus": "ohne Ton",
+      "engineState": {
+        "status": "unsupported",
+        "mode": null,
+        "freqHz": 440,
+        "frequenciesHz": [],
+        "waveform": "sine",
+        "gainDb": -20,
+        "binaural": null,
+        "sweep": null,
+        "contextState": "none",
+        "lastError": {
+          "code": "unsupported",
+          "message": "Web Audio API is not available in this environment.",
+          "recoverable": false
+        },
+        "revision": 1
+      }
+    },
+    "console": [
+      "log: Esoterik-Welt initialized",
+      "warning: Frequenzlabor: Web Audio API is not available in this environment.",
+      "warning: Frequenzlabor: Web Audio API is not available in this environment."
+    ]
+  },
+  "sweepTimeline": {
+    "statusTimeline": [
+      {
+        "t": 799,
+        "text": ""
+      },
+      {
+        "t": 923,
+        "text": "Sweep läuft: 200 → 800 Hz, 3 s."
+      },
+      {
+        "t": 3959,
+        "text": "Sweep beendet bei 800 Hz."
+      }
+    ],
+    "progressAfterEnd": {
+      "valueNow": "0",
+      "wrapHidden": true
+    }
+  },
+  "binaural": {
+    "engineState": {
+      "status": "running",
+      "mode": "binaural",
+      "freqHz": 200,
+      "frequenciesHz": [
+        200,
+        208
+      ],
+      "waveform": "sine",
+      "gainDb": -20,
+      "binaural": {
+        "carrierHz": 200,
+        "deltaHz": 8,
+        "leftHz": 200,
+        "rightHz": 208
+      },
+      "sweep": null,
+      "contextState": "running",
+      "lastError": null,
+      "revision": 3
+    },
+    "sampleRate": 48000,
+    "leftRms": 0.035423797319595995,
+    "rightRms": 0.03555453393618693,
+    "mixRms": 0.033709439104279725,
+    "leftPeakScan": [
+      {
+        "hz": 199.5,
+        "amp": 0.01741
+      },
+      {
+        "hz": 200,
+        "amp": 0.01741
+      },
+      {
+        "hz": 200.5,
+        "amp": 0.01741
+      }
+    ],
+    "rightPeakScan": [
+      {
+        "hz": 199.5,
+        "amp": 0.024511
+      },
+      {
+        "hz": 200,
+        "amp": 0.024511
+      },
+      {
+        "hz": 200.5,
+        "amp": 0.024511
+      }
+    ],
+    "left200": 0.017410161244114167,
+    "left208": 0.017410161244114167,
+    "right200": 0.0245110070647341,
+    "right208": 0.0245110070647341,
+    "correlation": 0.8044352828018979,
+    "frameMs": 42.666666666666664
+  },
+  "binauralAfterStop": {
+    "state": "idle",
+    "leftRms": 0,
+    "rightRms": 0
+  },
+  "levelCap": {
+    "gainUi": {
+      "value": "-6",
+      "readout": "−6 dBFS",
+      "capLabel": "Deckel: −6 dBFS"
+    },
+    "peak": {
+      "engineState": {
+        "status": "running",
+        "mode": "tone",
+        "freqHz": 440,
+        "frequenciesHz": [
+          440
+        ],
+        "waveform": "sine",
+        "gainDb": -6,
+        "binaural": null,
+        "sweep": null,
+        "contextState": "running",
+        "lastError": null,
+        "revision": 4
+      },
+      "peak": 0.5011871457099915,
+      "dbfs": -6.0000015236618465
+    }
+  }
+}

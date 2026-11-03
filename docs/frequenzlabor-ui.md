@@ -40,6 +40,16 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 
 Zehn bestehende Teststellen zählten sechs Startseiten-Karten; sie erwarten jetzt sieben und führen `frequenzen` in der Modul- und Routenliste (ADR §6.6). `tests/astrologie.spec.js` nutzt außerdem wie `playwright.config.cjs` den `E2E_PORT`, statt fest auf 3100 zu zeigen.
 
+### 2.1 Budget und Reserve (bewusst überwacht)
+
+NFR-1 (initialer statischer JS-Graph) ist mit **85.613 B von 86.275 B** gzip-9 zu **99,2 %** ausgelastet; die Reserve beträgt nur **662 B**. Das Gate in `scripts/check-frequenz-budget.cjs` schlägt bei Überschreitung fehl (Exitcode 1). Zusätzlich gibt es seit dem QA-Befund m-5 eine **Warnschwelle bei 95 % Auslastung** (`WARN_RATIO`): Bleibt das Budget eingehalten, aber die Reserve unter 5 %, zeigt die Tabelle `WARN`, das Skript schreibt eine Warnzeile ins Log und der Lauf bleibt grün — so wird die Warnung nicht als Fehlschlag umgangen und trotzdem sichtbar.
+
+Die Reserve ist damit bewusst klein und dauerhaft beobachtet: Jede weitere statische Zeile im Initialpfad (`js/main.js` und dessen statische Importe) muss gegen diese 662 B gerechnet werden. Feature-Code gehört in die Lazy-Module (`js/modules/frequenz*.js`, NFR-2 hat großen Abstand). Aufruf: `npm run check:frequenz-budget`, im CI-Job `unit-test` verankert.
+
+### 2.2 Testinfrastruktur: dedizierter Port, kein Server-Reuse
+
+Seit der Härtung aus QA-Befund m-3 beziehen **alle** Browser-Specs Port und Basis-URL aus `tests/helpers/e2e-target.cjs`: Standardport ist **3310** (nicht der Vorschau-Port 3100), `E2E_PORT`/`BASE_URL` bleiben als Overrides erhalten. `playwright.config.cjs` und `playwright.qa.config.js` setzen `reuseExistingServer: false` auch lokal und starten `scripts/serve-e2e.cjs`; das Skript bricht mit eindeutiger Meldung ab, wenn der Port belegt ist, statt einen fremden oder veralteten Server zu übernehmen.
+
 ## 3. Interaktion und Zustand
 
 | Bedienelement | Verhalten | Tastatur |
@@ -133,10 +143,10 @@ Screenshots: `hub-360/768/1440.png`, `lab-360/768/1440.png`, `lab-360-scrolled.p
 | --- | --- | --- |
 | Engine + Presets/Flags | `npm run test:frequenz` | **34 pass, 0 fail** (21 Engine E1–E20, 13 Presets P1–P8) |
 | UI-Browserfälle | `npx playwright test tests/frequenzlabor.spec.js` | **14 pass, 0 fail** (U1–U14) |
-| Vollständige Browser-Suite | `npx playwright test` | **88 pass, 0 fail** (inkl. Astrologie, Mond, Tarot, Smoke) |
+| Vollständige Browser-Suite | `npm run test:e2e` (Port 3310, eigener Serverstart) | **89 pass, 0 fail** (inkl. Astrologie, Mond, Tarot, Smoke) |
 | Offline-Datei | `npm run test:offline` | **2 pass** (inkl. eingebettetem `#local-frequencies-data`) |
 | Lokaler Einstieg | `node --test tests/local-entry.cjs` | **6 pass, 2 skip** (7 Karten, 6 Module) |
-| Budget | `npm run check:frequenz-budget` | NFR-1 85.605 B / 86.275 B · NFR-2 27.854 B / 100.000 B · NFR-3 2.883 B / 6.000 B |
+| Budget | `npm run check:frequenz-budget` | NFR-1 85.613 B / 86.275 B (**WARN**, 99,2 % Auslastung) · NFR-2 28.167 B / 100.000 B · NFR-3 2.903 B / 6.000 B (Stand nach der M-1-Nachbesserung, §2.1) |
 | Lint/Format | `npm run lint`, `npx prettier --check` | 0 Fehler |
 
 Konsole: U1 prüft `console.error`/`pageerror` auf beiden Ansichten. Zusätzlich lief ein eigener Konsolen-Probe über beide Ansichten bei 360/768/1440 px mit Filterwechsel, Preset-Play, Sweep, Schwebung, Binaural, 432-Hz-Vergleich, Wellenform- und Pegelwechsel: **0 Meldungen** (`error`, `warning`, `pageerror`, `requestfailed`).

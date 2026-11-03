@@ -6,7 +6,7 @@
   "disclaimer": {
     "kurz": "Bildungs- und Experimentierangebot, kein Medizinprodukt. Keine Heil- oder Gesundheitsversprechen. Leise hören, Pausen machen.",
     "lang": "Dieses Frequenzlabor ist ein Bildungs- und Experimentierangebot. Es ersetzt keine ärztliche Beratung, Diagnose oder Behandlung und ist kein Medizinprodukt. Aus der Wiedergabe von Tönen werden keine Heil-, Gesundheits- oder Wirkversprechen abgeleitet. Einträge mit dem Status „nicht belegt“ oder „traditionell“ geben überlieferte oder populäre Vorstellungen wieder, für die kein wissenschaftlicher Nachweis besteht; sie sind im Datenbestand ausdrücklich so gekennzeichnet. Höre nur bei angenehmer Lautstärke, beginne leise und mache regelmäßig Pausen: Die WHO empfiehlt für Freizeitbeschallung höchstens 80 dB(A) über 40 Stunden pro Woche. Wenn du einen Hörschaden, Tinnitus oder eine Erkrankung hast, bei der laute Geräusche oder bestimmte Töne Beschwerden auslösen, kläre die Nutzung vorab ärztlich ab und brich sie bei Unwohlsein sofort ab.",
-    "lautstaerke": "Die Audio-Engine begrenzt die Ausgabe hart auf -20 dBFS und erzeugt keinen Ton ohne Nutzer-Interaktion. Das ersetzt keinen Gehörschutz: Kopfhörer nie auf Anschlag drehen."
+    "lautstaerke": "Die Audio-Engine startet bei −20 dBFS und begrenzt die Ausgabe hart auf −6 dBFS; sie erzeugt keinen Ton ohne Nutzer-Interaktion. Das ersetzt keinen Gehörschutz: Kopfhörer nie auf Anschlag drehen."
   },
   "evidenzstatus_definitionen": {
     "belegt": "Durch Norm, Lehrbuch oder begutachtete Primärliteratur gestützt; die Aussage ist reproduzierbar oder messtechnisch belegt.",
