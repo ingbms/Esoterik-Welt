@@ -1,18 +1,32 @@
 // Farbwelten & Farbtherapie — Bereichsmodul.
 //
 // Rendert in #farbweltenRoot. Der Router (js/main.js) übergibt nur Segmente;
-// dieses Modul entscheidet über die Ansicht, setzt Titel/Description und den
-// Fokus. Alle Redaktionstexte stammen aus js/data/farbwelten.js und werden
-// ausschließlich mit textContent gerendert — kein innerHTML mit Inhalten.
-// innerHTML wird nur für konstante Zeichenketten (SVG-Figur) verwendet.
+// dieses Modul entscheidet über die Ansicht, setzt Titel/Description/Canonical
+// und den Fokus. Alle Redaktionstexte stammen aus js/data/farbwelten.js und
+// werden ausschließlich mit textContent gerendert — kein innerHTML mit
+// Inhalten. innerHTML wird nur für konstante Zeichenketten (SVG-Figur) verwendet.
+//
+// Ansichten: Einstieg, sieben Farbseiten (A–H-Skelett), Chakren, Lichtfrequenzen
+// und drei Themenseiten (Farbtherapie, Farbpsychologie, Lichtmedizin) ohne
+// Skelett — sie rendert renderTopic in der Reihenfolge ihrer H2-Abschnitte.
 
-import { CHAKREN_PAGE, FARBWELTEN, LANDING, LIGHT_PAGE, SECTION_ORDER, SOURCES } from '../data/farbwelten.js';
+import {
+  CHAKREN_PAGE,
+  FARBWELTEN,
+  LANDING,
+  LIGHT_PAGE,
+  SECTION_ORDER,
+  SOURCES,
+  TOPIC_PAGES,
+} from '../data/farbwelten.js';
 import { CHAKRA_POSITIONS, CHAKREN } from '../data/chakren.js';
 import { ROUTE, VIEW, resolveView, spectrumAt } from './farbwelten-model.js';
 
 const JSON_LD_ID = 'farbwelten-breadcrumb-ld';
+const CANONICAL_ORIGIN = 'https://ingbms.github.io/Esoterik-Welt/';
 const INLINE_PATTERN = /(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)]+\))/g;
 const COLOUR_IDS = new Set(FARBWELTEN.map((world) => world.id));
+const TOPIC_BY_SLUG = new Map(TOPIC_PAGES.map((page) => [page.slug, page]));
 
 // --- DOM-Bausteine --------------------------------------------------------
 
@@ -48,6 +62,7 @@ function resolveHref(href) {
     if (name === 'farbwelten') return ROUTE.base;
     if (name === 'chakren') return ROUTE.chakren();
     if (name === 'lichtfrequenzen') return ROUTE.light();
+    if (TOPIC_BY_SLUG.has(name)) return ROUTE.topic(name);
     if (COLOUR_IDS.has(name)) return ROUTE.color(name);
   }
   return null;
@@ -157,7 +172,7 @@ function swatch(world) {
   return figure;
 }
 
-function blocks(container, list, world) {
+function blocks(container, list, world, label) {
   for (const block of list) {
     switch (block.type) {
       case 'p':
@@ -178,15 +193,28 @@ function blocks(container, list, world) {
         break;
       case 'table':
         container.append(
-          h('div', { class: 'fw-table-wrap', role: 'region', 'aria-label': 'Tabelle', tabindex: '0' }, [table(block)])
+          h(
+            'div',
+            {
+              class: 'fw-table-wrap',
+              role: 'region',
+              'aria-label': label ? `Tabelle: ${label}` : 'Tabelle',
+              tabindex: '0',
+            },
+            [table(block)]
+          )
         );
         break;
       case 'quote': {
         const quote = h('blockquote', { class: 'fw-quote' });
         quote.append(paragraph(block.text));
+        if (block.cite) quote.append(h('footer', {}, [h('cite', { text: block.cite })]));
         container.append(quote);
         break;
       }
+      case 'sources':
+        container.append(sourceList(block.items, (entry) => entry));
+        break;
       case 'h3':
         container.append(h('h3', { class: 'fw-subhead', text: block.text }));
         break;
@@ -250,15 +278,17 @@ function toc(entries, ariaLabel) {
   ]);
 }
 
-function sourcesSection(ids, { title = 'Quellen', headingId = 'quellen-title' } = {}) {
+function sourceList(items, resolveSource) {
   // Bewusst <ul>: die Kennung [n] steht im Eintrag selbst. Eine <ol> hätte eine
   // zweite, konkurrierende Nummerierung, die mit den Kennungen nicht übereinstimmt.
   const resolution = h('ul', { class: 'fw-sources', role: 'list' });
-  for (const id of ids) {
-    const source = SOURCES[id];
-    if (!source) continue;
-    const li = h('li', { id: `quelle-${id}` });
-    const label = h('span', { class: 'fw-sources__label', text: `[${id}] ${source.label}` });
+  const seen = new Set();
+  for (const item of items) {
+    const source = resolveSource(item);
+    if (!source || seen.has(source.id)) continue;
+    seen.add(source.id);
+    const li = h('li', { id: `quelle-${source.id}` });
+    const label = h('span', { class: 'fw-sources__label', text: `[${source.id}] ${source.label}` });
     if (source.url) {
       li.append(h('a', { href: source.url, rel: 'noopener' }, [label]));
     } else {
@@ -266,10 +296,14 @@ function sourcesSection(ids, { title = 'Quellen', headingId = 'quellen-title' } 
     }
     resolution.append(li);
   }
+  return resolution;
+}
+
+function sourcesSection(ids, { title = 'Quellen', headingId = 'quellen-title' } = {}) {
   return h('section', { class: 'fw-detail__section', id: 'quellen', 'aria-labelledby': headingId }, [
     h('p', { class: 'label', text: 'Quellen' }),
     h('h2', { id: headingId, tabindex: '-1', text: title }),
-    resolution,
+    sourceList(ids, (id) => SOURCES[id]),
   ]);
 }
 
@@ -327,6 +361,22 @@ function hero() {
   ]);
 }
 
+function topicRegisterRow(page) {
+  return h('li', { class: 'fw-register__row' }, [
+    h('a', { class: 'fw-register__link fw-register__link--topic', href: ROUTE.topic(page.slug) }, [
+      h('span', { class: 'fw-register__mark', 'aria-hidden': 'true', text: 'Thema' }),
+      h('span', { class: 'fw-register__text' }, [
+        h('span', { class: 'fw-register__name', text: page.title }),
+        h('span', {
+          class: 'fw-register__meta',
+          text: `${page.sections.length} Abschnitte · ${page.listed.length} Quellen`,
+        }),
+      ]),
+      h('span', { class: 'fw-register__arrow', 'aria-hidden': 'true', text: '→' }),
+    ]),
+  ]);
+}
+
 function registerSection() {
   const list = h('ul', { class: 'fw-register' });
   FARBWELTEN.forEach((world, index) => {
@@ -359,6 +409,10 @@ function registerSection() {
       ])
     );
   });
+  // Zweite Registergruppe: die Redaktionsseiten ohne A–H-Skelett. Eigene <h3>,
+  // damit die Überschriftenfolge h2 → h3 ohne Sprung bleibt.
+  const topics = h('ul', { class: 'fw-register', 'aria-labelledby': 'register-themen-title' });
+  for (const page of TOPIC_PAGES) topics.append(topicRegisterRow(page));
   return h('section', { class: 'fw-section', id: 'register', 'aria-labelledby': 'register-title' }, [
     h('div', { class: 'fw-section__head' }, [
       h('h2', { id: 'register-title', text: 'Zwölf Farbwelten' }),
@@ -369,6 +423,8 @@ function registerSection() {
       'fw-section__lede'
     ),
     list,
+    h('h3', { class: 'fw-register__group', id: 'register-themen-title', text: 'Themen' }),
+    topics,
     h('p', {
       class: 'fw-note',
       text: 'Frequenzwerte berechnet mit f = c/λ (c = 299 792 458 m/s) für die genannten Grenzwellenlängen, gerundet. Die Zuordnung Farbe–Chakra folgt dem verbreiteten modernen Regenbogenmodell und ist keine historisch einheitliche Überlieferung.',
@@ -377,7 +433,7 @@ function registerSection() {
 }
 
 function entrySection() {
-  const card = (id, title, text, href) =>
+  const card = (title, text, href) =>
     h('article', { class: 'fw-card' }, [
       h('div', { class: 'fw-card__body' }, [
         h('h3', { class: 'fw-card__title', text: title }),
@@ -392,23 +448,28 @@ function entrySection() {
     ]);
   return h('section', { class: 'fw-section', id: 'einstiege', 'aria-labelledby': 'einstiege-title' }, [
     h('div', { class: 'fw-section__head' }, [
-      h('h2', { id: 'einstiege-title', text: 'Zwei Wege in das Thema' }),
-      h('p', { class: 'label', text: 'Einstiege' }),
+      h('h2', { id: 'einstiege-title', text: 'Einstiege in das Thema' }),
+      h('p', { class: 'label', text: 'Übersichten und Themenseiten' }),
     ]),
+    h('h3', { class: 'fw-subhead', text: 'Übersichten' }),
     h('div', { class: 'fw-card-grid' }, [
       card(
-        'chakren',
         'Chakren & Farben',
         'Sieben Zentren, ihre Farbzuordnung und die Geschichte des Regenbogenmodells — als Deutungstradition gekennzeichnet.',
         ROUTE.chakren()
       ),
       card(
-        'lichtfrequenzen',
         'Lichtfrequenzen',
         'Wellenlänge, Frequenz und Photonenenergie berechnen; belegte Lichtmedizin von nicht belegter Chromotherapie trennen.',
         ROUTE.light()
       ),
     ]),
+    h('h3', { class: 'fw-subhead', text: 'Themenseiten' }),
+    h(
+      'div',
+      { class: 'fw-card-grid' },
+      TOPIC_PAGES.map((page) => card(page.title, page.meta.teaser, ROUTE.topic(page.slug)))
+    ),
   ]);
 }
 
@@ -453,7 +514,7 @@ function renderLanding() {
         h('p', { class: 'label', text: 'Farbwelten' }),
       ]),
     ]);
-    blocks(container, section.blocks);
+    blocks(container, section.blocks, null, section.title);
     fragment.append(container);
   }
   fragment.append(
@@ -502,7 +563,7 @@ function renderColor(world) {
         h('h2', { id: `${section.anchor}-title`, tabindex: '-1', text: section.label }),
       ]
     );
-    blocks(container, list, world);
+    blocks(container, list, world, section.label);
     if (section.key === 'anwendung') container.append(compareBox(world));
     main.append(container);
   });
@@ -524,6 +585,14 @@ function renderColor(world) {
         h('li', {}, [h('a', { href: '#crystals', text: 'Kristalle nach Farbe und Chakra' })]),
         h('li', {}, [h('a', { href: '#blog', text: 'Artikel im Wissensbereich' })]),
       ]),
+      // Querverweise zu den Themenseiten: nur Links, kein Eingriff in den Text
+      // dieser Farbseite.
+      h('h3', { class: 'fw-subhead', id: 'themen-links-title', text: 'Themenseiten' }),
+      h(
+        'ul',
+        { class: 'fw-list fw-list--links', 'aria-labelledby': 'themen-links-title' },
+        TOPIC_PAGES.map((page) => h('li', {}, [h('a', { href: ROUTE.topic(page.slug), text: page.title })]))
+      ),
     ])
   );
   const tocEntries = SECTION_ORDER.map((section) => ({
@@ -834,7 +903,7 @@ function renderLight() {
         h('h2', { id: `${section.key}-title`, tabindex: '-1', text: section.title }),
       ]
     );
-    blocks(container, section.blocks);
+    blocks(container, section.blocks, null, section.title);
     if (section.key === 'disclaimer') container.classList.add('fw-disclaimer');
     fragment.append(container);
   }
@@ -849,6 +918,45 @@ function renderLight() {
     ])
   );
   return { fragment, explorer };
+}
+
+// Themenseite (FW-10/FW-11): H1, Lede und die H2-Abschnitte der Redaktionsdatei
+// in deren Reihenfolge. Kein A–H-Skelett, kein Sonderaufbau je Seite — der
+// Renderer kennt nur die Abschnittsliste aus den generierten Daten.
+function renderTopic(page) {
+  const fragment = document.createDocumentFragment();
+  fragment.append(
+    breadcrumb([{ label: 'Start', href: '#home' }, { label: 'Farben', href: ROUTE.base }, { label: page.title }])
+  );
+  fragment.append(
+    h('header', { class: 'fw-detail__band' }, [
+      h('p', { class: 'label', text: 'Thema · Einordnung' }),
+      h('h1', { id: 'farbwelten-title', tabindex: '-1', text: page.title }),
+      paragraph(page.lede, 'fw-detail__lede'),
+    ])
+  );
+  const main = h('div', { class: 'fw-detail__main' });
+  page.sections.forEach((section, index) => {
+    const container = h(
+      'section',
+      { class: 'fw-detail__section', id: section.anchor, 'aria-labelledby': `${section.anchor}-title` },
+      [
+        h('p', { class: 'label', text: String(index + 1).padStart(2, '0') }),
+        h('h2', { id: `${section.anchor}-title`, tabindex: '-1', text: section.heading }),
+      ]
+    );
+    blocks(container, section.blocks, null, section.heading);
+    // Der Quellenabschnitt trägt den Health-Disclaimer als letzten Absatz;
+    // er bleibt damit das Seitenende.
+    if (section.anchor === 'quellen') container.classList.add('fw-topic__quellen');
+    main.append(container);
+  });
+  const tocEntries = page.sections.map((section) => ({
+    href: ROUTE.topic(page.slug, section.anchor),
+    label: section.heading,
+  }));
+  fragment.append(h('div', { class: 'fw-detail__body' }, [main, toc(tocEntries, 'Inhalt dieser Themenseite')]));
+  return fragment;
 }
 
 function renderNotFound(slug) {
@@ -875,7 +983,7 @@ export class FarbweltenModule {
 
   async load() {
     if (this.data) return this.data;
-    this.data = { FARBWELTEN, SECTION_ORDER, SOURCES, LANDING, CHAKREN_PAGE, LIGHT_PAGE };
+    this.data = { FARBWELTEN, SECTION_ORDER, SOURCES, LANDING, CHAKREN_PAGE, LIGHT_PAGE, TOPIC_PAGES };
     return this.data;
   }
 
@@ -890,11 +998,13 @@ export class FarbweltenModule {
     const route = resolveView(
       segments,
       FARBWELTEN,
-      SECTION_ORDER.map((section) => section.anchor)
+      SECTION_ORDER.map((section) => section.anchor),
+      TOPIC_PAGES
     );
     const view = this.render(route);
     this.root.replaceChildren(view.fragment);
-    this.root.dataset.farbwelt = route.view === VIEW.COLOR ? route.world.id : '';
+    this.root.dataset.farbwelt =
+      route.view === VIEW.COLOR ? route.world.id : route.view === VIEW.TOPIC ? route.topic.slug : '';
     this.applyMeta(route);
     this.placeStructuredData(route);
     if (view.explorer) this.syncExplorer(view.explorer, 530);
@@ -906,6 +1016,8 @@ export class FarbweltenModule {
     switch (route.view) {
       case VIEW.COLOR:
         return { fragment: renderColor(route.world) };
+      case VIEW.TOPIC:
+        return { fragment: renderTopic(route.topic) };
       case VIEW.CHAKREN:
         return { fragment: renderChakren() };
       case VIEW.LIGHT: {
@@ -922,11 +1034,31 @@ export class FarbweltenModule {
 
   metaFor(route) {
     if (route.view === VIEW.COLOR) return route.world.meta;
+    if (route.view === VIEW.TOPIC) return route.topic.meta;
     if (route.view === VIEW.CHAKREN) return CHAKREN_PAGE.meta;
     if (route.view === VIEW.LIGHT) return LIGHT_PAGE.meta;
     if (route.view === VIEW.NOTFOUND)
       return { title: 'Unbekannte Farbwelt | Esoterik-Welt', description: 'Diese Farbwelt ist nicht vorhanden.' };
     return LANDING.meta;
+  }
+
+  // Kanonische Adresse der Ansicht. Die Sektion ist ein Dokument; die Ansichten
+  // sind Fragmente, deshalb trägt jede ihren eigenen Fragment-Anker.
+  canonicalFor(route) {
+    switch (route.view) {
+      case VIEW.COLOR:
+        return `${CANONICAL_ORIGIN}#farbwelten/${route.world.id}`;
+      case VIEW.TOPIC:
+        return `${CANONICAL_ORIGIN}#farbwelten/${route.topic.slug}`;
+      case VIEW.CHAKREN:
+        return `${CANONICAL_ORIGIN}#farbwelten/chakren`;
+      case VIEW.LIGHT:
+        return `${CANONICAL_ORIGIN}#farbwelten/lichtfrequenzen`;
+      case VIEW.LANDING:
+        return route.anchor ? `${CANONICAL_ORIGIN}#farbwelten/${route.anchor}` : `${CANONICAL_ORIGIN}#farbwelten`;
+      default:
+        return `${CANONICAL_ORIGIN}#farbwelten`;
+    }
   }
 
   applyMeta(route) {
@@ -941,6 +1073,10 @@ export class FarbweltenModule {
     setMeta('meta[property="og:description"]', meta.description);
     setMeta('meta[name="twitter:title"]', meta.title);
     setMeta('meta[name="twitter:description"]', meta.description);
+    const canonical = this.canonicalFor(route);
+    const link = document.querySelector('link[rel="canonical"]');
+    if (link) link.setAttribute('href', canonical);
+    setMeta('meta[property="og:url"]', canonical);
   }
 
   placeStructuredData(route) {
@@ -961,6 +1097,13 @@ export class FarbweltenModule {
       trail.push({
         name: 'Lichtfrequenzen',
         item: 'https://ingbms.github.io/Esoterik-Welt/#farbwelten/lichtfrequenzen',
+      });
+    // Die sichtbaren Stationen der Themenseite sind Start › Farben › Seitentitel;
+    // genau diese drei stehen auch im BreadcrumbList.
+    if (route.view === VIEW.TOPIC)
+      trail.push({
+        name: route.topic.title,
+        item: `${CANONICAL_ORIGIN}#farbwelten/${route.topic.slug}`,
       });
     const data = {
       '@context': 'https://schema.org',

@@ -9,6 +9,7 @@ export const ROUTE = {
   color: (id, anchor) => `#farbwelten/${id}${anchor ? `/${anchor}` : ''}`,
   chakren: (anchor) => `#farbwelten/chakren${anchor ? `/${anchor}` : ''}`,
   light: (anchor) => `#farbwelten/lichtfrequenzen${anchor ? `/${anchor}` : ''}`,
+  topic: (slug, anchor) => `#farbwelten/${slug}${anchor ? `/${anchor}` : ''}`,
 };
 
 export const VIEW = {
@@ -16,6 +17,7 @@ export const VIEW = {
   COLOR: 'color',
   CHAKREN: 'chakren',
   LIGHT: 'light',
+  TOPIC: 'topic',
   NOTFOUND: 'notfound',
 };
 
@@ -32,12 +34,20 @@ const PLANCK_EV_NM = 1239.841984; // eV·nm
  * @param {string[]} segments Pfadsegmente hinter #farbwelten
  * @param {Array<{id:string}>} worlds
  * @param {string[]} sectionKeys Abschnittsschlüssel der Farbseiten
+ * @param {Array<{slug:string, sections:Array<{anchor:string}>}>} topics Themenseiten
  */
-export function resolveView(segments, worlds, sectionKeys = []) {
+export function resolveView(segments, worlds, sectionKeys = [], topics = []) {
   const [first, second] = segments || [];
   if (!first) return { view: VIEW.LANDING, anchor: '' };
   if (first === 'chakren') return { view: VIEW.CHAKREN, anchor: second || '', raw: 'chakren' };
   if (first === 'lichtfrequenzen') return { view: VIEW.LIGHT, anchor: second || '', raw: 'lichtfrequenzen' };
+  // Themenseiten haben kein festes Skelett; ihr Anker ist ein Abschnitt ihrer
+  // eigenen H2-Reihenfolge.
+  const topic = (topics || []).find((entry) => entry.slug === first);
+  if (topic) {
+    const anchors = (topic.sections || []).map((section) => section.anchor);
+    return { view: VIEW.TOPIC, topic, anchor: anchors.includes(second) ? second : '', raw: first };
+  }
   const world = (worlds || []).find((entry) => entry.id === first);
   if (world) {
     return {

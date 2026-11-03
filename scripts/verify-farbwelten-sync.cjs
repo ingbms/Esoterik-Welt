@@ -48,7 +48,12 @@ const COLOR_TYPES = {
   schwarz: 'neutral',
 };
 const TYPE_LABELS = { spectral: 'Spektralfarbe', 'non-spectral': 'nicht spektral', neutral: 'Neutralfarbe' };
-const ALL_FILES = ['farbwelten', ...COLOR_IDS, 'chakren', 'lichtfrequenzen'];
+// Seiten mit A–H-Skelett und dem wortgleichen Vorgabe-Disclaimer (S16).
+const CONTENT_FILES = ['farbwelten', ...COLOR_IDS, 'chakren', 'lichtfrequenzen'];
+// Themenseiten (FW-10/FW-11): eigene Redaktionsseiten ohne Skelett, eigener
+// Health-Disclaimer am Seitenende.
+const TOPIC_FILES = ['farbtherapie', 'farbpsychologie', 'lichtmedizin'];
+const ALL_FILES = [...CONTENT_FILES, ...TOPIC_FILES];
 
 // Wortgleicher Vorgabetext (S16), siehe docs/farbwelten-konzept und
 // NACHPRUEFBERICHT-2.md §2.
@@ -143,18 +148,18 @@ for (const name of ALL_FILES) {
   if (entries.length < 5) fail(`${name}: nur ${entries.length} Bibliografie-Einträge im Format „- [n]"`);
 }
 
-// B1: [10] trägt Journal und DOI.
+// B1: [10] trägt Journal (ausgeschrieben oder abgekürzt) und DOI.
 for (const name of ALL_FILES) {
   const quellen = quellenSection(pages.get(name))?.lines.join('\n') || '';
   const entry = /^-\s+\[10\][^\n]*$/m.exec(quellen);
   if (entry) {
     if (!/10\.1186\/s13643-025-02902-3/.test(entry[0])) fail(`${name}: [10] ohne DOI 10.1186/s13643-025-02902-3`);
-    if (!/Systematic Reviews/i.test(entry[0])) fail(`${name}: [10] ohne Journal „Systematic Reviews"`);
+    if (!/Systematic Reviews|Syst\.? Rev/i.test(entry[0])) fail(`${name}: [10] ohne Journal „Systematic Reviews"`);
   }
 }
 
 // S16: Vorgabetext wortgleich genau einmal, nur ein Disclaimer-Block je Seite.
-for (const name of ALL_FILES) {
+for (const name of CONTENT_FILES) {
   const source = pages.get(name).source.replace(/\s+/g, ' ');
   const hits = source.split(DISCLAIMER).length - 1;
   if (hits !== 1) fail(`${name}: S16-Vorgabetext ${hits}× statt 1×`);
@@ -163,6 +168,22 @@ for (const name of ALL_FILES) {
   );
   if (disclaimerBlocks.length !== 1)
     fail(`${name}: ${disclaimerBlocks.length} Disclaimer-Blöcke statt 1 (S16-Doppelung)`);
+}
+
+// Themenseiten: genau ein Health-Disclaimer, und zwar als letzter Block.
+for (const name of TOPIC_FILES) {
+  const raw = pages.get(name).source;
+  const blocks = (raw.match(/^\*\*Health-Disclaimer:\*\*/gm) || []).length;
+  if (blocks !== 1) fail(`${name}: ${blocks} Health-Disclaimer statt 1`);
+  if (!/medizinische Diagnose oder Behandlung/.test(raw.replace(/\s+/g, ' ')))
+    fail(`${name}: Health-Disclaimer ohne Hinweis auf medizinische Diagnose/Behandlung`);
+  const lastParagraph = raw
+    .trim()
+    .split(/\n\s*\n/)
+    .at(-1)
+    .trim();
+  if (!/^(\*\*)?Health-Disclaimer/.test(lastParagraph))
+    fail(`${name}: Health-Disclaimer steht nicht am Seitenende (letzter Absatz: „${lastParagraph.slice(0, 60)}…“)`);
 }
 
 // B4: chakren 1577-Zeile trägt die bestätigte Fassung.
@@ -303,6 +324,36 @@ function allText(world) {
     const unresolved = cited.filter((id) => !data.SOURCES[id]);
     if (unresolved.length)
       fail(`Daten ${name}: Quellen ohne Registereintrag: ${unresolved.map((id) => `[${id}]`).join(' ')}`);
+  }
+
+  // Themenseiten: Abschnittsfolge, Metadaten und zitiert ⊆ gelistet im
+  // generierten Stand (die Redaktionsebene prüfen die Zeilen oben).
+  if (!Array.isArray(data.TOPIC_PAGES) || data.TOPIC_PAGES.length !== TOPIC_FILES.length)
+    fail(`Daten Themenseiten: ${data.TOPIC_PAGES ? data.TOPIC_PAGES.length : 0} statt ${TOPIC_FILES.length}`);
+  for (const page of data.TOPIC_PAGES || []) {
+    if (!page.sections.length) fail(`Daten ${page.slug}: keine Abschnitte`);
+    if (page.sections.at(-1)?.anchor !== 'quellen') fail(`Daten ${page.slug}: Quellen sind nicht der letzte Abschnitt`);
+    const entries = page.sections
+      .flatMap((section) => section.blocks)
+      .filter((block) => block.type === 'sources')
+      .flatMap((block) => block.items);
+    if (!entries.length) fail(`Daten ${page.slug}: keine Quellenliste gerendert`);
+    const listed = new Set(entries.map((entry) => entry.id));
+    const cited = idsIn(JSON.stringify(page.sections.filter((section) => section.anchor !== 'quellen')));
+    const missing = cited.filter((id) => !listed.has(id));
+    if (missing.length)
+      fail(`Daten ${page.slug}: zitiert, aber nicht gelistet: ${missing.map((id) => `[${id}]`).join(' ')}`);
+    for (const entry of entries) {
+      if (!entry.label || entry.label.length < 12) fail(`Daten ${page.slug}: Quelle [${entry.id}] ohne Label`);
+    }
+    if (page.meta.title.length > 60) fail(`Daten ${page.slug}: Title ${page.meta.title.length} > 60`);
+    if (page.meta.description.length > 155)
+      fail(`Daten ${page.slug}: Description ${page.meta.description.length} > 155`);
+    measurements[`topic_${page.slug}`] = {
+      sections: page.sections.length,
+      listed: [...listed],
+      cited,
+    };
   }
 
   measurements.registry = Object.keys(data.SOURCES).length;

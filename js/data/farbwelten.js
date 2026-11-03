@@ -2469,3 +2469,564 @@ export const LIGHT_PAGE = {
   ],
   sources: ['24', '15', '17', '18', '10', '11', '9', '14', '19'],
 };
+
+export const TOPIC_PAGES = [
+  {
+    slug: 'farbtherapie',
+    title: 'Farbtherapie und Chromotherapie',
+    seoTitle: 'Farbtherapie und Chromotherapie – was untersucht ist und was nicht',
+    meta: {
+      title: 'Farbtherapie — Evidenz und Grenzen | Esoterik-Welt',
+      description:
+        'Farbtherapie und Chromotherapie: Definition, Verfahren, Geschichte und die OSTEBA-Bewertung. Was untersucht ist — und warum die Evidenz fehlt.',
+      teaser:
+        'Was Chromotherapie behauptet, was dazu geprüft wurde — und wo die Grenze zur belegten Lichtmedizin verläuft.',
+    },
+    lede: 'Farbtherapie – meist als Chromotherapie oder Farblichttherapie bezeichnet – behauptet, dass farbiges Licht, farbige Umgebung oder gezielte Farbvisualisierung körperliche oder psychische Zustände beeinflussen können. Der Begriff selbst ist nicht scharf abgegrenzt: Manche Autoren verstehen darunter ausschließlich die Bestrahlung mit monochromatischem Licht, andere schließen Kleidung, Raumgestaltung, Meditation oder sogar Wasserfarben ein. Gemeinsam ist allen Spielarten die Idee, dass eine Farbe nicht nur wahrgenommen, sondern als therapeutischer Agent wirkt. Genau diese Unschärfe ist methodisch problematisch: Solange nicht präzise definiert ist, welche Wellenlängen, Intensitäten und Expositionszeiten untersucht werden, lässt sich ein Effekt weder bestätigen noch widerlegen.',
+    intro: [],
+    sections: [
+      {
+        key: 'was-farbtherapie-ist',
+        heading: 'Was Farbtherapie ist',
+        anchor: 'was-farbtherapie-ist',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Im engeren Sinne beschreibt Chromotherapie die Anwendung von Licht bestimmter Wellenlängen – meist rot, orange, gelb, grün, blau oder violett – auf Haut oder Augen, mit der Behauptung, physiologische Prozesse wie Kreislauf, Entzündung oder Stimmung zu modulieren. In der Praxis zeigt sich ein breites Spektrum: farbige Lampen in Behandlungsräumen, farbige Kleidung als „Farbkleidung“, Visualisierung farbiger Lichtwellen während einer Meditation, oder die Kombination aus Farbe und Klang. Keine von diesen Formen ist als medizinisches Verfahren zugelassen; die Herstellerangaben folgen meist entweder traditionellen Deutungen oder anonymisierten Erfahrungsberichten.',
+          },
+          {
+            type: 'p',
+            text: 'Wichtig ist die Unterscheidung von der Lichtmedizin: Während Chromotherapie von einer direkter biologischen Wirkung der Farbe ausgeht, arbeitet die Lichtmedizin (siehe [Lichtmedizin und Photobiologie](lichtmedizin.md)) mit definierten Wellenlängen, Bestrahlungsstärken und Expositionsdauern – und misst Effekte in kontrollierten Studien. Chromotherapie bleibt in vielen Darstellungen bei einer symbolischen oder energetischen Deutung stehen, die nicht mit physikalischen Größen operationalisierbar ist.',
+          },
+        ],
+      },
+      {
+        key: 'historische-entwicklung',
+        heading: 'Historische Entwicklung',
+        anchor: 'historische-entwicklung',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Die Vorstellung, dass Farbe heilend wirkt, hat alte Wurzeln. Im ayurvedischen System (Caraka Samhita) werden Hautfarben und Komplexionen beschrieben, aber nicht als Therapie mit Licht verwendet [26]. In der westlichen Tradition lässt sich eine erste wissenschaftliche Farblehre auf Isaac Newtons Opticks (1704) zurückführen, in dem das Spektrum in sieben Farbbänder aufgeteilt wird – eine Einteilung, die später von Goethes Farbenlehre (1810) kritisch untersucht und teilweise zurückgewiesen wird [23]. Goethes Interesse lag nicht an medizinischer Anwendung, aber seine Betonung der phänomenalen Erfahrung (Subjektivität der Wahrnehmung) bleibt relevant: Wenn die Wirkung einer Farbe von der individuellen Wahrnehmung abhängt, lässt sich kein universeller Therapieeffekt ableiten.',
+          },
+          {
+            type: 'p',
+            text: 'Im 19. Jahrhundert entwickelte Edwin D. Babbitt (1878) Vorstellungen zur Farbwirkung; der Heliotherapie-Pionier Auguste Rollier (Sonnenlicht, nicht chromotherapeutische Lichtquellen) war kein Vertreter der Chromotherapie. Die sogenannte „Chromotherapie“ als organisierte Praxis bildete sich vor allem 1910–1950 aus einer Mischung aus legitimer Optik und esoterischen Strömungen; siehe [1][2]. Die Verbindung mit Chakren und Regenbogenfarben ist jüngeren Datums: Das moderne Regenbogenmodell mit der Zuordnung von sieben Farben zu sieben Zentren entstand erst 1977 in westlichen Zusammenführungen, nicht in alten Texten [1][2]. Die historische Entwicklung der Chromotherapie lässt sich daher als Mischung aus legitimer Optik, unkritischer Übertragung und späterer symbolischer Neuordnung beschreiben – nicht als kontinuierliche medizinische Wissenschaft.',
+          },
+        ],
+      },
+      {
+        key: 'typische-verfahren',
+        heading: 'Typische Verfahren',
+        anchor: 'typische-verfahren',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Die folgenden Verfahren treten in populären Darstellungen regelmäßig auf; für jedes werden hier das behauptete Prinzip, der tatsächliche Stand der Untersuchung und die zentrale Einschränkung genannt.',
+          },
+          {
+            type: 'p',
+            text: '**Farbiges Licht (Bestrahlung).** Was gemacht wird: Der Patient sitzt einer andersfarbigen Lichtquelle aus (rot, blau, grün etc.), meist für Minuten bis Stunden. Behauptete Wirkung: Entspannung, Stimmungsverbesserung, Unterstützung bei Hautproblemen oder Entzündungen. Was untersucht ist: Einzelne kleine RCTs existieren (z. B. zur Zahnangst mit rotem Licht, Saklecha et al. 2022 [29]), aber keine systematische Übersichtsarbeit ist methodisch ausreichend. Einschränkung: Keine Kontrolle von Intensität, Spektrum und Expositionszeit; Placeboeffekte nicht ausgeschlossen; keine standardisierte Dosierung.',
+          },
+          {
+            type: 'p',
+            text: '**Raum- und Kleidungsdesign.** Was gemacht wird: Wände, Textilien oder Kleidung werden in bestimmten Farben gestaltet, um Stimmung oder Energie zu beeinflussen. Behauptete Wirkung: Beruhigung (blau/grün), Energie (rot/orange), Klarheit (gelb). Was untersucht ist: Studien zur Architekturpsychologie (z. B. Elliot & Maier 2014 [6]) zeigen Assoziationen, keine therapeutischen Effekte. Einschränkung: Kultur, Sättigung und Helligkeit verändern die Wirkung stärker als der Farbton allein; siehe [Farbpsychologie](farbpsychologie.md).',
+          },
+          {
+            type: 'p',
+            text: '**Visualisierung und Meditation.** Was gemacht wird: Während einer Meditationsübung wird eine Farbe visualisiert oder ein farbiger Lichtpunkt fixiert. Behauptete Wirkung: Harmonisierung von Chakren, Reduktion von Stress, Aktivierung von Energiezentren. Was untersucht ist: Keine kontrollierte Studie mit physiologischen Endpunkten; Meditationseffekte sind selbst nur schwach belegt und stark von Kontext abhängig. Einschränkung: Die Wirkung lässt sich nicht von der Meditation als solcher trennen; jede Farbbehauptung bleibt spekulativ.',
+          },
+          {
+            type: 'p',
+            text: '**Farblichtkombinationen mit Klang oder Aroma.** Was gemacht wird: Kombination aus Farbe, Ton (z. B. Klangschalen) und Duft; behauptet wird eine synergistische Wirkung. Was untersucht ist: Keine systematische Übersichtsarbeit; Einzelstudien zu Kombinationsbehandlungen fehlen. Einschränkung: Mehrere gleichzeitig veränderte Variablen machen eine spezifische Farbwirkung nicht isolierbar.',
+          },
+        ],
+      },
+      {
+        key: 'was-tatsaechlich-untersucht-ist',
+        heading: 'Was tatsächlich untersucht ist',
+        anchor: 'was-tatsaechlich-untersucht-ist',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Der wichtigste aktuelle Prüfbericht stammt von OSTEBA (2025), einer HTA-Bewertung im Auftrag des spanischen Gesundheitsministeriums [9]. Die Autorinnen und Autoren durchsuchten Medline, Embase, Cochrane, Epistemonikos und PEDro, identifizierten 201 Publikationen, prüften 20 Volltexte und schlossen alle aus; am Ende blieb keine geeignete systematische Übersicht und keine kontrollierte Studie zur Chromotherapie für irgendeine Indikation [9]. Die Schlussfolgerung des Berichts: Chromotherapie lässt sich mangels belastbarer Evidenz den Pseudotherapien zuordnen [9]. Eine separate Übersichtsarbeit zu integrativen Verfahren bestätigt, dass es zur Chromotherapie keine Cochrane-Übersicht gibt [27].',
+          },
+          {
+            type: 'p',
+            text: 'Einzelne, methodisch eingeschränkte Studien existieren (z. B. zur Zahnangst oder zur Stimmungsbeeinflussung), aber sie erfüllen nicht die Kriterien einer evidenzbasierten Bewertung: kleine Stichproben, fehlende Blindung, keine Standardisierung der Lichtquelle, keine Kontrolle für Placebo und kein konsistentes Messinstrument. Die wenigen RCTs, die existieren, wählen unterschiedliche Endpunkte und unterschiedliche Farbparameter, sodass keine Meta-Analyse möglich ist.',
+          },
+          {
+            type: 'p',
+            text: 'Die Geschichte der Chromotherapie zeigt zudem ein wiederkehrendes Muster: Neue Lichttechnologien (Bogenlampen, Leuchtstofflampen, LEDs) führen zu neuen Vermarktungen, aber nicht zu einer Verbesserung der Evidenzlage. Die Technologie entwickelt sich schneller als die Forschung – und die Forschung bleibt auf Einzelfallberichte und kleine Pilotstudien beschränkt.',
+          },
+        ],
+      },
+      {
+        key: 'grenzen-und-risiken',
+        heading: 'Grenzen und Risiken',
+        anchor: 'grenzen-und-risiken',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Die zentrale Einschränkung ist nicht nur das Fehlen von Belegen, sondern die Gefahr der Verwechslung von Assoziation und Wirkung. Wenn jemand in einem blau beleuchteten Raum ruhiger wird, kann das an der niedrigen Intensität, an der Erwartung oder an einem Placebo-Effekt durch Erwartung liegen – nicht notwendig an der Farbe Blau selbst. Die Ampelliste §8 und die Formulierungsregeln §12 der vorliegenden Dokumentation gelten hier strikt: Behauptungen, die einen medizinischen Effekt nahelegen, dürfen nur mit expliziter Richtigstellung und Health-Disclaimer verwendet werden.',
+          },
+          {
+            type: 'p',
+            text: 'Ein weiterer Hinweis betrifft die Geräte: Chromotherapeutische Lampen werden oft als „Wohlfühl-“ oder „Entspannungs-“ Geräte verkauft. Das ist rechtlich unproblematisch, solange keine medizinische Indikation behauptet wird; aber wer ein solches Gerät kauft, sollte nicht erwarten, dass es eine bestehende Erkrankung behandelt – und sollte keine medizinische Behandlung durch Lichtgeräte ersetzen. Photobiomodulation (siehe [Lichtmedizin und Photobiologie](lichtmedizin.md)) ist ein anderer Bereich und hat zumindest moderate Evidenz für spezifische Indikationen [10]; Chromotherapie als allgemeines Konzept gehört nicht dazu.',
+          },
+        ],
+      },
+      {
+        key: 'quellen',
+        heading: 'Quellen',
+        anchor: 'quellen',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Die folgenden Quellen sind im geprüften Bestand der Projektbibliothek enthalten (`evidenzreport-farbwelten.md` + `ledger.json`). Zitiert ⊆ gelistet.',
+          },
+          {
+            type: 'sources',
+            items: [
+              {
+                id: '6',
+                label:
+                  'Elliot & Maier 2014, Color Psychology. Annu Rev Psychol 65:95–120. DOI: 10.1146/annurev-psych-010213-115035. (Grundlage zur Unterscheidung von Assoziation und physiologischer Wirkung.)',
+                url: null,
+              },
+              {
+                id: '9',
+                label:
+                  'OSTEBA 2025, Eficacia y seguridad de la cromoterapia (Ministerio de Sanidad). URL: https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf. (Zentrale Bewertung: keine geeignete RCT, Pseudotherapie-Einordnung; Zitat aus [9]: „No systematic review or randomized clinical trial has been found that examines the efficacy and safety of chromotherapy for any disease.“)',
+                url: null,
+              },
+              {
+                id: '23',
+                label:
+                  'Smithsonian Libraries, Color in a New Light (Newton 1704 / Goethe 1810). URL: https://library.si.edu/sites/default/files/pdf/exhibitions/color-in-a-new-light.pdf. (Historische Quellen zur Farblehre.)',
+                url: null,
+              },
+              {
+                id: '26',
+                label:
+                  'Caraka Samhita Online, Varna (Hautfarbe/Komplexion). URL: https://www.carakasamhitaonline.com/index.php/Varna. (Historischer Kontext, kein Lichttherapie-Bezug.)',
+                url: null,
+              },
+              {
+                id: '27',
+                label:
+                  'Riera et al., What do Cochrane systematic reviews say about new practices on integrative medicine? Sao Paulo Med J. URL: https://www.scielo.br/j/spmj/a/wBgZ7MLg7VmNTBYdLMFXJMg/?lang=en. (Bestätigung: keine Cochrane-Übersicht zur Chromotherapie.)',
+                url: null,
+              },
+              {
+                id: '1',
+                label:
+                  'Leland 2017, The Rainbow Body (Quest 105.2). URL: https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be. (Entstehung des modernen Regenbogenmodells 1977.)',
+                url: null,
+              },
+              {
+                id: '2',
+                label:
+                  'Woodroffe (Arthur Avalon) 1919, The Serpent Power. URL: https://archive.org/details/the-serpent-power-john-woodroffe. (Historische Chakra-Quellen ohne Farbzuordnung.)',
+                url: null,
+              },
+              {
+                id: '29',
+                label:
+                  'Saklecha et al. 2022, Chromotherapy dental anxiety RCT. DOI: 10.4103/jcd.jcd_381_21. (Einzelbeispiel einer kleinen RCT, kein Nachweis für therapeutische Wirksamkeit.)',
+                url: null,
+              },
+              {
+                id: '10',
+                label:
+                  'Son et al. 2025, Photobiomodulation umbrella review. Syst Rev 14:160. DOI: 10.1186/s13643-025-02902-3',
+                url: null,
+              },
+            ],
+          },
+          {
+            type: 'p',
+            text: '**Health-Disclaimer:** Diese Seite beschreibt Farbtherapie und Chromotherapie als kulturelles und wissenschaftliches Thema. Keine der hier genannten Anwendungen ersetzt eine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Die Inhalte folgen der Ampelliste §8 (grün = mit Quelle behauptbar; gelb = Tradition/Assoziation; rot = nicht ohne explizite Richtigstellung und Health-Disclaimer) und den Formulierungsregeln §12.',
+          },
+        ],
+      },
+    ],
+    cited: ['1', '2', '6', '9', '10', '23', '26', '27', '29'],
+    listed: ['6', '9', '23', '26', '27', '1', '2', '29', '10'],
+  },
+  {
+    slug: 'farbpsychologie',
+    title: 'Farbpsychologie',
+    seoTitle: 'Farbpsychologie – Assoziation, Kontext und die Grenzen der Begründung',
+    meta: {
+      title: 'Farbpsychologie — Assoziation, nicht Wirkung | Esoterik-Welt',
+      description:
+        'Farbpsychologie: Assoziation ist nicht Wirkung. Was Studien zu Farbe und Emotion zeigen, wie Kultur und Kontext wirken — und was offenbleibt.',
+      teaser: 'Assoziation ist nicht Wirkung: was Studien zu Farbe und Emotion zeigen und was sie offenlassen.',
+    },
+    lede: 'Farbpsychologie fragt nicht, welche Farbe „gut“ oder „schlecht“ ist, sondern welche Assoziationen zwischen Farbe und Emotion in verschiedenen Gruppen, Kulturen und Kontexten beobachtet werden können. Das unterscheidet sie deutlich von therapeutischen Ansprüchen: Während Chromotherapie (siehe [Farbtherapie und Chromotherapie](farbtherapie.md)) behauptet, Farbe verursache einen Effekt, beschreibt Farbpsychologie zunächst nur Korrelationen und Muster. Der entscheidende Satz, der viele populäre Darstellungen verhindert, lautet: Assoziation ist nicht Wirkung. Man kann plausibel sagen, dass Rot mit Energie assoziiert wird – nicht, dass Rot Energie erzeugt [3][6]. Diese Unterscheidung ist keine Spitzfindigkeit, sondern der Unterschied zwischen einer kommunizierbaren Konvention und einer physiologischen Behauptung.',
+    intro: [],
+    sections: [
+      {
+        key: 'wahrnehmung-und-emotion',
+        heading: 'Wahrnehmung und Emotion',
+        anchor: 'wahrnehmung-und-emotion',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Die Wahrnehmung einer Farbe beginnt mit der physikalischen Reizung der Netzhaut. Der sichtbare Bereich liegt bei etwa 380 bis 750 nm; das menschliche Auge erreicht seine höchste Empfindlichkeit bei etwa 555 nm (gelbgrün) [31]. (Wellenlängenbereich 380–750 nm gemäß [31].) Diese physiologische Basis ist universell, aber die emotionale Bedeutung, die anschließend zugewiesen wird, ist es nicht. Farben lösen keine festgelegten Gefühle aus, sondern werden über kulturelle Lernprozesse und persönliche Erfahrung mit Bedeutungen verknüpft. Ein rotes Objekt kann Gefahr, Liebe, Sinnlichkeit oder politische Zugehörigkeit signalisieren – je nach Kontext und Betrachter.',
+          },
+          {
+            type: 'p',
+            text: 'Die Forschung unterscheidet daher zwischen drei Ebenen: physikalische Wahrnehmung (Spektrum, Intensität, Sättigung), assoziative Bedeutung (Lernen, Kultur, Sprache) und emotionale Bewertung (subjektive Empfindung). Nur die erste Ebene ist objektiv messbar; die beiden anderen hängen vom Beobachter ab. Wenn jemand behauptet, Blau beruhige zumindest „von Natur aus“, vermischt er eine assoziative Konvention (in vielen westlichen Kulturen wirkt Blau ruhig) mit einer kausalen Behauptung (Blau senkt den Herzfrequenz). Die Daten bestätigen das erste, nicht das zweite.',
+          },
+        ],
+      },
+      {
+        key: 'was-die-forschung-zeigt',
+        heading: 'Was die Forschung zeigt',
+        anchor: 'was-die-forschung-zeigt',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Der aussagekräftigste aktuelle Überblick ist Jonauskaite & Mohr 2025 [3]. Die Autorinnen und Autoren analysierten 132 unabhängige Studien mit insgesamt 42.266 Teilnehmenden aus 64 Ländern und bestätigten, dass Assoziationen zwischen Farbe und Emotion über Kulturen hinweg stabiler sind als oft angenommen – aber nicht universell sind und keine kausale Wirkung implizieren. Die zentrale Formulierung: „We know that people feel colours, but we do not know whether colours cause feelings“ (sinngemäß aus [3]); oder präziser: Man wisse derzeit nicht, ob Menschen Farben fühlen, aber man wisse, dass Farben Emotionen vermitteln. Die Unterscheidung zwischen Vermittlung und Verursachung ist entscheidend.',
+          },
+          {
+            type: 'p',
+            text: 'Ein weiterer relevanter Befund stammt von Gnambs 2020 [7]: Die wissenschaftliche Evidenz für einen spezifischen „Roteffekt“ (rote Kleidung verbessert Leistung in Wettkämpfen oder Verhandlungen) ist nicht belastbar. Meta-analytische Versuche, den Effekt zu bestätigen, scheitern an heterogenen Studien, kleinen Stichproben und fehlender Replikation. Der Roteffekt bleibt ein populäres Konzept, nicht ein wissenschaftlich gesicherter Mechanismus. Das heißt nicht, dass Rot nie einen Einfluss hat – nur, dass ein universeller, reproduzierbarer Effekt nicht nachgewiesen ist.',
+          },
+          {
+            type: 'p',
+            text: 'Darüber hinaus zeigt die Literatur, dass der Einfluss von Farbe auf Verhalten stark vom Kontext abhängt: Ein rotes Logo wirkt anders als ein rotes Warnschild; eine rote Wand in einem Wohnraum wirkt anders als eine rote Wand in einem Krankenhaustrakt. Die Forschung empfiehlt daher nicht, Farben als universelle Steuerinstrumente zu betrachten, sondern als Signale, deren Bedeutung erst im Kontext vollendet wird.',
+          },
+        ],
+      },
+      {
+        key: 'kontext-saettigung-und-helligkeit',
+        heading: 'Kontext, Sättigung und Helligkeit',
+        anchor: 'kontext-saettigung-und-helligkeit',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Farbe ist nicht ein einziger Parameter, sondern ein dreidimensionales Konstrukt: Helligkeit (Luminanz), Sättigung (Chroma) und Farbton (Hue) können unabhängig variiert werden. Ein blasses Rosa und ein volles Signalrot teilen denselben Farbton, aber ihre emotionale Wirkung und ihre Wahrnehmung unterscheiden sich deutlich. Studien zeigen, dass höhere Sättigung stärker assoziiert wird mit Intensität und Energie, während niedrige Sättigung eher als ruhig oder dezent wahrgenommen wird – unabhängig vom Farbton [6]. Helligkeit beeinflusst nicht nur die Wahrnehmung, sondern auch die emotionale Bewertung: Hellere Varianten wirken oft positiver, dunklere oft schwerer oder bedrohlicher.',
+          },
+          {
+            type: 'p',
+            text: 'Daher ist jede Aussage der Form „Blau beruhigt“ nicht nur ungenau, weil sie Assoziation und Wirkung verwechselt, sondern auch zu grob, weil sie nicht angibt, welches Blau (hell/dunkel, satt/blass, warm/kühl), in welchem Licht, auf welchem Hintergrund und bei welchem Betrachter. Die Farbpsychologie arbeitet deshalb zunehmend mit parametrisierten Farbmodellen (CIE L*a*b*, Munsell) statt mit umgangssprachlichen Farbnamen.',
+          },
+        ],
+      },
+      {
+        key: 'kulturelle-unterschiede',
+        heading: 'Kulturelle Unterschiede',
+        anchor: 'kulturelle-unterschiede',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Die große Querschnittsstudie von Jonauskaite et al. 2020 [4] (4.598 Teilnehmende, 30 Nationen) und die anschließende Erweiterung [3] zeigen, dass einige Assoziationen über Kulturen hinweg konsistent sind: Rot mit Wut und Liebe, Schwarz mit Trauer oder Eleganz, Weiß mit Reinheit – aber nicht überall. In vielen asiatischen Kulturen steht Weiß für Trauer; in Teilen Lateinamerikas ist Rot mit Glück und Feier verbunden; in manchen afrikanischen und nahöstlichen Traditionen haben Blau und Schwarz andere Bedeutungskontexte als im Westen [4]. Diese Unterschiede sind nicht Randnotizen, sondern zeigen, dass Farbassoziationen gelernt werden und nicht biologisch fixiert sind.',
+          },
+          {
+            type: 'p',
+            text: 'Für die Praxis bedeutet das: Ein Farbkonzept, das für einen deutschsprachigen, urbanen, westlichen Kontext funktioniert, lässt sich nicht ungeprüft auf andere Gruppen übertragen. Wer Farben als Kommunikationsmittel einsetzen möchte, muss die Zielgruppe kennen – nicht nur den Farbton, sondern auch die kulturelle Bedeutung.',
+          },
+        ],
+      },
+      {
+        key: 'farbe-in-architektur-und-marketing',
+        heading: 'Farbe in Architektur und Marketing',
+        anchor: 'farbe-in-architektur-und-marketing',
+        blocks: [
+          {
+            type: 'p',
+            text: 'In der Architektur wird Farbe häufig als Stimmungsinstrument eingesetzt: warme Töne (Ocker, Terrakotta) in Wohnräumen, kühle Töne (Blaugrau, Stahlblau) in Büros, Akzentfarben zur Orientierung. Die Wissenschaft bestätigt nicht, dass diese Farben bestimmte physiologische Effekte erzeugen; sie bestätigt aber, dass Menschen bestimmte Umgebungen als angenehmer, produktiver oder beruhigender wahrnehmen – und dass Farbe ein wichtiger Teil dieser Wahrnehmung ist [6]. Der Unterschied liegt im Anspruch: Architekturpsychologie arbeitet mit Wahrnehmung und Bewertung, nicht mit Therapie.',
+          },
+          {
+            type: 'p',
+            text: 'Im Marketing sind Farbassoziationen ein bewusst eingesetztes Werkzeug: Blau signalisiert Vertrauen und Seriosität (Finanzdienstleister), Rot Aufmerksamkeit und Dringlichkeit (Verkäufe, Warnungen), Grün Nachhaltigkeit und Natur. Diese Zuordnungen sind nicht naturgegeben, sondern das Ergebnis langer kultureller Lernprozesse und gezielter Markenbildung. Sie funktionieren, weil Menschen Bedeutungen gelernt haben – nicht, weil Farben kausal wirken. Wer Farbe als Marketinginstrument nutzt, sollte daher die Konventionen seiner Zielgruppe kennen und nicht auf universelle psychologische Mechanismen vertrauen.',
+          },
+        ],
+      },
+      {
+        key: 'individuelle-unterschiede',
+        heading: 'Individuelle Unterschiede',
+        anchor: 'individuelle-unterschiede',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Neben Kultur spielt die individuelle Erfahrung eine große Rolle. Personen mit Farbsehstörungen (z. B. Deuteranomalie) nehmen Rot-Grün-Kontraste anders wahr; ältere Menschen neigen zu einer geringeren Blauempfindlichkeit (Gelbverschiebung) – ein bekanntes physikalisches Phänomen, nicht als therapeutische Empfehlung zu lesen. Persönliche Erinnerungen können einen Farbton stärker mit einer Emotion verknüpfen als kulturelle Normen; ob dies gesundheitlich relevant ist, liegt außerhalb der vorliegenden Evidenz.',
+          },
+        ],
+      },
+      {
+        key: 'quellen',
+        heading: 'Quellen',
+        anchor: 'quellen',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Die folgenden Quellen sind im geprüften Bestand der Projektbibliothek enthalten (`evidenzreport-farbwelten.md` + `ledger.json`). Zitiert ⊆ gelistet.',
+          },
+          {
+            type: 'sources',
+            items: [
+              {
+                id: '3',
+                label:
+                  'Jonauskaite & Mohr 2025, Do we feel colours? Psychon Bull Rev 32:1457–1486. DOI: 10.3758/s13423-024-02615-z. (132 Studien, 42.266 Personen, 64 Länder; Assoziation ≠ Wirkung; zentrale Unterscheidung: Vermittlung vs. Verursachung.)',
+                url: null,
+              },
+              {
+                id: '4',
+                label:
+                  'Jonauskaite et al. 2020, Universal Patterns in Color-Emotion Associations. Psychol Sci 31:1245–1260. DOI: 10.1177/0956797620948810. (Kulturübergreifende Assoziationsmuster, nicht universelle Wirkung.)',
+                url: null,
+              },
+              {
+                id: '6',
+                label:
+                  'Elliot & Maier 2014, Color Psychology. Annu Rev Psychol 65:95–120. DOI: 10.1146/annurev-psych-010213-115035. (Grundlage zur Unterscheidung von Assoziation und physiologischer Wirkung.)',
+                url: null,
+              },
+              {
+                id: '7',
+                label:
+                  'Gnambs 2020, Limited evidence for the red effect. Psychon Bull Rev 27:1374–1382. DOI: 10.3758/s13423-020-01772-1. (Meta-analytische Unbeständigkeit des Roteffekts.)',
+                url: null,
+              },
+              {
+                id: '10',
+                label:
+                  'Son et al. 2025, Photobiomodulation umbrella review. Syst Rev 14:160. DOI: 10.1186/s13643-025-02902-3. (Separation von Photobiomodulation und Farbpsychologie; nur hier als Vergleich, nicht als Farbpsychologie-Beleg.)',
+                url: null,
+              },
+              {
+                id: '31',
+                label:
+                  'MIT Vision Book, Color (Metamerie, nicht-spektrale Farben). URL: https://visionbook.mit.edu/color.html. (Physiologische Basis der Farbwahrnehmung.)',
+                url: null,
+              },
+            ],
+          },
+          {
+            type: 'p',
+            text: '**Health-Disclaimer:** Diese Seite beschreibt Farbpsychologie als wissenschaftliches Thema der Wahrnehmung und Assoziation. Keine Aussagen ersetzen eine medizinische Diagnose oder Behandlung. Farbpsychologische Befunde beschreiben Muster, nicht Therapieeffekte. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Die Inhalte folgen der Ampelliste §8 (grün = mit Quelle behauptbar; gelb = Tradition/Assoziation; rot = nicht ohne explizite Richtigstellung und Health-Disclaimer) und den Formulierungsregeln §12.',
+          },
+        ],
+      },
+    ],
+    cited: ['3', '4', '6', '7', '31'],
+    listed: ['3', '4', '6', '7', '10', '31'],
+  },
+  {
+    slug: 'lichtmedizin',
+    title: 'Lichtmedizin und Photobiologie',
+    seoTitle: 'Lichtmedizin und Photobiologie – chronobiologisch, nicht therapeutisch als Allzweck',
+    meta: {
+      title: 'Lichtmedizin — Chronobiologie und Grenzen | Esoterik-Welt',
+      description:
+        'Lichtmedizin: SAD, Neonaten-Phototherapie, NB-UVB und Photobiomodulation — getrennt nach Wellenlänge, Dosis, Exposition und Evidenz.',
+      teaser:
+        'SAD, Neonaten-Phototherapie, UV-B und Photobiomodulation — getrennt nach Wellenlänge, Dosis und Evidenz.',
+    },
+    lede: 'Lichtmedizin ist ein Teilgebiet der Photobiologie, das sich mit den biologischen Wirkungen von elektromagnetischer Strahlung im sichtbaren und nahen UV-Bereich beschäftigt. Im Unterschied zur Chromotherapie (siehe [Farbtherapie und Chromotherapie](farbtherapie.md)) operiert sie mit definierbaren physikalischen Größen: Wellenlänge (nm), Bestrahlungsstärke (W/m² oder mW/cm²), Dosis (J/cm² oder Energie pro Flächeninhalt) und Expositionsdauer (Minuten, Stunden). Ohne diese Parameter ist eine Aussage über eine Wirkung nicht prüfbar. Die folgende Darstellung folgt dem geprüften Evidenzbestand und trennt klar, was untersucht, was unsicher und was nicht ableitbar ist.',
+    intro: [],
+    sections: [
+      {
+        key: 'chronobiologie-und-saisonale-depression',
+        heading: 'Chronobiologie und saisonale Depression',
+        anchor: 'chronobiologie-und-saisonale-depression',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Der circadiane Rhythmus des Menschen wird durch Licht gesteuert. Die retinale Photorezeption erfolgt nicht nur über Stäbchen und Zapfen (klassische Sehzellen), sondern auch über intrinsisch photosensitive retinale Ganglienzellen (ipRGCs), die Melanopsin enthalten [13]. Diese Zellen sind besonders empfindlich für kurzwelliges Licht (ca. 480 nm, blau) und steuern die Melatonin-Suppression, den Schlaf-Wach-Rhythmus und indirekt Stimmung und Aufmerksamkeit.',
+          },
+          {
+            type: 'p',
+            text: 'Besonders stark ist der Beleg für Licht als Medizin in der Neonatenfototherapie: Ein Cochrane-Review [17] fasst sechs RCTs mit 630 Neugeborenen zusammen; LED-Phototherapie senkt das Bilirubin ähnlich wie konventionelle Quellen, mit definiertem Risiko-Nutzen-Profil. Diese Indikation ist etabliert – sie ist kein Beleg für Chromotherapie oder allgemeine Lichttherapie als Allzweck.',
+          },
+          {
+            type: 'p',
+            text: 'Bei saisonaler affektiver Störung (SAD) wird Lichttherapie als Behandlungsoption betrachtet. Eine Meta-Analyse von Pjrek et al. 2020 [15] (SAD-Behandlung) zeigt einen standardisierten Effekt (SMD) von etwa −0,37 für Lichttherapie gegenüber Kontrolle – ein moderater, aber nachweisbarer Effekt. Dies bedeutet nicht, dass Lichttherapie für alle SAD-Patienten wirksam ist, sondern nur, dass in kontrollierten Studien ein durchschnittlicher Unterschied messbar war. Die Evidenz für Prävention (Verhinderung einer SAD-Episode, bevor sie auftritt) ist deutlich unsicherer: Für die Vorbeugung existiert nur eine kleine Studie mit 46 Teilnehmenden und sehr niedriger Evidenzqualität (RR 0,64; 95 %-KI 0,30–1,38) [16]. Ein Mechanismus-Beleg (PBM, Hamblin 2018) [11] beschreibt biologische Signalwege, nicht die Präventionswirksamkeit.',
+          },
+          {
+            type: 'p',
+            text: 'Die Studienlage zu SAD-Lichttherapie definiert Geräteparameter (helle Lichtboxen, ca. 10.000 Lux, tägliche Anwendung über Wochen, meist morgens), standardisierte Distanz und Expositionsdauer [16] – nicht als allgemeine Anwendungsempfehlung, sondern als Beschreibung der untersuchten Konfigurationen. Ein Smartphone-Display oder eine gewöhnliche Deckenlampe erfüllen diese Parameter nicht; ein Ersatz durch Alltagslichtquellen ist nicht belegt [16]. Keine medizinische Anwendung ohne Abklärung.',
+          },
+        ],
+      },
+      {
+        key: 'blaues-licht',
+        heading: 'Blaues Licht',
+        anchor: 'blaues-licht',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Blaue Wellenlängen (ca. 460–495 nm) sind physiologisch aktiv, weil sie Melanopsin aktivieren und die Melatonin-Produktion unterdrücken [13][14]. Das hat zwei Konsequenzen: Tagsüber ist kurzwelliges Licht nützlich für Wachheit und Schlafqualität; abends kann es den Schlaf verschieben und die zirkadiane Phasenlage verzögern. Die ANSES-Bewertung [14] weist auf potenzielle Risiken für die Netzhaut bei hohen Intensitäten und langen Expositionszeiten hin – speziell bei LED-Quellen mit hohem Blauanteil.',
+          },
+          {
+            type: 'p',
+            text: 'Für die Praxis bedeutet das nicht, dass blaues Licht „schlecht“ oder „gut“ ist, sondern dass der Effekt von Intensität, Dauer und Zeitpunkt abhängt. Ein kurzer Blick auf einen Bildschirm am Abend hat einen anderen physiologischen Effekt als eine zweistündige Bestrahlung mit einer 10.000-Lux-Box am Morgen. Diese Trennung wird in populären Darstellungen oft vernachlässigt.',
+          },
+        ],
+      },
+      {
+        key: 'rotlicht-und-photobiomodulation',
+        heading: 'Rotlicht und Photobiomodulation',
+        anchor: 'rotlicht-und-photobiomodulation',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Photobiomodulation (PBM) beschreibt die Anwendung von rotem und nahinfrarotem Licht (typisch 600–1000 nm, oft 660 nm oder 850 nm) auf Gewebe, mit dem Ziel, zelluläre Energieproduktion (Mitochondrienfunktion) zu modulieren. Ein Umbrella-Review von Son et al. 2025 [10] fasst die Evidenz als niedrig bis moderat zusammen – je nach Indikation und Endpunkt. Das heißt nicht, dass PBM wirkungslos ist, sondern dass die Qualität der Studien heterogen ist und keine allgemeine Anwendungsempfehlung ableitbar ist.',
+          },
+          {
+            type: 'p',
+            text: 'Die physiologische Basis (Absorption durch Cytochrom c Oxidase, Modulation von ROS und ATP) ist plausibel, aber die klinische Übertragbarkeit bleibt begrenzt: Dosis, Wellenlänge, Bestrahlungsfläche, Expositionsdauer und Behandlungsintervall müssen standardisiert werden – und sind in der Praxis selten konsistent. PBM ist kein Allzweck-Tool und kein Ersatz für medizinische Behandlung.',
+          },
+        ],
+      },
+      {
+        key: 'uv-strahlung',
+        heading: 'UV-Strahlung',
+        anchor: 'uv-strahlung',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Ultraviolette Strahlung (UV-A: 315–400 nm; UV-B: 280–315 nm; UV-C: 100–280 nm) hat definierte biologische Wirkungen: UV-A dringt in die Dermis und kann die Hautalterung beeinflussen; UV-B ist für die Vitamin-D-Synthese notwendig, aber auch für Sonnenbrand und Hautkrebsrisiko; UV-C (100–280 nm) wird von der Atmosphäre zurückgehalten und technisch zur Desinfektion genutzt; ionisierend ist UV-C nicht. Die IARC-Monographie [19] bewertet UV-Strahlung als krebserregend für Menschen (Grupp 1). Die Phototherapie mit UV-B (NB-UVB, [18]) ist für bestimmte Hauterkrankungen (z. B. Psoriasis, Ekzem) etabliert, aber der Nutzen muss gegen das Risiko abgewogen werden und erfordert medizinische Überwachung.',
+          },
+          {
+            type: 'p',
+            text: 'Die Trennung von Phototherapie und Lichttherapie ist hier besonders wichtig: Phototherapie (UV-B, PUVA) ist ein medizinisches Verfahren mit definierten Indikationen und Risiken; Lichttherapie (sichtbares Licht, meist hell) ist ein nicht-invasives Verfahren mit unterschiedlicher Evidenzlage.',
+          },
+        ],
+      },
+      {
+        key: 'lichttechnische-groessen',
+        heading: 'Lichttechnische Größen',
+        anchor: 'lichttechnische-groessen',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Für jede lichtmedizinische Aussage sind folgende Größen zu trennen:',
+          },
+          {
+            type: 'list',
+            items: [
+              '**Wellenlänge (nm):** Bestimmt den physiologischen Rezeptor (Melanopsin, Zapfen, Stäbchen, Cytochrom c Oxidase). 480 nm ≠ 660 nm ≠ 365 nm in der Wirkung – nicht nur in der Farbe.',
+              '**Bestrahlungsstärke (mW/cm² oder W/m²):** Bestimmt die Rate der Energiezuführung; gleichlange Exposition bei doppelter Intensität liefert doppelte Dosis.',
+              '**Dosis (J/cm²):** Energie pro Flächeninhalt; entscheidend für zelluläre Reaktionen und für Sicherheitsgrenzen.',
+              '**Beleuchtungsstärke (Lux):** Wahrnehmungsbezogene Größe, die die menschliche Helligkeitsbewertung beschreibt – nicht identisch mit physikalischer Intensität.',
+              '**Expositionsdauer (min/Stunden):** Bestimmt zusammen mit Intensität die Dosis; kurze, intensive Bestrahlung und lange, schwache Bestrahlung können gleiche Dosen ergeben, aber unterschiedliche biologische Effekte.',
+              '**Zeitpunkt und Rhythmus (morgens/abends, täglich/zyklisch):** Beeinflusst circadiane Effekte und die Toleranz.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Ohne diese Angabe ist jede Behauptung einer „Lichtwirkung“ nicht prüfbar. Populäre Darstellungen verzichten fast immer auf mindestens drei dieser Parameter.',
+          },
+        ],
+      },
+      {
+        key: 'was-daraus-nicht-folgt',
+        heading: 'Was daraus nicht folgt',
+        anchor: 'was-daraus-nicht-folgt',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Aus den oben genannten Befunden folgt nicht:',
+          },
+          {
+            type: 'list',
+            items: [
+              'Keine Anwendungsempfehlung für Lichttherapie bei SAD oder anderen Störungen ohne ärztliche Abklärung und ohne standardisierten Geräteinsatz.',
+              'Kein Kauf von chromotherapeutischen Lampen, LED-Panels oder „Lichtwellness“-Geräten als Therapieersatz.',
+              'Kein Ersatz einer medizinischen Behandlung durch Smartphone-Bildschirme, Tageslichtlampen oder Farbvisualisierung.',
+              'Keine Übertragung von PBM-Evidenz auf allgemeine Farblicht-Behandlung; diese sind verschiedene physiologische Mechanismen.',
+              'Keine Annahme, dass blauer Bildschirm am Abend „gesund“ oder „schädlich“ ist – der Effekt hängt von Intensität, Dauer und individueller Sensitivität ab.',
+              'Keine Behauptung, dass Lichtmedizin Chromotherapie ersetzt oder ergänzt; beide arbeiten mit unterschiedlichen Parametern und unterschiedlichen Evidenzniveaus.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Die Trennung von Physik und Anspruch ist hier zentral: Lichtmedizin beschreibt messbare Effekte unter definierten Bedingungen; Chromotherapie behauptet oft universelle Wirkungen ohne Messung. Wer Lichtmedizin ernst nimmt, muss diese Trennung beibehalten.',
+          },
+        ],
+      },
+      {
+        key: 'quellen',
+        heading: 'Quellen',
+        anchor: 'quellen',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Die folgenden Quellen sind im geprüften Bestand der Projektbibliothek enthalten (`evidenzreport-farbwelten.md` + `ledger.json`). Zitiert ⊆ gelistet.',
+          },
+          {
+            type: 'sources',
+            items: [
+              {
+                id: '13',
+                label:
+                  'Berson, Dunn & Takao 2002, Phototransduction by RGCs. Science 295:1070–1073. DOI: 10.1126/science.1067262. (Physiologische Basis: Melanopsin, ipRGCs, circadiane Steuerung.)',
+                url: null,
+              },
+              {
+                id: '15',
+                label:
+                  'Pjrek et al. 2020, Light therapy for SAD meta-analysis. Psychother Psychosom 89:17–24. DOI: 10.1159/000502891. (SMD ca. −0,37; moderater Effekt bei SAD-Behandlung.)',
+                url: null,
+              },
+              {
+                id: '16',
+                label:
+                  'Nussbaumer-Streit et al. 2019, Light therapy for preventing seasonal affective disorder. Cochrane Database Syst Rev CD011269. DOI: 10.1002/14651858.CD011269.pub3. (Eine Studie, 46 Teilnehmende, sehr niedrige Evidenzqualität; RR 0,64; 95 %-KI 0,30–1,38.)',
+                url: null,
+              },
+              {
+                id: '11',
+                label:
+                  'Hamblin 2018, Mechanisms and Mitochondrial Redox Signaling in PBM. URL: https://doi.org/10.1111/php.12864. (PBM-Mechanismus: Cytochrom c Oxidase, ROS, ATP; kein Präventions- oder SAD-Beleg.)',
+                url: null,
+              },
+              {
+                id: '17',
+                label:
+                  'Kumar, Chawla & Deorari 2022, LED phototherapy for neonatal hyperbilirubinaemia (Cochrane). DOI: 10.1002/14651858.CD007969.pub2. (Neonaten-Phototherapie als etablierte Indikation.)',
+                url: null,
+              },
+              {
+                id: '18',
+                label:
+                  'Chen et al. 2013, NB-UVB vs BB-UVB/PUVA for psoriasis (Cochrane). DOI: 10.1002/14651858.CD009481.pub2. (NB-UVB als medizinisches Verfahren mit definiertem Risiko-Nutzen-Profil.)',
+                url: null,
+              },
+              {
+                id: '10',
+                label:
+                  'Son et al. 2025, Photobiomodulation umbrella review. Syst Rev 14:160. DOI: 10.1186/s13643-025-02902-3. (Evidenzsicherheit niedrig–moderat; keine allgemeine Anwendungsempfehlung.)',
+                url: null,
+              },
+              {
+                id: '14',
+                label:
+                  'ANSES 2019/2020, LEDs and blue light. URL: https://www.anses.fr/en/content/leds-blue-light. (Blaulicht: Physik und Risikobewertung.)',
+                url: null,
+              },
+              {
+                id: '19',
+                label:
+                  'IARC 2012, Monographs Vol. 100D Radiation. URL: https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012. (UV-Strahlung: krebserregend, Grupp 1.)',
+                url: null,
+              },
+            ],
+          },
+          {
+            type: 'p',
+            text: '**Health-Disclaimer:** Diese Seite beschreibt Lichtmedizin und Photobiologie als wissenschaftliches Thema. Keine der genannten Anwendungen ersetzt eine medizinische Diagnose oder Behandlung. Lichttherapie bei SAD, Photobiomodulation oder Phototherapie erfordern in vielen Fällen medizinische Abklärung und standardisierte Geräte. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Die Inhalte folgen der Ampelliste §8 (grün = mit Quelle behauptbar; gelb = Tradition/Assoziation; rot = nicht ohne explizite Richtigstellung und Health-Disclaimer) und den Formulierungsregeln §12.',
+          },
+        ],
+      },
+    ],
+    cited: ['10', '11', '13', '14', '15', '16', '17', '18', '19'],
+    listed: ['13', '15', '16', '11', '17', '18', '10', '14', '19'],
+  },
+];

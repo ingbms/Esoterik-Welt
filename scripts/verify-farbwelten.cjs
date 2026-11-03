@@ -39,6 +39,11 @@ const ROUTES = [
   ...COLOURS.map((id) => ({ hash: `farbwelten/${id}`, kind: 'color' })),
   { hash: 'farbwelten/chakren', kind: 'chakren' },
   { hash: 'farbwelten/lichtfrequenzen', kind: 'light' },
+  // Themenseiten (FW-10/FW-11) ohne A–H-Skelett.
+  { hash: 'farbwelten/farbtherapie', kind: 'topic' },
+  { hash: 'farbwelten/farbpsychologie', kind: 'topic' },
+  { hash: 'farbwelten/lichtmedizin', kind: 'topic' },
+  { hash: 'farbwelten/farbtherapie/grenzen-und-risiken', kind: 'topic', anchor: 'grenzen-und-risiken' },
   { hash: 'farbwelten/rot/physik', kind: 'color', anchor: 'physik' },
 ];
 const WIDTHS = [1440, 1100, 900, 390, 320];
@@ -136,6 +141,28 @@ const CONTRAST_HELPER = `
             ogTitle: document.querySelector('meta[property="og:title"]')?.content || '',
             ogDescription: document.querySelector('meta[property="og:description"]')?.content || '',
             twitterTitle: document.querySelector('meta[name="twitter:title"]')?.content || '',
+            canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
+            ogUrl: document.querySelector('meta[property="og:url"]')?.getAttribute('content') || '',
+            tocHrefs: [...document.querySelectorAll('#farbweltenRoot .fw-toc a')].map((node) =>
+              node.getAttribute('href')
+            ),
+            sectionNodes: [...document.querySelectorAll('#farbweltenRoot section[id]')].map((node) => ({
+              id: node.id,
+              headingId: node.querySelector('h2')?.id || '',
+              visible: node.offsetParent !== null,
+            })),
+            breadcrumb: [...document.querySelectorAll('#farbweltenRoot .fw-breadcrumb li')].map((node) =>
+              node.textContent.trim()
+            ),
+            jsonLdNames: (() => {
+              const script = document.getElementById('farbwelten-breadcrumb-ld');
+              if (!script) return [];
+              try {
+                return JSON.parse(script.textContent).itemListElement.map((entry) => entry.name);
+              } catch {
+                return [];
+              }
+            })(),
             jsonLd: [...document.querySelectorAll('#farbweltenRoot script[type="application/ld+json"]')].length,
             activePage: document.querySelector('.page.active')?.id,
             rootChildren: document.getElementById('farbweltenRoot')?.children.length || 0,
@@ -248,6 +275,31 @@ const CONTRAST_HELPER = `
             if (!/565,6 Terahertz/.test(metrics.spectrumText)) failures.push('Frequenz 530 nm falsch');
           }
         }
+        if (route.kind === 'topic') {
+          const slug = route.hash.split('/')[1];
+          if (!metrics.canonical.endsWith(`#farbwelten/${slug}`)) failures.push(`Canonical: ${metrics.canonical}`);
+          if (metrics.ogUrl !== metrics.canonical) failures.push('og:url weicht vom Canonical ab');
+          if (metrics.sectionNodes.length < 6) failures.push(`Abschnitte: ${metrics.sectionNodes.length}`);
+          const hidden = metrics.sectionNodes.filter((node) => !node.visible).map((node) => node.id);
+          if (hidden.length) failures.push(`unsichtbare Abschnitte: ${hidden.join(', ')}`);
+          const brokenHeadings = metrics.sectionNodes
+            .filter((node) => node.headingId !== `${node.id}-title`)
+            .map((node) => node.id);
+          if (brokenHeadings.length) failures.push(`H2 nicht Sprungziel: ${brokenHeadings.join(', ')}`);
+          if (metrics.tocHrefs.length !== metrics.sectionNodes.length)
+            failures.push(`TOC ${metrics.tocHrefs.length} Einträge für ${metrics.sectionNodes.length} Abschnitte`);
+          const unknownTargets = metrics.tocHrefs.filter(
+            (href) => !metrics.sectionNodes.some((node) => href.endsWith(`/${node.id}`))
+          );
+          if (unknownTargets.length) failures.push(`TOC-Ziele ohne Abschnitt: ${unknownTargets.join(', ')}`);
+          if (metrics.breadcrumb.length !== 3) failures.push(`Brotkrümel: ${metrics.breadcrumb.join(' › ')}`);
+          if (metrics.breadcrumb.join('|') !== metrics.jsonLdNames.join('|'))
+            failures.push(
+              `BreadcrumbList weicht ab: ${metrics.jsonLdNames.join(' › ')} statt ${metrics.breadcrumb.join(' › ')}`
+            );
+          if (!metrics.visibleSections.includes('quellen')) failures.push('Quellenabschnitt fehlt');
+          if (route.anchor && !metrics.hash.endsWith(`/${route.anchor}`)) failures.push('Ankerroute verloren');
+        }
         for (const check of metrics.contrast) {
           if (check.missing || check.skipped) continue;
           if (!check.pass) failures.push(`Kontrast ${check.selector}: ${check.ratio}:1 < ${check.required}:1`);
@@ -307,16 +359,36 @@ const CONTRAST_HELPER = `
         const aliasHash = await page.evaluate(() => location.hash);
         const aliasFailures = aliasHash === '#farbwelten/chakren' ? [] : [`Alias: ${aliasHash}`];
 
+        // Themenseite: TOC-Sprung per Tastatur auf die Zielüberschrift.
+        await page.goto('about:blank');
+        await page.goto(`${base}#farbwelten/farbtherapie`, { waitUntil: 'networkidle' });
+        await page.waitForTimeout(150);
+        const tocLink = page.locator('.fw-toc a', { hasText: 'Grenzen und Risiken' });
+        await tocLink.focus();
+        await page.keyboard.press('Enter');
+        await page.waitForTimeout(150);
+        const topicJump = await page.evaluate(() => ({
+          hash: location.hash,
+          focused: document.activeElement?.id || '',
+          headingFocusable: document.getElementById('grenzen-und-risiken-title')?.getAttribute('tabindex'),
+        }));
+        const topicFailures = [];
+        if (!topicJump.hash.endsWith('/farbtherapie/grenzen-und-risiken'))
+          topicFailures.push(`TOC-Sprung: ${topicJump.hash}`);
+        if (topicJump.focused !== 'grenzen-und-risiken-title')
+          topicFailures.push(`Fokus nach TOC-Sprung: ${topicJump.focused || '—'}`);
+
         results.push({
           route: 'interaktion',
           width,
           chakraState,
           spectrum,
           aliasHash,
-          failures: [...chakraFailures, ...spectrumFailures, ...aliasFailures],
+          topicJump,
+          failures: [...chakraFailures, ...spectrumFailures, ...aliasFailures, ...topicFailures],
         });
         console.log(
-          `${results[results.length - 1].failures.length ? 'FAIL' : 'PASS'} 1440 Interaktion (Pfeiltasten, Spektrum, Alias)${
+          `${results[results.length - 1].failures.length ? 'FAIL' : 'PASS'} 1440 Interaktion (Pfeiltasten, Spektrum, Alias, TOC)${
             results[results.length - 1].failures.length ? ' — ' + results[results.length - 1].failures.join(' | ') : ''
           }`
         );
@@ -367,6 +439,9 @@ const CONTRAST_HELPER = `
       ['farbwelten/schwarz', 'schwarz'],
       ['farbwelten/chakren', 'chakren'],
       ['farbwelten/lichtfrequenzen', 'lichtfrequenzen'],
+      ['farbwelten/farbtherapie', 'farbtherapie'],
+      ['farbwelten/farbpsychologie', 'farbpsychologie'],
+      ['farbwelten/lichtmedizin', 'lichtmedizin'],
     ]) {
       for (const width of [1440, 390]) {
         const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
@@ -400,7 +475,11 @@ const CONTRAST_HELPER = `
         const measured = (entry.metrics?.contrast || []).filter((check) => !check.missing && !check.skipped);
         const min = measured.length ? Math.min(...measured.map((check) => check.ratio)) : null;
         return `| #${entry.route} | ${entry.width} | ${entry.metrics?.h1Count ?? '–'} | ${
-          entry.kind === 'color' ? `${entry.metrics?.visibleSections?.length ?? '–'}/8` : '–'
+          entry.kind === 'color'
+            ? `${entry.metrics?.visibleSections?.length ?? '–'}/8`
+            : entry.kind === 'topic'
+              ? `${entry.metrics?.sectionNodes?.length ?? '–'}`
+              : '–'
         } | ${entry.metrics?.docOverflowX ?? '–'} | ${measured.filter((check) => check.pass).length}/${
           measured.length
         } | ${min === null ? '–' : min + ':1'} | ${entry.failures.length ? 'FAIL: ' + entry.failures.join('; ') : 'PASS'} |`;

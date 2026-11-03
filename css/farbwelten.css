@@ -235,6 +235,29 @@
   color: var(--color-primary);
 }
 
+/* Zweite Registergruppe: Themenseiten ohne Farbfläche. */
+.fw-register__group {
+  margin: var(--space-10) 0 var(--space-2);
+  font-size: var(--text-xl);
+}
+
+.fw-register__link--topic {
+  grid-template-columns: 96px minmax(0, 1.3fr) auto;
+}
+
+.fw-register__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  border: 1px dashed var(--color-line-strong);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
 /* --- Farbkarten ---------------------------------------------------------- */
 .fw-card-grid {
   display: grid;
@@ -485,6 +508,18 @@
   max-width: 62ch;
   font-size: var(--text-base);
   line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* Quellenangabe eines Zitats (cite): steht unter dem Text, nicht darin. */
+.fw-quote footer {
+  margin-top: var(--space-2);
+}
+
+.fw-quote cite {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-style: normal;
   color: var(--color-text-secondary);
 }
 
