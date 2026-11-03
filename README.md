@@ -19,7 +19,7 @@ npm run verify:pages -- http://localhost:3000/Esoterik-Welt/ evidence/preview
 - **Eine kanonische Website:** GitHub Pages veröffentlicht `main:/` mit `index.html`, `css/`, `js/`, `data/` und `assets/`. `npm run build` verpackt dieselben Quellen; die Express-Vorschau verwendet `/Esoterik-Welt/` statt des veralteten `public/`-Platzhalters. `npm start` baut vorher automatisch. Kein Astro/Vite/Tailwind/PostCSS und kein Webpack-Einstieg erforderlich.
 - **Live-Prüfung:** `npm run verify:pages -- https://ingbms.github.io/Esoterik-Welt/ evidence/live` erzeugt Screenshots, CSS-/JS-MIME- und Netzwerk-/Console-Protokolle für zehn Ansichten bei 375/768/1440 px. Bestehende `test-results/` und andere Tests werden nicht überschrieben. Screenshots separat prüfen; historische QA-Aussagen unten sind kein Beleg für einen aktuellen Deploy.
 
-- **Hash-Routing:** Keine Server-Side-Routing nötig; statisches Hosting reicht. Routen: `#tarot`, `#crystals`, `#runes`, `#blog`, `#moon`, `#astrologie`, `#frequenzen`, `#frequenzen/labor`, `#home`. Der Alias `#frequenzlabor` wird auf `#frequenzen/labor` normalisiert.
+- **Hash-Routing:** Keine Server-Side-Routing nötig; statisches Hosting reicht. Routen: `#tarot`, `#crystals`, `#runes`, `#blog`, `#moon`, `#astrologie`, `#frequenzen`, `#frequenzen/labor`, `#frequenzen/quellen`, `#home`. Der Alias `#frequenzlabor` wird auf `#frequenzen/labor` normalisiert.
 - **Vanilla JS + ES-Module:** Keine Framework-Abhängigkeit; `blog.js`/`moon.js` nutzen `import/export`; `main.js` lädt dynamisch.
 - **Daten-Modell:** JSON/JS-Exports (`data/articles.js`, `data/crystals.json`, `data/runes.json`, `data/moon-phases.js`, `data/moon.js`).
 - **Design-System (`css/design-system.css`):** CSS-Variablen, Typografie (Cinzel, Inter), Reduced-Motion / Print / Kontrast.
@@ -68,13 +68,14 @@ npm run test:frequenz
 
 ## Frequenzlabor-Oberfläche
 
-Die Kategorie `#frequenzen` ist der Hub (Erklärstück, Bibliothek, Quellen, Disclaimer), `#frequenzen/labor` das Werkzeug. Beide Ansichten rendert `js/modules/frequenzlabor.js` in `#frequenzlaborRoot`; `js/modules/frequenzlabor-loader.js` ist der einzige statische Import im Initialpfad und lädt den Rest per `import()` erst beim ersten Aufruf.
+Die Kategorie `#frequenzen` ist der Hub (Erklärstück, Bibliothek, Quellen, Disclaimer), `#frequenzen/labor` das Werkzeug und `#frequenzen/quellen` die gerenderte Fassung von [`docs/frequenz-quellen.md`](docs/frequenz-quellen.md). Alle drei Ansichten rendert `js/modules/frequenzlabor.js` in `#frequenzlaborRoot`; `js/modules/frequenzlabor-loader.js` ist der einzige statische Import im Initialpfad und lädt den Rest per `import()` erst beim ersten Aufruf. `npm run build` legt `docs/frequenz-quellen.md` unter `dist/Esoterik-Welt/docs/` ab, damit die Ansicht und der Rohdatei-Link auch in der Vorschau antworten.
 
 | Datei | Aufgabe |
 | --- | --- |
 | `js/modules/frequenzlabor.js` | Controller/View: Slider, Presets, Transport, Sweep, Schwebung, binaural, 432/440, Fokus, Fehlertexte |
 | `js/modules/frequenz-presets.js` | `data/frequencies.json` laden/validieren, Wiedergabe-Mapping, Präferenzen in `localStorage` |
 | `js/modules/frequenz-visualisierung.js` | Canvas-Oszillogramm aus `getAnalyserData()`, statische Welle bei `prefers-reduced-motion` |
+| `js/modules/markdown-lite.js` | Markdown-Leser für die Quellenansicht: escapt, nur sichere Linkziele, Tabellen/Zitate/Codeblöcke |
 | `js/modules/frequenz-flags.js` | Feature-Flags; URL-Override nur auf `localhost`/`file:` |
 | `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens |
 
