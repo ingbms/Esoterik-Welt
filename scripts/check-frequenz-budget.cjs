@@ -13,6 +13,10 @@ const BASELINE_GZIP = 84275;
 const INITIAL_HEADROOM = 2000;
 const FEATURE_JS_LIMIT = 100000;
 const FEATURE_CSS_LIMIT = 6000;
+// Warnschwelle (NFR-1-Reserve, QA-Befund m-5): ab 95 % Auslastung bleibt das
+// Gate grün, meldet aber eine Warnung im Log. Die Reserve des Initialgraphen ist
+// bewusst klein und wird deshalb dauerhaft beobachtet (docs/frequenzlabor-ui.md).
+const WARN_RATIO = 0.95;
 
 function staticGraph(entry) {
   const seen = new Set();
@@ -74,15 +78,32 @@ const rows = [
 
 console.log('Budget-Prüfung Frequenzlabor (gzip -9)');
 for (const [name, scope, raw, gz, limit] of rows) {
-  const state = gz > limit ? 'FAIL' : 'ok  ';
+  const state = gz > limit ? 'FAIL' : gz > limit * WARN_RATIO ? 'WARN' : 'ok  ';
   console.log(
     `${state} ${name.padEnd(32)} ${scope.padEnd(24)} ${String(raw).padStart(7)} B roh ${String(gz).padStart(7)} B gz  Limit ${limit} B`
   );
 }
 
+const warnings = [];
+for (const [name, , , gz, limit] of rows) {
+  if (gz <= limit && gz > limit * WARN_RATIO) {
+    const reserve = limit - gz;
+    const used = ((gz / limit) * 100).toFixed(1).replace('.', ',');
+    warnings.push(`${name}: ${used} % ausgelastet, Reserve ${reserve} B (${gz} B / ${limit} B)`);
+  }
+}
+for (const warning of warnings) {
+  console.warn(`⚠ Reserve unter ${Math.round((1 - WARN_RATIO) * 100)} %: ${warning}`);
+}
+
 if (failures.length) {
   for (const failure of failures) console.error('✗ ' + failure);
   process.exitCode = 1;
+} else if (warnings.length) {
+  console.warn(
+    `✓ Alle Budgets eingehalten, aber ${warnings.length} Warnung(en) wegen kleiner Reserve ` +
+      `(bewusst überwacht, siehe docs/frequenzlabor-ui.md §2.1 „Budget und Reserve").`
+  );
 } else {
-  console.log('✓ Alle Budgets eingehalten.');
+  console.log(`✓ Alle Budgets eingehalten (Reserve überall größer als ${Math.round((1 - WARN_RATIO) * 100)} %).`);
 }

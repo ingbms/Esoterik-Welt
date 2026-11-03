@@ -10,7 +10,9 @@
 // gegen das tatsächlich gerenderte DOM geprüft.
 import { test, expect } from 'playwright/test';
 
-const BASE = process.env.BASE_URL || `http://127.0.0.1:${process.env.E2E_PORT || 3100}/Esoterik-Welt`;
+// Port und Basis-URL kommen aus tests/helpers/e2e-target.cjs (eine Quelle für
+// Konfiguration und Specs); lokal läuft der dedizierte E2E-Port 3310.
+import { E2E_BASE_URL as BASE } from './helpers/e2e-target.cjs';
 
 const AREAS = [
   { hash: '#astrologie/zeichen', selector: '.astro-card', count: 12, title: 'Die zwölf Zeichen' },

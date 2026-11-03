@@ -9,9 +9,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-// Mirrors playwright.config.cjs: the same E2E_PORT/BASE_URL overrides, so a
-// local run never navigates to a preview server on a foreign port.
-const BASE = process.env.BASE_URL || `http://127.0.0.1:${process.env.E2E_PORT || 3100}/Esoterik-Welt`;
+// Port und Basis-URL kommen aus tests/helpers/e2e-target.cjs (eine Quelle für
+// Konfiguration und Specs). Der lokale Build läuft auf dem dedizierten
+// E2E-Port 3310; BASE_URL zeigt die Suite auf ein Deployment.
+import { E2E_BASE_URL as BASE } from './helpers/e2e-target.cjs';
 // Playwright runs with the repository root as working directory.
 const root = process.cwd();
 

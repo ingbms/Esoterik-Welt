@@ -3,7 +3,7 @@ import { test, expect } from 'playwright/test';
 
 // Parameterised target: default is the local Pages build (npm run test:e2e).
 // Set BASE_URL to run the same suite against a deployment.
-const BASE = process.env.BASE_URL || 'http://127.0.0.1:3100/Esoterik-Welt';
+import { E2E_BASE_URL as BASE } from './helpers/e2e-target.cjs';
 
 test.describe('Internal link verification', () => {
   test('All internal links from home page return 200', async ({ page }) => {
