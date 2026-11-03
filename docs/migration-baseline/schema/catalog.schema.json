@@ -1,0 +1,395 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://esoterik-welt.local/migration-baseline/catalog.schema.json",
+  "title": "ESOW Katalog — Design und Inhalt",
+  "description": "Formale Fassung der Katalogstruktur aus docs/migration-baseline/00-schema-und-scope.md (Version 1.0.0). Ein Datei-Schema mit zwei Wurzeln: #/$defs/designCatalog fuer docs/migration-baseline/design-catalog.json und #/$defs/contentCatalog fuer docs/migration-baseline/content-catalog.json. Der Medien-Katalog ist CSV (Spalten siehe 00-schema-und-scope.md Abschnitt 8), der Funktions-Katalog Markdown (Abschnitt 9); beide werden von scripts/migration-baseline/validate-catalogs.cjs mitgeprueft.",
+  "oneOf": [{ "$ref": "#/$defs/designCatalog" }, { "$ref": "#/$defs/contentCatalog" }],
+  "$defs": {
+    "repoPath": {
+      "type": "string",
+      "description": "Repro-relativer POSIX-Pfad ab Repository-Wurzel, ohne fuehrendes './' und ohne '..'.",
+      "pattern": "^(?!/)(?!.*(^|/)\\.\\.(/|$))[A-Za-z0-9._-]+(/[A-Za-z0-9._-]+)*$",
+      "minLength": 3,
+      "maxLength": 200
+    },
+    "httpUrl": {
+      "type": "string",
+      "pattern": "^https?://[^\\s]+$",
+      "maxLength": 500
+    },
+    "isoDate": {
+      "type": "string",
+      "description": "ISO-8601-Datum, YYYY-MM-DD. Kein Zeitanteil.",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "status": {
+      "type": "string",
+      "description": "final = vorhanden und abgenommen; entwurf = vorhanden, nicht abgenommen; offen = nicht vorhanden/fehlt; veraltet = vorhanden, aber nicht mehr der Stand.",
+      "enum": ["final", "entwurf", "offen", "veraltet"]
+    },
+    "releaseRelevance": {
+      "type": "string",
+      "description": "must = Blocker fuer den Push; should = vor dem Push anzustreben, Nachbesserung zulaessig; none = nicht release-relevant, bleibt als Nachweis im Katalog.",
+      "enum": ["must", "should", "none"]
+    },
+    "delivery": {
+      "type": "string",
+      "description": "shipped = unter der Pages-Wurzel oeffentlich abrufbar oder von scripts/build-pages.cjs nach dist/Esoterik-Welt kopiert bzw. dort erzeugt. GitHub Pages liefert das Repository-Wurzelverzeichnis aus, deshalb ist auch eine nicht in dist/ enthaltene, aber versionierte Datei 'shipped'. source-only = Quelle im Repo, nicht oeffentlich abrufbar; excluded = bewusst nicht im Release (z. B. public/).",
+      "enum": ["shipped", "source-only", "excluded"]
+    },
+    "owner": {
+      "type": "string",
+      "description": "Verantwortliches Profil. Muss ein existierendes Hermes-Profil sein (siehe 00-schema-und-scope.md Abschnitt 5.4).",
+      "enum": [
+        "structured_output",
+        "design_web_layout",
+        "design_critique",
+        "writer",
+        "review_approval",
+        "architect",
+        "default"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "description": "Belegstelle des Eintrags. Mindestens path ODER url. path zeigt auf die massgebliche Datei, nicht auf eine Kopie.",
+      "additionalProperties": false,
+      "anyOf": [{ "required": ["path"] }, { "required": ["url"] }],
+      "properties": {
+        "path": { "$ref": "#/$defs/repoPath" },
+        "selector": {
+          "type": "string",
+          "description": "CSS-Selektor, HTML-id oder Markdown-Ueberschrift, die den Eintrag in der Datei eindeutig lokalisiert.",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "lines": {
+          "type": "string",
+          "description": "Zeilenspanne in der Datei, Format L<start> oder L<start>-L<ende>.",
+          "pattern": "^L[0-9]+(-L[0-9]+)?$"
+        },
+        "url": { "$ref": "#/$defs/httpUrl" }
+      }
+    },
+    "producedBy": {
+      "type": "object",
+      "description": "Nur fuer generierte Artefakte: Befehl und Eingangsdateien. Pflicht, wenn die Datei nicht von Hand gepflegt wird.",
+      "additionalProperties": false,
+      "required": ["command"],
+      "properties": {
+        "command": {
+          "type": "string",
+          "description": "Exakt ausfuehrbarer Befehl, z. B. npm run data:farbwelten.",
+          "minLength": 3,
+          "maxLength": 160
+        },
+        "from": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/repoPath" }
+        }
+      }
+    },
+    "evidenceItem": {
+      "type": "string",
+      "description": "Nachweis: repo-relativer Pfad, http(s)-URL oder 'cmd: <befehl>'. Frei Text, aber pruefbar.",
+      "minLength": 3,
+      "maxLength": 300
+    },
+    "designType": {
+      "type": "string",
+      "enum": [
+        "token-color",
+        "token-typography",
+        "token-space",
+        "token-radius",
+        "token-motion",
+        "token-shadow",
+        "component",
+        "layout",
+        "pattern",
+        "state",
+        "icon",
+        "illustration",
+        "breakpoint"
+      ]
+    },
+    "contentType": {
+      "type": "string",
+      "enum": [
+        "page",
+        "area",
+        "subroute",
+        "article",
+        "legal",
+        "ui-string",
+        "metadata",
+        "error-message",
+        "glossary",
+        "source-list",
+        "tool"
+      ]
+    },
+    "stateName": {
+      "type": "string",
+      "enum": ["default", "hover", "focus", "active", "disabled", "error", "empty", "loading", "selected", "expanded"]
+    },
+    "designEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "type",
+        "source",
+        "stand",
+        "status",
+        "owner",
+        "release_relevance",
+        "delivery",
+        "acceptance_check"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^DES-(TOK|CMP|LAY|PAT|STA|ICO|ILL|BP)-[0-9]{3}$"
+        },
+        "name": { "type": "string", "minLength": 3, "maxLength": 80 },
+        "description": { "type": "string", "minLength": 10, "maxLength": 400 },
+        "type": { "$ref": "#/$defs/designType" },
+        "source": { "$ref": "#/$defs/source" },
+        "produced_by": { "$ref": "#/$defs/producedBy" },
+        "value": {
+          "type": "string",
+          "description": "Nur fuer type token-*: der reale Wert (z. B. '#0b1012', '80px', '1.02'). Pflicht bei token-*.",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[A-Za-z0-9.]+)?$"
+        },
+        "stand": { "$ref": "#/$defs/isoDate" },
+        "status": { "$ref": "#/$defs/status" },
+        "owner": { "$ref": "#/$defs/owner" },
+        "release_relevance": { "$ref": "#/$defs/releaseRelevance" },
+        "delivery": { "$ref": "#/$defs/delivery" },
+        "acceptance_check": {
+          "type": "string",
+          "description": "Pruefbares Kriterium im Imperativ, mit Bezug auf die Rendering-Wirkung.",
+          "minLength": 10,
+          "maxLength": 300
+        },
+        "states": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/stateName" }
+        },
+        "uses_tokens": {
+          "type": "array",
+          "description": "IDs von Token-Eintraegen desselben Katalogs, die der Eintrag verwendet.",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^DES-TOK-[0-9]{3}$" }
+        },
+        "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidenceItem" } },
+        "open_questions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 5 } },
+        "notes": { "type": "string", "maxLength": 600 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "pattern": "^token-" } }, "required": ["type"] },
+          "then": { "required": ["value"] }
+        }
+      ]
+    },
+    "contentEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "type",
+        "source",
+        "text_ref",
+        "language",
+        "stand",
+        "status",
+        "owner",
+        "release_relevance",
+        "delivery",
+        "acceptance_check"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^CNT-(PAG|ARE|SUB|ART|LEG|STR|MET|ERR|GLO|SRC|TOOL)-[0-9]{3}$"
+        },
+        "name": { "type": "string", "minLength": 3, "maxLength": 120 },
+        "description": { "type": "string", "minLength": 10, "maxLength": 400 },
+        "type": { "$ref": "#/$defs/contentType" },
+        "source": { "$ref": "#/$defs/source" },
+        "produced_by": { "$ref": "#/$defs/producedBy" },
+        "text_ref": {
+          "type": "string",
+          "description": "Eindeutige Referenz auf den Originaltext: <pfad>#L<a>-L<b> oder <pfad>#<ueberschrift-slug>. Kein Ersatz durch Paraphrase.",
+          "pattern": "^[A-Za-z0-9._/-]+#(L[0-9]+(-L[0-9]+)?|[a-z0-9-]+)$",
+          "maxLength": 220
+        },
+        "route": {
+          "type": "string",
+          "description": "Oeffentliche Adresse. Hash-Route ('#home', '#farbwelten/rot', '#blog/1') oder Dokument mit optionalem Verzeichnis und Endung .html ('impressum.html', 'radiasthesie/glossar.html'). Einzelheiten in 00-schema-und-scope.md Abschnitt 7.3.",
+          "pattern": "^(#[A-Za-z0-9/_-]+|[A-Za-z0-9._-]+(/[A-Za-z0-9._-]+)*\\.html)$",
+          "maxLength": 120
+        },
+        "language": { "type": "string", "enum": ["de"] },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[A-Za-z0-9.]+)?$"
+        },
+        "stand": { "$ref": "#/$defs/isoDate" },
+        "status": { "$ref": "#/$defs/status" },
+        "owner": { "$ref": "#/$defs/owner" },
+        "release_relevance": { "$ref": "#/$defs/releaseRelevance" },
+        "delivery": { "$ref": "#/$defs/delivery" },
+        "acceptance_check": { "type": "string", "minLength": 10, "maxLength": 300 },
+        "media_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^MED-[0-9]{4}$" }
+        },
+        "components": {
+          "type": "array",
+          "description": "Verwendete Design-Eintraege (DES-IDs) aus design-catalog.json.",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^DES-(CMP|LAY|PAT|STA|ICO|ILL)-[0-9]{3}$" }
+        },
+        "claims": {
+          "type": "array",
+          "description": "IDs der Aussagen aus claims[], die dieser Eintrag enthaelt oder stuetzt.",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^CLM-[0-9]{3}$" }
+        },
+        "headings": {
+          "type": "array",
+          "description": "Inhaltsstruktur in Dokumentreihenfolge (Ueberschriftenebene + Text).",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["level", "text"],
+            "properties": {
+              "level": { "type": "integer", "minimum": 1, "maximum": 6 },
+              "text": { "type": "string", "minLength": 1, "maxLength": 200 }
+            }
+          }
+        },
+        "links": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "internal": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+            "external": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/httpUrl" } }
+          }
+        },
+        "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidenceItem" } },
+        "open_questions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 5 } },
+        "notes": { "type": "string", "maxLength": 600 }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "description": "Pruefbare Aussage (Zahl, Datum, Zuschreibung, Wirkungsbehauptung, Rechtsangabe).",
+      "additionalProperties": false,
+      "required": ["id", "claim", "kind", "text_ref", "verification", "status", "owner", "release_relevance"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^CLM-[0-9]{3}$" },
+        "claim": {
+          "type": "string",
+          "description": "Woertliche Aussage, nicht paraphrasiert.",
+          "minLength": 5,
+          "maxLength": 300
+        },
+        "kind": {
+          "type": "string",
+          "enum": ["number", "date", "name", "attribution", "effect", "legal", "other"]
+        },
+        "text_ref": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9._/-]+#(L[0-9]+(-L[0-9]+)?|[a-z0-9-]+)$",
+          "maxLength": 220
+        },
+        "verification": {
+          "type": "string",
+          "description": "verified = durch Quelle belegt; unverified = Beleg fehlt; unverifiable = nicht pruefbar, muss als solches gekennzeichnet bleiben.",
+          "enum": ["verified", "unverified", "unverifiable"]
+        },
+        "citation": {
+          "type": "string",
+          "description": "Kurzzitat der Quelle (Autor, Werk, Stelle) bzw. Belegdatei. Pflicht bei verification=verified.",
+          "minLength": 3,
+          "maxLength": 300
+        },
+        "status": { "$ref": "#/$defs/status" },
+        "owner": { "$ref": "#/$defs/owner" },
+        "release_relevance": { "$ref": "#/$defs/releaseRelevance" },
+        "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidenceItem" } },
+        "open_questions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 5 } }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "verification": { "const": "verified" } }, "required": ["verification"] },
+          "then": { "required": ["citation"] }
+        }
+      ]
+    },
+    "catalogHeader": {
+      "type": "object",
+      "required": ["schema_version", "catalog", "base_commit", "stand", "entries"],
+      "properties": {
+        "schema_version": { "const": "1.0.0" },
+        "base_commit": {
+          "type": "string",
+          "description": "Git-Commit, gegen den der Katalog erhoben wurde.",
+          "pattern": "^[0-9a-f]{7,40}$"
+        },
+        "stand": { "$ref": "#/$defs/isoDate" },
+        "scope_document": {
+          "type": "string",
+          "const": "docs/migration-baseline/00-schema-und-scope.md"
+        }
+      }
+    },
+    "designCatalog": {
+      "allOf": [{ "$ref": "#/$defs/catalogHeader" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "catalog", "base_commit", "stand", "entries"],
+      "properties": {
+        "schema_version": { "const": "1.0.0" },
+        "catalog": { "const": "design" },
+        "base_commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+        "stand": { "$ref": "#/$defs/isoDate" },
+        "scope_document": { "type": "string", "const": "docs/migration-baseline/00-schema-und-scope.md" },
+        "entries": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/designEntry" } }
+      }
+    },
+    "contentCatalog": {
+      "allOf": [{ "$ref": "#/$defs/catalogHeader" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "catalog", "base_commit", "stand", "entries", "claims"],
+      "properties": {
+        "schema_version": { "const": "1.0.0" },
+        "catalog": { "const": "content" },
+        "base_commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+        "stand": { "$ref": "#/$defs/isoDate" },
+        "scope_document": { "type": "string", "const": "docs/migration-baseline/00-schema-und-scope.md" },
+        "entries": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/contentEntry" } },
+        "claims": { "type": "array", "items": { "$ref": "#/$defs/claim" } }
+      }
+    }
+  }
+}
