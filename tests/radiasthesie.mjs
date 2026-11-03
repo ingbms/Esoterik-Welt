@@ -22,6 +22,7 @@ const MODULE_FILES = [
   'js/modules/radiasthesie-format.js',
   'js/modules/radiasthesie-model.js',
   'js/modules/radiasthesie-views.js',
+  'js/modules/radiasthesie-seo.js',
   'js/modules/radiasthesie-vertraege.js',
   'js/modules/pendeltafel-model.js',
   'js/modules/experiment-statistik.js',
@@ -37,6 +38,7 @@ const MAIN_ROUTES = new Set(['#tarot', '#crystals', '#moon', '#runes', '#astrolo
 let tmp;
 let views;
 let modelModule;
+let seo;
 let data;
 let model;
 
@@ -50,6 +52,7 @@ before(async () => {
   }
   views = await import(pathToFileURL(path.join(tmp, 'js/modules/radiasthesie-views.js')).href);
   modelModule = await import(pathToFileURL(path.join(tmp, 'js/modules/radiasthesie-model.js')).href);
+  seo = await import(pathToFileURL(path.join(tmp, 'js/modules/radiasthesie-seo.js')).href);
   data = await import(pathToFileURL(path.join(tmp, 'js/data/radiasthesie.js')).href);
   model = modelModule.createModel(data.RADIASTHESIE);
 });
@@ -454,14 +457,43 @@ test('HTML wird escaped, Daten erscheinen nicht als Markup', async () => {
   assert.ok(html.includes('href="#pendeln/quellen/Q01"'));
 });
 
-test('BreadcrumbList ist gültiges JSON-LD', () => {
-  const json = views.breadcrumbStructuredData([
-    { label: 'Start', href: '#home' },
-    { label: 'Pendeln', href: '#pendeln' },
-    { label: 'Radiästhesie' },
+test('BreadcrumbList ist gültiges JSON-LD ohne Fragmentadressen', () => {
+  const json = seo.breadcrumbList([
+    { label: 'Start', url: '' },
+    { label: 'Radiästhesie, Pendeln und Orakel', url: 'radiasthesie/' },
+    { label: 'Radiästhesie', url: null },
   ]);
   const parsed = JSON.parse(JSON.stringify(json));
   assert.equal(parsed['@type'], 'BreadcrumbList');
-  assert.equal(parsed.itemListElement.length, 2, 'das aktuelle Element trägt keine URL');
-  assert.ok(parsed.itemListElement.every((entry) => entry.item.startsWith('https://')));
+  assert.equal(parsed.itemListElement.length, 3);
+  assert.equal(parsed.itemListElement[0].item, 'https://ingbms.github.io/Esoterik-Welt/');
+  assert.ok(parsed.itemListElement.every((entry) => !String(entry.item || '').includes('#')));
+  assert.equal(parsed.itemListElement[2].item, undefined, 'das aktuelle Element trägt keine URL');
+  assert.throws(() =>
+    seo.breadcrumbList([
+      { label: 'Start', url: '' },
+      { label: 'Falsch', url: '#pendeln/glossar' },
+    ])
+  );
+});
+
+test('Titelgrenze und Canonical-Zuordnung halten die Projektregeln', () => {
+  // 60 Zeichen: Markensuffix nur, wenn er noch hineinpasst.
+  assert.equal(seo.TITLE_LIMIT, 60);
+  assert.equal(seo.pageTitle('Kurzer Titel'), 'Kurzer Titel | Esoterik-Welt');
+  assert.equal(
+    seo.pageTitle('Radiästhesie — Ruten, Geschichte und Forschungsstand'),
+    'Radiästhesie — Ruten, Geschichte und Forschungsstand'
+  );
+  for (const doc of seo.STATIC_DOCS) {
+    assert.ok(doc.url && !doc.url.includes('#'), `${doc.id}: Fragment in der Adresse`);
+  }
+  assert.equal(
+    seo.canonicalForRoute({ view: 'topic', topic: { slug: 'pendeln' } }),
+    'https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html'
+  );
+  assert.equal(seo.canonicalForRoute({ view: 'landing' }), 'https://ingbms.github.io/Esoterik-Welt/radiasthesie/');
+  assert.equal(seo.canonicalForRoute({ view: 'journal' }), 'https://ingbms.github.io/Esoterik-Welt/');
+  assert.equal(seo.canonicalForRoute({ view: 'suche', q: 'x' }), 'https://ingbms.github.io/Esoterik-Welt/');
+  assert.equal(new Set(seo.STATIC_DOCS.map((doc) => doc.url)).size, seo.STATIC_DOCS.length);
 });

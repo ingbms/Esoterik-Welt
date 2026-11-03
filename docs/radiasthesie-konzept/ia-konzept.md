@@ -314,6 +314,18 @@ Die Entscheidung trifft die Redaktion, nicht die Implementierung.
 
 ## 7. SEO/GEO
 
+- **Indexierbare Dokumente statt Hash-Ansichten (RAD-12):** Der Bereich hat sieben
+  statische HTML-Seiten unter `radiasthesie/` — Übersicht, drei Themenseiten,
+  Glossar, Quellen, Methodik. Sie entstehen mit
+  `scripts/generate-radiasthesie-pages.cjs` aus `js/data/radiasthesie.js` und
+  denselben Renderfunktionen wie die Modulansicht; `npm run build` erzeugt sie
+  vor dem Kopieren nach `dist/`. Der Hash-Router bleibt unverändert.
+  Canonical, `og:url` und Sitemap nennen nur diese Dokumente; Hash-Adressen
+  erscheinen in keinem Canonical, keiner Sitemap und keinem JSON-LD.
+- **Titelgrenze:** 60 Zeichen Projektgrenze (Google kürzt nach Pixelbreite,
+  nicht nach Zeichen — die Zahl ist eine Näherung, gemessen werden ≤ 600 px bei
+  16 px Arial). Der Markensuffix entfällt, sobald er die Grenze sprengen würde;
+  auf Unterseiten trägt ihn deshalb nur ein kurzer Titel.
 - **Titel je Route** (Setzung im Modul, nicht im statischen `<title>`):
   - `#pendeln`: „Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand“
   - `#pendeln/radiasthesie`: „Radiästhesie — Ruten, Geschichte und Forschungsstand“
@@ -324,25 +336,32 @@ Die Entscheidung trifft die Redaktion, nicht die Implementierung.
   - `#pendeln/methodik`: „Methodik und Grenzen — wie dieser Bereich prüft“
 - **Beschreibungen**: 120–160 Zeichen, nennen den Prüfstand („ohne Wirkungsversprechen“).
 - **H1**: genau eine je Ansicht, identisch mit dem Thema, keine Keyword-Stapel.
-- **Semantik**: `<article>` je Themenseite ist nicht nötig; `<main>` → `<section>` →
-  `<h2>` reicht. Brotkrümel als `<nav aria-label="Brotkrümelnavigation">` mit `<ol>`.
-- **Strukturierte Daten**: `BreadcrumbList` für die Themenseiten ist zulässig und
-  sinnvoll; `Article` nur, wenn ein Veröffentlichungsdatum und eine Redaktion
-  tatsächlich existieren. Kein `FAQPage` ohne echte FAQ-Seite.
+- **Semantik**: `<main>` → `<section>` → `<h2>`; die statischen Dokumente sind
+  zusätzlich als `WebPage` (Übersicht: `CollectionPage`) ausgezeichnet.
+  Brotkrümel als `<nav aria-label="Brotkrümelnavigation">` mit `<ol>`.
+- **Strukturierte Daten**: `BreadcrumbList` für alle Dokumente, `DefinedTermSet`
+  für das Glossar, `hasPart` für die Kapitel und `citation` für die im Text
+  zitierten Quellen. **Kein** `Article` (kein belegtes Veröffentlichungsdatum,
+  kein Redaktionskonto) und **kein** `FAQPage` (es gibt keine Frage-Antwort-Seite).
 - **Bildtexte**: Alt-Text beschreibt das Motiv, nicht die Deutung; Bildunterschrift
   nennt Maß, Herkunft und Grenze (siehe `asset-liste.md`).
 - **GEO**: Jede Aussage trägt eine Stufe (A–E), jede Quelle ein Abrufdatum. Damit sind
-  Sätze zitierfähig, ohne dass die Seite Wirkung behauptet.
+  Sätze zitierfähig, ohne dass die Seite Wirkung behauptet. Die Seiten sind ohne
+  JavaScript vollständig lesbar; es gibt keine Aussage über Rankings oder
+  KI-Zitationen.
 
-### Grenze der Hash-Routen (offen benannt)
+### Statische Dokumente (RAD-12, umgesetzt)
 
-Die Seite ist eine Einzeldokument-SPA mit Hash-Routen. Suchmaschinen indexieren
-`#pendeln/radiasthesie` **nicht** als eigene Seite; Canonical bleibt die Modul-URL.
-Wenn einzelne Themenseiten eigenständig ranken sollen, braucht es statische Dokumente
-pro Route (eigener Build-Schritt) — das ist eine Architekturentscheidung außerhalb
-dieses Pakets und muss vor der Content-Produktion entschieden werden. Der Entwurf
-funktioniert in beiden Fällen unverändert, weil die Ansichten bereits als reine
-Funktionen (Daten → HTML) gedacht sind.
+Die frühere Grenze — „Hash-Routen sind keine eigenen Seiten“ — ist damit
+aufgelöst, ohne den Router zu ersetzen: `#pendeln/radiasthesie` bleibt die
+interaktive Ansicht, `radiasthesie/radiasthesie.html` ist das Dokument. Beide
+zeigen denselben Text; die Ansicht setzt ihren Canonical auf das Dokument.
+Sitemap und Dokumentliste stehen in `js/modules/radiasthesie-seo.js`, damit
+Generator, Modul und Prüfungen dieselbe Quelle lesen. Geprüft wird auf drei
+Ebenen: `tests/radiasthesie-statisch.mjs` (HTML ohne Server),
+`tests/radiasthesie-statisch.spec.js` (Chromium mit deaktiviertem JavaScript,
+gemessene Titelbreite) und die statische Phase in `scripts/verify-pages.cjs`
+(HTTP: Status, Canonical, JSON-LD, Kerntext, interne Ziele, Bilder, Sitemap).
 
 ## 8. Zustände und Fehler
 

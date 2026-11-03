@@ -21,8 +21,157 @@ const routes = [
   '404.html',
 ];
 
+// --- Statische Dokumente ---------------------------------------------------
+// Die SPA-Prüfung oben braucht JavaScript. Indexierbare Dokumente müssen
+// dagegen schon im ausgelieferten HTML stehen. Diese Phase prüft sie über
+// HTTP: Status, Kopfmetadaten, strukturierte Daten, Kerntext, interne Ziele,
+// Bilder und Sitemap — ohne Browser und ohne JavaScript.
+
+const STATIC_ROUTES = [
+  'radiasthesie/',
+  'radiasthesie/radiasthesie.html',
+  'radiasthesie/pendeln.html',
+  'radiasthesie/orakel.html',
+  'radiasthesie/glossar.html',
+  'radiasthesie/quellen.html',
+  'radiasthesie/methodik.html',
+];
+
+const STATIC_CANONICAL = 'https://ingbms.github.io/Esoterik-Welt/';
+
+async function get(url) {
+  const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(20000) });
+  return { response, body: await response.text() };
+}
+
+async function verifyStaticDocuments(base, output) {
+  const reports = [];
+  const failures = [];
+  const seen = new Set();
+  const checkDocument = async (route) => {
+    const url = new URL(route, base).href;
+    const { response, body } = await get(url);
+    const problems = [];
+    const title = (/<title>([^<]+)<\/title>/.exec(body) || [])[1] || '';
+    const canonical = (/<link rel="canonical" href="([^"]+)"/.exec(body) || [])[1] || '';
+    const description = (/<meta name="description" content="([^"]+)"/.exec(body) || [])[1] || '';
+    const h1 = (/<h1\b[^>]*>([\s\S]*?)<\/h1>/.exec(body) || [])[1] || '';
+    const scripts = [...body.matchAll(/<script\b([^>]*)>/g)].map((match) => match[1]);
+    try {
+      assert.equal(response.status, 200, 'Status');
+      assert.ok(/text\/html/.test(response.headers.get('content-type') || ''), 'Content-Type');
+      assert.ok(title.length > 10 && title.length <= 60, `Titel ${title.length} Zeichen`);
+      assert.equal(canonical, new URL(route, STATIC_CANONICAL).href, 'Canonical');
+      assert.ok(description.length >= 100 && description.length <= 160, `Description ${description.length}`);
+      assert.equal(scripts.length, 1, 'genau ein Skript');
+      assert.match(scripts[0] || '', /application\/ld\+json/, 'nur JSON-LD');
+      assert.ok(!/<script\b(?![^>]*application\/ld\+json)/i.test(body), 'JavaScript im Dokument');
+      assert.ok(h1.trim().length > 3, 'H1 fehlt');
+      const raw = (/<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(body) || [])[1];
+      const json = JSON.parse(raw);
+      const types = json['@graph'].map((node) => node['@type']);
+      assert.ok(types.includes('BreadcrumbList'), 'BreadcrumbList fehlt');
+      assert.ok(!JSON.stringify(json).includes('"#pendeln'), 'Hash-Adresse im JSON-LD');
+      assert.ok(!types.includes('Article'), 'Article ohne Veröffentlichungsdatum');
+      assert.ok(!types.includes('FAQPage'), 'FAQPage ohne FAQ-Inhalt');
+      // Kerntext: die H1 steht als Text im HTML, nicht nur im JSON-LD.
+      assert.ok(
+        body
+          .replace(/<[^>]+>/g, ' ')
+          .replace(/\s+/g, ' ')
+          .includes(h1.replace(/<[^>]+>/g, '').trim())
+      );
+      // Interne Ziele und Bilder.
+      const pageUrl = new URL(url);
+      const targets = new Set();
+      const images = new Set();
+      for (const match of body.matchAll(/\bhref="([^"]+)"/g)) {
+        const href = match[1];
+        if (/^(?:https?:|mailto:|tel:|data:)/.test(href) || href.startsWith('#')) continue;
+        const target = new URL(href, pageUrl);
+        target.hash = '';
+        if (target.origin === pageUrl.origin) targets.add(target.href);
+      }
+      for (const match of body.matchAll(/<img\b[^>]*>/g)) {
+        const tag = match[0];
+        const src = (/\bsrc="([^"]+)"/.exec(tag) || [])[1];
+        const alt = (/\balt="([^"]*)"/.exec(tag) || [])[1];
+        assert.ok(alt && alt.trim().length > 20, `Alt-Text fehlt: ${src}`);
+        const target = new URL(src, pageUrl);
+        if (target.origin === pageUrl.origin) images.add(target.href);
+      }
+      for (const target of [...targets].slice(0, 80)) {
+        if (seen.has(target)) continue;
+        seen.add(target);
+        const head = await fetch(target, { method: 'GET', signal: AbortSignal.timeout(20000) });
+        assert.ok(head.ok, `internes Ziel ${target} → ${head.status}`);
+      }
+      for (const target of images) {
+        if (seen.has(target)) continue;
+        seen.add(target);
+        const image = await fetch(target, { signal: AbortSignal.timeout(20000) });
+        assert.ok(image.ok, `Bild ${target} → ${image.status}`);
+        assert.ok(/^image\//.test(image.headers.get('content-type') || ''), `Bildtyp ${target}`);
+      }
+    } catch (error) {
+      problems.push(error.message);
+    }
+    reports.push({
+      route,
+      url,
+      status: response.status,
+      title,
+      canonical,
+      descriptionLength: description.length,
+      failures: problems,
+    });
+    for (const problem of problems) failures.push(`${route}: ${problem}`);
+    console.log(`${problems.length ? 'FAIL' : 'PASS'} static ${route}: ${problems.join('; ')}`);
+  };
+
+  for (const route of STATIC_ROUTES) await checkDocument(route);
+
+  // Sitemap: nur echte Dokumente, vollständig, ohne Fragmente.
+  const sitemapUrl = new URL('sitemap.xml', base).href;
+  const { body: sitemap } = await get(sitemapUrl);
+  const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  const sitemapProblems = [];
+  try {
+    assert.equal(locs.length, 11, `Sitemap-Einträge: ${locs.length}`);
+    assert.equal(new Set(locs).size, locs.length, 'doppelte Einträge');
+    for (const loc of locs) {
+      assert.ok(loc.startsWith(STATIC_CANONICAL), `fremde Adresse: ${loc}`);
+      assert.ok(!loc.includes('#'), `Fragment: ${loc}`);
+      // Die Sitemap nennt Produktionsadressen. Geprüft wird das gerade
+      // gebaute Artefakt — gleicher Pfad unter der lokalen Basis.
+      const local = new URL(loc.slice(STATIC_CANONICAL.length), base).href;
+      const head = await fetch(local, { signal: AbortSignal.timeout(20000) });
+      assert.ok(head.ok, `Sitemap-Ziel ${loc} → ${head.status}`);
+    }
+    for (const route of STATIC_ROUTES) {
+      assert.ok(locs.includes(new URL(route, STATIC_CANONICAL).href), `fehlt in Sitemap: ${route}`);
+    }
+  } catch (error) {
+    sitemapProblems.push(error.message);
+  }
+  for (const problem of sitemapProblems) failures.push(`sitemap: ${problem}`);
+  console.log(`${sitemapProblems.length ? 'FAIL' : 'PASS'} sitemap: ${sitemapProblems.join('; ')}`);
+
+  const report = {
+    base,
+    date: new Date().toISOString(),
+    documents: reports,
+    sitemap: { url: sitemapUrl, entries: locs },
+    failures,
+  };
+  fs.writeFileSync(path.join(output, 'static-results.json'), JSON.stringify(report, null, 2));
+  console.log(`${reports.length} statische Dokumente geprüft; ${failures.length} Fehler`);
+  return report;
+}
+
 (async () => {
   fs.mkdirSync(output, { recursive: true });
+  const staticReport = await verifyStaticDocuments(base, output);
   const browser = await chromium.launch({ headless: true });
   const results = [];
   try {
@@ -173,8 +322,11 @@ const routes = [
     await browser.close();
   }
   const failed = results.filter((r) => r.failures.length);
-  console.log(`${results.length} pages/viewports checked; ${failed.length} failures`);
-  if (failed.length && !baseline) process.exitCode = 1;
+  console.log(
+    `${results.length} pages/viewports checked; ${failed.length} failures; ` +
+      `${staticReport.documents.length} statische Dokumente, ${staticReport.failures.length} Fehler`
+  );
+  if ((failed.length || staticReport.failures.length) && !baseline) process.exitCode = 1;
 })().catch((error) => {
   console.error(error);
   process.exitCode = 1;

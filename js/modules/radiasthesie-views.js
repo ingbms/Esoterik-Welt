@@ -31,7 +31,9 @@ const SITE = 'Esoterik-Welt';
 const UPDATED_LABEL = 'Stand 3. November 2026';
 const H1_ID = 'pendeln-title';
 
-const TITLES = {
+// Auch der statische Generator liest diese Texte: Er benutzt dieselben Titel
+// und Beschreibungen wie die Modulansicht, damit beide nicht auseinanderlaufen.
+export const TITLES = {
   glossar: 'Glossar — Radiästhesie, Pendeln und Orakel von A bis Z',
   quellen: 'Quellen und Belege — Radiästhesie und Pendeln',
   methodik: 'Methodik und Grenzen — wie dieser Bereich prüft',
@@ -39,7 +41,7 @@ const TITLES = {
   notfound: 'Seite nicht gefunden — Radiästhesie, Pendeln und Orakel',
 };
 
-const DESCRIPTIONS = {
+export const DESCRIPTIONS = {
   glossar:
     'Begriffe aus Radiästhesie, Pendeln und Orakel kurz erklärt — mit Evidenzstufe A–E und Quellenverweis, ohne Wirkungsversprechen.',
   quellen:
@@ -1639,23 +1641,6 @@ export function renderFailure(message) {
     title: 'Radiästhesie, Pendeln und Orakel',
     description: DESCRIPTIONS.notfound,
     h1: '',
-  };
-}
-
-/** BreadcrumbList als strukturierte Daten (nur für echte Navigationshierarchie). */
-export function breadcrumbStructuredData(trail) {
-  const items = trail
-    .filter((entry) => entry.href)
-    .map((entry, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: entry.label,
-      item: `https://ingbms.github.io/Esoterik-Welt/${entry.href}`,
-    }));
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items,
   };
 }
 

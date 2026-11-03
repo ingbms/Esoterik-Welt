@@ -8,12 +8,12 @@
 
 import { ROUTE } from './radiasthesie-format.js';
 import { createModel } from './radiasthesie-model.js';
+import { breadcrumbList, canonicalForRoute, pageTitle } from './radiasthesie-seo.js';
 import { mountPendulumSimulator } from './pendel-simulator.js';
 import { mountPendeltafelStudio } from './pendeltafel-studio.js';
 import { mountExperimentLabor } from './experiment-labor.js';
 import { mountPendelJournal } from './pendel-journal.js';
 import {
-  breadcrumbStructuredData,
   renderExperiment,
   renderFailure,
   renderGlossar,
@@ -28,7 +28,6 @@ import {
   renderTopic,
 } from './radiasthesie-views.js';
 
-const SITE_NAME = 'Esoterik-Welt';
 const JSON_LD_ID = 'pendeln-breadcrumb-ld';
 
 function debounce(fn, ms = 150) {
@@ -92,10 +91,13 @@ export class RadiasthesieModule {
     if (!this.root) return;
     const token = ++this.renderToken;
     let view;
+    let route;
     try {
       const model = await this.load();
       if (token !== this.renderToken) return;
-      view = this.resolveView(model, segments, query);
+      route = model.resolve(segments, query);
+      this.routeInfo = route;
+      view = this.resolveView(model, route);
     } catch (error) {
       if (token !== this.renderToken) return;
       console.error('Radiästhesie-Inhalte nicht verfügbar', error);
@@ -168,8 +170,7 @@ export class RadiasthesieModule {
     }
   }
 
-  resolveView(model, segments, query) {
-    const route = model.resolve(segments, query);
+  resolveView(model, route) {
     switch (route.view) {
       case 'topic':
         return renderTopic(model, route.topic, { anchor: route.anchor });
@@ -197,33 +198,49 @@ export class RadiasthesieModule {
     }
   }
 
-  /** Titel, Beschreibung und Open-Graph/Twitter folgen der aktiven Route. */
+  /**
+   * Titel, Beschreibung und Open-Graph/Twitter folgen der aktiven Route.
+   * Canonical und og:url zeigen auf das indexierbare Dokument: die statische
+   * Themenseite, sonst auf die Startseite. Eine Hash-Adresse ist nie
+   * Dokumentidentität — sie wird hier nicht mehr ausgegeben.
+   */
   applyMeta(view) {
-    const title = view.title ? `${view.title} | ${SITE_NAME}` : SITE_NAME;
+    const title = pageTitle(view.title || '');
+    const canonical = canonicalForRoute(this.routeInfo);
     document.title = title;
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) canonicalLink.setAttribute('href', canonical);
     setMeta('meta[name="description"]', view.description || '');
     setMeta('meta[property="og:title"]', title);
     setMeta('meta[property="og:description"]', view.description || '');
-    setMeta('meta[property="og:url"]', `https://ingbms.github.io/Esoterik-Welt/${location.hash || ROUTE.base}`);
+    setMeta('meta[property="og:url"]', canonical);
     setMeta('meta[name="twitter:title"]', title);
     setMeta('meta[name="twitter:description"]', view.description || '');
-    setMeta('meta[name="twitter:url"]', `https://ingbms.github.io/Esoterik-Welt/${location.hash || ROUTE.base}`);
+    setMeta('meta[name="twitter:url"]', canonical);
   }
 
   /**
-   * BreadcrumbList als strukturierte Daten. Nur die Modulhierarchie wird
-   * ausgezeichnet — kein Article (dafür fehlt eine Veröffentlichungsinstanz),
-   * kein FAQ (es gibt keine FAQ-Seite).
+   * BreadcrumbList als strukturierte Daten, ohne Fragmentadressen. Die
+   * statischen Dokumente unter radiasthesie/ tragen dieselbe Hierarchie; die
+   * Ansicht in index.html nennt für sich selbst keine Adresse. Kein Article
+   * (kein belegtes Veröffentlichungsdatum), kein FAQ (keine FAQ-Seite).
    */
   placeStructuredData(view) {
     const previous = document.getElementById(JSON_LD_ID);
     if (previous) previous.remove();
-    const trail = [
-      { label: 'Start', href: '#home' },
-      { label: 'Pendeln', href: ROUTE.base },
-      { label: view.h1 || view.title || 'Modul' },
-    ];
-    const data = breadcrumbStructuredData(trail);
+    const moduleTitle = (this.model && this.model.data.module.title) || 'Radiästhesie, Pendeln und Orakel';
+    const trail =
+      this.routeInfo && this.routeInfo.view === 'landing'
+        ? [
+            { label: 'Start', url: '' },
+            { label: moduleTitle, url: null },
+          ]
+        : [
+            { label: 'Start', url: '' },
+            { label: moduleTitle, url: 'radiasthesie/' },
+            { label: view.h1 || view.title || 'Modul', url: null },
+          ];
+    const data = { '@context': 'https://schema.org', ...breadcrumbList(trail) };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.id = JSON_LD_ID;

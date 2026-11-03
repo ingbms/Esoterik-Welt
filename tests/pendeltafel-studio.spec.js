@@ -86,7 +86,9 @@ test('Route #pendeln/studio rendert das Studio ohne Konsolenfehler', async ({ pa
   const root = page.locator('#pendelnRoot');
   await expect(root.locator('h1')).toHaveCount(1);
   await expect(root.locator('h1')).toHaveText('Pendeltafel-Studio');
-  await expect(page).toHaveTitle('Pendeltafel-Studio — Tafeln beschriften und exportieren | Esoterik-Welt');
+  // 52 Zeichen: der Markensuffix würde die 60-Zeichen-Grenze sprengen und
+  // entfällt deshalb (js/modules/radiasthesie-seo.js, pageTitle).
+  await expect(page).toHaveTitle('Pendeltafel-Studio — Tafeln beschriften und exportieren');
   const description = await page.locator('meta[name="description"]').getAttribute('content');
   expect(description.length).toBeGreaterThan(80);
   expect(description.length).toBeLessThanOrEqual(180);

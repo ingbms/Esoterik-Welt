@@ -40,6 +40,9 @@ const PENDELN_ROUTE = /^pendeln(?:\/([^?]*))?(?:\?(.*))?$/;
 // Every view lives in one document, so the title and the description have to
 // follow the active route instead of claiming the start page on all of them.
 const SITE_NAME = 'Esoterik-Welt';
+// Kanonische Adresse des Einzeldokuments; die Module setzen für ihre
+// statischen Seiten eine eigene Adresse.
+const SITE_CANONICAL = 'https://ingbms.github.io/Esoterik-Welt/';
 const PAGE_META = {
   home: {
     title: 'Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr',
@@ -74,7 +77,7 @@ const PAGE_META = {
       'Artikel zu Esoterik, Spiritualität und alter Weisheit: Tarot, Kristalle, Runen, Mondzyklen und Rituale.',
   },
   pendeln: {
-    title: 'Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand | Esoterik-Welt',
+    title: 'Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand',
     description:
       'Radiästhesie, Pendeln und Orakel: Instrumente, Geschichte und Handhabung im Überblick — mit Kennzeichnung von Tradition, Hypothese und geprüftem Befund, ohne Wirkungsversprechen.',
   },
@@ -96,6 +99,13 @@ function applyRouteMeta(pageId, article = null) {
   setMetaContent('meta[property="og:description"]', description);
   setMetaContent('meta[name="twitter:title"]', title);
   setMetaContent('meta[name="twitter:description"]', description);
+  // Alle übrigen Ansichten sind Ansichten von index.html. Das Modul setzt für
+  // seine statischen Dokumente gleich danach eine eigene kanonische Adresse;
+  // ohne dieses Zurücksetzen bliebe sie beim Seitenwechsel stehen.
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  if (canonicalLink) canonicalLink.setAttribute('href', SITE_CANONICAL);
+  setMetaContent('meta[property="og:url"]', SITE_CANONICAL);
+  setMetaContent('meta[name="twitter:url"]', SITE_CANONICAL);
 }
 
 // A dialog close may only rewrite history when it was not itself caused by a

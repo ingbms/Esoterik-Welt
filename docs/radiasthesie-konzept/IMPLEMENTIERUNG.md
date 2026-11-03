@@ -97,7 +97,7 @@ Quellenverzeichnis liefert Kurznamen und Anmerkungen.
 | A5 | Landingpage ohne Abschnitt „offene Fragen“ | Abschnitt „Was offen bleibt“ (03) | Der Auftrag verlangt benannte Lücken; der Text liefert sie (§5). Die Struktur-Tabelle aus dem Einstiegstext bleibt unveröffentlicht. |
 | A6 | „Redaktions-Hinweis“ als letztes Kapitel | Einordnungskasten (C13) mit Tradition / Evidenz / Konsequenz | Ein Meta-Abschnitt mitten im Artikel liest sich als Betriebsanleitung. Aussage bleibt vollständig. |
 | A7 | Wortbudget 800–1.200 W je Themenseite | 8–12 Kapitel, rund 13.000 Zeichen je Seite | Der freigegebene Text ist länger; Kapitel statt Kürzung. |
-| A8 | Sitemap-Einträge je Themenseite | keine Fragment-Einträge, Canonical bleibt die Startseite | Hash-Routen sind keine Dokumente; ein Eintrag wäre falsch. Offen benannt in `ia-konzept.md` §7 und im Sitemap-Kommentar. |
+| A8 | Sitemap-Einträge je Themenseite | ~~keine Fragment-Einträge, Canonical bleibt die Startseite~~ — durch RAD-12 ersetzt: sieben statische Dokumente mit eigenen Einträgen, keine Fragmente | Ursprünglich waren Hash-Routen keine Dokumente; mit RAD-12 existieren echte Dokumente unter `radiasthesie/` (§10). |
 | A9 | Startseiten-Kachelraster | unverändert sechs Karten, Modul über Navigation und Footer | Das Raster ist auf sechs Karten ausgelegt; ein siebtes hätte zwei bestehende Tests und das Layout verändert, ohne Nutzen. |
 
 ## 5. Korrekturen an den freigegebenen Texten
@@ -159,8 +159,9 @@ Umgesetzt und gemessen:
   Wirkungsversprechen“).
 - `BreadcrumbList` als JSON-LD je Ansicht. Kein `Article` (keine
   Veröffentlichungsinstanz), kein `FAQPage` (keine FAQ-Seite).
-- Canonical bleibt `https://ingbms.github.io/Esoterik-Welt/`; Sitemap enthält
-  keine Fragmente. Die Grenze ist in `ia-konzept.md` §7 offen benannt.
+- Canonical der hashbasierten Ansichten ist das jeweilige statische Dokument
+  unter `radiasthesie/` (Nachtrag RAD-12, §10); die Sitemap listet elf echte
+  Dokumente und keine Fragmente.
 
 ## 8. Nachweise
 
@@ -186,19 +187,45 @@ Umgesetzt und gemessen:
    gekennzeichnet und nicht implementiert.
 4. **Fotos** der Instrumente fehlen; die Lizenzprüfung aus ESOW-RAD-05 steht
    aus. Vier eigene SVGs tragen die Darstellung.
-5. **Hash-Routen** sind nicht einzeln indexierbar (Architekturentscheidung,
-   siehe `ia-konzept.md` §7).
+5. **Hash-Routen** sind nicht einzeln indexierbar — mit RAD-12 gelöst: die
+   indexierbaren Dokumente liegen unter `radiasthesie/` (§10).
 6. **Textzoom** (nur Schrift, 200 %) skaliert die px-Typografie des Bestands
    nicht — systemweite Entscheidung, nicht modulspezifisch.
 
-## 10. Wiederaufnahme
+## 10. Nachtrag RAD-12 — statische Dokumente (3. November 2026)
+
+Der Bereich hat jetzt sieben indexierbare HTML-Dokumente. Sie entstehen aus
+derselben Datendatei und denselben Renderfunktionen wie die Modulansicht; der
+Hash-Router bleibt unverändert.
+
+| Punkt | Umsetzung |
+| --- | --- |
+| Generator | `scripts/generate-radiasthesie-pages.cjs` → `radiasthesie/*.html` und `sitemap.xml` |
+| Quelle der Adressen | `js/modules/radiasthesie-seo.js` (`STATIC_DOCS`, Canonical, Titelgrenze, BreadcrumbList) |
+| Build | `scripts/build-pages.cjs` erzeugt die Seiten vor dem Kopieren; `scripts/build-local.cjs` übernimmt sie unverändert in die Vorschau |
+| Prüfung | `scripts/verify-pages.cjs` prüft die Dokumente über HTTP (Status, Kopf, JSON-LD, Kerntext, Links, Bilder, Sitemap) |
+| Strukturierte Daten | `WebPage`/`CollectionPage`, `BreadcrumbList`, `DefinedTermSet` (Glossar), `hasPart`, `citation`; **kein** `Article` (kein belegtes Veröffentlichungsdatum), **kein** `FAQPage` (keine Frage-Antwort-Seite) |
+| Titel | 60-Zeichen-Grenze, Markensuffix nur wenn er hineinpasst; im Browser zusätzlich auf ≤ 600 px gemessen |
+| Hash-Adressen | erscheinen in keinem Canonical, keiner Sitemap und keinem JSON-LD; die Modulansicht setzt ihren Canonical auf das Dokument |
+
+Bewusste Grenzen: Die statischen Seiten zeigen den redaktionellen Text, nicht
+die Werkzeuge (Pendellabor, Tafel-Studio, Experimentierlabor, Pendeltagebuch).
+Diese verlinken auf die Anwendung (`../#pendeln/…`) und bleiben ohne
+JavaScript erwartungsgemäß funktionslos — das steht als Satz im Fuß jeder
+Seite. Ein `og:image` fehlt weiterhin projektweit (B7); die vier eigenen SVGs
+taugen nicht als Social-Preview, und ein PNG ohne Freigabe zu erzeugen wäre
+eine unbelegte Zusage.
+
+## 11. Wiederaufnahme
 
 ```bash
 cd ~/Arbeit/Esoterik-Welt
 node scripts/generate-radiasthesie-data.cjs      # Texte → Datendatei
-npm run build                                    # dist + Lokal.html
+npm run build                                    # dist + Lokal.html + radiasthesie/*.html
 node --test tests/radiasthesie.mjs               # Daten und Ansichten
-npx playwright test tests/radiasthesie.spec.js   # Browser
+node --test tests/radiasthesie-statisch.mjs      # erzeugte Dokumente
+npx playwright test tests/radiasthesie.spec.js tests/radiasthesie-statisch.spec.js
+node scripts/verify-build.cjs                    # SPA + statische Dokumente über HTTP
 node docs/radiasthesie-konzept/scripts/probe-modul.cjs --shots
 ```
 
