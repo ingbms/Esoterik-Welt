@@ -1,6 +1,6 @@
 # Wireframes je Seitentyp
 
-Stand: 2. November 2026 · Maße in px, Desktop 1440 px / Mobil 390 px.
+Stand: 3. November 2026 · Maße in px, Desktop 1440 px / Mobil 390 px.
 Die Zeichnungen sind verbindlich für Reihenfolge und Gruppierung, nicht für
 Pixelgenauigkeit; die konkreten Werte stehen in `04` und `05`.
 
@@ -9,31 +9,35 @@ Pixelgenauigkeit; die konkreten Werte stehen in `04` und `05`.
 ```
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ header 100 px · Start Tarot Kristalle Mondphasen Astrologie Runen Pendeln    │
-│                Farben Wissen                                   ♥ 12         │
+│                Farben Wissen                                   ♥ 12          │
 ├──────────────────────────────────────────────────────────────────────────────┤
 │ [64]                                                                         │
-│   FARBEN / LICHT / BEDEUTUNG                          ┌───────────────────┐   │
-│                                                       │ ████ 620–750  Rot │   │
-│   Die Welt der Farben                                 │ ████ 590–620  Oran│   │
-│   – Licht, Schwingung                                 │ ████ 570–590  Gelb│   │
-│   und verborgene                                      │ ████ 490–570  Grün│   │
-│   Bedeutungen                                         │ ████ 450–490  Blau│   │
-│                                                       │ ████ 425–450  Indi│   │
-│   Entdecke, wie Licht entsteht, welche Bedeutungen     │ ████ 380–425  Viol│   │
-│   Menschen den Farben zuschreiben und was Wissen-      └───────────────────┘   │
-│   schaft und Traditionen erzählen.                     7 Bänder, 4:5           │
-│                                                       Hinweis 13 px           │
-│   [Farbwelten entdecken]   Chakren & Farben ↗                                │
+│  FARBEN / LICHT / BEDEUTUNG                  ┌───────────────────────────┐   │
+│                                              │████ 620–750 nm     Rot    │   │
+│  Die Welt der Farben                         │████ 590–620 nm     Orange │   │
+│  – Licht, Schwingung                         │████ 570–590 nm     Gelb   │   │
+│  und verborgene                              │████ 490–570 nm     Grün   │   │
+│  Bedeutungen                                 │████ 490–520 nm     Türkis │   │
+│                                              │████ 450–490 nm     Blau   │   │
+│  Entdecke, wie Licht entsteht, welche        │████ 425–450 nm     Indigo │   │
+│  Bedeutungen Menschen den Farben             │████ 380–425 nm     Violett│   │
+│  zuschreiben und was Wissenschaft            │████ nicht spektral Magenta│   │
+│  und Traditionen erzählen.                   │████ nicht spektral Rosa   │   │
+│                                              │████ Neutralfarbe   Weiß   │   │
+│  [Farbwelten entdecken] Chakren & Farben ↗   │████ Neutralfarbe   Schwarz│   │
+│                                              └───────────────────────────┘   │
+│                                              12 Bänder, Höhe nach Inhalt     │
+│                                              Mindesthöhe 44 px je Band       │
 │                                                                              │
 ├──────────────────────────────────────────────────────────────────────────────┤
-│ Sieben Farbwelten                                        FARBREGISTER        │
+│ Zwölf Farbwelten                                        FARBREGISTER         │
 │ Jede Farbwelt verbindet Physik, Wahrnehmung, Kultur und Tradition …          │
 │ ┌────┬─────────────────────────────┬──────────────────────────────┬───┐      │
 │ │████│ Rot                         │ Wurzelchakra (moderne …)     │ → │ 96   │
 │ │████│ 620–750 nm · 400–484 THz    │                              │   │      │
 │ ├────┼─────────────────────────────┼──────────────────────────────┼───┤      │
 │ │████│ Orange …                    │ Sakralchakra …               │ → │      │
-│ │ …  │ 5 weitere Zeilen            │                              │   │      │
+│ │ …  │ 10 weitere Zeilen           │                              │   │      │
 │ └────┴─────────────────────────────┴──────────────────────────────┴───┘      │
 │ Hinweis: Frequenzberechnung, Regenbogenmodell ist modern (13 px, 72 ch)      │
 ├──────────────────────────────────────────────────────────────────────────────┤
@@ -47,18 +51,18 @@ Pixelgenauigkeit; die konkreten Werte stehen in `04` und `05`.
 │ └───────────────┘ └───────────────┘ └───────────────┘                        │
 ├──────────────────────────────────────────────────────────────────────────────┤
 │ Chakren & Farben                                    SIEBEN POSITIONEN        │
-│ ┌───────────────────┐   AUSGEWÄHLT                                            │
-│ │      (7)          │   Mūlādhāra — Wurzelchakra                               │
-│ │       ○           │   „Wurzel“ · Steißbeinbereich                            │
-│ │      (6)          │   ─────────────────────────────                          │
-│ │       │           │   Symbolfarbe     Rot                                    │
-│ │      (5)          │   Typische Themen Stabilität, Erdung, Sicherheit         │
-│ │      (4)          │   Einordnung      Spirituelle Deutungstradition …        │
-│ │      (3)          │   ─────────────────────────────                          │
-│ │      (2)          │   Farbwelt Rot öffnen ↗                                  │
-│ │      (1)          │                                                          │
-│ └───────────────────┘                                                         │
-│ Stilisierte Figur, keine anatomische Darstellung (14 px)                      │
+│ ┌───────────────────┐   AUSGEWÄHLT                                           │
+│ │      (7)          │   Mūlādhāra — Wurzelchakra                             │
+│ │       ○           │   „Wurzel“ · Steißbeinbereich                          │
+│ │      (6)          │   ─────────────────────────────                        │
+│ │       │           │   Symbolfarbe     Rot                                  │
+│ │      (5)          │   Typische Themen Stabilität, Erdung, Sicherheit       │
+│ │      (4)          │   Einordnung      Spirituelle Deutungstradition …      │
+│ │      (3)          │   ─────────────────────────────                        │
+│ │      (2)          │   Farbwelt Rot öffnen ↗                                │
+│ │      (1)          │                                                        │
+│ └───────────────────┘                                                        │
+│ Stilisierte Figur, keine anatomische Darstellung (14 px)                     │
 ├──────────────────────────────────────────────────────────────────────────────┤
 │ Tradition und Forschung                                        MODUL         │
 │ ┌──────────────────────────────┬──────────────────────────────┐              │
@@ -70,9 +74,9 @@ Pixelgenauigkeit; die konkreten Werte stehen in `04` und `05`.
 │ │ Die Evidenzlage ist nicht symmetrisch: …                    │              │
 │ └─────────────────────────────────────────────────────────────┘              │
 ├──────────────────────────────────────────────────────────────────────────────┤
-│ Farbdetailseite                                            SEITENSKELETT    │
+│ Farbdetailseite                                            SEITENSKELETT     │
 │ ┌──────────────────────────────────────────────────────────────────────────┐ │
-│ │ [Rot-Verlauf]  FARBWELT 01 / 07 · SPEKTRAL                               │ │
+│ │ [Rot-Verlauf]  FARBWELT 01 / 12 · SPEKTRAALFARBE                         │ │
 │ │                Rot — das lange Ende des Lichts                           │ │
 │ │                Lede 2–3 Zeilen                                           │ │
 │ ├──────────────────────────────────────────────┬───────────────────────────┤ │
@@ -89,47 +93,52 @@ Pixelgenauigkeit; die konkreten Werte stehen in `04` und `05`.
 ## 2. Einstieg — Mobil (390)
 
 ```
-┌──────────────────────────────┐
-│ Esoterik-Welt      ☰    ♥ 12 │ 84 px
-├──────────────────────────────┤
-│ FARBEN / LICHT / BEDEUTUNG   │
-│ Die Welt der                 │
-│ Farben – Licht,              │
-│ Schwingung                   │
-│ und verborgene               │  H1 52 px
-│ Bedeutungen                  │
-│                              │
-│ Entdecke, wie Licht …        │
-│ (Lede 18 px, 52 ch)          │
-│                              │
-│ [ Farbwelten entdecken ]     │ 48 px
-│ Chakren & Farben ↗           │
-│                              │
-│ ┌──────────────────────────┐ │
-│ │ ████ 620–750 nm     Rot  │ │
-│ │ ████ 590–620 nm  Orange  │ │  16:9 gesamt
-│ │ ████ 570–590 nm    Gelb  │ │
-│ │ ████ 490–570 nm    Grün  │ │
-│ │ ████ 450–490 nm    Blau  │ │
-│ │ ████ 425–450 nm  Indigo  │ │
-│ │ ████ 380–425 nm Violett  │ │
-│ └──────────────────────────┘ │
-│ Hinweis 13 px                │
-├──────────────────────────────┤
-│ Sieben Farbwelten            │
-│ ┌────┬────────────────────┐  │
-│ │████│ Rot                │  │
-│ │████│ 620–750 nm · 400–  │  │  80 px
-│ │████│ 484 THz · spektral│  │
-│ ├────┼────────────────────┤  │
-│ │ …  │ 6 weitere Zeilen   │  │
-│ └────┴────────────────────┘  │
-│ (Chakra-Spalte entfällt)     │
-├──────────────────────────────┤
-│ Karten: 1 Spalte             │
-│ Chakra: Figur, dann Panel    │
-│ Vergleich: gestapelt         │
-└──────────────────────────────┘
+┌────────────────────────────────┐
+│ Esoterik-Welt      ☰    ♥ 12   │ 84 px
+├────────────────────────────────┤
+│ FARBEN / LICHT / BEDEUTUNG     │
+│ Die Welt der                   │
+│ Farben – Licht,                │
+│ Schwingung                     │
+│ und verborgene                 │ H1 52 px
+│ Bedeutungen                    │
+│                                │
+│ Entdecke, wie Licht …          │
+│ (Lede 18 px, 52 ch)            │
+│                                │
+│ [ Farbwelten entdecken ]       │ 48 px
+│ Chakren & Farben ↗             │
+│                                │
+│ ┌───────────────────────────┐  │
+│ │████ 620–750 nm     Rot    │  │
+│ │████ 590–620 nm     Orange │  │
+│ │████ 570–590 nm     Gelb   │  │
+│ │████ 490–570 nm     Grün   │  │
+│ │████ 490–520 nm     Türkis │  │
+│ │████ 450–490 nm     Blau   │  │
+│ │████ 425–450 nm     Indigo │  │
+│ │████ 380–425 nm     Violett│  │
+│ │████ nicht spektral Magenta│  │
+│ │████ nicht spektral Rosa   │  │
+│ │████ Neutralfarbe   Weiß   │  │
+│ │████ Neutralfarbe   Schwarz│  │
+│ └───────────────────────────┘  │
+│ 12 Bänder · Hinweis 13 px      │
+├────────────────────────────────┤
+│ Zwölf Farbwelten               │
+│ ┌────┬────────────────────┐    │
+│ │████│ Rot                │    │
+│ │████│ 620–750 nm · 400–  │    │ 80 px
+│ │████│ 484 THz · spektral │    │
+│ ├────┼────────────────────┤    │
+│ │ …  │ 11 weitere Zeilen  │    │
+│ └────┴────────────────────┘    │
+│ (Chakra-Spalte entfällt)       │
+├────────────────────────────────┤
+│ Karten: 1 Spalte               │
+│ Chakra: Figur, dann Panel      │
+│ Vergleich: gestapelt           │
+└────────────────────────────────┘
 ```
 
 ## 3. Farbdetailseite `#farbwelten/<farbe>`
@@ -140,10 +149,10 @@ Pixelgenauigkeit; die konkreten Werte stehen in `04` und `05`.
 ├──────────────────────────────────────────────────────────────────────────────┤
 │ ┌──────────────────────────────────────────────────────────────────────────┐ │
 │ │ [Verlauf deep → card]                                                    │ │
-│ │ FARBWELT 01 / 07 · SPEKTRAL · 620–750 NM                                 │ │
-│ │ Rot — das lange Ende des Lichts                                           │ │
-│ │ Lede: rund 620 bis 750 Nanometer …                                        │ │
-│ │ [Empirie begrenzt] [Historisch] [Deutungstradition]                       │ │
+│ │ FARBWELT 01 / 12 · SPEKTRAALFARBE · 620–750 NM                           │ │
+│ │ Rot — das lange Ende des Lichts                                          │ │
+│ │ Lede: rund 620 bis 750 Nanometer …                                       │ │
+│ │ [Empirie begrenzt] [Historisch] [Deutungstradition]                      │ │
 │ └──────────────────────────────────────────────────────────────────────────┘ │
 ├───────────────────────────────────────────────┬──────────────────────────────┤
 │ A  Die Farbe erleben                          │ AUF DIESER SEITE             │
@@ -207,6 +216,8 @@ Zustände:
 │  380 ───────────────●──────────────────────────── 780 nm                     │
 │  UV │ Violett │ Indigo │ Blau │ Grün │ Gelb │ Orange │ Rot │ IR              │
 │  Auswahl: 530 nm · 565,6 THz · 2,34 eV · Grün (Simulation)                   │
+│  Nicht auf der Achse, nur verlinkt: Magenta · Rosa (nicht spektral),         │
+│  Weiß · Schwarz (Neutralfarbe); Türkis = Übergang 490–520 nm (Konvention)    │
 ├──────────────────────────────────────────────────────────────────────────────┤
 │ Rechenwege f = c/λ, E ≈ 1239,842/λ, Einheiten, Grenzen                       │
 ├──────────────────────────────────────────────────────────────────────────────┤
@@ -214,7 +225,7 @@ Zustände:
 │  ┌ [DISCLAIMER-PLATZHALTER] ──────────────────────────────────────────────┐  │
 │  └────────────────────────────────────────────────────────────────────────┘  │
 ├──────────────────────────────────────────────────────────────────────────────┤
-│ Verwandte Farbwelten (7 Karten oder Register)                                │
+│ Zurück zu den Farbwelten (Liste: 12 Farben + Chakren)                        │
 └──────────────────────────────────────────────────────────────────────────────┘
 ```
 

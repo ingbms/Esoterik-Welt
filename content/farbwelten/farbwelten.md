@@ -54,8 +54,8 @@ Wählen Sie einen Tag aus, an dem Sie bewusst auf Farbe achten – nicht als The
 - [5] Jonauskaite, D. et al. (2020). "To see or not to see..." https://doi.org/10.1002/col.22490
 - [7] Gnambs, T. (2020). "Limited evidence for the red effect." Meta-Analyse. https://doi.org/10.3758/s13423-020-01772-1
 - [9] OSTEBA (2025). *Eficacia y seguridad de la cromoterapia* (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf
-- [24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).
-- [31] Wyszecki, G. & Stiles, W. S. (2000). Color Science: Concepts and Methods, Quantitative Data and Formulae. 2. Aufl., Wiley Classics Library (Nachdruck). ISBN 978-0-471-39918-6.
+- [24] NIST SP 330, SI-Broschüre. https://www.nist.gov/pml/special-publication-330/sp-330-section-2
+- [31] MIT Vision Book, Color (Metamerie, nichtspektrale Farben). https://visionbook.mit.edu/color.html
 - [15] Pjrek, E., Friedrich, M.-E., Cambioli, L., et al. (2020). The Efficacy of Light Therapy in the Treatment of Seasonal Affective Disorder: A Meta-Analysis of Randomized Controlled Trials. Psychotherapy and Psychosomatics 89(1), 17–24. https://doi.org/10.1159/000502891
 - [17] Bhutani, V. K., et al. (2011). Phototherapy to Prevent Severe Neonatal Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics 128(4), e1046–e1052. https://doi.org/10.1542/peds.2011-1494
 - [18] Elmets, C. A., et al. (2019). Joint American Academy of Dermatology–National Psoriasis Foundation guidelines of care for the management and treatment of psoriasis with phototherapy. J Am Acad Dermatol 81(3), 775–804. https://doi.org/10.1016/j.jaad.2019.04.042
