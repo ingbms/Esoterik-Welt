@@ -128,4 +128,4 @@ eigenes Modul mit reinen Funktionen + Mount, eigener Unit- und Browser-Spec.
 Für RAD-09/10 bleibt `WERKSTATT` die Laufzeit-Fassade; das Pendellabor braucht
 sie nicht (Entscheidung D6 in `MODELL.md`).
 
-Commit: `_______` (wird nach dem Commit in einem Folgeschritt ergänzt)
+Commit: `fca1ffe` (Code + Tests + Dokumentation). Kein Push.
