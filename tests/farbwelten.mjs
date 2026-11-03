@@ -39,6 +39,17 @@ const SECTION_KEYS = ['erleben', 'physik', 'psychologie', 'tradition', 'anwendun
 
 const BLOCK_TYPES = new Set(['p', 'list', 'facts', 'table', 'quote', 'h3', 'timeline', 'swatch', 'gap']);
 
+// Themenseiten (FW-10/FW-11): eigene Redaktionsseiten ohne A–H-Skelett.
+const TOPIC_SLUGS = ['farbtherapie', 'farbpsychologie', 'lichtmedizin'];
+const TOPIC_BLOCK_TYPES = new Set([...BLOCK_TYPES, 'sources']);
+
+/** H2-Überschriften einer Redaktionsdatei, in Dokumentreihenfolge. */
+function headingsFromSource(slug) {
+  const source = fs.readFileSync(path.join(root, 'content', 'farbwelten', `${slug}.md`), 'utf8').replace(/\r\n/g, '\n');
+  const body = source.replace(/^---\n[\s\S]*?\n---\n/, '');
+  return [...body.matchAll(/^##\s+(.+)$/gm)].map((match) => match[1].trim());
+}
+
 let tmp;
 let data;
 let model;
@@ -206,12 +217,99 @@ test('Routenauflösung: Einstieg, Farben, Anker, Unbekanntes', () => {
   assert.equal(model.ROUTE.landing('register'), '#farbwelten/register');
 });
 
+test('Themenseiten: Reihenfolge, Kennungen und zitiert ⊆ gelistet', () => {
+  assert.deepEqual(
+    data.TOPIC_PAGES.map((page) => page.slug),
+    TOPIC_SLUGS
+  );
+
+  for (const page of data.TOPIC_PAGES) {
+    // Struktur: H1 als Titel, Lede, H2-Abschnitte in der Reihenfolge der Datei.
+    assert.ok(page.title.length > 3, `${page.slug}: H1 fehlt`);
+    assert.ok(page.lede.length > 200, `${page.slug}: Lede zu kurz`);
+    assert.deepEqual(
+      page.sections.map((section) => section.heading),
+      headingsFromSource(page.slug),
+      `${page.slug}: Abschnittsreihenfolge weicht von der Redaktionsdatei ab`
+    );
+    assert.equal(page.sections.at(-1).anchor, 'quellen', `${page.slug}: Quellen sind nicht der letzte Abschnitt`);
+
+    const anchors = page.sections.map((section) => section.anchor);
+    assert.equal(new Set(anchors).size, anchors.length, `${page.slug}: doppelte Sprungmarke`);
+    for (const anchor of anchors) assert.match(anchor, /^[a-z0-9-]+$/, `${page.slug}: Sprungmarke ${anchor}`);
+
+    // Abschnittstypen: nur was der Generator und Renderer kennen.
+    for (const section of page.sections) {
+      assert.ok(section.blocks.length > 0, `${page.slug}/${section.anchor}: leer`);
+      for (const block of section.blocks)
+        assert.ok(TOPIC_BLOCK_TYPES.has(block.type), `${page.slug}/${section.anchor}: unbekannter Block ${block.type}`);
+    }
+
+    // Quellen: Bibliografie als Liste mit Kennung, Label und optionaler URL.
+    const sources = page.sections.flatMap((section) => section.blocks).filter((block) => block.type === 'sources');
+    assert.equal(sources.length, 1, `${page.slug}: genau eine Quellenliste erwartet`);
+    for (const entry of sources[0].items) {
+      assert.match(entry.id, /^\d{1,2}$/, `${page.slug}: Kennung ${entry.id}`);
+      assert.ok(entry.label.length > 10, `${page.slug}: Quelle [${entry.id}] ohne belastbares Label`);
+    }
+
+    // zitiert ⊆ gelistet: jeder Verweis im Text steht in der Quellenliste.
+    const listed = new Set(sources[0].items.map((entry) => entry.id));
+    assert.deepEqual([...listed].sort(), [...page.listed].sort(), `${page.slug}: listed weicht von der Liste ab`);
+    const bodyText = JSON.stringify(page.sections.filter((section) => section.anchor !== 'quellen'));
+    const cited = new Set([...bodyText.matchAll(/\[(\d{1,2})\]/g)].map((match) => match[1]));
+    for (const id of cited) assert.ok(listed.has(id), `${page.slug}: [${id}] zitiert, aber nicht gelistet`);
+    assert.deepEqual(
+      [...cited].sort((a, b) => a - b),
+      [...page.listed].filter((id) => cited.has(id)).sort((a, b) => a - b)
+    );
+
+    // Health-Disclaimer bleibt der letzte Block der Seite.
+    const last = page.sections.at(-1).blocks.at(-1);
+    assert.equal(last.type, 'p', `${page.slug}: letzter Block ist kein Absatz`);
+    const disclaimer = last.text.replace(/\*\*/g, '');
+    assert.match(disclaimer, /^Health-Disclaimer:/, `${page.slug}: Health-Disclaimer fehlt am Seitenende`);
+    assert.match(disclaimer, /medizinische Diagnose oder Behandlung/, `${page.slug}: Disclaimer ohne Diagnosehinweis`);
+  }
+});
+
+test('Themenseiten: Titel, Beschreibungen und Routen', () => {
+  const titles = data.TOPIC_PAGES.map((page) => page.meta.title);
+  assert.equal(new Set(titles).size, titles.length, 'Titel sind nicht eindeutig');
+  for (const page of data.TOPIC_PAGES) {
+    assert.ok(page.meta.title.length <= 60, `${page.slug}: Title ${page.meta.title.length} > 60`);
+    assert.ok(page.meta.description.length <= 155, `${page.slug}: Description ${page.meta.description.length} > 155`);
+    assert.match(page.meta.title, /\| Esoterik-Welt$/);
+    assert.ok(page.meta.teaser.length >= 60, `${page.slug}: Kartenansprache fehlt`);
+  }
+
+  const anchors = data.SECTION_ORDER.map((section) => section.anchor);
+  const topics = data.TOPIC_PAGES;
+  for (const page of topics) {
+    const route = model.resolveView([page.slug], data.FARBWELTEN, anchors, topics);
+    assert.equal(route.view, 'topic', `${page.slug}: Route nicht erkannt`);
+    assert.equal(route.topic.slug, page.slug);
+    assert.equal(route.anchor, '');
+    const section = page.sections[1];
+    assert.equal(
+      model.resolveView([page.slug, section.anchor], data.FARBWELTEN, anchors, topics).anchor,
+      section.anchor
+    );
+    assert.equal(model.resolveView([page.slug, 'quatsch'], data.FARBWELTEN, anchors, topics).anchor, '');
+    assert.equal(model.ROUTE.topic(page.slug), `#farbwelten/${page.slug}`);
+    assert.equal(model.ROUTE.topic(page.slug, section.anchor), `#farbwelten/${page.slug}/${section.anchor}`);
+  }
+  // Die Themenseiten dürfen die Farbseiten nicht verdrängen.
+  assert.equal(model.resolveView(['rot'], data.FARBWELTEN, anchors, topics).view, 'color');
+});
+
 test('SEO-Titel und Beschreibungen bleiben im Rahmen der IA', () => {
   const entries = [
     data.LANDING.meta,
     data.CHAKREN_PAGE.meta,
     data.LIGHT_PAGE.meta,
     ...data.FARBWELTEN.map((world) => world.meta),
+    ...data.TOPIC_PAGES.map((page) => page.meta),
   ];
   for (const meta of entries) {
     assert.ok(meta.title.length <= 80, `Titel zu lang: ${meta.title} (${meta.title.length})`);
@@ -225,7 +323,16 @@ test('Redaktionstexte stehen nicht im Markup', () => {
   for (const needle of ['Sat-cakra-nirupana', 'Mūlādhāra', 'Metamerie', 'Photobiomodulation']) {
     assert.equal(html.includes(needle), false, `index.html enthält Redaktionstext: ${needle}`);
   }
-  // Die Datendatei ist die einzige Quelle der Texte.
+  // Die Datendatei ist die einzige Quelle der Texte — auch für die Themenseiten.
   const module = fs.readFileSync(path.join(root, 'js/modules/farbwelten.js'), 'utf8');
-  assert.equal(module.includes('Sat-cakra-nirupana'), false, 'Modul enthält Redaktionstext');
+  for (const needle of [
+    'Sat-cakra-nirupana',
+    'Melanopsin',
+    'OSTEBA',
+    'Photobiomodulation',
+    'Jonauskaite',
+    'Bilirubin',
+  ]) {
+    assert.equal(module.includes(needle), false, `Modul enthält Redaktionstext: ${needle}`);
+  }
 });

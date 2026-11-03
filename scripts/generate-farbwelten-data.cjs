@@ -12,6 +12,8 @@
 //   "- "          → {type:'list', items:[]}
 //   "| … |"       → {type:'table', head:[], rows:[[]]}
 //   "> "          → {type:'quote', text, title?}
+//                   endet der Text auf „— [n]", wird [n] als cite gesetzt
+//                   (Quellenangabe des Zitats, gerendert als <cite>)
 //   "### "        → {type:'h3', text}
 //
 // Inline-Auszeichnung bleibt als Markdown-lite im Text (**fett**, *kursiv*,
@@ -179,6 +181,36 @@ const META_PAGES = {
       'Wellenlänge, Frequenz und Photonenenergie berechnen; Lichttherapie und Photobiologie mit Quellen und klaren Evidenzgrenzen.',
   },
 };
+// Themenseiten (FW-10/FW-11). Sie haben kein A–H-Skelett: die Abschnitte
+// folgen den H2-Überschriften der Redaktionsdatei in genau deren Reihenfolge.
+// Deshalb steht hier keine Abschnittszuordnung, sondern nur die Dateiliste.
+const TOPIC_FILES = ['farbtherapie', 'farbpsychologie', 'lichtmedizin'];
+
+// Titel, Beschreibungen und Kartenansprachen der Themenseiten. Wie bei den
+// Farbwelten sind das Metadaten der Informationsarchitektur (≤60/≤155), nicht
+// Fließtext: der steht ausschließlich in content/farbwelten/*.md.
+const META_TOPICS = {
+  farbtherapie: {
+    title: 'Farbtherapie — Evidenz und Grenzen | Esoterik-Welt',
+    description:
+      'Farbtherapie und Chromotherapie: Definition, Verfahren, Geschichte und die OSTEBA-Bewertung. Was untersucht ist — und warum die Evidenz fehlt.',
+    teaser:
+      'Was Chromotherapie behauptet, was dazu geprüft wurde — und wo die Grenze zur belegten Lichtmedizin verläuft.',
+  },
+  farbpsychologie: {
+    title: 'Farbpsychologie — Assoziation, nicht Wirkung | Esoterik-Welt',
+    description:
+      'Farbpsychologie: Assoziation ist nicht Wirkung. Was Studien zu Farbe und Emotion zeigen, wie Kultur und Kontext wirken — und was offenbleibt.',
+    teaser: 'Assoziation ist nicht Wirkung: was Studien zu Farbe und Emotion zeigen und was sie offenlassen.',
+  },
+  lichtmedizin: {
+    title: 'Lichtmedizin — Chronobiologie und Grenzen | Esoterik-Welt',
+    description:
+      'Lichtmedizin: SAD, Neonaten-Phototherapie, NB-UVB und Photobiomodulation — getrennt nach Wellenlänge, Dosis, Exposition und Evidenz.',
+    teaser: 'SAD, Neonaten-Phototherapie, UV-B und Photobiomodulation — getrennt nach Wellenlänge, Dosis und Evidenz.',
+  },
+};
+
 // Kurzverweise, die im Redaktionsstand nur als Nummer erscheinen. Keine
 // erfundenen bibliografischen Angaben: Label nennt nur, wofür die Quelle im
 // gelieferten Text steht, und verweist auf den Evidenzreport.
@@ -239,8 +271,18 @@ function parseBlocks(lines) {
   };
   const flushQuote = () => {
     if (!quote) return;
-    const text = inlineText(quote.join(' '));
-    if (text) blocks.push({ type: 'quote', text });
+    let text = inlineText(quote.join(' '));
+    if (text) {
+      // „Zitattext — [9]": die Kennung ist die Quellenangabe des Zitats, nicht
+      // Teil des Zitats. Sie wird als cite geführt und als <cite> gerendert.
+      let cite = null;
+      const attribution = /\s*[—–-]\s*\[(\d{1,2})\]$/.exec(text);
+      if (attribution) {
+        text = text.slice(0, attribution.index).trim();
+        cite = `[${attribution[1]}]`;
+      }
+      blocks.push(cite ? { type: 'quote', text, cite } : { type: 'quote', text });
+    }
     quote = null;
   };
 
@@ -669,11 +711,89 @@ function buildLightPage() {
   };
 }
 
+// Sprungmarke aus einer H2-Überschrift. Die Umlaute werden ausgeschrieben,
+// damit der Anker ohne Prozentkodierung lesbar bleibt.
+function slugifyHeading(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+// Themenseite: H1, Lede und H2-Abschnitte in der Reihenfolge der Redaktionsdatei.
+// Der Quellenabschnitt wird zur Bibliografie (Liste mit Kennung, Label und URL),
+// damit der Renderer dieselbe Darstellung wie auf den Farbseiten nutzen kann.
+function buildTopicPages() {
+  return TOPIC_FILES.map((slug) => {
+    const { parsed, document } = readDocument(slug);
+    const usedAnchors = new Set();
+    const listed = [];
+
+    const sections = document.sections.map((section, index) => {
+      const heading = section.heading || '';
+      const base = slugifyHeading(heading) || `abschnitt-${index + 1}`;
+      let anchor = base;
+      let suffix = 2;
+      while (usedAnchors.has(anchor)) anchor = `${base}-${suffix++}`;
+      usedAnchors.add(anchor);
+
+      const blocks = [...section.blocks];
+      if (/^quellen/i.test(heading)) {
+        const position = blocks.findIndex((block) => block.type === 'list');
+        if (position < 0) throw new Error(`${slug}: Abschnitt „${heading}“ enthält keine Liste`);
+        const entries = blocks[position].items.map(parseSourceEntry).filter(Boolean);
+        if (!entries.length) throw new Error(`${slug}: Abschnitt „${heading}“ enthält keine auswertbaren Einträge`);
+        blocks[position] = { type: 'sources', items: entries };
+        for (const entry of entries) if (!listed.includes(entry.id)) listed.push(entry.id);
+      }
+      return { key: anchor, heading, anchor, blocks };
+    });
+
+    if (!sections.length) throw new Error(`${slug}: keine H2-Abschnitte`);
+    if (!listed.length) throw new Error(`${slug}: keine Quellenliste`);
+
+    const intro = [...document.intro];
+    const lede = intro.shift()?.text || parsed.data.description || '';
+
+    // zitiert ⊆ gelistet: der Generator bricht ab, statt eine Seite mit offenen
+    // Verweisen auszuliefern.
+    const cited = collectSourceIds(JSON.stringify({ intro, sections })).sort((a, b) => Number(a) - Number(b));
+    const missing = cited.filter((id) => !listed.includes(id));
+    if (missing.length)
+      throw new Error(
+        `${slug}: zitiert, aber nicht in „Quellen“ gelistet: ${missing.map((id) => `[${id}]`).join(' ')}`
+      );
+
+    const meta = META_TOPICS[slug];
+    if (!meta) throw new Error(`${slug}: keine Metadaten hinterlegt`);
+    if (meta.title.length > 60) throw new Error(`${slug}: Title länger als 60 Zeichen (${meta.title.length})`);
+    if (meta.description.length > 155)
+      throw new Error(`${slug}: Description länger als 155 Zeichen (${meta.description.length})`);
+
+    return {
+      slug,
+      title: document.title,
+      seoTitle: parsed.data.title || document.title,
+      meta,
+      lede,
+      intro,
+      sections,
+      cited,
+      listed,
+    };
+  });
+}
+
 function main() {
   const { worlds, sourceRegistry, reports, landingDoc } = buildColors();
   const landingPage = buildLanding(landingDoc, worlds);
   const chakrenPage = buildChakrenPage(worlds.map((world) => world.id));
   const lightPage = buildLightPage();
+  const topicPages = buildTopicPages();
 
   const sourceObject = Object.fromEntries(
     [...sourceRegistry.values()].sort((a, b) => Number(a.id) - Number(b.id)).map((entry) => [entry.id, entry])
@@ -703,6 +823,8 @@ function main() {
     '',
     `export const LIGHT_PAGE = ${JSON.stringify(lightPage, null, 2)};`,
     '',
+    `export const TOPIC_PAGES = ${JSON.stringify(topicPages, null, 2)};`,
+    '',
   ].join('\n');
 
   fs.mkdirSync(path.dirname(target), { recursive: true });
@@ -720,6 +842,11 @@ function main() {
   }
   console.log(`Quellen im Register: ${Object.keys(sourceObject).length}`);
   console.log(`Farbwelten: ${worlds.length}, Abschnitte je Seite: ${SECTION_ORDER.length}`);
+  console.log(
+    `Themenseiten: ${topicPages
+      .map((page) => `${page.slug} (${page.sections.length} Abschnitte, ${page.listed.length} Quellen)`)
+      .join(', ')}`
+  );
   if (worlds.length !== 7) throw new Error('Es müssen sieben Farbwelten sein.');
 }
 

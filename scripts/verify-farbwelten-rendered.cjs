@@ -21,11 +21,18 @@ const jsonIndex = process.argv.indexOf('--json');
 const jsonTarget = jsonIndex >= 0 ? process.argv[jsonIndex + 1] : null;
 
 const COLOURS = ['rot', 'orange', 'gelb', 'gruen', 'blau', 'indigo', 'violett'];
+// Themenseiten (FW-10/FW-11): eigene Seiten ohne A–H-Skelett.
+const TOPICS = [
+  { id: 'farbtherapie', hash: '#farbwelten/farbtherapie' },
+  { id: 'farbpsychologie', hash: '#farbwelten/farbpsychologie' },
+  { id: 'lichtmedizin', hash: '#farbwelten/lichtmedizin' },
+];
 const ROUTES = [
   { id: 'farbwelten', hash: '#farbwelten' },
   ...COLOURS.map((id) => ({ id, hash: `#farbwelten/${id}` })),
   { id: 'chakren', hash: '#farbwelten/chakren' },
   { id: 'lichtfrequenzen', hash: '#farbwelten/lichtfrequenzen' },
+  ...TOPICS.map((topic) => ({ ...topic, topic: true })),
 ];
 
 const DISCLAIMER =
@@ -77,8 +84,21 @@ const results = [];
     };
 
     if (headings !== 1) record(`${headings} H1 statt 1`);
-    const disclaimerHits = text.split(DISCLAIMER).length - 1;
-    if (disclaimerHits !== 1) record(`S16-Vorgabetext ${disclaimerHits}× statt 1×`);
+    if (route.topic) {
+      // Die Themenseiten tragen ihren eigenen Health-Disclaimer als letzten
+      // Absatz des Quellenabschnitts (Redaktionsstand FW-10/FW-11).
+      const paragraphs = await page
+        .locator('#farbweltenRoot .fw-topic__quellen p')
+        .evaluateAll((nodes) => nodes.map((node) => node.textContent.trim()));
+      const last = paragraphs.at(-1) || '';
+      if ((last.match(/Health-Disclaimer:/g) || []).length !== 1)
+        record(`Health-Disclaimer nicht genau einmal am Seitenende: „${last.slice(0, 60)}“`);
+      if (!/medizinische Diagnose oder Behandlung/.test(last))
+        record('Health-Disclaimer ohne Hinweis auf medizinische Diagnose/Behandlung');
+    } else {
+      const disclaimerHits = text.split(DISCLAIMER).length - 1;
+      if (disclaimerHits !== 1) record(`S16-Vorgabetext ${disclaimerHits}× statt 1×`);
+    }
     if (quellenItems < 5) record(`nur ${quellenItems} gerenderte Quellen`);
     for (const pattern of FORBIDDEN) if (pattern.test(text)) record(`verbotene Aussage ${pattern}`);
 
