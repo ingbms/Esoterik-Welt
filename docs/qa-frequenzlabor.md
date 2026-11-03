@@ -287,6 +287,7 @@ Branch `chore/frequenzlabor-testinfra`, aufbauend auf `fix/frequenzlabor-qa-m1` 
 | `npx playwright test` bei belegtem E2E-Port | Abbruch vor dem ersten Test, kein Reuse | `e2e-m3-portkollision.txt` |
 | Wächter direkt auf belegtem Port | klare Meldung, Exit 1 | `e2e-m3-waechter-kollision.txt` |
 | `npm run lint`, `npm run format:check` | 0 Fehler, Format sauber | `lint-prettier-suites.txt` |
+| `QA_PORT=3325 npx playwright test --config=playwright.qa.config.js --project=chromium-desktop qa/01-funktional.spec.js` | **27/27**, Serverstart auf 3325 | `qa-config-check.txt` |
 | `npm run test:frequenz`, `npm run test:pages` | 34/34, 6/6 | `lint-prettier-suites.txt` |
 
 **Grenzen:** Das sind Windows-Lokalläufe; die Linux-CI lief in diesem Arbeitsbaum nicht (der PR löst sie aus). Die m-4-Normalisierung ist plattformneutral, weil sie vor dem Hash auf LF vereinheitlicht — Linux hasht denselben Wert wie zuvor. Weiterhin gilt für m-3: Ein belegter Port wird erkannt und der Lauf bricht ab; die Suite weicht nicht automatisch auf einen anderen Port aus, damit ein Lauf nie unbemerkt gegen einen anderen Build geht.

@@ -44,3 +44,5 @@ NFR-3 2 903 / 6 000 B, Exit 0.
 
 `protokolle/lint-prettier-suites.txt` — `npm run lint` (0), `npm run format:check` (sauber),
 `npm run test:frequenz` (34/34), `npm run test:pages` (6/6).
+`protokolle/qa-config-check.txt` — `playwright.qa.config.js` mit dem neuen Serverstart
+(`QA_PORT=3325`, Chromium, `qa/01-funktional.spec.js`): 27/27.
