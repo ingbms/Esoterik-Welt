@@ -33,7 +33,7 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 | `js/modules/frequenz-visualisierung.js` | Canvas-Renderer, rAF nur bei laufendem Ton, statische Welle bei reduzierter Bewegung |
 | `js/modules/frequenz-flags.js` | Feature-Flags mit lokalem URL-Override (`?fq=+cymatics,-binaural`); `cymatics`/`meditation` sind seit dem ADR-Nachtrag §13 ausgeliefert |
 | `js/modules/frequenzlabor-loader.js` | 30-Zeilen-Lazy-Proxy, einziger statischer Import im Initialpfad |
-| `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens (3.521 B gzip ohne, mit P9/P10-Regeln gemessen im Build) |
+| `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens (3.951 B gzip im integrierten Build, Grenze 6.000 B) |
 | `scripts/check-frequenz-budget.cjs` | Budget-Gate NFR-1/2/3 |
 | `tests/frequenz-presets.mjs` | 13 Vertragstests für Mapping, Flags, Storage, Laden |
 | `tests/markdown-lite.mjs` | 15 Vertragstests für den Markdown-Leser (inkl. Render des echten Quellendokuments) |
@@ -47,9 +47,9 @@ Zehn bestehende Teststellen zählten sechs Startseiten-Karten; sie erwarten jetz
 
 ### 2.1 Budget und Reserve (bewusst überwacht)
 
-NFR-1 (initialer statischer JS-Graph) ist mit **85.613 B von 86.275 B** gzip-9 zu **99,2 %** ausgelastet; die Reserve beträgt nur **662 B**. Das Gate in `scripts/check-frequenz-budget.cjs` schlägt bei Überschreitung fehl (Exitcode 1). Zusätzlich gibt es seit dem QA-Befund m-5 eine **Warnschwelle bei 95 % Auslastung** (`WARN_RATIO`): Bleibt das Budget eingehalten, aber die Reserve unter 5 %, zeigt die Tabelle `WARN`, das Skript schreibt eine Warnzeile ins Log und der Lauf bleibt grün — so wird die Warnung nicht als Fehlschlag umgangen und trotzdem sichtbar.
+NFR-1 (initialer statischer JS-Graph) ist mit **85.822 B von 86.275 B** gzip-9 zu **99,5 %** ausgelastet; die Reserve beträgt nur **453 B**. Das Gate in `scripts/check-frequenz-budget.cjs` schlägt bei Überschreitung fehl (Exitcode 1). Zusätzlich gibt es seit dem QA-Befund m-5 eine **Warnschwelle bei 95 % Auslastung** (`WARN_RATIO`): Bleibt das Budget eingehalten, aber die Reserve unter 5 %, zeigt die Tabelle `WARN`, das Skript schreibt eine Warnzeile ins Log und der Lauf bleibt grün — so wird die Warnung nicht als Fehlschlag umgangen und trotzdem sichtbar.
 
-Die Reserve ist damit bewusst klein und dauerhaft beobachtet: Jede weitere statische Zeile im Initialpfad (`js/main.js` und dessen statische Importe) muss gegen diese 662 B gerechnet werden. Feature-Code gehört in die Lazy-Module (`js/modules/frequenz*.js`, NFR-2 hat großen Abstand). Aufruf: `npm run check:frequenz-budget`, im CI-Job `unit-test` verankert.
+Die Reserve ist damit bewusst klein und dauerhaft beobachtet: Jede weitere statische Zeile im Initialpfad (`js/main.js` und dessen statische Importe) muss gegen diese 453 B gerechnet werden. Feature-Code gehört in die Lazy-Module (`js/modules/frequenz*.js`, NFR-2 hat großen Abstand). Aufruf: `npm run check:frequenz-budget`, im CI-Job `unit-test` verankert.
 
 ### 2.2 Testinfrastruktur: dedizierter Port, kein Server-Reuse
 
@@ -147,13 +147,14 @@ Screenshots: `hub-360/768/1440.png`, `lab-360/768/1440.png`, `lab-360-scrolled.p
 
 | Suite | Befehl | Ergebnis |
 | --- | --- | --- |
-| Engine + Presets/Flags | `npm run test:frequenz` | **34 pass, 0 fail** (21 Engine E1–E20, 13 Presets P1–P8) |
+| Engine + Presets/Flags + Modelle | `npm run test:frequenz` | **67 pass, 0 fail** (21 Engine E1–E20, 13 Presets P1–P8, 15 Markdown, 8 Chladni C1–C8, 10 Meditation M1–M9) |
 | UI-Browserfälle | `npx playwright test tests/frequenzlabor.spec.js` | **16 pass, 0 fail** (U1–U16; U15/U16 kamen mit `t_b78a89a5`/`t_f2a0868c` hinzu) |
-| Vollständige Browser-Suite | `npm run test:e2e` (Port 3310, eigener Serverstart) | **89 pass, 0 fail** (inkl. Astrologie, Mond, Tarot, Smoke) |
-| Offline-Datei | `npm run test:offline` | **2 pass** (inkl. eingebettetem `#local-frequencies-data`) |
+| Folgestufe P9/P10 (Browser) | `npx playwright test tests/frequenzlabor-p9-p10.spec.js` | **19 pass, 0 fail** |
+| Vollständige Browser-Suite | `E2E_PORT=3441 CI=1 npm run test:e2e` | **113 pass, 0 fail** in 11 Dateien (inkl. Astrologie, Mond, Tarot, Smoke, Link-Check) |
+| Offline-Datei | `npm run test:offline` | **2 pass** (inkl. eingebettetem `#local-frequencies-data` und Quellendokument) |
 | Lokaler Einstieg | `node --test tests/local-entry.cjs` | **6 pass, 2 skip** (7 Karten, 6 Module) |
-| Budget | `npm run check:frequenz-budget` | NFR-1 85.613 B / 86.275 B (**WARN**, 99,2 % Auslastung) · NFR-2 28.843 B / 100.000 B · NFR-3 2.903 B / 6.000 B (Stand nach Pause-Ergänzung und Testinfra, §2.1) |
-| Lint/Format | `npm run lint`, `npx prettier --check` | 0 Fehler |
+| Budget | `npm run check:frequenz-budget` | NFR-1 85.822 B / 86.275 B (**WARN**, 99,5 % Auslastung, Reserve 453 B) · NFR-2 47.002 B / 100.000 B · NFR-3 3.951 B / 6.000 B (integrierter Stand, §2.1) |
+| Lint/Format | `npm run lint`, `npm run format:check` | 0 Fehler, Prettier clean |
 
 Konsole: U1 prüft `console.error`/`pageerror` auf beiden Ansichten. Zusätzlich lief ein eigener Konsolen-Probe über beide Ansichten bei 360/768/1440 px mit Filterwechsel, Preset-Play, Sweep, Schwebung, Binaural, 432-Hz-Vergleich, Wellenform- und Pegelwechsel: **0 Meldungen** (`error`, `warning`, `pageerror`, `requestfailed`).
 
@@ -171,7 +172,7 @@ Konsole: U1 prüft `console.error`/`pageerror` auf beiden Ansichten. Zusätzlich
 
 ## 11. Offene Grenzen
 
-- Kein Test auf echten Audiogeräten, in Safari/iOS oder mit manuellem Screenreader — QA-Ticket `t_835bd1e9`.
+- Kein Test auf echten Audiogeräten, in Safari/iOS oder mit manuellem Screenreader. Die Eigentümerabnahme A5 (`t_4a8106de`, 03.11.2026) erfolgte ausdrücklich als Betreiber-Freigabe ohne vollständige Protokollbögen; Belegklasse, Restrisiken und der offene Major-Befund R2-1 (`t_26387037`) stehen in [qa-restrisiken-r1r3.md](qa-restrisiken-r1r3.md) §10.
 - Hash-Routen bleiben nicht indexierbar (ADR AD-8); die P11-Entscheidung dazu ist gefallen (keine statische Landingpage, ADR §10, Umsetzung §12).
 - `localStorage` wird nur auf `change`/`blur` geschrieben; blockierte Speicherung deaktiviert die Persistenz, nicht das Labor.
 - Die 1-Hz-Frequenzgenauigkeit ist keine UI-Eigenschaft; sie wird über `OfflineAudioContext` im Engine-Ticket gemessen (ADR §9.1/E18), nicht über den AnalyserNode.
@@ -203,7 +204,7 @@ Die Links stehen in `.fq-prose`/`.fq-lede`/`.fq-note`, sind unterstrichen (WCAG 
 
 **Umsetzungsentscheidung: gerenderte Ansicht statt nur Dateikopie.** Die Kopie der Markdown-Datei allein hätte den 404 behoben, aber rohes Markdown ausgeliefert. Deshalb liest `#frequenzen/quellen` dieselbe Datei und rendert sie; es entsteht keine zweite Textfassung, die driften könnte. Ein handgeschriebener Markdown-Leser statt einer neuen Abhängigkeit hält den Build offline-fähig und ohne Supply-Chain-Zuwachs (`dependencies` unverändert: nur `express`).
 
-**Tests (tatsächliche Läufe am 2026-11-03, Chromium 156, Node 24.13 lokal / 20 in CI):**
+**Tests (tatsächliche Läufe des P11-Tickets am 2026-11-03, Chromium 156, Node 24.13 lokal / 20 in CI; integrierter Gesamtstand in §8):**
 
 | Prüfung | Befehl | Ergebnis |
 | --- | --- | --- |
@@ -217,8 +218,9 @@ Die Links stehen in `.fq-prose`/`.fq-lede`/`.fq-note`, sind unterstrichen (WCAG 
 | Lighthouse Accessibility | `npx lighthouse … --only-categories=accessibility` | `#frequenzen` **100**, `#frequenzen/labor` **100**, `#frequenzen/quellen` **100** (jeweils 0 fehlgeschlagene Audits, Lighthouse 12.6.1) |
 
 **Grenzen:** Der Markdown-Leser deckt die im Dokument verwendeten Konstrukte ab (Überschriften, Absätze, Listen, Tabellen, Codeblöcke, Zitate, Trennlinien, inline Code/Fett/Kursiv/Links, nackte URLs). Neue Konstrukte wie Bilder, Fußnoten oder Referenzlinks würden als Text erscheinen statt zu brechen; der Test „Das echte Quellendokument rendert vollständig“ schlägt fehl, sobald eine künftige Fassung Elemente einführt, die er nicht kennt.
+
 ## 13. Folgestufe P9/P10
 
-Der ADR-Nachtrag §13 liefert die zweite Stufe aus: `#frequenzen/cymatics` (Chladni-Muster als idealisiertes Modell, ohne Frequenzzuordnung) und `#frequenzen/meditation` (Sitzung mit Timer, Fades, lokalen Favoriten und Wiederaufnahme). Beide Ansichten hängen an den vorhandenen Flags, werden per dynamischem `import()` geladen und verändern den Initialgraphen nicht (NFR-1 unverändert 85.613 B).
+Der ADR-Nachtrag §13 liefert die zweite Stufe aus: `#frequenzen/cymatics` (Chladni-Muster als idealisiertes Modell, ohne Frequenzzuordnung) und `#frequenzen/meditation` (Sitzung mit Timer, Fades, lokalen Favoriten und Wiederaufnahme). Beide Ansichten hängen an den vorhandenen Flags, werden per dynamischem `import()` geladen und verändern den Initialgraphen nicht (NFR-1 im integrierten Build 85.822 B; der Zuwachs gegenüber 85.613 B stammt aus P11, nicht aus P9/P10).
 
 Umsetzung, Messwerte, Testmatrix und Grenzen stehen in [frequenzlabor-p9-p10.md](frequenzlabor-p9-p10.md). Für dieses Dokument ändern sich drei Punkte: die Kategorie hat fünf statt drei Ansichten, die Bereichsnavigation ergänzt bei aktiven Flags `Chladni-Muster` und `Meditation` (weiterhin genau ein `aria-current="page"`), und das Stylesheet wächst um die P9/P10-Regeln (im Build gemessen, Grenze 6.000 B).
