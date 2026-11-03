@@ -49,7 +49,7 @@ Weiteres Verhalten:
 | --- | --- |
 | leer | Leerzustand, keine Meldung |
 | defektes JSON / falscher Umschlag | Rohwert unter `esot_rad_corrupt_esot_rad_journal_v1_<stamp>` gesichert, Schlüssel geleert, Meldung in der Live-Region, kein Throw |
-| Schema > 1 | wird **nicht** überschrieben, nur gemeldet |
+| Schema > 1 | wird **nicht** überschrieben: Speichern, Import und Laufübernahme sind blockiert, bis die neuere Version geladen ist |
 | Quota voll | Meldung „Speicher voll — exportieren und alte Einträge löschen“; Eintrag gilt sichtbar nur für die Sitzung |
 | kein `localStorage` (privat, `file://` gesperrt) | In-Memory-Fallback, sichtbarer Hinweis „nur für diese Sitzung“ |
 | > 500 Einträge in der Datei | lädt die ersten 500 und meldet das; Schreiben über 500 wird abgelehnt |
@@ -77,9 +77,9 @@ Weiteres Verhalten:
 | Datei | Zeilen | Inhalt |
 | --- | --- | --- |
 | `js/modules/journal-speicher.js` | 491 | Umschlag, Defekt-/Schema-/Quota-Behandlung, Listenoperationen, `buildEntry`, CSV/JSON, Import, Zusammenführung, Löschung (DOM-frei) |
-| `js/modules/pendel-journal.js` | 921 | Bedienung: Formular, Liste, Bearbeiten, Löschen, Export/Import, Laborübernahme, Live-Region, `destroy()` |
+| `js/modules/pendel-journal.js` | 938 | Bedienung: Formular, Liste, Bearbeiten, Löschen, Export/Import, Laborübernahme, Schema-Schutz, Live-Region, `destroy()` |
 | `tests/journal-speicher.mjs` | 646 | 26 Node-Tests (Speicher, CRUD-Hilfen, Vertrag, Laufbezug, CSV/JSON, Import, Löschung, Route/Ansicht) |
-| `tests/pendel-journal.spec.js` | 529 | 9 Browsertests (CRUD, Grenzen/XSS, Export/Import, Löschung, Laborübernahme, mobil, gesperrter Speicher, `file://`) |
+| `tests/pendel-journal.spec.js` | 555 | 10 Browsertests (CRUD, Grenzen/XSS, Export/Import, Löschung, Laborübernahme, mobil, gesperrter Speicher, neueres Schema, `file://`) |
 
 Geändert: `radiasthesie-views.js` (`renderJournal`), `radiasthesie-model.js`
 (Route), `radiasthesie-format.js` (`ROUTE.journal`), `radiasthesie.js`
@@ -93,7 +93,7 @@ Geändert: `radiasthesie-views.js` (`renderJournal`), `radiasthesie-model.js`
 (Route + Werkstattzahl), `Lokal.html` (generiert).
 
 SHA-256 (Kurzform, committeter Stand): `journal-speicher.js`
-`b0980168706df717`, `pendel-journal.js` `d6db7e066f3c93b6`,
+`b0980168706df717`, `pendel-journal.js` `1d86e341a796f7b5`,
 `css/radiasthesie.css` `a70c74560d303dc8`, `radiasthesie-views.js`
 `36e8d83e9f4b3888`.
 
@@ -102,7 +102,9 @@ SHA-256 (Kurzform, committeter Stand): `journal-speicher.js`
 | Commit | Inhalt |
 | --- | --- |
 | `de93baa` | Feature, Tests, Werkstatt-Karte/Inhalt, generierter Offline-Build |
-| dieser Commit | Checkpoint und Browser-Nachweise (Screenshots) |
+| `5a9b3e0` | Fix: neueres Schema blockiert Schreiben, Import und Übernahme; neuer Browsertest |
+| `ac143e7` | Checkpoint und erste Browser-Nachweise |
+| dieser Commit | aktualisierte Nachweise und Testzahlen |
 
 Basis: `589a387` (RAD-09 Checkpoint). Kein Push.
 
@@ -113,7 +115,7 @@ Alles unten wurde in diesem Lauf ausgeführt; Ausgaben sind nicht rekonstruiert.
 | Prüfung | Ergebnis |
 | --- | --- |
 | `node --test tests/journal-speicher.mjs` | **26/26** |
-| `npx playwright test tests/pendel-journal.spec.js` (E2E_PORT=3418) | **9/9** |
+| `npx playwright test tests/pendel-journal.spec.js` (E2E_PORT=3418) | **10/10** |
 | `npm run test:unit` (Jest) | 2/2 |
 | `npm run test:pages` | 6/6 |
 | `npm run test:crystals` / `test:astrologie` | 9/9 · 21/21 |
@@ -124,7 +126,7 @@ Alles unten wurde in diesem Lauf ausgeführt; Ausgaben sind nicht rekonstruiert.
 | `npm run test:radiasthesie:experiment` | 24/24 |
 | `npm run test:tarot` / `:decks` / `test:moon` | 11/11 · 12/12 · 14/14 |
 | `npm run test:offline` | 2/2 (Chromium, `file://`) |
-| `E2E_PORT=3418 npm run test:e2e` | **131/131** (122 bestehende + 9 neue RAD-10) |
+| `E2E_PORT=3418 npm run test:e2e` | **132/132** (122 bestehende + 10 neue RAD-10) |
 | `npm run lint` | 0 Fehler, 0 Warnungen |
 | `npx prettier --check` (alle eigenen Dateien) | sauber |
 | `npm run build` / `build:local` | grün, genau ein Offline-Bundle |
@@ -153,7 +155,8 @@ Ablehnung von leerem Datum, zu kurzer Frage und fehlender Vorhersage, JSON-
 und CSV-Download (Envelope, BOM, `;`, CRLF, Quoting), Import per Textarea und
 Datei, atomare Ablehnung, Löschung aller `esot_rad_`-Schlüssel bei Erhalt
 fremder Schlüssel, Übernahme eines echten 20-Versuche-Laufs ohne Veränderung
-des Laufs, gesperrter `localStorage` mit Sitzungshinweis.
+des Laufs, gesperrter `localStorage` mit Sitzungshinweis, neueres Schema ohne
+Überschreiben.
 
 ## 6. Restpunkte / offene Befunde
 
