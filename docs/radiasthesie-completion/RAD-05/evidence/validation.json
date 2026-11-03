@@ -1,0 +1,18 @@
+{
+  "manifest": "assets/radiasthesie/media/media-manifest.json",
+  "manifest_sha256": "98a2cd2808155091d2178b745b56585e49fc0dca34bd11a9f6464bd16c483217",
+  "geprueft_am": "2026-11-02T23:45:30Z",
+  "motive": 6,
+  "varianten": 24,
+  "originale_auf_platte": 6,
+  "varianten_auf_platte": 24,
+  "lizenz_urls": {
+    "https://commons.wikimedia.org/wiki/Template:PD-Art": 200,
+    "https://commons.wikimedia.org/wiki/Template:PD-old": 200,
+    "https://creativecommons.org/licenses/by-sa/3.0/": 200,
+    "https://creativecommons.org/publicdomain/zero/1.0/deed.de": 200
+  },
+  "errors": [],
+  "warnings": [],
+  "ergebnis": "bestanden"
+}

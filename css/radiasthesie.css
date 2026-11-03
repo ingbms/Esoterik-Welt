@@ -660,6 +660,32 @@
   color: var(--color-primary);
 }
 
+/* --- Themenvernetzung ---------------------------------------------------
+   Die Startseite zeigt vorhandene Anschlüsse und benannte Lücken getrennt.
+   Lücken bleiben unverlinkt: Ein ähnliches Kapitel ersetzt keinen fehlenden
+   Anschluss.
+   ------------------------------------------------------------------------ */
+
+.rad-related-item--pending {
+  border-left-style: dashed;
+  border-left-color: var(--color-border);
+}
+
+.rad-related-item--pending .rad-related-type {
+  color: var(--color-text-secondary);
+}
+
+.rad-related-item--pending h3 {
+  color: var(--color-text-primary);
+}
+
+.rad-subtitle {
+  margin: var(--space-8) 0 var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
 /* --- Werkstatt-Teaser ---------------------------------------------------
    Verweist auf die interaktiven Module. Ein Teaser nennt seinen Zustand
    (verfügbar / in Vorbereitung) im Text, nicht nur über eine Farbe.

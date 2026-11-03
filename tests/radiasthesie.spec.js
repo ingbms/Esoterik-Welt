@@ -146,7 +146,7 @@ test('Kapitel-Deep-Link scrollt zum Abschnitt und setzt den Fokus', async ({ pag
 test('Glossar filtert beim Tippen und behält den Filter in der Adresse', async ({ page }) => {
   await page.goto(url('#pendeln/glossar'));
   const root = page.locator('#pendelnRoot');
-  await expect(root.locator('.astro-term')).toHaveCount(13);
+  await expect(root.locator('.astro-term')).toHaveCount(17);
   const input = root.locator('#glossarSuche');
   await input.fill('bovis');
   await expect(root.locator('.astro-term')).toHaveCount(1);
@@ -167,7 +167,7 @@ test('Quellen-Deeplink hebt die zitierte Quelle hervor', async ({ page }) => {
   const target = page.locator('#pendelnRoot .astro-source-card.is-target');
   await expect(target).toHaveCount(1);
   await expect(target).toBeInViewport();
-  await expect(page.locator('#pendelnRoot .astro-source-card')).toHaveCount(33);
+  await expect(page.locator('#pendelnRoot .astro-source-card')).toHaveCount(66);
 });
 
 test('Suche, Fehleransicht und leere Suche führen zurück', async ({ page }) => {

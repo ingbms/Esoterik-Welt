@@ -72,14 +72,47 @@ test('Taxonomie und Gesamtdatensatz sind vertragskonform', () => {
     studien: 7,
     medien: 10,
     experimente: 3,
+    vernetzung: 9,
   });
+});
+
+test('Vernetzung: offene Einträge brauchen eine Entscheidung und keine Route', () => {
+  const topicIds = Object.keys(RADIASTHESIE.topics);
+  const sourceIds = RADIASTHESIE.sources.map((source) => source.id);
+  const check = (vernetzung) => {
+    const taxonomy = clone(RADIASTHESIE.taxonomie);
+    taxonomy.vernetzung = vernetzung;
+    return contracts.validateTaxonomie(taxonomy, { topicIds, sourceIds });
+  };
+
+  const broken = clone(RADIASTHESIE.taxonomie.vernetzung);
+  const gap = broken.find((entry) => entry.status === 'offen');
+  assert.ok(gap, 'eine offene Lücke muss es geben');
+  gap.href = '#pendeln/geomantie';
+  gap.decision = '';
+  const result = check(broken);
+  assert.equal(result.ok, false);
+  assert.ok(
+    result.errors.some((error) => /href/.test(error.path)),
+    'Lücke mit Route muss abgelehnt werden'
+  );
+  assert.ok(
+    result.errors.some((error) => /decision/.test(error.path)),
+    'fehlende Entscheidung muss abgelehnt werden'
+  );
+
+  const missingTopic = clone(RADIASTHESIE.taxonomie.vernetzung);
+  missingTopic[1].topics = ['geomantie'];
+  assert.equal(check(missingTopic).ok, false, 'unbekanntes Thema muss abgelehnt werden');
+
+  assert.equal(check(clone(RADIASTHESIE.taxonomie.vernetzung)).ok, true, 'Bestand muss gültig bleiben');
 });
 
 test('bestehendes Artikel- und Quellenmodell bleibt unverändert nutzbar', () => {
   assert.deepEqual(Object.keys(RADIASTHESIE.topics).sort(), ['orakel', 'pendeln', 'radiasthesie']);
   assert.equal(
     Object.values(RADIASTHESIE.topics).reduce((sum, topic) => sum + topic.sections.length, 0),
-    31
+    32
   );
   assert.equal(RADIASTHESIE.sources.length, 66);
   assert.equal(

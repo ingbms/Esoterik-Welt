@@ -31,7 +31,8 @@ const MODULE_FILES = [
 ];
 
 const TOPIC_SLUGS = ['radiasthesie', 'pendeln', 'orakel'];
-const CHAPTER_COUNTS = { radiasthesie: 9, pendeln: 10, orakel: 12 };
+const CHAPTER_COUNTS = { radiasthesie: 10, pendeln: 10, orakel: 12 };
+const MAIN_ROUTES = new Set(['#tarot', '#crystals', '#moon', '#runes', '#astrologie', '#blog']);
 
 let tmp;
 let views;
@@ -251,6 +252,95 @@ test('Themenseite verlinkt nicht auf sich selbst als verwandt', () => {
     assert.ok(!related.includes(`href="#pendeln/${slug}"`), `${slug}: Selbstverweis`);
     assert.ok(related.includes('href="#pendeln/glossar"'), `${slug}: Glossarverweis fehlt`);
   }
+});
+
+// --- Themenvernetzung (RAD-11) -------------------------------------------
+
+test('Themenvernetzung: alle acht Auftragsthemen sind verortet oder als Lücke entschieden', () => {
+  const network = data.RADIASTHESIE.vernetzung;
+  const ids = network.map((entry) => entry.id);
+  for (const required of ['frequenzen', 'geomantie', 'kraftorte', 'chakren', 'tarot', 'runen', 'iging', 'astrologie']) {
+    assert.ok(ids.includes(required), `Auftragsthema ${required} fehlt in der Vernetzung`);
+  }
+  for (const entry of network) {
+    assert.ok(entry.note.length > 20, `${entry.id}: Kurztext fehlt`);
+    assert.ok(entry.abgrenzung.length > 20, `${entry.id}: Abgrenzung fehlt`);
+    if (entry.status === 'offen') {
+      assert.equal(entry.href, '', `${entry.id}: Lücke darf keine Route tragen`);
+      assert.equal(entry.pending, true, `${entry.id}: Lücke muss als offen gerendert werden`);
+      assert.ok(entry.decision.length > 20, `${entry.id}: Zielentscheidung fehlt`);
+    } else {
+      assert.match(entry.href, /^#[a-z0-9][a-z0-9/-]*$/i, `${entry.id}: Route fehlt`);
+      assert.equal(entry.pending, false, `${entry.id}: verfügbarer Eintrag ist als Lücke markiert`);
+    }
+  }
+});
+
+test('jede verlinkte Vernetzungsroute löst auf und ist eindeutig', () => {
+  const seen = new Set();
+  for (const entry of data.RADIASTHESIE.vernetzung) {
+    if (entry.status !== 'verfuegbar') continue;
+    assert.ok(!seen.has(entry.href), `Route doppelt verlinkt: ${entry.href}`);
+    seen.add(entry.href);
+    if (MAIN_ROUTES.has(entry.href)) continue;
+    const [path, query = ''] = entry.href.replace(/^#/, '').split('?');
+    const segments = path.split('/').filter(Boolean);
+    assert.equal(segments[0], 'pendeln', `${entry.id}: fremde Route ${entry.href}`);
+    const route = model.resolve(segments.slice(1), query);
+    assert.notEqual(route.view, 'notfound', `${entry.id}: ${entry.href} ist unbekannt`);
+  }
+});
+
+test('Landingpage trennt vorhandene Anschlüsse von benannten Lücken', () => {
+  const html = htmlOf(views.renderLanding(model));
+  assert.ok(html.includes('Verwandte Themen'), 'Abschnitt fehlt');
+  assert.ok(html.includes('Bewusste Lücken'), 'Lückenabschnitt fehlt');
+  assert.ok(html.includes('href="#tarot"'), 'Tarot fehlt');
+  assert.ok(html.includes('href="#pendeln/radiasthesie/frequenz"'), 'Frequenzkapitel fehlt');
+  assert.ok(html.includes('Geomantie'), 'Geomantie fehlt');
+  assert.ok(html.includes('Kraftorte'), 'Kraftorte fehlt');
+  const gaps = data.RADIASTHESIE.vernetzung.filter((entry) => entry.pending);
+  assert.equal(gaps.length, 2, 'genau zwei benannte Lücken');
+  for (const gap of gaps) {
+    assert.ok(!html.includes(`href="#${gap.id}"`), `${gap.id}: Lücke darf keinen Link haben`);
+  }
+  assert.match(html, /Nicht angeschlossen/);
+});
+
+test('jede Themenseite verlinkt mindestens zwei andere Module (IA §9)', () => {
+  for (const slug of TOPIC_SLUGS) {
+    const html = htmlOf(views.renderTopic(model, model.topics[slug]));
+    const related = html.slice(html.indexOf('Weiterlesen'));
+    const modules = new Set(
+      [...related.matchAll(/href="#(tarot|crystals|moon|runes|astrologie|blog)"/g)].map((match) => match[1])
+    );
+    assert.ok(modules.size >= 2, `${slug}: nur ${[...modules].join(', ') || 'keine'} Fremdmodule verlinkt`);
+    assert.ok(related.includes('Glossar'), `${slug}: Glossarverweis fehlt`);
+    assert.ok(count(related, /class="rad-related-item"/g) <= 5, `${slug}: mehr als fünf Weiterlesen-Karten`);
+  }
+});
+
+test('Frequenz, Schwingung und Bovis bleiben getrennt (Auftrag RAD-11)', () => {
+  const page = htmlOf(views.renderTopic(model, model.topics.radiasthesie));
+  assert.ok(page.includes('Frequenz, Schwingung, Skala'), 'Grenzkapitel fehlt');
+  assert.match(page, /Frequenz in Hertz/);
+  assert.match(page, /keine SI-Einheit/);
+  assert.match(page, /nicht gleichgesetzt/);
+  // Absatzweise: kein Absatz stellt Bovis und eine physikalische Einheit
+  // nebeneinander — auch nicht über einen Absatzwechsel hinweg.
+  const paragraphs = page.split(/<\/(?:p|li|dd)>/).map((chunk) => chunk.replace(/<[^>]+>/g, ' '));
+  for (const paragraph of paragraphs) {
+    if (!/Bovis/.test(paragraph)) continue;
+    assert.doesNotMatch(
+      paragraph,
+      /\bHz\b|Hertz|Tesla/i,
+      `Bovis im selben Absatz wie eine Einheit: ${paragraph.slice(0, 160)}`
+    );
+  }
+  // Ein Deep-Link auf das neue Kapitel löst auf.
+  const route = model.resolve(['radiasthesie', 'frequenz']);
+  assert.equal(route.view, 'topic');
+  assert.equal(route.anchor, 'frequenz');
 });
 
 test('Glossar: Buchstabenleiste, Suche und 17 Begriffe', () => {

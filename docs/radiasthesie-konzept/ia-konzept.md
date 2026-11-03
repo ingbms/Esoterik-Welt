@@ -237,7 +237,8 @@ Reihenfolge (verbindlich):
    und einem Link.
 4. Stufenlegende A–E.
 5. Werkstatt-Teaser (drei Karten mit Zustand im Text).
-6. Verwandte Bereiche (Tarot, Astrologie, Kristalle) mit Typzeile.
+6. Verwandte Themen mit Typzeile: sieben vorhandene Anschlüsse und die zwei
+   benannten Lücken (Geomantie, Kraftorte) ohne Link.
 7. Einordnungskasten (drei Absätze).
 
 Kein Inhaltsverzeichnis auf der Landingpage — sie ist kurz genug, und ein
@@ -254,7 +255,8 @@ Verzeichnis würde die drei Einstiege konkurrenzieren.
 5. Kapitel als `<section>` mit H2, Fließtext, ggf. Instrumententafel, Hinweisbox,
    Schrittliste, Evidenztafel.
 6. Aufklappbares Quellenpanel.
-7. „Weiterlesen“ (drei Verweise).
+7. „Weiterlesen“ (drei bis fünf Verweise: verknüpfte Themen mit Abgrenzung,
+   ein Nachbarthema, Glossar).
 8. Einordnungskasten.
 9. Seitenleiste: Inhaltsverzeichnis (sticky ab 1200 px), Kasten mit vier Kennzahlen
    und Link auf die Methodik.
@@ -363,3 +365,14 @@ Funktionen (Daten → HTML) gedacht sind.
 - Quellenmarker `[Sxx]` im Text sind Links auf `#pendeln/quellen` (Anker `#quelle-Sxx`).
 - Jede Quellenkarte verlinkt zurück auf die Seiten, die sie verwenden.
 - Keine Sackgassen: Fehleransicht, Suche und Glossar führen immer zurück zur Übersicht.
+
+### Umsetzungsstand der Vernetzung (RAD-11)
+
+Die Liste der verwandten Themen steht als `vernetzung` in
+`docs/radiasthesie-konzept/daten/taxonomie.json`; der Generator löst jede Route
+gegen die vorhandenen Kapitel auf und bricht bei einem toten Anker ab. Die
+Startseite zeigt alle Einträge, jede Themenseite die für sie hinterlegten. Ein
+Thema ohne Bestand (Geomantie, Kraftorte) ist als Lücke mit dokumentierter
+Zielentscheidung geführt und wird **nicht** auf ein ähnliches Kapitel
+umgebogen. Die Rückrichtung in das Modul trägt der websiteweite Footer
+(„Radiästhesie & Pendeln“); die anderen Module bleiben unverändert.

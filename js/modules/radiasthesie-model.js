@@ -236,6 +236,7 @@ export function createModel(raw) {
     sources: data.sources || [],
     sourceById,
     sourceLegend: data.sourceLegend || [],
+    vernetzung: data.vernetzung || [],
     glossaryTerms,
     stats,
     resolve,

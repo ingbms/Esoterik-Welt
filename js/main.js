@@ -447,6 +447,11 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
       silent,
       hash: `#${route.raw}`,
       subroute: { segments: route.segments, query: route.query },
+      // Kaltstart mit Kapitel-Anker (RAD-11): Ein Deep-Link soll nicht nur
+      // scrollen, sondern den Fokus auf die Zielüberschrift setzen. Der Router
+      // rendert hier still, damit die Adresse nicht erneut geschrieben wird;
+      // ohne dieses Flag bliebe der Fokus auf <body>.
+      deepLinkFocus: route.segments.length > 0,
     });
     return;
   }
@@ -461,7 +466,7 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
 function navigateTo(
   pageId,
   replace = false,
-  { fromHistory = false, instant = false, silent = false, hash = null, subroute = null } = {}
+  { fromHistory = false, instant = false, silent = false, hash = null, subroute = null, deepLinkFocus = false } = {}
 ) {
   // Update active states
   elements.pages.forEach((page) => {
@@ -488,7 +493,7 @@ function navigateTo(
   const module = state.modules[pageId];
   if (module && typeof module.show === 'function') {
     const pending = module.show(subroute ? subroute.segments : [], subroute ? subroute.query : '', {
-      focus: !silent,
+      focus: !silent || deepLinkFocus,
     });
     if (pending && typeof pending.catch === 'function') {
       pending.catch((error) => console.error('Ansicht konnte nicht gerendert werden', error));

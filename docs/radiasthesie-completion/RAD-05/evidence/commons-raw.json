@@ -1,0 +1,792 @@
+{
+  "klassisches-pendel": {
+    "key": "klassisches-pendel",
+    "title": "File:Radiesthetic pendulum.jpg",
+    "api_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Csha1%7Cextmetadata%7Cmediatype&titles=File%3ARadiesthetic+pendulum.jpg&iiextmetadatalanguage=de",
+    "page_missing": false,
+    "pageid": 4608931,
+    "canonical_title": "File:Radiesthetic pendulum.jpg",
+    "raw": {
+      "batchcomplete": true,
+      "query": {
+        "pages": [
+          {
+            "pageid": 4608931,
+            "ns": 6,
+            "title": "File:Radiesthetic pendulum.jpg",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "size": 168315,
+                "width": 1784,
+                "height": 1468,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Radiesthetic_pendulum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Radiesthetic_pendulum.jpg",
+                "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=4608931",
+                "sha1": "1147b6087129a520463046ee012b1abce9f05aef",
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2008-08-23 00:18:49",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Radiesthetic pendulum",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "GFDL|Pendulums|Dowsing|License migration redundant|Self-published work",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "Radiesthetic pendulum.",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "2008-08-23",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "<a href=\"//commons.wikimedia.org/wiki/User:Carivaldi\" title=\"User:Carivaldi\">Carivaldi</a>",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "CC BY-SA 3.0",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Creative Commons Attribution-Share Alike 3.0",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "true",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "LicenseUrl": {
+                    "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                    "source": "commons-desc-page"
+                  },
+                  "Copyrighted": {
+                    "value": "True",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "cc-by-sa-3.0",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                },
+                "mime": "image/jpeg",
+                "mediatype": "BITMAP"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "summary": {
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Radiesthetic_pendulum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "description_url": "https://commons.wikimedia.org/wiki/File:Radiesthetic_pendulum.jpg",
+      "mime": "image/jpeg",
+      "mediatype": "BITMAP",
+      "width": 1784,
+      "height": 1468,
+      "size_bytes": 168315,
+      "sha1": "1147b6087129a520463046ee012b1abce9f05aef",
+      "license_short": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Carivaldi\" title=\"User:Carivaldi\">Carivaldi</a>",
+      "credit_html": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+      "attribution_required": "true",
+      "restrictions": "",
+      "copyrighted": "True",
+      "license_heading": "cc-by-sa-3.0",
+      "object_name": "Radiesthetic pendulum",
+      "date_original": "2008-08-23",
+      "categories": "GFDL|Pendulums|Dowsing|License migration redundant|Self-published work",
+      "image_description": "Radiesthetic pendulum."
+    }
+  },
+  "universalpendel": {
+    "key": "universalpendel",
+    "title": "File:Universal pendulum E.jpg",
+    "api_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Csha1%7Cextmetadata%7Cmediatype&titles=File%3AUniversal+pendulum+E.jpg&iiextmetadatalanguage=de",
+    "page_missing": false,
+    "pageid": 21716606,
+    "canonical_title": "File:Universal pendulum E.jpg",
+    "raw": {
+      "batchcomplete": true,
+      "query": {
+        "pages": [
+          {
+            "pageid": 21716606,
+            "ns": 6,
+            "title": "File:Universal pendulum E.jpg",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "size": 1655496,
+                "width": 2108,
+                "height": 1776,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Universal_pendulum_E.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Universal_pendulum_E.jpg",
+                "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=21716606",
+                "sha1": "a7da8420c903c7ef20acb7b675a2108f6df77d9f",
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2012-09-28 15:26:14",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Universal pendulum E",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "Taken with Nikon D70|Pendulums|Esotericism|Dowsing|Self-published work",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "Universal pendulum. Result of radiesthetic research by A. de Belizal, L. Chaumery and P.A. Morel.",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "2012-09-28 14:50:35",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "<a href=\"//commons.wikimedia.org/wiki/User:Wouterhagens\" title=\"User:Wouterhagens\">Wouter Hagens</a>",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "CC BY-SA 3.0",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Creative Commons Attribution-Share Alike 3.0",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "true",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "LicenseUrl": {
+                    "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                    "source": "commons-desc-page"
+                  },
+                  "Copyrighted": {
+                    "value": "True",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "cc-by-sa-3.0",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                },
+                "mime": "image/jpeg",
+                "mediatype": "BITMAP"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "summary": {
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Universal_pendulum_E.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "description_url": "https://commons.wikimedia.org/wiki/File:Universal_pendulum_E.jpg",
+      "mime": "image/jpeg",
+      "mediatype": "BITMAP",
+      "width": 2108,
+      "height": 1776,
+      "size_bytes": 1655496,
+      "sha1": "a7da8420c903c7ef20acb7b675a2108f6df77d9f",
+      "license_short": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Wouterhagens\" title=\"User:Wouterhagens\">Wouter Hagens</a>",
+      "credit_html": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+      "attribution_required": "true",
+      "restrictions": "",
+      "copyrighted": "True",
+      "license_heading": "cc-by-sa-3.0",
+      "object_name": "Universal pendulum E",
+      "date_original": "2012-09-28 14:50:35",
+      "categories": "Taken with Nikon D70|Pendulums|Esotericism|Dowsing|Self-published work",
+      "image_description": "Universal pendulum. Result of radiesthetic research by A. de Belizal, L. Chaumery and P.A. Morel."
+    }
+  },
+  "radiasthesierute": {
+    "key": "radiasthesierute",
+    "title": "File:Varilla de radiestesia.JPG",
+    "api_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Csha1%7Cextmetadata%7Cmediatype&titles=File%3AVarilla+de+radiestesia.JPG&iiextmetadatalanguage=de",
+    "page_missing": false,
+    "pageid": 17876808,
+    "canonical_title": "File:Varilla de radiestesia.JPG",
+    "raw": {
+      "batchcomplete": true,
+      "query": {
+        "pages": [
+          {
+            "pageid": 17876808,
+            "ns": 6,
+            "title": "File:Varilla de radiestesia.JPG",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "size": 335929,
+                "width": 566,
+                "height": 425,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Varilla_de_radiestesia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Varilla_de_radiestesia.JPG",
+                "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17876808",
+                "sha1": "40a58fb0b29e07d3ada3ce21354467b091df5692",
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2012-01-01 23:22:05",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Varilla de radiestesia",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "Taken with Sony DSC-W1|CC-Zero|Dowsing|Self-published work",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "The new dowsing rod",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "08.07.2009",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "José Antonio Agraz Sandoval",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "CC0",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Creative Commons Zero, Public Domain Dedication",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "false",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "LicenseUrl": {
+                    "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                    "source": "commons-desc-page"
+                  },
+                  "Copyrighted": {
+                    "value": "True",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "cc0",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                },
+                "mime": "image/jpeg",
+                "mediatype": "BITMAP"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "summary": {
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Varilla_de_radiestesia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "description_url": "https://commons.wikimedia.org/wiki/File:Varilla_de_radiestesia.JPG",
+      "mime": "image/jpeg",
+      "mediatype": "BITMAP",
+      "width": 566,
+      "height": 425,
+      "size_bytes": 335929,
+      "sha1": "40a58fb0b29e07d3ada3ce21354467b091df5692",
+      "license_short": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "usage_terms": "Creative Commons Zero, Public Domain Dedication",
+      "artist_html": "José Antonio Agraz Sandoval",
+      "credit_html": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+      "attribution_required": "false",
+      "restrictions": "",
+      "copyrighted": "True",
+      "license_heading": "cc0",
+      "object_name": "Varilla de radiestesia",
+      "date_original": "08.07.2009",
+      "categories": "Taken with Sony DSC-W1|CC-Zero|Dowsing|Self-published work",
+      "image_description": "The new dowsing rod"
+    }
+  },
+  "wuenschelrute-historisch": {
+    "key": "wuenschelrute-historisch",
+    "title": "File:Divining Rod.jpg",
+    "api_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Csha1%7Cextmetadata%7Cmediatype&titles=File%3ADivining+Rod.jpg&iiextmetadatalanguage=de",
+    "page_missing": false,
+    "pageid": 46196771,
+    "canonical_title": "File:Divining Rod.jpg",
+    "raw": {
+      "continue": {
+        "iistart": "2016-01-07T16:41:18Z",
+        "continue": "||"
+      },
+      "query": {
+        "pages": [
+          {
+            "pageid": 46196771,
+            "ns": 6,
+            "title": "File:Divining Rod.jpg",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "size": 1110391,
+                "width": 1232,
+                "height": 741,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Divining_Rod.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Divining_Rod.jpg",
+                "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=46196771",
+                "sha1": "b29c59be770ee6ec6b98a3e7c47c70f53f97a53c",
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2021-03-24 15:46:10",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Divining Rod",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "Dowsing|PD Old|CC-PD-Mark|Images uploaded as part of NLW - WMUK collaboration|PD-old missing SDC copyright status|Scanned with i2s Digibook Suprascan 10000 A0 RGB|Drawings of people in A Tour in Wales",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "<p>An image from a set of 8 extra-illustrated volumes of A tour in Wales by Thomas Pennant (1726-1798) that chronicle the three journeys he made through Wales between 1773 and 1776. These volumes are unique because they were compiled for Pennant's own library at Downing. This edition was produced in 1781.\n</p><p>The volumes include a number of original drawings by Moses Griffiths, Ingleby and other well known artists of the period.\n</p>\nThomas Pennant (1726-1798)",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "2015-12-17 10:45:47",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<table style=\"width:100%;border:1px red solid; background:#f6f6f4; padding:0; margin:auto;\">\n\n<tbody><tr>\n<td align=\"left\"><span typeof=\"mw:File\"><span><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Library_of_Wales_logo.svg/500px-National_Library_of_Wales_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"400\" height=\"61\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Library_of_Wales_logo.svg/960px-National_Library_of_Wales_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"78\"></span></span>\n</td>\n<td>This image is available from the <big><b><a rel=\"nofollow\" class=\"external text\" href=\"https://www.library.wales/\">National Library of Wales</a></b></big><br>\n</td></tr></tbody></table>",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "Thomas Pennant",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "Public domain",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Public domain",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "false",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Copyrighted": {
+                    "value": "False",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "pd",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                },
+                "mime": "image/jpeg",
+                "mediatype": "BITMAP"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "summary": {
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Divining_Rod.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "description_url": "https://commons.wikimedia.org/wiki/File:Divining_Rod.jpg",
+      "mime": "image/jpeg",
+      "mediatype": "BITMAP",
+      "width": 1232,
+      "height": 741,
+      "size_bytes": 1110391,
+      "sha1": "b29c59be770ee6ec6b98a3e7c47c70f53f97a53c",
+      "license_short": "Public domain",
+      "license_url": null,
+      "usage_terms": "Public domain",
+      "artist_html": "Thomas Pennant",
+      "credit_html": "<table style=\"width:100%;border:1px red solid; background:#f6f6f4; padding:0; margin:auto;\">\n\n<tbody><tr>\n<td align=\"left\"><span typeof=\"mw:File\"><span><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Library_of_Wales_logo.svg/500px-National_Library_of_Wales_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"400\" height=\"61\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Library_of_Wales_logo.svg/960px-National_Library_of_Wales_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"78\"></span></span>\n</td>\n<td>This image is available from the <big><b><a rel=\"nofollow\" class=\"external text\" href=\"https://www.library.wales/\">National Library of Wales</a></b></big><br>\n</td></tr></tbody></table>",
+      "attribution_required": "false",
+      "restrictions": "",
+      "copyrighted": "False",
+      "license_heading": "pd",
+      "object_name": "Divining Rod",
+      "date_original": "2015-12-17 10:45:47",
+      "categories": "Dowsing|PD Old|CC-PD-Mark|Images uploaded as part of NLW - WMUK collaboration|PD-old missing SDC copyright status|Scanned with i2s Digibook Suprascan 10000 A0 RGB|Drawings of people in A Tour in Wales",
+      "image_description": "<p>An image from a set of 8 extra-illustrated volumes of A tour in Wales by Thomas Pennant (1726-1798) that chronicle the three journeys he made through Wales between 1773 and 1776. These volumes are unique because they were compiled for Pennant's own library at Downing. This edition was produced in 1781.\n</p><p>The volumes include a number of original drawings by Moses Griffiths, Ingleby and other well known artists of the period.\n</p>\nThomas Pennant (1726-1798)"
+    }
+  },
+  "tarot": {
+    "key": "tarot",
+    "title": "File:Tarot cards - 3 card spread with candles.jpg",
+    "api_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Csha1%7Cextmetadata%7Cmediatype&titles=File%3ATarot+cards+-+3+card+spread+with+candles.jpg&iiextmetadatalanguage=de",
+    "page_missing": false,
+    "pageid": 102323072,
+    "canonical_title": "File:Tarot cards - 3 card spread with candles.jpg",
+    "raw": {
+      "batchcomplete": true,
+      "query": {
+        "pages": [
+          {
+            "pageid": 102323072,
+            "ns": 6,
+            "title": "File:Tarot cards - 3 card spread with candles.jpg",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "size": 1861604,
+                "width": 3200,
+                "height": 2400,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Tarot_cards_-_3_card_spread_with_candles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tarot_cards_-_3_card_spread_with_candles.jpg",
+                "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=102323072",
+                "sha1": "631451d33eed4381273b04fe61851d276c3a0221",
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2021-03-25 21:04:39",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Tarot cards - 3 card spread with candles",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "CC-Zero|Tarot card reading|Self-published work",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "Photo of a 3 card tarot spread on a table with candles. The deck is the Smith-Waite Centennial Tarot Deck (a faithful reproduction of the original Rider-Waite-Smith deck from 1909).",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "2021-03-25 15:26:27",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "<a href=\"//commons.wikimedia.org/wiki/User:Nosferattus\" title=\"User:Nosferattus\">Nosferattus</a>",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "CC0",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Creative Commons Zero, Public Domain Dedication",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "false",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "LicenseUrl": {
+                    "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                    "source": "commons-desc-page"
+                  },
+                  "Copyrighted": {
+                    "value": "True",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "cc0",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                },
+                "mime": "image/jpeg",
+                "mediatype": "BITMAP"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "summary": {
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Tarot_cards_-_3_card_spread_with_candles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "description_url": "https://commons.wikimedia.org/wiki/File:Tarot_cards_-_3_card_spread_with_candles.jpg",
+      "mime": "image/jpeg",
+      "mediatype": "BITMAP",
+      "width": 3200,
+      "height": 2400,
+      "size_bytes": 1861604,
+      "sha1": "631451d33eed4381273b04fe61851d276c3a0221",
+      "license_short": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "usage_terms": "Creative Commons Zero, Public Domain Dedication",
+      "artist_html": "<a href=\"//commons.wikimedia.org/wiki/User:Nosferattus\" title=\"User:Nosferattus\">Nosferattus</a>",
+      "credit_html": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+      "attribution_required": "false",
+      "restrictions": "",
+      "copyrighted": "True",
+      "license_heading": "cc0",
+      "object_name": "Tarot cards - 3 card spread with candles",
+      "date_original": "2021-03-25 15:26:27",
+      "categories": "CC-Zero|Tarot card reading|Self-published work",
+      "image_description": "Photo of a 3 card tarot spread on a table with candles. The deck is the Smith-Waite Centennial Tarot Deck (a faithful reproduction of the original Rider-Waite-Smith deck from 1909)."
+    }
+  },
+  "ouija-historisch": {
+    "key": "ouija-historisch",
+    "title": "File:Ouija board - Kennard Novelty Company.png",
+    "api_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Csha1%7Cextmetadata%7Cmediatype&titles=File%3AOuija+board+-+Kennard+Novelty+Company.png&iiextmetadatalanguage=de",
+    "page_missing": false,
+    "pageid": 88555005,
+    "canonical_title": "File:Ouija board - Kennard Novelty Company.png",
+    "raw": {
+      "continue": {
+        "iistart": "2020-03-25T17:15:42Z",
+        "continue": "||"
+      },
+      "query": {
+        "pages": [
+          {
+            "pageid": 88555005,
+            "ns": 6,
+            "title": "File:Ouija board - Kennard Novelty Company.png",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "size": 22414749,
+                "width": 4928,
+                "height": 3290,
+                "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Ouija_board_-_Kennard_Novelty_Company.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ouija_board_-_Kennard_Novelty_Company.png",
+                "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=88555005",
+                "sha1": "6eb9db8791e3779c0135f8e1dc44d0296cb392ef",
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2020-03-25 17:31:49",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Ouija board - Kennard Novelty Company",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "Ouija (board game)|PD-old-70-expired|PD-Art (PD-old-70-expired)|CC-PD-Mark|PD-Art missing SDC copyright status|PD-old missing SDC copyright status",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "A ouija board manufactured by the Kennard Novelty Company of Baltimore",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "etwa 1890<div style=\"display: none;\">date QS:P,+1890-00-00T00:00:00Z/9,P1480,Q5727902</div>",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://museumoftalkingboards.com/factory.html\">Museum of Talking Boards</a>",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "Elijah Bond (1847–1921) and Charles Kennard (1856–1925)",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "Public domain",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Public domain",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "false",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Copyrighted": {
+                    "value": "False",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "pd",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                },
+                "mime": "image/png",
+                "mediatype": "BITMAP"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "summary": {
+      "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Ouija_board_-_Kennard_Novelty_Company.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "description_url": "https://commons.wikimedia.org/wiki/File:Ouija_board_-_Kennard_Novelty_Company.png",
+      "mime": "image/png",
+      "mediatype": "BITMAP",
+      "width": 4928,
+      "height": 3290,
+      "size_bytes": 22414749,
+      "sha1": "6eb9db8791e3779c0135f8e1dc44d0296cb392ef",
+      "license_short": "Public domain",
+      "license_url": null,
+      "usage_terms": "Public domain",
+      "artist_html": "Elijah Bond (1847–1921) and Charles Kennard (1856–1925)",
+      "credit_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://museumoftalkingboards.com/factory.html\">Museum of Talking Boards</a>",
+      "attribution_required": "false",
+      "restrictions": "",
+      "copyrighted": "False",
+      "license_heading": "pd",
+      "object_name": "Ouija board - Kennard Novelty Company",
+      "date_original": "etwa 1890<div style=\"display: none;\">date QS:P,+1890-00-00T00:00:00Z/9,P1480,Q5727902</div>",
+      "categories": "Ouija (board game)|PD-old-70-expired|PD-Art (PD-old-70-expired)|CC-PD-Mark|PD-Art missing SDC copyright status|PD-old missing SDC copyright status",
+      "image_description": "A ouija board manufactured by the Kennard Novelty Company of Baltimore"
+    }
+  }
+}

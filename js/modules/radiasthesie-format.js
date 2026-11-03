@@ -190,9 +190,11 @@ export function relatedList(items) {
   if (!items || !items.length) return '';
   return `<ul class="rad-related">${items
     .map(
-      (item) => `<li class="rad-related-item">
+      (item) => `<li class="rad-related-item${item.pending ? ' rad-related-item--pending' : ''}">
       <span class="rad-related-type">${escapeHtml(item.type)}</span>
-      <h3><a href="${item.href}">${escapeHtml(item.title)}</a></h3>
+      <h3>${
+        item.href ? `<a href="${escapeHtml(item.href)}">${escapeHtml(item.title)}</a>` : escapeHtml(item.title)
+      }</h3>
       <p>${inlineText(item.text)}</p>
     </li>`
     )

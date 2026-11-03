@@ -530,6 +530,14 @@ Typzeile, `<h3><a>…</a></h3>`, ein Satz.
 **Nicht tun:** Modul auf sich selbst verlinken; Kacheln wie die Themenkarten
 gestalten (Verwechslungsgefahr).
 
+**Zustand „Lücke“ (RAD-11):** `.rad-related-item--pending` — gestrichelte
+linke Linie, Typzeile „Nicht angeschlossen“ in Sekundärfarbe, H3 ohne `<a>`.
+Der Text nennt Grund und Zielentscheidung. Ein Lückeneintrag hat nie ein
+`href`; das prüfen Vertrags- und Browsertest.
+
+**Menge:** drei bis fünf Karten je Themenseite (verknüpfte Themen, ein
+Nachbarthema, Glossar), auf der Startseite alle Einträge plus Lücken.
+
 ---
 
 ## C15 · Werkstatt-Teaser (`.rad-workshop`, `.rad-werk`)

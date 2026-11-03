@@ -56,6 +56,8 @@ export const STUDY_TYPES = ['experiment', 'reanalyse', 'review', 'feldtest', 'ue
 export const MEDIA_TYPES = ['svg', 'photo'];
 export const MEDIA_STATUS = ['available', 'planned'];
 export const TEST_TYPES = ['jaNein', 'richtung', 'zahl', 'symbol'];
+export const NETWORK_KINDS = ['modul', 'kapitel', 'luecke'];
+export const NETWORK_STATUS = ['verfuegbar', 'offen'];
 export const STOP_RULES = ['fixed-n'];
 export const ANALYSIS_METHODS = ['binomial-exact', 'wilson-95'];
 export const RUN_STATUS = ['running', 'complete'];
@@ -441,6 +443,52 @@ export function validateProtocol(protocol, path = 'protocol') {
 }
 
 /**
+ * Prüft die Themenvernetzung (RAD-11). Sie ist additiv: Fehlt der Schlüssel,
+ * bleibt die Taxonomie gültig; ist er vorhanden, gelten alle Regeln.
+ */
+function validateVernetzung(list, errors) {
+  if (!Array.isArray(list)) {
+    push(errors, 'taxonomie.vernetzung', 'type', 'vernetzung muss ein Array sein');
+    return;
+  }
+  const ids = new Set();
+  list.forEach((entry, index) => {
+    const path = `vernetzung[${index}]`;
+    if (!isObject(entry)) {
+      push(errors, path, 'type', 'Eintrag muss ein Objekt sein');
+      return;
+    }
+    if (!isSlug(entry.id)) push(errors, `${path}.id`, 'format', 'id muss ein Slug sein');
+    else if (ids.has(entry.id)) push(errors, `${path}.id`, 'duplicate', `id "${entry.id}" ist doppelt`);
+    else ids.add(entry.id);
+    if (typeof entry.label !== 'string' || entry.label.trim().length < 3)
+      push(errors, `${path}.label`, 'required', 'label fehlt');
+    if (!NETWORK_KINDS.includes(entry.kind))
+      push(errors, `${path}.kind`, 'enum', `kind muss ${NETWORK_KINDS.join('/')} sein`);
+    if (!NETWORK_STATUS.includes(entry.status))
+      push(errors, `${path}.status`, 'enum', `status muss ${NETWORK_STATUS.join('/')} sein`);
+    if (typeof entry.note !== 'string' || entry.note.trim().length < 20)
+      push(errors, `${path}.note`, 'required', 'note fehlt oder ist zu kurz');
+    if (typeof entry.abgrenzung !== 'string' || entry.abgrenzung.trim().length < 20)
+      push(errors, `${path}.abgrenzung`, 'required', 'Abgrenzung fehlt oder ist zu kurz');
+    if (entry.status === 'verfuegbar') {
+      if (!/^#[a-z0-9][a-z0-9/-]*$/i.test(String(entry.href || '')))
+        push(errors, `${path}.href`, 'format', 'verfügbarer Eintrag braucht eine Hash-Route');
+      if (entry.kind === 'luecke') push(errors, `${path}.kind`, 'logic', 'verfügbarer Eintrag darf keine Lücke sein');
+    }
+    if (entry.status === 'offen') {
+      if (entry.href) push(errors, `${path}.href`, 'logic', 'offener Eintrag darf keine Route tragen');
+      if (entry.kind !== 'luecke') push(errors, `${path}.kind`, 'logic', 'offener Eintrag muss kind "luecke" haben');
+      if (typeof entry.decision !== 'string' || entry.decision.trim().length < 20)
+        push(errors, `${path}.decision`, 'required', 'offener Eintrag braucht eine dokumentierte Zielentscheidung');
+    }
+    for (const topic of entry.topics || []) {
+      if (!TOPIC_IDS.includes(topic)) push(errors, `${path}.topics`, 'reference', `unbekanntes Thema: ${topic}`);
+    }
+  });
+}
+
+/**
  * Validiert die gesamte Taxonomie inklusive referenzieller Integrität.
  * @param {object} taxonomie Rohdaten aus taxonomie.json bzw. data.taxonomie
  * @param {{sourceIds?: Iterable<string>, topicIds?: string[]}} ctx
@@ -510,6 +558,11 @@ export function validateTaxonomie(taxonomie, ctx = {}) {
         else slugs.set(entity.slug, path);
       }
     });
+  }
+
+  if (taxonomie.vernetzung !== undefined) {
+    validateVernetzung(taxonomie.vernetzung, errors);
+    counts.vernetzung = Array.isArray(taxonomie.vernetzung) ? taxonomie.vernetzung.length : 0;
   }
 
   return { ok: errors.length === 0, errors, counts };

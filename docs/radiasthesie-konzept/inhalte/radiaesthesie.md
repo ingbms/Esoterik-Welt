@@ -101,7 +101,17 @@ Die Bovis-Skalen behaupten eine numerische Bewertung von Orten oder Objekten: Ei
 
 **Beispiel — was eine Skala ohne Einheit leistet.** Eine Zahl wie „7.200 Bovis“ sieht aus wie ein Messwert, hat aber keine Bezugsgröße: keinen Nullpunkt, keine Einheit, kein Kalibrierprotokoll, keine Fehlergrenze. In der Physik wäre das keine Messung, sondern eine Notiz. In der Praxis funktioniert die Zahl trotzdem — als gemeinsame Sprache für ein Gefühl. Genau darin liegt die Verwechslungsgefahr, und genau deshalb trägt dieses Kapitel die Stufe E.
 
-## 9. Untersuchungen: was geprüft wurde und was dabei herauskam (D/C)
+## 9. Frequenz, Schwingung, Skala: drei verschiedene Dinge (A/D)
+
+**Ein Pendel hat eine Frequenz — das ist Physik.** Ein Fadenpendel schwingt mit einer Schwingungsdauer, die von Fadenlänge und Erdbeschleunigung abhängt; der Kehrwert ist die Frequenz in Hertz. Beides lässt sich berechnen und im Pendellabor der Werkstatt nachvollziehen (`#pendeln/labor`); die Bewegung folgt der klassischen Mechanik eines fremderregten Pendels [Q51]. Gemessen wird dabei eine Zeit — keine Energie, keine Bedeutung und keine Information.
+
+**„Schwingung“ heißt in der Szene etwas anderes.** In esoterischer Literatur steht „hohe“ oder „niedrige Schwingung“ meist für eine Qualität: Stimmung, Feinheit, spirituelle Nähe. Einheit, Nullpunkt und Messvorschrift fehlen. Das ist eine Metapher mit kultureller Funktion, kein Messwert — wer sie in Hertz übersetzt, erfindet eine Zahl.
+
+**Die Bovis-Skala ist eine dritte Kategorie.** Sie ordnet Werte wie 6.500 oder 8.000, hat aber keine Einheit, keinen Nullpunkt und kein Kalibrierprotokoll (Kapitel 8) [Q12]. Ein Bovis-Wert ist eine Verabredung innerhalb einer Szene, keine physikalische Größe und keine SI-Einheit.
+
+**Die Regel dieses Moduls:** Physikalische Frequenz, symbolische Schwingung und Szeneskala werden nicht gleichgesetzt. Wo Einheit, Nullpunkt und Fehlergrenze fehlen, steht keine Messung — auch dann nicht, wenn das Wort „Frequenz“ fällt. Farb- und Lichtfrequenz-Systeme der esoterischen Literatur gehören nicht zu diesem Modul; sie werden hier weder übernommen noch als Messung ausgegeben.
+
+## 10. Untersuchungen: was geprüft wurde und was dabei herauskam (D/C)
 
 Dieses Kapitel fasst die Prüfungen zusammen, die in den Quellen tatsächlich beschrieben sind. Es ist keine Liste von „Beweisen“, sondern eine Liste von Versuchen — mit Aufbau, Ergebnis und Grenze. Die Reihenfolge folgt dem Gegenstand, nicht der Stärke des Befunds.
 
@@ -121,7 +131,7 @@ Dieses Kapitel fasst die Prüfungen zusammen, die in den Quellen tatsächlich be
 
 **Wie diese Liste zu lesen ist.** Ein einzelner positiver Befund widerlegt keine Serie negativer Befunde, und eine negative Prüfung beweist nicht, dass niemand etwas kann [Q05, Q42]. Was sich sagen lässt: Für die Behauptungen, mit denen Ruten und Pendel beworben werden — Wasser, Erze, Krankheiten, Belastungen —, liegt kein reproduzierbarer Nachweis vor; für die Mechanik der Bewegung liegt eine Erklärung vor, die ohne verborgene Information auskommt [Q51, Q53]. Beides steht nebeneinander, und beides ist überprüfbar.
 
-## 10. Redaktions-Hinweis zur Einordnung (Tradition vs. Evidenz)
+## 11. Redaktions-Hinweis zur Einordnung (Tradition vs. Evidenz)
 
 **Tradition:** Radiästhesie hat eine dokumentierbare Kulturgeschichte von Bergbau und Kirche über Aufklärung und Nachkriegszeit bis zur heutigen Szene. Die Binnensicht — Mutung, Gitter, Bovis, Erdstrahlen — ist als kulturelles Phänomen lesbar und respektierbar. Die Praxis ist international unterschiedlich eingebettet: als ländliche Selbstverständlichkeit in den USA, als Verbindung von Wasserfindung und Heilvorstellungen im Rif, als Teil volkskundlicher Naturdeutung in Estland [Q57, Q59, Q60].
 
@@ -131,4 +141,4 @@ Dieses Kapitel fasst die Prüfungen zusammen, die in den Quellen tatsächlich be
 
 ---
 
-*SEO:* `<title>` = "Radiästhesie — Wünschelrute, Erdstrahlen & Forschungsstand" (≤ 60 Z). Meta-Description = 154 Zeichen (siehe oben). H2: 1 Definition / 2 Geschichte I / 3 Geschichte II / 4 Geschichte III / 5 Instrumente / 6 Erdstrahlen / 7 Geologie / 8 Bovis / 9 Untersuchungen / 10 Einordnung.
+*SEO:* `<title>` = "Radiästhesie — Wünschelrute, Erdstrahlen & Forschungsstand" (≤ 60 Z). Meta-Description = 154 Zeichen (siehe oben). H2: 1 Definition / 2 Geschichte I / 3 Geschichte II / 4 Geschichte III / 5 Instrumente / 6 Erdstrahlen / 7 Geologie / 8 Bovis / 9 Frequenz / 10 Untersuchungen / 11 Einordnung.

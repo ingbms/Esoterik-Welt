@@ -1,0 +1,82 @@
+{
+  "checked_dir": "assets/radiasthesie",
+  "dateien": [
+    {
+      "datei": "assets/radiasthesie/orakel-karten.svg",
+      "bytes": 1488,
+      "befunde": [],
+      "hat_title": true,
+      "hat_desc": true,
+      "hat_viewbox": true,
+      "hat_role_img": true,
+      "elemente": [
+        "circle",
+        "desc",
+        "g",
+        "line",
+        "path",
+        "rect",
+        "svg",
+        "text",
+        "title"
+      ]
+    },
+    {
+      "datei": "assets/radiasthesie/pendel-geometrie.svg",
+      "bytes": 2732,
+      "befunde": [],
+      "hat_title": true,
+      "hat_desc": true,
+      "hat_viewbox": true,
+      "hat_role_img": true,
+      "elemente": [
+        "circle",
+        "desc",
+        "g",
+        "line",
+        "path",
+        "svg",
+        "text",
+        "title"
+      ]
+    },
+    {
+      "datei": "assets/radiasthesie/pendeltafel.svg",
+      "bytes": 2188,
+      "befunde": [],
+      "hat_title": true,
+      "hat_desc": true,
+      "hat_viewbox": true,
+      "hat_role_img": true,
+      "elemente": [
+        "circle",
+        "desc",
+        "g",
+        "line",
+        "svg",
+        "text",
+        "title"
+      ]
+    },
+    {
+      "datei": "assets/radiasthesie/winkelrute.svg",
+      "bytes": 1775,
+      "befunde": [],
+      "hat_title": true,
+      "hat_desc": true,
+      "hat_viewbox": true,
+      "hat_role_img": true,
+      "elemente": [
+        "circle",
+        "desc",
+        "line",
+        "path",
+        "svg",
+        "text",
+        "title"
+      ]
+    }
+  ],
+  "fehler": [],
+  "warnungen": []
+}

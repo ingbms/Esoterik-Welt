@@ -247,6 +247,12 @@ export function renderLanding(model) {
     .join('');
 
   const open = data.introduction.openQuestions;
+  // Themenvernetzung (RAD-11): vorhandene Anschlüsse und benannte Lücken.
+  // Eine Liste, zwei Zustände — die Startseite zeigt beides, damit kein Link
+  // auf eine Seite führt, die es nicht gibt.
+  const network = model.vernetzung.length ? model.vernetzung : landing.vernetzung || landing.related || [];
+  const related = network.filter((entry) => !entry.pending);
+  const gaps = network.filter((entry) => entry.pending);
 
   const html = `<div class="rad">
     <div class="rad-hero">
@@ -306,9 +312,16 @@ export function renderLanding(model) {
 
     <section class="rad-section" aria-labelledby="rad-verwandt-title">
       <p class="rad-kicker">05 · Nachbarschaft</p>
-      <h2 id="rad-verwandt-title" tabindex="-1">Verwandte Bereiche</h2>
-      <p class="rad-section-lead">Getrennte Systeme, keine Vermischung: Diese Bereiche werden verlinkt, nicht eingemeindet.</p>
-      ${relatedList(landing.related)}
+      <h2 id="rad-verwandt-title" tabindex="-1">Verwandte Themen</h2>
+      <p class="rad-section-lead">Acht Themenfelder aus dem Auftrag, jedes mit seinem Ort im Bestand und einem Satz Abgrenzung. Getrennte Systeme werden verlinkt, nicht eingemeindet.</p>
+      ${relatedList(related)}
+      ${
+        gaps.length
+          ? `<h3 class="rad-subtitle" id="rad-luecken-title">Bewusste Lücken</h3>
+      <p class="rad-section-lead">Zwei Themen haben in diesem Bestand keine Seite. Sie werden als Lücke benannt und nicht mit einem ähnlichen Kapitel verwechselt.</p>
+      ${relatedList(gaps)}`
+          : ''
+      }
     </section>
 
     ${disclaimerBox({ id: 'rad-disclaimer-landing', title: landing.disclaimer.title, paragraphs: landing.disclaimer.paragraphs })}
@@ -322,18 +335,29 @@ export function renderTopic(model, topic, { anchor = '' } = {}) {
   // Stufen in fester Reihenfolge A–E: sortiert ist schneller zu lesen als in
   // der Reihenfolge, in der die Kapitel sie zufällig verwenden.
   const chips = [...new Set(topic.sections.flatMap((entry) => entry.chips))].sort();
-  const others = model.topicList.filter((entry) => entry.slug !== topic.slug);
   // „Pendeln / Pendeln“ wäre ein doppelter Brotkrümel; dort heißt die
   // übergeordnete Seite „Übersicht“.
   const parentLabel = topic.slug === 'pendeln' ? 'Übersicht' : 'Pendeln';
 
+  // Weiterlesen (RAD-11): zuerst die verknüpften Themen mit Abgrenzung, dann
+  // genau ein Nachbarthema und das Glossar. Die frühere Liste beider
+  // Nachbarthemen hätte zusammen mit den externen Verweisen die IA-Vorgabe
+  // von höchstens fünf Karten gesprengt.
+  const siblingSlug = { radiasthesie: 'pendeln', pendeln: 'orakel', orakel: 'pendeln' }[topic.slug];
+  const sibling = model.topicList.find((entry) => entry.slug === siblingSlug);
+
   const related = [
-    ...others.map((entry) => ({
-      type: 'Thema',
-      title: entry.title,
-      href: ROUTE.topic(entry.slug),
-      text: entry.cardText,
-    })),
+    ...(topic.related || []),
+    ...(sibling
+      ? [
+          {
+            type: 'Thema',
+            title: sibling.title,
+            href: ROUTE.topic(sibling.slug),
+            text: sibling.cardText,
+          },
+        ]
+      : []),
     {
       type: 'Nachschlagen',
       title: 'Glossar',
@@ -1477,6 +1501,7 @@ export function renderMethodik(model) {
           <li>Keine finanzielle, rechtliche oder sicherheitsbezogene Prognose.</li>
           <li>Keine Darstellung von Bovis-Werten als physikalische Messgröße; die Skala ist ein Ordnungsschema der Szene.</li>
           <li>Keine Gleichsetzung von Radiästhesie und Divination: Radiästhesie ist der Oberbegriff für Ruten- und Pendelpraxis, Divination der weitere Bereich der Deutung.</li>
+          <li>Keine erfundenen Anschlüsse: Geomantie und Kraftorte haben in diesem Bestand keine Seite; sie werden als Lücke benannt statt mit einem ähnlichen Kapitel verlinkt.</li>
           <li>Keine scheinbaren Messwerte: Ein Ausschlag ist kein Messwert, solange Kalibrierung, Blindprotokoll und Fehlerbereich fehlen.</li>
         </ul>
       </section>

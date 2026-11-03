@@ -78,6 +78,7 @@ const TOPICS = [
       'erdstrahlen',
       'geologie',
       'bovis',
+      'frequenz',
       'befunde',
       'einordnung',
     ],
@@ -206,26 +207,86 @@ const WORKSHOP = [
   },
 ];
 
-const RELATED = [
-  {
-    type: 'Deutung',
-    title: 'Tarot',
-    href: '#tarot',
-    text: 'Bildkarten und Legesysteme. Eigene Symbolsprache, eigene Geschichte.',
-  },
-  {
-    type: 'System',
-    title: 'Astrologie',
-    href: '#astrologie',
-    text: 'Tierkreiszeichen, Faktoren und Aspekte — mit eigener Evidenzdebatte.',
-  },
-  {
-    type: 'Material',
-    title: 'Kristalle',
-    href: '#crystals',
-    text: 'Mineralien, Farben und überlieferte Zuordnungen, ohne Heilversprechen.',
-  },
+// Themenvernetzung (RAD-11): eine Quelle für Startseite und Seitenenden.
+// Die Einträge stehen in taxonomie.json, damit Redaktion und Vertragsprüfung
+// dieselbe Liste sehen. Der Generator löst jede Route gegen die vorhandenen
+// Kapitel auf — ein Tippfehler im Anker bricht den Lauf ab, statt einen toten
+// Link zu erzeugen.
+const NETWORK_TYPE_LABEL = {
+  modul: 'Modul',
+  kapitel: 'Kapitel',
+  luecke: 'Nicht angeschlossen',
+};
+
+// Pflichtthemen aus dem Auftrag ESOW-RAD-11. Fehlt eines, ist die Vernetzung
+// unvollständig — auch dann, wenn alle vorhandenen Links funktionieren.
+const REQUIRED_NETWORK_IDS = [
+  'frequenzen',
+  'geomantie',
+  'kraftorte',
+  'chakren',
+  'tarot',
+  'runen',
+  'iging',
+  'astrologie',
 ];
+
+const MAIN_PAGE_IDS = ['home', 'tarot', 'crystals', 'moon', 'runes', 'astrologie', 'blog'];
+const SUBPAGES = ['glossar', 'quellen', 'methodik', 'suche', 'labor', 'studio', 'experiment', 'journal'];
+
+function resolvesRoute(href, topics) {
+  if (typeof href !== 'string' || !href.startsWith('#')) return false;
+  const [path] = href.slice(1).split('?');
+  const segments = path.split('/').filter(Boolean);
+  if (!segments.length) return false;
+  if (segments[0] !== 'pendeln') return MAIN_PAGE_IDS.includes(segments[0]);
+  const area = segments[1];
+  if (!area) return true;
+  if (Object.prototype.hasOwnProperty.call(topics, area)) {
+    const anchor = segments[2];
+    if (!anchor) return true;
+    return topics[area].sections.some((section) => section.id === anchor);
+  }
+  return SUBPAGES.includes(area);
+}
+
+function buildVernetzung(taxonomie, topics) {
+  const entries = taxonomie.vernetzung;
+  if (!Array.isArray(entries) || !entries.length) {
+    fail('taxonomie.vernetzung fehlt — die Themenvernetzung ist ohne Liste unvollständig');
+  }
+  const seen = new Set();
+  const links = new Set();
+  const resolved = entries.map((entry) => {
+    if (seen.has(entry.id)) fail(`Vernetzung: id "${entry.id}" ist doppelt`);
+    seen.add(entry.id);
+    const available = entry.status === 'verfuegbar';
+    if (available && !resolvesRoute(entry.href, topics)) {
+      fail(`Vernetzung ${entry.id}: Route ${entry.href} löst auf keine vorhandene Seite auf`);
+    }
+    if (available && links.has(entry.href)) fail(`Vernetzung ${entry.id}: Route ${entry.href} ist doppelt verlinkt`);
+    if (available) links.add(entry.href);
+    const text = available
+      ? `${entry.note} ${entry.abgrenzung}`
+      : `${entry.note} ${entry.abgrenzung} ${entry.decision}`;
+    return {
+      id: entry.id,
+      type: NETWORK_TYPE_LABEL[entry.kind],
+      title: entry.label,
+      href: available ? entry.href : '',
+      pending: !available,
+      status: entry.status,
+      note: entry.note,
+      abgrenzung: entry.abgrenzung,
+      decision: entry.decision,
+      topics: Array.isArray(entry.topics) ? entry.topics.slice() : [],
+      text,
+    };
+  });
+  const missing = REQUIRED_NETWORK_IDS.filter((id) => !seen.has(id));
+  if (missing.length) fail(`Vernetzung unvollständig, Pflichtthemen fehlen: ${missing.join(', ')}`);
+  return resolved;
+}
 
 // --- Hilfen ---------------------------------------------------------------
 
@@ -765,6 +826,11 @@ async function main() {
     if (!usedMediaIds.has(item.id)) fail(`Motiv ${item.id} ist im Manifest, aber in keiner Themenseite eingesetzt`);
   }
 
+  const vernetzung = buildVernetzung(taxonomie, topics);
+  for (const topic of Object.values(topics)) {
+    topic.related = vernetzung.filter((entry) => entry.topics.includes(topic.slug));
+  }
+
   const glossar = parseGlossar(read('glossar.md'));
   const registry = JSON.parse(fs.readFileSync(sourcesFile, 'utf8'));
   const quellen = parseSources(read('quellenverzeichnis.md'), registry);
@@ -836,7 +902,6 @@ async function main() {
         lead: topics[config.slug].lead,
       })),
       workshop: WORKSHOP.map((entry) => ({ state: 'In Vorbereitung', ...entry })),
-      related: RELATED,
       disclaimer: {
         title: 'Einordnung dieses Bereichs',
         paragraphs: [
@@ -858,6 +923,7 @@ async function main() {
     glossary: glossar.groups,
     sources: quellen.sources,
     sourceLegend: quellen.legend,
+    vernetzung,
     media: {
       items: media.items,
       ownAssets: media.ownAssets,
@@ -899,7 +965,8 @@ async function main() {
       `${data.counts.sources} Quellen, ${data.counts.glossary} Glossarbegriffe, ` +
       `${taxonomieCheck.counts.instrumente} Instrumente, ${taxonomieCheck.counts.methoden} Methoden, ` +
       `${taxonomieCheck.counts.ereignisse} Ereignisse, ${taxonomieCheck.counts.studien} Studien, ` +
-      `${taxonomieCheck.counts.medien} Medien, ${taxonomieCheck.counts.experimente} Experimente.`
+      `${taxonomieCheck.counts.medien} Medien, ${taxonomieCheck.counts.experimente} Experimente, ` +
+      `${vernetzung.length} Vernetzungseinträge.`
   );
 }
 

@@ -1,10 +1,15 @@
 # Implementierung — Themenmodul „Radiästhesie, Pendeln und Orakel“
 
 Karte: `t_8c0cbe98` (ESOW-RAD-000, Umsetzung und Integration)
-Stand: 2. November 2026 · Status: **umgesetzt, Build und Tests grün**
+Stand: 3. November 2026 · Status: **umgesetzt, Build und Tests grün**
 Vorgaben: `ia-konzept.md`, `komponenten-specs.md`, `a11y-checkliste.md`,
 `responsive-checkliste.md` (Karte `t_f5d8a1a4`) und die freigegebenen Texte
 (Karte `t_059ba08e`).
+
+> **Hinweis zum Stand:** Diese Datei beschreibt den ersten Integrationsstand
+> (RAD-000/RAD-06). Die späteren Pakete RAD-07 bis RAD-11 haben Werkzeuge,
+> Quellenbasis, Fotos und die Themenvernetzung ergänzt; maßgeblich für deren
+> Stand sind die Checkpoints unter `docs/radiasthesie-completion/`.
 
 ## 1. Was jetzt läuft
 
@@ -14,12 +19,12 @@ Footer-Link „Radiästhesie & Pendeln“:
 
 | Route | Ansicht | Inhalt |
 | --- | --- | --- |
-| `#pendeln` | Landingpage | Hero, Einordnungsband, drei Themenkarten, Stufenlegende, offene Fragen, Werkstatt-Teaser, verwandte Bereiche, Einordnungskasten |
-| `#pendeln/radiasthesie` | Themenseite | 8 Kapitel (Begriff, Geschichte I–III, Instrumente, Erdstrahlen, Geologie, Bovis) |
+| `#pendeln` | Landingpage | Hero, Einordnungsband, drei Themenkarten, Stufenlegende, offene Fragen, Werkstatt-Teaser, Themenvernetzung (sieben Anschlüsse, zwei Lücken), Einordnungskasten |
+| `#pendeln/radiasthesie` | Themenseite | 10 Kapitel (Begriff, Geschichte I–III, Instrumente, Erdstrahlen, Geologie, Bovis, Frequenz/Schwingung, Untersuchungen) |
 | `#pendeln/pendeln` | Themenseite | 10 Kapitel (Praxis, Geschichte, Arten, Lernen, Tafeln, Biotensor, Karten, Mechanik, Forschungsstand, Selbsttest) |
 | `#pendeln/orakel` | Themenseite | 12 Kapitel (Divination, Tarot I–III, I Ging, I Ging im Westen, Runen, Runen im 20. Jh., Orakelkarten, Delphi, Ethylen, Forer) |
-| `#pendeln/glossar` | Glossar | 13 Begriffe, Live-Suche, Buchstabenleiste, `?b=R` als Filter |
-| `#pendeln/quellen` | Quellen | 33 Quellen mit Typ, Jahr, Prüftiefe, Interessenvermerk, Rückverweis auf die Seiten |
+| `#pendeln/glossar` | Glossar | 17 Begriffe, Live-Suche, Buchstabenleiste, `?b=R` als Filter |
+| `#pendeln/quellen` | Quellen | 66 Quellen mit Typ, Jahr, Prüftiefe, Interessenvermerk, Rückverweis auf die Seiten |
 | `#pendeln/methodik` | Methodik | Arbeitsannahme, Kennzeichnung A–E, Prüfung, Grenzen, Quelleninteressen, Datenschutz, rechtlicher Hinweis |
 | `#pendeln/suche?q=…` | Suche | Themen, Kapitel, Glossar und Quellen; leere Suche und Fehleransicht mit Vorschlägen |
 | `#pendeln/gibtsnicht` | Fehleransicht | bereichsintern, drei Wege zurück, Fokus auf die H1 |
@@ -36,15 +41,16 @@ obwohl die Seite eine Einzeldokument-SPA mit nur einem Hash ist.
 | --- | --- |
 | `docs/radiasthesie-konzept/inhalte/*.md` | freigegebene Texte als Quelle der Wahrheit (7 Dateien) |
 | `scripts/generate-radiasthesie-data.cjs` | Markdown → `js/data/radiasthesie.js`; bricht bei unerwartetem Markup ab |
-| `js/data/radiasthesie.js` | generierte Daten (81 kB): Themen, Kapitel, Blöcke, Stufen, Glossar, Quellen, Rechtstext |
+| `js/data/radiasthesie.js` | generierte Daten (262 kB): Themen, Kapitel, Blöcke, Stufen, Glossar, Quellen, Rechtstext, Themenvernetzung |
 | `js/modules/radiasthesie-format.js` | reine Formatierung: Escaping, `**fett**`, `*kursiv*`, `[Qxx]`-Links, Routen, Chips |
 | `js/modules/radiasthesie-model.js` | Route auflösen, Suche, Glossarfilter, Quellenzuordnung |
 | `js/modules/radiasthesie-views.js` | Ansichten als reine Funktionen (Daten → HTML + Titel) |
 | `js/modules/radiasthesie.js` | Controller: rendern, Metadaten, Fokus, JSON-LD, Filterzustand |
 | `css/radiasthesie.css` | Modul-CSS aus dem Mockup (`.rad-*`) plus fünf Ergänzungen der Umsetzung |
 | `assets/radiasthesie/*.svg` | vier eigene Instrumentenzeichnungen (Pendelgeometrie, Winkelrute, Pendeltafel, Orakelkarten) |
-| `tests/radiasthesie.mjs` | 16 Tests ohne Browser (Daten, Routen, Ansichten, Escaping, JSON-LD) |
-| `tests/radiasthesie.spec.js` | 12 Browsertests (Navigation, Routen, Deep-Links, Filter, Breakpoints, Tastatur, Metadaten) |
+| `tests/radiasthesie.mjs` | 23 Tests ohne Browser (Daten, Routen, Ansichten, Vernetzung, Escaping, JSON-LD) |
+| `tests/radiasthesie.spec.js` | 19 Browsertests (Navigation, Routen, Deep-Links, Filter, Breakpoints, Tastatur, Metadaten) |
+| `tests/radiasthesie-vernetzung.spec.js` | 6 Browsertests zur Themenvernetzung (Startseite, Lücken, Zurück/Vorwärts, Deep-Links, mobil) |
 | `docs/radiasthesie-konzept/scripts/probe-modul.cjs` | Messlauf gegen den Build (Status, Konsole, Fokus, Überläufe) |
 
 **Geändert**
@@ -77,14 +83,14 @@ Markdown ändern und neu generieren, nicht HTML in JavaScript schreiben.
 Quellen, keine Platzhalter, Escaping).
 
 Quellen: Maßgeblich ist `docs/radiasthesie-konzept/recherche/quellen.json`
-(33 geprüfte Einträge, Locator/DOI/ISBN). Die redaktionelle Tabelle im
+(66 geprüfte Einträge, Locator/DOI/ISBN). Die redaktionelle Tabelle im
 Quellenverzeichnis liefert Kurznamen und Anmerkungen.
 
 ## 4. Abweichungen von der Vorlage (bewusst, mit Grund)
 
 | # | Vorlage | Umsetzung | Grund |
 | --- | --- | --- | --- |
-| A1 | Anker `#was`, `#instrumente`, `#geschichte`, `#befunde` | `was`, `instrumente`, `geschichte-1…3`, `erdstrahlen`, `geologie`, `bovis` | Der Text hat drei Geschichtskapitel und kein Kapitel „Befunde“ auf der Radiästhesie-Seite. Anker folgen dem Inhalt, nicht dem Wunschraster; Deep-Links bleiben stabil. |
+| A1 | Anker `#was`, `#instrumente`, `#geschichte`, `#befunde` | `was`, `instrumente`, `geschichte-1…3`, `erdstrahlen`, `geologie`, `bovis`, `frequenz`, `befunde` | Der Text hat drei Geschichtskapitel; RAD-06 ergänzte „Untersuchungen“ als Anker für die IA-Vorgabe `#befunde`, RAD-11 das Grenzkapitel `frequenz`. Anker folgen dem Inhalt; Deep-Links bleiben stabil. |
 | A2 | Evidenztafel C7 mit Aussagen-IDs (H-01, T-04 …) | Stufen-Chips je Kapitel; Erklärungen auf der Methodik-Seite | Die freigegebenen Texte liefern keine Aussagen-IDs. Eine Tabelle hätte Aussagen neu erfinden müssen. |
 | A3 | Kapitel als reine `<section id>`-Anker | zusätzlich als Route `#pendeln/<thema>/<kapitel>` | Ein Hash kann nicht zwei Sprungziele tragen; so sind Kapitel teilbar und der Router bleibt zuständig. |
 | A4 | Quellenmarker als `[Sxx]` mit Anker `#quelle-Sxx` | `[Qxx]` → `#pendeln/quellen/Qxx` | IDs der Quellenbasis sind Q01–Q33; der Deeplink hebt die Zeile hervor und setzt den Fokus. |

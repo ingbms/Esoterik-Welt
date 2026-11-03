@@ -1147,5 +1147,106 @@
       "instructions": "Zahlenraum 1 bis 5 festlegen, Ziel verdeckt ziehen, Antwort geben und sperren, erst danach enthüllen. Alle 25 Versuche zählen.",
       "mode": "test"
     }
+  ],
+  "vernetzung": [
+    {
+      "id": "frequenzen",
+      "label": "Frequenzen und Schwingungen",
+      "kind": "kapitel",
+      "status": "verfuegbar",
+      "href": "#pendeln/radiasthesie/frequenz",
+      "topics": ["pendeln"],
+      "note": "Pendelfrequenz in Hertz, metaphorische „Schwingung“ und die Bovis-Skala werden in einem Kapitel auseinandergehalten.",
+      "abgrenzung": "Physikalische Frequenz und symbolische Schwingung werden nicht gleichgesetzt; Bovis ist keine SI-Einheit.",
+      "decision": ""
+    },
+    {
+      "id": "geomantie",
+      "label": "Geomantie",
+      "kind": "luecke",
+      "status": "offen",
+      "href": "",
+      "topics": [],
+      "note": "Erd-Horoskopie und Feng Shui sind eigenständige Deutungssysteme; dieses Modul behandelt sie nicht.",
+      "abgrenzung": "Die Kapitel zu Erdstrahlen und Gittern sind keine Geomantie.",
+      "decision": "Im Bestand gibt es kein Geomantie-Kapitel. Eine eigene Seite wäre eine Erweiterung des Gesamtangebots, nicht dieses Moduls."
+    },
+    {
+      "id": "kraftorte",
+      "label": "Kraftorte",
+      "kind": "luecke",
+      "status": "offen",
+      "href": "",
+      "topics": [],
+      "note": "Der einzige ortsbezogene Bestand ist Delphi als historischer Orakelort — ein Kraftort im energetischen Sinn ist damit nicht belegt.",
+      "abgrenzung": "Ein Ausgrabungsort mit Inschriften belegt keine Ortsenergie.",
+      "decision": "Ein Kraftorte-Text fehlt im Bestand. Delphi bleibt als Orakelort geführt und wird nicht zum Kraftort umgedeutet."
+    },
+    {
+      "id": "chakren",
+      "label": "Chakren",
+      "kind": "modul",
+      "status": "verfuegbar",
+      "href": "#crystals",
+      "topics": ["radiasthesie", "pendeln"],
+      "note": "Der Kristall-Katalog filtert Steine nach überlieferten Chakra-Zuordnungen.",
+      "abgrenzung": "Die Zuordnung ist eine Ordnungskategorie der Überlieferung, kein Nachweis von Energiezentren.",
+      "decision": ""
+    },
+    {
+      "id": "tarot",
+      "label": "Tarot",
+      "kind": "modul",
+      "status": "verfuegbar",
+      "href": "#tarot",
+      "topics": ["pendeln", "orakel"],
+      "note": "78 Karten, Tageskarte und Legungen — die heutige Praxis, die das Orakelkapitel historisch einordnet.",
+      "abgrenzung": "Das Kartenspiel stammt aus dem 15. Jahrhundert; die Wahrsagepraxis entstand im 19. Jahrhundert.",
+      "decision": ""
+    },
+    {
+      "id": "runen",
+      "label": "Runen",
+      "kind": "modul",
+      "status": "verfuegbar",
+      "href": "#runes",
+      "topics": ["orakel"],
+      "note": "Das ältere Futhark mit Wurf und Deutung.",
+      "abgrenzung": "Runen-Divination ist eine Erfindung des 20. Jahrhunderts, keine altnordische Praxis.",
+      "decision": ""
+    },
+    {
+      "id": "iging",
+      "label": "I Ging",
+      "kind": "kapitel",
+      "status": "verfuegbar",
+      "href": "#pendeln/orakel/iging",
+      "topics": [],
+      "note": "Hexagramme, Schafgarbenorakel und der Weg in den Westen.",
+      "abgrenzung": "Eine eigene I-Ging-Route gibt es nicht; das Kapitel steht auf der Orakelseite.",
+      "decision": ""
+    },
+    {
+      "id": "astrologie",
+      "label": "Astrologie und Deutungssysteme",
+      "kind": "modul",
+      "status": "verfuegbar",
+      "href": "#astrologie",
+      "topics": ["radiasthesie", "orakel"],
+      "note": "Zeichen, Faktoren, Häuser und Aspekte als eigenes Symbolsystem mit eigener Evidenzdebatte.",
+      "abgrenzung": "Astrologie deutet Himmelspositionen, Radiästhesie deutet Ausschläge — die Systeme bleiben getrennt.",
+      "decision": ""
+    },
+    {
+      "id": "delphi",
+      "label": "Historische Orakelorte",
+      "kind": "kapitel",
+      "status": "verfuegbar",
+      "href": "#pendeln/orakel/delphi",
+      "topics": [],
+      "note": "Delphi als Institution, Ritual und politiknahe Praxis.",
+      "abgrenzung": "Ein Orakelort ist kein Kraftort im energetischen Sinn; belegt sind Architektur, Inschriften und Literatur.",
+      "decision": ""
+    }
   ]
 }

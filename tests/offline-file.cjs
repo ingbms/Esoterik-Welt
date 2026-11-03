@@ -80,6 +80,19 @@ test('offline file entry serves every route without network access', async (t) =
   assert.match(await page.locator('#pendelnRoot h1#pendeln-title').textContent(), /Radiästhesie/);
   assert.ok((await page.locator('#pendelnRoot').textContent()).length > 5000, 'dowsing topic must render offline');
 
+  // RAD-11: Das Grenzkapitel und die Themenvernetzung funktionieren offline —
+  // inklusive der Querverweise in vorhandene Module.
+  await page.goto(localUrl + '#pendeln/radiasthesie/frequenz', { waitUntil: 'load' });
+  const frequency = page.locator('#pendelnRoot #frequenz');
+  await frequency.waitFor({ state: 'visible', timeout: 10000 });
+  assert.match(await frequency.textContent(), /Frequenz in Hertz/);
+  assert.match(await frequency.textContent(), /keine SI-Einheit/);
+  const relatedHrefs = await page
+    .locator('#pendelnRoot .rad-related a')
+    .evaluateAll((nodes) => nodes.map((node) => node.getAttribute('href')));
+  assert.ok(relatedHrefs.includes('#astrologie'), 'offline related link to astrology missing');
+  assert.ok(relatedHrefs.includes('#crystals'), 'offline related link to crystals missing');
+
   // The astrology area must work from the double-clicked file, including a
   // cold deep link into a detail page (data is inlined, never fetched).
   await page.goto(localUrl + '#astrologie/zeichen/widder', { waitUntil: 'load' });

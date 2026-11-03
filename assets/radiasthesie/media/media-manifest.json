@@ -1,0 +1,787 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "radiasthesie-media",
+  "project": "Esoterik-Welt",
+  "purpose": "Zentraler Bild- und Rechtenachweis für das Modul Radiästhesie, Pendeln und Orakel. Enthält je Motiv Originalquelle, Urheber, Lizenz mit URL, Länder- und Markenhinweise, Änderungshinweis, Alt-Text, Bildunterschrift, fertige Attributionszeile sowie Größen, Hashes und Varianten. Grundlage für die spätere Integration ins Datenmodell.",
+  "generated_at": "2026-11-02T23:27:43Z",
+  "generated_by": "Kanban-Task t_187d5f52 / ESOW-RAD-05 (Profil deep_research_rag, Modell deepseek-flash)",
+  "retrieved_at": "2026-11-03",
+  "scope": "assets/radiasthesie/media/",
+  "license_policy": {
+    "allowed": [
+      "Public Domain",
+      "CC0 1.0",
+      "CC BY 2.0/3.0/4.0",
+      "CC BY-SA 2.0/2.5/3.0/4.0"
+    ],
+    "excluded": [
+      "CC BY-NC*",
+      "CC BY-ND*",
+      "GFDL-only",
+      "Fair Use",
+      "Alle Rechte vorbehalten",
+      "Lizenz unklar"
+    ],
+    "rationale": "Öffentliche Website über GitHub Pages. NC ist ausgeschlossen, weil eine spätere kommerzielle Nutzung nicht ausgeschlossen werden soll; ND, weil Bilder skaliert und ins WebP-Format überführt werden. CC BY-SA ist zulässig, solange ShareAlike und Attribution ausgewiesen werden — beides ist hier je Motiv hinterlegt.",
+    "nicht_verwendet": [
+      "Händlerbilder",
+      "Screenshots fremder Websites",
+      "KI-generierte Bilder ohne geklärte Herkunft"
+    ]
+  },
+  "method": {
+    "quelle": "Wikimedia Commons, Dateibeschreibungsseite als Originalquelle",
+    "schritte": [
+      "1. Dateiseite je Motiv über die MediaWiki-API abgefragt (extmetadata) und zusätzlich im Wikitext gelesen",
+      "2. Lizenzbaustein, Urheber, Credit, Einschränkungen und Länderhinweise je Motiv erfasst",
+      "3. Original geladen und SHA-1 gegen den von Commons gemeldeten Wert geprüft",
+      "4. MIME über magic bytes unabhängig von der Endung geprüft, Maße mit Pillow gelesen",
+      "5. Motiv visuell am geladenen Original geprüft und Alt-Text daraus abgeleitet",
+      "6. Varianten skaliert (kein Hochskalieren, kein Beschneiden), EXIF entfernt, ICC beibehalten",
+      "7. Manifest, Attributionsseite und Validierung aus denselben Messdaten erzeugt"
+    ],
+    "reproduktion": "docs/radiasthesie-completion/RAD-05/scripts/ (Python 3.14, Pillow 13)"
+  },
+  "figure_slot": {
+    "breite": 520,
+    "hoehe": 400,
+    "quelle": "js/data/radiasthesie.js / js/modules/radiasthesie-views.js (bestehendes Datenmodell)",
+    "hinweis": "Bestehender Slot für Themenbilder; die Fotos haben eigene Seitenverhältnisse."
+  },
+  "variant_konvention": {
+    "breiten": [
+      520,
+      1040
+    ],
+    "formate": [
+      "webp (Auslieferung)",
+      "avif (moderne Zweitfassung, optional)",
+      "png (nur bei Transparenz)"
+    ],
+    "begruendung": "520 px ist die Breite des bestehenden Figuren-Slots, 1040 px die 2x-Fassung für hochauflösende Displays. WebP entspricht der Projektkonvention in assets/crystals/<breite>/. AVIF ergänzt den im Projektplan (§2.5) genannten zweiten modernen Typ; eingebunden wird er erst mit <picture>/<source> in RAD-06. Abweichend von den Kristallbildern (320/640/960/1280) sind hier nur zwei Breiten erzeugt, weil der Slot fest 520 px breit ist.",
+    "ausnahmen": [
+      "radiasthesierute: nur 520 px, weil das Original 566 px breit ist (kein Hochskalieren)",
+      "ouija-historisch: zusätzlich PNG, weil echte Transparenz und Schrift vorliegen"
+    ]
+  },
+  "counts": {
+    "motive": 6,
+    "originale": 6,
+    "varianten": 24,
+    "eigene_svgs": 4,
+    "dateien_im_medienordner": 33,
+    "assets_gesamt": 34
+  },
+  "items": [
+    {
+      "id": "rad-media-01",
+      "key": "klassisches-pendel",
+      "motiv": "Klassisches Pendel",
+      "einsatz": "pendeln",
+      "alt": "Ein kegelförmiges Messingpendel hängt an einer geflochtenen dunkelblauen Schnur; die Schnur liegt in einer grossen Schlaufe über hellem Untergrund.",
+      "caption": "Kegelpendel aus Messing an geflochtener Kordel — die verbreitetste Bauform. Das Objekt ist ein Alltagsgegenstand; das Foto belegt keine Wirkung.",
+      "attribution_text": "Carivaldi, „Klassisches Pendel“, CC BY-SA 3.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)",
+      "urheber": {
+        "name": "Carivaldi",
+        "url": "https://commons.wikimedia.org/wiki/User:Carivaldi"
+      },
+      "credit": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+      "quelle": {
+        "dateiseite": "https://commons.wikimedia.org/wiki/File:Radiesthetic_pendulum.jpg",
+        "datei_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Radiesthetic_pendulum.jpg",
+        "api": "https://commons.wikimedia.org/w/api.php (action=query, prop=imageinfo, extmetadata)",
+        "seiten_revid": 904548060,
+        "seiten_stand": "2024-07-29T06:35:00Z",
+        "abgerufen_am": "2026-11-03",
+        "lizenz_baustein_wikitext": "{{self|cc-by-sa-3.0|GFDL}}"
+      },
+      "lizenz": {
+        "kurz": "CC BY-SA 3.0",
+        "name": "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 Unported",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attribution_pflicht": true,
+        "share_alike": true,
+        "aenderungshinweis": "Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten."
+      },
+      "rechte": {
+        "laenderhinweis": "Keine länderspezifische Besonderheit bekannt. Die Datei ist zusätzlich unter GFDL lizenziert; genutzt wird die CC-BY-SA-3.0-Option.",
+        "marken": null,
+        "bedenken": "Bearbeitungen (Skalierung, Formatwechsel) sind Weitergaben unter gleichen Bedingungen: Die Varianten stehen ebenfalls unter CC BY-SA 3.0 und nennen Urheber und Änderung."
+      },
+      "pruefung": {
+        "visuell_geprueft": true,
+        "befund": "Visuell geprüft: kegelförmiger Messingkörper, Punkt nach unten, geflochtene dunkelblaue Kordel mit Knoten; freigestellt auf hellem, leicht bläulichem Untergrund. Kein Massstab, keine Skala im Bild.",
+        "sha1_gegen_quelle": true,
+        "mime_gegen_quelle": true,
+        "lizenz_auf_dateiseite_bestaetigt": true
+      },
+      "original": {
+        "pfad": "assets/radiasthesie/media/original/klassisches-pendel.jpg",
+        "bytes": 168315,
+        "mime": "image/jpeg",
+        "breite": 1784,
+        "hoehe": 1468,
+        "sha1": "1147b6087129a520463046ee012b1abce9f05aef",
+        "sha256": "130eb311793ec7e2718654339f2b09404a33f31a027d7de4ca0ed9a5ffb36719",
+        "sha1_quelle": "1147b6087129a520463046ee012b1abce9f05aef"
+      },
+      "varianten": [
+        {
+          "breite": 520,
+          "hoehe": 428,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/520/klassisches-pendel.webp",
+          "bytes": 7180,
+          "sha256": "09515c0fc962e3ffb1c9a875b2972ac3429ccfc22a0226139a0e94641c418054",
+          "hat_alpha": false
+        },
+        {
+          "breite": 520,
+          "hoehe": 428,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/520/klassisches-pendel.avif",
+          "bytes": 6217,
+          "sha256": "e31a374ecbf2768072935d6812bd9b8f9802bc4b52913d18e9192d9514207f40",
+          "hat_alpha": false,
+          "optional": true
+        },
+        {
+          "breite": 1040,
+          "hoehe": 856,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/1040/klassisches-pendel.webp",
+          "bytes": 18560,
+          "sha256": "aad652a54f390d21746fddea4e3b2d7da0c4390da690f23caac3b26341a9a8c8",
+          "hat_alpha": false
+        },
+        {
+          "breite": 1040,
+          "hoehe": 856,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/1040/klassisches-pendel.avif",
+          "bytes": 17153,
+          "sha256": "4bdbe0b052b2ce04148e3890ac2129f8cd76f5b98e227176d1c2e9acf41cc462",
+          "hat_alpha": false,
+          "optional": true
+        }
+      ],
+      "varianten_uebersprungen": [],
+      "web": {
+        "src": "assets/radiasthesie/media/520/klassisches-pendel.webp",
+        "srcset": "assets/radiasthesie/media/520/klassisches-pendel.webp 520w, assets/radiasthesie/media/1040/klassisches-pendel.webp 1040w",
+        "srcset_avif": "assets/radiasthesie/media/520/klassisches-pendel.avif 520w, assets/radiasthesie/media/1040/klassisches-pendel.avif 1040w",
+        "width": 520,
+        "height": 428,
+        "fallback_png_520": null,
+        "hinweis": "Der bestehende Figuren-Slot ist 520 × 400 px bei anderem Seitenverhältnis. Beim Einbau object-fit: cover setzen und die Höhe aus dem tatsächlichen Seitenverhältnis ableiten, damit nichts verzerrt wird. AVIF ist als <picture>-Quelle vorbereitet, aber noch nicht eingebunden."
+      }
+    },
+    {
+      "id": "rad-media-02",
+      "key": "universalpendel",
+      "motiv": "Universalpendel",
+      "einsatz": "pendeln",
+      "alt": "Schwarze Kugel mit weissen Buchstaben und Markierungen (M, G, BL, VL), aus der ein Messingstab über eine braune Lederauflage austritt; eine Kordel führt nach rechts unten, unten liegt eine 10-Cent-Münze als Grössenvergleich.",
+      "caption": "Universalpendel: Kugelkörper mit aufgedruckten Buchstaben und Messingstab, laut Bildbeschreibung Ergebnis der Arbeiten von de Belizal, Chaumery und Morel. Die Münze dient nur dem Grössenvergleich.",
+      "attribution_text": "Wouter Hagens, „Universalpendel“, CC BY-SA 3.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)",
+      "urheber": {
+        "name": "Wouter Hagens",
+        "url": "https://commons.wikimedia.org/wiki/User:Wouterhagens"
+      },
+      "credit": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+      "quelle": {
+        "dateiseite": "https://commons.wikimedia.org/wiki/File:Universal_pendulum_E.jpg",
+        "datei_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Universal_pendulum_E.jpg",
+        "api": "https://commons.wikimedia.org/w/api.php (action=query, prop=imageinfo, extmetadata)",
+        "seiten_revid": 1211018461,
+        "seiten_stand": "2026-05-09T06:43:52Z",
+        "abgerufen_am": "2026-11-03",
+        "lizenz_baustein_wikitext": "{{self|cc-by-sa-3.0}}"
+      },
+      "lizenz": {
+        "kurz": "CC BY-SA 3.0",
+        "name": "Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 Unported",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attribution_pflicht": true,
+        "share_alike": true,
+        "aenderungshinweis": "Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten."
+      },
+      "rechte": {
+        "laenderhinweis": "Keine länderspezifische Besonderheit bekannt.",
+        "marken": "„Universalpendel“ ist eine Gerätebezeichnung aus der Radiästhesie-Literatur; keine Prüfung einer allfälligen Marke erfolgt, die Bezeichnung wird rein beschreibend verwendet.",
+        "bedenken": "Die Buchstaben auf der Kugel sind Teil eines Deutungssystems, keine Messskala. Die Varianten stehen unter CC BY-SA 3.0."
+      },
+      "pruefung": {
+        "visuell_geprueft": true,
+        "befund": "Visuell geprüft: schwarze, glänzende Kugel mit weissen Buchstaben (M, G, BL, VL, Vr, +), Messingstab in brauner Lederauflage, geflochtene Kordel, 10-Cent-Münze als Vergleich. Kein Eichvermerk, keine Zertifizierung im Bild.",
+        "sha1_gegen_quelle": true,
+        "mime_gegen_quelle": true,
+        "lizenz_auf_dateiseite_bestaetigt": true
+      },
+      "original": {
+        "pfad": "assets/radiasthesie/media/original/universalpendel.jpg",
+        "bytes": 1655496,
+        "mime": "image/jpeg",
+        "breite": 2108,
+        "hoehe": 1776,
+        "sha1": "a7da8420c903c7ef20acb7b675a2108f6df77d9f",
+        "sha256": "18fd3a30e08c7d20472be4da934a1fc6ee712daa8bd03d980b1cd62bc4278432",
+        "sha1_quelle": "a7da8420c903c7ef20acb7b675a2108f6df77d9f"
+      },
+      "varianten": [
+        {
+          "breite": 520,
+          "hoehe": 438,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/520/universalpendel.webp",
+          "bytes": 15360,
+          "sha256": "049dbd89e2705f5e0a35622e33e93a149fff538869022cef8a769886e83a7f61",
+          "hat_alpha": false
+        },
+        {
+          "breite": 520,
+          "hoehe": 438,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/520/universalpendel.avif",
+          "bytes": 13477,
+          "sha256": "a41e47945a097893b84deaea2ea4861148c8eae578982645e3fea97d615ac53c",
+          "hat_alpha": false,
+          "optional": true
+        },
+        {
+          "breite": 1040,
+          "hoehe": 876,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/1040/universalpendel.webp",
+          "bytes": 44382,
+          "sha256": "c90cbb1d9f41748ec5f1a28f0e87e1585c093b67c767f8bce93560dcb05515db",
+          "hat_alpha": false
+        },
+        {
+          "breite": 1040,
+          "hoehe": 876,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/1040/universalpendel.avif",
+          "bytes": 38276,
+          "sha256": "c6ba7029fd9863d90bb25667fac73c09eca8e9932b70a0467544cb5523648d25",
+          "hat_alpha": false,
+          "optional": true
+        }
+      ],
+      "varianten_uebersprungen": [],
+      "web": {
+        "src": "assets/radiasthesie/media/520/universalpendel.webp",
+        "srcset": "assets/radiasthesie/media/520/universalpendel.webp 520w, assets/radiasthesie/media/1040/universalpendel.webp 1040w",
+        "srcset_avif": "assets/radiasthesie/media/520/universalpendel.avif 520w, assets/radiasthesie/media/1040/universalpendel.avif 1040w",
+        "width": 520,
+        "height": 438,
+        "fallback_png_520": null,
+        "hinweis": "Der bestehende Figuren-Slot ist 520 × 400 px bei anderem Seitenverhältnis. Beim Einbau object-fit: cover setzen und die Höhe aus dem tatsächlichen Seitenverhältnis ableiten, damit nichts verzerrt wird. AVIF ist als <picture>-Quelle vorbereitet, aber noch nicht eingebunden."
+      }
+    },
+    {
+      "id": "rad-media-03",
+      "key": "radiasthesierute",
+      "motiv": "Radiästhesierute (Winkelrute)",
+      "einsatz": "radiasthesie",
+      "alt": "Eine Person in blauem Hemd hockt im Freien über steinigem, trockenem Boden und hält eine Winkelrute: zwei Messingarme laufen an einem blau lackierten Griffstück zusammen.",
+      "caption": "Winkelrute mit blau lackiertem Griffstück und zwei Messingarmen, im Gelände gehalten. Das Foto zeigt die Handhabung, nicht das Ergebnis einer Messung.",
+      "attribution_text": "José Antonio Agraz Sandoval, „Radiästhesierute (Winkelrute)“, CC0 1.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)",
+      "urheber": {
+        "name": "José Antonio Agraz Sandoval",
+        "url": "https://commons.wikimedia.org/wiki/Special:ListFiles/Jos%C3%A9_Antonio_Agraz_Sandoval"
+      },
+      "credit": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+      "quelle": {
+        "dateiseite": "https://commons.wikimedia.org/wiki/File:Varilla_de_radiestesia.JPG",
+        "datei_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Varilla_de_radiestesia.JPG",
+        "api": "https://commons.wikimedia.org/w/api.php (action=query, prop=imageinfo, extmetadata)",
+        "seiten_revid": 1141593234,
+        "seiten_stand": "2026-01-04T08:33:31Z",
+        "abgerufen_am": "2026-11-03",
+        "lizenz_baustein_wikitext": "{{self|Cc-zero}}"
+      },
+      "lizenz": {
+        "kurz": "CC0 1.0",
+        "name": "Creative Commons Zero 1.0 – Verzicht auf alle Rechte (Public Domain Dedication)",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.de",
+        "attribution_pflicht": false,
+        "share_alike": false,
+        "aenderungshinweis": "Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten."
+      },
+      "rechte": {
+        "laenderhinweis": "CC0 ist ein weltweiter Rechteverzicht; keine länderspezifische Einschränkung bekannt. Die Nennung des Urhebers erfolgt hier freiwillig.",
+        "marken": null,
+        "bedenken": "Das Original ist mit 566 × 425 px klein; es wird deshalb nur eine 520-px-Variante erzeugt und nicht hochskaliert. Für eine grossformatige Verwendung ist das Bild nicht geeignet."
+      },
+      "pruefung": {
+        "visuell_geprueft": true,
+        "befund": "Visuell geprüft: hockende Person, blaues Hemd, trockener steiniger Untergrund, zwei abgewinkelte Messingruten an einem blau lackierten Griff. Gesicht nur angeschnitten sichtbar (Bildrand). Keine Messanzeige im Bild.",
+        "sha1_gegen_quelle": true,
+        "mime_gegen_quelle": true,
+        "lizenz_auf_dateiseite_bestaetigt": true
+      },
+      "original": {
+        "pfad": "assets/radiasthesie/media/original/radiasthesierute.jpg",
+        "bytes": 335929,
+        "mime": "image/jpeg",
+        "breite": 566,
+        "hoehe": 425,
+        "sha1": "40a58fb0b29e07d3ada3ce21354467b091df5692",
+        "sha256": "4aba217318b0fe1dfc52491556d905aca80130060bcb0a29adb6de38aade50cb",
+        "sha1_quelle": "40a58fb0b29e07d3ada3ce21354467b091df5692"
+      },
+      "varianten": [
+        {
+          "breite": 520,
+          "hoehe": 390,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/520/radiasthesierute.webp",
+          "bytes": 87682,
+          "sha256": "3cf17cc5dc4b16ac82dc8ad11b073414894a6fb78ae4e84cdcb05fe52be0c173",
+          "hat_alpha": false
+        },
+        {
+          "breite": 520,
+          "hoehe": 390,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/520/radiasthesierute.avif",
+          "bytes": 59847,
+          "sha256": "dc93219d349037887bc9532e5cdbf62a0bd78fe831096257efb63dee761f48fa",
+          "hat_alpha": false,
+          "optional": true
+        }
+      ],
+      "varianten_uebersprungen": [
+        {
+          "breite": 1040,
+          "grund": "Original ist nur 566 px breit; kein Hochskalieren"
+        }
+      ],
+      "web": {
+        "src": "assets/radiasthesie/media/520/radiasthesierute.webp",
+        "srcset": "assets/radiasthesie/media/520/radiasthesierute.webp 520w",
+        "srcset_avif": "assets/radiasthesie/media/520/radiasthesierute.avif 520w",
+        "width": 520,
+        "height": 390,
+        "fallback_png_520": null,
+        "hinweis": "Der bestehende Figuren-Slot ist 520 × 400 px bei anderem Seitenverhältnis. Beim Einbau object-fit: cover setzen und die Höhe aus dem tatsächlichen Seitenverhältnis ableiten, damit nichts verzerrt wird. AVIF ist als <picture>-Quelle vorbereitet, aber noch nicht eingebunden."
+      }
+    },
+    {
+      "id": "rad-media-04",
+      "key": "wuenschelrute-historisch",
+      "motiv": "Historische Wünschelrute",
+      "einsatz": "radiasthesie",
+      "alt": "Getönte Federzeichnung: Ein Mann in der Kleidung des 18. Jahrhunderts steht auf freiem Feld und hält mit beiden Händen eine gegabelte Rute schräg vor dem Körper; im Hintergrund Hügel.",
+      "caption": "Wünschelrute in einer Zeichnung aus dem erweiterten Exemplar von Thomas Pennants „A Tour in Wales“ (Ausgabe 1781), National Library of Wales. Gemeinfrei.",
+      "attribution_text": "Thomas Pennant (1726–1798), laut Dateiseite; Vorlage: National Library of Wales, „Historische Wünschelrute“, Public Domain (PD-old), via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)",
+      "urheber": {
+        "name": "Thomas Pennant (1726–1798), laut Dateiseite; Vorlage: National Library of Wales",
+        "url": "https://commons.wikimedia.org/wiki/File:Divining_Rod.jpg"
+      },
+      "credit": "<table style=\"width:100%;border:1px red solid; background:#f6f6f4; padding:0; margin:auto;\">\n\n<tbody><tr>\n<td align=\"left\"><span typeof=\"mw:File\"><span><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Library_of_Wales_logo.svg/500px-National_Library_of_Wales_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"400\" height=\"61\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Library_of_Wales_logo.svg/960px-National_Library_of_Wales_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"78\"></span></span>\n</td>\n<td>This image is available from the <big><b><a rel=\"nofollow\" class=\"external text\" href=\"https://www.library.wales/\">National Library of Wales</a></b></big><br>\n</td></tr></tbody></table>",
+      "quelle": {
+        "dateiseite": "https://commons.wikimedia.org/wiki/File:Divining_Rod.jpg",
+        "datei_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Divining_Rod.jpg",
+        "api": "https://commons.wikimedia.org/w/api.php (action=query, prop=imageinfo, extmetadata)",
+        "seiten_revid": 1207052185,
+        "seiten_stand": "2026-05-02T11:11:19Z",
+        "abgerufen_am": "2026-11-03",
+        "lizenz_baustein_wikitext": "{{PD-old}}"
+      },
+      "lizenz": {
+        "kurz": "Public Domain (PD-old)",
+        "name": "Gemeinfrei — Schutzfrist abgelaufen (Urheber 1798 gestorben)",
+        "url": "https://commons.wikimedia.org/wiki/Template:PD-old",
+        "attribution_pflicht": false,
+        "share_alike": false,
+        "aenderungshinweis": "Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten."
+      },
+      "rechte": {
+        "laenderhinweis": "Gemeinfrei weltweit: Der Urheber starb 1798, die Schutzfrist von 70 Jahren nach dem Tod ist in allen relevanten Rechtsordnungen abgelaufen.",
+        "marken": null,
+        "bedenken": "Die Dateiseite nennt als Urheber Thomas Pennant, obwohl die Beschreibung von Zeichnungen durch Moses Griffiths, Ingleby und weitere Künstler spricht. Wer das vorliegende Blatt gezeichnet hat, ist dort nicht eindeutig bestimmt — die Zuschreibung bleibt unsicher. Für die Gemeinfreiheit ist das ohne Belang, für die Bildunterschrift schon: Sie nennt deshalb die Publikation, nicht einen einzelnen Zeichner."
+      },
+      "pruefung": {
+        "visuell_geprueft": true,
+        "befund": "Visuell geprüft: monochrome getuschte Zeichnung, Papier gebräunt, Mann mit Wams und Kniehosen, gegabelte Rute in beiden Händen, Hügelkulisse. Die Rute ist als Gabel erkennbar, nicht als Winkelrute.",
+        "sha1_gegen_quelle": true,
+        "mime_gegen_quelle": true,
+        "lizenz_auf_dateiseite_bestaetigt": true
+      },
+      "original": {
+        "pfad": "assets/radiasthesie/media/original/wuenschelrute-historisch.jpg",
+        "bytes": 1110391,
+        "mime": "image/jpeg",
+        "breite": 1232,
+        "hoehe": 741,
+        "sha1": "b29c59be770ee6ec6b98a3e7c47c70f53f97a53c",
+        "sha256": "328dfcd41b5608d8fa262adadd69212622ac5b12019ee2c289da4d18a6099e3e",
+        "sha1_quelle": "b29c59be770ee6ec6b98a3e7c47c70f53f97a53c"
+      },
+      "varianten": [
+        {
+          "breite": 520,
+          "hoehe": 313,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/520/wuenschelrute-historisch.webp",
+          "bytes": 24274,
+          "sha256": "5f10b4c5133b4d27e678945cdef8babe74072d78f4c18263798da34260109621",
+          "hat_alpha": false
+        },
+        {
+          "breite": 520,
+          "hoehe": 313,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/520/wuenschelrute-historisch.avif",
+          "bytes": 18793,
+          "sha256": "5fdc640d570cf93dac42c20592a1bbbc66806117bdfd1793d3c3792cd60737fd",
+          "hat_alpha": false,
+          "optional": true
+        },
+        {
+          "breite": 1040,
+          "hoehe": 626,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/1040/wuenschelrute-historisch.webp",
+          "bytes": 80852,
+          "sha256": "de461610c1af0b16d73f00fb9706a5153526afa69d933c1354e586628f20fd11",
+          "hat_alpha": false
+        },
+        {
+          "breite": 1040,
+          "hoehe": 626,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/1040/wuenschelrute-historisch.avif",
+          "bytes": 67704,
+          "sha256": "83613667ae9e6c9e461b61dd8908c7f208fc3ddbbf94df96fe2e2b3bc4fc75e0",
+          "hat_alpha": false,
+          "optional": true
+        }
+      ],
+      "varianten_uebersprungen": [],
+      "web": {
+        "src": "assets/radiasthesie/media/520/wuenschelrute-historisch.webp",
+        "srcset": "assets/radiasthesie/media/520/wuenschelrute-historisch.webp 520w, assets/radiasthesie/media/1040/wuenschelrute-historisch.webp 1040w",
+        "srcset_avif": "assets/radiasthesie/media/520/wuenschelrute-historisch.avif 520w, assets/radiasthesie/media/1040/wuenschelrute-historisch.avif 1040w",
+        "width": 520,
+        "height": 313,
+        "fallback_png_520": null,
+        "hinweis": "Der bestehende Figuren-Slot ist 520 × 400 px bei anderem Seitenverhältnis. Beim Einbau object-fit: cover setzen und die Höhe aus dem tatsächlichen Seitenverhältnis ableiten, damit nichts verzerrt wird. AVIF ist als <picture>-Quelle vorbereitet, aber noch nicht eingebunden."
+      }
+    },
+    {
+      "id": "rad-media-05",
+      "key": "tarot",
+      "motiv": "Tarot — Drei-Karten-Legung",
+      "einsatz": "orakel",
+      "alt": "Drei Tarotkarten liegen offen in einer Reihe auf blauem Samt: Die Hohepriesterin, Zwei der Kelche und Ass der Schwerter; dahinter liegt das ganze Deck gefächert, daneben drei weisse Kerzen und eine Hand aus schwarzem Holz.",
+      "caption": "Drei-Karten-Legung mit dem Rider-Waite-Smith-Deck (Ausgabe Smith-Waite Centennial): Die Hohepriesterin, Zwei der Kelche, Ass der Schwerter.",
+      "attribution_text": "Nosferattus, „Tarot — Drei-Karten-Legung“, CC0 1.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)",
+      "urheber": {
+        "name": "Nosferattus",
+        "url": "https://commons.wikimedia.org/wiki/User:Nosferattus"
+      },
+      "credit": "<span class=\"int-own-work\" lang=\"de\">Eigenes Werk</span>",
+      "quelle": {
+        "dateiseite": "https://commons.wikimedia.org/wiki/File:Tarot_cards_-_3_card_spread_with_candles.jpg",
+        "datei_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Tarot_cards_-_3_card_spread_with_candles.jpg",
+        "api": "https://commons.wikimedia.org/w/api.php (action=query, prop=imageinfo, extmetadata)",
+        "seiten_revid": 1219272290,
+        "seiten_stand": "2026-05-24T04:29:47Z",
+        "abgerufen_am": "2026-11-03",
+        "lizenz_baustein_wikitext": "{{self|cc-zero}}"
+      },
+      "lizenz": {
+        "kurz": "CC0 1.0",
+        "name": "Creative Commons Zero 1.0 – Verzicht auf alle Rechte (Public Domain Dedication)",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.de",
+        "attribution_pflicht": false,
+        "share_alike": false,
+        "aenderungshinweis": "Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten."
+      },
+      "rechte": {
+        "laenderhinweis": "Das Foto ist CC0. Die abgebildeten Kartenmotive sind Reproduktionen des 1909 erschienenen Rider-Waite-Smith-Decks (Zeichnungen: Pamela Colman Smith, gestorben 1951). Nach deutschem und EU-Recht endete die Schutzfrist Ende 2021; in den USA ist das Deck seit Langem gemeinfrei. Die Kartenrückseite und Eigenleistungen der Neuausgabe sind nicht abgebildet.",
+        "marken": "„Smith-Waite Centennial“ und „Rider-Waite-Smith“ sind Bezeichnungen von Verlagen; sie werden hier nur zur Identifikation des abgebildeten Decks genannt.",
+        "bedenken": "Die Legung ist gestellt. Das Bild dokumentiert eine verbreitete Praxis, nicht deren Treffsicherheit."
+      },
+      "pruefung": {
+        "visuell_geprueft": true,
+        "befund": "Visuell geprüft: blaue Samtdecke, gefächertes Gesamtdeck, drei offene Karten mit lesbaren Titeln (THE HIGH PRIESTESS, TWO OF CUPS, ACE OF SWORDS), schwarze Holzhand als Kartenhalter, drei weisse Stumpenkerzen, olivfarbene Wand. Kerzen sind nicht angezündet.",
+        "sha1_gegen_quelle": true,
+        "mime_gegen_quelle": true,
+        "lizenz_auf_dateiseite_bestaetigt": true
+      },
+      "original": {
+        "pfad": "assets/radiasthesie/media/original/tarot.jpg",
+        "bytes": 1861604,
+        "mime": "image/jpeg",
+        "breite": 3200,
+        "hoehe": 2400,
+        "sha1": "631451d33eed4381273b04fe61851d276c3a0221",
+        "sha256": "9d50255b05821416925e965825cf56a52f2c4c1d1090f7fcb11fde5606e870d8",
+        "sha1_quelle": "631451d33eed4381273b04fe61851d276c3a0221"
+      },
+      "varianten": [
+        {
+          "breite": 520,
+          "hoehe": 390,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/520/tarot.webp",
+          "bytes": 35892,
+          "sha256": "348411e73d2091952a8a9fc2c31d30b73b8731b760c6a912a734ab5400375319",
+          "hat_alpha": false
+        },
+        {
+          "breite": 520,
+          "hoehe": 390,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/520/tarot.avif",
+          "bytes": 24155,
+          "sha256": "ef6490216e6150f4c0f27bfb7b51717eb3e50b1adc66fb06942503adb9d8edee",
+          "hat_alpha": false,
+          "optional": true
+        },
+        {
+          "breite": 1040,
+          "hoehe": 780,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/1040/tarot.webp",
+          "bytes": 112604,
+          "sha256": "2528062ec1412e77dc1efe42ef569338baf93b1d8b1061e8222c211350027296",
+          "hat_alpha": false
+        },
+        {
+          "breite": 1040,
+          "hoehe": 780,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/1040/tarot.avif",
+          "bytes": 79347,
+          "sha256": "fb8f895c3762b8c0e034abc2b36583dfb865625903cefc73dccd2c5046459087",
+          "hat_alpha": false,
+          "optional": true
+        }
+      ],
+      "varianten_uebersprungen": [],
+      "web": {
+        "src": "assets/radiasthesie/media/520/tarot.webp",
+        "srcset": "assets/radiasthesie/media/520/tarot.webp 520w, assets/radiasthesie/media/1040/tarot.webp 1040w",
+        "srcset_avif": "assets/radiasthesie/media/520/tarot.avif 520w, assets/radiasthesie/media/1040/tarot.avif 1040w",
+        "width": 520,
+        "height": 390,
+        "fallback_png_520": null,
+        "hinweis": "Der bestehende Figuren-Slot ist 520 × 400 px bei anderem Seitenverhältnis. Beim Einbau object-fit: cover setzen und die Höhe aus dem tatsächlichen Seitenverhältnis ableiten, damit nichts verzerrt wird. AVIF ist als <picture>-Quelle vorbereitet, aber noch nicht eingebunden."
+      }
+    },
+    {
+      "id": "rad-media-06",
+      "key": "ouija-historisch",
+      "motiv": "Historisches Ouija-Brett",
+      "einsatz": "orakel",
+      "alt": "Freigestelltes historisches Ouija-Brett aus orangebraunem Holz mit schwarzen Buchstaben A bis Z in zwei Bögen, den Ziffern 1 bis 9 und 0 sowie den Wörtern YES, NO und GOOD BYE; oben ein ovales Herstellerlogo mit Vogel-Emblem, in den Ecken Sterne, oben rechts Stern und Mondsichel, oben links ein dunkler Kreis.",
+      "caption": "Ouija-Brett der Kennard Novelty Company, Baltimore, um 1890. Gemeinfrei; die Bezeichnung „Ouija“ ist als Marke geschützt — das Bild zeigt ein historisches Objekt, keine Produktempfehlung.",
+      "attribution_text": "Elijah Bond (1847–1921) und Charles Kennard (1856–1925), „Historisches Ouija-Brett“, Public Domain (PD-Art / PD-old-70-1923), via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)",
+      "urheber": {
+        "name": "Elijah Bond (1847–1921) und Charles Kennard (1856–1925)",
+        "url": "https://commons.wikimedia.org/wiki/File:Ouija_board_-_Kennard_Novelty_Company.png"
+      },
+      "credit": "<a rel=\"nofollow\" class=\"external text\" href=\"https://museumoftalkingboards.com/factory.html\">Museum of Talking Boards</a>",
+      "quelle": {
+        "dateiseite": "https://commons.wikimedia.org/wiki/File:Ouija_board_-_Kennard_Novelty_Company.png",
+        "datei_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Ouija_board_-_Kennard_Novelty_Company.png",
+        "api": "https://commons.wikimedia.org/w/api.php (action=query, prop=imageinfo, extmetadata)",
+        "seiten_revid": 1207650742,
+        "seiten_stand": "2026-05-03T10:10:09Z",
+        "abgerufen_am": "2026-11-03",
+        "lizenz_baustein_wikitext": "{{PD-Art|PD-old-70-1923}}"
+      },
+      "lizenz": {
+        "kurz": "Public Domain (PD-Art / PD-old-70-1923)",
+        "name": "Gemeinfrei — zweidimensionales Werk, Schutzfrist abgelaufen",
+        "url": "https://commons.wikimedia.org/wiki/Template:PD-Art",
+        "attribution_pflicht": false,
+        "share_alike": false,
+        "aenderungshinweis": "Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten. Zusätzlich PNG-Fassung mit erhaltenem Alphakanal."
+      },
+      "rechte": {
+        "laenderhinweis": "Die Dateiseite traegt {{PD-Art|PD-old-70-1923}} — nicht, wie in der Ausgangsliste vermerkt, eine Public-Domain-Mark. Beide Wege führen zu gemeinfrei, der genaue Baustein ist aber PD-old-70-1923. PD-Art ist am US-Recht ausgerichtet; für Deutschland und die EU greift § 64 UrhG: Bond starb 1921, Kennard 1925, die 70-Jahres-Frist endete 1992 bzw. 1996. Das Werk ist in beiden Rechtsordnungen gemeinfrei.",
+        "marken": "„Ouija“ ist eine eingetragene Marke (Hasbro). Die Gemeinfreiheit des historischen Bretts berührt das Markenrecht nicht. Zulässig ist die beschreibende Verwendung als historisches Dokument; das Bild darf nicht als Herkunfts- oder Qualitätshinweis für Produkte dienen.",
+        "bedenken": "Das Brett ist freigestellt (Alphakanal mit echter Transparenz). Die Varianten behalten den Alphakanal; JPEG kommt dafür nicht in Frage, weil es keine Transparenz kennt."
+      },
+      "pruefung": {
+        "visuell_geprueft": true,
+        "befund": "Visuell geprüft: Holzmaserung, schwarze Schrift, Buchstabenbogen A–M und N–Z, Ziffernreihe 1–9 und 0, YES/NO/GOOD BYE, ovales Logo mit Vogel, Sterne und Mondsichel. Das Logo ist kursiv und schräg gedruckt und bei 520 px nicht sicher zu entziffern — deshalb nennt der Alt-Text nur „ovales Herstellerlogo mit Vogel-Emblem“ und keine Lesung.",
+        "sha1_gegen_quelle": true,
+        "mime_gegen_quelle": true,
+        "lizenz_auf_dateiseite_bestaetigt": true
+      },
+      "original": {
+        "pfad": "assets/radiasthesie/media/original/ouija-historisch.png",
+        "bytes": 22414749,
+        "mime": "image/png",
+        "breite": 4928,
+        "hoehe": 3290,
+        "sha1": "6eb9db8791e3779c0135f8e1dc44d0296cb392ef",
+        "sha256": "caf46ad77f0397018c82b96818f8a83867f9e33f2753e653a128a6c3881bf4d5",
+        "sha1_quelle": "6eb9db8791e3779c0135f8e1dc44d0296cb392ef"
+      },
+      "varianten": [
+        {
+          "breite": 520,
+          "hoehe": 347,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/520/ouija-historisch.webp",
+          "bytes": 51788,
+          "sha256": "28b1d65497949ad3a36243603c5fac180f8dfbba6dd26b81005b259636ac62a7",
+          "hat_alpha": true
+        },
+        {
+          "breite": 520,
+          "hoehe": 347,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/520/ouija-historisch.avif",
+          "bytes": 34669,
+          "sha256": "00271918a0b6be1e3c105a4a531c9a4c094f6475954a4a77279b7de7bfaec8c5",
+          "hat_alpha": true,
+          "optional": true
+        },
+        {
+          "breite": 520,
+          "hoehe": 347,
+          "format": "png",
+          "pfad": "assets/radiasthesie/media/520/ouija-historisch.png",
+          "bytes": 355346,
+          "sha256": "48c9c0b67cc0e1153a4cd2f8bfdb318f4a4470d63fc90a1db0a2af71684909aa",
+          "hat_alpha": true
+        },
+        {
+          "breite": 1040,
+          "hoehe": 694,
+          "format": "webp",
+          "pfad": "assets/radiasthesie/media/1040/ouija-historisch.webp",
+          "bytes": 192544,
+          "sha256": "2f671f09a5ea687171991c66ebd0a2aeeef9c0131eabca355c4450eff05cc9c2",
+          "hat_alpha": true
+        },
+        {
+          "breite": 1040,
+          "hoehe": 694,
+          "format": "avif",
+          "pfad": "assets/radiasthesie/media/1040/ouija-historisch.avif",
+          "bytes": 130993,
+          "sha256": "b2e01fe073ba2331bcc91d4920962688c1787fb735db4411b57016c1bf65594f",
+          "hat_alpha": true,
+          "optional": true
+        },
+        {
+          "breite": 1040,
+          "hoehe": 694,
+          "format": "png",
+          "pfad": "assets/radiasthesie/media/1040/ouija-historisch.png",
+          "bytes": 1439499,
+          "sha256": "5ea31dad72c089e9a50ee2dbdbb7982f86fe751606e8cbb3893051987956d9dd",
+          "hat_alpha": true
+        }
+      ],
+      "varianten_uebersprungen": [],
+      "web": {
+        "src": "assets/radiasthesie/media/520/ouija-historisch.webp",
+        "srcset": "assets/radiasthesie/media/520/ouija-historisch.webp 520w, assets/radiasthesie/media/1040/ouija-historisch.webp 1040w",
+        "srcset_avif": "assets/radiasthesie/media/520/ouija-historisch.avif 520w, assets/radiasthesie/media/1040/ouija-historisch.avif 1040w",
+        "width": 520,
+        "height": 347,
+        "fallback_png_520": "assets/radiasthesie/media/520/ouija-historisch.png",
+        "hinweis": "Der bestehende Figuren-Slot ist 520 × 400 px bei anderem Seitenverhältnis. Beim Einbau object-fit: cover setzen und die Höhe aus dem tatsächlichen Seitenverhältnis ableiten, damit nichts verzerrt wird. AVIF ist als <picture>-Quelle vorbereitet, aber noch nicht eingebunden."
+      }
+    }
+  ],
+  "own_assets": [
+    {
+      "datei": "assets/radiasthesie/pendel-geometrie.svg",
+      "motiv": "Pendelgeometrie",
+      "einsatz": "pendeln",
+      "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden.",
+      "caption": "Pendelgeometrie: Länge L, Auslenkung α, Schwingungsdauer T.",
+      "bytes": 2732,
+      "lizenz": {
+        "kurz": "Eigenwerk (Projekt Esoterik-Welt)",
+        "url": null,
+        "hinweis": "Im Repository liegt keine LICENSE-Datei; die Rechteangabe für eigene Assets ist projektweit offen (siehe offene Punkte)."
+      },
+      "sicherheitspruefung": {
+        "fehler": 0,
+        "keine_skripte": true,
+        "keine_externen_referenzen": true,
+        "title_desc_viewbox": true
+      }
+    },
+    {
+      "datei": "assets/radiasthesie/pendeltafel.svg",
+      "motiv": "Pendeltafel",
+      "einsatz": "pendeln",
+      "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10.",
+      "caption": "Pendeltafel als Ordnungsschema — die Tafel misst nichts.",
+      "bytes": 2188,
+      "lizenz": {
+        "kurz": "Eigenwerk (Projekt Esoterik-Welt)",
+        "url": null,
+        "hinweis": "Im Repository liegt keine LICENSE-Datei; die Rechteangabe für eigene Assets ist projektweit offen (siehe offene Punkte)."
+      },
+      "sicherheitspruefung": {
+        "fehler": 0,
+        "keine_skripte": true,
+        "keine_externen_referenzen": true,
+        "title_desc_viewbox": true
+      }
+    },
+    {
+      "datei": "assets/radiasthesie/winkelrute.svg",
+      "motiv": "Winkelrute in Aufsicht",
+      "einsatz": "radiasthesie",
+      "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander.",
+      "caption": "Winkelrute in Aufsicht, eigene Zeichnung.",
+      "bytes": 1775,
+      "lizenz": {
+        "kurz": "Eigenwerk (Projekt Esoterik-Welt)",
+        "url": null,
+        "hinweis": "Im Repository liegt keine LICENSE-Datei; die Rechteangabe für eigene Assets ist projektweit offen (siehe offene Punkte)."
+      },
+      "sicherheitspruefung": {
+        "fehler": 0,
+        "keine_skripte": true,
+        "keine_externen_referenzen": true,
+        "title_desc_viewbox": true
+      }
+    },
+    {
+      "datei": "assets/radiasthesie/orakel-karten.svg",
+      "motiv": "Orakelkarten",
+      "einsatz": "orakel",
+      "alt": "Drei hochformatige Karten liegen leicht gefächert übereinander; auf der mittleren stehen ein Kreis, ein Stern und ein Bogen.",
+      "caption": "Drei gefächerte Karten als Zeichen für Orakel, eigene Zeichnung.",
+      "bytes": 1488,
+      "lizenz": {
+        "kurz": "Eigenwerk (Projekt Esoterik-Welt)",
+        "url": null,
+        "hinweis": "Im Repository liegt keine LICENSE-Datei; die Rechteangabe für eigene Assets ist projektweit offen (siehe offene Punkte)."
+      },
+      "sicherheitspruefung": {
+        "fehler": 0,
+        "keine_skripte": true,
+        "keine_externen_referenzen": true,
+        "title_desc_viewbox": true
+      }
+    }
+  ],
+  "open_issues": [
+    "Keine LICENSE-Datei im Repository: die Lizenz der eigenen SVGs und der Projektinhalte ist nicht formal festgelegt.",
+    "Pfadabweichung zu RAD-01/INTEGRATIONSPUNKTE.md §2.5: dort sind assets/radiasthesie/fotos/ und assets/radiasthesie/media-manifest.json vorgesehen. Diese Karte schreibt assets/radiasthesie/media/ vor. Bewusst genau eine Manifestdatei unter assets/radiasthesie/media/media-manifest.json — eine Kopie an zweiter Stelle wäre eine zweite Wahrheit. RAD-06 muss diesen Pfad lesen.",
+    "Das Ouija-Logo ist bei 520 px nicht sicher zu entziffern; der Alt-Text beschreibt es deshalb, ohne es zu lesen.",
+    "Die Zuschreibung des Wünschelruten-Blattes an Thomas Pennant ist laut Dateiseite unsicher (Beschreibung nennt mehrere Zeichner).",
+    "Die Bilder sind noch nicht in js/data/radiasthesie.js eingebunden — das ist Integrationsumfang (RAD-06), nicht dieser Karte.",
+    "AVIF ist erzeugt, aber noch von keiner Ansicht ausgeliefert; der Einbau braucht <picture>/<source>.",
+    "Für die Auslieferung fehlt eine Bildnachweisseite im Seitenbau; hier liegt sie als generierte Datei bereit.",
+    "Bei den beiden CC-BY-SA-3.0-Motiven muss die Weitergabe unter gleichen Bedingungen sichtbar werden (Impressum- oder Bildnachweishinweis)."
+  ]
+}

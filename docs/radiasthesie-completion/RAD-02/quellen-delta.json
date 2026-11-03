@@ -1,0 +1,2058 @@
+{
+  "schema_version": "1.1-delta",
+  "generated_for": "ESOW-RAD-02 / Kanban t_54bbde93 (Delta-Karte)",
+  "generated_at": "2026-11-03",
+  "base": {
+    "repository": "C:/Users/mas/Arbeit/Esoterik-Welt",
+    "worktree": "C:/Users/mas/Arbeit/esow-rad-t_878c59c7",
+    "branch": "feature/radiasthesie-modul",
+    "commit": "e44fa5c54c80cb39383fa4177aa587236dc87596",
+    "existing_library": "docs/radiasthesie-konzept/recherche/quellen.json",
+    "existing_ids_preserved": "Q01-Q33 unverändert; dieses Delta ergänzt ausschließlich Q34-Q66",
+    "predecessor_card": "t_0fe70b63"
+  },
+  "rules": {
+    "id_policy": "Bestehende Q-IDs werden nicht umnummeriert, nicht umgedeutet und nicht überschrieben.",
+    "evidence_policy": "Jede Aussage trägt eine Quelle mit Locator; Volltext, Abstract und Metadaten sind getrennt ausgewiesen.",
+    "no_fabrication": "Nicht beschaffte Volltexte sind als nicht beschafft markiert und stützen keine Inhaltsaussage.",
+    "interest_policy": "Interessenvermerke sind beschreibend, kein Wahrheitsurteil."
+  },
+  "verification_levels": {
+    "full_text": "Volltext vollständig abgerufen und gelesen (HTML/PDF/TXT)",
+    "full_text_partial": "Volltext abgerufen, aber nur teilweise auswertbar (Scan-OCR, Auszug, Sperre)",
+    "abstract": "Abstract im Volltext abgerufen und gelesen; Volltext nicht beschafft",
+    "metadata_doi_csl": "Bibliografische Metadaten über DOI-Content-Negotiation (CSL-JSON) geprüft",
+    "metadata_crossref": "Metadaten über Crossref geprüft",
+    "metadata_openalex": "Metadaten über OpenAlex geprüft",
+    "library_record": "ISBN/Publikationsdaten über lobid/hbz-Verbundkatalog geprüft",
+    "page_loaded": "Webseite geladen und im Text geprüft",
+    "not_obtained": "Existenz belegt (Referenzliste), Publikation selbst nicht beschafft"
+  },
+  "corrections": [
+    {
+      "id": "K01",
+      "target": "docs/radiasthesie-konzept/inhalte/quellenverzeichnis.md, Zeile Q05",
+      "issue": "Q05 wird dort als 'Rutengehen — Forschungsstand (Betz 2003)' geführt.",
+      "finding": "Die Seite ist von Gerhard Mayer, 10. Juni 2003, Gesellschaft für Anomalistik (Studie des Monats); Betz wird nur zitiert.",
+      "evidence": "Q05-Seite, Autorenzeile 'Gerhard Mayer' und Datum '10. Juni 2003'; quellen.json führt Mayer korrekt.",
+      "action": "RAD-06: Tabellenzeile Q05 auf Mayer korrigieren; keine inhaltliche Änderung."
+    },
+    {
+      "id": "K02",
+      "target": "Q02 Enright 1995",
+      "issue": "Zwei DOI-Varianten im Umlauf: 10.1007/s001140050198 (Startquelle, Q02) und 10.1007/bf01134560.",
+      "finding": "OpenAlex indexiert beide unter demselben Titel/Autoren/Jahr; die Startquelle ist gültig.",
+      "evidence": "OpenAlex-Suche 'water dowsing' listet beide DOIs; Crossref-Abruf der Startquelle lieferte HTTP 200.",
+      "action": "Q02 unverändert lassen; in RAD-06 als Dublette dokumentieren, nicht ersetzen."
+    },
+    {
+      "id": "K03",
+      "target": "Q01 USGS Water Dowsing",
+      "issue": "Q01 hat kein Jahr; die Webseite nennt 'September 17, 2026' als Aktualisierung.",
+      "finding": "Die Webseite ist eine aktualisierte Fassung; die zugehörige Druckpublikation ist USGS GIP 'Water Dowsing' (1977), DOI 10.3133/7000104.",
+      "evidence": "Q01-Seite (Abruf 2026-11-03) nennt das Datum; OpenAlex/DOI 10.3133/7000104 für die Publikation von 1977.",
+      "action": "RAD-06: Q01 um 'Webfassung, aktualisiert 2026-09-17; Printoriginal 1977' ergänzen."
+    },
+    {
+      "id": "K04",
+      "target": "Q30 Prokop/Wimmer 1985",
+      "issue": "Q30 verweist auf ISBN aus Q06 (Sekundärquelle).",
+      "finding": "lobid bestätigt: 'Wünschelrute, Erdstrahlen, Radiästhesie', 3. Aufl., Enke 1985, ISBN 3-432-84473-5.",
+      "evidence": "lobid-Ressource TT002048267.",
+      "action": "RAD-06: Verifikationsstufe von 'secondary_isbn' auf 'library_record' heben."
+    },
+    {
+      "id": "K05",
+      "target": "Q05 Literaturangabe zu Betz & König 1989",
+      "issue": "Q05 nennt 'Herold-Verlag, München'; Katalog nennt 'König und Betz'.",
+      "finding": "lobid: München: König und Betz, 1989, ISBN 3-923819-05-6 (Selbstverlag).",
+      "evidence": "lobid-Ressource HT004087743.",
+      "action": "RAD-06: Verlagsangabe präzisieren; als Selbstverlag kennzeichnen."
+    },
+    {
+      "id": "K06",
+      "target": "Quellenverzeichnis, Kopfzeile",
+      "issue": "Kopfzeile nennt 'Lücken: Enright (404)'.",
+      "finding": "Der DOI ist bei Crossref/OpenAlex registriert; die Verlagsseite lieferte 2026-11-02 HTTP 404. Der Befund ist ein Zugriffs-, kein Existenzproblem.",
+      "evidence": "Crossref-Abruf 10.1007/s001140050198 (HTTP 200, JSON 1.575 Bytes); OpenAlex-Treffer.",
+      "action": "RAD-06: Formulierung 'Volltext über Verlag nicht erreichbar' statt '404' verwenden."
+    }
+  ],
+  "gaps_remaining": [
+    "Walach & Schmidt (1997) und Houtkooper & Vaitl (1997) sind nur über Q05 referenziert; keine eigene Metadaten- oder Volltextprüfung erfolgt.",
+    "Der Münchner Schlussbericht (Wagner, Betz & König 1990, BMFT 01 KB8602) wurde nicht beschafft; alle Aufbaudaten stammen aus der Rezeption (Q42).",
+    "Die Betz & König 1989-Monografie wurde nur katalogisiert, nicht gelesen; die positive Deutung ist über Q05/Q42 referiert.",
+    "Für den Biotensor existiert keine peer-reviewte Studie; die Aussage 'keine Validierung' beruht auf negativer Recherche (OpenAlex-Suche 'biotensor' ohne einschlägige Treffer) und ist keine bewiesene Nichtexistenz.",
+    "Der amerikanische ASD-Gründungsdatensatz (1961) ist nur tertiär belegt; die ASD-Website blockierte den Abruf.",
+    "Die NS-Zeit (1933-1945) ist im Delta nicht durch eine neu geprüfte Primärquelle abgedeckt; Q15 (bestehend) bleibt dafür die Referenz.",
+    "Spanischsprachige und afrikanische Literatur außer Marokko wurde nicht systematisch durchsucht (Sprachgrenze).",
+    "Eine unabhängige Replikation der Münchner Befunde durch Dritte wurde nicht gefunden; die Suche war auf OpenAlex/Crossref beschränkt."
+  ],
+  "coverage_map": {
+    "historische_primärquelle": [
+      "Q34",
+      "Q35",
+      "Q36",
+      "Q63",
+      "Q64"
+    ],
+    "wissenschaftliche_originalstudien": [
+      "Q39",
+      "Q42",
+      "Q44",
+      "Q45",
+      "Q46",
+      "Q47",
+      "Q48",
+      "Q49",
+      "Q50",
+      "Q51",
+      "Q52",
+      "Q53",
+      "Q54"
+    ],
+    "experimentelle_kontroversen": [
+      "C04",
+      "C05",
+      "C06",
+      "C16"
+    ],
+    "vertreter_und_kritiker": [
+      "Q43",
+      "Q04",
+      "Q05",
+      "Q42",
+      "Q40",
+      "Q55",
+      "Q56"
+    ],
+    "moderne_verfahren": [
+      "Q56",
+      "Q55",
+      "Q38"
+    ],
+    "instrumententypen": [
+      "Q34",
+      "Q39",
+      "Q56",
+      "Q06"
+    ],
+    "nationale_kulturelle_unterschiede": [
+      "Q59",
+      "Q60",
+      "Q61",
+      "Q62",
+      "Q63",
+      "Q64",
+      "Q66",
+      "Q57"
+    ],
+    "biotensoren": [
+      "Q55",
+      "Q56",
+      "Q44"
+    ],
+    "fernmutung": [
+      "Q39",
+      "Q40",
+      "Q65"
+    ],
+    "datenqualitaet": [
+      "Q47",
+      "Q48",
+      "Q49",
+      "Q50",
+      "Q42"
+    ],
+    "experimentspezifik": [
+      "Q39",
+      "Q42",
+      "Q44",
+      "Q46"
+    ]
+  },
+  "sources": [
+    {
+      "id": "Q34",
+      "delta_role": [
+        "historische_primärquelle",
+        "instrumente"
+      ],
+      "type": "Historische Primärquelle (Frühdruck, neuzeitliche Übersetzung)",
+      "title": "De re metallica, libri XII (Buch II)",
+      "authors": [
+        "Agricola, Georgius"
+      ],
+      "year": 1556,
+      "container": "Basel: Froben (Erstdruck); englische Übersetzung H. C. Hoover / L. H. Hoover, London 1912",
+      "locator": "https://www.gutenberg.org/ebooks/38015",
+      "language": "la (Original), en (Übersetzung)",
+      "region": "Deutschland (Erzgebirge/Sachsen), Rezeption international",
+      "verified": "full_text",
+      "access_note": "Hoover-Übersetzung als Volltext (Project Gutenberg #38015, 1.922.397 Bytes) geladen; Zitate aus Buch II, S. 38-41 der Druckausgabe 1912.",
+      "interest_note": "Humanistischer Gelehrter und Montanwissenschaftler; keine okkulte Bindung. Frühste kritische Distanz zur Rute im Druck.",
+      "data_quality": {
+        "peer_review": "nein (historischer Druck)",
+        "limitations": "Kein Experimentbericht; argumentiert begrifflich-mechanisch. Die Deutung 'Manipulation' ist eine Vorwegnahme der Ideomotorik-Erklärung, kein Messbeleg."
+      },
+      "evidence_use": [
+        "A"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C01",
+        "C02",
+        "C30"
+      ]
+    },
+    {
+      "id": "Q35",
+      "delta_role": [
+        "historische_primärquelle",
+        "forschungsstand_1917"
+      ],
+      "type": "Behördenpublikation (USGS Water-Supply Paper 416)",
+      "title": "The Divining Rod: A History of Water Witching, with a Bibliography",
+      "authors": [
+        "Ellis, Arthur J.",
+        "Meinzer, O. E. (Intro.)"
+      ],
+      "year": 1917,
+      "container": "U.S. Geological Survey, Water-Supply Paper 416, Washington: Government Printing Office",
+      "locator": "https://pubs.usgs.gov/wsp/0416/report.pdf",
+      "language": "en",
+      "region": "USA, mit internationaler Literatur",
+      "verified": "full_text_partial",
+      "access_note": "PDF geladen; Titelseite, Inhalt und Introductory Note gelesen. Der historische Hauptteil (S. 7-55) und die Bibliografie wurden nicht vollständig durchgearbeitet.",
+      "interest_note": "Staatliche Geologiebehörde, explizit aufklärend gegenüber 'water witching'; kein kommerzielles Interesse.",
+      "data_quality": {
+        "peer_review": "nein (Behördenbericht)",
+        "limitations": "Literaturbericht, keine eigenen kontrollierten Tests. Die Bewertung 'practical uselessness' ist eine Behördenposition von 1917, kein Studienresultat."
+      },
+      "evidence_use": [
+        "A",
+        "D"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C01",
+        "C03",
+        "C30"
+      ]
+    },
+    {
+      "id": "Q36",
+      "delta_role": [
+        "historische_fachliteratur",
+        "institutionengeschichte"
+      ],
+      "type": "Buchkapitel (Sammelband, Brill)",
+      "title": "6. The Electric Rod: Dowsing and the Freiberg Mining Academy",
+      "authors": [
+        "Dym, Warren Alexander"
+      ],
+      "year": 2010,
+      "container": "BRILL eBooks (Sammelband zur Wissenschafts- und Montangeschichte)",
+      "locator": "https://doi.org/10.1163/ej.9789004186422.i-218.40",
+      "language": "en",
+      "region": "Sachsen (Freiberg), 18./19. Jahrhundert",
+      "verified": "abstract",
+      "access_note": "Abstract über OpenAlex abgerufen; Buchkapitel selbst nicht beschafft (Brill, kostenpflichtig).",
+      "interest_note": "Wissenschaftsgeschichte; keine Nähe zur Radiästhesieszene erkennbar.",
+      "data_quality": {
+        "peer_review": "Sammelband, Verlag Brill",
+        "limitations": "Nur Abstract geprüft; Detailaussagen zur Freiberger Gutachtenpraxis sind sekundär und nicht am Kapitel verifiziert."
+      },
+      "evidence_use": [
+        "A"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C22"
+      ]
+    },
+    {
+      "id": "Q37",
+      "delta_role": [
+        "soziologie",
+        "deutschland"
+      ],
+      "type": "Monografie (Soziologie)",
+      "title": "Die Welt der Wünschelrutengänger und Pendler: Erkundungen einer verborgenen Wirklichkeit",
+      "authors": [
+        "Knoblauch, Hubert A."
+      ],
+      "year": 1991,
+      "container": "Frankfurt/Main: Campus-Verlag",
+      "isbn": "3-593-34575-7",
+      "locator": "https://lobid.org/resources/HT003976043",
+      "language": "de",
+      "region": "Deutschland",
+      "verified": "library_record",
+      "access_note": "Katalogdatensatz (lobid/hbz, OCLC 611627271) geprüft; Buchinhalt nicht gelesen.",
+      "interest_note": "Akademische Soziologie; untersucht Praxis und Milieu, nicht die Wirkung.",
+      "data_quality": {
+        "peer_review": "Monografie (Campus-Verlag)",
+        "limitations": "Inhalt nicht geprüft; Nutzung nur als Existenz- und Kontextbeleg, nicht für Detailaussagen."
+      },
+      "evidence_use": [
+        "A",
+        "B"
+      ],
+      "topics": [
+        "radiasthesie",
+        "pendeln"
+      ],
+      "claims": [
+        "C28"
+      ]
+    },
+    {
+      "id": "Q38",
+      "delta_role": [
+        "soziologie",
+        "open_access"
+      ],
+      "type": "Monografie (Open Access, Soziologie)",
+      "title": "The world of divining rods and dowsing",
+      "authors": [
+        "Knoblauch, Hubert A."
+      ],
+      "year": 2026,
+      "container": "DepositOnce (Repositorium der Technischen Universität Berlin)",
+      "locator": "https://doi.org/10.14279/depositonce-26541",
+      "language": "en",
+      "region": "Deutschland (mit internationalem Bezug)",
+      "verified": "abstract",
+      "access_note": "Abstract und Metadaten über OpenAlex/DOI geprüft; Volltext (Open Access) nicht durchgearbeitet.",
+      "interest_note": "Soziologische Perspektive; beschreibt Akteure, Geräte und Deutungen, ohne Wirkbehauptung.",
+      "data_quality": {
+        "peer_review": "Repositoriumspublikation (TU Berlin)",
+        "limitations": "Nur Abstract geprüft; Einzelaussagen zu Geräten und Erdstrahlen nicht am Text verifiziert."
+      },
+      "evidence_use": [
+        "A",
+        "B"
+      ],
+      "topics": [
+        "radiasthesie",
+        "pendeln"
+      ],
+      "claims": [
+        "C28"
+      ]
+    },
+    {
+      "id": "Q39",
+      "delta_role": [
+        "experiment",
+        "fernmutung",
+        "military"
+      ],
+      "type": "Zeitschriftenaufsatz (Nature)",
+      "title": "Dowsing Experiments",
+      "authors": [
+        "Foulkes, R. A."
+      ],
+      "year": 1971,
+      "container": "Nature",
+      "volume": "229",
+      "issue": "5281",
+      "pages": "163-168",
+      "locator": "https://doi.org/10.1038/229163a0",
+      "language": "en",
+      "region": "Großbritannien (British Army / Ministry of Defence)",
+      "verified": "full_text_partial",
+      "access_note": "PDF-Transkript über dowsing-research.net geladen und gelesen (Scan-OCR, teilweise fehlerhaft); Verlagskopie nicht beschafft.",
+      "interest_note": "Institut für Industrieforschung (Dublin), Auftrag durch britisches Verteidigungsministerium; militärisches Beschaffungsinteresse (Minensuche).",
+      "data_quality": {
+        "design": "Feld- und Kartentests mit verdeckten Zielen (u. a. 20 Attrappen-Minen entlang einer 3.400-Fuß-Strecke, Kartenmutung)",
+        "blinding": "Ziele den Rutengängern unbekannt; Kontrollvergleich mit reinen Rateversuchen von 50 MEXE-Bediensteten",
+        "n": "sieben Rutengänger bei der Kartenserie",
+        "peer_review": "Nature (1971)",
+        "limitations": "Kleine Stichprobe, OCR-Verluste, keine Randomisierungsdetails im gelesenen Auszug; Ergebnisse durchgehend nicht über Zufall."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C07",
+        "C30"
+      ]
+    },
+    {
+      "id": "Q40",
+      "delta_role": [
+        "review",
+        "forschungsstand_1982",
+        "international"
+      ],
+      "type": "Reviewaufsatz (Journal of the Society for Psychical Research)",
+      "title": "Dowsing: A Review of Experimental Research",
+      "authors": [
+        "Hansen, George P."
+      ],
+      "year": 1982,
+      "container": "Journal of the Society for Psychical Research",
+      "volume": "51",
+      "pages": "343-367",
+      "locator": "http://www.tricksterbook.com/ArticlesOnline/Dowsing-ReviewOfExperimetnalResearch-Hansen-JSPR-1982.pdf",
+      "language": "en",
+      "region": "international (USA, Europa, Sowjetunion)",
+      "verified": "full_text_partial",
+      "access_note": "PDF geladen und in Ausschnitten gelesen (Early Research, Tromp, Ongley, Sowjetunion, Hyman/Vogt, Fazit zu Kartentests). Vollständige 25-Seiten-Auswertung nicht erfolgt.",
+      "interest_note": "Parapsychologisch interessierter Autor (JSPR), der die Experimentalgeschichte kritisch ordnet; kein kommerzielles Interesse.",
+      "data_quality": {
+        "design": "Sekundäranalyse der bis 1982 publizierten Experimente",
+        "peer_review": "JSPR (Fachzeitschrift, nicht naturwissenschaftliches Mainstream-Organ)",
+        "limitations": "Review, keine eigenen Daten; Auswahl und Bewertung der Studien durch einen Autor mit psi-offener Perspektive."
+      },
+      "evidence_use": [
+        "D",
+        "A"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C08",
+        "C27"
+      ]
+    },
+    {
+      "id": "Q41",
+      "delta_role": [
+        "kontroverse",
+        "replik"
+      ],
+      "type": "Zeitschriftenaufsatz (Replik)",
+      "title": "Dowsers lost in a Barn",
+      "authors": [
+        "Enright, J. T."
+      ],
+      "year": 1996,
+      "container": "Naturwissenschaften",
+      "volume": "83",
+      "issue": "6",
+      "pages": "275-277",
+      "locator": "https://doi.org/10.1007/BF01149601",
+      "language": "en",
+      "verified": "metadata_doi_csl",
+      "access_note": "Metadaten über DOI-Content-Negotiation geprüft (Springer, ISSN 0028-1042). Volltext nicht beschafft; Inhalt über Q42 referiert.",
+      "interest_note": "Kritiker der Münchner Deutung; methodisch-statistische Reanalyse.",
+      "data_quality": {
+        "peer_review": "Naturwissenschaften",
+        "limitations": "Nur Metadaten geprüft; inhaltliche Aussagen ausschließlich über die Selbstauskunft in Q42."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "id": "Q42",
+      "delta_role": [
+        "experiment",
+        "experimentspezifik",
+        "kontroverse"
+      ],
+      "type": "Magazinaufsatz (Skeptical Inquirer), Volltext frei",
+      "title": "Testing Dowsing: The Failure of the Munich Experiments",
+      "authors": [
+        "Enright, J. T."
+      ],
+      "year": 1999,
+      "container": "Skeptical Inquirer",
+      "volume": "23",
+      "issue": "1",
+      "locator": "https://skepticalinquirer.org/1999/01/testing-dowsing-the-failure-of-the-munich-experiments/",
+      "language": "en",
+      "region": "Deutschland (München), Rezeption USA",
+      "verified": "full_text",
+      "access_note": "Volltext vollständig gelesen (HTML). Enthält Aufbaudaten, Ergebniszahlen und die Auseinandersetzung mit Betz et al. 1996.",
+      "interest_note": "INTERESSENVERMERK: Skeptikerorganisation (CSICOP/Skeptical Inquirer), Autor langjähriger Kritiker; explizit parteiisch in der Kontroverse.",
+      "data_quality": {
+        "design": "Reanalyse der Münchner Scheunenversuche (843 Einzeltests, 104 Serien, 43 aus 500 Kandidaten)",
+        "blinding": "Doppelblind im Original; kein Feedback während der Tests",
+        "n": "843 kritische Tests; 43 Rutengänger; 500 Vorkandidaten",
+        "peer_review": "nein (Magazin), aber datengestützte Reanalyse mit Bezug auf Q02/Q41",
+        "limitations": "Sekundäranalyse fremder Daten; eigene statistische Auswertung nicht unabhängig nachgerechnet. Enthält persönliche Vorwürfe gegen Betz (Abschnitt 'A Sad and Sorry Postscript'), die hier nur als Konflikt dokumentiert, nicht bewertet werden."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C04",
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "id": "Q43",
+      "delta_role": [
+        "experiment",
+        "befuerworter",
+        "graue_literatur"
+      ],
+      "type": "Forschungsbericht (Buch, Selbstverlag)",
+      "title": "Erdstrahlen? Der Wünschelruten-Report. Wissenschaftlicher Untersuchungsbericht",
+      "authors": [
+        "Betz, Hans-Dieter",
+        "König, Herbert L."
+      ],
+      "year": 1989,
+      "container": "München: König und Betz",
+      "isbn": "3-923819-05-6",
+      "locator": "https://lobid.org/resources/HT004087743",
+      "language": "de",
+      "region": "Deutschland (München)",
+      "verified": "library_record",
+      "access_note": "Katalogdatensatz geprüft; Bericht selbst nicht beschafft. Abweichung zu Q05: dort 'Herold-Verlag', im Katalog 'König und Betz' (Selbstverlag) – dokumentiert, nicht geglättet.",
+      "interest_note": "INTERESSENVERMERK: Autoren sind Vertreter eines Ruteneffekts und Urheber der Münchner Versuche; Selbstverlag.",
+      "data_quality": {
+        "design": "Großangelegte Feld-/Hallentests (Details über Q42)",
+        "peer_review": "nein (Forschungsbericht)",
+        "limitations": "Nicht im Original geprüft; Zitation stützt sich auf Q05 und Q42."
+      },
+      "evidence_use": [
+        "C",
+        "D"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C04",
+        "C05"
+      ]
+    },
+    {
+      "id": "Q44",
+      "delta_role": [
+        "experiment",
+        "biotensor",
+        "medizin"
+      ],
+      "type": "Zeitschriftenaufsatz (peer review, JRSM)",
+      "title": "Can Homeopaths Detect Homeopathic Medicines by Dowsing? A Randomized, Double-Blind, Placebo-Controlled Trial",
+      "authors": [
+        "McCarney, R.",
+        "Fisher, P.",
+        "Spink, F.",
+        "Flint, G. E.",
+        "van Haselen, R."
+      ],
+      "year": 2002,
+      "container": "Journal of the Royal Society of Medicine",
+      "volume": "95",
+      "issue": "8",
+      "pages": "406-409",
+      "locator": "https://doi.org/10.1177/014107680209500406",
+      "language": "en",
+      "region": "Großbritannien",
+      "verified": "abstract",
+      "access_note": "Abstract vollständig gelesen; Volltext nicht beschafft (Open-Access-Status laut OpenAlex: true, jedoch nicht abgerufen).",
+      "interest_note": "Medizinische Fachgesellschaft; Test im homöopathischen Kontext, also innerhalb eines umstrittenen Feldes, aber methodisch als RCT angelegt.",
+      "data_quality": {
+        "design": "Randomisierte, doppelblinde, placebokontrollierte Studie; 6 mutende Homöopathen, 156 Flaschenpaare",
+        "result": "Bryonia C12 korrekt in 48,1 % (95%-KI 40,2-56,0), p = 0,689",
+        "peer_review": "JRSM",
+        "limitations": "Nur Abstract geprüft; Übertragbarkeit auf andere Biotensor-Anwendungen begrenzt (spezifischer Testgegenstand)."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "pendeln",
+        "radiasthesie"
+      ],
+      "claims": [
+        "C13"
+      ]
+    },
+    {
+      "id": "Q45",
+      "delta_role": [
+        "experiment",
+        "archaeologie"
+      ],
+      "type": "Zeitschriftenaufsatz (peer review)",
+      "title": "The effectiveness of dowsing as a method of determining the nature and location of buried features on historic garden sites",
+      "authors": [
+        "Locock, Martin"
+      ],
+      "year": 1995,
+      "container": "Archaeological Prospection",
+      "volume": "2",
+      "issue": "1",
+      "pages": "15-18",
+      "locator": "https://doi.org/10.1002/1099-0763(199503)2:1<15::aid-arp6140020103>3.0.co;2-1",
+      "language": "en",
+      "region": "Großbritannien (Castle Bromwich Hall)",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext nicht beschafft.",
+      "interest_note": "Archäologische Prospektion; kein erkennbarer Interessenkonflikt.",
+      "data_quality": {
+        "design": "Evaluationsstudie auf einem historischen Gartenstandort",
+        "peer_review": "Archaeological Prospection",
+        "limitations": "Kleine Fallstudie; Ergebnis gemischt (Metall ja, Bodenmerkmale nein), daher nicht als pauschale Widerlegung lesbar."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C14"
+      ]
+    },
+    {
+      "id": "Q46",
+      "delta_role": [
+        "experiment",
+        "forensik"
+      ],
+      "type": "Zeitschriftenaufsatz (peer review)",
+      "title": "Dowsing for Bone",
+      "authors": [
+        "Easter, M. E.",
+        "Christensen, A. M.",
+        "Miller, M."
+      ],
+      "year": 2021,
+      "container": "Forensic Anthropology",
+      "locator": "https://doi.org/10.5744/fa.2020.0024",
+      "language": "en",
+      "region": "USA",
+      "verified": "abstract",
+      "access_note": "Abstract vollständig gelesen; Volltext nicht beschafft.",
+      "interest_note": "Forensische Anthropologie; testet die praktische Verwendung durch Ermittlungsbehörden.",
+      "data_quality": {
+        "design": "Kontrollierter Blindtest: Knochen in 3 von 9 Löchern; Vergleichsgruppe visuelle Inspektion, Testgruppe Ruten (ungeübte Anwender)",
+        "result": "Matthew's Correlation Coefficient -0,19 (Kontrolle) bzw. 0,00 (Rute); Gruppenvergleich p = 0,36",
+        "peer_review": "Forensic Anthropology",
+        "limitations": "Ungeübte Rutengänger; Ergebnis nicht auf erfahrene Anwender übertragbar (selbst so einschränkend)."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C15"
+      ]
+    },
+    {
+      "id": "Q47",
+      "delta_role": [
+        "experiment",
+        "positivbefund",
+        "datenqualitaet"
+      ],
+      "type": "Zeitschriftenaufsatz",
+      "title": "The Repeatability of Dowsing Reactions when Searching for 'Active Sites'. Site Dependent Dowsing Reactions",
+      "authors": [
+        "von Tscharner, Vinzenz",
+        "Nigg, Benno Maurus"
+      ],
+      "year": 2018,
+      "container": "Пространство и Время (Space and Time)",
+      "locator": "https://doi.org/10.24411/2226-7271-2018-11092",
+      "language": "en",
+      "region": "nicht angegeben (Autoren Schweiz/Kanada)",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext über CyberLeninka frei zugänglich, aber nicht durchgearbeitet. Kein Volumen/keine Seiten in den CSL-Metadaten.",
+      "interest_note": "Autoren aus Biomechanik/Bewegungswissenschaft; kein erkennbarer kommerzieller Bezug, aber Publikationsort außerhalb des Mainstreams.",
+      "data_quality": {
+        "design": "Neun erfahrene Rutengänger, vier 'aktive Orte', single- und double-blind, zufällige Startpositionen",
+        "result": "20 von 20 Tests nicht zufällig; überlappende Reaktionsbereiche",
+        "peer_review": "unklar (russische Zeitschrift, kein Impact-Faktor erkennbar)",
+        "limitations": "Keine unabhängige Replikation bekannt; 'aktiver Ort' wird über die Reaktion selbst definiert (Zirkularität); keine Angabe zur Zahl der Fehlversuche/abgebrochenen Serien im Abstract."
+      },
+      "evidence_use": [
+        "C",
+        "D"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C16"
+      ]
+    },
+    {
+      "id": "Q48",
+      "delta_role": [
+        "geopathie",
+        "datenqualitaet",
+        "international"
+      ],
+      "type": "Zeitschriftenaufsatz",
+      "title": "Effect of geopathic stress on human heart rate and blood pressure",
+      "authors": [
+        "Dharmadhikari, Nandkumar P."
+      ],
+      "year": 2010,
+      "container": "Indian Journal of Science and Technology",
+      "volume": "3",
+      "issue": "1",
+      "pages": "54-57",
+      "locator": "https://doi.org/10.17485/ijst/2010/v3i1.11",
+      "language": "en",
+      "region": "Indien",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext nicht beschafft.",
+      "interest_note": "Autor aus dem Feld der 'geopathic stress'-Forschung; Zeitschrift mit sehr niedriger methodischer Hürde.",
+      "data_quality": {
+        "design": "Vergleich von Blutdruck/Herzfrequenz in 'Stress'- und 'Nicht-Stress'-Zonen",
+        "peer_review": "formal ja, faktisch geringe Prüftiefe",
+        "limitations": "Keine Verblindung, keine Sham-/Placebo-Zone, unklare Zonendefinition, keine Kontrolle von Tageszeit/Lage/Erwartung; als Wirksamkeitsbeleg unbrauchbar."
+      },
+      "evidence_use": [
+        "E",
+        "C"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C17"
+      ]
+    },
+    {
+      "id": "Q49",
+      "delta_role": [
+        "physik_behauptung",
+        "datenqualitaet"
+      ],
+      "type": "Zeitschriftenaufsatz",
+      "title": "Towards a physics of dowsing: inverse effects in the northern and southern hemispheres",
+      "authors": [
+        "Dodd, R. J.",
+        "Harris, J. W.",
+        "Humphries, C. M.",
+        "Reddish, V. C."
+      ],
+      "year": 2002,
+      "container": "Earth and Environmental Science Transactions of the Royal Society of Edinburgh",
+      "locator": "https://doi.org/10.1017/s0263593300000341",
+      "language": "en",
+      "region": "Großbritannien, globale Behauptung",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext nicht beschafft.",
+      "interest_note": "Autorengruppe um V. C. Reddish verfolgt ein eigenes 'dowsing field'-Modell; kein kommerzieller Bezug erkennbar.",
+      "data_quality": {
+        "design": "Messungen mit Ruten an definierten Metall-/Isolatorpaaren, angeblich in Nord- und Südhalbkugel",
+        "peer_review": "Regionalzeitschrift der Royal Society of Edinburgh",
+        "limitations": "Außerordentliche Behauptung ohne unabhängige Replikation; hemispherenspezifische Inversion ist physikalisch unbegründet; keine Angabe zur Verblindung der Beobachter im Abstract."
+      },
+      "evidence_use": [
+        "C",
+        "E"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C18"
+      ]
+    },
+    {
+      "id": "Q50",
+      "delta_role": [
+        "physik_behauptung"
+      ],
+      "type": "Zeitschriftenaufsatz",
+      "title": "Dowsing physics: interferometry",
+      "authors": [
+        "Reddish, V. C."
+      ],
+      "year": 1998,
+      "container": "Earth and Environmental Science Transactions of the Royal Society of Edinburgh",
+      "locator": "https://doi.org/10.1017/s0263593300002339",
+      "language": "en",
+      "region": "Großbritannien",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext nicht beschafft.",
+      "interest_note": "Vertreter eines physikalischen 'dowsing field'; kein kommerzieller Bezug erkennbar.",
+      "data_quality": {
+        "design": "Rutenmessungen an parallelen Stäben, Musterkartierung",
+        "peer_review": "Regionalzeitschrift",
+        "limitations": "Beobachterabhängige Messung ohne Verblindung; 'Feld'-Begriff nicht operationalisiert; keine unabhängige Replikation."
+      },
+      "evidence_use": [
+        "C",
+        "E"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C18"
+      ]
+    },
+    {
+      "id": "Q51",
+      "delta_role": [
+        "physik",
+        "mechanik"
+      ],
+      "type": "Zeitschriftenaufsatz (Lehrbuchphysik)",
+      "title": "Concerning the nonlinear behaviour of the forced spherical pendulum including the dowsing pendulum",
+      "authors": [
+        "Irons, F. E."
+      ],
+      "year": 1990,
+      "container": "European Journal of Physics",
+      "volume": "11",
+      "issue": "2",
+      "locator": "https://doi.org/10.1088/0143-0807/11/2/009",
+      "language": "en",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext nicht beschafft.",
+      "interest_note": "Physikalische Grundlagenarbeit; keine esoterische Bindung.",
+      "data_quality": {
+        "design": "Theorie und Messung eines fremderregten Kugelpendels",
+        "peer_review": "European Journal of Physics",
+        "limitations": "Kein Dowsing-Experiment; liefert nur eine mechanische Erklärung für Pendelbewegungen, keine Aussage über angebliche Felder."
+      },
+      "evidence_use": [
+        "D",
+        "C"
+      ],
+      "topics": [
+        "pendeln",
+        "radiasthesie"
+      ],
+      "claims": [
+        "C19"
+      ]
+    },
+    {
+      "id": "Q52",
+      "delta_role": [
+        "ideomotorik",
+        "experiment"
+      ],
+      "type": "Zeitschriftenaufsatz",
+      "title": "An Experimental Analysis of the Chevreul Pendulum Illusion",
+      "authors": [
+        "Easton, Randolph D.",
+        "Shor, Ronald E."
+      ],
+      "year": 1976,
+      "container": "The Journal of General Psychology",
+      "locator": "https://doi.org/10.1080/00221309.1976.9710871",
+      "language": "en",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext nicht beschafft.",
+      "interest_note": "Experimentalpsychologie; keine esoterische Bindung.",
+      "data_quality": {
+        "design": "60 Studierende, zeitverzögerte Fotografie zur Quantifizierung der Pendelbewegung",
+        "result": "Starke parametrische Effekte (Aufmerksamkeit, Muskelspannung, visuelle/auditive Stimulation, Geschlecht)",
+        "peer_review": "The Journal of General Psychology",
+        "limitations": "Laborstudie zur Illusion, nicht zur diagnostischen Treffsicherheit."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "pendeln"
+      ],
+      "claims": [
+        "C09"
+      ]
+    },
+    {
+      "id": "Q53",
+      "delta_role": [
+        "ideomotorik",
+        "experiment"
+      ],
+      "type": "Zeitschriftenaufsatz (peer review)",
+      "title": "Expressing unconscious general knowledge using Chevreul's pendulum",
+      "authors": [
+        "Moga, Gyorgy",
+        "Dienes, Zoltan Paul"
+      ],
+      "year": 2022,
+      "container": "American Journal of Clinical Hypnosis",
+      "locator": "https://doi.org/10.1080/00029157.2021.2010641",
+      "language": "en",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext nicht beschafft.",
+      "interest_note": "Hypnoseforschung; kein kommerzieller Bezug.",
+      "data_quality": {
+        "design": "Replikation eines Ouija-Designs mit Chevreul-Pendel; Wissensfragen, die zuvor als 'Rate' eingestuft wurden",
+        "result": "Kein Vorteil der ideomotorischen gegenüber der verbalen Antwort; beide etwa auf Zufallsniveau",
+        "peer_review": "American Journal of Clinical Hypnosis",
+        "limitations": "Laborparadigma zu Allgemeinwissen, nicht zu radiästhetischer Diagnose."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "pendeln"
+      ],
+      "claims": [
+        "C10"
+      ]
+    },
+    {
+      "id": "Q54",
+      "delta_role": [
+        "ideomotorik",
+        "methodik"
+      ],
+      "type": "Zeitschriftenaufsatz",
+      "title": "The Effects of Subject Arm Position and Initial Experience on Chevreul Pendulum Responses",
+      "authors": [
+        "Montgomery, Guy H.",
+        "Kirsch, Irving"
+      ],
+      "year": 1996,
+      "container": "American Journal of Clinical Hypnosis",
+      "locator": "https://doi.org/10.1080/00029157.1996.10403336",
+      "language": "en",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext nicht beschafft.",
+      "interest_note": "Klinische Hypnoseforschung; kein kommerzieller Bezug.",
+      "data_quality": {
+        "design": "32 Studierende, counterbalanced crossover, Ellenbogen gestützt vs. nicht gestützt",
+        "result": "Kein Haupteffekt der Methode; Stützen half nur beim ersten Versuch",
+        "peer_review": "American Journal of Clinical Hypnosis",
+        "limitations": "Kleine Stichprobe; Methodenfrage, keine Wirksamkeitsprüfung."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "pendeln"
+      ],
+      "claims": [
+        "C09"
+      ]
+    },
+    {
+      "id": "Q55",
+      "delta_role": [
+        "biotensor",
+        "test",
+        "skeptiker"
+      ],
+      "type": "Vereinspublikation (Testbericht)",
+      "title": "Überraschung bei den Psi-Tests der GWUP (Biotensor-Test Emil Siebke)",
+      "authors": [
+        "Gesellschaft zur wissenschaftlichen Untersuchung von Parawissenschaften (GWUP)"
+      ],
+      "year": 2019,
+      "container": "GWUP, Skeptiker-Artikel",
+      "locator": "https://www.gwup.org/skeptiker-artikel/pseudo-parawissenschaften/ueberraschung-psi-tests-gwup/",
+      "language": "de",
+      "region": "Deutschland (Würzburg)",
+      "verified": "full_text",
+      "access_note": "Volltext gelesen; ergänzender Blogbeitrag vom 17.09.2019 verweist auf den ausführlichen Tag-eins-Bericht.",
+      "interest_note": "INTERESSENVERMERK: Skeptikerorganisation, veranstaltet die Tests und berichtet darüber; Doppelrolle als Veranstalter und Berichterstatter.",
+      "data_quality": {
+        "design": "1-aus-10-Doppelblindtest, 13 Durchgänge, Ziel: mit Kiron behandeltes Apfelstück",
+        "result": "0 von 13 Treffern",
+        "peer_review": "nein",
+        "limitations": "Ein einzelner Kandidat, kein Studiendesign; Aussage nur über diesen Test, nicht über alle Biotensor-Anwender. Kandidat erklärte das Scheitern später mit der Preisgeld-Ablehnung."
+      },
+      "evidence_use": [
+        "D"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C11",
+        "C12"
+      ]
+    },
+    {
+      "id": "Q56",
+      "delta_role": [
+        "biotensor",
+        "praxis",
+        "professionsverband"
+      ],
+      "type": "Fachartikel in Heilpraktiker-Magazin",
+      "title": "Mit Rute und Pendel … Medizinische Radiästhesie-Diagnostik (MRD)",
+      "authors": [
+        "Pickl, Karin Myria"
+      ],
+      "year": 2009,
+      "container": "Paracelsus – Naturheilpraxis – Psychologie – Tierheilkunde, Nr. 03/2009, S. 32-33 (PDF beim Heilpraktikerverband)",
+      "locator": "https://heilpraktikerverband.de/images/stories/heilpraktiker/fachartikel/0309_MRD.pdf",
+      "language": "de",
+      "region": "Deutschland",
+      "verified": "full_text",
+      "access_note": "PDF geladen und gelesen (S. 32-33); Artikel ist ein Praxisbeitrag, keine Studie.",
+      "interest_note": "INTERESSENVERMERK: Heilpraktiker-Fachverband und praktizierende Autorin; bewirbt die Methode und das Instrument Biotensor®.",
+      "data_quality": {
+        "peer_review": "nein",
+        "limitations": "Erfahrungsbericht; räumt selbst ein, dass die Wirkung 'nicht wissenschaftlich bewiesen' ist. Enthält unbelegte historische Behauptungen (Steinbilder, Grabbeigaben) und eine fehlerhafte Namenszuordnung („Abbé Mermet L. Bouly“)."
+      },
+      "evidence_use": [
+        "B"
+      ],
+      "topics": [
+        "radiasthesie",
+        "pendeln"
+      ],
+      "claims": [
+        "C11",
+        "C29",
+        "C30"
+      ]
+    },
+    {
+      "id": "Q57",
+      "delta_role": [
+        "usa",
+        "soziologie",
+        "klassiker"
+      ],
+      "type": "Monografie (Soziologie/Anthropologie)",
+      "title": "Water Witching U.S.A.",
+      "authors": [
+        "Vogt, Evon Z.",
+        "Hyman, Ray"
+      ],
+      "year": 1959,
+      "container": "Chicago: University of Chicago Press",
+      "locator": "https://doi.org/10.1525/aa.1960.62.6.02a00640",
+      "language": "en",
+      "region": "USA",
+      "verified": "metadata_openalex",
+      "access_note": "Metadaten über Rezensionsdatensatz (American Anthropologist 62/1960, S. 1126-1127) geprüft; Buch selbst nicht beschafft.",
+      "interest_note": "Akademische Sozialforschung; Hyman war später ein bekannter Skeptiker, Vogt Ethnologe.",
+      "data_quality": {
+        "peer_review": "Monografie mit Fachrezensionen",
+        "limitations": "Inhalt nicht geprüft; Nutzung als Existenz- und Kontextbeleg."
+      },
+      "evidence_use": [
+        "A",
+        "B"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C27"
+      ]
+    },
+    {
+      "id": "Q58",
+      "delta_role": [
+        "usa",
+        "ethnografie"
+      ],
+      "type": "Zeitschriftenaufsatz",
+      "title": "Interviewing Water-Dowsers",
+      "authors": [
+        "Vogt, Evon Z."
+      ],
+      "year": 1956,
+      "container": "American Journal of Sociology",
+      "volume": "62",
+      "issue": "2",
+      "pages": "198",
+      "locator": "https://doi.org/10.1086/221963",
+      "language": "en",
+      "region": "USA (Südwesten)",
+      "verified": "metadata_openalex",
+      "access_note": "Nur Metadaten geprüft (Seitenangabe 198 = Kurzbeitrag/Forschungsnotiz); Inhalt nicht gelesen.",
+      "interest_note": "Universitäre Ethnologie; kein kommerzielles Interesse.",
+      "data_quality": {
+        "peer_review": "AJS",
+        "limitations": "Inhalt nicht geprüft; keine Aussage über Ergebnisse."
+      },
+      "evidence_use": [
+        "A"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": []
+    },
+    {
+      "id": "Q59",
+      "delta_role": [
+        "international",
+        "folklore"
+      ],
+      "type": "Zeitschriftenaufsatz (peer review, Open Access)",
+      "title": "Energy as the Mediator between Natural and Supernatural Realms",
+      "authors": [
+        "Kivari, Kristel"
+      ],
+      "year": 2013,
+      "container": "Journal of Ethnology and Folkloristics",
+      "volume": "6",
+      "pages": "49-68",
+      "locator": "https://ojs.utlib.ee/index.php/JEF/article/view/22611",
+      "language": "en",
+      "region": "Estland",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext (Open Access) nicht beschafft. Kein DOI vorhanden; Locator ist die Verlagsseite der Zeitschrift (OpenAlex W2992340880). Die Dissertation von 2016 (Univ. Tartu, hdl.handle.net/10062/51501) enthält laut Abstract keine Publikationen.",
+      "interest_note": "Ethnologie/Folkloristik; untersucht Glaubenspraxis, keine Wirkbehauptung.",
+      "data_quality": {
+        "peer_review": "Journal of Ethnology and Folkloristics",
+        "limitations": "Qualitative Fallstudien; keine Messung, keine Verallgemeinerung auf Wirksamkeit."
+      },
+      "evidence_use": [
+        "A",
+        "B"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C23"
+      ]
+    },
+    {
+      "id": "Q60",
+      "delta_role": [
+        "international",
+        "marokko"
+      ],
+      "type": "Zeitschriftenaufsatz (arabisch)",
+      "title": "Water Dowsing and Healing Practices in the Chefchaouen Basin: Between Popular Beliefs and Scientific Knowledge",
+      "authors": [
+        "Maymoun, Mouad",
+        "Boughaba, Abdesselam"
+      ],
+      "year": 2026,
+      "container": "La Revue Espace, Homme et Développement Durable",
+      "locator": "https://journals.imist.ma/index.php/index/article/view/6757",
+      "language": "ar",
+      "region": "Marokko (Rif, Chefchaouen)",
+      "verified": "abstract",
+      "access_note": "Arabisches Abstract gelesen und sinngemäß übersetzt; Volltext nicht beschafft, kein DOI vorhanden (OpenAlex W7220155682).",
+      "interest_note": "Regionale sozialwissenschaftliche Zeitschrift; deskriptiv-analytischer Ansatz.",
+      "data_quality": {
+        "design": "Deskriptiv-analytisch, Felddaten und Wasseranalysen, Literaturreview geophysikalischer Studien",
+        "peer_review": "unklar (regionale Zeitschrift)",
+        "limitations": "Kein kontrollierter Test der Rutengängigkeit; die Aussage 'praktische Erfolge' bleibt unbelegt und ist mit dem Design nicht prüfbar."
+      },
+      "evidence_use": [
+        "B",
+        "C"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C24"
+      ]
+    },
+    {
+      "id": "Q61",
+      "delta_role": [
+        "international",
+        "archaeologie",
+        "missbrauch"
+      ],
+      "type": "Zeitschriftenaufsatz (peer review)",
+      "title": "The Jinn and Dowsing Rods: The Recent Tragedy of Antiquities Plundering in Tulkarm, Palestine",
+      "authors": [
+        "Al-Houdalieh, Salah Hussein",
+        "Jamal, Hasan Said"
+      ],
+      "year": 2025,
+      "container": "Al-Quds University Journal (Humanities and Social Sciences), Vol. 4, No. 4, S. 88-99",
+      "locator": "https://doi.org/10.47874/aqupp:88-99",
+      "language": "en",
+      "region": "Palästina (Tulkarm)",
+      "verified": "abstract",
+      "access_note": "Abstract gelesen; Volltext nicht beschafft.",
+      "interest_note": "Archäologie/Denkmalschutz; dokumentiert Schäden durch Raubgrabungen.",
+      "data_quality": {
+        "design": "Fallstudie/qualitative Dokumentation",
+        "peer_review": "Al-Quds University Journal",
+        "limitations": "Keine Aussage über Trefferquote der Rute; belegt Nutzung und Folgen, nicht Wirksamkeit."
+      },
+      "evidence_use": [
+        "A",
+        "B"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C25"
+      ]
+    },
+    {
+      "id": "Q62",
+      "delta_role": [
+        "international",
+        "russland",
+        "geophysik"
+      ],
+      "type": "Zeitschriftenaufsatz (russisch)",
+      "title": "Dowsing, nanotechnologies and prospects of applied and fundamental geophysics",
+      "authors": [
+        "Shuleikin, V. N.",
+        "Zhigalin, A. D."
+      ],
+      "year": 2016,
+      "container": "Geologiya i Geofizika Yuga Rossii (Geology and Geophysics of the South of Russia)",
+      "locator": "https://doi.org/10.23671/vnc.2016.2.20813",
+      "language": "ru",
+      "region": "Russland",
+      "verified": "abstract",
+      "access_note": "Russisches Abstract gelesen und sinngemäß übersetzt; Volltext nicht beschafft.",
+      "interest_note": "Geowissenschaftliches Institut; diskutiert Dowsing als offenes Forschungsproblem, ohne es zu bestätigen.",
+      "data_quality": {
+        "design": "Überblicks-/Diskussionsaufsatz",
+        "peer_review": "Fachzeitschrift (Geologie/Geophysik)",
+        "limitations": "Keine eigenen kontrollierten Daten im Abstract; drei konkurrierende Deutungen werden referiert."
+      },
+      "evidence_use": [
+        "B",
+        "A"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C26"
+      ]
+    },
+    {
+      "id": "Q63",
+      "delta_role": [
+        "international",
+        "institutionengeschichte",
+        "uk"
+      ],
+      "type": "Vereinswebsite (Selbstdarstellung)",
+      "title": "History – The British Society of Dowsers",
+      "authors": [
+        "The British Society of Dowsers"
+      ],
+      "year": null,
+      "year_note": "Seite ohne Datum; Abruf 2026-11-03",
+      "container": "britishdowsers.org",
+      "locator": "https://britishdowsers.org/dowsers-history/",
+      "language": "en",
+      "region": "Großbritannien",
+      "verified": "page_loaded",
+      "access_note": "Seite mit Browser-User-Agent geladen (Standard-UA liefert HTTP 406); Text geprüft.",
+      "interest_note": "INTERESSENVERMERK: Selbstdarstellung der Vereinigung; Gründungsdatum und Selbstbild sind Eigenaussagen.",
+      "data_quality": {
+        "peer_review": "nein",
+        "limitations": "Eigenaussage; Gründungsdatum 4. Mai 1933 wird durch keine unabhängige Quelle hier gegengeprüft."
+      },
+      "evidence_use": [
+        "A",
+        "B"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C20",
+        "C21"
+      ]
+    },
+    {
+      "id": "Q64",
+      "delta_role": [
+        "international",
+        "frankreich",
+        "begriffsgeschichte"
+      ],
+      "type": "Enzyklopädieartikel (Sekundärquelle)",
+      "title": "Radiesthésie",
+      "authors": [
+        "Wikipedia-Autorinnen und -Autoren (fr)"
+      ],
+      "year": null,
+      "year_note": "Abruf 2026-11-03; Versionsstand nicht archiviert",
+      "container": "Wikipédia en français",
+      "locator": "https://fr.wikipedia.org/wiki/Radiesth%C3%A9sie",
+      "language": "fr",
+      "region": "Frankreich",
+      "verified": "page_loaded",
+      "access_note": "Seite geladen; Abschnitt 'Histoire' geprüft (1926, 1929, 130+ Titel 1930-1940).",
+      "interest_note": "Gemeinschaftlich erstellte Enzyklopädie; für Wirkaussagen nicht verwendbar, für Begriffs- und Institutionengeschichte mit Belegen brauchbar.",
+      "data_quality": {
+        "peer_review": "nein",
+        "limitations": "Sekundär; die Beleglage im Artikel verweist u. a. auf La Voix du Nord 2013 und eine Fachzeitschrift von 1930. Datierung bleibt indirekt."
+      },
+      "evidence_use": [
+        "A",
+        "B"
+      ],
+      "topics": [
+        "radiasthesie",
+        "pendeln"
+      ],
+      "claims": [
+        "C20",
+        "C29"
+      ]
+    },
+    {
+      "id": "Q65",
+      "delta_role": [
+        "fernmutung",
+        "begriff"
+      ],
+      "type": "Enzyklopädieartikel (Sekundärquelle)",
+      "title": "Radiesthesia",
+      "authors": [
+        "Wikipedia-Autorinnen und -Autoren (en)"
+      ],
+      "year": null,
+      "year_note": "Abruf 2026-11-03",
+      "container": "Wikipedia, englischsprachige Ausgabe",
+      "locator": "https://en.wikipedia.org/wiki/Radiesthesia",
+      "language": "en",
+      "region": "international",
+      "verified": "page_loaded",
+      "access_note": "Seite geladen; Abschnitt 'Claims' (Teleradiesthesia) geprüft.",
+      "interest_note": "Gemeinschaftlich erstellte Enzyklopädie; beschreibt die Binnensicht der Praxis, keine Wirkbelege.",
+      "data_quality": {
+        "peer_review": "nein",
+        "limitations": "Sekundär und ohne Primärbelege für die Definition im geprüften Abschnitt."
+      },
+      "evidence_use": [
+        "B"
+      ],
+      "topics": [
+        "radiasthesie",
+        "pendeln"
+      ],
+      "claims": [
+        "C07"
+      ]
+    },
+    {
+      "id": "Q66",
+      "delta_role": [
+        "international",
+        "usa",
+        "institutionengeschichte"
+      ],
+      "type": "Enzyklopädieartikel (Tertiärquelle, Gale)",
+      "title": "Dowsing",
+      "authors": [
+        "Encyclopedia.com (Gale)"
+      ],
+      "year": null,
+      "year_note": "Abruf 2026-11-03",
+      "container": "Encyclopedia.com",
+      "locator": "https://www.encyclopedia.com/philosophy-and-religion/other-religious-beliefs-and-general-terms/miscellaneous-religion/dowsing",
+      "language": "en",
+      "region": "USA",
+      "verified": "page_loaded",
+      "access_note": "Seite geladen (HTTP 200); Abschnitt zur US-Geschichte und ASD-Gründung geprüft.",
+      "interest_note": "Tertiärquelle ohne eigene Forschung; nur für Institutionendaten mit Vorsicht verwendbar.",
+      "data_quality": {
+        "peer_review": "nein",
+        "limitations": "Tertiär; Gründungsjahr 1961 nicht an einer Primärquelle (ASD) gegengeprüft, da die ASD-Website den Abruf blockierte."
+      },
+      "evidence_use": [
+        "A"
+      ],
+      "topics": [
+        "radiasthesie"
+      ],
+      "claims": [
+        "C20"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "text": "Die Wünschelrute ist seit dem 16. Jahrhundert schriftlich belegt; die früheste bekannte gedruckte Beschreibung der Rute zur Erz- und Wassersuche steht bei Agricola (1556).",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q34",
+          "locator": "Buch II, Hoover-Übersetzung 1912, Fußnote [21] zu S. 38",
+          "quote": "So far as we are able to discover, this is the first published description of the divining rod as applied to minerals or water."
+        },
+        {
+          "source_id": "Q35",
+          "locator": "Introductory Note, S. 5",
+          "quote": "a curious superstition that has been a subject of discussion since the middle of the sixteenth century"
+        }
+      ],
+      "counter_evidence": "Ältere chinesische und antike Bezüge werden in der Literatur behauptet (Q39 nennt eine chinesische Darstellung von 147 n. Chr.), sind aber nicht als kontinuierliche Überlieferung der neuzeitlichen Rute belegt.",
+      "confidence": "hoch",
+      "relevance": [
+        "radiasthesie",
+        "geschichte"
+      ]
+    },
+    {
+      "id": "C02",
+      "text": "Agricola erklärt die Bewegung der Rute bereits 1556 mechanisch durch die Handhabung des Rutengängers und nicht durch eine Kraft der Erze.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q34",
+          "locator": "Buch II, Hoover-Übersetzung 1912, S. 39-40",
+          "quote": "it must necessarily follow that the manipulation is the cause of the twig's twisting motion"
+        }
+      ],
+      "counter_evidence": "Zeitgenössische und spätere Vertreter führten die Bewegung auf Ausdünstungen oder 'Ausstrahlungen' der Erze zurück (vgl. Q36, Q49, Q50).",
+      "confidence": "hoch",
+      "relevance": [
+        "radiasthesie",
+        "ideomotorik",
+        "geschichte"
+      ]
+    },
+    {
+      "id": "C03",
+      "text": "Die wissenschaftliche Kontroverse ist mindestens seit dem 19. Jahrhundert dokumentiert; der USGS-Bericht von 1917 bilanziert die Rute als praktisch nutzlos und verweist auf Chevreul und Faraday.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q35",
+          "locator": "Introductory Note (Meinzer), S. 5",
+          "quote": "will probably enable most honest inquirers to appreciate the practical uselessness of \"water witching\" and other applications of the divining rod"
+        },
+        {
+          "source_id": "Q35",
+          "locator": "Inhaltsverzeichnis, S. 3",
+          "quote": "Chevreul and Faraday ... 21"
+        }
+      ],
+      "counter_evidence": "Der Bericht ist eine Behördenposition, kein eigenes Experiment; seine Wirkungsliteratur ist bis 1917 begrenzt.",
+      "confidence": "hoch",
+      "relevance": [
+        "radiasthesie",
+        "forschungsstand"
+      ]
+    },
+    {
+      "id": "C04",
+      "text": "Die Münchner Scheunenversuche (1986-1988) prüften 43 aus rund 500 vorausgewählte Rutengänger in 843 Einzeltests (104 Serien) an einer 10-Meter-Linie mit doppelblinder Zielsetzung.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q42",
+          "locator": "Abschnitt 'Experimental Design'",
+          "quote": "the forty-three selected dowsers participated in 843 single tests, grouped into 104 test-series"
+        },
+        {
+          "source_id": "Q42",
+          "locator": "Abschnitt 'Planning an Experimental Study'",
+          "quote": "some 500 candidate dowsers were recruited for preliminary testing"
+        },
+        {
+          "source_id": "Q42",
+          "locator": "Abschnitt 'Experimental Design'",
+          "quote": "a ten-meter test line was established"
+        }
+      ],
+      "counter_evidence": "Die Zahlen stammen aus der Reanalyse eines Kritikers (Q42); der Originalbericht (Q43) wurde nicht eingesehen.",
+      "confidence": "hoch (Zahlen), mittel (Deutung)",
+      "relevance": [
+        "radiasthesie",
+        "experimentspezifik"
+      ]
+    },
+    {
+      "id": "C05",
+      "text": "Die Münchner Autoren deuteten ihre Daten als Beleg eines Ruteneffekts; die kritische Reanalyse kommt zum gegenteiligen Schluss (Zufall, nicht reproduzierbar). Der Konflikt ist bis heute nicht konsensual aufgelöst.",
+      "status": "widersprüchlich",
+      "evidence": [
+        {
+          "source_id": "Q42",
+          "locator": "Abschnitt 'Results and Interpretation by the Experimenters' (übersetztes Zitat aus Wagner/Betz/König 1990)",
+          "quote": "a real core of dowser-phenomena can be regarded as empirically proven"
+        },
+        {
+          "source_id": "Q42",
+          "locator": "Abschnitt 'Conclusion'",
+          "quote": "the Munich experiments constitute as decisive and complete a failure as can be imagined of dowsers to do what they claim"
+        }
+      ],
+      "counter_evidence": "Betz et al. 1996 (Q04) halten den Effekt aufrecht; Q05 (2003) bewertet die Studienlage als 'unentschieden'.",
+      "confidence": "hoch für den Konflikt, offen für die Deutung",
+      "relevance": [
+        "radiasthesie",
+        "kontroverse"
+      ]
+    },
+    {
+      "id": "C06",
+      "text": "Die Erwiderung von Betz et al. (1996) behauptet einen persistierenden Effekt; eine unabhängige Replikation der Münchner Befunde durch eine andere Gruppe ist nicht dokumentiert.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q04",
+          "locator": "Titel und Publikationsdaten (Naturwissenschaften 83: 272-275)",
+          "quote": "Dowsing reviewed – the effect persists"
+        },
+        {
+          "source_id": "Q41",
+          "locator": "Metadaten (Replik auf Enright)",
+          "quote": "Dowsers lost in a Barn"
+        }
+      ],
+      "counter_evidence": "Q42 dokumentiert, dass die sechs 'besten' Rutengänger ihre Treffer in anderen Serien nicht reproduzierten.",
+      "confidence": "hoch",
+      "relevance": [
+        "radiasthesie",
+        "kontroverse"
+      ]
+    },
+    {
+      "id": "C07",
+      "text": "Fern-/Kartenmutung wurde militärisch geprüft: Rutengänger sollten verdeckte Minen anhand von Karten lokalisieren; die Ergebnisse lagen nicht über Zufall. Die Serie umfasste nach Hansen (Q40) 20 Attrappen-Minen und sieben Rutengänger, nach Foulkes (Q39) u. a. eine 3.400-Fuß-Strecke mit fünf Minen.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q39",
+          "locator": "Abschnitt 'Map Dowsing'",
+          "quote": "To sum up on map dowsing, the results from all the trials are really failures and there is no evidence that this is a practical method for locating mines."
+        },
+        {
+          "source_id": "Q39",
+          "locator": "Kopfspalte/Abstract",
+          "quote": "results obtained by dowsing are no more reliable than a series of guesses"
+        },
+        {
+          "source_id": "Q40",
+          "locator": "Abschnitt zu Foulkes (Kartentests)",
+          "quote": "For the map dowsing tests, 20 inert mines were buried along several military roads. Seven dowsers were given maps of the roads and asked to locate the mines. Only chance results were obtained."
+        }
+      ],
+      "counter_evidence": "Einzelne parapsychologische Kartentests (Cadoret/Osis) werden in Q40 als marginal signifikant referiert; Hitching/Lewis-Anekdoten ohne Kontrolle.",
+      "confidence": "hoch",
+      "relevance": [
+        "radiasthesie",
+        "fernmutung"
+      ]
+    },
+    {
+      "id": "C08",
+      "text": "Der Review von 1982 findet unter den Kartentests nur drei methodisch gut kontrollierte; nur einer erreicht knappe Signifikanz. Die Gesamtbilanz bleibt uneindeutig.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q40",
+          "locator": "Abschnitt zu Kartentests/Fazit",
+          "quote": "Of the tests reviewed, only three stand out as well conducted—the map dowsing tests of Cadoret, Osis, and Foulkes. Of these, only one produced significant results, and that barely significant."
+        }
+      ],
+      "counter_evidence": "Q40 ist selbst psi-offen; die Einschätzung stammt aus der Parapsychologie, nicht aus einer skeptischen Quelle.",
+      "confidence": "hoch",
+      "relevance": [
+        "radiasthesie",
+        "fernmutung",
+        "forschungsstand"
+      ]
+    },
+    {
+      "id": "C09",
+      "text": "Die Chevreul-Pendeltäuschung ist experimentell als ideomotorisches Phänomen quantifiziert; Bewegungsumfang und -richtung hängen von Muskelspannung, Aufmerksamkeit und Pendellänge ab.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q52",
+          "locator": "Abstract",
+          "quote": "strong parametric influences of the pendulum's sinusoidal motion were isolated"
+        },
+        {
+          "source_id": "Q03",
+          "locator": "Titel/Abstract",
+          "quote": "Amount of finger movement and pendulum length determine success in the Chevreul pendulum illusion"
+        },
+        {
+          "source_id": "Q54",
+          "locator": "Abstract",
+          "quote": "supporting the elbow does facilitate responding, but only on the initial trial"
+        }
+      ],
+      "counter_evidence": "Praktiker deuten dieselbe Bewegung als Anzeige eines externen Feldes (Q50, Q56); eine Übertragung der Laborbefunde auf alle Pendelanwendungen ist damit nicht automatisch gegeben.",
+      "confidence": "hoch",
+      "relevance": [
+        "pendeln",
+        "ideomotorik"
+      ]
+    },
+    {
+      "id": "C10",
+      "text": "Ideomotorische Antworten liefern in kontrollierten Paradigmen keinen Zugang zu Informationen, die verbal nicht verfügbar sind; die Treffer liegen auf Zufallsniveau.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q53",
+          "locator": "Abstract",
+          "quote": "questions whose answer was previously rated as a guess, were answered equally well and at about chance levels by ideomotor action and verbal responses"
+        }
+      ],
+      "counter_evidence": "Das Paradigma testet Allgemeinwissen, nicht radiästhetische Diagnose; ein Nullresultat dort widerlegt nicht jede denkbare Anwendung.",
+      "confidence": "hoch (für das Paradigma)",
+      "relevance": [
+        "pendeln",
+        "ideomotorik"
+      ]
+    },
+    {
+      "id": "C11",
+      "text": "Der 'Biotensor' ist eine kommerzielle Weiterentwicklung der Einhandrute und wird in der Heilpraxis zur Diagnostik eingesetzt; die Wirkung wird von Anwendern selbst als wissenschaftlich nicht bewiesen bezeichnet.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q56",
+          "locator": "S. 32",
+          "quote": "Viele Heilpraktiker bevorzugen das Radiästhesie-Instrument Biotensor ®, eine Weiterentwicklung der Einhandrute."
+        },
+        {
+          "source_id": "Q56",
+          "locator": "S. 32-33",
+          "quote": "Wie Radiästhesie funktioniert, ist auch heute noch nicht wissenschaftlich bewiesen"
+        }
+      ],
+      "counter_evidence": "Keine.",
+      "confidence": "hoch",
+      "relevance": [
+        "radiasthesie",
+        "biotensor"
+      ]
+    },
+    {
+      "id": "C12",
+      "text": "Für den Biotensor existiert keine peer-reviewte Validierungsstudie; der dokumentierte Doppelblindtest eines Anwenders endete mit 0 von 13 Treffern.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q55",
+          "locator": "Absatz zu Emil Siebke",
+          "quote": "Das gelang ihm jedoch bei keinem der 13 Durchgänge."
+        },
+        {
+          "source_id": "Q55",
+          "locator": "Testanlage",
+          "quote": "Unter zehn Apfelhälften in gleich aussehenden verschlossenen Dosen"
+        }
+      ],
+      "counter_evidence": "Ein Einzeltestergebnis ist kein Studienbefund; die Verallgemeinerung auf alle Biotensor-Nutzer ist damit nicht belegt (siehe data_quality Q55).",
+      "confidence": "hoch (Einzelfall), offen (Verallgemeinerung)",
+      "relevance": [
+        "radiasthesie",
+        "biotensor"
+      ]
+    },
+    {
+      "id": "C13",
+      "text": "Sechs mutende Homöopathen konnten Bryonia C12 nicht von Placebo unterscheiden (48,1 % Treffer, n = 156 Paare, p = 0,689).",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q44",
+          "locator": "Abstract",
+          "quote": "The homeopathic medicine Bryonia was correctly identified in 48.1% of bottle pairs (n=156; 95% confidence interval 40.2%, 56.0%; P=0.689)."
+        }
+      ],
+      "counter_evidence": "Der Test betrifft homöopathische Arzneimittel, nicht Wasseradern oder Erdstrahlen; Übertragbarkeit begrenzt.",
+      "confidence": "hoch",
+      "relevance": [
+        "pendeln",
+        "biotensor",
+        "medizin"
+      ]
+    },
+    {
+      "id": "C14",
+      "text": "In der archäologischen Prospektion lokalisierte Rutengehen Metallobjekte, versagte aber bei bodengefüllten Strukturen; nicht zuordenbare Anomalien blieben häufig.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q45",
+          "locator": "Abstract",
+          "quote": "dowsing could locate buried metal features, but performed poorly at identifying soil-filled features"
+        }
+      ],
+      "counter_evidence": "Einzelfallstudie; positives Teilergebnis bei Metall zeigt, dass die Methode nicht pauschal 'nichts' findet.",
+      "confidence": "mittel",
+      "relevance": [
+        "radiasthesie",
+        "archaeologie"
+      ]
+    },
+    {
+      "id": "C15",
+      "text": "Ein kontrollierter Blindtest mit ungeübten Rutengängern fand keine bessere Trefferquote als visuelle Inspektion und keine Beziehung zum tatsächlichen Knochenversteck.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q46",
+          "locator": "Abstract",
+          "quote": "Matthew's Correlation Coefficient –0.19 for the control group and 0.00 for the test group ... p = 0.36"
+        }
+      ],
+      "counter_evidence": "Ungeübte Anwender; erfahrene Rutengänger könnten anders abschneiden (nicht getestet).",
+      "confidence": "hoch (für die Stichprobe)",
+      "relevance": [
+        "radiasthesie",
+        "forensik"
+      ]
+    },
+    {
+      "id": "C16",
+      "text": "Eine Studie mit neun erfahrenen Rutengängern berichtet 20 von 20 nicht zufälligen Reaktionen an vier 'aktiven Orten' und überlappende Reaktionsbereiche.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q47",
+          "locator": "Abstract",
+          "quote": "in 20 out of 20 tests the dowsers’ reactions were not at random positions"
+        }
+      ],
+      "counter_evidence": "Kein unabhängiger Replikationsbefund; 'aktiver Ort' wird über die Reaktion definiert; keine Angaben zu Fehlversuchen oder Kontrollgruppe im Abstract.",
+      "confidence": "niedrig (Befund), mittel (Existenz der Studie)",
+      "relevance": [
+        "radiasthesie",
+        "datenqualitaet"
+      ]
+    },
+    {
+      "id": "C17",
+      "text": "Behauptungen, 'geopathischer Stress' verändere Herzfrequenz und Blutdruck, stützen sich auf Studien ohne Verblindung, Sham-Bedingung oder klare Zonendefinition.",
+      "status": "unbelegt",
+      "evidence": [
+        {
+          "source_id": "Q48",
+          "locator": "Abstract",
+          "quote": "The observation indicates the change in blood pressure and heart rate in geopathic stress zones as compared to nonstress zones."
+        }
+      ],
+      "counter_evidence": "Die zitierte Studie ist selbst der Beleg für die Behauptung; ihre Methode trägt sie nicht.",
+      "confidence": "hoch (methodische Schwäche), niedrig (Wirkaussage)",
+      "relevance": [
+        "radiasthesie",
+        "geopathie"
+      ]
+    },
+    {
+      "id": "C18",
+      "text": "Es existieren physikalische Deutungen, die ein nicht-elektromagnetisches 'dowsing field' postulieren (Interferometrie, Hemisphären-Inversion). Diese Behauptungen sind nicht unabhängig repliziert.",
+      "status": "unbelegt",
+      "evidence": [
+        {
+          "source_id": "Q50",
+          "locator": "Abstract",
+          "quote": "The existence of the patterns shows that the dowsing field is wave radiation."
+        },
+        {
+          "source_id": "Q49",
+          "locator": "Abstract",
+          "quote": "the inference that the field is not electromagnetic was confirmed by experiments carried out in an electromagnetically shielded laboratory"
+        }
+      ],
+      "counter_evidence": "Beobachterabhängige Rutenmessungen ohne Verblindung; keine Replikation durch unabhängige Gruppen; mechanische Pendelerklärung (Q51) und Ideomotorik (Q52) bieten eine einfachere Deutung.",
+      "confidence": "hoch (dass es Behauptungen sind), niedrig (Geltung)",
+      "relevance": [
+        "radiasthesie",
+        "physik"
+      ]
+    },
+    {
+      "id": "C19",
+      "text": "Die Bewegung eines handgeführten Pendels ist mit klassischer Mechanik (fremderregtes Kugelpendel) erklärbar; ein übernatürlicher Antrieb ist dafür nicht erforderlich.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q51",
+          "locator": "Abstract",
+          "quote": "The study of the mechanically forced pendulum provides useful insight into the centuries-old problem concerning the dynamics of the hand-forced pendulum as employed by dowsers."
+        }
+      ],
+      "counter_evidence": "Erklärt die Bewegung, nicht die behauptete Informationsquelle; Radiästheten bestreiten die Gleichsetzung (Q56).",
+      "confidence": "hoch",
+      "relevance": [
+        "pendeln",
+        "physik"
+      ]
+    },
+    {
+      "id": "C20",
+      "text": "Die Radiästhesie institutionalisierte sich international: Begriff und französische Vereinigung 1926/1929, britische Gesellschaft 1933, US-amerikanische Gesellschaft 1961.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q64",
+          "locator": "Abschnitt 'Histoire'",
+          "quote": "Le terme « radiesthésie » est employé pour la première fois en 1926 par l'abbé Bouly"
+        },
+        {
+          "source_id": "Q64",
+          "locator": "Abschnitt 'Histoire'",
+          "quote": "L’abbé Bouly crée en 1929 l’Association française et internationale des amis de la radiesthésie"
+        },
+        {
+          "source_id": "Q63",
+          "locator": "Seite 'History'",
+          "quote": "The British Society of Dowsers, founded, came to life on 4th May 1933."
+        },
+        {
+          "source_id": "Q66",
+          "locator": "Abschnitt 'Dowsing'",
+          "quote": "in 1961 the American Society of Dowsers was founded in Vermont"
+        }
+      ],
+      "counter_evidence": "Gründungsdaten sind Eigenaussagen bzw. Tertiärquellen; unabhängige Gegenprüfung steht aus (ASD-Website blockiert).",
+      "confidence": "mittel-hoch",
+      "relevance": [
+        "radiasthesie",
+        "international",
+        "geschichte"
+      ]
+    },
+    {
+      "id": "C21",
+      "text": "Die britische Gesellschaft wurde von einem ehemaligen Offizier gegründet und verlagerte ihre Schwerpunkte im Lauf der Zeit von Wasser/Öl/Mineralien zu Gesundheit, Archäologie und spirituellen Anwendungen.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q63",
+          "locator": "Seite 'History'",
+          "quote": "its founder, by Arthur H. Bell, D.S.O., O.B.E ... was a former army officer"
+        },
+        {
+          "source_id": "Q63",
+          "locator": "Seite 'History'",
+          "quote": "the early decades of the society focussed much on water divining and searching for oil, minerals, or even lost people"
+        }
+      ],
+      "counter_evidence": "Eigenaussage der Vereinigung; keine unabhängige Institutionsgeschichte geprüft.",
+      "confidence": "mittel",
+      "relevance": [
+        "radiasthesie",
+        "international"
+      ]
+    },
+    {
+      "id": "C22",
+      "text": "An der Freiberger Bergakademie wurde das Rutengehen im 18./19. Jahrhundert in die bergbauliche Wissenschaft integriert und in den 1840er-Jahren amtlich begutachtet.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q36",
+          "locator": "Abstract",
+          "quote": "the Central Mining Office nonetheless asked him in the 1840s to examine a mine surveyor who claimed to experience 'galvanic excitement' with a dowsing rod"
+        }
+      ],
+      "counter_evidence": "Nur Abstract geprüft; die Deutung als 'Integration' stammt aus dem Abstract und ist am Kapitel nicht verifiziert.",
+      "confidence": "mittel",
+      "relevance": [
+        "radiasthesie",
+        "geschichte"
+      ]
+    },
+    {
+      "id": "C23",
+      "text": "In Estland ist Rutengehen in einen lokalen Diskurs über 'Energien' aus dem Boden eingebettet (u. a. Witch's Well in Tuhala); es ist Teil volkskundlicher Naturdeutung, nicht nur ein technisches Suchverfahren.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q59",
+          "locator": "Abstract",
+          "quote": "This article discusses contemporary vernacular theory about the elusive energies that emanate from the ground."
+        }
+      ],
+      "counter_evidence": "Qualitative Fallstudien; keine Verallgemeinerung auf alle baltischen Regionen.",
+      "confidence": "mittel",
+      "relevance": [
+        "radiasthesie",
+        "international"
+      ]
+    },
+    {
+      "id": "C24",
+      "text": "Im marokkanischen Rif ist Wasserfindung mit Heilpraktiken und lokalen Glaubensvorstellungen verbunden; eine deskriptive Studie behauptet 'praktische Erfolge', ohne sie kontrolliert zu testen.",
+      "status": "unbelegt",
+      "evidence": [
+        {
+          "source_id": "Q60",
+          "locator": "Arabisches Abstract (eigene Übersetzung)",
+          "quote": "أظهرت النتائج أن بعض الطرق التقليدية، رغم التشكيك في أساسها العلمي، تحقق نجاحات عملية ملحوظة"
+        }
+      ],
+      "counter_evidence": "Kein Kontrolltest, kein DOI, regionales Journal; die Erfolgsbehauptung ist nicht falsifizierbar angelegt.",
+      "confidence": "hoch (Existenz der Praxis), niedrig (Erfolgsbehauptung)",
+      "relevance": [
+        "radiasthesie",
+        "international"
+      ]
+    },
+    {
+      "id": "C25",
+      "text": "In Palästina nutzen Raubgräber Dschinn-Vorstellungen und Wünschelruten zur Suche nach Antiquitäten; die Archäologie dokumentiert dadurch verursachte Zerstörungen.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q61",
+          "locator": "Abstract",
+          "quote": "looters have increasingly relied on supernatural intermediaries, such as jinn and dowsing rods, to identify buried treasures"
+        }
+      ],
+      "counter_evidence": "Keine Aussage über die Trefferquote; belegt Nutzung und Folgen, nicht Wirksamkeit.",
+      "confidence": "hoch",
+      "relevance": [
+        "radiasthesie",
+        "international"
+      ]
+    },
+    {
+      "id": "C26",
+      "text": "In der russischen Geowissenschaft wird Rutengehen weiter als ungelöstes Problem diskutiert; referiert werden ein geophysikalischer, ein biophysikalischer und ein 'astraler' Erklärungsansatz.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q62",
+          "locator": "Russisches Abstract (eigene Übersetzung)",
+          "quote": "Секрет эффекта лозы до сих пор не раскрыт до конца"
+        }
+      ],
+      "counter_evidence": "Überblicksaufsatz ohne eigene kontrollierte Daten; die drei Ansätze werden referiert, nicht geprüft.",
+      "confidence": "mittel",
+      "relevance": [
+        "radiasthesie",
+        "international"
+      ]
+    },
+    {
+      "id": "C27",
+      "text": "In den USA ist 'water witching' als ländliche Praxis weit verbreitet und wurde soziologisch/ethnografisch untersucht; die Persistenz wird mit Praktiken, Kosten und lokalen Unsicherheiten erklärt, nicht mit nachgewiesener Treffsicherheit.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q40",
+          "locator": "Abschnitt zu Hyman & Vogt",
+          "quote": "Ray Hyman and Evon Z. Vogt conducted several studies to determine why water witching was such a widespread and persistent practice."
+        },
+        {
+          "source_id": "Q57",
+          "locator": "Titel/Metadaten",
+          "quote": "Water Witching U.S.A."
+        }
+      ],
+      "counter_evidence": "Q57/Q58 nicht im Inhalt geprüft; die soziologische Erklärung stützt sich auf Q40.",
+      "confidence": "mittel",
+      "relevance": [
+        "radiasthesie",
+        "international",
+        "soziologie"
+      ]
+    },
+    {
+      "id": "C28",
+      "text": "Die deutsche Radiästhesieszene ist soziologisch als Milieu mit Geräten, Praktiken und Deutungen beschrieben, nicht als einheitliche Lehre.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q38",
+          "locator": "Abstract",
+          "quote": "Instead of explaining the 'belief,' 'superstition,' or 'teaching,' this book describes who is doing what in this field and for what reasons."
+        },
+        {
+          "source_id": "Q37",
+          "locator": "Titel/Metadaten",
+          "quote": "Die Welt der Wünschelrutengänger und Pendler: Erkundungen einer verborgenen Wirklichkeit"
+        }
+      ],
+      "counter_evidence": "Nur Abstract bzw. Katalogdaten geprüft.",
+      "confidence": "mittel",
+      "relevance": [
+        "radiasthesie",
+        "soziologie"
+      ]
+    },
+    {
+      "id": "C29",
+      "text": "Die Datierung des Begriffs 'Radiästhesie' ist in den Quellen widersprüchlich: 1926 (Bouly, französische Enzyklopädie) steht gegen 1930 (Heilpraktiker-Fachartikel). Die ältere Angabe ist besser belegt, bleibt aber sekundär.",
+      "status": "widersprüchlich",
+      "evidence": [
+        {
+          "source_id": "Q64",
+          "locator": "Abschnitt 'Histoire'",
+          "quote": "Le terme « radiesthésie » est employé pour la première fois en 1926 par l'abbé Bouly"
+        },
+        {
+          "source_id": "Q56",
+          "locator": "S. 32",
+          "quote": "Der Begriff „Radiästhesie“, 1930 vom französischen Geistlichen Abbé Mermet L. Bouly aus den Bestandteilen „Radius“ (lat.) = Strahlen und „Aisthesis“ (griech.) = Wahrnehmung geprägt"
+        }
+      ],
+      "counter_evidence": "Q10 (bestehend) dokumentiert zusätzlich 1926 vs. um 1931; eine Primärquelle von Bouly selbst wurde nicht beschafft.",
+      "confidence": "mittel",
+      "relevance": [
+        "radiasthesie",
+        "geschichte"
+      ]
+    },
+    {
+      "id": "C30",
+      "text": "Die überlieferten Instrumententypen umfassen Gabelrute (Hasel/Zweig), Winkel-/L-Rute, Einhandrute/Tensor, Pendel sowie kommerzielle Varianten wie den Biotensor; die Geräte unterscheiden sich in Handhabung, nicht in der behaupteten Wirkungsweise.",
+      "status": "belegt",
+      "evidence": [
+        {
+          "source_id": "Q34",
+          "locator": "Buch II",
+          "quote": "a forked one cut from a hazel bush, or from some other wood equally flexible"
+        },
+        {
+          "source_id": "Q39",
+          "locator": "Einleitung",
+          "quote": "Three types of apparatus are commonly used: (1) forked rods; (2) a pair of L shaped rods, and (3) a pendulum"
+        },
+        {
+          "source_id": "Q56",
+          "locator": "S. 32",
+          "quote": "Zu den gebräuchlichen Radiästhesie-Geräten zählen V-Ruten aus Holz oder Metall (Gabelruten, Schleifenruten), Winkelruten sowie Pendelruten aus Metall und teilweise zusätzlichem Holz (Einhandruten, Pendel)."
+        }
+      ],
+      "counter_evidence": "Die Liste ist nicht abschließend (z. B. Lecher-Antenne in Q06 genannt); die Gleichsetzung der Wirkungsweise ist eine analytische Zusammenfassung, keine Quellenaussage.",
+      "confidence": "hoch",
+      "relevance": [
+        "radiasthesie",
+        "instrumente"
+      ]
+    }
+  ],
+  "counts": {
+    "existing_sources": 33,
+    "delta_sources": 33,
+    "total_sources": 66,
+    "claims": 30,
+    "claims_belegt": 25,
+    "claims_widerspruechlich": 2,
+    "claims_unbelegt": 3
+  }
+}
