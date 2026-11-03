@@ -1,0 +1,24 @@
+Commit 648910c (Git-Blobs, unabhängig vom Arbeitsbaum):
+  LF (CI-Basis)                     164301 B roh   44168 B gz  (10 Dateien)
+  CRLF (Windows-Klon)               168448 B roh   44414 B gz  (10 Dateien)
+  Blob-Bytes unverändert            164301 B roh   44168 B gz  (10 Dateien)
+Kontrollsumme: LF-Bytes 164301 in 10 Dateien
+
+Commit 68648ca (Git-Blobs, unabhängig vom Arbeitsbaum):
+  LF (CI-Basis)                     164333 B roh   44180 B gz  (10 Dateien)
+  CRLF (Windows-Klon)               168480 B roh   44425 B gz  (10 Dateien)
+  Blob-Bytes unverändert            164333 B roh   44180 B gz  (10 Dateien)
+Kontrollsumme: LF-Bytes 164333 in 10 Dateien
+
+Commit 8d8124f (Git-Blobs, unabhängig vom Arbeitsbaum):
+  LF (CI-Basis)                     164908 B roh   44347 B gz  (10 Dateien)
+  CRLF (Windows-Klon)               169067 B roh   44592 B gz  (10 Dateien)
+  Blob-Bytes unverändert            164908 B roh   44347 B gz  (10 Dateien)
+Kontrollsumme: LF-Bytes 164908 in 10 Dateien
+
+Commit dbc1ccd (Git-Blobs, unabhängig vom Arbeitsbaum):
+  LF (CI-Basis)                     164908 B roh   44347 B gz  (10 Dateien)
+  CRLF (Windows-Klon)               169067 B roh   44592 B gz  (10 Dateien)
+  Blob-Bytes unverändert            164908 B roh   44347 B gz  (10 Dateien)
+Kontrollsumme: LF-Bytes 164908 in 10 Dateien
+

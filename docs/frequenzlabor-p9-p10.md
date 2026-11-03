@@ -201,7 +201,7 @@ Nicht maschinell geprüft: manueller Screenreader-Durchlauf, Safari/iOS und ein 
 | frischer Klon, `core.autocrlf=true` (CRLF) | 169.067 B | 44.592 B |
 | CI-Auscheckung (LF, so liegen die Blobs im Index) | 164.908 B | **44.347 B** |
 
-Kernversion `71b895c`, gleiche Messung: 28.007 B gzip-9 (LF) bzw. 28.167 B (CRLF). Die Differenz zur Kernversion ist damit 16.340 B auf LF-Basis und 16.425 B auf CRLF-Basis — die frühere Angabe „43.472 B / +15.305 B“ stammte aus dem Arbeitsbaum und war mit der CRLF-Basis des Kerns vermischt. Frühere Tabellenstände (44.168/44.414 B) gehörten zu `648910c`; seither sind 32 Rohbytes für den Rücksprung-Guard der Ansage hinzugekommen. In jeder Variante liegt der Wert weit unter der Grenze von 100.000 B; das Gate ist nicht zeilenendenabhängig gefährdet.
+Kernversion `71b895c`, gleiche Messung: 28.007 B gzip-9 (LF) bzw. 28.167 B (CRLF). Die Differenz zur Kernversion ist damit 16.340 B auf LF-Basis und 16.425 B auf CRLF-Basis — die frühere Angabe „43.472 B / +15.305 B“ stammte aus dem Arbeitsbaum und war mit der CRLF-Basis des Kerns vermischt. Frühere Tabellenstände (44.168/44.414 B) gehörten zu `648910c`. Von dort bis `8d8124f` sind **607 Rohbytes** dazugekommen, verteilt auf zwei Commits: `68648ca` ergänzte **32** (Unterbrechung ohne Restzeit nicht als „Fortsetzen möglich“ ansagen, 2 Zeilen), der Rücksprung-Guard der Ansage in `8d8124f` weitere **575** (164.908 B gzip 44.347 B gegenüber 164.301 B / 44.168 B; nachgemessen mit `node evidence/t_aa849c1c/measure-nfr2.cjs . 648910c`, `. 68648ca`, `. 8d8124f`). In jeder Variante liegt der Wert weit unter der Grenze von 100.000 B; das Gate ist nicht zeilenendenabhängig gefährdet.
 
 Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bündelt beide Ansichten in `local.js`. `Lokal.html` wächst von **790.818 B** (CRLF-Auscheckung von `71b895c`; Blob im Index 784.220 B) auf **826.792 B** im Arbeitsbaum von `feda2c5` (Blob/LF 820.062 B; reine CRLF-Umrechnung des Blobs 826.796 B — der Arbeitsbaum hat 6.730 CRLF- und 4 LF-Zeilen, die der Build so schreibt). `8d8124f` liegt bei 826.607 B (CRLF) bzw. 819.873 B (Blob). Nachmessbar mit `node evidence/t_aa849c1c/measure-lokal.cjs . 71b895c 8d8124f feda2c5`; das Skript meldet Blob und — wo derselbe Blob im Arbeitsbaum liegt — dessen Ist-Größe samt Zeilenenden. Die frühere Angabe „826.083 B“ stammte aus einem zeilenenden-gemischten Zwischenstand vor der Neuerzeugung in `c5da9cc` und war aus keinem Commit reproduzierbar. Geprüft mit Chromium über `file://`: Bibliothek mit 32 Einträgen, Cymatics zeichnet Knotenlinien, Meditation startet (Timer 02:59 nach einer Sekunde), `localStorage` funktioniert.
 
@@ -295,3 +295,24 @@ Ohne Befund geblieben ist der Hinweis auf „30-Zeilen-Lazy-Proxy“ in `docs/fr
 **Zusatz aus der Abarbeitung (Test-Stabilität, kein Produktfehler).** Beim Nachlauf der Folgestufen-Spec in einem Durchgang der vollen Suite (parallele Last) schlug **M8** einmal an `Math.max(...gains) ≤ before + 0,5` fehl, einzeln und in zwei weiteren Spec-Läufen jedoch grün. Ursache war die Messanordnung, nicht das Ausblenden: `before` wurde in einem eigenen `page.evaluate` gelesen, der Klick folgte über einen zweiten Protokoll-Umlauf. Während dieser Lücke läuft die Einblendung weiter — gemessen (Sonde, 100-ms-Raster ab 1,5 s Einblendung): −36,478 · −35,918 · −35,391 · −34,895 · −34,425 · −33,979 dBFS, also ≈ 0,5 dB je 100 ms. Bei ≥ 250 ms Abstand liegt die Referenz über 1 dB unter dem Klickpegel, die Zusicherung scheitert dann ohne Fehler im Ausblenden. Der Fall setzt den Messbeginn und den Klick jetzt in **derselben** `page.evaluate`-Aufgabe; die Aussage bleibt unverändert (kein Wert über dem Pegel beim Beenden, monoton fallend, Ende < −55 dBFS). Belegt: M8 einzeln 3/3 grün, Folgestufen-Spec 19/19 in zwei Läufen, volle Suite 108/108 mit dem gehärteten Fall.
 
 Nach den Korrekturen unverändert: `npm run test:frequenz` 52/52 · Folgestufen-Spec 19/19 · volle Browser-Suite 108/108 · Lint 0 / Format 0 · Budget-Gate grün (NFR-1 unverändert 85.613 B). Feature-Code (`js/`, `css/`) ist in Runde 3 unberührt: `git diff feda2c5 -- js/ css/` bleibt leer; geändert sind nur `docs/`, `evidence/` und die Testdatei.
+
+---
+
+## 14. Review Runde 4 — Doku-Korrektur (D6)
+
+Prüfstand der Review: `dbc1ccd`. Es wurde **keine Code-Änderung** verlangt; der Befund betraf eine Ursachenzuordnung in §7, die zwei Commits zu einem verschmolz.
+
+| Befund | Ursache | Korrektur | Beleg |
+| --- | --- | --- | --- |
+| **D6** Das NFR-2-Delta „32 Rohbytes“ passte nicht zum dokumentierten Commit: der Satz stand zwei Zeilen unter der Tabelle mit 164.908 B, dort beträgt das Delta gegenüber `648910c` aber 607 B | Der Satz war vor dem D1-Fix geschrieben und führte den gesamten Zuwachs seit `648910c` auf den Rücksprung-Guard zurück; die 32 B stammen aus `68648ca` (Ansage ohne Restzeit), der Guard in `8d8124f` kostet 575 B | §7 nennt jetzt beide Commits getrennt mit ihren Beträgen (32 + 575 = 607 B) und den gemessenen Werten; dieselbe Zuordnung steht im ADR §13.5 | `node evidence/t_aa849c1c/measure-nfr2.cjs . 648910c` / `. 68648ca` / `. 8d8124f`, Ausgabe in `evidence/t_aa849c1c/nfr2-commits.txt` |
+
+Nachgemessen an den Git-Blobs (LF-Basis der CI, unabhängig vom Arbeitsbaum):
+
+| Commit | Inhalt | NFR-2 roh | NFR-2 gzip-9 | Delta |
+| --- | --- | --- | --- | --- |
+| `648910c` | Ton endet beim Ansichtswechsel, Fades ab Ist-Pegel | 164.301 B | 44.168 B | — |
+| `68648ca` | Unterbrechung ohne Restzeit nicht als „Fortsetzen möglich“ ansagen | 164.333 B | 44.180 B | **+32 B** |
+| `8d8124f` | Ansage-Timer beim Verlassen der Ansicht abbrechen (Rücksprung-Guard) | 164.908 B | 44.347 B | **+575 B** (zusammen +607 B) |
+| `dbc1ccd` | letzter Doku-Commit, Feature-JS unverändert | 164.908 B | 44.347 B | 0 B |
+
+Der CRLF-Klon verschiebt dieselben Werte wie in §7 dokumentiert (168.448 → 168.480 → 169.067 B roh); die Zuordnung der Deltas ist davon unabhängig, weil beide Commits am Feature-JS nur `js/modules/frequenz-meditation-view.js` ändern (`68648ca` zusätzlich die neu erzeugte `Lokal.html`, die nicht in NFR-2 eingeht; `8d8124f` zusätzlich Messskript und Spec). Feature-Code in Runde 4 unberührt: `git diff dbc1ccd -- js/ css/` ist leer.
