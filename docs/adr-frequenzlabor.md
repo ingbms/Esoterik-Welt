@@ -264,6 +264,8 @@ Deaktivierte Features werden **nicht importiert** (dynamic `import()` erst hinte
 
 **Folgen:** Keine neuen indexierbaren URLs. Wenn P11 eine statische Landingpage beschließt, muss sie kanonisch auf `/Esoterik-Welt/` zeigen oder die Hash-Ansicht ersetzen — dann ist dieses ADR zu ändern.
 
+**Nachtrag P11 (2026-11-03, Ticket `t_9564a3d5`):** Die Bewertung ist abgeschlossen und bleibt bei **Nein**; die Begründung samt Canonical- und Sitemap-Folge steht in §10 („Entscheidung P11 — statische Landingpage“). AD-8 gilt unverändert weiter.
+
 ---
 
 ## 4. Schnittstellenvertrag der Audio-Engine (verbindlich)
@@ -1135,11 +1137,29 @@ Fake-Context mit Aufzeichnung aller Aufrufe (`createOscillator`, `createGain`, `
 | Kopfhörer nicht vorhanden | binaurale Wirkung nicht hörbar | Pflichttext „Kopfhörer erforderlich“; keine Wirkbehauptung |
 | Wahrnehmbare Lautheit vs. dBFS | Sicherheitsgefühl trügt | Startpegel −20 dBFS, Deckel −6 dBFS, Wellenform-Trims, Gehörschutz-Hinweis |
 | `file://`-localStorage blockiert | Presets nicht gespeichert | `try/catch`, sichtbarer Hinweis, Labor bleibt funktionsfähig |
-| Hash-Routen nicht indexierbar | SEO-Schwäche | bewusst akzeptiert (AD-8), separates P11-Ticket |
+| Hash-Routen nicht indexierbar | SEO-Schwäche | bewusst akzeptiert (AD-8); P11 entschieden: keine Landingpage, interne Verlinkung ausgebaut (§10) |
 
 **Nicht-Scope dieser Architektur:** Chladni/Cymatics, Meditations-Timer, Audio-Export, Aufnahme, Mikrofon, serverseitige Speicherung, Native-Apps, räumliches Audio, MIDI.
 
-**Offene Entscheidung für P11 (nicht blockierend):** Ob eine statische, indexierbare Landingpage für „Frequenzen“ sinnvoll ist. Dann muss sie kanonisch eindeutig sein und dieses ADR (AD-8) ersetzt werden.
+### Entscheidung P11 — statische Landingpage für „Frequenzen“: Nein
+
+**Entscheidung (2026-11-03, Ticket `t_9564a3d5`):** Es wird keine eigene statische, indexierbare Landingpage `frequenzen.html` gebaut. `#frequenzen` bleibt die einzige Einstiegsfläche der Kategorie; die interne Verlinkung wird stattdessen inhaltlich ausgebaut.
+
+**Begründung**
+
+1. **Doppelter Inhalt.** Eine Landingpage müsste Erklärstück, Bibliothek und Disclaimer wiederholen. Zwei Fassungen derselben Aussagen driften auseinander, sobald `data/frequencies.json` oder das Quellendokument gepflegt werden; der Vertragstest prüft den Datensatz, nicht eine zweite HTML-Kopie.
+2. **Canonical-Konflikt statt SEO-Gewinn.** Die Seite ist eine SPA mit einer Dokument-URL. Eine zweite URL mit denselben Texten müsste kanonisch auf `/Esoterik-Welt/` zeigen — dann wird sie nicht indexiert; zeigt sie auf sich selbst, konkurrieren zwei Einstiegsseiten um dieselbe Suchintention.
+3. **Kein belegtes Suchvolumen.** Für „Frequenzbibliothek“, „432 Hz“ oder „Solfeggio“ dominieren kommerzielle und enzyklopädische Anbieter. Der belegbare Unterschied dieser Seite ist die Evidenzprüfung — und die ist bereits als Dokument verfügbar (siehe unten).
+4. **Dünner Text bleibt dünner Text.** Ohne eigenständige, verlinkbare Inhalte wäre eine Landingpage eine Zusammenfassung (Duplicate Content) und keine redaktionelle Leistung.
+
+**Was stattdessen umgesetzt ist (P11, `t_9564a3d5`)**
+
+- **Interne Verlinkung statt Landingpage:** Der Hub verlinkt im Abschnitt „Traditionelle Zuordnungen“ kontextuell auf `#astrologie`, `#blog/3` (Chakra-Artikel) und `#crystals`; der Quellen-Abschnitt verlinkt `#blog` (Wissensbereich). Das ist inhaltliche Nachbarschaft, keine Linkliste.
+- **Quellendokument im Build:** `scripts/build-pages.cjs` kopiert `docs/frequenz-quellen.md` nach `dist/Esoterik-Welt/docs/` (GitHub Pages liefert `docs/` aus der Wurzel ohnehin aus). Die neue Ansicht `#frequenzen/quellen` rendert dasselbe Dokument lesbar; der Link auf die Rohdatei antwortet damit auch im Preview (vorher 404).
+- **Canonical:** unverändert `https://ingbms.github.io/Esoterik-Welt/`. Die Ansicht `#frequenzen/quellen` setzt nur `document.title` und `meta[name=description]` (Router, `PAGE_META.frequenzenQuellen`) und erzeugt keine zweite Canonical-URL.
+- **Sitemap:** unverändert, keine neuen Dokument-URLs. Das Quellendokument wird bewusst nicht als eigene `Quellen.html` indexiert: es ist Prüfspur, keine Einstiegsseite, und steht als Markdown unter `docs/` zur Zitation bereit.
+
+**Folge, falls sich die Annahmen ändern:** Entsteht eigener, suchrelevanter Inhalt (z. B. eine redaktionelle Artikelserie mit belegtem Suchvolumen), ist eine statische Seite nur mit eigenständigem Text, selbstreferenziendem Canonical, Sitemap-Eintrag und Ersatz von AD-8 zulässig. Das ist dann ein neuer ADR-Nachtrag, keine stille Änderung.
 
 ---
 
