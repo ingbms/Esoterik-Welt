@@ -129,3 +129,8 @@ Die Reserve war für eine Seite mit acht Rubriken kalibriert. Eine Entscheidung 
 - **C:** NFR-1 als WARN statt FAIL führen — schwächt das Gate und wird nicht empfohlen.
 
 Bis zur Entscheidung bleibt der CI-Schritt rot; alle anderen Suiten sind grün.
+
+## 8. Pull Request
+
+PR gegen `main`: https://github.com/ingbms/Esoterik-Welt/pull/18
+(Branch `feature/rubriken-vollstaendig`, Basis `47981b4`).
