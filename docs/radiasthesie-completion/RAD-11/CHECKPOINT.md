@@ -2,7 +2,8 @@
 
 Karte: t_6955196e · Branch: `feature/radiasthesie-modul`
 Stand: 3. November 2026 · Status: **umgesetzt und verifiziert, kein Push**
-Code-Commit: `8e3070e` (Basis `708ced9`, Parent RAD-06)
+Commits: `8e3070e` (Code), `50c389f` (Checkpoint/Evidenz), `e46e2dd` (Einleitungstext); Doku-Nachträge folgen als eigene Commits.
+Basis: `708ced9` (Parent RAD-06)
 
 ## 1. Ergebnis in einem Absatz
 
