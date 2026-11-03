@@ -61,4 +61,4 @@ Wählen Sie einen Tag aus, an dem Sie bewusst auf Farbe achten – nicht als The
 - [18] Elmets, C. A., et al. (2019). Joint American Academy of Dermatology–National Psoriasis Foundation guidelines of care for the management and treatment of psoriasis with phototherapy. J Am Acad Dermatol 81(3), 775–804. https://doi.org/10.1016/j.jaad.2019.04.042
 - [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
 - [14] ANSES (2019). Effets sur la santé humaine et sur l'environnement (faune et flore) des systèmes utilisant des diodes électroluminescentes (LED) – Avis et rapport. https://www.anses.fr/system/files/AP2014SA0253Ra.pdf
-- [19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int
+- [19] IARC 2012, Monographs Vol. 100D Radiation. https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012

@@ -98,8 +98,8 @@ export const SOURCES = {
   },
   19: {
     id: '19',
-    label: 'IARC (2023). Monograph on artificial optical radiation',
-    url: 'https://www.iarc.who.int',
+    label: 'IARC 2012, Monographs Vol. 100D Radiation',
+    url: 'https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012',
     shortRef: false,
   },
   24: {
@@ -1464,7 +1464,7 @@ export const FARBWELTEN = [
             '[10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3',
             '[24] NIST SP 330, SI-Broschüre. https://www.nist.gov/pml/special-publication-330/sp-330-section-2',
             '[31] MIT Vision Book, Color (Metamerie, nichtspektrale Farben). https://visionbook.mit.edu/color.html',
-            '[19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int',
+            '[19] IARC 2012, Monographs Vol. 100D Radiation. https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012',
           ],
         },
       ],

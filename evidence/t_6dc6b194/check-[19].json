@@ -1,0 +1,236 @@
+[
+  {
+    "route": "farbwelten",
+    "h1": "Farbwelten",
+    "iarcAnchors": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenIarc": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenGesamt": 15,
+    "checks": {
+      "h1_present": true,
+      "kein_altjahr_im_text": true,
+      "keine_altdomain": true,
+      "iarc_anker_mit_ledger_url": true,
+      "quellenblock_ledger_label": true,
+      "quellenblock_vorhanden": true
+    },
+    "pass": true
+  },
+  {
+    "route": "farbwelten/violett",
+    "h1": "Violett",
+    "iarcAnchors": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenIarc": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenGesamt": 10,
+    "checks": {
+      "h1_present": true,
+      "kein_altjahr_im_text": true,
+      "keine_altdomain": true,
+      "iarc_anker_mit_ledger_url": true,
+      "quellenblock_ledger_label": true,
+      "quellenblock_vorhanden": true
+    },
+    "pass": true
+  },
+  {
+    "route": "farbwelten/chakren",
+    "h1": "Chakren & Farben",
+    "iarcAnchors": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenIarc": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenGesamt": 8,
+    "checks": {
+      "h1_present": true,
+      "kein_altjahr_im_text": true,
+      "keine_altdomain": true,
+      "iarc_anker_mit_ledger_url": true,
+      "quellenblock_ledger_label": true,
+      "quellenblock_vorhanden": true
+    },
+    "pass": true
+  },
+  {
+    "route": "farbwelten/lichtfrequenzen",
+    "h1": "Lichtfrequenzen und wissenschaftliche Einordnung",
+    "iarcAnchors": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenIarc": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenGesamt": 9,
+    "checks": {
+      "h1_present": true,
+      "kein_altjahr_im_text": true,
+      "keine_altdomain": true,
+      "iarc_anker_mit_ledger_url": true,
+      "quellenblock_ledger_label": true,
+      "quellenblock_vorhanden": true
+    },
+    "pass": true
+  },
+  {
+    "route": "farbwelten/tuerkis",
+    "h1": "Türkis (Cyan)",
+    "iarcAnchors": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenIarc": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenGesamt": 10,
+    "checks": {
+      "h1_present": true,
+      "kein_altjahr_im_text": true,
+      "keine_altdomain": true,
+      "iarc_anker_mit_ledger_url": true,
+      "quellenblock_ledger_label": true,
+      "quellenblock_vorhanden": true
+    },
+    "pass": true
+  },
+  {
+    "route": "farbwelten/magenta",
+    "h1": "Magenta",
+    "iarcAnchors": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenIarc": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenGesamt": 9,
+    "checks": {
+      "h1_present": true,
+      "kein_altjahr_im_text": true,
+      "keine_altdomain": true,
+      "iarc_anker_mit_ledger_url": true,
+      "quellenblock_ledger_label": true,
+      "quellenblock_vorhanden": true
+    },
+    "pass": true
+  },
+  {
+    "route": "farbwelten/rosa",
+    "h1": "Rosa",
+    "iarcAnchors": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenIarc": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenGesamt": 9,
+    "checks": {
+      "h1_present": true,
+      "kein_altjahr_im_text": true,
+      "keine_altdomain": true,
+      "iarc_anker_mit_ledger_url": true,
+      "quellenblock_ledger_label": true,
+      "quellenblock_vorhanden": true
+    },
+    "pass": true
+  },
+  {
+    "route": "farbwelten/weiss",
+    "h1": "Weiß",
+    "iarcAnchors": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenIarc": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenGesamt": 10,
+    "checks": {
+      "h1_present": true,
+      "kein_altjahr_im_text": true,
+      "keine_altdomain": true,
+      "iarc_anker_mit_ledger_url": true,
+      "quellenblock_ledger_label": true,
+      "quellenblock_vorhanden": true
+    },
+    "pass": true
+  },
+  {
+    "route": "farbwelten/schwarz",
+    "h1": "Schwarz",
+    "iarcAnchors": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenIarc": [
+      {
+        "text": "[19] IARC 2012, Monographs Vol. 100D Radiation",
+        "href": "https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+      }
+    ],
+    "quellenGesamt": 10,
+    "checks": {
+      "h1_present": true,
+      "kein_altjahr_im_text": true,
+      "keine_altdomain": true,
+      "iarc_anker_mit_ledger_url": true,
+      "quellenblock_ledger_label": true,
+      "quellenblock_vorhanden": true
+    },
+    "pass": true
+  }
+]
