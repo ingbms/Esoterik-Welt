@@ -4,14 +4,18 @@
 // in content/farbwelten/*.md und danach in js/data/farbwelten.js. Die
 // Browser-Ebene prüft scripts/verify-farbwelten-rendered.cjs.
 //
-// Aufruf: node scripts/verify-farbwelten-sync.cjs [--json <datei>]
+// Aufruf: node scripts/verify-farbwelten-sync.cjs [--json <datei>] [--strict-labels]
 // Exit-Code 1 bei jedem Fehler. Keine stillen Warnungen: alles, was nicht
-// belegbar ist, steht als Fehler im Bericht.
+// belegbar ist, steht als Fehler im Bericht. Kennungen mit abweichenden
+// Quellenfassungen (Label/URL je Seite) prüft der Quellenabgleich aus
+// scripts/lib/farbwelten-sources.cjs; --strict-labels wertet auch
+// unterschiedlich ausführliche Labels derselben URL als Fehler.
 
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
+const { loadDocuments, analyseDocuments, checkRegister } = require('./lib/farbwelten-sources.cjs');
 
 const root = path.resolve(__dirname, '..');
 const contentDir = path.join(root, 'content', 'farbwelten');
@@ -66,6 +70,7 @@ const FORBIDDEN = [
 ];
 
 const failures = [];
+const notes = [];
 const measurements = {};
 
 function fail(message) {
@@ -305,7 +310,35 @@ function allText(world) {
       fail(`Daten ${name}: Quellen ohne Registereintrag: ${unresolved.map((id) => `[${id}]`).join(' ')}`);
   }
 
+  // Quellenabgleich: jede Kennung aus allen Dokumenten, normalisierte Form
+  // (Label, URL). Divergierende Fassungen sind Fehler, keine Sortierfrage —
+  // siehe scripts/lib/farbwelten-sources.cjs für die Klassifikation.
+  const sourceDocuments = loadDocuments(contentDir);
+  const sourceAnalysis = analyseDocuments(sourceDocuments, {
+    strictLabels: process.argv.includes('--strict-labels'),
+  });
+  const sourceRegister = checkRegister(sourceAnalysis, data.SOURCES);
+  const sourceErrors = [...sourceAnalysis.errors, ...sourceRegister.errors];
+  const sourceWarnings = [...sourceAnalysis.warnings, ...sourceRegister.warnings];
+  for (const error of sourceErrors) fail(`Quellenabgleich: ${error.message}`);
+  for (const warning of sourceWarnings) notes.push(`Hinweis ${warning.message}`);
+
+  measurements.sourceConsistency = {
+    documents: sourceAnalysis.documents.length,
+    ids: sourceAnalysis.ids.length,
+    divergentIds: sourceAnalysis.ids.filter((record) => !record.identical).map((record) => record.id),
+    errors: sourceErrors.length,
+    warnings: sourceWarnings.length,
+    strictLabels: sourceAnalysis.strictLabels,
+    chains: sourceAnalysis.chains.length,
+    details: {
+      errors: sourceErrors.map(({ code, id, message }) => ({ code, id, message })),
+      warnings: sourceWarnings.map(({ code, id, message }) => ({ code, id, message })),
+    },
+  };
+
   measurements.registry = Object.keys(data.SOURCES).length;
+
   measurements.cited = citedPerPage;
   measurements.listed = listedPerPage;
 
@@ -324,8 +357,9 @@ function allText(world) {
   }
 
   console.log(
-    `Farbwelten-Sync: ${ALL_FILES.length} Quellen, ${measurements.registry} Registereinträge, ${failures.length} Fehler`
+    `Farbwelten-Sync: ${ALL_FILES.length} Quellen, ${measurements.registry} Registereinträge, ${failures.length} Fehler, ${notes.length} Hinweise`
   );
+  for (const note of notes) console.log(`  ${note}`);
   for (const failure of failures) console.log(`  FEHLER ${failure}`);
   if (failures.length) process.exitCode = 1;
 })().catch((error) => {

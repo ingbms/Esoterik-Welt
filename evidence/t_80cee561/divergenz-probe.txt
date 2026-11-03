@@ -1,0 +1,23 @@
+
+## [19] Altseite zurück auf IARC (2023) mit iarc.who.int-URL
+   Kopie: C:\Users\mas\AppData\Local\Temp\farbwelten-divergenz-HvGeFA (Original unverändert)
+   violett.md: „- [19] IARC 2012, Monographs Vol. 100D Radiation. https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+   →      „- [19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int"
+   ERGEBNIS: erkannt als url-konflikt für [19]
+   Meldung: [19] verschiedene Dokumente: chakren/farbwelten/lichtfrequenzen/magenta/rosa/schwarz/tuerkis/weiss → „IARC 2012, Monographs Vol. 100D Radiation“ <https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012> | violett → „IARC (2023). Monograph on artificial optical radiation“ <https://www.iarc.who.int>
+
+## [24] Altseite ohne URL (längeres Label)
+   Kopie: C:\Users\mas\AppData\Local\Temp\farbwelten-divergenz-OkcVJP (Original unverändert)
+   blau.md: „- [24] NIST SP 330, SI-Broschüre. https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+   →      „- [24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s)."
+   ERGEBNIS: erkannt als url-konflikt für [24]
+   Meldung: [24] verschiedene Dokumente: blau → „NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s)“ (ohne URL) | farbwelten/gelb/gruen/indigo/lichtfrequenzen/magenta/orange/rosa/rot/schwarz/tuerkis/violett/weiss → „NIST SP 330, SI-Broschüre“ <https://www.nist.gov/pml/special-publication-330/sp-330-section-2>
+
+## [19] gleiche URL, abweichendes Jahr (2023 statt 2012)
+   Kopie: C:\Users\mas\AppData\Local\Temp\farbwelten-divergenz-z18On8 (Original unverändert)
+   violett.md: „- [19] IARC 2012, Monographs Vol. 100D Radiation. https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+   →      „- [19] IARC 2023, Monographs Vol. 100D Radiation. https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012"
+   ERGEBNIS: erkannt als identitaetskonflikt für [19]
+   Meldung: [19] gleiche URL, aber abweichende Jahres-/Bandangabe: chakren/farbwelten/lichtfrequenzen/magenta/rosa/schwarz/tuerkis/weiss → „IARC 2012, Monographs Vol. 100D Radiation“ <https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012> | violett → „IARC 2023, Monographs Vol. 100D Radiation“ <https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012>
+
+Alle 3 Divergenzfälle erkannt; content/farbwelten/*.md blieb unverändert.

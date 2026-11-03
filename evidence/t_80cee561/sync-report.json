@@ -1,0 +1,413 @@
+{
+  "checkedAt": "2026-11-03T04:31:09.855Z",
+  "files": 15,
+  "registryEntries": 16,
+  "failures": [],
+  "measurements": {
+    "b4_chakren_1577": "- 1577: *Sat-cakra-nirupana* – sechs Zentren + Sahasrāra; Zuordnung von Element- und Lotosfarben, keine Regenbogenfolge [1][2].",
+    "sourceConsistency": {
+      "documents": 15,
+      "ids": 16,
+      "divergentIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "errors": 0,
+      "warnings": 6,
+      "strictLabels": false,
+      "chains": 0,
+      "details": {
+        "errors": [],
+        "warnings": [
+          {
+            "code": "label-variante",
+            "id": "1",
+            "message": "[1] gleiche URL, unterschiedlich ausführliche Labels: blau/gruen/indigo/magenta/orange/rosa/schwarz/tuerkis/violett/weiss → „Leland, D. (2017). \"The Rainbow Body...\"“ | chakren/farbwelten/gelb/rot → „Leland, D. (2017). \"The Rainbow Body: How the Western Chakra System Came to Be.\" Quest 105.2“"
+          },
+          {
+            "code": "label-variante",
+            "id": "2",
+            "message": "[2] gleiche URL, unterschiedlich ausführliche Labels: blau/gruen/indigo/magenta/orange/rosa/schwarz/tuerkis/violett/weiss → „Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power“ | chakren/farbwelten/gelb/rot → „Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power“"
+          },
+          {
+            "code": "label-variante",
+            "id": "3",
+            "message": "[3] gleiche URL, unterschiedlich ausführliche Labels: blau/gruen/indigo/magenta/orange/rosa/schwarz/tuerkis/violett/weiss → „Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486“ | chakren/farbwelten/rot → „Jonauskaite, D. & Mohr, C. (2025). \"Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions.\" Psychon Bull Rev 32(4), 1457–1486“ | gelb → „Jonauskaite, D. & Mohr, C. (2025). \"Do we feel colours?\"“"
+          },
+          {
+            "code": "label-variante",
+            "id": "4",
+            "message": "[4] gleiche URL, unterschiedlich ausführliche Labels: blau/chakren/farbwelten/gruen/indigo/magenta/orange/rosa/rot/schwarz/tuerkis/violett/weiss → „Jonauskaite, D. et al. (2020). \"Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity.\" Psychological Science 31(10), 1245–1260“ | gelb → „Jonauskaite, D. et al. (2020). \"Universal Patterns of Colour-Emotion Associations.\"“"
+          },
+          {
+            "code": "label-variante",
+            "id": "5",
+            "message": "[5] gleiche URL, unterschiedlich ausführliche Labels: farbwelten/gelb → „Jonauskaite, D. et al. (2020). \"To see or not to see...\"“ | gruen/rot → „Jonauskaite, D., Tremea, A., Bürki, L., Diouf, C. N. & Mohr, C. (2020). \"To see or not to see: Importance of color perception to color therapy.\" Color Research & Application 45(3), 450–464“"
+          },
+          {
+            "code": "label-variante",
+            "id": "7",
+            "message": "[7] gleiche URL, unterschiedlich ausführliche Labels: blau/gruen/indigo/magenta/orange/rosa/schwarz/tuerkis/violett/weiss → „Gnambs, T. (2020). \"Limited evidence for the effect of red color on cognitive performance: A meta-analysis.\" Psychon Bull & Rev 27, 1374-1382“ | farbwelten → „Gnambs, T. (2020). \"Limited evidence for the red effect.\" Meta-Analyse“ | gelb/rot → „Gnambs, T. (2020). \"Limited evidence for the effect of red color on cognitive performance: A meta-analysis.\" Psychon Bull Rev 27, 1374-1382“"
+          }
+        ]
+      }
+    },
+    "registry": 16,
+    "cited": {
+      "farbwelten": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "14",
+        "15",
+        "17",
+        "18",
+        "19",
+        "24",
+        "31"
+      ],
+      "rot": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "24"
+      ],
+      "orange": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "gelb": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "gruen": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "tuerkis": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "9",
+        "19",
+        "24",
+        "31"
+      ],
+      "blau": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "14",
+        "24",
+        "31"
+      ],
+      "indigo": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "violett": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "19",
+        "24",
+        "31"
+      ],
+      "magenta": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "9",
+        "19",
+        "24",
+        "31"
+      ],
+      "rosa": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "9",
+        "19",
+        "24",
+        "31"
+      ],
+      "weiss": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "9",
+        "10",
+        "19",
+        "24",
+        "31"
+      ],
+      "schwarz": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "9",
+        "10",
+        "19",
+        "24",
+        "31"
+      ],
+      "chakren": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "9",
+        "10",
+        "14",
+        "19"
+      ],
+      "lichtfrequenzen": [
+        "9",
+        "10",
+        "11",
+        "14",
+        "15",
+        "17",
+        "18",
+        "19",
+        "24"
+      ]
+    },
+    "listed": {
+      "farbwelten": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "14",
+        "15",
+        "17",
+        "18",
+        "19",
+        "24",
+        "31"
+      ],
+      "rot": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "24"
+      ],
+      "orange": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "gelb": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "gruen": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "tuerkis": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "19",
+        "24",
+        "31"
+      ],
+      "blau": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "14",
+        "24",
+        "31"
+      ],
+      "indigo": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "24",
+        "31"
+      ],
+      "violett": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "19",
+        "24",
+        "31"
+      ],
+      "magenta": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "19",
+        "24",
+        "31"
+      ],
+      "rosa": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "19",
+        "24",
+        "31"
+      ],
+      "weiss": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "19",
+        "24",
+        "31"
+      ],
+      "schwarz": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "9",
+        "10",
+        "19",
+        "24",
+        "31"
+      ],
+      "chakren": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "9",
+        "10",
+        "14",
+        "19"
+      ],
+      "lichtfrequenzen": [
+        "9",
+        "10",
+        "11",
+        "14",
+        "15",
+        "17",
+        "18",
+        "19",
+        "24"
+      ]
+    }
+  }
+}
