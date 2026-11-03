@@ -124,3 +124,28 @@ hinterlässt.
 - Nicht geprüft (wie in der Abnahme): Screenreader, echte Mobilgeräte, Safari,
   Lighthouse-Lauf. Die Abnahme hatte diese Punkte bereits belegt; an ihnen hat
   sich durch die Korrekturen nichts geändert.
+
+## Nachbesserung N1 (Review-Runde 1, Commit bdef5c1)
+
+Befund: `index.html:678` nannte in der Ohne-Skript-Kurzfassung „sieben Farben“,
+obwohl Modul, `PAGE_META` und Kompass zwölf Farbwelten führen.
+
+Änderung: Die Zahl ist zahlfrei formuliert worden — „Der Bereich erklärt Farben
+zwischen Physik, Wahrnehmung, Kultur und Tradition.“ Damit kann sie nicht erneut
+veralten. Die Zeile wurde per `npx prettier --write index.html` umbrochen; der
+Diff betrifft ausschließlich diesen Absatz. `content/farbwelten/*.md` und B1–B4
+blieben unverändert.
+
+Nachweise (Ist-Werte dieses Laufs):
+
+| Prüfung | Ergebnis |
+| --- | --- |
+| `npm run build` | OK; `dist/Esoterik-Welt/index.html:678` enthält die neue Fassung |
+| `npm run lint` | 0 Warnungen |
+| `npm run format:check` | OK |
+| `npm run test:pages` | 6/6 |
+| `npm run test:offline` | 2/2 (Lokal.html frisch gebaut, danach zurückgesetzt) |
+
+Restliche Treffer auf „sieben Farben“ in `js/data/farbwelten.js` beschreiben
+ausschließlich das historische Regenbogen-Chakramodell von 1977 (Inhalt, nicht
+Modulzählung) und bleiben unangetastet.
