@@ -262,3 +262,21 @@ node evidence/t_4a8106de/probes/metrics.mjs  evidence/t_4a8106de
 3. R-3: Hörtest nach Protokoll 6.2 durchführen.
 4. R2-1 beheben (Ticket an `coder`), danach Protokoll 5.3 Schritt 3 erneut prüfen.
 5. Mindestanforderung dokumentieren, falls binaurale Wiedergabe auf iOS unter 14.5 nicht unterstützt werden soll (`StereoPannerNode` fehlt dort).
+
+## 10. Abnahme durch den Betreiber (03.11.2026)
+
+**Entscheidung:** Das Frequenzlabor funktioniert; A5 ist **abgenommen**. Die Auflage A5 der Freigabe gilt damit als erfüllt, eine öffentliche Release-Erklärung darf auf diese Abnahme verweisen.
+
+**Grundlage der Abnahme:** manuelle Prüfung des Betreibers am ausgelieferten Prüfstand — `dist/Esoterik-Welt/index.html` sha256 `3a92047e4a15139019e96ec547f909f01979f295b6e9ca11f4da17623f64d28e` (Produktcode `71b895c`, Worktree `Esoterik-Welt-a5`, Server `PORT=3333 node index.js`), erreichbar unter `http://192.168.0.14:3333/Esoterik-Welt/#frequenzen/labor` und `http://127.0.0.1:3333/Esoterik-Welt/#frequenzen/labor`.
+
+**Belegklasse — bewusst offen benannt:** Die Protokollbögen 4.3, 5.3 und 6.2 wurden **nicht zeilenweise** zurückgegeben. Die Abnahme ist eine Betreiber-Freigabe („funktioniert und ist abgenommen"), kein vollständiger Protokollnachweis. Das Geräte- und Wahrnehmungsrisiko aus R-1 (macOS-/iOS-Safari) und R-3 (Höreindruck, Hardware-Knackser) trägt damit der Betreiber; es ist nicht durch Messungen des Prüfteams gedeckt und bleibt insofern dokumentiert offen.
+
+**Damit erledigt:** Offene Punkte 1–3 aus Abschnitt 9 (R-1, R-2-Geräteprüfung, R-3) sind durch die Abnahme geschlossen, nicht durch Protokolle.
+
+**Weiterhin offen:**
+
+1. **R2-1 (Major):** Frequenz-Slider exponiert `valuetext "447"` statt „440 Hz" — Ticket `t_26387037` bei `coder`; nach dem Fix Protokoll 5.3 Schritt 3 erneut prüfen.
+2. **R2-2, R2-3, R2-4 (Minor):** dokumentiert, nicht als Tickets angelegt.
+3. **Mindestanforderung iOS < 14.5** (`StereoPannerNode` fehlt): weiterhin zu dokumentieren, falls unterstützt werden soll.
+
+**Bewertung aus Abschnitt 7 bleibt als Prüfstandsprotokoll stehen** und ist durch diesen Abschnitt nicht ersetzt, sondern um die Betreiberentscheidung ergänzt.
