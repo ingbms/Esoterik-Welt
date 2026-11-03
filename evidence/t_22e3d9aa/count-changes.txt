@@ -1,0 +1,7 @@
+[1] 10 Seiten: blau, gruen, indigo, magenta, orange, rosa, schwarz, tuerkis, violett, weiss
+[2] 10 Seiten: blau, gruen, indigo, magenta, orange, rosa, schwarz, tuerkis, violett, weiss
+[3] 11 Seiten: blau, gelb, gruen, indigo, magenta, orange, rosa, schwarz, tuerkis, violett, weiss
+[4] 1 Seiten: gelb
+[5] 4 Seiten: farbwelten, gelb, gruen, rot
+[7] 12 Seiten: blau, farbwelten, gelb, gruen, indigo, magenta, orange, rosa, schwarz, tuerkis, violett, weiss
+gesamt: 48 Zeilen in 13 Dateien

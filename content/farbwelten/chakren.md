@@ -58,4 +58,4 @@ Das moderne Modell ordnet jedem der sieben Zentren eine Farbe zu (Rot → Violet
 - [9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf
 - [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
 - [14] ANSES (2019). Effets sur la santé humaine et sur l'environnement (faune et flore) des systèmes utilisant des diodes électroluminescentes (LED) – Avis et rapport. https://www.anses.fr/system/files/AP2014SA0253Ra.pdf
-- [19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int
+- [19] IARC 2012, Monographs Vol. 100D Radiation. https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012

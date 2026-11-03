@@ -50,11 +50,11 @@ Betrachten Sie einen türkisen / cyan-farbenen Gegenstand — ein Glas, eine Blu
 
 ## Quellen
 
-- [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
-- [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
-- [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+- [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+- [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+- [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
 - [4] Jonauskaite, D. et al. (2020). "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity." Psychological Science 31(10), 1245–1260. https://doi.org/10.1177/0956797620948810
-- [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+- [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
 - [9] OSTEBA (2025). Eficacia y seguridad de la cromoterapia (HTA). https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf
 - [10] Son, Y., et al. (2025). Effects of photobiomodulation on multiple health outcomes: an umbrella review. Systematic Reviews 14. https://doi.org/10.1186/s13643-025-02902-3
 - [19] IARC 2012, Monographs Vol. 100D Radiation. https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012

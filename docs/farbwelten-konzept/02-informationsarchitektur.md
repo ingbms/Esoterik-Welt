@@ -1,8 +1,13 @@
 # Informationsarchitektur — „Farbwelten & Farbtherapie“
 
-Stand: 2. November 2026 · Status: verbindliche Umsetzungsvorgabe
+Stand: 3. November 2026 · Status: verbindliche Umsetzungsvorgabe
 Grundlage: Master-Auftrag §2 (Taxonomie), §5 (Farbseiten), §6 (Chakren),
 §10 (Interaktion), Bestandsaufnahme in `01-bestandsaufnahme.md`.
+
+Geltungsbereich: **zwölf Farbwelten** — acht Spektralfarben (Rot, Orange, Gelb,
+Grün, Türkis, Blau, Indigo, Violett), zwei nichtspektrale Mischfarben (Magenta,
+Rosa) und zwei Neutralfarben (Weiß, Schwarz) — dazu die Chakrenseite und die
+Wissensseite „Lichtfrequenzen“. Paletten und Kontraste: `03`.
 
 ## 1. Ziel und Nicht-Ziele
 
@@ -22,19 +27,32 @@ Ansichten von `index.html`, keine eigenen Dokumente.
 
 | Route | Ansicht | Inhalt | Status |
 | --- | --- | --- | --- |
-| `#farbwelten` | Einstieg | Hero, Farbtafel, Farbregister (7), zwei Einstiege (Chakren, Lichtfrequenzen), Methodenhinweis | Pflicht |
+| `#farbwelten` | Einstieg | Hero, Farbtafel (12 Bänder), Farbregister (12), zwei Einstiege (Chakren, Lichtfrequenzen), Methodenhinweis | Pflicht |
 | `#farbwelten/rot` | Farbdetail | Skelett A–H, siehe §5 | Pflicht |
 | `#farbwelten/orange` | Farbdetail | dito | Pflicht |
 | `#farbwelten/gelb` | Farbdetail | dito | Pflicht |
 | `#farbwelten/gruen` | Farbdetail | dito | Pflicht |
+| `#farbwelten/tuerkis` | Farbdetail | dito; Spektralfarbe im Übergangsbereich 490–520 nm (Konvention) | Pflicht |
 | `#farbwelten/blau` | Farbdetail | dito | Pflicht |
 | `#farbwelten/indigo` | Farbdetail | dito | Pflicht |
 | `#farbwelten/violett` | Farbdetail | dito | Pflicht |
+| `#farbwelten/magenta` | Farbdetail | dito; nicht spektral, ohne Wellenlängenangabe | Pflicht |
+| `#farbwelten/rosa` | Farbdetail | dito; nicht spektral, ohne Wellenlängenangabe | Pflicht |
+| `#farbwelten/weiss` | Farbdetail | dito; Neutralfarbe, ohne Wellenlängenangabe | Pflicht |
+| `#farbwelten/schwarz` | Farbdetail | dito; Neutralfarbe, ohne Wellenlängenangabe | Pflicht |
 | `#farbwelten/chakren` | Übersicht | 7 Chakren, Farbe–Chakra-Zuordnung, interaktive Figur, historische Einordnung | Pflicht |
 | `#farbwelten/lichtfrequenzen` | Wissensseite | Spektrum, Frequenz-/Energierechnung, Lichttherapie-Einordnung, Disclaimer-Platzhalter | Pflicht |
 | `#chakren` | Alias | leitet auf `#farbwelten/chakren` um (replace) | Kompatibilität |
 | `#lichtfrequenzen` | Alias | leitet auf `#farbwelten/lichtfrequenzen` um (replace) | Kompatibilität |
-| `#farbwelten/tuerkis`, `/magenta`, `/rosa`, `/weiss`, `/schwarz` | Ausbaustufe 2 | Paletten und Datenmodell vorbereitet (`03` §5), Inhalte später | optional |
+
+Das sind **14 Routen**: zwölf Farbdetailseiten plus Chakren- und Wissensseite;
+die beiden Alias-Routen kommen ohne eigene Ansicht hinzu.
+
+**Reihenfolge der zwölf Farben** (verbindlich, Register und Farbtafel folgen
+dem Array in `js/data/farbwelten.js`): Rot, Orange, Gelb, Grün, Türkis, Blau,
+Indigo, Violett, Magenta, Rosa, Weiß, Schwarz. Sie folgt dem Spektralverlauf
+und hängt die nichtspektralen (Magenta, Rosa) und neutralen Farben (Weiß,
+Schwarz) hinten an — die λ-Achse bleibt davon unberührt (§8).
 
 **Warum Unterrouten statt eigener Seiten:** Das Radiästhesie-Modul hat dasselbe
 Muster (`#pendeln/<thema>`) eingeführt; der Router versteht bereits Segmente
@@ -117,8 +135,10 @@ Seite schon kennt:
 
 1. **Breadcrumb** (`<nav aria-label="Brotkrümelnavigation"><ol>`):
    `Start › Farben › Rot` — auf jeder Unterroute, letzte Stufe `aria-current="page"`.
-2. **Farbregister** auf der Einstiegsseite (7 Zeilen) und als „Weitere Farben“
-   (3 Karten) am Ende jeder Farbdetailseite.
+2. **Farbregister** auf der Einstiegsseite (12 Zeilen, durchnummeriert 01–12) und
+   als „Weitere Farben“ (3 Karten) am Ende jeder Farbdetailseite. Die drei Karten
+   sind die nächsten Einträge der Registerreihenfolge (zyklisch), nicht die
+   Verwandtschaftsliste; die steht im Register selbst als Text („Verwandt: …“).
 3. **Inhaltsverzeichnis** (`<details class="astro-toc">` mobil, sticky Spalte
    ≥1100 px) auf Farbdetail- und Wissensseiten.
 
@@ -126,13 +146,13 @@ Damit bleibt die Hauptnavigation ein Ziel pro Bereich, wie bei „Pendeln“.
 
 ## 5. Seiten-Skelett der Farbdetailseiten (A–H)
 
-Jede der sieben Seiten nutzt exakt dieselben acht Abschnitte in derselben
-Reihenfolge; nur Inhalt und Palettenvariable wechseln.
+Jede der zwölf Seiten nutzt exakt dieselben acht Abschnitte in derselben
+Reihenfolge; nur Inhalt, Typ-Label und Palettenvariable wechseln.
 
 | # | Abschnitt | Anker | Pflichtinhalt | Evidenz |
 | --- | --- | --- | --- | --- |
-| A | Die Farbe erleben | `#erleben` | Farbfläche, 3–5 Nuancen, Wellenlängenbereich, Einordnung spektral/nichtspektral | Fakten |
-| B | Physikalische Eigenschaften | `#physik` | Wellenlänge, Frequenz, Photonenergie, Entstehung, Abgrenzung zu Mischfarben | Messwert |
+| A | Die Farbe erleben | `#erleben` | Farbfläche, 3–5 Nuancen, Wellenlängenbereich (nur Spektralfarben), Typ-Label (Spektralfarbe / nicht spektral / Neutralfarbe) | Fakten |
+| B | Physikalische Eigenschaften | `#physik` | bei Spektralfarben Wellenlänge, Frequenz, Photonenenergie; bei nichtspektralen und neutralen Farben stattdessen Entstehung (Mischung, Additivität, Remission/Absorption), jeweils ohne erfundene Messwerte | Messwert bzw. Erklärung |
 | C | Farbpsychologie | `#psychologie` | typische Assoziationen, Kontext, kulturelle Unterschiede, Stand der Forschung | Empirie |
 | D | Spirituelle Bedeutung | `#tradition` | traditionelle Symbolik, Chakra-Zuordnung, Meditationsbezug, Herkunft der Zuordnung | Deutungstradition |
 | E | Farbtherapeutische Anwendung | `#anwendung` | traditionelle Praxis, behauptete Wirkungen, untersuchte Ansätze, Grenzen | gemischt, je Aussage markiert |
@@ -150,10 +170,24 @@ Regeln:
 - Die Übung (G) ist immer abbrechbar, ohne Speicherung personenbezogener Daten.
 - Quellen (H) nennen Publikationstyp und Datum; keine DOI ohne Prüfung.
 
+**Nichtspektrale und neutrale Farben:** Magenta und Rosa (Typ „nicht spektral“)
+sowie Weiß und Schwarz (Typ „Neutralfarbe“) tragen in A das Typ-Label statt
+eines Wellenlängenbereichs; in B erklären Faktenzeilen und Absätze Mischung,
+Additivität, Remission und Absorption. `wavelength`, `frequency` und
+`photonEv` bleiben dort leer — `verify-farbwelten-sync` wertet jeden Wert als
+Fehler. Türkis ist Spektralfarbe und wird mit 490–520 nm als Konvention geführt
+(Übergangsbereich, Überschneidung mit Grün und Blau wird benannt).
+
 ## 6. Einstiegsseite `#farbwelten` — Reihenfolge
 
-1. Hero: H1, Lede, eine Hauptaktion („Farbwelten entdecken“), Farbtafel rechts.
-2. Farbregister: sieben Zeilen (Name, Wellenlänge/Frequenz, Chakra, Pfeil).
+1. Hero: H1, Lede, eine Hauptaktion („Farbwelten entdecken“), Farbtafel rechts —
+   **zwölf Bänder** in Registerreihenfolge, je Band Farbfeld (40 %) und
+   Labelplatte mit Wellenlängenbereich bzw. Typ-Label und Name. Keine feste
+   4:5-Box mehr; jedes Band hat mindestens 44 px Höhe, die Platte wächst mit
+   dem Inhalt (kein Überlauf ab 320 px).
+2. Farbregister: **zwölf Zeilen**, durchnummeriert 01–12 (Name,
+   Wellenlänge/Frequenz bzw. „keine Wellenlänge“, Chakra-Zuordnung,
+   Kurzbeschreibung, Verwandte, Pfeil).
 3. Zwei Einstiege: „Chakren & Farben“, „Lichtfrequenzen & Einordnung“.
 4. Methodenhinweis: warum Tradition und Forschung getrennt markiert werden;
    Link auf `#farbwelten/lichtfrequenzen`.
@@ -176,6 +210,11 @@ Regeln:
 - H1 „Lichtfrequenzen und wissenschaftliche Einordnung“.
 - Spektrum-Explorer (Slider 380–780 nm, Frequenz-/Energieanzeige, Kennzeichnung
   als Simulation) — Pflichtfunktion des Master-Auftrags, Umsetzung in FW-07.
+- Die **λ-Achse bleibt 380–780 nm** und führt ausschließlich Wellenlängen.
+  Nichtspektrale und neutrale Farben (Magenta, Rosa, Weiß, Schwarz) liegen
+  nicht auf der Achse; sie werden oberhalb als verlinkte Liste mit Typ-Label
+  geführt. Türkis erscheint nicht als eigene Achsenstufe, sondern ist als
+  Übergangsbereich 490–520 nm (Konvention) benannt.
 - Rechenwege als Text: `f = c/λ`, `E ≈ 1239,842/λ`; Einheiten und Grenzen.
 - Lichttherapie/Photobiologie: kurze, quellenbelegte Einordnung, keine Anwendungstipps.
 - **Disclaimer-Platzhalter** (verbindlich, Text von der Redaktion zu füllen):
@@ -189,8 +228,9 @@ Regeln:
 | --- | --- | --- |
 | jede Farbseite D | `#farbwelten/chakren` | Chakra-Zuordnung prüfen |
 | jede Farbseite B | `#farbwelten/lichtfrequenzen` | Physik vertiefen |
-| Chakrenseite | alle 7 Farbseiten | Zuordnung Farbe–Chakra |
-| Lichtfrequenzen | 7 Farbseiten (Spektralbereiche) | Rückweg |
+| Chakrenseite | die sieben Farbseiten mit Chakra-Zuordnung (Rot bis Violett) | Zuordnung Farbe–Chakra |
+| Lichtfrequenzen | alle zwölf Farbseiten („Zurück zu den Farbwelten“) | Rückweg |
+| Lichtfrequenzen (Explorer) | Magenta, Rosa, Weiß, Schwarz | nicht auf der λ-Achse, deshalb verlinkt statt eingezeichnet |
 | Farbseiten | `#crystals` (gefiltert nach Farbe/Chakra, falls Filter-URL vorhanden) | Materialbezug |
 | Farbseiten | `#blog` (passende Artikel) | Redaktion |
 | Einstieg | `#farbwelten/chakren`, `#farbwelten/lichtfrequenzen` | zwei Hauptpfade |
@@ -202,16 +242,21 @@ existierenden Inhalt zeigen.
 
 | Route | `<title>` | Meta-Description (≤155 Zeichen) |
 | --- | --- | --- |
-| `#farbwelten` | Farbwelten — Bedeutung, Physik und Tradition der Farben \| Esoterik-Welt | Sieben Farbwelten zwischen Licht, Wahrnehmung und Tradition: Wellenlängen, Assoziationen, Chakren und Forschungsstand differenziert erklärt. |
+| `#farbwelten` | Farbwelten — Bedeutung, Physik und Tradition der Farben \| Esoterik-Welt | Zwölf Farbwelten zwischen Licht, Wahrnehmung und Tradition: Wellenlängen, Assoziationen, Chakren und Forschungsstand differenziert erklärt. |
 | `#farbwelten/rot` | Rot — Licht, Wirkung und Bedeutung \| Esoterik-Welt | Rot zwischen 620 und 750 nm: Physik, Farbpsychologie, kulturelle Symbolik, Chakra-Zuordnung und die Grenzen farbtherapeutischer Behauptungen. |
 | `#farbwelten/orange` | Orange — Licht, Wirkung und Bedeutung \| Esoterik-Welt | Orange zwischen 590 und 620 nm: Wahrnehmung, Assoziationen, kulturelle Bedeutung, Sakralchakra und der Unterschied zwischen Tradition und Befund. |
 | `#farbwelten/gelb` | Gelb — Licht, Wirkung und Bedeutung \| Esoterik-Welt | Gelb zwischen 570 und 590 nm: Helligkeitswirkung, Assoziationen, Symbolik, Solarplexuschakra und die Grenzen der Farbpsychologie. |
 | `#farbwelten/gruen` | Grün — Licht, Wirkung und Bedeutung \| Esoterik-Welt | Grün zwischen 490 und 570 nm: Wahrnehmung, Beruhigungsassoziationen, Natur- und Herzsymbolik, Forschungslage und offene Fragen. |
+| `#farbwelten/tuerkis` | Türkis (Cyan) — Übergang zwischen Grün und Blau \| Esoterik-Welt | Türkis (Cyan) als Übergangsbereich um 490–520 nm (Konvention): Physik, Assoziationen, Tradition und die Grenzen der Farbtherapie. |
 | `#farbwelten/blau` | Blau — Licht, Wirkung und Bedeutung \| Esoterik-Welt | Blau zwischen 450 und 490 nm: Physik, Farbpsychologie, Halschakra und die gut untersuchte Rolle von Licht für die innere Uhr. |
 | `#farbwelten/indigo` | Indigo — Licht, Wirkung und Bedeutung \| Esoterik-Welt | Indigo zwischen 425 und 450 nm: schmaler Spektralbereich, kulturelle Deutungen, Stirnchakra und die Herkunft der modernen Zuordnung. |
 | `#farbwelten/violett` | Violett — Licht, Wirkung und Bedeutung \| Esoterik-Welt | Violett zwischen 380 und 425 nm: kurzwelliges Licht, Symbolik, Kronenchakra, Abgrenzung zu Magenta und der Stand der Forschung. |
+| `#farbwelten/magenta` | Magenta — Mischfarbe aus Rot und Blau \| Esoterik-Welt | Magenta ist nicht spektral: additiver Rot-Blau-Mix, Physik, Farbpsychologie, Symbolik und die Grenzen therapeutischer Behauptungen. |
+| `#farbwelten/rosa` | Rosa — Mischfarbe aus Rot und Weiß \| Esoterik-Welt | Rosa als Rot-Weiß-Mischung: Sättigung, Helligkeit, kulturelle Bedeutung und die Grenzen der Farbpsychologie — ohne Heilversprechen. |
+| `#farbwelten/weiss` | Weiß — Neutralfarbe aus allen Wellenlängen \| Esoterik-Welt | Weiß als Superposition und Remission: warum es keine eigene Wellenlänge hat, was die Forschung sagt und was Tradition bleibt. |
+| `#farbwelten/schwarz` | Schwarz — Neutralfarbe ohne Lichtreiz \| Esoterik-Welt | Schwarz als Absorption ohne Lichtreiz: Physik, kulturelle Deutungen, Farbpsychologie und die klaren Grenzen der Farbtherapie. |
 | `#farbwelten/chakren` | Chakren und Farben — Zuordnung und Herkunft \| Esoterik-Welt | Die sieben Chakren, ihre Farbzuordnung und die Geschichte des Regenbogenmodells — als Tradition gekennzeichnet, wissenschaftlich eingeordnet. |
-| `#farbwelten/lichtfrequenzen` | Lichtfrequenzen und wissenschaftliche Einordnung \| Esoterik-Welt | Wellenlänge, Frequenz und Photonenergie berechnen; Lichttherapie und Photobiologie mit Quellen und klaren Evidenzgrenzen. |
+| `#farbwelten/lichtfrequenzen` | Lichtfrequenzen und wissenschaftliche Einordnung \| Esoterik-Welt | Wellenlänge, Frequenz und Photonenenergie berechnen; Lichttherapie und Photobiologie mit Quellen und klaren Evidenzgrenzen. |
 
 Regeln:
 
@@ -226,35 +271,51 @@ Regeln:
 
 ## 11. Datenmodell (verbindlich)
 
-Ein Modul, eine Datenquelle, sieben Ansichten. Vorschlag als ES-Module, passend
-zu `js/data/*.js`:
+Ein Modul, eine Datenquelle, zwölf Ansichten. Umgesetzt als ES-Module in
+`js/data/farbwelten.js` (erzeugt aus `content/farbwelten/*.md`); Paletten sind
+CSS-Tokens in `css/design-system.css` und stehen nicht im Datenobjekt (`03` §7).
 
 ```js
-// js/data/farbwelten.js
+// js/data/farbwelten.js — Auszug, Feldnamen wie implementiert
+export const SOURCES = {
+  24: { id: '24', label: 'NIST SP 330, SI-Broschüre', url: 'https://…', shortRef: false },
+  // … 15 weitere
+};
+
 export const FARBWELTEN = [
   {
     id: 'rot',
     name: 'Rot',
+    route: '#farbwelten/rot',
+    type: 'spectral', // 'spectral' | 'non-spectral' | 'neutral'
+    typeLabel: 'Spektralfarbe', // 'Spektralfarbe' | 'nicht spektral' | 'Neutralfarbe'
     spectral: true,
-    wavelength: { min: 620, max: 750, note: 'konventionelle Näherung' },
-    frequencyThz: { min: 400, max: 484 },
-    photonEv: { min: 1.65, max: 2.0 },
-    palette: { ink: '#cf6a60', core: '#bc4a41', deep: '#281715' /* ... */ },
+    wavelength: { min: 620, max: 750, label: '620–750 nm' },
+    frequency: { min: 400, max: 484, label: '400–484 THz' },
+    photonEv: { min: 1.653, max: 2, label: '1,65–2,00 eV' },
     chakra: 'root',
     summary: '…',
+    meta: { title: '…', description: '…' },
     sections: {
       erleben: [/* Blöcke */],
       physik: [/* Blöcke */],
-      psychologie: [/* Blöcke */],
-      tradition: [/* Blöcke */],
-      anwendung: [/* Blöcke */],
-      geschichte: [/* Blöcke */],
-      uebung: [/* Blöcke */],
+      /* … psychologie, tradition, anwendung, geschichte, uebung … */
+      quellen: [/* type: 'list', items: ['[1] …', '…'] */],
     },
-    sources: [{ label: '…', url: '…', type: 'peer-review', date: '2025', checked: '2026-11-02' }],
+    sources: ['1', '2', '3', '4', '5', '7', '9', '10', '24', '31'],
     related: ['chakren', 'lichtfrequenzen', 'crystals'],
+    verwandt: ['orange', 'magenta', 'rosa'],
+    register: {
+      id: 'rot',
+      name: 'Rot',
+      route: '#farbwelten/rot',
+      kurz: '…',
+      typLabel: 'Spektralfarbe',
+      verwandt: ['orange', 'magenta', 'rosa'],
+      chakra: 'root',
+    },
   },
-  // … sechs weitere
+  // … elf weitere in Registerreihenfolge
 ];
 
 // js/data/chakren.js — Felder entsprechen Master-Auftrag §6.2/§13.2
@@ -276,6 +337,18 @@ export const CHAKREN = [
   // … sechs weitere
 ];
 ```
+
+**Registerreihenfolge:** Rot, Orange, Gelb, Grün, Türkis, Blau, Indigo, Violett,
+Magenta, Rosa, Weiß, Schwarz. Sie ist die Reihenfolge des Arrays und steuert
+Farbtafel, Register (01–12) sowie die Karten „Weitere Farben“ (die jeweils
+nächsten drei Einträge, zyklisch).
+
+**Nichtspektrale und neutrale Welten** (Magenta, Rosa, Weiß, Schwarz) lassen
+`wavelength`, `frequency` und `photonEv` weg; `typeLabel` trägt dort
+„nicht spektral“ bzw. „Neutralfarbe“. `verify-farbwelten-sync` wertet jeden
+Wert in diesen Feldern als Fehler; `verify-farbwelten` prüft im gerenderten
+Register, dass für alle vier „keine Wellenlänge“ steht. Türkis ist `spectral`
+mit 490–520 nm (Konvention).
 
 Blocktypen (rendern ohne HTML-Injektion, Text bleibt Text):
 `{ type: 'p', text }`, `{ type: 'list', items: [] }`, `{ type: 'facts', rows: [[label, value]] }`,

@@ -1,0 +1,5 @@
+
+> esoterik-welt@1.0.0 verify:sync
+> node scripts/verify-farbwelten-sync.cjs
+
+Farbwelten-Sync: 15 Quellen, 16 Registereinträge, 0 Fehler, 0 Hinweise

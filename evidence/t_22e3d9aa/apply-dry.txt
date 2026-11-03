@@ -1,0 +1,146 @@
+WÜRDE blau.md:47 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE blau.md:48 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE blau.md:49 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE blau.md:51 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE farbwelten.md:54 [5]
+  alt: - [5] Jonauskaite, D. et al. (2020). "To see or not to see..." https://doi.org/10.1002/col.22490
+  neu: - [5] Jonauskaite, D., Tremea, I., Bürki, L., Diouf, C. N. & Mohr, C. (2020). "To see or not to see: Importance of color perception to color therapy." Color Research & Application 45(3), 450–464. https://doi.org/10.1002/col.22490
+WÜRDE farbwelten.md:55 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the red effect." Meta-Analyse. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE gelb.md:43 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours?" https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE gelb.md:44 [4]
+  alt: - [4] Jonauskaite, D. et al. (2020). "Universal Patterns of Colour-Emotion Associations." https://doi.org/10.1177/0956797620948810
+  neu: - [4] Jonauskaite, D. et al. (2020). "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity." Psychological Science 31(10), 1245–1260. https://doi.org/10.1177/0956797620948810
+WÜRDE gelb.md:45 [5]
+  alt: - [5] Jonauskaite, D. et al. (2020). "To see or not to see..." https://doi.org/10.1002/col.22490
+  neu: - [5] Jonauskaite, D., Tremea, I., Bürki, L., Diouf, C. N. & Mohr, C. (2020). "To see or not to see: Importance of color perception to color therapy." Color Research & Application 45(3), 450–464. https://doi.org/10.1002/col.22490
+WÜRDE gelb.md:46 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE gruen.md:41 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE gruen.md:42 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE gruen.md:43 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE gruen.md:45 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE gruen.md:50 [5]
+  alt: - [5] Jonauskaite, D., Tremea, A., Bürki, L., Diouf, C. N. & Mohr, C. (2020). "To see or not to see: Importance of color perception to color therapy." Color Research & Application 45(3), 450–464. https://doi.org/10.1002/col.22490
+  neu: - [5] Jonauskaite, D., Tremea, I., Bürki, L., Diouf, C. N. & Mohr, C. (2020). "To see or not to see: Importance of color perception to color therapy." Color Research & Application 45(3), 450–464. https://doi.org/10.1002/col.22490
+WÜRDE indigo.md:49 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE indigo.md:50 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE indigo.md:51 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE indigo.md:53 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE magenta.md:53 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE magenta.md:54 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE magenta.md:55 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE magenta.md:57 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE orange.md:41 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE orange.md:42 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE orange.md:43 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE orange.md:45 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE rosa.md:55 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE rosa.md:56 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE rosa.md:57 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE rosa.md:59 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE rot.md:58 [5]
+  alt: - [5] Jonauskaite, D., Tremea, A., Bürki, L., Diouf, C. N. & Mohr, C. (2020). "To see or not to see: Importance of color perception to color therapy." Color Research & Application 45(3), 450–464. https://doi.org/10.1002/col.22490
+  neu: - [5] Jonauskaite, D., Tremea, I., Bürki, L., Diouf, C. N. & Mohr, C. (2020). "To see or not to see: Importance of color perception to color therapy." Color Research & Application 45(3), 450–464. https://doi.org/10.1002/col.22490
+WÜRDE schwarz.md:55 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE schwarz.md:56 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE schwarz.md:57 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE schwarz.md:59 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE tuerkis.md:53 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE tuerkis.md:54 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE tuerkis.md:55 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE tuerkis.md:57 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE violett.md:49 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE violett.md:50 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE violett.md:51 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE violett.md:53 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+WÜRDE weiss.md:55 [1]
+  alt: - [1] Leland, D. (2017). "The Rainbow Body..." https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+  neu: - [1] Leland, D. (2017). "The Rainbow Body: How the Western Chakra System Came to Be." Quest 105.2. https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be
+WÜRDE weiss.md:56 [2]
+  alt: - [2] Woodroffe, J. G. (1919) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+  neu: - [2] Woodroffe, J. G. (1919, Übers.) / Avalon, A. The Serpent Power. https://archive.org/details/the-serpent-power-john-woodroffe
+WÜRDE weiss.md:57 [3]
+  alt: - [3] Jonauskaite, D. & Mohr, C. (2025). Do we feel colours? Psychon Bull Rev 32:1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+  neu: - [3] Jonauskaite, D. & Mohr, C. (2025). "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions." Psychon Bull Rev 32(4), 1457–1486. https://doi.org/10.3758/s13423-024-02615-z
+WÜRDE weiss.md:59 [7]
+  alt: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull & Rev 27, 1374-1382. https://doi.org/10.3758/s13423-020-01772-1
+  neu: - [7] Gnambs, T. (2020). "Limited evidence for the effect of red color on cognitive performance: A meta-analysis." Psychon Bull Rev 27, 1374–1382. https://doi.org/10.3758/s13423-020-01772-1
+
+Probelauf: 48 Zeilen geändert, 25 bereits kanonisch, 0 Fehler

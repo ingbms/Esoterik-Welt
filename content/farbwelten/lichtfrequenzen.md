@@ -50,5 +50,5 @@ Die HTA-Bewertung des spanischen Gesundheitsministeriums (OSTEBA, 2025) fand fü
 - [15] Pjrek, E., Friedrich, M.-E., Cambioli, L., et al. (2020). The Efficacy of Light Therapy in the Treatment of Seasonal Affective Disorder: A Meta-Analysis of Randomized Controlled Trials. Psychotherapy and Psychosomatics 89(1), 17–24. https://doi.org/10.1159/000502891
 - [17] Bhutani, V. K., et al. (2011). Phototherapy to Prevent Severe Neonatal Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics 128(4), e1046–e1052. https://doi.org/10.1542/peds.2011-1494
 - [18] Elmets, C. A., et al. (2019). Joint American Academy of Dermatology–National Psoriasis Foundation guidelines of care for the management and treatment of psoriasis with phototherapy. J Am Acad Dermatol 81(3), 775–804. https://doi.org/10.1016/j.jaad.2019.04.042
-- [19] IARC (2023). Monograph on artificial optical radiation. https://www.iarc.who.int
-- [24] NIST / CIE. SI-Werte und Lichtgeschwindigkeit (c = 299 792 458 m/s).
+- [19] IARC 2012, Monographs Vol. 100D Radiation. https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012
+- [24] NIST SP 330, SI-Broschüre. https://www.nist.gov/pml/special-publication-330/sp-330-section-2
