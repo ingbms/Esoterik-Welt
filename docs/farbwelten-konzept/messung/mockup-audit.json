@@ -1,5 +1,6 @@
 {
   "base": "http://127.0.0.1:8138/Esoterik-Welt/docs/farbwelten-konzept/mockup/index.html",
+  "stand": "Messung erste Ausbaustufe (7 Farbwelten) — historischer Messstand, nicht Referenz für den Zwölf-Farben-Stand (02, 03, 06)",
   "measured_at": "2026-11-02T22:11:02.755Z",
   "viewports": [
     {

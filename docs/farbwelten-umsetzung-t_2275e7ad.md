@@ -2,6 +2,12 @@
 
 Stand: 3. November 2026 · Karte `t_2275e7ad` · Branch `feature/farbwelten-modul`
 
+> **Geltungsstand dieser Datei: erste Ausbaustufe (7 Farbwelten, 11 Ansichten).**
+> Alle Zahlen in §2, §4, §7 und §9 sind Messungen dieses Stands und werden hier
+> nicht auf zwölf Farben umgedeutet. Der Nachzug auf **zwölf Farbwelten /
+> 14 Routen** (Karten `t_747ba46a` und `t_e3ecc54e`, Commits `c2b70f4` und
+> `d0fe111`) ist in §13 dokumentiert — mit den Prüfzahlen des Zwölf-Farben-Stands.
+
 Diese Datei dokumentiert, wie das IA-/Designkonzept (`docs/farbwelten-konzept/`)
 und die Redaktionstexte (`content/farbwelten/`, Task 3) in den bestehenden
 Website-Code überführt wurden — einschließlich jeder Abweichung, der
@@ -10,11 +16,11 @@ Build-/Testkommandos und der Nachweise.
 ## 1. Ergebnis in einem Absatz
 
 Die Sektion ist als neuntes Hauptziel „Farben“ eingebaut. Sie hat eine
-Einstiegsroute, sieben Farbdetailseiten mit dem vollständigen A–H-Skelett,
-eine Chakrenseite mit tastaturbedienbarem Chakra-Explorer und eine
-Lichtfrequenzseite mit Spektrum-Explorer. Alle Texte liegen in
-`js/data/farbwelten.js` (erzeugt aus den Markdown-Dateien), nicht im Markup.
-Paletten sind Tokens in `css/design-system.css`, Komponenten in
+Einstiegsroute, sieben Farbdetailseiten (erste Ausbaustufe; heute zwölf, §13)
+mit dem vollständigen A–H-Skelett, eine Chakrenseite mit tastaturbedienbarem
+Chakra-Explorer und eine Lichtfrequenzseite mit Spektrum-Explorer. Alle Texte
+liegen in `js/data/farbwelten.js` (erzeugt aus den Markdown-Dateien), nicht im
+Markup. Paletten sind Tokens in `css/design-system.css`, Komponenten in
 `css/farbwelten.css`. Build, Lint, Jest, alle Node-Suiten, alle 100
 Playwright-Tests und vier Lighthouse-Läufe (A11y/BP/SEO je 100) sind grün.
 
@@ -48,7 +54,7 @@ aus. Die Browsertests brauchen einen Build; `playwright.config.cjs` startet
 | `css/farbwelten.css` | Komponenten: Hero, Farbtafel, Register, Karten, Detailband, TOC, Fakten, Zeitleiste, Farbfläche, Chakra-Explorer, Vergleichskasten, Quellen, Tabelle, Spektrum-Explorer, Responsiv-/Druckregeln |
 | `js/modules/farbwelten.js` | Bereichsmodul: Ansichten, sichere Textausgabe, Chakra-Auswahl, Spektrumrechner, Metadaten, strukturierte Daten |
 | `js/modules/farbwelten-model.js` | reine Logik: Routenauflösung, Frequenz-/Energie-/Farbnamenberechnung, Wellenlänge→sRGB |
-| `js/data/farbwelten.js` | erzeugter Datensatz: 7 Farbwelten, 8 Abschnitte je Seite, Quellenregister, Einstieg, Chakrenseite, Lichtseite |
+| `js/data/farbwelten.js` | erzeugter Datensatz: 7 Farbwelten (erste Ausbaustufe; heute 12), 8 Abschnitte je Seite, Quellenregister, Einstieg, Chakrenseite, Lichtseite |
 | `js/data/chakren.js` | 7 Chakren mit Sanskrit, Position, Themen, Einordnung, Herkunftssatz |
 | `scripts/generate-farbwelten-data.cjs` | Markdown→Daten-Importer (einmalig, reproduzierbar) |
 | `scripts/verify-farbwelten.cjs` | Browserprüfung: H1, Überschriften, A–H, Überlauf, Kontrast, Tastatur, Alias, Kopfzeile, Screenshots |
@@ -76,7 +82,7 @@ aus. Die Browsertests brauchen einen Build; `playwright.config.cjs` startet
 | Route | Ansicht |
 | --- | --- |
 | `#farbwelten` | Einstieg: Hero, Farbtafel, Register, Inhalte, zwei Einstiege, Methodenhinweis, Quellen |
-| `#farbwelten/rot` … `/violett` | sieben Farbseiten, A–H |
+| `#farbwelten/rot` … `/violett` | sieben Farbseiten, A–H (erste Ausbaustufe; heute zwölf, §13) |
 | `#farbwelten/rot/physik` | Farbseite mit Sprungmarke (jeder A–H-Anker) |
 | `#farbwelten/chakren` | Chakrenübersicht mit Explorer und Tabelle |
 | `#farbwelten/lichtfrequenzen` | Spektrum-Explorer, Lichtmedizin, Disclaimer |
@@ -157,9 +163,10 @@ oder erfunden.
 
 ## 6. Design und Tokens
 
-* 49 Palettentokens (`--fw-<welt>-{ink,core,core-deep,soft,line,deep,deep-alt}`)
+* 49 Palettentokens der ersten Ausbaustufe (`--fw-<welt>-{ink,core,core-deep,soft,line,deep,deep-alt}`)
   in `css/design-system.css`, Werte unverändert aus `palette.css` /
-  `03-farbwelten-und-paletten.md`.
+  `03-farbwelten-und-paletten.md`. Mit zwölf Farbwelten sind es 84 Tokens
+  (12 × 7, §13).
 * `[data-farbwelt="<id>"]` setzt `--fw-current-*`; das Modul setzt nur das
   Attribut, keine Inline-Farben. Ein Test/`grep` auf `#rrggbb` in
   `css/farbwelten.css` findet keine Literale.
@@ -178,7 +185,7 @@ Automatisiert geprüft (`npm run verify:farbwelten`, alle Breiten 1440/1100/
 | --- | --- |
 | Genau eine H1 je Ansicht | 11/11 Routen |
 | Keine Überschriftsprünge (H1→H2→H3) | 0 Sprünge |
-| A–H-Sprungmarken sichtbar | 8/8 auf allen sieben Farbseiten |
+| A–H-Sprungmarken sichtbar | 8/8 auf allen sieben Farbseiten (erste Ausbaustufe) |
 | Horizontaler Überlauf | 0 px an allen Breiten (Reflow 320) |
 | Kontraste (Text/Linien, berechnet im DOM) | alle geprüften Paare ≥ 4,5:1 (min. 9,09:1 im DOM-Sample); Paletten-Ink 4,81:1 separat in `messung/palette.json` belegt |
 | Fokusring | 2 px `#c6b38e`, Offset 4 px (Site-Standard), nie entfernt |
@@ -208,7 +215,8 @@ Sektion lädt ein 66-KB-Datenmodul dynamisch); Textzoom 200 % nicht separat
 * `BreadcrumbList` als JSON-LD, nur wo ein sichtbarer Breadcrumb steht; kein
   `Article`/`FAQPage` ohne Autor/Datum bzw. echte Fragen.
 * Interne Verlinkung: jede Farbseite → Chakren, Lichtfrequenzen, Kristalle,
-  Blog; Chakren → alle sieben Farbwelten; Lichtseite → alle Farbwelten;
+  Blog; Chakren → alle Farbwelten (erste Ausbaustufe: sieben, heute zwölf);
+  Lichtseite → alle Farbwelten;
   Einstieg → beide Hauptpfade; Footer → Farbwelten.
 * `sitemap.xml` unverändert, Canonical unverändert (siehe Abweichung 2).
 
@@ -267,3 +275,44 @@ Ablauf für diese Übergabe:
 4. Abschnitt C für Indigo/Violett ergänzen, sobald die Übergabe gelandet ist
    (Karte `t_f611ba88`, bis dahin blockiert); der sichtbare Redaktionshinweis
    verschwindet automatisch, sobald der Abschnitt Blöcke enthält.
+
+## 13. Nachzug zwölf Farbwelten (Stand `d0fe111`)
+
+Die Sektion wurde nach dieser Karte auf **zwölf Farbwelten** erweitert
+(`t_747ba46a`: Datenmodell, Paletten, Routen; `t_e3ecc54e`: Quellen der
+Altseiten, IA-Doku). Verbindliche Vorgabe sind jetzt `02` (Routen,
+Registerreihenfolge, Meta), `03` (Paletten, Kontraste) und `06` (Wireframes);
+die Zahlen der ersten Ausbaustufe oben bleiben als Messstand dieser Stufe
+stehen und werden nicht umgedeutet.
+
+| Punkt | Erste Ausbaustufe (oben dokumentiert) | Stand `d0fe111` |
+| --- | --- | --- |
+| Farbwelten im Datensatz | 7 | **12** — Rot, Orange, Gelb, Grün, Türkis, Blau, Indigo, Violett, Magenta, Rosa, Weiß, Schwarz |
+| Typen | `spectral` | `spectral` (8), `non-spectral` (Magenta, Rosa), `neutral` (Weiß, Schwarz); nichtspektrale und neutrale Welten ohne Wellenlängen- und Frequenzfelder |
+| Routen mit eigener Ansicht | 11 (Einstieg, 7 Farben, Chakren, Licht) | **14** (`02` §2) plus zwei Aliasse |
+| Palettentokens in `css/design-system.css` | 49 | **84** (`--fw-<welt>-*`, 12 × 7) |
+| Datenmodul `js/data/farbwelten.js` | 66 KB | **153 KB** |
+
+Prüfungen des Zwölf-Farben-Stands (lokal erneut gefahren gegen
+`dist/Esoterik-Welt` unter `http://127.0.0.1:3207/Esoterik-Welt/`, Build grün):
+
+| Prüfung | Ergebnis |
+| --- | --- |
+| `npm run test:farbwelten` | **12/12** |
+| `node scripts/verify-farbwelten.cjs <basis>` | **87 PASS / 0 FAIL** |
+| `node scripts/verify-pages.cjs <basis>` | **66 Seiten/Viewports, 0 Fehler** |
+| `node scripts/verify-farbwelten-sync.cjs` | 15 Redaktionsquellen, 16 Quelleneinträge, 0 Fehler |
+
+**Offene Punkte aus dem Nachzug** (nicht als erledigt gewertet):
+
+1. `js/main.js` → `PAGE_META.farbwelten.description` sagt weiterhin
+   „Sieben Farbwelten …“; verbindlich ist „Zwölf Farbwelten …“ (`02` §10,
+   in `08` §2 als Abweichung vermerkt). Nachzug als Folgekarte.
+2. Das Datenmodul liegt mit 153 KB über dem in `08` §9.2 genannten Richtwert
+   von 150 KB; die dort beschriebene Auslagerung auf `data/farbwelten/*.json`
+   mit `fetch` ist damit fällig und offen.
+3. Das Mockup (`mockup/index.html`) und `messung/mockup-audit.json` zeigen
+   weiterhin den Messstand der ersten Ausbaustufe; beide sind als historisch
+   gekennzeichnet und **nicht** auf zwölf Bänder nachgezogen.
+4. Quelle [19]: Das Register zeigt IARC (2023) statt Ledger IARC 2012 Vol. 100D
+   — Folgekarte `t_6dc6b194`.
