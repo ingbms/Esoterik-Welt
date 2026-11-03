@@ -1,0 +1,1125 @@
+{
+ "generated": "2026-11-03T07:31:03.363Z",
+ "docs": {
+  "radiasthesie/index.html": {
+   "file": "radiasthesie/index.html",
+   "bytes": 21838,
+   "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+   "titleLen": 58,
+   "description": "Radiästhesie, Pendeln und Orakel: Instrumente, Geschichte und Forschungsstand — mit Kennzeichnung von Tradition und Befund, ohne Wirkungsversprechen.",
+   "descriptionLen": 149,
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "ogUrl": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+   "ogImage": null,
+   "robots": "index,follow",
+   "jsonld": [
+    {
+     "parse": "ok",
+     "context": "https://schema.org",
+     "types": [
+      "CollectionPage",
+      "BreadcrumbList"
+     ],
+     "nodeCount": 2,
+     "hashUrls": [],
+     "urlsWithHash": [
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/#webpage",
+      "https://ingbms.github.io/Esoterik-Welt/#website",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/#breadcrumb",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/#breadcrumb"
+     ]
+    }
+   ],
+   "headings": [
+    "H1: Radiästhesie, Pendeln und Orakel",
+    "H2: Drei Zugänge, ein Zusammenhang",
+    "H3: Radiästhesie",
+    "H3: Pendeln",
+    "H3: Orakel",
+    "H2: Fünf Stufen der Kennzeichnung",
+    "H2: Was offen bleibt",
+    "H2: Werkzeuge zum Ausprobieren",
+    "H3: Pendellabor",
+    "H3: Pendeltafel-Studio",
+    "H3: Experimentierlabor",
+    "H3: Pendeltagebuch",
+    "H2: Verwandte Themen",
+    "H3: Frequenzen und Schwingungen",
+    "H3: Chakren",
+    "H3: Tarot",
+    "H3: Runen",
+    "H3: I Ging",
+    "H3: Astrologie und Deutungssysteme",
+    "H3: Historische Orakelorte",
+    "H3: Bewusste Lücken",
+    "H3: Geomantie",
+    "H3: Kraftorte",
+    "H2: Einordnung dieses Bereichs"
+   ],
+   "h1Count": 1,
+   "headingSkips": [],
+   "appRoutes": [
+    "../#pendeln",
+    "../#pendeln/labor",
+    "../#pendeln/studio",
+    "../#pendeln/experiment",
+    "../#pendeln/journal",
+    "../#crystals",
+    "../#tarot",
+    "../#runes",
+    "../#astrologie",
+    "../#pendeln"
+   ],
+   "internalLinks": 46,
+   "brokenLinks": [],
+   "images": [
+    {
+     "src": "../assets/radiasthesie/pendel-geometrie.svg",
+     "hasSrcset": false,
+     "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "../assets/radiasthesie/winkelrute.svg",
+     "hasSrcset": false,
+     "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "../assets/radiasthesie/pendeltafel.svg",
+     "hasSrcset": false,
+     "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "../assets/radiasthesie/orakel-karten.svg",
+     "hasSrcset": false,
+     "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    }
+   ],
+   "imagesWithoutAlt": [],
+   "missingImageFiles": [],
+   "externalResources": [],
+   "css": [
+    {
+     "file": "../css/design-system.css",
+     "exists": true,
+     "urlCount": 3,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/main.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie-statisch.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    }
+   ],
+   "mainTextNoJs": 8541,
+   "mainParagraphs": 42,
+   "hasNoscript": false,
+   "placeholders": {
+    "todo": [],
+    "inVorbereitung": 0
+   },
+   "inlineHandlers": 0
+  },
+  "radiasthesie/radiasthesie.html": {
+   "file": "radiasthesie/radiasthesie.html",
+   "bytes": 79341,
+   "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+   "titleLen": 52,
+   "description": "Radiästhesie: Begriffsgeschichte, Instrumente, Erdstrahlen und Forschungsstand — mit Evidenzstufen A–E und offenem Datierungskonflikt.",
+   "descriptionLen": 134,
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "ogUrl": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+   "ogImage": null,
+   "robots": "index,follow",
+   "jsonld": [
+    {
+     "parse": "ok",
+     "context": "https://schema.org",
+     "types": [
+      "WebPage",
+      "BreadcrumbList"
+     ],
+     "nodeCount": 2,
+     "hashUrls": [],
+     "urlsWithHash": [
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#webpage",
+      "https://ingbms.github.io/Esoterik-Welt/#website",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#breadcrumb",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#was",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#geschichte-1",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#geschichte-2",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#geschichte-3",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#instrumente",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#erdstrahlen",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#geologie",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#bovis",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#frequenz",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#befunde",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html#breadcrumb"
+     ]
+    }
+   ],
+   "headings": [
+    "H1: Radiästhesie",
+    "H2: Auf einen Blick",
+    "H2: Was ist Radiästhesie?",
+    "H2: Geschichte I: Bergleute, Kirche und Aufklärung — bis 1700",
+    "H2: Geschichte II: Von der Strahlenfühligkeit zur Radiästhesie — 1800–1945",
+    "H2: Geschichte III: Nachkriegszeit, Gitter, Milieu und Münchner Experimente",
+    "H2: Instrumentenkunde — Rute, Winkelrute, Einhandrute, Biotensor",
+    "H2: Erdstrahlen, Wasseradern, Gitter — die Behauptungen im Detail",
+    "H2: Was die Geologie sagt — und was nicht",
+    "H2: Bovis-Skalen: Ordnungsschema oder Messung?",
+    "H2: Frequenz, Schwingung, Skala: drei verschiedene Dinge",
+    "H2: Untersuchungen: was geprüft wurde und was dabei herauskam",
+    "H2: Weiterlesen",
+    "H3: Chakren",
+    "H3: Astrologie und Deutungssysteme",
+    "H3: Pendeln",
+    "H3: Glossar",
+    "H2: Einordnung dieser Seite"
+   ],
+   "h1Count": 1,
+   "headingSkips": [],
+   "appRoutes": [
+    "../#pendeln",
+    "../#crystals",
+    "../#astrologie",
+    "../#pendeln"
+   ],
+   "internalLinks": 190,
+   "brokenLinks": [],
+   "images": [
+    {
+     "src": "../assets/radiasthesie/media/520/wuenschelrute-historisch.webp",
+     "hasSrcset": false,
+     "alt": "Getönte Federzeichnung: Ein Mann in der Kleidung des 18. Jahrhunderts steht auf freiem Feld und hält mit beiden Händen eine gegabelte Rute schräg vor dem Körper; im Hintergrund Hügel.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "../assets/radiasthesie/media/520/radiasthesierute.webp",
+     "hasSrcset": false,
+     "alt": "Eine Person in blauem Hemd hockt im Freien über steinigem, trockenem Boden und hält eine Winkelrute: zwei Messingarme laufen an einem blau lackierten Griffstück zusammen.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "../assets/radiasthesie/winkelrute.svg",
+     "hasSrcset": false,
+     "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    }
+   ],
+   "imagesWithoutAlt": [],
+   "missingImageFiles": [],
+   "externalResources": [],
+   "css": [
+    {
+     "file": "../css/design-system.css",
+     "exists": true,
+     "urlCount": 3,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/main.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie-statisch.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    }
+   ],
+   "mainTextNoJs": 36616,
+   "mainParagraphs": 85,
+   "hasNoscript": false,
+   "placeholders": {
+    "todo": [],
+    "inVorbereitung": 0
+   },
+   "inlineHandlers": 0
+  },
+  "radiasthesie/pendeln.html": {
+   "file": "radiasthesie/pendeln.html",
+   "bytes": 55216,
+   "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+   "titleLen": 53,
+   "description": "Pendeln: Geschichte seit 371 n. Chr., Arten, Antwortkonventionen und Mechanik — kontrollierte Tests und offene Fragen, ohne Wirkungsversprechen.",
+   "descriptionLen": 144,
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "ogUrl": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+   "ogImage": null,
+   "robots": "index,follow",
+   "jsonld": [
+    {
+     "parse": "ok",
+     "context": "https://schema.org",
+     "types": [
+      "WebPage",
+      "BreadcrumbList"
+     ],
+     "nodeCount": 2,
+     "hashUrls": [],
+     "urlsWithHash": [
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#webpage",
+      "https://ingbms.github.io/Esoterik-Welt/#website",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#breadcrumb",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#was",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#geschichte",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#arten",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#lernen",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#tafeln",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#biotensor",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#karten",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#mechanismen",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#forschung",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#labor",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html#breadcrumb"
+     ]
+    }
+   ],
+   "headings": [
+    "H1: Pendeln",
+    "H2: Auf einen Blick",
+    "H2: Was ein Pendel in der Praxis tun soll",
+    "H2: Geschichte: Von Ammianus Marcellinus bis zur Kriegsmarine — 371 n. Chr. bis 19. ",
+    "H2: Pendelarten und Materialien",
+    "H2: Pendeln lernen: Ablauf, Eichung, Fragetechnik",
+    "H2: Pendeltafeln und Antwortskalen",
+    "H2: Biotensor und Einhandrute in der Alternativmedizin",
+    "H2: Kartenpendeln und Fernmutung",
+    "H2: Der Mechanismus: Carpenter-, Kohnstamm-Effekt, Chevreul-Täuschung",
+    "H2: Forschungsstand: Was kontrollierte Tests zeigen",
+    "H2: Selbst testen: verblindet prüfen",
+    "H2: Weiterlesen",
+    "H3: Frequenzen und Schwingungen",
+    "H3: Chakren",
+    "H3: Tarot",
+    "H3: Orakel",
+    "H3: Glossar",
+    "H2: Einordnung dieser Seite"
+   ],
+   "h1Count": 1,
+   "headingSkips": [],
+   "appRoutes": [
+    "../#pendeln",
+    "../#crystals",
+    "../#tarot",
+    "../#pendeln"
+   ],
+   "internalLinks": 115,
+   "brokenLinks": [],
+   "images": [
+    {
+     "src": "../assets/radiasthesie/media/520/klassisches-pendel.webp",
+     "hasSrcset": false,
+     "alt": "Ein kegelförmiges Messingpendel hängt an einer geflochtenen dunkelblauen Schnur; die Schnur liegt in einer grossen Schlaufe über hellem Untergrund.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "../assets/radiasthesie/media/520/universalpendel.webp",
+     "hasSrcset": false,
+     "alt": "Schwarze Kugel mit weissen Buchstaben und Markierungen (M, G, BL, VL), aus der ein Messingstab über eine braune Lederauflage austritt; eine Kordel führt nach rechts unten, unten liegt eine 10-Cent-Münze als Grössenvergleich.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "../assets/radiasthesie/pendeltafel.svg",
+     "hasSrcset": false,
+     "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    }
+   ],
+   "imagesWithoutAlt": [],
+   "missingImageFiles": [],
+   "externalResources": [],
+   "css": [
+    {
+     "file": "../css/design-system.css",
+     "exists": true,
+     "urlCount": 3,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/main.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie-statisch.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    }
+   ],
+   "mainTextNoJs": 25376,
+   "mainParagraphs": 73,
+   "hasNoscript": false,
+   "placeholders": {
+    "todo": [],
+    "inVorbereitung": 0
+   },
+   "inlineHandlers": 0
+  },
+  "radiasthesie/orakel.html": {
+   "file": "radiasthesie/orakel.html",
+   "bytes": 37302,
+   "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+   "titleLen": 59,
+   "description": "Orakel: Tarot seit den 1440ern, I Ging, Runen und Delphi — Geschichte, Praxis und Forschungslage, ohne Prognoseversprechen.",
+   "descriptionLen": 123,
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "ogUrl": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+   "ogImage": null,
+   "robots": "index,follow",
+   "jsonld": [
+    {
+     "parse": "ok",
+     "context": "https://schema.org",
+     "types": [
+      "WebPage",
+      "BreadcrumbList"
+     ],
+     "nodeCount": 2,
+     "hashUrls": [],
+     "urlsWithHash": [
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#webpage",
+      "https://ingbms.github.io/Esoterik-Welt/#website",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#breadcrumb",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#divination",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#tarot-1",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#tarot-2",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#tarot-3",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#iging",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#iging-west",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#runen",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#runen-20",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#orakelkarten",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#delphi",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#delphi-ethylen",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#forer",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html#breadcrumb"
+     ]
+    }
+   ],
+   "headings": [
+    "H1: Orakel",
+    "H2: Auf einen Blick",
+    "H2: Divination: Warum Menschen Zeichen lesen",
+    "H2: Tarot I: Ein Spiel des 15. Jahrhunderts",
+    "H2: Tarot II: Kartomantie und Okkultismus (1780–1900)",
+    "H2: Tarot III: Moderne Praxis und Selbsthilfe",
+    "H2: I Ging: Text, Hexagramme, Schafgarbenorakel",
+    "H2: I Ging: Der Weg in den Westen",
+    "H2: Runen: Schrift, Magie, Missverständnisse",
+    "H2: Runen: Die Erfindung der Runen-Divination im 20. Jahrhundert",
+    "H2: Orakelkarten: Ein Genre ohne Geschichte — und ohne Forschung",
+    "H2: Delphi: Institution, Ritual, Politik",
+    "H2: Delphi: Das Ethylen-Rätsel und warum es strittig bleibt",
+    "H2: Warum Orakel \"treffen\" (und wann nicht) — der Forer-Effekt",
+    "H2: Weiterlesen",
+    "H3: Tarot",
+    "H3: Runen",
+    "H3: Astrologie und Deutungssysteme",
+    "H3: Pendeln",
+    "H3: Glossar",
+    "H2: Einordnung dieser Seite"
+   ],
+   "h1Count": 1,
+   "headingSkips": [],
+   "appRoutes": [
+    "../#pendeln",
+    "../#tarot",
+    "../#runes",
+    "../#astrologie",
+    "../#pendeln"
+   ],
+   "internalLinks": 76,
+   "brokenLinks": [],
+   "images": [
+    {
+     "src": "../assets/radiasthesie/media/520/ouija-historisch.webp",
+     "hasSrcset": false,
+     "alt": "Freigestelltes historisches Ouija-Brett aus orangebraunem Holz mit schwarzen Buchstaben A bis Z in zwei Bögen, den Ziffern 1 bis 9 und 0 sowie den Wörtern YES, NO und GOOD BYE; oben ein ovales Herstellerlogo mit Vogel-Emblem, in den Ecken Sterne, oben rechts Stern und Mondsichel, oben links ein dunkler Kreis.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "../assets/radiasthesie/media/520/tarot.webp",
+     "hasSrcset": false,
+     "alt": "Drei Tarotkarten liegen offen in einer Reihe auf blauem Samt: Die Hohepriesterin, Zwei der Kelche und Ass der Schwerter; dahinter liegt das ganze Deck gefächert, daneben drei weisse Kerzen und eine Hand aus schwarzem Holz.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "../assets/radiasthesie/orakel-karten.svg",
+     "hasSrcset": false,
+     "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel.",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    }
+   ],
+   "imagesWithoutAlt": [],
+   "missingImageFiles": [],
+   "externalResources": [],
+   "css": [
+    {
+     "file": "../css/design-system.css",
+     "exists": true,
+     "urlCount": 3,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/main.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie-statisch.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    }
+   ],
+   "mainTextNoJs": 14813,
+   "mainParagraphs": 62,
+   "hasNoscript": false,
+   "placeholders": {
+    "todo": [],
+    "inVorbereitung": 0
+   },
+   "inlineHandlers": 0
+  },
+  "radiasthesie/glossar.html": {
+   "file": "radiasthesie/glossar.html",
+   "bytes": 20834,
+   "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+   "titleLen": 54,
+   "description": "Begriffe aus Radiästhesie, Pendeln und Orakel kurz erklärt — mit Evidenzstufe A–E und Quellenverweis, ohne Wirkungsversprechen.",
+   "descriptionLen": 127,
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "ogUrl": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+   "ogImage": null,
+   "robots": "index,follow",
+   "jsonld": [
+    {
+     "parse": "ok",
+     "context": "https://schema.org",
+     "types": [
+      "WebPage",
+      "BreadcrumbList",
+      "DefinedTermSet"
+     ],
+     "nodeCount": 3,
+     "hashUrls": [],
+     "urlsWithHash": [
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#webpage",
+      "https://ingbms.github.io/Esoterik-Welt/#website",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#breadcrumb",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#breadcrumb",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html#glossar"
+     ]
+    }
+   ],
+   "headings": [
+    "H1: Glossar",
+    "H2: B",
+    "H2: D",
+    "H2: E",
+    "H2: F",
+    "H2: I",
+    "H2: O",
+    "H2: P",
+    "H2: R",
+    "H2: T",
+    "H2: Begriffe fehlen?"
+   ],
+   "h1Count": 1,
+   "headingSkips": [],
+   "appRoutes": [
+    "../#pendeln",
+    "../#g-b",
+    "../#g-d",
+    "../#g-e",
+    "../#g-f",
+    "../#g-i",
+    "../#g-o",
+    "../#g-p",
+    "../#g-r",
+    "../#g-t",
+    "../#pendeln"
+   ],
+   "internalLinks": 59,
+   "brokenLinks": [],
+   "images": [],
+   "imagesWithoutAlt": [],
+   "missingImageFiles": [],
+   "externalResources": [],
+   "css": [
+    {
+     "file": "../css/design-system.css",
+     "exists": true,
+     "urlCount": 3,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/main.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie-statisch.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    }
+   ],
+   "mainTextNoJs": 3551,
+   "mainParagraphs": 16,
+   "hasNoscript": false,
+   "placeholders": {
+    "todo": [],
+    "inVorbereitung": 0
+   },
+   "inlineHandlers": 0
+  },
+  "radiasthesie/quellen.html": {
+   "file": "radiasthesie/quellen.html",
+   "bytes": 61796,
+   "title": "Quellen und Belege — Radiästhesie und Pendeln",
+   "titleLen": 45,
+   "description": "Alle 66 Quellen des Themenmoduls mit Typ, Jahr, Prüftiefe, Interessenvermerk und, wo einschlägig, den Seiten, die sie belegen.",
+   "descriptionLen": 126,
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "ogUrl": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+   "ogImage": null,
+   "robots": "index,follow",
+   "jsonld": [
+    {
+     "parse": "ok",
+     "context": "https://schema.org",
+     "types": [
+      "WebPage",
+      "BreadcrumbList"
+     ],
+     "nodeCount": 2,
+     "hashUrls": [],
+     "urlsWithHash": [
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html#webpage",
+      "https://ingbms.github.io/Esoterik-Welt/#website",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html#breadcrumb",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html#breadcrumb"
+     ]
+    }
+   ],
+   "headings": [
+    "H1: Quellen & Belege",
+    "H2: Wie geprüft wurde",
+    "H2: Alle Quellen",
+    "H3: U.S. Geological Survey, Water Science School: Water Dowsing (1977 / 2026). USGS ",
+    "H3: Enright, J. T.: Water Dowsing: the Scheunen Experiments (1995). Naturwissenschaf",
+    "H3: Cantergi, D.; Awasthi, B.; Friedman, J.: Moving objects by imagination? Amount o",
+    "H3: Betz, H.-D.; Kulzer, R.; König, H. L.; Tritschler, J.; Wagner, H.: Dowsing revie",
+    "H3: Mayer, G.: Rutengehen – Wie ist der Forschungsstand? (2003). Gesellschaft für An",
+    "H3: Wikipedia-Autorinnen und -Autoren: Radiästhesie. Wikipedia, deutschsprachige Aus",
+    "H3: Wikipedia-Autorinnen und -Autoren: Wünschelrute. Wikipedia, deutschsprachige Aus",
+    "H3: Wikipedia-Autorinnen und -Autoren: Erdstrahlen. Wikipedia, deutschsprachige Ausg",
+    "H3: Wikipedia-Autorinnen und -Autoren: Siderisches Pendel. Wikipedia, deutschsprachi",
+    "H3: Wikipédia-Autorinnen und -Autoren: Radiesthésie (1926 / ~31). Wikipédia, französ",
+    "H3: Harder, B.: Warum Wünschelrutengehen keine Wissenschaft ist (2013). GWUP-Blog (G",
+    "H3: Psiram-Autorinnen und -Autoren: Bovis-Einheit. Psiram",
+    "H3: Süddeutsche Zeitung (Redaktion Wissen): Radiästhesie – Mit Pendel und Wünschelru",
+    "H3: haus.de (Redaktion), mit Zitat Tristan Jorde, Verbraucherzentrale Hamburg: Wasse",
+    "H3: Schellinger, U.; Anton, A.; Schetsche, M.: Zwischen Szientismus und Okkultismus.",
+    "H3: Husband, T.: Before Fortune-Telling: The History and Structure of Tarot Cards (2",
+    "H3: Encyclopaedia Britannica (Redaktion): Dowsing. Encyclopaedia Britannica",
+    "H3: Parlett, D.: Tarot. Encyclopaedia Britannica",
+    "H3: Wikipedia-Autorinnen und -Autoren: Wahrsagekarten. Wikipedia, deutschsprachige A",
+    "H3: Lavin, M. F.: On Spiritualist Workers: Healing and Divining through Tarot and th",
+    "H3: Wikipedia-Autorinnen und -Autoren: I Ching (1924 / 1950er). Wikipedia, englischs",
+    "H3: Wikipedia-Autorinnen und -Autoren: Runic magic. Wikipedia, englischsprachige Aus",
+    "H3: Blum, R.: The Book of Runes: A Handbook for the Use of an Ancient Oracle (1982).",
+    "H3: Wikipedia-Autorinnen und -Autoren: Pythia. Wikipedia, englischsprachige Ausgabe",
+    "H3: de Boer, J. Z.; Hale, J. R.; Chanton, J.: New evidence for the geological origin",
+    "H3: Lehoux, D.: Drugs and the Delphic Oracle (2007). Classical World",
+    "H3: Foster, J.; Lehoux, D.: The Delphic Oracle and the ethylene-intoxication hypothe",
+    "H3: Ernst, E.: Komplementärmedizinische Diagnoseverfahren (2005). Deutsches Ärztebla",
+    "H3: Forer, B. R.: The fallacy of personal validation: a classroom demonstration of g",
+    "H3: Prokop, O.; Wimmer, W.: Wünschelrute, Erdstrahlen, Radiästhesie. Die okkulten St",
+    "H3: Lambeck, M.: Irrt die Physik? Über alternative Medizin und Esoterik (2003). C.H.",
+    "H3: Wikipedia-Autorinnen und -Autoren: Dowsing. Wikipedia, englischsprachige Ausgabe",
+    "H3: Wikipedia-Autorinnen und -Autoren: Runen. Wikipedia, deutschsprachige Ausgabe",
+    "H3: Agricola, Georgius: De re metallica, libri XII (Buch II) (1556). Basel: Froben (",
+    "H3: Ellis, Arthur J.; Meinzer, O. E. (Intro.): The Divining Rod: A History of Water ",
+    "H3: Dym, Warren Alexander: 6. The Electric Rod: Dowsing and the Freiberg Mining Acad",
+    "H3: Knoblauch, Hubert A.: Die Welt der Wünschelrutengänger und Pendler: Erkundungen ",
+    "H3: Knoblauch, Hubert A.: The world of divining rods and dowsing (2026). DepositOnce",
+    "H3: Foulkes, R. A.: Dowsing Experiments (1971). Nature",
+    "H3: Hansen, George P.: Dowsing: A Review of Experimental Research (1982). Journal of",
+    "H3: Enright, J. T.: Dowsers lost in a Barn (1996). Naturwissenschaften",
+    "H3: Enright, J. T.: Testing Dowsing: The Failure of the Munich Experiments (1999). S",
+    "H3: Betz, Hans-Dieter; König, Herbert L.: Erdstrahlen? Der Wünschelruten-Report. Wis",
+    "H3: McCarney, R.; Fisher, P.; Spink, F.; Flint, G. E.; van Haselen, R.: Can Homeopat",
+    "H3: Locock, Martin: The effectiveness of dowsing as a method of determining the natu",
+    "H3: Easter, M. E.; Christensen, A. M.; Miller, M.: Dowsing for Bone (2021). Forensic",
+    "H3: von Tscharner, Vinzenz; Nigg, Benno Maurus: The Repeatability of Dowsing Reactio",
+    "H3: Dharmadhikari, Nandkumar P.: Effect of geopathic stress on human heart rate and ",
+    "H3: Dodd, R. J.; Harris, J. W.; Humphries, C. M.; Reddish, V. C.: Towards a physics ",
+    "H3: Reddish, V. C.: Dowsing physics: interferometry (1998). Earth and Environmental ",
+    "H3: Irons, F. E.: Concerning the nonlinear behaviour of the forced spherical pendulu",
+    "H3: Easton, Randolph D.; Shor, Ronald E.: An Experimental Analysis of the Chevreul P",
+    "H3: Moga, Gyorgy; Dienes, Zoltan Paul: Expressing unconscious general knowledge usin",
+    "H3: Montgomery, Guy H.; Kirsch, Irving: The Effects of Subject Arm Position and Init",
+    "H3: Gesellschaft zur wissenschaftlichen Untersuchung von Parawissenschaften (GWUP): ",
+    "H3: Pickl, Karin Myria: Mit Rute und Pendel … Medizinische Radiästhesie-Diagnostik (",
+    "H3: Vogt, Evon Z.; Hyman, Ray: Water Witching U.S.A. (1959). Chicago: University of ",
+    "H3: Vogt, Evon Z.: Interviewing Water-Dowsers (1956). American Journal of Sociology",
+    "H3: Kivari, Kristel: Energy as the Mediator between Natural and Supernatural Realms ",
+    "H3: Maymoun, Mouad; Boughaba, Abdesselam: Water Dowsing and Healing Practices in the",
+    "H3: Al-Houdalieh, Salah Hussein; Jamal, Hasan Said: The Jinn and Dowsing Rods: The R",
+    "H3: Shuleikin, V. N.; Zhigalin, A. D.: Dowsing, nanotechnologies and prospects of ap",
+    "H3: The British Society of Dowsers: History – The British Society of Dowsers. britis",
+    "H3: Wikipedia-Autorinnen und -Autoren (fr): Radiesthésie. Wikipédia en français",
+    "H3: Wikipedia-Autorinnen und -Autoren (en): Radiesthesia. Wikipedia, englischsprachi",
+    "H3: Encyclopedia.com (Gale): Dowsing. Encyclopedia.com",
+    "H2: Zurück zu den Texten"
+   ],
+   "h1Count": 1,
+   "headingSkips": [],
+   "appRoutes": [
+    "../#pendeln",
+    "../#pendeln"
+   ],
+   "internalLinks": 99,
+   "brokenLinks": [],
+   "images": [],
+   "imagesWithoutAlt": [],
+   "missingImageFiles": [],
+   "externalResources": [],
+   "css": [
+    {
+     "file": "../css/design-system.css",
+     "exists": true,
+     "urlCount": 3,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/main.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie-statisch.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    }
+   ],
+   "mainTextNoJs": 26160,
+   "mainParagraphs": 340,
+   "hasNoscript": false,
+   "placeholders": {
+    "todo": [],
+    "inVorbereitung": 0
+   },
+   "inlineHandlers": 0
+  },
+  "radiasthesie/methodik.html": {
+   "file": "radiasthesie/methodik.html",
+   "bytes": 18549,
+   "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+   "titleLen": 47,
+   "description": "Wie dieses Modul prüft: Arbeitsannahme, Kennzeichnung A–E, Quelleninteressen, Grenzen und Datenschutz.",
+   "descriptionLen": 102,
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "ogUrl": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+   "ogImage": null,
+   "robots": "index,follow",
+   "jsonld": [
+    {
+     "parse": "ok",
+     "context": "https://schema.org",
+     "types": [
+      "WebPage",
+      "BreadcrumbList"
+     ],
+     "nodeCount": 2,
+     "hashUrls": [],
+     "urlsWithHash": [
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html#webpage",
+      "https://ingbms.github.io/Esoterik-Welt/#website",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html#breadcrumb",
+      "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html#breadcrumb"
+     ]
+    }
+   ],
+   "headings": [
+    "H1: Methodik & Grenzen",
+    "H2: Arbeitsannahme",
+    "H2: Kennzeichnung A–E",
+    "H2: Was geprüft wird",
+    "H2: Was dieser Bereich nicht tut",
+    "H2: Umgang mit Quelleninteressen",
+    "H2: Datenschutz",
+    "H2: Bildnachweise und Lizenzen",
+    "H2: Rechtlicher Hinweis"
+   ],
+   "h1Count": 1,
+   "headingSkips": [],
+   "appRoutes": [
+    "../#pendeln",
+    "../#pendeln"
+   ],
+   "internalLinks": 19,
+   "brokenLinks": [],
+   "images": [],
+   "imagesWithoutAlt": [],
+   "missingImageFiles": [],
+   "externalResources": [],
+   "css": [
+    {
+     "file": "../css/design-system.css",
+     "exists": true,
+     "urlCount": 3,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/main.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "../css/radiasthesie-statisch.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    }
+   ],
+   "mainTextNoJs": 9963,
+   "mainParagraphs": 23,
+   "hasNoscript": false,
+   "placeholders": {
+    "todo": [],
+    "inVorbereitung": 0
+   },
+   "inlineHandlers": 0
+  },
+  "index.html": {
+   "file": "index.html",
+   "bytes": 38274,
+   "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+   "titleLen": 58,
+   "description": "Esoterik-Welt — Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen.",
+   "descriptionLen": 93,
+   "canonical": "https://ingbms.github.io/Esoterik-Welt/",
+   "ogUrl": "https://ingbms.github.io/Esoterik-Welt/",
+   "ogImage": null,
+   "robots": null,
+   "jsonld": [],
+   "headings": [
+    "H1: Entdecke die verborgene Sprache des Universums",
+    "H2: Pfade der Erkenntnis",
+    "H2: Ein Stein ist mehr als sein Glanz.",
+    "H2: Ein leiser Bezug zum großen Ganzen.",
+    "H1: Tarot — Der Spiegel der Seele",
+    "H2: Deine Ziehung",
+    "H1: Kristalle & Steine",
+    "H1: Mondphasen",
+    "H2: Lade …",
+    "H2: Die vier Hauptphasen im Verlauf",
+    "H2: Monatskalender",
+    "H2: Die acht Phasen verstehen",
+    "H2: Was Menschen in die Phasen gelesen haben",
+    "H3: Reflexionsideen für die aktuelle Phase",
+    "H3: Deutung der aktuellen Phase",
+    "H2: Woher die Zahlen kommen",
+    "H1: Runen — Das ältere Futhark",
+    "H2: Deine Runen",
+    "H2: Alle Runen des älteren Futhark",
+    "H1: Wissen & Artikel",
+    "H2: Tools",
+    "H2: Wissen",
+    "H2: Rechtliches",
+    "H3: Karten-Detail",
+    "H3: Kristall-Detail",
+    "H3: Runen-Detail",
+    "H3: Artikel"
+   ],
+   "h1Count": 6,
+   "headingSkips": [],
+   "appRoutes": [
+    "#main",
+    "#home",
+    "#home",
+    "#tarot",
+    "#crystals",
+    "#moon",
+    "#astrologie",
+    "#runes",
+    "#pendeln",
+    "#blog",
+    "#home",
+    "#tarot",
+    "#astrologie",
+    "#crystals",
+    "#blog",
+    "#tarot",
+    "#crystals",
+    "#moon",
+    "#runes",
+    "#astrologie",
+    "#pendeln",
+    "#blog",
+    "#blog/6"
+   ],
+   "internalLinks": 29,
+   "brokenLinks": [],
+   "images": [
+    {
+     "src": "assets/mineral/quartz-light-2400.jpg",
+     "hasSrcset": false,
+     "alt": "Räumliche Bergkristallgruppe vor dunklem Grund: durchscheinende Spitzen, geriefte Flächen und gestaffelte Facetten, vollständig im Bild",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": null
+    },
+    {
+     "src": "assets/mineral/mineral-detail-1000.jpg",
+     "hasSrcset": false,
+     "alt": "Detailstudie einer Quarzstufe: eine lange durchscheinende Spitze über milchiger Basis, Riefen und Bruchflächen sichtbar",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": "lazy"
+    },
+    {
+     "src": "assets/cosmos/orion-chart.svg",
+     "hasSrcset": false,
+     "alt": "Orion: sieben Hauptsterne in einer reduzierten Koordinatenprojektion, Norden oben, Osten links",
+     "hasWidth": true,
+     "hasHeight": true,
+     "loading": null
+    }
+   ],
+   "imagesWithoutAlt": [],
+   "missingImageFiles": [],
+   "externalResources": [],
+   "css": [
+    {
+     "file": "css/design-system.css",
+     "exists": true,
+     "urlCount": 3,
+     "externalUrls": []
+    },
+    {
+     "file": "css/main.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    },
+    {
+     "file": "css/radiasthesie.css",
+     "exists": true,
+     "urlCount": 0,
+     "externalUrls": []
+    }
+   ],
+   "mainTextNoJs": 6198,
+   "mainParagraphs": 43,
+   "hasNoscript": true,
+   "placeholders": {
+    "todo": [],
+    "inVorbereitung": 0
+   },
+   "inlineHandlers": 0
+  }
+ },
+ "sitemap": {
+  "count": 11,
+  "withFragment": [],
+  "entries": [
+   {
+    "url_ok": true,
+    "rel": "",
+    "target": "index.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "impressum.html",
+    "target": "impressum.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "datenschutz.html",
+    "target": "datenschutz.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "haftung.html",
+    "target": "haftung.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "radiasthesie/",
+    "target": "radiasthesie/index.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "radiasthesie/radiasthesie.html",
+    "target": "radiasthesie/radiasthesie.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "radiasthesie/pendeln.html",
+    "target": "radiasthesie/pendeln.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "radiasthesie/orakel.html",
+    "target": "radiasthesie/orakel.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "radiasthesie/glossar.html",
+    "target": "radiasthesie/glossar.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "radiasthesie/quellen.html",
+    "target": "radiasthesie/quellen.html",
+    "exists": true
+   },
+   {
+    "url_ok": true,
+    "rel": "radiasthesie/methodik.html",
+    "target": "radiasthesie/methodik.html",
+    "exists": true
+   }
+  ]
+ },
+ "data": {
+  "bytes": 259365,
+  "bovisWrong": 0,
+  "bovisNeutral": 4,
+  "placeholders": {
+   "todo": [],
+   "inVorbereitung": 0
+  },
+  "sourceCount": 66
+ },
+ "findings": [
+  {
+   "id": "SEO-JSONLD-MISSING",
+   "severity": "fail",
+   "msg": "index.html: kein JSON-LD"
+  }
+ ],
+ "canonicalUnique": [],
+ "titleDuplicates": []
+}

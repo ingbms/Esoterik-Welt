@@ -1,0 +1,28 @@
+✔ Taxonomie und Gesamtdatensatz sind vertragskonform (4.0913ms)
+✔ Vernetzung: offene Einträge brauchen eine Entscheidung und keine Route (3.6301ms)
+✔ bestehendes Artikel- und Quellenmodell bleibt unverändert nutzbar (0.1951ms)
+✔ jede Entität verweist nur auf vorhandene Quellen, Themen und Medien (0.3081ms)
+✔ verfügbare Medien zeigen auf existierende Dateien, geplante nicht (0.5329ms)
+✔ Werkstatt-Fassade liefert eingefrorene, aufgelöste Konfiguration (0.1588ms)
+✔ unbekannte Quelle, doppelte id und doppelter slug werden abgelehnt (5.6421ms)
+✔ ungültige Felder, Daten und Zustände werden abgelehnt (10.5917ms)
+✔ falscher Vertragsstand wird abgelehnt (2.2213ms)
+✔ alle Katalogprotokolle haben feste Fallzahl, Abbruchregel und Basiswahrscheinlichkeit 1/k (0.3231ms)
+✔ unvollständige oder widersprüchliche Protokolle werden abgelehnt (0.268ms)
+✔ Lauf: Commitment ohne Ziel, Sperre vor Enthüllung, Treffer wird berechnet (11.3223ms)
+✔ Enthüllung ohne Sperre und mit manipuliertem Secret ist nicht zulässig (0.8212ms)
+✔ manipulierte gespeicherte Läufe werden erkannt (1.2667ms)
+✔ vollständiger Lauf endet mit Status complete und auswertbarer Zusammenfassung (3.2463ms)
+✔ Tagebucheintrag: Pflichtfelder, Grenzen, Steuerzeichen und Datum (0.8079ms)
+✔ Journalbezug zum Lauf ist referenziell geprüft (3.3931ms)
+✔ Journal-Export und -Import sind verlustfrei und schemafest (0.6319ms)
+✔ Import lehnt falsches Schema, falsche App, falsche Art und ungültige Einträge atomar ab (1.9383ms)
+✔ Export verweigert ungültige Daten statt sie zu schreiben (0.162ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 126.4635

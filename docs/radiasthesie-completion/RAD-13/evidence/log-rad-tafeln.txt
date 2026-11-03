@@ -1,0 +1,45 @@
+✔ sechs Vorlagen mit erwarteten Segmentzahlen und Beschriftungen (1.1878ms)
+✔ Standardkonfiguration ist eingefroren und schema-konform (0.6504ms)
+✔ Ja/Nein-Tafel: JA links, NEIN rechts, gleiche Winkel (0.4929ms)
+✔ Zahlenkreis: zehn Segmente, 0 oben, gleichmäßig verteilt (0.3021ms)
+✔ Buchstabentafel: 26 eigene Positionen, alle innerhalb der Fläche (0.4076ms)
+✔ Segmenttafel: zwölf Segmente im 30-Grad-Raster (0.2141ms)
+✔ Zeichenlängen-Grenze folgt der Segmentzahl (0.1655ms)
+✔ Schriftgröße bleibt im zulässigen Band und wird bei mehr Segmenten kleiner (0.2074ms)
+✔ gültige Konfiguration wird übernommen und getrimmt (0.276ms)
+✔ Nicht-Objekte werden abgelehnt (0.2639ms)
+✔ falscher Schema-Bezeichner wird abgelehnt (0.1795ms)
+✔ unbekannte Felder werden abgelehnt — auch onload, href und html (0.2523ms)
+✔ unbekannte Vorlage und unbekannter Farbstil werden abgelehnt (0.1617ms)
+✔ Segmentzahl außerhalb 2–48 wird abgelehnt (0.2841ms)
+✔ leere und zu lange Beschriftungen werden abgelehnt (0.3185ms)
+✔ Steuerzeichen und Zeilenumbrüche werden abgelehnt (0.1302ms)
+✔ Markup in Beschriftung und Überschrift wird abgelehnt (0.1745ms)
+✔ Überschrift: leer und zu lang werden abgelehnt (0.0819ms)
+✔ Umlaute und Sonderzeichen sind erlaubt und bleiben erhalten (0.4511ms)
+✔ doppelte Beschriftungen sind erlaubt, werden aber gemeldet (0.0949ms)
+✔ Importgröße: mehr als 32 KiB werden vor dem Parsen abgelehnt (0.2798ms)
+✔ JSON-Import: leer, kaputt und mit BOM (0.1849ms)
+✔ Export, Reimport und erneuter Export ergeben dieselbe Zeichnung (0.2819ms)
+✔ ungültige Konfiguration lässt sich nicht serialisieren (0.3687ms)
+✔ SVG ist deterministisch und eigenständig (0.7422ms)
+✔ SVG enthält keine Skripte, Eventhandler oder externen Verweise (1.5544ms)
+✔ jede Beschriftung steht genau einmal im SVG, dazu Titel und Fußzeile (0.2247ms)
+✔ escapeXml deckt alle fünf XML-Sonderzeichen ab (0.0613ms)
+✔ ungültige Eingaben werden auch beim Zeichnen abgelehnt (0.1168ms)
+✔ Farbstil ändert die Zeichnung, nicht die Geometrie (0.1398ms)
+✔ Farbstile erfüllen die Kontrastanforderungen (0.2595ms)
+✔ Dateiname wird aus der Überschrift gebildet und bleibt sicher (0.1887ms)
+✔ Route #pendeln/studio löst die Studio-Ansicht aus (0.2208ms)
+✔ Studio-Ansicht enthält Bedienung, Vorschau und Druckansicht (0.7183ms)
+✔ Werkstatt-Karte des Studios ist verfügbar und verlinkt (0.7719ms)
+✔ Druckvariante enthält nur die Segmente, aber weiterhin Titel und Beschreibung (0.2045ms)
+✔ Styleheet enthält die A4-Druckregeln für die Tafel (0.6836ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 99.2786

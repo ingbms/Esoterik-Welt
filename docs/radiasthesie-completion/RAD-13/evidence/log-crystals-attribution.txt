@@ -1,0 +1,17 @@
+✔ 30 Bilder mit vier Ausgabestufen und vorhandenen WebP-Dateien (5.0464ms)
+✔ attribution_text_required ist aus credit/production generiert (0 Abweichungen) (0.7569ms)
+✔ änderungsbezogene Falschangaben sind ausgeschlossen (0.2439ms)
+✔ credit.changes steht wörtlich im Nachweis, Retusche wird genannt (0.1372ms)
+✔ namensnennungspflichtige Bilder sind vollständig und ShareAlike ausgewiesen (0.2132ms)
+✔ data/crystals.json und Sammelnachweis spiegeln das Manifest (0.4018ms)
+✔ crys-15 nennt den schwarzen Fotogrund (P2.4) (0.112ms)
+✔ Alt-Texte widersprechen der gemessenen Grundhelligkeit nicht (P2.2) (0.3372ms)
+✔ Generator und Sync-Skript erzeugen denselben Text (0.208ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 77.0387

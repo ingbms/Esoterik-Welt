@@ -1,0 +1,434 @@
+{
+ "stats": [
+  {
+   "h": 15,
+   "n": 20,
+   "k": 2,
+   "implP": 0.04138946533203118,
+   "refP": 0.04138946533203125,
+   "dP": 6.938893903907228e-17,
+   "implW": {
+    "low": 0.531299122381256,
+    "high": 0.8881382985923343,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 0.531299122381256,
+    "high": 0.8881382985923343
+   },
+   "dW": 0
+  },
+  {
+   "h": 5,
+   "n": 16,
+   "k": 8,
+   "implP": 0.040661890588278855,
+   "refP": 0.04066189058827874,
+   "dP": 1.1796119636642288e-16,
+   "implW": {
+    "low": 0.14164643854782039,
+    "high": 0.5559564416525933,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 0.14164643854782039,
+    "high": 0.5559564416525933
+   },
+   "dW": 0
+  },
+  {
+   "h": 8,
+   "n": 25,
+   "k": 5,
+   "implP": 0.1365125215956746,
+   "refP": 0.1365125215956743,
+   "dP": 2.7755575615628914e-16,
+   "implW": {
+    "low": 0.17205190306907978,
+    "high": 0.5158973072689775,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 0.17205190306907978,
+    "high": 0.5158973072689775
+   },
+   "dW": 0
+  },
+  {
+   "h": 10,
+   "n": 20,
+   "k": 2,
+   "implP": 0.999999999999998,
+   "refP": 1,
+   "dP": 1.9984014443252818e-15,
+   "implW": {
+    "low": 0.2992980081982123,
+    "high": 0.7007019918017877,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 0.2992980081982123,
+    "high": 0.7007019918017877
+   },
+   "dW": 0
+  },
+  {
+   "h": 3,
+   "n": 16,
+   "k": 8,
+   "implP": 0.44098848594021045,
+   "refP": 0.4409884859402098,
+   "dP": 6.661338147750939e-16,
+   "implW": {
+    "low": 0.06591599071428142,
+    "high": 0.4300888096197414,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 0.06591599071428142,
+    "high": 0.4300888096197414
+   },
+   "dW": 0
+  },
+  {
+   "h": 13,
+   "n": 20,
+   "k": 2,
+   "implP": 0.26317596435546853,
+   "refP": 0.26317596435546875,
+   "dP": 2.220446049250313e-16,
+   "implW": {
+    "low": 0.43285427668523624,
+    "high": 0.818808175898918,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 0.43285427668523624,
+    "high": 0.818808175898918
+   },
+   "dW": 0
+  },
+  {
+   "h": 0,
+   "n": 25,
+   "k": 5,
+   "implP": 0.005317944677962285,
+   "refP": 0.005317944677962283,
+   "dP": 1.734723475976807e-18,
+   "implW": {
+    "low": 1.3877787807814457e-17,
+    "high": 0.13319225093904846,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 1.3877787807814457e-17,
+    "high": 0.13319225093904846
+   },
+   "dW": 0
+  },
+  {
+   "h": 25,
+   "n": 25,
+   "k": 5,
+   "implP": 3.355443200000004e-18,
+   "refP": 3.3554431999999997e-18,
+   "dP": 4.237045877651919e-33,
+   "implW": {
+    "low": 0.8668077490609515,
+    "high": 0.9999999999999999,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 0.8668077490609515,
+    "high": 0.9999999999999999
+   },
+   "dW": 0
+  },
+  {
+   "h": 2,
+   "n": 10,
+   "k": 2,
+   "implP": 0.10937500000000017,
+   "refP": 0.109375,
+   "dP": 1.6653345369377348e-16,
+   "implW": {
+    "low": 0.05668215145437519,
+    "high": 0.5098375284633583,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 0.05668215145437519,
+    "high": 0.5098375284633583
+   },
+   "dW": 0
+  },
+  {
+   "h": 19,
+   "n": 25,
+   "k": 5,
+   "implP": 2.627973789463352e-9,
+   "refP": 2.6279737894633472e-9,
+   "dP": 4.549493369041652e-24,
+   "implW": {
+    "low": 0.5657031664457093,
+    "high": 0.8850368630659855,
+    "confidence": 0.95,
+    "method": "wilson"
+   },
+   "refW": {
+    "low": 0.5657031664457093,
+    "high": 0.8850368630659855
+   },
+   "dW": 0
+  }
+ ],
+ "skip": [
+  {
+   "path": "/#pendeln/quellen",
+   "focused": {
+    "tag": "A",
+    "cls": "",
+    "href": "https://www.usgs.gov/water-science-school/science/water-dowsing",
+    "text": "U.S. Geological Survey, Water Science Sc"
+   },
+   "afterEnter": {
+    "hash": "",
+    "scrollY": 0,
+    "focus": "BODY"
+   },
+   "nextTab": {
+    "tag": "BODY",
+    "id": null,
+    "text": "403 ERROR\nThe request could not be satis",
+    "inMain": null,
+    "visible": true
+   },
+   "h1Before": [
+    "Quellen & Belege"
+   ],
+   "h1After": [
+    "403 ERROR"
+   ],
+   "urlAfter": "https://www.usgs.gov/water-science-school/science/water-dowsing",
+   "ok": false
+  },
+  {
+   "path": "/#pendeln/methodik",
+   "focused": {
+    "tag": "A",
+    "cls": "",
+    "href": "#pendeln/quellen",
+    "text": "Zum vollständigen Quellenverzeichnis"
+   },
+   "afterEnter": {
+    "hash": "#pendeln/quellen",
+    "scrollY": 0,
+    "focus": "H1"
+   },
+   "nextTab": {
+    "tag": "A",
+    "id": null,
+    "text": "U.S. Geological Survey, Water Science Sc",
+    "inMain": true,
+    "visible": true
+   },
+   "h1Before": [
+    "Methodik & Grenzen"
+   ],
+   "h1After": [
+    "Quellen & Belege"
+   ],
+   "urlAfter": "http://127.0.0.1:2470/Esoterik-Welt/#pendeln/quellen",
+   "ok": false
+  },
+  {
+   "path": "/#pendeln/labor",
+   "focused": {
+    "tag": "DIV",
+    "cls": "psim-scene",
+    "href": null,
+    "text": "Fadenpendel mit Aufhängepunkt, Faden und"
+   },
+   "afterEnter": {
+    "hash": "#pendeln/labor",
+    "scrollY": 428,
+    "focus": "DIV"
+   },
+   "nextTab": {
+    "tag": "INPUT",
+    "id": "psimLength",
+    "text": "",
+    "inMain": true,
+    "visible": true
+   },
+   "h1Before": [
+    "Pendellabor"
+   ],
+   "h1After": [
+    "Pendellabor"
+   ],
+   "urlAfter": "http://127.0.0.1:2470/Esoterik-Welt/#pendeln/labor",
+   "ok": true
+  },
+  {
+   "path": "/radiasthesie/quellen.html",
+   "focused": {
+    "tag": "A",
+    "cls": "skip-link",
+    "href": "#main",
+    "text": "Zum Hauptinhalt springen"
+   },
+   "afterEnter": {
+    "hash": "#main",
+    "scrollY": 0,
+    "focus": "BODY"
+   },
+   "nextTab": {
+    "tag": "A",
+    "id": null,
+    "text": "Start",
+    "inMain": true,
+    "visible": true
+   },
+   "h1Before": [
+    "Quellen & Belege"
+   ],
+   "h1After": [
+    "Quellen & Belege"
+   ],
+   "urlAfter": "http://127.0.0.1:2470/Esoterik-Welt/radiasthesie/quellen.html#main",
+   "ok": true
+  },
+  {
+   "path": "/radiasthesie/pendeln.html",
+   "focused": {
+    "tag": "A",
+    "cls": "skip-link",
+    "href": "#main",
+    "text": "Zum Hauptinhalt springen"
+   },
+   "afterEnter": {
+    "hash": "#main",
+    "scrollY": 0,
+    "focus": "BODY"
+   },
+   "nextTab": {
+    "tag": "A",
+    "id": null,
+    "text": "Start",
+    "inMain": true,
+    "visible": true
+   },
+   "h1Before": [
+    "Pendeln"
+   ],
+   "h1After": [
+    "Pendeln"
+   ],
+   "urlAfter": "http://127.0.0.1:2470/Esoterik-Welt/radiasthesie/pendeln.html#main",
+   "ok": true
+  }
+ ],
+ "journal": {},
+ "findings": [
+  {
+   "id": "SKIP-LINK",
+   "detail": {
+    "path": "/#pendeln/quellen",
+    "focused": {
+     "tag": "A",
+     "cls": "",
+     "href": "https://www.usgs.gov/water-science-school/science/water-dowsing",
+     "text": "U.S. Geological Survey, Water Science Sc"
+    },
+    "afterEnter": {
+     "hash": "",
+     "scrollY": 0,
+     "focus": "BODY"
+    },
+    "nextTab": {
+     "tag": "BODY",
+     "id": null,
+     "text": "403 ERROR\nThe request could not be satis",
+     "inMain": null,
+     "visible": true
+    },
+    "h1Before": [
+     "Quellen & Belege"
+    ],
+    "h1After": [
+     "403 ERROR"
+    ],
+    "urlAfter": "https://www.usgs.gov/water-science-school/science/water-dowsing",
+    "ok": false
+   }
+  },
+  {
+   "id": "SKIP-LINK",
+   "detail": {
+    "path": "/#pendeln/methodik",
+    "focused": {
+     "tag": "A",
+     "cls": "",
+     "href": "#pendeln/quellen",
+     "text": "Zum vollständigen Quellenverzeichnis"
+    },
+    "afterEnter": {
+     "hash": "#pendeln/quellen",
+     "scrollY": 0,
+     "focus": "H1"
+    },
+    "nextTab": {
+     "tag": "A",
+     "id": null,
+     "text": "U.S. Geological Survey, Water Science Sc",
+     "inMain": true,
+     "visible": true
+    },
+    "h1Before": [
+     "Methodik & Grenzen"
+    ],
+    "h1After": [
+     "Quellen & Belege"
+    ],
+    "urlAfter": "http://127.0.0.1:2470/Esoterik-Welt/#pendeln/quellen",
+    "ok": false
+   }
+  },
+  {
+   "id": "JOURNAL-FLOW",
+   "detail": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#pendelnRoot button').filter({ hasText: /Export|JSON/ }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"button\" id=\"jrExportJson\" class=\"btn btn-secondary\">Alle Einträge (JSON)</button>\u001b["
+  }
+ ],
+ "statsMaxDelta": 1.9984014443252818e-15,
+ "analyse": {
+  "schema": "esow.experiment-statistik/1",
+  "hits": 15,
+  "n": 20,
+  "k": 2,
+  "baseProbability": 0.5,
+  "expected": 10,
+  "expectedRounded": 10,
+  "hitRate": 0.75,
+  "pValue": 0.04138946533203118,
+  "alpha": 0.05,
+  "meetsAlpha": true,
+  "interval": {
+   "low": 0.531299122381256,
+   "high": 0.8881382985923343,
+   "confidence": 0.95,
+   "method": "wilson"
+  },
+  "method": "binomial-exact + wilson-95"
+ },
+ "wilsonViolations": []
+}

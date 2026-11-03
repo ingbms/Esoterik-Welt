@@ -1,0 +1,29 @@
+✔ generated data module matches the approved content package byte for byte (14.8144ms)
+✔ all required counts are present and rendered from the same data (0.5161ms)
+✔ every id, slug and cross reference resolves (1.0538ms)
+✔ every source reference and inline marker points at a real ledger entry (3.0925ms)
+✔ hub renders four entries, the legend and the no-calculation notice (0.365ms)
+✔ learning path renders six stages and every stage detail (0.5676ms)
+✔ all twelve signs render fully in index and detail (1.6035ms)
+✔ sign filters and search return correct counts and an empty state (0.4554ms)
+✔ ten factors render with astronomy, themes and questions (1.2295ms)
+✔ twelve houses render with themes, questions and the caution box (0.8605ms)
+✔ five aspects render with angle and orb conventions (0.7292ms)
+✔ 24 basics render grouped in three levels with core points (1.1283ms)
+✔ four fictional examples render assumptions, steps, synthesis and limits (0.5332ms)
+✔ 15 FAQ answers render with short and long answer and related links (0.4934ms)
+✔ 65 glossary terms render alphabetically with see-also links (7.6313ms)
+✔ source ledger renders all 25 sources and 28 claims with fetch status (1.6489ms)
+✔ method page states assumption, evidence, no-calculation and privacy (0.2788ms)
+✔ search is diacritic-insensitive, grouped and has a real empty state (1.1842ms)
+✔ unknown sub-route renders an in-area error view with real links (0.1994ms)
+✔ every view avoids placeholders, dead hashes and unsafe markup (7.2979ms)
+✔ internal links only use known area routes (1.0686ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 130.8485

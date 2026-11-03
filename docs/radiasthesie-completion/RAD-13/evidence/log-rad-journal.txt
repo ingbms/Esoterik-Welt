@@ -1,0 +1,34 @@
+✔ Speicher: leerer Stand und Rundlauf mit Sortierung nach Datum (10.5426ms)
+✔ Speicher: defektes JSON wird gesichert und geleert, ohne Throw (0.2634ms)
+✔ Speicher: falscher Umschlag und fehlende Liste werden gesichert (0.1344ms)
+✔ Speicher: neueres Schema wird gemeldet, aber nicht überschrieben (0.1619ms)
+✔ Speicher: Quota und fehlender Speicher liefern eine Meldung statt Throw (0.4172ms)
+✔ Speicher: Obergrenze von 500 Einträgen wird nicht überschritten (0.7792ms)
+✔ vollständige Löschung entfernt alle esot_rad_-Schlüssel, fremde bleiben (0.3283ms)
+✔ Löschung meldet Schlüssel, die sich nicht entfernen lassen (0.1078ms)
+✔ Listen: ergänzen, ersetzen, entfernen, filtern, zählen (0.4914ms)
+✔ Datum und Sicherheit werden deutsch formatiert, Unbekanntes bleibt sichtbar (0.2648ms)
+✔ buildEntry erzeugt Kennung und Erstellzeit und trimmt Rand-Leerzeichen (0.3018ms)
+✔ buildEntry lehnt ungültige Felder mit Feldnamen ab (0.3163ms)
+✔ buildEntry: Bearbeitung behält Kennung und Erstellzeit, leert optionale Felder (0.2594ms)
+✔ Laufbezug: runId erfordert experimentId und einen bekannten Lauf (13.8227ms)
+✔ Übernahme aus dem Labor: nur vollständig enthüllte Läufe, Bezug bleibt stabil (5.291ms)
+✔ Bearbeitung mit gelöschtem Lauf: Struktur bleibt prüfbar, Bezug bleibt Text (4.2813ms)
+✔ CSV: BOM, Semikolon, CRLF, Quoting und deutsche Spalten (0.404ms)
+✔ CSV: leere Liste erzeugt nur den Kopf, Sonderzeichen bleiben literal (0.1785ms)
+✔ JSON-Export ist vertragskonform und wieder importierbar (0.5196ms)
+✔ Import ist atomar: ein ungültiger Eintrag lehnt die ganze Datei ab (0.1852ms)
+✔ Import lehnt fremde Art, Schema, Größe und leeren Text ab (1.4402ms)
+✔ Import ignoriert unbekannte Felder und speichert sie nicht (Datensparsamkeit) (0.2655ms)
+✔ Import über 500 Einträge wird abgelehnt (2.3908ms)
+✔ Zusammenführung: gleiche Kennung ersetzt, neue ergänzt, Grenze gilt fürs Ergebnis (0.358ms)
+✔ Route #pendeln/journal löst die Ansicht aus (0.9203ms)
+✔ Werkstatt-Karte „Pendeltagebuch“ ist verfügbar und verlinkt (0.6371ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 121.1601
