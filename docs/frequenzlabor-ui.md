@@ -31,7 +31,7 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 | `js/modules/frequenz-visualisierung.js` | Canvas-Renderer, rAF nur bei laufendem Ton, statische Welle bei reduzierter Bewegung |
 | `js/modules/frequenz-flags.js` | Feature-Flags mit lokalem URL-Override (`?fq=+cymatics,-binaural`) |
 | `js/modules/frequenzlabor-loader.js` | 30-Zeilen-Lazy-Proxy, einziger statischer Import im Initialpfad |
-| `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens (2.883 B gzip) |
+| `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens (2.883 B gzip, mit Quellenansicht 3.521 B) |
 | `scripts/check-frequenz-budget.cjs` | Budget-Gate NFR-1/2/3 |
 | `tests/frequenz-presets.mjs` | 13 Vertragstests für Mapping, Flags, Storage, Laden |
 | `tests/markdown-lite.mjs` | 15 Vertragstests für den Markdown-Leser (inkl. Render des echten Quellendokuments) |
@@ -196,7 +196,7 @@ Die Links stehen in `.fq-prose`/`.fq-lede`/`.fq-note`, sind unterstrichen (WCAG 
 | Vollständige Browser-Suite | `E2E_PORT=3512 CI=1 npm run test:e2e` | **92 pass, 0 fail** |
 | Gebauter Build (Server + Routen) | `npm run verify:build` | **36 Seiten/Viewports, 0 Fehler** |
 | Offline-Datei | `npm run test:offline` | **2 pass** (jetzt inkl. eingebettetem Quellendokument) |
-| Budget | `npm run check:frequenz-budget` | NFR-1 85.822 B / 86.275 B · NFR-2 29.601 B / 100.000 B · NFR-3 3.466 B / 6.000 B |
+| Budget | `npm run check:frequenz-budget` | NFR-1 85.822 B / 86.275 B · NFR-2 29.601 B / 100.000 B · NFR-3 3.521 B / 6.000 B |
 | Lint/Format | `npm run lint`, `npm run format:check` | 0 Fehler, Prettier clean |
 | Lighthouse Accessibility | `npx lighthouse … --only-categories=accessibility` | `#frequenzen` **100**, `#frequenzen/labor` **100**, `#frequenzen/quellen` **100** (jeweils 0 fehlgeschlagene Audits, Lighthouse 12.6.1) |
 

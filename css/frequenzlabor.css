@@ -601,11 +601,12 @@
   vertical-align: top;
   overflow-wrap: break-word;
 }
-/* Die erste Spalte trägt Status oder id; ohne Mindestbreite bricht dort ein
-   einzelnes Wort mitten im Buchstaben ("traditione/ll"). */
+/* Die erste Spalte trägt Status oder id als Inline-Code (monospace, ~8,4 px je
+   Zeichen). 15ch deckt den längsten Status ("traditionell") samt Innenabstand
+   ab, damit dort kein Wort mitten im Buchstaben bricht. */
 .fq-table-scroll th:first-child,
 .fq-table-scroll td:first-child {
-  min-width: 10ch;
+  min-width: 15ch;
 }
 .fq-table-scroll th {
   background: var(--color-bg-card);
