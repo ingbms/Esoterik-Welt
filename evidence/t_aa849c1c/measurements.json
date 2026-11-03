@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T02:25:30.085Z",
-  "base": "http://127.0.0.1:3902/Esoterik-Welt",
+  "generatedAt": "2026-11-03T03:29:09.592Z",
+  "base": "http://127.0.0.1:3905/Esoterik-Welt",
   "views": {
     "cymatics": {
       "route": "frequenzen/cymatics",
@@ -44,14 +44,14 @@
         }
       ],
       "moduleRequests": [
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenzlabor-loader.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenzlabor.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-engine.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-flags.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-presets.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-visualisierung.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-cymatics-view.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-chladni.js"
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenzlabor-loader.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenzlabor.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-engine.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-flags.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-presets.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-visualisierung.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-cymatics-view.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-chladni.js"
       ]
     },
     "meditation": {
@@ -103,14 +103,14 @@
         }
       ],
       "moduleRequests": [
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenzlabor-loader.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenzlabor.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-engine.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-flags.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-presets.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-visualisierung.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-meditation-view.js",
-        "http://127.0.0.1:3902/Esoterik-Welt/js/modules/frequenz-meditation-model.js"
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenzlabor-loader.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenzlabor.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-engine.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-flags.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-presets.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-visualisierung.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-meditation-view.js",
+        "http://127.0.0.1:3905/Esoterik-Welt/js/modules/frequenz-meditation-model.js"
       ]
     }
   },

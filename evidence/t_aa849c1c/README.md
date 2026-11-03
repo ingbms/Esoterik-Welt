@@ -9,7 +9,8 @@ npm ci
 npm run build
 PORT=3902 node index.js &          # Vorschau unter http://127.0.0.1:3902/Esoterik-Welt/
 BASE_URL=http://127.0.0.1:3902/Esoterik-Welt node evidence/t_aa849c1c/measure-p9-p10.cjs
-npm run test:frequenz              # 51 Vertragstests (inkl. C1–C8, M1–M9)
+node evidence/t_aa849c1c/measure-nfr2.cjs .   # NFR-2 in drei Auscheck-Basen
+npm run test:frequenz              # 52 Vertragstests (inkl. C1–C8, M1–M10)
 E2E_PORT=3904 CI=1 npx playwright test tests/frequenzlabor-p9-p10.spec.js
 npm run check:frequenz-budget
 ```
@@ -22,6 +23,7 @@ npm run check:frequenz-budget
 | `p9-cymatics-desktop.png`, `p9-cymatics-mobile.png` | Ansicht bei 1440 × 1000 (ganze Seite) und 360 × 760 |
 | `p10-meditation-desktop.png`, `p10-meditation-mobile.png` | Ansicht bei 1440 × 1000 (ganze Seite) und 360 × 760 |
 | `measure-p9-p10.cjs` | Messskript (liest DOM, Canvas und Netzwerk; steuert nichts) |
+| `measure-nfr2.cjs` | NFR-2 (Feature-JS gesamt) in drei Auscheck-Basen: Arbeitsbaum, frischer CRLF-Klon, CI/LF |
 
 ## Ergebnisse (Lauf vom 2026-11-03, Chromium, lokaler Build)
 
@@ -33,4 +35,4 @@ npm run check:frequenz-budget
 - **Lazy Loading:** Beim direkten Aufruf von `#frequenzen/meditation` werden nur die Module der Kategorie plus `frequenz-meditation-view.js` und `frequenz-meditation-model.js` geladen; `frequenz-cymatics-view.js` und `frequenz-chladni.js` erscheinen nicht. Umgekehrt lädt `#frequenzen/cymatics` die Meditationsmodule nicht (E2E C6/M5 prüft zusätzlich den Fall „Flag aus“: dann entsteht gar kein Request).
 - **Konsole:** keine Fehler oder Warnungen auf beiden Ansichten.
 
-Die Testläufe selbst (51 Unit-Tests, 15 Browserfälle der Folgestufe, 104 Fälle der vollen Browser-Suite) sind in [`docs/frequenzlabor-p9-p10.md`](../../docs/frequenzlabor-p9-p10.md) tabelliert; die Ausgaben entstehen reproduzierbar mit den Befehlen oben.
+Die Testläufe selbst (52 Unit-Tests, 18 Browserfälle der Folgestufe, 107 Fälle der vollen Browser-Suite) sind in [`docs/frequenzlabor-p9-p10.md`](../../docs/frequenzlabor-p9-p10.md) tabelliert; die Ausgaben entstehen reproduzierbar mit den Befehlen oben. Die Messwerte oben wurden nach der Review-Runde 1 (R1–R4) neu erhoben: axe `[]`, kleinster Kontrast 9,09 : 1, Canvas 1.942 / 2.788 helle Pixel, 360 px ohne Überlauf.
