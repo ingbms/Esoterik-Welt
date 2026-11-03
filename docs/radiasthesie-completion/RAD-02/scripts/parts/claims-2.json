@@ -1,0 +1,177 @@
+[
+  {
+    "id": "C16",
+    "text": "Eine Studie mit neun erfahrenen Rutengängern berichtet 20 von 20 nicht zufälligen Reaktionen an vier 'aktiven Orten' und überlappende Reaktionsbereiche.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q47", "locator": "Abstract", "quote": "in 20 out of 20 tests the dowsers’ reactions were not at random positions"}
+    ],
+    "counter_evidence": "Kein unabhängiger Replikationsbefund; 'aktiver Ort' wird über die Reaktion definiert; keine Angaben zu Fehlversuchen oder Kontrollgruppe im Abstract.",
+    "confidence": "niedrig (Befund), mittel (Existenz der Studie)",
+    "relevance": ["radiasthesie", "datenqualitaet"]
+  },
+  {
+    "id": "C17",
+    "text": "Behauptungen, 'geopathischer Stress' verändere Herzfrequenz und Blutdruck, stützen sich auf Studien ohne Verblindung, Sham-Bedingung oder klare Zonendefinition.",
+    "status": "unbelegt",
+    "evidence": [
+      {"source_id": "Q48", "locator": "Abstract", "quote": "The observation indicates the change in blood pressure and heart rate in geopathic stress zones as compared to nonstress zones."}
+    ],
+    "counter_evidence": "Die zitierte Studie ist selbst der Beleg für die Behauptung; ihre Methode trägt sie nicht.",
+    "confidence": "hoch (methodische Schwäche), niedrig (Wirkaussage)",
+    "relevance": ["radiasthesie", "geopathie"]
+  },
+  {
+    "id": "C18",
+    "text": "Es existieren physikalische Deutungen, die ein nicht-elektromagnetisches 'dowsing field' postulieren (Interferometrie, Hemisphären-Inversion). Diese Behauptungen sind nicht unabhängig repliziert.",
+    "status": "unbelegt",
+    "evidence": [
+      {"source_id": "Q50", "locator": "Abstract", "quote": "The existence of the patterns shows that the dowsing field is wave radiation."},
+      {"source_id": "Q49", "locator": "Abstract", "quote": "the inference that the field is not electromagnetic was confirmed by experiments carried out in an electromagnetically shielded laboratory"}
+    ],
+    "counter_evidence": "Beobachterabhängige Rutenmessungen ohne Verblindung; keine Replikation durch unabhängige Gruppen; mechanische Pendelerklärung (Q51) und Ideomotorik (Q52) bieten eine einfachere Deutung.",
+    "confidence": "hoch (dass es Behauptungen sind), niedrig (Geltung)",
+    "relevance": ["radiasthesie", "physik"]
+  },
+  {
+    "id": "C19",
+    "text": "Die Bewegung eines handgeführten Pendels ist mit klassischer Mechanik (fremderregtes Kugelpendel) erklärbar; ein übernatürlicher Antrieb ist dafür nicht erforderlich.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q51", "locator": "Abstract", "quote": "The study of the mechanically forced pendulum provides useful insight into the centuries-old problem concerning the dynamics of the hand-forced pendulum as employed by dowsers."}
+    ],
+    "counter_evidence": "Erklärt die Bewegung, nicht die behauptete Informationsquelle; Radiästheten bestreiten die Gleichsetzung (Q56).",
+    "confidence": "hoch",
+    "relevance": ["pendeln", "physik"]
+  },
+  {
+    "id": "C20",
+    "text": "Die Radiästhesie institutionalisierte sich international: Begriff und französische Vereinigung 1926/1929, britische Gesellschaft 1933, US-amerikanische Gesellschaft 1961.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q64", "locator": "Abschnitt 'Histoire'", "quote": "Le terme « radiesthésie » est employé pour la première fois en 1926 par l'abbé Bouly"},
+      {"source_id": "Q64", "locator": "Abschnitt 'Histoire'", "quote": "L’abbé Bouly crée en 1929 l’Association française et internationale des amis de la radiesthésie"},
+      {"source_id": "Q63", "locator": "Seite 'History'", "quote": "The British Society of Dowsers, founded, came to life on 4th May 1933."},
+      {"source_id": "Q66", "locator": "Abschnitt 'Dowsing'", "quote": "in 1961 the American Society of Dowsers was founded in Vermont"}
+    ],
+    "counter_evidence": "Gründungsdaten sind Eigenaussagen bzw. Tertiärquellen; unabhängige Gegenprüfung steht aus (ASD-Website blockiert).",
+    "confidence": "mittel-hoch",
+    "relevance": ["radiasthesie", "international", "geschichte"]
+  },
+  {
+    "id": "C21",
+    "text": "Die britische Gesellschaft wurde von einem ehemaligen Offizier gegründet und verlagerte ihre Schwerpunkte im Lauf der Zeit von Wasser/Öl/Mineralien zu Gesundheit, Archäologie und spirituellen Anwendungen.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q63", "locator": "Seite 'History'", "quote": "its founder, by Arthur H. Bell, D.S.O., O.B.E ... was a former army officer"},
+      {"source_id": "Q63", "locator": "Seite 'History'", "quote": "the early decades of the society focussed much on water divining and searching for oil, minerals, or even lost people"}
+    ],
+    "counter_evidence": "Eigenaussage der Vereinigung; keine unabhängige Institutionsgeschichte geprüft.",
+    "confidence": "mittel",
+    "relevance": ["radiasthesie", "international"]
+  },
+  {
+    "id": "C22",
+    "text": "An der Freiberger Bergakademie wurde das Rutengehen im 18./19. Jahrhundert in die bergbauliche Wissenschaft integriert und in den 1840er-Jahren amtlich begutachtet.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q36", "locator": "Abstract", "quote": "the Central Mining Office nonetheless asked him in the 1840s to examine a mine surveyor who claimed to experience 'galvanic excitement' with a dowsing rod"}
+    ],
+    "counter_evidence": "Nur Abstract geprüft; die Deutung als 'Integration' stammt aus dem Abstract und ist am Kapitel nicht verifiziert.",
+    "confidence": "mittel",
+    "relevance": ["radiasthesie", "geschichte"]
+  },
+  {
+    "id": "C23",
+    "text": "In Estland ist Rutengehen in einen lokalen Diskurs über 'Energien' aus dem Boden eingebettet (u. a. Witch's Well in Tuhala); es ist Teil volkskundlicher Naturdeutung, nicht nur ein technisches Suchverfahren.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q59", "locator": "Abstract", "quote": "This article discusses contemporary vernacular theory about the elusive energies that emanate from the ground."}
+    ],
+    "counter_evidence": "Qualitative Fallstudien; keine Verallgemeinerung auf alle baltischen Regionen.",
+    "confidence": "mittel",
+    "relevance": ["radiasthesie", "international"]
+  },
+  {
+    "id": "C24",
+    "text": "Im marokkanischen Rif ist Wasserfindung mit Heilpraktiken und lokalen Glaubensvorstellungen verbunden; eine deskriptive Studie behauptet 'praktische Erfolge', ohne sie kontrolliert zu testen.",
+    "status": "unbelegt",
+    "evidence": [
+      {"source_id": "Q60", "locator": "Arabisches Abstract (eigene Übersetzung)", "quote": "أظهرت النتائج أن بعض الطرق التقليدية، رغم التشكيك في أساسها العلمي، تحقق نجاحات عملية ملحوظة"}
+    ],
+    "counter_evidence": "Kein Kontrolltest, kein DOI, regionales Journal; die Erfolgsbehauptung ist nicht falsifizierbar angelegt.",
+    "confidence": "hoch (Existenz der Praxis), niedrig (Erfolgsbehauptung)",
+    "relevance": ["radiasthesie", "international"]
+  },
+  {
+    "id": "C25",
+    "text": "In Palästina nutzen Raubgräber Dschinn-Vorstellungen und Wünschelruten zur Suche nach Antiquitäten; die Archäologie dokumentiert dadurch verursachte Zerstörungen.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q61", "locator": "Abstract", "quote": "looters have increasingly relied on supernatural intermediaries, such as jinn and dowsing rods, to identify buried treasures"}
+    ],
+    "counter_evidence": "Keine Aussage über die Trefferquote; belegt Nutzung und Folgen, nicht Wirksamkeit.",
+    "confidence": "hoch",
+    "relevance": ["radiasthesie", "international"]
+  },
+  {
+    "id": "C26",
+    "text": "In der russischen Geowissenschaft wird Rutengehen weiter als ungelöstes Problem diskutiert; referiert werden ein geophysikalischer, ein biophysikalischer und ein 'astraler' Erklärungsansatz.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q62", "locator": "Russisches Abstract (eigene Übersetzung)", "quote": "Секрет эффекта лозы до сих пор не раскрыт до конца"}
+    ],
+    "counter_evidence": "Überblicksaufsatz ohne eigene kontrollierte Daten; die drei Ansätze werden referiert, nicht geprüft.",
+    "confidence": "mittel",
+    "relevance": ["radiasthesie", "international"]
+  },
+  {
+    "id": "C27",
+    "text": "In den USA ist 'water witching' als ländliche Praxis weit verbreitet und wurde soziologisch/ethnografisch untersucht; die Persistenz wird mit Praktiken, Kosten und lokalen Unsicherheiten erklärt, nicht mit nachgewiesener Treffsicherheit.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q40", "locator": "Abschnitt zu Hyman & Vogt", "quote": "Ray Hyman and Evon Z. Vogt conducted several studies to determine why water witching was such a widespread and persistent practice."},
+      {"source_id": "Q57", "locator": "Titel/Metadaten", "quote": "Water Witching U.S.A."}
+    ],
+    "counter_evidence": "Q57/Q58 nicht im Inhalt geprüft; die soziologische Erklärung stützt sich auf Q40.",
+    "confidence": "mittel",
+    "relevance": ["radiasthesie", "international", "soziologie"]
+  },
+  {
+    "id": "C28",
+    "text": "Die deutsche Radiästhesieszene ist soziologisch als Milieu mit Geräten, Praktiken und Deutungen beschrieben, nicht als einheitliche Lehre.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q38", "locator": "Abstract", "quote": "Instead of explaining the 'belief,' 'superstition,' or 'teaching,' this book describes who is doing what in this field and for what reasons."},
+      {"source_id": "Q37", "locator": "Titel/Metadaten", "quote": "Die Welt der Wünschelrutengänger und Pendler: Erkundungen einer verborgenen Wirklichkeit"}
+    ],
+    "counter_evidence": "Nur Abstract bzw. Katalogdaten geprüft.",
+    "confidence": "mittel",
+    "relevance": ["radiasthesie", "soziologie"]
+  },
+  {
+    "id": "C29",
+    "text": "Die Datierung des Begriffs 'Radiästhesie' ist in den Quellen widersprüchlich: 1926 (Bouly, französische Enzyklopädie) steht gegen 1930 (Heilpraktiker-Fachartikel). Die ältere Angabe ist besser belegt, bleibt aber sekundär.",
+    "status": "widersprüchlich",
+    "evidence": [
+      {"source_id": "Q64", "locator": "Abschnitt 'Histoire'", "quote": "Le terme « radiesthésie » est employé pour la première fois en 1926 par l'abbé Bouly"},
+      {"source_id": "Q56", "locator": "S. 32", "quote": "Der Begriff „Radiästhesie“, 1930 vom französischen Geistlichen Abbé Mermet L. Bouly aus den Bestandteilen „Radius“ (lat.) = Strahlen und „Aisthesis“ (griech.) = Wahrnehmung geprägt"}
+    ],
+    "counter_evidence": "Q10 (bestehend) dokumentiert zusätzlich 1926 vs. um 1931; eine Primärquelle von Bouly selbst wurde nicht beschafft.",
+    "confidence": "mittel",
+    "relevance": ["radiasthesie", "geschichte"]
+  },
+  {
+    "id": "C30",
+    "text": "Die überlieferten Instrumententypen umfassen Gabelrute (Hasel/Zweig), Winkel-/L-Rute, Einhandrute/Tensor, Pendel sowie kommerzielle Varianten wie den Biotensor; die Geräte unterscheiden sich in Handhabung, nicht in der behaupteten Wirkungsweise.",
+    "status": "belegt",
+    "evidence": [
+      {"source_id": "Q34", "locator": "Buch II", "quote": "a forked one cut from a hazel bush, or from some other wood equally flexible"},
+      {"source_id": "Q39", "locator": "Einleitung", "quote": "Three types of apparatus are commonly used: (1) forked rods; (2) a pair of L shaped rods, and (3) a pendulum"},
+      {"source_id": "Q56", "locator": "S. 32", "quote": "Zu den gebräuchlichen Radiästhesie-Geräten zählen V-Ruten aus Holz oder Metall (Gabelruten, Schleifenruten), Winkelruten sowie Pendelruten aus Metall und teilweise zusätzlichem Holz (Einhandruten, Pendel)."}
+    ],
+    "counter_evidence": "Die Liste ist nicht abschließend (z. B. Lecher-Antenne in Q06 genannt); die Gleichsetzung der Wirkungsweise ist eine analytische Zusammenfassung, keine Quellenaussage.",
+    "confidence": "hoch",
+    "relevance": ["radiasthesie", "instrumente"]
+  }
+]

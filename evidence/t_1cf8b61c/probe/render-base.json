@@ -1,0 +1,538 @@
+{
+  "summary": {
+    "base": "http://127.0.0.1:3298/Esoterik-Welt",
+    "routes": 31,
+    "failed": [],
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  "results": [
+    {
+      "id": "landing",
+      "hash": "#farbwelten",
+      "kind": "landing",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · CC BY-S",
+      "activeHash": "#farbwelten",
+      "mainTextLength": 1889,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "rot",
+      "hash": "#farbwelten/rot",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/rot“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · CC ",
+      "activeHash": "#farbwelten/rot",
+      "mainTextLength": 1893,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "orange",
+      "hash": "#farbwelten/orange",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/orange“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · ",
+      "activeHash": "#farbwelten/orange",
+      "mainTextLength": 1896,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "gelb",
+      "hash": "#farbwelten/gelb",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/gelb“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · CC",
+      "activeHash": "#farbwelten/gelb",
+      "mainTextLength": 1894,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "gruen",
+      "hash": "#farbwelten/gruen",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/gruen“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · C",
+      "activeHash": "#farbwelten/gruen",
+      "mainTextLength": 1895,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "tuerkis",
+      "hash": "#farbwelten/tuerkis",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/tuerkis“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens ·",
+      "activeHash": "#farbwelten/tuerkis",
+      "mainTextLength": 1897,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "blau",
+      "hash": "#farbwelten/blau",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/blau“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · CC",
+      "activeHash": "#farbwelten/blau",
+      "mainTextLength": 1894,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "indigo",
+      "hash": "#farbwelten/indigo",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/indigo“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · ",
+      "activeHash": "#farbwelten/indigo",
+      "mainTextLength": 1896,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "violett",
+      "hash": "#farbwelten/violett",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/violett“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens ·",
+      "activeHash": "#farbwelten/violett",
+      "mainTextLength": 1897,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "magenta",
+      "hash": "#farbwelten/magenta",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/magenta“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens ·",
+      "activeHash": "#farbwelten/magenta",
+      "mainTextLength": 1897,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "rosa",
+      "hash": "#farbwelten/rosa",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/rosa“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · CC",
+      "activeHash": "#farbwelten/rosa",
+      "mainTextLength": 1894,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "weiss",
+      "hash": "#farbwelten/weiss",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/weiss“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · C",
+      "activeHash": "#farbwelten/weiss",
+      "mainTextLength": 1895,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "schwarz",
+      "hash": "#farbwelten/schwarz",
+      "kind": "color",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/schwarz“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens ·",
+      "activeHash": "#farbwelten/schwarz",
+      "mainTextLength": 1897,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "chakren",
+      "hash": "#farbwelten/chakren",
+      "kind": "chakren",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/chakren“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens ·",
+      "activeHash": "#farbwelten/chakren",
+      "mainTextLength": 1897,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "lichtfrequenzen",
+      "hash": "#farbwelten/lichtfrequenzen",
+      "kind": "light",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/lichtfrequenzen“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Des",
+      "activeHash": "#farbwelten/lichtfrequenzen",
+      "mainTextLength": 1905,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "farbtherapie",
+      "hash": "#farbwelten/farbtherapie",
+      "kind": "topic",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/farbtherapie“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descou",
+      "activeHash": "#farbwelten/farbtherapie",
+      "mainTextLength": 1902,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "farbpsychologie",
+      "hash": "#farbwelten/farbpsychologie",
+      "kind": "topic",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/farbpsychologie“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Des",
+      "activeHash": "#farbwelten/farbpsychologie",
+      "mainTextLength": 1905,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "lichtmedizin",
+      "hash": "#farbwelten/lichtmedizin",
+      "kind": "topic",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/lichtmedizin“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descou",
+      "activeHash": "#farbwelten/lichtmedizin",
+      "mainTextLength": 1902,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "kompass",
+      "hash": "#farbwelten/kompass",
+      "kind": "tool",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/kompass“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens ·",
+      "activeHash": "#farbwelten/kompass",
+      "mainTextLength": 1897,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "farbmeditation",
+      "hash": "#farbwelten/farbmeditation",
+      "kind": "tool",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/farbmeditation“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Desc",
+      "activeHash": "#farbwelten/farbmeditation",
+      "mainTextLength": 1904,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "zeitleiste",
+      "hash": "#farbwelten/zeitleiste",
+      "kind": "tool",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/zeitleiste“ gehört zu keiner Seite dieser Website. Zur Startseite MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouen",
+      "activeHash": "#farbwelten/zeitleiste",
+      "mainTextLength": 1900,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "home",
+      "hash": "#home",
+      "kind": "core",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · CC BY-SA 4.0 Gewachsene Form, gerichtete Reflexe, echte Einschlüsse. Pfade ",
+      "activeHash": "#home",
+      "mainTextLength": 1821,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "tarot",
+      "hash": "#tarot",
+      "kind": "core",
+      "title": "Tarot — 78 Karten, Tageskarte & Legungen | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Tarot — Der Spiegel der Seele"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "TAROT / SPIEGEL DER SEELE Tarot — Der Spiegel der Seele 78 Karten: 22 Große Arkana und vier Farben mit je 14 Karten — wahlweise im Nachtatelier-Deck (Standard) oder in der farbigen Gartenbrevier-Variante. Jede Karte hat eigene Stichwörter, eine Beschreibung ihrer Bildsprache und je eine Deutung für aufrecht und umgekehrt. Deck wählen Beide Decks zeigen dieselben 78 Karten mit denselben Stichwörter",
+      "activeHash": "#tarot",
+      "mainTextLength": 4559,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "crystals",
+      "hash": "#crystals",
+      "kind": "core",
+      "title": "Kristalle & Steine — Chakra, Farbe, Wirkung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Kristalle & Steine"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "KRISTALLE / MATERIAL Kristalle & Steine Kraft der Erde. Filter nach Chakra, Farbe, Wirkung. Alle Chakren Wurzel (Rot) Sakral (Orange) Solarplexus (Gelb) Herz (Grün/Rosa) Hals (Blau) Stirn (Indigo) Krone (Violett/Weiß) Alle Farben Rot Orange Gelb Grün Blau Violett Rosa Weiß/Klar Schwarz Chakra Drittes Auge Hals / Drittes Auge Herz Herz / Hals Herz / Sakral Kronen Kronen / Alle Kronen- & Drittes Aug",
+      "activeHash": "#crystals",
+      "mainTextLength": 7337,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "moon",
+      "hash": "#moon",
+      "kind": "core",
+      "title": "Mondphasen, Kalender & Deutung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Mondphasen"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "MOND / ZYKLUS Mondphasen Was gerade am Himmel steht, wann die nächste Hauptphase ist — und was die acht Phasen bedeuten. Nordhalbkugel-Darstellung, Licht von links Dienstag, 03. November 2026 · 04:56 MEZ · Europe/Berlin Abnehmende Sichel 36 % beleuchtet · abnehmend MONDALTER 23,5 Tage seit Neumond IM ZYKLUS Phase 8 von 8 · 79 % des Zyklus NÄCHSTES EREIGNIS Neumond in 6 Tagen Zuletzt: Letztes Viert",
+      "activeHash": "#moon",
+      "mainTextLength": 9006,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "runes",
+      "hash": "#runes",
+      "kind": "core",
+      "title": "Runen — Das ältere Futhark | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Runen — Das ältere Futhark"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "RUNEN / ÄLTERES FUTHARK Runen — Das ältere Futhark 24 Runen. Werfe die Runen für Antworten aus der Tiefe der Zeit. 3 Runen werfen (Vergangenheit, Gegenwart, Zukunft) Einzelne Rune Alle Runen des älteren Futhark ᚠ Fehu F Vieh, Reichtum, bewegliches Gut ᚢ Uruz U Auerochse, Urkraft, Vitalität ᚦ Thurisaz TH Riese, Dorn, Thor's Hammer ᚨ Ansuz A Gott, Odin, Mund, Kommunikation ᚱ Raido R Reise, Rad, Rhyt",
+      "activeHash": "#runes",
+      "mainTextLength": 1208,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "astrologie",
+      "hash": "#astrologie",
+      "kind": "core",
+      "title": "Astrologie — Zeichen, Faktoren, Häuser, Aspekte | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Astrologie verstehen"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "ASTROLOGIE / NACHSCHLAGEN UND LERNEN Astrologie verstehen 12 Zeichen · 10 Faktoren · 12 Häuser · 5 Hauptaspekte Ein Lern- und Nachschlagebereich für die westliche tropische Astrologie: erst die Grundbegriffe, dann die Vergleichstabellen, dann die Beispiele — und an jeder Stelle die Grenze zwischen Überlieferung und belegtem Wissen. Vier Einstiege Neu hier? Lernpfad Sechs Stufen von „Was Astrologie",
+      "activeHash": "#astrologie",
+      "mainTextLength": 2914,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "blog",
+      "hash": "#blog",
+      "kind": "core",
+      "title": "Wissen & Artikel — Esoterik, Rituale, Geschichte | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Wissen & Artikel"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "WISSEN / ARTIKEL Wissen & Artikel Tiefgehende Artikel zu Esoterik, Spiritualität & alter Weisheit. Alle Kategorien Tarot Kristalle Runen Mond & Zyklen Rituale Geschichte & Mythos 📜 tarot 2025-10-15 ⏱ 12 Min Die 78 Tarot-Karten: Eine Reise durch die Major & Minor Arcana Die 78 Karten des Tarot bilden ein komplettes Symbolsystem für menschliche Erfahrungen. Von den 22 Major Arcana — den großen Lebe",
+      "activeHash": "#blog",
+      "mainTextLength": 3379,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "pendeln",
+      "hash": "#pendeln",
+      "kind": "core",
+      "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Radiästhesie, Pendeln und Orakel"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "THEMENMODUL · INSTRUMENTE UND DEUTUNG Radiästhesie, Pendeln und Orakel Wie Rute, Pendel und Tafel gedeutet werden, was darüber dokumentiert ist — und wo die Grenze zwischen Erfahrung und Beleg verläuft. Mit Radiästhesie beginnen Einordnung lesen ↓ BEREICHE 3 Themen KAPITEL 30 KENNZEICHNUNG 5 Stufen Pendelgeometrie. Länge L, Auslenkung α, Schwingungsdauer T. Eigene Zeichnung, kein Messgerät und kei",
+      "activeHash": "#pendeln",
+      "mainTextLength": 4997,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "unbekannt",
+      "hash": "#farbwelten/gibtsnicht",
+      "kind": "notfound",
+      "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Radiästhesie, Pendeln und Orakel"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#farbwelten/gibtsnicht“ gehört zu keiner Seite dieser Website. Zur Startseite THEMENMODUL · INSTRUMENTE UND DEUTUNG Radiästhesie, Pendeln und Orakel Wie Rute, Pendel und Tafel gedeutet werden, was darüber dokumentiert ist — und wo die Grenze zwischen Erfahrung und Beleg verläuft. Mit Radiästhesie beginnen Einordnung lesen ↓ BEREICHE 3 Themen KAPITEL 30 KENNZEICHNUNG 5 Stufen Pendelgeometrie. Läng",
+      "activeHash": "#farbwelten/gibtsnicht",
+      "mainTextLength": 5076,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "unbekannt-kern",
+      "hash": "#gibtsnicht",
+      "kind": "notfound",
+      "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Radiästhesie, Pendeln und Orakel"
+      ],
+      "rootExists": false,
+      "rootChildCount": 0,
+      "text": "„#gibtsnicht“ gehört zu keiner Seite dieser Website. Zur Startseite THEMENMODUL · INSTRUMENTE UND DEUTUNG Radiästhesie, Pendeln und Orakel Wie Rute, Pendel und Tafel gedeutet werden, was darüber dokumentiert ist — und wo die Grenze zwischen Erfahrung und Beleg verläuft. Mit Radiästhesie beginnen Einordnung lesen ↓ BEREICHE 3 Themen KAPITEL 30 KENNZEICHNUNG 5 Stufen Pendelgeometrie. Länge L, Auslen",
+      "activeHash": "#gibtsnicht",
+      "mainTextLength": 5065,
+      "hasMarkdownTable": false,
+      "problems": []
+    }
+  ]
+}

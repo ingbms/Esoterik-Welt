@@ -1,0 +1,1784 @@
+{
+  "summary": {
+    "axe": {
+      "runs": 22,
+      "violations": 1,
+      "byEngine": {
+        "chromium": {
+          "launched": true,
+          "views": 12,
+          "violations": 1,
+          "incomplete": [
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 15
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 8
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 8
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 8
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 8
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 8
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 3
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 4
+            },
+            {
+              "id": "link-in-text-block",
+              "count": 1
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 4
+            },
+            {
+              "id": "link-in-text-block",
+              "count": 1
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 2
+            },
+            {
+              "id": "color-contrast",
+              "count": 3
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 7
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 3
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "firefox": {
+          "launched": true,
+          "views": 5,
+          "violations": 0,
+          "incomplete": [
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 8
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 8
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 2
+            },
+            {
+              "id": "color-contrast",
+              "count": 3
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 7
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 3
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "webkit": {
+          "launched": true,
+          "views": 5,
+          "violations": 0,
+          "incomplete": [
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 8
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 8
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 2
+            },
+            {
+              "id": "color-contrast",
+              "count": 3
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 7
+            },
+            {
+              "id": "aria-allowed-role",
+              "count": 40
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "count": 1
+            },
+            {
+              "id": "color-contrast",
+              "count": 3
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      }
+    },
+    "contrast": [
+      {
+        "id": "rot",
+        "inkOnDeep": 4.81,
+        "inkOnDeepAlt": 5.19,
+        "softOnDeep": 7.21,
+        "lineOnDeep": 3.27,
+        "lineOnDeepAlt": 3.53,
+        "coreOnDeep": 3.43
+      },
+      {
+        "id": "orange",
+        "inkOnDeep": 4.9,
+        "inkOnDeepAlt": 5.27,
+        "softOnDeep": 7.33,
+        "lineOnDeep": 3.33,
+        "lineOnDeepAlt": 3.58,
+        "coreOnDeep": 3.54
+      },
+      {
+        "id": "gelb",
+        "inkOnDeep": 5.06,
+        "inkOnDeepAlt": 5.47,
+        "softOnDeep": 7.41,
+        "lineOnDeep": 3.25,
+        "lineOnDeepAlt": 3.51,
+        "coreOnDeep": 3.66
+      },
+      {
+        "id": "gruen",
+        "inkOnDeep": 5.33,
+        "inkOnDeepAlt": 5.73,
+        "softOnDeep": 7.58,
+        "lineOnDeep": 3.22,
+        "lineOnDeepAlt": 3.46,
+        "coreOnDeep": 3.9
+      },
+      {
+        "id": "tuerkis",
+        "inkOnDeep": 5.22,
+        "inkOnDeepAlt": 5.66,
+        "softOnDeep": 7.58,
+        "lineOnDeep": 3.31,
+        "lineOnDeepAlt": 3.59,
+        "coreOnDeep": 3.82
+      },
+      {
+        "id": "blau",
+        "inkOnDeep": 5.1,
+        "inkOnDeepAlt": 5.5,
+        "softOnDeep": 7.41,
+        "lineOnDeep": 3.27,
+        "lineOnDeepAlt": 3.52,
+        "coreOnDeep": 3.66
+      },
+      {
+        "id": "indigo",
+        "inkOnDeep": 4.92,
+        "inkOnDeepAlt": 5.31,
+        "softOnDeep": 7.35,
+        "lineOnDeep": 3.33,
+        "lineOnDeepAlt": 3.6,
+        "coreOnDeep": 3.53
+      },
+      {
+        "id": "violett",
+        "inkOnDeep": 4.83,
+        "inkOnDeepAlt": 5.2,
+        "softOnDeep": 7.23,
+        "lineOnDeep": 3.28,
+        "lineOnDeepAlt": 3.53,
+        "coreOnDeep": 3.42
+      },
+      {
+        "id": "magenta",
+        "inkOnDeep": 4.81,
+        "inkOnDeepAlt": 5.15,
+        "softOnDeep": 7.25,
+        "lineOnDeep": 3.26,
+        "lineOnDeepAlt": 3.5,
+        "coreOnDeep": 3.43
+      },
+      {
+        "id": "rosa",
+        "inkOnDeep": 6.19,
+        "inkOnDeepAlt": 6.67,
+        "softOnDeep": 7.31,
+        "lineOnDeep": 3.63,
+        "lineOnDeepAlt": 3.91,
+        "coreOnDeep": 3.52
+      },
+      {
+        "id": "weiss",
+        "inkOnDeep": 9.78,
+        "inkOnDeepAlt": 10.56,
+        "softOnDeep": 16.07,
+        "lineOnDeep": 5.49,
+        "lineOnDeepAlt": 5.92,
+        "coreOnDeep": 14.32
+      },
+      {
+        "id": "schwarz",
+        "inkOnDeep": 7.43,
+        "inkOnDeepAlt": 8.02,
+        "softOnDeep": 2.19,
+        "lineOnDeep": 3.25,
+        "lineOnDeepAlt": 3.51,
+        "coreOnDeep": 1.34
+      }
+    ],
+    "measuredText": [
+      {
+        "view": "landing",
+        "checked": 358,
+        "min": 8.42,
+        "failures": 0
+      },
+      {
+        "view": "tuerkis",
+        "checked": 215,
+        "min": 5.9,
+        "failures": 0
+      },
+      {
+        "view": "magenta",
+        "checked": 206,
+        "min": 5.32,
+        "failures": 0
+      },
+      {
+        "view": "rosa",
+        "checked": 207,
+        "min": 6.87,
+        "failures": 0
+      },
+      {
+        "view": "weiss",
+        "checked": 210,
+        "min": 8.42,
+        "failures": 0
+      },
+      {
+        "view": "schwarz",
+        "checked": 210,
+        "min": 8.34,
+        "failures": 0
+      },
+      {
+        "view": "farbtherapie",
+        "checked": 90,
+        "min": 8.42,
+        "failures": 0
+      },
+      {
+        "view": "farbpsychologie",
+        "checked": 82,
+        "min": 8.42,
+        "failures": 0
+      },
+      {
+        "view": "lichtmedizin",
+        "checked": 109,
+        "min": 9.09,
+        "failures": 0
+      },
+      {
+        "view": "kompass",
+        "checked": 142,
+        "min": 7.96,
+        "failures": 0
+      },
+      {
+        "view": "farbmeditation",
+        "checked": 122,
+        "min": 8.34,
+        "failures": 0
+      },
+      {
+        "view": "zeitleiste",
+        "checked": 244,
+        "min": 9.09,
+        "failures": 0
+      }
+    ],
+    "focus": [
+      {
+        "view": "landing",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "tuerkis",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "magenta",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "rosa",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "weiss",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "schwarz",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "farbtherapie",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "farbpsychologie",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "lichtmedizin",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "kompass",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "farbmeditation",
+        "tabStops": 12,
+        "invisible": 0
+      },
+      {
+        "view": "zeitleiste",
+        "tabStops": 12,
+        "invisible": 0
+      }
+    ],
+    "labels": {
+      "landing": [
+        {
+          "tag": "A",
+          "type": "",
+          "name": "Farbwelten entdecken",
+          "valueText": null,
+          "min": null,
+          "max": null
+        }
+      ],
+      "kompass": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "RotWurzelchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "OrangeSakralchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "GelbSolarplexuschakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "GrünHerzchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Türkis (Cyan)ohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "BlauHalschakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "IndigoStirnchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "ViolettKronenchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Magentaohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Rosaohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Weißohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Schwarzohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "name": "Farbseite Rot öffnen",
+          "valueText": null,
+          "min": null,
+          "max": null
+        }
+      ],
+      "farbmeditation": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "RotWurzelchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "OrangeSakralchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "GelbSolarplexuschakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "GrünHerzchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Türkis (Cyan)ohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "BlauHalschakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "IndigoStirnchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "ViolettKronenchakra · moderne Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Magentaohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Rosaohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Weißohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "Schwarzohne Chakra-Zuordnung",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "range",
+          "name": "Dauer in Minuten",
+          "valueText": null,
+          "min": "1",
+          "max": "20"
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "name": "Start",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "name": "Pause",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "name": "Beenden",
+          "valueText": null,
+          "min": null,
+          "max": null
+        }
+      ],
+      "zeitleiste": [
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "name": "Alle (17)",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "name": "Chakra-Geschichte (4)",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "name": "Farbpsychologie (3)",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "name": "Chromotherapie (2)",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "name": "Lichtmedizin (7)",
+          "valueText": null,
+          "min": null,
+          "max": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "name": "Spektrum & Farbmetrik (1)",
+          "valueText": null,
+          "min": null,
+          "max": null
+        }
+      ]
+    },
+    "liveRegions": {
+      "landing": [
+        {
+          "tag": "SPAN",
+          "role": null,
+          "live": "polite",
+          "id": "favCounter",
+          "textLength": 3
+        },
+        {
+          "tag": "DIV",
+          "role": "status",
+          "live": null,
+          "id": "routeNotice",
+          "textLength": 14
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotDeckStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotResultCount",
+          "textLength": 9
+        },
+        {
+          "tag": "P",
+          "role": "alert",
+          "live": null,
+          "id": "moonError",
+          "textLength": 132
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "moonCalendarLabel",
+          "textLength": 13
+        },
+        {
+          "tag": "DIV",
+          "role": null,
+          "live": "polite",
+          "id": "moonDayDetail",
+          "textLength": 493
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": null,
+          "id": "icalStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "articleListStatus",
+          "textLength": 33
+        }
+      ],
+      "kompass": [
+        {
+          "tag": "SPAN",
+          "role": null,
+          "live": "polite",
+          "id": "favCounter",
+          "textLength": 3
+        },
+        {
+          "tag": "DIV",
+          "role": "status",
+          "live": null,
+          "id": "routeNotice",
+          "textLength": 14
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotDeckStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotResultCount",
+          "textLength": 9
+        },
+        {
+          "tag": "P",
+          "role": "alert",
+          "live": null,
+          "id": "moonError",
+          "textLength": 132
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "moonCalendarLabel",
+          "textLength": 13
+        },
+        {
+          "tag": "DIV",
+          "role": null,
+          "live": "polite",
+          "id": "moonDayDetail",
+          "textLength": 493
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": null,
+          "id": "icalStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": null,
+          "id": "fwCompassSummary",
+          "textLength": 76
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "articleListStatus",
+          "textLength": 33
+        }
+      ],
+      "farbmeditation": [
+        {
+          "tag": "SPAN",
+          "role": null,
+          "live": "polite",
+          "id": "favCounter",
+          "textLength": 3
+        },
+        {
+          "tag": "DIV",
+          "role": "status",
+          "live": null,
+          "id": "routeNotice",
+          "textLength": 14
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotDeckStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotResultCount",
+          "textLength": 9
+        },
+        {
+          "tag": "P",
+          "role": "alert",
+          "live": null,
+          "id": "moonError",
+          "textLength": 132
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "moonCalendarLabel",
+          "textLength": 13
+        },
+        {
+          "tag": "DIV",
+          "role": null,
+          "live": "polite",
+          "id": "moonDayDetail",
+          "textLength": 493
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": null,
+          "id": "icalStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": "timer",
+          "live": "off",
+          "id": "fwMedTimer",
+          "textLength": 5
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": null,
+          "id": "fwMedStatus",
+          "textLength": 44
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "articleListStatus",
+          "textLength": 33
+        }
+      ],
+      "zeitleiste": [
+        {
+          "tag": "SPAN",
+          "role": null,
+          "live": "polite",
+          "id": "favCounter",
+          "textLength": 3
+        },
+        {
+          "tag": "DIV",
+          "role": "status",
+          "live": null,
+          "id": "routeNotice",
+          "textLength": 14
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotDeckStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotResultCount",
+          "textLength": 9
+        },
+        {
+          "tag": "P",
+          "role": "alert",
+          "live": null,
+          "id": "moonError",
+          "textLength": 132
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "moonCalendarLabel",
+          "textLength": 13
+        },
+        {
+          "tag": "DIV",
+          "role": null,
+          "live": "polite",
+          "id": "moonDayDetail",
+          "textLength": 493
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": null,
+          "id": "icalStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": null,
+          "id": "fwTimelineStatus",
+          "textLength": 21
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "articleListStatus",
+          "textLength": 33
+        }
+      ],
+      "farbtherapie": [
+        {
+          "tag": "SPAN",
+          "role": null,
+          "live": "polite",
+          "id": "favCounter",
+          "textLength": 3
+        },
+        {
+          "tag": "DIV",
+          "role": "status",
+          "live": null,
+          "id": "routeNotice",
+          "textLength": 14
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotDeckStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": "polite",
+          "id": "tarotResultCount",
+          "textLength": 9
+        },
+        {
+          "tag": "P",
+          "role": "alert",
+          "live": null,
+          "id": "moonError",
+          "textLength": 132
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "moonCalendarLabel",
+          "textLength": 13
+        },
+        {
+          "tag": "DIV",
+          "role": null,
+          "live": "polite",
+          "id": "moonDayDetail",
+          "textLength": 493
+        },
+        {
+          "tag": "P",
+          "role": "status",
+          "live": null,
+          "id": "icalStatus",
+          "textLength": 0
+        },
+        {
+          "tag": "P",
+          "role": null,
+          "live": "polite",
+          "id": "articleListStatus",
+          "textLength": 33
+        }
+      ]
+    },
+    "headingSkips": [
+      {
+        "view": "landing",
+        "skip": false
+      },
+      {
+        "view": "tuerkis",
+        "skip": false
+      },
+      {
+        "view": "magenta",
+        "skip": false
+      },
+      {
+        "view": "rosa",
+        "skip": false
+      },
+      {
+        "view": "weiss",
+        "skip": false
+      },
+      {
+        "view": "schwarz",
+        "skip": false
+      },
+      {
+        "view": "farbtherapie",
+        "skip": false
+      },
+      {
+        "view": "farbpsychologie",
+        "skip": false
+      },
+      {
+        "view": "lichtmedizin",
+        "skip": false
+      },
+      {
+        "view": "kompass",
+        "skip": false
+      },
+      {
+        "view": "farbmeditation",
+        "skip": false
+      },
+      {
+        "view": "zeitleiste",
+        "skip": false
+      }
+    ],
+    "findings": [
+      {
+        "id": "P3-axe",
+        "severity": "blocking",
+        "message": "chromium/farbtherapie: link-in-text-block (serious, 3 Knoten) – #was-farbtherapie-ist > p:nth-child(4) > a[href$=\"#farbwelten/lichtmedizin\"]",
+        "repro": "#farbwelten/farbtherapie"
+      }
+    ],
+    "blocking": 1
+  },
+  "axeResults": [
+    {
+      "label": "chromium:landing",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 15
+        }
+      ],
+      "passes": 41
+    },
+    {
+      "label": "chromium:tuerkis",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 8
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "label": "chromium:magenta",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 8
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "label": "chromium:rosa",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 8
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "label": "chromium:weiss",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 8
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "label": "chromium:schwarz",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 8
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "label": "chromium:farbtherapie",
+      "violations": [
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "nodes": [
+            {
+              "target": [
+                "#was-farbtherapie-ist > p:nth-child(4) > a[href$=\"#farbwelten/lichtmedizin\"]"
+              ],
+              "summary": "Fix any of the following:   The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7)"
+            },
+            {
+              "target": [
+                "a[href=\"#farbwelten/farbpsychologie\"]"
+              ],
+              "summary": "Fix any of the following:   The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7)"
+            },
+            {
+              "target": [
+                "#grenzen-und-risiken > p:nth-child(4) > a[href$=\"#farbwelten/lichtmedizin\"]"
+              ],
+              "summary": "Fix any of the following:   The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7)"
+            }
+          ],
+          "count": 3
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ],
+      "passes": 38
+    },
+    {
+      "label": "chromium:farbpsychologie",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 4
+        },
+        {
+          "id": "link-in-text-block",
+          "count": 1
+        }
+      ],
+      "passes": 38
+    },
+    {
+      "label": "chromium:lichtmedizin",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 4
+        },
+        {
+          "id": "link-in-text-block",
+          "count": 1
+        }
+      ],
+      "passes": 38
+    },
+    {
+      "label": "chromium:kompass",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 2
+        },
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ],
+      "passes": 44
+    },
+    {
+      "label": "chromium:farbmeditation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 7
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "label": "chromium:zeitleiste",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ],
+      "passes": 41
+    },
+    {
+      "label": "firefox:tuerkis",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 8
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "label": "firefox:schwarz",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 8
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "label": "firefox:kompass",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 2
+        },
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ],
+      "passes": 44
+    },
+    {
+      "label": "firefox:farbmeditation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 7
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "label": "firefox:zeitleiste",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ],
+      "passes": 41
+    },
+    {
+      "label": "webkit:tuerkis",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 8
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "label": "webkit:schwarz",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 8
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "label": "webkit:kompass",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 2
+        },
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ],
+      "passes": 44
+    },
+    {
+      "label": "webkit:farbmeditation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 7
+        }
+      ],
+      "passes": 45
+    },
+    {
+      "label": "webkit:zeitleiste",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "count": 40
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 3
+        }
+      ],
+      "passes": 41
+    }
+  ],
+  "focusRows": [
+    {
+      "view": "landing",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "tuerkis",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "magenta",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "rosa",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "weiss",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "schwarz",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "farbtherapie",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "farbpsychologie",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "lichtmedizin",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "kompass",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "farbmeditation",
+      "count": 12,
+      "invisible": []
+    },
+    {
+      "view": "zeitleiste",
+      "count": 12,
+      "invisible": []
+    }
+  ]
+}

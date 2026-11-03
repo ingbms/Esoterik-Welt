@@ -1,0 +1,157 @@
+{
+  "generatedAt": "2026-11-03T01:32:42.662Z",
+  "widths": {
+    "320": {
+      "panelH": 1406,
+      "padding": "16px",
+      "rowGap": "20px",
+      "display": "grid",
+      "docH": 2995,
+      "children": [
+        {
+          "tag": "h2",
+          "cls": "rad-ws-panel-head",
+          "h": 15,
+          "txt": "Neuer Eintrag"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 81,
+          "txt": "Datum"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 80,
+          "txt": "Frage 0 / 200"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 79,
+          "txt": "Methode Pendel über Tafel Winkelrute Freies Pendeln Kartenle"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 79,
+          "txt": "Vorhersage"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 106,
+          "txt": "Ergebnis (später) 0 / 500"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 106,
+          "txt": "Bewertung (später) 0 / 500"
+        },
+        {
+          "tag": "fieldset",
+          "cls": "rad-ws-choice",
+          "h": 304,
+          "txt": "Sicherheit (1 = geraten, 5 = sicher) 1 2 3 4 5"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-actions",
+          "h": 48,
+          "txt": "Eintrag speichern"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-actions",
+          "h": 168,
+          "txt": "Alle exportieren (JSON) Alle exportieren (CSV) Alle Einträge"
+        },
+        {
+          "tag": "p",
+          "cls": "rad-ws-hint",
+          "h": 107,
+          "txt": "Speicherorte: esot_rad_journal_v1, esot_rad_experiment_v1, e"
+        }
+      ],
+      "sumChildren": 1173
+    },
+    "1440": {
+      "panelH": 1199,
+      "padding": "20px",
+      "rowGap": "20px",
+      "display": "grid",
+      "docH": 1910,
+      "children": [
+        {
+          "tag": "h2",
+          "cls": "rad-ws-panel-head",
+          "h": 15,
+          "txt": "Neuer Eintrag"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 81,
+          "txt": "Datum"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 80,
+          "txt": "Frage 0 / 200"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 79,
+          "txt": "Methode Pendel über Tafel Winkelrute Freies Pendeln Kartenle"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 79,
+          "txt": "Vorhersage"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 106,
+          "txt": "Ergebnis (später) 0 / 500"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-field",
+          "h": 106,
+          "txt": "Bewertung (später) 0 / 500"
+        },
+        {
+          "tag": "fieldset",
+          "cls": "rad-ws-choice",
+          "h": 192,
+          "txt": "Sicherheit (1 = geraten, 5 = sicher) 1 2 3 4 5"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-actions",
+          "h": 48,
+          "txt": "Eintrag speichern"
+        },
+        {
+          "tag": "div",
+          "cls": "rad-ws-actions",
+          "h": 108,
+          "txt": "Alle exportieren (JSON) Alle exportieren (CSV) Alle Einträge"
+        },
+        {
+          "tag": "p",
+          "cls": "rad-ws-hint",
+          "h": 64,
+          "txt": "Speicherorte: esot_rad_journal_v1, esot_rad_experiment_v1, e"
+        }
+      ],
+      "sumChildren": 958
+    }
+  }
+}

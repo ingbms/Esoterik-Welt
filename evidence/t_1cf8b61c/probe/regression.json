@@ -1,0 +1,267 @@
+{
+  "pages": 8,
+  "regressions": [],
+  "navBefore": [
+    "Start",
+    "Tarot",
+    "Kristalle",
+    "Mondphasen",
+    "Astrologie",
+    "Runen",
+    "Pendeln",
+    "Wissen"
+  ],
+  "navAfter": [
+    "Start",
+    "Tarot",
+    "Kristalle",
+    "Mondphasen",
+    "Astrologie",
+    "Runen",
+    "Pendeln",
+    "Farben",
+    "Wissen"
+  ],
+  "rows": [
+    {
+      "hash": "#home",
+      "before": {
+        "violations": [],
+        "nav": 8,
+        "heading": [
+          "Entdecke die verborgene Sprache des Universums"
+        ]
+      },
+      "after": {
+        "violations": [],
+        "nav": 9,
+        "heading": [
+          "Entdecke die verborgene Sprache des Universums"
+        ]
+      },
+      "newViolations": [],
+      "moreNodes": [],
+      "consoleErrors": {
+        "before": 0,
+        "after": 0
+      },
+      "pageErrors": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "hash": "#tarot",
+      "before": {
+        "violations": [
+          "label-content-name-mismatch:78"
+        ],
+        "nav": 8,
+        "heading": [
+          "Tarot — Der Spiegel der Seele"
+        ]
+      },
+      "after": {
+        "violations": [
+          "label-content-name-mismatch:78"
+        ],
+        "nav": 9,
+        "heading": [
+          "Tarot — Der Spiegel der Seele"
+        ]
+      },
+      "newViolations": [],
+      "moreNodes": [],
+      "consoleErrors": {
+        "before": 0,
+        "after": 0
+      },
+      "pageErrors": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "hash": "#crystals",
+      "before": {
+        "violations": [
+          "label-content-name-mismatch:32"
+        ],
+        "nav": 8,
+        "heading": [
+          "Kristalle & Steine"
+        ]
+      },
+      "after": {
+        "violations": [
+          "label-content-name-mismatch:32"
+        ],
+        "nav": 9,
+        "heading": [
+          "Kristalle & Steine"
+        ]
+      },
+      "newViolations": [],
+      "moreNodes": [],
+      "consoleErrors": {
+        "before": 0,
+        "after": 0
+      },
+      "pageErrors": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "hash": "#moon",
+      "before": {
+        "violations": [
+          "label-content-name-mismatch:31"
+        ],
+        "nav": 8,
+        "heading": [
+          "Mondphasen"
+        ]
+      },
+      "after": {
+        "violations": [
+          "label-content-name-mismatch:31"
+        ],
+        "nav": 9,
+        "heading": [
+          "Mondphasen"
+        ]
+      },
+      "newViolations": [],
+      "moreNodes": [],
+      "consoleErrors": {
+        "before": 0,
+        "after": 0
+      },
+      "pageErrors": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "hash": "#runes",
+      "before": {
+        "violations": [
+          "label-content-name-mismatch:24"
+        ],
+        "nav": 8,
+        "heading": [
+          "Runen — Das ältere Futhark"
+        ]
+      },
+      "after": {
+        "violations": [
+          "label-content-name-mismatch:24"
+        ],
+        "nav": 9,
+        "heading": [
+          "Runen — Das ältere Futhark"
+        ]
+      },
+      "newViolations": [],
+      "moreNodes": [],
+      "consoleErrors": {
+        "before": 0,
+        "after": 0
+      },
+      "pageErrors": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "hash": "#astrologie",
+      "before": {
+        "violations": [
+          "link-in-text-block:1"
+        ],
+        "nav": 8,
+        "heading": [
+          "Astrologie verstehen"
+        ]
+      },
+      "after": {
+        "violations": [
+          "link-in-text-block:1"
+        ],
+        "nav": 9,
+        "heading": [
+          "Astrologie verstehen"
+        ]
+      },
+      "newViolations": [],
+      "moreNodes": [],
+      "consoleErrors": {
+        "before": 0,
+        "after": 0
+      },
+      "pageErrors": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "hash": "#blog",
+      "before": {
+        "violations": [
+          "label-content-name-mismatch:10"
+        ],
+        "nav": 8,
+        "heading": [
+          "Wissen & Artikel"
+        ]
+      },
+      "after": {
+        "violations": [
+          "label-content-name-mismatch:10"
+        ],
+        "nav": 9,
+        "heading": [
+          "Wissen & Artikel"
+        ]
+      },
+      "newViolations": [],
+      "moreNodes": [],
+      "consoleErrors": {
+        "before": 0,
+        "after": 0
+      },
+      "pageErrors": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "hash": "#pendeln",
+      "before": {
+        "violations": [],
+        "nav": 8,
+        "heading": [
+          "Radiästhesie, Pendeln und Orakel"
+        ]
+      },
+      "after": {
+        "violations": [],
+        "nav": 9,
+        "heading": [
+          "Radiästhesie, Pendeln und Orakel"
+        ]
+      },
+      "newViolations": [],
+      "moreNodes": [],
+      "consoleErrors": {
+        "before": 0,
+        "after": 0
+      },
+      "pageErrors": {
+        "before": 0,
+        "after": 0
+      }
+    }
+  ]
+}

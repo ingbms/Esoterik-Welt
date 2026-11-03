@@ -1,0 +1,1989 @@
+{
+ "axeVersion": "4.14.0",
+ "widths": [
+  1440,
+  375
+ ],
+ "runs": [
+  {
+   "width": 1440,
+   "route": "module-landing",
+   "path": "/#pendeln",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    },
+    {
+     "id": "color-contrast",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "topic-pendeln",
+   "path": "/#pendeln/pendeln",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 2
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "path": "/#pendeln/quellen",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 17
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "glossar",
+   "path": "/#pendeln/glossar",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    },
+    {
+     "id": "color-contrast",
+     "count": 17
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "methodik",
+   "path": "/#pendeln/methodik",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 6
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "labor",
+   "path": "/#pendeln/labor",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "studio",
+   "path": "/#pendeln/studio",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 41
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 2
+    },
+    {
+     "id": "color-contrast",
+     "count": 7
+    },
+    {
+     "id": "duplicate-id-aria",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "experiment",
+   "path": "/#pendeln/experiment",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "journal",
+   "path": "/#pendeln/journal",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 1
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "doc-index",
+   "path": "/radiasthesie/",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 2
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "width": 1440,
+   "route": "doc-pendeln",
+   "path": "/radiasthesie/pendeln.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 4
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "path": "/radiasthesie/quellen.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 19
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "path": "/radiasthesie/radiasthesie.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 4
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-orakel",
+   "path": "/radiasthesie/orakel.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 4
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-glossar",
+   "path": "/radiasthesie/glossar.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 5
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "path": "/radiasthesie/methodik.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 8
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "module-landing",
+   "path": "/#pendeln",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    },
+    {
+     "id": "color-contrast",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "topic-pendeln",
+   "path": "/#pendeln/pendeln",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 2
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "path": "/#pendeln/quellen",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 17
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "glossar",
+   "path": "/#pendeln/glossar",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    },
+    {
+     "id": "color-contrast",
+     "count": 17
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "methodik",
+   "path": "/#pendeln/methodik",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 6
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "labor",
+   "path": "/#pendeln/labor",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "studio",
+   "path": "/#pendeln/studio",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 41
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 2
+    },
+    {
+     "id": "color-contrast",
+     "count": 7
+    },
+    {
+     "id": "duplicate-id-aria",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "experiment",
+   "path": "/#pendeln/experiment",
+   "violations": [],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "journal",
+   "path": "/#pendeln/journal",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 1
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "aria-allowed-role",
+     "count": 40
+    },
+    {
+     "id": "aria-prohibited-attr",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "doc-index",
+   "path": "/radiasthesie/",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 2
+    }
+   ],
+   "incomplete": [
+    {
+     "id": "color-contrast",
+     "count": 5
+    }
+   ]
+  },
+  {
+   "width": 375,
+   "route": "doc-pendeln",
+   "path": "/radiasthesie/pendeln.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 4
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "path": "/radiasthesie/quellen.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 19
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-radiasthesie",
+   "path": "/radiasthesie/radiasthesie.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 4
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-orakel",
+   "path": "/radiasthesie/orakel.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 4
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-glossar",
+   "path": "/radiasthesie/glossar.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 5
+    }
+   ],
+   "incomplete": []
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "path": "/radiasthesie/methodik.html",
+   "violations": [
+    {
+     "id": "link-in-text-block",
+     "count": 8
+    }
+   ],
+   "incomplete": []
+  }
+ ],
+ "violations": [
+  {
+   "width": 1440,
+   "route": "topic-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-01 > figcaption > .rad-photo-credit > a[href$=\"#pendeln/methodik\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "topic-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-02 > figcaption > .rad-photo-credit > a[href$=\"#pendeln/methodik\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q03 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q09 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q16 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q19 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q20 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q21 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q22 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-source-meta:nth-child(7) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q24 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q25 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q26 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q27 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q28 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q29 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q33 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q54 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "a[href$=\"#pendeln/methodik\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-01 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-02 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-03 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-04 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-05 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-06 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "journal",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".jr-block--labor > .astro-text > a[href$=\"#pendeln/experiment\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-index",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-index",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-01 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-02 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q03 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q09 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q16 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q19 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q20 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q21 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q22 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-source-meta:nth-child(7) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q24 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q25 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q26 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q27 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q28 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q29 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q33 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q54 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-text > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-04 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-03 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-orakel",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-06 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-orakel",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-05 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-orakel",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-orakel",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-text:nth-child(3) > a[href$=\"radiasthesie.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-text:nth-child(3) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-text:nth-child(3) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-01 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-02 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-03 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-04 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-05 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-06 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 1440,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "topic-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-01 > figcaption > .rad-photo-credit > a[href$=\"#pendeln/methodik\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "topic-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-02 > figcaption > .rad-photo-credit > a[href$=\"#pendeln/methodik\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q03 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q09 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q16 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q19 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q20 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q21 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q22 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-source-meta:nth-child(7) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q24 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q25 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q26 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q27 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q28 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q29 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q33 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q54 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "a[href$=\"#pendeln/methodik\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-01 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-02 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-03 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-04 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-05 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-06 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "journal",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".jr-block--labor > .astro-text > a[href$=\"#pendeln/experiment\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-index",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-index",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-01 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-02 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-pendeln",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q03 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q09 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q16 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q19 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q20 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q21 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q22 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-source-meta:nth-child(7) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q24 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q25 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q26 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q27 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q28 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q29 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q33 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#quelle-Q54 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-text > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-quellen",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-radiasthesie",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-04 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-radiasthesie",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-03 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-radiasthesie",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-radiasthesie",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-orakel",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-06 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-orakel",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#bild-rad-media-05 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-orakel",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-orakel",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-text:nth-child(3) > a[href$=\"radiasthesie.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-text:nth-child(3) > a[href$=\"pendeln.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    ".astro-text:nth-child(3) > a[href$=\"orakel.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-glossar",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-01 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-02 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-03 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-04 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-05 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "#nachweis-rad-media-06 > a[rel=\"noopener\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(1) > a[href$=\"methodik.html\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  },
+  {
+   "width": 375,
+   "route": "doc-methodik",
+   "id": "link-in-text-block",
+   "impact": "serious",
+   "target": [
+    "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+   ],
+   "summary": "Fix any of the following: The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surrounding text: #babdb7) The link has no styling"
+  }
+ ]
+}

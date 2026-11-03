@@ -32,7 +32,7 @@ test('offline file entry serves every route without network access', async (t) =
   });
 
   await page.goto(localUrl, { waitUntil: 'load' });
-  await page.waitForFunction(() => document.querySelectorAll('#featureGrid > *').length === 7, { timeout: 10000 });
+  await page.waitForFunction(() => document.querySelectorAll('#featureGrid > *').length === 9, { timeout: 10000 });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(300);
 
@@ -60,7 +60,7 @@ test('offline file entry serves every route without network access', async (t) =
 
   assert.match(startup.url, /^file:\/\//, 'must run from file://');
   assert.equal(startup.background, startup.tokenBackground, 'design-system background must be applied offline');
-  assert.equal(startup.features, 7);
+  assert.equal(startup.features, 9);
   assert.equal(startup.fonts.fraunces, true, 'Fraunces must load from the local font files offline');
   assert.equal(startup.fonts.manrope, true, 'Manrope must load from the local font files offline');
   for (const key of ['tarotCards', 'crystals', 'runes', 'articles']) {
@@ -73,11 +73,49 @@ test('offline file entry serves every route without network access', async (t) =
     'embedded frequency dataset is missing from Lokal.html'
   );
 
-  for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'frequenzen', 'runes', 'blog', 'home']) {
+  for (const route of [
+    'tarot',
+    'crystals',
+    'moon',
+    'astrologie',
+    'frequenzen',
+    'runes',
+    'pendeln',
+    'farbwelten',
+    'blog',
+    'home',
+  ]) {
     await page.click(`.nav-link[data-page="${route}"]`);
     await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible', timeout: 10000 });
     assert.equal(new URL(page.url()).hash, '#' + route, `${route} route hash`);
   }
+
+  // The dowsing area must work from the double-clicked file, including a cold
+  // deep link into a chapter (data is inlined, never fetched).
+  await page.goto(localUrl + '#pendeln/radiasthesie', { waitUntil: 'load' });
+  await page.locator('#pendelnRoot h1#pendeln-title').waitFor({ state: 'visible', timeout: 10000 });
+  assert.match(await page.locator('#pendelnRoot h1#pendeln-title').textContent(), /Radiästhesie/);
+  assert.ok((await page.locator('#pendelnRoot').textContent()).length > 5000, 'dowsing topic must render offline');
+
+  // RAD-11: Das Grenzkapitel und die Themenvernetzung funktionieren offline —
+  // inklusive der Querverweise in vorhandene Module.
+  await page.goto(localUrl + '#pendeln/radiasthesie/frequenz', { waitUntil: 'load' });
+  const frequency = page.locator('#pendelnRoot #frequenz');
+  await frequency.waitFor({ state: 'visible', timeout: 10000 });
+  assert.match(await frequency.textContent(), /Frequenz in Hertz/);
+  assert.match(await frequency.textContent(), /keine SI-Einheit/);
+  const relatedHrefs = await page
+    .locator('#pendelnRoot .rad-related a')
+    .evaluateAll((nodes) => nodes.map((node) => node.getAttribute('href')));
+  assert.ok(relatedHrefs.includes('#astrologie'), 'offline related link to astrology missing');
+  assert.ok(relatedHrefs.includes('#crystals'), 'offline related link to crystals missing');
+
+  // The colour area must work from the double-clicked file, including a cold
+  // deep link into a colour page (its data module is inlined, never fetched).
+  await page.goto(localUrl + '#farbwelten/rot', { waitUntil: 'load' });
+  await page.locator('#farbweltenRoot h1').waitFor({ state: 'visible', timeout: 10000 });
+  assert.match(await page.locator('#farbweltenRoot h1').textContent(), /^Rot$/);
+  assert.ok((await page.locator('#farbweltenRoot').textContent()).length > 3000, 'colour page must render offline');
 
   // The astrology area must work from the double-clicked file, including a
   // cold deep link into a detail page (data is inlined, never fetched).

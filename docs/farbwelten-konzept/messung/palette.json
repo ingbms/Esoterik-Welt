@@ -1,0 +1,623 @@
+{
+  "generated_by": "docs/farbwelten-konzept/scripts/generate-palette.py",
+  "method": "OKLCH-Konstruktion, Gamut-Mapping per Chroma-Reduktion, WCAG-2.x-Kontrastformel",
+  "base": {
+    "bg_deep": "#0b1012",
+    "bg_card": "#141c1f",
+    "bg_hover": "#1a2427",
+    "text_primary": "#eae6dc",
+    "text_secondary": "#babdb7",
+    "sand": "#c6b38e",
+    "sand_hover": "#d5c4a2",
+    "line_strong": "#82928e",
+    "border": "#3c484b",
+    "base_contrast": {
+      "text_primary_auf_bg_deep": 15.36,
+      "text_secondary_auf_bg_deep": 10.07,
+      "sand_auf_bg_deep": 9.33,
+      "text_primary_auf_bg_card": 13.86,
+      "text_secondary_auf_bg_card": 9.09,
+      "sand_auf_bg_card": 8.42,
+      "line_strong_auf_bg_deep": 5.88,
+      "border_auf_bg_deep": 2.02
+    }
+  },
+  "worlds": [
+    {
+      "id": "rot",
+      "name": "Rot",
+      "type": "spectral",
+      "hue_oklch": 27.0,
+      "tokens": {
+        "ink": "#cf6a60",
+        "core": "#bc4a41",
+        "core-deep": "#853630",
+        "soft": "#d69991",
+        "line": "#985c55",
+        "deep": "#281715",
+        "deep-alt": "#1d100e"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 5.36,
+        "ink_auf_bg_card": 4.84,
+        "ink_auf_deep": 4.81,
+        "text_primary_auf_deep": 13.77,
+        "text_secondary_auf_deep": 9.03,
+        "line_auf_deep": 3.27,
+        "line_auf_bg_card": 3.29,
+        "core_auf_bg_deep": 3.82,
+        "core_auf_bg_card": 3.45,
+        "core_deep_auf_bg_card": 2.11,
+        "bg_deep_auf_ink": 5.36,
+        "sand_auf_deep": 8.37
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 3.82,
+        "core_auf_bg_card": 3.45,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "type": "spectral",
+      "hue_oklch": 55.0,
+      "tokens": {
+        "ink": "#c77434",
+        "core": "#ad5c13",
+        "core-deep": "#7a4213",
+        "soft": "#d09f7d",
+        "line": "#936240",
+        "deep": "#26180f",
+        "deep-alt": "#1c110a"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 5.45,
+        "ink_auf_bg_card": 4.92,
+        "ink_auf_deep": 4.9,
+        "text_primary_auf_deep": 13.81,
+        "text_secondary_auf_deep": 9.06,
+        "line_auf_deep": 3.33,
+        "line_auf_bg_card": 3.34,
+        "core_auf_bg_deep": 3.94,
+        "core_auf_bg_card": 3.55,
+        "core_deep_auf_bg_card": 2.15,
+        "bg_deep_auf_ink": 5.45,
+        "sand_auf_deep": 8.39
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 3.94,
+        "core_auf_bg_card": 3.55,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "gelb",
+      "name": "Gelb",
+      "type": "spectral",
+      "hue_oklch": 96.0,
+      "tokens": {
+        "ink": "#a08b32",
+        "core": "#887315",
+        "core-deep": "#605213",
+        "soft": "#b9ab74",
+        "line": "#786c3a",
+        "deep": "#201c0c",
+        "deep-alt": "#171408"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 5.68,
+        "ink_auf_bg_card": 5.13,
+        "ink_auf_deep": 5.06,
+        "text_primary_auf_deep": 13.67,
+        "text_secondary_auf_deep": 8.96,
+        "line_auf_deep": 3.25,
+        "line_auf_bg_card": 3.29,
+        "core_auf_bg_deep": 4.11,
+        "core_auf_bg_card": 3.71,
+        "core_deep_auf_bg_card": 2.23,
+        "bg_deep_auf_ink": 5.68,
+        "sand_auf_deep": 8.31
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 4.11,
+        "core_auf_bg_card": 3.71,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "gruen",
+      "name": "Grün",
+      "type": "spectral",
+      "hue_oklch": 148.0,
+      "tokens": {
+        "ink": "#4da15d",
+        "core": "#1d8b3d",
+        "core-deep": "#1b622d",
+        "soft": "#8bb890",
+        "line": "#47764e",
+        "deep": "#131f14",
+        "deep-alt": "#0d170e"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 5.99,
+        "ink_auf_bg_card": 5.41,
+        "ink_auf_deep": 5.33,
+        "text_primary_auf_deep": 13.66,
+        "text_secondary_auf_deep": 8.96,
+        "line_auf_deep": 3.22,
+        "line_auf_bg_card": 3.27,
+        "core_auf_bg_deep": 4.39,
+        "core_auf_bg_card": 3.96,
+        "core_deep_auf_bg_card": 2.33,
+        "bg_deep_auf_ink": 5.99,
+        "sand_auf_deep": 8.3
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 4.39,
+        "core_auf_bg_card": 3.96,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "tuerkis",
+      "name": "Türkis",
+      "type": "spectral",
+      "hue_oklch": 195.0,
+      "tokens": {
+        "ink": "#389d9d",
+        "core": "#1b8585",
+        "core-deep": "#185e5e",
+        "soft": "#6fbab9",
+        "line": "#3f7776",
+        "deep": "#0a2020",
+        "deep-alt": "#071717"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 5.9,
+        "ink_auf_bg_card": 5.33,
+        "ink_auf_deep": 5.22,
+        "text_primary_auf_deep": 13.59,
+        "text_secondary_auf_deep": 8.91,
+        "line_auf_deep": 3.31,
+        "line_auf_bg_card": 3.38,
+        "core_auf_bg_deep": 4.32,
+        "core_auf_bg_card": 3.9,
+        "core_deep_auf_bg_card": 2.3,
+        "bg_deep_auf_ink": 5.9,
+        "sand_auf_deep": 8.26
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 4.32,
+        "core_auf_bg_card": 3.9,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "blau",
+      "name": "Blau",
+      "type": "spectral",
+      "hue_oklch": 248.0,
+      "tokens": {
+        "ink": "#4391d7",
+        "core": "#1678c3",
+        "core-deep": "#15568a",
+        "soft": "#85afd8",
+        "line": "#447098",
+        "deep": "#111d28",
+        "deep-alt": "#0c151d"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 5.72,
+        "ink_auf_bg_card": 5.16,
+        "ink_auf_deep": 5.1,
+        "text_primary_auf_deep": 13.7,
+        "text_secondary_auf_deep": 8.98,
+        "line_auf_deep": 3.27,
+        "line_auf_bg_card": 3.3,
+        "core_auf_bg_deep": 4.11,
+        "core_auf_bg_card": 3.71,
+        "core_deep_auf_bg_card": 2.25,
+        "bg_deep_auf_ink": 5.72,
+        "sand_auf_deep": 8.32
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 4.11,
+        "core_auf_bg_card": 3.71,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "type": "spectral",
+      "hue_oklch": 285.0,
+      "tokens": {
+        "ink": "#857fd7",
+        "core": "#6e64c8",
+        "core-deep": "#4d478c",
+        "soft": "#a5a5d9",
+        "line": "#6a689c",
+        "deep": "#1a1a28",
+        "deep-alt": "#13121d"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 5.48,
+        "ink_auf_bg_card": 4.95,
+        "ink_auf_deep": 4.92,
+        "text_primary_auf_deep": 13.79,
+        "text_secondary_auf_deep": 9.04,
+        "line_auf_deep": 3.33,
+        "line_auf_bg_card": 3.35,
+        "core_auf_bg_deep": 3.94,
+        "core_auf_bg_card": 3.55,
+        "core_deep_auf_bg_card": 2.14,
+        "bg_deep_auf_ink": 5.48,
+        "sand_auf_deep": 8.38
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 3.94,
+        "core_auf_bg_card": 3.55,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "violett",
+      "name": "Violett",
+      "type": "spectral",
+      "hue_oklch": 318.0,
+      "tokens": {
+        "ink": "#ad71bf",
+        "core": "#9853ad",
+        "core-deep": "#6b3c79",
+        "soft": "#bf9cca",
+        "line": "#82608d",
+        "deep": "#211824",
+        "deep-alt": "#18111a"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 5.37,
+        "ink_auf_bg_card": 4.85,
+        "ink_auf_deep": 4.83,
+        "text_primary_auf_deep": 13.8,
+        "text_secondary_auf_deep": 9.05,
+        "line_auf_deep": 3.28,
+        "line_auf_bg_card": 3.3,
+        "core_auf_bg_deep": 3.81,
+        "core_auf_bg_card": 3.44,
+        "core_deep_auf_bg_card": 2.1,
+        "bg_deep_auf_ink": 5.37,
+        "sand_auf_deep": 8.39
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 3.81,
+        "core_auf_bg_card": 3.44,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "magenta",
+      "name": "Magenta",
+      "type": "non-spectral",
+      "hue_oklch": 345.0,
+      "tokens": {
+        "ink": "#c3699e",
+        "core": "#af4a88",
+        "core-deep": "#7b3660",
+        "soft": "#ce98b6",
+        "line": "#905b79",
+        "deep": "#25161f",
+        "deep-alt": "#1b1016"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 5.32,
+        "ink_auf_bg_card": 4.8,
+        "ink_auf_deep": 4.81,
+        "text_primary_auf_deep": 13.89,
+        "text_secondary_auf_deep": 9.11,
+        "line_auf_deep": 3.26,
+        "line_auf_bg_card": 3.26,
+        "core_auf_bg_deep": 3.79,
+        "core_auf_bg_card": 3.42,
+        "core_deep_auf_bg_card": 2.09,
+        "bg_deep_auf_ink": 5.32,
+        "sand_auf_deep": 8.44
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 3.79,
+        "core_auf_bg_card": 3.42,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "rosa",
+      "name": "Rosa",
+      "type": "non-spectral",
+      "hue_oklch": 0.0,
+      "tokens": {
+        "ink": "#c9899c",
+        "core": "#a15c72",
+        "core-deep": "#714251",
+        "soft": "#c59fa9",
+        "line": "#8e6973",
+        "deep": "#23181b",
+        "deep-alt": "#191113"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 6.87,
+        "ink_auf_bg_card": 6.2,
+        "ink_auf_deep": 6.19,
+        "text_primary_auf_deep": 13.84,
+        "text_secondary_auf_deep": 9.07,
+        "line_auf_deep": 3.63,
+        "line_auf_bg_card": 3.63,
+        "core_auf_bg_deep": 3.91,
+        "core_auf_bg_card": 3.53,
+        "core_deep_auf_bg_card": 2.14,
+        "bg_deep_auf_ink": 6.87,
+        "sand_auf_deep": 8.41
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 3.91,
+        "core_auf_bg_card": 3.53,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "weiss",
+      "name": "Weiß",
+      "type": "neutral",
+      "hue_oklch": 90.0,
+      "tokens": {
+        "ink": "#c9c4b5",
+        "core": "#f1ebda",
+        "core-deep": "#d9d4c8",
+        "soft": "#fbf8f0",
+        "line": "#95928a",
+        "deep": "#1e1c14",
+        "deep-alt": "#16140e"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 10.98,
+        "ink_auf_bg_card": 9.91,
+        "ink_auf_deep": 9.78,
+        "text_primary_auf_deep": 13.68,
+        "text_secondary_auf_deep": 8.97,
+        "line_auf_deep": 5.49,
+        "line_auf_bg_card": 5.56,
+        "core_auf_bg_deep": 16.08,
+        "core_auf_bg_card": 14.51,
+        "core_deep_auf_bg_card": 11.68,
+        "bg_deep_auf_ink": 10.98,
+        "sand_auf_deep": 8.32
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 16.08,
+        "core_auf_bg_card": 14.51,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche hebt sich ohne Rahmen ab"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    },
+    {
+      "id": "schwarz",
+      "name": "Schwarz",
+      "type": "neutral",
+      "hue_oklch": 90.0,
+      "tokens": {
+        "ink": "#b0ab9c",
+        "core": "#383225",
+        "core-deep": "#201d13",
+        "soft": "#55524b",
+        "line": "#6f6c64",
+        "deep": "#1e1c14",
+        "deep-alt": "#16140e"
+      },
+      "contrast": {
+        "ink_auf_bg_deep": 8.34,
+        "ink_auf_bg_card": 7.53,
+        "ink_auf_deep": 7.43,
+        "text_primary_auf_deep": 13.68,
+        "text_secondary_auf_deep": 8.97,
+        "line_auf_deep": 3.25,
+        "line_auf_bg_card": 3.29,
+        "core_auf_bg_deep": 1.5,
+        "core_auf_bg_card": 1.36,
+        "core_deep_auf_bg_card": 1.03,
+        "bg_deep_auf_ink": 8.34,
+        "sand_auf_deep": 8.32
+      },
+      "swatch_separation": {
+        "core_auf_bg_deep": 1.5,
+        "core_auf_bg_card": 1.36,
+        "line_strong_auf_bg_deep": 5.88,
+        "hinweis": "Flaeche wird zusaetzlich durch 1-px-Rahmen --color-line-strong begrenzt"
+      },
+      "checks": {
+        "ink_text_aa": true,
+        "body_on_deep_aa": true,
+        "line_nontext_3to1": true,
+        "button_label_aa": true,
+        "sand_on_deep_aa": true
+      }
+    }
+  ],
+  "spectrum_simulation": [
+    {
+      "nm": 380,
+      "hex": "#610061"
+    },
+    {
+      "nm": 400,
+      "hex": "#8300b5"
+    },
+    {
+      "nm": 420,
+      "hex": "#6a00ff"
+    },
+    {
+      "nm": 440,
+      "hex": "#0000ff"
+    },
+    {
+      "nm": 460,
+      "hex": "#007bff"
+    },
+    {
+      "nm": 480,
+      "hex": "#00d5ff"
+    },
+    {
+      "nm": 500,
+      "hex": "#00ff92"
+    },
+    {
+      "nm": 520,
+      "hex": "#36ff00"
+    },
+    {
+      "nm": 540,
+      "hex": "#81ff00"
+    },
+    {
+      "nm": 560,
+      "hex": "#c3ff00"
+    },
+    {
+      "nm": 580,
+      "hex": "#ffff00"
+    },
+    {
+      "nm": 600,
+      "hex": "#ffbe00"
+    },
+    {
+      "nm": 620,
+      "hex": "#ff7700"
+    },
+    {
+      "nm": 640,
+      "hex": "#ff2100"
+    },
+    {
+      "nm": 660,
+      "hex": "#ff0000"
+    },
+    {
+      "nm": 680,
+      "hex": "#ff0000"
+    },
+    {
+      "nm": 700,
+      "hex": "#ff0000"
+    },
+    {
+      "nm": 720,
+      "hex": "#db0000"
+    },
+    {
+      "nm": 740,
+      "hex": "#b50000"
+    },
+    {
+      "nm": 760,
+      "hex": "#8d0000"
+    },
+    {
+      "nm": 780,
+      "hex": "#610000"
+    }
+  ],
+  "notes": [
+    "Hex-Werte sind sRGB. Ein Bildschirm kann Spektralfarben nur naehern.",
+    "core-Swatch ist eine Flaeche, kein Textgrund fuer Pflichtinformation.",
+    "Alle Textwerte erreichen mindestens 4.5:1 auf ihrer getoenten Flaeche.",
+    "Nichtspektrale und neutrale Farben haben keine Wellenlaengen-Rolle; ihre Tokens sind reine Flaechenfarben."
+  ]
+}

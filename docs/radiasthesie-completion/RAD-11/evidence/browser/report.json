@@ -1,0 +1,84 @@
+{
+  "base": "http://127.0.0.1:3191/Esoterik-Welt",
+  "generatedAt": "2026-11-03T06:46:30.263Z",
+  "views": {
+    "landing-1440": {
+      "links": [
+        "#pendeln/radiasthesie/frequenz",
+        "#crystals",
+        "#tarot",
+        "#runes",
+        "#pendeln/orakel/iging",
+        "#astrologie",
+        "#pendeln/orakel/delphi"
+      ],
+      "gaps": [
+        "Nicht angeschlossen",
+        "Nicht angeschlossen"
+      ],
+      "overflow": 0,
+      "box": {
+        "width": 1312,
+        "height": 944
+      },
+      "errors": []
+    },
+    "weiterlesen-1440": {
+      "links": [
+        "#crystals",
+        "#astrologie",
+        "#pendeln/pendeln",
+        "#pendeln/glossar"
+      ],
+      "errors": []
+    },
+    "deep-link-1440": {
+      "focus": {
+        "id": "frequenz-title",
+        "scrollY": 9818,
+        "top": 116
+      },
+      "errors": [],
+      "overflow": 0
+    },
+    "landing-390": {
+      "links": [
+        "#pendeln/radiasthesie/frequenz",
+        "#crystals",
+        "#tarot",
+        "#runes",
+        "#pendeln/orakel/iging",
+        "#astrologie",
+        "#pendeln/orakel/delphi"
+      ],
+      "gaps": [
+        "Nicht angeschlossen",
+        "Nicht angeschlossen"
+      ],
+      "overflow": 0,
+      "box": {
+        "width": 342,
+        "height": 2393
+      },
+      "errors": []
+    },
+    "weiterlesen-390": {
+      "links": [
+        "#crystals",
+        "#astrologie",
+        "#pendeln/pendeln",
+        "#pendeln/glossar"
+      ],
+      "errors": []
+    },
+    "deep-link-390": {
+      "focus": {
+        "id": "frequenz-title",
+        "scrollY": 15520,
+        "top": 100
+      },
+      "errors": [],
+      "overflow": 0
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "commit": "ceddc84cfca44d53f1995dfd0981b7d70a554724",
+  "bytes": "git show COMMIT:path (no checkout conversion)",
+  "sha256": {
+    "js/data/radiasthesie.js": "ee15e6f4887c3a9d766020dc3bf7febcdf09c93879bec9425a32dc46fd80b2ac",
+    "js/modules/radiasthesie-views.js": "6ce2ef273cb8068fb1d311007b58572bf69107f2306826c6019b202d8ae55889",
+    "js/modules/radiasthesie-model.js": "97b37e78e150df6a09aef4e604433b44f4950710f352624f7ab0fef97bb49b5b",
+    "js/modules/radiasthesie-format.js": "174bb282e06350e4fd190d1e77817dd8afb2d6b083c55a23e0fa70e559e12f8f",
+    "js/modules/radiasthesie.js": "2aa6cc1109ac7676ddd3c28c40081c1a9c9a852129065b3cd996c76463ddffbe",
+    "js/modules/pendel-simulator.js": "8272ad5b89f5c1548ed91ec1607f4cd948abd445118d72c2f2a0976384df0f11",
+    "js/modules/pendeltafel-model.js": "9e3b122212a2e18635c42ee5955229864bb24500e9c4a64d11e131062dfd46b9",
+    "js/modules/pendeltafel-studio.js": "ab108ac13e48d1c67ef21b7b6ed7322b43a8584c43525f8b19d76255ba023e0a",
+    "js/modules/experiment-statistik.js": "7c1ce8209797876a87eb5e0852c1505cb0c9ac95f3786c5cc587be11d976e602",
+    "js/modules/experiment-labor.js": "5e7ab9bddab73bcc79c83168abd64e39a7bd2d48420c5a96802a26ef9befc708",
+    "js/modules/journal-speicher.js": "b0980168706df71754b3f38db731c94ead56f18db278bf861bda9b8b2819ae76",
+    "js/modules/pendel-journal.js": "1d86e341a796f7b5dec738cdafa83568f1acbae0114870ff9106861c4dd61531",
+    "css/radiasthesie.css": "c06fcd0672cf843dd9012c653c4814218e576f361ad491b0111ec78284290e1d",
+    "css/radiasthesie-statisch.css": "4adacd536fc5a11a22b18afddeac73690c1668b8612a9a0bdeaf325b519c1ea3",
+    "scripts/generate-radiasthesie-data.cjs": "f8c0058e8630e7c2c253464427da633a1421cf152d56f5d0563364ea0f5db7b4",
+    "scripts/generate-radiasthesie-pages.cjs": "c91ec02835bde14145cf0b123717bde8b6ff794bf9bbc9c1d65bd628ebfba2eb"
+  }
+}

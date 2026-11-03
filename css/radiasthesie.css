@@ -1,0 +1,3095 @@
+/* ============================================================================
+   Esoterik-Welt — Themenmodul „Radiästhesie, Pendeln und Orakel“
+   ----------------------------------------------------------------------------
+   Ergänzung zu css/design-system.css und css/main.css. Diese Datei enthält
+   ausschließlich Regeln, die der Wissensbereich zusätzlich braucht; alles
+   andere (Brotkrümel, Seitenkopf, Inhaltsverzeichnis, Fließtext, Karten,
+   Hinweisboxen, Quellenpanel, Glossar, Buchstabenleiste) kommt unverändert aus
+   den vorhandenen Klassen `.astro-*` in css/main.css.
+
+   Verhältnis zur Vorlage: Die `.astro-*`-Klassen sind der gemeinsame
+   Wissensbereich-Baukasten. Sie werden hier NICHT kopiert und NICHT umbenannt
+   (Regel: kein unnötiges Refactoring, eine visuelle Sprache). Neu sind nur die
+   Modulelemente, die es im Astrologiebereich nicht gibt: Instrumententafel,
+   Einordnungsband, Evidenzstufen A–E, Themenkarten mit Instrumentenbild,
+   Werkstatt-Teaser, Methodik-Kopf.
+
+   Alle Farben, Schriften, Abstände und Radien sind Tokens aus
+   css/design-system.css. Keine Rohwerte außer 1px-Haarlinien, Prozentwerten
+   und SVG-Koordinaten.
+   ============================================================================ */
+
+/* --- Grundriss ----------------------------------------------------------- */
+
+.rad-root {
+  padding-block: var(--space-8) var(--space-16);
+}
+
+.rad {
+  min-width: 0;
+}
+
+/* --- Hero des Themenmoduls ----------------------------------------------
+   Ein Hero pro Modul, zwei Spalten: Text 6,4fr / Instrumententafel 5,6fr.
+   Die Tafel ist ein eigenes SVG, kein Foto: Das Instrument ist schematisch
+   dargestellt und wird nicht als Beweis fotografischer Authentizität benutzt.
+   ------------------------------------------------------------------------- */
+
+.rad-hero {
+  padding-block: var(--space-6) var(--space-12);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-8);
+}
+
+.rad-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 6.4fr) minmax(0, 5.6fr);
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.rad-hero-copy {
+  min-width: 0;
+}
+
+.rad-hero-title {
+  margin: var(--space-2) 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.2vw, var(--text-page-title));
+  font-weight: var(--font-weight-normal);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  text-wrap: balance;
+}
+
+.rad-hero-title em {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.rad-hero-lead {
+  margin: 0 0 var(--space-6);
+  max-width: 58ch;
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.rad-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.rad-hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-8);
+  margin: var(--space-8) 0 0;
+  padding: var(--space-4) 0 0;
+  border-top: 1px solid var(--color-border);
+  list-style: none;
+}
+
+.rad-hero-fact {
+  min-width: 0;
+}
+
+.rad-hero-fact dt {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.rad-hero-fact dd {
+  margin: var(--space-1) 0 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+/* Instrumententafel: 1px-Rahmen, Kartenfläche, Mono-Beschriftung. */
+.rad-plate {
+  margin: 0;
+  min-width: 0;
+}
+
+.rad-plate-frame {
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.rad-plate svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rad-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rad-plate figcaption {
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.rad-plate figcaption strong {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-normal);
+}
+
+/* --- Lesbarkeit: Zeilenlänge im Modul -----------------------------------
+   Gemessen: `.astro-text` bricht bei 72ch auf 86 Zeichen je Zeile (Manrope,
+   16px) — zu lang für ruhiges Lesen. Das Modul begrenzt Fließtext deshalb
+   auf 60ch; das ergibt gemessen 68–71 Zeichen je Zeile (messung/mockup-
+   messung.json, Feld text.prose.charsPerLine). Gilt nur innerhalb `.rad`,
+   die gemeinsamen Primitives bleiben unverändert.
+   ------------------------------------------------------------------------ */
+
+.rad .astro-text,
+.rad .astro-lead,
+.rad .astro-callout p,
+.rad .astro-details-body p,
+.rad .rad-claim-text,
+.rad .astro-term dd,
+.rad .astro-entry p {
+  max-width: 60ch;
+}
+
+/* Instrumententafeln im Artikel bleiben schmaler als die Textspalte,
+   damit die Zeichnung nicht in leerer Fläche steht. */
+.rad .astro-main .rad-plate {
+  /* Fotos: --rad-photo-max begrenzt auf die größte verfügbare Bildvariante,
+     damit nichts über die Quelle hinaus skaliert wird (RAD-13/F2). */
+  max-width: var(--rad-photo-max, 680px);
+}
+
+/* --- Artikel-Layout: Lesereihenfolge = DOM-Reihenfolge ------------------
+   Die Seitenleiste steht im DOM vor dem Text. Auf Desktop wird sie per
+   grid-area nach rechts gestellt, auf schmalen Geräten bleibt sie oben.
+   Damit stimmt die visuelle Reihenfolge mit der Fokus- und Lesereihenfolge
+   überein (WCAG 1.3.2) — anders als bei einer reinen `order`-Umsortierung.
+   ---------------------------------------------------------------------- */
+
+.rad .astro-layout {
+  grid-template-areas: 'aside' 'main';
+}
+
+.rad .astro-main {
+  grid-area: main;
+}
+
+.rad .astro-aside {
+  grid-area: aside;
+  order: 0;
+}
+
+@media (min-width: 1200px) {
+  .rad .astro-layout {
+    grid-template-areas: 'main aside';
+  }
+}
+
+/* --- Einordnungsband -----------------------------------------------------
+   Pflichtelement. Steht auf jeder Seite des Moduls direkt unter dem Kopf,
+   vor dem ersten Abschnitt, und ist nicht schließbar. Sand ist die
+   funktionale Linie dieses Bandes; Rose bleibt der Kennzeichnung von
+   Einschränkungen vorbehalten (z. B. widerlegte Behauptung).
+   ------------------------------------------------------------------------ */
+
+.rad-status {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-3) var(--space-4);
+  align-items: start;
+  margin: 0 0 var(--space-8);
+  padding: var(--space-4) 0 var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-line-strong);
+  border-bottom: 1px solid var(--color-line-strong);
+  border-left: 2px solid var(--color-primary);
+}
+
+.rad-status-label {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  min-height: 24px;
+  padding: 2px var(--space-2);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.rad-status-body {
+  margin: 0;
+  max-width: 78ch;
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.rad-status-body strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.rad-status-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.rad-status-link:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+/* --- Abschnittsrhythmus der Übersichtsseite -----------------------------
+   Die Landingpage ist keine Artikelseite: Abschnitte stehen auf 64px
+   (mobil 48px) Abstand und tragen eine 34px-Überschrift. Artikelseiten
+   nutzen weiterhin `.astro-section` (28px, 40px Abstand).
+   ------------------------------------------------------------------------ */
+
+.rad-section {
+  margin: 0 0 var(--space-16);
+  min-width: 0;
+}
+
+.rad-section h2 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, var(--text-3xl));
+  font-weight: var(--font-weight-normal);
+  line-height: 1.15;
+  color: var(--color-text-primary);
+}
+
+.rad-section h2:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .rad-section {
+    margin-bottom: var(--space-12);
+  }
+}
+
+/* --- Abschnittskopf mit Zählung ----------------------------------------- */
+
+.rad-kicker {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.rad-section-lead {
+  margin: 0 0 var(--space-6);
+  max-width: 68ch;
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+/* --- Themenkarten -------------------------------------------------------
+   Drei Karten, je ein Instrument, drei Stichworte, ein Link. Die Karte ist
+   kein Klickziel in Gänze (keine verschachtelten Ziele); der Titel ist der
+   Link, die ganze Fläche ist über die Titelzeile erreichbar.
+   ------------------------------------------------------------------------ */
+
+.rad-topics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rad-topic {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  min-width: 0;
+  transition: border-color var(--transition-fast);
+}
+
+.rad-topic:hover,
+.rad-topic:focus-within {
+  border-color: var(--color-line-strong);
+}
+
+.rad-topic-figure {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-deep);
+}
+
+.rad-topic-figure img,
+.rad-topic-figure svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rad-topic-body {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  padding: var(--space-5);
+}
+
+.rad-topic-meta {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+}
+
+.rad-topic-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.15;
+}
+
+.rad-topic-title a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.rad-topic-title a:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.rad-topic-text {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.rad-topic-facts {
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.rad-topic-facts li::before {
+  content: '·';
+  color: var(--color-primary);
+  margin-right: var(--space-2);
+}
+
+.rad-topic-cta {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-sm);
+}
+
+.rad-topic-cta a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rad-topic-cta a:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+.rad-topic-cta a span {
+  margin-left: var(--space-2);
+}
+
+/* --- Evidenzstufen A–E --------------------------------------------------
+   Fünf Stufen aus dem Redaktionsauftrag. Jede Stufe hat eine Textmarke —
+   Farbe ist nie das einzige Unterscheidungsmerkmal. Kontraste: siehe
+   messung/kontrast.json (alle ≥ 6,45:1 auf Kartenfläche).
+   ------------------------------------------------------------------------ */
+
+.rad-levels {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-3);
+  max-width: 78ch;
+}
+
+.rad-level {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: var(--space-2) var(--space-4);
+  align-items: baseline;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rad-level dt,
+.rad-level-term {
+  min-width: 0;
+}
+
+.rad-level dd,
+.rad-level-desc {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.rad-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 1px var(--space-2);
+  border: 1px solid currentColor;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.rad-chip--a {
+  color: #c0a889;
+}
+.rad-chip--b {
+  color: var(--color-primary);
+}
+.rad-chip--c {
+  color: #9db3c4;
+}
+.rad-chip--d {
+  color: var(--color-accent-emerald);
+}
+.rad-chip--e {
+  color: var(--color-accent-rose);
+}
+
+/* --- Evidenztafel (Claims) ----------------------------------------------
+   Tabellarische Liste, die auf schmalen Geräten zu gestapelten Blöcken wird.
+   Kein horizontaler Scroll, keine zusammengeführten Zellen.
+   ------------------------------------------------------------------------ */
+
+.rad-claims {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-line-strong);
+}
+
+.rad-claim {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+  min-width: 0;
+}
+
+.rad-claim-id {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.rad-claim-text {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  overflow-wrap: break-word;
+}
+
+.rad-claim-note {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  overflow-wrap: break-word;
+}
+
+.rad-claim-note a {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* --- Einordnungskasten (Artikelende und Methodik) ----------------------- */
+
+.rad-disclaimer {
+  margin: var(--space-8) 0 0;
+  padding: var(--space-5) var(--space-6);
+  border: 1px solid var(--color-line-strong);
+  border-left: 2px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.rad-disclaimer-title {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.rad-disclaimer p {
+  margin: 0 0 var(--space-3);
+  max-width: 72ch;
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.rad-disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+.rad-disclaimer strong {
+  color: var(--color-text-primary);
+}
+
+.rad-disclaimer ul {
+  margin: 0 0 var(--space-3);
+  padding-left: var(--space-5);
+  display: grid;
+  gap: var(--space-2);
+  max-width: 72ch;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* --- Verwandte Themen --------------------------------------------------- */
+
+.rad-related {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rad-related-item {
+  padding: var(--space-4);
+  border-left: 1px solid var(--color-line-strong);
+  min-width: 0;
+}
+
+.rad-related-item h2,
+.rad-related-item h3 {
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.rad-related-item h2 a,
+.rad-related-item h3 a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rad-related-item h2 a:hover,
+.rad-related-item h3 a:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.rad-related-item p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.rad-related-type {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+}
+
+/* --- Themenvernetzung ---------------------------------------------------
+   Die Startseite zeigt vorhandene Anschlüsse und benannte Lücken getrennt.
+   Lücken bleiben unverlinkt: Ein ähnliches Kapitel ersetzt keinen fehlenden
+   Anschluss.
+   ------------------------------------------------------------------------ */
+
+.rad-related-item--pending {
+  border-left-style: dashed;
+  border-left-color: var(--color-border);
+}
+
+.rad-related-item--pending .rad-related-type {
+  color: var(--color-text-secondary);
+}
+
+.rad-related-item--pending h3 {
+  color: var(--color-text-primary);
+}
+
+.rad-subtitle {
+  margin: var(--space-8) 0 var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* --- Werkstatt-Teaser ---------------------------------------------------
+   Verweist auf die interaktiven Module. Ein Teaser nennt seinen Zustand
+   (verfügbar / in Vorbereitung) im Text, nicht nur über eine Farbe.
+   ------------------------------------------------------------------------ */
+
+.rad-workshop {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rad-werk {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  min-width: 0;
+}
+
+.rad-werk-state {
+  justify-self: start;
+  padding: 1px var(--space-2);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.rad-werk-state--planned {
+  border-style: dashed;
+}
+
+.rad-werk h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.25;
+}
+
+.rad-werk p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* --- Artikelkopf: Stand und Prüfvermerk -------------------------------- */
+
+.rad-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.rad-meta li::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: var(--space-2);
+  border: 1px solid var(--color-primary);
+  vertical-align: 2px;
+}
+
+/* --- Glossar: Buchstabenleiste und Begriffssprung ----------------------
+   Übernimmt .astro-letters / .astro-letter / .astro-glossgroup; ergänzt nur
+   den Zähler und die Kopfzeile der Buchstabengruppe.
+   ---------------------------------------------------------------------- */
+
+.rad-gloss-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-line-strong);
+  margin: 0 0 var(--space-4);
+}
+
+.rad-gloss-head h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.rad-gloss-count {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+/* Suchfeld bleibt schmal: ein Glossarfilter braucht keine 1100px Zeile. */
+.rad .astro-search {
+  max-width: 560px;
+}
+
+/* Stufen-Chip hinter dem Begriff, nicht als Teil des Begriffs lesbar. */
+.astro-term dt .rad-chip {
+  margin-left: var(--space-2);
+  vertical-align: 1px;
+}
+
+/* ============================================================================
+   Kopfzeile mit acht Navigationszielen
+   ----------------------------------------------------------------------------
+   Die beiden globalen Regeln stehen bewusst in den gemeinsamen Dateien, damit
+   sie nicht von der Ladereihenfolge dieses Moduls abhängen:
+
+   1) css/main.css — direkt nach dem Block „@media (min-width: 781px) and
+      (max-width: 1120px)“: Logo 24 px und Listenabstand 4 px zwischen 781 und
+      900 px (acht Ziele plus dreistelliger Favoritenzähler).
+   2) css/design-system.css — im Block „@media (max-width: 780px)“:
+      `align-items: stretch` für das gestapelte Menü.
+   ============================================================================ */
+
+/* --- Zustände: Fokus, Hover, Auswahl -----------------------------------
+   Fokus ist immer sichtbar und nie nur ein Farbwechsel: 2px Sand,
+   4px Abstand, zusätzlich 1px dunkle Trennlinie für helle Nachbarflächen.
+   ---------------------------------------------------------------------- */
+
+.rad a:focus-visible,
+.rad button:focus-visible,
+.rad summary:focus-visible,
+.rad input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.rad-topic:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+/* --- Responsive ---------------------------------------------------------
+   1100: Gutter und Hero-Tafel enger, Karten bleiben dreispaltig bis 900.
+    900: Hero einspaltig, Tafel unter dem Text; Themenkarten zweispaltig.
+    700: Karten einspaltig, Einordnungsband einspaltig, Werkstatt einspaltig.
+    480: Innenabstände 16px, Evidenztafel gestapelt.
+   ---------------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .rad-hero-grid {
+    gap: var(--space-12);
+  }
+  .rad-hero-lead {
+    font-size: var(--text-base);
+  }
+}
+
+@media (max-width: 900px) {
+  .rad-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+  .rad-topics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .rad-workshop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Zwischen 701 und 900 px stehen die drei Karten als Liste: Instrument links,
+   Text rechts. Drei Karten in zwei Spalten hätten eine halbe Karte allein
+   gelassen; eine breite Karte allein hätte eine leere Bildspalte erzeugt. */
+@media (min-width: 701px) and (max-width: 900px) {
+  .rad-topics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .rad-topic {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-rows: auto;
+  }
+  .rad-topic-figure {
+    aspect-ratio: 4 / 3;
+    border-bottom: 0;
+    border-right: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 700px) {
+  .rad-hero {
+    padding-block: var(--space-2) var(--space-8);
+  }
+  .rad-topics,
+  .rad-workshop {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .rad-status {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .rad-level {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+  }
+}
+
+@media (max-width: 480px) {
+  .rad-topic-body,
+  .rad-werk,
+  .rad-disclaimer,
+  .rad-plate-frame {
+    padding: var(--space-4);
+  }
+  .rad-claim {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+  }
+  .rad-hero-facts {
+    gap: var(--space-3) var(--space-5);
+  }
+}
+
+/* --- Reduzierte Bewegung ------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .rad-topic {
+    transition: none;
+  }
+}
+
+/* --- Druck -------------------------------------------------------------- */
+
+@media print {
+  .rad-status,
+  .rad-disclaimer {
+    border: 1px solid #777;
+    background: transparent;
+  }
+  .rad-status-label,
+  .rad-chip,
+  .rad-topic-meta,
+  .rad-hero-facts,
+  .rad-workshop {
+    color: #000;
+  }
+  .rad-topic,
+  .rad-werk,
+  .rad-claim {
+    break-inside: avoid;
+  }
+  .rad-plate-frame {
+    border: 1px solid #777;
+  }
+  .rad-topic-cta a::after,
+  .rad-status-link::after,
+  .rad-related-item h2 a::after,
+  .rad-related-item h3 a::after {
+    content: ' (' attr(href) ')';
+    font-size: 9pt;
+  }
+}
+
+/* ============================================================================
+   Ergänzungen der Umsetzung (über den Mockup hinaus)
+   ----------------------------------------------------------------------------
+   Der Mockup zeigt drei Ansichten mit Mustertext. Die echte Seite ergänzt
+   wenige Elemente, die erst mit den freigegebenen Inhalten entstehen:
+   Stufen je Kapitel, Quellenmarker im Fließtext, Buchstabenzähler im Glossar,
+   Trefferliste der Suche und die Artikel-Tafel.
+   ============================================================================ */
+
+/* Stufen eines Kapitels: direkt unter der H2, als Textmarke, nie nur Farbe. */
+.rad-section-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: calc(var(--space-1) * -1) 0 var(--space-4);
+}
+
+/* Quellenmarker im Fließtext: gleiche Farbe wie Links, aber ohne Unterlinie,
+   damit der Text nicht wie ein Linkteppich wirkt. */
+.rad-cite {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 45%, transparent);
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  padding: 0 1px;
+}
+
+.rad-cite:hover {
+  color: var(--color-hover);
+  border-bottom-color: var(--color-hover);
+}
+
+/* Zeitraum eines Kapitels im Inhaltsverzeichnis: leiser als der Titel. */
+.rad-toc-period {
+  display: block;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+/* Spaltenlegende des Quellenverzeichnisses. */
+.rad-legend-list {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.rad-legend-list strong {
+  color: var(--color-text-primary);
+}
+
+/* Artikel-Tafel: Abstand nach oben, weil sie zwischen Text und Quellen steht. */
+.rad-plate--article {
+  margin: var(--space-8) 0;
+}
+
+/* Trefferliste der Suche: nutzt .astro-text-list, braucht nur Abstand. */
+.rad .astro-text-list {
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 700px) {
+  .rad-section-levels {
+    gap: var(--space-1);
+  }
+}
+
+@media print {
+  .rad-cite {
+    color: #000;
+    border-bottom: 0;
+  }
+}
+
+/* ============================================================================
+   Pendellabor (RAD-07)
+   ----------------------------------------------------------------------------
+   Bühne als SVG (skaliert ohne Pixeltricks), Regler als native range-Inputs,
+   Messwerte als <output> in einer Definitionsliste. Touch-Ziele mindestens
+   44 px, Fokusringe auf Bühne und Reglern, keine Farbe als einziger Träger
+   einer Aussage. Die Bewegung selbst erzeugt JavaScript; hier steht nur das
+   Aussehen.
+   ============================================================================ */
+
+.psim {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--space-6);
+  align-items: start;
+  margin: var(--space-6) 0 var(--space-8);
+}
+
+.psim-stage {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  min-width: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.psim-scene {
+  min-width: 0;
+  border-radius: var(--radius-sm);
+  background: radial-gradient(ellipse at 50% 8%, #1b2629 0%, #0e1517 70%);
+}
+
+.psim-scene:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.psim-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.psim-beam {
+  stroke: var(--color-line-strong);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.psim-support {
+  stroke: var(--color-border);
+  stroke-width: 2;
+}
+
+.psim-guide {
+  stroke: var(--color-border);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+}
+
+.psim-pivot {
+  fill: var(--color-primary);
+}
+
+.psim-thread {
+  stroke: var(--color-text-secondary);
+  stroke-width: 1.5;
+}
+
+.psim-arc {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1.5;
+  opacity: 0.75;
+}
+
+.psim-bob-brass {
+  stroke: #6f6042;
+  stroke-width: 1;
+}
+
+.psim-bob-cap {
+  fill: var(--color-primary);
+}
+
+/* Kugel und Kegel beziehen ihre Füllung als SVG-Paint-Server direkt aus dem
+   Markup: der Offline-Build verbietet Asset-Verweise in Stylesheets, und ein
+   Gradient gehört ohnehin zur Zeichnung, nicht zum Farbschema. */
+
+.psim-bob-shine {
+  fill: rgba(255, 255, 255, 0.35);
+}
+
+.psim-bob-ring {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 5;
+}
+
+.psim-bob-core {
+  fill: var(--color-primary);
+}
+
+/* Nur die gewählte Pendeldarstellung ist sichtbar. */
+[data-psim-bob] {
+  display: none;
+}
+
+[data-psim-bob][data-active] {
+  display: inline;
+}
+
+.psim-readout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3) var(--space-4);
+  margin: 0;
+}
+
+.psim-readout > div {
+  min-width: 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+}
+
+.psim-readout dt {
+  margin-bottom: var(--space-1);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+.psim-readout dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+}
+
+.psim-status {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-deep);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.psim-controls {
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+  min-width: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.psim-field {
+  display: grid;
+  gap: var(--space-4);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.psim-field legend {
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.psim-control {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-2) var(--space-3);
+  align-items: center;
+}
+
+.psim-control label {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.psim-control input[type='range'] {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  accent-color: var(--color-primary);
+  background: transparent;
+}
+
+.psim-value {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+}
+
+.psim-hint {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.psim-control .psim-hint {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+.psim-choice {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.psim-choice input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.psim-choice:hover span {
+  color: var(--color-text-primary);
+}
+
+.psim-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.psim-actions .btn {
+  min-height: 44px;
+}
+
+.psim-formula {
+  max-width: 60ch;
+  margin: 0 0 var(--space-4);
+  padding: var(--space-4);
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-card);
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+.psim-limits {
+  display: grid;
+  margin: var(--space-4) 0;
+}
+
+.psim-limits > div {
+  display: grid;
+  grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.psim-limits dt {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.psim-limits dd {
+  max-width: 60ch;
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.psim-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* Verfügbare Werkstatt-Karte: durchgezogener Rahmen und Link am Titel. */
+.rad-werk-state--ready {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.rad-werk-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 55%, transparent);
+}
+
+.rad-werk-link:hover {
+  color: var(--color-hover);
+  border-bottom-color: var(--color-hover);
+}
+
+@media (max-width: 1000px) {
+  .psim {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .psim-stage,
+  .psim-controls {
+    padding: var(--space-4);
+  }
+  .psim-limits > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .psim-readout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media print {
+  .psim {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .psim-controls,
+  .psim-actions,
+  .psim-hint {
+    display: none;
+  }
+  .psim-stage {
+    border: 1px solid #777;
+    background: transparent;
+  }
+  .psim-readout dd {
+    color: #000;
+  }
+}
+
+/* Modellzeichnung: gleiche Maßbreite wie die Artikel-Tafeln, damit die
+   Zeichnung nicht über die halbe Seite läuft. */
+#psim-modell .rad-plate {
+  max-width: 680px;
+}
+
+/* ============================================================================
+   Pendeltafel-Studio (RAD-08)
+   ----------------------------------------------------------------------------
+   Werkstattfläche aus zwei Spalten: links Bedienung, rechts die Vorschau, die
+   zugleich die Exportdatei ist. Darunter die A4-Druckansicht. Alle Farben und
+   Abstände kommen aus css/design-system.css; die Farbstile selbst sind Daten
+   in js/modules/pendeltafel-model.js und werden hier nur als Muster gezeigt.
+   ============================================================================ */
+
+.ptf-section {
+  margin-top: var(--space-8);
+}
+
+.ptf {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: var(--space-6);
+  align-items: start;
+  margin: var(--space-6) 0 var(--space-8);
+}
+
+.ptf-editor {
+  display: grid;
+  gap: var(--space-5);
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.ptf-fieldset {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ptf-fieldset legend {
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.ptf-control {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.ptf-control label {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.ptf-control select,
+.ptf-control input[type='text'],
+.ptf-control input[type='file'],
+.ptf-control textarea {
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.ptf-control textarea {
+  font-family: var(--font-mono);
+  resize: vertical;
+}
+
+.ptf-control input[type='file'] {
+  padding: var(--space-2);
+  font-size: var(--text-xs);
+}
+
+.ptf-control select:focus-visible,
+.ptf-control input:focus-visible,
+.ptf-control textarea:focus-visible,
+.ptf-choice input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.ptf-control [aria-invalid='true'] {
+  border-color: var(--color-accent-rose);
+}
+
+.ptf-hint {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.ptf-error {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-accent-rose);
+}
+
+.ptf-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.ptf-choice {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  min-height: 44px;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.ptf-choice:hover {
+  background: var(--color-bg-card-hover);
+}
+
+.ptf-choice:has(input:checked) {
+  border-color: var(--color-primary);
+}
+
+.ptf-choice input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--color-primary);
+}
+
+.ptf-choice-body {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.ptf-choice-head {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.ptf-choice-name {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.ptf-choice-note {
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.ptf-swatch {
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+  flex: 0 0 auto;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 999px;
+}
+
+.ptf-swatch--messing {
+  background: #141c1f;
+  box-shadow: inset 0 0 0 3px #c6b38e;
+}
+
+.ptf-swatch--salbei {
+  background: #101a17;
+  box-shadow: inset 0 0 0 3px #9db3a4;
+}
+
+.ptf-swatch--nacht {
+  background: #0d141b;
+  box-shadow: inset 0 0 0 3px #c09489;
+}
+
+.ptf-swatch--papier {
+  background: #fbf9f4;
+  box-shadow: inset 0 0 0 3px #6b5b3e;
+}
+
+.ptf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.ptf-actions .btn {
+  min-height: 44px;
+}
+
+.ptf-import {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+}
+
+.ptf-import summary {
+  min-height: 44px;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.ptf-import-body {
+  display: grid;
+  gap: var(--space-4);
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.ptf-import-body .btn {
+  justify-self: start;
+  min-height: 44px;
+}
+
+.ptf-errors {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-8);
+  border-left: 2px solid var(--color-accent-rose);
+  background: color-mix(in srgb, var(--color-accent-rose) 10%, transparent);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+.ptf-errors[hidden] {
+  display: none;
+}
+
+.ptf-status {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-deep);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.ptf-preview {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  min-width: 0;
+  position: sticky;
+  top: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.ptf-preview h3 {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.ptf-canvas {
+  min-width: 0;
+  background: var(--color-bg-deep);
+  border: 1px solid var(--color-border);
+}
+
+.ptf-canvas svg,
+.ptf-sheet-board svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ptf-printblock {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  justify-items: stretch;
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.ptf-printblock h3 {
+  margin: 0;
+}
+
+.ptf-print-note {
+  max-width: 70ch;
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+/* A4-Vorschau: dieselbe Fläche, die gedruckt wird. Die Farben folgen dem
+   gewählten Farbstil, damit die Vorschau nicht schönt. */
+.ptf-sheet {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 210 / 297;
+  margin-inline: auto;
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  background: #141c1f;
+  color: #eae6dc;
+}
+
+.ptf-sheet[data-ptf-palette='salbei'] {
+  background: #101a17;
+  color: #e7eee8;
+}
+
+.ptf-sheet[data-ptf-palette='nacht'] {
+  background: #0d141b;
+  color: #e8e6e1;
+}
+
+.ptf-sheet[data-ptf-palette='papier'] {
+  background: #fbf9f4;
+  color: #2b2a26;
+}
+
+.ptf-sheet-head {
+  display: grid;
+  gap: var(--space-1);
+}
+
+/* Die Druckoptimierung des Hauptstylesheets setzt p-Farben auf Schwarz.
+   Innerhalb der Tafel gilt die Farbe des Farbstils, sonst wäre die
+   Überschrift auf dunklem Grund im PDF unsichtbar. */
+.ptf-sheet .ptf-sheet-kicker,
+.ptf-sheet .ptf-sheet-title,
+.ptf-sheet .ptf-sheet-foot,
+.ptf-sheet .ptf-sheet-foot p {
+  color: inherit;
+}
+
+.ptf-sheet-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.ptf-sheet-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.ptf-sheet-board {
+  align-self: center;
+  min-width: 0;
+}
+
+.ptf-sheet-foot {
+  display: grid;
+  gap: var(--space-1);
+  font-size: 0.66rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.ptf-sheet-foot p {
+  margin: 0;
+}
+
+.ptf-export-list {
+  display: grid;
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.ptf-export-list > div {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-card);
+}
+
+.ptf-export-list dt {
+  margin-bottom: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.ptf-export-list dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1000px) {
+  .ptf {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ptf-preview {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .ptf-editor,
+  .ptf-preview {
+    padding: var(--space-4);
+  }
+  .ptf-choices {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ptf-sheet {
+    padding: var(--space-4);
+  }
+}
+
+/* Druck: Es bleibt genau die A4-Fläche übrig. Die Regeln gelten nur, solange
+   das Studio gerendert ist (html.ptf-print-active), damit der Ausdruck anderer
+   Seiten unverändert bleibt. Statt visibility werden die Boxen ausgeblendet:
+   sonst würde die lange, unsichtbare Seite in mehrere leere Blätter zerfallen. */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html.ptf-print-active,
+  html.ptf-print-active body {
+    background: #ffffff;
+  }
+
+  /* Nur die Kette vom Dokument bis zur Tafel bleibt als Box bestehen. */
+  html.ptf-print-active body > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active body > main {
+    display: block !important;
+  }
+
+  html.ptf-print-active main > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active main > #pendeln {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Kein Rand und kein Innenabstand auf dem Weg zur Tafel: ein einziges
+     Millimeter zu viel erzeugt sonst ein zweites, leeres Blatt. */
+  html.ptf-print-active body,
+  html.ptf-print-active main,
+  html.ptf-print-active #pendeln,
+  html.ptf-print-active #pendeln > .container,
+  html.ptf-print-active #pendelnRoot,
+  html.ptf-print-active #pendelnRoot > .rad,
+  html.ptf-print-active .rad > .ptf-section,
+  html.ptf-print-active .ptf-section > .ptf-printblock {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+  }
+
+  html.ptf-print-active #pendeln > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active #pendeln > .container {
+    display: block !important;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  html.ptf-print-active .container > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active .container > #pendelnRoot {
+    display: block !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  html.ptf-print-active #pendelnRoot > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active #pendelnRoot > .rad {
+    display: block !important;
+  }
+
+  html.ptf-print-active .rad > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active .rad > .ptf-section {
+    display: block !important;
+    margin: 0;
+  }
+
+  html.ptf-print-active .ptf-section > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active .ptf-section > .ptf-printblock {
+    display: grid !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  html.ptf-print-active .ptf-printblock > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active .ptf-printblock > .ptf-sheet {
+    display: grid !important;
+    width: 210mm;
+    height: 296mm;
+    max-width: none;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 16mm 18mm;
+    border: 0;
+    box-shadow: none;
+    overflow: hidden;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Das Hauptstylesheet setzt im Druck p, span und a auf Schwarz (!important).
+     Innerhalb der Tafel gilt die Farbe des Farbstils — sonst wäre die
+     Überschrift auf dunklem Grund im PDF nicht lesbar. */
+  html.ptf-print-active .ptf-sheet {
+    color: #eae6dc !important;
+  }
+
+  html.ptf-print-active .ptf-sheet[data-ptf-palette='salbei'] {
+    color: #e7eee8 !important;
+  }
+
+  html.ptf-print-active .ptf-sheet[data-ptf-palette='nacht'] {
+    color: #e8e6e1 !important;
+  }
+
+  html.ptf-print-active .ptf-sheet[data-ptf-palette='papier'] {
+    color: #2b2a26 !important;
+  }
+
+  html.ptf-print-active .ptf-sheet * {
+    color: inherit !important;
+  }
+
+  html.ptf-print-active .ptf-sheet-board svg {
+    width: 100%;
+    height: auto;
+    max-height: 196mm;
+  }
+
+  html.ptf-print-active .ptf-sheet-title {
+    font-size: 20pt;
+  }
+
+  html.ptf-print-active .ptf-sheet-foot,
+  html.ptf-print-active .ptf-sheet-kicker {
+    font-size: 8pt;
+  }
+}
+
+/* ============================================================================
+   Experimentierlabor (RAD-09)
+   ----------------------------------------------------------------------------
+   Zwei getrennte Modi: Spielmodus (sofortiges Feedback) und Testmodus
+   (Protokoll, Sperre, Auswertung). Die Bausteine folgen den vorhandenen
+   Formularen des Tafel-Studios; neu sind nur Moduswahl, Antwortfelder,
+   Auswertungsraster und Lauf-Liste.
+   ============================================================================ */
+
+.exp-section {
+  margin-top: var(--space-8);
+}
+
+.exp {
+  display: grid;
+  gap: var(--space-6);
+  margin: var(--space-6) 0 var(--space-8);
+  min-width: 0;
+}
+
+.exp-modes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  min-width: 0;
+}
+
+.exp-modes legend {
+  padding: 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.exp-mode {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+  cursor: pointer;
+}
+
+.exp-mode:has(input:checked) {
+  border-color: var(--color-primary);
+}
+
+.exp-mode input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  accent-color: var(--color-primary);
+}
+
+.exp-mode-body {
+  display: block;
+  min-width: 0;
+}
+
+.exp-mode-name {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.exp-mode-note {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.exp-panel {
+  display: grid;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.exp-panel[hidden] {
+  display: none;
+}
+
+.exp-badge {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+}
+
+.exp-control {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 460px;
+  min-width: 0;
+}
+
+.exp-control label {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.exp-control select {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-3);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+.exp-experiments,
+.exp-protocols {
+  min-width: 0;
+}
+
+/* Auf schmalen Geräten ist die Protokolltabelle breiter als der Text: Sie
+   scrollt innerhalb ihres Blocks, statt die Seite zu überdehnen. */
+.exp-protocols {
+  overflow-x: auto;
+}
+
+.exp-experiments {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.exp-experiments legend {
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.exp-choice {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  cursor: pointer;
+}
+
+.exp-choice:has(input:checked) {
+  border-color: var(--color-primary);
+}
+
+.exp-choice input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  accent-color: var(--color-primary);
+}
+
+.exp-choice-body {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.exp-choice-head {
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+.exp-choice-note {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+}
+
+.exp-choice-text {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.exp-protocol {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  background: var(--color-bg-card);
+}
+
+.exp-protocol caption {
+  padding: var(--space-2) 0;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.exp-protocol th,
+.exp-protocol td {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.exp-protocol th {
+  width: 32%;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-deep);
+}
+
+.exp-protocol td {
+  color: var(--color-text-primary);
+}
+
+.exp-start {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: start;
+}
+
+.exp-hint,
+.exp-note {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.exp-error {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-left: 2px solid var(--color-accent-rose);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.exp-note[data-state='warn'] {
+  padding: var(--space-2) var(--space-3);
+  border-left: 2px solid var(--color-accent-rose);
+  color: var(--color-text-primary);
+}
+
+.exp-trial {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.exp-trial-meta {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+}
+
+.exp-trial h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-normal);
+}
+
+.exp-question,
+.exp-question-note {
+  margin: 0;
+}
+
+.exp-question-note {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.exp-answers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.exp-answer {
+  min-width: 84px;
+  min-height: 48px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.exp-answer:hover:not(:disabled) {
+  background: var(--color-bg-card-hover);
+}
+
+.exp-answer[aria-pressed='true'],
+.exp-answer.is-chosen {
+  border-color: var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-primary);
+  color: var(--color-primary);
+}
+
+.exp-answer:disabled {
+  opacity: 0.62;
+  cursor: not-allowed;
+}
+
+.exp-answer:focus-visible,
+.exp-mode input:focus-visible,
+.exp-choice input:focus-visible,
+.exp-control select:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.exp-lock {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: start;
+}
+
+.exp-reveal {
+  padding: var(--space-4);
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-bg-deep);
+}
+
+.exp-reveal[hidden] {
+  display: none;
+}
+
+.exp-reveal:has([data-hit='false']) {
+  border-left-color: var(--color-accent-rose);
+}
+
+.exp-reveal-text {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-primary);
+}
+
+.exp-status:empty {
+  display: none;
+}
+
+.exp-status,
+.exp-feedback,
+.exp-demo-counter {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.exp-feedback {
+  min-height: 1.6em;
+  color: var(--color-text-primary);
+}
+
+.exp-demo-counter {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+}
+
+.exp-results {
+  display: grid;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.exp-results h3,
+.exp-runs h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-normal);
+}
+
+.exp-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.exp-stats > div {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+}
+
+.exp-stats dt {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.exp-stats dd {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.exp-verdict {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--color-line-strong);
+  background: var(--color-bg-card);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-primary);
+}
+
+.exp-verdict[data-level='auffaellig'] {
+  border-left-color: var(--color-primary);
+}
+
+.exp-verdict[data-level='vereinbar'],
+.exp-verdict[data-level='zwischenstand'],
+.exp-verdict[data-level='leer'] {
+  border-left-color: var(--color-border);
+}
+
+.exp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.exp-danger {
+  color: var(--color-accent-rose);
+  border-color: var(--color-accent-rose);
+}
+
+.exp-danger[data-armed='true'] {
+  border-width: 2px;
+  font-weight: 600;
+}
+
+.exp-tablewrap {
+  overflow-x: auto;
+}
+
+.exp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  background: var(--color-bg-card);
+}
+
+.exp-table caption {
+  padding: var(--space-2) 0;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.exp-table th,
+.exp-table td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.exp-table thead th {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.exp-table tr.is-miss td {
+  color: var(--color-text-secondary);
+}
+
+.exp-runs {
+  display: grid;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.exp-runlist {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exp-runlist-empty {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.exp-runlist-item {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.exp-runlist-title {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.exp-runlist-meta {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.exp-runlist-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+@media (max-width: 700px) {
+  .exp-modes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .exp-trial {
+    padding: var(--space-4);
+  }
+
+  .exp-answer {
+    flex: 1 1 calc(50% - var(--space-3));
+    min-width: 0;
+  }
+
+  .exp-protocol {
+    font-size: var(--text-xs);
+  }
+
+  .exp-protocol th,
+  .exp-protocol td {
+    padding: var(--space-2);
+  }
+
+  .exp-protocol th {
+    width: 42%;
+  }
+}
+
+@media print {
+  /* Das Labor ist eine Bedienfläche; gedruckt werden Protokoll und Erklärtext. */
+  .exp {
+    display: none !important;
+  }
+}
+
+/* ============================================================================
+   Pendeltagebuch (RAD-10)
+   ----------------------------------------------------------------------------
+   Präfix `.jr-` wie `.exp-` und `.ptf-` bei den Nachbarmodulen: eine
+   Bedienfläche, keine neuen Tokens. Zwei Spalten (Formular | Liste), ab
+   1000 px einspaltig. Statusfarben nur zusätzlich zum Text.
+   ========================================================================= */
+
+.jr-section {
+  padding-block: var(--space-6) var(--space-10);
+}
+
+.jr {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.jr-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.jr-form,
+.jr-list,
+.jr-block {
+  min-width: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.jr-form h3,
+.jr-list h3,
+.jr-block h3 {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-normal);
+}
+
+.jr-control {
+  display: grid;
+  gap: var(--space-2);
+  margin-block-end: var(--space-4);
+  min-width: 0;
+}
+
+.jr-control label {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.jr-control input,
+.jr-control textarea,
+.jr-control select,
+.jr-run-form input {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-3);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+.jr-control textarea {
+  min-height: 84px;
+  resize: vertical;
+}
+
+.jr-control input[aria-invalid='true'],
+.jr-control textarea[aria-invalid='true'],
+.jr-control select[aria-invalid='true'],
+.jr-run-form input[aria-invalid='true'] {
+  border-color: var(--color-accent-rose);
+  outline: 2px solid var(--color-accent-rose);
+  outline-offset: 1px;
+}
+
+.jr-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.jr-hint {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.jr-error {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-sm);
+  color: var(--color-accent-rose);
+}
+
+.jr-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  min-height: 1.5em;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.jr-status[data-state='warn'] {
+  color: var(--color-accent-rose);
+}
+
+.jr-runlink {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  align-items: center;
+  margin: 0 0 var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-line-strong);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.jr-linkbtn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.jr-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.jr-list-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.jr-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.jr-filter legend {
+  padding: 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.jr-filter-option {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.jr-storage {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.jr-empty {
+  margin: var(--space-3) 0;
+  padding: var(--space-4);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.jr-entries,
+.jr-runs {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jr-entry {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+}
+
+.jr-entry summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-1) var(--space-3);
+  align-items: baseline;
+  min-height: 44px;
+  padding: var(--space-4);
+  cursor: pointer;
+  list-style: none;
+}
+
+.jr-entry summary::-webkit-details-marker {
+  display: none;
+}
+
+.jr-entry summary::after {
+  content: '+';
+  grid-column: 1;
+  grid-row: 1;
+  font-size: var(--text-base);
+  color: var(--color-primary);
+}
+
+.jr-entry[open] summary::after {
+  content: '−';
+}
+
+.jr-entry-date {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-secondary);
+}
+
+.jr-entry-question {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-size: var(--text-base);
+  line-height: 1.4;
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+}
+
+.jr-entry-badges {
+  grid-column: 2;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.jr-entry-body {
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.jr-entry-fields {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.jr-entry-fields div {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.jr-entry-fields dt {
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.jr-entry-fields dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.jr-entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.jr-danger-btn {
+  border-color: var(--color-accent-rose);
+  background: transparent;
+  color: var(--color-accent-rose);
+}
+
+.jr-danger-btn[data-armed='true'] {
+  background: var(--color-accent-rose);
+  color: var(--color-bg-deep);
+}
+
+.jr-block {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.jr-block .astro-text {
+  margin: 0;
+}
+
+.jr-import summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+}
+
+.jr-import-body {
+  display: grid;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+}
+
+.jr-block--labor .jr-runs {
+  margin-top: var(--space-2);
+}
+
+.jr-run {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+}
+
+.jr-run-title {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+}
+
+.jr-run-meta {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.jr-run-done {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--color-accent-emerald);
+}
+
+.jr-run-form {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.jr-run-form label {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.jr-run-form .btn {
+  justify-self: start;
+}
+
+.jr-danger {
+  border-color: var(--color-accent-rose);
+}
+
+.jr-export-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+
+.jr-export-list div {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.jr-export-list dt {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.jr-export-list dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1000px) {
+  .jr-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .jr-form,
+  .jr-list,
+  .jr-block {
+    padding: var(--space-4);
+  }
+
+  .jr-pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .jr-list-head {
+    flex-direction: column;
+  }
+}
+
+@media print {
+  /* Das Tagebuch ist eine Bedienfläche; gedruckt werden Erklärtext und Grenzen. */
+  .jr {
+    display: none !important;
+  }
+}
+
+/* --- Fotos (RAD-06) -------------------------------------------------------
+   Fotos aus dem Medien-Manifest. Bewusst ohne festen 520x400-Slot: Die
+   Motive haben eigene Seitenverhältnisse, und ein Beschnitt würde das
+   Motiv verändern. Die Maße kommen als width/height aus den Daten. */
+.rad-plate--photo {
+  /* --rad-photo-max setzt die Grenze auf die größte verfügbare Bildvariante,
+     wenn diese schmaler ist als der Slot (siehe radiasthesie-views.js). */
+  max-width: var(--rad-photo-max, 680px);
+}
+.rad-plate--photo picture {
+  display: block;
+}
+.rad-plate--photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+.rad-photo-credit {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+}
+/* --- Link-Erkennbarkeit im Fließtext (WCAG 1.4.1, RAD-13/F1) --------------
+   Links in Textblöcken und Metazeilen waren nur durch die Farbe vom
+   umgebenden Text unterschieden (Kontrast 1,07:1, gefordert sind 3:1).
+   Sie werden deshalb zusätzlich unterstrichen. Bedienflächen mit eigener
+   Form (.btn, .textlink, .rad-status-link mit Unterkante) bleiben unverändert. */
+.astro-source-meta a,
+.rad-photo-credit a,
+.astro-text a:not(.btn):not(.textlink),
+.astro-panel-note a,
+.rad-media-credits a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.rad-media-credits li {
+  margin-bottom: var(--space-3);
+}

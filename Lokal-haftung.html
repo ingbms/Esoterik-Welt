@@ -92,6 +92,119 @@
   --color-chakra-third-eye: #5e35b1;
   --color-chakra-crown: #8e24aa;
 
+  /* --- Farbwelten (Sektion „Farben“) -------------------------------------
+     Inhaltsfarben der zwölf Farbwelten. Automatisch erzeugt von
+     docs/farbwelten-konzept/scripts/generate-palette.py; Kontraste und Rollen
+     sind in docs/farbwelten-konzept/03-farbwelten-und-paletten.md und in
+     docs/farbwelten-konzept/messung/palette.json belegt: -ink ≥ 4,81:1 auf
+     allen drei dunklen Flächen, -line ≥ 3,22:1, Text auf -deep ≥ 7,43:1.
+     Text steht nie auf -core oder -soft. Nicht von Hand ändern; bei Änderung
+     das Skript erneut ausführen.
+     Nichtspektrale (magenta, rosa) und neutrale (weiss, schwarz) Farben haben
+     keine Wellenlängenrolle; ihre Tokens sind reine Flächenfarben. Die
+     Abgrenzung dieser Flächen zum Seitenhintergrund ist bewusst gemessen und
+     in palette.json (swatch_separation) dokumentiert. */
+  --fw-rot-ink: #cf6a60;
+  --fw-rot-core: #bc4a41;
+  --fw-rot-core-deep: #853630;
+  --fw-rot-soft: #d69991;
+  --fw-rot-line: #985c55;
+  --fw-rot-deep: #281715;
+  --fw-rot-deep-alt: #1d100e;
+
+  --fw-orange-ink: #c77434;
+  --fw-orange-core: #ad5c13;
+  --fw-orange-core-deep: #7a4213;
+  --fw-orange-soft: #d09f7d;
+  --fw-orange-line: #936240;
+  --fw-orange-deep: #26180f;
+  --fw-orange-deep-alt: #1c110a;
+
+  --fw-gelb-ink: #a08b32;
+  --fw-gelb-core: #887315;
+  --fw-gelb-core-deep: #605213;
+  --fw-gelb-soft: #b9ab74;
+  --fw-gelb-line: #786c3a;
+  --fw-gelb-deep: #201c0c;
+  --fw-gelb-deep-alt: #171408;
+
+  --fw-gruen-ink: #4da15d;
+  --fw-gruen-core: #1d8b3d;
+  --fw-gruen-core-deep: #1b622d;
+  --fw-gruen-soft: #8bb890;
+  --fw-gruen-line: #47764e;
+  --fw-gruen-deep: #131f14;
+  --fw-gruen-deep-alt: #0d170e;
+
+  --fw-tuerkis-ink: #389d9d;
+  --fw-tuerkis-core: #1b8585;
+  --fw-tuerkis-core-deep: #185e5e;
+  --fw-tuerkis-soft: #6fbab9;
+  --fw-tuerkis-line: #3f7776;
+  --fw-tuerkis-deep: #0a2020;
+  --fw-tuerkis-deep-alt: #071717;
+
+  --fw-blau-ink: #4391d7;
+  --fw-blau-core: #1678c3;
+  --fw-blau-core-deep: #15568a;
+  --fw-blau-soft: #85afd8;
+  --fw-blau-line: #447098;
+  --fw-blau-deep: #111d28;
+  --fw-blau-deep-alt: #0c151d;
+
+  --fw-indigo-ink: #857fd7;
+  --fw-indigo-core: #6e64c8;
+  --fw-indigo-core-deep: #4d478c;
+  --fw-indigo-soft: #a5a5d9;
+  --fw-indigo-line: #6a689c;
+  --fw-indigo-deep: #1a1a28;
+  --fw-indigo-deep-alt: #13121d;
+
+  --fw-violett-ink: #ad71bf;
+  --fw-violett-core: #9853ad;
+  --fw-violett-core-deep: #6b3c79;
+  --fw-violett-soft: #bf9cca;
+  --fw-violett-line: #82608d;
+  --fw-violett-deep: #211824;
+  --fw-violett-deep-alt: #18111a;
+
+  /* Nicht spektral: additiver Rot-Blau-Mix, keine eigene Wellenlänge. */
+  --fw-magenta-ink: #c3699e;
+  --fw-magenta-core: #af4a88;
+  --fw-magenta-core-deep: #7b3660;
+  --fw-magenta-soft: #ce98b6;
+  --fw-magenta-line: #905b79;
+  --fw-magenta-deep: #25161f;
+  --fw-magenta-deep-alt: #1b1016;
+
+  --fw-rosa-ink: #c9899c;
+  --fw-rosa-core: #a15c72;
+  --fw-rosa-core-deep: #714251;
+  --fw-rosa-soft: #c59fa9;
+  --fw-rosa-line: #8e6973;
+  --fw-rosa-deep: #23181b;
+  --fw-rosa-deep-alt: #191113;
+
+  /* Neutralfarben: keine Wellenlänge. -core ist die Fläche, die den
+     Farbeindruck trägt; die 1-px-Rahmen (--color-line-strong) trennen sie vom
+     Seitenhintergrund, weil ein fast schwarzer Ton gegen einen fast schwarzen
+     Grund keine 3:1-Trennung erreichen kann. */
+  --fw-weiss-ink: #c9c4b5;
+  --fw-weiss-core: #f1ebda;
+  --fw-weiss-core-deep: #d9d4c8;
+  --fw-weiss-soft: #fbf8f0;
+  --fw-weiss-line: #95928a;
+  --fw-weiss-deep: #1e1c14;
+  --fw-weiss-deep-alt: #16140e;
+
+  --fw-schwarz-ink: #b0ab9c;
+  --fw-schwarz-core: #383225;
+  --fw-schwarz-core-deep: #201d13;
+  --fw-schwarz-soft: #55524b;
+  --fw-schwarz-line: #6f6c64;
+  --fw-schwarz-deep: #1e1c14;
+  --fw-schwarz-deep-alt: #16140e;
+
   /* --- Typography -------------------------------------------------------- */
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -208,6 +321,119 @@
   --color-primary-dark: #633492;
   --color-secondary-text: #006b61;
   --shadow-glow: 0 0 20px rgba(187, 134, 252, 0.2);
+}
+
+/* --- Aktive Farbwelt ------------------------------------------------------
+   Eine Zuweisung statt Inline-Styles: js/modules/farbwelten.js setzt
+   #farbweltenRoot[data-farbwelt="rot"]. Nur Komponenten der Sektion lesen
+   --fw-current-*; die globalen Tokens bleiben unverändert. */
+[data-farbwelt='rot'] {
+  --fw-current-ink: var(--fw-rot-ink);
+  --fw-current-core: var(--fw-rot-core);
+  --fw-current-core-deep: var(--fw-rot-core-deep);
+  --fw-current-soft: var(--fw-rot-soft);
+  --fw-current-line: var(--fw-rot-line);
+  --fw-current-deep: var(--fw-rot-deep);
+  --fw-current-deep-alt: var(--fw-rot-deep-alt);
+}
+[data-farbwelt='orange'] {
+  --fw-current-ink: var(--fw-orange-ink);
+  --fw-current-core: var(--fw-orange-core);
+  --fw-current-core-deep: var(--fw-orange-core-deep);
+  --fw-current-soft: var(--fw-orange-soft);
+  --fw-current-line: var(--fw-orange-line);
+  --fw-current-deep: var(--fw-orange-deep);
+  --fw-current-deep-alt: var(--fw-orange-deep-alt);
+}
+[data-farbwelt='gelb'] {
+  --fw-current-ink: var(--fw-gelb-ink);
+  --fw-current-core: var(--fw-gelb-core);
+  --fw-current-core-deep: var(--fw-gelb-core-deep);
+  --fw-current-soft: var(--fw-gelb-soft);
+  --fw-current-line: var(--fw-gelb-line);
+  --fw-current-deep: var(--fw-gelb-deep);
+  --fw-current-deep-alt: var(--fw-gelb-deep-alt);
+}
+[data-farbwelt='gruen'] {
+  --fw-current-ink: var(--fw-gruen-ink);
+  --fw-current-core: var(--fw-gruen-core);
+  --fw-current-core-deep: var(--fw-gruen-core-deep);
+  --fw-current-soft: var(--fw-gruen-soft);
+  --fw-current-line: var(--fw-gruen-line);
+  --fw-current-deep: var(--fw-gruen-deep);
+  --fw-current-deep-alt: var(--fw-gruen-deep-alt);
+}
+[data-farbwelt='tuerkis'] {
+  --fw-current-ink: var(--fw-tuerkis-ink);
+  --fw-current-core: var(--fw-tuerkis-core);
+  --fw-current-core-deep: var(--fw-tuerkis-core-deep);
+  --fw-current-soft: var(--fw-tuerkis-soft);
+  --fw-current-line: var(--fw-tuerkis-line);
+  --fw-current-deep: var(--fw-tuerkis-deep);
+  --fw-current-deep-alt: var(--fw-tuerkis-deep-alt);
+}
+[data-farbwelt='blau'] {
+  --fw-current-ink: var(--fw-blau-ink);
+  --fw-current-core: var(--fw-blau-core);
+  --fw-current-core-deep: var(--fw-blau-core-deep);
+  --fw-current-soft: var(--fw-blau-soft);
+  --fw-current-line: var(--fw-blau-line);
+  --fw-current-deep: var(--fw-blau-deep);
+  --fw-current-deep-alt: var(--fw-blau-deep-alt);
+}
+[data-farbwelt='indigo'] {
+  --fw-current-ink: var(--fw-indigo-ink);
+  --fw-current-core: var(--fw-indigo-core);
+  --fw-current-core-deep: var(--fw-indigo-core-deep);
+  --fw-current-soft: var(--fw-indigo-soft);
+  --fw-current-line: var(--fw-indigo-line);
+  --fw-current-deep: var(--fw-indigo-deep);
+  --fw-current-deep-alt: var(--fw-indigo-deep-alt);
+}
+[data-farbwelt='violett'] {
+  --fw-current-ink: var(--fw-violett-ink);
+  --fw-current-core: var(--fw-violett-core);
+  --fw-current-core-deep: var(--fw-violett-core-deep);
+  --fw-current-soft: var(--fw-violett-soft);
+  --fw-current-line: var(--fw-violett-line);
+  --fw-current-deep: var(--fw-violett-deep);
+  --fw-current-deep-alt: var(--fw-violett-deep-alt);
+}
+[data-farbwelt='magenta'] {
+  --fw-current-ink: var(--fw-magenta-ink);
+  --fw-current-core: var(--fw-magenta-core);
+  --fw-current-core-deep: var(--fw-magenta-core-deep);
+  --fw-current-soft: var(--fw-magenta-soft);
+  --fw-current-line: var(--fw-magenta-line);
+  --fw-current-deep: var(--fw-magenta-deep);
+  --fw-current-deep-alt: var(--fw-magenta-deep-alt);
+}
+[data-farbwelt='rosa'] {
+  --fw-current-ink: var(--fw-rosa-ink);
+  --fw-current-core: var(--fw-rosa-core);
+  --fw-current-core-deep: var(--fw-rosa-core-deep);
+  --fw-current-soft: var(--fw-rosa-soft);
+  --fw-current-line: var(--fw-rosa-line);
+  --fw-current-deep: var(--fw-rosa-deep);
+  --fw-current-deep-alt: var(--fw-rosa-deep-alt);
+}
+[data-farbwelt='weiss'] {
+  --fw-current-ink: var(--fw-weiss-ink);
+  --fw-current-core: var(--fw-weiss-core);
+  --fw-current-core-deep: var(--fw-weiss-core-deep);
+  --fw-current-soft: var(--fw-weiss-soft);
+  --fw-current-line: var(--fw-weiss-line);
+  --fw-current-deep: var(--fw-weiss-deep);
+  --fw-current-deep-alt: var(--fw-weiss-deep-alt);
+}
+[data-farbwelt='schwarz'] {
+  --fw-current-ink: var(--fw-schwarz-ink);
+  --fw-current-core: var(--fw-schwarz-core);
+  --fw-current-core-deep: var(--fw-schwarz-core-deep);
+  --fw-current-soft: var(--fw-schwarz-soft);
+  --fw-current-line: var(--fw-schwarz-line);
+  --fw-current-deep: var(--fw-schwarz-deep);
+  --fw-current-deep-alt: var(--fw-schwarz-deep-alt);
 }
 
 /* ============================================================================
@@ -499,6 +725,12 @@ hr {
 #favCounter {
   margin-left: var(--space-3);
   flex-shrink: 0;
+  /* Der Zähler steht statisch im Markup. Eine feste Mindestbreite hält die
+     Navigation auch dann an ihrem Platz, wenn die Zahl von 0 auf zweistellig
+     wächst — sonst verschiebt sich der Burger beim Favorisieren. */
+  min-width: 3rem;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
 }
 
 .nav-list {
@@ -561,7 +793,11 @@ hr {
   background: var(--color-primary);
 }
 
-@media (max-width: 780px) {
+/* Neun Hauptziele: Ab 901 px passen Logo, neun Links und der Favoritenzähler
+   nebeneinander (gemessen 50,31 px Reserve, docs/farbwelten-konzept/02 §3).
+   Zwischen 781 und 900 px würde die Kopfzeile um 16,20 px überlaufen; dort
+   gilt deshalb das gestapelte Menü. */
+@media (max-width: 900px) {
   .nav-toggle {
     display: inline-flex;
   }
@@ -578,6 +814,10 @@ hr {
     top: var(--header-height);
     left: 0;
     right: 0;
+    /* Gestapeltes Menü: ohne stretch erbt die Liste `align-items: center` aus
+       der Desktop-Regel, die Ziele schrumpfen auf Textbreite und stehen
+       mittig. Volle Breite = 44-px-Trefferfläche über die ganze Zeile. */
+    align-items: stretch;
     flex-direction: column;
     gap: 0;
     width: 100%;
@@ -713,7 +953,8 @@ button.card,
 .card[role='button']:hover,
 .card[role='link']:hover,
 button.card:hover,
-.crystal-card-interactive:hover {
+.crystal-card-interactive:hover,
+.crystal-card-interactive:focus-within {
   border-color: var(--color-line-strong);
 }
 
@@ -1430,6 +1671,16 @@ button.card:hover,
   font-size: var(--text-xl);
   margin-block: var(--space-8) var(--space-2);
   letter-spacing: 0;
+}
+/* Deck subsections in the imprint must read as subordinates of their h2
+   (--text-xl 20px). The global h3 (--text-2xl 28px) would invert the
+   hierarchy, so legal sub-headings take the next step down with their own
+   leading above, the way .article-prose h3 does. */
+.legal-prose h3 {
+  font-size: var(--text-lg);
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin-block: var(--space-6) var(--space-2);
 }
 .legal-prose p,
 .legal-prose li {
@@ -2236,6 +2487,13 @@ button.card:hover,
   line-height: 1.6;
   color: var(--color-text-secondary);
 }
+/* Inline links in running text must stay distinguishable without relying on colour
+   alone (WCAG 1.4.1): primary and secondary text sit at ~1.08:1 in this palette. */
+.tarot-deck-note a,
+.deck-credits a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
 
 /* --- Deck picker --------------------------------------------------------- */
 /* Two equal options, each with the first card of its deck as preview. The radio
@@ -2411,12 +2669,67 @@ button.card:hover,
   padding: 0;
   overflow: hidden;
 }
+/* Bildplatte: quadratisch, Basaltgrund, ganze Silhouette (Spec §3/E1/E2) */
+.crystal-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-border);
+}
 .crystal-image {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
   background: var(--color-bg-deep);
-  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+  border-bottom: 0;
+  position: relative;
+}
+/* Museumstafel: helle Studiofotos stehen als gerahmte Platte im Basaltgrund.
+   Die weiche Innenkante blendet die Fotokante in den Hintergrund, damit die
+   Kacheln als Montage und nicht als Leuchtflächen wirken (Review t_385afa1e,
+   P2.1 – bewusste Gestaltungsentscheidung, dokumentiert in
+   docs/kristalle/DESIGN-MUSEUMSTAFEL.md). */
+.crystal-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(186, 189, 183, 0.12);
+  box-shadow: inset 0 0 26px 12px rgba(11, 16, 18, 0.55);
+}
+.crystal-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Sicherheitsnetz; produziert wird bereits 1:1 */
+  object-position: center;
+}
+.crystal-credit {
+  margin: 0;
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere; /* lange Urhebernamen brechen, statt ueberzulaufen */
+}
+/* Ab zwei Spalten: Nachweisblock auf drei Zeilen reservieren, damit die
+   Kartennamen trotz langer Urhebernamen (crys-01: 73 Zeichen) gleich hoch stehen. */
+@media (min-width: 632px) {
+  .crystal-credit {
+    min-height: calc(3 * 1.4 * var(--text-xs) + var(--space-2) + var(--space-3));
+  }
+}
+.crystal-image.is-missing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crystal-credit-inline {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
 }
 .crystal-content {
   flex: 1;
@@ -2479,12 +2792,67 @@ button.card:hover,
   width: 100%;
   height: 100%;
   min-width: 0;
-  object-fit: cover;
+  object-fit: contain;
+}
+#crystalModal .modal {
+  max-width: min(92vw, 880px);
 }
 @container (min-width: 36rem) {
   .crystal-detail-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   }
+}
+.crystal-detail-figure {
+  margin: 0;
+  min-width: 0;
+}
+.crystal-detail-credit {
+  margin: var(--space-3) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+.crystal-detail-credit .credit-label {
+  color: var(--color-text-primary);
+}
+.crystal-detail-credit a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+/* Unter 380 px ist die Dialogplatte breiter als nötig: der vollständige
+   Nachweis (Urheber, Lizenz, Quelle, Änderungen) soll ohne Scrollen sichtbar
+   sein (Review t_385afa1e, P2.3). */
+@media (max-width: 380px) {
+  .crystal-detail-image {
+    width: min(100%, 240px);
+    margin-inline: auto;
+  }
+}
+/* Sammelnachweis unter dem Raster (Spec §9.2) */
+.crystal-sources {
+  margin: var(--space-6) 0 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+.crystal-sources a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+/* Sammelnachweis im Impressum: Links müssen ohne Farbe erkennbar sein
+   (WCAG 1.4.1) – Link- und Fließtextfarbe liegen nur 1,08:1 auseinander. */
+.crystal-credits a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* List view */
@@ -2492,12 +2860,19 @@ button.card:hover,
   flex-direction: row;
   height: auto;
 }
+.crystal-list .crystal-figure {
+  flex: 0 0 120px;
+  align-self: flex-start;
+  border-bottom: 0;
+  border-right: 1px solid var(--color-border);
+}
 .crystal-list .crystal-image {
   width: 120px;
   height: 120px;
   aspect-ratio: auto;
-  border-bottom: 0;
-  border-right: 1px solid var(--color-border);
+}
+.crystal-list .crystal-credit {
+  display: none;
 }
 .crystal-list .crystal-content {
   flex: 1;
@@ -3788,11 +4163,16 @@ button.card:hover,
   .crystal-list .crystal-card {
     flex-direction: column;
   }
-  .crystal-list .crystal-image {
+  .crystal-list .crystal-figure {
+    flex: 0 0 auto;
     width: 100%;
-    height: 200px;
     border-right: 0;
     border-bottom: 1px solid var(--color-border);
+  }
+  .crystal-list .crystal-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
   }
   .rune-card {
     padding: var(--space-3);
@@ -3848,6 +4228,10 @@ button.card:hover,
   }
   .crystal-image,
   .article-image {
+    display: none !important;
+  }
+  /* Nachweis nur mit Bild: Figur komplett ausblenden (Spec E12). */
+  .crystal-figure {
     display: none !important;
   }
   .card,
@@ -5085,13 +5469,17 @@ button.card:hover,
   }
 }
 
-/* --- Kopfzeile mit sieben Navigationszielen -----------------------------
-   Der Astrologiebereich ist das siebte Hauptziel. Zwischen 781 px (ab dort
-   zeigt das Design-System die horizontale Navigation) und dem Desktop-Bereich
-   reichte die Breite für Logo + sieben Links nicht mehr: Die Kopfzeile lief
-   um bis zu 74 px über. Statt die Mobile-Navigation früher einzuschalten,
-   bleiben hier alle Ziele sichtbar und rücken nur enger zusammen. */
-@media (min-width: 781px) and (max-width: 1120px) {
+/* --- Kopfzeile mit zehn Navigationszielen --------------------------------
+   Seit der Rubriken-Integration sind es zehn Hauptziele: Start, Tarot,
+   Kristalle, Mondphasen, Astrologie, Frequenzen, Runen, Pendeln, Farben,
+   Wissen. Ab 901 px zeigt das Design-System die horizontale Navigation; zehn
+   Ziele plus dreistelliger Favoritenzähler passen dort nur mit engeren
+   Abständen und der 13-px-Schriftgrenze. Gemessen am Build (2026-11-03, Zehn
+   Ziele): 901 px Reserve 88,63 px bei 4-px-Abstand (mit 8 px noch 7 px
+   Überlauf), 1001–1165 px Reserve ab 136,63 px bei 8 px, ab 1166 px greift
+   wieder der Standardabstand (Reserve 91,63 px, kein Überlauf). Unterhalb von
+   901 px gilt das gestapelte Menü. */
+@media (min-width: 901px) and (max-width: 1165px) {
   .nav-list {
     gap: var(--space-2);
   }
@@ -5101,6 +5489,29 @@ button.card:hover,
   }
   .header-inner {
     gap: var(--space-4);
+  }
+}
+
+/* Der schmalste Band der horizontalen Navigation braucht 4-px-Abstände:
+   bei 10 Zielen und 901 px sind 8 px Abstand 7 px zu breit. */
+@media (min-width: 901px) and (max-width: 1000px) {
+  .nav-list {
+    gap: var(--space-1);
+  }
+  .header-inner {
+    gap: var(--space-2);
+  }
+}
+
+/* Reflow bei 320 px (WCAG 1.4.10): Die Produktivseite lief mit Favoritenzähler
+   um 19 px über. Kleineres Logo und engerer Abstand beseitigen den Überlauf;
+   die Regel greift nur unterhalb von 361 px. */
+@media (max-width: 360px) {
+  .header-inner {
+    gap: var(--space-2);
+  }
+  .logo {
+    font-size: 22px;
   }
 }
 </style>

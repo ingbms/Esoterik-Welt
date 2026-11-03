@@ -1,0 +1,36 @@
+
+> esoterik-welt@1.0.0 test:farbwelten
+> node --test tests/farbwelten.mjs tests/farbwelten-sources.mjs
+
+✔ echter Bestand: keine Kennung führt abweichende Fassungen (12.4927ms)
+✔ echter Bestand: Register führt je Kennung den vollständigsten Kandidaten (6.1299ms)
+✔ [19]-Muster (IARC 2023 vs. 2012, verschiedene URLs) schlägt an (0.7956ms)
+✔ [24]-Muster (URL vs. keine URL) schlägt an (0.292ms)
+✔ gleiche URL, abweichendes Jahr ist ein Identitätskonflikt (0.3593ms)
+✔ gleiche URL mit kürzerem Label: Hinweis, unter --strict-labels Fehler (0.3419ms)
+✔ Schreibweisen derselben Fassung sind kein Fehler (0.6336ms)
+✔ Verweisketten sind keine bibliografische Fassung (0.4196ms)
+✔ Gleichstand im Score wird gemeldet, nicht still entschieden (0.3667ms)
+✔ veraltetes Register wird als Abweichung erkannt (0.4174ms)
+✔ Registerfassung ohne Entsprechung im Dokument wird erkannt (0.2191ms)
+✔ Normalisierung: URL und Label vergleichbar, Identität bleibt unterscheidend (0.1822ms)
+✔ zwölf Farbwelten mit Typ, belegten Wellenlängen und Frequenzbereichen (6.0805ms)
+✔ Misch- und Neutralfarben erfinden keine Messwerte im Physikabschnitt (0.7411ms)
+✔ jede Farbseite trägt das vollständige A–H-Skelett (1.3883ms)
+✔ kein Text enthält HTML oder Skriptfragmente (1.1078ms)
+✔ alle Quellenverweise sind aufgelöst (0.9295ms)
+✔ Einstieg, Chakren- und Lichtseite sind vollständig (0.2297ms)
+✔ Chakren-Daten sind vollständig und als Tradition gekennzeichnet (0.2089ms)
+✔ Spektrumrechnung trifft die dokumentierten Stützwerte (0.5355ms)
+✔ Routenauflösung: Einstieg, Farben, Anker, Unbekanntes (0.8369ms)
+✔ Registereinträge tragen Route, Kurzbeschreibung, Typ-Label und Verwandtschaften (0.8516ms)
+✔ SEO-Titel und Beschreibungen bleiben im Rahmen der IA (0.6349ms)
+✔ Redaktionstexte stehen nicht im Markup (4.2693ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 339.1925

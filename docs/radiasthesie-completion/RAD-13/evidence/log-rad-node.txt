@@ -1,0 +1,32 @@
+✔ drei Themenseiten mit vollständigem Kapitelinventar (4.8871ms)
+✔ jeder Quellenmarker im Text löst auf eine vorhandene Quelle auf (0.4829ms)
+✔ Quellenverzeichnis ist vollständig und ohne Platzhalter (0.476ms)
+✔ Glossar und Evidenzstufen sind vollständig (0.2139ms)
+✔ Router-Vokabular wird vollständig aufgelöst (0.2947ms)
+✔ Suche findet Themen, Kapitel, Glossar und Quellen — auch mit Umlauten (13.6311ms)
+✔ Glossarfilter grenzt auf Buchstabe und Suchbegriff ein (0.4118ms)
+✔ Landingpage: eine H1, drei Themenkarten, Einordnungsband und Stufenlegende (0.9318ms)
+✔ Themenseiten: Kapitel, Inhaltsverzeichnis, Quellenpanel und Einordnungskasten (3.2205ms)
+✔ Themenseite verlinkt nicht auf sich selbst als verwandt (1.4383ms)
+✔ Themenvernetzung: alle acht Auftragsthemen sind verortet oder als Lücke entschieden (0.3114ms)
+✔ jede verlinkte Vernetzungsroute löst auf und ist eindeutig (0.2191ms)
+✔ Landingpage trennt vorhandene Anschlüsse von benannten Lücken (0.2296ms)
+✔ jede Themenseite verlinkt mindestens zwei andere Module (IA §9) (1.3968ms)
+✔ Frequenz, Schwingung und Bovis bleiben getrennt (Auftrag RAD-11) (0.814ms)
+✔ Glossar: Buchstabenleiste, Suche und 17 Begriffe (0.9575ms)
+✔ Quellen: 66 Karten mit Sprungziel und Rückverweis (1.5393ms)
+✔ Methodik: Abschnitte inklusive Bildnachweise, keine Wirkversprechen (0.4807ms)
+✔ Bildnachweise nennen alle sechs Fotos mit Lizenz und Share-Alike-Hinweis (0.2406ms)
+✔ Fotos stehen im passenden Kapitel und tragen Alt-Text, Maße und Attributionszeile (1.21ms)
+✔ Suche und Fehleransicht führen immer zurück (2.6811ms)
+✔ HTML wird escaped, Daten erscheinen nicht als Markup (0.3891ms)
+✔ BreadcrumbList ist gültiges JSON-LD ohne Fragmentadressen (0.3278ms)
+✔ Titelgrenze und Canonical-Zuordnung halten die Projektregeln (0.2251ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 136.3482

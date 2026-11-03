@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigationsprobe · 8 Hauptziele</title>
+    <link rel="stylesheet" href="../../../css/design-system.css" />
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <!-- Kandidat für die achte Navigationsstufe (in der Spec: css/main.css) -->
+    <style id="nav-candidate">
+      @media (min-width: 781px) and (max-width: 900px) {
+        .logo {
+          font-size: 24px;
+        }
+        .nav-list {
+          gap: var(--space-1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" id="header" role="banner">
+      <div class="header-inner" id="headerInner">
+        <a href="#home" class="logo" aria-label="Esoterik-Welt Startseite">Esoterik-Welt</a>
+        <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
+          <ul class="nav-list" id="navList">
+            <li><a href="#home" class="nav-link" data-page="home">Start</a></li>
+            <li><a href="#tarot" class="nav-link" data-page="tarot">Tarot</a></li>
+            <li><a href="#crystals" class="nav-link" data-page="crystals">Kristalle</a></li>
+            <li><a href="#moon" class="nav-link" data-page="moon">Mondphasen</a></li>
+            <li><a href="#astrologie" class="nav-link" data-page="astrologie">Astrologie</a></li>
+            <li><a href="#runes" class="nav-link" data-page="runes">Runen</a></li>
+            <li><a href="#pendeln" class="nav-link active" data-page="pendeln" aria-current="page">Pendeln</a></li>
+            <li><a href="#blog" class="nav-link" data-page="blog">Wissen</a></li>
+          </ul>
+          <span id="favCounter" class="badge badge-primary" aria-label="Anzahl Kristall-Favoriten" aria-live="polite">♥ 128</span>
+          <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navList">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main id="main" style="min-height: 60vh"></main>
+  </body>
+</html>

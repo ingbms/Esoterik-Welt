@@ -1,0 +1,547 @@
+{
+ "checks": [
+  {
+   "id": "STATISTIK-REFERENZ",
+   "ok": false,
+   "detail": {
+    "maxDelta": null,
+    "cases": 8
+   }
+  },
+  {
+   "id": "STATISTIK-INTERVALL-EIGENSCHAFTEN",
+   "ok": false,
+   "detail": {
+    "verletzungen": [
+     {
+      "h": 0,
+      "n": 10,
+      "iv": {
+       "low": 0,
+       "high": 0.2775327998628892,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     },
+     {
+      "h": 2,
+      "n": 10,
+      "iv": {
+       "low": 0.05668215145437519,
+       "high": 0.5098375284633583,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     },
+     {
+      "h": 4,
+      "n": 10,
+      "iv": {
+       "low": 0.16818032970623614,
+       "high": 0.6873262302663417,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     },
+     {
+      "h": 6,
+      "n": 10,
+      "iv": {
+       "low": 0.31267376973365824,
+       "high": 0.8318196702937638,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     },
+     {
+      "h": 8,
+      "n": 10,
+      "iv": {
+       "low": 0.4901624715366418,
+       "high": 0.9433178485456248,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "STATISTIK-ANALYSE-KONSISTENZ",
+   "ok": true,
+   "detail": {
+    "analyse": {
+     "schema": "esow.experiment-statistik/1",
+     "hits": 15,
+     "n": 20,
+     "k": 2,
+     "baseProbability": 0.5,
+     "expected": 10,
+     "expectedRounded": 10,
+     "hitRate": 0.75,
+     "pValue": 0.04138946533203118,
+     "alpha": 0.05,
+     "meetsAlpha": true,
+     "interval": {
+      "low": 0.531299122381256,
+      "high": 0.8881382985923343,
+      "confidence": 0.95,
+      "method": "wilson"
+     },
+     "method": "binomial-exact + wilson-95"
+    }
+   }
+  },
+  {
+   "id": "SKIP-LINK:/#pendeln/quellen",
+   "ok": false,
+   "detail": {
+    "focused": {
+     "tag": "A",
+     "cls": "",
+     "href": "https://www.usgs.gov/water-science-school/science/water-dowsing"
+    },
+    "urlBefore": "http://127.0.0.1:4010/Esoterik-Welt/#pendeln/quellen",
+    "after": {
+     "hash": "",
+     "active": "BODY",
+     "h1": [
+      "403 ERROR"
+     ],
+     "scrollY": 0,
+     "url": "https://www.usgs.gov/water-science-school/science/water-dowsing"
+    },
+    "h1Before": [
+     "Quellen & Belege"
+    ]
+   }
+  },
+  {
+   "id": "SKIP-LINK:/#pendeln/labor",
+   "ok": true,
+   "detail": {
+    "focused": {
+     "tag": "DIV",
+     "cls": "psim-scene",
+     "href": null
+    },
+    "urlBefore": "http://127.0.0.1:4010/Esoterik-Welt/#pendeln/labor",
+    "after": {
+     "hash": "#pendeln/labor",
+     "active": "psimScene",
+     "h1": [
+      "Pendellabor"
+     ],
+     "scrollY": 428,
+     "url": "http://127.0.0.1:4010/Esoterik-Welt/#pendeln/labor"
+    },
+    "h1Before": [
+     "Pendellabor"
+    ]
+   }
+  },
+  {
+   "id": "SKIP-LINK:/#pendeln/journal",
+   "ok": true,
+   "detail": {
+    "focused": {
+     "tag": "INPUT",
+     "cls": "",
+     "href": null
+    },
+    "urlBefore": "http://127.0.0.1:4010/Esoterik-Welt/#pendeln/journal",
+    "after": {
+     "hash": "#pendeln/journal",
+     "active": "jrQuestion",
+     "h1": [
+      "Pendeltagebuch"
+     ],
+     "scrollY": 520,
+     "url": "http://127.0.0.1:4010/Esoterik-Welt/#pendeln/journal"
+    },
+    "h1Before": [
+     "Pendeltagebuch"
+    ]
+   }
+  },
+  {
+   "id": "SKIP-LINK:/radiasthesie/quellen.html",
+   "ok": false,
+   "detail": {
+    "focused": {
+     "tag": "A",
+     "cls": "skip-link",
+     "href": "#main"
+    },
+    "urlBefore": "http://127.0.0.1:4010/Esoterik-Welt/radiasthesie/quellen.html",
+    "after": {
+     "hash": "#main",
+     "active": "BODY",
+     "h1": [
+      "Quellen & Belege"
+     ],
+     "scrollY": 0,
+     "url": "http://127.0.0.1:4010/Esoterik-Welt/radiasthesie/quellen.html#main"
+    },
+    "h1Before": [
+     "Quellen & Belege"
+    ]
+   }
+  },
+  {
+   "id": "JOURNAL-XSS",
+   "ok": true,
+   "detail": {
+    "xss": null,
+    "htmlHasImg": false,
+    "textVisible": true,
+    "stored": [
+     "esot_rad_journal_v1"
+    ],
+    "storageSize": 373
+   }
+  },
+  {
+   "id": "JOURNAL-EXPORT",
+   "ok": false,
+   "detail": {
+    "name": "radiasthesie-journal-2026-11-03.json",
+    "bytes": 391,
+    "keys": [
+     "schema",
+     "app",
+     "kind",
+     "exportedAt",
+     "data"
+    ]
+   }
+  },
+  {
+   "id": "JOURNAL-LOESCHUNG",
+   "ok": true,
+   "detail": {
+    "before": 373,
+    "afterDel": {
+     "keys": [],
+     "size": 41,
+     "entriesVisible": false
+    }
+   }
+  },
+  {
+   "id": "STUDIO-IMPORT-INVALID",
+   "ok": true,
+   "detail": {
+    "label": "ungueltig",
+    "invalid": [],
+    "alerts": [
+     "Kein gültiges JSON: Expected property name or '}' in JSON at position 2 (line 1 column 3)",
+     "Kein gültiges JSON: Expected property name or '}' in JSON at position 2 (line 1 column 3)"
+    ],
+    "title": "Ja/Nein-Tafel",
+    "segments": 0
+   }
+  },
+  {
+   "id": "STUDIO-IMPORT-GRENZE",
+   "ok": true,
+   "detail": {
+    "label": "zu gross",
+    "invalid": [],
+    "alerts": [
+     "Die Datei ist 40972 Bytes groß; erlaubt sind höchstens 32768 Bytes (32 KiB).",
+     "Die Datei ist 40972 Bytes groß; erlaubt sind höchstens 32768 Bytes (32 KiB)."
+    ],
+    "title": "Ja/Nein-Tafel",
+    "segments": 0
+   }
+  },
+  {
+   "id": "STUDIO-IMPORT-ESCAPE",
+   "ok": true,
+   "detail": {
+    "xss": null,
+    "svg": {
+     "text": " Ja/Nein-Tafel Kreisrunde Pendeltafel „Ja/Nein-Tafel“ mit 2 gleich großen Segmenten: JA, NEIN. Die Tafel ordnet die Bedeutung der Segmente; sie misst nichts. Ja/Nein-Tafel JANEIN Esoterik-Welt · Pende",
+     "hasScript": false,
+     "hasImg": false
+    },
+    "hostile": {
+     "label": "hostil",
+     "invalid": [
+      "ptfTitle",
+      "ptfLabels"
+     ],
+     "alerts": [
+      "Unbekanntes Feld „segments“ — erlaubt sind schema, preset, title, palette, labels. Feld „schema“ muss „esow.pendeltafel/",
+      "Unbekanntes Feld „segments“ — erlaubt sind schema, preset, title, palette, labels.Feld „schema“ muss „esow.pendeltafel/1"
+     ],
+     "title": "Ja/Nein-Tafel",
+     "segments": 0
+    }
+   }
+  },
+  {
+   "id": "STUDIO-SVG-EXPORT",
+   "ok": false,
+   "detail": {
+    "name": "pendeltafel-ja-nein-tafel.svg",
+    "bytes": 1930,
+    "hasScript": false,
+    "hasOnAttr": false,
+    "wellFormed": false
+   }
+  }
+ ],
+ "findings": [
+  {
+   "id": "STATISTIK-REFERENZ",
+   "detail": {
+    "maxDelta": null,
+    "cases": 8
+   }
+  },
+  {
+   "id": "STATISTIK-INTERVALL-EIGENSCHAFTEN",
+   "detail": {
+    "verletzungen": [
+     {
+      "h": 0,
+      "n": 10,
+      "iv": {
+       "low": 0,
+       "high": 0.2775327998628892,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     },
+     {
+      "h": 2,
+      "n": 10,
+      "iv": {
+       "low": 0.05668215145437519,
+       "high": 0.5098375284633583,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     },
+     {
+      "h": 4,
+      "n": 10,
+      "iv": {
+       "low": 0.16818032970623614,
+       "high": 0.6873262302663417,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     },
+     {
+      "h": 6,
+      "n": 10,
+      "iv": {
+       "low": 0.31267376973365824,
+       "high": 0.8318196702937638,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     },
+     {
+      "h": 8,
+      "n": 10,
+      "iv": {
+       "low": 0.4901624715366418,
+       "high": 0.9433178485456248,
+       "confidence": 0.95,
+       "method": "wilson"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "SKIP-LINK:/#pendeln/quellen",
+   "detail": {
+    "focused": {
+     "tag": "A",
+     "cls": "",
+     "href": "https://www.usgs.gov/water-science-school/science/water-dowsing"
+    },
+    "urlBefore": "http://127.0.0.1:4010/Esoterik-Welt/#pendeln/quellen",
+    "after": {
+     "hash": "",
+     "active": "BODY",
+     "h1": [
+      "403 ERROR"
+     ],
+     "scrollY": 0,
+     "url": "https://www.usgs.gov/water-science-school/science/water-dowsing"
+    },
+    "h1Before": [
+     "Quellen & Belege"
+    ]
+   }
+  },
+  {
+   "id": "SKIP-LINK:/radiasthesie/quellen.html",
+   "detail": {
+    "focused": {
+     "tag": "A",
+     "cls": "skip-link",
+     "href": "#main"
+    },
+    "urlBefore": "http://127.0.0.1:4010/Esoterik-Welt/radiasthesie/quellen.html",
+    "after": {
+     "hash": "#main",
+     "active": "BODY",
+     "h1": [
+      "Quellen & Belege"
+     ],
+     "scrollY": 0,
+     "url": "http://127.0.0.1:4010/Esoterik-Welt/radiasthesie/quellen.html#main"
+    },
+    "h1Before": [
+     "Quellen & Belege"
+    ]
+   }
+  },
+  {
+   "id": "JOURNAL-EXPORT",
+   "detail": {
+    "name": "radiasthesie-journal-2026-11-03.json",
+    "bytes": 391,
+    "keys": [
+     "schema",
+     "app",
+     "kind",
+     "exportedAt",
+     "data"
+    ]
+   }
+  },
+  {
+   "id": "STUDIO-SVG-EXPORT",
+   "detail": {
+    "name": "pendeltafel-ja-nein-tafel.svg",
+    "bytes": 1930,
+    "hasScript": false,
+    "hasOnAttr": false,
+    "wellFormed": false
+   }
+  }
+ ],
+ "studio": {
+  "ids": [
+   {
+    "id": "ptfPreset",
+    "tag": "SELECT",
+    "type": "select-one"
+   },
+   {
+    "id": "",
+    "tag": "INPUT",
+    "type": "radio"
+   },
+   {
+    "id": "",
+    "tag": "INPUT",
+    "type": "radio"
+   },
+   {
+    "id": "",
+    "tag": "INPUT",
+    "type": "radio"
+   },
+   {
+    "id": "",
+    "tag": "INPUT",
+    "type": "radio"
+   },
+   {
+    "id": "ptfTitle",
+    "tag": "INPUT",
+    "type": "text"
+   },
+   {
+    "id": "ptfLabels",
+    "tag": "TEXTAREA",
+    "type": "textarea"
+   },
+   {
+    "id": "ptfDownloadSvg",
+    "tag": "BUTTON",
+    "type": "button"
+   },
+   {
+    "id": "ptfDownloadJson",
+    "tag": "BUTTON",
+    "type": "button"
+   },
+   {
+    "id": "ptfPrint",
+    "tag": "BUTTON",
+    "type": "button"
+   },
+   {
+    "id": "ptfImportFile",
+    "tag": "INPUT",
+    "type": "file"
+   },
+   {
+    "id": "ptfImportText",
+    "tag": "TEXTAREA",
+    "type": "textarea"
+   },
+   {
+    "id": "ptfImportApply",
+    "tag": "BUTTON",
+    "type": "button"
+   }
+  ],
+  "invalidJson": {
+   "label": "ungueltig",
+   "invalid": [],
+   "alerts": [
+    "Kein gültiges JSON: Expected property name or '}' in JSON at position 2 (line 1 column 3)",
+    "Kein gültiges JSON: Expected property name or '}' in JSON at position 2 (line 1 column 3)"
+   ],
+   "title": "Ja/Nein-Tafel",
+   "segments": 0
+  },
+  "oversized": {
+   "label": "zu gross",
+   "invalid": [],
+   "alerts": [
+    "Die Datei ist 40972 Bytes groß; erlaubt sind höchstens 32768 Bytes (32 KiB).",
+    "Die Datei ist 40972 Bytes groß; erlaubt sind höchstens 32768 Bytes (32 KiB)."
+   ],
+   "title": "Ja/Nein-Tafel",
+   "segments": 0
+  },
+  "hostile": {
+   "label": "hostil",
+   "invalid": [
+    "ptfTitle",
+    "ptfLabels"
+   ],
+   "alerts": [
+    "Unbekanntes Feld „segments“ — erlaubt sind schema, preset, title, palette, labels. Feld „schema“ muss „esow.pendeltafel/",
+    "Unbekanntes Feld „segments“ — erlaubt sind schema, preset, title, palette, labels.Feld „schema“ muss „esow.pendeltafel/1"
+   ],
+   "title": "Ja/Nein-Tafel",
+   "segments": 0
+  },
+  "xss": null,
+  "svgInDom": {
+   "text": " Ja/Nein-Tafel Kreisrunde Pendeltafel „Ja/Nein-Tafel“ mit 2 gleich großen Segmenten: JA, NEIN. Die Tafel ordnet die Bedeutung der Segmente; sie misst nichts. Ja/Nein-Tafel JANEIN Esoterik-Welt · Pende",
+   "hasScript": false,
+   "hasImg": false
+  },
+  "svgFile": {
+   "name": "pendeltafel-ja-nein-tafel.svg",
+   "bytes": 1930,
+   "hasScript": false,
+   "hasOnAttr": false,
+   "wellFormed": false
+  }
+ }
+}

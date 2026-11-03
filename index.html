@@ -46,6 +46,8 @@
       <link rel="stylesheet" href="css/design-system.css" />
       <link rel="stylesheet" href="css/main.css" />
       <link rel="stylesheet" href="css/frequenzlabor.css" />
+      <link rel="stylesheet" href="css/radiasthesie.css" />
+      <link rel="stylesheet" href="css/farbwelten.css" />
 
       <!-- Favicon -->
       <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -74,6 +76,8 @@
             <li><a href="#astrologie" class="nav-link" data-page="astrologie">Astrologie</a></li>
             <li><a href="#frequenzen" class="nav-link" data-page="frequenzen">Frequenzen</a></li>
             <li><a href="#runes" class="nav-link" data-page="runes">Runen</a></li>
+            <li><a href="#pendeln" class="nav-link" data-page="pendeln">Pendeln</a></li>
+            <li><a href="#farbwelten" class="nav-link" data-page="farbwelten">Farben</a></li>
             <li><a href="#blog" class="nav-link" data-page="blog">Wissen</a></li>
           </ul>
           <button
@@ -86,6 +90,12 @@
             <span></span><span></span><span></span>
           </button>
         </nav>
+        <!-- Statisch im Markup: reserviert den Platz, bevor die Kristalle-Sektion
+             initialisiert. Würde der Zähler nachträglich eingefügt, verschöbe er
+             den Burger um ~83 px und schnelle Taps liefen ins Leere (B2). -->
+        <span id="favCounter" class="badge badge-primary" aria-label="Anzahl Kristall-Favoriten" aria-live="polite"
+          >♥ 0</span
+        >
       </div>
     </header>
 
@@ -141,7 +151,7 @@
           <div class="container">
             <div class="section-head">
               <h2 id="pfade-title">Pfade der Erkenntnis</h2>
-              <p class="label">Sieben Zugänge</p>
+              <p class="label">Neun Zugänge</p>
             </div>
             <p class="section-lede">Wähle dein Tor zur Weisheit — jede Ansicht ist ein eigenes Werkzeug.</p>
             <div class="grid" id="featureGrid" style="margin-top: var(--space-8)"></div>
@@ -673,6 +683,46 @@
         </div>
       </section>
 
+      <!-- Themenmodul: Radiästhesie, Pendeln und Orakel (#pendeln/…) -->
+      <section id="pendeln" class="page" aria-label="Radiästhesie, Pendeln und Orakel" hidden>
+        <div class="container">
+          <noscript>
+            <div class="astro-callout astro-callout--limit">
+              <p>
+                <strong>Dieser Bereich braucht JavaScript.</strong> Die Inhalte liegen als lokale Datendatei im Projekt;
+                es wird nichts nachgeladen und nichts übertragen.
+              </p>
+              <p>
+                Kurzfassung ohne Skript: Radiästhesie ist der Oberbegriff für Ruten- und Pendelpraxis; der Bereich
+                beschreibt Instrumente, Geschichte und Forschungsstand, ohne eine Wirkung zu behaupten. Kontrollierte
+                Tests erbrachten keine Treffer über dem Zufall.
+              </p>
+            </div>
+          </noscript>
+          <div id="pendelnRoot" class="rad-root"></div>
+        </div>
+      </section>
+
+      <!-- Farbwelten & Farbtherapie (#farbwelten/…) -->
+      <section id="farbwelten" class="page" aria-label="Farbwelten und Farbtherapie" hidden>
+        <div class="container">
+          <noscript>
+            <div class="astro-callout astro-callout--limit">
+              <p>
+                <strong>Dieser Bereich braucht JavaScript.</strong> Die Inhalte liegen als lokale Datendatei im Projekt;
+                es wird nichts nachgeladen und nichts übertragen.
+              </p>
+              <p>
+                Kurzfassung ohne Skript: Der Bereich erklärt Farben zwischen Physik, Wahrnehmung, Kultur und Tradition.
+                Wellenlängen und Lichtwirkungen sind belegt; die Farb-Chakra-Zuordnung ist eine Deutungstradition des
+                20. Jahrhunderts, und Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt.
+              </p>
+            </div>
+          </noscript>
+          <div id="farbweltenRoot" class="fw-root"></div>
+        </div>
+      </section>
+
       <!-- Blog/Wissen Section -->
       <section id="blog" class="page" aria-labelledby="blog-title" hidden>
         <div class="container">
@@ -741,6 +791,8 @@
           <h2>Wissen</h2>
           <ul class="footer-links">
             <li><a href="#astrologie">Astrologie-Bereich</a></li>
+            <li><a href="#pendeln">Radiästhesie &amp; Pendeln</a></li>
+            <li><a href="#farbwelten">Farbwelten &amp; Farben</a></li>
             <li><a href="#blog">Artikel-Archiv</a></li>
             <li><a href="#blog/6">Einsteiger-Guide</a></li>
           </ul>

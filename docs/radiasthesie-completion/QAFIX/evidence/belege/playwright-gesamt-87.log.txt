@@ -1,0 +1,98 @@
+
+Running 87 tests using 1 worker
+
+[1/87] tests\astrologie.spec.js:33:7 › Astrologie — Navigation und Deep-Links › main navigation opens the area and keeps one visible h1
+[2/87] tests\astrologie.spec.js:54:7 › Astrologie — Navigation und Deep-Links › every index area renders its full catalogue on a cold deep link
+[3/87] tests\astrologie.spec.js:64:7 › Astrologie — Navigation und Deep-Links › detail, back and forward keep the address and the content in sync
+[4/87] tests\astrologie.spec.js:79:7 › Astrologie — Navigation und Deep-Links › a cold link to every reference item renders that item
+[5/87] tests\astrologie.spec.js:107:7 › Astrologie — Navigation und Deep-Links › an unknown path stays inside the area and offers real exits
+[6/87] tests\astrologie.spec.js:118:7 › Astrologie — Filter, Suche, Zustand › element filter and search narrow the sign list and survive reload
+[7/87] tests\astrologie.spec.js:139:7 › Astrologie — Filter, Suche, Zustand › full-text search groups hits and shows a real empty state
+[8/87] tests\astrologie.spec.js:157:7 › Astrologie — Filter, Suche, Zustand › source markers lead into the ledger entry
+[9/87] tests\astrologie.spec.js:171:7 › Astrologie — Tastatur, Fokus, Dialogverhalten › table of contents, details and letter jump are keyboard operable
+[10/87] tests\astrologie.spec.js:194:7 › Astrologie — Tastatur, Fokus, Dialogverhalten › skip link keeps the astrology view visible and focuses main
+[11/87] tests\astrologie.spec.js:207:9 › Astrologie — Lesbarkeit und Payload › no horizontal overflow at 375px in index, detail and glossary
+[12/87] tests\astrologie.spec.js:207:9 › Astrologie — Lesbarkeit und Payload › no horizontal overflow at 768px in index, detail and glossary
+[13/87] tests\astrologie.spec.js:207:9 › Astrologie — Lesbarkeit und Payload › no horizontal overflow at 1440px in index, detail and glossary
+[14/87] tests\astrologie.spec.js:228:7 › Astrologie — Lesbarkeit und Payload › body text contrast meets 4.5:1 on the dark background
+[15/87] tests\astrologie.spec.js:260:7 › Astrologie — Lesbarkeit und Payload › the data module is only fetched when the area is opened
+[16/87] tests\capture-screenshots.spec.js:9:7 › Screenshots for F4 verification › Home page screenshot
+[17/87] tests\capture-screenshots.spec.js:15:7 › Screenshots for F4 verification › Tarot page screenshot
+[18/87] tests\capture-screenshots.spec.js:21:7 › Screenshots for F4 verification › Crystals page screenshot
+[19/87] tests\capture-screenshots.spec.js:27:7 › Screenshots for F4 verification › Moon page screenshot
+[20/87] tests\capture-screenshots.spec.js:33:7 › Screenshots for F4 verification › Runes page screenshot
+[21/87] tests\capture-screenshots.spec.js:39:7 › Screenshots for F4 verification › Blog page screenshot
+[22/87] tests\capture-screenshots.spec.js:45:7 › Screenshots for F4 verification › Impressum page screenshot
+[23/87] tests\capture-screenshots.spec.js:51:7 › Screenshots for F4 verification › Datenschutz page screenshot
+[24/87] tests\capture-screenshots.spec.js:57:7 › Screenshots for F4 verification › Haftung page screenshot
+[25/87] tests\capture-screenshots.spec.js:63:7 › Screenshots for F4 verification › 404 page screenshot
+[26/87] tests\console-check.spec.js:9:7 › Console error check › Home page has no critical console errors
+tests\console-check.spec.js:9:7 › Console error check › Home page has no critical console errors
+All errors: []
+
+Critical errors: []
+
+Warnings: []
+
+[27/87] tests\console-check.spec.js:39:7 › Console error check › Legal pages have no console errors
+[28/87] tests\console-check.spec.js:56:7 › Console error check › 404 page has no console errors
+[29/87] tests\f4-fixes-verification.spec.js:9:7 › F4 Fixes Verification (P0-P2) › F4.1/F4.3: Root loads with <base> and correct canonical
+[30/87] tests\f4-fixes-verification.spec.js:16:7 › F4 Fixes Verification (P0-P2) › F4.3: CSS assets load (design-system.css, main.css)
+[31/87] tests\f4-fixes-verification.spec.js:23:7 › F4 Fixes Verification (P0-P2) › F4.3: Favicon asset exists
+[32/87] tests\f4-fixes-verification.spec.js:28:7 › F4 Fixes Verification (P0-P2) › F4.3: JS modules load
+[33/87] tests\f4-fixes-verification.spec.js:48:7 › F4 Fixes Verification (P0-P2) › F4.4: Legal routes resolve with .html
+[34/87] tests\f4-fixes-verification.spec.js:55:7 › F4 Fixes Verification (P0-P2) › F4.4: Legal pages have content
+[35/87] tests\f4-fixes-verification.spec.js:62:7 › F4 Fixes Verification (P0-P2) › F4.4/F4.1: 404 fallback works and links to #home
+[36/87] tests\f4-fixes-verification.spec.js:72:7 › F4 Fixes Verification (P0-P2) › F4.1: Public/index.html has correct base and stylesheet
+[37/87] tests\f4-fixes-verification.spec.js:80:7 › F4 Fixes Verification (P0-P2) › Navigation: All hash routes accessible via direct URL
+[38/87] tests\f4-fixes-verification.spec.js:90:7 › F4 Fixes Verification (P0-P2) › Navigation: Nav links update URL hash
+[39/87] tests\f4-fixes-verification.spec.js:112:7 › F4 Fixes Verification (P0-P2) › Footer: Legal links work
+[40/87] tests\f4-fixes-verification.spec.js:133:7 › F4 Fixes Verification (P0-P2) › External links have security attributes
+[41/87] tests\f4-fixes-verification.spec.js:151:7 › F4 Fixes Verification (P0-P2) › Skip link navigates to main
+[42/87] tests\f4-fixes-verification.spec.js:163:7 › F4 Fixes Verification (P0-P2) › OG/Twitter meta tags point to correct domain
+[43/87] tests\link-check.spec.js:9:7 › Internal link verification › All internal links from home page return 200
+[44/87] tests\link-check.spec.js:59:7 › Internal link verification › All legal page links return 200
+[45/87] tests\link-check.spec.js:91:7 › Internal link verification › 404 page links return 200
+[46/87] tests\moon-calendar.spec.js:61:7 › Mondkalender — Monatswechsel, Takt und Relativtage › B1/B2: geblätterter Monat und Auswahl überleben den Minutentakt
+[47/87] tests\moon-calendar.spec.js:107:7 › Mondkalender — Monatswechsel, Takt und Relativtage › B1: ohne Blättern zieht der Takt über Mitternacht in den neuen Monat
+[48/87] tests\moon-calendar.spec.js:120:7 › Mondkalender — Monatswechsel, Takt und Relativtage › B3: Relativtage folgen dem Kalendertag, nicht den Stunden
+[49/87] tests\radiasthesie.spec.js:41:1 › Navigationsziel öffnet das Modul und setzt Route, Titel und Fokus
+[50/87] tests\radiasthesie.spec.js:56:1 › Landingpage: Hero, Einordnungsband, drei Themen, fünf Stufen, Werkstatt
+[51/87] tests\radiasthesie.spec.js:71:1 › Jede Route hat genau eine H1, keine Sprünge und vollständige Metadaten
+[52/87] tests\radiasthesie.spec.js:107:1 › Themenseiten: Kapitel, Inhaltsverzeichnis und auflösbare Quellenmarker
+[53/87] tests\radiasthesie.spec.js:133:1 › Kapitel-Deep-Link scrollt zum Abschnitt und setzt den Fokus
+[54/87] tests\radiasthesie.spec.js:145:1 › Glossar filtert beim Tippen und behält den Filter in der Adresse
+[55/87] tests\radiasthesie.spec.js:162:1 › Quellen-Deeplink hebt die zitierte Quelle hervor
+[56/87] tests\radiasthesie.spec.js:172:1 › Suche, Fehleransicht und leere Suche führen zurück
+[57/87] tests\radiasthesie.spec.js:189:1 › Keine Überläufe an den definierten Breakpoints
+[58/87] tests\radiasthesie.spec.js:206:1 › Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt
+[59/87] tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)
+[60/87] tests\radiasthesie.spec.js:275:1 › Tastatur: Skip-Link, Fokusring und Esc-freie Navigation
+[61/87] tests\radiasthesie.spec.js:295:1 › Sitemap und Canonical bleiben ehrlich (keine Fragment-URLs)
+[62/87] tests\regression-f4-links-staging.spec.js:11:7 › Routing / asset fixes (staging) › Root loads with <base> and correct canonical
+[63/87] tests\regression-f4-links-staging.spec.js:18:7 › Routing / asset fixes (staging) › CSS asset loads (F4.3)
+[64/87] tests\regression-f4-links-staging.spec.js:25:7 › Routing / asset fixes (staging) › Legal routes resolve with .html (F4.4)
+[65/87] tests\regression-f4-links-staging.spec.js:32:7 › Routing / asset fixes (staging) › 404 fallback works and links to #home (F4.4/F4.1)
+[66/87] tests\regression-f4-links-staging.spec.js:43:7 › Routing / asset fixes (staging) › Favicon asset exists (P1)
+[67/87] tests\regression-f4-links-staging.spec.js:48:7 › Routing / asset fixes (staging) › Public/index server path loads with correct style (P1 divergence)
+[68/87] tests\regression-f4-links.spec.js:10:7 › Routing / asset fixes › Root loads with <base> and correct canonical
+[69/87] tests\regression-f4-links.spec.js:17:7 › Routing / asset fixes › CSS asset loads (F4.3)
+[70/87] tests\regression-f4-links.spec.js:24:7 › Routing / asset fixes › Legal routes resolve with .html (F4.4)
+[71/87] tests\regression-f4-links.spec.js:31:7 › Routing / asset fixes › 404 fallback works and links to #home (F4.4/F4.1)
+[72/87] tests\regression-f4-links.spec.js:42:7 › Routing / asset fixes › Favicon asset exists (P1)
+[73/87] tests\regression-f4-links.spec.js:47:7 › Routing / asset fixes › Root page loads design-system.css stylesheet (P1 divergence)
+[74/87] tests\smoke-test-production.spec.js:9:7 › Production smoke test › Home page loads without console errors
+[75/87] tests\smoke-test-production.spec.js:22:7 › Production smoke test › All hash routes navigate correctly
+[76/87] tests\smoke-test-production.spec.js:39:7 › Production smoke test › Navigation links work
+[77/87] tests\smoke-test-production.spec.js:59:7 › Production smoke test › Legal pages accessible
+[78/87] tests\smoke-test-production.spec.js:72:7 › Production smoke test › 404 page works and has home link
+[79/87] tests\smoke-test-production.spec.js:81:7 › Production smoke test › Assets load correctly
+[80/87] tests\smoke-test-production.spec.js:90:7 › Production smoke test › External links have correct attributes
+[81/87] tests\smoke-test-production.spec.js:109:7 › Production smoke test › Tarot card draw functionality
+[82/87] tests\smoke-test-production.spec.js:121:7 › Production smoke test › Crystal filters work
+[83/87] tests\smoke-test-production.spec.js:143:7 › Production smoke test › Moon phase displays
+[84/87] tests\smoke-test-production.spec.js:152:7 › Production smoke test › Rune casting works
+[85/87] tests\smoke-test-production.spec.js:167:7 › Production smoke test › Blog filters and search work
+[86/87] tests\smoke-test-production.spec.js:184:7 › Production smoke test › Footer legal links work
+[87/87] tests\smoke-test-production.spec.js:205:7 › Production smoke test › Skip link works
+  87 passed (1.6m)

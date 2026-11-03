@@ -1,0 +1,10 @@
+import { readFileSync } from 'node:fs';
+const r = JSON.parse(readFileSync('C:/Users/mas/AppData/Local/hermes/cache/scratch/rad13-evidence/browser-routes.json', 'utf8'));
+const errs = r.runs.filter((x) => x.error || (x.failedRequests || []).length);
+console.log('Runs total', r.runs.length, 'mit Fehlern', errs.length);
+for (const e of errs) console.log(' ', e.width, e.route, e.error || '', JSON.stringify(e.failedRequests));
+console.log('--- Overflow max', Math.max(...r.runs.map((x) => x.overflow || 0)));
+console.log('--- H1-Verteilung', JSON.stringify([...new Set(r.runs.map((x) => (x.h1 || []).length))]));
+console.log('--- Bilder je Route (mit src)', JSON.stringify([...new Set(r.runs.map((x) => x.imgsWithSrc))]));
+const u = r.runs.filter((x) => x.route.startsWith('doc-') || x.route === 'topic-pendeln');
+for (const x of u.slice(0, 3)) console.log(x.route, x.width, 'imgs', x.imgsWithSrc, 'undersized', JSON.stringify(x.undersized));

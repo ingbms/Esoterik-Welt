@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Only real, crawlable documents under the actual Pages base are listed.
-     SPA fragments (#tarot, #blog/1, …) are views of index.html, not separate
-     documents; they stay reachable as deep links without being indexed twice. -->
+<!-- Erzeugt von scripts/generate-radiasthesie-pages.cjs. Nur echte Dokumente,
+     keine SPA-Fragmente (#tarot, #pendeln/radiasthesie, …). Die statischen
+     Themenseiten sind die kanonischen Dokumente dieses Bereichs. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ingbms.github.io/Esoterik-Welt/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://ingbms.github.io/Esoterik-Welt/impressum.html</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://ingbms.github.io/Esoterik-Welt/datenschutz.html</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://ingbms.github.io/Esoterik-Welt/haftung.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/radiasthesie/</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html</loc><lastmod>2026-11-03</lastmod></url>
 </urlset>

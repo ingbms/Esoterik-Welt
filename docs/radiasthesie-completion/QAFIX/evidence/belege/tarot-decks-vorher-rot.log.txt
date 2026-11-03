@@ -1,0 +1,49 @@
+
+> esoterik-welt@1.0.0 test:tarot:decks
+> node --test tests/tarot-decks-v2.cjs
+
+✔ registry: two decks, V1 stays the default, both carry the same 78 ids (4.1907ms)
+✔ shipped assets: 156 card mappings exist with declared bytes, hashes and 3:5 sizes (576.1934ms)
+✔ registry paths and filesystem agree for all 156 mappings and both card backs (18.9382ms)
+✖ V1 deck is untouched by the second deck (manifest, bytes and card count) (3.6485ms)
+✔ picker: labeled previews, V1 selected by default, gallery uses V1 (1628.1704ms)
+✔ keyboard switch: arrow key changes deck, persists across reload, gallery follows (1617.4691ms)
+✔ dialog and draw: 156 dialog mappings follow the deck, draw keeps ids and orientation (9433.9575ms)
+✔ stored deck id: unknown value falls back to V1, heals the key and keeps history (995.6376ms)
+✔ payload: no second master set, no double initial load; the deck lazily loads its own thumbs (5317.8892ms)
+✔ missing asset: a broken V2 thumbnail is named instead of showing a broken icon (1072.9499ms)
+✔ mobile 375/768: picker fits, switches, and the gallery stays inside the viewport (1620.024ms)
+✔ file:// edition: both decks decode from disk, switch and reload work offline (4432.5538ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 11
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28344.1835
+
+✖ failing tests:
+
+test at tests\tarot-decks-v2.cjs:132:1
+✖ V1 deck is untouched by the second deck (manifest, bytes and card count) (3.6485ms)
+  AssertionError [ERR_ASSERTION]: V1 manifest is byte-identical to the published state
+  + actual - expected
+  
+  + 'f50f46eff4076bc9339d3e0a83d60d4500dd1d0865de82058f4bf8c1cfd12b81'
+  - 'e3d0548a1db46cc135e05697ef4805823724dcbed4c5efa58f2cc54d86330a80'
+  
+      at TestContext.<anonymous> (C:\Users\mas\Arbeit\esow-rad-t_878c59c7\tests\tarot-decks-v2.cjs:137:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'f50f46eff4076bc9339d3e0a83d60d4500dd1d0865de82058f4bf8c1cfd12b81',
+    expected: 'e3d0548a1db46cc135e05697ef4805823724dcbed4c5efa58f2cc54d86330a80',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

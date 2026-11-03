@@ -1,0 +1,51 @@
+
+> esoterik-welt@1.0.0 verify:build
+> node scripts/verify-build.cjs
+
+Verifying local build at http://127.0.0.1:45202/Esoterik-Welt/ (output: test-results/verify-pages)
+PASS static radiasthesie/: 
+PASS static radiasthesie/radiasthesie.html: 
+PASS static radiasthesie/pendeln.html: 
+PASS static radiasthesie/orakel.html: 
+PASS static radiasthesie/glossar.html: 
+PASS static radiasthesie/quellen.html: 
+PASS static radiasthesie/methodik.html: 
+PASS sitemap: 
+7 statische Dokumente geprüft; 0 Fehler
+PASS 375 home: 
+PASS 375 tarot: 
+PASS 375 crystals: 
+PASS 375 moon: 
+PASS 375 astrologie: 
+PASS 375 runes: 
+PASS 375 pendeln: 
+PASS 375 blog: 
+PASS 375 impressum.html: 
+PASS 375 datenschutz.html: 
+PASS 375 haftung.html: 
+PASS 375 404.html: 
+PASS 768 home: 
+PASS 768 tarot: 
+PASS 768 crystals: 
+PASS 768 moon: 
+PASS 768 astrologie: 
+PASS 768 runes: 
+PASS 768 pendeln: 
+PASS 768 blog: 
+PASS 768 impressum.html: 
+PASS 768 datenschutz.html: 
+PASS 768 haftung.html: 
+PASS 768 404.html: 
+PASS 1440 home: 
+PASS 1440 tarot: 
+PASS 1440 crystals: 
+PASS 1440 moon: 
+PASS 1440 astrologie: 
+PASS 1440 runes: 
+PASS 1440 pendeln: 
+PASS 1440 blog: 
+PASS 1440 impressum.html: 
+PASS 1440 datenschutz.html: 
+PASS 1440 haftung.html: 
+PASS 1440 404.html: 
+36 pages/viewports checked; 0 failures; 7 statische Dokumente, 0 Fehler

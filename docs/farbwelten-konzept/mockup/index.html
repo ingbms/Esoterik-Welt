@@ -1,0 +1,556 @@
+<!doctype html>
+<!--
+  MESSSTAND DER ERSTEN AUSBAUSTUFE (7 Farbwelten), 2. November 2026.
+  Dieses Mockup ist der historische Nachweis für Raster, Typografie und
+  Barrierefreiheit (04, 05, 07 sowie messung/mockup-audit.json). Es ist NICHT
+  die Referenz für den Zwölf-Farben-Stand: Farbtafel (7 Bänder), Register
+  (7 Zeilen) und die Überschrift „Sieben Farbwelten“ sind bewusst nicht
+  nachgezogen. Referenz für zwölf Farbwelten sind 02, 03 und 06 sowie die
+  Produktionsfassung (css/farbwelten.css, js/data/farbwelten.js).
+  Hinweis: palette.css wird von scripts/generate-palette.py mit allen zwölf
+  Welten erzeugt; die fünf zusätzlichen Variablensätze sind hier ungenutzt.
+-->
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farbwelten — Konzept-Mockup | Esoterik-Welt</title>
+    <meta
+      name="description"
+      content="Konzept-Mockup der Sektion Farbwelten für Esoterik-Welt: Farbregister, Farbkarten, Chakra-Zuordnung und Hinweiskasten Tradition vs. Wissenschaft."
+    />
+    <link rel="stylesheet" href="../../../css/design-system.css" />
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <link rel="stylesheet" href="palette.css" />
+    <link rel="stylesheet" href="farbwelten.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
+
+    <header class="header" id="header" role="banner">
+      <div class="header-inner">
+        <a href="#home" class="logo" aria-label="Esoterik-Welt Startseite">Esoterik-Welt</a>
+        <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
+          <ul class="nav-list" id="navList">
+            <li><a href="#home" class="nav-link" data-page="home">Start</a></li>
+            <li><a href="#tarot" class="nav-link" data-page="tarot">Tarot</a></li>
+            <li><a href="#crystals" class="nav-link" data-page="crystals">Kristalle</a></li>
+            <li><a href="#moon" class="nav-link" data-page="moon">Mondphasen</a></li>
+            <li><a href="#astrologie" class="nav-link" data-page="astrologie">Astrologie</a></li>
+            <li><a href="#runes" class="nav-link" data-page="runes">Runen</a></li>
+            <li><a href="#pendeln" class="nav-link" data-page="pendeln">Pendeln</a></li>
+            <li><a href="#farbwelten" class="nav-link active" data-page="farbwelten" aria-current="page">Farben</a></li>
+            <li><a href="#blog" class="nav-link" data-page="blog">Wissen</a></li>
+          </ul>
+          <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navList">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+        <span class="badge badge-primary" id="favCounter" aria-label="Anzahl Kristall-Favoriten" aria-live="polite">♥ 12</span>
+      </div>
+    </header>
+
+    <main id="main" role="main" tabindex="-1">
+      <div class="container">
+        <!-- HERO ------------------------------------------------------------ -->
+        <section class="fw-hero" aria-labelledby="farbwelten-title">
+          <div>
+            <p class="label fw-hero__eyebrow">Farben / Licht / Bedeutung</p>
+            <h1 id="farbwelten-title">
+              Die Welt der Farben – Licht, Schwingung und <em>verborgene</em> Bedeutungen
+            </h1>
+            <p class="fw-hero__lede">
+              Entdecke, wie Licht entsteht, welche Bedeutungen Menschen den Farben zuschreiben und was
+              wissenschaftliche Untersuchungen und spirituelle Traditionen über ihre Wirkungen erzählen.
+            </p>
+            <div class="fw-actions">
+              <a class="btn btn-primary" href="#register">Farbwelten entdecken</a>
+              <a class="textlink" href="#chakren">Chakren &amp; Farben <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <figure class="fw-tafel-wrap" style="margin: 0">
+            <div class="fw-tafel" role="img" aria-label="Farbtafel: sieben Farbwelten von Rot bis Violett mit ihren Wellenlängenbereichen">
+              <div class="fw-tafel__band" style="--band-core: var(--fw-rot-core); --band-deep: var(--fw-rot-deep)">
+                <span class="fw-tafel__field" aria-hidden="true"></span>
+                <span class="fw-tafel__plate"><span class="fw-tafel__nm">620–750 nm</span><span class="fw-tafel__name">Rot</span></span>
+              </div>
+              <div class="fw-tafel__band" style="--band-core: var(--fw-orange-core); --band-deep: var(--fw-orange-deep)">
+                <span class="fw-tafel__field" aria-hidden="true"></span>
+                <span class="fw-tafel__plate"><span class="fw-tafel__nm">590–620 nm</span><span class="fw-tafel__name">Orange</span></span>
+              </div>
+              <div class="fw-tafel__band" style="--band-core: var(--fw-gelb-core); --band-deep: var(--fw-gelb-deep)">
+                <span class="fw-tafel__field" aria-hidden="true"></span>
+                <span class="fw-tafel__plate"><span class="fw-tafel__nm">570–590 nm</span><span class="fw-tafel__name">Gelb</span></span>
+              </div>
+              <div class="fw-tafel__band" style="--band-core: var(--fw-gruen-core); --band-deep: var(--fw-gruen-deep)">
+                <span class="fw-tafel__field" aria-hidden="true"></span>
+                <span class="fw-tafel__plate"><span class="fw-tafel__nm">490–570 nm</span><span class="fw-tafel__name">Grün</span></span>
+              </div>
+              <div class="fw-tafel__band" style="--band-core: var(--fw-blau-core); --band-deep: var(--fw-blau-deep)">
+                <span class="fw-tafel__field" aria-hidden="true"></span>
+                <span class="fw-tafel__plate"><span class="fw-tafel__nm">450–490 nm</span><span class="fw-tafel__name">Blau</span></span>
+              </div>
+              <div class="fw-tafel__band" style="--band-core: var(--fw-indigo-core); --band-deep: var(--fw-indigo-deep)">
+                <span class="fw-tafel__field" aria-hidden="true"></span>
+                <span class="fw-tafel__plate"><span class="fw-tafel__nm">425–450 nm</span><span class="fw-tafel__name">Indigo</span></span>
+              </div>
+              <div class="fw-tafel__band" style="--band-core: var(--fw-violett-core); --band-deep: var(--fw-violett-deep)">
+                <span class="fw-tafel__field" aria-hidden="true"></span>
+                <span class="fw-tafel__plate"><span class="fw-tafel__nm">380–425 nm</span><span class="fw-tafel__name">Violett</span></span>
+              </div>
+            </div>
+            <p class="fw-tafel__hint">
+              Wellenlängenbereiche sind konventionelle Näherungen; die Grenzen zwischen Farbnamen sind
+              fließend. Die Flächen sind eine Bildschirmannäherung, kein monochromatisches Licht.
+            </p>
+          </figure>
+        </section>
+
+        <!-- FARBREGISTER ---------------------------------------------------- -->
+        <section class="fw-section" id="register" aria-labelledby="register-title">
+          <div class="fw-section__head">
+            <h2 id="register-title">Sieben Farbwelten</h2>
+            <p class="label">Farbregister</p>
+          </div>
+          <p class="section-lede" style="margin: 0 0 var(--space-8)">
+            Jede Farbwelt verbindet Physik, Wahrnehmung, Kultur und Tradition — getrennt gekennzeichnet,
+            wo die Quellenlagen auseinandergehen.
+          </p>
+          <ul class="fw-register">
+            <li class="fw-register__row">
+              <a class="fw-register__link" href="#farbwelten/rot">
+                <span class="fw-register__field" style="background: var(--fw-rot-core)" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-register__name">Rot</span>
+                  <span class="fw-register__meta">620–750 nm · 400–484 THz · spektral</span>
+                </span>
+                <span class="fw-register__chakra">Wurzelchakra (moderne Zuordnung)</span>
+                <span class="fw-register__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li class="fw-register__row">
+              <a class="fw-register__link" href="#farbwelten/orange">
+                <span class="fw-register__field" style="background: var(--fw-orange-core)" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-register__name">Orange</span>
+                  <span class="fw-register__meta">590–620 nm · 484–508 THz · spektral</span>
+                </span>
+                <span class="fw-register__chakra">Sakralchakra (moderne Zuordnung)</span>
+                <span class="fw-register__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li class="fw-register__row">
+              <a class="fw-register__link" href="#farbwelten/gelb">
+                <span class="fw-register__field" style="background: var(--fw-gelb-core)" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-register__name">Gelb</span>
+                  <span class="fw-register__meta">570–590 nm · 508–526 THz · spektral</span>
+                </span>
+                <span class="fw-register__chakra">Solarplexuschakra (moderne Zuordnung)</span>
+                <span class="fw-register__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li class="fw-register__row">
+              <a class="fw-register__link" href="#farbwelten/gruen">
+                <span class="fw-register__field" style="background: var(--fw-gruen-core)" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-register__name">Grün</span>
+                  <span class="fw-register__meta">490–570 nm · 526–612 THz · spektral</span>
+                </span>
+                <span class="fw-register__chakra">Herzchakra (moderne Zuordnung)</span>
+                <span class="fw-register__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li class="fw-register__row">
+              <a class="fw-register__link" href="#farbwelten/blau">
+                <span class="fw-register__field" style="background: var(--fw-blau-core)" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-register__name">Blau</span>
+                  <span class="fw-register__meta">450–490 nm · 612–666 THz · spektral</span>
+                </span>
+                <span class="fw-register__chakra">Halschakra (moderne Zuordnung)</span>
+                <span class="fw-register__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li class="fw-register__row">
+              <a class="fw-register__link" href="#farbwelten/indigo">
+                <span class="fw-register__field" style="background: var(--fw-indigo-core)" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-register__name">Indigo</span>
+                  <span class="fw-register__meta">425–450 nm · 666–705 THz · spektral</span>
+                </span>
+                <span class="fw-register__chakra">Stirnchakra (moderne Zuordnung)</span>
+                <span class="fw-register__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li class="fw-register__row">
+              <a class="fw-register__link" href="#farbwelten/violett">
+                <span class="fw-register__field" style="background: var(--fw-violett-core)" aria-hidden="true"></span>
+                <span>
+                  <span class="fw-register__name">Violett</span>
+                  <span class="fw-register__meta">380–425 nm · 705–789 THz · spektral</span>
+                </span>
+                <span class="fw-register__chakra">Kronenchakra (moderne Zuordnung)</span>
+                <span class="fw-register__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          </ul>
+          <p class="fw-note">
+            Frequenzwerte berechnet mit f = c/λ (c = 299 792 458 m/s) für die genannten Grenzwellenlängen,
+            gerundet. Die Zuordnung Farbe–Chakra folgt dem verbreiteten modernen Regenbogenmodell und ist
+            keine historisch einheitliche Überlieferung.
+          </p>
+        </section>
+
+        <!-- FARBKARTEN ------------------------------------------------------ -->
+        <section class="fw-section" aria-labelledby="karten-title">
+          <div class="fw-section__head">
+            <h2 id="karten-title">Farbkarten</h2>
+            <p class="label">Komponente</p>
+          </div>
+          <p class="section-lede" style="margin: 0 0 var(--space-8)">
+            Dieselbe Karte trägt Teaser, Verwandtschaft und Chakren-Zuordnung. Die Farbfläche bleibt
+            Dekoration; alle Pflichtinformationen stehen als Text daneben.
+          </p>
+          <div class="fw-card-grid">
+            <article class="fw-card">
+              <div class="fw-card__field" style="background: linear-gradient(135deg, var(--fw-rot-soft) 0%, var(--fw-rot-core) 58%, var(--fw-rot-deep) 100%)" aria-hidden="true"></div>
+              <div class="fw-card__body">
+                <h3 class="fw-card__title">Rot</h3>
+                <p class="fw-card__text">
+                  Langwelliges Licht am Rand des sichtbaren Bereichs. Kulturell oft mit Wärme, Aktivierung
+                  und Gefahr verbunden — je nach Kontext gegensätzlich.
+                </p>
+                <div class="fw-card__meta">
+                  <span class="astro-badge astro-badge--historisch">Historisch</span>
+                  <span class="astro-badge astro-badge--empirie">Empirie begrenzt</span>
+                </div>
+              </div>
+            </article>
+            <article class="fw-card">
+              <div class="fw-card__field" style="background: linear-gradient(135deg, var(--fw-blau-soft) 0%, var(--fw-blau-core) 58%, var(--fw-blau-deep) 100%)" aria-hidden="true"></div>
+              <div class="fw-card__body">
+                <h3 class="fw-card__title">Blau</h3>
+                <p class="fw-card__text">
+                  Kurzwelliges Licht. Biologisch gut untersucht ist die Rolle von Blau für die innere Uhr;
+                  das ist keine Aussage über eine „heilende“ Wirkung von Blau als Farbe.
+                </p>
+                <div class="fw-card__meta">
+                  <span class="astro-badge astro-badge--empirie">Empirie</span>
+                  <span class="astro-badge astro-badge--konvention">Konvention</span>
+                </div>
+              </div>
+            </article>
+            <article class="fw-card">
+              <div class="fw-card__field" style="background: linear-gradient(135deg, var(--fw-violett-soft) 0%, var(--fw-violett-core) 58%, var(--fw-violett-deep) 100%)" aria-hidden="true"></div>
+              <div class="fw-card__body">
+                <h3 class="fw-card__title">Violett</h3>
+                <p class="fw-card__text">
+                  Am kurzen Ende des Spektrums. In esoterischen Systemen häufig dem Kronenchakra
+                  zugeordnet; die Regenbogenfolge ist eine moderne Standardisierung.
+                </p>
+                <div class="fw-card__meta">
+                  <span class="astro-badge astro-badge--deutungstradition">Deutungstradition</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- CHAKRA-EXPLORER ------------------------------------------------- -->
+        <section class="fw-section" id="chakren" aria-labelledby="chakren-title">
+          <div class="fw-section__head">
+            <h2 id="chakren-title">Chakren &amp; Farben</h2>
+            <p class="label">Sieben Positionen</p>
+          </div>
+          <div class="fw-chakra">
+            <figure class="fw-figure">
+              <div class="fw-figure__stage" style="position: relative">
+                <svg viewBox="0 0 200 420" role="img" aria-labelledby="fig-title fig-desc">
+                  <title id="fig-title">Stilisierte menschliche Silhouette mit sieben Chakra-Positionen</title>
+                  <desc id="fig-desc">
+                    Die sieben Positionen sind als nummerierte Schaltflächen zusätzlich per Tastatur
+                    erreichbar; die Nummernfolge entspricht Wurzel- bis Kronenchakra.
+                  </desc>
+                  <g fill="none" stroke="#82928e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="100" cy="54" r="23" />
+                    <path d="M90 76 L90 88" />
+                    <path d="M110 76 L110 88" />
+                    <path d="M62 104 C78 92 122 92 138 104 C146 150 142 205 128 252 L72 252 C58 205 54 150 62 104 Z" />
+                    <path d="M62 104 C50 150 46 200 44 244" />
+                    <path d="M138 104 C150 150 154 200 156 244" />
+                    <path d="M80 252 L76 330 L72 404" />
+                    <path d="M120 252 L124 330 L128 404" />
+                    <path d="M72 252 C88 260 112 260 128 252" />
+                  </g>
+                  <g stroke="#3c484b" stroke-width="1" stroke-dasharray="2 6">
+                    <line x1="36" y1="22" x2="164" y2="22" />
+                    <line x1="36" y1="50" x2="164" y2="50" />
+                    <line x1="36" y1="88" x2="164" y2="88" />
+                    <line x1="36" y1="132" x2="164" y2="132" />
+                    <line x1="36" y1="174" x2="164" y2="174" />
+                    <line x1="36" y1="212" x2="164" y2="212" />
+                    <line x1="36" y1="252" x2="164" y2="252" />
+                  </g>
+                </svg>
+                <!-- Positionsbuttons: links = x/200, oben = y/420 -->
+                <button class="fw-node" type="button" data-chakra="root" aria-pressed="true" aria-label="Wurzelchakra, Rot, Position 1" style="left: 50%; top: 60%">
+                  <span class="fw-node__dot" style="background: var(--fw-rot-core)" aria-hidden="true"></span>1
+                </button>
+                <button class="fw-node" type="button" data-chakra="sacral" aria-pressed="false" aria-label="Sakralchakra, Orange, Position 2" style="left: 50%; top: 50.48%">
+                  <span class="fw-node__dot" style="background: var(--fw-orange-core)" aria-hidden="true"></span>2
+                </button>
+                <button class="fw-node" type="button" data-chakra="solar" aria-pressed="false" aria-label="Solarplexuschakra, Gelb, Position 3" style="left: 50%; top: 41.43%">
+                  <span class="fw-node__dot" style="background: var(--fw-gelb-core)" aria-hidden="true"></span>3
+                </button>
+                <button class="fw-node" type="button" data-chakra="heart" aria-pressed="false" aria-label="Herzchakra, Grün, Position 4" style="left: 50%; top: 31.43%">
+                  <span class="fw-node__dot" style="background: var(--fw-gruen-core)" aria-hidden="true"></span>4
+                </button>
+                <button class="fw-node" type="button" data-chakra="throat" aria-pressed="false" aria-label="Halschakra, Blau, Position 5" style="left: 50%; top: 20.95%">
+                  <span class="fw-node__dot" style="background: var(--fw-blau-core)" aria-hidden="true"></span>5
+                </button>
+                <button class="fw-node" type="button" data-chakra="third-eye" aria-pressed="false" aria-label="Stirnchakra, Indigo, Position 6" style="left: 50%; top: 11.9%">
+                  <span class="fw-node__dot" style="background: var(--fw-indigo-core)" aria-hidden="true"></span>6
+                </button>
+                <button class="fw-node" type="button" data-chakra="crown" aria-pressed="false" aria-label="Kronenchakra, Violett, Position 7" style="left: 50%; top: 5.24%">
+                  <span class="fw-node__dot" style="background: var(--fw-violett-core)" aria-hidden="true"></span>7
+                </button>
+              </div>
+              <figcaption>
+                Stilisierte Figur, keine anatomische Darstellung. Positionen und Farben folgen dem
+                verbreiteten modernen Chakra-Modell.
+              </figcaption>
+            </figure>
+
+            <div class="fw-chakra__panel">
+              <p class="label">Ausgewählt</p>
+              <h3 id="chakra-name">Mūlādhāra — Wurzelchakra</h3>
+              <p class="fw-chakra__sanskrit" id="chakra-sanskrit">„Wurzel“ · Steißbeinbereich</p>
+              <dl class="fw-chakra__list">
+                <div><dt>Symbolfarbe</dt><dd id="chakra-color">Rot</dd></div>
+                <div><dt>Typische Themen</dt><dd id="chakra-themes">Stabilität, Erdung, Sicherheit</dd></div>
+                <div><dt>Einordnung</dt><dd id="chakra-evidence">Spirituelle Deutungstradition, keine medizinische Größe</dd></div>
+              </dl>
+              <a class="textlink" id="chakra-link" href="#farbwelten/rot"><span id="chakra-link-label">Farbwelt Rot öffnen</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- TRADITION / WISSENSCHAFT ---------------------------------------- -->
+        <section class="fw-section" aria-labelledby="vergleich-title">
+          <div class="fw-section__head">
+            <h2 id="vergleich-title">Tradition und Forschung</h2>
+            <p class="label">Modul</p>
+          </div>
+          <div class="fw-compare">
+            <div class="fw-compare__col">
+              <p class="label">Tradition</p>
+              <h3>Rotes Licht und Wärme</h3>
+              <p>
+                In vielen Farbtherapien steht Rot für Aktivierung und Wärme. Praktiziert werden
+                Farbvisualisierungen, farbige Lichtquellen und die symbolische Arbeit mit dem
+                Wurzelchakra.
+              </p>
+              <span class="astro-badge astro-badge--deutungstradition">Deutungstradition</span>
+            </div>
+            <div class="fw-compare__col">
+              <p class="label">Forschung</p>
+              <h3>Was tatsächlich untersucht ist</h3>
+              <p>
+                Untersucht werden unter anderem Photobiomodulation mit rotem Licht und Nahinfrarot sowie
+                Lichtwirkungen auf circadiane Prozesse. Ergebnisse sind anwendungsabhängig; die Evidenz
+                ist heterogen und nicht auf „Rot als Farbe“ übertragbar.
+              </p>
+              <span class="astro-badge astro-badge--empirie">Empirie begrenzt</span>
+            </div>
+            <p class="fw-compare__foot">
+              Die Evidenzlage ist nicht symmetrisch: Tradition und Forschung stehen hier nebeneinander,
+              nicht gleichwertig. Quellen und Bewertung folgen im Ausbau (ResearchEvidence).
+            </p>
+          </div>
+        </section>
+
+        <!-- FARBDETAIL-ANSSCHNITT ------------------------------------------- -->
+        <section class="fw-section" aria-labelledby="detail-title">
+          <div class="fw-section__head">
+            <h2 id="detail-title">Farbdetailseite</h2>
+            <p class="label">Seitenskelett</p>
+          </div>
+          <div class="fw-detail">
+            <div class="fw-detail__band">
+              <p class="label">Farbwelt 01 / 07 · spektral</p>
+              <h2>Rot — das lange Ende des Lichts</h2>
+              <p>
+                Rund 620 bis 750 Nanometer, kulturell aufgeladen zwischen Wärme, Liebe, Macht und Gefahr.
+                Diese Seite trennt messbare Eigenschaften, psychologische Assoziationen, Tradition und
+                offene Fragen.
+              </p>
+            </div>
+            <div class="fw-detail__body">
+              <div>
+                <h3>Physikalische Eigenschaften</h3>
+                <p>
+                  Rot liegt am langwelligen Rand des sichtbaren Spektrums. Die Grenze zum Infraroten ist
+                  konventionell; die Wahrnehmbarkeit hängt von Intensität, Umfeld und Adaptation ab.
+                </p>
+                <p>
+                  Ein Bildschirm erzeugt kein monochromatisches Licht der angegebenen Wellenlänge. Die
+                  Farbfläche dieser Seite ist deshalb als Annäherung gekennzeichnet.
+                </p>
+                <div class="astro-callout astro-callout--limit">
+                  <p>
+                    Keine Aussage dieser Seite ist eine medizinische Empfehlung. Farbtherapeutische
+                    Behauptungen werden als Tradition gekennzeichnet, nicht als Wirkungsnachweis.
+                  </p>
+                </div>
+              </div>
+              <nav class="fw-detail__toc" aria-label="Inhalt dieser Farbseite">
+                <p class="label">Auf dieser Seite</p>
+                <ol>
+                  <li><a href="#detail-title">Die Farbe erleben</a></li>
+                  <li><a href="#detail-title">Physikalische Eigenschaften</a></li>
+                  <li><a href="#detail-title">Farbpsychologie</a></li>
+                  <li><a href="#detail-title">Spirituelle Bedeutung</a></li>
+                  <li><a href="#detail-title">Farbtherapeutische Anwendung</a></li>
+                  <li><a href="#detail-title">Kultur und Geschichte</a></li>
+                  <li><a href="#detail-title">Übung</a></li>
+                  <li><a href="#detail-title">Quellen</a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <p class="fw-note">
+            Mockup-Ausschnitt. Vollständige Texte liefert die Redaktion auf Basis der Evidenzrecherche;
+            dieses Dokument legt Struktur, Gestaltung und Zustände fest.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer" style="padding: var(--space-10) 0; border-top: 1px solid var(--color-border); margin-top: var(--space-16)">
+      <div class="container">
+        <p class="text-muted" style="margin: 0; font-size: var(--text-sm)">
+          Konzept-Mockup „Farbwelten“ · Esoterik-Welt · keine Produktionsseite · Stand 2. November 2026
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const chakras = {
+          root: {
+            name: 'Mūlādhāra — Wurzelchakra',
+            sanskrit: '„Wurzel“ · Steißbeinbereich',
+            color: 'Rot',
+            themes: 'Stabilität, Erdung, Sicherheit',
+            evidence: 'Spirituelle Deutungstradition, keine medizinische Größe',
+            href: '#farbwelten/rot',
+          },
+          sacral: {
+            name: 'Svādhiṣṭhāna — Sakralchakra',
+            sanskrit: '„eigener Standort“ · Unterbauch',
+            color: 'Orange',
+            themes: 'Kreativität, Emotionen, Sinnlichkeit',
+            evidence: 'Spirituelle Deutungstradition, keine medizinische Größe',
+            href: '#farbwelten/orange',
+          },
+          solar: {
+            name: 'Maṇipūra — Solarplexuschakra',
+            sanskrit: '„Stadt des Juwels“ · Oberbauch',
+            color: 'Gelb',
+            themes: 'Willenskraft, Selbstvertrauen',
+            evidence: 'Spirituelle Deutungstradition, keine medizinische Größe',
+            href: '#farbwelten/gelb',
+          },
+          heart: {
+            name: 'Anāhata — Herzchakra',
+            sanskrit: '„unversehrt“ · Brustmitte',
+            color: 'Grün',
+            themes: 'Liebe, Mitgefühl, Harmonie',
+            evidence: 'Spirituelle Deutungstradition, keine medizinische Größe',
+            href: '#farbwelten/gruen',
+          },
+          throat: {
+            name: 'Viśuddha — Halschakra',
+            sanskrit: '„gereinigt“ · Kehlbereich',
+            color: 'Blau',
+            themes: 'Ausdruck, Kommunikation',
+            evidence: 'Spirituelle Deutungstradition, keine medizinische Größe',
+            href: '#farbwelten/blau',
+          },
+          'third-eye': {
+            name: 'Ājñā — Stirnchakra',
+            sanskrit: '„Weisung“ · zwischen den Augenbrauen',
+            color: 'Indigo',
+            themes: 'Intuition, Erkenntnis',
+            evidence: 'Spirituelle Deutungstradition, keine medizinische Größe',
+            href: '#farbwelten/indigo',
+          },
+          crown: {
+            name: 'Sahasrāra — Kronenchakra',
+            sanskrit: '„tausendfach“ · Scheitel',
+            color: 'Violett',
+            themes: 'Spiritualität, Bewusstsein',
+            evidence: 'Spirituelle Deutungstradition, keine medizinische Größe',
+            href: '#farbwelten/violett',
+          },
+        };
+
+        const nodes = Array.from(document.querySelectorAll('.fw-node'));
+        const panel = {
+          name: document.getElementById('chakra-name'),
+          sanskrit: document.getElementById('chakra-sanskrit'),
+          color: document.getElementById('chakra-color'),
+          themes: document.getElementById('chakra-themes'),
+          evidence: document.getElementById('chakra-evidence'),
+          link: document.getElementById('chakra-link'),
+          linkLabel: document.getElementById('chakra-link-label'),
+        };
+
+        function select(id) {
+          const data = chakras[id];
+          if (!data) return;
+          nodes.forEach((node) => {
+            const active = node.dataset.chakra === id;
+            node.setAttribute('aria-pressed', String(active));
+          });
+          panel.name.textContent = data.name;
+          panel.sanskrit.textContent = data.sanskrit;
+          panel.color.textContent = data.color;
+          panel.themes.textContent = data.themes;
+          panel.evidence.textContent = data.evidence;
+          panel.link.href = data.href;
+          panel.linkLabel.textContent = `Farbwelt ${data.color} öffnen`;
+        }
+
+        nodes.forEach((node) => {
+          node.addEventListener('click', () => select(node.dataset.chakra));
+        });
+
+        // Pfeiltasten wechseln zwischen den Positionen (Roving-Fokus bleibt tabellarisch).
+        const list = nodes;
+        list.forEach((node, index) => {
+          node.addEventListener('keydown', (event) => {
+            if (!['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft'].includes(event.key)) return;
+            event.preventDefault();
+            const step = event.key === 'ArrowDown' || event.key === 'ArrowRight' ? 1 : -1;
+            const next = list[(index + step + list.length) % list.length];
+            next.focus();
+            select(next.dataset.chakra);
+          });
+        });
+
+        const toggle = document.getElementById('navToggle');
+        const nav = document.getElementById('nav');
+        if (toggle && nav) {
+          toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', String(open));
+            toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

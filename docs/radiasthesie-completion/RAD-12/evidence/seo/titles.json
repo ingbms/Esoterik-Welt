@@ -1,0 +1,72 @@
+[
+  {
+    "id": "landing",
+    "route": "radiasthesie/",
+    "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand",
+    "characters": 58,
+    "serp16": 419,
+    "serp20": 532,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/",
+    "description": 149
+  },
+  {
+    "id": "radiasthesie",
+    "route": "radiasthesie/radiasthesie.html",
+    "title": "Radiästhesie — Ruten, Geschichte und Forschungsstand",
+    "characters": 52,
+    "serp16": 394,
+    "serp20": 498,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/radiasthesie.html",
+    "description": 134
+  },
+  {
+    "id": "pendeln",
+    "route": "radiasthesie/pendeln.html",
+    "title": "Pendeln — Arten, Materialien, Tafeln und Bovis-Skalen",
+    "characters": 53,
+    "serp16": 376,
+    "serp20": 477,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/pendeln.html",
+    "description": 144
+  },
+  {
+    "id": "orakel",
+    "route": "radiasthesie/orakel.html",
+    "title": "Orakel — Pendelorakel, Tarot, Runen und I Ging im Vergleich",
+    "characters": 59,
+    "serp16": 419,
+    "serp20": 537,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/orakel.html",
+    "description": 123
+  },
+  {
+    "id": "glossar",
+    "route": "radiasthesie/glossar.html",
+    "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+    "characters": 54,
+    "serp16": 395,
+    "serp20": 502,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/glossar.html",
+    "description": 127
+  },
+  {
+    "id": "quellen",
+    "route": "radiasthesie/quellen.html",
+    "title": "Quellen und Belege — Radiästhesie und Pendeln",
+    "characters": 45,
+    "serp16": 341,
+    "serp20": 428,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/quellen.html",
+    "description": 126
+  },
+  {
+    "id": "methodik",
+    "route": "radiasthesie/methodik.html",
+    "title": "Methodik und Grenzen — wie dieser Bereich prüft",
+    "characters": 47,
+    "serp16": 343,
+    "serp20": 438,
+    "canonical": "https://ingbms.github.io/Esoterik-Welt/radiasthesie/methodik.html",
+    "description": 102
+  }
+]

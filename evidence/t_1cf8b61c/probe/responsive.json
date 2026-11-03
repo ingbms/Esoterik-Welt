@@ -1,0 +1,5473 @@
+{
+  "summary": {
+    "cells": 60,
+    "overflow": 0,
+    "maxOverflow": 0,
+    "touchTargetViolations": 120,
+    "inlineExempt": 660,
+    "smallestControls": [
+      {
+        "width": 320,
+        "hash": "#farbwelten",
+        "smallest": {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben ↗",
+          "w": 135,
+          "h": 44,
+          "display": "flex",
+          "inline": false
+        }
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/tuerkis",
+        "smallest": {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/magenta",
+        "smallest": {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/rosa",
+        "smallest": {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/weiss",
+        "smallest": {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/schwarz",
+        "smallest": {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/farbtherapie",
+        "smallest": {
+          "tag": "A",
+          "type": "",
+          "text": "Was Farbtherapie ist",
+          "w": 131,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      },
+      {
+        "width": 320,
+        "hash": "#farbwelten/farbpsychologie",
+        "smallest": {
+          "tag": "A",
+          "type": "",
+          "text": "Wahrnehmung und Emotion",
+          "w": 176,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      }
+    ],
+    "mobile": {
+      "390": {
+        "visibleLinks": [
+          "Start",
+          "Tarot",
+          "Kristalle",
+          "Mondphasen",
+          "Astrologie",
+          "Runen",
+          "Pendeln",
+          "Farben",
+          "Wissen"
+        ],
+        "navLinks": 9,
+        "navVisible": true,
+        "expanded": "true"
+      },
+      "768": {
+        "visibleLinks": [
+          "Start",
+          "Tarot",
+          "Kristalle",
+          "Mondphasen",
+          "Astrologie",
+          "Runen",
+          "Pendeln",
+          "Farben",
+          "Wissen"
+        ],
+        "navLinks": 9,
+        "navVisible": true,
+        "expanded": "true"
+      }
+    },
+    "desktop": {
+      "1024": [
+        "Start",
+        "Tarot",
+        "Kristalle",
+        "Mondphasen",
+        "Astrologie",
+        "Runen",
+        "Pendeln",
+        "Farben",
+        "Wissen"
+      ],
+      "1440": [
+        "Start",
+        "Tarot",
+        "Kristalle",
+        "Mondphasen",
+        "Astrologie",
+        "Runen",
+        "Pendeln",
+        "Farben",
+        "Wissen"
+      ]
+    },
+    "findings": [
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/zeitleiste: Touch-Ziel A „[31]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/zeitleiste: Touch-Ziel A „[17]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "320px #farbwelten/zeitleiste: Touch-Ziel A „[18]“ 23×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/zeitleiste: Touch-Ziel A „[31]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/zeitleiste: Touch-Ziel A „[17]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "390px #farbwelten/zeitleiste: Touch-Ziel A „[18]“ 23×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/zeitleiste: Touch-Ziel A „[31]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/zeitleiste: Touch-Ziel A „[17]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "768px #farbwelten/zeitleiste: Touch-Ziel A „[18]“ 23×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/zeitleiste: Touch-Ziel A „[31]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/zeitleiste: Touch-Ziel A „[17]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1024px #farbwelten/zeitleiste: Touch-Ziel A „[18]“ 23×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/kompass: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/kompass"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/farbmeditation: Touch-Ziel INPUT[radio] „“ 18×18",
+        "repro": "#farbwelten/farbmeditation"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/zeitleiste: Touch-Ziel A „[2]“ 17×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/zeitleiste: Touch-Ziel A „[1]“ 15×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/zeitleiste: Touch-Ziel A „[31]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/zeitleiste: Touch-Ziel A „[17]“ 22×21",
+        "repro": "#farbwelten/zeitleiste"
+      },
+      {
+        "id": "P5-2",
+        "severity": "major",
+        "message": "1440px #farbwelten/zeitleiste: Touch-Ziel A „[18]“ 23×21",
+        "repro": "#farbwelten/zeitleiste"
+      }
+    ],
+    "blocking": 0
+  },
+  "rows": [
+    {
+      "width": 320,
+      "hash": "#farbwelten",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben ↗",
+          "w": 135,
+          "h": 44,
+          "display": "flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben öffnen ↗",
+          "w": 180,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichtfrequenzen öffnen ↗",
+          "w": 171,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie öffnen ↗",
+          "w": 172,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Zum Farben-Kompass ↗",
+          "w": 162,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/tuerkis",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Start",
+          "w": 34,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/magenta",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Start",
+          "w": 34,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/rosa",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Start",
+          "w": 34,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/weiss",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Start",
+          "w": 34,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/schwarz",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Start",
+          "w": 34,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/farbtherapie",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 3,
+      "controlCount": 12,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was Farbtherapie ist",
+          "w": 131,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Historische Entwicklung",
+          "w": 154,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Typische Verfahren",
+          "w": 121,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Grenzen und Risiken",
+          "w": 128,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Quellen",
+          "w": 48,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/farbpsychologie",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 11,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Wahrnehmung und Emotion",
+          "w": 176,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was die Forschung zeigt",
+          "w": 153,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kulturelle Unterschiede",
+          "w": 150,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Individuelle Unterschiede",
+          "w": 160,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Quellen",
+          "w": 48,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/lichtmedizin",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 11,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Blaues Licht",
+          "w": 78,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "UV-Strahlung",
+          "w": 87,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichttechnische Größen",
+          "w": 152,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was daraus nicht folgt",
+          "w": 143,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Quellen",
+          "w": 48,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/kompass",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 7,
+      "controlCount": 24,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/farbmeditation",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 3,
+      "controlCount": 20,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "hash": "#farbwelten/zeitleiste",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[31]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[17]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[18]",
+          "w": 23,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben ↗",
+          "w": 135,
+          "h": 44,
+          "display": "flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben öffnen ↗",
+          "w": 180,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichtfrequenzen öffnen ↗",
+          "w": 171,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapie und Chromotherapi",
+          "w": 284,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie öffnen ↗",
+          "w": 172,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/tuerkis",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/magenta",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/rosa",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/weiss",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/schwarz",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/farbtherapie",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 3,
+      "controlCount": 12,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was Farbtherapie ist",
+          "w": 131,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Historische Entwicklung",
+          "w": 154,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Typische Verfahren",
+          "w": 121,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was tatsächlich untersucht ist",
+          "w": 197,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Grenzen und Risiken",
+          "w": 128,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/farbpsychologie",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 11,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Wahrnehmung und Emotion",
+          "w": 176,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was die Forschung zeigt",
+          "w": 153,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kontext, Sättigung und Helligk",
+          "w": 208,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kulturelle Unterschiede",
+          "w": 150,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbe in Architektur und Marke",
+          "w": 221,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/lichtmedizin",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 11,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Blaues Licht",
+          "w": 78,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Rotlicht und Photobiomodulatio",
+          "w": 210,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "UV-Strahlung",
+          "w": 87,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichttechnische Größen",
+          "w": 152,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was daraus nicht folgt",
+          "w": 143,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/kompass",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 7,
+      "controlCount": 24,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/farbmeditation",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 3,
+      "controlCount": 20,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "hash": "#farbwelten/zeitleiste",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[31]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[17]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[18]",
+          "w": 23,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben ↗",
+          "w": 135,
+          "h": 44,
+          "display": "flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben öffnen ↗",
+          "w": 180,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichtfrequenzen öffnen ↗",
+          "w": 171,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapie und Chromotherapi",
+          "w": 284,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie öffnen ↗",
+          "w": 172,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/tuerkis",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/magenta",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/rosa",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/weiss",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/schwarz",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/farbtherapie",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 3,
+      "controlCount": 12,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was Farbtherapie ist",
+          "w": 131,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Historische Entwicklung",
+          "w": 154,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Typische Verfahren",
+          "w": 121,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was tatsächlich untersucht ist",
+          "w": 197,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Grenzen und Risiken",
+          "w": 128,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/farbpsychologie",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 11,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Wahrnehmung und Emotion",
+          "w": 176,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was die Forschung zeigt",
+          "w": 153,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kontext, Sättigung und Helligk",
+          "w": 208,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kulturelle Unterschiede",
+          "w": 150,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbe in Architektur und Marke",
+          "w": 221,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/lichtmedizin",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 11,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chronobiologie und saisonale D",
+          "w": 260,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Blaues Licht",
+          "w": 78,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Rotlicht und Photobiomodulatio",
+          "w": 210,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "UV-Strahlung",
+          "w": 87,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichttechnische Größen",
+          "w": 152,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/kompass",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 7,
+      "controlCount": 24,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/farbmeditation",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 3,
+      "controlCount": 20,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "hash": "#farbwelten/zeitleiste",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[31]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[17]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[18]",
+          "w": 23,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben ↗",
+          "w": 135,
+          "h": 44,
+          "display": "flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben öffnen ↗",
+          "w": 180,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichtfrequenzen öffnen ↗",
+          "w": 171,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapie und Chromotherapi",
+          "w": 284,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie öffnen ↗",
+          "w": 172,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/tuerkis",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/magenta",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/rosa",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/weiss",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/schwarz",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 34,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapeutische Anwendung",
+          "w": 206,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/farbtherapie",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 3,
+      "controlCount": 12,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was Farbtherapie ist",
+          "w": 131,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Historische Entwicklung",
+          "w": 154,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Typische Verfahren",
+          "w": 121,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was tatsächlich untersucht ist",
+          "w": 197,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Grenzen und Risiken",
+          "w": 128,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/farbpsychologie",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 11,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Wahrnehmung und Emotion",
+          "w": 176,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was die Forschung zeigt",
+          "w": 153,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kontext, Sättigung und Helligk",
+          "w": 208,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kulturelle Unterschiede",
+          "w": 150,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbe in Architektur und Marke",
+          "w": 221,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/lichtmedizin",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 11,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chronobiologie und saisonale D",
+          "w": 260,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Blaues Licht",
+          "w": 78,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Rotlicht und Photobiomodulatio",
+          "w": 210,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "UV-Strahlung",
+          "w": 87,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichttechnische Größen",
+          "w": 152,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/kompass",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 7,
+      "controlCount": 24,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/farbmeditation",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 3,
+      "controlCount": 20,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "hash": "#farbwelten/zeitleiste",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[31]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[17]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[18]",
+          "w": 23,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben ↗",
+          "w": 135,
+          "h": 44,
+          "display": "flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Chakren & Farben öffnen ↗",
+          "w": 180,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichtfrequenzen öffnen ↗",
+          "w": 171,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbtherapie und Chromotherapi",
+          "w": 284,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie öffnen ↗",
+          "w": 172,
+          "h": 44,
+          "display": "inline-flex",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/tuerkis",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/magenta",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 32,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/rosa",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 16,
+      "controlCount": 32,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/weiss",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/schwarz",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 17,
+      "controlCount": 33,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Die Farbe erleben",
+          "w": 110,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Physikalische Eigenschaften",
+          "w": 181,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Farbpsychologie",
+          "w": 104,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Spirituelle Bedeutung",
+          "w": 138,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kultur und Geschichte",
+          "w": 142,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/farbtherapie",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 3,
+      "controlCount": 11,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was Farbtherapie ist",
+          "w": 131,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Historische Entwicklung",
+          "w": 154,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Typische Verfahren",
+          "w": 121,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was tatsächlich untersucht ist",
+          "w": 197,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Grenzen und Risiken",
+          "w": 128,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/farbpsychologie",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 10,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Wahrnehmung und Emotion",
+          "w": 176,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was die Forschung zeigt",
+          "w": 153,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Kulturelle Unterschiede",
+          "w": 150,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Individuelle Unterschiede",
+          "w": 160,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Quellen",
+          "w": 48,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/lichtmedizin",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [],
+      "inlineExempt": 1,
+      "controlCount": 10,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Blaues Licht",
+          "w": 78,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "UV-Strahlung",
+          "w": 87,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Lichttechnische Größen",
+          "w": 152,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Was daraus nicht folgt",
+          "w": 143,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "Quellen",
+          "w": 48,
+          "h": 32,
+          "display": "inline-block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/kompass",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 7,
+      "controlCount": 24,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/farbmeditation",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 3,
+      "controlCount": 20,
+      "smallestControls": [
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "text": "",
+          "w": 18,
+          "h": 18,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "hash": "#farbwelten/zeitleiste",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": 0,
+      "overflowElements": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[31]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[17]",
+          "w": 22,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[18]",
+          "w": 23,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ],
+      "inlineExempt": 17,
+      "controlCount": 43,
+      "smallestControls": [
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[1]",
+          "w": 15,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        },
+        {
+          "tag": "A",
+          "type": "",
+          "text": "[2]",
+          "w": 17,
+          "h": 21,
+          "display": "block",
+          "inline": false
+        }
+      ]
+    }
+  ]
+}

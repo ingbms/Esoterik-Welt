@@ -1,0 +1,145 @@
+{
+  "abgerufen": "2026-11-03T04:48:09.738Z",
+  "quelle": "https://api.crossref.org/works/<DOI>",
+  "ids": {
+    "1": {
+      "hinweis": "kein DOI (Zeitschriftenartikel/Buch ohne DOI im Register) — Crossref nicht anwendbar"
+    },
+    "3": {
+      "doi": "10.3758/s13423-024-02615-z",
+      "title": [
+        "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions"
+      ],
+      "containerTitle": [
+        "Psychonomic Bulletin &amp; Review"
+      ],
+      "shortContainerTitle": [
+        "Psychon Bull Rev"
+      ],
+      "volume": "32",
+      "issue": "4",
+      "page": "1457-1486",
+      "publishedPrint": [
+        [
+          2025,
+          8
+        ]
+      ],
+      "authors": [
+        "Jonauskaite, Domicele",
+        "Mohr, Christine"
+      ]
+    },
+    "4": {
+      "doi": "10.1177/0956797620948810",
+      "title": [
+        "Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity"
+      ],
+      "containerTitle": [
+        "Psychological Science"
+      ],
+      "shortContainerTitle": [
+        "Psychol Sci"
+      ],
+      "volume": "31",
+      "issue": "10",
+      "page": "1245-1260",
+      "publishedPrint": [
+        [
+          2020,
+          10
+        ]
+      ],
+      "authors": [
+        "Jonauskaite, Domicele",
+        "Abu-Akel, Ahmad",
+        "Dael, Nele",
+        "Oberfeld, Daniel",
+        "Abdel-Khalek, Ahmed M.",
+        "Al-Rasheed, Abdulrahman S.",
+        "Antonietti, Jean-Philippe",
+        "Bogushevskaya, Victoria",
+        "Chamseddine, Amer",
+        "Chkonia, Eka",
+        "Corona, Violeta",
+        "Fonseca-Pedrero, Eduardo",
+        "Griber, Yulia A.",
+        "Grimshaw, Gina",
+        "Hasan, Aya Ahmed",
+        "Havelka, Jelena",
+        "Hirnstein, Marco",
+        "Karlsson, Bodil S. A.",
+        "Laurent, Eric",
+        "Lindeman, Marjaana",
+        "Marquardt, Lynn",
+        "Mefoh, Philip",
+        "Papadatou-Pastou, Marietta",
+        "Pérez-Albéniz, Alicia",
+        "Pouyan, Niloufar",
+        "Roinishvili, Maya",
+        "Romanyuk, Lyudmyla",
+        "Salgado Montejo, Alejandro",
+        "Schrag, Yann",
+        "Sultanova, Aygun",
+        "Uusküla, Mari",
+        "Vainio, Suvi",
+        "Wąsowicz, Grażyna",
+        "Zdravković, Sunčica",
+        "Zhang, Meng",
+        "Mohr, Christine"
+      ]
+    },
+    "5": {
+      "doi": "10.1002/col.22490",
+      "title": [
+        "To see or not to see: Importance of color perception to color therapy"
+      ],
+      "containerTitle": [
+        "Color Research &amp; Application"
+      ],
+      "shortContainerTitle": [
+        "Color Research &amp; Application"
+      ],
+      "volume": "45",
+      "issue": "3",
+      "page": "450-464",
+      "publishedPrint": [
+        [
+          2020,
+          6
+        ]
+      ],
+      "authors": [
+        "Jonauskaite, Domicele",
+        "Tremea, Irina",
+        "Bürki, Loyse",
+        "Diouf, Cécile N.",
+        "Mohr, Christine"
+      ]
+    },
+    "7": {
+      "doi": "10.3758/s13423-020-01772-1",
+      "title": [
+        "Limited evidence for the effect of red color on cognitive performance: A meta-analysis"
+      ],
+      "containerTitle": [
+        "Psychonomic Bulletin &amp; Review"
+      ],
+      "shortContainerTitle": [
+        "Psychon Bull Rev"
+      ],
+      "volume": "27",
+      "issue": "6",
+      "page": "1374-1382",
+      "publishedPrint": [
+        [
+          2020,
+          12
+        ]
+      ],
+      "authors": [
+        "Gnambs, Timo"
+      ]
+    }
+  }
+}

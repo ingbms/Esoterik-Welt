@@ -1,0 +1,20 @@
+✔ sieben Dokumente, je ein Titel unter 60 Zeichen, eindeutig (9.5207ms)
+✔ Meta-Description, Canonical und Open Graph sind konsistent (0.3194ms)
+✔ nur JSON-LD als Skript — keine JavaScript-Abhängigkeit (3.2342ms)
+✔ strukturierte Daten: WebPage/CollectionPage und BreadcrumbList ohne Fragmente (0.9234ms)
+✔ Themenseiten: Kapitel und Kerntexte stehen vollständig im HTML (12.2823ms)
+✔ Glossar: DefinedTermSet deckt alle Begriffe ab, keine Suchmaske ohne Funktion (1.646ms)
+✔ Brotkrümel im HTML entsprechen der JSON-LD-Hierarchie (0.5347ms)
+✔ Überschriftenordnung und IDs sind eindeutig (0.6022ms)
+✔ Bilder: Alt-Text vorhanden, Dateien existieren, Maße gesetzt (1.0574ms)
+✔ interne Links und Sprungziele sind auflösbar (199.9261ms)
+✔ Sitemap: nur echte Dokumente, vollständig, ohne Fragmente (1.0703ms)
+✔ keine erfundenen Titel- oder Beschreibungsbehauptungen (2.5686ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 319.5424

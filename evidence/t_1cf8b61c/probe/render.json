@@ -1,0 +1,538 @@
+{
+  "summary": {
+    "base": "http://127.0.0.1:3298/Esoterik-Welt",
+    "routes": 31,
+    "failed": [],
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  "results": [
+    {
+      "id": "landing",
+      "hash": "#farbwelten",
+      "kind": "landing",
+      "title": "Farbwelten — Bedeutung, Physik und Tradition der Farben | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Farbwelten"
+      ],
+      "rootExists": true,
+      "rootChildCount": 13,
+      "text": "FARBEN / LICHT / BEDEUTUNG Farbwelten Farbe ist das erste, was wir wahrnehmen – lange bevor wir einen Namen dafür haben. Ein roter Himmel vor dem Gewitter, das sanfte Grün eines Waldrands, das Gelb einer alten Postkarte: Diese Erlebnisse sind echt, und sie sind kulturell gewachsen. Was in dieser Sektion zu lesen steht, ist kein Lehrbuch für Heilkunst, sondern eine Einladung, Farben mit offenen Aug",
+      "activeHash": "#farbwelten",
+      "mainTextLength": 12226,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "rot",
+      "hash": "#farbwelten/rot",
+      "kind": "color",
+      "title": "Rot — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Rot"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Rot FARBWELT 01 / 12 · SPEKTRALFARBE Rot Rot ist die Farbe mit der längsten Wellenlänge im sichtbaren Spektrum: etwa 620 bis 750 Nanometer, 400 bis 484 Terahertz [10][24]. Das Auge ist dafür deutlich weniger empfindlich als für Gelbgrün (Maximum bei 555 nm); bei abnehmendem Licht wirkt Rot deshalb früh dunkel, während sich die Wahrnehmung zum Blaugrünen verschiebt. Was Rot kulturell s",
+      "activeHash": "#farbwelten/rot",
+      "mainTextLength": 7377,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "orange",
+      "hash": "#farbwelten/orange",
+      "kind": "color",
+      "title": "Orange — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Orange"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Orange FARBWELT 02 / 12 · SPEKTRALFARBE Orange Orange liegt bei etwa 590–620 nm, 484–508 THz [10][24]. Orange ist ein eigener Spektralbereich zwischen Rot und Gelb. Auf dem Bildschirm entsteht dieser Eindruck durch Mischung weniger Primärvalenzen – man sieht ein Metamer, kein monochromatisches Licht [31]. Das macht sie besonders im Wahrnehmungserlebnis – sie wirkt oft als \"warme\" Farb",
+      "activeHash": "#farbwelten/orange",
+      "mainTextLength": 5917,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "gelb",
+      "hash": "#farbwelten/gelb",
+      "kind": "color",
+      "title": "Gelb — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Gelb"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Gelb FARBWELT 03 / 12 · SPEKTRALFARBE Gelb Gelb liegt bei etwa 570–590 nm, 508–526 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Gelb ist ein Spektralbereich zwischen Grün und Orange; auf dem Bildschirm entsteht gelber Eindruck durch Mischung weniger Primärvalenzen – ein Metamer, kein monochromatisches Licht [31]. KENNZEICHNUNG Konvention De",
+      "activeHash": "#farbwelten/gelb",
+      "mainTextLength": 5973,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "gruen",
+      "hash": "#farbwelten/gruen",
+      "kind": "color",
+      "title": "Grün — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Grün"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Grün FARBWELT 04 / 12 · SPEKTRALFARBE Grün Grün liegt bei etwa 490–570 nm, 526–612 THz [10][24]. Es ist die Farbe der Vegetation – nicht zufällig, denn Chlorophyll reflektiert grünes Licht und absorbiert rotes und blaues. Physikalisch ist Grün ein Mittler; wahrgenommen wird es als beruhigend und natürlich. KENNZEICHNUNG Konvention Deutungstradition Empirie begrenzt Messwerte, Assoziat",
+      "activeHash": "#farbwelten/gruen",
+      "mainTextLength": 5932,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "tuerkis",
+      "hash": "#farbwelten/tuerkis",
+      "kind": "color",
+      "title": "Türkis (Cyan) — Übergang zwischen Grün und Blau | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Türkis (Cyan)"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Türkis (Cyan) FARBWELT 05 / 12 · SPEKTRALFARBE Türkis (Cyan) Türkis — im Englischen eher Cyan — liegt im Übergangsbereich zwischen Blau und Grün. Physikalisch wird dieser Bereich konventionell bei ca. 490–520 nm geführt; diese Grenzen sind eine Vereinbarung, keine scharfe Naturkante. Den bestehenden Farbwelten-Bestand ordnet Blau dem Bereich 450–495 nm und Grün 495–570 nm zu; die Gren",
+      "activeHash": "#farbwelten/tuerkis",
+      "mainTextLength": 9496,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "blau",
+      "hash": "#farbwelten/blau",
+      "kind": "color",
+      "title": "Blau — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Blau"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Blau FARBWELT 06 / 12 · SPEKTRALFARBE Blau Blau liegt bei etwa 450–490 nm, 612–666 THz [10][24]. Es ist die Farbe des Himmels und des tiefen Wassers – nicht zufällig, denn Rayleigh-Streuung bevorzugt kurzwelliges Licht. Physikalisch ist Blau eine der energiereichsten sichtbaren Wellenlängen. KENNZEICHNUNG Konvention Deutungstradition Empirie begrenzt Messwerte, Assoziationen und Deutu",
+      "activeHash": "#farbwelten/blau",
+      "mainTextLength": 6071,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "indigo",
+      "hash": "#farbwelten/indigo",
+      "kind": "color",
+      "title": "Indigo — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Indigo"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Indigo FARBWELT 07 / 12 · SPEKTRALFARBE Indigo Indigo liegt bei ca. 425–450 nm, ca. 666–705 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31]. KENNZEICHNUNG Konvention Deutungstradition Empirie begrenzt Messwerte, Assoziationen und Deutungstradition sind getrennt geke",
+      "activeHash": "#farbwelten/indigo",
+      "mainTextLength": 7879,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "violett",
+      "hash": "#farbwelten/violett",
+      "kind": "color",
+      "title": "Violett — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Violett"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Violett FARBWELT 08 / 12 · SPEKTRALFARBE Violett Violett liegt am kurzwelligen Rand des sichtbaren Spektrums, konventionell bei ca. 380–425 nm (ca. 705–789 THz); die Grenze zum Indigo ist fließend und wird je nach Einteilung bis etwa 450 nm gezogen [10][24]. Unterhalb von 380 nm beginnt der UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19]. KENNZEICHNUNG Konvention Deutungstradi",
+      "activeHash": "#farbwelten/violett",
+      "mainTextLength": 8518,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "magenta",
+      "hash": "#farbwelten/magenta",
+      "kind": "color",
+      "title": "Magenta — Mischfarbe aus Rot und Blau | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Magenta"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Magenta FARBWELT 09 / 12 · NICHT SPEKTRAL Magenta Magenta ist keine Spektralfarbe. Sie entsteht als additive Mischfarbe durch gleichzeitige Stimulation der roten (~620 nm) und blauen (~450 nm) Rezeptoren — ein Effekt, der nur bei gleichzeitiger Reizung beider Wellenlängen auf der Netzhaut auftritt [31]. Im Spektrum des sichtbaren Lichts findet sich kein rein magenta-farbenes Licht; zw",
+      "activeHash": "#farbwelten/magenta",
+      "mainTextLength": 9497,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "rosa",
+      "hash": "#farbwelten/rosa",
+      "kind": "color",
+      "title": "Rosa — Mischfarbe aus Rot und Weiß | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Rosa"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Rosa FARBWELT 10 / 12 · NICHT SPEKTRAL Rosa Rosa ist keine Spektralfarbe. Sie entsteht durch Mischen von Rot mit Weiß — als Licht durch Reduktion der Sättigung bei hoher Helligkeit, als Pigment durch Remission von Rot- und Weißanteilen bei niedriger Pigmentdichte [31]. Physikalisch ist Rosa ein Rot mit reduziertem Kontrast und erhöhter Gesamtremission; die Wellenlängen selbst bleiben ",
+      "activeHash": "#farbwelten/rosa",
+      "mainTextLength": 8633,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "weiss",
+      "hash": "#farbwelten/weiss",
+      "kind": "color",
+      "title": "Weiß — Neutralfarbe aus allen Wellenlängen | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Weiß"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Weiß FARBWELT 11 / 12 · NEUTRALFARBE Weiß Weiß ist keine Spektralfarbe. Physikalisch entsteht Weiß als Licht durch gleichzeitige Stimulation aller sichtbaren Wellenlängen (ca. 380–750 nm) mit ungefähr gleicher Intensität — ein additiver Zustand, kein Reinstoff [31]. Im Spektrum gibt es kein \"weißes Licht\" als einzelne Wellenlänge; Weiß entsteht durch Superposition, nicht durch Isolati",
+      "activeHash": "#farbwelten/weiss",
+      "mainTextLength": 9297,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "schwarz",
+      "hash": "#farbwelten/schwarz",
+      "kind": "color",
+      "title": "Schwarz — Neutralfarbe ohne Lichtreiz | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Schwarz"
+      ],
+      "rootExists": true,
+      "rootChildCount": 5,
+      "text": "Start Farben Schwarz FARBWELT 12 / 12 · NEUTRALFARBE Schwarz Schwarz ist keine Spektralfarbe und hat keine eigene Wellenlänge. Physikalisch entsteht Schwarz durch nahezu vollständige Absorption von Licht über das gesamte sichtbare Spektrum (ca. 380–750 nm) — ein Oberflächenphänomen, bei dem wenig Licht remittiert wird [31]. Ein schwarzer Körper im thermischen Gleichgewicht strahlt zwar selbst (Sch",
+      "activeHash": "#farbwelten/schwarz",
+      "mainTextLength": 9532,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "chakren",
+      "hash": "#farbwelten/chakren",
+      "kind": "chakren",
+      "title": "Chakren und Farben — Zuordnung und Herkunft | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Chakren & Farben"
+      ],
+      "rootExists": true,
+      "rootChildCount": 9,
+      "text": "Start Farben Chakren ÜBERSICHT · DEUTUNGSTRADITION Chakren & Farben Das Wort \"Chakra\" (Sanskrit: \"Rad\", \"Kreis\") beschreibt in mehreren indischen Traditionen Energiezentren im Körper. Was als \"die\" Chakrenlehre gilt, ist keine Einheit: Der klassische Text Sat-cakra-nirupana (1577) beschreibt sechs Zentren und das Sahasrāra darüber [1]. Woodroffe/Avalon übersetzen dies 1919 als The Serpent Power – ",
+      "activeHash": "#farbwelten/chakren",
+      "mainTextLength": 4486,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "lichtfrequenzen",
+      "hash": "#farbwelten/lichtfrequenzen",
+      "kind": "light",
+      "title": "Lichtfrequenzen und wissenschaftliche Einordnung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Lichtfrequenzen und wissenschaftliche Einordnung"
+      ],
+      "rootExists": true,
+      "rootChildCount": 10,
+      "text": "Start Farben Lichtfrequenzen WISSEN · EINORDNUNG Lichtfrequenzen und wissenschaftliche Einordnung Licht ist elektromagnetische Strahlung. Der sichtbare Bereich liegt bei ca. 380–780 nm; UV und Infrarot liegen außerhalb [24]. \"Frequenz\" und \"Wellenlänge\" sind verknüpft (f = c/λ). Die Aussage \"Farbtemperatur in Kelvin ist die Frequenz des Lichts\" ist falsch [24] – nicht verwendet. Spektrum-Explorer ",
+      "activeHash": "#farbwelten/lichtfrequenzen",
+      "mainTextLength": 4587,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "farbtherapie",
+      "hash": "#farbwelten/farbtherapie",
+      "kind": "topic",
+      "title": "Farbtherapie — Evidenz und Grenzen | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Farbtherapie und Chromotherapie"
+      ],
+      "rootExists": true,
+      "rootChildCount": 4,
+      "text": "Start Farben Farbtherapie und Chromotherapie THEMA · EINORDNUNG Farbtherapie und Chromotherapie Farbtherapie – meist als Chromotherapie oder Farblichttherapie bezeichnet – behauptet, dass farbiges Licht, farbige Umgebung oder gezielte Farbvisualisierung körperliche oder psychische Zustände beeinflussen können. Der Begriff selbst ist nicht scharf abgegrenzt: Manche Autoren verstehen darunter aussch",
+      "activeHash": "#farbwelten/farbtherapie",
+      "mainTextLength": 11409,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "farbpsychologie",
+      "hash": "#farbwelten/farbpsychologie",
+      "kind": "topic",
+      "title": "Farbpsychologie — Assoziation, nicht Wirkung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Farbpsychologie"
+      ],
+      "rootExists": true,
+      "rootChildCount": 4,
+      "text": "Start Farben Farbpsychologie THEMA · EINORDNUNG Farbpsychologie Farbpsychologie fragt nicht, welche Farbe „gut“ oder „schlecht“ ist, sondern welche Assoziationen zwischen Farbe und Emotion in verschiedenen Gruppen, Kulturen und Kontexten beobachtet werden können. Das unterscheidet sie deutlich von therapeutischen Ansprüchen: Während Chromotherapie (siehe Farbtherapie und Chromotherapie) behauptet,",
+      "activeHash": "#farbwelten/farbpsychologie",
+      "mainTextLength": 9810,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "lichtmedizin",
+      "hash": "#farbwelten/lichtmedizin",
+      "kind": "topic",
+      "title": "Lichtmedizin — Chronobiologie und Grenzen | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Lichtmedizin und Photobiologie"
+      ],
+      "rootExists": true,
+      "rootChildCount": 4,
+      "text": "Start Farben Lichtmedizin und Photobiologie THEMA · EINORDNUNG Lichtmedizin und Photobiologie Lichtmedizin ist ein Teilgebiet der Photobiologie, das sich mit den biologischen Wirkungen von elektromagnetischer Strahlung im sichtbaren und nahen UV-Bereich beschäftigt. Im Unterschied zur Chromotherapie (siehe Farbtherapie und Chromotherapie) operiert sie mit definierbaren physikalischen Größen: Welle",
+      "activeHash": "#farbwelten/lichtmedizin",
+      "mainTextLength": 10699,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "kompass",
+      "hash": "#farbwelten/kompass",
+      "kind": "tool",
+      "title": "Farben-Kompass — Assoziation, Tradition und Einordnung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Farben-Kompass"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "Start Farben Kompass WERKZEUG · ASSOZIATION UND EINORDNUNG Farben-Kompass Farben sind mit Emotionen assoziiert — über Kulturen hinweg ähnlich, aber nicht identisch [3][4]. Der Kompass stellt diese Assoziationen neben die Tradition und den Forschungsstand. Er ist kein Test, keine Typologie und keine Diagnose. Assoziationen beschreiben, wie Farben in Studien und Kulturen verstanden werden — nicht, w",
+      "activeHash": "#farbwelten/kompass",
+      "mainTextLength": 3349,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "farbmeditation",
+      "hash": "#farbwelten/farbmeditation",
+      "kind": "tool",
+      "title": "Farbmeditation — ruhige Visualisierungsübung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Farbmeditation"
+      ],
+      "rootExists": true,
+      "rootChildCount": 8,
+      "text": "Start Farben Farbmeditation WERKZEUG · ÜBUNG Farbmeditation Eine ruhige Visualisierungsübung mit einer Farbe Ihrer Wahl. Wählen Sie eine Farbwelt und eine Dauer zwischen einer und zwanzig Minuten; gestartet wird nur auf Ihren Klick. KENNZEICHNUNG Konvention Entspannungsübung keine Behandlung Farbfläche und Dauer START AUF KLICK Entspannungs- und Visualisierungsübung, keine Behandlung. Es gibt kein",
+      "activeHash": "#farbwelten/farbmeditation",
+      "mainTextLength": 1805,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "zeitleiste",
+      "hash": "#farbwelten/zeitleiste",
+      "kind": "tool",
+      "title": "Zeitleiste — Farbforschung, Chromotherapie und Lichtmedizin | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Zeitleiste der Farbforschung"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "Start Farben Zeitleiste WERKZEUG · GESCHICHTE MIT QUELLEN Zeitleiste der Farbforschung Jede Station ist mindestens einer Quelle aus dem Register dieser Sektion zugeordnet: Chakra-Geschichte, Farbpsychologie, Chromotherapie, Lichtmedizin und Farbmetrik. Belegte Stationen 17 EREIGNISSE Die Liste ist chronologisch geordnet und vollständig. Die Filterleiste blendet lediglich Einträge aus; sie ist kein",
+      "activeHash": "#farbwelten/zeitleiste",
+      "mainTextLength": 6032,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "home",
+      "hash": "#home",
+      "kind": "core",
+      "title": "Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr",
+      "h1Count": 1,
+      "h1Text": [
+        "Entdecke die verborgene Sprache des Universums"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "MATERIAL · ZEICHEN · ZYKLEN Entdecke die verborgene Sprache des Universums Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen. Karte ziehen ↓ Astrologie lernen ↗ Bergkristall · Fotografie: Didier Descouens · CC BY-SA 4.0 Gewachsene Form, gerichtete Reflexe, echte Einschlüsse. Pfade ",
+      "activeHash": "#home",
+      "mainTextLength": 1821,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "tarot",
+      "hash": "#tarot",
+      "kind": "core",
+      "title": "Tarot — 78 Karten, Tageskarte & Legungen | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Tarot — Der Spiegel der Seele"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "TAROT / SPIEGEL DER SEELE Tarot — Der Spiegel der Seele 78 Karten: 22 Große Arkana und vier Farben mit je 14 Karten — wahlweise im Nachtatelier-Deck (Standard) oder in der farbigen Gartenbrevier-Variante. Jede Karte hat eigene Stichwörter, eine Beschreibung ihrer Bildsprache und je eine Deutung für aufrecht und umgekehrt. Deck wählen Beide Decks zeigen dieselben 78 Karten mit denselben Stichwörter",
+      "activeHash": "#tarot",
+      "mainTextLength": 4559,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "crystals",
+      "hash": "#crystals",
+      "kind": "core",
+      "title": "Kristalle & Steine — Chakra, Farbe, Wirkung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Kristalle & Steine"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "KRISTALLE / MATERIAL Kristalle & Steine Kraft der Erde. Filter nach Chakra, Farbe, Wirkung. Alle Chakren Wurzel (Rot) Sakral (Orange) Solarplexus (Gelb) Herz (Grün/Rosa) Hals (Blau) Stirn (Indigo) Krone (Violett/Weiß) Alle Farben Rot Orange Gelb Grün Blau Violett Rosa Weiß/Klar Schwarz Chakra Drittes Auge Hals / Drittes Auge Herz Herz / Hals Herz / Sakral Kronen Kronen / Alle Kronen- & Drittes Aug",
+      "activeHash": "#crystals",
+      "mainTextLength": 7337,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "moon",
+      "hash": "#moon",
+      "kind": "core",
+      "title": "Mondphasen, Kalender & Deutung | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Mondphasen"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "MOND / ZYKLUS Mondphasen Was gerade am Himmel steht, wann die nächste Hauptphase ist — und was die acht Phasen bedeuten. Nordhalbkugel-Darstellung, Licht von links Dienstag, 03. November 2026 · 05:17 MEZ · Europe/Berlin Abnehmende Sichel 36 % beleuchtet · abnehmend MONDALTER 23,5 Tage seit Neumond IM ZYKLUS Phase 8 von 8 · 79 % des Zyklus NÄCHSTES EREIGNIS Neumond in 6 Tagen Zuletzt: Letztes Viert",
+      "activeHash": "#moon",
+      "mainTextLength": 9006,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "runes",
+      "hash": "#runes",
+      "kind": "core",
+      "title": "Runen — Das ältere Futhark | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Runen — Das ältere Futhark"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "RUNEN / ÄLTERES FUTHARK Runen — Das ältere Futhark 24 Runen. Werfe die Runen für Antworten aus der Tiefe der Zeit. 3 Runen werfen (Vergangenheit, Gegenwart, Zukunft) Einzelne Rune Alle Runen des älteren Futhark ᚠ Fehu F Vieh, Reichtum, bewegliches Gut ᚢ Uruz U Auerochse, Urkraft, Vitalität ᚦ Thurisaz TH Riese, Dorn, Thor's Hammer ᚨ Ansuz A Gott, Odin, Mund, Kommunikation ᚱ Raido R Reise, Rad, Rhyt",
+      "activeHash": "#runes",
+      "mainTextLength": 1208,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "astrologie",
+      "hash": "#astrologie",
+      "kind": "core",
+      "title": "Astrologie — Zeichen, Faktoren, Häuser, Aspekte | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Astrologie verstehen"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "ASTROLOGIE / NACHSCHLAGEN UND LERNEN Astrologie verstehen 12 Zeichen · 10 Faktoren · 12 Häuser · 5 Hauptaspekte Ein Lern- und Nachschlagebereich für die westliche tropische Astrologie: erst die Grundbegriffe, dann die Vergleichstabellen, dann die Beispiele — und an jeder Stelle die Grenze zwischen Überlieferung und belegtem Wissen. Vier Einstiege Neu hier? Lernpfad Sechs Stufen von „Was Astrologie",
+      "activeHash": "#astrologie",
+      "mainTextLength": 2914,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "blog",
+      "hash": "#blog",
+      "kind": "core",
+      "title": "Wissen & Artikel — Esoterik, Rituale, Geschichte | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Wissen & Artikel"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "WISSEN / ARTIKEL Wissen & Artikel Tiefgehende Artikel zu Esoterik, Spiritualität & alter Weisheit. Alle Kategorien Tarot Kristalle Runen Mond & Zyklen Rituale Geschichte & Mythos 📜 tarot 2025-10-15 ⏱ 12 Min Die 78 Tarot-Karten: Eine Reise durch die Major & Minor Arcana Die 78 Karten des Tarot bilden ein komplettes Symbolsystem für menschliche Erfahrungen. Von den 22 Major Arcana — den großen Lebe",
+      "activeHash": "#blog",
+      "mainTextLength": 3379,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "pendeln",
+      "hash": "#pendeln",
+      "kind": "core",
+      "title": "Radiästhesie, Pendeln und Orakel — Tradition und Prüfstand | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Radiästhesie, Pendeln und Orakel"
+      ],
+      "rootExists": true,
+      "rootChildCount": 7,
+      "text": "THEMENMODUL · INSTRUMENTE UND DEUTUNG Radiästhesie, Pendeln und Orakel Wie Rute, Pendel und Tafel gedeutet werden, was darüber dokumentiert ist — und wo die Grenze zwischen Erfahrung und Beleg verläuft. Mit Radiästhesie beginnen Einordnung lesen ↓ BEREICHE 3 Themen KAPITEL 30 KENNZEICHNUNG 5 Stufen Pendelgeometrie. Länge L, Auslenkung α, Schwingungsdauer T. Eigene Zeichnung, kein Messgerät und kei",
+      "activeHash": "#pendeln",
+      "mainTextLength": 4997,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "unbekannt",
+      "hash": "#farbwelten/gibtsnicht",
+      "kind": "notfound",
+      "title": "Unbekannte Farbwelt | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Diese Farbwelt gibt es nicht"
+      ],
+      "rootExists": true,
+      "rootChildCount": 2,
+      "text": "UNBEKANNTE FARBWELT Diese Farbwelt gibt es nicht „gibtsnicht“ ist keine der 12 Farbwelten. Das Farbregister führt alle verfügbaren Seiten. Zum Farbregister",
+      "activeHash": "#farbwelten/gibtsnicht",
+      "mainTextLength": 155,
+      "hasMarkdownTable": false,
+      "problems": []
+    },
+    {
+      "id": "unbekannt-kern",
+      "hash": "#gibtsnicht",
+      "kind": "notfound",
+      "title": "Farbwelten — Bedeutung, Physik und Tradition der Farben | Esoterik-Welt",
+      "h1Count": 1,
+      "h1Text": [
+        "Farbwelten"
+      ],
+      "rootExists": true,
+      "rootChildCount": 13,
+      "text": "„#gibtsnicht“ gehört zu keiner Seite dieser Website. Zur Startseite FARBEN / LICHT / BEDEUTUNG Farbwelten Farbe ist das erste, was wir wahrnehmen – lange bevor wir einen Namen dafür haben. Ein roter Himmel vor dem Gewitter, das sanfte Grün eines Waldrands, das Gelb einer alten Postkarte: Diese Erlebnisse sind echt, und sie sind kulturell gewachsen. Was in dieser Sektion zu lesen steht, ist kein Le",
+      "activeHash": "#gibtsnicht",
+      "mainTextLength": 12294,
+      "hasMarkdownTable": false,
+      "problems": []
+    }
+  ]
+}

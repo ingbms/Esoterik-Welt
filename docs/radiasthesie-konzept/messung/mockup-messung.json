@@ -1,0 +1,3018 @@
+{
+  "erzeugt": "2026-11-02T21:08:16.758Z",
+  "results": [
+    {
+      "view": "landing",
+      "width": 1280,
+      "viewport": {
+        "w": 1280,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 1280,
+        "h": 3391,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      "h1": {
+        "x": 64,
+        "y": 263,
+        "w": 580,
+        "h": 112,
+        "fontSize": "53.76px",
+        "lineHeight": "55.9104px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 64,
+        "y": 761,
+        "w": 1152,
+        "h": 103
+      },
+      "topics": [
+        {
+          "x": 64,
+          "y": 1084,
+          "w": 368,
+          "h": 627
+        },
+        {
+          "x": 456,
+          "y": 1084,
+          "w": 368,
+          "h": 627
+        },
+        {
+          "x": 848,
+          "y": 1084,
+          "w": 368,
+          "h": 627
+        }
+      ],
+      "gridColumns": "368px 368px 368px",
+      "plate": {
+        "x": 729,
+        "y": 226,
+        "w": 466,
+        "h": 358
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 261.8,
+        "gap": "32px",
+        "navGap": "20px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "scrollHeight": 3988,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 729,
+            "y": 226,
+            "w": 466,
+            "h": 358
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 85,
+            "y": 1105,
+            "w": 326,
+            "h": 234
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 477,
+            "y": 1105,
+            "w": 326,
+            "h": 234
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 869,
+            "y": 1105,
+            "w": 326,
+            "h": 234
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 192,
+          "charsPerLine": 64
+        },
+        "prose": null
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "landing",
+      "width": 1024,
+      "viewport": {
+        "w": 1024,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 1024,
+        "h": 3287,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 235,
+        "w": 486,
+        "h": 89,
+        "fontSize": "43.008px",
+        "lineHeight": "44.7283px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 32,
+        "y": 697,
+        "w": 960,
+        "h": 103
+      },
+      "topics": [
+        {
+          "x": 32,
+          "y": 1017,
+          "w": 304,
+          "h": 601
+        },
+        {
+          "x": 360,
+          "y": 1017,
+          "w": 304,
+          "h": 601
+        },
+        {
+          "x": 688,
+          "y": 1017,
+          "w": 304,
+          "h": 601
+        }
+      ],
+      "gridColumns": "304px 304px 304px",
+      "plate": {
+        "x": 587,
+        "y": 226,
+        "w": 384,
+        "h": 295
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 239.8,
+        "gap": "16px",
+        "navGap": "8px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "scrollHeight": 3884,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 587,
+            "y": 226,
+            "w": 384,
+            "h": 295
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1038,
+            "w": 262,
+            "h": 186
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 381,
+            "y": 1038,
+            "w": 262,
+            "h": 186
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 709,
+            "y": 1038,
+            "w": 262,
+            "h": 186
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 4,
+          "chars": 192,
+          "charsPerLine": 48
+        },
+        "prose": null
+      },
+      "screenshot": "messung/mockup/landing-1024.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "landing",
+      "width": 900,
+      "viewport": {
+        "w": 900,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 900,
+        "h": 4534,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 233,
+        "w": 836,
+        "h": 39,
+        "fontSize": "37.8px",
+        "lineHeight": "39.312px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 32,
+        "y": 1355,
+        "w": 836,
+        "h": 103
+      },
+      "topics": [
+        {
+          "x": 32,
+          "y": 1671,
+          "w": 836,
+          "h": 307
+        },
+        {
+          "x": 32,
+          "y": 2002,
+          "w": 836,
+          "h": 330
+        },
+        {
+          "x": 32,
+          "y": 2356,
+          "w": 836,
+          "h": 330
+        }
+      ],
+      "gridColumns": "836px",
+      "plate": {
+        "x": 53,
+        "y": 589,
+        "w": 794,
+        "h": 611
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 165.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 900,
+        "clientWidth": 900,
+        "scrollHeight": 5131,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 589,
+            "w": 794,
+            "h": 611
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1692,
+            "w": 307,
+            "h": 221
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 2023,
+            "w": 307,
+            "h": 221
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 2377,
+            "w": 307,
+            "h": 221
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 192,
+          "charsPerLine": 64
+        },
+        "prose": null
+      },
+      "screenshot": "messung/mockup/landing-900.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 1440,
+      "viewport": {
+        "w": 1440,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 1440,
+        "h": 3967,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      "h1": {
+        "x": 64,
+        "y": 272,
+        "w": 720,
+        "h": 59,
+        "fontSize": "56px",
+        "lineHeight": "58.8px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 64,
+        "y": 612,
+        "w": 1312,
+        "h": 103
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 85,
+        "y": 1225,
+        "w": 638,
+        "h": 491
+      },
+      "toc": {
+        "x": 1096,
+        "y": 747,
+        "w": 280,
+        "h": 3305,
+        "position": "sticky"
+      },
+      "header": {
+        "navReserve": 421.8,
+        "gap": "32px",
+        "navGap": "20px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 4565,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 85,
+            "y": 1225,
+            "w": 638,
+            "h": 491
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 189,
+          "charsPerLine": 63
+        },
+        "prose": {
+          "lines": 5,
+          "chars": 345,
+          "charsPerLine": 69
+        }
+      },
+      "screenshot": "messung/mockup/thema-1440.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 1280,
+      "viewport": {
+        "w": 1280,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 1280,
+        "h": 4241,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      "h1": {
+        "x": 64,
+        "y": 272,
+        "w": 720,
+        "h": 59,
+        "fontSize": "56px",
+        "lineHeight": "58.8px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 64,
+        "y": 612,
+        "w": 1152,
+        "h": 103
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 85,
+        "y": 1225,
+        "w": 638,
+        "h": 491
+      },
+      "toc": {
+        "x": 936,
+        "y": 747,
+        "w": 280,
+        "h": 3579,
+        "position": "sticky"
+      },
+      "header": {
+        "navReserve": 261.8,
+        "gap": "32px",
+        "navGap": "20px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "scrollHeight": 4839,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 85,
+            "y": 1225,
+            "w": 638,
+            "h": 491
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 189,
+          "charsPerLine": 63
+        },
+        "prose": {
+          "lines": 5,
+          "chars": 345,
+          "charsPerLine": 69
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 1024,
+      "viewport": {
+        "w": 1024,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 1024,
+        "h": 4186,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 720,
+        "h": 54,
+        "fontSize": "51.2px",
+        "lineHeight": "53.76px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 32,
+        "y": 607,
+        "w": 960,
+        "h": 103
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 53,
+        "y": 1443,
+        "w": 638,
+        "h": 491
+      },
+      "toc": {
+        "x": 32,
+        "y": 742,
+        "w": 960,
+        "h": 183,
+        "position": "static"
+      },
+      "header": {
+        "navReserve": 239.8,
+        "gap": "16px",
+        "navGap": "8px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "scrollHeight": 4783,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1443,
+            "w": 638,
+            "h": 491
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 189,
+          "charsPerLine": 63
+        },
+        "prose": {
+          "lines": 5,
+          "chars": 345,
+          "charsPerLine": 69
+        }
+      },
+      "screenshot": "messung/mockup/thema-1024.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 900,
+      "viewport": {
+        "w": 900,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 900,
+        "h": 4270,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 720,
+        "h": 47,
+        "fontSize": "45px",
+        "lineHeight": "47.25px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 32,
+        "y": 601,
+        "w": 836,
+        "h": 103
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 53,
+        "y": 1436,
+        "w": 638,
+        "h": 491
+      },
+      "toc": {
+        "x": 32,
+        "y": 736,
+        "w": 836,
+        "h": 183,
+        "position": "static"
+      },
+      "header": {
+        "navReserve": 165.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 900,
+        "clientWidth": 900,
+        "scrollHeight": 4868,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1436,
+            "w": 638,
+            "h": 491
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 189,
+          "charsPerLine": 63
+        },
+        "prose": {
+          "lines": 5,
+          "chars": 345,
+          "charsPerLine": 69
+        }
+      },
+      "screenshot": "messung/mockup/thema-900.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 1440,
+      "viewport": {
+        "w": 1440,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 1440,
+        "h": 2208,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      "h1": {
+        "x": 64,
+        "y": 272,
+        "w": 720,
+        "h": 59,
+        "fontSize": "56px",
+        "lineHeight": "58.8px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 421.8,
+        "gap": "32px",
+        "navGap": "20px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 2805,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 187,
+          "charsPerLine": 62
+        },
+        "prose": {
+          "lines": 2,
+          "chars": 150,
+          "charsPerLine": 75
+        }
+      },
+      "screenshot": "messung/mockup/glossar-1440.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 1280,
+      "viewport": {
+        "w": 1280,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 1280,
+        "h": 2256,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      "h1": {
+        "x": 64,
+        "y": 272,
+        "w": 720,
+        "h": 59,
+        "fontSize": "56px",
+        "lineHeight": "58.8px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 261.8,
+        "gap": "32px",
+        "navGap": "20px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "scrollHeight": 2853,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 187,
+          "charsPerLine": 62
+        },
+        "prose": {
+          "lines": 2,
+          "chars": 150,
+          "charsPerLine": 75
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 1024,
+      "viewport": {
+        "w": 1024,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 1024,
+        "h": 2251,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 720,
+        "h": 54,
+        "fontSize": "51.2px",
+        "lineHeight": "53.76px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 239.8,
+        "gap": "16px",
+        "navGap": "8px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "scrollHeight": 2848,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 187,
+          "charsPerLine": 62
+        },
+        "prose": {
+          "lines": 2,
+          "chars": 150,
+          "charsPerLine": 75
+        }
+      },
+      "screenshot": "messung/mockup/glossar-1024.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 900,
+      "viewport": {
+        "w": 900,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 900,
+        "h": 2244,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 720,
+        "h": 47,
+        "fontSize": "45px",
+        "lineHeight": "47.25px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 165.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 900,
+        "clientWidth": 900,
+        "scrollHeight": 2842,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 187,
+          "charsPerLine": 62
+        },
+        "prose": {
+          "lines": 2,
+          "chars": 150,
+          "charsPerLine": 75
+        }
+      },
+      "screenshot": "messung/mockup/glossar-900.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "landing",
+      "width": 840,
+      "viewport": {
+        "w": 840,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 840,
+        "h": 4670,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 233,
+        "w": 776,
+        "h": 37,
+        "fontSize": "35.28px",
+        "lineHeight": "36.6912px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 32,
+        "y": 1306,
+        "w": 776,
+        "h": 126
+      },
+      "topics": [
+        {
+          "x": 32,
+          "y": 1644,
+          "w": 776,
+          "h": 330
+        },
+        {
+          "x": 32,
+          "y": 1998,
+          "w": 776,
+          "h": 330
+        },
+        {
+          "x": 32,
+          "y": 2351,
+          "w": 776,
+          "h": 330
+        }
+      ],
+      "gridColumns": "776px",
+      "plate": {
+        "x": 53,
+        "y": 586,
+        "w": 734,
+        "h": 565
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 105.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 840,
+        "clientWidth": 840,
+        "scrollHeight": 5268,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 586,
+            "w": 734,
+            "h": 565
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1665,
+            "w": 282,
+            "h": 202
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 2019,
+            "w": 282,
+            "h": 202
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 2372,
+            "w": 282,
+            "h": 202
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 192,
+          "charsPerLine": 64
+        },
+        "prose": null
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "landing",
+      "width": 800,
+      "viewport": {
+        "w": 800,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 800,
+        "h": 4638,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 233,
+        "w": 736,
+        "h": 35,
+        "fontSize": "34px",
+        "lineHeight": "35.36px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 32,
+        "y": 1274,
+        "w": 736,
+        "h": 126
+      },
+      "topics": [
+        {
+          "x": 32,
+          "y": 1612,
+          "w": 736,
+          "h": 330
+        },
+        {
+          "x": 32,
+          "y": 1966,
+          "w": 736,
+          "h": 330
+        },
+        {
+          "x": 32,
+          "y": 2319,
+          "w": 736,
+          "h": 330
+        }
+      ],
+      "gridColumns": "736px",
+      "plate": {
+        "x": 53,
+        "y": 585,
+        "w": 694,
+        "h": 534
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 65.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 800,
+        "clientWidth": 800,
+        "scrollHeight": 5236,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 585,
+            "w": 694,
+            "h": 534
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1633,
+            "w": 265,
+            "h": 189
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1987,
+            "w": 265,
+            "h": 189
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 2340,
+            "w": 265,
+            "h": 189
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 192,
+          "charsPerLine": 64
+        },
+        "prose": null
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "landing",
+      "width": 781,
+      "viewport": {
+        "w": 781,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 781,
+        "h": 4643,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 233,
+        "w": 717,
+        "h": 35,
+        "fontSize": "34px",
+        "lineHeight": "35.36px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 32,
+        "y": 1260,
+        "w": 717,
+        "h": 126
+      },
+      "topics": [
+        {
+          "x": 32,
+          "y": 1597,
+          "w": 717,
+          "h": 330
+        },
+        {
+          "x": 32,
+          "y": 1951,
+          "w": 717,
+          "h": 330
+        },
+        {
+          "x": 32,
+          "y": 2305,
+          "w": 717,
+          "h": 330
+        }
+      ],
+      "gridColumns": "717px",
+      "plate": {
+        "x": 53,
+        "y": 585,
+        "w": 675,
+        "h": 519
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 46.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 781,
+        "clientWidth": 781,
+        "scrollHeight": 5241,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 585,
+            "w": 675,
+            "h": 519
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1618,
+            "w": 257,
+            "h": 183
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1972,
+            "w": 257,
+            "h": 183
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 2326,
+            "w": 257,
+            "h": 183
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 192,
+          "charsPerLine": 64
+        },
+        "prose": null
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "landing",
+      "width": 768,
+      "viewport": {
+        "w": 768,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 768,
+        "h": 4660,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 233,
+        "w": 704,
+        "h": 35,
+        "fontSize": "34px",
+        "lineHeight": "35.36px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 32,
+        "y": 1250,
+        "w": 704,
+        "h": 126
+      },
+      "topics": [
+        {
+          "x": 32,
+          "y": 1587,
+          "w": 704,
+          "h": 330
+        },
+        {
+          "x": 32,
+          "y": 1941,
+          "w": 704,
+          "h": 330
+        },
+        {
+          "x": 32,
+          "y": 2295,
+          "w": 704,
+          "h": 330
+        }
+      ],
+      "gridColumns": "704px",
+      "plate": {
+        "x": 53,
+        "y": 585,
+        "w": 662,
+        "h": 509
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 482.3,
+        "gap": "32px",
+        "navGap": "0px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "scrollHeight": 5460,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 585,
+            "w": 662,
+            "h": 509
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1608,
+            "w": 252,
+            "h": 179
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1962,
+            "w": 252,
+            "h": 179
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 2316,
+            "w": 252,
+            "h": 179
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 192,
+          "charsPerLine": 64
+        },
+        "prose": null
+      },
+      "screenshot": "messung/mockup/landing-768.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "landing",
+      "width": 390,
+      "viewport": {
+        "w": 390,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 133,
+        "w": 390,
+        "h": 6315,
+        "paddingLeft": "24px",
+        "paddingRight": "24px"
+      },
+      "h1": {
+        "x": 24,
+        "y": 201,
+        "w": 342,
+        "h": 71,
+        "fontSize": "34px",
+        "lineHeight": "35.36px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 24,
+        "y": 1105,
+        "w": 342,
+        "h": 236
+      },
+      "topics": [
+        {
+          "x": 24,
+          "y": 1635,
+          "w": 342,
+          "h": 577
+        },
+        {
+          "x": 24,
+          "y": 2236,
+          "w": 342,
+          "h": 599
+        },
+        {
+          "x": 24,
+          "y": 2859,
+          "w": 342,
+          "h": 599
+        }
+      ],
+      "gridColumns": "342px",
+      "plate": {
+        "x": 41,
+        "y": 691,
+        "w": 308,
+        "h": 237
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 120.3,
+        "gap": "32px",
+        "navGap": "0px",
+        "height": 85
+      },
+      "doc": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 7465,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 41,
+            "y": 691,
+            "w": 308,
+            "h": 237
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 45,
+            "y": 1656,
+            "w": 300,
+            "h": 214
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 45,
+            "y": 2257,
+            "w": 300,
+            "h": 214
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 45,
+            "y": 2880,
+            "w": 300,
+            "h": 214
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 5,
+          "chars": 192,
+          "charsPerLine": 38
+        },
+        "prose": null
+      },
+      "screenshot": "messung/mockup/landing-390.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "landing",
+      "width": 360,
+      "viewport": {
+        "w": 360,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 133,
+        "w": 360,
+        "h": 6577,
+        "paddingLeft": "24px",
+        "paddingRight": "24px"
+      },
+      "h1": {
+        "x": 24,
+        "y": 220,
+        "w": 312,
+        "h": 71,
+        "fontSize": "34px",
+        "lineHeight": "35.36px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 24,
+        "y": 1190,
+        "w": 312,
+        "h": 259
+      },
+      "topics": [
+        {
+          "x": 24,
+          "y": 1742,
+          "w": 312,
+          "h": 577
+        },
+        {
+          "x": 24,
+          "y": 2343,
+          "w": 312,
+          "h": 577
+        },
+        {
+          "x": 24,
+          "y": 2944,
+          "w": 312,
+          "h": 577
+        }
+      ],
+      "gridColumns": "312px",
+      "plate": {
+        "x": 41,
+        "y": 798,
+        "w": 278,
+        "h": 214
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 126.1,
+        "gap": "8px",
+        "navGap": "0px",
+        "height": 85
+      },
+      "doc": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "scrollHeight": 7726,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 41,
+            "y": 798,
+            "w": 278,
+            "h": 214
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 45,
+            "y": 1763,
+            "w": 270,
+            "h": 192
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 45,
+            "y": 2364,
+            "w": 270,
+            "h": 192
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 45,
+            "y": 2965,
+            "w": 270,
+            "h": 192
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 6,
+          "chars": 192,
+          "charsPerLine": 32
+        },
+        "prose": null
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 840,
+      "viewport": {
+        "w": 840,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 840,
+        "h": 4472,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 720,
+        "h": 44,
+        "fontSize": "42px",
+        "lineHeight": "44.1px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 32,
+        "y": 597,
+        "w": 776,
+        "h": 103
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 53,
+        "y": 1433,
+        "w": 638,
+        "h": 491
+      },
+      "toc": {
+        "x": 32,
+        "y": 733,
+        "w": 776,
+        "h": 183,
+        "position": "static"
+      },
+      "header": {
+        "navReserve": 105.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 840,
+        "clientWidth": 840,
+        "scrollHeight": 5070,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1433,
+            "w": 638,
+            "h": 491
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 189,
+          "charsPerLine": 63
+        },
+        "prose": {
+          "lines": 5,
+          "chars": 345,
+          "charsPerLine": 69
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 800,
+      "viewport": {
+        "w": 800,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 800,
+        "h": 4516,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 720,
+        "h": 42,
+        "fontSize": "40px",
+        "lineHeight": "42px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 32,
+        "y": 595,
+        "w": 736,
+        "h": 126
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 53,
+        "y": 1454,
+        "w": 638,
+        "h": 491
+      },
+      "toc": {
+        "x": 32,
+        "y": 754,
+        "w": 736,
+        "h": 183,
+        "position": "static"
+      },
+      "header": {
+        "navReserve": 65.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 800,
+        "clientWidth": 800,
+        "scrollHeight": 5113,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1454,
+            "w": 638,
+            "h": 491
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 189,
+          "charsPerLine": 63
+        },
+        "prose": {
+          "lines": 5,
+          "chars": 345,
+          "charsPerLine": 69
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 781,
+      "viewport": {
+        "w": 781,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 781,
+        "h": 4515,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 717,
+        "h": 41,
+        "fontSize": "39.05px",
+        "lineHeight": "41.0025px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 32,
+        "y": 594,
+        "w": 717,
+        "h": 126
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 53,
+        "y": 1453,
+        "w": 638,
+        "h": 491
+      },
+      "toc": {
+        "x": 32,
+        "y": 753,
+        "w": 717,
+        "h": 183,
+        "position": "static"
+      },
+      "header": {
+        "navReserve": 46.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 781,
+        "clientWidth": 781,
+        "scrollHeight": 5112,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1453,
+            "w": 638,
+            "h": 491
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 189,
+          "charsPerLine": 63
+        },
+        "prose": {
+          "lines": 5,
+          "chars": 345,
+          "charsPerLine": 69
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 768,
+      "viewport": {
+        "w": 768,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 768,
+        "h": 4514,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 704,
+        "h": 40,
+        "fontSize": "38.4px",
+        "lineHeight": "40.32px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 32,
+        "y": 594,
+        "w": 704,
+        "h": 126
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 53,
+        "y": 1453,
+        "w": 638,
+        "h": 491
+      },
+      "toc": {
+        "x": 32,
+        "y": 752,
+        "w": 704,
+        "h": 183,
+        "position": "static"
+      },
+      "header": {
+        "navReserve": 482.3,
+        "gap": "32px",
+        "navGap": "0px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "scrollHeight": 5314,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 53,
+            "y": 1453,
+            "w": 638,
+            "h": 491
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 189,
+          "charsPerLine": 63
+        },
+        "prose": {
+          "lines": 5,
+          "chars": 345,
+          "charsPerLine": 69
+        }
+      },
+      "screenshot": "messung/mockup/thema-768.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 390,
+      "viewport": {
+        "w": 390,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 133,
+        "w": 390,
+        "h": 5904,
+        "paddingLeft": "24px",
+        "paddingRight": "24px"
+      },
+      "h1": {
+        "x": 24,
+        "y": 256,
+        "w": 342,
+        "h": 32,
+        "fontSize": "30px",
+        "lineHeight": "31.5px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 24,
+        "y": 698,
+        "w": 342,
+        "h": 236
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 41,
+        "y": 1961,
+        "w": 308,
+        "h": 237
+      },
+      "toc": {
+        "x": 24,
+        "y": 966,
+        "w": 342,
+        "h": 183,
+        "position": "static"
+      },
+      "header": {
+        "navReserve": 120.3,
+        "gap": "32px",
+        "navGap": "0px",
+        "height": 85
+      },
+      "doc": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 7054,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 41,
+            "y": 1961,
+            "w": 308,
+            "h": 237
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 5,
+          "chars": 189,
+          "charsPerLine": 38
+        },
+        "prose": {
+          "lines": 9,
+          "chars": 345,
+          "charsPerLine": 38
+        }
+      },
+      "screenshot": "messung/mockup/thema-390.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "thema",
+      "width": 360,
+      "viewport": {
+        "w": 360,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 133,
+        "w": 360,
+        "h": 6133,
+        "paddingLeft": "24px",
+        "paddingRight": "24px"
+      },
+      "h1": {
+        "x": 24,
+        "y": 256,
+        "w": 312,
+        "h": 32,
+        "fontSize": "30px",
+        "lineHeight": "31.5px",
+        "text": "Radiästhesie"
+      },
+      "status": {
+        "x": 24,
+        "y": 746,
+        "w": 312,
+        "h": 236
+      },
+      "topics": [],
+      "gridColumns": null,
+      "plate": {
+        "x": 41,
+        "y": 2009,
+        "w": 278,
+        "h": 214
+      },
+      "toc": {
+        "x": 24,
+        "y": 1013,
+        "w": 312,
+        "h": 183,
+        "position": "static"
+      },
+      "header": {
+        "navReserve": 126.1,
+        "gap": "8px",
+        "navGap": "0px",
+        "height": 85
+      },
+      "doc": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "scrollHeight": 7283,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 41,
+            "y": 2009,
+            "w": 278,
+            "h": 214
+          },
+          "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an."
+        }
+      ],
+      "focusable": 17,
+      "text": {
+        "lead": {
+          "lines": 6,
+          "chars": 189,
+          "charsPerLine": 32
+        },
+        "prose": {
+          "lines": 9,
+          "chars": 345,
+          "charsPerLine": 38
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 840,
+      "viewport": {
+        "w": 840,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 840,
+        "h": 2241,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 720,
+        "h": 44,
+        "fontSize": "42px",
+        "lineHeight": "44.1px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 105.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 840,
+        "clientWidth": 840,
+        "scrollHeight": 2839,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 187,
+          "charsPerLine": 62
+        },
+        "prose": {
+          "lines": 2,
+          "chars": 150,
+          "charsPerLine": 75
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 800,
+      "viewport": {
+        "w": 800,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 800,
+        "h": 2239,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 720,
+        "h": 42,
+        "fontSize": "40px",
+        "lineHeight": "42px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 65.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 800,
+        "clientWidth": 800,
+        "scrollHeight": 2836,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 187,
+          "charsPerLine": 62
+        },
+        "prose": {
+          "lines": 2,
+          "chars": 150,
+          "charsPerLine": 75
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 781,
+      "viewport": {
+        "w": 781,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 781,
+        "h": 2238,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 717,
+        "h": 41,
+        "fontSize": "39.05px",
+        "lineHeight": "41.0025px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 46.3,
+        "gap": "16px",
+        "navGap": "4px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 781,
+        "clientWidth": 781,
+        "scrollHeight": 2835,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 187,
+          "charsPerLine": 62
+        },
+        "prose": {
+          "lines": 2,
+          "chars": 150,
+          "charsPerLine": 75
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 768,
+      "viewport": {
+        "w": 768,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 768,
+        "h": 2237,
+        "paddingLeft": "32px",
+        "paddingRight": "32px"
+      },
+      "h1": {
+        "x": 32,
+        "y": 272,
+        "w": 704,
+        "h": 40,
+        "fontSize": "38.4px",
+        "lineHeight": "40.32px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 482.3,
+        "gap": "32px",
+        "navGap": "0px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "scrollHeight": 3037,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 187,
+          "charsPerLine": 62
+        },
+        "prose": {
+          "lines": 2,
+          "chars": 150,
+          "charsPerLine": 75
+        }
+      },
+      "screenshot": "messung/mockup/glossar-768.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 390,
+      "viewport": {
+        "w": 390,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 133,
+        "w": 390,
+        "h": 2647,
+        "paddingLeft": "24px",
+        "paddingRight": "24px"
+      },
+      "h1": {
+        "x": 24,
+        "y": 256,
+        "w": 342,
+        "h": 32,
+        "fontSize": "30px",
+        "lineHeight": "31.5px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 120.3,
+        "gap": "32px",
+        "navGap": "0px",
+        "height": 85
+      },
+      "doc": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 3797,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 4,
+          "chars": 187,
+          "charsPerLine": 47
+        },
+        "prose": {
+          "lines": 4,
+          "chars": 150,
+          "charsPerLine": 38
+        }
+      },
+      "screenshot": "messung/mockup/glossar-390.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "glossar",
+      "width": 360,
+      "viewport": {
+        "w": 360,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 133,
+        "w": 360,
+        "h": 2836,
+        "paddingLeft": "24px",
+        "paddingRight": "24px"
+      },
+      "h1": {
+        "x": 24,
+        "y": 256,
+        "w": 312,
+        "h": 32,
+        "fontSize": "30px",
+        "lineHeight": "31.5px",
+        "text": "Glossar"
+      },
+      "status": {},
+      "topics": [],
+      "gridColumns": null,
+      "plate": null,
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 126.1,
+        "gap": "8px",
+        "navGap": "0px",
+        "height": 85
+      },
+      "doc": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "scrollHeight": 3986,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [],
+      "focusable": 25,
+      "text": {
+        "lead": {
+          "lines": 5,
+          "chars": 187,
+          "charsPerLine": 37
+        },
+        "prose": {
+          "lines": 4,
+          "chars": 150,
+          "charsPerLine": 38
+        }
+      },
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "view": "landing",
+      "width": 1440,
+      "viewport": {
+        "w": 1440,
+        "h": 1000
+      },
+      "container": {
+        "x": 0,
+        "y": 149,
+        "w": 1440,
+        "h": 3423,
+        "paddingLeft": "64px",
+        "paddingRight": "64px"
+      },
+      "h1": {
+        "x": 64,
+        "y": 279,
+        "w": 666,
+        "h": 116,
+        "fontSize": "56px",
+        "lineHeight": "58.24px",
+        "text": "Radiästhesie, Pendeln und Orakel"
+      },
+      "status": {
+        "x": 64,
+        "y": 797,
+        "w": 1312,
+        "h": 103
+      },
+      "topics": [
+        {
+          "x": 64,
+          "y": 1121,
+          "w": 421,
+          "h": 644
+        },
+        {
+          "x": 509,
+          "y": 1121,
+          "w": 421,
+          "h": 644
+        },
+        {
+          "x": 955,
+          "y": 1121,
+          "w": 421,
+          "h": 644
+        }
+      ],
+      "gridColumns": "421.328px 421.328px 421.344px",
+      "plate": {
+        "x": 815,
+        "y": 226,
+        "w": 540,
+        "h": 416
+      },
+      "toc": {
+        "position": null
+      },
+      "header": {
+        "navReserve": 421.8,
+        "gap": "32px",
+        "navGap": "20px",
+        "height": 101
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 4020,
+        "overflowX": 0
+      },
+      "overflowEls": [],
+      "images": [
+        {
+          "src": "../assets/pendel-geometrie.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 815,
+            "y": 226,
+            "w": 540,
+            "h": 416
+          },
+          "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden."
+        },
+        {
+          "src": "../assets/winkelrute.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 85,
+            "y": 1142,
+            "w": 379,
+            "h": 273
+          },
+          "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander."
+        },
+        {
+          "src": "../assets/pendeltafel.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 530,
+            "y": 1142,
+            "w": 379,
+            "h": 273
+          },
+          "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10."
+        },
+        {
+          "src": "../assets/orakel-karten.svg",
+          "natural": "195x150",
+          "rendered": {
+            "x": 976,
+            "y": 1142,
+            "w": 379,
+            "h": 274
+          },
+          "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel."
+        }
+      ],
+      "focusable": 13,
+      "text": {
+        "lead": {
+          "lines": 3,
+          "chars": 192,
+          "charsPerLine": 64
+        },
+        "prose": null
+      },
+      "screenshot": "messung/mockup/landing-1440.png",
+      "consoleErrors": [],
+      "externalRequests": []
+    }
+  ],
+  "keyboard": [
+    {
+      "width": 1440,
+      "order": [
+        {
+          "tag": "a",
+          "text": "Zum Hauptinhalt springen",
+          "outline": "solid 2px rgb(234, 230, 220)",
+          "offset": "2px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Esoterik-Welt",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Start",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Tarot",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Kristalle",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Mondphasen",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Astrologie",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Runen",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Pendeln",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Wissen",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Mit Radiästhesie beginnen",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Einordnung lesen ↓",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "so funktioniert die Kennzeichnung",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Radiästhesie",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "order": [
+        {
+          "tag": "a",
+          "text": "Zum Hauptinhalt springen",
+          "outline": "solid 2px rgb(234, 230, 220)",
+          "offset": "2px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Esoterik-Welt",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Mit Radiästhesie beginnen",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Einordnung lesen ↓",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "so funktioniert die Kennzeichnung",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Radiästhesie",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Zum Thema Radiästhesie →",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Pendeln",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Zum Thema Pendeln →",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Orakel",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Zum Thema Orakel →",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Tarot",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Astrologie",
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "offset": "4px",
+          "visible": true
+        }
+      ]
+    }
+  ]
+}

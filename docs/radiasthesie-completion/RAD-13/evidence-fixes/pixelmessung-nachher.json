@@ -1,0 +1,872 @@
+{
+ "herkunft": "real-after2.json",
+ "messungen": 96,
+ "ueberskaliert": 0,
+ "ueberskaliert_liste": [],
+ "messwerte": [
+  {
+   "width": 320,
+   "route": "topic-radiasthesie",
+   "file": "520/wuenschelrute-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "topic-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "topic-pendeln",
+   "file": "520/klassisches-pendel.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "topic-pendeln",
+   "file": "520/universalpendel.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "topic-orakel",
+   "file": "520/ouija-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "topic-orakel",
+   "file": "520/tarot.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "doc-radiasthesie",
+   "file": "520/wuenschelrute-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "doc-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "doc-pendeln",
+   "file": "520/klassisches-pendel.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "doc-pendeln",
+   "file": "520/universalpendel.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "doc-orakel",
+   "file": "520/ouija-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 320,
+   "route": "doc-orakel",
+   "file": "520/tarot.avif",
+   "realPx": 520,
+   "cssWidth": 272,
+   "ratio": 0.523,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "topic-radiasthesie",
+   "file": "520/wuenschelrute-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "topic-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "topic-pendeln",
+   "file": "520/klassisches-pendel.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "topic-pendeln",
+   "file": "520/universalpendel.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "topic-orakel",
+   "file": "520/ouija-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "topic-orakel",
+   "file": "520/tarot.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "doc-radiasthesie",
+   "file": "520/wuenschelrute-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "doc-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "doc-pendeln",
+   "file": "520/klassisches-pendel.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "doc-pendeln",
+   "file": "520/universalpendel.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "doc-orakel",
+   "file": "520/ouija-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 375,
+   "route": "doc-orakel",
+   "file": "520/tarot.avif",
+   "realPx": 520,
+   "cssWidth": 327,
+   "ratio": 0.629,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "topic-radiasthesie",
+   "file": "520/wuenschelrute-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "topic-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "topic-pendeln",
+   "file": "520/klassisches-pendel.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "topic-pendeln",
+   "file": "520/universalpendel.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "topic-orakel",
+   "file": "520/ouija-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "topic-orakel",
+   "file": "520/tarot.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "doc-radiasthesie",
+   "file": "520/wuenschelrute-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "doc-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "doc-pendeln",
+   "file": "520/klassisches-pendel.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "doc-pendeln",
+   "file": "520/universalpendel.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "doc-orakel",
+   "file": "520/ouija-historisch.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 414,
+   "route": "doc-orakel",
+   "file": "520/tarot.avif",
+   "realPx": 520,
+   "cssWidth": 366,
+   "ratio": 0.704,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "topic-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "topic-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "topic-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "topic-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "topic-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "topic-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "doc-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "doc-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "doc-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "doc-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "doc-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 640,
+   "route": "doc-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 592,
+   "ratio": 0.569,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "topic-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "topic-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "topic-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "topic-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "topic-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "topic-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "doc-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "doc-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "doc-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "doc-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "doc-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 768,
+   "route": "doc-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "topic-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "topic-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "topic-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "topic-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "topic-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "topic-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "doc-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "doc-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "doc-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "doc-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "doc-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 900,
+   "route": "doc-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "topic-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "topic-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "topic-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "topic-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "topic-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "topic-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "doc-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "doc-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "doc-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "doc-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "doc-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1024,
+   "route": "doc-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "topic-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "topic-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "topic-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "topic-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "topic-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "topic-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "file": "1040/wuenschelrute-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "doc-radiasthesie",
+   "file": "520/radiasthesierute.avif",
+   "realPx": 520,
+   "cssWidth": 520,
+   "ratio": 1,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "doc-pendeln",
+   "file": "1040/klassisches-pendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "doc-pendeln",
+   "file": "1040/universalpendel.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "doc-orakel",
+   "file": "1040/ouija-historisch.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  },
+  {
+   "width": 1440,
+   "route": "doc-orakel",
+   "file": "1040/tarot.avif",
+   "realPx": 1040,
+   "cssWidth": 680,
+   "ratio": 0.654,
+   "sizes": "(max-width: 728px) calc(100vw - 48px), 680px"
+  }
+ ]
+}

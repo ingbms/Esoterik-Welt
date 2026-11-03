@@ -3829,13 +3829,17 @@
   }
 }
 
-/* --- Kopfzeile mit sieben Navigationszielen -----------------------------
-   Der Astrologiebereich ist das siebte Hauptziel. Zwischen 781 px (ab dort
-   zeigt das Design-System die horizontale Navigation) und dem Desktop-Bereich
-   reichte die Breite für Logo + sieben Links nicht mehr: Die Kopfzeile lief
-   um bis zu 74 px über. Statt die Mobile-Navigation früher einzuschalten,
-   bleiben hier alle Ziele sichtbar und rücken nur enger zusammen. */
-@media (min-width: 781px) and (max-width: 1120px) {
+/* --- Kopfzeile mit zehn Navigationszielen --------------------------------
+   Seit der Rubriken-Integration sind es zehn Hauptziele: Start, Tarot,
+   Kristalle, Mondphasen, Astrologie, Frequenzen, Runen, Pendeln, Farben,
+   Wissen. Ab 901 px zeigt das Design-System die horizontale Navigation; zehn
+   Ziele plus dreistelliger Favoritenzähler passen dort nur mit engeren
+   Abständen und der 13-px-Schriftgrenze. Gemessen am Build (2026-11-03, Zehn
+   Ziele): 901 px Reserve 88,63 px bei 4-px-Abstand (mit 8 px noch 7 px
+   Überlauf), 1001–1165 px Reserve ab 136,63 px bei 8 px, ab 1166 px greift
+   wieder der Standardabstand (Reserve 91,63 px, kein Überlauf). Unterhalb von
+   901 px gilt das gestapelte Menü. */
+@media (min-width: 901px) and (max-width: 1165px) {
   .nav-list {
     gap: var(--space-2);
   }
@@ -3845,5 +3849,28 @@
   }
   .header-inner {
     gap: var(--space-4);
+  }
+}
+
+/* Der schmalste Band der horizontalen Navigation braucht 4-px-Abstände:
+   bei 10 Zielen und 901 px sind 8 px Abstand 7 px zu breit. */
+@media (min-width: 901px) and (max-width: 1000px) {
+  .nav-list {
+    gap: var(--space-1);
+  }
+  .header-inner {
+    gap: var(--space-2);
+  }
+}
+
+/* Reflow bei 320 px (WCAG 1.4.10): Die Produktivseite lief mit Favoritenzähler
+   um 19 px über. Kleineres Logo und engerer Abstand beseitigen den Überlauf;
+   die Regel greift nur unterhalb von 361 px. */
+@media (max-width: 360px) {
+  .header-inner {
+    gap: var(--space-2);
+  }
+  .logo {
+    font-size: 22px;
   }
 }

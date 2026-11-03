@@ -1,0 +1,131 @@
+{
+  "landing": {
+    "lang": "de",
+    "duplicateIds": [],
+    "headingCount": 15,
+    "h1Count": 1,
+    "headingJumps": [],
+    "images": [
+      {
+        "src": "../assets/pendel-geometrie.svg",
+        "alt": "Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden.",
+        "hasAlt": true,
+        "natural": 195,
+        "width": "520",
+        "height": "400"
+      },
+      {
+        "src": "../assets/winkelrute.svg",
+        "alt": "Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander.",
+        "hasAlt": true,
+        "natural": 195,
+        "width": "520",
+        "height": "400"
+      },
+      {
+        "src": "../assets/pendeltafel.svg",
+        "alt": "Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10.",
+        "hasAlt": true,
+        "natural": 195,
+        "width": "520",
+        "height": "400"
+      },
+      {
+        "src": "../assets/orakel-karten.svg",
+        "alt": "Drei gefächerte Karten mit Kreis, Dreieck und Linien als abstrakte Zeichen für Bild- und Zeichenorakel.",
+        "hasAlt": true,
+        "natural": 195,
+        "width": "520",
+        "height": "400"
+      }
+    ],
+    "emptyLinks": [],
+    "badTargetBlank": 0,
+    "inputs": [],
+    "ariaCurrent": [],
+    "landmarks": {
+      "header": 3,
+      "nav": 5,
+      "main": 1,
+      "footer": 1,
+      "h1": 1
+    },
+    "summaryWithoutDetails": 0,
+    "tabindexPositive": [],
+    "skipLinkTargetExists": true,
+    "skipLinkTargetTabIndex": "-1"
+  },
+  "thema": {
+    "lang": "de",
+    "duplicateIds": [],
+    "headingCount": 14,
+    "h1Count": 1,
+    "headingJumps": [],
+    "images": [
+      {
+        "src": "../assets/winkelrute.svg",
+        "alt": "Aufsicht auf eine Winkelrute: zwei Ruten laufen vom Griffpunkt in einem Winkel von etwa 40 Grad auseinander, ein gestrichelter Pfeil deutet die Ausschlagrichtung an.",
+        "hasAlt": true,
+        "natural": 195,
+        "width": "520",
+        "height": "400"
+      }
+    ],
+    "emptyLinks": [],
+    "badTargetBlank": 0,
+    "inputs": [],
+    "ariaCurrent": [
+      {
+        "tag": "a",
+        "value": "page",
+        "text": "Radiästhesie"
+      }
+    ],
+    "landmarks": {
+      "header": 3,
+      "nav": 5,
+      "main": 1,
+      "footer": 1,
+      "h1": 1
+    },
+    "summaryWithoutDetails": 0,
+    "tabindexPositive": [],
+    "skipLinkTargetExists": true,
+    "skipLinkTargetTabIndex": "-1"
+  },
+  "glossar": {
+    "lang": "de",
+    "duplicateIds": [],
+    "headingCount": 6,
+    "h1Count": 1,
+    "headingJumps": [],
+    "images": [],
+    "emptyLinks": [],
+    "badTargetBlank": 0,
+    "inputs": [
+      {
+        "type": "search",
+        "id": "glossarSuche",
+        "hasLabel": true
+      }
+    ],
+    "ariaCurrent": [
+      {
+        "tag": "a",
+        "value": "page",
+        "text": "Glossar"
+      }
+    ],
+    "landmarks": {
+      "header": 3,
+      "nav": 5,
+      "main": 1,
+      "footer": 1,
+      "h1": 1
+    },
+    "summaryWithoutDetails": 0,
+    "tabindexPositive": [],
+    "skipLinkTargetExists": true,
+    "skipLinkTargetTabIndex": "-1"
+  }
+}

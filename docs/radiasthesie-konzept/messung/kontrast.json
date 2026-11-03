@@ -1,0 +1,224 @@
+{
+  "erzeugt": "2026-11-02T20:34:22.730Z",
+  "norm": "WCAG 2.2 · AA: 4.5:1 Text <24px bzw. <18.66px fett, 3:1 für Bedienelemente/Fokus",
+  "results": [
+    {
+      "surface": "bg_deep",
+      "foreground": "text-primary",
+      "fg": "#eae6dc",
+      "bg": "#0b1012",
+      "ratio": 15.36,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_deep",
+      "foreground": "text-secondary",
+      "fg": "#babdb7",
+      "bg": "#0b1012",
+      "ratio": 10.07,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_deep",
+      "foreground": "sand",
+      "fg": "#c6b38e",
+      "bg": "#0b1012",
+      "ratio": 9.33,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_deep",
+      "foreground": "sand-hover",
+      "fg": "#d5c4a2",
+      "bg": "#0b1012",
+      "ratio": 11.16,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_deep",
+      "foreground": "line-strong",
+      "fg": "#82928e",
+      "bg": "#0b1012",
+      "ratio": 5.88,
+      "aa_text": true,
+      "aaa_text": false,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_deep",
+      "foreground": "accent-rose",
+      "fg": "#c09489",
+      "bg": "#0b1012",
+      "ratio": 7.14,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_deep",
+      "foreground": "accent-emerald",
+      "fg": "#9db3a4",
+      "bg": "#0b1012",
+      "ratio": 8.58,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_deep",
+      "foreground": "level-A-historisch",
+      "fg": "#c0a889",
+      "bg": "#0b1012",
+      "ratio": 8.39,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_deep",
+      "foreground": "level-C-hypothese",
+      "fg": "#9db3c4",
+      "bg": "#0b1012",
+      "ratio": 8.82,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_deep",
+      "foreground": "level-E-widerlegt",
+      "fg": "#c09489",
+      "bg": "#0b1012",
+      "ratio": 7.14,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "text-primary",
+      "fg": "#eae6dc",
+      "bg": "#141c1f",
+      "ratio": 13.86,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "text-secondary",
+      "fg": "#babdb7",
+      "bg": "#141c1f",
+      "ratio": 9.09,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "sand",
+      "fg": "#c6b38e",
+      "bg": "#141c1f",
+      "ratio": 8.42,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "sand-hover",
+      "fg": "#d5c4a2",
+      "bg": "#141c1f",
+      "ratio": 10.07,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "line-strong",
+      "fg": "#82928e",
+      "bg": "#141c1f",
+      "ratio": 5.31,
+      "aa_text": true,
+      "aaa_text": false,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "accent-rose",
+      "fg": "#c09489",
+      "bg": "#141c1f",
+      "ratio": 6.45,
+      "aa_text": true,
+      "aaa_text": false,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "accent-emerald",
+      "fg": "#9db3a4",
+      "bg": "#141c1f",
+      "ratio": 7.75,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "level-A-historisch",
+      "fg": "#c0a889",
+      "bg": "#141c1f",
+      "ratio": 7.57,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "level-C-hypothese",
+      "fg": "#9db3c4",
+      "bg": "#141c1f",
+      "ratio": 7.96,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "bg_card",
+      "foreground": "level-E-widerlegt",
+      "fg": "#c09489",
+      "bg": "#141c1f",
+      "ratio": 6.45,
+      "aa_text": true,
+      "aaa_text": false,
+      "ui_3to1": true
+    },
+    {
+      "surface": "sand-area",
+      "foreground": "button-label-on-sand",
+      "fg": "#0b1012",
+      "bg": "#c6b38e",
+      "ratio": 9.33,
+      "aa_text": true,
+      "aaa_text": true,
+      "ui_3to1": true
+    },
+    {
+      "surface": "focus-ring",
+      "foreground": "sand-outline",
+      "fg": "#c6b38e",
+      "bg": "#0b1012",
+      "ratio": 9.33,
+      "ui_3to1": true
+    }
+  ]
+}

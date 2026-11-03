@@ -1,0 +1,20 @@
+✔ registry: two decks, V1 stays the default, both carry the same 78 ids (1.0874ms)
+✔ shipped assets: 156 card mappings exist with declared bytes, hashes and 3:5 sizes (106.5962ms)
+✔ registry paths and filesystem agree for all 156 mappings and both card backs (9.5714ms)
+✔ V1 deck is untouched by the second deck (manifest, bytes and card count) (0.7388ms)
+✔ picker: labeled previews, V1 selected by default, gallery uses V1 (647.0181ms)
+✔ keyboard switch: arrow key changes deck, persists across reload, gallery follows (1061.6611ms)
+✔ dialog and draw: 156 dialog mappings follow the deck, draw keeps ids and orientation (4251.8176ms)
+✔ stored deck id: unknown value falls back to V1, heals the key and keeps history (582.2244ms)
+✔ payload: no second master set, no double initial load; the deck lazily loads its own thumbs (3624.9345ms)
+✔ missing asset: a broken V2 thumbnail is named instead of showing a broken icon (650.9209ms)
+✔ mobile 375/768: picker fits, switches, and the gallery stays inside the viewport (975.5063ms)
+✔ file:// edition: both decks decode from disk, switch and reload work offline (1104.0814ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13335.3343

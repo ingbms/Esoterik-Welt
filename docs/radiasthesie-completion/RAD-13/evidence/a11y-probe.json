@@ -1,0 +1,1179 @@
+{
+ "axeVersion": "4.14.0",
+ "width": 1440,
+ "runs": [
+  {
+   "route": "module-landing",
+   "path": "/#pendeln",
+   "axe": {
+    "violations": [],
+    "incomplete": [
+     {
+      "id": "aria-allowed-role",
+      "count": 40,
+      "targets": [
+       [
+        ".feature-card[data-page=\"tarot\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"crystals\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"moon\"][role=\"link\"]"
+       ]
+      ]
+     },
+     {
+      "id": "aria-prohibited-attr",
+      "count": 1,
+      "targets": [
+       [
+        "#favCounter"
+       ]
+      ]
+     },
+     {
+      "id": "color-contrast",
+      "count": 4,
+      "targets": [
+       [
+        ".textlink[href$=\"#pendeln/methodik\"] > span[aria-hidden=\"true\"]"
+       ],
+       [
+        "a[href$=\"#pendeln/radiasthesie\"] > span[aria-hidden=\"true\"]"
+       ],
+       [
+        "a[href$=\"#pendeln/pendeln\"] > span[aria-hidden=\"true\"]"
+       ]
+      ]
+     }
+    ],
+    "passes": 44
+   },
+   "focusables": 52,
+   "reached": 52,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "a",
+    "cls": "btn btn-primary",
+    "href": "#pendeln/radiasthesie",
+    "text": "Mit Radiästhesie beginnen"
+   },
+   "afterSkip": {
+    "active": "pendeln-title",
+    "activeText": "Radiästhesie",
+    "hash": "#pendeln/radiasthesie",
+    "h1": [
+     "Radiästhesie"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "topic-pendeln",
+   "path": "/#pendeln/pendeln",
+   "axe": {
+    "violations": [
+     {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "nodes": [
+       {
+        "target": [
+         "#bild-rad-media-01 > figcaption > .rad-photo-credit > a[href$=\"#pendeln/methodik\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#bild-rad-media-02 > figcaption > .rad-photo-credit > a[href$=\"#pendeln/methodik\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       }
+      ],
+      "count": 2
+     }
+    ],
+    "incomplete": [
+     {
+      "id": "aria-allowed-role",
+      "count": 40,
+      "targets": [
+       [
+        ".feature-card[data-page=\"tarot\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"crystals\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"moon\"][role=\"link\"]"
+       ]
+      ]
+     },
+     {
+      "id": "aria-prohibited-attr",
+      "count": 1,
+      "targets": [
+       [
+        "#favCounter"
+       ]
+      ]
+     }
+    ],
+    "passes": 43
+   },
+   "focusables": 145,
+   "reached": 120,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "a",
+    "cls": "rad-cite",
+    "href": "#pendeln/quellen/Q09",
+    "text": "[Q09]"
+   },
+   "afterSkip": {
+    "active": "quelle-Q09",
+    "activeText": "Q09 AB\n      Wikipedia-Autorinnen und -Autoren: Siderisches ",
+    "hash": "#pendeln/quellen/Q09",
+    "h1": [
+     "Quellen & Belege"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "quellen",
+   "path": "/#pendeln/quellen",
+   "axe": {
+    "violations": [
+     {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "nodes": [
+       {
+        "target": [
+         "#quelle-Q03 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#quelle-Q09 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#quelle-Q16 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#quelle-Q19 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       }
+      ],
+      "count": 17
+     }
+    ],
+    "incomplete": [
+     {
+      "id": "aria-allowed-role",
+      "count": 40,
+      "targets": [
+       [
+        ".feature-card[data-page=\"tarot\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"crystals\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"moon\"][role=\"link\"]"
+       ]
+      ]
+     },
+     {
+      "id": "aria-prohibited-attr",
+      "count": 1,
+      "targets": [
+       [
+        "#favCounter"
+       ]
+      ]
+     }
+    ],
+    "passes": 38
+   },
+   "focusables": 169,
+   "reached": 159,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "a",
+    "cls": "",
+    "href": "https://www.usgs.gov/water-science-school/science/water-dowsing",
+    "text": "U.S. Geological Survey, Water Science School: Wate"
+   },
+   "afterSkip": {
+    "active": "BODY",
+    "activeText": "403 ERROR\nThe request could not be satisfied.\n\nRequest block",
+    "hash": "",
+    "h1": [
+     "403 ERROR"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "glossar",
+   "path": "/#pendeln/glossar",
+   "axe": {
+    "violations": [],
+    "incomplete": [
+     {
+      "id": "aria-allowed-role",
+      "count": 40,
+      "targets": [
+       [
+        ".feature-card[data-page=\"tarot\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"crystals\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"moon\"][role=\"link\"]"
+       ]
+      ]
+     },
+     {
+      "id": "aria-prohibited-attr",
+      "count": 1,
+      "targets": [
+       [
+        "#favCounter"
+       ]
+      ]
+     },
+     {
+      "id": "color-contrast",
+      "count": 17,
+      "targets": [
+       [
+        ".is-empty.astro-letter[aria-hidden=\"true\"]:nth-child(1)"
+       ],
+       [
+        ".is-empty.astro-letter[aria-hidden=\"true\"]:nth-child(3)"
+       ],
+       [
+        ".is-empty.astro-letter[aria-hidden=\"true\"]:nth-child(7)"
+       ]
+      ]
+     }
+    ],
+    "passes": 47
+   },
+   "focusables": 65,
+   "reached": 65,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "input",
+    "cls": "input",
+    "href": null,
+    "text": ""
+   },
+   "afterSkip": {
+    "active": "glossarSuche",
+    "activeText": "",
+    "hash": "#pendeln/glossar",
+    "h1": [
+     "Glossar"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "methodik",
+   "path": "/#pendeln/methodik",
+   "axe": {
+    "violations": [
+     {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "nodes": [
+       {
+        "target": [
+         "#nachweis-rad-media-01 > a[rel=\"noopener\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#nachweis-rad-media-02 > a[rel=\"noopener\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#nachweis-rad-media-03 > a[rel=\"noopener\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#nachweis-rad-media-04 > a[rel=\"noopener\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       }
+      ],
+      "count": 6
+     }
+    ],
+    "incomplete": [
+     {
+      "id": "aria-allowed-role",
+      "count": 40,
+      "targets": [
+       [
+        ".feature-card[data-page=\"tarot\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"crystals\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"moon\"][role=\"link\"]"
+       ]
+      ]
+     },
+     {
+      "id": "aria-prohibited-attr",
+      "count": 1,
+      "targets": [
+       [
+        "#favCounter"
+       ]
+      ]
+     }
+    ],
+    "passes": 40
+   },
+   "focusables": 31,
+   "reached": 31,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "a",
+    "cls": "",
+    "href": "#pendeln/quellen",
+    "text": "Zum vollständigen Quellenverzeichnis"
+   },
+   "afterSkip": {
+    "active": "pendeln-title",
+    "activeText": "Quellen & Belege",
+    "hash": "#pendeln/quellen",
+    "h1": [
+     "Quellen & Belege"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "labor",
+   "path": "/#pendeln/labor",
+   "axe": {
+    "violations": [],
+    "incomplete": [
+     {
+      "id": "aria-allowed-role",
+      "count": 40,
+      "targets": [
+       [
+        ".feature-card[data-page=\"tarot\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"crystals\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"moon\"][role=\"link\"]"
+       ]
+      ]
+     },
+     {
+      "id": "aria-prohibited-attr",
+      "count": 1,
+      "targets": [
+       [
+        "#favCounter"
+       ]
+      ]
+     }
+    ],
+    "passes": 49
+   },
+   "focusables": 37,
+   "reached": 35,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "div",
+    "cls": "psim-scene",
+    "href": null,
+    "text": "Fadenpendel mit Aufhängepunkt, Faden und Pendelkör"
+   },
+   "afterSkip": {
+    "active": "psimScene",
+    "activeText": "Fadenpendel mit Aufhängepunkt, Faden und Pendelkörper\n      ",
+    "hash": "#pendeln/labor",
+    "h1": [
+     "Pendellabor"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "studio",
+   "path": "/#pendeln/studio",
+   "axe": {
+    "violations": [],
+    "incomplete": [
+     {
+      "id": "aria-allowed-role",
+      "count": 41,
+      "targets": [
+       [
+        ".feature-card[data-page=\"tarot\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"crystals\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"moon\"][role=\"link\"]"
+       ]
+      ]
+     },
+     {
+      "id": "aria-prohibited-attr",
+      "count": 2,
+      "targets": [
+       [
+        "#favCounter"
+       ],
+       [
+        "#ptfPreview"
+       ]
+      ]
+     },
+     {
+      "id": "color-contrast",
+      "count": 7,
+      "targets": [
+       [
+        "text[y=\"48\"]"
+       ],
+       [
+        "#ptfPreview > svg[viewBox=\"0 0 600 660\"][aria-labelledby=\"ptf-title ptf-desc\"][role=\"img\"] > g[font-weight=\"500\"][letter-spacing=\"1\"][fill=\"#eae6dc\"] > text[x=\"158.1\"][y=\"340\"][dy=\".35em\"]"
+       ],
+       [
+        "#ptfPreview > svg[viewBox=\"0 0 600 660\"][aria-labelledby=\"ptf-title ptf-desc\"][role=\"img\"] > g[font-weight=\"500\"][letter-spacing=\"1\"][fill=\"#eae6dc\"] > text[x=\"441.9\"][y=\"340\"][dy=\".35em\"]"
+       ]
+      ]
+     },
+     {
+      "id": "duplicate-id-aria",
+      "count": 2,
+      "targets": [
+       [
+        "#ptfPreview > svg[viewBox=\"0 0 600 660\"][aria-labelledby=\"ptf-title ptf-desc\"][role=\"img\"] > title"
+       ],
+       [
+        "#ptfPreview > svg[viewBox=\"0 0 600 660\"][aria-labelledby=\"ptf-title ptf-desc\"][role=\"img\"] > desc"
+       ]
+      ]
+     }
+    ],
+    "passes": 49
+   },
+   "focusables": 39,
+   "reached": 33,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "select",
+    "cls": "",
+    "href": null,
+    "text": "Ja/Nein-Tafel — 2 SegmenteZahlenkreis 0–9 — 10 Seg"
+   },
+   "afterSkip": {
+    "active": "ptfPreset",
+    "activeText": "Ja/Nein-Tafel — 2 SegmenteZahlenkreis 0–9 — 10 SegmenteBuchs",
+    "hash": "#pendeln/studio",
+    "h1": [
+     "Pendeltafel-Studio"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.ptf-print-active",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "experiment",
+   "path": "/#pendeln/experiment",
+   "axe": {
+    "violations": [],
+    "incomplete": [
+     {
+      "id": "aria-allowed-role",
+      "count": 40,
+      "targets": [
+       [
+        ".feature-card[data-page=\"tarot\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"crystals\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"moon\"][role=\"link\"]"
+       ]
+      ]
+     },
+     {
+      "id": "aria-prohibited-attr",
+      "count": 1,
+      "targets": [
+       [
+        "#favCounter"
+       ]
+      ]
+     }
+    ],
+    "passes": 50
+   },
+   "focusables": 32,
+   "reached": 29,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "input",
+    "cls": "",
+    "href": null,
+    "text": ""
+   },
+   "afterSkip": {
+    "active": "INPUT",
+    "activeText": "",
+    "hash": "#pendeln/experiment",
+    "h1": [
+     "Experimentierlabor"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "journal",
+   "path": "/#pendeln/journal",
+   "axe": {
+    "violations": [
+     {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "nodes": [
+       {
+        "target": [
+         ".jr-block--labor > .astro-text > a[href$=\"#pendeln/experiment\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       }
+      ],
+      "count": 1
+     }
+    ],
+    "incomplete": [
+     {
+      "id": "aria-allowed-role",
+      "count": 40,
+      "targets": [
+       [
+        ".feature-card[data-page=\"tarot\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"crystals\"][role=\"link\"]"
+       ],
+       [
+        ".feature-card[data-page=\"moon\"][role=\"link\"]"
+       ]
+      ]
+     },
+     {
+      "id": "aria-prohibited-attr",
+      "count": 1,
+      "targets": [
+       [
+        "#favCounter"
+       ]
+      ]
+     }
+    ],
+    "passes": 47
+   },
+   "focusables": 42,
+   "reached": 38,
+   "outlineMissing": [
+    {
+     "idx": "11",
+     "tag": "input",
+     "text": "2026-11-03",
+     "visible": true,
+     "hasOutline": false
+    }
+   ],
+   "firstFocus": {
+    "tag": "input",
+    "cls": "",
+    "href": null,
+    "text": ""
+   },
+   "afterSkip": {
+    "active": "jrQuestion",
+    "activeText": "",
+    "hash": "#pendeln/journal",
+    "h1": [
+     "Pendeltagebuch"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "doc-index",
+   "path": "/radiasthesie/",
+   "axe": {
+    "violations": [
+     {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "nodes": [
+       {
+        "target": [
+         "p:nth-child(1) > a[href$=\"methodik.html\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       }
+      ],
+      "count": 2
+     }
+    ],
+    "incomplete": [
+     {
+      "id": "color-contrast",
+      "count": 4,
+      "targets": [
+       [
+        ".textlink > span[aria-hidden=\"true\"]"
+       ],
+       [
+        "a[href$=\"radiasthesie.html\"] > span[aria-hidden=\"true\"]"
+       ],
+       [
+        "a[href$=\"pendeln.html\"] > span[aria-hidden=\"true\"]"
+       ]
+      ]
+     }
+    ],
+    "passes": 39
+   },
+   "focusables": 46,
+   "reached": 46,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "a",
+    "cls": "skip-link",
+    "href": "#main",
+    "text": "Zum Hauptinhalt springen"
+   },
+   "afterSkip": {
+    "active": "BODY",
+    "activeText": "Zum Hauptinhalt springen\n    \n      \n        Esoterik-Welt\n ",
+    "hash": "#main",
+    "h1": [
+     "Radiästhesie, Pendeln und Orakel"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "doc-pendeln",
+   "path": "/radiasthesie/pendeln.html",
+   "axe": {
+    "violations": [
+     {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "nodes": [
+       {
+        "target": [
+         "#bild-rad-media-01 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#bild-rad-media-02 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "p:nth-child(1) > a[href$=\"methodik.html\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       }
+      ],
+      "count": 4
+     }
+    ],
+    "incomplete": [],
+    "passes": 37
+   },
+   "focusables": 139,
+   "reached": 114,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "a",
+    "cls": "skip-link",
+    "href": "#main",
+    "text": "Zum Hauptinhalt springen"
+   },
+   "afterSkip": {
+    "active": "BODY",
+    "activeText": "Zum Hauptinhalt springen\n    \n      \n        Esoterik-Welt\n ",
+    "hash": "#main",
+    "h1": [
+     "Pendeln"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  },
+  {
+   "route": "doc-quellen",
+   "path": "/radiasthesie/quellen.html",
+   "axe": {
+    "violations": [
+     {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "nodes": [
+       {
+        "target": [
+         "#quelle-Q03 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#quelle-Q09 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#quelle-Q16 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       },
+       {
+        "target": [
+         "#quelle-Q19 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+        ],
+        "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+       }
+      ],
+      "count": 19
+     }
+    ],
+    "incomplete": [],
+    "passes": 32
+   },
+   "focusables": 163,
+   "reached": 160,
+   "outlineMissing": [],
+   "firstFocus": {
+    "tag": "a",
+    "cls": "skip-link",
+    "href": "#main",
+    "text": "Zum Hauptinhalt springen"
+   },
+   "afterSkip": {
+    "active": "BODY",
+    "activeText": "Zum Hauptinhalt springen\n    \n      \n        Esoterik-Welt\n ",
+    "hash": "#main",
+    "h1": [
+     "Quellen & Belege"
+    ]
+   },
+   "motion": {
+    "transition": 0.00001,
+    "animation": 0.00001,
+    "worst": "HTML.",
+    "mediaReduce": true
+   }
+  }
+ ],
+ "findings": [
+  {
+   "severity": "fail",
+   "id": "AXE:link-in-text-block",
+   "route": "topic-pendeln",
+   "detail": {
+    "impact": "serious",
+    "count": 2,
+    "nodes": [
+     {
+      "target": [
+       "#bild-rad-media-01 > figcaption > .rad-photo-credit > a[href$=\"#pendeln/methodik\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#bild-rad-media-02 > figcaption > .rad-photo-credit > a[href$=\"#pendeln/methodik\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     }
+    ]
+   }
+  },
+  {
+   "severity": "warn",
+   "id": "KB-UNREACHED",
+   "route": "topic-pendeln",
+   "detail": {
+    "focusables": 145,
+    "reached": 120
+   }
+  },
+  {
+   "severity": "fail",
+   "id": "AXE:link-in-text-block",
+   "route": "quellen",
+   "detail": {
+    "impact": "serious",
+    "count": 17,
+    "nodes": [
+     {
+      "target": [
+       "#quelle-Q03 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#quelle-Q09 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/pendeln\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#quelle-Q16 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#quelle-Q19 > .astro-source-meta:nth-child(6) > a[href$=\"#pendeln/orakel\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     }
+    ]
+   }
+  },
+  {
+   "severity": "warn",
+   "id": "KB-UNREACHED",
+   "route": "quellen",
+   "detail": {
+    "focusables": 169,
+    "reached": 159
+   }
+  },
+  {
+   "severity": "fail",
+   "id": "AXE:link-in-text-block",
+   "route": "methodik",
+   "detail": {
+    "impact": "serious",
+    "count": 6,
+    "nodes": [
+     {
+      "target": [
+       "#nachweis-rad-media-01 > a[rel=\"noopener\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#nachweis-rad-media-02 > a[rel=\"noopener\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#nachweis-rad-media-03 > a[rel=\"noopener\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#nachweis-rad-media-04 > a[rel=\"noopener\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     }
+    ]
+   }
+  },
+  {
+   "severity": "warn",
+   "id": "KB-UNREACHED",
+   "route": "labor",
+   "detail": {
+    "focusables": 37,
+    "reached": 35
+   }
+  },
+  {
+   "severity": "warn",
+   "id": "KB-UNREACHED",
+   "route": "studio",
+   "detail": {
+    "focusables": 39,
+    "reached": 33
+   }
+  },
+  {
+   "severity": "warn",
+   "id": "KB-UNREACHED",
+   "route": "experiment",
+   "detail": {
+    "focusables": 32,
+    "reached": 29
+   }
+  },
+  {
+   "severity": "fail",
+   "id": "AXE:link-in-text-block",
+   "route": "journal",
+   "detail": {
+    "impact": "serious",
+    "count": 1,
+    "nodes": [
+     {
+      "target": [
+       ".jr-block--labor > .astro-text > a[href$=\"#pendeln/experiment\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     }
+    ]
+   }
+  },
+  {
+   "severity": "warn",
+   "id": "KB-UNREACHED",
+   "route": "journal",
+   "detail": {
+    "focusables": 42,
+    "reached": 38
+   }
+  },
+  {
+   "severity": "fail",
+   "id": "FOCUS-VISIBLE",
+   "route": "journal",
+   "detail": [
+    {
+     "idx": "11",
+     "tag": "input",
+     "text": "2026-11-03",
+     "visible": true,
+     "hasOutline": false
+    }
+   ]
+  },
+  {
+   "severity": "fail",
+   "id": "AXE:link-in-text-block",
+   "route": "doc-index",
+   "detail": {
+    "impact": "serious",
+    "count": 2,
+    "nodes": [
+     {
+      "target": [
+       "p:nth-child(1) > a[href$=\"methodik.html\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     }
+    ]
+   }
+  },
+  {
+   "severity": "fail",
+   "id": "AXE:link-in-text-block",
+   "route": "doc-pendeln",
+   "detail": {
+    "impact": "serious",
+    "count": 4,
+    "nodes": [
+     {
+      "target": [
+       "#bild-rad-media-01 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#bild-rad-media-02 > figcaption > .rad-photo-credit > a[href$=\"methodik.html\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "p:nth-child(1) > a[href$=\"methodik.html\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "p:nth-child(2) > a[href$=\"../#pendeln\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     }
+    ]
+   }
+  },
+  {
+   "severity": "warn",
+   "id": "KB-UNREACHED",
+   "route": "doc-pendeln",
+   "detail": {
+    "focusables": 139,
+    "reached": 114
+   }
+  },
+  {
+   "severity": "fail",
+   "id": "AXE:link-in-text-block",
+   "route": "doc-quellen",
+   "detail": {
+    "impact": "serious",
+    "count": 19,
+    "nodes": [
+     {
+      "target": [
+       "#quelle-Q03 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#quelle-Q09 > .astro-source-meta:nth-child(6) > a[href$=\"pendeln.html\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#quelle-Q16 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     },
+     {
+      "target": [
+       "#quelle-Q19 > .astro-source-meta:nth-child(6) > a[href$=\"orakel.html\"]"
+      ],
+      "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.07:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c6b38e, surround"
+     }
+    ]
+   }
+  },
+  {
+   "severity": "warn",
+   "id": "KB-UNREACHED",
+   "route": "doc-quellen",
+   "detail": {
+    "focusables": 163,
+    "reached": 160
+   }
+  }
+ ]
+}

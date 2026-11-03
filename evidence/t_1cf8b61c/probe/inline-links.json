@@ -1,0 +1,358 @@
+[
+  {
+    "hash": "#farbwelten/farbtherapie",
+    "links": [
+      {
+        "text": "Start",
+        "href": "#home",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Farben",
+        "href": "#farbwelten",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Lichtmedizin und Photobiologie",
+        "href": "#farbwelten/lichtmedizin",
+        "color": "rgb(198, 179, 142)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "none",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1.08,
+        "parent": "P"
+      },
+      {
+        "text": "Farbpsychologie",
+        "href": "#farbwelten/farbpsychologie",
+        "color": "rgb(198, 179, 142)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "none",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1.08,
+        "parent": "P"
+      },
+      {
+        "text": "Lichtmedizin und Photobiologie",
+        "href": "#farbwelten/lichtmedizin",
+        "color": "rgb(198, 179, 142)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "none",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1.08,
+        "parent": "P"
+      },
+      {
+        "text": "Was Farbtherapie ist",
+        "href": "#farbwelten/farbtherapie/was-farbtherapie-ist",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Historische Entwicklung",
+        "href": "#farbwelten/farbtherapie/historische-entwicklung",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Typische Verfahren",
+        "href": "#farbwelten/farbtherapie/typische-verfahren",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Was tatsächlich untersucht ist",
+        "href": "#farbwelten/farbtherapie/was-tatsaechlich-untersucht-ist",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Grenzen und Risiken",
+        "href": "#farbwelten/farbtherapie/grenzen-und-risiken",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Quellen",
+        "href": "#farbwelten/farbtherapie/quellen",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      }
+    ]
+  },
+  {
+    "hash": "#farbwelten/farbpsychologie",
+    "links": [
+      {
+        "text": "Start",
+        "href": "#home",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Farben",
+        "href": "#farbwelten",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Farbtherapie und Chromotherapie",
+        "href": "#farbwelten/farbtherapie",
+        "color": "rgb(198, 179, 142)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "none",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1.08,
+        "parent": "P"
+      },
+      {
+        "text": "Wahrnehmung und Emotion",
+        "href": "#farbwelten/farbpsychologie/wahrnehmung-und-emotion",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Was die Forschung zeigt",
+        "href": "#farbwelten/farbpsychologie/was-die-forschung-zeigt",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Kontext, Sättigung und Helligkeit",
+        "href": "#farbwelten/farbpsychologie/kontext-saettigung-und-helligkeit",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Kulturelle Unterschiede",
+        "href": "#farbwelten/farbpsychologie/kulturelle-unterschiede",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Farbe in Architektur und Marketing",
+        "href": "#farbwelten/farbpsychologie/farbe-in-architektur-und-marketing",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Individuelle Unterschiede",
+        "href": "#farbwelten/farbpsychologie/individuelle-unterschiede",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Quellen",
+        "href": "#farbwelten/farbpsychologie/quellen",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      }
+    ]
+  },
+  {
+    "hash": "#farbwelten/lichtmedizin",
+    "links": [
+      {
+        "text": "Start",
+        "href": "#home",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Farben",
+        "href": "#farbwelten",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Farbtherapie und Chromotherapie",
+        "href": "#farbwelten/farbtherapie",
+        "color": "rgb(198, 179, 142)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "none",
+        "borderBottom": "0px",
+        "fontWeight": "400",
+        "contrastToText": 1.08,
+        "parent": "P"
+      },
+      {
+        "text": "Chronobiologie und saisonale Depression",
+        "href": "#farbwelten/lichtmedizin/chronobiologie-und-saisonale-depression",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Blaues Licht",
+        "href": "#farbwelten/lichtmedizin/blaues-licht",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Rotlicht und Photobiomodulation",
+        "href": "#farbwelten/lichtmedizin/rotlicht-und-photobiomodulation",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "UV-Strahlung",
+        "href": "#farbwelten/lichtmedizin/uv-strahlung",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Lichttechnische Größen",
+        "href": "#farbwelten/lichtmedizin/lichttechnische-groessen",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Was daraus nicht folgt",
+        "href": "#farbwelten/lichtmedizin/was-daraus-nicht-folgt",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      },
+      {
+        "text": "Quellen",
+        "href": "#farbwelten/lichtmedizin/quellen",
+        "color": "rgb(186, 189, 183)",
+        "textColor": "rgb(186, 189, 183)",
+        "decoration": "underline",
+        "borderBottom": "1px",
+        "fontWeight": "400",
+        "contrastToText": 1,
+        "parent": "LI"
+      }
+    ]
+  }
+]

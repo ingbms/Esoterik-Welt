@@ -1,0 +1,19 @@
+✔ deck manifest: 78 stable ids, 22 + 4x14, no duplicates, canonical names (1.4363ms)
+✔ deck manifest: every declared file exists with the declared hash, bytes and 3:5 size (53.9586ms)
+✔ card content: individual keywords and both interpretations for all 78 cards (2.0758ms)
+✔ HTTP edition: all 78 cards open with their own asset, name, numeral and interpretation (7049.4725ms)
+✔ file:// edition: all 78 cards open offline from Lokal.html (7566.9803ms)
+✔ filters and search: 22 / 56 / 14 per suit, empty state, reset (805.9206ms)
+✔ draws: single and three-card spread keep the drawn orientation and the back image (8527.1473ms)
+✔ keyboard and reduced motion: Enter opens, Escape restores focus, draw settles instantly (746.2653ms)
+✔ stored deck id: unknown value falls back to v1 and old history keeps working (558.2697ms)
+✔ payload: first view loads no 1200 px master, zoom does (3395.7788ms)
+✔ missing artwork: the dialog names the failure instead of a broken icon (1207.3293ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30233.8431

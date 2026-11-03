@@ -1,0 +1,93 @@
+{
+  "file": "file:///C:/Users/mas/Arbeit/Esoterik-Welt/.worktrees/t_1cf8b61c/Lokal.html",
+  "routes": 14,
+  "externalRequests": [],
+  "consoleAndPageErrors": [],
+  "failures": [],
+  "rows": [
+    {
+      "hash": "#farbwelten",
+      "h1": "Farbwelten",
+      "textLength": 12288,
+      "rootChildren": 13
+    },
+    {
+      "hash": "#farbwelten/tuerkis",
+      "h1": "Türkis (Cyan)",
+      "textLength": 9554,
+      "rootChildren": 5
+    },
+    {
+      "hash": "#farbwelten/magenta",
+      "h1": "Magenta",
+      "textLength": 9555,
+      "rootChildren": 5
+    },
+    {
+      "hash": "#farbwelten/rosa",
+      "h1": "Rosa",
+      "textLength": 8692,
+      "rootChildren": 5
+    },
+    {
+      "hash": "#farbwelten/weiss",
+      "h1": "Weiß",
+      "textLength": 9356,
+      "rootChildren": 5
+    },
+    {
+      "hash": "#farbwelten/schwarz",
+      "h1": "Schwarz",
+      "textLength": 9591,
+      "rootChildren": 5
+    },
+    {
+      "hash": "#farbwelten/farbtherapie",
+      "h1": "Farbtherapie und Chromotherapie",
+      "textLength": 11442,
+      "rootChildren": 4
+    },
+    {
+      "hash": "#farbwelten/farbpsychologie",
+      "h1": "Farbpsychologie",
+      "textLength": 9843,
+      "rootChildren": 4
+    },
+    {
+      "hash": "#farbwelten/lichtmedizin",
+      "h1": "Lichtmedizin und Photobiologie",
+      "textLength": 10736,
+      "rootChildren": 4
+    },
+    {
+      "hash": "#farbwelten/kompass",
+      "h1": "Farben-Kompass",
+      "textLength": 3379,
+      "rootChildren": 7
+    },
+    {
+      "hash": "#farbwelten/farbmeditation",
+      "h1": "Farbmeditation",
+      "textLength": 1825,
+      "rootChildren": 8
+    },
+    {
+      "hash": "#farbwelten/zeitleiste",
+      "h1": "Zeitleiste der Farbforschung",
+      "textLength": 6132,
+      "rootChildren": 7
+    },
+    {
+      "hash": "#farbwelten/lichtfrequenzen",
+      "h1": "Lichtfrequenzen und wissenschaftliche Einordnung",
+      "textLength": 4616,
+      "rootChildren": 10
+    },
+    {
+      "hash": "#farbwelten/chakren",
+      "h1": "Chakren & Farben",
+      "textLength": 4511,
+      "rootChildren": 9
+    }
+  ]
+}

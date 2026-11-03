@@ -1,0 +1,182 @@
+/* ============================================================================
+   Esoterik-Welt — statische Dokumente des Themenmoduls
+   ----------------------------------------------------------------------------
+   Ergänzung zu css/design-system.css, css/main.css und css/radiasthesie.css für
+   die ohne JavaScript erzeugten Seiten unter radiasthesie/.
+
+   Hier steht nur der Rahmen (Kopfzeile, Brotkrümelabstand, Fußzeile) und die
+   Lesbarkeitskorrekturen für ein eigenständiges Dokument. Artikel-, Karten-,
+   Tabellen-, Glossar- und Quellenstile kommen unverändert aus den bestehenden
+   `.astro-*`- und `.rad-*`-Regeln. Alle Farben und Abstände sind Tokens aus
+   design-system.css.
+   ============================================================================ */
+
+body.rad-static {
+  background: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+
+/* --- Kopfzeile ----------------------------------------------------------- */
+
+.rad-static-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rad-static-header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-6);
+  padding-block: var(--space-3);
+}
+
+.rad-static-brand {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.rad-static-brand:hover,
+.rad-static-brand:focus-visible {
+  color: var(--color-hover);
+}
+
+.rad-static-nav {
+  min-width: 0;
+}
+
+.rad-static-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.rad-static-nav a {
+  display: inline-block;
+  padding-block: 2px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.rad-static-nav a:hover,
+.rad-static-nav a:focus-visible {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-line-strong);
+}
+
+.rad-static-nav a[aria-current='page'] {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.rad-static-app {
+  margin-left: auto;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm, 4px);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.rad-static-app:hover,
+.rad-static-app:focus-visible {
+  border-color: var(--color-primary);
+  color: var(--color-hover);
+}
+
+/* --- Inhalt -------------------------------------------------------------- */
+
+.rad-static-main {
+  padding-block: var(--space-6) var(--space-16);
+  overflow-wrap: break-word;
+}
+
+.rad-static-main .astro-breadcrumb {
+  margin-bottom: var(--space-4);
+}
+
+.rad-static-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Quellen-URLs und DOI-Zeilen sind lang; sie sollen den Text nicht sprengen. */
+.rad-static-main .astro-source a,
+.rad-static-main .astro-source-card a,
+.rad-static-main .astro-source-meta {
+  overflow-wrap: anywhere;
+}
+
+/* Der Hero der Übersicht braucht in einem Dokument etwas weniger Luft. */
+.rad-static-main .rad-hero {
+  padding-block: var(--space-2) var(--space-8);
+}
+
+/* --- Fußzeile ------------------------------------------------------------ */
+
+.rad-static-footer {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-16);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.rad-static-footer p {
+  margin: 0;
+  max-width: 80ch;
+}
+
+.rad-static-footer a {
+  color: var(--color-primary);
+  /* WCAG 1.4.1 (RAD-13/F1): Fußzeilenlinks im Textblock zusätzlich
+     zur Farbe durch Unterstreichung erkennbar. */
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Fließtextlinks der statischen Dokumente: gleiche Regel wie im Modul,
+   hier für die Absätze, die keine .astro-text-Klasse tragen. */
+.rad-static-main p a:not(.btn):not(.textlink) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 720px) {
+  .rad-static-app {
+    margin-left: 0;
+  }
+
+  .rad-static-header-inner {
+    gap: var(--space-2) var(--space-4);
+  }
+}
+
+@media print {
+  .rad-static-header,
+  .rad-static-footer {
+    display: none;
+  }
+
+  body.rad-static {
+    background: #fff;
+    color: #111;
+  }
+}

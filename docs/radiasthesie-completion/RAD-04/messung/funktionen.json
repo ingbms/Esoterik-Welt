@@ -1,0 +1,119 @@
+{
+  "generatedAt": "2026-11-03T01:55:18.146Z",
+  "studio": {
+    "deterministic": true,
+    "bytes": 1097,
+    "hasTitle": true,
+    "hasDesc": true,
+    "hasXmlns": true,
+    "externalRefs": 0,
+    "hasScriptTag": false,
+    "hasXlink": false,
+    "escapedNoRawTag": true,
+    "escapedText": true,
+    "titleEscaped": true,
+    "validate": {
+      "empty": 1,
+      "tooLongLabel": 1,
+      "control": 1,
+      "titleLong": 1,
+      "ok": true
+    },
+    "stats": {
+      "p_12_40_k4": 0.46681,
+      "p_10_40_k4": 1,
+      "p_30_40_k4": 0,
+      "wilson_12_40": [
+        0.1807,
+        0.4543
+      ],
+      "wilson_30_40": [
+        0.5981,
+        0.8581
+      ]
+    },
+    "sim": {
+      "theo_0_25": 1.003,
+      "readout": "1,00 s"
+    },
+    "storageEmpty": true
+  },
+  "journal": {
+    "storageEmpty": true,
+    "entries": 3,
+    "noNetwork": true
+  },
+  "simulator": {
+    "expected": 1.003,
+    "shown": "1.00 s",
+    "periode": "1.00 s"
+  },
+  "reducedMotion": {
+    "settled": {
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationPlayState": "running",
+      "transform": "matrix(0.978148, -0.207912, 0.207912, 0.978148, 0, 0)",
+      "barDuration": "0s"
+    },
+    "runningReduced": {
+      "animationName": "none",
+      "animationDuration": "0s",
+      "transform": "matrix(0.978148, -0.207912, 0.207912, 0.978148, 0, 0)",
+      "running": "true"
+    },
+    "runningNormal": {
+      "animationName": "radSwing",
+      "animationDuration": "2.6s",
+      "animationPlayState": "running",
+      "transform": "matrix(0.97899, -0.203908, 0.203908, 0.97899, 0, 0)",
+      "running": "true"
+    }
+  },
+  "print": {
+    "studio": {
+      "panel": false,
+      "nav": false,
+      "status": false,
+      "einordnung": true,
+      "printSheet": true,
+      "printTitle": "Pendeltafel",
+      "sheetSvgWidth": 567,
+      "plateColorAdjust": "exact",
+      "printPlateStyle": "pergament",
+      "plateFace": "rgb(255, 255, 255)",
+      "plateInk": "rgb(0, 0, 0)",
+      "plateContrast": 21
+    },
+    "simulator": {
+      "panel": false,
+      "chart": true,
+      "readout": true,
+      "animationName": "none",
+      "periode": "1,00 s"
+    },
+    "journal": {
+      "panel": false,
+      "list": true,
+      "filter": false,
+      "entries": 3,
+      "bodiesVisible": 3,
+      "firstBodyVisible": true,
+      "firstBodyLines": 1,
+      "firstBodyHeight": 148,
+      "firstBodyText": "Methode: Pendel über TafelVorhersage: Ja, im FlurSicherheit: 4 von 5Ergebnis: Nicht im Flur gefunden, lag im Auto.",
+      "toggleMarker": "none"
+    },
+    "experiment": {
+      "panel": false,
+      "stats": true,
+      "result": true,
+      "actions": false,
+      "stageBg": "rgb(255, 255, 255)",
+      "stageText": "rgb(0, 0, 0)",
+      "stageContrast": 21,
+      "targetColor": "rgb(0, 0, 0)",
+      "progressBarBg": "rgba(0, 0, 0, 0)"
+    }
+  }
+}

@@ -1,0 +1,7198 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-03T01:55:18.146Z",
+    "chrome": "Chrome/155.0.8059.85",
+    "protocol": "1.3",
+    "mockup": "docs/radiasthesie-completion/RAD-04/mockup/index.html",
+    "widths": [
+      320,
+      375,
+      768,
+      1440
+    ],
+    "tools": [
+      "simulator",
+      "studio",
+      "experiment",
+      "journal"
+    ],
+    "note": "Je Messpunkt frisch navigiert (Cache-Buster), Metriken vor Navigation gesetzt, Scrollbalken ausgeblendet."
+  },
+  "results": [
+    {
+      "viewport": {
+        "w": 320,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "overflowX": 0,
+        "height": 2838
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 272
+      },
+      "panel": {
+        "x": 24,
+        "y": 1674,
+        "w": 272,
+        "h": 871,
+        "right": 296
+      },
+      "stage": {
+        "x": 24,
+        "y": 838,
+        "w": 272,
+        "h": 391,
+        "right": 296,
+        "aspect": 1.437
+      },
+      "instrument": {
+        "x": 41,
+        "y": 855,
+        "w": 238,
+        "h": 179,
+        "right": 279,
+        "aspect": 0.75
+      },
+      "readout": {
+        "cols": 1,
+        "count": 4
+      },
+      "nav": {
+        "width": 272,
+        "height": 129,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 136,
+        "linkHeight": 56,
+        "sum": 544,
+        "inner": 272,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 17,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "bereit",
+      "width": 320,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2601
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1481,
+        "w": 327,
+        "h": 871,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 751,
+        "w": 327,
+        "h": 391,
+        "right": 351,
+        "aspect": 1.194
+      },
+      "instrument": {
+        "x": 41,
+        "y": 768,
+        "w": 293,
+        "h": 220,
+        "right": 334,
+        "aspect": 0.75
+      },
+      "readout": {
+        "cols": 2,
+        "count": 4
+      },
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 17,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "bereit",
+      "width": 375,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 768,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "overflowX": 0,
+        "height": 2308
+      },
+      "gutter": 32,
+      "title": {
+        "size": 30.72,
+        "lineHeight": "32.5632px",
+        "w": 680
+      },
+      "panel": {
+        "x": 32,
+        "y": 1418,
+        "w": 704,
+        "h": 693,
+        "right": 736
+      },
+      "stage": {
+        "x": 32,
+        "y": 607,
+        "w": 704,
+        "h": 436,
+        "right": 736,
+        "aspect": 0.62
+      },
+      "instrument": {
+        "x": 53,
+        "y": 628,
+        "w": 662,
+        "h": 320,
+        "right": 715,
+        "aspect": 0.483
+      },
+      "readout": {
+        "cols": 4,
+        "count": 4
+      },
+      "nav": {
+        "width": 704,
+        "height": 114,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 352,
+        "linkHeight": 56,
+        "sum": 1408,
+        "inner": 704,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 17,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "bereit",
+      "width": 768,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1652
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 701,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 565,
+        "w": 820,
+        "h": 533,
+        "right": 884,
+        "aspect": 0.65
+      },
+      "instrument": {
+        "x": 85,
+        "y": 586,
+        "w": 778,
+        "h": 437,
+        "right": 863,
+        "aspect": 0.562
+      },
+      "readout": {
+        "cols": 4,
+        "count": 4
+      },
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 17,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "bereit",
+      "width": 1440,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 320,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "overflowX": 0,
+        "height": 2999
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 272
+      },
+      "panel": {
+        "x": 24,
+        "y": 1245,
+        "w": 272,
+        "h": 1461,
+        "right": 296
+      },
+      "stage": {
+        "x": 24,
+        "y": 833,
+        "w": 272,
+        "h": 388,
+        "right": 296,
+        "aspect": 1.426
+      },
+      "instrument": {
+        "x": 41,
+        "y": 850,
+        "w": 238,
+        "h": 238,
+        "right": 279,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 272,
+        "height": 129,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 136,
+        "linkHeight": 56,
+        "sum": 544,
+        "inner": 272,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 26,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(11,16,18)",
+        "ratio": 15.36,
+        "lineColor": "rgb(198,179,142)",
+        "lineRatio": 9.33
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "standard",
+      "width": 320,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2802
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1151,
+        "w": 327,
+        "h": 1403,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 726,
+        "w": 327,
+        "h": 401,
+        "right": 351,
+        "aspect": 1.227
+      },
+      "instrument": {
+        "x": 41,
+        "y": 743,
+        "w": 293,
+        "h": 293,
+        "right": 334,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 26,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(11,16,18)",
+        "ratio": 15.36,
+        "lineColor": "rgb(198,179,142)",
+        "lineRatio": 9.33
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "standard",
+      "width": 375,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 768,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "overflowX": 0,
+        "height": 2329
+      },
+      "gutter": 32,
+      "title": {
+        "size": 30.72,
+        "lineHeight": "32.5632px",
+        "w": 680
+      },
+      "panel": {
+        "x": 32,
+        "y": 1147,
+        "w": 704,
+        "h": 985,
+        "right": 736
+      },
+      "stage": {
+        "x": 32,
+        "y": 607,
+        "w": 704,
+        "h": 516,
+        "right": 736,
+        "aspect": 0.732
+      },
+      "instrument": {
+        "x": 174,
+        "y": 628,
+        "w": 420,
+        "h": 420,
+        "right": 594,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 704,
+        "height": 114,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 352,
+        "linkHeight": 56,
+        "sum": 1408,
+        "inner": 704,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 26,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(11,16,18)",
+        "ratio": 15.36,
+        "lineColor": "rgb(198,179,142)",
+        "lineRatio": 9.33
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "standard",
+      "width": 768,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1836
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 1096,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 565,
+        "w": 820,
+        "h": 736,
+        "right": 884,
+        "aspect": 0.897
+      },
+      "instrument": {
+        "x": 154,
+        "y": 586,
+        "w": 640,
+        "h": 640,
+        "right": 794,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 26,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(11,16,18)",
+        "ratio": 15.36,
+        "lineColor": "rgb(198,179,142)",
+        "lineRatio": 9.33
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "standard",
+      "width": 1440,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 320,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "overflowX": 0,
+        "height": 2600
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 272
+      },
+      "panel": {
+        "x": 24,
+        "y": 1621,
+        "w": 272,
+        "h": 686,
+        "right": 296
+      },
+      "stage": {
+        "x": 24,
+        "y": 978,
+        "w": 272,
+        "h": 372,
+        "right": 296,
+        "aspect": 1.366
+      },
+      "instrument": {
+        "x": 41,
+        "y": 995,
+        "w": 238,
+        "h": 180,
+        "right": 279,
+        "aspect": 0.756
+      },
+      "readout": null,
+      "nav": {
+        "width": 272,
+        "height": 129,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 136,
+        "linkHeight": 56,
+        "sum": 544,
+        "inner": 272,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "verdeckt",
+      "width": 320,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2319
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1406,
+        "w": 327,
+        "h": 665,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 869,
+        "w": 327,
+        "h": 330,
+        "right": 351,
+        "aspect": 1.009
+      },
+      "instrument": {
+        "x": 41,
+        "y": 886,
+        "w": 293,
+        "h": 180,
+        "right": 334,
+        "aspect": 0.614
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "verdeckt",
+      "width": 375,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 768,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "overflowX": 0,
+        "height": 1880
+      },
+      "gutter": 32,
+      "title": {
+        "size": 30.72,
+        "lineHeight": "32.5632px",
+        "w": 680
+      },
+      "panel": {
+        "x": 32,
+        "y": 1192,
+        "w": 704,
+        "h": 490,
+        "right": 736
+      },
+      "stage": {
+        "x": 32,
+        "y": 669,
+        "w": 704,
+        "h": 316,
+        "right": 736,
+        "aspect": 0.448
+      },
+      "instrument": {
+        "x": 104,
+        "y": 690,
+        "w": 560,
+        "h": 220,
+        "right": 664,
+        "aspect": 0.393
+      },
+      "readout": null,
+      "nav": {
+        "width": 704,
+        "height": 114,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 352,
+        "linkHeight": 56,
+        "sum": 1408,
+        "inner": 704,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "verdeckt",
+      "width": 768,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1301
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 540,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 627,
+        "w": 820,
+        "h": 316,
+        "right": 884,
+        "aspect": 0.385
+      },
+      "instrument": {
+        "x": 194,
+        "y": 648,
+        "w": 560,
+        "h": 220,
+        "right": 754,
+        "aspect": 0.393
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "verdeckt",
+      "width": 1440,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 320,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "overflowX": 0,
+        "height": 2995
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 272
+      },
+      "panel": {
+        "x": 24,
+        "y": 786,
+        "w": 272,
+        "h": 1406,
+        "right": 296
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 272,
+        "height": 129,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 136,
+        "linkHeight": 56,
+        "sum": 544,
+        "inner": 272,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 30,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "liste",
+      "width": 320,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2769
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 679,
+        "w": 327,
+        "h": 1384,
+        "right": 351
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 30,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "liste",
+      "width": 375,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 768,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "overflowX": 0,
+        "height": 2273
+      },
+      "gutter": 32,
+      "title": {
+        "size": 30.72,
+        "lineHeight": "32.5632px",
+        "w": 680
+      },
+      "panel": {
+        "x": 32,
+        "y": 578,
+        "w": 704,
+        "h": 1109,
+        "right": 736
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 704,
+        "height": 114,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 352,
+        "linkHeight": 56,
+        "sum": 1408,
+        "inner": 704,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 30,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "liste",
+      "width": 768,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1910
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 64,
+        "y": 536,
+        "w": 468,
+        "h": 1199,
+        "right": 532
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 30,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "liste",
+      "width": 1440,
+      "consoleErrors": [],
+      "externalRequests": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2622
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1502,
+        "w": 327,
+        "h": 871,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 772,
+        "w": 327,
+        "h": 391,
+        "right": 351,
+        "aspect": 1.194
+      },
+      "instrument": {
+        "x": 41,
+        "y": 789,
+        "w": 293,
+        "h": 220,
+        "right": 334,
+        "aspect": 0.75
+      },
+      "readout": {
+        "cols": 2,
+        "count": 4
+      },
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 17,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 8.42
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "laeuft",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1652
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 701,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 565,
+        "w": 820,
+        "h": 533,
+        "right": 884,
+        "aspect": 0.65
+      },
+      "instrument": {
+        "x": 85,
+        "y": 586,
+        "w": 778,
+        "h": 437,
+        "right": 863,
+        "aspect": 0.562
+      },
+      "readout": {
+        "cols": 4,
+        "count": 4
+      },
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 17,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 8.42
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "laeuft",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2725
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1502,
+        "w": 327,
+        "h": 974,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 772,
+        "w": 327,
+        "h": 391,
+        "right": 351,
+        "aspect": 1.194
+      },
+      "instrument": {
+        "x": 41,
+        "y": 789,
+        "w": 293,
+        "h": 220,
+        "right": 334,
+        "aspect": 0.75
+      },
+      "readout": {
+        "cols": 2,
+        "count": 4
+      },
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 15,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "reduziert",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1652
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 819,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 565,
+        "w": 820,
+        "h": 533,
+        "right": 884,
+        "aspect": 0.65
+      },
+      "instrument": {
+        "x": 85,
+        "y": 586,
+        "w": 778,
+        "h": 437,
+        "right": 863,
+        "aspect": 0.562
+      },
+      "readout": {
+        "cols": 4,
+        "count": 4
+      },
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 15,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "reduziert",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2728
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1502,
+        "w": 327,
+        "h": 977,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 772,
+        "w": 327,
+        "h": 391,
+        "right": 351,
+        "aspect": 1.194
+      },
+      "instrument": {
+        "x": 41,
+        "y": 789,
+        "w": 293,
+        "h": 220,
+        "right": 334,
+        "aspect": 0.75
+      },
+      "readout": {
+        "cols": 2,
+        "count": 4
+      },
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 16,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(192,148,137)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 6.45
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "fehler",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1652
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 822,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 565,
+        "w": 820,
+        "h": 533,
+        "right": 884,
+        "aspect": 0.65
+      },
+      "instrument": {
+        "x": 85,
+        "y": 586,
+        "w": 778,
+        "h": 437,
+        "right": 863,
+        "aspect": 0.562
+      },
+      "readout": {
+        "cols": 4,
+        "count": 4
+      },
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 16,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Chip-Text",
+          "fg": "rgb(192,148,137)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 6.45
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 13.86
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "simulator",
+      "tool": "simulator",
+      "state": "fehler",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2284
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 954,
+        "w": 327,
+        "h": 1081,
+        "right": 351
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "leer",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1599
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 859,
+        "right": 1376
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "leer",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2726
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1324,
+        "w": 327,
+        "h": 1154,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 898,
+        "w": 327,
+        "h": 401,
+        "right": 351,
+        "aspect": 1.227
+      },
+      "instrument": {
+        "x": 41,
+        "y": 915,
+        "w": 293,
+        "h": 293,
+        "right": 334,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 27,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(11,16,18)",
+        "ratio": 15.36,
+        "lineColor": "rgb(198,179,142)",
+        "lineRatio": 9.33
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "fehler",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1632
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 893,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 696,
+        "w": 820,
+        "h": 736,
+        "right": 884,
+        "aspect": 0.897
+      },
+      "instrument": {
+        "x": 154,
+        "y": 717,
+        "w": 640,
+        "h": 640,
+        "right": 794,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 27,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(11,16,18)",
+        "ratio": 15.36,
+        "lineColor": "rgb(198,179,142)",
+        "lineRatio": 9.33
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "fehler",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2802
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1151,
+        "w": 327,
+        "h": 1403,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 726,
+        "w": 327,
+        "h": 401,
+        "right": 351,
+        "aspect": 1.227
+      },
+      "instrument": {
+        "x": 41,
+        "y": 743,
+        "w": 293,
+        "h": 293,
+        "right": 334,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 26,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(20,28,31)",
+        "ratio": 13.86,
+        "lineColor": "rgb(170,147,139)",
+        "lineRatio": 5.97
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "violett",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1836
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 1096,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 565,
+        "w": 820,
+        "h": 736,
+        "right": 884,
+        "aspect": 0.897
+      },
+      "instrument": {
+        "x": 154,
+        "y": 586,
+        "w": 640,
+        "h": 640,
+        "right": 794,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 26,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(234,230,220)",
+        "bg": "rgb(20,28,31)",
+        "ratio": 13.86,
+        "lineColor": "rgb(170,147,139)",
+        "lineRatio": 5.97
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "violett",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2823
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1172,
+        "w": 327,
+        "h": 1403,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 746,
+        "w": 327,
+        "h": 401,
+        "right": 351,
+        "aspect": 1.227
+      },
+      "instrument": {
+        "x": 41,
+        "y": 763,
+        "w": 293,
+        "h": 293,
+        "right": 334,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 26,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(11,16,18)",
+        "bg": "rgb(234,230,220)",
+        "ratio": 15.36,
+        "lineColor": "rgb(82,76,60)",
+        "lineRatio": 6.86
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "pergament",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1836
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 1096,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 565,
+        "w": 820,
+        "h": 736,
+        "right": 884,
+        "aspect": 0.897
+      },
+      "instrument": {
+        "x": 154,
+        "y": 586,
+        "w": 640,
+        "h": 640,
+        "right": 794,
+        "aspect": 1
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 26,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": {
+        "label": "Tafeltext gegen Tafelfläche",
+        "fg": "rgb(11,16,18)",
+        "bg": "rgb(234,230,220)",
+        "ratio": 15.36,
+        "lineColor": "rgb(82,76,60)",
+        "lineRatio": 6.86
+      },
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "studio",
+      "tool": "studio",
+      "state": "pergament",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2236
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1426,
+        "w": 327,
+        "h": 562,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 869,
+        "w": 327,
+        "h": 350,
+        "right": 351,
+        "aspect": 1.069
+      },
+      "instrument": {
+        "x": 41,
+        "y": 886,
+        "w": 293,
+        "h": 200,
+        "right": 334,
+        "aspect": 0.681
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "vorbereitet",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1314
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 458,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 627,
+        "w": 820,
+        "h": 329,
+        "right": 884,
+        "aspect": 0.401
+      },
+      "instrument": {
+        "x": 194,
+        "y": 648,
+        "w": 560,
+        "h": 233,
+        "right": 754,
+        "aspect": 0.416
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "vorbereitet",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2319
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1406,
+        "w": 327,
+        "h": 665,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 869,
+        "w": 327,
+        "h": 330,
+        "right": 351,
+        "aspect": 1.009
+      },
+      "instrument": {
+        "x": 41,
+        "y": 886,
+        "w": 293,
+        "h": 180,
+        "right": 334,
+        "aspect": 0.614
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 4,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "antwort",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1301
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 540,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 627,
+        "w": 820,
+        "h": 316,
+        "right": 884,
+        "aspect": 0.385
+      },
+      "instrument": {
+        "x": 194,
+        "y": 648,
+        "w": 560,
+        "h": 220,
+        "right": 754,
+        "aspect": 0.393
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 4,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "antwort",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2422
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1509,
+        "w": 327,
+        "h": 665,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 869,
+        "w": 327,
+        "h": 330,
+        "right": 351,
+        "aspect": 1.009
+      },
+      "instrument": {
+        "x": 41,
+        "y": 886,
+        "w": 293,
+        "h": 180,
+        "right": 334,
+        "aspect": 0.614
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 4,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "enthuellt",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1404
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 540,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 627,
+        "w": 820,
+        "h": 316,
+        "right": 884,
+        "aspect": 0.385
+      },
+      "instrument": {
+        "x": 194,
+        "y": 648,
+        "w": 560,
+        "h": 220,
+        "right": 754,
+        "aspect": 0.393
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 4,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "enthuellt",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2791
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1878,
+        "w": 327,
+        "h": 665,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 869,
+        "w": 327,
+        "h": 330,
+        "right": 351,
+        "aspect": 1.009
+      },
+      "instrument": {
+        "x": 41,
+        "y": 886,
+        "w": 293,
+        "h": 180,
+        "right": 334,
+        "aspect": 0.614
+      },
+      "readout": {
+        "cols": 2,
+        "count": 4
+      },
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 21,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 4,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "abgeschlossen",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1580
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 540,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 627,
+        "w": 820,
+        "h": 316,
+        "right": 884,
+        "aspect": 0.385
+      },
+      "instrument": {
+        "x": 194,
+        "y": 648,
+        "w": 560,
+        "h": 220,
+        "right": 754,
+        "aspect": 0.393
+      },
+      "readout": {
+        "cols": 6,
+        "count": 4
+      },
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 21,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Messwert groß",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 4,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "abgeschlossen",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2403
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1405,
+        "w": 327,
+        "h": 750,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 848,
+        "w": 327,
+        "h": 350,
+        "right": 351,
+        "aspect": 1.069
+      },
+      "instrument": {
+        "x": 41,
+        "y": 865,
+        "w": 293,
+        "h": 200,
+        "right": 334,
+        "aspect": 0.681
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "leer",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1341
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 601,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 627,
+        "w": 820,
+        "h": 329,
+        "right": 884,
+        "aspect": 0.401
+      },
+      "instrument": {
+        "x": 194,
+        "y": 648,
+        "w": 560,
+        "h": 233,
+        "right": 754,
+        "aspect": 0.416
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 20,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "leer",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2309
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 1378,
+        "w": 327,
+        "h": 683,
+        "right": 351
+      },
+      "stage": {
+        "x": 24,
+        "y": 869,
+        "w": 327,
+        "h": 350,
+        "right": 351,
+        "aspect": 1.069
+      },
+      "instrument": {
+        "x": 41,
+        "y": 886,
+        "w": 293,
+        "h": 200,
+        "right": 334,
+        "aspect": 0.681
+      },
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 19,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "demo",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1296
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 908,
+        "y": 565,
+        "w": 468,
+        "h": 556,
+        "right": 1376
+      },
+      "stage": {
+        "x": 64,
+        "y": 627,
+        "w": 820,
+        "h": 329,
+        "right": 884,
+        "aspect": 0.401
+      },
+      "instrument": {
+        "x": 194,
+        "y": 648,
+        "w": 560,
+        "h": 233,
+        "right": 754,
+        "aspect": 0.416
+      },
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 19,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": null,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": {
+        "count": 4,
+        "disabled": 0,
+        "pressed": 0,
+        "minH": 56
+      },
+      "overflowing": [],
+      "activeTool": "experiment",
+      "tool": "experiment",
+      "state": "demo",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2480
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 700,
+        "w": 327,
+        "h": 1324,
+        "right": 351
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 23,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "leer",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1910
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 64,
+        "y": 536,
+        "w": 468,
+        "h": 1199,
+        "right": 532
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 23,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "leer",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2489
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 721,
+        "w": 327,
+        "h": 1496,
+        "right": 351
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 25,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "fehler",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 2038
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 64,
+        "y": 536,
+        "w": 468,
+        "h": 1327,
+        "right": 532
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 25,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "fehler",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2523
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 721,
+        "w": 327,
+        "h": 1384,
+        "right": 351
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 24,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "voll",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1910
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 64,
+        "y": 536,
+        "w": 468,
+        "h": 1199,
+        "right": 532
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 24,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "voll",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2726
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 700,
+        "w": 327,
+        "h": 1324,
+        "right": 351
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 25,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "bestaetigung",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1910
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 64,
+        "y": 536,
+        "w": 468,
+        "h": 1199,
+        "right": 532
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 25,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "bestaetigung",
+      "width": 1440,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 375,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "overflowX": 0,
+        "height": 2480
+      },
+      "gutter": 24,
+      "title": {
+        "size": 30,
+        "lineHeight": "31.8px",
+        "w": 327
+      },
+      "panel": {
+        "x": 24,
+        "y": 700,
+        "w": 327,
+        "h": 1324,
+        "right": 351
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 327,
+        "height": 121,
+        "links": 4,
+        "rows": 2,
+        "linkWidth": 164,
+        "linkHeight": 56,
+        "sum": 654,
+        "inner": 327,
+        "reserve": null
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 23,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "geloescht",
+      "width": 375,
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "doc": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflowX": 0,
+        "height": 1910
+      },
+      "gutter": 64,
+      "title": {
+        "size": 44,
+        "lineHeight": "46.64px",
+        "w": 680
+      },
+      "panel": {
+        "x": 64,
+        "y": 536,
+        "w": 468,
+        "h": 1199,
+        "right": 532
+      },
+      "stage": null,
+      "instrument": null,
+      "readout": null,
+      "nav": {
+        "width": 1312,
+        "height": 58,
+        "links": 4,
+        "rows": 1,
+        "linkWidth": 328,
+        "linkHeight": 56,
+        "sum": 1312,
+        "inner": 1312,
+        "reserve": 0
+      },
+      "minFontSize": 13,
+      "smallTargets": [],
+      "interactiveCount": 23,
+      "pairs": [
+        {
+          "label": "Fließtext (lead) auf Seitenhintergrund",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        },
+        {
+          "label": "Hinweistext 13 px auf Karte",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(20,28,31)",
+          "ratio": 9.09
+        },
+        {
+          "label": "Sand-Akzent (Wert/Label)",
+          "fg": "rgb(198,179,142)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Primärknopf-Beschriftung",
+          "fg": "rgb(11,16,18)",
+          "bg": "rgb(198,179,142)",
+          "ratio": 9.33
+        },
+        {
+          "label": "Eingabetext auf Feldfläche",
+          "fg": "rgb(234,230,220)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 15.36
+        },
+        {
+          "label": "Navigationsziel",
+          "fg": "rgb(186,189,183)",
+          "bg": "rgb(11,16,18)",
+          "ratio": 10.07
+        }
+      ],
+      "inputBorderContrast": 5.88,
+      "plateContrast": null,
+      "structure": {
+        "h1Count": 1,
+        "headingJumps": 0,
+        "imgsNoAlt": 0,
+        "liveRegions": 1,
+        "unlabeledInputs": []
+      },
+      "expAnswers": null,
+      "overflowing": [],
+      "activeTool": "journal",
+      "tool": "journal",
+      "state": "geloescht",
+      "width": 1440,
+      "consoleErrors": []
+    }
+  ],
+  "keyboard": [
+    {
+      "tool": "simulator",
+      "width": 1440,
+      "sequence": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Direkt zum Werkzeug",
+          "w": 167,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Start",
+          "w": 30,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Pendeln",
+          "w": 51,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Werkstatt",
+          "w": 59,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Wie die Kennzeichnung funktioniert",
+          "w": 223,
+          "h": 20,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "01 Simulator",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "02 Tafel-Studio",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Test- und Demo-Labor",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "04 Journal",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "range",
+          "name": "25",
+          "w": 426,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "range",
+          "name": "12",
+          "w": 426,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "range",
+          "name": "4",
+          "w": 426,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "radio",
+          "name": "scheibe",
+          "w": 18,
+          "h": 18,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Start",
+          "w": 176,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Zurücksetzen",
+          "w": 238,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "body"
+        }
+      ]
+    },
+    {
+      "tool": "simulator",
+      "width": 375,
+      "sequence": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Direkt zum Werkzeug",
+          "w": 167,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Start",
+          "w": 30,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Pendeln",
+          "w": 51,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Werkstatt",
+          "w": 59,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Wie die Kennzeichnung funktioniert",
+          "w": 223,
+          "h": 20,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "01 Simulator",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "02 Tafel-Studio",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Test- und Demo-Labor",
+          "w": 164,
+          "h": 63,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "04 Journal",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "range",
+          "name": "25",
+          "w": 293,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "range",
+          "name": "12",
+          "w": 293,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "range",
+          "name": "4",
+          "w": 293,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "radio",
+          "name": "scheibe",
+          "w": 18,
+          "h": 18,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Start",
+          "w": 293,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Zurücksetzen",
+          "w": 293,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "body"
+        }
+      ]
+    },
+    {
+      "tool": "studio",
+      "width": 1440,
+      "sequence": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Direkt zum Werkzeug",
+          "w": 167,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Start",
+          "w": 30,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Pendeln",
+          "w": 51,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Werkstatt",
+          "w": 59,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Wie die Kennzeichnung funktioniert",
+          "w": 223,
+          "h": 20,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "01 Simulator",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "02 Tafel-Studio",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Test- und Demo-Labor",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "04 Journal",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "radio",
+          "name": "jaNein",
+          "w": 18,
+          "h": 18,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "Pendeltafel",
+          "w": 426,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "Beschriftung 1",
+          "w": 370,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Beschriftung 1 entfernen",
+          "w": 48,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "Beschriftung 2",
+          "w": 370,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Beschriftung 2 entfernen",
+          "w": 48,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "+ Beschriftung hinzufügen",
+          "w": 239,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        }
+      ]
+    },
+    {
+      "tool": "studio",
+      "width": 375,
+      "sequence": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Direkt zum Werkzeug",
+          "w": 167,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Start",
+          "w": 30,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Pendeln",
+          "w": 51,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Werkstatt",
+          "w": 59,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Wie die Kennzeichnung funktioniert",
+          "w": 223,
+          "h": 20,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "01 Simulator",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "02 Tafel-Studio",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Test- und Demo-Labor",
+          "w": 164,
+          "h": 63,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "04 Journal",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "radio",
+          "name": "jaNein",
+          "w": 18,
+          "h": 18,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "Pendeltafel",
+          "w": 293,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "Beschriftung 1",
+          "w": 237,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Beschriftung 1 entfernen",
+          "w": 48,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "Beschriftung 2",
+          "w": 237,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Beschriftung 2 entfernen",
+          "w": 48,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "+ Beschriftung hinzufügen",
+          "w": 239,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        }
+      ]
+    },
+    {
+      "tool": "experiment",
+      "width": 1440,
+      "sequence": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Direkt zum Werkzeug",
+          "w": 167,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Start",
+          "w": 30,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Pendeln",
+          "w": 51,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Werkstatt",
+          "w": 59,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Wie die Kennzeichnung funktioniert",
+          "w": 223,
+          "h": 20,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "01 Simulator",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "02 Tafel-Studio",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Test- und Demo-Labor",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "04 Journal",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "1",
+          "w": 199,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "2",
+          "w": 199,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "3",
+          "w": 199,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "4",
+          "w": 199,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Antwort speichern",
+          "w": 820,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "radio",
+          "name": "test",
+          "w": 18,
+          "h": 18,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "radio",
+          "name": "richtung",
+          "w": 18,
+          "h": 18,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        }
+      ]
+    },
+    {
+      "tool": "experiment",
+      "width": 375,
+      "sequence": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Direkt zum Werkzeug",
+          "w": 167,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Start",
+          "w": 30,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Pendeln",
+          "w": 51,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Werkstatt",
+          "w": 59,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Wie die Kennzeichnung funktioniert",
+          "w": 223,
+          "h": 20,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "01 Simulator",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "02 Tafel-Studio",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Test- und Demo-Labor",
+          "w": 164,
+          "h": 63,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "04 Journal",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "1",
+          "w": 76,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "2",
+          "w": 76,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "3",
+          "w": 76,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "4",
+          "w": 76,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Antwort speichern",
+          "w": 327,
+          "h": 48,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "radio",
+          "name": "test",
+          "w": 18,
+          "h": 18,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "radio",
+          "name": "richtung",
+          "w": 18,
+          "h": 18,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        }
+      ]
+    },
+    {
+      "tool": "journal",
+      "width": 1440,
+      "sequence": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Direkt zum Werkzeug",
+          "w": 167,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Start",
+          "w": 30,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Pendeln",
+          "w": 51,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Werkstatt",
+          "w": 59,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Wie die Kennzeichnung funktioniert",
+          "w": 223,
+          "h": 20,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "01 Simulator",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "02 Tafel-Studio",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Test- und Demo-Labor",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "04 Journal",
+          "w": 328,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "2026-11-03",
+          "w": 426,
+          "h": 52,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "2026-11-03",
+          "w": 426,
+          "h": 52,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "2026-11-03",
+          "w": 426,
+          "h": 52,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "2026-11-03",
+          "w": 426,
+          "h": 52,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "",
+          "w": 426,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "select",
+          "type": "select-one",
+          "name": "Pendel über Tafel Winkelrute Freies Pendeln Ka",
+          "w": 426,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "",
+          "w": 426,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        }
+      ]
+    },
+    {
+      "tool": "journal",
+      "width": 375,
+      "sequence": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Direkt zum Werkzeug",
+          "w": 167,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Start",
+          "w": 30,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Pendeln",
+          "w": 51,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Werkstatt",
+          "w": 59,
+          "h": 44,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Wie die Kennzeichnung funktioniert",
+          "w": 223,
+          "h": 20,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "01 Simulator",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "02 Tafel-Studio",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Test- und Demo-Labor",
+          "w": 164,
+          "h": 63,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "04 Journal",
+          "w": 164,
+          "h": 56,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "2026-11-03",
+          "w": 293,
+          "h": 52,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "2026-11-03",
+          "w": 293,
+          "h": 52,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "2026-11-03",
+          "w": 293,
+          "h": 52,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "2026-11-03",
+          "w": 293,
+          "h": 52,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "",
+          "w": 293,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "select",
+          "type": "select-one",
+          "name": "Pendel über Tafel Winkelrute Freies Pendeln Ka",
+          "w": 293,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "",
+          "w": 293,
+          "h": 50,
+          "outline": "solid 2px rgb(198, 179, 142)",
+          "covered": "visible"
+        }
+      ]
+    }
+  ],
+  "reducedMotion": {
+    "settled": {
+      "animationName": "none",
+      "animationDuration": "0s",
+      "animationPlayState": "running",
+      "transform": "matrix(0.978148, -0.207912, 0.207912, 0.978148, 0, 0)",
+      "barDuration": "0s"
+    },
+    "runningReduced": {
+      "animationName": "none",
+      "animationDuration": "0s",
+      "transform": "matrix(0.978148, -0.207912, 0.207912, 0.978148, 0, 0)",
+      "running": "true"
+    },
+    "runningNormal": {
+      "animationName": "radSwing",
+      "animationDuration": "2.6s",
+      "animationPlayState": "running",
+      "transform": "matrix(0.97899, -0.203908, 0.203908, 0.97899, 0, 0)",
+      "running": "true"
+    }
+  },
+  "print": {
+    "studio": {
+      "panel": false,
+      "nav": false,
+      "status": false,
+      "einordnung": true,
+      "printSheet": true,
+      "printTitle": "Pendeltafel",
+      "sheetSvgWidth": 567,
+      "plateColorAdjust": "exact",
+      "printPlateStyle": "pergament",
+      "plateFace": "rgb(255, 255, 255)",
+      "plateInk": "rgb(0, 0, 0)",
+      "plateContrast": 21
+    },
+    "simulator": {
+      "panel": false,
+      "chart": true,
+      "readout": true,
+      "animationName": "none",
+      "periode": "1,00 s"
+    },
+    "journal": {
+      "panel": false,
+      "list": true,
+      "filter": false,
+      "entries": 3,
+      "bodiesVisible": 3,
+      "firstBodyVisible": true,
+      "firstBodyLines": 1,
+      "firstBodyHeight": 148,
+      "firstBodyText": "Methode: Pendel über TafelVorhersage: Ja, im FlurSicherheit: 4 von 5Ergebnis: Nicht im Flur gefunden, lag im Auto.",
+      "toggleMarker": "none"
+    },
+    "experiment": {
+      "panel": false,
+      "stats": true,
+      "result": true,
+      "actions": false,
+      "stageBg": "rgb(255, 255, 255)",
+      "stageText": "rgb(0, 0, 0)",
+      "stageContrast": 21,
+      "targetColor": "rgb(0, 0, 0)",
+      "progressBarBg": "rgba(0, 0, 0, 0)"
+    }
+  },
+  "functions": {
+    "studio": {
+      "deterministic": true,
+      "bytes": 1097,
+      "hasTitle": true,
+      "hasDesc": true,
+      "hasXmlns": true,
+      "externalRefs": 0,
+      "hasScriptTag": false,
+      "hasXlink": false,
+      "escapedNoRawTag": true,
+      "escapedText": true,
+      "titleEscaped": true,
+      "validate": {
+        "empty": 1,
+        "tooLongLabel": 1,
+        "control": 1,
+        "titleLong": 1,
+        "ok": true
+      },
+      "stats": {
+        "p_12_40_k4": 0.46681,
+        "p_10_40_k4": 1,
+        "p_30_40_k4": 0,
+        "wilson_12_40": [
+          0.1807,
+          0.4543
+        ],
+        "wilson_30_40": [
+          0.5981,
+          0.8581
+        ]
+      },
+      "sim": {
+        "theo_0_25": 1.003,
+        "readout": "1,00 s"
+      },
+      "storageEmpty": true
+    },
+    "journal": {
+      "storageEmpty": true,
+      "entries": 3,
+      "noNetwork": true
+    },
+    "simulator": {
+      "expected": 1.003,
+      "shown": "1.00 s",
+      "periode": "1.00 s"
+    }
+  },
+  "stateShots": [
+    {
+      "tool": "simulator",
+      "state": "laeuft",
+      "width": 375,
+      "file": "simulator-laeuft-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "simulator",
+      "state": "laeuft",
+      "width": 1440,
+      "file": "simulator-laeuft-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "simulator",
+      "state": "reduziert",
+      "width": 375,
+      "file": "simulator-reduziert-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "simulator",
+      "state": "reduziert",
+      "width": 1440,
+      "file": "simulator-reduziert-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "simulator",
+      "state": "fehler",
+      "width": 375,
+      "file": "simulator-fehler-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "simulator",
+      "state": "fehler",
+      "width": 1440,
+      "file": "simulator-fehler-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "studio",
+      "state": "leer",
+      "width": 375,
+      "file": "studio-leer-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "studio",
+      "state": "leer",
+      "width": 1440,
+      "file": "studio-leer-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "studio",
+      "state": "fehler",
+      "width": 375,
+      "file": "studio-fehler-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "studio",
+      "state": "fehler",
+      "width": 1440,
+      "file": "studio-fehler-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "studio",
+      "state": "violett",
+      "width": 375,
+      "file": "studio-violett-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "studio",
+      "state": "violett",
+      "width": 1440,
+      "file": "studio-violett-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "studio",
+      "state": "pergament",
+      "width": 375,
+      "file": "studio-pergament-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "studio",
+      "state": "pergament",
+      "width": 1440,
+      "file": "studio-pergament-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "vorbereitet",
+      "width": 375,
+      "file": "experiment-vorbereitet-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "vorbereitet",
+      "width": 1440,
+      "file": "experiment-vorbereitet-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "antwort",
+      "width": 375,
+      "file": "experiment-antwort-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "antwort",
+      "width": 1440,
+      "file": "experiment-antwort-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "enthuellt",
+      "width": 375,
+      "file": "experiment-enthuellt-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "enthuellt",
+      "width": 1440,
+      "file": "experiment-enthuellt-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "abgeschlossen",
+      "width": 375,
+      "file": "experiment-abgeschlossen-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "abgeschlossen",
+      "width": 1440,
+      "file": "experiment-abgeschlossen-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "leer",
+      "width": 375,
+      "file": "experiment-leer-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "leer",
+      "width": 1440,
+      "file": "experiment-leer-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "demo",
+      "width": 375,
+      "file": "experiment-demo-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "experiment",
+      "state": "demo",
+      "width": 1440,
+      "file": "experiment-demo-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "leer",
+      "width": 375,
+      "file": "journal-leer-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "leer",
+      "width": 1440,
+      "file": "journal-leer-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "fehler",
+      "width": 375,
+      "file": "journal-fehler-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "fehler",
+      "width": 1440,
+      "file": "journal-fehler-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "voll",
+      "width": 375,
+      "file": "journal-voll-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "voll",
+      "width": 1440,
+      "file": "journal-voll-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "bestaetigung",
+      "width": 375,
+      "file": "journal-bestaetigung-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "bestaetigung",
+      "width": 1440,
+      "file": "journal-bestaetigung-1440.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "geloescht",
+      "width": 375,
+      "file": "journal-geloescht-375.png",
+      "overflowX": 0
+    },
+    {
+      "tool": "journal",
+      "state": "geloescht",
+      "width": 1440,
+      "file": "journal-geloescht-1440.png",
+      "overflowX": 0
+    }
+  ],
+  "printShots": [
+    "druck-studio-1440.png",
+    "druck-simulator-1440.png",
+    "druck-journal-1440.png",
+    "druck-experiment-1440.png"
+  ],
+  "errors": {
+    "console": [],
+    "externalRequests": [],
+    "failedRequests": []
+  }
+}

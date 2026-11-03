@@ -1,0 +1,17 @@
+
+Running 13 tests using 1 worker
+
+[1/13] tests\radiasthesie.spec.js:41:1 › Navigationsziel öffnet das Modul und setzt Route, Titel und Fokus
+[2/13] tests\radiasthesie.spec.js:56:1 › Landingpage: Hero, Einordnungsband, drei Themen, fünf Stufen, Werkstatt
+[3/13] tests\radiasthesie.spec.js:71:1 › Jede Route hat genau eine H1, keine Sprünge und vollständige Metadaten
+[4/13] tests\radiasthesie.spec.js:107:1 › Themenseiten: Kapitel, Inhaltsverzeichnis und auflösbare Quellenmarker
+[5/13] tests\radiasthesie.spec.js:133:1 › Kapitel-Deep-Link scrollt zum Abschnitt und setzt den Fokus
+[6/13] tests\radiasthesie.spec.js:145:1 › Glossar filtert beim Tippen und behält den Filter in der Adresse
+[7/13] tests\radiasthesie.spec.js:162:1 › Quellen-Deeplink hebt die zitierte Quelle hervor
+[8/13] tests\radiasthesie.spec.js:172:1 › Suche, Fehleransicht und leere Suche führen zurück
+[9/13] tests\radiasthesie.spec.js:189:1 › Keine Überläufe an den definierten Breakpoints
+[10/13] tests\radiasthesie.spec.js:206:1 › Mobilmenü bleibt vollflächig bedienbar und die Kopfzeile passt
+[11/13] tests\radiasthesie.spec.js:223:1 › Kopfzeilen-Layout: Burger verschiebt sich nicht mehr (B2)
+[12/13] tests\radiasthesie.spec.js:275:1 › Tastatur: Skip-Link, Fokusring und Esc-freie Navigation
+[13/13] tests\radiasthesie.spec.js:295:1 › Sitemap und Canonical bleiben ehrlich (keine Fragment-URLs)
+  13 passed (18.1s)

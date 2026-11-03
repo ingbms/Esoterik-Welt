@@ -1,0 +1,1887 @@
+{
+  "base": "http://127.0.0.1:8138/Esoterik-Welt/docs/farbwelten-konzept/mockup/index.html",
+  "stand": "Messung erste Ausbaustufe (7 Farbwelten) — historischer Messstand, nicht Referenz für den Zwölf-Farben-Stand (02, 03, 06)",
+  "measured_at": "2026-11-02T22:11:02.755Z",
+  "viewports": [
+    {
+      "width": 1440,
+      "structure": {
+        "docOverflowX": 0,
+        "headings": [
+          "H1:Die Welt der Farben – Licht, Schwingung und verb",
+          "H2:Sieben Farbwelten",
+          "H2:Farbkarten",
+          "H3:Rot",
+          "H3:Blau",
+          "H3:Violett",
+          "H2:Chakren & Farben",
+          "H3:Mūlādhāra — Wurzelchakra",
+          "H2:Tradition und Forschung",
+          "H3:Rotes Licht und Wärme",
+          "H3:Was tatsächlich untersucht ist",
+          "H2:Farbdetailseite",
+          "H2:Rot — das lange Ende des Lichts",
+          "H3:Physikalische Eigenschaften"
+        ],
+        "h1Count": 1,
+        "cardHeights": [
+          443,
+          443,
+          443
+        ],
+        "cardTops": [
+          2359,
+          2359,
+          2359
+        ],
+        "rowHeights": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ],
+        "nodeSizes": [
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44
+        ],
+        "navLinkCount": 9,
+        "lastNavRight": 1288,
+        "headerInnerRight": 1376,
+        "imagesWithoutAlt": 0,
+        "svgTitle": true,
+        "pressedCount": 1
+      },
+      "tokens": {
+        "rotCore": "#bc4a41",
+        "rotInk": "#cf6a60",
+        "probeBackground": "rgb(188, 74, 65)",
+        "bodyBackground": "rgb(11, 16, 18)",
+        "bodyFont": "Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "transition": "1e-05s"
+      },
+      "contrast": [
+        {
+          "selector": "h1",
+          "label": "h1",
+          "found": true,
+          "fontSize": "80px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-hero__lede",
+          "label": "Hero-Lede",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__name",
+          "label": "Register-Name",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-register__meta",
+          "label": "Register-Metadaten",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__chakra",
+          "label": "Register-Chakra",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__arrow",
+          "label": "Register-Pfeil",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 9.33
+        },
+        {
+          "selector": ".fw-card__text",
+          "label": "Kartentext",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-card__title",
+          "label": "Kartentitel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 13.86
+        },
+        {
+          "selector": ".fw-chakra__panel h3",
+          "label": "Chakra-Titel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-chakra__sanskrit",
+          "label": "Chakra-Sanskrit",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-chakra__list dd",
+          "label": "Chakra-Wert",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-compare__col p",
+          "label": "Vergleichstext",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-compare__foot",
+          "label": "Vergleichs-Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-detail__band h2",
+          "label": "Detail-H2",
+          "found": true,
+          "fontSize": "44px",
+          "color": "rgb(234, 230, 220)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__band p:last-child",
+          "label": "Detail-Lede",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__body p",
+          "label": "Detail-Absatz",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-note",
+          "label": "Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-tafel__name",
+          "label": "Tafel-Name",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 13.77
+        },
+        {
+          "selector": ".fw-tafel__nm",
+          "label": "Tafel-Wellenlaenge",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 9.03
+        },
+        {
+          "selector": ".fw-node",
+          "label": "Chakra-Knoten (Zahl)",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".astro-badge--historisch",
+          "label": "Badge historisch",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(192, 168, 137)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.57
+        },
+        {
+          "selector": ".astro-badge--empirie",
+          "label": "Badge Empirie",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(157, 179, 196)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.96
+        },
+        {
+          "selector": ".astro-badge--deutungstradition",
+          "label": "Badge Deutungstradition",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 8.42
+        }
+      ],
+      "focus": {
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(234, 230, 220)",
+        "outlineOffset": "0px"
+      },
+      "keyboard": {
+        "before": "root",
+        "after": {
+          "pressed": "sacral",
+          "name": "Svādhiṣṭhāna — Sakralchakra",
+          "link": "#farbwelten/orange"
+        }
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "width": 1100,
+      "structure": {
+        "docOverflowX": 0,
+        "headings": [
+          "H1:Die Welt der Farben – Licht, Schwingung und verb",
+          "H2:Sieben Farbwelten",
+          "H2:Farbkarten",
+          "H3:Rot",
+          "H3:Blau",
+          "H3:Violett",
+          "H2:Chakren & Farben",
+          "H3:Mūlādhāra — Wurzelchakra",
+          "H2:Tradition und Forschung",
+          "H3:Rotes Licht und Wärme",
+          "H3:Was tatsächlich untersucht ist",
+          "H2:Farbdetailseite",
+          "H2:Rot — das lange Ende des Lichts",
+          "H3:Physikalische Eigenschaften"
+        ],
+        "h1Count": 1,
+        "cardHeights": [
+          491,
+          491,
+          491
+        ],
+        "cardTops": [
+          2806,
+          2806,
+          3321
+        ],
+        "rowHeights": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ],
+        "nodeSizes": [
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44
+        ],
+        "navLinkCount": 9,
+        "lastNavRight": 996,
+        "headerInnerRight": 1068,
+        "imagesWithoutAlt": 0,
+        "svgTitle": true,
+        "pressedCount": 1
+      },
+      "tokens": {
+        "rotCore": "#bc4a41",
+        "rotInk": "#cf6a60",
+        "probeBackground": "rgb(188, 74, 65)",
+        "bodyBackground": "rgb(11, 16, 18)",
+        "bodyFont": "Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "transition": "1e-05s"
+      },
+      "contrast": [
+        {
+          "selector": "h1",
+          "label": "h1",
+          "found": true,
+          "fontSize": "66px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-hero__lede",
+          "label": "Hero-Lede",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__name",
+          "label": "Register-Name",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-register__meta",
+          "label": "Register-Metadaten",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__chakra",
+          "label": "Register-Chakra",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__arrow",
+          "label": "Register-Pfeil",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 9.33
+        },
+        {
+          "selector": ".fw-card__text",
+          "label": "Kartentext",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-card__title",
+          "label": "Kartentitel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 13.86
+        },
+        {
+          "selector": ".fw-chakra__panel h3",
+          "label": "Chakra-Titel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-chakra__sanskrit",
+          "label": "Chakra-Sanskrit",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-chakra__list dd",
+          "label": "Chakra-Wert",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-compare__col p",
+          "label": "Vergleichstext",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-compare__foot",
+          "label": "Vergleichs-Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-detail__band h2",
+          "label": "Detail-H2",
+          "found": true,
+          "fontSize": "44px",
+          "color": "rgb(234, 230, 220)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__band p:last-child",
+          "label": "Detail-Lede",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__body p",
+          "label": "Detail-Absatz",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-note",
+          "label": "Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-tafel__name",
+          "label": "Tafel-Name",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 13.77
+        },
+        {
+          "selector": ".fw-tafel__nm",
+          "label": "Tafel-Wellenlaenge",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 9.03
+        },
+        {
+          "selector": ".fw-node",
+          "label": "Chakra-Knoten (Zahl)",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".astro-badge--historisch",
+          "label": "Badge historisch",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(192, 168, 137)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.57
+        },
+        {
+          "selector": ".astro-badge--empirie",
+          "label": "Badge Empirie",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(157, 179, 196)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.96
+        },
+        {
+          "selector": ".astro-badge--deutungstradition",
+          "label": "Badge Deutungstradition",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 8.42
+        }
+      ],
+      "focus": {
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(234, 230, 220)",
+        "outlineOffset": "0px"
+      },
+      "keyboard": {
+        "before": "root",
+        "after": {
+          "pressed": "sacral",
+          "name": "Svādhiṣṭhāna — Sakralchakra",
+          "link": "#farbwelten/orange"
+        }
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "width": 900,
+      "structure": {
+        "docOverflowX": 0,
+        "headings": [
+          "H1:Die Welt der Farben – Licht, Schwingung und verb",
+          "H2:Sieben Farbwelten",
+          "H2:Farbkarten",
+          "H3:Rot",
+          "H3:Blau",
+          "H3:Violett",
+          "H2:Chakren & Farben",
+          "H3:Mūlādhāra — Wurzelchakra",
+          "H2:Tradition und Forschung",
+          "H3:Rotes Licht und Wärme",
+          "H3:Was tatsächlich untersucht ist",
+          "H2:Farbdetailseite",
+          "H2:Rot — das lange Ende des Lichts",
+          "H3:Physikalische Eigenschaften"
+        ],
+        "h1Count": 1,
+        "cardHeights": [
+          435,
+          435,
+          435
+        ],
+        "cardTops": [
+          2693,
+          2693,
+          3152
+        ],
+        "rowHeights": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ],
+        "nodeSizes": [
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44
+        ],
+        "navLinkCount": 9,
+        "lastNavRight": 796,
+        "headerInnerRight": 868,
+        "imagesWithoutAlt": 0,
+        "svgTitle": true,
+        "pressedCount": 1
+      },
+      "tokens": {
+        "rotCore": "#bc4a41",
+        "rotInk": "#cf6a60",
+        "probeBackground": "rgb(188, 74, 65)",
+        "bodyBackground": "rgb(11, 16, 18)",
+        "bodyFont": "Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "transition": "1e-05s"
+      },
+      "contrast": [
+        {
+          "selector": "h1",
+          "label": "h1",
+          "found": true,
+          "fontSize": "66px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-hero__lede",
+          "label": "Hero-Lede",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__name",
+          "label": "Register-Name",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-register__meta",
+          "label": "Register-Metadaten",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__chakra",
+          "label": "Register-Chakra",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__arrow",
+          "label": "Register-Pfeil",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 9.33
+        },
+        {
+          "selector": ".fw-card__text",
+          "label": "Kartentext",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-card__title",
+          "label": "Kartentitel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 13.86
+        },
+        {
+          "selector": ".fw-chakra__panel h3",
+          "label": "Chakra-Titel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-chakra__sanskrit",
+          "label": "Chakra-Sanskrit",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-chakra__list dd",
+          "label": "Chakra-Wert",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-compare__col p",
+          "label": "Vergleichstext",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-compare__foot",
+          "label": "Vergleichs-Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-detail__band h2",
+          "label": "Detail-H2",
+          "found": true,
+          "fontSize": "44px",
+          "color": "rgb(234, 230, 220)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__band p:last-child",
+          "label": "Detail-Lede",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__body p",
+          "label": "Detail-Absatz",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-note",
+          "label": "Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-tafel__name",
+          "label": "Tafel-Name",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 13.77
+        },
+        {
+          "selector": ".fw-tafel__nm",
+          "label": "Tafel-Wellenlaenge",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 9.03
+        },
+        {
+          "selector": ".fw-node",
+          "label": "Chakra-Knoten (Zahl)",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".astro-badge--historisch",
+          "label": "Badge historisch",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(192, 168, 137)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.57
+        },
+        {
+          "selector": ".astro-badge--empirie",
+          "label": "Badge Empirie",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(157, 179, 196)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.96
+        },
+        {
+          "selector": ".astro-badge--deutungstradition",
+          "label": "Badge Deutungstradition",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 8.42
+        }
+      ],
+      "focus": {
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(234, 230, 220)",
+        "outlineOffset": "0px"
+      },
+      "keyboard": {
+        "before": "root",
+        "after": {
+          "pressed": "sacral",
+          "name": "Svādhiṣṭhāna — Sakralchakra",
+          "link": "#farbwelten/orange"
+        }
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "width": 768,
+      "structure": {
+        "docOverflowX": 0,
+        "headings": [
+          "H1:Die Welt der Farben – Licht, Schwingung und verb",
+          "H2:Sieben Farbwelten",
+          "H2:Farbkarten",
+          "H3:Rot",
+          "H3:Blau",
+          "H3:Violett",
+          "H2:Chakren & Farben",
+          "H3:Mūlādhāra — Wurzelchakra",
+          "H2:Tradition und Forschung",
+          "H3:Rotes Licht und Wärme",
+          "H3:Was tatsächlich untersucht ist",
+          "H2:Farbdetailseite",
+          "H2:Rot — das lange Ende des Lichts",
+          "H3:Physikalische Eigenschaften"
+        ],
+        "h1Count": 1,
+        "cardHeights": [
+          420,
+          420,
+          442
+        ],
+        "cardTops": [
+          2619,
+          2619,
+          3063
+        ],
+        "rowHeights": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ],
+        "nodeSizes": [
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44
+        ],
+        "navLinkCount": 9,
+        "lastNavRight": 0,
+        "headerInnerRight": 736,
+        "imagesWithoutAlt": 0,
+        "svgTitle": true,
+        "pressedCount": 1
+      },
+      "tokens": {
+        "rotCore": "#bc4a41",
+        "rotInk": "#cf6a60",
+        "probeBackground": "rgb(188, 74, 65)",
+        "bodyBackground": "rgb(11, 16, 18)",
+        "bodyFont": "Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "transition": "1e-05s"
+      },
+      "contrast": [
+        {
+          "selector": "h1",
+          "label": "h1",
+          "found": true,
+          "fontSize": "66px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-hero__lede",
+          "label": "Hero-Lede",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__name",
+          "label": "Register-Name",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-register__meta",
+          "label": "Register-Metadaten",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__chakra",
+          "label": "Register-Chakra",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__arrow",
+          "label": "Register-Pfeil",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 9.33
+        },
+        {
+          "selector": ".fw-card__text",
+          "label": "Kartentext",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-card__title",
+          "label": "Kartentitel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 13.86
+        },
+        {
+          "selector": ".fw-chakra__panel h3",
+          "label": "Chakra-Titel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-chakra__sanskrit",
+          "label": "Chakra-Sanskrit",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-chakra__list dd",
+          "label": "Chakra-Wert",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-compare__col p",
+          "label": "Vergleichstext",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-compare__foot",
+          "label": "Vergleichs-Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-detail__band h2",
+          "label": "Detail-H2",
+          "found": true,
+          "fontSize": "44px",
+          "color": "rgb(234, 230, 220)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__band p:last-child",
+          "label": "Detail-Lede",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__body p",
+          "label": "Detail-Absatz",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-note",
+          "label": "Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-tafel__name",
+          "label": "Tafel-Name",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 13.77
+        },
+        {
+          "selector": ".fw-tafel__nm",
+          "label": "Tafel-Wellenlaenge",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 9.03
+        },
+        {
+          "selector": ".fw-node",
+          "label": "Chakra-Knoten (Zahl)",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".astro-badge--historisch",
+          "label": "Badge historisch",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(192, 168, 137)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.57
+        },
+        {
+          "selector": ".astro-badge--empirie",
+          "label": "Badge Empirie",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(157, 179, 196)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.96
+        },
+        {
+          "selector": ".astro-badge--deutungstradition",
+          "label": "Badge Deutungstradition",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 8.42
+        }
+      ],
+      "focus": {
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(234, 230, 220)",
+        "outlineOffset": "0px"
+      },
+      "keyboard": {
+        "before": "root",
+        "after": {
+          "pressed": "sacral",
+          "name": "Svādhiṣṭhāna — Sakralchakra",
+          "link": "#farbwelten/orange"
+        }
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "width": 390,
+      "structure": {
+        "docOverflowX": 0,
+        "headings": [
+          "H1:Die Welt der Farben – Licht, Schwingung und verb",
+          "H2:Sieben Farbwelten",
+          "H2:Farbkarten",
+          "H3:Rot",
+          "H3:Blau",
+          "H3:Violett",
+          "H2:Chakren & Farben",
+          "H3:Mūlādhāra — Wurzelchakra",
+          "H2:Tradition und Forschung",
+          "H3:Rotes Licht und Wärme",
+          "H3:Was tatsächlich untersucht ist",
+          "H2:Farbdetailseite",
+          "H2:Rot — das lange Ende des Lichts",
+          "H3:Physikalische Eigenschaften"
+        ],
+        "h1Count": 1,
+        "cardHeights": [
+          421,
+          421,
+          444
+        ],
+        "cardTops": [
+          2816,
+          3261,
+          3707
+        ],
+        "rowHeights": [
+          113,
+          113,
+          113,
+          113,
+          113,
+          113,
+          113
+        ],
+        "nodeSizes": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "navLinkCount": 9,
+        "lastNavRight": 0,
+        "headerInnerRight": 366,
+        "imagesWithoutAlt": 0,
+        "svgTitle": true,
+        "pressedCount": 1
+      },
+      "tokens": {
+        "rotCore": "#bc4a41",
+        "rotInk": "#cf6a60",
+        "probeBackground": "rgb(188, 74, 65)",
+        "bodyBackground": "rgb(11, 16, 18)",
+        "bodyFont": "Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "transition": "1e-05s"
+      },
+      "contrast": [
+        {
+          "selector": "h1",
+          "label": "h1",
+          "found": true,
+          "fontSize": "52px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-hero__lede",
+          "label": "Hero-Lede",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__name",
+          "label": "Register-Name",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-register__meta",
+          "label": "Register-Metadaten",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__chakra",
+          "label": "Register-Chakra",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__arrow",
+          "label": "Register-Pfeil",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 9.33
+        },
+        {
+          "selector": ".fw-card__text",
+          "label": "Kartentext",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-card__title",
+          "label": "Kartentitel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 13.86
+        },
+        {
+          "selector": ".fw-chakra__panel h3",
+          "label": "Chakra-Titel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-chakra__sanskrit",
+          "label": "Chakra-Sanskrit",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-chakra__list dd",
+          "label": "Chakra-Wert",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-compare__col p",
+          "label": "Vergleichstext",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-compare__foot",
+          "label": "Vergleichs-Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-detail__band h2",
+          "label": "Detail-H2",
+          "found": true,
+          "fontSize": "34px",
+          "color": "rgb(234, 230, 220)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__band p:last-child",
+          "label": "Detail-Lede",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__body p",
+          "label": "Detail-Absatz",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-note",
+          "label": "Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-tafel__name",
+          "label": "Tafel-Name",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 13.77
+        },
+        {
+          "selector": ".fw-tafel__nm",
+          "label": "Tafel-Wellenlaenge",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 9.03
+        },
+        {
+          "selector": ".fw-node",
+          "label": "Chakra-Knoten (Zahl)",
+          "found": true,
+          "fontSize": "10px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".astro-badge--historisch",
+          "label": "Badge historisch",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(192, 168, 137)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.57
+        },
+        {
+          "selector": ".astro-badge--empirie",
+          "label": "Badge Empirie",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(157, 179, 196)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.96
+        },
+        {
+          "selector": ".astro-badge--deutungstradition",
+          "label": "Badge Deutungstradition",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 8.42
+        }
+      ],
+      "focus": {
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(234, 230, 220)",
+        "outlineOffset": "0px"
+      },
+      "keyboard": {
+        "before": "root",
+        "after": {
+          "pressed": "sacral",
+          "name": "Svādhiṣṭhāna — Sakralchakra",
+          "link": "#farbwelten/orange"
+        }
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "width": 320,
+      "structure": {
+        "docOverflowX": 0,
+        "headings": [
+          "H1:Die Welt der Farben – Licht, Schwingung und verb",
+          "H2:Sieben Farbwelten",
+          "H2:Farbkarten",
+          "H3:Rot",
+          "H3:Blau",
+          "H3:Violett",
+          "H2:Chakren & Farben",
+          "H3:Mūlādhāra — Wurzelchakra",
+          "H2:Tradition und Forschung",
+          "H3:Rotes Licht und Wärme",
+          "H3:Was tatsächlich untersucht ist",
+          "H2:Farbdetailseite",
+          "H2:Rot — das lange Ende des Lichts",
+          "H3:Physikalische Eigenschaften"
+        ],
+        "h1Count": 1,
+        "cardHeights": [
+          438,
+          404,
+          404
+        ],
+        "cardTops": [
+          3107,
+          3569,
+          3997
+        ],
+        "rowHeights": [
+          113,
+          113,
+          113,
+          113,
+          113,
+          113,
+          113
+        ],
+        "nodeSizes": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "navLinkCount": 9,
+        "lastNavRight": 0,
+        "headerInnerRight": 296,
+        "imagesWithoutAlt": 0,
+        "svgTitle": true,
+        "pressedCount": 1
+      },
+      "tokens": {
+        "rotCore": "#bc4a41",
+        "rotInk": "#cf6a60",
+        "probeBackground": "rgb(188, 74, 65)",
+        "bodyBackground": "rgb(11, 16, 18)",
+        "bodyFont": "Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "transition": "1e-05s"
+      },
+      "contrast": [
+        {
+          "selector": "h1",
+          "label": "h1",
+          "found": true,
+          "fontSize": "46px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-hero__lede",
+          "label": "Hero-Lede",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__name",
+          "label": "Register-Name",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-register__meta",
+          "label": "Register-Metadaten",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__chakra",
+          "label": "Register-Chakra",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-register__arrow",
+          "label": "Register-Pfeil",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 9.33
+        },
+        {
+          "selector": ".fw-card__text",
+          "label": "Kartentext",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-card__title",
+          "label": "Kartentitel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 13.86
+        },
+        {
+          "selector": ".fw-chakra__panel h3",
+          "label": "Chakra-Titel",
+          "found": true,
+          "fontSize": "28px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-chakra__sanskrit",
+          "label": "Chakra-Sanskrit",
+          "found": true,
+          "fontSize": "18px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-chakra__list dd",
+          "label": "Chakra-Wert",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".fw-compare__col p",
+          "label": "Vergleichstext",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-compare__foot",
+          "label": "Vergleichs-Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-detail__band h2",
+          "label": "Detail-H2",
+          "found": true,
+          "fontSize": "34px",
+          "color": "rgb(234, 230, 220)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__band p:last-child",
+          "label": "Detail-Lede",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "gradient",
+          "backgroundType": "gradient",
+          "ratio": null
+        },
+        {
+          "selector": ".fw-detail__body p",
+          "label": "Detail-Absatz",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 9.09
+        },
+        {
+          "selector": ".fw-note",
+          "label": "Fussnote",
+          "found": true,
+          "fontSize": "14px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 10.07
+        },
+        {
+          "selector": ".fw-tafel__name",
+          "label": "Tafel-Name",
+          "found": true,
+          "fontSize": "16px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 13.77
+        },
+        {
+          "selector": ".fw-tafel__nm",
+          "label": "Tafel-Wellenlaenge",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(186, 189, 183)",
+          "background": "rgb(40, 23, 21)",
+          "backgroundType": "color",
+          "ratio": 9.03
+        },
+        {
+          "selector": ".fw-node",
+          "label": "Chakra-Knoten (Zahl)",
+          "found": true,
+          "fontSize": "10px",
+          "color": "rgb(234, 230, 220)",
+          "background": "rgb(11, 16, 18)",
+          "backgroundType": "color",
+          "ratio": 15.36
+        },
+        {
+          "selector": ".astro-badge--historisch",
+          "label": "Badge historisch",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(192, 168, 137)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.57
+        },
+        {
+          "selector": ".astro-badge--empirie",
+          "label": "Badge Empirie",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(157, 179, 196)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 7.96
+        },
+        {
+          "selector": ".astro-badge--deutungstradition",
+          "label": "Badge Deutungstradition",
+          "found": true,
+          "fontSize": "13px",
+          "color": "rgb(198, 179, 142)",
+          "background": "rgb(20, 28, 31)",
+          "backgroundType": "color",
+          "ratio": 8.42
+        }
+      ],
+      "focus": {
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(234, 230, 220)",
+        "outlineOffset": "0px"
+      },
+      "keyboard": {
+        "before": "root",
+        "after": {
+          "pressed": "sacral",
+          "name": "Svādhiṣṭhāna — Sakralchakra",
+          "link": "#farbwelten/orange"
+        }
+      },
+      "errors": [],
+      "failedRequests": []
+    }
+  ],
+  "failures": [],
+  "focusDefault": {
+    "active": "fw-node",
+    "outlineWidth": "2px",
+    "outlineStyle": "solid",
+    "outlineColor": "rgb(198, 179, 142)",
+    "outlineOffset": "4px"
+  }
+}

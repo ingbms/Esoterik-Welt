@@ -1,0 +1,25 @@
+{
+  "deterministic": true,
+  "runs": [
+    {
+      "run": 1,
+      "exit": 0,
+      "stdout": "QUELLENBIBLIOTHEK.md: 66 Quellen · MEDIEN-LIZENZEN.md: 6 Fotos, 4 SVGs, 24 Varianten\n",
+      "stderr": "",
+      "hashes": {
+        "QUELLENBIBLIOTHEK.md": "95fd4ce5fdaf7a622a507cbef289cc7a3c085eb563f29320bd512fbcb14fc61d",
+        "MEDIEN-LIZENZEN.md": "e432dfa015aa1aad465c8f1c3a0c77fe63f01a18b206089837e9f049b02b631a"
+      }
+    },
+    {
+      "run": 2,
+      "exit": 0,
+      "stdout": "QUELLENBIBLIOTHEK.md: 66 Quellen · MEDIEN-LIZENZEN.md: 6 Fotos, 4 SVGs, 24 Varianten\n",
+      "stderr": "",
+      "hashes": {
+        "QUELLENBIBLIOTHEK.md": "95fd4ce5fdaf7a622a507cbef289cc7a3c085eb563f29320bd512fbcb14fc61d",
+        "MEDIEN-LIZENZEN.md": "e432dfa015aa1aad465c8f1c3a0c77fe63f01a18b206089837e9f049b02b631a"
+      }
+    }
+  ]
+}

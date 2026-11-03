@@ -1,0 +1,36 @@
+
+=== crossref-7.json (DOI 10.3758/s13423-020-01772-1) ===
+  title               : Limited evidence for the effect of red color on cognitive performance: A meta-analysis
+  container-title     : Psychonomic Bulletin &amp; Review
+  short-container     : Psychon Bull Rev
+  volume/issue/page   : 27 / 6 / 1374-1382
+  published-print     : [ [ 2020, 12 ] ]
+  published-online    : [ [ 2020, 7, 7 ] ]
+  authors             : Gnambs, Timo
+
+=== crossref-10-3758-s13423-024-02615-z.json (DOI 10.3758/s13423-024-02615-z) ===
+  title               : Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions
+  container-title     : Psychonomic Bulletin &amp; Review
+  short-container     : Psychon Bull Rev
+  volume/issue/page   : 32 / 4 / 1457-1486
+  published-print     : [ [ 2025, 8 ] ]
+  published-online    : [ [ 2025, 1, 13 ] ]
+  authors             : Jonauskaite, Domicele; Mohr, Christine
+
+=== crossref-10-1177-0956797620948810.json (DOI 10.1177/0956797620948810) ===
+  title               : Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity
+  container-title     : Psychological Science
+  short-container     : Psychol Sci
+  volume/issue/page   : 31 / 10 / 1245-1260
+  published-print     : [ [ 2020, 10 ] ]
+  published-online    : [ [ 2020, 9, 8 ] ]
+  authors             : Jonauskaite, Domicele; Abu-Akel, Ahmad; Dael, Nele; Oberfeld, Daniel; Abdel-Khalek, Ahmed M.; Al-Rasheed, Abdulrahman S.; Antonietti, Jean-Philippe; Bogushevskaya, Victoria; Chamseddine, Amer; Chkonia, Eka; Corona, Violeta; Fonseca-Pedrero, Eduardo; Griber, Yulia A.; Grimshaw, Gina; Hasan, Aya Ahmed; Havelka, Jelena; Hirnstein, Marco; Karlsson, Bodil S. A.; Laurent, Eric; Lindeman, Marjaana; Marquardt, Lynn; Mefoh, Philip; Papadatou-Pastou, Marietta; Pérez-Albéniz, Alicia; Pouyan, Niloufar; Roinishvili, Maya; Romanyuk, Lyudmyla; Salgado Montejo, Alejandro; Schrag, Yann; Sultanova, Aygun; Uusküla, Mari; Vainio, Suvi; Wąsowicz, Grażyna; Zdravković, Sunčica; Zhang, Meng; Mohr, Christine
+
+=== crossref-10-1002-col-22490.json (DOI 10.1002/col.22490) ===
+  title               : To see or not to see: Importance of color perception to color therapy
+  container-title     : Color Research &amp; Application
+  short-container     : Color Research &amp; Application
+  volume/issue/page   : 45 / 3 / 450-464
+  published-print     : [ [ 2020, 6 ] ]
+  published-online    : [ [ 2020, 2, 22 ] ]
+  authors             : Jonauskaite, Domicele; Tremea, Irina; Bürki, Loyse; Diouf, Cécile N.; Mohr, Christine
