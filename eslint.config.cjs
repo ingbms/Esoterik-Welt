@@ -55,7 +55,8 @@ module.exports = [
   },
   {
     // Playwright specs are ES modules executed by the Playwright runner.
-    files: ['tests/**/*.spec.js'],
+    // `qa/**` enthält die unabhängige Abnahme-Suite (eigene Konfiguration).
+    files: ['tests/**/*.spec.js', 'qa/**/*.spec.js'],
     languageOptions: {
       ecmaVersion: 2023,
       sourceType: 'module',

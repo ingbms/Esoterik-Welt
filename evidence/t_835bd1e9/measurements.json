@@ -1,0 +1,625 @@
+{
+  "generatedAt": "2026-11-02T22:19:27.736Z",
+  "base": "http://127.0.0.1:3321/Esoterik-Welt",
+  "browsers": {
+    "chromium": {
+      "engine": "chromium",
+      "browserVersion": "156.0.8078.4",
+      "checks": {
+        "contextsBeforeInteraction": 0,
+        "libraryEntries": 32,
+        "sourceLinks": 26,
+        "badges": 32,
+        "disclaimerHub": "Bildungs- und Experimentierangebot, kein Medizinprodukt. Keine Heil- oder Gesundheitsversprechen. Leise hören, Pausen machen.",
+        "contextsAfterLoad": 0,
+        "audioSupported": true,
+        "playState": {
+          "status": "running",
+          "mode": "tone",
+          "freqHz": 440,
+          "frequenciesHz": [
+            440
+          ],
+          "waveform": "sine",
+          "gainDb": -20,
+          "binaural": null,
+          "sweep": null,
+          "contextState": "running",
+          "lastError": null,
+          "revision": 3
+        },
+        "contextsAfterPlay": 1,
+        "analyserPeak": 0.1,
+        "stopState": "idle",
+        "stopDisabledWhenIdle": true,
+        "sweepElapsedMs": 1588,
+        "sweepEndHz": 800,
+        "capPeak": 0.50119,
+        "reducedMotion": {
+          "matches": true,
+          "rafPerSecond": 0,
+          "noteVisible": true
+        },
+        "mobile": {
+          "overflowPx": 0,
+          "targets": [
+            {
+              "selector": "#fqPlay",
+              "h": 48,
+              "w": 132
+            },
+            {
+              "selector": "#fqStop",
+              "h": 48,
+              "w": 93
+            },
+            {
+              "selector": "#fqSweepStart",
+              "h": 44,
+              "w": 132
+            },
+            {
+              "selector": "#fqPresetPlay",
+              "h": 44,
+              "w": 148
+            },
+            {
+              "selector": "#fqGainRange",
+              "h": 44,
+              "w": 286
+            }
+          ]
+        },
+        "mobileTapPlay": "running",
+        "tabStops": [
+          "A",
+          "fqPlay",
+          "fqFreqRange",
+          "fqFreqNumber",
+          "fqWaveform",
+          "fqGainRange",
+          "fqSweepFrom",
+          "fqSweepTo",
+          "fqSweepSeconds",
+          "fqSweepStart",
+          "fqBeatBase",
+          "fqBeatDelta",
+          "fqBeatPlay",
+          "fqPresetSelect"
+        ]
+      },
+      "frequencies": [
+        {
+          "requestedHz": 20,
+          "zeroCrossHz": 20,
+          "errorHz": 0,
+          "goertzelHz": 20,
+          "peakAmplitude": 0.1,
+          "rms": 0.07054,
+          "seconds": 3
+        },
+        {
+          "requestedHz": 100,
+          "zeroCrossHz": 100,
+          "errorHz": 0,
+          "goertzelHz": 100,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        },
+        {
+          "requestedHz": 440,
+          "zeroCrossHz": 440,
+          "errorHz": 0,
+          "goertzelHz": 440,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        },
+        {
+          "requestedHz": 528,
+          "zeroCrossHz": 528,
+          "errorHz": 0,
+          "goertzelHz": 528,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        },
+        {
+          "requestedHz": 1000,
+          "zeroCrossHz": 1000,
+          "errorHz": 0,
+          "goertzelHz": 1000,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        },
+        {
+          "requestedHz": 5000,
+          "zeroCrossHz": 4999.9994,
+          "errorHz": -0.0006,
+          "goertzelHz": 5000,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        }
+      ],
+      "consoleProblems": [],
+      "contrastHub": [
+        {
+          "selector": "#frequenzen-title",
+          "ratio": 15.36,
+          "fontSizePx": 56,
+          "required": 3,
+          "text": "Frequenzen & Schwingungen"
+        },
+        {
+          "selector": ".fq-entry-title",
+          "ratio": 13.86,
+          "fontSizePx": 20,
+          "required": 4.5,
+          "text": "Menschlicher Hörbereich"
+        },
+        {
+          "selector": ".fq-entry-desc",
+          "ratio": 9.09,
+          "fontSizePx": 14,
+          "required": 4.5,
+          "text": "Normalhörende nehmen etwa 20 H"
+        },
+        {
+          "selector": ".fq-badge",
+          "ratio": 7.75,
+          "fontSizePx": 13,
+          "required": 4.5,
+          "text": "Belegt"
+        },
+        {
+          "selector": ".fq-source-link",
+          "ratio": 8.42,
+          "fontSizePx": 13,
+          "required": 4.5,
+          "text": "OpenStax College Physics 2e, K"
+        },
+        {
+          "selector": "#fqDisclaimerLang",
+          "ratio": 10.07,
+          "fontSizePx": 16,
+          "required": 4.5,
+          "text": "Dieses Frequenzlabor ist ein B"
+        }
+      ],
+      "contrastLab": [
+        {
+          "selector": ".fq-panel-title",
+          "ratio": 13.86,
+          "fontSizePx": 20,
+          "required": 4.5,
+          "text": "Frequenz"
+        },
+        {
+          "selector": ".fq-note",
+          "ratio": 9.09,
+          "fontSizePx": 14,
+          "required": 4.5,
+          "text": "20 kHz ist für viele Menschen "
+        },
+        {
+          "selector": ".fq-gain-cap",
+          "ratio": 8.42,
+          "fontSizePx": 13,
+          "required": 4.5,
+          "text": "Deckel: −6 dBFS"
+        },
+        {
+          "selector": "#fqGainReadout",
+          "ratio": 13.86,
+          "fontSizePx": 18,
+          "required": 4.5,
+          "text": "−20 dBFS"
+        },
+        {
+          "selector": "#fqStatus",
+          "ratio": 10.07,
+          "fontSizePx": 14,
+          "required": 4.5,
+          "text": ""
+        },
+        {
+          "selector": ".btn-primary",
+          "ratio": 9.33,
+          "fontSizePx": 15,
+          "required": 4.5,
+          "text": "Karte ziehen\n                 "
+        }
+      ]
+    },
+    "firefox": {
+      "engine": "firefox",
+      "browserVersion": "157.0",
+      "checks": {
+        "contextsBeforeInteraction": 0,
+        "libraryEntries": 32,
+        "sourceLinks": 26,
+        "badges": 32,
+        "disclaimerHub": "Bildungs- und Experimentierangebot, kein Medizinprodukt. Keine Heil- oder Gesundheitsversprechen. Leise hören, Pausen machen.",
+        "contextsAfterLoad": 0,
+        "audioSupported": true,
+        "playState": {
+          "status": "running",
+          "mode": "tone",
+          "freqHz": 440,
+          "frequenciesHz": [
+            440
+          ],
+          "waveform": "sine",
+          "gainDb": -20,
+          "binaural": null,
+          "sweep": null,
+          "contextState": "running",
+          "lastError": null,
+          "revision": 3
+        },
+        "contextsAfterPlay": 1,
+        "analyserPeak": 0.1,
+        "stopState": "idle",
+        "stopDisabledWhenIdle": true,
+        "sweepElapsedMs": 1607,
+        "sweepEndHz": 800,
+        "capPeak": 0.50119,
+        "reducedMotion": {
+          "matches": true,
+          "rafPerSecond": 0,
+          "noteVisible": true
+        },
+        "mobile": {
+          "overflowPx": 0,
+          "targets": [
+            {
+              "selector": "#fqPlay",
+              "h": 48,
+              "w": 131
+            },
+            {
+              "selector": "#fqStop",
+              "h": 48,
+              "w": 93
+            },
+            {
+              "selector": "#fqSweepStart",
+              "h": 44,
+              "w": 131
+            },
+            {
+              "selector": "#fqPresetPlay",
+              "h": 44,
+              "w": 148
+            },
+            {
+              "selector": "#fqGainRange",
+              "h": 44,
+              "w": 286
+            }
+          ]
+        },
+        "mobileTapPlay": "running",
+        "tabStops": [
+          "fqFreqRange",
+          "fqFreqNumber",
+          "fqWaveform",
+          "fqGainRange",
+          "fqSweepFrom",
+          "fqSweepTo",
+          "fqSweepSeconds",
+          "fqSweepStart",
+          "fqBeatBase",
+          "fqBeatDelta",
+          "fqBeatPlay",
+          "fqPresetSelect",
+          "fqPresetPlay",
+          "fqBinauralPreset"
+        ]
+      },
+      "frequencies": [
+        {
+          "requestedHz": 20,
+          "zeroCrossHz": 19.9997,
+          "errorHz": -0.0003,
+          "goertzelHz": 20,
+          "peakAmplitude": 0.1,
+          "rms": 0.07054,
+          "seconds": 3
+        },
+        {
+          "requestedHz": 100,
+          "zeroCrossHz": 100.0003,
+          "errorHz": 0.0003,
+          "goertzelHz": 100,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        },
+        {
+          "requestedHz": 440,
+          "zeroCrossHz": 439.9998,
+          "errorHz": -0.0002,
+          "goertzelHz": 440,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        },
+        {
+          "requestedHz": 528,
+          "zeroCrossHz": 528,
+          "errorHz": 0,
+          "goertzelHz": 528,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        },
+        {
+          "requestedHz": 1000,
+          "zeroCrossHz": 1000.0005,
+          "errorHz": 0.0005,
+          "goertzelHz": 1000,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        },
+        {
+          "requestedHz": 5000,
+          "zeroCrossHz": 4999.9993,
+          "errorHz": -0.0007,
+          "goertzelHz": 5000,
+          "peakAmplitude": 0.1,
+          "rms": 0.07047,
+          "seconds": 2
+        }
+      ],
+      "consoleProblems": [],
+      "contrastHub": [
+        {
+          "selector": "#frequenzen-title",
+          "ratio": 15.36,
+          "fontSizePx": 56,
+          "required": 3,
+          "text": "Frequenzen & Schwingungen"
+        },
+        {
+          "selector": ".fq-entry-title",
+          "ratio": 13.86,
+          "fontSizePx": 20,
+          "required": 4.5,
+          "text": "Menschlicher Hörbereich"
+        },
+        {
+          "selector": ".fq-entry-desc",
+          "ratio": 9.09,
+          "fontSizePx": 14,
+          "required": 4.5,
+          "text": "Normalhörende nehmen etwa 20 H"
+        },
+        {
+          "selector": ".fq-badge",
+          "ratio": 7.75,
+          "fontSizePx": 13,
+          "required": 4.5,
+          "text": "Belegt"
+        },
+        {
+          "selector": ".fq-source-link",
+          "ratio": 8.42,
+          "fontSizePx": 13,
+          "required": 4.5,
+          "text": "OpenStax College Physics 2e, K"
+        },
+        {
+          "selector": "#fqDisclaimerLang",
+          "ratio": 10.07,
+          "fontSizePx": 16,
+          "required": 4.5,
+          "text": "Dieses Frequenzlabor ist ein B"
+        }
+      ],
+      "contrastLab": [
+        {
+          "selector": ".fq-panel-title",
+          "ratio": 13.86,
+          "fontSizePx": 20,
+          "required": 4.5,
+          "text": "Frequenz"
+        },
+        {
+          "selector": ".fq-note",
+          "ratio": 9.09,
+          "fontSizePx": 14,
+          "required": 4.5,
+          "text": "20 kHz ist für viele Menschen "
+        },
+        {
+          "selector": ".fq-gain-cap",
+          "ratio": 8.42,
+          "fontSizePx": 13,
+          "required": 4.5,
+          "text": "Deckel: −6 dBFS"
+        },
+        {
+          "selector": "#fqGainReadout",
+          "ratio": 13.86,
+          "fontSizePx": 18,
+          "required": 4.5,
+          "text": "−20 dBFS"
+        },
+        {
+          "selector": "#fqStatus",
+          "ratio": 10.07,
+          "fontSizePx": 14,
+          "required": 4.5,
+          "text": ""
+        },
+        {
+          "selector": ".btn-primary",
+          "ratio": 9.33,
+          "fontSizePx": 15,
+          "required": 4.5,
+          "text": "Karte ziehen\n                 "
+        }
+      ]
+    },
+    "webkit": {
+      "engine": "webkit",
+      "browserVersion": "27.2",
+      "checks": {
+        "contextsBeforeInteraction": 0,
+        "libraryEntries": 32,
+        "sourceLinks": 26,
+        "badges": 32,
+        "disclaimerHub": "Bildungs- und Experimentierangebot, kein Medizinprodukt. Keine Heil- oder Gesundheitsversprechen. Leise hören, Pausen machen.",
+        "contextsAfterLoad": 0,
+        "audioSupported": false,
+        "audio": "nicht verfügbar (Browser-Build ohne Web-Audio-API)",
+        "reducedMotion": {
+          "matches": true,
+          "rafPerSecond": 1,
+          "noteVisible": false
+        },
+        "mobile": {
+          "overflowPx": 0,
+          "targets": [
+            {
+              "selector": "#fqPlay",
+              "h": 48,
+              "w": 132
+            },
+            {
+              "selector": "#fqStop",
+              "h": 48,
+              "w": 93
+            },
+            {
+              "selector": "#fqSweepStart",
+              "h": 44,
+              "w": 131
+            },
+            {
+              "selector": "#fqPresetPlay",
+              "h": 44,
+              "w": 146
+            },
+            {
+              "selector": "#fqGainRange",
+              "h": 44,
+              "w": 286
+            }
+          ]
+        },
+        "tabStops": [
+          "fqPlay",
+          "fqFreqRange",
+          "fqFreqNumber",
+          "fqWaveform",
+          "fqGainRange",
+          "fqSweepFrom",
+          "fqSweepTo",
+          "fqSweepSeconds",
+          "fqSweepStart",
+          "fqBeatBase",
+          "fqBeatDelta",
+          "fqBeatPlay",
+          "fqPresetSelect",
+          "fqPresetPlay"
+        ]
+      },
+      "frequencies": [],
+      "consoleProblems": [],
+      "contrastHub": [
+        {
+          "selector": "#frequenzen-title",
+          "ratio": 15.36,
+          "fontSizePx": 56,
+          "required": 3,
+          "text": "Frequenzen & Schwingungen"
+        },
+        {
+          "selector": ".fq-entry-title",
+          "ratio": 13.86,
+          "fontSizePx": 20,
+          "required": 4.5,
+          "text": "Menschlicher Hörbereich"
+        },
+        {
+          "selector": ".fq-entry-desc",
+          "ratio": 9.09,
+          "fontSizePx": 14,
+          "required": 4.5,
+          "text": "Normalhörende nehmen etwa 20 H"
+        },
+        {
+          "selector": ".fq-badge",
+          "ratio": 7.75,
+          "fontSizePx": 13,
+          "required": 4.5,
+          "text": "Belegt"
+        },
+        {
+          "selector": ".fq-source-link",
+          "ratio": 8.42,
+          "fontSizePx": 13,
+          "required": 4.5,
+          "text": "OpenStax College Physics 2e, K"
+        },
+        {
+          "selector": "#fqDisclaimerLang",
+          "ratio": 10.07,
+          "fontSizePx": 16,
+          "required": 4.5,
+          "text": "Dieses Frequenzlabor ist ein B"
+        }
+      ],
+      "contrastLab": [
+        {
+          "selector": ".fq-panel-title",
+          "ratio": 13.86,
+          "fontSizePx": 20,
+          "required": 4.5,
+          "text": "Frequenz"
+        },
+        {
+          "selector": ".fq-note",
+          "ratio": 9.09,
+          "fontSizePx": 14,
+          "required": 4.5,
+          "text": "20 kHz ist für viele Menschen "
+        },
+        {
+          "selector": ".fq-gain-cap",
+          "ratio": 8.42,
+          "fontSizePx": 13,
+          "required": 4.5,
+          "text": "Deckel: −6 dBFS"
+        },
+        {
+          "selector": "#fqGainReadout",
+          "ratio": 13.86,
+          "fontSizePx": 18,
+          "required": 4.5,
+          "text": "−20 dBFS"
+        },
+        {
+          "selector": "#fqStatus",
+          "ratio": 10.07,
+          "fontSizePx": 14,
+          "required": 4.5,
+          "text": ""
+        },
+        {
+          "selector": ".btn-primary",
+          "ratio": 9.33,
+          "fontSizePx": 15,
+          "required": 4.5,
+          "text": "Karte ziehen\n                 "
+        }
+      ]
+    }
+  }
+}
