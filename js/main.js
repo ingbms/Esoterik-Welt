@@ -174,6 +174,9 @@ const elements = {
 
 // --- Initialize ---
 async function init() {
+  // Adresse beim Start merken: Ändert sie sich während der asynchronen
+  // Initialisierung, hat der hashchange-Handler die Route bereits gesetzt.
+  const hashAtStart = location.hash;
   // Setup navigation
   setupNavigation();
 
@@ -248,8 +251,16 @@ async function init() {
       console.error('Radiästhesie-Daten nicht verfügbar', error); // the module shows its own error view
     }
   }
-  applyRoute(initialRoute, { instant: true, silent: true });
-  if (initialRoute.type !== 'skip') settleRouteScroll(state.currentPage);
+  // Der Hash kann sich während des Ladens ändern (Klick auf einen Deep-Link,
+  // Zurück-Taste). Dann hat der hashchange-Handler die Route bereits gesetzt:
+  // Ein erneutes Anwenden des alten Stands würde die frische Ansicht ausblenden
+  // und den Fokus auf ein verstecktes Element setzen. Nur ein unveränderter
+  // Hash wird hier abgeschlossen.
+  const settledRoute = parseRoute(location.hash);
+  if (location.hash === hashAtStart) {
+    applyRoute(settledRoute, { instant: true, silent: true });
+    if (settledRoute.type !== 'skip') settleRouteScroll(state.currentPage);
+  }
 
   // Populate home feature grid
   populateFeatureGrid();

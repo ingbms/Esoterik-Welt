@@ -15,6 +15,7 @@ const VIEW = {
   suche: 'suche',
   labor: 'labor',
   studio: 'studio',
+  experiment: 'experiment',
   notfound: 'notfound',
 };
 
@@ -113,6 +114,10 @@ export function createModel(raw) {
       // Farbstil; eine URL würde nur einen fremden Stand vortäuschen.
       case 'studio':
         return { view: VIEW.studio, params };
+      // Werkstatt-Route des Experimentierlabors (RAD-09). Ohne Query-Zustand:
+      // Modus, Lauf und Ziel liegen im Browser, nicht in der Adresse.
+      case 'experiment':
+        return { view: VIEW.experiment, params };
       case 'suche':
         return { view: VIEW.suche, q: params.get('q') || '', params };
       default:

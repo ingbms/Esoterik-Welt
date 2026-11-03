@@ -173,7 +173,9 @@ const WORKSHOP = [
   },
   {
     title: 'Experimentierlabor',
-    text: 'Verblindete Testreihe mit festgelegtem Ziel, Zufallserwartung und Konfidenzintervall.',
+    text: 'Verblindete Testreihe mit festgelegtem Ziel, Zufallserwartung, Konfidenzintervall und Rohdatenexport.',
+    state: 'Verfügbar',
+    href: '#pendeln/experiment',
   },
 ];
 

@@ -34,6 +34,9 @@ export const ROUTE = {
   // die Tafel wird im Browser zusammengestellt und nicht in die Adresse
   // geschrieben.
   studio: '#pendeln/studio',
+  // Werkstatt Experimentierlabor (RAD-09). Ebenfalls ohne Query-Zustand: Ein
+  // Deep-Link darf weder einen laufenden Versuch noch ein Ziel vortäuschen.
+  experiment: '#pendeln/experiment',
 };
 
 // --- Kennzeichnung --------------------------------------------------------

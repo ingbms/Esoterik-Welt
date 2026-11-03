@@ -71,7 +71,7 @@ Der Forschungsstand zu Pendeln in der Diagnostik ist lückenhaft: Keine peer-rev
 
 ## 10. Selbst testen: verblindet prüfen (D)
 
-Ein verblindetes Experimentierlabor ist in Vorbereitung; der Versuchsaufbau steht bereits fest: Frage vorher schriftlich fixieren, Ziel verdeckt halten, Antwort vor Offenlegung speichern, alle Versuche zählen (keine Nachlese). Die Auswertung erfolgt gegen Zufall (50 % bei Ja/Nein, 12,5 % bei acht Orten). **Wichtig:** Ein Test, der „nichts zeigt“, ist kein Beweis, dass niemand etwas kann — er zeigt, dass die Behauptung in dieser Prüfung nicht sichtbar wurde.
+Ein verblindetes Experimentierlabor steht im Modul zur Verfügung; der Versuchsaufbau steht fest: Frage vorher schriftlich fixieren, Ziel verdeckt halten, Antwort vor Offenlegung speichern, alle Versuche zählen (keine Nachlese). Die Auswertung erfolgt gegen Zufall (50 % bei Ja/Nein, 12,5 % bei acht Orten). **Wichtig:** Ein Test, der „nichts zeigt“, ist kein Beweis, dass niemand etwas kann — er zeigt, dass die Behauptung in dieser Prüfung nicht sichtbar wurde.
 
 ## 11. Redaktions-Hinweis zur Einordnung (Tradition vs. Evidenz)
 

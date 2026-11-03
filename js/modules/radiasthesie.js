@@ -10,8 +10,10 @@ import { ROUTE } from './radiasthesie-format.js';
 import { createModel } from './radiasthesie-model.js';
 import { mountPendulumSimulator } from './pendel-simulator.js';
 import { mountPendeltafelStudio } from './pendeltafel-studio.js';
+import { mountExperimentLabor } from './experiment-labor.js';
 import {
   breadcrumbStructuredData,
+  renderExperiment,
   renderFailure,
   renderGlossar,
   renderLabor,
@@ -52,6 +54,7 @@ export class RadiasthesieModule {
     this.view = null;
     this.simulator = null;
     this.studio = null;
+    this.experiment = null;
     this.bound = false;
     if (root) this.bind();
   }
@@ -97,6 +100,7 @@ export class RadiasthesieModule {
     }
     this.teardownSimulator();
     this.teardownStudio();
+    this.teardownExperiment();
     this.root.innerHTML = view.html;
     this.view = view;
     // Das Pendellabor hängt seine Physik erst nach dem Einsetzen ins Dokument
@@ -107,6 +111,11 @@ export class RadiasthesieModule {
     }
     if (view.studio) {
       this.studio = mountPendeltafelStudio(this.root.querySelector('#pendeltafelStudio'));
+    }
+    if (view.experiment) {
+      // Das Labor hält Lauf und Secret im Modulspeicher. destroy() verwirft
+      // beides, damit ein Routenwechsel kein verdecktes Ziel weiterleben lässt.
+      this.experiment = mountExperimentLabor(this.root.querySelector('#experimentLabor'));
     }
     this.applyMeta(view);
     this.placeStructuredData(view);
@@ -134,6 +143,14 @@ export class RadiasthesieModule {
     }
   }
 
+  /** Beendet das Experimentierlabor und verwirft Lauf samt geheimem Ziel. */
+  teardownExperiment() {
+    if (this.experiment) {
+      this.experiment.destroy();
+      this.experiment = null;
+    }
+  }
+
   resolveView(model, segments, query) {
     const route = model.resolve(segments, query);
     switch (route.view) {
@@ -149,6 +166,8 @@ export class RadiasthesieModule {
         return renderLabor();
       case 'studio':
         return renderStudio();
+      case 'experiment':
+        return renderExperiment();
       case 'suche':
         return renderSuche(model, route.q || '');
       case 'notfound':

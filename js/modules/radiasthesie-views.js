@@ -22,6 +22,8 @@ import {
   statusBand,
 } from './radiasthesie-format.js';
 import { BOARD_LIMITS, BOARD_PRESETS, PALETTES, PALETTE_IDS } from './pendeltafel-model.js';
+import { WERKSTATT } from '../data/radiasthesie-werkstatt.js';
+import { ALPHA, TRIAL_LIMITS, answerLabels, formatPercent, testTypeLabel } from './experiment-statistik.js';
 
 const SITE = 'Esoterik-Welt';
 const UPDATED_LABEL = 'Stand 2. November 2026';
@@ -733,6 +735,252 @@ NEIN</textarea>
       'Pendeltafeln selbst gestalten: Ja/Nein, Zahlenkreis, Buchstaben und freie Segmente, vier Farbstile, SVG-Export und Druckansicht — ohne Wirkungsversprechen.',
     h1: 'Pendeltafel-Studio',
     studio: true,
+  };
+}
+
+/**
+ * Experimentierlabor (RAD-09): echte Route mit zwei getrennten Modi.
+ *
+ * Das Markup enthält ausschließlich Protokoll und Bedienfläche. Ziel,
+ * Commitment und Antworten leben im Controller (experiment-labor.js); die
+ * Ansicht kennt kein Ziel und schreibt keines ins Dokument. Ohne JavaScript
+ * bleiben Protokoll, Auswertungsverfahren und Grenzen lesbar.
+ */
+export function renderExperiment() {
+  const experiments = WERKSTATT.experimente;
+  const demoTypes = ['jaNein', 'richtung', 'zahl'];
+
+  const choices = experiments
+    .map(
+      (experiment, index) => `<label class="exp-choice">
+        <input type="radio" name="expExperiment" value="${escapeHtml(experiment.id)}"${index === 0 ? ' checked' : ''} />
+        <span class="exp-choice-body">
+          <span class="exp-choice-head">${escapeHtml(experiment.title)}</span>
+          <span class="exp-choice-note">${escapeHtml(testTypeLabel(experiment.testType))} · k = ${
+            experiment.k
+          } Ziele · n = ${experiment.n} Versuche · p = ${formatPercent(experiment.baseProbability)}</span>
+          <span class="exp-choice-text">${escapeHtml(experiment.summary)}</span>
+        </span>
+      </label>`
+    )
+    .join('');
+
+  const protocols = experiments
+    .map((experiment, index) => {
+      const labels = answerLabels(experiment.testType, experiment.k).join(', ');
+      return `<div class="exp-protocol-block" data-exp-protocol="${escapeHtml(experiment.id)}"${
+        index === 0 ? '' : ' hidden'
+      }>
+        <table class="exp-protocol">
+          <caption>Vorregistriertes Protokoll: ${escapeHtml(experiment.title)}</caption>
+          <tbody>
+            <tr><th scope="row">Testart</th><td>${escapeHtml(testTypeLabel(experiment.testType))} (${escapeHtml(
+              experiment.testType
+            )})</td></tr>
+            <tr><th scope="row">Zielraum</th><td>${experiment.k} gleich wahrscheinliche Ziele: ${escapeHtml(
+              labels
+            )}</td></tr>
+            <tr><th scope="row">Basiswahrscheinlichkeit</th><td>${formatPercent(
+              experiment.baseProbability,
+              1
+            )} je Versuch (1/${experiment.k})</td></tr>
+            <tr><th scope="row">Geplante Fallzahl</th><td>${experiment.n} Versuche</td></tr>
+            <tr><th scope="row">Abbruchregel</th><td>Nach genau ${experiment.n} Versuchen endet der Lauf. Keine Zwischenauswertung, kein vorzeitiger Abbruch, keine Nachlese.</td></tr>
+            <tr><th scope="row">Primäre Auswertung</th><td>Exakter zweiseitiger Binomialtest der Trefferzahl gegen p = ${formatPercent(
+              experiment.baseProbability,
+              1
+            )}, Schwelle α = ${formatPercent(ALPHA, 0).replace(/\s/g, '')}; zusätzlich Wilson-95-%-Intervall der Trefferquote.</td></tr>
+            <tr><th scope="row">Hypothese</th><td>${escapeHtml(experiment.hypothesis)}</td></tr>
+            <tr><th scope="row">Ablauf</th><td>${escapeHtml(experiment.instructions)}</td></tr>
+          </tbody>
+        </table>
+      </div>`;
+    })
+    .join('');
+
+  const demoOptions = demoTypes
+    .map(
+      (type) =>
+        `<option value="${escapeHtml(type)}">${escapeHtml(testTypeLabel(type))} — ${answerLabels(type, type === 'richtung' ? 8 : type === 'zahl' ? 5 : 2).length} Ziele</option>`
+    )
+    .join('');
+
+  const html = `<div class="rad">
+    ${breadcrumb([{ label: 'Pendeln', href: ROUTE.base }, { label: 'Experimentierlabor' }])}
+    ${pageHead({
+      eyebrow: 'Werkstatt · Prüfung',
+      title: 'Experimentierlabor',
+      subtitle: 'Verdecktes Ziel, gesperrte Antwort, feste Auswertung',
+      lead: 'Hier lässt sich prüfen, ob eine Antwort das verdeckte Ziel häufiger trifft als der Zufall. Das Ziel wird unabhängig gezogen und verdeckt gehalten; die Antwort wird gespeichert, bevor das Ziel erscheint. Spielmodus und auswertbarer Testmodus sind getrennt.',
+      meta: [
+        'Protokoll vor dem Start: Zielraum, Fallzahl, Abbruchregel und Auswertung stehen fest',
+        'Zufall: Web Crypto (crypto.getRandomValues), kein Math.random',
+        `Testarten: ${experiments.length} vorregistrierte Läufe · Zielraum ${TRIAL_LIMITS.minK}–${TRIAL_LIMITS.maxK}`,
+      ],
+    })}
+
+    <section class="exp-section" aria-labelledby="exp-heading">
+      <p class="rad-kicker">01 · Labor</p>
+      <h2 id="exp-heading" tabindex="-1">Modus wählen und Versuche durchführen</h2>
+      <p class="rad-section-lead">Der Spielmodus zeigt sofort ein Ergebnis und zählt nichts. Der Testmodus folgt einem vorregistrierten Protokoll, speichert jede gesperrte Antwort und wertet erst nach der festen Fallzahl aus.</p>
+      <noscript><p class="astro-text">Das Labor braucht JavaScript: Zufallsziel, Sperre und Auswertung laufen im Browser. Protokoll, Verfahren und Grenzen stehen darunter auch ohne Skript.</p></noscript>
+
+      <div class="exp" id="experimentLabor">
+        <fieldset class="exp-modes">
+          <legend>Modus</legend>
+          <label class="exp-mode">
+            <input type="radio" name="expMode" value="test" checked />
+            <span class="exp-mode-body">
+              <span class="exp-mode-name">Testmodus</span>
+              <span class="exp-mode-note">Vorregistriert, gespeichert, exportierbar. Zählt in die Auswertung.</span>
+            </span>
+          </label>
+          <label class="exp-mode">
+            <input type="radio" name="expMode" value="demo" />
+            <span class="exp-mode-body">
+              <span class="exp-mode-name">Spielmodus (Demo)</span>
+              <span class="exp-mode-note">Sofortiges Feedback, keine Speicherung, keine Statistik.</span>
+            </span>
+          </label>
+        </fieldset>
+
+        <div class="exp-panel" data-exp-panel="demo" hidden>
+          <p class="exp-badge">Spielmodus — zählt nicht, wird nicht gespeichert und nicht exportiert.</p>
+          <div class="exp-control">
+            <label for="expDemoType">Testart im Spielmodus</label>
+            <select id="expDemoType">${demoOptions}</select>
+          </div>
+          <p class="exp-question">Welches Ziel wurde gezogen?</p>
+          <div class="exp-answers" id="expDemoAnswers" role="group" aria-label="Antwort im Spielmodus"></div>
+          <p class="exp-feedback" id="expDemoFeedback" role="status" aria-live="polite">Wähle eine Antwort. Das Ziel erscheint sofort.</p>
+          <p class="exp-demo-counter" id="expDemoCounter">0 Versuche · 0 Treffer</p>
+          <button type="button" class="btn btn-secondary" id="expDemoReset">Spielstand zurücksetzen</button>
+        </div>
+
+        <div class="exp-panel" data-exp-panel="test">
+          <fieldset class="exp-experiments" id="expExperimentField">
+            <legend>Vorregistriertes Experiment</legend>
+            ${choices}
+          </fieldset>
+
+          <div class="exp-protocols" id="expProtocols">${protocols}</div>
+
+          <div class="exp-start">
+            <button type="button" class="btn btn-primary" id="expStart">Lauf starten</button>
+            <p class="exp-hint">Mit dem Start stehen Zielraum, Fallzahl, Abbruchregel und Auswertung fest. Ein begonnener Lauf wird gespeichert; die Antwort jedes Versuchs ist nach dem Sperren unveränderlich.</p>
+            <p class="exp-error" id="expStartError" role="alert" hidden></p>
+          </div>
+
+          <div class="exp-trial" id="expTrialPanel" hidden>
+            <p class="exp-trial-meta"><span id="expTrialCounter">Versuch 1 von 20</span> · <span id="expRunLabel">Lauf —</span></p>
+            <h3 id="expQuestion" tabindex="-1">Welches Ziel wurde gezogen?</h3>
+            <p class="exp-question-note">Das Ziel wurde vor dieser Anzeige gezogen und als Commitment gespeichert. Es steht nicht im Dokument, nicht im Seitentitel und nicht im Speicher.</p>
+            <div class="exp-answers" id="expAnswers" role="group" aria-labelledby="expQuestion"></div>
+            <div class="exp-lock">
+              <button type="button" class="btn btn-primary" id="expLock" disabled>Antwort endgültig sperren</button>
+              <p class="exp-hint" id="expLockHint">Erst nach dem Sperren wird das Ziel enthüllt. Die Antwort lässt sich danach nicht ändern; es gibt keine Korrektur einzelner Versuche.</p>
+            </div>
+            <div class="exp-reveal" id="expReveal" hidden>
+              <p class="exp-reveal-text" id="expRevealText"></p>
+              <button type="button" class="btn btn-secondary" id="expNext">Nächster Versuch</button>
+            </div>
+            <p class="exp-status" id="expStatus" role="status" aria-live="polite"></p>
+          </div>
+
+          <section class="exp-results" id="expResults" aria-labelledby="expResultsTitle">
+            <h3 id="expResultsTitle" tabindex="-1">Auswertung</h3>
+            <dl class="exp-stats">
+              <div><dt>Treffer</dt><dd id="expStatHits">—</dd></div>
+              <div><dt>Erwartung bei Zufall</dt><dd id="expStatExpected">—</dd></div>
+              <div><dt>Trefferquote</dt><dd id="expStatRate">—</dd></div>
+              <div><dt>95-%-Intervall</dt><dd id="expStatInterval">—</dd></div>
+              <div><dt>Exakter Binomialtest</dt><dd id="expStatP">—</dd></div>
+              <div><dt>Status</dt><dd id="expStatStatus">Noch kein Lauf</dd></div>
+            </dl>
+            <p class="exp-verdict" id="expVerdict" role="status">Sobald ein Versuch enthüllt ist, erscheint hier die Einordnung.</p>
+            <p class="exp-note" id="expMultiple"></p>
+            <div class="exp-actions">
+              <button type="button" class="btn btn-secondary" id="expExportJson" disabled>Rohdaten (JSON)</button>
+              <button type="button" class="btn btn-secondary" id="expExportCsv" disabled>Rohdaten (CSV)</button>
+              <button type="button" class="btn btn-secondary exp-danger" id="expDeleteRun" disabled>Lauf löschen</button>
+            </div>
+            <p class="exp-hint" id="expStorageNote" role="status"></p>
+          </section>
+
+          <div class="exp-tablewrap" id="expTableWrap" hidden>
+            <table class="exp-table">
+              <caption>Versuche dieses Laufs</caption>
+              <thead>
+                <tr><th scope="col">Versuch</th><th scope="col">Antwort</th><th scope="col">Ziel</th><th scope="col">Treffer</th><th scope="col">Enthüllt</th></tr>
+              </thead>
+              <tbody id="expTrialBody"></tbody>
+            </table>
+          </div>
+
+          <section class="exp-runs" aria-labelledby="expRunsTitle">
+            <h3 id="expRunsTitle">Gespeicherte Läufe</h3>
+            <p class="exp-hint" id="expRunsHint">Läufe liegen ausschließlich im lokalen Speicher dieses Browsers. Es gibt kein Konto, keine Übertragung und keinen Abgleich.</p>
+            <ul class="exp-runlist" id="expRuns"></ul>
+            <button type="button" class="btn btn-secondary" id="expResume" hidden>Gespeicherten Lauf fortsetzen</button>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="astro-section" id="exp-protokoll" aria-labelledby="exp-protokoll-title">
+      <p class="rad-kicker">02 · Protokoll</p>
+      <h2 id="exp-protokoll-title" tabindex="-1">Was vor dem ersten Versuch feststeht</h2>
+      <p class="astro-text">Ein Test, dessen Auswertung erst nach den Daten gewählt wird, ist kein Test. Deshalb legt jeder Lauf vor dem Start vier Dinge fest: den <strong>Zielraum</strong> (wie viele gleich wahrscheinliche Ziele), die <strong>Fallzahl</strong> (wie viele Versuche gezählt werden), die <strong>Abbruchregel</strong> (hier: genau die geplante Zahl, keine Zwischenauswertung) und die <strong>primäre Auswertung</strong> (exakter zweiseitiger Binomialtest mit Schwelle 5 %, dazu ein Wilson-95-%-Intervall).</p>
+      <p class="astro-text">Der Ablauf ist Vertrag und nicht Bedienelement: Ziel ziehen → verdeckt halten → Antwort erfassen → Antwort sperren und speichern → Ziel enthüllen → auswerten. Die Sperre ist endgültig; einzelne Antworten lassen sich nicht korrigieren oder löschen, nur ein ganzer Lauf.</p>
+      <p class="astro-text">Gezählt werden alle Versuche des Laufs. Wer nach einem Treffer aufhört oder erfolglose Versuche streicht, zerstört die Auswertung — das Labor verhindert es, so gut es clientseitig möglich ist.</p>
+    </section>
+
+    <section class="astro-section" id="exp-statistik" aria-labelledby="exp-statistik-title">
+      <p class="rad-kicker">03 · Statistik</p>
+      <h2 id="exp-statistik-title" tabindex="-1">Trefferquote, Erwartung und Intervall</h2>
+      <p class="astro-text">Die <strong>Zufallserwartung</strong> ist die Anzahl der Treffer, die bei reinem Raten zu erwarten wäre: n geteilt durch die Zahl der Ziele. Bei 20 Versuchen mit zwei Zielen sind das 10 Treffer, bei 16 Versuchen mit acht Orten 2 Treffer.</p>
+      <p class="astro-text">Der <strong>exakte zweiseitige Binomialtest</strong> beantwortet die Frage, wie wahrscheinlich eine Trefferzahl ist, die mindestens so weit von der Erwartung abweicht wie die beobachtete — unter der Annahme, dass nur geraten wird. Gerechnet wird als Summe der Wahrscheinlichkeiten aller Ausgänge, die höchstens so wahrscheinlich sind wie der beobachtete; es gibt keine Normalapproximation, damit auch kleine Fallzahlen korrekt bleiben. Der p-Wert ist <em>kein</em> Nachweis: Bei einer Schwelle von 5 % ist etwa jeder zwanzigste reine Zufallslauf auffällig.</p>
+      <p class="astro-text">Das <strong>Wilson-95-%-Intervall</strong> beschreibt die Unsicherheit der Trefferquote. Es ist auch bei wenigen Versuchen und bei Werten nahe 0 oder 100 % brauchbar, anders als die einfache Normalapproximation. Ein Intervall, das die Zufallswahrscheinlichkeit einschließt, ist mit Raten vereinbar; ein Intervall ganz darüber wäre auffällig — und bleibt trotzdem ein Hinweis, kein Beweis.</p>
+      <p class="astro-text"><strong>Mehrfachtests und Selektionsfehler:</strong> Wer mehrere Läufe macht und nur den auffälligsten zeigt, erhöht die Fehlerrate mit jedem Lauf. Das Labor korrigiert dafür nicht und darf es nicht nachträglich: Eine Korrektur (etwa Bonferroni) müsste vor der Auswertung feststehen. Es zählt stattdessen die bekannten Läufe und nennt sie im Ergebnis.</p>
+    </section>
+
+    <section class="astro-section" id="exp-grenzen" aria-labelledby="exp-grenzen-title">
+      <p class="rad-kicker">04 · Grenzen</p>
+      <h2 id="exp-grenzen-title" tabindex="-1">Informationslecks und was diese Verblindung leistet</h2>
+      <p class="astro-text">Die Verblindung ist <strong>clientseitig</strong> und damit begrenzt. Das Ziel wird mit Web Crypto gezogen, nur als SHA-256-Commitment gespeichert und erst nach dem Sperren der Antwort enthüllt. Vor der Enthüllung steht es weder im Dokument noch im Seitentitel noch im lokalen Speicher — das prüfen die automatisierten Tests.</p>
+      <p class="astro-text">Was das <em>nicht</em> verhindert: Wer die Entwicklerwerkzeuge des Browsers bedient, kann Skripte anhalten, Speicher auslesen oder die Seite verändern. Ein Browser kann kein manipulationssicheres Labor garantieren. Für eine belastbare Prüfung bräuchte es eine unabhängige Instanz, die das Ziel zieht und die Antwort entgegennimmt — dieses Modul ist eine ehrliche Übung, kein Zertifikat.</p>
+      <p class="astro-text">Zweite Grenze: Das Salt eines noch nicht enthüllten Versuchs lebt nur im Arbeitsspeicher der Seite. Wird die Seite genau zwischen Sperre und Enthüllung neu geladen, lässt sich dieser Versuch nicht mehr enthüllen; der Lauf bleibt als unvollständig gekennzeichnet und ist nicht auswertbar. Das ist der Preis dafür, dass das Ziel nicht im Speicher liegt. Ein bereits gezogenes, aber noch nicht beantwortetes Ziel wird beim Fortsetzen verworfen — es wurde keine Antwort gespeichert, und ohne das Salt wäre es ohnehin nicht mehr enthüllbar.</p>
+      <p class="astro-text">Dritte Grenze: Das Modul misst nur, ob Antworten mit einem verdeckten Zufallsziel übereinstimmen. Es sagt nichts über Ursachen, Fähigkeiten oder Personen — und ein negatives Ergebnis widerlegt eine Behauptung nicht, es zeigt nur, dass sie in dieser Prüfung nicht sichtbar wurde.</p>
+    </section>
+
+    <section class="astro-section" id="exp-export" aria-labelledby="exp-export-title">
+      <p class="rad-kicker">05 · Rohdaten</p>
+      <h2 id="exp-export-title" tabindex="-1">Export und was darin steht</h2>
+      <p class="astro-text">Der JSON-Export enthält den vollständigen Lauf nach Vertrag: Kennung, Experiment, Modus, Protokoll, je Versuch das Commitment, die gesperrte Antwort mit Zeitstempel und das enthüllte Ergebnis. Salt und Ziel eines nicht enthüllten Versuchs sind nie enthalten. Die Datei lässt sich mit <code>importEnvelope</code> wieder prüfen.</p>
+      <p class="astro-text">Der CSV-Export enthält eine Zeile je enthülltem Versuch: Lauf, Experiment, Modus, Basiswahrscheinlichkeit, Versuchsnummer, Antwort, Ziel, Treffer und beide Zeitstempel. Format nach Vertrag: UTF-8 mit BOM, Semikolon als Trenner, Anführungszeichen verdoppelt, CRLF als Zeilenende — direkt in Tabellenprogrammen lesbar.</p>
+      <p class="astro-text">Es gibt keine Namen, keine Gerätekennung, keine Netzwerkanfrage und keine Telemetrie. Gespeichert wird ausschließlich im lokalen Speicher des Browsers; Löschen entfernt den ganzen Lauf.</p>
+    </section>
+
+    <aside class="rad-disclaimer" aria-labelledby="exp-nicht-title">
+      <h2 class="rad-disclaimer-title" id="exp-nicht-title">Was dieses Labor nicht leistet</h2>
+      <p><strong>Kein Nachweis:</strong> Ein auffälliger Lauf ist ein Hinweis, kein Beleg für eine Fähigkeit. Ein unauffälliger Lauf ist kein Beweis dagegen.</p>
+      <p><strong>Keine Diagnose:</strong> Das Modul prüft Antworten gegen Zufall. Es stellt keine gesundheitlichen, geologischen oder persönlichen Fragen und bewertet keine Personen.</p>
+      <p><strong>Keine Sicherheit gegen Manipulation:</strong> Wer den Browser kontrolliert, kontrolliert das Labor. Die Verblindung schützt vor unbeabsichtigtem Sehen, nicht vor absichtlichem Nachsehen.</p>
+    </aside>
+
+    <p class="astro-text psim-links">
+      <a class="btn btn-secondary" href="${ROUTE.topic('pendeln')}">Zum Thema Pendeln</a>
+      <a class="textlink" href="${ROUTE.studio}">Pendeltafel-Studio öffnen</a>
+    </p>
+  </div>`;
+
+  return {
+    html,
+    title: 'Experimentierlabor — verblindete Testreihe mit Statistik',
+    description:
+      'Verblindetes Experimentierlabor: verdecktes Zufallsziel, gesperrte Antwort, feste Fallzahl, exakter Binomialtest, Wilson-Intervall und Rohdatenexport — ohne Wirkungsversprechen.',
+    h1: 'Experimentierlabor',
+    experiment: true,
   };
 }
 
