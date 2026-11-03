@@ -1302,10 +1302,10 @@ Gemessen nach §7.1 (`npm run check:frequenz-budget`, gzip -9):
 | Kennzahl | Wert | Grenze |
 | --- | --- | --- |
 | NFR-1 Initialgraph | 85.613 B (17 Dateien) — unverändert | 86.275 B |
-| NFR-2 Feature-JS | 43.390 B (10 Dateien) | 100.000 B |
+| NFR-2 Feature-JS | 43.472 B (10 Dateien) | 100.000 B |
 | NFR-3 Feature-CSS | 3.338 B | 6.000 B |
 
-Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enthält beide Ansichten; `Lokal.html` wächst von 790.818 B auf 825.909 B. `file://` ist geprüft: Bibliothek mit 32 Einträgen, Cymatics zeichnet, Meditation startet und zählt.
+Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enthält beide Ansichten; `Lokal.html` wächst von 790.818 B auf 826.083 B. `file://` ist geprüft: Bibliothek mit 32 Einträgen, Cymatics zeichnet, Meditation startet und zählt.
 
 ### 13.6 N-6: Tests und Barrierefreiheit
 

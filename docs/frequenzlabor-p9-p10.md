@@ -28,9 +28,9 @@ Die Bereichsnavigation (Hub, Labor, Cymatics, Meditation) zeigt einen Link nur, 
 | `js/modules/frequenz-meditation-model.js` | Presets, Validierung, Countdown-Arithmetik, Fade-Hüllkurve, versionierter Speicher | nein |
 | `js/modules/frequenz-cymatics-view.js` | Canvas-Darstellung, Modenwahl, Fehlerfall, Textalternative | ja |
 | `js/modules/frequenz-meditation-view.js` | Formular, Timer, Favoriten, Engine-Steuerung, Wiederaufnahme | ja |
-| `js/modules/frequenzlabor.js` | +24 Zeilen Routing: Segmentwahl, dynamischer Import, `disposeFeatureView()`, `onInterrupt()` in `halt()` | ja |
+| `js/modules/frequenzlabor.js` | +82/−6 Zeilen Routing: Segmentwahl, dynamischer Import, `disposeFeatureView()`, `onInterrupt()` in `halt()` | ja |
 | `js/modules/frequenz-flags.js` | `cymatics`/`meditation` auf `true`; Kommentar zum Kill-Switch | – |
-| `css/frequenzlabor.css` | +86 Zeilen `.fq-figures`, `.fq-square`, `.fq-med*`, `.fq-favorite` | – |
+| `css/frequenzlabor.css` | +136 Zeilen `.fq-figures`, `.fq-square`, `.fq-med*`, `.fq-favorite` | – |
 | `tests/frequenz-chladni.mjs` | 8 Modelltests (C1–C8) | – |
 | `tests/frequenz-meditation.mjs` | 9 Vertragstests (M1–M9) | – |
 | `tests/frequenzlabor-p9-p10.spec.js` | 15 Browserfälle (C1–C6, M1–M5, A1–A4) | – |
@@ -178,10 +178,10 @@ Nicht maschinell geprüft: manueller Screenreader-Durchlauf, Safari/iOS und ein 
 | Kennzahl | Wert | Grenze | Veränderung zur Kernversion |
 | --- | --- | --- | --- |
 | NFR-1 Initialgraph (statisch) | 85.613 B, 17 Dateien (291.343 B roh) | 86.275 B | **0 B** |
-| NFR-2 Feature-JS | 43.390 B, 10 Dateien (163.826 B roh) | 100.000 B | +15.223 B |
+| NFR-2 Feature-JS | 43.472 B, 10 Dateien (163.967 B roh) | 100.000 B | +15.305 B |
 | NFR-3 Feature-CSS | 3.338 B (16.795 B roh) | 6.000 B | +435 B |
 
-Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bündelt beide Ansichten in `local.js`; `Lokal.html` wächst von 790.818 B auf 825.909 B. Geprüft mit Chromium über `file://`: Bibliothek mit 32 Einträgen, Cymatics zeichnet Knotenlinien, Meditation startet (Timer 02:59 nach einer Sekunde), `localStorage` funktioniert.
+Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bündelt beide Ansichten in `local.js`; `Lokal.html` wächst von 790.818 B auf 826.083 B. Geprüft mit Chromium über `file://`: Bibliothek mit 32 Einträgen, Cymatics zeichnet Knotenlinien, Meditation startet (Timer 02:59 nach einer Sekunde), `localStorage` funktioniert.
 
 ---
 
@@ -194,7 +194,7 @@ Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bün
 | Volle Browser-Suite | `E2E_PORT=<frei> CI=1 npx playwright test` | **104 pass, 0 fail** (1,9 min; inkl. U1–U15, Astrologie, Mond, Tarot, Smoke) |
 | Bestehende Frequenzlabor-UI | Teil der vollen Suite | **U1–U15 pass** |
 | Seiten-/Offline-Regression | `npm run test:pages`, `npm run test:local`, `npm run test:offline` | 6 / 12+2 skip / 2 pass |
-| Budget | `npm run check:frequenz-budget` | NFR-1 85.613 / 86.275 · NFR-2 43.390 / 100.000 · NFR-3 3.338 / 6.000 |
+| Budget | `npm run check:frequenz-budget` | NFR-1 85.613 / 86.275 · NFR-2 43.472 / 100.000 · NFR-3 3.338 / 6.000 |
 | Lint/Format | `npm run lint`, `npm run format:check` | 0 Fehler, alle Dateien formatiert |
 
 Modelltests im Detail: C1 Gültigkeit/Entartung, C2 Antisymmetrie und 180°-Drehung, C3 Spiegelsymmetrie nur bei gleicher Parität, C4 Normierung und Rastergröße, C5 analytische Nulldurchgänge (n=2,m=3 → 3/3; n=4,m=7 → 7/7; n=3,m=5 → Mittelachsen vollständig Knotenlinie), C6 Text ohne Hz-Aussage, C7 Knotenlinien auf dem Nullniveau, C8 keine Frequenzzuordnung im Modul.

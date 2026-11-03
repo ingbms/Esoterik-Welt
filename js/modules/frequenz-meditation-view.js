@@ -38,7 +38,9 @@ const TICK_MS = 250;
 const FADE_STEP_MS = 100;
 
 function formatDb(value) {
-  return `${Number(value).toLocaleString('de-DE', { maximumFractionDigits: 0 })} dBFS`;
+  // Typografisches Minus wie im Labor (U+2212), damit die Hinweise identisch lesen.
+  const number = Number(value).toLocaleString('de-DE', { maximumFractionDigits: 0 });
+  return `${String(number).replace('-', '\u2212')} dBFS`;
 }
 
 function optionList(values, selected, label) {
