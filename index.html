@@ -45,6 +45,7 @@
       <link rel="preload" href="css/design-system.css" as="style" />
       <link rel="stylesheet" href="css/design-system.css" />
       <link rel="stylesheet" href="css/main.css" />
+      <link rel="stylesheet" href="css/frequenzlabor.css" />
 
       <!-- Favicon -->
       <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -71,6 +72,7 @@
             <li><a href="#crystals" class="nav-link" data-page="crystals">Kristalle</a></li>
             <li><a href="#moon" class="nav-link" data-page="moon">Mondphasen</a></li>
             <li><a href="#astrologie" class="nav-link" data-page="astrologie">Astrologie</a></li>
+            <li><a href="#frequenzen" class="nav-link" data-page="frequenzen">Frequenzen</a></li>
             <li><a href="#runes" class="nav-link" data-page="runes">Runen</a></li>
             <li><a href="#blog" class="nav-link" data-page="blog">Wissen</a></li>
           </ul>
@@ -103,8 +105,8 @@
                 <p class="label">Material · Zeichen · Zyklen</p>
                 <h1 id="home-title">Entdecke die verborgene Sprache des <em>Universums</em></h1>
                 <p class="hero-intro">
-                  Tarot · Kristalle · Runen · Mondphasen · Astrologie · Altes Wissen für moderne Suchende. Ein ruhiger
-                  Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen.
+                  Tarot · Kristalle · Runen · Mondphasen · Astrologie · Frequenzen · Altes Wissen für moderne Suchende.
+                  Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen.
                 </p>
                 <div class="hero-actions">
                   <a href="#tarot" class="btn btn-primary">
@@ -139,7 +141,7 @@
           <div class="container">
             <div class="section-head">
               <h2 id="pfade-title">Pfade der Erkenntnis</h2>
-              <p class="label">Sechs Zugänge</p>
+              <p class="label">Sieben Zugänge</p>
             </div>
             <p class="section-lede">Wähle dein Tor zur Weisheit — jede Ansicht ist ein eigenes Werkzeug.</p>
             <div class="grid" id="featureGrid" style="margin-top: var(--space-8)"></div>
@@ -587,6 +589,35 @@
         </div>
       </section>
 
+      <!-- Frequenzen Section: Hub und Labor rendert js/modules/frequenzlabor.js -->
+      <section id="frequenzen" class="page" aria-labelledby="frequenzen-title" hidden>
+        <div class="container">
+          <div class="section-header mb-8">
+            <p class="label">Frequenzen / Schwingungen</p>
+            <h1 id="frequenzen-title" class="page-title" tabindex="-1">Frequenzen &amp; Schwingungen</h1>
+            <p class="text-muted">
+              Quellenbasierte Frequenzbibliothek mit Evidenzstatus und ein interaktives Frequenzlabor mit Tongenerator,
+              Oszillogramm, Schwebung und binauraler Demonstration — ohne Wirkungsversprechen.
+            </p>
+          </div>
+          <noscript>
+            <div class="fq-notice">
+              <p>
+                <strong>Das Frequenzlabor braucht JavaScript.</strong> Der Datenbestand liegt als lokale Datei im
+                Projekt und wird im Browser gerendert; es wird nichts nachgeladen und nichts übertragen.
+              </p>
+              <p>
+                Kurzfassung ohne Ton: Eine Schwingung ist eine periodische Änderung um einen Ruhewert, ihre Frequenz
+                wird in Hertz (Hz) angegeben. Der Hörbereich liegt bei etwa 20 Hz bis 20 kHz. Zwei Töne mit 4 Hz Abstand
+                erzeugen eine Schwebung von 4 Hz. Genormt ist der Kammerton A4 = 440 Hz (ISO 16:1975). Jeder Eintrag ist
+                mit Evidenzstatus und Quelle versehen; das Angebot ist kein Medizinprodukt.
+              </p>
+            </div>
+          </noscript>
+          <div id="frequenzlaborRoot" class="fq-root"></div>
+        </div>
+      </section>
+
       <!-- Runes Section -->
       <section id="runes" class="page" aria-labelledby="runes-title" hidden>
         <div class="container">
@@ -701,6 +732,7 @@
             <li><a href="#tarot">Tarot-Karten</a></li>
             <li><a href="#crystals">Kristall-Katalog</a></li>
             <li><a href="#moon">Mondkalender</a></li>
+            <li><a href="#frequenzen">Frequenzlabor</a></li>
             <li><a href="#runes">Runen-Wurf</a></li>
           </ul>
         </div>

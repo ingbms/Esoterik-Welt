@@ -7,6 +7,7 @@ import { MoonModule } from './modules/moon.js';
 import { RunesModule } from './modules/runes.js';
 import { BlogModule } from './modules/blog.js';
 import { AstrologieModule } from './modules/astrologie.js';
+import { FrequenzlaborLoader } from './modules/frequenzlabor-loader.js';
 import { DialogController } from './dialog.js';
 
 // --- State ---
@@ -18,7 +19,7 @@ const state = {
 // --- Routes ---
 // Only these ids are pages. #main is the skip target inside the document and
 // must never become a page id; unknown fragments must never hide every section.
-const MAIN_PAGES = ['home', 'tarot', 'crystals', 'moon', 'runes', 'astrologie', 'blog'];
+const MAIN_PAGES = ['home', 'tarot', 'crystals', 'moon', 'runes', 'astrologie', 'frequenzen', 'blog'];
 const PAGE_IDS = new Set(MAIN_PAGES);
 const SKIP_ANCHOR = 'main';
 const ARTICLE_ROUTE = /^blog\/([^/]+)$/;
@@ -28,6 +29,11 @@ const ARTICLE_ROUTE = /^blog\/([^/]+)$/;
 // area module, which answers unknown slugs with its own in-area error view
 // instead of the site-wide route notice.
 const ASTROLOGIE_ROUTE = /^astrologie(?:\/([^?]*))?(?:\?(.*))?$/;
+// The frequency area is one page with two views: #frequenzen (library) and
+// #frequenzen/labor (tool). #frequenzlabor is only an alias and is normalised
+// to the canonical route, so a shared old link never becomes a second page.
+const FREQUENZ_ROUTE = /^frequenzen(?:\/([^?]*))?(?:\?(.*))?$/;
+const FREQUENZ_ALIAS = /^frequenzlabor(?:\/([^?]*))?(?:\?(.*))?$/;
 
 // --- Per-route metadata ---
 // Every view lives in one document, so the title and the description have to
@@ -66,6 +72,11 @@ const PAGE_META = {
     description:
       'Artikel zu Esoterik, Spiritualität und alter Weisheit: Tarot, Kristalle, Runen, Mondzyklen und Rituale.',
   },
+  frequenzen: {
+    title: 'Frequenzen & Schwingungen — Bibliothek und Frequenzlabor | Esoterik-Welt',
+    description:
+      'Frequenzbibliothek mit Evidenzstatus und interaktives Frequenzlabor: Tongenerator, Oszillogramm, binaurale Demonstration und 432/440-Vergleich.',
+  },
 };
 
 function setMetaContent(selector, value) {
@@ -98,6 +109,32 @@ function parseRoute(hash) {
   if (raw === SKIP_ANCHOR) return { type: 'skip', raw };
   const article = ARTICLE_ROUTE.exec(raw);
   if (article) return { type: 'article', page: 'blog', id: article[1], raw };
+  // The frequency area owns its two views and the legacy alias. Parsed before
+  // the plain PAGE_IDS check so the canonical id and the alias share one shape.
+  const frequenz = FREQUENZ_ROUTE.exec(raw);
+  if (frequenz) {
+    return {
+      type: 'frequenzen',
+      page: 'frequenzen',
+      segments: String(frequenz[1] || '')
+        .split('/')
+        .filter(Boolean),
+      query: frequenz[2] || '',
+      raw,
+    };
+  }
+  const alias = FREQUENZ_ALIAS.exec(raw);
+  if (alias) {
+    // Old links open the tool and are rewritten to the canonical URL.
+    return {
+      type: 'frequenzen',
+      page: 'frequenzen',
+      segments: ['labor'],
+      query: alias[2] || '',
+      raw,
+      alias: true,
+    };
+  }
   // Astrology sub-routes carry their own query (?q=, ?element=…) so filters and
   // search results survive reload, deep links and Back/Forward.
   const astrologie = ASTROLOGIE_ROUTE.exec(raw);
@@ -178,6 +215,9 @@ async function init() {
   // loaded lazily (see modules/astrologie.js): on HTTP the data file is only
   // fetched when the area is opened, offline webpack inlines it.
   state.modules.astrologie = new AstrologieModule(document.getElementById('astrologieRoot'));
+  // The frequency area is lazy: only this proxy is part of the initial graph,
+  // the engine and the view are loaded on the first visit (ADR AD-5/§5.2).
+  state.modules.frequenzen = new FrequenzlaborLoader(document.getElementById('frequenzlaborRoot'));
   // A card-opened article becomes its own history entry, so Back/Forward,
   // reload and the dialog close action stay consistent with the address bar.
   state.modules.blog.onArticleOpened = (id) => {
@@ -392,6 +432,25 @@ function applyRoute(route, { fromHistory = false, instant = false, replace = fal
     return;
   }
 
+  // Frequenzen is one page with two views. The alias replaces its history entry
+  // instead of adding a second one, so Back never lands on the old URL.
+  if (route.type === 'frequenzen') {
+    clearRouteNotice();
+    navigateTo('frequenzen', route.alias ? true : replace, {
+      fromHistory,
+      instant,
+      silent,
+      hash: route.alias ? '#frequenzen/labor' : `#${route.raw}`,
+      subroute: { segments: route.segments, query: route.query },
+    });
+    // navigateTo() writes the URL only for fresh user navigations. A cold start,
+    // an in-document hash change and Back/Forward must still end up canonical.
+    if (route.alias && (fromHistory || silent)) {
+      history.replaceState({ page: 'frequenzen' }, '', '#frequenzen/labor');
+    }
+    return;
+  }
+
   // Unknown fragment: keep a readable page and explain the dead link instead of
   // hiding every section, which left the site looking empty.
   const page = PAGE_IDS.has(state.currentPage) ? state.currentPage : 'home';
@@ -404,6 +463,12 @@ function navigateTo(
   replace = false,
   { fromHistory = false, instant = false, silent = false, hash = null, subroute = null } = {}
 ) {
+  // Leaving a page must release its resources: the frequency lab stops audio
+  // on any route change instead of playing on in the background.
+  if (pageId !== state.currentPage) {
+    const previous = state.modules[state.currentPage];
+    if (previous && typeof previous.onHide === 'function') previous.onHide();
+  }
   // Update active states
   elements.pages.forEach((page) => {
     page.classList.toggle('active', page.id === pageId);
@@ -480,7 +545,7 @@ function populateFeatureGrid() {
   const grid = document.getElementById('featureGrid');
   if (!grid) return;
 
-  // No emoji: the register is typographic, numbered 01–06 (Nachtatelier).
+  // No emoji: the register is typographic, numbered 01–07 (Nachtatelier).
   const features = [
     { id: 'tarot', title: 'Tarot', desc: '78 Karten, Major & Minor Arcana, Tageskarte & Legungen' },
     { id: 'crystals', title: 'Kristalle', desc: '30+ Steine mit Chakra-Filter, Wirkungen & Details' },
@@ -489,6 +554,11 @@ function populateFeatureGrid() {
       id: 'astrologie',
       title: 'Astrologie',
       desc: '12 Zeichen, 10 Faktoren, 12 Häuser, 5 Aspekte, Lernpfad & Glossar',
+    },
+    {
+      id: 'frequenzen',
+      title: 'Frequenzen',
+      desc: 'Frequenzbibliothek mit Evidenzstatus, Tongenerator, Oszillogramm und Hörvergleich',
     },
     { id: 'runes', title: 'Runen', desc: 'Älteres Futhark, 3-Runen-Wurf & Deutung' },
     { id: 'blog', title: 'Wissen', desc: 'Artikel zu Esoterik, Geschichte, Ritualen & Praxis' },

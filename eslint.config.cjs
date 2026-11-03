@@ -73,6 +73,16 @@ module.exports = [
     },
   },
   {
+    // node:test files in ESM (tests/*.mjs) laufen im Node-Prozess; sie
+    // brauchen neben den Browser-Modulen auch Node-Globals wie setTimeout.
+    files: ['tests/**/*.mjs'],
+    languageOptions: {
+      ecmaVersion: 2023,
+      sourceType: 'module',
+      globals: { ...globals.node },
+    },
+  },
+  {
     // Jest unit/API tests.
     files: ['tests/**/*.test.js'],
     languageOptions: {

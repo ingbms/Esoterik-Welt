@@ -36,6 +36,13 @@ async function buildLocal(output) {
   }
   const bundle = fs.readFileSync(path.join(bundleDir, 'local.js'), 'utf8').replace(/<\/script/gi, '<\\/script');
   const json = JSON.stringify(JSON.parse(read('data/crystals.json'))).replace(/</g, '\\u003c');
+  // Optional: the frequency dataset is embedded for file:// so the lab works
+  // without fetch. A missing file only warns; the build stays green.
+  const freqPath = path.join(root, 'data/frequencies.json');
+  const freqJson = fs.existsSync(freqPath)
+    ? JSON.stringify(JSON.parse(read('data/frequencies.json'))).replace(/</g, '\\u003c')
+    : null;
+  if (!freqJson) console.warn('data/frequencies.json fehlt — Offline-Labor startet ohne Presets.');
   for (const file of pages) {
     let html = read(file)
       .replace(/\s*<!-- LOCAL-ENTRY:[\s\S]*?<!-- \/LOCAL-ENTRY -->/, '')
@@ -79,7 +86,9 @@ async function buildLocal(output) {
       html = html.replace(
         '</body>',
         () =>
-          `<script id="local-crystals-data" type="application/json">${json}</script>\n<script>${bundle}</script>\n</body>`
+          `<script id="local-crystals-data" type="application/json">${json}</script>\n${
+            freqJson ? `<script id="local-frequencies-data" type="application/json">${freqJson}</script>\n` : ''
+          }<script>${bundle}</script>\n</body>`
       );
     }
     html = html.replace(

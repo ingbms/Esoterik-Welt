@@ -1,0 +1,556 @@
+/* ============================================================================
+   Frequenzlabor — .fq-* (ADR-0001 §7.4/§7.5)
+   Nur Tokens aus css/design-system.css. Keine externen Referenzen, keine
+   Schatten, keine Pills. Das Stylesheet wird vom Offline-Build inline gestellt.
+   ============================================================================ */
+
+.fq-root {
+  margin-top: var(--space-8);
+}
+
+/* --- Bereichsnavigation (Bibliothek ↔ Labor) ------------------------------- */
+.fq-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-6);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+.fq-nav a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.fq-nav-current {
+  color: var(--color-text-secondary);
+}
+.fq-nav a[aria-current='page'] {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: var(--color-primary);
+}
+
+/* --- Hinweise: dauerhaft sichtbar, aber nicht modal ----------------------- */
+.fq-notice,
+.fq-disclaimer {
+  border-left: 2px solid var(--color-primary);
+  padding: var(--space-3) var(--space-4);
+  margin: 0 0 var(--space-6);
+  background: var(--color-bg-card);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+.fq-notice {
+  border-left-color: var(--color-accent-rose);
+  color: var(--color-text-primary);
+}
+.fq-disclaimer-kurz,
+.fq-disclaimer-lang {
+  margin: 0;
+  max-width: 78ch;
+}
+.fq-hinweis .fq-disclaimer-lang {
+  color: var(--color-text-secondary);
+}
+
+/* --- Abschnitte und Fließtext -------------------------------------------- */
+.fq-section {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+.fq-section:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.fq-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  margin-bottom: var(--space-4);
+}
+.fq-section-head h2,
+.fq-section > h2 {
+  margin: 0;
+  font-size: var(--text-2xl);
+  line-height: 1.2;
+}
+.fq-section-head .label {
+  margin: 0;
+}
+.fq-lede {
+  max-width: 68ch;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-6);
+}
+.fq-prose {
+  max-width: 68ch;
+}
+.fq-prose h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.3;
+  margin: var(--space-6) 0 var(--space-2);
+}
+.fq-prose p {
+  margin: 0 0 var(--space-4);
+  color: var(--color-text-secondary);
+}
+.fq-formula {
+  font-family: var(--font-mono);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+/* WCAG 1.4.1: links in running text must not rely on colour alone. The palette
+   puts primary and secondary at ~1.07:1, so these links are underlined. */
+.fq-prose a,
+.fq-lede a,
+.fq-note a,
+.fq-disclaimer-lang a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.fq-mono {
+  font-family: var(--font-mono);
+}
+.fq-note {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: var(--space-2) 0 0;
+  max-width: 68ch;
+}
+
+/* --- Filter --------------------------------------------------------------- */
+.fq-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.fq-filters .fq-field {
+  margin: 0;
+}
+.fq-filters .select {
+  min-height: 44px;
+  margin: 0;
+}
+.fq-filter-status {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+.fq-field {
+  display: block;
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+/* --- Bibliothek ----------------------------------------------------------- */
+.fq-library {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  align-items: start;
+  gap: var(--space-4);
+}
+.fq-entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  min-width: 0;
+}
+.fq-entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.fq-entry-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.fq-entry-hz {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+.fq-badge {
+  align-self: flex-start;
+  margin: 0;
+}
+.fq-badge--belegt {
+  border-color: var(--color-accent-emerald);
+  color: var(--color-accent-emerald);
+}
+.fq-badge--plausibel {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.fq-badge--nicht-belegt {
+  border-color: var(--color-accent-rose);
+  color: var(--color-accent-rose);
+}
+.fq-badge--traditionell {
+  border-color: var(--color-line-strong);
+  color: var(--color-text-primary);
+}
+.fq-entry-desc {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+.fq-entry-source {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+.fq-entry-source-label {
+  color: var(--color-text-primary);
+}
+.fq-source-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.fq-source-link:hover {
+  color: var(--color-hover);
+}
+/* Programmatic focus on the page title (NFR-17) gets a wider, thinner ring so
+   it reads as a focus marker rather than as an input field. */
+#frequenzen-title:focus-visible {
+  outline-width: 1px;
+  outline-offset: 12px;
+}
+.fq-entry-hint {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+.fq-entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+.fq-entry-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-sm);
+}
+.fq-entry-none {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+.fq-empty {
+  margin: var(--space-6) 0 0;
+  color: var(--color-text-secondary);
+}
+.fq-playback-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-bg-card);
+  font-size: var(--text-sm);
+}
+.fq-playback-bar p {
+  margin: 0;
+}
+
+/* --- Labor: Transport, Status ------------------------------------------- */
+.fq-transport {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+  padding: var(--space-3) 0;
+  margin-bottom: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.fq-live {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+.fq-live-hz {
+  margin: 0 0 0 auto;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--text-lg);
+  color: var(--color-text-primary);
+}
+.fq-status {
+  min-height: 1.5em;
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+.fq-error {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-accent-rose);
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+}
+
+/* --- Labor: Raster ------------------------------------------------------- */
+.fq-lab-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+.fq-controls {
+  display: grid;
+  gap: var(--space-4);
+  min-width: 0;
+}
+.fq-panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  min-width: 0;
+}
+.fq-panel-title {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.2;
+}
+.fq-readout {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--text-3xl);
+  line-height: 1.1;
+  color: var(--color-primary);
+}
+
+/* --- Slider: 44px Ziel, 24px Daumen, 2px Raster -------------------------- */
+.fq-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 44px;
+  margin: var(--space-1) 0 var(--space-2);
+  background: transparent;
+  cursor: pointer;
+}
+.fq-range::-webkit-slider-runnable-track {
+  height: 2px;
+  background: var(--color-line-strong);
+}
+.fq-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: -11px;
+  border: 2px solid var(--color-bg-deep);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+}
+.fq-range::-moz-range-track {
+  height: 2px;
+  background: var(--color-line-strong);
+}
+.fq-range::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-bg-deep);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+}
+.fq-range:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --- Formularzeilen ------------------------------------------------------ */
+.fq-field-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-2) var(--space-4);
+  align-items: end;
+  margin-bottom: var(--space-2);
+}
+.fq-field-row .fq-field {
+  margin: 0;
+}
+.fq-field-row--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.fq-field-row--inline {
+  grid-template-columns: minmax(0, 1fr) minmax(120px, 180px);
+  align-items: center;
+}
+.fq-field-row--inline .fq-field {
+  margin: 0;
+}
+.fq-number {
+  width: 100%;
+  min-height: 44px;
+  font-variant-numeric: tabular-nums;
+}
+.fq-gain-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+}
+.fq-gain-row output {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  color: var(--color-text-primary);
+}
+.fq-gain-cap {
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 1px var(--space-2);
+}
+.fq-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+/* --- Sweep-Fortschritt --------------------------------------------------- */
+.fq-progress {
+  margin-top: var(--space-3);
+}
+.fq-progress-track {
+  height: 6px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+.fq-progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--color-primary);
+}
+
+/* --- Visualisierung ------------------------------------------------------ */
+.fq-visual {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-4));
+}
+.fq-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7;
+  min-height: 140px;
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-bg-deep);
+}
+.fq-readout-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-2) var(--space-4);
+  margin: var(--space-4) 0 0;
+}
+.fq-readout-list dt {
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+.fq-readout-list dd {
+  margin: var(--space-1) 0 0;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+}
+
+/* --- Responsive: 1024, 700, 360 ----------------------------------------- */
+@media (max-width: 1024px) {
+  .fq-lab-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fq-visual {
+    position: static;
+  }
+  /* NFR-22: the transport stays reachable while scrolling through the panels.
+     It sticks below the page header, not over it, and never leaves the page. */
+  .fq-transport {
+    position: sticky;
+    top: var(--header-height);
+    z-index: var(--z-dropdown);
+    padding-inline: var(--gutter);
+    margin-inline: calc(var(--gutter) * -1);
+    background: var(--color-bg-card);
+    border-block: 1px solid var(--color-line-strong);
+  }
+  /* A focused control must not disappear under the sticky transport. */
+  .fq-controls input,
+  .fq-controls select,
+  .fq-controls button {
+    scroll-margin-top: calc(var(--header-height) + 112px);
+  }
+}
+@media (max-width: 700px) {
+  .fq-live-hz {
+    margin-left: 0;
+  }
+  .fq-panel {
+    padding: var(--space-4);
+  }
+  .fq-readout {
+    font-size: var(--text-2xl);
+  }
+  .fq-field-row,
+  .fq-field-row--3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 360px) {
+  .fq-entry,
+  .fq-panel {
+    padding: var(--space-3);
+  }
+  .fq-entry-title {
+    font-size: var(--text-lg);
+  }
+}

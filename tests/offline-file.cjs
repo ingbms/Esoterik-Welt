@@ -32,7 +32,7 @@ test('offline file entry serves every route without network access', async (t) =
   });
 
   await page.goto(localUrl, { waitUntil: 'load' });
-  await page.waitForFunction(() => document.querySelectorAll('#featureGrid > *').length === 6, { timeout: 10000 });
+  await page.waitForFunction(() => document.querySelectorAll('#featureGrid > *').length === 7, { timeout: 10000 });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(300);
 
@@ -60,14 +60,20 @@ test('offline file entry serves every route without network access', async (t) =
 
   assert.match(startup.url, /^file:\/\//, 'must run from file://');
   assert.equal(startup.background, startup.tokenBackground, 'design-system background must be applied offline');
-  assert.equal(startup.features, 6);
+  assert.equal(startup.features, 7);
   assert.equal(startup.fonts.fraunces, true, 'Fraunces must load from the local font files offline');
   assert.equal(startup.fonts.manrope, true, 'Manrope must load from the local font files offline');
   for (const key of ['tarotCards', 'crystals', 'runes', 'articles']) {
     assert.ok(startup[key] > 0, `${key} must render offline`);
   }
+  // ADR §6.4: the frequency dataset is embedded so the lab works without fetch.
+  assert.equal(
+    await page.evaluate(() => Boolean(document.getElementById('local-frequencies-data'))),
+    true,
+    'embedded frequency dataset is missing from Lokal.html'
+  );
 
-  for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'runes', 'blog', 'home']) {
+  for (const route of ['tarot', 'crystals', 'moon', 'astrologie', 'frequenzen', 'runes', 'blog', 'home']) {
     await page.click(`.nav-link[data-page="${route}"]`);
     await page.locator(`#${route}.active:not([hidden])`).waitFor({ state: 'visible', timeout: 10000 });
     assert.equal(new URL(page.url()).hash, '#' + route, `${route} route hash`);
