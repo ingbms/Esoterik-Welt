@@ -379,6 +379,18 @@ test.describe('Frequenzlabor — Sweep', () => {
     await expect(page.locator('#fqSweepProgress')).toBeHidden();
   });
 
+  test('Sweep-Start wird angesagt (Befund m-1, NFR-15)', async ({ page }) => {
+    await openLab(page);
+    await page.locator('#fqSweepFrom').fill('200');
+    await page.locator('#fqSweepTo').fill('800');
+    await page.locator('#fqSweepSeconds').fill('2');
+    await page.locator('#fqSweepStart').click();
+    // Kurz nach dem Start steht die Ansage in der Live-Region, nicht erst am Ende.
+    await expect(page.locator('#fqStatus')).toContainText('Sweep läuft: 200 → 800 Hz, 2 s');
+    await expect.poll(async () => (await readState(page)).status).toBe('running');
+    await expect.poll(async () => (await readState(page)).sweep, { timeout: 15000 }).toBe(null);
+  });
+
   test('Sweep-Abbruch beendet den Sweep und meldet den Abbruch', async ({ page }) => {
     await openLab(page);
     await page.locator('#fqSweepSeconds').fill('8');

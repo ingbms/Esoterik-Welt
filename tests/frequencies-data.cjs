@@ -119,6 +119,13 @@ test('Disclaimer ist vorhanden, benennt Grenzen und Lautstärke', () => {
   assert.match(lang, /80 dB/i, 'kein Lautstärkehinweis');
   assert.match(lang, /Pausen/i);
   assert.match(d.lautstaerke, /dBFS/i);
+  // m-2 (t_835bd1e9): −20 dBFS ist der Startpegel, hart begrenzt wird auf −6 dBFS.
+  assert.match(d.lautstaerke, /startet bei\s*[−–-]?20\s*dBFS/i, 'Startpegel −20 dBFS fehlt');
+  assert.match(d.lautstaerke, /hart auf\s*[−–-]?6\s*dBFS/i, 'harte Grenze −6 dBFS fehlt');
+  assert.ok(
+    !/hart auf\s*[−–-]?20\s*dBFS/i.test(d.lautstaerke),
+    'lautstaerke darf −20 dBFS nicht als harte Grenze nennen'
+  );
 });
 
 test('keine unbelegten Gesundheitsbehauptungen im Datensatz', () => {
