@@ -154,6 +154,7 @@ export class FrequenzlaborModule {
     this.announceTimer = 0;
     this.viz = null;
     this.refs = {};
+    this.featureView = null;
     this.unsubscribe = null;
     installDebugHandle(this.engine);
     this.reducedMotionQuery = typeof matchMedia === 'function' ? matchMedia('(prefers-reduced-motion: reduce)') : null;
@@ -197,8 +198,22 @@ export class FrequenzlaborModule {
   async show(segments = [], query = '', { focus = true } = {}) {
     const segment = Array.isArray(segments) && segments[0] ? segments[0] : '';
     this.query = String(query || '');
-    const nextView = segment === 'labor' ? 'labor' : 'hub';
-    const unknown = segment && segment !== 'labor';
+    // P9/P10 sind eigene Ansichten derselben Kategorie (ADR-Nachtrag §13). Sie
+    // sind nur erreichbar, wenn ihr Flag aktiv ist; deaktivierte Ansichten
+    // rendern den Hub mit sichtbarem Hinweis statt einer leeren Seite.
+    const known = ['labor', 'cymatics', 'meditation'];
+    const enabled = (name) => name === 'labor' || Boolean(this.features[name]);
+    let nextView = 'hub';
+    let notice = '';
+    if (segment) {
+      if (!known.includes(segment)) {
+        notice = `„#frequenzen/${segment}“ ist keine eigene Ansicht. Du siehst die Bibliothek.`;
+      } else if (!enabled(segment)) {
+        notice = `„#frequenzen/${segment}“ ist in diesem Build nicht aktiviert. Du siehst die Bibliothek.`;
+      } else {
+        nextView = segment;
+      }
+    }
     this.view = nextView;
     if (!this.unsubscribe) {
       this.unsubscribe = this.engine.subscribe((state) => this.onEngineState(state));
@@ -211,10 +226,19 @@ export class FrequenzlaborModule {
     await this.load();
     this.prefs = { ...this.prefs, view: nextView };
     this.store.write(this.prefs);
-    if (nextView === 'labor') this.renderLab();
-    else this.renderHub();
-    if (unknown && this.refs.notice) {
-      this.refs.notice.textContent = `„#frequenzen/${segment}“ ist keine eigene Ansicht. Du siehst die Bibliothek.`;
+    if (nextView === 'labor') {
+      this.disposeFeatureView();
+      this.renderLab();
+    } else if (nextView === 'cymatics') {
+      await this.renderCymatics();
+    } else if (nextView === 'meditation') {
+      await this.renderMeditation();
+    } else {
+      this.disposeFeatureView();
+      this.renderHub();
+    }
+    if (notice && this.refs.notice) {
+      this.refs.notice.textContent = notice;
       this.refs.notice.hidden = false;
     }
     this.onEngineState(this.engine.state);
@@ -224,14 +248,45 @@ export class FrequenzlaborModule {
     }
   }
 
+  /** Baut eine Ansicht der Folgestufe (P9/P10) lazy auf. */
+  async renderCymatics() {
+    this.disposeFeatureView();
+    const { CymaticsView } = await import('./frequenz-cymatics-view.js');
+    this.featureView = new CymaticsView(this.root, {
+      reducedMotion: this.reducedMotion,
+      meditation: this.features.meditation,
+    });
+    this.featureView.render();
+    this.refs = { notice: document.getElementById('fqCyNotice') };
+  }
+
+  async renderMeditation() {
+    this.disposeFeatureView();
+    const { MeditationView } = await import('./frequenz-meditation-view.js');
+    this.featureView = new MeditationView(this.root, {
+      engine: this.engine,
+      reducedMotion: this.reducedMotion,
+      cymatics: this.features.cymatics,
+    });
+    this.featureView.render();
+    this.refs = { notice: null };
+  }
+
+  disposeFeatureView() {
+    if (this.featureView && typeof this.featureView.dispose === 'function') this.featureView.dispose();
+    this.featureView = null;
+  }
+
   onHide() {
     this.halt(null);
     if (this.viz) this.viz.stop();
     clearInterval(this.sweepTimer);
+    this.disposeFeatureView();
   }
 
   /** Stoppt Audio, Sweep und Animation; `message` wird angesagt, wenn gesetzt. */
   halt(message) {
+    if (this.featureView && typeof this.featureView.onInterrupt === 'function') this.featureView.onInterrupt();
     clearInterval(this.sweepTimer);
     this.sweepTimer = 0;
     this.engine.stop().catch(() => {});
@@ -278,6 +333,25 @@ export class FrequenzlaborModule {
 
   /* ---------------------------------------------------------------- Ansichten */
 
+  /**
+   * Navigationslinks der Folgestufe (P9/P10). Ein Link erscheint nur, wenn das
+   * Flag des Features aktiv ist; die aktuelle Ansicht wird als Text mit
+   * `aria-current` ausgezeichnet statt als Link auf sich selbst.
+   */
+  featureNavLinks(current) {
+    return [
+      ['cymatics', '#frequenzen/cymatics', 'Chladni-Muster'],
+      ['meditation', '#frequenzen/meditation', 'Meditation'],
+    ]
+      .filter(([name]) => Boolean(this.features[name]))
+      .map(([name, href, label]) =>
+        name === current
+          ? `<span class="fq-nav-current" aria-current="page">${label}</span>`
+          : `<a href="${href}">${label}</a>`
+      )
+      .join('');
+  }
+
   renderHub() {
     const entries = this.data ? this.data.entries : [];
     const playable = entries.filter((entry) => entry.playback.mode !== 'none').length;
@@ -285,6 +359,7 @@ export class FrequenzlaborModule {
       <nav class="fq-nav" aria-label="Frequenzbereich">
         <a href="#frequenzen" aria-current="page">Bibliothek</a>
         <a href="#frequenzen/labor">Zum Frequenzlabor <span aria-hidden="true">↗</span></a>
+        ${this.featureNavLinks('hub')}
       </nav>
       <p class="fq-notice" id="fqNotice" role="status" hidden></p>
       <div class="fq-disclaimer" role="note">
@@ -498,6 +573,7 @@ export class FrequenzlaborModule {
       <nav class="fq-nav" aria-label="Frequenzbereich">
         <a href="#frequenzen">← Bibliothek</a>
         <span class="fq-nav-current" aria-current="page">Frequenzlabor</span>
+        ${this.featureNavLinks('labor')}
       </nav>
       <p class="fq-notice" id="fqNotice" role="status" hidden></p>
       <div class="fq-disclaimer" role="note">

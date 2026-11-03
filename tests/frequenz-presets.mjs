@@ -215,7 +215,9 @@ test('Frequenzformatierung nutzt deutsche Schreibweise und die Einheit Hz', () =
 });
 
 test('Feature-Flags: Produktion ignoriert den URL-Override, lokal gilt er', () => {
-  assert.equal(FEATURES.cymatics, false);
+  // P9/P10 sind mit dem ADR-Nachtrag §13 ausgeliefert.
+  assert.equal(FEATURES.cymatics, true);
+  assert.equal(FEATURES.meditation, true);
   const prod = resolveFeatures('?fq=+cymatics,-binaural', { protocol: 'https:', hostname: 'ingbms.github.io' });
   assert.equal(prod, FEATURES);
   const local = resolveFeatures('?fq=+cymatics,-binaural', { protocol: 'http:', hostname: 'localhost' });
@@ -224,6 +226,12 @@ test('Feature-Flags: Produktion ignoriert den URL-Override, lokal gilt er', () =
   assert.equal(local.labor, true);
   const file = resolveFeatures('?fq=+meditation', { protocol: 'file:', hostname: '' });
   assert.equal(file.meditation, true);
+  // Kill-Switch der Folgestufe: lokal abschaltbar, in Produktion nicht.
+  const offLocal = resolveFeatures('?fq=-meditation,-cymatics', { protocol: 'http:', hostname: '127.0.0.1' });
+  assert.equal(offLocal.meditation, false);
+  assert.equal(offLocal.cymatics, false);
+  const offProd = resolveFeatures('?fq=-meditation', { protocol: 'https:', hostname: 'ingbms.github.io' });
+  assert.equal(offProd.meditation, true);
 });
 
 test('Datenladen nutzt das eingebettete JSON vor fetch (file://-Pfad)', async () => {
