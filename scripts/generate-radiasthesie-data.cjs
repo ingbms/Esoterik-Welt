@@ -15,10 +15,13 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const { pathToFileURL } = require('node:url');
 
 const root = path.resolve(__dirname, '..');
 const contentDir = path.join(root, 'docs/radiasthesie-konzept/inhalte');
 const sourcesFile = path.join(root, 'docs/radiasthesie-konzept/recherche/quellen.json');
+const taxonomieFile = path.join(root, 'docs/radiasthesie-konzept/daten/taxonomie.json');
+const contractFile = path.join(root, 'js/modules/radiasthesie-vertraege.js');
 const outputFile = path.join(root, 'js/data/radiasthesie.js');
 const UPDATED = '2026-11-02';
 
@@ -194,9 +197,11 @@ const RELATED = [
 // --- Hilfen ---------------------------------------------------------------
 
 function fail(message) {
+  const error = new Error(message);
+  error.reported = true;
   console.error('FEHLER: ' + message);
   process.exitCode = 1;
-  throw new Error(message);
+  throw error;
 }
 
 function parseFrontmatter(raw, file) {
@@ -584,8 +589,19 @@ function buildTopic(config, parsed) {
   };
 }
 
-function main() {
+async function main() {
   const read = (file) => fs.readFileSync(path.join(contentDir, file), 'utf8');
+
+  // Die Taxonomie ist eine eigene, versionierte Quelle. Sie wird vor dem
+  // Schreiben gegen das Vertragsmodul geprüft; ein Fehler bricht den Lauf ab,
+  // statt ungültige Daten in js/data/radiasthesie.js zu schreiben.
+  const contracts = await import(pathToFileURL(contractFile).href);
+  let taxonomie;
+  try {
+    taxonomie = JSON.parse(fs.readFileSync(taxonomieFile, 'utf8'));
+  } catch (error) {
+    fail(`taxonomie.json nicht lesbar: ${error.message}`);
+  }
 
   const intro = parseIntroduction(read('modul-einstieg.md'));
   const levels = levelsFromIntro(intro);
@@ -600,6 +616,24 @@ function main() {
   const glossar = parseGlossar(read('glossar.md'));
   const registry = JSON.parse(fs.readFileSync(sourcesFile, 'utf8'));
   const quellen = parseSources(read('quellenverzeichnis.md'), registry);
+
+  const taxonomieCheck = contracts.validateTaxonomie(taxonomie, {
+    sourceIds: registry.sources.map((source) => source.id),
+    topicIds: Object.keys(topics),
+  });
+  if (!taxonomieCheck.ok) {
+    const detail = taxonomieCheck.errors
+      .slice(0, 6)
+      .map((error) => error.message)
+      .join(' | ');
+    fail(`Taxonomie ungültig (${taxonomieCheck.errors.length} Fehler): ${detail}`);
+  }
+  const missingMedia = taxonomie.medien.filter(
+    (medium) => medium.status === 'available' && !fs.existsSync(path.join(root, medium.file))
+  );
+  if (missingMedia.length) {
+    fail(`Mediendatei fehlt: ${missingMedia.map((medium) => medium.file).join(', ')}`);
+  }
   const disclaimer = parseFrontmatter(read('disclaimer.md'), 'disclaimer.md');
   const legalSection = /##\s+Rechtlicher Haftungsausschluss[^\n]*\n([\s\S]*?)(?=\n---|\s*$)/.exec(
     stripEditorialFooters(disclaimer.body)
@@ -612,6 +646,7 @@ function main() {
   const data = {
     generatedAt: UPDATED,
     generatedFrom: 'docs/radiasthesie-konzept/inhalte/',
+    schemaVersion: contracts.CONTRACT_VERSION,
     module: {
       id: 'pendeln',
       base: '#pendeln',
@@ -674,6 +709,7 @@ function main() {
       paragraphs: legalParagraphs,
     },
     updated: UPDATED,
+    taxonomie,
   };
 
   const banner = `// AUTO-GENERIERT — nicht direkt bearbeiten.\n// Quelle: docs/radiasthesie-konzept/inhalte/*.md\n// Erzeugt von scripts/generate-radiasthesie-data.cjs am ${UPDATED}.\n`;
@@ -698,10 +734,20 @@ function main() {
   console.log(
     `js/data/radiasthesie.js geschrieben (${kb} kB): ` +
       `${data.counts.topics} Themen, ${data.counts.chapters} Kapitel, ` +
-      `${data.counts.sources} Quellen, ${data.counts.glossary} Glossarbegriffe.`
+      `${data.counts.sources} Quellen, ${data.counts.glossary} Glossarbegriffe, ` +
+      `${taxonomieCheck.counts.instrumente} Instrumente, ${taxonomieCheck.counts.methoden} Methoden, ` +
+      `${taxonomieCheck.counts.ereignisse} Ereignisse, ${taxonomieCheck.counts.studien} Studien, ` +
+      `${taxonomieCheck.counts.medien} Medien, ${taxonomieCheck.counts.experimente} Experimente.`
   );
 }
 
-if (require.main === module) main();
+if (require.main === module) {
+  main().catch((error) => {
+    if (!error || !error.reported) {
+      console.error('FEHLER: ' + (error && error.message ? error.message : String(error)));
+    }
+    process.exitCode = 1;
+  });
+}
 
 module.exports = { main };
