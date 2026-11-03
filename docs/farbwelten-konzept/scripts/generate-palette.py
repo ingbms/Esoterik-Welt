@@ -32,24 +32,27 @@ SAND_HOVER = "#d5c4a2"
 LINE_STRONG = "#82928e"
 BORDER = "#3c484b"
 
-# --- Farbwelten: Hue-Winkel in OKLCH (bewusst kein Regenbogen-Gleichabstand) --
-WORLDS = [
-    # id, Name, Hue, Rolle/Anmerkung
-    ("rot", "Rot", 27.0),
-    ("orange", "Orange", 55.0),
-    ("gelb", "Gelb", 96.0),
-    ("gruen", "Grün", 148.0),
-    ("blau", "Blau", 248.0),
-    ("indigo", "Indigo", 285.0),
-    ("violett", "Violett", 318.0),
-]
+# Rollen-Helligkeiten (OKLCH L) der Standardpalette.
+DEFAULT_LEVELS = {"ink": 0.64, "line": 0.50, "core": 0.56, "core-deep": 0.44, "soft": 0.74}
 
-# Phase 2 (Master-Auftrag §5): nichtspektrale und neutrale Farben. Sie sind
-# vorbereitet, aber nicht Teil der ersten Ausbaustufe.
-PHASE2 = [
-    ("tuerkis", "Türkis", 195.0),
-    ("magenta", "Magenta", 350.0),
-    ("rosa", "Rosa", 8.0),
+# --- Farbwelten in Registerreihenfolge (Master-Auftrag §5) -------------------
+# id, Name, Hue (OKLCH), Typ, Chroma-Skala, Rollen-Helligkeiten (optional)
+WORLDS = [
+    ("rot", "Rot", 27.0, "spectral", 1.0, None),
+    ("orange", "Orange", 55.0, "spectral", 1.0, None),
+    ("gelb", "Gelb", 96.0, "spectral", 1.0, None),
+    ("gruen", "Grün", 148.0, "spectral", 1.0, None),
+    # Türkis ist Spektralfarbe im Übergangsbereich (ca. 490–520 nm, Konvention).
+    ("tuerkis", "Türkis", 195.0, "spectral", 1.0, None),
+    ("blau", "Blau", 248.0, "spectral", 1.0, None),
+    ("indigo", "Indigo", 285.0, "spectral", 1.0, None),
+    ("violett", "Violett", 318.0, "spectral", 1.0, None),
+    # Nicht spektral: additiver Rot-Blau-Mix, keine eigene Wellenlänge.
+    ("magenta", "Magenta", 345.0, "non-spectral", 1.0, None),
+    ("rosa", "Rosa", 0.0, "non-spectral", 0.62, {"ink": 0.70, "line": 0.56}),
+    # Neutral: keine Wellenlänge. Die Hue dient nur dem warmen Grau des Systems.
+    ("weiss", "Weiß", 90.0, "neutral", 0.16, {"ink": 0.82, "line": 0.66, "core": 0.94, "core-deep": 0.87, "soft": 0.98}),
+    ("schwarz", "Schwarz", 90.0, "neutral", 0.16, {"ink": 0.74, "line": 0.46, "core": 0.32, "core-deep": 0.23, "soft": 0.44}),
 ]
 
 
@@ -118,17 +121,20 @@ def max_chroma(L: float, h: float, cap: float = 0.30) -> float:
 
 
 # --- Palettenkonstruktion ----------------------------------------------------
-def build_world(world_id: str, name: str, h: float) -> dict:
+def build_world(world_id: str, name: str, h: float, kind: str, scale: float, levels: dict | None) -> dict:
+    role = dict(DEFAULT_LEVELS)
+    role.update(levels or {})
+
     # Tiefe, getoente Flaeche: bleibt im Nachtraum, traegt aber den Farbton.
-    deep = oklch_hex(0.225, 0.028, h)
-    deep_alt = oklch_hex(0.19, 0.022, h)  # Verlaufstiefe / Hero-Rand
+    deep = oklch_hex(0.225, 0.028 * max(scale, 0.5), h)
+    deep_alt = oklch_hex(0.19, 0.022 * max(scale, 0.5), h)  # Verlaufstiefe / Hero-Rand
     assert deep and deep_alt
 
-    # Ink: Textfarbe der Farbwelt. Startwert L 0.64 - so gedeckt wie moeglich,
-    # aber auf allen drei dunklen Flaechen >= 4.6:1 (Puffer ueber AA).
-    ink_L, ink_hex = 0.64, None
-    while ink_L <= 0.90:
-        candidate = oklch_hex(ink_L, min(0.13, max_chroma(ink_L, h) * 0.85), h)
+    # Ink: Textfarbe der Farbwelt. Startwert - so gedeckt wie moeglich, aber auf
+    # allen drei dunklen Flaechen >= 4.6:1 (Puffer ueber AA).
+    ink_L, ink_hex = role["ink"], None
+    while ink_L <= 0.95:
+        candidate = oklch_hex(ink_L, min(0.13 * scale, max_chroma(ink_L, h) * 0.85), h)
         if candidate and min(
             contrast(candidate, BG_DEEP), contrast(candidate, BG_CARD), contrast(candidate, deep)
         ) >= 4.6:
@@ -138,10 +144,10 @@ def build_world(world_id: str, name: str, h: float) -> dict:
     if ink_hex is None:
         raise SystemExit(f"Kein AA-taugliches Ink fuer {name}")
 
-    # Line: funktionale Linie, Ziel >= 3.2:1 auf getoenter Flaeche.
-    line_L, line_hex = 0.50, None
-    while line_L <= 0.80:
-        candidate = oklch_hex(line_L, min(0.08, max_chroma(line_L, h) * 0.65), h)
+    # Line: funktionale Linie, Ziel >= 3.2:1 auf getoenter und auf Kartenflaeche.
+    line_L, line_hex = role["line"], None
+    while line_L <= 0.95:
+        candidate = oklch_hex(line_L, min(0.08 * scale, max_chroma(line_L, h) * 0.65), h)
         if candidate and contrast(candidate, deep) >= 3.2 and contrast(candidate, BG_CARD) >= 3.2:
             line_hex = candidate
             break
@@ -149,11 +155,10 @@ def build_world(world_id: str, name: str, h: float) -> dict:
     if line_hex is None:
         raise SystemExit(f"Keine 3:1-Linie fuer {name}")
 
-    # Core: Pigmentflaeche fuer grosse Felder, nie fuer Pflichttext. Chroma ist
-    # gedeckelt, damit die Sektion nicht in Neon kippt (STYLEGUIDE §1/§4).
-    core = oklch_hex(0.56, min(0.15, max_chroma(0.56, h) * 0.95), h)
-    core_deep = oklch_hex(0.44, min(0.11, max_chroma(0.44, h) * 0.9), h)
-    soft = oklch_hex(0.74, min(0.075, max_chroma(0.74, h) * 0.8), h)
+    # Core: Pigmentflaeche fuer grosse Felder, nie fuer Pflichttext.
+    core = oklch_hex(role["core"], min(0.15 * scale, max_chroma(role["core"], h) * 0.95), h)
+    core_deep = oklch_hex(role["core-deep"], min(0.11 * scale, max_chroma(role["core-deep"], h) * 0.9), h)
+    soft = oklch_hex(role["soft"], min(0.075 * scale, max_chroma(role["soft"], h) * 0.8), h)
     assert core and core_deep and soft
 
     pairs = {
@@ -165,6 +170,8 @@ def build_world(world_id: str, name: str, h: float) -> dict:
         "line_auf_deep": contrast(line_hex, deep),
         "line_auf_bg_card": contrast(line_hex, BG_CARD),
         "core_auf_bg_deep": contrast(core, BG_DEEP),
+        "core_auf_bg_card": contrast(core, BG_CARD),
+        "core_deep_auf_bg_card": contrast(core_deep, BG_CARD),
         "bg_deep_auf_ink": contrast(BG_DEEP, ink_hex),
         "sand_auf_deep": contrast(SAND, deep),
     }
@@ -182,6 +189,7 @@ def build_world(world_id: str, name: str, h: float) -> dict:
     return {
         "id": world_id,
         "name": name,
+        "type": kind,
         "hue_oklch": h,
         "tokens": {
             "ink": ink_hex,
@@ -193,6 +201,19 @@ def build_world(world_id: str, name: str, h: float) -> dict:
             "deep-alt": deep_alt,
         },
         "contrast": {k: round(v, 2) for k, v in pairs.items()},
+        # Abgrenzung der Farbflaeche zum Seitenhintergrund. Fuer Schwarz ist
+        # 3:1 gegen einen fast schwarzen Grund physikalisch unerreichbar; dort
+        # trennt der 1-px-Rahmen (--color-line-strong) die Flaeche.
+        "swatch_separation": {
+            "core_auf_bg_deep": round(pairs["core_auf_bg_deep"], 2),
+            "core_auf_bg_card": round(pairs["core_auf_bg_card"], 2),
+            "line_strong_auf_bg_deep": round(contrast(LINE_STRONG, BG_DEEP), 2),
+            "hinweis": (
+                "Flaeche wird zusaetzlich durch 1-px-Rahmen --color-line-strong begrenzt"
+                if pairs["core_auf_bg_deep"] < 3.0
+                else "Flaeche hebt sich ohne Rahmen ab"
+            ),
+        },
         "checks": checks,
     }
 
@@ -228,8 +249,7 @@ def wavelength_to_hex(nm: float) -> str:
 
 
 def main() -> None:
-    worlds = [build_world(i, n, h) for i, n, h in WORLDS]
-    phase2 = [build_world(i, n, h) for i, n, h in PHASE2]
+    worlds = [build_world(i, n, h, k, s, lv) for i, n, h, k, s, lv in WORLDS]
 
     spectrum = []
     for nm in range(380, 781, 20):
@@ -262,12 +282,12 @@ def main() -> None:
         "method": "OKLCH-Konstruktion, Gamut-Mapping per Chroma-Reduktion, WCAG-2.x-Kontrastformel",
         "base": base,
         "worlds": worlds,
-        "phase2": phase2,
         "spectrum_simulation": spectrum,
         "notes": [
             "Hex-Werte sind sRGB. Ein Bildschirm kann Spektralfarben nur naehern.",
             "core-Swatch ist eine Flaeche, kein Textgrund fuer Pflichtinformation.",
-            "Alle Textwerte erreichen mindestens 4.8:1 auf ihrer getoenten Flaeche.",
+            "Alle Textwerte erreichen mindestens 4.5:1 auf ihrer getoenten Flaeche.",
+            "Nichtspektrale und neutrale Farben haben keine Wellenlaengen-Rolle; ihre Tokens sind reine Flaechenfarben.",
         ],
     }
     (ROOT / "messung").mkdir(parents=True, exist_ok=True)
@@ -276,20 +296,21 @@ def main() -> None:
     )
 
     lines = ["/* Automatisch erzeugt von scripts/generate-palette.py - nicht von Hand editieren. */", ":root {"]
-    for world in worlds + phase2:
+    for world in worlds:
         for role, value in world["tokens"].items():
             lines.append(f"  --fw-{world['id']}-{role}: {value};")
     lines.append("}")
     (ROOT / "mockup").mkdir(parents=True, exist_ok=True)
     (ROOT / "mockup" / "palette.css").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-    failures = [w["id"] for w in worlds + phase2 if not all(w["checks"].values())]
-    print(json.dumps({"worlds": len(worlds), "phase2": len(phase2), "failures": failures}, indent=2))
-    for world in worlds + phase2:
+    failures = [w["id"] for w in worlds if not all(w["checks"].values())]
+    print(json.dumps({"worlds": len(worlds), "failures": failures}, indent=2))
+    for world in worlds:
         t, c = world["tokens"], world["contrast"]
         print(
             f"{world['name']:<8} ink {t['ink']} ({c['ink_auf_deep']:.2f}:1 auf deep)  "
-            f"core {t['core']}  line {t['line']} ({c['line_auf_deep']:.2f}:1)  deep {t['deep']}"
+            f"core {t['core']} ({c['core_auf_bg_deep']:.2f}:1 auf bg-deep)  "
+            f"line {t['line']} ({c['line_auf_deep']:.2f}:1)  deep {t['deep']}"
         )
     if failures:
         raise SystemExit(1)

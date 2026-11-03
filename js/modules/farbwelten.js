@@ -279,7 +279,9 @@ function hero() {
   const tafel = h('div', {
     class: 'fw-tafel',
     role: 'img',
-    'aria-label': `Farbtafel: ${FARBWELTEN.map((world) => `${world.name} ${world.wavelength.label}`).join(', ')}`,
+    'aria-label': `Farbtafel: ${FARBWELTEN.map(
+      (world) => `${world.name} ${world.wavelength ? world.wavelength.label : world.typeLabel}`
+    ).join(', ')}`,
   });
   for (const world of FARBWELTEN) {
     tafel.append(
@@ -292,7 +294,10 @@ function hero() {
         [
           h('span', { class: 'fw-tafel__field', 'aria-hidden': 'true' }),
           h('span', { class: 'fw-tafel__plate' }, [
-            h('span', { class: 'fw-tafel__nm', text: world.wavelength.label }),
+            h('span', {
+              class: 'fw-tafel__nm',
+              text: world.wavelength ? world.wavelength.label : world.typeLabel,
+            }),
             h('span', { class: 'fw-tafel__name', text: world.name }),
           ]),
         ]
@@ -316,7 +321,7 @@ function hero() {
       tafel,
       h('figcaption', {
         class: 'fw-tafel__hint',
-        text: 'Wellenlängenbereiche sind konventionelle Näherungen; die Grenzen zwischen Farbnamen sind fließend.',
+        text: 'Wellenlängenbereiche sind konventionelle Näherungen; die Grenzen zwischen Farbnamen sind fließend. Nichtspektrale und neutrale Farben haben keine Wellenlänge und sind als solche gekennzeichnet.',
       }),
     ]),
   ]);
@@ -325,23 +330,30 @@ function hero() {
 function registerSection() {
   const list = h('ul', { class: 'fw-register' });
   FARBWELTEN.forEach((world, index) => {
-    const chakra = CHAKREN.find((entry) => entry.colorId === world.id);
+    const entry = world.register;
+    const chakra = CHAKREN.find((item) => item.colorId === world.id);
+    const verwandt = entry.verwandt
+      .map((id) => FARBWELTEN.find((item) => item.id === id)?.name)
+      .filter(Boolean)
+      .join(', ');
+    const zuordnung = chakra ? `${chakra.name} (moderne Zuordnung)` : 'ohne Chakra-Zuordnung';
+    const meta = world.wavelength
+      ? `${world.wavelength.label} · ${world.frequency.label} · ${entry.typLabel}`
+      : `${entry.typLabel} · keine Wellenlänge`;
     list.append(
       h('li', { class: 'fw-register__row' }, [
-        h('a', { class: 'fw-register__link', href: ROUTE.color(world.id) }, [
+        h('a', { class: 'fw-register__link', href: entry.route }, [
           h('span', {
             class: 'fw-register__field',
             style: `background: var(--fw-${world.id}-core)`,
             'aria-hidden': 'true',
           }),
           h('span', { class: 'fw-register__text' }, [
-            h('span', { class: 'fw-register__name', text: `${String(index + 1).padStart(2, '0')} ${world.name}` }),
-            h('span', {
-              class: 'fw-register__meta',
-              text: `${world.wavelength.label} · ${world.frequency.label} · ${world.spectral ? 'spektral' : 'Mischfarbe'}`,
-            }),
+            h('span', { class: 'fw-register__name', text: `${String(index + 1).padStart(2, '0')} ${entry.name}` }),
+            h('span', { class: 'fw-register__meta', text: meta }),
+            h('span', { class: 'fw-register__desc', text: entry.kurz }),
           ]),
-          h('span', { class: 'fw-register__chakra', text: `${chakra ? chakra.name : 'Chakra'} (moderne Zuordnung)` }),
+          h('span', { class: 'fw-register__chakra', text: `${zuordnung} · Verwandt: ${verwandt}` }),
           h('span', { class: 'fw-register__arrow', 'aria-hidden': 'true', text: '→' }),
         ]),
       ])
@@ -349,11 +361,11 @@ function registerSection() {
   });
   return h('section', { class: 'fw-section', id: 'register', 'aria-labelledby': 'register-title' }, [
     h('div', { class: 'fw-section__head' }, [
-      h('h2', { id: 'register-title', text: 'Sieben Farbwelten' }),
+      h('h2', { id: 'register-title', text: 'Zwölf Farbwelten' }),
       h('p', { class: 'label', text: 'Farbregister' }),
     ]),
     paragraph(
-      'Jede Farbwelt verbindet Physik, Wahrnehmung, Kultur und Tradition — getrennt gekennzeichnet, wo die Quellenlagen auseinandergehen.',
+      'Jede Farbwelt verbindet Physik, Wahrnehmung, Kultur und Tradition — getrennt gekennzeichnet, wo die Quellenlagen auseinandergehen. Nichtspektrale und neutrale Farben tragen keine Wellenlänge; das steht im Register ausdrücklich dabei.',
       'fw-section__lede'
     ),
     list,
@@ -408,7 +420,7 @@ function methodSection() {
     ]),
     h('div', { class: 'astro-callout astro-callout--limit' }, [
       paragraph(
-        'Tradition und Forschung stehen nebeneinander, nicht gleichwertig. Jede Seite nennt die Wellenlänge als Messwert, kennzeichnet Assoziationen als Assoziationen und trennt medizinisch untersuchte Lichttherapie von nicht belegter Chromotherapie.'
+        'Tradition und Forschung stehen nebeneinander, nicht gleichwertig. Jede Seite nennt die Wellenlänge als Messwert — oder begründet, warum es keine gibt —, kennzeichnet Assoziationen als Assoziationen und trennt medizinisch untersuchte Lichttherapie von nicht belegter Chromotherapie.'
       ),
       h('p', {}, [
         h('a', { class: 'textlink', href: ROUTE.light() }, [
@@ -455,6 +467,7 @@ function renderLanding() {
 
 function renderColor(world) {
   const index = FARBWELTEN.findIndex((entry) => entry.id === world.id) + 1;
+  const total = String(FARBWELTEN.length).padStart(2, '0');
   const fragment = document.createDocumentFragment();
   fragment.append(
     breadcrumb([{ label: 'Start', href: '#home' }, { label: 'Farben', href: ROUTE.base }, { label: world.name }])
@@ -463,7 +476,7 @@ function renderColor(world) {
     h('header', { class: 'fw-detail__band' }, [
       h('p', {
         class: 'label',
-        text: `Farbwelt ${String(index).padStart(2, '0')} / 07 · ${world.spectral ? 'spektral' : 'Mischfarbe'}`,
+        text: `Farbwelt ${String(index).padStart(2, '0')} / ${total} · ${world.typeLabel}`,
       }),
       h('h1', { id: 'farbwelten-title', tabindex: '-1', text: world.name }),
       paragraph(world.lede, 'fw-detail__lede'),
@@ -561,7 +574,12 @@ function otherColors(currentId) {
           }),
           h('div', { class: 'fw-card__body' }, [
             h('h3', { class: 'fw-card__title' }, [h('a', { href: ROUTE.color(world.id), text: world.name })]),
-            paragraph(`${world.wavelength.label} · ${world.frequency.label}`, 'fw-card__text'),
+            paragraph(
+              world.wavelength
+                ? `${world.wavelength.label} · ${world.frequency.label}`
+                : `${world.typeLabel} · keine Wellenlänge`,
+              'fw-card__text'
+            ),
             h('p', { class: 'fw-card__footer' }, [
               h('a', { class: 'textlink', href: ROUTE.color(world.id) }, [
                 document.createTextNode(`${world.name} öffnen `),
@@ -718,6 +736,29 @@ function spectrumExplorer() {
       'Wellenlänge, Frequenz und Photonenenergie hängen zusammen (f = c/λ, E ≈ 1239,842/λ). Die Vorschau ist eine Simulation, kein monochromatisches Licht.'
     ),
   ]);
+  // Nichtspektrale und neutrale Farben haben keinen Platz auf der λ-Achse.
+  // Sie werden deshalb verlinkt, nicht eingezeichnet — die Achse bleibt
+  // physikalisch (380–780 nm) und führt nur Wellenlängen.
+  const withoutWavelength = FARBWELTEN.filter((world) => !world.wavelength);
+  const offAxis = h('div', { class: 'fw-spectrum__offaxis' }, [
+    paragraph(
+      'Die Achse dieses Explorers führt ausschließlich Wellenlängen von 380 bis 780 nm. Nichtspektrale und neutrale Farben haben keine eigene Wellenlänge und werden deshalb nicht auf die Achse gelegt; ihre Seiten sind hier direkt erreichbar.'
+    ),
+    h(
+      'ul',
+      { class: 'fw-list fw-list--links' },
+      withoutWavelength.map((world) =>
+        h('li', {}, [
+          h('a', { href: ROUTE.color(world.id), text: world.name }),
+          document.createTextNode(` — ${world.typeLabel}`),
+        ])
+      )
+    ),
+    paragraph(
+      'Türkis ist ein spektraler Übergangsbereich zwischen Grün und Blau (ca. 490–520 nm, Konvention) und erscheint deshalb nicht als eigene Stufe der Achse.'
+    ),
+  ]);
+  section.append(offAxis);
   const preview = h('div', { class: 'fw-spectrum__preview', id: 'fwSpectrumPreview', 'aria-hidden': 'true' });
   const readout = h('p', { class: 'fw-spectrum__readout', id: 'fwSpectrumReadout', 'aria-live': 'polite' });
   const list = facts([
@@ -814,7 +855,9 @@ function renderNotFound(slug) {
   return h('section', { class: 'fw-section', 'aria-labelledby': 'notfound-title' }, [
     h('p', { class: 'label', text: 'Unbekannte Farbwelt' }),
     h('h1', { id: 'notfound-title', tabindex: '-1', text: 'Diese Farbwelt gibt es nicht' }),
-    paragraph(`„${slug}“ ist keine der sieben Farbwelten. Das Farbregister führt alle verfügbaren Seiten.`),
+    paragraph(
+      `„${slug}“ ist keine der ${FARBWELTEN.length} Farbwelten. Das Farbregister führt alle verfügbaren Seiten.`
+    ),
     h('p', {}, [h('a', { class: 'btn btn-secondary', href: ROUTE.base, text: 'Zum Farbregister' })]),
   ]);
 }

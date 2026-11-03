@@ -1,7 +1,7 @@
 // Farbwelten & Farbtherapie — Browsertests.
 //
 // Deckt die Abnahmekriterien der Karte ab: Navigationsziel, Einstieg,
-// sieben Farbseiten mit A–H-Skelett, Chakren-Explorer per Tastatur,
+// zwölf Farbseiten mit A–H-Skelett, Chakren-Explorer per Tastatur,
 // Spektrum-Stützwerte, Alias-Routen, Metadaten, Überläufe, Konsole und
 // externe Requests. Läuft gegen die gebaute Fassung (playwright.config.cjs).
 
@@ -15,10 +15,16 @@ const COLOURS = [
   ['orange', 'Orange', /^Orange — Licht, Wirkung und Bedeutung/],
   ['gelb', 'Gelb', /^Gelb — Licht, Wirkung und Bedeutung/],
   ['gruen', 'Grün', /^Grün — Licht, Wirkung und Bedeutung/],
+  ['tuerkis', 'Türkis (Cyan)', /^Türkis \(Cyan\) — Übergang zwischen Grün und Blau/],
   ['blau', 'Blau', /^Blau — Licht, Wirkung und Bedeutung/],
   ['indigo', 'Indigo', /^Indigo — Licht, Wirkung und Bedeutung/],
   ['violett', 'Violett', /^Violett — Licht, Wirkung und Bedeutung/],
+  ['magenta', 'Magenta', /^Magenta — Mischfarbe aus Rot und Blau/],
+  ['rosa', 'Rosa', /^Rosa — Mischfarbe aus Rot und Weiß/],
+  ['weiss', 'Weiß', /^Weiß — Neutralfarbe aus allen Wellenlängen/],
+  ['schwarz', 'Schwarz', /^Schwarz — Neutralfarbe ohne Lichtreiz/],
 ];
+const OHNE_WELLENLAENGE = ['magenta', 'rosa', 'weiss', 'schwarz'];
 const SECTIONS = ['erleben', 'physik', 'psychologie', 'tradition', 'anwendung', 'geschichte', 'uebung', 'quellen'];
 
 function collect(page) {
@@ -45,8 +51,14 @@ test('Navigationsziel öffnet die Sektion mit Titel, H1 und Fokus', async ({ pag
   await expect(page.locator('#farbweltenRoot h1')).toHaveText('Farbwelten');
   await expect(page.locator('#farbweltenRoot h1')).toBeFocused();
   await expect(page).toHaveTitle(/^Farbwelten — Bedeutung, Physik und Tradition der Farben/);
-  await expect(page.locator('.fw-register__row')).toHaveCount(7);
-  await expect(page.locator('.fw-tafel__band')).toHaveCount(7);
+  await expect(page.locator('.fw-register__row')).toHaveCount(12);
+  await expect(page.locator('.fw-tafel__band')).toHaveCount(12);
+  // Registereintrag je Farbe: Typ-Label, Kurzbeschreibung, Verwandtschaften.
+  await expect(page.locator('.fw-register__row').first()).toContainText('Spektralfarbe');
+  await expect(page.locator('.fw-register__row a[href="#farbwelten/tuerkis"]')).toHaveCount(1);
+  await expect(page.locator('.fw-register__row a[href="#farbwelten/schwarz"]')).toHaveCount(1);
+  const nichtSpektral = page.locator('.fw-register__row .fw-register__meta', { hasText: 'keine Wellenlänge' });
+  await expect(nichtSpektral).toHaveCount(4);
   expect(log.consoleErrors).toEqual([]);
   expect(log.pageErrors).toEqual([]);
   expect(log.external).toEqual([]);
@@ -64,6 +76,16 @@ for (const [id, name, title] of COLOURS) {
     await expect(root.locator('.fw-compare')).toHaveCount(1);
     await expect(root.locator('.fw-sources li')).not.toHaveCount(0);
     await expect(root.locator('.fw-node')).toHaveCount(0);
+    await expect(root.locator('#physik dl.fw-facts')).toHaveCount(1);
+    if (OHNE_WELLENLAENGE.includes(id)) {
+      // Keine erfundene Wellenlänge: keine Zeile „Wellenlängenbereich“, keine
+      // nm-Angabe im Physik-Abschnitt, dafür Typ-Label und Erklärung.
+      await expect(root.locator('#physik .fw-facts dt', { hasText: 'Wellenlängenbereich' })).toHaveCount(0);
+      await expect(root.locator('#physik')).toContainText('keine eigene Wellenlänge');
+      await expect(root.locator('#erleben .fw-facts')).toContainText('keine eigene Wellenlänge');
+    } else {
+      await expect(root.locator('#physik .fw-facts dt', { hasText: 'Wellenlängenbereich' })).toHaveCount(1);
+    }
     expect(log.consoleErrors).toEqual([]);
     expect(log.external).toEqual([]);
     expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(
@@ -71,6 +93,42 @@ for (const [id, name, title] of COLOURS) {
     );
   });
 }
+
+test('Nichtspektrale Farben liegen nicht auf der λ-Achse des Explorers', async ({ page }) => {
+  await page.goto(url('#farbwelten/lichtfrequenzen'));
+  const root = page.locator('#farbweltenRoot');
+  // Die Achse bleibt physikalisch korrekt: 380–780 nm.
+  await expect(root.locator('#fwWavelength')).toHaveAttribute('min', '380');
+  await expect(root.locator('#fwWavelength')).toHaveAttribute('max', '780');
+  const offAxis = root.locator('.fw-spectrum__offaxis');
+  await expect(offAxis).toBeVisible();
+  for (const id of OHNE_WELLENLAENGE) {
+    await expect(offAxis.locator(`a[href="#farbwelten/${id}"]`)).toHaveCount(1);
+  }
+  // Der Explorer-Readout nennt nur Spektralbereiche, nie Misch- oder Neutralfarben.
+  for (const nm of ['380', '500', '650', '780']) {
+    await root.locator('#fwWavelength').evaluate((input, value) => {
+      input.value = String(value);
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    }, nm);
+    const readout = await root.locator('#fwSpectrumReadout').textContent();
+    for (const begriff of ['Magenta', 'Rosa', 'Weiß', 'Schwarz']) {
+      expect(readout).not.toContain(begriff);
+    }
+  }
+});
+
+test('Fünf neue Farbseiten: Register-Navigation setzt Fokus, Breadcrumb und aria-current', async ({ page }) => {
+  for (const id of ['tuerkis', 'magenta', 'rosa', 'weiss', 'schwarz']) {
+    await page.goto(url('#farbwelten'));
+    await page.locator(`.fw-register__row a[href="#farbwelten/${id}"]`).click();
+    await expect(page).toHaveURL(new RegExp(`#farbwelten/${id}$`));
+    const root = page.locator('#farbweltenRoot');
+    await expect(root.locator('h1')).toBeFocused();
+    await expect(root.locator('.fw-breadcrumb a[href="#farbwelten"]')).toHaveCount(1);
+    await expect(root.locator('.fw-breadcrumb [aria-current="page"]')).not.toHaveText('');
+  }
+});
 
 test('Einstieg: Hauptaktion führt zum Farbregister', async ({ page }) => {
   await page.goto(url('#farbwelten'));
@@ -128,7 +186,14 @@ test('Kein Überlauf an den Breakpoints 320/390/781/900/901/1440', async ({ page
   const failures = [];
   for (const width of [320, 390, 781, 900, 901, 1440]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const hash of ['#farbwelten', '#farbwelten/rot', '#farbwelten/chakren', '#farbwelten/lichtfrequenzen']) {
+    for (const hash of [
+      '#farbwelten',
+      '#farbwelten/rot',
+      '#farbwelten/tuerkis',
+      '#farbwelten/schwarz',
+      '#farbwelten/chakren',
+      '#farbwelten/lichtfrequenzen',
+    ]) {
       await page.goto(url(hash));
       await page.locator('#farbweltenRoot h1').waitFor();
       const overflow = await page.evaluate(

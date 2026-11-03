@@ -17,7 +17,37 @@ const root = path.resolve(__dirname, '..');
 const contentDir = path.join(root, 'content', 'farbwelten');
 const dataFile = path.join(root, 'js', 'data', 'farbwelten.js');
 
-const COLOR_IDS = ['rot', 'orange', 'gelb', 'gruen', 'blau', 'indigo', 'violett'];
+const COLOR_IDS = [
+  'rot',
+  'orange',
+  'gelb',
+  'gruen',
+  'tuerkis',
+  'blau',
+  'indigo',
+  'violett',
+  'magenta',
+  'rosa',
+  'weiss',
+  'schwarz',
+];
+// Farbtyp nach §13.2: nur Spektralfarben dürfen Wellenlänge, Frequenz und
+// Photonenenergie tragen.
+const COLOR_TYPES = {
+  rot: 'spectral',
+  orange: 'spectral',
+  gelb: 'spectral',
+  gruen: 'spectral',
+  tuerkis: 'spectral',
+  blau: 'spectral',
+  indigo: 'spectral',
+  violett: 'spectral',
+  magenta: 'non-spectral',
+  rosa: 'non-spectral',
+  weiss: 'neutral',
+  schwarz: 'neutral',
+};
+const TYPE_LABELS = { spectral: 'Spektralfarbe', 'non-spectral': 'nicht spektral', neutral: 'Neutralfarbe' };
 const ALL_FILES = ['farbwelten', ...COLOR_IDS, 'chakren', 'lichtfrequenzen'];
 
 // Wortgleicher Vorgabetext (S16), siehe docs/farbwelten-konzept und
@@ -211,9 +241,39 @@ function allText(world) {
 (async () => {
   const data = await loadData();
 
-  if (data.FARBWELTEN.length !== 7) fail(`Daten: ${data.FARBWELTEN.length} Farbwelten statt 7`);
+  if (data.FARBWELTEN.length !== COLOR_IDS.length)
+    fail(`Daten: ${data.FARBWELTEN.length} Farbwelten statt ${COLOR_IDS.length}`);
 
   for (const world of data.FARBWELTEN) {
+    // §13.2: Typ, Typ-Label, Route und Messwerte müssen zusammenpassen.
+    const type = COLOR_TYPES[world.id];
+    if (!type) fail(`Daten ${world.id}: unbekannte Farbwelt`);
+    else {
+      if (world.type !== type) fail(`Daten ${world.id}: Typ „${world.type}" statt „${type}"`);
+      if (world.typeLabel !== TYPE_LABELS[type])
+        fail(`Daten ${world.id}: Typ-Label „${world.typeLabel}" statt „${TYPE_LABELS[type]}"`);
+    }
+    if (world.route !== `#farbwelten/${world.id}`) fail(`Daten ${world.id}: Route „${world.route}"`);
+    if (!world.register) fail(`Daten ${world.id}: Registereintrag fehlt`);
+    else {
+      if (world.register.route !== world.route) fail(`Daten ${world.id}: Registerroute abweichend`);
+      if (!world.register.kurz || world.register.kurz.length < 20) fail(`Daten ${world.id}: Kurzbeschreibung fehlt`);
+      if (!Array.isArray(world.register.verwandt) || !world.register.verwandt.length)
+        fail(`Daten ${world.id}: Verwandtschaften fehlen`);
+    }
+    if (type === 'spectral') {
+      if (!world.wavelength || !world.frequency || !world.photonEv)
+        fail(`Daten ${world.id}: Spektralfarbe ohne Messwerte`);
+    } else {
+      if (world.wavelength || world.frequency || world.photonEv)
+        fail(`Daten ${world.id}: ${TYPE_LABELS[type]} trägt erfundene Messwerte`);
+      const facts = world.sections.physik.find((block) => block.type === 'facts');
+      const labels = (facts?.rows || []).map(([label]) => label);
+      for (const verboten of ['Wellenlängenbereich', 'Frequenz', 'Photonenenergie']) {
+        if (labels.includes(verboten)) fail(`Daten ${world.id}: Physikzeile „${verboten}" unzulässig`);
+      }
+    }
+
     const text = allText(world);
     const cited = idsIn(text);
     const unresolved = cited.filter((id) => !data.SOURCES[id]);

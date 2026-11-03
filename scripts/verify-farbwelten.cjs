@@ -17,7 +17,23 @@ const path = require('node:path');
 const base = process.argv[2] || 'http://127.0.0.1:8099/Esoterik-Welt/';
 const output = path.resolve(process.argv[3] || 'evidence/farbwelten');
 const SECTION_IDS = ['erleben', 'physik', 'psychologie', 'tradition', 'anwendung', 'geschichte', 'uebung', 'quellen'];
-const COLOURS = ['rot', 'orange', 'gelb', 'gruen', 'blau', 'indigo', 'violett'];
+const COLOURS = [
+  'rot',
+  'orange',
+  'gelb',
+  'gruen',
+  'tuerkis',
+  'blau',
+  'indigo',
+  'violett',
+  'magenta',
+  'rosa',
+  'weiss',
+  'schwarz',
+];
+// Farben ohne eigene Wellenlänge: sie dürfen nicht auf die λ-Achse gelegt
+// werden und müssen im Register als solche gekennzeichnet sein.
+const OHNE_WELLENLAENGE = ['magenta', 'rosa', 'weiss', 'schwarz'];
 const ROUTES = [
   { hash: 'farbwelten', kind: 'landing' },
   ...COLOURS.map((id) => ({ hash: `farbwelten/${id}`, kind: 'color' })),
@@ -126,6 +142,13 @@ const CONTRAST_HELPER = `
             h1Count: document.querySelectorAll('#farbweltenRoot h1').length,
             headings,
             skips,
+            registerRows: document.querySelectorAll('#farbweltenRoot .fw-register__row').length,
+            registerWithoutWavelength: [...document.querySelectorAll('#farbweltenRoot .fw-register__meta')].filter(
+              (node) => /keine Wellenlänge/.test(node.textContent)
+            ).length,
+            tafelBands: document.querySelectorAll('#farbweltenRoot .fw-tafel__band').length,
+            offAxisLinks: document.querySelectorAll('#farbweltenRoot .fw-spectrum__offaxis a[href^="#farbwelten/"]')
+              .length,
             sectionIds: [...document.querySelectorAll('#farbweltenRoot [id]')].map((node) => node.id),
             visibleSections: sectionIds.filter((id) => {
               const node = document.getElementById(id);
@@ -169,12 +192,15 @@ const CONTRAST_HELPER = `
             '#farbweltenRoot p',
             '#farbweltenRoot .fw-register__meta',
             '#farbweltenRoot .fw-register__name',
+            '#farbweltenRoot .fw-register__desc',
+            '#farbweltenRoot .fw-register__chakra',
             '#farbweltenRoot .fw-card__text',
             '#farbweltenRoot .fw-breadcrumb a',
             '#farbweltenRoot .fw-toc a',
             '#farbweltenRoot .fw-quote p',
             '#farbweltenRoot .fw-facts dt',
             '#farbweltenRoot .fw-facts dd',
+            '#farbweltenRoot .fw-spectrum__offaxis p',
             '#farbweltenRoot .astro-badge',
           ].map((selector) => measure(selector));
         }, CONTRAST_HELPER);
@@ -195,6 +221,20 @@ const CONTRAST_HELPER = `
           if (missing.length) failures.push(`fehlende Abschnitte: ${missing.join(', ')}`);
           if (route.anchor && !metrics.hash.endsWith(`/${route.anchor}`)) failures.push('Ankerroute verloren');
         }
+        if (route.kind === 'landing') {
+          if (metrics.registerRows !== COLOURS.length)
+            failures.push(`Registerzeilen: ${metrics.registerRows} statt ${COLOURS.length}`);
+          if (metrics.tafelBands !== COLOURS.length)
+            failures.push(`Farbtafel-Bänder: ${metrics.tafelBands} statt ${COLOURS.length}`);
+          if (metrics.registerWithoutWavelength !== OHNE_WELLENLAENGE.length)
+            failures.push(
+              `Register ohne Wellenlänge: ${metrics.registerWithoutWavelength} statt ${OHNE_WELLENLAENGE.length}`
+            );
+        }
+        if (route.kind === 'light' && metrics.offAxisLinks !== OHNE_WELLENLAENGE.length)
+          failures.push(
+            `Nichtspektrale Verweise im Explorer: ${metrics.offAxisLinks} statt ${OHNE_WELLENLAENGE.length}`
+          );
         if (route.kind === 'chakren') {
           if (metrics.nodeCount !== 7) failures.push(`Chakra-Knoten: ${metrics.nodeCount}`);
           if (metrics.pressedCount !== 1) failures.push(`aria-pressed aktiv: ${metrics.pressedCount}`);
@@ -323,6 +363,8 @@ const CONTRAST_HELPER = `
     for (const [hash, suffix] of [
       ['farbwelten', 'landing'],
       ['farbwelten/rot', 'rot'],
+      ['farbwelten/tuerkis', 'tuerkis'],
+      ['farbwelten/schwarz', 'schwarz'],
       ['farbwelten/chakren', 'chakren'],
       ['farbwelten/lichtfrequenzen', 'lichtfrequenzen'],
     ]) {

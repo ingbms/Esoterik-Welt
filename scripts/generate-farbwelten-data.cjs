@@ -27,7 +27,20 @@ const target = path.join(root, 'js', 'data', 'farbwelten.js');
 const C_LIGHT = 299792458; // m/s
 const PLANCK_EV_NM = 1239.841984; // eV·nm
 
-const COLOR_FILES = ['rot', 'orange', 'gelb', 'gruen', 'blau', 'indigo', 'violett'];
+const COLOR_FILES = [
+  'rot',
+  'orange',
+  'gelb',
+  'gruen',
+  'tuerkis',
+  'blau',
+  'indigo',
+  'violett',
+  'magenta',
+  'rosa',
+  'weiss',
+  'schwarz',
+];
 
 // Verbindliche Wellenlängenbereiche aus docs/farbwelten-konzept/02 §10 und
 // mockup/index.html. Grenzen sind konventionelle Näherungen.
@@ -36,21 +49,57 @@ const WAVELENGTHS = {
   orange: [590, 620],
   gelb: [570, 590],
   gruen: [490, 570],
+  // Türkis ist Spektralfarbe, liegt aber als Übergangsbereich zwischen Grün
+  // (bis 490 nm im Datenbestand) und Blau und überschneidet beide Grenzen.
+  // 490–520 nm ist eine Konvention, keine Naturkante.
+  tuerkis: [490, 520],
   blau: [450, 490],
   indigo: [425, 450],
   violett: [380, 425],
 };
 
-// Einordnung der Seite als Spektralbereich. Magenta u. Ä. sind nicht Teil
-// dieser Ausbaustufe (docs/farbwelten-konzept/03 §5).
-const SPECTRAL = {
-  rot: true,
-  orange: true,
-  gelb: true,
-  gruen: true,
-  blau: true,
-  indigo: true,
-  violett: true,
+// Farbtyp nach §13.2 des Master-Auftrags. Der Typ entscheidet, ob eine
+// Wellenlänge, Frequenz und Photonenenergie überhaupt angegeben werden dürfen.
+const COLOR_TYPES = {
+  rot: 'spectral',
+  orange: 'spectral',
+  gelb: 'spectral',
+  gruen: 'spectral',
+  tuerkis: 'spectral',
+  blau: 'spectral',
+  indigo: 'spectral',
+  violett: 'spectral',
+  magenta: 'non-spectral',
+  rosa: 'non-spectral',
+  weiss: 'neutral',
+  schwarz: 'neutral',
+};
+
+const TYPE_LABELS = {
+  spectral: 'Spektralfarbe',
+  'non-spectral': 'nicht spektral',
+  neutral: 'Neutralfarbe',
+};
+
+// Einordnung der Seite als Spektralbereich. Fehlt eine Zuordnung, bricht der
+// Generator ab — es gibt keinen stillen Standardwert.
+const SPECTRAL = Object.fromEntries(COLOR_FILES.map((id) => [id, COLOR_TYPES[id] === 'spectral']));
+
+// Verwandtschaften für das Register. Physikalische Nachbarschaft im Spektrum
+// bzw. bei Mischfarben die beteiligten Grundfarben.
+const RELATED_COLORS = {
+  rot: ['orange', 'magenta', 'rosa'],
+  orange: ['rot', 'gelb'],
+  gelb: ['orange', 'gruen'],
+  gruen: ['gelb', 'tuerkis', 'blau'],
+  tuerkis: ['gruen', 'blau'],
+  blau: ['tuerkis', 'indigo'],
+  indigo: ['blau', 'violett'],
+  violett: ['indigo', 'magenta'],
+  magenta: ['rot', 'blau', 'violett'],
+  rosa: ['rot', 'weiss'],
+  weiss: ['schwarz', 'rosa'],
+  schwarz: ['weiss'],
 };
 
 // Abschnittsschlüssel der Farbdetailseiten (Skelett A–H, IA §5).
@@ -97,9 +146,14 @@ const TRADITION_CLAIM = {
   orange: 'Kreativität, Geselligkeit und das Element Wasser',
   gelb: 'Willenskraft, Selbstvertrauen und das Feuer',
   gruen: 'Natur, Harmonie und Heilung',
+  tuerkis: 'Klarheit, Offenheit und den Übergang zwischen zwei Polen',
   blau: 'Kommunikation, Ruhe und Ausdruck',
   indigo: 'Intuition',
   violett: 'Spiritualität',
+  magenta: 'Übergang, Veränderung und die Spannung zwischen Leidenschaft und Tiefe',
+  rosa: 'Sanftmut und Fürsorge als abgedämpfte Form des Rot',
+  weiss: 'Reinigung und die höchste Schwingung der modernen Regensymbolik',
+  schwarz: 'Schutz, das Unbekannte und Transformation durch Dunkelheit',
 };
 
 const RESEARCH_CLAIM = {
@@ -109,11 +163,20 @@ const RESEARCH_CLAIM = {
   gelb: 'Photobiomodulation arbeitet mit rotem bis nahinfrarotem Licht; Gelb spielt in medizinischen Protokollen keine eigene Rolle.',
   gruen:
     'Photobiomodulation arbeitet mit rotem bis nahinfrarotem Licht; für Grün gibt es kein eigenes medizinisches Protokoll.',
+  tuerkis:
+    'Für Türkis gibt es keine eigene, von Blau und Grün getrennte emotionale Kategorie; die Studienlage führt nur eine gemeinsame Kategorie GREEN–BLUE.',
   blau: 'Untersucht ist die Rolle von Blaulicht für die innere Uhr und, bei hoher Dosis, Retina und Rhythmus; ein Heilverfahren „Blau“ gibt es nicht.',
   indigo:
     'Für Indigo existiert kein medizinisches Lichtprotokoll; Indigo ist ein fließender Übergang zwischen Blau und Violett.',
   violett:
     'Für Violett existiert kein medizinisches Lichtprotokoll; UV-Strahlung liegt außerhalb des sichtbaren Bereichs.',
+  magenta:
+    'Für Magenta gibt es keine von Rot und Blau unabhängige Effektsignatur; Studien führen es als Bildschirm-Mix unter „purple / violet“.',
+  rosa: 'Rosa hat keine eigene Wellenlänge: Studien beschreiben es als Rotvariante mit reduzierter Sättigung, ohne spezifische therapeutische Evidenz.',
+  weiss:
+    'Weißes Licht ist in der Phototherapie nur Träger definierter Spektren; Photobiomodulation arbeitet mit rotem bis nahinfrarotem Licht.',
+  schwarz:
+    'Für Schwarz als Farbkategorie existiert kein Lichtprotokoll; untersucht werden Intensität und Wellenlänge von Licht, nicht die Abwesenheit von Reiz.',
 };
 
 const HEALTH_NOTE =
@@ -160,13 +223,38 @@ const META = {
     description:
       'Violett zwischen 380 und 425 nm: kurzwelliges Licht, Symbolik, Kronenchakra, Abgrenzung zu Magenta und der Stand der Forschung.',
   },
+  tuerkis: {
+    title: 'Türkis (Cyan) — Übergang zwischen Grün und Blau | Esoterik-Welt',
+    description:
+      'Türkis (Cyan) als Übergangsbereich um 490–520 nm (Konvention): Physik, Assoziationen, Tradition und die Grenzen der Farbtherapie.',
+  },
+  magenta: {
+    title: 'Magenta — Mischfarbe aus Rot und Blau | Esoterik-Welt',
+    description:
+      'Magenta ist nicht spektral: additiver Rot-Blau-Mix, Physik, Farbpsychologie, Symbolik und die Grenzen therapeutischer Behauptungen.',
+  },
+  rosa: {
+    title: 'Rosa — Mischfarbe aus Rot und Weiß | Esoterik-Welt',
+    description:
+      'Rosa als Rot-Weiß-Mischung: Sättigung, Helligkeit, kulturelle Bedeutung und die Grenzen der Farbpsychologie — ohne Heilversprechen.',
+  },
+  weiss: {
+    title: 'Weiß — Neutralfarbe aus allen Wellenlängen | Esoterik-Welt',
+    description:
+      'Weiß als Superposition und Remission: warum es keine eigene Wellenlänge hat, was die Forschung sagt und was Tradition bleibt.',
+  },
+  schwarz: {
+    title: 'Schwarz — Neutralfarbe ohne Lichtreiz | Esoterik-Welt',
+    description:
+      'Schwarz als Absorption ohne Lichtreiz: Physik, kulturelle Deutungen, Farbpsychologie und die klaren Grenzen der Farbtherapie.',
+  },
 };
 
 const META_PAGES = {
   landing: {
     title: 'Farbwelten — Bedeutung, Physik und Tradition der Farben | Esoterik-Welt',
     description:
-      'Sieben Farbwelten zwischen Licht, Wahrnehmung und Tradition: Wellenlängen, Assoziationen, Chakren und Forschungsstand differenziert erklärt.',
+      'Zwölf Farbwelten zwischen Licht, Wahrnehmung und Tradition: Wellenlängen, Assoziationen, Chakren und Forschungsstand differenziert erklärt.',
   },
   chakren: {
     title: 'Chakren und Farben — Zuordnung und Herkunft | Esoterik-Welt',
@@ -433,6 +521,112 @@ function readDocument(name) {
   return { parsed, document: mergeIntroHeading(splitDocument(parsed.body)) };
 }
 
+// --- Farbtyp-abhängige Abschnitte -----------------------------------------
+
+const CHAKRA_BY_ID = {
+  rot: 'root',
+  orange: 'sacral',
+  gelb: 'solar',
+  gruen: 'heart',
+  blau: 'throat',
+  indigo: 'third-eye',
+  violett: 'crown',
+};
+
+const CHAKRA_TITLE = {
+  rot: 'Wurzelchakra',
+  orange: 'Sakralchakra',
+  gelb: 'Solarplexuschakra',
+  gruen: 'Herzchakra',
+  blau: 'Kehlkopfchakra',
+  indigo: 'Stirnchakra',
+  violett: 'Kronenchakra',
+};
+
+const SPECTRAL_NOTE =
+  'Die Grenzen zu den Nachbarfarben sind konventionell und fließend. Ein Bildschirm erzeugt Metamere, kein monochromatisches Licht der angegebenen Wellenlänge [24][31].';
+
+// Nichtspektrale und neutrale Farben haben keine Wellenlänge. Der Abschnitt
+// nennt deshalb keine Messwerte, sondern erklärt Mischfarbe, Additivität und
+// Remission — dieselbe Quellenlage wie die Redaktionsseiten.
+const PHYSICS = {
+  'non-spectral': {
+    rows: [
+      ['Einordnung', 'nicht spektral — keine eigene Wellenlänge'],
+      ['Zustandekommen', 'additive Mischung aus Rot und Blau (Licht) bzw. Remission bei Pigmenten'],
+    ],
+    text: 'Für diese Farbe lässt sich keine Wellenlänge angeben: Sie existiert im Spektrum nicht als Reinstoff, sondern nur als Mischung. Bildschirme erzeugen sie als RGB-Mix, Pigmente durch Remission; zwei physikalisch verschiedene Proben können dabei identisch aussehen [24][31].',
+  },
+  neutral: {
+    weiss: {
+      rows: [
+        ['Einordnung', 'Neutralfarbe — keine eigene Wellenlänge'],
+        ['Zustandekommen', 'Superposition aller sichtbaren Wellenlängen (Licht) bzw. breite Remission (Oberfläche)'],
+      ],
+      text: 'Weiß ist keine Wellenlänge, sondern ein Zustand: alle sichtbaren Wellenlängen gemeinsam (Licht) oder eine breite, gleichmäßige Remission (Oberfläche). Ein Bildschirm mischt Weiß aus seinen Primärvalenzen; das Ergebnis ist ein Metamer, kein weißes Reinstofflicht [24][31].',
+    },
+    schwarz: {
+      rows: [
+        ['Einordnung', 'Neutralfarbe — keine eigene Wellenlänge'],
+        ['Zustandekommen', 'nahezu vollständige Absorption des sichtbaren Lichts, minimale Remission'],
+      ],
+      text: 'Schwarz ist keine Wellenlänge, sondern das Fehlen remittierten Lichts: Eine Oberfläche absorbiert nahezu das gesamte sichtbare Spektrum. Ein Bildschirm erzeugt Schwarz durch Abschalten der Kanäle — ein Reiz entsteht dabei nicht [24][31].',
+    },
+  },
+};
+
+function erlebenFacts(id, type, range) {
+  if (!range) {
+    return [
+      ['Einordnung', TYPE_LABELS[type]],
+      ['Wellenlänge', 'keine eigene Wellenlänge'],
+    ];
+  }
+  const [min, max] = range;
+  return [
+    ['Wellenlängenbereich', id === 'tuerkis' ? `${min}–${max} nm (Übergangsbereich, Konvention)` : `${min}–${max} nm`],
+    [
+      'Einordnung',
+      id === 'tuerkis'
+        ? 'Spektralfarbe im Übergangsbereich zwischen Grün und Blau'
+        : 'Spektralfarbe im sichtbaren Bereich',
+    ],
+  ];
+}
+
+function physikSection(id, type, range, frequency, photonEv) {
+  if (range) {
+    const [min, max] = range;
+    return [
+      {
+        type: 'facts',
+        rows: [
+          [
+            'Wellenlängenbereich',
+            id === 'tuerkis'
+              ? `${min}–${max} nm (Übergangsbereich, Konvention)`
+              : `${min}–${max} nm (konventionelle Näherung)`,
+          ],
+          ['Frequenz', frequency.label],
+          ['Photonenenergie', `ca. ${photonEv.label}`],
+          [
+            'Entstehung',
+            id === 'tuerkis'
+              ? 'Spektralfarbe im Übergangsbereich zwischen Grün und Blau; die Grenzen 490 und 520 nm sind Konvention'
+              : 'Spektralfarbe innerhalb des sichtbaren Bereichs',
+          ],
+        ],
+      },
+      { type: 'p', text: SPECTRAL_NOTE },
+    ];
+  }
+  const detail = type === 'neutral' ? PHYSICS.neutral[id] : PHYSICS[type];
+  return [
+    { type: 'facts', rows: detail.rows },
+    { type: 'p', text: detail.text },
+  ];
+}
+
 function buildColors() {
   const sourceRegistry = new Map();
   const worlds = [];
@@ -463,13 +657,32 @@ function buildColors() {
       });
   }
 
+  // Fehlende Zuordnungen brechen hart ab: kein stiller Textverlust, keine
+  // erfundenen Messwerte, keine leeren Registerfelder.
+  for (const id of COLOR_FILES) {
+    for (const [name, table] of Object.entries({
+      COLOR_TYPES,
+      TRADITION_CLAIM,
+      RESEARCH_CLAIM,
+      META,
+      RELATED_COLORS,
+    })) {
+      if (!table[id]) throw new Error(`${id}: keine Zuordnung in ${name}`);
+    }
+    const type = COLOR_TYPES[id];
+    if (!TYPE_LABELS[type]) throw new Error(`${id}: unbekannter Farbtyp „${type}“`);
+    if (type === 'spectral' && !WAVELENGTHS[id]) throw new Error(`${id}: Spektralfarbe ohne Wellenlängenbereich`);
+    if (type !== 'spectral' && WAVELENGTHS[id])
+      throw new Error(`${id}: ${TYPE_LABELS[type]} darf keinen Wellenlängenbereich tragen`);
+  }
+
   for (const id of COLOR_FILES) {
     const { parsed, document } = documents.get(id);
     const { sections, mapped } = mapSections(document, id);
-
-    const [min, max] = WAVELENGTHS[id];
-    const frequency = frequencies([min, max]);
-    const photonEv = photonEnergies([min, max]);
+    const type = COLOR_TYPES[id];
+    const range = WAVELENGTHS[id] || null;
+    const frequency = range ? frequencies(range) : null;
+    const photonEv = range ? photonEnergies(range) : null;
 
     // Abschnitt A: Farbfläche, Nuancen, Wellenlängenbereich und Einordnung.
     // Der erste Einstiegsabsatz steht als Lede im Seitenkopf (IA §5 A, §6).
@@ -477,31 +690,11 @@ function buildColors() {
     const lede = introBlocks[0]?.text || parsed.data.description || '';
     sections.erleben = [
       { type: 'swatch' },
-      {
-        type: 'facts',
-        rows: [
-          ['Wellenlängenbereich', `${min}–${max} nm`],
-          ['Einordnung', SPECTRAL[id] ? 'Spektralfarbe im sichtbaren Bereich' : 'Mischfarbe'],
-        ],
-      },
+      { type: 'facts', rows: erlebenFacts(id, type, range) },
       ...introBlocks.slice(1),
     ];
 
-    sections.physik = [
-      {
-        type: 'facts',
-        rows: [
-          ['Wellenlängenbereich', `${min}–${max} nm (konventionelle Näherung)`],
-          ['Frequenz', frequency.label],
-          ['Photonenenergie', `ca. ${photonEv.label}`],
-          ['Entstehung', SPECTRAL[id] ? 'Spektralfarbe innerhalb des sichtbaren Bereichs' : 'Mischfarbe'],
-        ],
-      },
-      {
-        type: 'p',
-        text: 'Die Grenzen zu den Nachbarfarben sind konventionell und fließend. Ein Bildschirm erzeugt Metamere, kein monochromatisches Licht der angegebenen Wellenlänge [24][31].',
-      },
-    ];
+    sections.physik = physikSection(id, type, range, frequency, photonEv);
 
     if (!sections.psychologie.length) {
       sections.psychologie = [
@@ -519,7 +712,9 @@ function buildColors() {
     sections.geschichte.push({ type: 'timeline', items: HISTORY_TIMELINE });
 
     const compare = {
-      traditionTitle: `${document.title} und das ${id === 'rot' ? 'Wurzelchakra' : 'zu geordnete Zentrum'}`,
+      traditionTitle: CHAKRA_TITLE[id]
+        ? `${document.title} und das ${CHAKRA_TITLE[id]}`
+        : `${document.title} und die moderne Regenbogenzuordnung`,
       traditionText: `In der Tradition steht ${document.title} für ${TRADITION_CLAIM[id]}. Die Regenbogenzuordnung der Chakren ist eine moderne Zusammenführung; sie erscheint in dieser Kombination erst 1977 [1][2].`,
       traditionChips: ['Deutungstradition'],
       researchTitle: 'Was tatsächlich untersucht ist',
@@ -528,8 +723,19 @@ function buildColors() {
       note: COMPARE_NOTE,
     };
 
-    if (!sections.anwendung.some((block) => block.type === 'quote' && /medizin/i.test(block.text))) {
-      sections.anwendung.push({ type: 'quote', text: HEALTH_NOTE });
+    // Der Health-Disclaimer des Redaktionsstands steht als letzter Block der
+    // Seite (nach ## Quellen). Er gehört inhaltlich in den Anwendungsabschnitt
+    // und wird dort als letzter Block gerendert; aus dem Quellenabschnitt wird
+    // er entfernt, damit er nicht doppelt in den Daten steht.
+    const isDisclaimer = (block) =>
+      block.type === 'quote' && /Health-Disclaimer|medizinische Diagnose oder Behandlung/i.test(block.text);
+    const moved = sections.quellen.filter(isDisclaimer);
+    if (moved.length) sections.quellen = sections.quellen.filter((block) => !isDisclaimer(block));
+    const existingDisclaimer = sections.anwendung.find(
+      (block) => block.type === 'quote' && /medizin/i.test(block.text)
+    );
+    if (!existingDisclaimer) {
+      sections.anwendung.push(moved[0] || { type: 'quote', text: HEALTH_NOTE });
     }
 
     const allText = JSON.stringify({ intro: document.intro, sections });
@@ -537,28 +743,22 @@ function buildColors() {
     const sources = cited.filter((sourceId) => sourceRegistry.has(sourceId));
     const shortRefs = cited.filter((sourceId) => !sourceRegistry.has(sourceId));
 
+    const summary = parsed.data.description || '';
+    const route = `#farbwelten/${id}`;
+    const verwandt = RELATED_COLORS[id];
+
     worlds.push({
       id,
       name: document.title,
+      route,
+      type,
+      typeLabel: TYPE_LABELS[type],
       spectral: SPECTRAL[id],
-      wavelength: { min, max, label: `${min}–${max} nm` },
+      wavelength: range ? { min: range[0], max: range[1], label: `${range[0]}–${range[1]} nm` } : null,
       frequency,
       photonEv,
-      chakra:
-        id === 'rot'
-          ? 'root'
-          : id === 'orange'
-            ? 'sacral'
-            : id === 'gelb'
-              ? 'solar'
-              : id === 'gruen'
-                ? 'heart'
-                : id === 'blau'
-                  ? 'throat'
-                  : id === 'indigo'
-                    ? 'third-eye'
-                    : 'crown',
-      summary: parsed.data.description || '',
+      chakra: CHAKRA_BY_ID[id] || null,
+      summary,
       seoTitle: parsed.data.title || document.title,
       meta: META[id],
       lede,
@@ -568,6 +768,18 @@ function buildColors() {
       sources,
       shortRefs,
       related: ['chakren', 'lichtfrequenzen', 'crystals'],
+      verwandt,
+      // Registereintrag: id, Name, Route, Kurzbeschreibung, Typ-Label,
+      // Verwandtschaften — die Landing rendert ausschließlich daraus.
+      register: {
+        id,
+        name: document.title,
+        route,
+        kurz: summary,
+        typLabel: TYPE_LABELS[type],
+        verwandt,
+        chakra: CHAKRA_BY_ID[id] || null,
+      },
     });
     reports.push({ id, mapped, dropped: mapped.filter((entry) => entry.key === null) });
   }
@@ -720,7 +932,8 @@ function main() {
   }
   console.log(`Quellen im Register: ${Object.keys(sourceObject).length}`);
   console.log(`Farbwelten: ${worlds.length}, Abschnitte je Seite: ${SECTION_ORDER.length}`);
-  if (worlds.length !== 7) throw new Error('Es müssen sieben Farbwelten sein.');
+  if (worlds.length !== COLOR_FILES.length)
+    throw new Error(`Es müssen ${COLOR_FILES.length} Farbwelten sein, erzeugt wurden ${worlds.length}.`);
 }
 
 main();

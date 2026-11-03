@@ -6,13 +6,17 @@
 // (gleiches Verfahren wie tests/astrologie.mjs).
 //
 // Geprüft wird, was der Browser unverändert lädt:
-//   1. sieben Farbwelten mit belegten Wellenlängen/Frequenzen,
+//   1. zwölf Farbwelten mit Typ (spektral / nicht spektral / neutral),
+//      belegten Wellenlängen/Frequenzen und keine Messwerte für Misch- und
+//      Neutralfarben,
 //   2. vollständiges A–H-Skelett je Farbseite und bekannte Blocktypen,
 //   3. Quellenauflösung ohne offene Verweise,
 //   4. Spektrum-Stützwerte (650/530/420 nm),
 //   5. Routenauflösung inkl. Anker und Unbekannt-Ansicht,
 //   6. Chakren- und Lichtseite vollständig,
-//   7. Redaktionstexte nicht im Markup, SEO-Längen, kein HTML in Daten.
+//   7. Redaktionstexte nicht im Markup, SEO-Längen, kein HTML in Daten,
+//   8. Registereinträge mit Route, Kurzbeschreibung, Typ-Label und
+//      Verwandtschaften.
 
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
@@ -25,14 +29,48 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const MODULE_FILES = ['js/modules/farbwelten-model.js', 'js/data/farbwelten.js', 'js/data/chakren.js'];
 
+// Sollzustand je Farbe: [min, max, Frequenzlabel] oder null für Farben ohne
+// eigene Wellenlänge.
 const WAVELENGTHS = {
   rot: [620, 750, '400–484 THz'],
   orange: [590, 620, '484–508 THz'],
   gelb: [570, 590, '508–526 THz'],
   gruen: [490, 570, '526–612 THz'],
+  tuerkis: [490, 520, '577–612 THz'],
   blau: [450, 490, '612–666 THz'],
   indigo: [425, 450, '666–705 THz'],
   violett: [380, 425, '705–789 THz'],
+  magenta: null,
+  rosa: null,
+  weiss: null,
+  schwarz: null,
+};
+
+const TYPES = {
+  rot: 'spectral',
+  orange: 'spectral',
+  gelb: 'spectral',
+  gruen: 'spectral',
+  tuerkis: 'spectral',
+  blau: 'spectral',
+  indigo: 'spectral',
+  violett: 'spectral',
+  magenta: 'non-spectral',
+  rosa: 'non-spectral',
+  weiss: 'neutral',
+  schwarz: 'neutral',
+};
+
+const TYPE_LABELS = { spectral: 'Spektralfarbe', 'non-spectral': 'nicht spektral', neutral: 'Neutralfarbe' };
+
+const CHAKRA_BY_ID = {
+  rot: 'root',
+  orange: 'sacral',
+  gelb: 'solar',
+  gruen: 'heart',
+  blau: 'throat',
+  indigo: 'third-eye',
+  violett: 'crown',
 };
 
 const SECTION_KEYS = ['erleben', 'physik', 'psychologie', 'tradition', 'anwendung', 'geschichte', 'uebung', 'quellen'];
@@ -60,24 +98,55 @@ after(() => {
   if (tmp) fs.rmSync(tmp, { recursive: true, force: true });
 });
 
-test('sieben Farbwelten mit belegten Wellenlängen- und Frequenzbereichen', () => {
-  assert.equal(data.FARBWELTEN.length, 7);
+test('zwölf Farbwelten mit Typ, belegten Wellenlängen und Frequenzbereichen', () => {
+  assert.equal(data.FARBWELTEN.length, 12);
   assert.deepEqual(
     data.FARBWELTEN.map((world) => world.id),
     Object.keys(WAVELENGTHS)
   );
   for (const world of data.FARBWELTEN) {
-    const [min, max, frequency] = WAVELENGTHS[world.id];
-    assert.equal(world.wavelength.min, min, `${world.id}: min`);
-    assert.equal(world.wavelength.max, max, `${world.id}: max`);
-    assert.equal(world.wavelength.label, `${min}–${max} nm`, `${world.id}: label`);
-    assert.equal(world.frequency.label, frequency, `${world.id}: Frequenz`);
-    assert.equal(world.spectral, true, `${world.id}: spektral`);
-    assert.ok(world.photonEv.min > 1.5 && world.photonEv.max < 3.4, `${world.id}: Photonenenergie`);
-    assert.equal(
-      world.chakra,
-      ['root', 'sacral', 'solar', 'heart', 'throat', 'third-eye', 'crown'][data.FARBWELTEN.indexOf(world)]
-    );
+    const expected = WAVELENGTHS[world.id];
+    assert.equal(world.type, TYPES[world.id], `${world.id}: Typ`);
+    assert.equal(world.typeLabel, TYPE_LABELS[TYPES[world.id]], `${world.id}: Typ-Label`);
+    assert.equal(world.spectral, TYPES[world.id] === 'spectral', `${world.id}: spektral`);
+    assert.equal(world.chakra, CHAKRA_BY_ID[world.id] ?? null, `${world.id}: Chakra`);
+    if (expected) {
+      const [min, max, frequency] = expected;
+      assert.equal(world.wavelength.min, min, `${world.id}: min`);
+      assert.equal(world.wavelength.max, max, `${world.id}: max`);
+      assert.equal(world.wavelength.label, `${min}–${max} nm`, `${world.id}: label`);
+      assert.equal(world.frequency.label, frequency, `${world.id}: Frequenz`);
+      assert.ok(world.photonEv.min > 1.5 && world.photonEv.max < 3.4, `${world.id}: Photonenenergie`);
+    } else {
+      // Nichtspektrale und neutrale Farben tragen keine Messwerte.
+      assert.equal(world.wavelength, null, `${world.id}: keine Wellenlänge`);
+      assert.equal(world.frequency, null, `${world.id}: keine Frequenz`);
+      assert.equal(world.photonEv, null, `${world.id}: keine Photonenenergie`);
+      assert.equal(world.chakra, null, `${world.id}: kein Chakra`);
+    }
+  }
+  // Türkis ist Spektralfarbe im Übergangsbereich zwischen Grün und Blau.
+  const tuerkis = data.FARBWELTEN.find((world) => world.id === 'tuerkis');
+  assert.equal(tuerkis.type, 'spectral');
+  assert.deepEqual([tuerkis.wavelength.min, tuerkis.wavelength.max], [490, 520]);
+});
+
+test('Misch- und Neutralfarben erfinden keine Messwerte im Physikabschnitt', () => {
+  for (const world of data.FARBWELTEN) {
+    if (world.wavelength) continue;
+    const facts = world.sections.physik.find((block) => block.type === 'facts');
+    assert.ok(facts, `${world.id}: Physik-Fakten fehlen`);
+    const labels = facts.rows.map(([label]) => label);
+    assert.equal(labels.includes('Wellenlängenbereich'), false, `${world.id}: Wellenlängenzeile verboten`);
+    assert.equal(labels.includes('Frequenz'), false, `${world.id}: Frequenzzeile verboten`);
+    assert.equal(labels.includes('Photonenenergie'), false, `${world.id}: Energiezeile verboten`);
+    for (const [, value] of facts.rows) {
+      assert.doesNotMatch(String(value), /\d+\s*(?:–|-|bis)\s*\d+\s*nm/, `${world.id}: nm-Bereich erfunden`);
+      assert.doesNotMatch(String(value), /THz|eV/, `${world.id}: Messwert erfunden`);
+    }
+    // Der Abschnitt erklärt stattdessen Mischfarbe/Additivität/Remission.
+    const text = JSON.stringify(world.sections.physik);
+    assert.match(text, /Mischung|Remission|Absorption|Superposition/i, `${world.id}: Erklärung fehlt`);
   }
 });
 
@@ -139,7 +208,7 @@ test('Einstieg, Chakren- und Lichtseite sind vollständig', () => {
   assert.ok(data.LANDING.lede.length > 80);
   assert.equal(data.LANDING.sections.length, 5);
   for (const section of data.LANDING.sections) assert.ok(section.blocks.length > 0, section.key);
-  assert.equal(data.LANDING.worlds.length, 7);
+  assert.equal(data.LANDING.worlds.length, 12);
   assert.ok(data.LANDING.sources.includes('1') && data.LANDING.sources.includes('3'));
 
   assert.equal(data.CHAKREN_PAGE.table.rows.length, 7);
@@ -201,9 +270,40 @@ test('Routenauflösung: Einstieg, Farben, Anker, Unbekanntes', () => {
   assert.equal(model.resolveView(['rot', 'quatsch'], worlds, anchors).anchor, '');
   assert.equal(model.resolveView(['chakren'], worlds, anchors).view, 'chakren');
   assert.equal(model.resolveView(['lichtfrequenzen'], worlds, anchors).view, 'light');
-  assert.equal(model.resolveView(['tuerkis'], worlds, anchors).view, 'notfound');
+  // Alle zwölf Farben sind echte Routen — auch die nichtspektralen.
+  for (const id of Object.keys(WAVELENGTHS)) {
+    const route = model.resolveView([id], worlds, anchors);
+    assert.equal(route.view, 'color', `${id}: keine Route`);
+    assert.equal(route.world.id, id, `${id}: falsche Farbe`);
+    assert.equal(model.ROUTE.color(id), `#farbwelten/${id}`);
+  }
+  assert.equal(model.resolveView(['tuerkis'], worlds, anchors).view, 'color');
+  assert.equal(model.resolveView(['magenta', 'physik'], worlds, anchors).anchor, 'physik');
+  assert.equal(model.resolveView(['quatsch'], worlds, anchors).view, 'notfound');
   assert.equal(model.ROUTE.color('rot', 'physik'), '#farbwelten/rot/physik');
   assert.equal(model.ROUTE.landing('register'), '#farbwelten/register');
+});
+
+test('Registereinträge tragen Route, Kurzbeschreibung, Typ-Label und Verwandtschaften', () => {
+  for (const world of data.FARBWELTEN) {
+    const entry = world.register;
+    assert.ok(entry, `${world.id}: Registereintrag fehlt`);
+    assert.equal(entry.id, world.id);
+    assert.equal(entry.name, world.name);
+    assert.equal(entry.route, `#farbwelten/${world.id}`);
+    assert.equal(entry.typLabel, TYPE_LABELS[world.type]);
+    assert.ok(entry.kurz.length >= 20, `${world.id}: Kurzbeschreibung zu kurz`);
+    assert.ok(Array.isArray(entry.verwandt) && entry.verwandt.length > 0, `${world.id}: Verwandtschaften fehlen`);
+    for (const id of entry.verwandt) {
+      assert.ok(
+        data.FARBWELTEN.some((other) => other.id === id),
+        `${world.id}: Verwandtschaft ${id} existiert nicht`
+      );
+      assert.notEqual(id, world.id, `${world.id}: verweist auf sich selbst`);
+    }
+  }
+  assert.equal(data.FARBWELTEN.filter((world) => world.register.typLabel === 'nicht spektral').length, 2);
+  assert.equal(data.FARBWELTEN.filter((world) => world.register.typLabel === 'Neutralfarbe').length, 2);
 });
 
 test('SEO-Titel und Beschreibungen bleiben im Rahmen der IA', () => {
