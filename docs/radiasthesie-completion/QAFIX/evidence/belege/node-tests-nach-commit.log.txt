@@ -1,0 +1,24 @@
+✔ drei Themenseiten mit vollständigem Kapitelinventar (9.0437ms)
+✔ jeder Quellenmarker im Text löst auf eine vorhandene Quelle auf (0.6851ms)
+✔ Quellenverzeichnis ist vollständig und ohne Platzhalter (0.5425ms)
+✔ Glossar und Evidenzstufen sind vollständig (0.2922ms)
+✔ Router-Vokabular wird vollständig aufgelöst (0.383ms)
+✔ Suche findet Themen, Kapitel, Glossar und Quellen — auch mit Umlauten (17.9294ms)
+✔ Glossarfilter grenzt auf Buchstabe und Suchbegriff ein (0.5461ms)
+✔ Landingpage: eine H1, drei Themenkarten, Einordnungsband und Stufenlegende (1.6117ms)
+✔ Themenseiten: Kapitel, Inhaltsverzeichnis, Quellenpanel und Einordnungskasten (4.1595ms)
+✔ Themenseite verlinkt nicht auf sich selbst als verwandt (1.0523ms)
+✔ Glossar: Buchstabenleiste, Suche und 13 Begriffe (0.7483ms)
+✔ Quellen: 33 Karten mit Sprungziel und Rückverweis (1.6501ms)
+✔ Methodik: sechs Abschnitte plus Rechtliches, keine Wirkversprechen (0.4305ms)
+✔ Suche und Fehleransicht führen immer zurück (2.2706ms)
+✔ HTML wird escaped, Daten erscheinen nicht als Markup (0.5731ms)
+✔ BreadcrumbList ist gültiges JSON-LD (0.2313ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 181.3545

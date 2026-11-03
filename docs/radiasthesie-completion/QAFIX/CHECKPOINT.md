@@ -116,3 +116,15 @@ TMP/TEMP/TMPDIR jeweils `C:/Users/mas/AppData/Local/hermes/cache/scratch`; Exitc
 4. **CI-Lücke:** `.github/workflows/ci.yml` ruft `npm run test:radiasthesie` nicht auf (nur pages, crystals, astrologie, offline, tarot, tarot:decks, moon, e2e). Die 16 Modultests laufen dort nicht mit — eigener kleiner CI-Schritt nötig.
 5. `npm run format:check` bleibt rot, solange `assets/radiasthesie/media/bildnachweis.html` (RAD-05) unformatiert ist; nicht von dieser Karte angefasst.
 6. Kein Push, kein Deployment, keine Gesamtabnahme der 14 Pakete.
+
+## 7. Nachtrag — Prüfung nach dem Commit
+
+Commit `d1c5ea0` (35 Dateien). Direkt danach aus dem committeten Stand erneut ausgeführt:
+
+| Prüfung | Ergebnis | Exit |
+|---|---|---|
+| `node --test tests/radiasthesie.mjs` | 16/16 | 0 |
+| `npm run build` + `git status --porcelain` | Build grün, **keine** Änderung an `Lokal*.html`/`index.html` ⇒ Quellen und generierte Dateien stimmen überein | 0 |
+| `npx playwright test tests/radiasthesie.spec.js` (Port 3317) | 13/13 | 0 |
+
+Belege: `evidence/belege/node-tests-nach-commit.log.txt`, `build-nach-commit.log.txt`, `playwright-modul-13-nach-commit.log.txt`. Der Arbeitsbaum enthält danach nur noch fremde, nicht angefasste Verzeichnisse (`assets/radiasthesie/media/`, `docs/radiasthesie-completion/RAD-02|04|05/`).
