@@ -501,7 +501,7 @@ export class MeditationView {
     if (left === null) return;
     this.syncControls();
     this.renderResume();
-    this.announce('Sitzung unterbrochen. Fortsetzen ist möglich.');
+    this.announce(left > 0 ? 'Sitzung unterbrochen. Fortsetzen ist möglich.' : 'Sitzung beendet.');
   }
 
   /* ------------------------------------------------------------- Favoriten */
