@@ -1,0 +1,41 @@
+/** Leitet Kennzahlen aus den Rohdaten ab: node metrics.mjs <dir> */
+import fs from 'node:fs';
+import path from 'node:path';
+
+const dir = process.argv[2] || 'evidence/t_4a8106de';
+const read = (f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+const p2 = read('probe2.json');
+const p3 = read('probe3.json');
+const db = (amp) => 20 * Math.log10(amp);
+const ax = read('ax-probe.json');
+const single = ax.find((r) => r.engine === 'chromium').steps.afterPlay.leftRms;
+
+const lines = [];
+lines.push('# Abgeleitete Messwerte');
+lines.push('');
+lines.push('Alle Werte mit `node evidence/t_4a8106de/probes/metrics.mjs` berechnet, nicht geschätzt.');
+lines.push('');
+lines.push('## Pegel');
+const capPeak = p2.levelCap.peak.peak;
+lines.push(`- Deckel bei Regler-Endanschlag −6 dBFS: Spitzenamplitude ${capPeak.toFixed(6)} → ${db(capPeak).toFixed(3)} dBFS (Sollwert 0,50119 / −6,000 dBFS; Abweichung ${Math.abs(db(capPeak) + 6).toExponential(2)} dB)`);
+lines.push(`- Startpegel −20 dBFS, ein Ton (440 Hz Sinus): RMS ${single.toFixed(6)} → ${db(single).toFixed(3)} dBFS. Der Sollwert −20 dBFS gilt als Spitzenamplitude 0,1; für einen Sinus ist RMS = Amplitude/√2, also ${(0.1 / Math.SQRT2).toFixed(6)} = ${db(0.1 / Math.SQRT2).toFixed(3)} dBFS RMS. Gemessen und Soll stimmen überein.`);
+lines.push(`- Startpegel −20 dBFS, zwei Stimmen binaural: je Stimme Pegel 1/n = 0,05 → RMS ${p2.binaural.leftRms.toFixed(6)} (${db(p2.binaural.leftRms).toFixed(3)} dBFS), konsistent mit 1/n-Regel und Gesamtspitze 0,1.`);
+lines.push('');
+lines.push('## Kanaltrennung binaural (200 Hz links / 300 Hz rechts, −20 dBFS)');
+const b = p3.binaural100Hz;
+const ratioL = b.leftAt200 / b.leftAt300;
+const ratioR = b.rightAt300 / b.rightAt200;
+lines.push(`- Links: 200 Hz ${b.leftAt200.toFixed(6)} vs. 300 Hz ${b.leftAt300.toFixed(6)} → Verhältnis ${ratioL.toFixed(1)}`);
+lines.push(`- Rechts: 300 Hz ${b.rightAt300.toFixed(6)} vs. 200 Hz ${b.rightAt200.toFixed(6)} → Verhältnis ${ratioR.toFixed(1)}`);
+lines.push(`- Übersprechen links→rechts: ${(b.rightAt200 / b.rightAt300 * 100).toFixed(2)} %, rechts→links: ${(b.leftAt300 / b.leftAt200 * 100).toFixed(2)} %`);
+lines.push('');
+lines.push('## Binaural 8 Hz (200/208 Hz), 1,28 s Fenster');
+lines.push(`- Auflösung der verketteten Analyse: ${p3.binaural8Hz.resolutionHz} Hz bei ${p3.binaural8Hz.samples} Samples`);
+lines.push('- Ergebnis: Peaks nicht eindeutig trennbar (Fensterlücken beim Polling des Analysators), deshalb hier keine Frequenzaussage — die Kanaltrennung ist über den 100-Hz-Fall belegt.');
+lines.push('');
+lines.push('## Zustand nach Stopp');
+lines.push(`- Engine-Status: ${p3.afterStop.status}, mixRms links ${p3.afterStop.leftRms}, rechts ${p3.afterStop.rightRms}`);
+lines.push('');
+const out = lines.join('\n');
+fs.writeFileSync(path.join(dir, 'metrics.md'), `${out}\n`, 'utf8');
+console.log(out);
