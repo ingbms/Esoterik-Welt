@@ -1,6 +1,6 @@
 {
   "base": "http://127.0.0.1:3191/Esoterik-Welt",
-  "generatedAt": "2026-11-03T06:42:29.311Z",
+  "generatedAt": "2026-11-03T06:45:56.662Z",
   "views": {
     "landing-1440": {
       "links": [
@@ -58,7 +58,7 @@
       "overflow": 0,
       "box": {
         "width": 342,
-        "height": 2437
+        "height": 2393
       },
       "errors": []
     },
