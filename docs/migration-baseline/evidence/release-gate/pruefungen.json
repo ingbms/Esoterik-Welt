@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-03T22:15:22.069Z",
+  "generated_at": "2026-11-03T22:16:59.422Z",
   "card": "t_9c2a7824",
   "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
-  "head_commit": "627c463986456618c96a65f919045d126ab04a57",
+  "head_commit": "debd50e30999ed2113c7d2fa09605fcca59413b7",
   "counts": {
     "design_entries": 277,
     "design_states": 12,
@@ -23,7 +23,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/0 Abweichung/)",
-      "duration_ms": 275
+      "duration_ms": 276
     },
     {
       "id": "M2",
@@ -32,7 +32,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/0 Fehler/)",
-      "duration_ms": 525
+      "duration_ms": 521
     },
     {
       "id": "M3",
@@ -41,7 +41,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/OK\\s+docs\\/migration-baseline\\/content-catalog\\.md/)",
-      "duration_ms": 84
+      "duration_ms": 82
     },
     {
       "id": "M4",
@@ -50,7 +50,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/OK, 0 Warnungen/)",
-      "duration_ms": 174
+      "duration_ms": 189
     },
     {
       "id": "M5",
@@ -59,7 +59,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/\"errors\": 0/)",
-      "duration_ms": 172
+      "duration_ms": 195
     },
     {
       "id": "M6",
@@ -68,7 +68,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/17\\/17 (Pruefungen|Prüfungen) bestanden/)",
-      "duration_ms": 709
+      "duration_ms": 819
     },
     {
       "id": "M7",
@@ -77,7 +77,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/alle Quellen und Nachweise vorhanden/)",
-      "duration_ms": 139
+      "duration_ms": 182
     },
     {
       "id": "M8",
@@ -86,7 +86,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0, Muster bestaetigt (/^OK:/m)",
-      "duration_ms": 153
+      "duration_ms": 201
     },
     {
       "id": "M9",
@@ -95,7 +95,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "39 Routen, 0 nicht gefunden, 0 verlinkt aber nicht katalogisiert",
-      "duration_ms": 46810
+      "duration_ms": 46985
     },
     {
       "id": "M10",
@@ -104,7 +104,7 @@
       "status": "pass",
       "exit_code": 0,
       "detail": "Exit 0",
-      "duration_ms": 9785
+      "duration_ms": 9732
     }
   ],
   "structural_findings": [
