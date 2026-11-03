@@ -14,7 +14,7 @@ Die Kategorie „Frequenzen & Schwingungen“ besteht aus zwei Ansichten derselb
 | Route | Ansicht | Inhalt |
 | --- | --- | --- |
 | `#frequenzen` | Hub | Erklärstück „Was ist Schwingung?“ (308 Wörter), Frequenzbibliothek mit 32 Einträgen, Quellen, dauerhafter Disclaimer |
-| `#frequenzen/labor` | Werkzeug | Frequenz-Slider + Zahlenfeld, Wellenform, Pegel mit sichtbarem Deckel, Play/Stopp, Sweep, Schwebung, Presets, binaurale Demo, 432/440-Vergleich, Oszillogramm |
+| `#frequenzen/labor` | Werkzeug | Frequenz-Slider + Zahlenfeld, Wellenform, Pegel mit sichtbarem Deckel, Play/Pause/Weiter/Stopp, Sweep, Schwebung, Presets, binaurale Demo, 432/440-Vergleich, Oszillogramm |
 | `#frequenzlabor` | Alias | wird per `history.replaceState()` auf `#frequenzen/labor` normalisiert — beim Kaltstart, bei In-Document-Sprüngen und bei Back/Forward |
 
 Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den Bereich.
@@ -23,7 +23,7 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 
 | Datei | Verantwortung |
 | --- | --- |
-| `js/modules/frequenzlabor.js` | Controller/View, 1.018 Zeilen: Rendering beider Ansichten, Events, Fokus, Fehlertexte, Sweep-Fortschritt |
+| `js/modules/frequenzlabor.js` | Controller/View, 1.089 Zeilen: Rendering beider Ansichten, Events, Fokus, Fehlertexte, Pause/Weiter, Sweep-Fortschritt |
 | `js/modules/frequenz-presets.js` | Laden (HTTP `fetch` / eingebettetes JSON), Validierung, Wiedergabe-Mapping, Präferenzen |
 | `js/modules/frequenz-visualisierung.js` | Canvas-Renderer, rAF nur bei laufendem Ton, statische Welle bei reduzierter Bewegung |
 | `js/modules/frequenz-flags.js` | Feature-Flags mit lokalem URL-Override (`?fq=+cymatics,-binaural`) |
@@ -31,7 +31,7 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 | `css/frequenzlabor.css` | `.fq-*`-Styles, ausschließlich Design-Tokens (2.883 B gzip) |
 | `scripts/check-frequenz-budget.cjs` | Budget-Gate NFR-1/2/3 |
 | `tests/frequenz-presets.mjs` | 13 Vertragstests für Mapping, Flags, Storage, Laden |
-| `tests/frequenzlabor.spec.js` | 14 Playwright-Fälle U1–U14 |
+| `tests/frequenzlabor.spec.js` | 16 Playwright-Fälle U1–U16 |
 
 Zehn bestehende Teststellen zählten sechs Startseiten-Karten; sie erwarten jetzt sieben und führen `frequenzen` in der Modul- und Routenliste (ADR §6.6). `tests/astrologie.spec.js` nutzt außerdem wie `playwright.config.cjs` den `E2E_PORT`, statt fest auf 3100 zu zeigen.
 
@@ -44,6 +44,7 @@ Zehn bestehende Teststellen zählten sechs Startseiten-Karten; sie erwarten jetz
 | Wellenform (`#fqWaveform`) | Sinus/Dreieck/Rechteck/Sägezahn; Rechteck und Sägezahn erhalten −6 dB Trim (Engine) | natives `<select>` |
 | Pegel (`#fqGainRange`) | −60 … −6 dBFS, Start −20 dBFS; Deckel als eigenes Label sichtbar; die Engine klemmt zusätzlich selbst | Pfeiltasten |
 | Ton starten / Stopp | `engine.play()` im Klick-Handler (kein `await` davor), Stopp blendet 20 ms aus | Enter/Leertaste |
+| Pause / Weiter (`#fqPause`, ein Umschaltknopf) | „Pause“ ruft `stop()` und merkt den Pause-Zustand im Controller, „Weiter“ ruft `play()` mit den dort gehaltenen Werten; kein dritter Audiozustand, Ansage über `#fqStatus`; „Stopp“ löscht den Pause-Zustand (ADR §4.4, NFR-27) | Enter/Leertaste |
 | Sweep | von/bis/Dauer (0,1–60 s), exponentiell, Fortschrittsbalken mit `role="progressbar"` | Enter auf Start/Abbrechen |
 | Schwebung | Grundton + Differenz → `playTones([f, f+Δ])`, zwei Stimmen mit halbiertem Gain | Enter auf „Schwebung hören“ |
 | Preset-Auswahl | nur hörbare Einträge, Format „Name — Hz (Status)“ | natives `<select>` |
@@ -127,11 +128,11 @@ Screenshots: `hub-360/768/1440.png`, `lab-360/768/1440.png`, `lab-360-scrolled.p
 | Suite | Befehl | Ergebnis |
 | --- | --- | --- |
 | Engine + Presets/Flags | `npm run test:frequenz` | **34 pass, 0 fail** (21 Engine E1–E20, 13 Presets P1–P8) |
-| UI-Browserfälle | `npx playwright test tests/frequenzlabor.spec.js` | **14 pass, 0 fail** (U1–U14) |
+| UI-Browserfälle | `npx playwright test tests/frequenzlabor.spec.js` | **16 pass, 0 fail** (U1–U16; U15/U16 kamen mit `t_b78a89a5`/`t_f2a0868c` hinzu) |
 | Vollständige Browser-Suite | `npx playwright test` | **88 pass, 0 fail** (inkl. Astrologie, Mond, Tarot, Smoke) |
 | Offline-Datei | `npm run test:offline` | **2 pass** (inkl. eingebettetem `#local-frequencies-data`) |
 | Lokaler Einstieg | `node --test tests/local-entry.cjs` | **6 pass, 2 skip** (7 Karten, 6 Module) |
-| Budget | `npm run check:frequenz-budget` | NFR-1 85.605 B / 86.275 B · NFR-2 27.854 B / 100.000 B · NFR-3 2.883 B / 6.000 B |
+| Budget | `npm run check:frequenz-budget` | NFR-1 85.613 B / 86.275 B · NFR-2 28.843 B / 100.000 B · NFR-3 2.903 B / 6.000 B |
 | Lint/Format | `npm run lint`, `npx prettier --check` | 0 Fehler |
 
 Konsole: U1 prüft `console.error`/`pageerror` auf beiden Ansichten. Zusätzlich lief ein eigener Konsolen-Probe über beide Ansichten bei 360/768/1440 px mit Filterwechsel, Preset-Play, Sweep, Schwebung, Binaural, 432-Hz-Vergleich, Wellenform- und Pegelwechsel: **0 Meldungen** (`error`, `warning`, `pageerror`, `requestfailed`).

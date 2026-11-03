@@ -1,4 +1,4 @@
-// Browser-Abnahme des Frequenzlabors (ADR §9.3, U1–U14).
+// Browser-Abnahme des Frequenzlabors (ADR §9.3, U1–U16).
 //
 // Die Tests prüfen die gerenderte Seite, nicht die Engine-Interna: der
 // read-only Debug-Handle (window.EsoterikWelt.frequenz) liefert Zustand und
@@ -282,4 +282,64 @@ test('U15: der Sweep-Start wird in der Live-Region angesagt (NFR-15)', async ({ 
     .poll(() => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status), { timeout: 5000 })
     .toBe('running');
   await page.locator('#fqSweepCancel').click();
+});
+
+test('U16: Pause hält den Ton an, Weiter setzt mit denselben Werten fort (B3/NFR-27)', async ({ page }) => {
+  await openLab(page);
+  // Bewusst verstellte Werte, damit „dieselben Werte“ prüfbar ist.
+  await page.locator('#fqFreqNumber').fill('528');
+  await page.locator('#fqFreqNumber').dispatchEvent('change');
+  await page.locator('#fqGainRange').fill('-14');
+  await page.locator('#fqGainRange').dispatchEvent('input');
+  await expect(page.locator('#fqGainReadout')).toHaveText('−14 dBFS');
+
+  // Vor dem Start ist Pause nicht bedienbar, die Beschriftung bleibt „Pause“.
+  await expect(page.locator('#fqPause')).toHaveText('Pause');
+  await expect(page.locator('#fqPause')).toBeDisabled();
+
+  await page.locator('#fqPlay').click();
+  await expect
+    .poll(() => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status), { timeout: 5000 })
+    .toBe('running');
+  await expect(page.locator('#fqPause')).toBeEnabled();
+  await expect(page.locator('#fqPause')).toHaveText('Pause');
+
+  // Pause = stop(): Audio ist aus, die Einstellungen bleiben im Controller.
+  await page.locator('#fqPause').click();
+  await expect
+    .poll(() => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status), { timeout: 5000 })
+    .toBe('idle');
+  const halted = await page.evaluate(() => window.EsoterikWelt.frequenz.getState());
+  expect(halted.frequenciesHz.length).toBe(0);
+  expect(halted.freqHz).toBeCloseTo(528, 1);
+  expect(halted.gainDb).toBe(-14);
+  await expect(page.locator('#fqPause')).toHaveText('Weiter');
+  await expect(page.locator('#fqPause')).toBeEnabled();
+  await expect(page.locator('#fqStatus')).toContainText('Ton pausiert bei 528 Hz');
+  // Kein dritter Audiozustand: die Live-Anzeige nennt weiterhin nur Engine-Zustände.
+  await expect(page.locator('#fqLiveStatus')).toHaveText('bereit');
+  await expect(page.locator('#fqFreqReadout')).toHaveText('528 Hz');
+
+  // Weiter = play() mit den gemerkten Werten, per Tastatur bedient.
+  await page.locator('#fqPause').focus();
+  await page.keyboard.press('Enter');
+  await expect
+    .poll(() => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status), { timeout: 5000 })
+    .toBe('running');
+  const resumed = await page.evaluate(() => window.EsoterikWelt.frequenz.getState());
+  expect(resumed.freqHz).toBeCloseTo(528, 1);
+  expect(resumed.gainDb).toBe(-14);
+  expect(resumed.frequenciesHz.length).toBe(1);
+  await expect(page.locator('#fqPause')).toHaveText('Pause');
+  await expect(page.locator('#fqStatus')).toContainText('Weiter: Ton läuft: 528 Hz');
+
+  // Stopp beendet die Pause-Bedienung; Pause ist danach wieder inaktiv.
+  await page.locator('#fqPause').click();
+  await expect
+    .poll(() => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status), { timeout: 5000 })
+    .toBe('idle');
+  await page.locator('#fqStop').click();
+  await expect(page.locator('#fqPause')).toHaveText('Pause');
+  await expect(page.locator('#fqPause')).toBeDisabled();
+  await expect(page.locator('#fqStatus')).toContainText('Ton gestoppt.');
 });

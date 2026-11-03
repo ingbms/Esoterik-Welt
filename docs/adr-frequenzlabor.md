@@ -8,6 +8,8 @@
 
 Diese Entscheidung ist bindend. Abweichungen brauchen eine begründete Änderung dieses Dokuments im selben Pull Request, in dem sie entstehen. Der Vertrag in §4 ist die einzige Wahrheit für die Engine; der Code-Block in §4.1 ist bis auf den Dateikopf byte-gleich mit `js/modules/frequenz-engine.d.ts`.
 
+**Änderungsnachweis 2026-11-03 (`t_f2a0868c`, Review `t_a0f14bb2`):** Der Nachtrag in §4.4/§4.5 präzisiert erstens die sichtbare Pause-/Weiter-Bedienung, die der Master-Auftrag §3.2 („Play, Pause und Stop“) fordert und die §4.4 bisher nur als Abbildung auf `stop()` beschrieb, ohne dass die UI sie anbot (Befund B3). Zweitens dokumentiert er vier Festlegungen der Engine-Implementierung (`js/modules/frequenz-engine.js`, PR #5), die von der ursprünglichen Formulierung abweichen (Befund B7). Beides ändert weder den Vertragsblock in §4.1 (weiterhin byte-gleich, 9.395 B) noch die Methodensignaturen; §1 verlangt für solche Abweichungen eine begründete Änderung dieses Dokuments, die hiermit vorliegt.
+
 ---
 
 ## 1. Ziel und Abgrenzung
@@ -603,6 +605,30 @@ Alle Setter sind synchron und dürfen **niemals** einen `AudioContext` erzeugen.
 
 **Pause ist keine Engine-Methode.** Die UI bildet „Pause“ als `stop()` ab und behält die Parameter im Controller; „Weiter“ ruft `play()` mit den gemerkten Werten. Damit gibt es keinen dritten Audiozustand, keine hängenden Oszillatoren und keine Race-Condition zwischen Pause und Stop. Die Buttons werden aus `state.status` abgeleitet und sind während `starting` deaktiviert.
 
+**Nachtrag 2026-11-03 — sichtbare Pause-/Weiter-Bedienung (Review B3, Master-Auftrag §3.2).** Die Transportleiste hat drei Knöpfe; „Pause“ und „Weiter“ sind derselbe Knopf in zwei Beschriftungen:
+
+| Knopf | Beschriftung | Aktiv bei Status | Aktion |
+| --- | --- | --- | --- |
+| `#fqPlay` | „Ton starten“ | `idle`, `error`, `unsupported` | `play()` mit Frequenz, Wellenform und Pegel aus dem Controller |
+| `#fqPause` | „Pause“ | `running`, `starting` | `stop()` (20 ms Ausblenden); der Controller merkt „pausiert“ |
+| `#fqPause` | „Weiter“ | pausiert (Engine `idle`) | `play()` mit den Werten, die der Controller hält |
+| `#fqStop` | „Stopp“ | `running`, `starting`, pausiert | `stop()` und Pause-Merkzeichen löschen |
+
+- Das Pause-Merkzeichen ist reiner UI-Zustand. `state.status` bleibt `idle`; es gibt **keine** dritte Stufe in `STATE_TEXTS`, keine neue Engine-Methode und keinen zusätzlichen Audiozustand.
+- Ansage über `#fqStatus` (`role="status"`, NFR-15): „Ton pausiert bei <Hz>. ‚Weiter‘ setzt mit denselben Werten fort.“ bzw. „Weiter: Ton läuft: <Hz>, <dBFS>.“
+- Beide Knöpfe sind native `<button>` und damit per Enter/Leertaste bedienbar (NFR-13); der Fokus bleibt beim Umschalten der Beschriftung auf dem Knopf.
+- Jedes andere Starten (Preset, Sweep, Schwebung, binaural, 432/440) setzt das Merkzeichen zurück, ebenso jedes Stoppen von außen (`visibilitychange → hidden`, `pagehide`, Routenwechsel über `onHide`).
+- Wird die Frequenz oder der Pegel während der Pause verändert, gilt für „Weiter“ der dann sichtbare Wert: Quelle ist der Controller, nicht ein Schnappschuss vom Pause-Zeitpunkt.
+- Playwright-Fall U16 (§9.3) prüft Pause → `idle` ohne Stimmen, erhaltene Parameter, Ansage, fehlende dritte Statusstufe, Weiter per Tastatur mit denselben Werten und das Zurücksetzen durch „Stopp“.
+
+**Nachtrag 2026-11-03 — vier Festlegungen der Engine-Implementierung (Review B7).** Sie präzisieren §4.3–§4.5, ohne den Vertragsblock (§4.1) oder Signaturen zu ändern; `js/modules/frequenz-engine.js` setzt sie um, `tests/frequenz-engine.mjs` prüft sie:
+
+1. **`mixBus` ist explizit zweikanalig.** `mixBus.channelCount = 2`, `channelCountMode = 'explicit'`, `channelInterpretation = 'speakers'`. Grund: die Analysatorkanäle `left`/`right` sollen auch im Ton-Modus Signal sehen; mit `channelCountMode = 'max'` füllt ein Mono-Oszillator nur einen Kanal. Reine Graph-Detailentscheidung, kein Vertragsbestandteil.
+2. **Aufrufe nach `dispose()` enden mit `context_closed`.** `play()`, `playTones()`, `playBinaural()`, `sweep()` sowie `setFrequency`, `setWaveform`, `setGain` und `setBeatDelta` werfen synchron `FrequencyEngineError('context_closed')`; `stop()` lehnt das Promise damit ab. Grund: ein stiller Erfolg würde einen beendeten Audiozustand vortäuschen; §4.5 lässt `disposed` nur als Endzustand zu. Ausnahmen: `dispose()` ist idempotent, `subscribe()` nimmt weiterhin Listener an (sie werden nicht mehr aufgerufen) und die Leser `getState()`, `getAnalyserData()` und `getSpectrumData()` liefern den letzten Zustand bzw. Nullen.
+3. **`setFrequency()` während eines Sweeps bricht den Sweep ab.** Der Sweep-Promise löst mit `completed: false` auf, der Ton bleibt auf dem neuen Wert. Grund: zwei konkurrierende `AudioParam`-Automationen auf demselben Oszillator sind nicht deterministisch. `cancelSweep()` bleibt der ausdrückliche Weg; ein Setter darf ihn nicht unbemerkt überholen.
+4. **`getFrequencyEngine()` erzeugt nach `dispose()` eine frische Instanz.** Grund: die beendete Instanz würde jeden Start mit `context_closed` ablehnen; das Singleton ist an einen nutzbaren Context gebunden, nicht an das Modul-Lebensende.
+
+
 **Autoplay-Invariante:** `play()` erzeugt den Context synchron vor dem ersten `await`; zwischen dem auslösenden Nutzerereignis und der Context-Erzeugung darf kein `await` liegen. Deshalb werden Preset-Daten beim Betreten der Seite geladen, nicht im Klick-Handler.
 
 **Safari/iOS:** Der Context wird mit `new AudioContext()` erzeugt und sofort `resume()` aufgerufen. Bleibt `ctx.state === 'suspended'`, ist das ein `context_blocked`-Fehler, kein stiller Erfolg.
@@ -617,6 +643,7 @@ Alle Setter sind synchron und dürfen **niemals** einen `AudioContext` erzeugen.
 | `starting` | Resume scheitert | `error` | keine Oszillatoren bleiben zurück |
 | `running` | `stop()` | `idle` | nach `fadeOutMs`; Parameter bleiben |
 | `running` | `sweep()` | `running` (`sweep ≠ null`) | Ende → `running` (`sweep = null`) |
+| `running` (mit Sweep) | `setFrequency()` | `running` (`sweep = null`) | Sweep endet mit `completed: false` (Nachtrag §4.4, Punkt 3) |
 | `running` | `cancelSweep()` | `running` | `SweepResult.completed = false` |
 | `running` | `dispose()` | `disposed` | Context geschlossen |
 | `error` | `play()` | `starting` | neuer Versuch erlaubt |
@@ -987,6 +1014,7 @@ Zusätzlich prüft `tests/pages-regression.cjs` alle dynamischen Importe in `js/
 | NFR-24 | Kein `ScriptProcessorNode`, kein `AudioWorklet`, kein `OfflineAudioContext` im Produktivpfad |
 | NFR-25 | Keine externen Requests, keine Fonts/CDNs/Tracker; `data/frequencies.json` ist same-origin |
 | NFR-26 | `localStorage`-Fehler dürfen die Seite nicht brechen; Schreiben höchstens bei `change`/`blur`, nicht bei jedem `input`-Event |
+| NFR-27 | Sichtbare Pause-/Weiter-Bedienung (Master-Auftrag §3.2, Nachtrag §4.4): „Pause“ = `stop()`, „Weiter“ = `play()` mit den Werten des Controllers, „Stopp“ löscht den Pause-Zustand; kein dritter Audiozustand, keine neue Statusstufe, Ansage über die Live-Region, Tastaturbedienung; Playwright U16 |
 
 ### 7.6 Sicherheit und Datenschutz
 
@@ -1113,11 +1141,13 @@ Fake-Context mit Aufzeichnung aller Aufrufe (`createOscillator`, `createGain`, `
 | U12 | Navigation weg | Audio stoppt (Status `idle`) |
 | U13 | `file://` (`Lokal.html`) | Seite lädt, Presets aus eingebettetem JSON, Play funktioniert nach Klick |
 | U14 | Bundle-Requests | vor `#frequenzen` kein `frequenz-engine.js`-Request |
+| U16 | Pause/Weiter | Pause → Status `idle`, keine Stimmen, Parameter bleiben; „Weiter“ startet mit denselben Werten (Tastatur); keine dritte Statusstufe; „Stopp“ setzt zurück (B3/NFR-27) |
 
 ### 9.4 Abnahme je Ticket
 
 - **`t_2ce71bc5` (Engine):** E1–E20 grün; `npm run test:frequenz`; keine neue Abhängigkeit; Engine exportiert `createFrequencyEngine`, `getFrequencyEngine`, `FREQUENCY_LIMITS`, `WAVEFORM_TRIM_DB`, `FrequencyEngineError`.
-- **`t_6b8164b3` (UI):** U1–U14 grün; `npm run check:frequenz-budget` grün; Lighthouse Accessibility ≥ 95; keine Konsolenfehler; Screenshots 360/768/1440.
+- **`t_6b8164b3` (UI):** U1–U14 grün; `npm run check:frequenz-budget` grün; Lighthouse Accessibility ≥ 95; keine Konsolenfehler; Screenshots 360/768/1440. (U15 kam mit `t_b78a89a5`, U16 mit `t_f2a0868c` hinzu.)
+- **`t_f2a0868c` (Pause/Weiter + ADR-Nachtrag):** U16 grün; Nachtrag in §4.4/§4.5 vorhanden; `npm run test:frequenz`, `npx playwright test tests/frequenzlabor.spec.js` und `npm run lint` grün.
 - **`t_835bd1e9` (QA):** Testplan mit Traceability; Messung nach §9.1/E18; zwei Browser; Autoplay-/Blocked-Szenario dokumentiert.
 - **`t_a0f14bb2` (Review):** Abweichungen vom ADR sind begründet; keine Heilversprechen; Quellen und Disclaimer vorhanden.
 

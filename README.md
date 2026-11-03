@@ -80,13 +80,13 @@ Die Kategorie `#frequenzen` ist der Hub (Erklärstück, Bibliothek, Quellen, Dis
 
 **Wiedergabe-Regeln (ADR §8.2):** Ein gültiges `playback`-Feld gewinnt. Ohne `playback` werden nur die Solfeggio-Töne sowie 432/440 Hz als Einzelton angeboten; `partner_hz` erzeugt zwei Stimmen mit halbiertem Gain. Alles andere — Schumann-Resonanzen, EEG-Bänder, 40-Hz-Stimulation, Obertonreihe, Ultraschall — bleibt `mode: "none"` und wird als „Zahlenwert zur Einordnung“ gekennzeichnet. Die binaurale Schwebung (440/444 Hz) läuft kanalgetrennt, weil der Datenbestand sie so beschreibt.
 
-**Bedienung und Barrierefreiheit:** Frequenz-Slider logarithmisch (20–20.000 Hz) mit gekoppeltem Zahlenfeld und sichtbarer Einheit, Wellenform-Auswahl, Pegel-Slider mit sichtbarem Deckel (−6 dBFS) und Startpegel (−20 dBFS), Play/Stopp, Sweep mit Fortschrittsbalken, Schwebungs-Demo, binaurale Presets und ein 432/440-Vergleich einzelner Sinustöne. Alles ist per Tastatur bedienbar, Statusmeldungen laufen über `role="status"` (maximal eine Ansage pro Sekunde), das Canvas ist `aria-hidden` und hat eine Textentsprechung, Fokus landet nach dem Ansichtswechsel auf der H1, `prefers-reduced-motion` schaltet die Animationsschleife ab. Der Ton stoppt bei jedem Routenwechsel (`onHide`), bei `visibilitychange → hidden` und bei `pagehide`.
+**Bedienung und Barrierefreiheit:** Frequenz-Slider logarithmisch (20–20.000 Hz) mit gekoppeltem Zahlenfeld und sichtbarer Einheit, Wellenform-Auswahl, Pegel-Slider mit sichtbarem Deckel (−6 dBFS) und Startpegel (−20 dBFS), Play/Pause/Weiter/Stopp (Pause und Weiter sind derselbe Umschaltknopf, ohne dritten Audiozustand), Sweep mit Fortschrittsbalken, Schwebungs-Demo, binaurale Presets und ein 432/440-Vergleich einzelner Sinustöne. Alles ist per Tastatur bedienbar, Statusmeldungen laufen über `role="status"` (maximal eine Ansage pro Sekunde), das Canvas ist `aria-hidden` und hat eine Textentsprechung, Fokus landet nach dem Ansichtswechsel auf der H1, `prefers-reduced-motion` schaltet die Animationsschleife ab. Der Ton stoppt bei jedem Routenwechsel (`onHide`), bei `visibilitychange → hidden` und bei `pagehide`.
 
 **Tests und Budget:**
 
 ```bash
 npm run test:frequenz          # Engine (E1–E20) + Presets/Flags (P1–P8)
-npx playwright test tests/frequenzlabor.spec.js   # U1–U14
+npx playwright test tests/frequenzlabor.spec.js   # U1–U16
 npm run check:frequenz-budget  # NFR-1/2/3: Initialgraph, Feature-JS, Feature-CSS
 ```
 
