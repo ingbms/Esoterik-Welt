@@ -363,17 +363,23 @@ test.describe('P10 — Meditationssitzung', () => {
     await page.locator('#fqMedStart').click();
     await expect.poll(status).toBe('running');
     await page.waitForTimeout(1500);
-    const before = await page.evaluate(() => window.EsoterikWelt.frequenz.getState().gainDb);
-    expect(before, 'Pegel liegt nach 1,5 s Einblendung deutlich unter dem Ziel').toBeLessThan(-28);
 
     // Messreihe im Browser: 25-ms-Abtastung erfasst jeden 100-ms-Blendschritt.
-    await page.evaluate(() => {
+    // Referenzpegel und Klick liegen in derselben Aufgabe, sonst läuft die
+    // Einblendung zwischen Referenzmessung und Klick weiter und die Zusicherung
+    // „kein Wert über dem Ausgangspegel“ würde unter Last fälschlich scheitern.
+    const before = await page.evaluate(() => {
+      const engine = window.EsoterikWelt.frequenz;
       window.__gains = [];
       window.__sampler = window.setInterval(() => {
-        window.__gains.push(window.EsoterikWelt.frequenz.getState().gainDb);
+        window.__gains.push(engine.getState().gainDb);
       }, 25);
+      const reference = engine.getState().gainDb;
+      document.querySelector('#fqMedStop').click();
+      return reference;
     });
-    await page.locator('#fqMedStop').click();
+    expect(before, 'Pegel liegt nach 1,5 s Einblendung deutlich unter dem Ziel').toBeLessThan(-28);
+
     await expect.poll(status).toBe('idle');
     const gains = await page.evaluate(() => {
       window.clearInterval(window.__sampler);

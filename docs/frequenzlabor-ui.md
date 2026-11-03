@@ -36,7 +36,7 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 | `tests/frequenzlabor.spec.js` | 15 Playwright-Fälle U1–U15 |
 | `js/modules/frequenz-chladni.js`, `js/modules/frequenz-meditation-model.js` | Folgestufe P9/P10 (DOM-frei) |
 | `js/modules/frequenz-cymatics-view.js`, `js/modules/frequenz-meditation-view.js` | Folgestufe P9/P10 (Ansichten, lazy) |
-| `tests/frequenz-chladni.mjs`, `tests/frequenz-meditation.mjs`, `tests/frequenzlabor-p9-p10.spec.js` | Tests der Folgestufe (C1–C8, M1–M9, Browserfälle) |
+| `tests/frequenz-chladni.mjs`, `tests/frequenz-meditation.mjs`, `tests/frequenzlabor-p9-p10.spec.js` | Tests der Folgestufe (C1–C8, M1–M10, Browserfälle) |
 
 Zehn bestehende Teststellen zählten sechs Startseiten-Karten; sie erwarten jetzt sieben und führen `frequenzen` in der Modul- und Routenliste (ADR §6.6). `tests/astrologie.spec.js` nutzt außerdem wie `playwright.config.cjs` den `E2E_PORT`, statt fest auf 3100 zu zeigen.
 

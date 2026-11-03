@@ -24,7 +24,9 @@ npm run check:frequenz-budget
 | `p10-meditation-desktop.png`, `p10-meditation-mobile.png` | Ansicht bei 1440 × 1000 (ganze Seite) und 360 × 760 |
 | `measure-p9-p10.cjs` | Messskript (liest DOM, Canvas und Netzwerk; steuert nichts) |
 | `measure-nfr2.cjs` | NFR-2 (Feature-JS gesamt) in drei Auscheck-Basen: Arbeitsbaum, frischer CRLF-Klon, CI/LF; mit Revisionsargument direkt aus den Git-Blobs |
+| `measure-lokal.cjs` | Größe von `Lokal.html` commit-gebunden: Blob (LF), reine CRLF-Umrechnung und — bei gleichem Blob im Arbeitsbaum — die Ist-Größe samt Zeilenenden; `node evidence/t_aa849c1c/measure-lokal.cjs . 71b895c 8d8124f feda2c5` |
 | `review-runde2.txt` | Rot-/Grün-Nachweis der Review-Runde 2 (D1–D3): Befehle, Fehlermeldungen, NFR-2-Messreihen über vier Commits, Klon- und CI-Ergebnis |
+| `review-runde3.txt` | Review-Runde 3 (D4/D5): Zählung der Testfälle je Datei, geänderte Doku-Stellen, Offline-Größen über vier Commits, M8-Messreihe und Testhärtung |
 
 ## Ergebnisse (Lauf vom 2026-11-03, Chromium, lokaler Build)
 

@@ -1308,7 +1308,7 @@ Gemessen nach §7.1 (`npm run check:frequenz-budget`, gzip -9):
 
 NFR-2 hängt an den Zeilenenden der Auscheckung, weil das Gate die Dateien so gzippt, wie sie auf der Platte liegen. Alle Varianten sind gemessen und in `docs/frequenzlabor-p9-p10.md` §7 belegt; `evidence/t_aa849c1c/measure-nfr2.cjs` rechnet sie für jeden Stand nach, mit Revisionsargument direkt aus den Git-Blobs (`node evidence/t_aa849c1c/measure-nfr2.cjs . 8d8124f`). Die frühere Angabe „43.472 B“ war ein Arbeitsbaum-Wert und deshalb nicht plattformneutral reproduzierbar; die Zwischenstände 44.168/44.414 B gehörten zu `648910c`.
 
-Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enthält beide Ansichten; `Lokal.html` wächst von 790.818 B auf 826.083 B. `file://` ist geprüft: Bibliothek mit 32 Einträgen, Cymatics zeichnet, Meditation startet und zählt.
+Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enthält beide Ansichten; `Lokal.html` wächst commit-gebunden von **790.818 B** (CRLF-Auscheckung von `71b895c`; Blob 784.220 B) auf **826.792 B** im Arbeitsbaum von `feda2c5` (Blob/LF 820.062 B, reine CRLF-Umrechnung 826.796 B; `8d8124f`: 826.607/819.873 B); nachmessbar mit `node evidence/t_aa849c1c/measure-lokal.cjs . 71b895c 8d8124f feda2c5`. Die frühere Angabe „826.083 B“ war ein zeilenenden-gemischter Zwischenstand vor `c5da9cc`. `file://` ist geprüft: Bibliothek mit 32 Einträgen, Cymatics zeichnet, Meditation startet und zählt.
 
 ### 13.6 N-6: Tests und Barrierefreiheit
 
@@ -1316,7 +1316,7 @@ Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enth
 | --- | --- | --- |
 | Unit (node:test) | `tests/frequenz-chladni.mjs` | C1–C8: Gültigkeit, Antisymmetrie, Spiegelsymmetrie, Normierung, analytische Nulldurchgänge, Textentsprechung, Knotenlinienlage, keine Frequenzaussage |
 | Unit (node:test) | `tests/frequenz-meditation.mjs` | M1–M10: Allowlist, Validierung, Uhr/Restzeit, Fade-Hüllkurve, Speicher-Versionierung, blockierter Speicher, Favoriten-IDs, Wiederaufnahme, Dauern, Ausblenden ab Ist-Pegel |
-| Browser (Playwright) | `tests/frequenzlabor-p9-p10.spec.js` | C1–C6, M1–M11, A1–A4 (axe-core WCAG 2.1 A/AA, Tastatur, 360 px, Lazy-Loading); M6–M8 decken den Ansichtswechsel, die Rückkehr und die Ausblendhüllkurve ab, M11 die Fehlerfreiheit des Ansichtswechsels während einer ausstehenden Ansage (`pageerror`/`console.error` = 0) |
+| Browser (Playwright) | `tests/frequenzlabor-p9-p10.spec.js` | C1–C6, M1–M8, M11, A1–A4 = 19 Fälle (axe-core WCAG 2.1 A/AA, Tastatur, 360 px, Lazy-Loading); M6–M8 decken den Ansichtswechsel, die Rückkehr und die Ausblendhüllkurve ab, M11 die Fehlerfreiheit des Ansichtswechsels während einer ausstehenden Ansage (`pageerror`/`console.error` = 0). Die Nummern M9/M10 sind Unit-Tests der Sitzungslogik und haben keinen Browserfall |
 
 `npm run test:frequenz` führt beide Unit-Suiten mit aus; die CI-Konfiguration bleibt unverändert.
 

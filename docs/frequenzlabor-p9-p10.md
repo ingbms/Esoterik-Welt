@@ -33,7 +33,7 @@ Die Bereichsnavigation (Hub, Labor, Cymatics, Meditation) zeigt einen Link nur, 
 | `css/frequenzlabor.css` | +136 Zeilen `.fq-figures`, `.fq-square`, `.fq-med*`, `.fq-favorite` | – |
 | `tests/frequenz-chladni.mjs` | 8 Modelltests (C1–C8) | – |
 | `tests/frequenz-meditation.mjs` | 10 Vertragstests (M1–M10) | – |
-| `tests/frequenzlabor-p9-p10.spec.js` | 19 Browserfälle (C1–C6, M1–M11, A1–A4) | – |
+| `tests/frequenzlabor-p9-p10.spec.js` | 19 Browserfälle (C1–C6, M1–M8, M11, A1–A4; M9/M10 sind Unit-Tests) | – |
 | `tests/frequenz-presets.mjs` | Flag-Test auf ausgelieferten Zustand und Kill-Switch erweitert | – |
 
 Die beiden Modelle sind DOM-frei und werden in `node --test` als echte ES-Module geprüft (Kopie in ein temporäres Verzeichnis mit eigener `package.json`, wie bei der Engine).
@@ -203,7 +203,7 @@ Nicht maschinell geprüft: manueller Screenreader-Durchlauf, Safari/iOS und ein 
 
 Kernversion `71b895c`, gleiche Messung: 28.007 B gzip-9 (LF) bzw. 28.167 B (CRLF). Die Differenz zur Kernversion ist damit 16.340 B auf LF-Basis und 16.425 B auf CRLF-Basis — die frühere Angabe „43.472 B / +15.305 B“ stammte aus dem Arbeitsbaum und war mit der CRLF-Basis des Kerns vermischt. Frühere Tabellenstände (44.168/44.414 B) gehörten zu `648910c`; seither sind 32 Rohbytes für den Rücksprung-Guard der Ansage hinzugekommen. In jeder Variante liegt der Wert weit unter der Grenze von 100.000 B; das Gate ist nicht zeilenendenabhängig gefährdet.
 
-Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bündelt beide Ansichten in `local.js`; `Lokal.html` wächst von 790.818 B auf 826.083 B. Geprüft mit Chromium über `file://`: Bibliothek mit 32 Einträgen, Cymatics zeichnet Knotenlinien, Meditation startet (Timer 02:59 nach einer Sekunde), `localStorage` funktioniert.
+Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bündelt beide Ansichten in `local.js`. `Lokal.html` wächst von **790.818 B** (CRLF-Auscheckung von `71b895c`; Blob im Index 784.220 B) auf **826.792 B** im Arbeitsbaum von `feda2c5` (Blob/LF 820.062 B; reine CRLF-Umrechnung des Blobs 826.796 B — der Arbeitsbaum hat 6.730 CRLF- und 4 LF-Zeilen, die der Build so schreibt). `8d8124f` liegt bei 826.607 B (CRLF) bzw. 819.873 B (Blob). Nachmessbar mit `node evidence/t_aa849c1c/measure-lokal.cjs . 71b895c 8d8124f feda2c5`; das Skript meldet Blob und — wo derselbe Blob im Arbeitsbaum liegt — dessen Ist-Größe samt Zeilenenden. Die frühere Angabe „826.083 B“ stammte aus einem zeilenenden-gemischten Zwischenstand vor der Neuerzeugung in `c5da9cc` und war aus keinem Commit reproduzierbar. Geprüft mit Chromium über `file://`: Bibliothek mit 32 Einträgen, Cymatics zeichnet Knotenlinien, Meditation startet (Timer 02:59 nach einer Sekunde), `localStorage` funktioniert.
 
 ---
 
@@ -212,7 +212,7 @@ Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bün
 | Suite | Befehl | Ergebnis |
 | --- | --- | --- |
 | Modelle + Engine + Presets/Flags | `npm run test:frequenz` | **52 pass, 0 fail** (34 bestehend + 8 Chladni + 10 Meditation) |
-| Neue Browserfälle | `npx playwright test tests/frequenzlabor-p9-p10.spec.js` | **19 pass, 0 fail** (C1–C6, M1–M11, A1–A4) |
+| Neue Browserfälle | `npx playwright test tests/frequenzlabor-p9-p10.spec.js` | **19 pass, 0 fail** (C1–C6, M1–M8, M11, A1–A4) |
 | Volle Browser-Suite | `E2E_PORT=<frei> CI=1 npx playwright test` | **108 pass, 0 fail** (2,2 min; inkl. U1–U15, Astrologie, Mond, Tarot, Smoke) |
 | Bestehende Frequenzlabor-UI | Teil der vollen Suite | **U1–U15 pass** |
 | Seiten-/Offline-Regression | `npm run test:pages`, `npm run test:local`, `npm run test:offline` | 6 / 12+2 skip / 2 pass |
@@ -220,7 +220,8 @@ Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bün
 | Lint/Format | `npm run lint`, `npm run format:check` | 0 Fehler, alle Dateien formatiert |
 
 Modelltests im Detail: C1 Gültigkeit/Entartung, C2 Antisymmetrie und 180°-Drehung, C3 Spiegelsymmetrie nur bei gleicher Parität, C4 Normierung und Rastergröße, C5 analytische Nulldurchgänge (n=2,m=3 → 3/3; n=4,m=7 → 7/7; n=3,m=5 → Mittelachsen vollständig Knotenlinie), C6 Text ohne Hz-Aussage, C7 Knotenlinien auf dem Nullniveau, C8 keine Frequenzzuordnung im Modul.
-Sitzungstests: M1 Allowlist, M2 Validierung, M3 Uhr/Restzeit, M4 Fade-Hüllkurve, M5 Speicher-Versionierung, M6 blockierter Speicher, M7 Favoriten-IDs/Obergrenze, M8 Wiederaufnahme, M9 Dauern/Fades.
+Sitzungstests (Unit, `tests/frequenz-meditation.mjs`): M1 Allowlist, M2 Validierung, M3 Uhr/Restzeit, M4 Fade-Hüllkurve, M5 Speicher-Versionierung, M6 blockierter Speicher, M7 Favoriten-IDs/Obergrenze, M8 Wiederaufnahme, M9 Dauern/Fades, M10 Ausblenden ab Ist-Pegel.
+Browserfälle der Spec: C1–C6 (P9), M1–M8 und M11 (P10), A1–A4 (Barrierefreiheit, Budget) — 19 Fälle. Die M-Nummern sind je Datei zu lesen: M9/M10 existieren nur als Unit-Tests, M11 nur im Browser (Fehlerfreiheit des Ansichtswechsels während einer ausstehenden Ansage).
 
 Rohdaten und Screenshots: `evidence/t_aa849c1c/` (`measurements.json` mit axe-Ergebnissen, Kontrastwerten, Canvas-Messwerten, Touch-Zielen und Modul-Requests; vier Screenshots bei 1440 px und 360 px; Messskript `measure-p9-p10.cjs`).
 
@@ -277,3 +278,20 @@ Prüfstand der Review: `a18a429`. Die Review fand einen implementierungsseitigen
 Rot-Nachweis auf `a18a429` (Quelldatei `frequenz-meditation-view.js` auf den Commit zurückgesetzt, Build, neue Fälle): M11 scheiterte mit `pageerror: Cannot set properties of undefined (setting 'textContent')` beim Wechsel nach Cymatics nach 300 ms; M6 mit zwei `pageerror` (Wechsel zu Cymatics und zum Hub). Mit `8d8124f` sind M6 und M11 grün, die Folgestufen-Spec läuft mit 19/19.
 
 Nach den Korrekturen: `npm run test:frequenz` 52/52 · Folgestufen-Spec 19/19 (axe `[]` für beide Ansichten) · volle Browser-Suite 108/108 · Lint 0 / Format 0 · Budget-Gate grün (NFR-1 unverändert 85.613 B).
+
+---
+
+## 13. Review Runde 3 — Doku-Korrekturen (D4–D5)
+
+Prüfstand der Review: `feda2c5`. Es wurde **keine Code-Änderung** verlangt; beide Befunde betrafen Benennungen und Messwerte in der Dokumentation.
+
+| Befund | Ursache | Korrektur | Beleg |
+| --- | --- | --- | --- |
+| **D4** Testfall-Bezeichnungen passten nicht zu den Testdateien („C1–C6, M1–M11, A1–A4“ = 21 IDs für 19 Fälle; M9/M10 fehlten in der Unit-Aufzählung; UI-Doku nannte „M1–M9“) | §8 war mit dem Stand vor dem D1-Fix geschrieben und übernahm die Bereiche aus ADR §13.6; die Nummernkreise von Unit- und Browser-Suite sind unabhängig | Bereichsangaben an den Ist-Bestand angeglichen: `tests/frequenzlabor-p9-p10.spec.js` = **C1–C6, M1–M8, M11, A1–A4** (19 Fälle); Unit-Sitzungstests enden mit **M10**; UI-Doku nennt **M1–M10**. Fünf Stellen geändert (§2 Spec-Zeile, §8 Tabelle, §8 Aufzählung, `docs/frequenzlabor-ui.md` §2, ADR §13.6) | eigene Zählung der `test(`-Blöcke in beiden Testdateien: 8 C + 10 M (Unit), 6 C + 8 M + 1 M11 + 4 A = 19 (Browser) |
+| **D5** Offline-Größe „826.083 B“ aus keinem Commit reproduzierbar | Der Wert stammt aus einem zeilenenden-gemischten Zwischenstand **vor** der Neuerzeugung von `Lokal.html` in `c5da9cc` | Zahlen commit-gebunden aus den Git-Blobs (plus CRLF-Auscheckung) erhoben und die Basis benannt: Basis `71b895c` 784.220 B (Blob/LF) bzw. 790.818 B (CRLF) · `8d8124f` 819.873 / 826.607 B · `feda2c5` **820.062 / 826.792 B**. Neues Messskript `evidence/t_aa849c1c/measure-lokal.cjs` (Revisionsargument) | `node evidence/t_aa849c1c/measure-lokal.cjs . 71b895c 8d8124f feda2c5` |
+
+Ohne Befund geblieben ist der Hinweis auf „30-Zeilen-Lazy-Proxy“ in `docs/frequenzlabor-ui.md` §2 (`frequenzlabor-loader.js` hat 37 Zeilen). Die Zeile ist vorbestehend und in diesem PR unverändert; sie wird hier nicht stillschweigend mitgeändert.
+
+**Zusatz aus der Abarbeitung (Test-Stabilität, kein Produktfehler).** Beim Nachlauf der Folgestufen-Spec in einem Durchgang der vollen Suite (parallele Last) schlug **M8** einmal an `Math.max(...gains) ≤ before + 0,5` fehl, einzeln und in zwei weiteren Spec-Läufen jedoch grün. Ursache war die Messanordnung, nicht das Ausblenden: `before` wurde in einem eigenen `page.evaluate` gelesen, der Klick folgte über einen zweiten Protokoll-Umlauf. Während dieser Lücke läuft die Einblendung weiter — gemessen (Sonde, 100-ms-Raster ab 1,5 s Einblendung): −36,478 · −35,918 · −35,391 · −34,895 · −34,425 · −33,979 dBFS, also ≈ 0,5 dB je 100 ms. Bei ≥ 250 ms Abstand liegt die Referenz über 1 dB unter dem Klickpegel, die Zusicherung scheitert dann ohne Fehler im Ausblenden. Der Fall setzt den Messbeginn und den Klick jetzt in **derselben** `page.evaluate`-Aufgabe; die Aussage bleibt unverändert (kein Wert über dem Pegel beim Beenden, monoton fallend, Ende < −55 dBFS). Belegt: M8 einzeln 3/3 grün, Folgestufen-Spec 19/19 in zwei Läufen, volle Suite 108/108 mit dem gehärteten Fall.
+
+Nach den Korrekturen unverändert: `npm run test:frequenz` 52/52 · Folgestufen-Spec 19/19 · volle Browser-Suite 108/108 · Lint 0 / Format 0 · Budget-Gate grün (NFR-1 unverändert 85.613 B). Feature-Code (`js/`, `css/`) ist in Runde 3 unberührt: `git diff feda2c5 -- js/ css/` bleibt leer; geändert sind nur `docs/`, `evidence/` und die Testdatei.
