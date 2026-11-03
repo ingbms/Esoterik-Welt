@@ -1,0 +1,93 @@
+{
+  "binaural8Hz": {
+    "sampleRate": 48000,
+    "samples": 61440,
+    "windowMs": 1280,
+    "resolutionHz": 0.781,
+    "leftRms": 0.035348521257260644,
+    "rightRms": 0.03536254760056901,
+    "leftPeak": [
+      {
+        "hz": 211,
+        "amp": 0.010268
+      },
+      {
+        "hz": 199,
+        "amp": 0.00684
+      },
+      {
+        "hz": 199.5,
+        "amp": 0.00684
+      }
+    ],
+    "rightPeak": [
+      {
+        "hz": 200,
+        "amp": 0.008356
+      },
+      {
+        "hz": 207.5,
+        "amp": 0.007368
+      },
+      {
+        "hz": 208,
+        "amp": 0.007368
+      }
+    ]
+  },
+  "binaural100Hz": {
+    "sampleRate": 48000,
+    "state": {
+      "status": "running",
+      "mode": "binaural",
+      "freqHz": 200,
+      "frequenciesHz": [
+        200,
+        300
+      ],
+      "waveform": "sine",
+      "gainDb": -20,
+      "binaural": {
+        "carrierHz": 200,
+        "deltaHz": 100,
+        "leftHz": 200,
+        "rightHz": 300
+      },
+      "sweep": null,
+      "contextState": "running",
+      "lastError": null,
+      "revision": 6
+    },
+    "leftAt200": 0.016727,
+    "leftAt300": 0.001611,
+    "rightAt200": 0.001017,
+    "rightAt300": 0.023568
+  },
+  "afterStop": {
+    "status": "idle",
+    "leftRms": 0,
+    "rightRms": 0,
+    "statusText": "Binaural: 200 Hz links, 300 Hz rechts. Kopfhörer nötig."
+  },
+  "tabSwitch": {
+    "mode": "headed",
+    "before": {
+      "visibility": "visible",
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS."
+    },
+    "during": {
+      "visibility": "visible",
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS.",
+      "liveStatus": "läuft",
+      "leftRms": 0.07076149454907774,
+      "rightRms": 0.07076149454907774
+    },
+    "after": {
+      "visibility": "visible",
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS."
+    }
+  }
+}

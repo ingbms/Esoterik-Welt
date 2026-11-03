@@ -1,0 +1,658 @@
+[
+  {
+    "engine": "chromium",
+    "browserVersion": "156.0.8078.4",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+    "webAudio": {
+      "AudioContext": "function",
+      "webkitAudioContext": "undefined",
+      "OfflineAudioContext": "function"
+    },
+    "steps": {
+      "initial": {
+        "#fqPlay": {
+          "selector": "#fqPlay",
+          "role": "button",
+          "name": "Ton starten",
+          "properties": {
+            "invalid": "false",
+            "focusable": true
+          }
+        },
+        "#fqStop": {
+          "selector": "#fqStop",
+          "role": "button",
+          "name": "Stopp",
+          "properties": {
+            "disabled": true,
+            "invalid": "false"
+          }
+        },
+        "#fqFreqRange": {
+          "selector": "#fqFreqRange",
+          "role": "slider",
+          "name": "Frequenz, logarithmisch 20–20.000 Hz",
+          "value": 447,
+          "properties": {
+            "invalid": "false",
+            "focusable": true,
+            "valuemin": 0,
+            "valuemax": 1000,
+            "valuetext": "447"
+          }
+        },
+        "#fqFreqNumber": {
+          "selector": "#fqFreqNumber",
+          "role": "spinbutton",
+          "name": "Frequenz in Hz",
+          "value": 440,
+          "properties": {
+            "invalid": "false",
+            "focusable": true,
+            "valuemin": 20,
+            "valuemax": 20000,
+            "valuetext": "440"
+          }
+        },
+        "#fqFreqReadout": {
+          "selector": "#fqFreqReadout",
+          "role": "paragraph",
+          "name": "",
+          "properties": {}
+        },
+        "#fqGainRange": {
+          "selector": "#fqGainRange",
+          "role": "slider",
+          "name": "Lautstärke",
+          "value": -20,
+          "properties": {
+            "invalid": "false",
+            "focusable": true,
+            "valuemin": -60,
+            "valuemax": -6,
+            "valuetext": "-20"
+          }
+        },
+        "#fqGainReadout": {
+          "selector": "#fqGainReadout",
+          "role": "status",
+          "name": "",
+          "properties": {
+            "live": "polite",
+            "atomic": true,
+            "relevant": "additions text",
+            "invalid": "false"
+          }
+        },
+        "#fqSweepStart": {
+          "selector": "#fqSweepStart",
+          "role": "button",
+          "name": "Sweep starten",
+          "properties": {
+            "invalid": "false",
+            "focusable": true
+          }
+        },
+        "#fqSweepCancel": {
+          "selector": "#fqSweepCancel",
+          "role": "button",
+          "name": "Sweep abbrechen",
+          "properties": {
+            "disabled": true,
+            "invalid": "false"
+          }
+        },
+        "#fqSweepProgress": {
+          "selector": "#fqSweepProgress",
+          "role": "none",
+          "properties": {},
+          "invalid": "ignored"
+        },
+        "#fqStatus": {
+          "selector": "#fqStatus",
+          "role": "status",
+          "name": "",
+          "properties": {
+            "live": "polite",
+            "atomic": true,
+            "relevant": "additions text"
+          }
+        },
+        "#fqError": {
+          "selector": "#fqError",
+          "role": "none",
+          "properties": {},
+          "invalid": "ignored"
+        },
+        "dom": {
+          "sliderMin": "0",
+          "sliderMax": "1000",
+          "sliderStep": "1",
+          "sliderValue": "447",
+          "sliderAriaValueText": null,
+          "sliderAriaDescribedby": null,
+          "numberValue": "440",
+          "numberInputmode": "decimal",
+          "numberType": "number",
+          "gainMin": "-60",
+          "gainMax": "-6",
+          "gainValue": "-20",
+          "gainAriaValueText": null,
+          "statusRole": "status",
+          "statusLive": "polite",
+          "errorRole": "alert",
+          "errorHidden": true,
+          "playDisabled": false,
+          "labels": [
+            {
+              "id": "fqFreqRange",
+              "label": "Frequenz, logarithmisch 20–20.000 Hz"
+            },
+            {
+              "id": "fqFreqNumber",
+              "label": "Frequenz in Hz"
+            },
+            {
+              "id": "fqGainRange",
+              "label": "Lautstärke"
+            }
+          ]
+        }
+      },
+      "afterPlay": {
+        "status": "Ton läuft: 440 Hz, −20 dBFS.",
+        "error": "",
+        "errorHidden": true,
+        "engineState": {
+          "status": "running",
+          "mode": "tone",
+          "freqHz": 440,
+          "frequenciesHz": [
+            440
+          ],
+          "waveform": "sine",
+          "gainDb": -20,
+          "binaural": null,
+          "sweep": null,
+          "contextState": "running",
+          "lastError": null,
+          "revision": 3
+        },
+        "leftRms": 0.07048075607260694
+      },
+      "afterStop": {
+        "status": "Ton gestoppt.",
+        "errorHidden": true,
+        "engineState": {
+          "status": "idle",
+          "mode": null,
+          "freqHz": 440,
+          "frequenciesHz": [],
+          "waveform": "sine",
+          "gainDb": -20,
+          "binaural": null,
+          "sweep": null,
+          "contextState": "running",
+          "lastError": null,
+          "revision": 4
+        }
+      },
+      "sliderKeys": {
+        "sliderValue": "449",
+        "numberValue": "444.7",
+        "readout": "444,7 Hz",
+        "ax": {
+          "selector": "#fqFreqRange",
+          "role": "slider",
+          "name": "Frequenz, logarithmisch 20–20.000 Hz",
+          "value": 449,
+          "properties": {
+            "invalid": "false",
+            "focusable": true,
+            "valuemin": 0,
+            "valuemax": 1000,
+            "valuetext": "449"
+          }
+        }
+      },
+      "sweepStart": {
+        "status": "Sweep beendet bei 800 Hz.",
+        "progress": {
+          "valueNow": "0",
+          "wrapHidden": true
+        },
+        "ax": {
+          "selector": "#fqSweepProgress",
+          "role": "none",
+          "properties": {},
+          "invalid": "ignored"
+        }
+      },
+      "sweepEnd": {
+        "status": "Sweep beendet bei 800 Hz."
+      },
+      "invalidNumber": {
+        "status": "Diese Frequenz ist ungültig. Erlaubt sind 20 bis 20.000 Hz.",
+        "error": "Diese Frequenz ist ungültig. Erlaubt sind 20 bis 20.000 Hz.",
+        "errorHidden": false,
+        "numberValue": "800",
+        "ax": {
+          "selector": "#fqError",
+          "role": "alert",
+          "name": "",
+          "properties": {
+            "live": "assertive",
+            "atomic": true,
+            "relevant": "additions text"
+          }
+        }
+      },
+      "hub": {
+        "badgeCount": 32,
+        "badges": [
+          "Belegt",
+          "Belegt",
+          "Belegt",
+          "Belegt",
+          "Belegt",
+          "Belegt"
+        ],
+        "badgeColorOnly": {
+          "color": "rgb(157, 179, 164)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "hasText": true
+        },
+        "firstEntryAx": {
+          "selector": ".fq-badge",
+          "role": "none",
+          "properties": {},
+          "invalid": "ignored"
+        }
+      }
+    },
+    "console": [
+      "warning: Frequenzlabor: {code: invalid_frequency}"
+    ],
+    "pageErrors": []
+  },
+  {
+    "engine": "firefox",
+    "browserVersion": "157.0",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+    "webAudio": {
+      "AudioContext": "function",
+      "webkitAudioContext": "undefined",
+      "OfflineAudioContext": "function"
+    },
+    "steps": {
+      "initial": {
+        "#fqPlay": {
+          "selector": "#fqPlay",
+          "ariaSnapshot": "- button \"Ton starten\""
+        },
+        "#fqStop": {
+          "selector": "#fqStop",
+          "ariaSnapshot": "- button \"Stopp\" [disabled]"
+        },
+        "#fqFreqRange": {
+          "selector": "#fqFreqRange",
+          "ariaSnapshot": "- slider \"Frequenz, logarithmisch 20–20.000 Hz\": \"447\""
+        },
+        "#fqFreqNumber": {
+          "selector": "#fqFreqNumber",
+          "ariaSnapshot": "- spinbutton \"Frequenz in Hz\": \"440\""
+        },
+        "#fqFreqReadout": {
+          "selector": "#fqFreqReadout",
+          "ariaSnapshot": "- paragraph: 440 Hz"
+        },
+        "#fqGainRange": {
+          "selector": "#fqGainRange",
+          "ariaSnapshot": "- slider \"Lautstärke\": \"-20\""
+        },
+        "#fqGainReadout": {
+          "selector": "#fqGainReadout",
+          "ariaSnapshot": "- status: −20 dBFS"
+        },
+        "#fqSweepStart": {
+          "selector": "#fqSweepStart",
+          "ariaSnapshot": "- button \"Sweep starten\""
+        },
+        "#fqSweepCancel": {
+          "selector": "#fqSweepCancel",
+          "ariaSnapshot": "- button \"Sweep abbrechen\" [disabled]"
+        },
+        "#fqSweepProgress": {
+          "selector": "#fqSweepProgress",
+          "ariaSnapshot": ""
+        },
+        "#fqStatus": {
+          "selector": "#fqStatus",
+          "ariaSnapshot": "- status"
+        },
+        "#fqError": {
+          "selector": "#fqError",
+          "ariaSnapshot": ""
+        },
+        "dom": {
+          "sliderMin": "0",
+          "sliderMax": "1000",
+          "sliderStep": "1",
+          "sliderValue": "447",
+          "sliderAriaValueText": null,
+          "sliderAriaDescribedby": null,
+          "numberValue": "440",
+          "numberInputmode": "decimal",
+          "numberType": "number",
+          "gainMin": "-60",
+          "gainMax": "-6",
+          "gainValue": "-20",
+          "gainAriaValueText": null,
+          "statusRole": "status",
+          "statusLive": "polite",
+          "errorRole": "alert",
+          "errorHidden": true,
+          "playDisabled": false,
+          "labels": [
+            {
+              "id": "fqFreqRange",
+              "label": "Frequenz, logarithmisch 20–20.000 Hz"
+            },
+            {
+              "id": "fqFreqNumber",
+              "label": "Frequenz in Hz"
+            },
+            {
+              "id": "fqGainRange",
+              "label": "Lautstärke"
+            }
+          ]
+        }
+      },
+      "afterPlay": {
+        "status": "Ton läuft: 440 Hz, −20 dBFS.",
+        "error": "",
+        "errorHidden": true,
+        "engineState": {
+          "status": "running",
+          "mode": "tone",
+          "freqHz": 440,
+          "frequenciesHz": [
+            440
+          ],
+          "waveform": "sine",
+          "gainDb": -20,
+          "binaural": null,
+          "sweep": null,
+          "contextState": "running",
+          "lastError": null,
+          "revision": 3
+        },
+        "leftRms": 0.07047444301826968
+      },
+      "afterStop": {
+        "status": "Ton gestoppt.",
+        "errorHidden": true,
+        "engineState": {
+          "status": "idle",
+          "mode": null,
+          "freqHz": 440,
+          "frequenciesHz": [],
+          "waveform": "sine",
+          "gainDb": -20,
+          "binaural": null,
+          "sweep": null,
+          "contextState": "running",
+          "lastError": null,
+          "revision": 4
+        }
+      },
+      "sliderKeys": {
+        "sliderValue": "449",
+        "numberValue": "444.7",
+        "readout": "444,7 Hz",
+        "ax": {
+          "selector": "#fqFreqRange",
+          "ariaSnapshot": "- slider \"Frequenz, logarithmisch 20–20.000 Hz\": \"449\""
+        }
+      },
+      "sweepStart": {
+        "status": "Sweep beendet bei 800 Hz.",
+        "progress": {
+          "valueNow": "0",
+          "wrapHidden": true
+        },
+        "ax": {
+          "selector": "#fqSweepProgress",
+          "ariaSnapshot": ""
+        }
+      },
+      "sweepEnd": {
+        "status": "Sweep beendet bei 800 Hz."
+      },
+      "invalidNumber": {
+        "status": "Diese Frequenz ist ungültig. Erlaubt sind 20 bis 20.000 Hz.",
+        "error": "Diese Frequenz ist ungültig. Erlaubt sind 20 bis 20.000 Hz.",
+        "errorHidden": false,
+        "numberValue": "800",
+        "ax": {
+          "selector": "#fqError",
+          "ariaSnapshot": "- alert: Diese Frequenz ist ungültig. Erlaubt sind 20 bis 20.000 Hz."
+        }
+      },
+      "hub": {
+        "badgeCount": 32,
+        "badges": [
+          "Belegt",
+          "Belegt",
+          "Belegt",
+          "Belegt",
+          "Belegt",
+          "Belegt"
+        ],
+        "badgeColorOnly": {
+          "color": "rgb(157, 179, 164)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "hasText": true
+        },
+        "firstEntryAx": null
+      }
+    },
+    "console": [
+      "warning: Frequenzlabor: JSHandle@object"
+    ],
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "fatal": "page.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#fqStop')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled id=\"fqStop\" type=\"button\" class=\"btn btn-secondary\">Stopp</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    45 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at runEngine (C:\\Users\\mas\\Arbeit\\Esoterik-Welt-a5\\evidence\\t_4a8106de\\probes\\ax-probe.mjs:154:14)\n    at async file:///C:/Users/mas/Arbeit/Esoterik-Welt-a5/evidence/t_4a8106de/probes/ax-probe.mjs:233:18"
+  },
+  {
+    "engine": "chromium-mobile",
+    "browserVersion": "156.0.8078.4",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+    "webAudio": {
+      "AudioContext": "function",
+      "webkitAudioContext": "undefined",
+      "OfflineAudioContext": "function"
+    },
+    "steps": {
+      "initial": {
+        "#fqPlay": {
+          "selector": "#fqPlay",
+          "ariaSnapshot": "- button \"Ton starten\""
+        },
+        "#fqStop": {
+          "selector": "#fqStop",
+          "ariaSnapshot": "- button \"Stopp\" [disabled]"
+        },
+        "#fqFreqRange": {
+          "selector": "#fqFreqRange",
+          "ariaSnapshot": "- slider \"Frequenz, logarithmisch 20–20.000 Hz\": \"447\""
+        },
+        "#fqFreqNumber": {
+          "selector": "#fqFreqNumber",
+          "ariaSnapshot": "- spinbutton \"Frequenz in Hz\": \"440\""
+        },
+        "#fqFreqReadout": {
+          "selector": "#fqFreqReadout",
+          "ariaSnapshot": "- paragraph: 440 Hz"
+        },
+        "#fqGainRange": {
+          "selector": "#fqGainRange",
+          "ariaSnapshot": "- slider \"Lautstärke\": \"-20\""
+        },
+        "#fqGainReadout": {
+          "selector": "#fqGainReadout",
+          "ariaSnapshot": "- status: −20 dBFS"
+        },
+        "#fqSweepStart": {
+          "selector": "#fqSweepStart",
+          "ariaSnapshot": "- button \"Sweep starten\""
+        },
+        "#fqSweepCancel": {
+          "selector": "#fqSweepCancel",
+          "ariaSnapshot": "- button \"Sweep abbrechen\" [disabled]"
+        },
+        "#fqSweepProgress": {
+          "selector": "#fqSweepProgress",
+          "ariaSnapshot": ""
+        },
+        "#fqStatus": {
+          "selector": "#fqStatus",
+          "ariaSnapshot": "- status"
+        },
+        "#fqError": {
+          "selector": "#fqError",
+          "ariaSnapshot": ""
+        },
+        "dom": {
+          "sliderMin": "0",
+          "sliderMax": "1000",
+          "sliderStep": "1",
+          "sliderValue": "447",
+          "sliderAriaValueText": null,
+          "sliderAriaDescribedby": null,
+          "numberValue": "440",
+          "numberInputmode": "decimal",
+          "numberType": "number",
+          "gainMin": "-60",
+          "gainMax": "-6",
+          "gainValue": "-20",
+          "gainAriaValueText": null,
+          "statusRole": "status",
+          "statusLive": "polite",
+          "errorRole": "alert",
+          "errorHidden": true,
+          "playDisabled": false,
+          "labels": [
+            {
+              "id": "fqFreqRange",
+              "label": "Frequenz, logarithmisch 20–20.000 Hz"
+            },
+            {
+              "id": "fqFreqNumber",
+              "label": "Frequenz in Hz"
+            },
+            {
+              "id": "fqGainRange",
+              "label": "Lautstärke"
+            }
+          ]
+        }
+      },
+      "afterPlay": {
+        "status": "Ton läuft: 440 Hz, −20 dBFS.",
+        "error": "",
+        "errorHidden": true,
+        "engineState": {
+          "status": "running",
+          "mode": "tone",
+          "freqHz": 440,
+          "frequenciesHz": [
+            440
+          ],
+          "waveform": "sine",
+          "gainDb": -20,
+          "binaural": null,
+          "sweep": null,
+          "contextState": "running",
+          "lastError": null,
+          "revision": 3
+        },
+        "leftRms": 0.07077087347402497
+      },
+      "afterStop": {
+        "status": "Ton gestoppt.",
+        "errorHidden": true,
+        "engineState": {
+          "status": "idle",
+          "mode": null,
+          "freqHz": 440,
+          "frequenciesHz": [],
+          "waveform": "sine",
+          "gainDb": -20,
+          "binaural": null,
+          "sweep": null,
+          "contextState": "running",
+          "lastError": null,
+          "revision": 4
+        }
+      },
+      "sliderKeys": {
+        "sliderValue": "449",
+        "numberValue": "444.7",
+        "readout": "444,7 Hz",
+        "ax": {
+          "selector": "#fqFreqRange",
+          "ariaSnapshot": "- slider \"Frequenz, logarithmisch 20–20.000 Hz\": \"449\""
+        }
+      },
+      "sweepStart": {
+        "status": "Sweep beendet bei 800 Hz.",
+        "progress": {
+          "valueNow": "0",
+          "wrapHidden": true
+        },
+        "ax": {
+          "selector": "#fqSweepProgress",
+          "ariaSnapshot": ""
+        }
+      },
+      "sweepEnd": {
+        "status": "Sweep beendet bei 800 Hz."
+      },
+      "invalidNumber": {
+        "status": "Diese Frequenz ist ungültig. Erlaubt sind 20 bis 20.000 Hz.",
+        "error": "Diese Frequenz ist ungültig. Erlaubt sind 20 bis 20.000 Hz.",
+        "errorHidden": false,
+        "numberValue": "800",
+        "ax": {
+          "selector": "#fqError",
+          "ariaSnapshot": "- alert: Diese Frequenz ist ungültig. Erlaubt sind 20 bis 20.000 Hz."
+        }
+      },
+      "hub": {
+        "badgeCount": 32,
+        "badges": [
+          "Belegt",
+          "Belegt",
+          "Belegt",
+          "Belegt",
+          "Belegt",
+          "Belegt"
+        ],
+        "badgeColorOnly": {
+          "color": "rgb(157, 179, 164)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "hasText": true
+        },
+        "firstEntryAx": null
+      }
+    },
+    "console": [
+      "warning: Frequenzlabor: {code: invalid_frequency}"
+    ],
+    "pageErrors": []
+  }
+]
