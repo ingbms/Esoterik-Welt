@@ -14,6 +14,7 @@ const VIEW = {
   methodik: 'methodik',
   suche: 'suche',
   labor: 'labor',
+  studio: 'studio',
   notfound: 'notfound',
 };
 
@@ -107,6 +108,11 @@ export function createModel(raw) {
       // geschrieben, damit ein Deep-Link nie eine andere Bewegung vortäuscht.
       case 'labor':
         return { view: VIEW.labor, params };
+      // Werkstatt-Route des Pendeltafel-Studios (RAD-08). Ebenfalls ohne
+      // Query-Zustand: die Tafel entsteht im Browser aus Vorlage, Text und
+      // Farbstil; eine URL würde nur einen fremden Stand vortäuschen.
+      case 'studio':
+        return { view: VIEW.studio, params };
       case 'suche':
         return { view: VIEW.suche, q: params.get('q') || '', params };
       default:

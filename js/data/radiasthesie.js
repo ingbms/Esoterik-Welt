@@ -253,7 +253,7 @@ export const RADIASTHESIE = {
         'Pendeln: Geschichte seit 371 n. Chr., Arten, Antwortkonventionen und Mechanik — kontrollierte Tests und offene Fragen, ohne Wirkungsversprechen.',
       heading: 'Pendeln: Von Ammianus Marcellinus bis zur modernen Praxis',
       lead: 'Ein Pendel in der Radiästhesie-Praktik besteht meist aus einem Kegel oder einer Kugel (2–3 cm Körper), an einer 15–30 cm langen Schnur hängend [Q09]. Die Anwendung folgt einer Konvention: Frage formulieren, Pendel ruhig halten (meist über einer Tafel, über dem Körper oder über einer Karte), Bewegung beobachten — entweder Kreis, Oval, oder Pendelbewegung als „Ja“ oder „Nein“. Für mehr Antwortmöglichkeiten dienen **Pendeldiagramme** (Ja/Nein, Zahlenkreis, Buchstabenfeld, Segmenttafeln) [Q09].',
-      wordCount: 934,
+      wordCount: 936,
       chapterCount: 10,
       figure: {
         src: 'assets/radiasthesie/pendeltafel.svg',
@@ -263,7 +263,7 @@ export const RADIASTHESIE = {
       },
       cardText:
         'Pendelarten, Materialien, Tafeln und Skalen. Woher die Bovis-Skala kommt, warum sie keine SI-Einheit ist und wie ein Pendel mechanisch schwingt.',
-      facts: ['Pendelarten und Materialien', 'Pendeltafeln und Bovis-Skalen', 'Pendellabor (in Vorbereitung)'],
+      facts: ['Pendelarten und Materialien', 'Pendeltafeln und Bovis-Skalen', 'Pendellabor und Tafel-Studio'],
       sections: [
         {
           id: 'was',
@@ -314,10 +314,10 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
-              text: 'Die **Pendeltafel** (auch Pendeldiagramm) ist ein zentrales Element: Sie strukturiert die mögliche Antwort in Ja/Nein, Zahlen, Buchstaben oder Segmenten und ermöglicht so komplexere Fragen [Q09]. Ein interaktives Tafel-Studio, das die Konvention zeigt — nicht als Demonstration der Wirksamkeit —, ist in Vorbereitung.',
+              text: 'Die **Pendeltafel** (auch Pendeldiagramm) ist ein zentrales Element: Sie strukturiert die mögliche Antwort in Ja/Nein, Zahlen, Buchstaben oder Segmenten und ermöglicht so komplexere Fragen [Q09]. Das Tafel-Studio in der Werkstatt setzt diese Konvention als Gestaltung um — als Ordnungsschema, nicht als Demonstration der Wirksamkeit.',
             },
           ],
-          words: 86,
+          words: 88,
         },
         {
           id: 'lernen',
@@ -733,7 +733,7 @@ export const RADIASTHESIE = {
         metaLine: 'Thema 2 · Praxis',
         title: 'Pendeln',
         text: 'Pendelarten, Materialien, Tafeln und Skalen. Woher die Bovis-Skala kommt, warum sie keine SI-Einheit ist und wie ein Pendel mechanisch schwingt.',
-        facts: ['Pendelarten und Materialien', 'Pendeltafeln und Bovis-Skalen', 'Pendellabor (in Vorbereitung)'],
+        facts: ['Pendelarten und Materialien', 'Pendeltafeln und Bovis-Skalen', 'Pendellabor und Tafel-Studio'],
         figure: {
           src: 'assets/radiasthesie/pendeltafel.svg',
           alt: 'Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10.',
@@ -764,9 +764,10 @@ export const RADIASTHESIE = {
         href: '#pendeln/labor',
       },
       {
-        state: 'In Vorbereitung',
+        state: 'Verfügbar',
         title: 'Pendeltafel-Studio',
         text: 'Tafeln beschriften, Farbstil wählen, als SVG oder Druckvorlage ausgeben.',
+        href: '#pendeln/studio',
       },
       {
         state: 'In Vorbereitung',

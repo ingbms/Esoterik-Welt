@@ -30,6 +30,10 @@ export const ROUTE = {
   suche: (q) => (q ? `#pendeln/suche?q=${encodeURIComponent(q)}` : '#pendeln/suche'),
   // Werkstatt Pendellabor (RAD-07). Reine Seite, kein Query-Zustand.
   labor: '#pendeln/labor',
+  // Werkstatt Pendeltafel-Studio (RAD-08). Reine Seite, kein Query-Zustand:
+  // die Tafel wird im Browser zusammengestellt und nicht in die Adresse
+  // geschrieben.
+  studio: '#pendeln/studio',
 };
 
 // --- Kennzeichnung --------------------------------------------------------

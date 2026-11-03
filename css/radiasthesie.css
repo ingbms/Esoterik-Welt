@@ -1374,3 +1374,606 @@
 #psim-modell .rad-plate {
   max-width: 680px;
 }
+
+/* ============================================================================
+   Pendeltafel-Studio (RAD-08)
+   ----------------------------------------------------------------------------
+   Werkstattfläche aus zwei Spalten: links Bedienung, rechts die Vorschau, die
+   zugleich die Exportdatei ist. Darunter die A4-Druckansicht. Alle Farben und
+   Abstände kommen aus css/design-system.css; die Farbstile selbst sind Daten
+   in js/modules/pendeltafel-model.js und werden hier nur als Muster gezeigt.
+   ============================================================================ */
+
+.ptf-section {
+  margin-top: var(--space-8);
+}
+
+.ptf {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: var(--space-6);
+  align-items: start;
+  margin: var(--space-6) 0 var(--space-8);
+}
+
+.ptf-editor {
+  display: grid;
+  gap: var(--space-5);
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.ptf-fieldset {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ptf-fieldset legend {
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.ptf-control {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.ptf-control label {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.ptf-control select,
+.ptf-control input[type='text'],
+.ptf-control input[type='file'],
+.ptf-control textarea {
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.ptf-control textarea {
+  font-family: var(--font-mono);
+  resize: vertical;
+}
+
+.ptf-control input[type='file'] {
+  padding: var(--space-2);
+  font-size: var(--text-xs);
+}
+
+.ptf-control select:focus-visible,
+.ptf-control input:focus-visible,
+.ptf-control textarea:focus-visible,
+.ptf-choice input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.ptf-control [aria-invalid='true'] {
+  border-color: var(--color-accent-rose);
+}
+
+.ptf-hint {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.ptf-error {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-accent-rose);
+}
+
+.ptf-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.ptf-choice {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  min-height: 44px;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.ptf-choice:hover {
+  background: var(--color-bg-card-hover);
+}
+
+.ptf-choice:has(input:checked) {
+  border-color: var(--color-primary);
+}
+
+.ptf-choice input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--color-primary);
+}
+
+.ptf-choice-body {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.ptf-choice-head {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.ptf-choice-name {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.ptf-choice-note {
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.ptf-swatch {
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+  flex: 0 0 auto;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 999px;
+}
+
+.ptf-swatch--messing {
+  background: #141c1f;
+  box-shadow: inset 0 0 0 3px #c6b38e;
+}
+
+.ptf-swatch--salbei {
+  background: #101a17;
+  box-shadow: inset 0 0 0 3px #9db3a4;
+}
+
+.ptf-swatch--nacht {
+  background: #0d141b;
+  box-shadow: inset 0 0 0 3px #c09489;
+}
+
+.ptf-swatch--papier {
+  background: #fbf9f4;
+  box-shadow: inset 0 0 0 3px #6b5b3e;
+}
+
+.ptf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.ptf-actions .btn {
+  min-height: 44px;
+}
+
+.ptf-import {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-deep);
+}
+
+.ptf-import summary {
+  min-height: 44px;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.ptf-import-body {
+  display: grid;
+  gap: var(--space-4);
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.ptf-import-body .btn {
+  justify-self: start;
+  min-height: 44px;
+}
+
+.ptf-errors {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-8);
+  border-left: 2px solid var(--color-accent-rose);
+  background: color-mix(in srgb, var(--color-accent-rose) 10%, transparent);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+.ptf-errors[hidden] {
+  display: none;
+}
+
+.ptf-status {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-deep);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.ptf-preview {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  min-width: 0;
+  position: sticky;
+  top: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+}
+
+.ptf-preview h3 {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.ptf-canvas {
+  min-width: 0;
+  background: var(--color-bg-deep);
+  border: 1px solid var(--color-border);
+}
+
+.ptf-canvas svg,
+.ptf-sheet-board svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ptf-printblock {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  justify-items: stretch;
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.ptf-printblock h3 {
+  margin: 0;
+}
+
+.ptf-print-note {
+  max-width: 70ch;
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+/* A4-Vorschau: dieselbe Fläche, die gedruckt wird. Die Farben folgen dem
+   gewählten Farbstil, damit die Vorschau nicht schönt. */
+.ptf-sheet {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 210 / 297;
+  margin-inline: auto;
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  background: #141c1f;
+  color: #eae6dc;
+}
+
+.ptf-sheet[data-ptf-palette='salbei'] {
+  background: #101a17;
+  color: #e7eee8;
+}
+
+.ptf-sheet[data-ptf-palette='nacht'] {
+  background: #0d141b;
+  color: #e8e6e1;
+}
+
+.ptf-sheet[data-ptf-palette='papier'] {
+  background: #fbf9f4;
+  color: #2b2a26;
+}
+
+.ptf-sheet-head {
+  display: grid;
+  gap: var(--space-1);
+}
+
+/* Die Druckoptimierung des Hauptstylesheets setzt p-Farben auf Schwarz.
+   Innerhalb der Tafel gilt die Farbe des Farbstils, sonst wäre die
+   Überschrift auf dunklem Grund im PDF unsichtbar. */
+.ptf-sheet .ptf-sheet-kicker,
+.ptf-sheet .ptf-sheet-title,
+.ptf-sheet .ptf-sheet-foot,
+.ptf-sheet .ptf-sheet-foot p {
+  color: inherit;
+}
+
+.ptf-sheet-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.ptf-sheet-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.ptf-sheet-board {
+  align-self: center;
+  min-width: 0;
+}
+
+.ptf-sheet-foot {
+  display: grid;
+  gap: var(--space-1);
+  font-size: 0.66rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.ptf-sheet-foot p {
+  margin: 0;
+}
+
+.ptf-export-list {
+  display: grid;
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.ptf-export-list > div {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-left: 2px solid var(--color-primary);
+  background: var(--color-bg-card);
+}
+
+.ptf-export-list dt {
+  margin-bottom: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.ptf-export-list dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1000px) {
+  .ptf {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ptf-preview {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .ptf-editor,
+  .ptf-preview {
+    padding: var(--space-4);
+  }
+  .ptf-choices {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ptf-sheet {
+    padding: var(--space-4);
+  }
+}
+
+/* Druck: Es bleibt genau die A4-Fläche übrig. Die Regeln gelten nur, solange
+   das Studio gerendert ist (html.ptf-print-active), damit der Ausdruck anderer
+   Seiten unverändert bleibt. Statt visibility werden die Boxen ausgeblendet:
+   sonst würde die lange, unsichtbare Seite in mehrere leere Blätter zerfallen. */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html.ptf-print-active,
+  html.ptf-print-active body {
+    background: #ffffff;
+  }
+
+  /* Nur die Kette vom Dokument bis zur Tafel bleibt als Box bestehen. */
+  html.ptf-print-active body > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active body > main {
+    display: block !important;
+  }
+
+  html.ptf-print-active main > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active main > #pendeln {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Kein Rand und kein Innenabstand auf dem Weg zur Tafel: ein einziges
+     Millimeter zu viel erzeugt sonst ein zweites, leeres Blatt. */
+  html.ptf-print-active body,
+  html.ptf-print-active main,
+  html.ptf-print-active #pendeln,
+  html.ptf-print-active #pendeln > .container,
+  html.ptf-print-active #pendelnRoot,
+  html.ptf-print-active #pendelnRoot > .rad,
+  html.ptf-print-active .rad > .ptf-section,
+  html.ptf-print-active .ptf-section > .ptf-printblock {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+  }
+
+  html.ptf-print-active #pendeln > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active #pendeln > .container {
+    display: block !important;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  html.ptf-print-active .container > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active .container > #pendelnRoot {
+    display: block !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  html.ptf-print-active #pendelnRoot > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active #pendelnRoot > .rad {
+    display: block !important;
+  }
+
+  html.ptf-print-active .rad > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active .rad > .ptf-section {
+    display: block !important;
+    margin: 0;
+  }
+
+  html.ptf-print-active .ptf-section > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active .ptf-section > .ptf-printblock {
+    display: grid !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  html.ptf-print-active .ptf-printblock > * {
+    display: none !important;
+  }
+
+  html.ptf-print-active .ptf-printblock > .ptf-sheet {
+    display: grid !important;
+    width: 210mm;
+    height: 296mm;
+    max-width: none;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 16mm 18mm;
+    border: 0;
+    box-shadow: none;
+    overflow: hidden;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Das Hauptstylesheet setzt im Druck p, span und a auf Schwarz (!important).
+     Innerhalb der Tafel gilt die Farbe des Farbstils — sonst wäre die
+     Überschrift auf dunklem Grund im PDF nicht lesbar. */
+  html.ptf-print-active .ptf-sheet {
+    color: #eae6dc !important;
+  }
+
+  html.ptf-print-active .ptf-sheet[data-ptf-palette='salbei'] {
+    color: #e7eee8 !important;
+  }
+
+  html.ptf-print-active .ptf-sheet[data-ptf-palette='nacht'] {
+    color: #e8e6e1 !important;
+  }
+
+  html.ptf-print-active .ptf-sheet[data-ptf-palette='papier'] {
+    color: #2b2a26 !important;
+  }
+
+  html.ptf-print-active .ptf-sheet * {
+    color: inherit !important;
+  }
+
+  html.ptf-print-active .ptf-sheet-board svg {
+    width: 100%;
+    height: auto;
+    max-height: 196mm;
+  }
+
+  html.ptf-print-active .ptf-sheet-title {
+    font-size: 20pt;
+  }
+
+  html.ptf-print-active .ptf-sheet-foot,
+  html.ptf-print-active .ptf-sheet-kicker {
+    font-size: 8pt;
+  }
+}

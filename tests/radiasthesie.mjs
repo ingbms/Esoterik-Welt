@@ -22,6 +22,7 @@ const MODULE_FILES = [
   'js/modules/radiasthesie-format.js',
   'js/modules/radiasthesie-model.js',
   'js/modules/radiasthesie-views.js',
+  'js/modules/pendeltafel-model.js',
   'js/data/radiasthesie.js',
 ];
 

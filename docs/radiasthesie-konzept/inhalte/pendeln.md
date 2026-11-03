@@ -28,7 +28,7 @@ In der Neuzeit verbreitet sich das Pendel als Instrument der Kleromantie und der
 
 Beschrieben werden verschiedene Formen: Tropfenpendel (Kegelform), Isis-Pendel (mit Isis-Symbolik), Triangel-Pendel, Resonanzpendel (mit verschiedenen Materialien: Holz, Metall, Kristall, Magnetit) [Q09]. Die Materialien werden in der Praxis mit unterschiedlichen Eigenschaften assoziiert — Holz für "sanfte" Antworten, Metall für "starke". Wissenschaftlich sind diese Assoziationen nicht bestätigt [Q09, Q13].
 
-Die **Pendeltafel** (auch Pendeldiagramm) ist ein zentrales Element: Sie strukturiert die mögliche Antwort in Ja/Nein, Zahlen, Buchstaben oder Segmenten und ermöglicht so komplexere Fragen [Q09]. Ein interaktives Tafel-Studio, das die Konvention zeigt — nicht als Demonstration der Wirksamkeit —, ist in Vorbereitung.
+Die **Pendeltafel** (auch Pendeldiagramm) ist ein zentrales Element: Sie strukturiert die mögliche Antwort in Ja/Nein, Zahlen, Buchstaben oder Segmenten und ermöglicht so komplexere Fragen [Q09]. Das Tafel-Studio in der Werkstatt setzt diese Konvention als Gestaltung um — als Ordnungsschema, nicht als Demonstration der Wirksamkeit.
 
 ## 4. Pendeln lernen: Ablauf, Eichung, Fragetechnik (B)
 

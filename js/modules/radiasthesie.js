@@ -9,6 +9,7 @@
 import { ROUTE } from './radiasthesie-format.js';
 import { createModel } from './radiasthesie-model.js';
 import { mountPendulumSimulator } from './pendel-simulator.js';
+import { mountPendeltafelStudio } from './pendeltafel-studio.js';
 import {
   breadcrumbStructuredData,
   renderFailure,
@@ -18,6 +19,7 @@ import {
   renderMethodik,
   renderNotFound,
   renderQuellen,
+  renderStudio,
   renderSuche,
   renderTopic,
 } from './radiasthesie-views.js';
@@ -49,6 +51,7 @@ export class RadiasthesieModule {
     this.renderToken = 0;
     this.view = null;
     this.simulator = null;
+    this.studio = null;
     this.bound = false;
     if (root) this.bind();
   }
@@ -93,6 +96,7 @@ export class RadiasthesieModule {
       view = renderFailure('Die Datendatei des Moduls konnte nicht geladen werden.');
     }
     this.teardownSimulator();
+    this.teardownStudio();
     this.root.innerHTML = view.html;
     this.view = view;
     // Das Pendellabor hängt seine Physik erst nach dem Einsetzen ins Dokument
@@ -100,6 +104,9 @@ export class RadiasthesieModule {
     // auf denselben Container zeigen.
     if (view.simulator) {
       this.simulator = mountPendulumSimulator(this.root.querySelector('#pendelLabor'));
+    }
+    if (view.studio) {
+      this.studio = mountPendeltafelStudio(this.root.querySelector('#pendeltafelStudio'));
     }
     this.applyMeta(view);
     this.placeStructuredData(view);
@@ -119,6 +126,14 @@ export class RadiasthesieModule {
     }
   }
 
+  /** Beendet das Tafel-Studio: Entpreller und Listener, bevor neu gerendert wird. */
+  teardownStudio() {
+    if (this.studio) {
+      this.studio.destroy();
+      this.studio = null;
+    }
+  }
+
   resolveView(model, segments, query) {
     const route = model.resolve(segments, query);
     switch (route.view) {
@@ -132,6 +147,8 @@ export class RadiasthesieModule {
         return renderMethodik(model);
       case 'labor':
         return renderLabor();
+      case 'studio':
+        return renderStudio();
       case 'suche':
         return renderSuche(model, route.q || '');
       case 'notfound':

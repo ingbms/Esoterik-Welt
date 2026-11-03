@@ -21,6 +21,7 @@ import {
   renderBlocks,
   statusBand,
 } from './radiasthesie-format.js';
+import { BOARD_LIMITS, BOARD_PRESETS, PALETTES, PALETTE_IDS } from './pendeltafel-model.js';
 
 const SITE = 'Esoterik-Welt';
 const UPDATED_LABEL = 'Stand 2. November 2026';
@@ -542,6 +543,196 @@ export function renderLabor() {
       'Interaktiver Pendelsimulator: Länge, Auslenkung und Dämpfung einstellen, Dauer messen und mit der Kleinwinkelformel vergleichen — ohne Wirkungsversprechen.',
     h1: 'Pendellabor',
     simulator: true,
+  };
+}
+
+/**
+ * Pendeltafel-Studio (RAD-08): echte Route mit Vorlagen, freien
+ * Beschriftungen, Farbstilen, SVG-/JSON-Export und Druckansicht.
+ *
+ * Das Markup ist die Bedienfläche; js/modules/pendeltafel-studio.js hängt
+ * Vorschau, Prüfung, Export und Import an #pendeltafelStudio. Ohne JavaScript
+ * bleiben Vorlagenbeschreibung, Exportwege und Grenzen lesbar.
+ */
+export function renderStudio() {
+  const presetOptions = BOARD_PRESETS.map(
+    (preset, index) =>
+      `<option value="${escapeHtml(preset.id)}"${index === 0 ? ' selected' : ''}>${escapeHtml(
+        preset.title
+      )} — ${preset.labels.length} Segmente</option>`
+  ).join('');
+
+  const paletteChoices = PALETTE_IDS.map((id, index) => {
+    const palette = PALETTES[id];
+    return `<label class="ptf-choice">
+      <input type="radio" name="ptfPalette" value="${escapeHtml(id)}"${index === 0 ? ' checked' : ''} />
+      <span class="ptf-choice-body">
+        <span class="ptf-choice-head">
+          <span class="ptf-swatch ptf-swatch--${escapeHtml(id)}" aria-hidden="true"></span>
+          <span class="ptf-choice-name">${escapeHtml(palette.label)}</span>
+        </span>
+        <span class="ptf-choice-note">${escapeHtml(palette.note)}</span>
+      </span>
+    </label>`;
+  }).join('');
+
+  const presetNotes = BOARD_PRESETS.map(
+    (preset) => `<li><strong>${escapeHtml(preset.title)}</strong> — ${escapeHtml(preset.description)}</li>`
+  ).join('');
+
+  const html = `<div class="rad">
+    ${breadcrumb([{ label: 'Pendeln', href: ROUTE.base }, { label: 'Pendeltafel-Studio' }])}
+    ${pageHead({
+      eyebrow: 'Werkstatt · Tafel',
+      title: 'Pendeltafel-Studio',
+      subtitle: 'Ja/Nein, Zahlenkreis, Buchstaben und freie Segmente',
+      lead: 'Eine Tafel ordnet, welche Antwort gemeint ist — sie misst nichts. Hier lassen sich Vorlage, Beschriftungen und Farbstil festlegen und als SVG oder Druckvorlage ausgeben. Die Bedeutung der Segmente bleibt eine vorher getroffene Vereinbarung.',
+      meta: [
+        'Export: SVG-Datei, JSON-Konfiguration, Druck bzw. PDF über den Browser',
+        `Grenzen: ${BOARD_LIMITS.minSegments}–${BOARD_LIMITS.maxSegments} Segmente, ${BOARD_LIMITS.maxTitleLength} Zeichen Überschrift, 32 KiB Import`,
+        'Keine Speicherung, keine Übertragung: alles bleibt im Browser',
+      ],
+    })}
+
+    <section class="ptf-section" aria-labelledby="ptf-heading">
+      <p class="rad-kicker">01 · Werkstatt</p>
+      <h2 id="ptf-heading" tabindex="-1">Tafel aufbauen, beschriften, ausgeben</h2>
+      <p class="rad-section-lead">Die Vorschau zeigt genau die Zeichnung des SVG-Downloads. Änderungen wirken sofort und ohne Server.</p>
+      <noscript><p class="astro-text">Das Studio braucht JavaScript. Die Vorlagen, Exportwege und Grenzen stehen darunter auch ohne Skript.</p></noscript>
+
+      <div class="ptf" id="pendeltafelStudio">
+        <form class="ptf-editor" id="ptfForm" novalidate>
+          <fieldset class="ptf-fieldset">
+            <legend>Tafel</legend>
+            <div class="ptf-control">
+              <label for="ptfPreset">Vorlage</label>
+              <select id="ptfPreset" name="ptfPreset">${presetOptions}</select>
+              <p class="ptf-hint" id="ptfPresetHint">Der Wechsel der Vorlage ersetzt Überschrift und Beschriftungen.</p>
+            </div>
+          </fieldset>
+
+          <fieldset class="ptf-fieldset">
+            <legend>Farbstil</legend>
+            <div class="ptf-choices">${paletteChoices}</div>
+          </fieldset>
+
+          <div class="ptf-control">
+            <label for="ptfTitle">Überschrift der Tafel</label>
+            <input type="text" id="ptfTitle" name="ptfTitle" maxlength="${BOARD_LIMITS.maxTitleLength}" value="Ja/Nein-Tafel" autocomplete="off" aria-describedby="ptfTitleHint" />
+            <p class="ptf-hint" id="ptfTitleHint">Bis ${BOARD_LIMITS.maxTitleLength} Zeichen. Steht im Bild und in der Druckansicht.</p>
+          </div>
+
+          <div class="ptf-control">
+            <label for="ptfLabels">Beschriftungen — eine pro Zeile</label>
+            <textarea id="ptfLabels" name="ptfLabels" rows="8" spellcheck="false" autocomplete="off" aria-describedby="ptfLabelsHint ptfLimits">JA
+NEIN</textarea>
+            <p class="ptf-hint" id="ptfLabelsHint">Jede Zeile ist ein Segment. ${BOARD_LIMITS.minSegments} bis ${BOARD_LIMITS.maxSegments} Zeilen; wie viele Zeichen je Segment passen, hängt von der Segmentzahl ab.</p>
+            <p class="ptf-hint" id="ptfLimits" data-ptf-limits>2 Segmente · höchstens 40 Zeichen je Beschriftung</p>
+            <p class="ptf-error" id="ptfLabelError" role="alert" hidden></p>
+          </div>
+
+          <div class="ptf-actions">
+            <button type="button" class="btn btn-primary" id="ptfDownloadSvg">SVG herunterladen</button>
+            <button type="button" class="btn btn-secondary" id="ptfDownloadJson">Konfiguration (JSON)</button>
+            <button type="button" class="btn btn-secondary" id="ptfPrint">Drucken / PDF</button>
+          </div>
+
+          <details class="ptf-import" id="ptf-import">
+            <summary>Konfiguration importieren</summary>
+            <div class="ptf-import-body">
+              <div class="ptf-control">
+                <label for="ptfImportFile">JSON-Datei</label>
+                <input type="file" id="ptfImportFile" accept=".json,application/json" aria-describedby="ptfImportHint" />
+              </div>
+              <div class="ptf-control">
+                <label for="ptfImportText">oder JSON einfügen</label>
+                <textarea id="ptfImportText" rows="4" spellcheck="false" autocomplete="off" aria-describedby="ptfImportHint"></textarea>
+              </div>
+              <button type="button" class="btn btn-secondary" id="ptfImportApply">Importieren</button>
+              <p class="ptf-hint" id="ptfImportHint">Höchstens ${Math.round(
+                BOARD_LIMITS.maxBytes / 1024
+              )} KiB. Erwartet wird ein Objekt mit den Feldern schema, preset, title, palette und labels. Unbekannte Felder und Markup-Zeichen werden abgelehnt.</p>
+            </div>
+          </details>
+
+          <ul class="ptf-errors" id="ptfErrors" role="alert" hidden></ul>
+          <p class="ptf-status" id="ptfStatus" role="status" aria-live="polite">Bereit. Vorlage „Ja/Nein-Tafel“ mit zwei Segmenten.</p>
+        </form>
+
+        <div class="ptf-preview">
+          <h3 id="ptfPreviewTitle">Vorschau</h3>
+          <div class="ptf-canvas" id="ptfPreview" aria-labelledby="ptfPreviewTitle"></div>
+          <p class="ptf-hint">Die Vorschau ist die Exportdatei im Browser. Sie enthält keine Skripte und keine externen Verweise.</p>
+        </div>
+      </div>
+
+      <section class="ptf-printblock" aria-labelledby="ptf-print-title">
+        <h3 id="ptf-print-title">Druckansicht</h3>
+        <p class="ptf-print-note">Genau diese Seite erscheint im Druckdialog: eine A4-Seite mit Überschrift, Tafel und Fußzeile, ohne Navigation und ohne Bedienelemente. Für Papier empfiehlt sich der Farbstil „Papier“.</p>
+        <div class="ptf-sheet" id="ptfSheet">
+          <div class="ptf-sheet-head">
+            <p class="ptf-sheet-kicker">Esoterik-Welt · Pendeltafel-Studio</p>
+            <p class="ptf-sheet-title" id="ptfSheetTitle">Ja/Nein-Tafel</p>
+          </div>
+          <div class="ptf-sheet-board" id="ptfSheetBoard"></div>
+          <div class="ptf-sheet-foot">
+            <p>Die Tafel ordnet die Bedeutung der Segmente. Sie misst nichts, beantwortet keine Fragen und ersetzt keine Untersuchung.</p>
+            <p>Stand: <span id="ptfSheetDate">—</span> · Farbstil: <span id="ptfSheetPalette">Messing</span> · Beschriftungen selbst festgelegt</p>
+          </div>
+        </div>
+        <p class="ptf-hint">PDF: im Druckdialog als Ziel „Als PDF speichern“ wählen. Der Dateiname stammt aus dem Seitentitel; die Tafel selbst bleibt eine Vektorgrafik.</p>
+      </section>
+    </section>
+
+    <section class="astro-section" id="ptf-export" aria-labelledby="ptf-export-title">
+      <p class="rad-kicker">02 · Ausgabe</p>
+      <h2 id="ptf-export-title" tabindex="-1">Drei Exportwege und was sie enthalten</h2>
+      <dl class="ptf-export-list">
+        <div><dt>SVG-Datei</dt><dd>Eigenständige Vektorgrafik mit Überschrift, Segmenten und Fußzeile. Enthält Text als Text, keine Skripte, keine Eventhandler und keine externen Verweise. Geeignet für Druck, Vektorgrafik-Programme und als Vorlage für eigene Anpassungen.</dd></div>
+        <div><dt>JSON-Konfiguration</dt><dd>Überschrift, Vorlage, Farbstil und Beschriftungen als Daten — nicht die Zeichnung. Dieselbe Datei lässt sich im Studio wieder importieren; sie wird dabei vollständig geprüft. Für eigene Werkzeuge und zur Weitergabe einer Tafel an andere.</dd></div>
+        <div><dt>Druck / PDF</dt><dd>Eine A4-Seite über den Druckdialog des Browsers. Die Druckansicht blendet Navigation, Regler und Hinweise aus; übrig bleiben Überschrift, Tafel und Fußzeile. Die PDF-Ausgabe ist der Druckweg des Browsers, keine eigene PDF-Bibliothek.</dd></div>
+      </dl>
+      <p class="astro-text">Der SVG-Export ist bewusst eine Datei und kein Daten-URL: Sie lässt sich mit einem Bildbetrachter, einem Vektorprogramm oder im Browser öffnen, ohne dass die Seite geladen wird. Gedruckt wird die Tafel in der Größe der Druckansicht; für eine andere Größe empfiehlt sich der SVG-Export.</p>
+    </section>
+
+    <section class="astro-section" id="ptf-vorlagen" aria-labelledby="ptf-vorlagen-title">
+      <p class="rad-kicker">03 · Vorlagen</p>
+      <h2 id="ptf-vorlagen-title" tabindex="-1">Vier Tafelarten, ein Aufbau</h2>
+      <p class="astro-text">Alle Vorlagen sind gleich aufgebaut: gleiche Segmentgröße, gleiche Schrift, gleicher Mittelpunkt. Unterschiedlich sind nur Anzahl und Beschriftung der Segmente. Maße und Bedeutung bleiben Vereinbarung — die Tafel ist kein Messgerät.</p>
+      <ul class="astro-list">${presetNotes}</ul>
+      <p class="astro-text">Die Beschriftungen sind frei: Zahlen, Buchstaben, Wörter, Farbnamen oder Kategorien. Doppelte Beschriftungen sind erlaubt, aber schwer zu unterscheiden; das Studio weist darauf hin.</p>
+    </section>
+
+    <section class="astro-section" id="ptf-pruefung" aria-labelledby="ptf-pruefung-title">
+      <p class="rad-kicker">04 · Prüfung</p>
+      <h2 id="ptf-pruefung-title" tabindex="-1">Was der Import prüft</h2>
+      <p class="astro-text">Eine importierte Konfiguration wird nicht ausgeführt, sondern gegen ein festes Schema geprüft. Abgelehnt werden: unbekannte Felder, ein falscher Schema-Bezeichner, unbekannte Vorlagen oder Farbstile, weniger als ${BOARD_LIMITS.minSegments} oder mehr als ${BOARD_LIMITS.maxSegments} Segmente, leere oder zu lange Beschriftungen, Steuerzeichen und die Markup-Zeichen &lt; und &gt;. Zusätzlich gilt eine Obergrenze von ${Math.round(
+        BOARD_LIMITS.maxBytes / 1024
+      )} KiB für die Datei.</p>
+      <p class="astro-text">Alle übernommenen Texte werden bei der Ausgabe zusätzlich escaped. Die SVG-Datei enthält kein <code>&lt;script&gt;</code>, keinen Eventhandler, kein <code>&lt;foreignObject&gt;</code>, kein <code>&lt;image&gt;</code> und keine externe Referenz — Attribute und Geometrie stammen ausschließlich aus dem Studio, nie aus der Eingabe.</p>
+      <p class="astro-text">Geprüft wurden unter anderem XSS-Eingaben wie <code>&lt;script&gt;alert(1)&lt;/script&gt;</code> in Beschriftung und Überschrift, Umlaute und Sonderzeichen, der Export mit anschließendem Reimport sowie die Druckansicht. Die Nachweise stehen im Prüfbericht zu RAD-08.</p>
+    </section>
+
+    <aside class="rad-disclaimer" aria-labelledby="ptf-nicht-title">
+      <h2 class="rad-disclaimer-title" id="ptf-nicht-title">Was diese Tafel nicht tut</h2>
+      <p><strong>Keine Messung:</strong> Die Segmente sind eine vereinbarte Ordnung. Die Tafel zeigt keine Felder, Strahlungen oder Zustände an.</p>
+      <p><strong>Keine Antwort:</strong> Welches Segment „gilt“, entscheidet die Person, die die Tafel benutzt — nicht die Grafik.</p>
+      <p><strong>Kein Standard:</strong> Es gibt kein normiertes Tafellayout. Die Ausgabe ist ein Gestaltungsvorschlag, keine Reproduktion einer historischen Vorlage.</p>
+    </aside>
+
+    <p class="astro-text psim-links">
+      <a class="btn btn-secondary" href="${ROUTE.topic('pendeln')}">Zum Thema Pendeln</a>
+      <a class="textlink" href="${ROUTE.labor}">Pendellabor öffnen</a>
+    </p>
+  </div>`;
+
+  return {
+    html,
+    title: 'Pendeltafel-Studio — Tafeln beschriften und exportieren',
+    description:
+      'Pendeltafeln selbst gestalten: Ja/Nein, Zahlenkreis, Buchstaben und freie Segmente, vier Farbstile, SVG-Export und Druckansicht — ohne Wirkungsversprechen.',
+    h1: 'Pendeltafel-Studio',
+    studio: true,
   };
 }
 

@@ -75,7 +75,7 @@ const TOPICS = [
       'Ein Pendel bewegt sich — aber nicht durch verborgene Information. Carpenter-, Kohnstamm-Effekt und Chevreul-Täuschung erklären die Bewegung; kontrollierte Tests zeigen keine Abweichung vom Zufall.',
     cardText:
       'Pendelarten, Materialien, Tafeln und Skalen. Woher die Bovis-Skala kommt, warum sie keine SI-Einheit ist und wie ein Pendel mechanisch schwingt.',
-    facts: ['Pendelarten und Materialien', 'Pendeltafeln und Bovis-Skalen', 'Pendellabor (in Vorbereitung)'],
+    facts: ['Pendelarten und Materialien', 'Pendeltafeln und Bovis-Skalen', 'Pendellabor und Tafel-Studio'],
     figure: {
       src: 'assets/radiasthesie/pendeltafel.svg',
       alt: 'Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10.',
@@ -168,6 +168,8 @@ const WORKSHOP = [
   {
     title: 'Pendeltafel-Studio',
     text: 'Tafeln beschriften, Farbstil wählen, als SVG oder Druckvorlage ausgeben.',
+    state: 'Verfügbar',
+    href: '#pendeln/studio',
   },
   {
     title: 'Experimentierlabor',
