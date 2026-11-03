@@ -679,7 +679,8 @@
 .fw-sources {
   max-width: 78ch;
   margin: var(--space-4) 0 0;
-  padding-left: var(--space-5);
+  padding-left: 0;
+  list-style: none;
   font-size: var(--text-sm);
   line-height: 1.7;
   color: var(--color-text-secondary);
@@ -687,6 +688,8 @@
 
 .fw-sources li {
   margin-bottom: var(--space-3);
+  padding-left: calc(var(--space-5) + var(--space-6));
+  text-indent: calc(-1 * (var(--space-5) + var(--space-6)));
   overflow-wrap: anywhere;
 }
 

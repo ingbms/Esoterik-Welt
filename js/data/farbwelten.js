@@ -483,11 +483,11 @@ export const FARBWELTEN = [
       description:
         'Gelb zwischen 570 und 590 nm: Helligkeitswirkung, Assoziationen, Symbolik, Solarplexuschakra und die Grenzen der Farbpsychologie.',
     },
-    lede: 'Gelb liegt bei etwa 570–590 nm, 508–525 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Gelb ist ein Spektralbereich zwischen Grün und Orange; auf dem Bildschirm entsteht gelber Eindruck durch Mischung weniger Primärvalenzen – ein Metamer, kein monochromatisches Licht [31].',
+    lede: 'Gelb liegt bei etwa 570–590 nm, 508–526 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Gelb ist ein Spektralbereich zwischen Grün und Orange; auf dem Bildschirm entsteht gelber Eindruck durch Mischung weniger Primärvalenzen – ein Metamer, kein monochromatisches Licht [31].',
     intro: [
       {
         type: 'p',
-        text: 'Gelb liegt bei etwa 570–590 nm, 508–525 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Gelb ist ein Spektralbereich zwischen Grün und Orange; auf dem Bildschirm entsteht gelber Eindruck durch Mischung weniger Primärvalenzen – ein Metamer, kein monochromatisches Licht [31].',
+        text: 'Gelb liegt bei etwa 570–590 nm, 508–526 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Gelb ist ein Spektralbereich zwischen Grün und Orange; auf dem Bildschirm entsteht gelber Eindruck durch Mischung weniger Primärvalenzen – ein Metamer, kein monochromatisches Licht [31].',
       },
     ],
     sections: {
@@ -629,11 +629,11 @@ export const FARBWELTEN = [
       description:
         'Grün zwischen 490 und 570 nm: Wahrnehmung, Beruhigungsassoziationen, Natur- und Herzsymbolik, Forschungslage und offene Fragen.',
     },
-    lede: 'Grün liegt bei etwa 495–570 nm, 525–606 THz [10][24]. Es ist die Farbe der Vegetation – nicht zufällig, denn Chlorophyll reflektiert grünes Licht und absorbiert rotes und blaues. Physikalisch ist Grün ein Mittler; wahrgenommen wird es als beruhigend und natürlich.',
+    lede: 'Grün liegt bei etwa 490–570 nm, 526–612 THz [10][24]. Es ist die Farbe der Vegetation – nicht zufällig, denn Chlorophyll reflektiert grünes Licht und absorbiert rotes und blaues. Physikalisch ist Grün ein Mittler; wahrgenommen wird es als beruhigend und natürlich.',
     intro: [
       {
         type: 'p',
-        text: 'Grün liegt bei etwa 495–570 nm, 525–606 THz [10][24]. Es ist die Farbe der Vegetation – nicht zufällig, denn Chlorophyll reflektiert grünes Licht und absorbiert rotes und blaues. Physikalisch ist Grün ein Mittler; wahrgenommen wird es als beruhigend und natürlich.',
+        text: 'Grün liegt bei etwa 490–570 nm, 526–612 THz [10][24]. Es ist die Farbe der Vegetation – nicht zufällig, denn Chlorophyll reflektiert grünes Licht und absorbiert rotes und blaues. Physikalisch ist Grün ein Mittler; wahrgenommen wird es als beruhigend und natürlich.',
       },
     ],
     sections: {
@@ -771,11 +771,11 @@ export const FARBWELTEN = [
       description:
         'Blau zwischen 450 und 490 nm: Physik, Farbpsychologie, Halschakra und die gut untersuchte Rolle von Licht für die innere Uhr.',
     },
-    lede: 'Blau liegt bei etwa 450–495 nm, 606–666 THz [10][24]. Es ist die Farbe des Himmels und des tiefen Wassers – nicht zufällig, denn Rayleigh-Streuung bevorzugt kurzwelliges Licht. Physikalisch ist Blau eine der energiereichsten sichtbaren Wellenlängen.',
+    lede: 'Blau liegt bei etwa 450–490 nm, 612–666 THz [10][24]. Es ist die Farbe des Himmels und des tiefen Wassers – nicht zufällig, denn Rayleigh-Streuung bevorzugt kurzwelliges Licht. Physikalisch ist Blau eine der energiereichsten sichtbaren Wellenlängen.',
     intro: [
       {
         type: 'p',
-        text: 'Blau liegt bei etwa 450–495 nm, 606–666 THz [10][24]. Es ist die Farbe des Himmels und des tiefen Wassers – nicht zufällig, denn Rayleigh-Streuung bevorzugt kurzwelliges Licht. Physikalisch ist Blau eine der energiereichsten sichtbaren Wellenlängen.',
+        text: 'Blau liegt bei etwa 450–490 nm, 612–666 THz [10][24]. Es ist die Farbe des Himmels und des tiefen Wassers – nicht zufällig, denn Rayleigh-Streuung bevorzugt kurzwelliges Licht. Physikalisch ist Blau eine der energiereichsten sichtbaren Wellenlängen.',
       },
     ],
     sections: {
@@ -925,11 +925,11 @@ export const FARBWELTEN = [
       description:
         'Indigo zwischen 425 und 450 nm: schmaler Spektralbereich, kulturelle Deutungen, Stirnchakra und die Herkunft der modernen Zuordnung.',
     },
-    lede: 'Indigo liegt bei ca. 425–450 nm, ca. 666–706 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].',
+    lede: 'Indigo liegt bei ca. 425–450 nm, ca. 666–705 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].',
     intro: [
       {
         type: 'p',
-        text: 'Indigo liegt bei ca. 425–450 nm, ca. 666–706 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].',
+        text: 'Indigo liegt bei ca. 425–450 nm, ca. 666–705 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].',
       },
     ],
     sections: {
@@ -975,7 +975,7 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: 'Abgrenzung Blau ↔ Indigo, quellenbasiert: Blau umfasst etwa 450–495 nm; Indigo liegt bei ca. 425–450 nm und grenzt an die violette Kante des sichtbaren Spektrums [10]. Die Forschung behandelt Indigo als Teil der Blautöne, nicht als eigene emotionale Klasse [3][4]. Eine Aussage wie "Indigo beruhigt stärker als Blau" wäre daher nicht belegt – sie würde die fehlende Eigenstudie mit einer künstlichen Differenzierung überspielen. Ehrlich formuliert lautet die Einordnung: Indigo hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.',
+          text: 'Abgrenzung Blau ↔ Indigo, quellenbasiert: Blau umfasst etwa 450–490 nm; Indigo liegt bei ca. 425–450 nm und grenzt an die violette Kante des sichtbaren Spektrums [10]. Die Forschung behandelt Indigo als Teil der Blautöne, nicht als eigene emotionale Klasse [3][4]. Eine Aussage wie "Indigo beruhigt stärker als Blau" wäre daher nicht belegt – sie würde die fehlende Eigenstudie mit einer künstlichen Differenzierung überspielen. Ehrlich formuliert lautet die Einordnung: Indigo hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.',
         },
       ],
       tradition: [
@@ -1082,11 +1082,11 @@ export const FARBWELTEN = [
       description:
         'Violett zwischen 380 und 425 nm: kurzwelliges Licht, Symbolik, Kronenchakra, Abgrenzung zu Magenta und der Stand der Forschung.',
     },
-    lede: 'Violett liegt am kurzwelligen Rand des sichtbaren Spektrums, konventionell bei ca. 380–425 nm (ca. 706–789 THz); die Grenze zum Indigo ist fließend und wird je nach Einteilung bis etwa 450 nm gezogen [10][24]. Unterhalb von 380 nm beginnt der UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
+    lede: 'Violett liegt am kurzwelligen Rand des sichtbaren Spektrums, konventionell bei ca. 380–425 nm (ca. 705–789 THz); die Grenze zum Indigo ist fließend und wird je nach Einteilung bis etwa 450 nm gezogen [10][24]. Unterhalb von 380 nm beginnt der UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
     intro: [
       {
         type: 'p',
-        text: 'Violett liegt am kurzwelligen Rand des sichtbaren Spektrums, konventionell bei ca. 380–425 nm (ca. 706–789 THz); die Grenze zum Indigo ist fließend und wird je nach Einteilung bis etwa 450 nm gezogen [10][24]. Unterhalb von 380 nm beginnt der UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
+        text: 'Violett liegt am kurzwelligen Rand des sichtbaren Spektrums, konventionell bei ca. 380–425 nm (ca. 705–789 THz); die Grenze zum Indigo ist fließend und wird je nach Einteilung bis etwa 450 nm gezogen [10][24]. Unterhalb von 380 nm beginnt der UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].',
       },
     ],
     sections: {
@@ -1152,7 +1152,7 @@ export const FARBWELTEN = [
         },
         {
           type: 'p',
-          text: 'Farbspezifische Ergänzung: Violett (ca. 380–425 nm, ca. 706–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich, wird aber am schwächsten wahrgenommen; in der Tradition steht es für das Kronenchakra – ohne medizinische Wirkaussage [1][10][24].',
+          text: 'Farbspezifische Ergänzung: Violett (ca. 380–425 nm, ca. 705–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich, wird aber am schwächsten wahrgenommen; in der Tradition steht es für das Kronenchakra – ohne medizinische Wirkaussage [1][10][24].',
         },
       ],
       geschichte: [

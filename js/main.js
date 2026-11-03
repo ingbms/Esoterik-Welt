@@ -326,10 +326,14 @@ function setupNavigation() {
   });
 
   // Mobile toggle
-  elements.navToggle.addEventListener('click', () => {
-    const isOpen = elements.nav.classList.toggle('open');
+  const setMobileNav = (isOpen) => {
+    elements.nav.classList.toggle('open', isOpen);
     elements.navToggle.setAttribute('aria-expanded', String(isOpen));
     elements.navToggle.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+  };
+
+  elements.navToggle.addEventListener('click', () => {
+    setMobileNav(!elements.nav.classList.contains('open'));
   });
   elements.navToggle.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -338,20 +342,25 @@ function setupNavigation() {
     }
   });
 
+  // Escape schließt das offene Mobilmenü und gibt den Fokus an den Schalter
+  // zurück. Der Handler liegt am Dokument, damit er auch greift, wenn der Fokus
+  // bereits auf einem Link im Menü steht.
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape' && e.key !== 'Esc') return;
+    if (!elements.nav.classList.contains('open')) return;
+    e.preventDefault();
+    setMobileNav(false);
+    elements.navToggle.focus();
+  });
+
   // Close mobile nav on link click
   elements.navList.addEventListener('click', (e) => {
-    if (e.target.classList.contains('nav-link')) {
-      elements.nav.classList.remove('open');
-      elements.navToggle.setAttribute('aria-expanded', 'false');
-    }
+    if (e.target.classList.contains('nav-link')) setMobileNav(false);
   });
 
   // Close mobile nav on outside click
   document.addEventListener('click', (e) => {
-    if (!elements.header.contains(e.target)) {
-      elements.nav.classList.remove('open');
-      elements.navToggle.setAttribute('aria-expanded', 'false');
-    }
+    if (!elements.header.contains(e.target)) setMobileNav(false);
   });
 
   // Route transitions own scroll position; native restoration would race with

@@ -13,7 +13,7 @@ farbe: Indigo
 
 ## Einführung
 
-Indigo liegt bei ca. 425–450 nm, ca. 666–706 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].
+Indigo liegt bei ca. 425–450 nm, ca. 666–705 THz [10][24]. Physikalisch ist es ein fließender Übergang zwischen Blau und Violett – keine scharfe Grenze. Bildschirme erzeugen nur Metamere, keine Spektralfarben [31].
 
 ## Traditionelle Bedeutung
 
@@ -27,7 +27,7 @@ Die Review [3] beschreibt Blau als assoziiert mit positiven, niedrig erregten Em
 
 Interkulturell zeigen sich bei Blautönen vergleichbare Muster – Ruhe und Seriosität als häufige Assoziationen –, aber die Varianz zwischen Probandengruppen bleibt hoch [4]. Für Indigo als Übergangsfarbe ist diese Varianz noch größer, weil die Wahrnehmung selbst von der spektralen Zusammensetzung (Metamerie) und der Bildschirmkalibration abhängt: Ein "indigo" auf einem Monitor ist ein RGB-Mix, kein Spektralreinstoff, und zwei Beobachter können dieselbe Bildschirmfarbe als eher blau oder eher violett wahrnehmen [31][24]. Das macht jede emotionale Aussage über Indigo zusätzlich fraglich.
 
-Abgrenzung Blau ↔ Indigo, quellenbasiert: Blau umfasst etwa 450–495 nm; Indigo liegt bei ca. 425–450 nm und grenzt an die violette Kante des sichtbaren Spektrums [10]. Die Forschung behandelt Indigo als Teil der Blautöne, nicht als eigene emotionale Klasse [3][4]. Eine Aussage wie "Indigo beruhigt stärker als Blau" wäre daher nicht belegt – sie würde die fehlende Eigenstudie mit einer künstlichen Differenzierung überspielen. Ehrlich formuliert lautet die Einordnung: Indigo hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.
+Abgrenzung Blau ↔ Indigo, quellenbasiert: Blau umfasst etwa 450–490 nm; Indigo liegt bei ca. 425–450 nm und grenzt an die violette Kante des sichtbaren Spektrums [10]. Die Forschung behandelt Indigo als Teil der Blautöne, nicht als eigene emotionale Klasse [3][4]. Eine Aussage wie "Indigo beruhigt stärker als Blau" wäre daher nicht belegt – sie würde die fehlende Eigenstudie mit einer künstlichen Differenzierung überspielen. Ehrlich formuliert lautet die Einordnung: Indigo hat keine eigene emotionale Kategorie in der Forschung; seine Assoziationen sind entweder Blautöne oder kulturelle Deutungen, und letztere sind als Tradition zu kennzeichnen [1][2], nicht als Wirkung.
 
 ## Was die Studienlage nicht hergibt
 

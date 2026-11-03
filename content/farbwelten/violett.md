@@ -13,7 +13,7 @@ farbe: Violett
 
 ## Einführung
 
-Violett liegt am kurzwelligen Rand des sichtbaren Spektrums, konventionell bei ca. 380–425 nm (ca. 706–789 THz); die Grenze zum Indigo ist fließend und wird je nach Einteilung bis etwa 450 nm gezogen [10][24]. Unterhalb von 380 nm beginnt der UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].
+Violett liegt am kurzwelligen Rand des sichtbaren Spektrums, konventionell bei ca. 380–425 nm (ca. 705–789 THz); die Grenze zum Indigo ist fließend und wird je nach Einteilung bis etwa 450 nm gezogen [10][24]. Unterhalb von 380 nm beginnt der UV-Bereich; UV-Strahlung selbst ist nicht sichtbar [19].
 
 ## Traditionelle Bedeutung
 
@@ -35,7 +35,7 @@ Für eine Heilwirkung von Violett gegen Krebs oder als spezifische Lichttherapie
 
 > **Health-Disclaimer:** Diese Inhalte ersetzen keine medizinische Diagnose oder Behandlung. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachkraft. Farbtherapie als Krankheitsbehandlung ist medizinisch nicht belegt [9].
 
-Farbspezifische Ergänzung: Violett (ca. 380–425 nm, ca. 706–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich, wird aber am schwächsten wahrgenommen; in der Tradition steht es für das Kronenchakra – ohne medizinische Wirkaussage [1][10][24].
+Farbspezifische Ergänzung: Violett (ca. 380–425 nm, ca. 705–789 THz) hat die höchste Photonenenergie im sichtbaren Bereich, wird aber am schwächsten wahrgenommen; in der Tradition steht es für das Kronenchakra – ohne medizinische Wirkaussage [1][10][24].
 
 ## Traditionshistorische Einordnung
 

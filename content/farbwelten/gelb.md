@@ -13,7 +13,7 @@ farbe: Gelb
 
 ## Einführung
 
-Gelb liegt bei etwa 570–590 nm, 508–525 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Gelb ist ein Spektralbereich zwischen Grün und Orange; auf dem Bildschirm entsteht gelber Eindruck durch Mischung weniger Primärvalenzen – ein Metamer, kein monochromatisches Licht [31].
+Gelb liegt bei etwa 570–590 nm, 508–526 THz [10][24]. Es ist die Farbe der Sonne, des Lichts, das am stärksten wahrgenommen wird. Gelb ist ein Spektralbereich zwischen Grün und Orange; auf dem Bildschirm entsteht gelber Eindruck durch Mischung weniger Primärvalenzen – ein Metamer, kein monochromatisches Licht [31].
 
 ## Traditionelle Bedeutung
 

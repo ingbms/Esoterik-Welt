@@ -13,7 +13,7 @@ farbe: Grün
 
 ## Einführung
 
-Grün liegt bei etwa 495–570 nm, 525–606 THz [10][24]. Es ist die Farbe der Vegetation – nicht zufällig, denn Chlorophyll reflektiert grünes Licht und absorbiert rotes und blaues. Physikalisch ist Grün ein Mittler; wahrgenommen wird es als beruhigend und natürlich.
+Grün liegt bei etwa 490–570 nm, 526–612 THz [10][24]. Es ist die Farbe der Vegetation – nicht zufällig, denn Chlorophyll reflektiert grünes Licht und absorbiert rotes und blaues. Physikalisch ist Grün ein Mittler; wahrgenommen wird es als beruhigend und natürlich.
 
 ## Traditionelle Bedeutung
 

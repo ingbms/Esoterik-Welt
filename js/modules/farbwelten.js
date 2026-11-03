@@ -251,7 +251,9 @@ function toc(entries, ariaLabel) {
 }
 
 function sourcesSection(ids, { title = 'Quellen', headingId = 'quellen-title' } = {}) {
-  const resolution = h('ol', { class: 'fw-sources' });
+  // Bewusst <ul>: die Kennung [n] steht im Eintrag selbst. Eine <ol> hätte eine
+  // zweite, konkurrierende Nummerierung, die mit den Kennungen nicht übereinstimmt.
+  const resolution = h('ul', { class: 'fw-sources', role: 'list' });
   for (const id of ids) {
     const source = SOURCES[id];
     if (!source) continue;

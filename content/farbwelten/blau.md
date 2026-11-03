@@ -13,7 +13,7 @@ farbe: Blau
 
 ## Einführung
 
-Blau liegt bei etwa 450–495 nm, 606–666 THz [10][24]. Es ist die Farbe des Himmels und des tiefen Wassers – nicht zufällig, denn Rayleigh-Streuung bevorzugt kurzwelliges Licht. Physikalisch ist Blau eine der energiereichsten sichtbaren Wellenlängen.
+Blau liegt bei etwa 450–490 nm, 612–666 THz [10][24]. Es ist die Farbe des Himmels und des tiefen Wassers – nicht zufällig, denn Rayleigh-Streuung bevorzugt kurzwelliges Licht. Physikalisch ist Blau eine der energiereichsten sichtbaren Wellenlängen.
 
 ## Traditionelle Bedeutung
 
