@@ -498,6 +498,32 @@ test('gesperrter Speicher: Eintrag gilt sichtbar nur für diese Sitzung', async 
   expect(log.pageErrors).toEqual([]);
 });
 
+test('neueres Schema: Lesen wird gemeldet, Schreiben bleibt blockiert', async ({ page }) => {
+  const log = collect(page);
+  const raw = JSON.stringify({
+    schema: 2,
+    savedAt: '2026-11-03T00:00:00.000Z',
+    data: [{ id: 'jr-zukunft-1', date: '2026-11-02', question: 'Frage aus neuerer Version', prediction: 'Vorhersage' }],
+  });
+  await page.addInitScript((value) => {
+    localStorage.setItem('esot_rad_journal_v1', value);
+  }, raw);
+  await page.goto(url(ROUTE));
+  await expect(page.locator('#pendelJournal')).toBeVisible();
+  await expect(page.locator('#jrStorageNote')).toContainText('neueren Version');
+  await expect(page.locator('#jrEntries .jr-entry')).toHaveCount(0);
+
+  await fillForm(page);
+  await page.locator('#jrSave').click();
+  await expect(page.locator('#jrError')).toContainText('neueren Version');
+  await expect(page.locator('#jrStatus')).toContainText('blockiert');
+  expect(await page.evaluate((key) => localStorage.getItem(key), JOURNAL_KEY)).toBe(raw);
+  await expect(page.locator('#jrEntries .jr-entry')).toHaveCount(0);
+
+  expect(log.consoleErrors).toEqual([]);
+  expect(log.pageErrors).toEqual([]);
+});
+
 test('file://: Tagebuch speichert oder sagt ehrlich, dass es nur die Sitzung gilt', async ({ page }) => {
   const file = path.join(__dirname, '..', 'Lokal.html');
   test.skip(!fs.existsSync(file), 'Lokal.html fehlt — npm run build:local ausführen');

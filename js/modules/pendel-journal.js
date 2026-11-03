@@ -246,6 +246,20 @@ export function mountPendelJournal(container, options = {}) {
     return written.ok;
   };
 
+  /**
+   * Ein höheres Schema gehört einer neueren Version dieses Moduls. Es wird
+   * weder überschrieben noch als leerer Bestand weitergeführt — sonst ginge
+   * der neuere Stand beim ersten Speichern verloren.
+   */
+  const writesBlocked = () => {
+    if (state.storageState !== 'future') return false;
+    showError(
+      'Der gespeicherte Stand stammt aus einer neueren Version dieses Moduls. Es wird nichts geschrieben, damit nichts verloren geht. Bitte die Seite neu laden.'
+    );
+    announce('Speichern blockiert: Im lokalen Speicher liegt ein neueres Schema.', { warn: true });
+    return true;
+  };
+
   // --- Darstellung -------------------------------------------------------
 
   const storageText = () => {
@@ -507,6 +521,7 @@ export function mountPendelJournal(container, options = {}) {
     clearError();
     clearInvalid();
     try {
+      if (writesBlocked()) return;
       const existing = state.editingId ? findEntry(state.entries, state.editingId) : null;
       if (state.editingId && !existing) {
         showError('Der Eintrag ist nicht mehr vorhanden. Formular leeren und neu erfassen.');
@@ -618,6 +633,7 @@ export function mountPendelJournal(container, options = {}) {
   // --- Import ------------------------------------------------------------
 
   const applyImport = async (text, sourceLabel = 'Eingabe') => {
+    if (writesBlocked()) return;
     const result = parseImport(text, { methodIds, runs: null });
     if (!result.ok) {
       const first = result.errors[0];
@@ -769,6 +785,7 @@ export function mountPendelJournal(container, options = {}) {
   // --- Übernahme aus dem Labor ------------------------------------------
 
   const takeOver = (runId, input, button) => {
+    if (writesBlocked()) return;
     const run = state.runs.find((candidate) => candidate.runId === runId);
     if (!run) {
       announce('Der Lauf ist nicht mehr vorhanden. Die Liste wird neu geladen.', { warn: true });
