@@ -24,6 +24,8 @@ import {
 import { BOARD_LIMITS, BOARD_PRESETS, PALETTES, PALETTE_IDS } from './pendeltafel-model.js';
 import { WERKSTATT } from '../data/radiasthesie-werkstatt.js';
 import { ALPHA, TRIAL_LIMITS, answerLabels, formatPercent, testTypeLabel } from './experiment-statistik.js';
+import { JOURNAL_LIMITS } from './radiasthesie-vertraege.js';
+import { CONFIDENCE_LABELS } from './journal-speicher.js';
 
 const SITE = 'Esoterik-Welt';
 const UPDATED_LABEL = 'Stand 2. November 2026';
@@ -981,6 +983,220 @@ export function renderExperiment() {
       'Verblindetes Experimentierlabor: verdecktes Zufallsziel, gesperrte Antwort, feste Fallzahl, exakter Binomialtest, Wilson-Intervall und Rohdatenexport — ohne Wirkungsversprechen.',
     h1: 'Experimentierlabor',
     experiment: true,
+  };
+}
+
+/**
+ * Pendeltagebuch (RAD-10): echte Route mit lokalem Journal.
+ *
+ * Das Markup enthält ausschließlich die Bedienfläche und feste Erklärtexte.
+ * Einträge werden nie als HTML eingesetzt, sondern im Controller mit
+ * textContent aufgebaut — die Ansicht kennt keinen Nutzerinhalt.
+ */
+export function renderJournal() {
+  const methodOptions = WERKSTATT.methoden
+    .map((method) => `<option value="${escapeHtml(method.id)}">${escapeHtml(method.title)}</option>`)
+    .join('');
+
+  const confidenceOptions = [1, 2, 3, 4, 5]
+    .map((value) => `<option value="${value}">${escapeHtml(`${value} von 5 · ${CONFIDENCE_LABELS[value]}`)}</option>`)
+    .join('');
+
+  const html = `<div class="rad">
+    ${breadcrumb([{ label: 'Pendeln', href: ROUTE.base }, { label: 'Pendeltagebuch' }])}
+    ${pageHead({
+      eyebrow: 'Werkstatt · Tagebuch',
+      title: 'Pendeltagebuch',
+      subtitle: 'Frage, Vorhersage, Ergebnis — lokal und ohne Konto',
+      lead: 'Ein persönliches Journal hält fest, was vorher vermutet und was tatsächlich beobachtet wurde. Es speichert ausschließlich in diesem Browser, überträgt nichts und verlangt keine Anmeldung. Die spätere Bewertung ist der eigentliche Gewinn: Sie zeigt, wie oft eine Vorhersage zutraf — ohne daraus einen Beweis zu machen.',
+      meta: [
+        'Felder: Datum, Frage oder Versuch, Methode, Vorhersage, Sicherheit 1–5, Ergebnis, spätere Bewertung',
+        'Speicher: lokal unter „esot_rad_journal_v1“, höchstens 500 Einträge',
+        'Export: JSON und CSV · Import: eigenes JSON bis 1 MiB · vollständige Löschung möglich',
+      ],
+    })}
+
+    <section class="jr-section" aria-labelledby="jr-heading">
+      <p class="rad-kicker">01 · Tagebuch</p>
+      <h2 id="jr-heading" tabindex="-1">Einträge erfassen, lesen und auswerten</h2>
+      <p class="rad-section-lead">Ein Eintrag braucht Datum, Frage und Vorhersage. Ergebnis und Bewertung dürfen später ergänzt werden — genau dafür ist das Journal da.</p>
+      <noscript><p class="astro-text">Das Tagebuch braucht JavaScript: Speichern, Export und Löschung laufen im Browser. Felder, Grenzen und Speicherort stehen darunter auch ohne Skript.</p></noscript>
+
+      <div class="jr" id="pendelJournal">
+        <div class="jr-grid">
+          <form class="jr-form" id="jrForm" novalidate aria-labelledby="jr-form-title">
+            <h3 id="jr-form-title" tabindex="-1">Neuer Eintrag</h3>
+            <p class="jr-hint">Pflichtfelder sind Datum, Frage und Vorhersage. Alles andere ist freiwillig; leere Felder werden nicht gespeichert.</p>
+
+            <p class="jr-runlink" id="jrRunLink" hidden>
+              <span id="jrRunLinkText"></span>
+              <button type="button" class="jr-linkbtn" id="jrRunClear">Bezug entfernen</button>
+            </p>
+
+            <div class="jr-control">
+              <label for="jrDate">Datum</label>
+              <input type="date" id="jrDate" name="date" required aria-describedby="jrDateHint" />
+              <p class="jr-hint" id="jrDateHint">Tag der Beobachtung, nicht der Eintragung.</p>
+            </div>
+
+            <div class="jr-control">
+              <label for="jrQuestion">Frage oder Versuch</label>
+              <textarea id="jrQuestion" name="question" rows="3" maxlength="${JOURNAL_LIMITS.question}" required aria-describedby="jrQuestionHint"></textarea>
+              <p class="jr-hint" id="jrQuestionHint">Eine Frage, die sich mit Ja, Nein oder einer benannten Antwort entscheiden lässt. Höchstens ${JOURNAL_LIMITS.question} Zeichen.</p>
+            </div>
+
+            <div class="jr-pair">
+              <div class="jr-control">
+                <label for="jrMethod">Verwendete Methode</label>
+                <select id="jrMethod" name="method" aria-describedby="jrMethodHint">
+                  <option value="">Keine Angabe</option>
+                  ${methodOptions}
+                </select>
+                <p class="jr-hint" id="jrMethodHint">Die Bezeichnungen stammen aus dem Methodenkatalog des Moduls.</p>
+              </div>
+              <div class="jr-control">
+                <label for="jrConfidence">Subjektive Sicherheit</label>
+                <select id="jrConfidence" name="confidence" aria-describedby="jrConfidenceHint">
+                  <option value="">Keine Angabe</option>
+                  ${confidenceOptions}
+                </select>
+                <p class="jr-hint" id="jrConfidenceHint">Wie sicher war die Vorhersage im Moment der Erfassung?</p>
+              </div>
+            </div>
+
+            <div class="jr-control">
+              <label for="jrPrediction">Eigene Vorhersage</label>
+              <textarea id="jrPrediction" name="prediction" rows="3" maxlength="${JOURNAL_LIMITS.prediction}" required aria-describedby="jrPredictionHint"></textarea>
+              <p class="jr-hint" id="jrPredictionHint">Was genau wurde erwartet? Vor dem Ergebnis schreiben, nicht danach. Höchstens ${JOURNAL_LIMITS.prediction} Zeichen.</p>
+            </div>
+
+            <div class="jr-control">
+              <label for="jrResult">Tatsächliches Ergebnis</label>
+              <textarea id="jrResult" name="result" rows="3" maxlength="${JOURNAL_LIMITS.result}" aria-describedby="jrResultHint"></textarea>
+              <p class="jr-hint" id="jrResultHint">Was ist tatsächlich eingetreten? Höchstens ${JOURNAL_LIMITS.result} Zeichen.</p>
+            </div>
+
+            <div class="jr-control">
+              <label for="jrReview">Spätere Bewertung</label>
+              <textarea id="jrReview" name="review" rows="3" maxlength="${JOURNAL_LIMITS.review}" aria-describedby="jrReviewHint"></textarea>
+              <p class="jr-hint" id="jrReviewHint">Im Rückblick: War die Frage gut gestellt? Wurde die Antwort nachträglich gedeutet? Höchstens ${JOURNAL_LIMITS.review} Zeichen.</p>
+            </div>
+
+            <div class="jr-actions">
+              <button type="submit" class="btn btn-primary" id="jrSave">Eintrag speichern</button>
+              <button type="button" class="btn btn-secondary" id="jrReset">Formular leeren</button>
+              <button type="button" class="btn btn-secondary" id="jrCancelEdit" hidden>Bearbeiten beenden</button>
+            </div>
+            <p class="jr-error" id="jrError" role="alert" hidden></p>
+          </form>
+
+          <div class="jr-list">
+            <div class="jr-list-head">
+              <h3 id="jrListTitle">Eigene Einträge</h3>
+              <fieldset class="jr-filter">
+                <legend>Filter</legend>
+                <label class="jr-filter-option"><input type="radio" name="jrFilter" value="all" checked /> alle</label>
+                <label class="jr-filter-option"><input type="radio" name="jrFilter" value="experiment" /> mit Experimentbezug</label>
+              </fieldset>
+            </div>
+            <p class="jr-storage" id="jrStorageNote"></p>
+            <p class="jr-empty" id="jrEmpty">Noch kein Eintrag gespeichert. Der erste Eintrag entsteht mit dem Formular.</p>
+            <ol class="jr-entries" id="jrEntries"></ol>
+            <div class="jr-actions jr-actions--list">
+              <button type="button" class="btn btn-secondary" id="jrExportJson" disabled>Alle Einträge (JSON)</button>
+              <button type="button" class="btn btn-secondary" id="jrExportCsv" disabled>Alle Einträge (CSV)</button>
+              <button type="button" class="btn btn-secondary" id="jrExportRuns" disabled>Experimentläufe (JSON)</button>
+            </div>
+          </div>
+
+          <p class="jr-status" id="jrStatus" role="status" aria-live="polite">Bereit. Einträge bleiben in diesem Browser.</p>
+        </div>
+
+        <section class="jr-block" aria-labelledby="jr-import-title">
+          <h3 id="jr-import-title" tabindex="-1">Einträge importieren</h3>
+          <p class="astro-text">Ein Export aus diesem Tagebuch lässt sich wieder einlesen — auf demselben Gerät oder nach einem Browserwechsel. Geprüft wird die ganze Datei: Ist ein Eintrag ungültig, wird <strong>nichts</strong> übernommen. Unbekannte Felder werden ignoriert, gleiche Kennungen ersetzt.</p>
+          <details class="jr-import">
+            <summary>Import öffnen</summary>
+            <div class="jr-import-body">
+              <div class="jr-control">
+                <label for="jrImportFile">JSON-Datei</label>
+                <input type="file" id="jrImportFile" accept=".json,application/json" aria-describedby="jrImportHint" />
+              </div>
+              <div class="jr-control">
+                <label for="jrImportText">oder JSON einfügen</label>
+                <textarea id="jrImportText" rows="4" spellcheck="false" autocomplete="off" aria-describedby="jrImportHint"></textarea>
+              </div>
+              <button type="button" class="btn btn-secondary" id="jrImportApply">Importieren</button>
+              <p class="jr-hint" id="jrImportHint">Nur das eigene JSON-Format, höchstens 1 MiB und 500 Einträge. CSV-Import ist nicht vorgesehen, weil dabei Feldtypen verloren gehen.</p>
+            </div>
+          </details>
+        </section>
+
+        <section class="jr-block jr-block--labor" aria-labelledby="jr-labor-title">
+          <h3 id="jr-labor-title" tabindex="-1">Aus dem Experimentierlabor</h3>
+          <p class="astro-text">Abgeschlossene Testläufe aus dem <a href="${ROUTE.experiment}">Experimentierlabor</a> erscheinen hier. Ein übernommener Lauf erzeugt einen Eintrag mit stabilem Bezug auf Experiment und Lauf; Vorhersage und Ergebnis stammen aus dem Protokoll. Der Lauf selbst bleibt unverändert.</p>
+          <p class="jr-hint" id="jrRunsNote">Es werden nur vollständig enthüllte Läufe angeboten — ein abgebrochener Lauf ist nicht auswertbar.</p>
+          <ul class="jr-runs" id="jrRuns"></ul>
+          <p class="jr-empty" id="jrRunsEmpty">Kein abgeschlossener Lauf in diesem Browser.</p>
+        </section>
+
+        <section class="jr-block jr-danger" aria-labelledby="jr-danger-title">
+          <h3 id="jr-danger-title" tabindex="-1">Alle eigenen Daten löschen</h3>
+          <p class="astro-text">Diese Schaltfläche entfernt <strong>alle</strong> lokal gespeicherten Daten dieses Bereichs: Tagebucheinträge, gespeicherte Experimentläufe, eine eventuell vorhandene Tafelkonfiguration und Sicherungskopien defekter Stände. Es gibt kein Konto und keinen Server, also auch keine weitere Kopie — und keine Wiederherstellung. Vorher exportieren, was erhalten bleiben soll.</p>
+          <div class="jr-actions">
+            <button type="button" class="btn jr-danger-btn" id="jrDeleteAll">Alle eigenen Daten löschen</button>
+          </div>
+          <p class="jr-hint" id="jrDeleteAllHint">Zum Löschen zweimal klicken: Der erste Klick schaltet scharf, der zweite löscht. Nach sechs Sekunden ohne zweiten Klick bleibt alles erhalten.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="astro-section" id="jr-speicher" aria-labelledby="jr-speicher-title">
+      <p class="rad-kicker">02 · Speicherung</p>
+      <h2 id="jr-speicher-title" tabindex="-1">Was lokal liegt — und was nicht</h2>
+      <p class="astro-text">Gespeichert werden ausschließlich die sieben Felder plus zwei technische Angaben (Kennung und Erstellzeit). Es gibt <strong>kein</strong> Feld für Namen, E-Mail-Adresse, Standort oder Geburtsdatum, keine Gerätekennung, kein Cookie, keine Telemetrie und keine Netzwerkanfrage. Nichts verlässt den Browser.</p>
+      <p class="astro-text">Der Speicher ist der <code>localStorage</code> dieses Browsers unter dem Schlüssel <code>esot_rad_journal_v1</code> als Umschlag <code>{ schema, savedAt, data }</code>. Ist der Speicher gesperrt oder nicht vorhanden — etwa im privaten Modus oder bei einer Datei-Edition —, arbeitet das Tagebuch im Arbeitsspeicher weiter und sagt sichtbar, dass Einträge nur für diese Sitzung gelten. Ist der Speicher voll, erscheint eine Meldung mit dem Hinweis, zu exportieren und alte Einträge zu löschen.</p>
+      <p class="astro-text"><strong>Grenze der Datei-Edition:</strong> Wird die Seite als lokale Datei (<code>file://</code>) geöffnet, kann der Browser den Speicher anders behandeln als unter einer Webadresse — je nach Browser getrennt pro Datei, flüchtig oder ganz gesperrt. Das Tagebuch funktioniert dort, aber die Dauerhaftigkeit ist nicht garantiert. Wer Einträge behalten will, exportiert sie.</p>
+    </section>
+
+    <section class="astro-section" id="jr-export" aria-labelledby="jr-export-title">
+      <p class="rad-kicker">03 · Ausgabe</p>
+      <h2 id="jr-export-title" tabindex="-1">Export, Import und ihre Grenzen</h2>
+      <dl class="jr-export-list">
+        <div><dt>JSON</dt><dd>Alle Einträge mit allen Feldern, Kennungen, Experiment- und Laufbezug. UTF-8, lesbar formatiert, mit Schema und Exportzeit. Dieselbe Datei lässt sich wieder importieren.</dd></div>
+        <div><dt>CSV</dt><dd>Eine Zeile je Eintrag mit deutschen Spaltennamen. UTF-8 mit BOM, Semikolon als Trenner, Anführungszeichen verdoppelt, CRLF als Zeilenende — direkt in Tabellenprogrammen lesbar. Nur zum Lesen und Weiterverarbeiten, nicht zum Wiedereinlesen.</dd></div>
+        <div><dt>Experimentläufe</dt><dd>Die Rohdaten der gespeicherten Läufe als eigener JSON-Umschlag. Sie gehören nicht zum Tagebuch, werden aber von „Alle eigenen Daten löschen“ mit entfernt — deshalb steht dieser Export daneben.</dd></div>
+      </dl>
+      <p class="astro-text">Der Import ist atomar: Ein einziger ungültiger Eintrag führt dazu, dass die ganze Datei abgelehnt wird. Das ist strenger als nötig, verhindert aber einen halb gefüllten Bestand. Übernommen werden höchstens 500 Einträge; gleiche Kennungen ersetzen den vorhandenen Eintrag.</p>
+    </section>
+
+    <section class="astro-section" id="jr-loeschen" aria-labelledby="jr-loeschen-title">
+      <p class="rad-kicker">04 · Löschung</p>
+      <h2 id="jr-loeschen-title" tabindex="-1">Vollständig löschen heißt vollständig</h2>
+      <p class="astro-text">Die Löschung entfernt jeden Schlüssel mit dem Präfix <code>esot_rad_</code> — also Tagebuch, Experimentläufe, Tafelkonfiguration und die Sicherungskopien defekter Stände. Sie ist keine Ausblendung und kein Papierkorb: Es bleibt nichts zurück, was sich wiederherstellen ließe. Ein einzelner Eintrag lässt sich getrennt löschen; für alles andere gibt es genau diesen einen Weg.</p>
+      <p class="astro-text">Vor der Löschung wird nicht automatisch exportiert. Wer die Daten behalten will, exportiert sie vorher — der Export ist eine bewusste Nutzeraktion und lädt nichts von selbst herunter.</p>
+    </section>
+
+    <aside class="rad-disclaimer" aria-labelledby="jr-nicht-title">
+      <h2 class="rad-disclaimer-title" id="jr-nicht-title">Was dieses Tagebuch nicht leistet</h2>
+      <p><strong>Kein Nachweis:</strong> Ein gefülltes Journal zeigt, was jemand beobachtet und vorhergesagt hat. Es belegt keine Fähigkeit und keine Wirkung — auch nicht bei vielen Treffern.</p>
+      <p><strong>Keine Messung:</strong> Die subjektive Sicherheit ist eine Selbstauskunft auf einer Skala von 1 bis 5, keine gemessene Größe. Sie ist nur mit sich selbst vergleichbar.</p>
+      <p><strong>Kein Gesundheitsrat:</strong> Einträge zu Befinden oder Diagnosen ersetzen keine ärztliche Abklärung. Das Modul gibt keine Heil- oder Therapieempfehlung.</p>
+    </aside>
+
+    <p class="astro-text psim-links">
+      <a class="btn btn-secondary" href="${ROUTE.topic('pendeln')}">Zum Thema Pendeln</a>
+      <a class="textlink" href="${ROUTE.experiment}">Experimentierlabor öffnen</a>
+    </p>
+  </div>`;
+
+  return {
+    html,
+    title: 'Pendeltagebuch — Experimente lokal festhalten',
+    description:
+      'Persönliches Pendeltagebuch: Frage, Vorhersage, subjektive Sicherheit, Ergebnis und spätere Bewertung — lokal ohne Konto, mit Export und vollständiger Löschung.',
+    h1: 'Pendeltagebuch',
+    journal: true,
   };
 }
 

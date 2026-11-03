@@ -177,6 +177,12 @@ const WORKSHOP = [
     state: 'Verfügbar',
     href: '#pendeln/experiment',
   },
+  {
+    title: 'Pendeltagebuch',
+    text: 'Eigene Versuche lokal festhalten: Frage, Vorhersage, Sicherheit, Ergebnis und spätere Bewertung — mit Export und vollständiger Löschung.',
+    state: 'Verfügbar',
+    href: '#pendeln/journal',
+  },
 ];
 
 const RELATED = [

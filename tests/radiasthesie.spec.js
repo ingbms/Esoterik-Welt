@@ -20,6 +20,7 @@ const ROUTES = [
   { hash: '#pendeln/glossar', h1: 'Glossar', title: /^Glossar —/ },
   { hash: '#pendeln/quellen', h1: 'Quellen & Belege', title: /^Quellen und Belege/ },
   { hash: '#pendeln/methodik', h1: 'Methodik & Grenzen', title: /^Methodik und Grenzen/ },
+  { hash: '#pendeln/journal', h1: 'Pendeltagebuch', title: /^Pendeltagebuch —/ },
   { hash: '#pendeln/suche?q=bovis', h1: 'Suche im Modul', title: /^Suche: bovis/ },
 ];
 
@@ -60,7 +61,7 @@ test('Landingpage: Hero, Einordnungsband, drei Themen, fünf Stufen, Werkstatt',
   await expect(root.locator('.rad-status')).toContainText('nicht belegt');
   await expect(root.locator('.rad-topic')).toHaveCount(3);
   await expect(root.locator('.rad-level')).toHaveCount(5);
-  await expect(root.locator('.rad-werk')).toHaveCount(3);
+  await expect(root.locator('.rad-werk')).toHaveCount(4);
   await expect(root.locator('.rad-disclaimer')).toContainText('Was hier nicht behauptet wird');
   await expect(root.locator('h1')).toHaveCount(1);
   for (const name of ['Radiästhesie', 'Pendeln', 'Orakel']) {

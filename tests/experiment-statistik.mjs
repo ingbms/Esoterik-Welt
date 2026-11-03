@@ -537,7 +537,7 @@ test('Werkstatt-Karte „Experimentierlabor“ ist verfügbar und verlinkt', () 
   const landing = renderLanding(model);
   assert.ok(landing.html.includes('Experimentierlabor'));
   const workshop = model.data.landing.workshop;
-  assert.equal(workshop.length, 3);
+  assert.equal(workshop.length, 4);
   const entry = workshop.find((item) => item.title === 'Experimentierlabor');
   assert.equal(entry.state, 'Verfügbar');
   assert.equal(entry.href, '#pendeln/experiment');

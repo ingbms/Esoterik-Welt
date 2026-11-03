@@ -335,9 +335,9 @@ test('Laboransicht: eine H1, Regler mit Labels, drei Darstellungen, Disclaimer',
   assert.ok(html.includes('Gültigkeitsbereich und Annahmen'));
 });
 
-test('Startseite verlinkt Pendellabor und Tafel-Studio als verfügbare Werkzeuge', () => {
+test('Startseite verlinkt Pendellabor, Tafel-Studio, Labor und Tagebuch als verfügbare Werkzeuge', () => {
   const workshop = model.data.landing.workshop;
-  assert.equal(workshop.length, 3);
+  assert.equal(workshop.length, 4);
   assert.equal(workshop[0].title, 'Pendellabor');
   assert.equal(workshop[0].href, '#pendeln/labor');
   assert.equal(workshop[0].state, 'Verfügbar');
@@ -348,11 +348,16 @@ test('Startseite verlinkt Pendellabor und Tafel-Studio als verfügbare Werkzeuge
   assert.equal(workshop[2].title, 'Experimentierlabor');
   assert.equal(workshop[2].href, '#pendeln/experiment');
   assert.equal(workshop[2].state, 'Verfügbar');
+  // Das Pendeltagebuch ist mit RAD-10 verfügbar und verlinkt.
+  assert.equal(workshop[3].title, 'Pendeltagebuch');
+  assert.equal(workshop[3].href, '#pendeln/journal');
+  assert.equal(workshop[3].state, 'Verfügbar');
 
   const html = renderLanding(model).html;
   assert.ok(html.includes('class="rad-werk-link" href="#pendeln/labor"'));
   assert.ok(html.includes('class="rad-werk-link" href="#pendeln/studio"'));
   assert.ok(html.includes('class="rad-werk-link" href="#pendeln/experiment"'));
-  assert.equal((html.match(/rad-werk-state--ready/g) || []).length, 3);
+  assert.ok(html.includes('class="rad-werk-link" href="#pendeln/journal"'));
+  assert.equal((html.match(/rad-werk-state--ready/g) || []).length, 4);
   assert.equal((html.match(/rad-werk-state--planned/g) || []).length, 0);
 });

@@ -37,6 +37,9 @@ export const ROUTE = {
   // Werkstatt Experimentierlabor (RAD-09). Ebenfalls ohne Query-Zustand: Ein
   // Deep-Link darf weder einen laufenden Versuch noch ein Ziel vortäuschen.
   experiment: '#pendeln/experiment',
+  // Werkstatt Pendeltagebuch (RAD-10). Ohne Query-Zustand: Einträge liegen im
+  // Browser, nicht in der Adresse — ein Link darf keinen fremden Stand zeigen.
+  journal: '#pendeln/journal',
 };
 
 // --- Kennzeichnung --------------------------------------------------------

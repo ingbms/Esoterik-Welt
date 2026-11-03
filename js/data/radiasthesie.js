@@ -253,7 +253,7 @@ export const RADIASTHESIE = {
         'Pendeln: Geschichte seit 371 n. Chr., Arten, Antwortkonventionen und Mechanik — kontrollierte Tests und offene Fragen, ohne Wirkungsversprechen.',
       heading: 'Pendeln: Von Ammianus Marcellinus bis zur modernen Praxis',
       lead: 'Ein Pendel in der Radiästhesie-Praktik besteht meist aus einem Kegel oder einer Kugel (2–3 cm Körper), an einer 15–30 cm langen Schnur hängend [Q09]. Die Anwendung folgt einer Konvention: Frage formulieren, Pendel ruhig halten (meist über einer Tafel, über dem Körper oder über einer Karte), Bewegung beobachten — entweder Kreis, Oval, oder Pendelbewegung als „Ja“ oder „Nein“. Für mehr Antwortmöglichkeiten dienen **Pendeldiagramme** (Ja/Nein, Zahlenkreis, Buchstabenfeld, Segmenttafeln) [Q09].',
-      wordCount: 937,
+      wordCount: 983,
       chapterCount: 10,
       figure: {
         src: 'assets/radiasthesie/pendeltafel.svg',
@@ -447,8 +447,12 @@ export const RADIASTHESIE = {
               type: 'p',
               text: 'Ein verblindetes Experimentierlabor steht im Modul zur Verfügung; der Versuchsaufbau steht fest: Frage vorher schriftlich fixieren, Ziel verdeckt halten, Antwort vor Offenlegung speichern, alle Versuche zählen (keine Nachlese). Die Auswertung erfolgt gegen Zufall (50 % bei Ja/Nein, 12,5 % bei acht Orten). **Wichtig:** Ein Test, der „nichts zeigt“, ist kein Beweis, dass niemand etwas kann — er zeigt, dass die Behauptung in dieser Prüfung nicht sichtbar wurde.',
             },
+            {
+              type: 'p',
+              text: 'Ein persönliches Pendeltagebuch ergänzt das Labor: Es hält Frage, Methode, Vorhersage, subjektive Sicherheit, Ergebnis und eine spätere Bewertung fest — lokal im Browser, ohne Konto und ohne Übertragung. Ein abgeschlossener Testlauf lässt sich übernehmen; die Einträge bleiben auch dann lesbar, wenn der Lauf später gelöscht wird.',
+            },
           ],
-          words: 67,
+          words: 113,
         },
       ],
       disclaimer: {
@@ -774,6 +778,12 @@ export const RADIASTHESIE = {
         title: 'Experimentierlabor',
         text: 'Verblindete Testreihe mit festgelegtem Ziel, Zufallserwartung, Konfidenzintervall und Rohdatenexport.',
         href: '#pendeln/experiment',
+      },
+      {
+        state: 'Verfügbar',
+        title: 'Pendeltagebuch',
+        text: 'Eigene Versuche lokal festhalten: Frage, Vorhersage, Sicherheit, Ergebnis und spätere Bewertung — mit Export und vollständiger Löschung.',
+        href: '#pendeln/journal',
       },
     ],
     related: [

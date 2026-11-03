@@ -11,11 +11,13 @@ import { createModel } from './radiasthesie-model.js';
 import { mountPendulumSimulator } from './pendel-simulator.js';
 import { mountPendeltafelStudio } from './pendeltafel-studio.js';
 import { mountExperimentLabor } from './experiment-labor.js';
+import { mountPendelJournal } from './pendel-journal.js';
 import {
   breadcrumbStructuredData,
   renderExperiment,
   renderFailure,
   renderGlossar,
+  renderJournal,
   renderLabor,
   renderLanding,
   renderMethodik,
@@ -55,6 +57,7 @@ export class RadiasthesieModule {
     this.simulator = null;
     this.studio = null;
     this.experiment = null;
+    this.journal = null;
     this.bound = false;
     if (root) this.bind();
   }
@@ -101,6 +104,7 @@ export class RadiasthesieModule {
     this.teardownSimulator();
     this.teardownStudio();
     this.teardownExperiment();
+    this.teardownJournal();
     this.root.innerHTML = view.html;
     this.view = view;
     // Das Pendellabor hängt seine Physik erst nach dem Einsetzen ins Dokument
@@ -116,6 +120,11 @@ export class RadiasthesieModule {
       // Das Labor hält Lauf und Secret im Modulspeicher. destroy() verwirft
       // beides, damit ein Routenwechsel kein verdecktes Ziel weiterleben lässt.
       this.experiment = mountExperimentLabor(this.root.querySelector('#experimentLabor'));
+    }
+    if (view.journal) {
+      // Das Tagebuch liest den lokalen Speicher beim Einsetzen neu und hängt
+      // alle Zuhörer an den Container. destroy() entfernt sie samt Timern.
+      this.journal = mountPendelJournal(this.root.querySelector('#pendelJournal'));
     }
     this.applyMeta(view);
     this.placeStructuredData(view);
@@ -151,6 +160,14 @@ export class RadiasthesieModule {
     }
   }
 
+  /** Beendet das Pendeltagebuch: Listener und Lösch-Timer. */
+  teardownJournal() {
+    if (this.journal) {
+      this.journal.destroy();
+      this.journal = null;
+    }
+  }
+
   resolveView(model, segments, query) {
     const route = model.resolve(segments, query);
     switch (route.view) {
@@ -168,6 +185,8 @@ export class RadiasthesieModule {
         return renderStudio();
       case 'experiment':
         return renderExperiment();
+      case 'journal':
+        return renderJournal();
       case 'suche':
         return renderSuche(model, route.q || '');
       case 'notfound':

@@ -25,6 +25,7 @@ const MODULE_FILES = [
   'js/modules/radiasthesie-vertraege.js',
   'js/modules/pendeltafel-model.js',
   'js/modules/experiment-statistik.js',
+  'js/modules/journal-speicher.js',
   'js/data/radiasthesie.js',
   'js/data/radiasthesie-werkstatt.js',
 ];
@@ -164,6 +165,7 @@ test('Router-Vokabular wird vollständig aufgelöst', () => {
   assert.equal(model.resolve(['quellen', 'Q06']).sourceId, 'Q06');
   assert.equal(model.resolve(['quellen', 'Q99']).sourceId, '');
   assert.equal(model.resolve(['methodik']).view, 'methodik');
+  assert.equal(model.resolve(['journal']).view, 'journal');
   assert.equal(model.resolve(['suche'], 'q=forer').q, 'forer');
   assert.equal(model.resolve(['gibtsnicht']).view, 'notfound');
 });
@@ -206,7 +208,7 @@ test('Landingpage: eine H1, drei Themenkarten, Einordnungsband und Stufenlegende
   assert.equal(count(html, /class="rad-topic"/g), 3);
   assert.equal(count(html, /class="rad-status"/g), 1);
   assert.equal(count(html, /class="rad-level"/g), 5);
-  assert.equal(count(html, /class="rad-werk"/g), 3);
+  assert.equal(count(html, /class="rad-werk"/g), 4);
   assert.ok(html.includes('Was offen bleibt'), 'offene Fragen müssen auf der Landingpage stehen');
   assert.match(view.title, /Radiästhesie, Pendeln und Orakel/);
   assert.ok(view.description.length > 80 && view.description.length <= 180);

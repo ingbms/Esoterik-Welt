@@ -16,6 +16,7 @@ const VIEW = {
   labor: 'labor',
   studio: 'studio',
   experiment: 'experiment',
+  journal: 'journal',
   notfound: 'notfound',
 };
 
@@ -118,6 +119,11 @@ export function createModel(raw) {
       // Modus, Lauf und Ziel liegen im Browser, nicht in der Adresse.
       case 'experiment':
         return { view: VIEW.experiment, params };
+      // Werkstatt-Route des Pendeltagebuchs (RAD-10). Ebenfalls ohne
+      // Query-Zustand: Einträge liegen im lokalen Speicher des Browsers und
+      // gehören nicht in eine teilbare Adresse.
+      case 'journal':
+        return { view: VIEW.journal, params };
       case 'suche':
         return { view: VIEW.suche, q: params.get('q') || '', params };
       default:

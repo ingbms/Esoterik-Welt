@@ -73,6 +73,8 @@ Der Forschungsstand zu Pendeln in der Diagnostik ist lückenhaft: Keine peer-rev
 
 Ein verblindetes Experimentierlabor steht im Modul zur Verfügung; der Versuchsaufbau steht fest: Frage vorher schriftlich fixieren, Ziel verdeckt halten, Antwort vor Offenlegung speichern, alle Versuche zählen (keine Nachlese). Die Auswertung erfolgt gegen Zufall (50 % bei Ja/Nein, 12,5 % bei acht Orten). **Wichtig:** Ein Test, der „nichts zeigt“, ist kein Beweis, dass niemand etwas kann — er zeigt, dass die Behauptung in dieser Prüfung nicht sichtbar wurde.
 
+Ein persönliches Pendeltagebuch ergänzt das Labor: Es hält Frage, Methode, Vorhersage, subjektive Sicherheit, Ergebnis und eine spätere Bewertung fest — lokal im Browser, ohne Konto und ohne Übertragung. Ein abgeschlossener Testlauf lässt sich übernehmen; die Einträge bleiben auch dann lesbar, wenn der Lauf später gelöscht wird.
+
 ## 11. Redaktions-Hinweis zur Einordnung (Tradition vs. Evidenz)
 
 **Tradition:** Pendeln hat eine dokumentierbare Geschichte seit 371 n. Chr., eine Praxis der Frage-Antwort, Konventionen und Instrumente, und eine Kultur der Selbstreflexion und Entscheidungshilfe.
