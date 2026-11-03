@@ -3,11 +3,19 @@
 Stand: 2. November 2026 · Zielstandard: **WCAG 2.2 AA**, soweit auf die
 Konzept- und Mockup-Ebene anwendbar.
 
+Geltungsbereich: **zwölf Farbwelten** (`02` §2/§11, Kontrastpaare in `03` §4).
+Die Messungen in §1–§5 und die Bilder in §9 stammen aus dem Mockup der
+**ersten Ausbaustufe (7 Farbwelten)** und sind als solche gekennzeichnet;
+Zahlen der ersten Ausbaustufe werden nicht auf zwölf Farben umgedeutet. Die
+Prüfung der zwölf Farbwelten in der Produktionsfassung läuft über
+`npm run verify:farbwelten` (siehe `08` §7).
+
 ## 1. Prüfumgebung und Grenzen
 
 - Chromium (Playwright 1.64.1, Build 1208) unter Windows 11, ohne Erweiterungen.
-- Gerendert: `mockup/index.html` mit den echten Projektstylesheets
-  (`css/design-system.css`, `css/main.css`) und `mockup/farbwelten.css`.
+- Gerendert (**Messung erste Ausbaustufe, 7 Farbwelten**): `mockup/index.html`
+  mit den echten Projektstylesheets (`css/design-system.css`, `css/main.css`)
+  und `mockup/farbwelten.css`.
 - Breiten: 1440, 1100, 900, 768, 390, 320 px; zusätzlich Kopfzeilenmessung bei
   781/800/840/900/901/920/960/1024/1120/1200/1440 px.
 - Reproduktion: `node docs/farbwelten-konzept/scripts/audit-mockup.cjs`,
@@ -23,12 +31,18 @@ Konzept- und Mockup-Ebene anwendbar.
 
 ### 2.1 Paletten
 
-Alle Text- und Linienpaare der sieben Farbwelten: siehe `03` §4.
-Kurzfassung: `-ink` 4,81–5,99:1 auf den drei dunklen Flächen, Fließtext
-8,96–13,81:1, funktionale Linien 3,22–3,35:1. Alle Prüfungen bestanden
-(`messung/palette.json` → `checks`).
+Alle Text- und Linienpaare der **zwölf** Farbwelten stehen in `03` §4
+(Quelle: `scripts/generate-palette.py`, Rohdaten `messung/palette.json`,
+12 Messpaare und 5 Prüfpunkte je Welt, alle bestanden).
+Kurzfassung über alle zwölf Welten: `-ink` 4,81–9,78:1 auf dem eigenen `-deep`
+(4,80–9,91:1 auf `#141c1f`, 5,32–10,98:1 auf `#0b1012`), Fließtext
+8,91–13,89:1, funktionale Linien 3,22–5,49:1 auf `-deep` und 3,26–5,56:1 auf
+der Karte (`messung/palette.json` → `checks`).
 
-### 2.2 Gerendertes Mockup (1440 px, berechnete Farben)
+Messung erste Ausbaustufe (7 Farben) zum Vergleich, unverändert: `-ink`
+4,81–5,99:1, Fließtext 8,96–13,81:1, funktionale Linien 3,22–3,35:1.
+
+### 2.2 Gerendertes Mockup (1440 px, berechnete Farben) — Messung erste Ausbaustufe (7 Farbwelten)
 
 | Element | Vordergrund | Hintergrund | Kontrast |
 | --- | --- | --- | ---: |
@@ -85,6 +99,9 @@ Ablauf im Mockup geprüft (`messung/mockup-audit.json` → `keyboard`):
    Zeigergesten erforderlich.
 
 ## 5. Struktur und Semantik
+
+Die Nachweise in dieser Tabelle stammen aus dem Mockup-Audit der **ersten
+Ausbaustufe (7 Farbwelten)** (`messung/mockup-audit.json`).
 
 | Prüfpunkt | Ergebnis | Nachweis |
 | --- | --- | --- |
@@ -161,8 +178,14 @@ Status: **E** = erfüllt und gemessen · **K** = erfüllt durch Konstruktion ·
    eine Simulation (Deuteranopie/Protanopie) wurde nicht durchgeführt.
 5. Die Übung (Abschnitt G) ist im Mockup nicht implementiert; ihre
    Bedienbarkeit (Start/Pause/Ende, kein Autoplay) ist Vorgabe, nicht Nachweis.
+6. Die zwölf Farbwelten der Produktion sind mit `npm run verify:farbwelten`
+   geprüft (Struktur, Fokus, Kontraste im DOM, Überlauf); ein **erneutes**
+   Mockup-Audit oder ein Lighthouse-Lauf über die zwölf Farbseiten fehlt. Die
+   Werte in §2.2, §5 und §9 gelten für den Messstand der ersten Ausbaustufe.
 
 ## 9. Nachweise (Bilder)
+
+Alle Bilder zeigen das Mockup der **ersten Ausbaustufe (7 Farbwelten)**.
 
 | Bild | Inhalt |
 | --- | --- |

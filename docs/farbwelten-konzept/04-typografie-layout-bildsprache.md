@@ -3,6 +3,12 @@
 Stand: 2. November 2026 · Referenz: `docs/art-direction-nachtatelier/STYLEGUIDE.md`,
 `css/design-system.css`, `mockup/farbwelten.css`.
 
+Geltungsbereich: **zwölf Farbwelten**; Registerreihenfolge und Routen stehen
+verbindlich in `02` §2/§11, Paletten und Kontraste in `03`. Alle Messwerte in
+diesem Dokument sind die **Messung der ersten Ausbaustufe (7 Farbwelten)** aus
+dem Mockup und als solche gekennzeichnet; sie belegen Raster, Typografie und
+Zielgrößen, nicht die Zahl der Bänder oder Registerzeilen.
+
 ## 1. Typografie-Hierarchie
 
 Keine neue Schrift, keine neuen Grade. Die Sektion nutzt ausschließlich die
@@ -48,9 +54,12 @@ Regeln:
 
 Raute: 4-px-Raster (4/8/12/16/24/32/48/64/96). Keine Zwischenwerte.
 
-Gemessene Ist-Werte des Mockups (`messung/mockup-audit.json`):
+Gemessene Ist-Werte — **Messung erste Ausbaustufe (7 Farbwelten)**, Mockup vom
+2. November 2026 (`messung/mockup-audit.json`). Die Zeilenhöhe gilt unverändert;
+die Zahl der Registerzeilen und Tafelbänder ist mit zwölf Farbwelten größer
+(heute 12, siehe `05` §2/§3):
 
-- Farbregister-Zeilen: **96 px** bei 1440 px (7 Zeilen).
+- Farbregister-Zeilen: **96 px** bei 1440 px (7 Zeilen im Messstand).
 - Farbkarten: **443 px** Höhe in einer Dreierreihe, differenzfrei.
 - Chakra-Ziele: **44 px** ab 901 px, **36 px** bei 401–700 px, **32 px** bei
   ≤400 px (auch 390 px) — alle über der 24-px-Mindestgröße.
@@ -79,7 +88,7 @@ keine Stockfotos, keine generierten Kristallbilder, keine Regenbogen-Collagen.
 
 | Motiv | Umsetzung | Warum |
 | --- | --- | --- |
-| Farbtafel im Hero | 7 Bänder, je `core → deep`, Beschriftung auf fester `deep`-Platte | zeigt alle Welten, ohne Text auf Farbe |
+| Farbtafel im Hero | 12 Bänder in Registerreihenfolge (`02` §2), je `core → deep`, Beschriftung auf fester `deep`-Platte; nichtspektrale und neutrale Welten tragen das Typ-Label statt einer nm-Angabe | zeigt alle Welten, ohne Text auf Farbe |
 | Farbfeld in Karte/Detail | Verlauf `soft → core → deep`, 16:9 oder 4:3 | Pigmentwirkung statt Icon |
 | Spektrumband | CSS-Verlauf aus den 21 Messpunkten, UV/IR als gedämpfte Randzonen | physikalische Anschauung, klar als Simulation markiert |
 | Chakra-Figur | eigene SVG-Silhouette, 1,5-px-Linie `#82928e`, gestrichelte Positionslinien `#3c484b` | editierbar, keine Rechtefrage, keine Anatomiebehauptung |
@@ -89,7 +98,7 @@ keine Stockfotos, keine generierten Kristallbilder, keine Regenbogen-Collagen.
 Wenn später Fotos oder Fremdgrafiken dazukommen (z. B. CIE-Diagramm, Chakren-
 Silhouetten aus dem Master-Auftrag §11), gelten die Beschaffungsregeln des
 Master-Auftrags: Quelldatei prüfen, Lizenz und Urheber dokumentieren, lokal
-ablegen, Alt-Text schreiben, Änderungen nachweisen. Für die sieben Farbwelten
+ablegen, Alt-Text schreiben, Änderungen nachweisen. Für die zwölf Farbwelten
 ist **kein** Fremdbild nötig; die Flächen sind CSS.
 
 Bildunterschriften nennen, was zu sehen ist, und — bei Simulationen — was sie
@@ -110,7 +119,7 @@ nicht sind („Bildschirmannäherung, kein monochromatisches Licht“).
 
 - Maximal **eine** farbige Großfläche pro Viewport-Höhe; danach mindestens
   eine Textfläche oder ein 1-px-Trenner.
-- Sieben Farbkarten stehen nie gleichzeitig als sieben gesättigte Flächen im
+- Zwölf Farbkarten stehen nie gleichzeitig als zwölf gesättigte Flächen im
   Blick: Auf der Einstiegsseite trägt das Register die Übersicht, die Karten
   zeigen nur drei Beispiele.
 - Jede Sektion beginnt mit Text (Label + H2), nicht mit einer Farbfläche.

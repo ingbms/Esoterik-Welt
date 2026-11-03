@@ -3,6 +3,10 @@
 Stand: 2. November 2026 · Ziel: die Sektion ohne Rückfragen in das bestehende
 Projekt einbauen. Alle Entscheidungen sind hier oder in `02`–`07` belegt.
 
+Geltungsbereich: **zwölf Farbwelten / 14 Routen** (verbindlich in `02` §2/§11).
+Der Leitfaden beschreibt den Zielstand; Messwerte aus der ersten Ausbaustufe
+(7 Farbwelten) sind dort, wo sie zitiert werden, als solche gekennzeichnet.
+
 ## 1. Dateien
 
 **Neu:**
@@ -11,7 +15,7 @@ Projekt einbauen. Alle Entscheidungen sind hier oder in `02`–`07` belegt.
 | --- | --- | --- |
 | `css/farbwelten.css` | Komponenten aus `05` | 8–10 KB |
 | `js/modules/farbwelten.js` | Router-Ansicht, Rendering, Chakra-Auswahl | 6–8 KB |
-| `js/data/farbwelten.js` | 7 Farbwelten, Blöcke, Quellen | Inhalt |
+| `js/data/farbwelten.js` | 12 Farbwelten in Registerreihenfolge (`02` §2), Blöcke, Quellen | Inhalt |
 | `js/data/chakren.js` | 7 Chakren, Positionen, Einordnung | 2 KB |
 | `js/data/evidence.js` | `ResearchEvidence`-Liste (optional, sonst in `farbwelten.js`) | Inhalt |
 | `content/farbwelten/*.md` | Redaktionsquelle (Task 3), nicht im Build | – |
@@ -24,7 +28,7 @@ Projekt einbauen. Alle Entscheidungen sind hier oder in `02`–`07` belegt.
 | `js/main.js` | Import, `MAIN_PAGES`, `FARBWELTEN_ROUTE`, `parseRoute`, `applyRoute`, `PAGE_META`, `init` |
 | `css/design-system.css` | `--fw-*`-Block, Mobilmenü-Grenze 780 → 900 px |
 | `css/main.css` | Kompaktblock 781 → 901 px; 781–900-Block entfernen |
-| `scripts/verify-pages.cjs` | Routen `farbwelten`, `farbwelten/rot`, `farbwelten/chakren`, `farbwelten/lichtfrequenzen` |
+| `scripts/verify-pages.cjs` | Routen aus `02` §2 (`farbwelten`, alle zwölf Farben, `farbwelten/chakren`, `farbwelten/lichtfrequenzen`) |
 | `scripts/build-pages.cjs` | keine Änderung nötig (kopiert `css`, `js`, `data`) |
 
 `js/data/farbwelten.js` liegt unter `js/`, damit der bestehende Kopierschritt
@@ -70,7 +74,7 @@ if (route.type === 'farbwelten') {
 farbwelten: {
   title: 'Farbwelten — Bedeutung, Physik und Tradition der Farben | Esoterik-Welt',
   description:
-    'Sieben Farbwelten zwischen Licht, Wahrnehmung und Tradition: Wellenlängen, Assoziationen, Chakren und Forschungsstand differenziert erklärt.',
+    'Zwölf Farbwelten zwischen Licht, Wahrnehmung und Tradition: Wellenlängen, Assoziationen, Chakren und Forschungsstand differenziert erklärt.',
 },
 
 // init()
@@ -78,6 +82,11 @@ state.modules.farbwelten = new FarbweltenModule(document.getElementById('farbwel
 // laden, sobald die Route aktiv ist (Muster wie astrologie/pendeln):
 if (state.currentPage === 'farbwelten') await state.modules.farbwelten.load();
 ```
+
+**Bekannte Abweichung (Stand der Implementierung):** `js/main.js` führt für
+`farbwelten` noch die Meta-Description der ersten Ausbaustufe
+(„Sieben Farbwelten …“). Verbindlich ist der Text in `02` §10
+(„Zwölf Farbwelten …“); der Nachzug ist offen und als Folgekarte notiert.
 
 Die Alias-Rückgabe muss **vor** `if (PAGE_IDS.has(raw))` stehen; `raw` ist
 bereits um `#` bereinigt. Für Alias-Routen im `applyRoute`-Block
@@ -148,7 +157,7 @@ Zielen, `href` wird gegen `https://` geprüft.
 
 Unbekannte Blocktypen werden **nicht** stillschweigend gerendert, sondern
 lösen im Entwicklungsmodus `console.warn` aus und werden ausgelassen; ein Test
-prüft, dass alle Blöcke der sieben Welten einen bekannten Typ haben.
+prüft, dass alle Blöcke der zwölf Welten einen bekannten Typ haben.
 
 ## 5. Farbwelt-Scoping
 
@@ -183,9 +192,10 @@ npm run verify:pages     # Playwright-Lauf gegen die gebaute Fassung
 
 Ergänzungen, die mit der Implementierung kommen müssen:
 
-- `scripts/verify-pages.cjs`: die vier neuen Routen in `routes` aufnehmen.
-- Neuer Test `tests/farbwelten.cjs`: prüft
-  1. sieben Farbseiten rendern je eine H1 und die acht Abschnitts-IDs,
+- `scripts/verify-pages.cjs`: die Routen aus `02` §2 in `routes` aufnehmen —
+  Einstieg, alle zwölf Farben, `farbwelten/chakren`, `farbwelten/lichtfrequenzen`.
+- Neuer Test `tests/farbwelten.mjs`: prüft
+  1. zwölf Farbseiten rendern je eine H1 und die acht Abschnitts-IDs,
   2. Alias `#chakren` landet auf `#farbwelten/chakren`,
   3. Chakra-Auswahl setzt `aria-pressed` und aktualisiert das Panel,
   4. Frequenzberechnung an drei Stützwerten (650/530/420 nm),
@@ -197,7 +207,7 @@ Ergänzungen, die mit der Implementierung kommen müssen:
 
 | Kriterium | Nachweis |
 | --- | --- |
-| Einstieg, 7 Farbseiten, Chakren, Lichtfrequenzen erreichbar | `verify-pages`-Lauf, Screenshots |
+| Einstieg, zwölf Farbseiten, Chakren, Lichtfrequenzen erreichbar (14 Routen, `02` §2) | `verify-pages`-Lauf, Screenshots |
 | Einheitliches Skelett A–H auf allen Farbseiten | Test zählt Abschnitts-IDs |
 | Paletten als Tokens, keine Hex-Literale in Komponenten | `grep -n "#[0-9a-f]\{6\}" css/farbwelten.css` → nur Token-Datei |
 | Kontraste AA | `generate-palette.py` + `audit-mockup.cjs` grün |
@@ -213,7 +223,7 @@ Ergänzungen, die mit der Implementierung kommen müssen:
 1. **Kopfzeile**: Die Grenze 900 px ist gemessen, aber plattformabhängig
    (Font-Fallbacks). Nach der Umsetzung bei 901 px und 781 px nachmessen; wenn
    die Reserve unter 30 px fällt, Logo auf 22 px reduzieren (nicht die Schrift).
-2. **Datenmenge**: Sieben Seiten mit je acht Abschnitten erzeugen viel Text im
+2. **Datenmenge**: Zwölf Seiten mit je acht Abschnitten erzeugen viel Text im
    ES-Modul. Wenn die Datei > 150 KB wird, auf `data/farbwelten/*.json` mit
    `fetch` wechseln — dann ist ein Ladezustand nötig (`aria-busy`).
 3. **`innerHTML`**: Der Modulcode darf Redaktionstext niemals als HTML

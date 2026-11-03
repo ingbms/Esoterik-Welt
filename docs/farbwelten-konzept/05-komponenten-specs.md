@@ -3,6 +3,13 @@
 Stand: 2. November 2026 · Referenzimplementierung: `mockup/index.html` mit
 `mockup/farbwelten.css` (Prüfungen in `07-accessibility.md`).
 
+Geltungsbereich: **zwölf Farbwelten** (Registerreihenfolge und Routen: `02` §2/§11).
+Die Referenzimplementierung `mockup/index.html` zeigt den **Stand der ersten
+Ausbaustufe (7 Farbwelten)**; wo die Produktionsfassung (`css/farbwelten.css`)
+abweicht, stehen hier die Werte der Produktionsfassung, und die Abweichung ist
+am Baustein benannt. Messwerte aus dem Mockup-Audit sind als solche
+gekennzeichnet.
+
 Konvention: Maße in px, Farben ausschließlich über Tokens, Zustände explizit.
 Jede Komponente nennt Zweck, Aufbau, Maße, Zustände, Barrierefreiheit und
 Inhaltsregeln.
@@ -37,29 +44,29 @@ Farbtafel (5 Teile), 64 px Abstand, 96 px oben / 64 px unten.
 
 ## 2. Farbtafel (`fw-tafel`)
 
-**Zweck:** Alle sieben Welten auf einen Blick, als Materialprobe.
+**Zweck:** Alle zwölf Welten auf einen Blick, als Materialprobe.
 
 | Eigenschaft | Wert |
 | --- | --- |
-| Container | `display:grid; grid-template-rows:repeat(7,1fr); aspect-ratio:4/5`, 1-px-Rahmen `--color-line-strong` |
-| Band | `display:flex`, 1-px-Trenner `--color-bg-deep` |
-| Farbfeld | `flex:1 1 auto; min-width:40%`, Verlauf `--band-core → --band-deep` |
-| Beschriftungsplatte | `flex:0 0 auto; min-width:46%`, Fläche `--band-deep`, 16 px Innenabstand |
-| Inhalt | Mono-Wellenlänge (13 px, sekundär) + Name (Fraunces 18 px, primär) |
-| Mobil ≤1100 | `aspect-ratio:16/9`, Name 16 px |
+| Container | `display:grid; grid-template-rows:repeat(12, minmax(44px, auto))` — zwölf Bänder in Registerreihenfolge, Mindesthöhe 44 px; 1-px-Rahmen `--color-line-strong`, Fläche `--color-bg-card`. Kein festes Seitenverhältnis mehr (die Vorgabe der ersten Ausbaustufe war `repeat(7,1fr)` mit `aspect-ratio:4/5`) |
+| Band | `display:flex`, 1-px-Trenner `--color-bg-deep`, letztes Band ohne Trenner |
+| Farbfeld | `flex:0 0 40%`, Verlauf `--band-core → --band-deep` (90°) |
+| Beschriftungsplatte | `flex:1 1 auto`, rechtsbündig, 12 px Innenabstand, Fläche `--band-deep` |
+| Inhalt | Mono-Wellenlänge (`--text-xs`, sekundär) + Name (Fraunces `--text-lg`, primär); Magenta, Rosa, Weiß und Schwarz tragen in der Mono-Zeile das Typ-Label („nicht spektral“, „Neutralfarbe“) statt einer Wellenlänge |
+| Mobil | Bandhöhe folgt dem Inhalt (Mindesthöhe 44 px); Name ab ≤700 px `--text-base` |
 
 **Regel:** Text steht **nur** auf der Platte (`--band-deep`), nie auf dem
-Verlauf. Kontrast dadurch messbar: 13,77:1 (Name) und 9,03:1 (Wellenlänge),
-siehe `03` §4.
+Verlauf. Kontrast dadurch messbar: 13,59–13,89:1 (Name) und 8,91–9,11:1
+(Wellenlänge) über alle zwölf `-deep`-Flächen, siehe `03` §4.
 
-**Barrierefreiheit:** Container `role="img"` mit `aria-label`, das alle sieben
-Namen und Wellenlängen nennt; die inneren Elemente sind für Screenreader
-dekorativ (`aria-hidden` am Farbfeld). Alternativ als `<ul>` mit sieben
-`<li>`— dann ohne `role="img"`.
+**Barrierefreiheit:** Container `role="img"` mit `aria-label`, das alle zwölf
+Namen und — wo vorhanden — Wellenlängen nennt; die inneren Elemente sind für
+Screenreader dekorativ (`aria-hidden` am Farbfeld). Alternativ als `<ul>` mit
+zwölf `<li>`— dann ohne `role="img"`.
 
 ## 3. Farbregister (`fw-register`)
 
-**Zweck:** Schnelle Übersicht und Einstieg in die sieben Detailseiten.
+**Zweck:** Schnelle Übersicht und Einstieg in die zwölf Detailseiten.
 
 ```html
 <ul class="fw-register">

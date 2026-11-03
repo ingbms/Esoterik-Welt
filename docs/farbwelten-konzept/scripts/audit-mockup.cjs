@@ -125,7 +125,15 @@ const structureScript = () => {
 (async () => {
   fs.mkdirSync(shotDir, { recursive: true });
   const browser = await chromium.launch({ headless: true });
-  const report = { base, measured_at: new Date().toISOString(), viewports: [], failures: [] };
+  const report = {
+    base,
+    // Bleibt bei einer Neumessung stehen: das Mockup zeigt die erste Ausbaustufe.
+    stand:
+      'Messung erste Ausbaustufe (7 Farbwelten) — historischer Messstand, nicht Referenz für den Zwölf-Farben-Stand (02, 03, 06)',
+    measured_at: new Date().toISOString(),
+    viewports: [],
+    failures: [],
+  };
   try {
     for (const width of widths) {
       const context = await browser.newContext({
