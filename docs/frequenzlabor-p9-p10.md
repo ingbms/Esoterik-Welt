@@ -33,7 +33,7 @@ Die Bereichsnavigation (Hub, Labor, Cymatics, Meditation) zeigt einen Link nur, 
 | `css/frequenzlabor.css` | +136 Zeilen `.fq-figures`, `.fq-square`, `.fq-med*`, `.fq-favorite` | – |
 | `tests/frequenz-chladni.mjs` | 8 Modelltests (C1–C8) | – |
 | `tests/frequenz-meditation.mjs` | 10 Vertragstests (M1–M10) | – |
-| `tests/frequenzlabor-p9-p10.spec.js` | 18 Browserfälle (C1–C6, M1–M8, A1–A4) | – |
+| `tests/frequenzlabor-p9-p10.spec.js` | 19 Browserfälle (C1–C6, M1–M11, A1–A4) | – |
 | `tests/frequenz-presets.mjs` | Flag-Test auf ausgelieferten Zustand und Kill-Switch erweitert | – |
 
 Die beiden Modelle sind DOM-frei und werden in `node --test` als echte ES-Module geprüft (Kopie in ein temporäres Verzeichnis mit eigener `package.json`, wie bei der Engine).
@@ -190,18 +190,18 @@ Nicht maschinell geprüft: manueller Screenreader-Durchlauf, Safari/iOS und ein 
 | Kennzahl | Wert | Grenze | Veränderung zur Kernversion |
 | --- | --- | --- | --- |
 | NFR-1 Initialgraph (statisch) | 85.613 B, 17 Dateien (291.343 B roh) | 86.275 B | **0 B** |
-| NFR-2 Feature-JS | 44.168 B, 10 Dateien (164.301 B roh, LF-Basis der CI) | 100.000 B | +16.161 B |
+| NFR-2 Feature-JS | 44.347 B, 10 Dateien (164.908 B roh, LF-Basis der CI) | 100.000 B | +16.340 B |
 | NFR-3 Feature-CSS | 3.338 B (16.795 B roh) | 6.000 B | +435 B |
 
-**Warum NFR-2 drei Zahlen hat (Review R4).** Das Gate gzippt die Dateien so, wie sie auf der Platte liegen; die vier neuen Module lagen im Arbeitsbaum mit LF, die älteren mit CRLF. Dieselbe Änderung ergibt deshalb je nach Auscheckung leicht verschiedene Werte. Alle drei Varianten sind gemessen (`evidence/t_aa849c1c/measure-nfr2.cjs`, aufrufbar für jeden Stand):
+**Warum NFR-2 mehrere Zahlen hat (Review R4/D2).** Das Gate gzippt die Dateien so, wie sie auf der Platte liegen; die vier neuen Module lagen im Arbeitsbaum mit LF, die älteren mit CRLF. Dieselbe Änderung ergibt deshalb je nach Auscheckung leicht verschiedene Werte. Verbindlich sind die Zahlen aus den Git-Blobs von **`8d8124f`** (letzter Code-Commit; die Doku-Commits danach ändern kein Feature-JS), nachmessbar mit `node evidence/t_aa849c1c/measure-nfr2.cjs . 8d8124f`:
 
 | Auscheckung | NFR-2 roh | NFR-2 gzip-9 |
 | --- | --- | --- |
-| Arbeitsbaum (gemischte Zeilenenden) | 167.048 B | 44.565 B |
-| frischer Klon, `core.autocrlf=true` (CRLF) | 168.448 B | 44.414 B |
-| CI-Auscheckung (LF, so liegen die Blobs im Index) | 164.301 B | **44.168 B** |
+| Arbeitsbaum des Implementierers (gemischte Zeilenenden) | 167.655 B | 44.756 B |
+| frischer Klon, `core.autocrlf=true` (CRLF) | 169.067 B | 44.592 B |
+| CI-Auscheckung (LF, so liegen die Blobs im Index) | 164.908 B | **44.347 B** |
 
-Kernversion `71b895c`, gleiche Messung: 28.007 B gzip-9 (LF) bzw. 28.167 B (CRLF). Die Differenz zur Kernversion ist damit 16.161 B auf LF-Basis und 16.247 B auf CRLF-Basis — die frühere Angabe „43.472 B / +15.305 B“ stammte aus dem Arbeitsbaum und war mit der CRLF-Basis des Kerns vermischt. In jeder Variante liegt der Wert weit unter der Grenze von 100.000 B; das Gate ist nicht zeilenendenabhängig gefährdet.
+Kernversion `71b895c`, gleiche Messung: 28.007 B gzip-9 (LF) bzw. 28.167 B (CRLF). Die Differenz zur Kernversion ist damit 16.340 B auf LF-Basis und 16.425 B auf CRLF-Basis — die frühere Angabe „43.472 B / +15.305 B“ stammte aus dem Arbeitsbaum und war mit der CRLF-Basis des Kerns vermischt. Frühere Tabellenstände (44.168/44.414 B) gehörten zu `648910c`; seither sind 32 Rohbytes für den Rücksprung-Guard der Ansage hinzugekommen. In jeder Variante liegt der Wert weit unter der Grenze von 100.000 B; das Gate ist nicht zeilenendenabhängig gefährdet.
 
 Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bündelt beide Ansichten in `local.js`; `Lokal.html` wächst von 790.818 B auf 826.083 B. Geprüft mit Chromium über `file://`: Bibliothek mit 32 Einträgen, Cymatics zeichnet Knotenlinien, Meditation startet (Timer 02:59 nach einer Sekunde), `localStorage` funktioniert.
 
@@ -212,11 +212,11 @@ Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) bün
 | Suite | Befehl | Ergebnis |
 | --- | --- | --- |
 | Modelle + Engine + Presets/Flags | `npm run test:frequenz` | **52 pass, 0 fail** (34 bestehend + 8 Chladni + 10 Meditation) |
-| Neue Browserfälle | `npx playwright test tests/frequenzlabor-p9-p10.spec.js` | **18 pass, 0 fail** (C1–C6, M1–M8, A1–A4) |
-| Volle Browser-Suite | `E2E_PORT=<frei> CI=1 npx playwright test` | **107 pass, 0 fail** (2,0 min; inkl. U1–U15, Astrologie, Mond, Tarot, Smoke) |
+| Neue Browserfälle | `npx playwright test tests/frequenzlabor-p9-p10.spec.js` | **19 pass, 0 fail** (C1–C6, M1–M11, A1–A4) |
+| Volle Browser-Suite | `E2E_PORT=<frei> CI=1 npx playwright test` | **108 pass, 0 fail** (2,2 min; inkl. U1–U15, Astrologie, Mond, Tarot, Smoke) |
 | Bestehende Frequenzlabor-UI | Teil der vollen Suite | **U1–U15 pass** |
 | Seiten-/Offline-Regression | `npm run test:pages`, `npm run test:local`, `npm run test:offline` | 6 / 12+2 skip / 2 pass |
-| Budget | `npm run check:frequenz-budget` | NFR-1 85.613 / 86.275 · NFR-2 44.565 / 100.000 (Arbeitsbaum; CI-Basis 44.168, siehe §7) · NFR-3 3.338 / 6.000 |
+| Budget | `npm run check:frequenz-budget` | NFR-1 85.613 / 86.275 · NFR-2 44.756 / 100.000 (Arbeitsbaum; CI-Basis 44.347, siehe §7) · NFR-3 3.338 / 6.000 |
 | Lint/Format | `npm run lint`, `npm run format:check` | 0 Fehler, alle Dateien formatiert |
 
 Modelltests im Detail: C1 Gültigkeit/Entartung, C2 Antisymmetrie und 180°-Drehung, C3 Spiegelsymmetrie nur bei gleicher Parität, C4 Normierung und Rastergröße, C5 analytische Nulldurchgänge (n=2,m=3 → 3/3; n=4,m=7 → 7/7; n=3,m=5 → Mittelachsen vollständig Knotenlinie), C6 Text ohne Hz-Aussage, C7 Knotenlinien auf dem Nullniveau, C8 keine Frequenzzuordnung im Modul.
@@ -239,6 +239,16 @@ Rohdaten und Screenshots: `evidence/t_aa849c1c/` (`measurements.json` mit axe-Er
 
 ---
 
+## 10. Offene Grenzen
+
+- Das Modell ist keine Eigenwertlösung: es nennt keine Frequenz zu einer Mode und trifft keine Aussage über reale Platten (Dicke, Material, Halterung, Anregungspunkt).
+- Reale Chladni-Figuren weichen von der idealisierten Familie ab; das steht in der Ansicht und in diesem Dokument.
+- Binaurale Differenzen sind eine Hördemonstration; eine EEG-Wirkung ist nicht belegt und wird nicht behauptet.
+- Manuelle Screenreader-, Safari/iOS- und Hörtests stehen aus (Auflage A5, `t_4a8106de`).
+- Die Flags sind ein Übergang; nach zwei Releases werden sie nach AD-5 entfernt.
+
+---
+
 ## 11. Review Runde 1 — Korrekturen (R1–R4)
 
 Prüfstand der Review: `a9015af`. Alle Korrekturen unten sind mit einem Test belegt, der auf `a9015af` **rot** war (nachgestellt durch Zurücksetzen der vier Quelldateien auf den Commit, Build und Lauf der neuen Fälle).
@@ -250,14 +260,20 @@ Prüfstand der Review: `a9015af`. Alle Korrekturen unten sind mit einem Test bel
 | **R3** Symmetrie-Text galt den Knotenlinien, nicht dem gefärbten Bild | Formulierung „das Bild ist 180°-drehsymmetrisch“ | Texte nennen die **Knotenlinien**; bei ungleicher Parität wird der Vorzeichen-/Farbwechsel des Feldes ausdrücklich benannt (`fieldRotationSymmetric`) | Unit **C6** (Label nennt Knotenlinien, `fieldRotationSymmetric` false für 2/3, true für 2/4) |
 | **R4** NFR-2 und Zeilenzahl nicht reproduzierbar | Zeilenenden-Mix im Arbeitsbaum; veraltete Zeilenzahl | drei Messbasen in §7 dokumentiert und mit `evidence/t_aa849c1c/measure-nfr2.cjs` nachmessbar; `frequenzlabor.js` mit 1.108 Zeilen in der UI-Doku | `measure-nfr2.cjs` (Arbeitsbaum/CRLF/LF) |
 
-Rot-Nachweis auf `a9015af`: M6 und M7 scheiterten mit `status: "running"` nach dem Wechsel, M8 mit der Messreihe `… −36,48, −20,45, −20,45 …` (Sprung von **+16,0 dB**). Nach der Korrektur: M6/M7/M8 grün in der Gesamtsuite (107/107).
+Rot-Nachweis auf `a9015af`: M6 und M7 scheiterten mit `status: "running"` nach dem Wechsel, M8 mit der Messreihe `… −36,48, −20,45, −20,45 …` (Sprung von **+16,0 dB**). Nach der Korrektur: M6/M7/M8 grün in der damaligen Gesamtsuite (107/107).
 
 ---
 
-## 10. Offene Grenzen
+## 12. Review Runde 2 — Korrekturen (D1–D3)
 
-- Das Modell ist keine Eigenwertlösung: es nennt keine Frequenz zu einer Mode und trifft keine Aussage über reale Platten (Dicke, Material, Halterung, Anregungspunkt).
-- Reale Chladni-Figuren weichen von der idealisierten Familie ab; das steht in der Ansicht und in diesem Dokument.
-- Binaurale Differenzen sind eine Hördemonstration; eine EEG-Wirkung ist nicht belegt und wird nicht behauptet.
-- Manuelle Screenreader-, Safari/iOS- und Hörtests stehen aus (Auflage A5, `t_4a8106de`).
-- Die Flags sind ein Übergang; nach zwei Releases werden sie nach AD-5 entfernt.
+Prüfstand der Review: `a18a429`. Die Review fand einen implementierungsseitigen Fehler im neuen R1-Pfad und zwei Doku-Abweichungen.
+
+| Befund | Ursache | Korrektur | Beleg |
+| --- | --- | --- | --- |
+| **D1** unbehandelter `TypeError` beim Verlassen der Meditationsansicht innerhalb von 1 s nach der letzten Ansage | `announce()` plante die Statusmeldung per `setTimeout` ein, prüfte `refs.status` nur **vor** dem Einplanen; `dispose()` setzte `refs = {}` und löschte den Timer nicht. Die verzögerte Closure dereferenzierte `refs.status` erneut | `announceTimer` wird in `announce()` gemerkt und in `dispose()` gelöscht; die Closure prüft `this.refs.status` erneut und entfällt in einer abgebauten Ansicht; eine neue Ansage ersetzt die ausstehende, statt sie später zu überschreiben | E2E **M11** (Cymatics, Hub, Labor und `#home` bei 300/700 ms Verweildauer, je 1300 ms Nachlauf: `status idle`, 0 `pageerror`/`console.error`) und **M6** (zusätzliche Fehlerzählung) — beide auf `a18a429` **rot** mit `Cannot set properties of undefined (setting 'textContent')` |
+| **D2** NFR-2-Zahlen gehörten zu `648910c`, nicht zum letzten Code-Commit | Tabellen wurden vor `68648ca` erhoben; Arbeitsbaum-Zeile aus keinem Commit reproduzierbar | Werte aus den Git-Blobs von `8d8124f` neu erhoben (LF 164.908 B / **44.347 B** gz · CRLF 169.067 B / 44.592 B · Arbeitsbaum 167.655 B / 44.756 B), Commit-Hash steht neben der Tabelle in §7 und ADR §13.5; `measure-nfr2.cjs` akzeptiert jetzt ein Revision-Argument (`node evidence/t_aa849c1c/measure-nfr2.cjs . 8d8124f`) und liest die Blobs direkt | `measure-nfr2.cjs` (Commit-Modus), §7, ADR §13.5 |
+| **D3** Abschnittsreihenfolge | „11. Review Runde 1“ stand vor „10. Offene Grenzen“ | Reihenfolge korrigiert (10 → 11 → 12) | dieses Dokument |
+
+Rot-Nachweis auf `a18a429` (Quelldatei `frequenz-meditation-view.js` auf den Commit zurückgesetzt, Build, neue Fälle): M11 scheiterte mit `pageerror: Cannot set properties of undefined (setting 'textContent')` beim Wechsel nach Cymatics nach 300 ms; M6 mit zwei `pageerror` (Wechsel zu Cymatics und zum Hub). Mit `8d8124f` sind M6 und M11 grün, die Folgestufen-Spec läuft mit 19/19.
+
+Nach den Korrekturen: `npm run test:frequenz` 52/52 · Folgestufen-Spec 19/19 (axe `[]` für beide Ansichten) · volle Browser-Suite 108/108 · Lint 0 / Format 0 · Budget-Gate grün (NFR-1 unverändert 85.613 B).

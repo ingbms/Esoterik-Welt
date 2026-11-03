@@ -1278,7 +1278,7 @@ Verbindliche Eigenschaften:
 | Timer | `performance.now()`-basiert, Anzeige alle 250 ms, `role="timer"` mit `aria-live="off"`; Ansage nur bei Start, einer Minute Restzeit und Ende |
 | Autoplay | Der erste `play()`-Aufruf erfolgt ausschließlich im Klick auf „Sitzung starten“/„Fortsetzen“ (NFR-12) |
 | Ende | Ausblenden, dann `stop()`; die Sitzung endet auch bei `visibilitychange → hidden`, `pagehide` und beim Verlassen der Ansicht |
-| Ansichtswechsel | `FrequenzlaborModule.show()` ruft vor dem Neuaufbau `halt(null)`: Audio stoppt **sofort** (interne 40-ms-Rampe), die Restzeit wird **genau einmal** gesichert, in der Zielansicht bleibt kein Oszillator ohne Bedienelement; `MeditationView.dispose()` stoppt zusätzlich selbst |
+| Ansichtswechsel | `FrequenzlaborModule.show()` ruft vor dem Neuaufbau `halt(null)`: Audio stoppt **sofort** (interne 40-ms-Rampe), die Restzeit wird **genau einmal** gesichert, in der Zielansicht bleibt kein Oszillator ohne Bedienelement; `MeditationView.dispose()` stoppt zusätzlich selbst und verwirft eine noch ausstehende Statusmeldung (`announceTimer`), damit kein Timer ein entferntes Element anspricht |
 | Wiederaufnahme | Bei Unterbrechung wird die Restzeit lokal gesichert und beim nächsten Besuch als „Fortsetzen“ angeboten; ein ausdrückliches Beenden löscht sie |
 | Speicher | `esoterik-welt:frequenzlabor:meditation:v1`: `{version, favorites[], resume}`; maximal 8 Favoriten, Name ≤ 60 Zeichen, keine Zeitstempel, kein Verlauf |
 | Datenschutz | keine Registrierung, keine Cloud, keine Übertragung von Nutzungsdaten, keine Cookies (AD-4 gilt analog) |
@@ -1303,10 +1303,10 @@ Gemessen nach §7.1 (`npm run check:frequenz-budget`, gzip -9):
 | Kennzahl | Wert | Grenze |
 | --- | --- | --- |
 | NFR-1 Initialgraph | 85.613 B (17 Dateien) — unverändert | 86.275 B |
-| NFR-2 Feature-JS | 44.168 B (10 Dateien, LF-Basis der CI; Arbeitsbaum 44.565 B, frischer CRLF-Klon 44.414 B) | 100.000 B |
+| NFR-2 Feature-JS | 44.347 B (10 Dateien, LF-Basis der CI; Arbeitsbaum 44.756 B, frischer CRLF-Klon 44.592 B) — gemessen an `8d8124f` | 100.000 B |
 | NFR-3 Feature-CSS | 3.338 B | 6.000 B |
 
-NFR-2 hängt an den Zeilenenden der Auscheckung, weil das Gate die Dateien so gzippt, wie sie auf der Platte liegen. Alle drei Varianten sind gemessen und in `docs/frequenzlabor-p9-p10.md` §7 belegt; `evidence/t_aa849c1c/measure-nfr2.cjs` rechnet sie für jeden Stand nach. Die frühere Angabe „43.472 B“ war ein Arbeitsbaum-Wert und deshalb nicht plattformneutral reproduzierbar.
+NFR-2 hängt an den Zeilenenden der Auscheckung, weil das Gate die Dateien so gzippt, wie sie auf der Platte liegen. Alle Varianten sind gemessen und in `docs/frequenzlabor-p9-p10.md` §7 belegt; `evidence/t_aa849c1c/measure-nfr2.cjs` rechnet sie für jeden Stand nach, mit Revisionsargument direkt aus den Git-Blobs (`node evidence/t_aa849c1c/measure-nfr2.cjs . 8d8124f`). Die frühere Angabe „43.472 B“ war ein Arbeitsbaum-Wert und deshalb nicht plattformneutral reproduzierbar; die Zwischenstände 44.168/44.414 B gehörten zu `648910c`.
 
 Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enthält beide Ansichten; `Lokal.html` wächst von 790.818 B auf 826.083 B. `file://` ist geprüft: Bibliothek mit 32 Einträgen, Cymatics zeichnet, Meditation startet und zählt.
 
@@ -1316,7 +1316,7 @@ Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enth
 | --- | --- | --- |
 | Unit (node:test) | `tests/frequenz-chladni.mjs` | C1–C8: Gültigkeit, Antisymmetrie, Spiegelsymmetrie, Normierung, analytische Nulldurchgänge, Textentsprechung, Knotenlinienlage, keine Frequenzaussage |
 | Unit (node:test) | `tests/frequenz-meditation.mjs` | M1–M10: Allowlist, Validierung, Uhr/Restzeit, Fade-Hüllkurve, Speicher-Versionierung, blockierter Speicher, Favoriten-IDs, Wiederaufnahme, Dauern, Ausblenden ab Ist-Pegel |
-| Browser (Playwright) | `tests/frequenzlabor-p9-p10.spec.js` | C1–C6, M1–M8, A1–A4 (axe-core WCAG 2.1 A/AA, Tastatur, 360 px, Lazy-Loading); M6–M8 decken den Ansichtswechsel, die Rückkehr und die Ausblendhüllkurve ab |
+| Browser (Playwright) | `tests/frequenzlabor-p9-p10.spec.js` | C1–C6, M1–M11, A1–A4 (axe-core WCAG 2.1 A/AA, Tastatur, 360 px, Lazy-Loading); M6–M8 decken den Ansichtswechsel, die Rückkehr und die Ausblendhüllkurve ab, M11 die Fehlerfreiheit des Ansichtswechsels während einer ausstehenden Ansage (`pageerror`/`console.error` = 0) |
 
 `npm run test:frequenz` führt beide Unit-Suiten mit aus; die CI-Konfiguration bleibt unverändert.
 
