@@ -40,7 +40,7 @@ Diese Werte wurden hier **nicht erneut** erhoben.
 | 7 | Farbpsychologie und Lichtmedizin mit verifizierten Quellen | teilweise | Abschnitte „Farbpsychologie“ je Farbseite, „Lichtmedizin und Chromotherapie“ auf der Einstiegsseite, Lichtfrequenz-Seite mit [9]–[18]; **eigene Seiten nach §8/§9 fehlen** |
 | 8 | Physikalisch/psychologisch/esoterisch sauber getrennt | erfüllt | Evidenzstufen, Kasten „Tradition und Forschung“, Ampelliste; wiederholt nachgeprüft (t_15d4231f, t_d12db88e) |
 | 9 | Bild- und Grafikressourcen rechtssicher | erfüllt | ausschließlich eigene SVG-/CSS-Grafiken, keine Fremdassets importiert; damit entfällt die Lizenzfrage der vier Wikimedia-Vorschläge |
-| 10 | Responsiv, zugänglich, performant | erfüllt | siehe Abschnitt 1 (Responsive/axe/Lighthouse aus t_aa938907) |
+| 10 | Responsiv, zugänglich, performant | teilweise | Responsive 35/35 und axe 0 Verstöße belegt (t_aa938907), Lighthouse 100 für Accessibility/Best Practices/SEO; **Performance wurde nicht gemessen** (keine Lighthouse-Performance-Budgets) |
 | 11 | Wesentliche interne Verknüpfungen | erfüllt | 70/70 Hash-Ziele, Fokus auf Zielüberschrift |
 | 12 | SEO und GEO berücksichtigt | erfüllt | 10/10 eindeutige Titel/Descriptions, Canonical, OG/Twitter, `BreadcrumbList`-JSON-LD; Sitemap bewusst unverändert (Hash-Ansichten sind keine Dokumente) |
 | 13 | Tests dokumentiert, relevante Fehler behoben | **offen** | eigener Stand grün; die unabhängige Inhaltsfreigabe des Stands `fcfe190` fehlt noch, der Nachtest zu `t_aa938907` läuft |
