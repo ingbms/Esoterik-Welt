@@ -23,7 +23,8 @@ npm run check:frequenz-budget
 | `p9-cymatics-desktop.png`, `p9-cymatics-mobile.png` | Ansicht bei 1440 × 1000 (ganze Seite) und 360 × 760 |
 | `p10-meditation-desktop.png`, `p10-meditation-mobile.png` | Ansicht bei 1440 × 1000 (ganze Seite) und 360 × 760 |
 | `measure-p9-p10.cjs` | Messskript (liest DOM, Canvas und Netzwerk; steuert nichts) |
-| `measure-nfr2.cjs` | NFR-2 (Feature-JS gesamt) in drei Auscheck-Basen: Arbeitsbaum, frischer CRLF-Klon, CI/LF |
+| `measure-nfr2.cjs` | NFR-2 (Feature-JS gesamt) in drei Auscheck-Basen: Arbeitsbaum, frischer CRLF-Klon, CI/LF; mit Revisionsargument direkt aus den Git-Blobs |
+| `review-runde2.txt` | Rot-/Grün-Nachweis der Review-Runde 2 (D1–D3): Befehle, Fehlermeldungen, NFR-2-Messreihen über vier Commits, Klon- und CI-Ergebnis |
 
 ## Ergebnisse (Lauf vom 2026-11-03, Chromium, lokaler Build)
 

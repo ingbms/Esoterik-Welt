@@ -1,0 +1,62 @@
+# Review-Runde 2 (D1–D3) — Rot-/Grün-Nachweis
+
+Ticket `t_aa849c1c` · Branch `feature/frequenzlabor-p9-p10` · Prüfstand der Review `a18a429`
+
+## D1 — unbehandelter TypeError beim Verlassen der Meditationsansicht
+
+Quelldatei für den Rot-Lauf: `git checkout -- js/modules/frequenz-meditation-view.js` (Stand `a18a429`),
+`npm run build`, dann die neuen Fälle. Danach die korrigierte Datei zurück, erneut `npm run build`.
+
+```
+# rot (a18a429)
+E2E_PORT=3971 CI=1 npx playwright test tests/frequenzlabor-p9-p10.spec.js -g "M11" --reporter=line
+  Error: Cymatics nach 300 ms: pageerror: Cannot set properties of undefined (setting 'textContent')
+
+E2E_PORT=3975 CI=1 npx playwright test tests/frequenzlabor-p9-p10.spec.js -g "M6" --reporter=line
+  Received: ["pageerror: Cannot set properties of undefined (setting 'textContent')",
+             "pageerror: Cannot set properties of undefined (setting 'textContent')"]
+
+# grün (8d8124f)
+E2E_PORT=3977 CI=1 npx playwright test tests/frequenzlabor-p9-p10.spec.js -g "M6|M11" --reporter=line
+  2 passed (13.3s)
+```
+
+Fall M11 prüft vier Ziele (Cymatics, Hub, Labor, `#home`) mit 300 ms bzw. 700 ms Verweildauer und
+1300 ms Nachlauf; gemessen wird `status === 'idle'` und `pageerror`/`console.error` = 0.
+M6 zählt seither ebenfalls beide Fehlerarten (mit 1200 ms Nachlauf, damit der 1-s-Timer fällig würde).
+
+## D2 — NFR-2 commit-gebunden
+
+`measure-nfr2.cjs` akzeptiert seit `8d8124f` eine Revision und liest die Git-Blobs:
+
+```
+$ node evidence/t_aa849c1c/measure-nfr2.cjs . a18a429
+  LF (CI-Basis)        164333 B roh   44180 B gz
+  CRLF (Windows-Klon)  168480 B roh   44425 B gz
+$ node evidence/t_aa849c1c/measure-nfr2.cjs . 648910c
+  LF (CI-Basis)        164301 B roh   44168 B gz
+  CRLF (Windows-Klon)  168448 B roh   44414 B gz
+$ node evidence/t_aa849c1c/measure-nfr2.cjs . 8d8124f
+  LF (CI-Basis)        164908 B roh   44347 B gz
+  CRLF (Windows-Klon)  169067 B roh   44592 B gz
+$ node evidence/t_aa849c1c/measure-nfr2.cjs . 71b895c      # Kernversion
+  LF (CI-Basis)        106467 B roh   28007 B gz
+  CRLF (Windows-Klon)  109127 B roh   28167 B gz
+```
+
+Frischer Klon (`core.autocrlf=true`, `67586a9`) reproduziert die CRLF-Zeile (169.067 B roh / 44.592 B gz)
+und aus den Blobs die LF-Zeile (164.908 / 44.347); Arbeitsbaum des Implementierers 167.655 / 44.756.
+
+## Grün-Nachweis nach der Korrektur
+
+| Prüfung | Ergebnis |
+| --- | --- |
+| `npm run test:frequenz` | 52 pass, 0 fail |
+| Folgestufen-Spec (Arbeitsbaum, `8d8124f`) | 19 pass, 0 fail, axe `[]` für beide Ansichten |
+| Volle Browser-Suite (Arbeitsbaum) | 108 pass, 0 fail (2,2 min) |
+| Frischer Klon `67586a9` + `npm ci` + `npm run build` | 19/19 Spec, 52/52 Unit, Budget grün (NFR-1 85.613 · NFR-2 44.592 CRLF · NFR-3 3.338) |
+| `npm run lint` / `format:check` | 0 / alle Dateien formatiert |
+| `npm run test:pages` / `test:offline` | 6/6 bzw. 2/2 |
+| CI 41576387364 auf `67586a9` | Lint, Unit, Browser-E2E, Static Build — alle success |
+
+Nicht geprüft (unverändert A5, `t_4a8106de`): manueller Screenreader, Safari/iOS, Hörtest.
