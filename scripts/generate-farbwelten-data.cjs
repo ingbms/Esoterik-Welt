@@ -21,6 +21,7 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const { parseEntry, LOCAL_SOURCE_DOCUMENTS } = require('./lib/farbwelten-sources.cjs');
 
 const root = path.resolve(__dirname, '..');
 const contentDir = path.join(root, 'content', 'farbwelten');
@@ -272,7 +273,7 @@ const META_PAGES = {
 // Themenseiten (FW-10/FW-11). Sie haben kein A–H-Skelett: die Abschnitte
 // folgen den H2-Überschriften der Redaktionsdatei in genau deren Reihenfolge.
 // Deshalb steht hier keine Abschnittszuordnung, sondern nur die Dateiliste.
-const TOPIC_FILES = ['farbtherapie', 'farbpsychologie', 'lichtmedizin'];
+const TOPIC_FILES = LOCAL_SOURCE_DOCUMENTS;
 
 // Titel, Beschreibungen und Kartenansprachen der Themenseiten. Wie bei den
 // Farbwelten sind das Metadaten der Informationsarchitektur (≤60/≤155), nicht
@@ -796,17 +797,8 @@ function mapSections(document, id) {
 }
 
 function parseSourceEntry(item) {
-  const match = /^\[(\d{1,2})\]\s*(.+)$/.exec(item);
-  if (!match) return null;
-  const [, id, rest] = match;
-  const urlMatch = /(https?:\/\/\S+)$/.exec(rest);
-  const url = urlMatch ? urlMatch[1].replace(/[).,;]+$/, '') : null;
-  const label = (url ? rest.slice(0, rest.length - urlMatch[1].length) : rest)
-    .replace(/\*+/g, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .replace(/[.\s]+$/, '');
-  return { id, label, url };
+  const entry = parseEntry(item);
+  return entry ? { id: entry.id, label: entry.label, url: entry.url } : null;
 }
 
 // Jede Redaktionsseite führt ihre eigene Bibliografie. Für das Quellenregister

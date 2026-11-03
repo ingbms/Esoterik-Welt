@@ -81,6 +81,8 @@ const DEEP_LINKS = [
     if (JSON.stringify(sections) !== JSON.stringify(EXPECTED_SECTIONS))
       problems.push(`Sektionen: ${sections.join(',')}`);
     if (cards !== 9) problems.push(`Startseitenkarten: ${cards}`);
+    const colourCard = await page.locator('#featureGrid [data-page="farbwelten"] .feature-desc').textContent();
+    if (!colourCard.startsWith('Zwölf Farbwelten:')) problems.push(`Farbwelten-Karte: ${colourCard}`);
     if (label !== 'Neun Zugänge') problems.push(`Startseiten-Label: ${label}`);
     if (JSON.stringify(numbers) !== JSON.stringify(['01', '02', '03', '04', '05', '06', '07', '08', '09'])) {
       problems.push(`Nummerierung: ${numbers.join(',')}`);

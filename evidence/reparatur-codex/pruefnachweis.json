@@ -1,0 +1,172 @@
+{
+  "checked_at": "2026-11-03T16:18:16.397912+01:00",
+  "node_tests": 361,
+  "node_suites": [
+    6,
+    9,
+    14,
+    67,
+    21,
+    25,
+    14,
+    20,
+    21,
+    37,
+    24,
+    26,
+    36,
+    11,
+    12,
+    14,
+    2
+  ],
+  "jest_tests": 2,
+  "browser_tests": {
+    "startTime": "2026-11-03T15:10:16.677Z",
+    "duration": 253724.936,
+    "expected": 224,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "rubriken_smoke": {
+    "base": "http://127.0.0.1:51709/Esoterik-Welt/",
+    "date": "2026-11-03T15:16:12.541Z",
+    "results": [
+      {
+        "step": "start",
+        "nav": 10,
+        "sections": 10,
+        "cards": 9,
+        "label": "Neun Zugänge",
+        "numbers": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09"
+        ]
+      },
+      {
+        "step": "nav:home",
+        "hash": "#home",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "nav:tarot",
+        "hash": "#tarot",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "nav:crystals",
+        "hash": "#crystals",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "nav:moon",
+        "hash": "#moon",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "nav:astrologie",
+        "hash": "#astrologie",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "nav:frequenzen",
+        "hash": "#frequenzen",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "nav:runes",
+        "hash": "#runes",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "nav:pendeln",
+        "hash": "#pendeln",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "nav:farbwelten",
+        "hash": "#farbwelten",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "nav:blog",
+        "hash": "#blog",
+        "ariaCurrent": 1
+      },
+      {
+        "step": "deep:#pendeln",
+        "heading": "Radiästhesie, Pendeln und Orakel"
+      },
+      {
+        "step": "deep:#pendeln/radiasthesie",
+        "heading": "Radiästhesie"
+      },
+      {
+        "step": "deep:#farbwelten",
+        "heading": "Farbwelten"
+      },
+      {
+        "step": "deep:#farbwelten/rot",
+        "heading": "Rot"
+      },
+      {
+        "step": "deep:#frequenzen",
+        "heading": "Menschlicher Hörbereich20 Hz – 20.000 HzBelegtNormalhörende nehmen etwa 20 Hz bi"
+      },
+      {
+        "step": "deep:#frequenzen/labor",
+        "heading": "BibliothekFrequenzlaborQuellen & MethodikChladni-MusterMeditation\n      \n      \n"
+      },
+      {
+        "step": "mobile-menu",
+        "visibleLinks": 10
+      }
+    ],
+    "consoleEvents": [],
+    "problems": []
+  },
+  "budget_output": "Budget-Prüfung Frequenzlabor (gzip -9)\nWARN NFR-1 Initialgraph (statisch)    19 Dateien                295718 B roh   88855 B gz  Limit 92000 B\nok   NFR-2 Feature-JS                 11 Dateien                176168 B roh   46884 B gz  Limit 100000 B\nok   NFR-3 Feature-CSS                css/frequenzlabor.css      19865 B roh    3951 B gz  Limit 6000 B\n⚠ Reserve unter 5 %: NFR-1 Initialgraph (statisch): 96,6 % ausgelastet, Reserve 3145 B (88855 B / 92000 B)\n✓ Alle Budgets eingehalten, aber 1 Warnung(en) wegen kleiner Reserve (bewusst überwacht, siehe docs/frequenzlabor-ui.md §2.1 „Budget und Reserve\").\n",
+  "source_hashes": {
+    "js/main.js": "2f41cdf1bdc77e13a20742468812019c284c9c62aef8850ec7ab622a2394beb4",
+    "scripts/lib/farbwelten-sources.cjs": "8521c0dd11233841a67ea09598fbf6c8657f01c47843c9f9eaaa5208b45a2f5a",
+    "scripts/generate-farbwelten-data.cjs": "8384498d9e4b54669c3e858b4a13ef2eca4470c9909de71e1cf4def29eecbc3d",
+    "scripts/verify-farbwelten-sync.cjs": "9b0232438cb68a2a7a2c190e884e21d3879afbc1e7a3e58c291fe7e5bd580d51",
+    "scripts/check-frequenz-budget.cjs": "fb33033e881bebae07e55acebb5ba09958628ef70f85136d0927150e77d27ce0",
+    "scripts/verify-build.cjs": "b10194bc2682f94f38433d66dc9a471beb1a751cc344e2f67e4b83031cae011b",
+    "scripts/verify-rubriken.cjs": "fd1ae095b8e2580728d6df5c7a8c949e1b2133699c1f924db7b0a184aa4990eb",
+    "tests/farbwelten-sources.mjs": "c759070edf53c7ac98ae014f733d0c4417c1f06efad534b2e367b752ba17ffce",
+    "js/data/farbwelten.js": "cb4723e1d01bb775be822e5a1eda4c83c991c8aaa673bff0d1fa452488fd800b"
+  },
+  "unchanged_content_files": {
+    "content\\farbwelten\\blau.md": "05612b9e9dc8325f67c2d96110f95dc3a24915b8b4e5ebffa5ff5b6ec1d88b18",
+    "content\\farbwelten\\chakren.md": "7b27c9e674b85fdf313e68bcaf759460ca9f86b5e4c76bbf8962b9a144c33af5",
+    "content\\farbwelten\\farbpsychologie.md": "4fc40687e26df38870acda111a492fe58714f0908cbb9fc91270081dc3f5dd2e",
+    "content\\farbwelten\\farbtherapie.md": "2613eb25f8944af470453f69a690e9aa86454dc7a5f512c20e8893c7c1c32680",
+    "content\\farbwelten\\farbwelten.md": "f4c42b93c00bdd31554eaf0886336cc82e5e2c97c7eef976805e402fe4f6bc25",
+    "content\\farbwelten\\gelb.md": "0ab9c35be413af2db98b63b1fc9aecdedd98e908ca3248e72f7b060866ff8cbc",
+    "content\\farbwelten\\gruen.md": "ef2b6fdfe2231d975bf531a0d78e9d234eaab56d1bd2ba0cd3435566497da8fd",
+    "content\\farbwelten\\indigo.md": "e4b45f9f48e88e0c08217f52814ae03c868d61baf0605662c37dc81489372eca",
+    "content\\farbwelten\\lichtfrequenzen.md": "4a98a2b0c8b680eb2cf74ddc9f61ad356f52b717daf358c3d711ad549577299e",
+    "content\\farbwelten\\lichtmedizin.md": "4e6cabbe256dbd4ba3f3849bbffd640fabb04b4bbef3d9a275a68432b847bceb",
+    "content\\farbwelten\\magenta.md": "3469a1c2c60631c299c3da6093aa3bcc5ebbd0fc3bcb0c506c8805f7669846b4",
+    "content\\farbwelten\\orange.md": "09c43bcd86109d1f8b8a89c3fe0007ba733669205d524d93a0c70e03b10d7a37",
+    "content\\farbwelten\\rosa.md": "50e489cd5a5c8513773de5bf97e18062b3d727f1735e1fdf46ebac0b4f92b1e9",
+    "content\\farbwelten\\rot.md": "58d92eb8290333ccbb96cb65683c77fb6155e1439d739b766ff972747a035ecb",
+    "content\\farbwelten\\schwarz.md": "506172da331ff5e2b3dee988624984201968d2c9683c31ffcd8c853e1d98e111",
+    "content\\farbwelten\\tuerkis.md": "8f14f8abc424da510c4b0dadd008d4a36b0beb203dc0b35f88f38a43b57d29b2",
+    "content\\farbwelten\\violett.md": "c391a82c01b99757c69876976d0c4b60aa6aef41a354ff4be88a4a6e4a46ff21",
+    "content\\farbwelten\\weiss.md": "2a0a3d4afdbb6cc82b249fdb0fafe4644246ef557370c7b224261622dfb25cda"
+  },
+  "notes": [
+    "Local full test:all passed; final start-card wording checked separately after regeneration. GitHub CI rechecks full exact committed head.",
+    "Manual Safari/iOS, screenreader and hearing checks are not claimed."
+  ]
+}

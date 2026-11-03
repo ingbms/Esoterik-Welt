@@ -38,6 +38,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
+// Diese Seiten rendern eigene Bibliografien statt des gemeinsamen SOURCES-Registers.
+const LOCAL_SOURCE_DOCUMENTS = ['farbtherapie', 'farbpsychologie', 'lichtmedizin'];
+
 // Wie in scripts/generate-farbwelten-data.cjs: kürzere „Labels" sind keine
 // bibliografische Angabe, sondern Verweisreste.
 const MIN_LABEL_LENGTH = 10;
@@ -95,9 +98,15 @@ function parseEntry(item) {
   const match = ID_PATTERN.exec(String(item || '').trim());
   if (!match) return null;
   const [, rawId, rest] = match;
-  const urlMatch = /(https?:\/\/\S+)$/.exec(rest);
-  const rawUrl = urlMatch ? urlMatch[1] : null;
-  const rawLabel = urlMatch ? rest.slice(0, rest.length - urlMatch[1].length) : rest;
+  // Themenseiten ergänzen nach URL/DOI eine redaktionelle Einordnung.
+  // Auch dort bleibt der Link eine Quellenadresse, kein Teil des Labels.
+  const urlMatch = /https?:\/\/[^\s<>]+/.exec(rest);
+  const doiMatch = !urlMatch && /\bDOI:\s*(10\.\d{4,9}\/[^\s]+)/i.exec(rest);
+  const reference = urlMatch || doiMatch;
+  const rawUrl = urlMatch ? urlMatch[0] : doiMatch ? `https://doi.org/${doiMatch[1]}` : null;
+  const rawLabel = reference
+    ? rest.slice(0, reference.index).replace(/\bURL:\s*$/i, '') + rest.slice(reference.index + reference[0].length)
+    : rest;
   return {
     id: String(Number(rawId)),
     rawId,
@@ -157,6 +166,7 @@ function loadDocuments(directory) {
     .sort()
     .map((file) => ({
       name: file.replace(/\.md$/, ''),
+      sourceScope: LOCAL_SOURCE_DOCUMENTS.includes(file.replace(/\.md$/, '')) ? file.replace(/\.md$/, '') : null,
       source: fs.readFileSync(path.join(directory, file), 'utf8'),
     }));
 }
@@ -184,9 +194,10 @@ function describeForm(form) {
 }
 
 /**
- * Vergleicht je Kennung alle Fassungen aus allen Dokumenten.
+ * Vergleicht je Kennung alle Fassungen innerhalb desselben Quellenregisters.
+ * Farbseiten teilen ein Register; Themenseiten nutzen ihren eigenen sourceScope.
  *
- * @param {Array<{name: string, source: string}>} documents
+ * @param {Array<{name: string, source: string, sourceScope?: string}>} documents
  * @param {{strictLabels?: boolean}} [options]
  * @returns {{ids: object[], errors: object[], warnings: object[], documents: string[], chains: object[]}}
  */
@@ -204,14 +215,17 @@ function analyseDocuments(documents, options = {}) {
         chains.push(entry);
         continue;
       }
-      if (!byId.has(entry.id)) byId.set(entry.id, []);
-      byId.get(entry.id).push(entry);
+      const scope = document.sourceScope || null;
+      const key = `${scope || ''}\u0000${entry.id}`;
+      if (!byId.has(key)) byId.set(key, []);
+      byId.get(key).push({ ...entry, scope });
     }
   }
 
   const ids = [];
-  for (const id of [...byId.keys()].sort((a, b) => Number(a) - Number(b))) {
-    const list = byId.get(id);
+  for (const key of [...byId.keys()].sort((a, b) => a.localeCompare(b, 'de', { numeric: true }))) {
+    const list = byId.get(key);
+    const { id, scope } = list[0];
     const forms = [];
     for (const entry of list) {
       const label = normalizeLabel(entry.label);
@@ -230,6 +244,7 @@ function analyseDocuments(documents, options = {}) {
 
     const record = {
       id,
+      scope,
       forms,
       files: [...new Set(list.map((entry) => entry.file))],
       identical: forms.length === 1,
@@ -318,13 +333,29 @@ function analyseDocuments(documents, options = {}) {
  * Prüft das generierte Register (SOURCES) gegen die Dokumentfassungen:
  * vollständigster Kandidat, vorhandene URL, vorhandenes Label.
  */
-function checkRegister(analysis, sources) {
+function topicRegisters(pages) {
+  return Object.fromEntries(
+    (pages || []).map((page) => [
+      page.slug,
+      Object.fromEntries(
+        page.sections
+          .flatMap((section) => section.blocks)
+          .filter((block) => block.type === 'sources')
+          .flatMap((block) => block.items)
+          .map((entry) => [entry.id, entry])
+      ),
+    ])
+  );
+}
+
+function checkRegister(analysis, sources, localRegisters = {}) {
   const errors = [];
   const warnings = [];
   for (const record of analysis.ids) {
-    const source = sources && sources[record.id];
+    const register = record.scope ? localRegisters[record.scope] : sources;
+    const source = register && register[record.id];
     if (!source) {
-      warnings.push({
+      (record.scope ? errors : warnings).push({
         code: 'register-fehlt',
         id: record.id,
         files: record.files,
@@ -369,6 +400,8 @@ function checkRegister(analysis, sources) {
 
 module.exports = {
   MIN_LABEL_LENGTH,
+  LOCAL_SOURCE_DOCUMENTS,
+  topicRegisters,
   normalizeLabel,
   normalizeUrl,
   parseEntry,

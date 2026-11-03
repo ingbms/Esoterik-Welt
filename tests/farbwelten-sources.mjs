@@ -31,6 +31,8 @@ const {
   checkRegister,
   normalizeLabel,
   normalizeUrl,
+  parseEntry,
+  topicRegisters,
 } = require('../scripts/lib/farbwelten-sources.cjs');
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -81,7 +83,7 @@ test('echter Bestand: keine Kennung führt abweichende Fassungen', () => {
 
 test('echter Bestand: Register führt je Kennung den vollständigsten Kandidaten', () => {
   const analysis = analyseDocuments(loadDocuments(contentDir));
-  const result = checkRegister(analysis, data.SOURCES);
+  const result = checkRegister(analysis, data.SOURCES, topicRegisters(data.TOPIC_PAGES));
   assert.deepEqual(
     result.errors.map((error) => error.message),
     [],
@@ -230,4 +232,52 @@ test('Normalisierung: URL und Label vergleichbar, Identität bleibt unterscheide
     normalizeLabel('"Do we feel colours?" - Meta-Analyse')
   );
   assert.notEqual(normalizeLabel('IARC (2012)'), normalizeLabel('IARC (2023)'));
+});
+
+test('URL/DOI vor einer Einordnung bleiben anklickbare Quellenadressen', () => {
+  const url = parseEntry('[11] Hamblin 2018. URL: https://doi.org/10.1111/php.12864. (Mechanismus, kein SAD-Beleg.)');
+  assert.equal(url.url, 'https://doi.org/10.1111/php.12864');
+  assert.match(url.label, /Mechanismus, kein SAD-Beleg/);
+  assert.doesNotMatch(url.label, /URL:|https:/);
+  const doi = parseEntry('[17] Kumar 2022. DOI: 10.1002/14651858.CD007969.pub2. (Phototherapie.)');
+  assert.equal(doi.url, 'https://doi.org/10.1002/14651858.CD007969.pub2');
+  assert.match(doi.label, /Phototherapie/);
+});
+
+test('lokale Kennungen verdrängen keine globale Quelle; lokale Divergenz bleibt ein Fehler', () => {
+  const global = page('lichtfrequenzen', ['- [11] Cochrane 2019. https://doi.org/10.1002/SAD']);
+  const local = {
+    ...page('lichtmedizin', ['- [11] Hamblin 2018. https://doi.org/10.1111/PBM']),
+    sourceScope: 'lichtmedizin',
+  };
+  const analysis = analyseDocuments([global, local]);
+  assert.deepEqual(analysis.errors, []);
+  assert.equal(analysis.ids.length, 2);
+  const globalEntry = parseEntry('[11] Cochrane 2019. https://doi.org/10.1002/SAD');
+  const localEntry = parseEntry('[11] Hamblin 2018. https://doi.org/10.1111/PBM');
+  assert.deepEqual(checkRegister(analysis, { 11: globalEntry }, { lichtmedizin: { 11: localEntry } }).errors, []);
+  assert.ok(checkRegister(analysis, { 11: globalEntry }, { lichtmedizin: { 11: globalEntry } }).errors.length);
+  assert.ok(checkRegister(analysis, { 11: globalEntry }).errors.some((error) => error.code === 'register-fehlt'));
+  const conflict = {
+    ...page('zweite-lokale-fassung', ['- [11] Falsche Quelle 2023. https://doi.org/10.1111/other']),
+    sourceScope: 'lichtmedizin',
+  };
+  assert.ok(analyseDocuments([global, local, conflict]).errors.some((error) => error.code === 'url-konflikt'));
+});
+
+test('alle drei lokalen Bibliografien werden gegen ihre generierten Links geprüft', () => {
+  const documents = loadDocuments(contentDir);
+  assert.deepEqual(
+    documents
+      .filter((document) => document.sourceScope)
+      .map((document) => document.name)
+      .sort(),
+    ['farbpsychologie', 'farbtherapie', 'lichtmedizin']
+  );
+  const analysis = analyseDocuments(documents);
+  const registers = topicRegisters(data.TOPIC_PAGES);
+  assert.deepEqual(checkRegister(analysis, data.SOURCES, registers).errors, []);
+  assert.equal(registers.lichtmedizin['11'].url, 'https://doi.org/10.1111/php.12864');
+  assert.notEqual(registers.lichtmedizin['11'].url, data.SOURCES['11'].url);
+  assert.equal(Object.keys(registers).length, 3);
 });

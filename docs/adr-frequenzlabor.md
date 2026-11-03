@@ -1378,3 +1378,31 @@ Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enth
 - Reale Chladni-Figuren weichen ab (endliche Dicke, nicht idealfreie Ränder, Anregungspunkt).
 - Keine Wirkaussagen zu Meditation, binauralen Tönen oder Solfeggio-Zahlen; die Presets sind Hörangebote.
 - Manuelle Screenreader-, Safari/iOS- und Hörtests bleiben beim QA-Ticket `t_4a8106de` (Auflage A5).
+
+
+## 14. Rubriken-Integration und NFR-1 (03.11.2026)
+
+Die Website integriert Frequenzen, Radiästhesie und Farbwelten gemeinsam. Die
+zusätzlichen Rubriken laden über kleine Lazy-Loader; ihre großen Datenmodule
+gehören weiterhin nicht in den Initialgraphen. Eine Abnahme einzelner Rubriken
+ersetzt keine gemeinsame Abnahme von Navigation, Router, Startseitenkarten,
+statischen Dokumenten, Quellen und Offline-Ausgabe.
+
+Der Eigentümer hat am 03.11.2026 Option A mit zusätzlicher Reserve freigegeben:
+**NFR-1 maximal 92.000 Byte gzip-9**. Das Gate setzt deshalb `BASELINE_GZIP = 90000`
+und behält `INITIAL_HEADROOM = 2000`. Die historische Basis 84.275 Byte plus
+2.000 Byte war auf den früheren Rubrikenbestand bezogen. Das Gesamtlimit 86.275
+Byte gilt für diese Integration nicht mehr. Frühere Messwerttabellen dieses ADR
+beschreiben weiterhin ihren jeweils genannten historischen Stand.
+
+Die Anpassung ist keine Abschwächung auf einen Warnstatus: oberhalb von 92.000
+Byte schlägt NFR-1 weiterhin fehl. Der bestehende Hinweis bei weniger als fünf
+Prozent Reserve bleibt zusätzlich aktiv. NFR-2 (100.000 Byte Feature-JS) und
+NFR-3 (6.000 Byte CSS) bleiben unverändert. Messwerte samt tatsächlicher Reserve
+stehen im Abschlussnachweis `reparatur-codex-t_33cdf5ec.md`.
+
+Die CI prüft künftig auch sämtliche Radiästhesie-Verträge und die vollständigen
+Farbwelten-Quellen. Farbseiten teilen das globale Quellenregister; die drei
+Themenseiten besitzen jeweils eine eigene Bibliografie. Jede tatsächlich
+gerenderte Quellenfassung wird in ihrem eigenen Geltungsbereich verglichen.
+URLs und DOI-Angaben vor erläuternden Klammern bleiben anklickbare Links.

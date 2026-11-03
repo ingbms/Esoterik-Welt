@@ -106,29 +106,14 @@ Konfliktauflösung betraf ausschließlich Integrationsdateien (`index.html`, `js
 Die vom Browsertest erzeugten Screenshots unter `docs/radiasthesie-completion/**/evidence/`
 wurden nach den Testläufen auf den Stand der Abnahme zurückgesetzt.
 
-## 7. Offener Punkt: NFR-1 des Frequenz-ADR
+## 7. Aufgelöste Entscheidung: NFR-1
 
-`npm run check:frequenz-budget` (CI-Schritt) meldet:
-
-```
-FAIL NFR-1 Initialgraph (statisch)  19 Dateien  296.520 B roh  88.912 B gz  Limit 86.275 B
-ok   NFR-2 Feature-JS               46.884 B gz / 100.000 B
-ok   NFR-3 Feature-CSS               3.951 B gz /   6.000 B
-```
-
-Basis vor dieser Karte: 85.822 B / Limit 86.275 B, also 453 B Reserve. Die zwei neuen
-Rubriken kosten 3.090 B gzip: 2.013 B Router-/Meta-/Kartenzeilen in `js/main.js` und
-1.077 B für die beiden Lazy-Proxy-Loader. Das ist bereits die im ADR vorgesehene
-Minimalform („wächst nur um Loader und Router-Zeilen“); ohne die Loader wären es
-+203.896 B.
-
-Die Reserve war für eine Seite mit acht Rubriken kalibriert. Eine Entscheidung ist nötig:
-
-- **A (empfohlen):** NFR-1-Basis im ADR um die zwei Rubriken anheben (86.275 → 89.400 B) und die Messung dokumentieren. Danach ist das Gate grün.
-- **B:** Zusätzlich Datenmodule bestehender Rubriken (z. B. `js/data/tarot.js`, 12.294 B gz) hinter Lazy-Imports legen; das Gate wäre mit großem Abstand grün, ändert aber freigegebene Module außerhalb dieser Karte.
-- **C:** NFR-1 als WARN statt FAIL führen — schwächt das Gate und wird nicht empfohlen.
-
-Bis zur Entscheidung bleibt der CI-Schritt rot; alle anderen Suiten sind grün.
+Der Eigentümer hat Option A mit **92.000 Byte Gesamtlimit** freigegeben.
+Gate und ADR §14 setzen diese Entscheidung um; eine Überschreitung bleibt
+blockierend. Die früheren Tabellen dieses Dokuments gehören zum ursprünglichen
+Integrationsstand. Der verbindliche neue Abschlussnachweis mit den zusätzlichen
+Farbwelten-Nacharbeiten und allen aktuellen Tests ist
+[reparatur-codex-t_33cdf5ec.md](reparatur-codex-t_33cdf5ec.md).
 
 ## 8. Pull Request
 

@@ -759,7 +759,7 @@ function populateFeatureGrid() {
     {
       id: 'farbwelten',
       title: 'Farben',
-      desc: 'Sieben Farbwelten: Bedeutung, Wellenlängen, Chakren und Forschungsstand',
+      desc: 'Zwölf Farbwelten: Bedeutung, Wellenlängen, Chakren und Forschungsstand',
     },
     { id: 'blog', title: 'Wissen', desc: 'Artikel zu Esoterik, Geschichte, Ritualen & Praxis' },
   ];

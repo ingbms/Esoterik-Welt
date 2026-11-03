@@ -1,6 +1,8 @@
 // Budget-Gate des Frequenzlabors (ADR §7.1, NFR-1/2/3).
 //
-// NFR-1  initialer statischer JS-Graph ≤ 84.275 B + 2.000 B gzip-9
+// NFR-1  initialer statischer JS-Graph ≤ 90.000 B + 2.000 B gzip-9
+//        (Basis 84.275 B bis 03.11.2026; Erhöhung durch Eigentümerentscheidung
+//        nach der Rubriken-Integration, ADR §14. Gesamtlimit 92.000 B.)
 // NFR-2  gesamtes Feature-JS (js/modules/frequenz*.js) ≤ 100.000 B gzip-9
 // NFR-3  Feature-CSS (css/frequenzlabor.css) ≤ 6.000 B gzip-9
 const fs = require('node:fs');
@@ -9,7 +11,7 @@ const zlib = require('node:zlib');
 
 const root = path.resolve(__dirname, '..');
 const gzip = (buffer) => zlib.gzipSync(buffer, { level: 9 }).length;
-const BASELINE_GZIP = 84275;
+const BASELINE_GZIP = 90000;
 const INITIAL_HEADROOM = 2000;
 const FEATURE_JS_LIMIT = 100000;
 const FEATURE_CSS_LIMIT = 6000;

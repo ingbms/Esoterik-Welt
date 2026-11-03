@@ -15,7 +15,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
-const { loadDocuments, analyseDocuments, checkRegister } = require('./lib/farbwelten-sources.cjs');
+const { loadDocuments, analyseDocuments, checkRegister, topicRegisters } = require('./lib/farbwelten-sources.cjs');
 
 const root = path.resolve(__dirname, '..');
 const contentDir = path.join(root, 'content', 'farbwelten');
@@ -361,14 +361,13 @@ function allText(world) {
     };
   }
 
-  // Quellenabgleich: jede Kennung aus allen Dokumenten, normalisierte Form
-  // (Label, URL). Divergierende Fassungen sind Fehler, keine Sortierfrage —
-  // siehe scripts/lib/farbwelten-sources.cjs für die Klassifikation.
+  // Jede Seite wird geprüft: Farbseiten im gemeinsamen Register, Themenseiten
+  // in ihrer tatsächlich gerenderten eigenen Bibliografie. Keine Seite ausnehmen.
   const sourceDocuments = loadDocuments(contentDir);
   const sourceAnalysis = analyseDocuments(sourceDocuments, {
     strictLabels: process.argv.includes('--strict-labels'),
   });
-  const sourceRegister = checkRegister(sourceAnalysis, data.SOURCES);
+  const sourceRegister = checkRegister(sourceAnalysis, data.SOURCES, topicRegisters(data.TOPIC_PAGES));
   const sourceErrors = [...sourceAnalysis.errors, ...sourceRegister.errors];
   const sourceWarnings = [...sourceAnalysis.warnings, ...sourceRegister.warnings];
   for (const error of sourceErrors) fail(`Quellenabgleich: ${error.message}`);

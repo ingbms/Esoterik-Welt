@@ -2595,56 +2595,54 @@ export const TOPIC_PAGES = [
               {
                 id: '6',
                 label:
-                  'Elliot & Maier 2014, Color Psychology. Annu Rev Psychol 65:95–120. DOI: 10.1146/annurev-psych-010213-115035. (Grundlage zur Unterscheidung von Assoziation und physiologischer Wirkung.)',
-                url: null,
+                  'Elliot & Maier 2014, Color Psychology. Annu Rev Psychol 65:95–120. (Grundlage zur Unterscheidung von Assoziation und physiologischer Wirkung.)',
+                url: 'https://doi.org/10.1146/annurev-psych-010213-115035',
               },
               {
                 id: '9',
                 label:
-                  'OSTEBA 2025, Eficacia y seguridad de la cromoterapia (Ministerio de Sanidad). URL: https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf. (Zentrale Bewertung: keine geeignete RCT, Pseudotherapie-Einordnung; Zitat aus [9]: „No systematic review or randomized clinical trial has been found that examines the efficacy and safety of chromotherapy for any disease.“)',
-                url: null,
+                  'OSTEBA 2025, Eficacia y seguridad de la cromoterapia (Ministerio de Sanidad). (Zentrale Bewertung: keine geeignete RCT, Pseudotherapie-Einordnung; Zitat aus [9]: „No systematic review or randomized clinical trial has been found that examines the efficacy and safety of chromotherapy for any disease.“)',
+                url: 'https://www.conprueba.es/sites/default/files/informes/2026-04/E-25-11-Eficacia_y_seguridad_de_la_cromoterapia.pdf',
               },
               {
                 id: '23',
                 label:
-                  'Smithsonian Libraries, Color in a New Light (Newton 1704 / Goethe 1810). URL: https://library.si.edu/sites/default/files/pdf/exhibitions/color-in-a-new-light.pdf. (Historische Quellen zur Farblehre.)',
-                url: null,
+                  'Smithsonian Libraries, Color in a New Light (Newton 1704 / Goethe 1810). (Historische Quellen zur Farblehre.)',
+                url: 'https://library.si.edu/sites/default/files/pdf/exhibitions/color-in-a-new-light.pdf',
               },
               {
                 id: '26',
                 label:
-                  'Caraka Samhita Online, Varna (Hautfarbe/Komplexion). URL: https://www.carakasamhitaonline.com/index.php/Varna. (Historischer Kontext, kein Lichttherapie-Bezug.)',
-                url: null,
+                  'Caraka Samhita Online, Varna (Hautfarbe/Komplexion). (Historischer Kontext, kein Lichttherapie-Bezug.)',
+                url: 'https://www.carakasamhitaonline.com/index.php/Varna',
               },
               {
                 id: '27',
                 label:
-                  'Riera et al., What do Cochrane systematic reviews say about new practices on integrative medicine? Sao Paulo Med J. URL: https://www.scielo.br/j/spmj/a/wBgZ7MLg7VmNTBYdLMFXJMg/?lang=en. (Bestätigung: keine Cochrane-Übersicht zur Chromotherapie.)',
-                url: null,
+                  'Riera et al., What do Cochrane systematic reviews say about new practices on integrative medicine? Sao Paulo Med J. (Bestätigung: keine Cochrane-Übersicht zur Chromotherapie.)',
+                url: 'https://www.scielo.br/j/spmj/a/wBgZ7MLg7VmNTBYdLMFXJMg/?lang=en',
               },
               {
                 id: '1',
-                label:
-                  'Leland 2017, The Rainbow Body (Quest 105.2). URL: https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be. (Entstehung des modernen Regenbogenmodells 1977.)',
-                url: null,
+                label: 'Leland 2017, The Rainbow Body (Quest 105.2). (Entstehung des modernen Regenbogenmodells 1977.)',
+                url: 'https://www.theosophical.org/publications/quest-magazine/the-rainbow-body-how-the-western-chakra-system-came-to-be',
               },
               {
                 id: '2',
                 label:
-                  'Woodroffe (Arthur Avalon) 1919, The Serpent Power. URL: https://archive.org/details/the-serpent-power-john-woodroffe. (Historische Chakra-Quellen ohne Farbzuordnung.)',
-                url: null,
+                  'Woodroffe (Arthur Avalon) 1919, The Serpent Power. (Historische Chakra-Quellen ohne Farbzuordnung.)',
+                url: 'https://archive.org/details/the-serpent-power-john-woodroffe',
               },
               {
                 id: '29',
                 label:
-                  'Saklecha et al. 2022, Chromotherapy dental anxiety RCT. DOI: 10.4103/jcd.jcd_381_21. (Einzelbeispiel einer kleinen RCT, kein Nachweis für therapeutische Wirksamkeit.)',
-                url: null,
+                  'Saklecha et al. 2022, Chromotherapy dental anxiety RCT. (Einzelbeispiel einer kleinen RCT, kein Nachweis für therapeutische Wirksamkeit.)',
+                url: 'https://doi.org/10.4103/jcd.jcd_381_21',
               },
               {
                 id: '10',
-                label:
-                  'Son et al. 2025, Photobiomodulation umbrella review. Syst Rev 14:160. DOI: 10.1186/s13643-025-02902-3',
-                url: null,
+                label: 'Son et al. 2025, Photobiomodulation umbrella review. Syst Rev 14:160',
+                url: 'https://doi.org/10.1186/s13643-025-02902-3',
               },
             ],
           },
@@ -2776,38 +2774,38 @@ export const TOPIC_PAGES = [
               {
                 id: '3',
                 label:
-                  'Jonauskaite & Mohr 2025, Do we feel colours? Psychon Bull Rev 32:1457–1486. DOI: 10.3758/s13423-024-02615-z. (132 Studien, 42.266 Personen, 64 Länder; Assoziation ≠ Wirkung; zentrale Unterscheidung: Vermittlung vs. Verursachung.)',
-                url: null,
+                  'Jonauskaite & Mohr 2025, Do we feel colours? Psychon Bull Rev 32:1457–1486. (132 Studien, 42.266 Personen, 64 Länder; Assoziation ≠ Wirkung; zentrale Unterscheidung: Vermittlung vs. Verursachung.)',
+                url: 'https://doi.org/10.3758/s13423-024-02615-z',
               },
               {
                 id: '4',
                 label:
-                  'Jonauskaite et al. 2020, Universal Patterns in Color-Emotion Associations. Psychol Sci 31:1245–1260. DOI: 10.1177/0956797620948810. (Kulturübergreifende Assoziationsmuster, nicht universelle Wirkung.)',
-                url: null,
+                  'Jonauskaite et al. 2020, Universal Patterns in Color-Emotion Associations. Psychol Sci 31:1245–1260. (Kulturübergreifende Assoziationsmuster, nicht universelle Wirkung.)',
+                url: 'https://doi.org/10.1177/0956797620948810',
               },
               {
                 id: '6',
                 label:
-                  'Elliot & Maier 2014, Color Psychology. Annu Rev Psychol 65:95–120. DOI: 10.1146/annurev-psych-010213-115035. (Grundlage zur Unterscheidung von Assoziation und physiologischer Wirkung.)',
-                url: null,
+                  'Elliot & Maier 2014, Color Psychology. Annu Rev Psychol 65:95–120. (Grundlage zur Unterscheidung von Assoziation und physiologischer Wirkung.)',
+                url: 'https://doi.org/10.1146/annurev-psych-010213-115035',
               },
               {
                 id: '7',
                 label:
-                  'Gnambs 2020, Limited evidence for the red effect. Psychon Bull Rev 27:1374–1382. DOI: 10.3758/s13423-020-01772-1. (Meta-analytische Unbeständigkeit des Roteffekts.)',
-                url: null,
+                  'Gnambs 2020, Limited evidence for the red effect. Psychon Bull Rev 27:1374–1382. (Meta-analytische Unbeständigkeit des Roteffekts.)',
+                url: 'https://doi.org/10.3758/s13423-020-01772-1',
               },
               {
                 id: '10',
                 label:
-                  'Son et al. 2025, Photobiomodulation umbrella review. Syst Rev 14:160. DOI: 10.1186/s13643-025-02902-3. (Separation von Photobiomodulation und Farbpsychologie; nur hier als Vergleich, nicht als Farbpsychologie-Beleg.)',
-                url: null,
+                  'Son et al. 2025, Photobiomodulation umbrella review. Syst Rev 14:160. (Separation von Photobiomodulation und Farbpsychologie; nur hier als Vergleich, nicht als Farbpsychologie-Beleg.)',
+                url: 'https://doi.org/10.1186/s13643-025-02902-3',
               },
               {
                 id: '31',
                 label:
-                  'MIT Vision Book, Color (Metamerie, nicht-spektrale Farben). URL: https://visionbook.mit.edu/color.html. (Physiologische Basis der Farbwahrnehmung.)',
-                url: null,
+                  'MIT Vision Book, Color (Metamerie, nicht-spektrale Farben). (Physiologische Basis der Farbwahrnehmung.)',
+                url: 'https://visionbook.mit.edu/color.html',
               },
             ],
           },
@@ -2970,56 +2968,54 @@ export const TOPIC_PAGES = [
               {
                 id: '13',
                 label:
-                  'Berson, Dunn & Takao 2002, Phototransduction by RGCs. Science 295:1070–1073. DOI: 10.1126/science.1067262. (Physiologische Basis: Melanopsin, ipRGCs, circadiane Steuerung.)',
-                url: null,
+                  'Berson, Dunn & Takao 2002, Phototransduction by RGCs. Science 295:1070–1073. (Physiologische Basis: Melanopsin, ipRGCs, circadiane Steuerung.)',
+                url: 'https://doi.org/10.1126/science.1067262',
               },
               {
                 id: '15',
                 label:
-                  'Pjrek et al. 2020, Light therapy for SAD meta-analysis. Psychother Psychosom 89:17–24. DOI: 10.1159/000502891. (SMD ca. −0,37; moderater Effekt bei SAD-Behandlung.)',
-                url: null,
+                  'Pjrek et al. 2020, Light therapy for SAD meta-analysis. Psychother Psychosom 89:17–24. (SMD ca. −0,37; moderater Effekt bei SAD-Behandlung.)',
+                url: 'https://doi.org/10.1159/000502891',
               },
               {
                 id: '16',
                 label:
-                  'Nussbaumer-Streit et al. 2019, Light therapy for preventing seasonal affective disorder. Cochrane Database Syst Rev CD011269. DOI: 10.1002/14651858.CD011269.pub3. (Eine Studie, 46 Teilnehmende, sehr niedrige Evidenzqualität; RR 0,64; 95 %-KI 0,30–1,38.)',
-                url: null,
+                  'Nussbaumer-Streit et al. 2019, Light therapy for preventing seasonal affective disorder. Cochrane Database Syst Rev CD011269. (Eine Studie, 46 Teilnehmende, sehr niedrige Evidenzqualität; RR 0,64; 95 %-KI 0,30–1,38.)',
+                url: 'https://doi.org/10.1002/14651858.CD011269.pub3',
               },
               {
                 id: '11',
                 label:
-                  'Hamblin 2018, Mechanisms and Mitochondrial Redox Signaling in PBM. URL: https://doi.org/10.1111/php.12864. (PBM-Mechanismus: Cytochrom c Oxidase, ROS, ATP; kein Präventions- oder SAD-Beleg.)',
-                url: null,
+                  'Hamblin 2018, Mechanisms and Mitochondrial Redox Signaling in PBM. (PBM-Mechanismus: Cytochrom c Oxidase, ROS, ATP; kein Präventions- oder SAD-Beleg.)',
+                url: 'https://doi.org/10.1111/php.12864',
               },
               {
                 id: '17',
                 label:
-                  'Kumar, Chawla & Deorari 2022, LED phototherapy for neonatal hyperbilirubinaemia (Cochrane). DOI: 10.1002/14651858.CD007969.pub2. (Neonaten-Phototherapie als etablierte Indikation.)',
-                url: null,
+                  'Kumar, Chawla & Deorari 2022, LED phototherapy for neonatal hyperbilirubinaemia (Cochrane). (Neonaten-Phototherapie als etablierte Indikation.)',
+                url: 'https://doi.org/10.1002/14651858.CD007969.pub2',
               },
               {
                 id: '18',
                 label:
-                  'Chen et al. 2013, NB-UVB vs BB-UVB/PUVA for psoriasis (Cochrane). DOI: 10.1002/14651858.CD009481.pub2. (NB-UVB als medizinisches Verfahren mit definiertem Risiko-Nutzen-Profil.)',
-                url: null,
+                  'Chen et al. 2013, NB-UVB vs BB-UVB/PUVA for psoriasis (Cochrane). (NB-UVB als medizinisches Verfahren mit definiertem Risiko-Nutzen-Profil.)',
+                url: 'https://doi.org/10.1002/14651858.CD009481.pub2',
               },
               {
                 id: '10',
                 label:
-                  'Son et al. 2025, Photobiomodulation umbrella review. Syst Rev 14:160. DOI: 10.1186/s13643-025-02902-3. (Evidenzsicherheit niedrig–moderat; keine allgemeine Anwendungsempfehlung.)',
-                url: null,
+                  'Son et al. 2025, Photobiomodulation umbrella review. Syst Rev 14:160. (Evidenzsicherheit niedrig–moderat; keine allgemeine Anwendungsempfehlung.)',
+                url: 'https://doi.org/10.1186/s13643-025-02902-3',
               },
               {
                 id: '14',
-                label:
-                  'ANSES 2019/2020, LEDs and blue light. URL: https://www.anses.fr/en/content/leds-blue-light. (Blaulicht: Physik und Risikobewertung.)',
-                url: null,
+                label: 'ANSES 2019/2020, LEDs and blue light. (Blaulicht: Physik und Risikobewertung.)',
+                url: 'https://www.anses.fr/en/content/leds-blue-light',
               },
               {
                 id: '19',
-                label:
-                  'IARC 2012, Monographs Vol. 100D Radiation. URL: https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012. (UV-Strahlung: krebserregend, Grupp 1.)',
-                url: null,
+                label: 'IARC 2012, Monographs Vol. 100D Radiation. (UV-Strahlung: krebserregend, Grupp 1.)',
+                url: 'https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Radiation-2012',
               },
             ],
           },
