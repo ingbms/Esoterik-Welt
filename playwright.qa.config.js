@@ -7,6 +7,10 @@
  *    oder veralteter Entwicklungsserver die Ergebnisse verfälscht,
  *  - eigener Testordner, damit die Feature-Suite (tests/*.spec.js) unverändert
  *    bleibt und beide Sätze getrennt berichtet werden können.
+ *
+ * Der Serverstart läuft wie bei der Feature-Suite über `scripts/serve-e2e.cjs`:
+ * ein belegter Port bricht mit eindeutiger Meldung ab, statt still einen fremden
+ * Server zu übernehmen (QA-Befund m-3).
  */
 const { defineConfig, devices } = require('playwright/test');
 
@@ -41,10 +45,13 @@ module.exports = defineConfig({
     { name: 'chromium-mobile', use: { ...devices['Pixel 5'], browserName: 'chromium' } },
   ],
   webServer: {
-    command: 'node index.js',
+    command: 'node scripts/serve-e2e.cjs',
     url: `${BASE_URL.replace(/\/Esoterik-Welt$/, '')}/api/health`,
-    env: { PORT: String(PORT) },
+    env: { E2E_PORT: String(PORT) },
     reuseExistingServer: false,
+    // Servermeldungen (Port, Abbruch bei Kollision) gehören ins CI-Log.
+    stdout: 'pipe',
+    stderr: 'pipe',
     timeout: 60000,
   },
 });

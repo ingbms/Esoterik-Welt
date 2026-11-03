@@ -1,0 +1,94 @@
+{
+  "S1_activateTarget": {
+    "before": {
+      "visibility": "visible",
+      "hidden": false,
+      "hasFocus": true,
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS.",
+      "liveStatus": "läuft",
+      "mixRms": 0.07047486530762828
+    },
+    "during": {
+      "visibility": "visible",
+      "hidden": false,
+      "hasFocus": true,
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS.",
+      "liveStatus": "läuft",
+      "mixRms": 0.07079504039624003
+    },
+    "after": {
+      "visibility": "visible",
+      "hidden": false,
+      "hasFocus": true,
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS.",
+      "liveStatus": "läuft",
+      "mixRms": 0.07081856770624219
+    },
+    "otherState": {
+      "visibility": "visible",
+      "hasFocus": true
+    },
+    "activated": "53855C11C4848CF8B59838BD3D78F4FC"
+  },
+  "S2_minimize": {
+    "before": {
+      "visibility": "visible",
+      "hidden": false,
+      "hasFocus": true,
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS.",
+      "liveStatus": "läuft",
+      "mixRms": 0.07049732142773908
+    },
+    "during": {
+      "visibility": "visible",
+      "hidden": false,
+      "hasFocus": true,
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS.",
+      "liveStatus": "läuft",
+      "mixRms": 0.07081851974348262
+    },
+    "after": {
+      "visibility": "visible",
+      "hidden": false,
+      "hasFocus": true,
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS.",
+      "liveStatus": "läuft",
+      "mixRms": 0.07049073572053284
+    },
+    "windowId": 175557317,
+    "boundsBefore": {
+      "left": -26214,
+      "top": -26214,
+      "width": 918,
+      "height": 790,
+      "windowState": "normal"
+    },
+    "minimize": "ok"
+  },
+  "S3_stubbed": {
+    "before": {
+      "visibility": "visible",
+      "hidden": false,
+      "hasFocus": true,
+      "status": "running",
+      "statusText": "Ton läuft: 440 Hz, −20 dBFS.",
+      "liveStatus": "läuft",
+      "mixRms": 0.07049732142773908
+    },
+    "during": {
+      "visibility": "hidden",
+      "hidden": false,
+      "hasFocus": true,
+      "status": "idle",
+      "statusText": "Seite im Hintergrund — Ton gestoppt.",
+      "liveStatus": "bereit",
+      "mixRms": 0
+    }
+  }
+}
