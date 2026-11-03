@@ -1,0 +1,362 @@
+{
+  "generatedAt": "2026-11-03T01:30:54.358Z",
+  "target": "input#journalDatum (type=date) im Journal, Zustand liste, 1440 px",
+  "tabSteps": [
+    {
+      "step": 1,
+      "tag": "a",
+      "type": "",
+      "id": "",
+      "cls": "rad-ws-skip",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(198, 179, 142)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 64,
+        "y": 32,
+        "w": 167,
+        "h": 50
+      }
+    },
+    {
+      "step": 2,
+      "tag": "a",
+      "type": "",
+      "id": "",
+      "cls": "",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "0px none rgb(186, 189, 183)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 64,
+        "y": 32,
+        "w": 30,
+        "h": 44
+      }
+    },
+    {
+      "step": 3,
+      "tag": "a",
+      "type": "",
+      "id": "",
+      "cls": "",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "0px none rgb(186, 189, 183)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 115,
+        "y": 32,
+        "w": 51,
+        "h": 44
+      }
+    },
+    {
+      "step": 4,
+      "tag": "a",
+      "type": "",
+      "id": "",
+      "cls": "",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "0px none rgb(186, 189, 183)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 187,
+        "y": 32,
+        "w": 59,
+        "h": 44
+      }
+    },
+    {
+      "step": 5,
+      "tag": "a",
+      "type": "",
+      "id": "",
+      "cls": "rad-status-link",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "0px none rgb(198, 179, 142)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 519,
+        "y": 318,
+        "w": 223,
+        "h": 20
+      }
+    },
+    {
+      "step": 6,
+      "tag": "a",
+      "type": "",
+      "id": "",
+      "cls": "rad-ws-navlink",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "0px none rgb(186, 189, 183)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 64,
+        "y": 394,
+        "w": 328,
+        "h": 56
+      }
+    },
+    {
+      "step": 7,
+      "tag": "a",
+      "type": "",
+      "id": "",
+      "cls": "rad-ws-navlink",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "0px none rgb(186, 189, 183)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 392,
+        "y": 394,
+        "w": 328,
+        "h": 56
+      }
+    },
+    {
+      "step": 8,
+      "tag": "a",
+      "type": "",
+      "id": "",
+      "cls": "rad-ws-navlink",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "0px none rgb(186, 189, 183)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 720,
+        "y": 394,
+        "w": 328,
+        "h": 56
+      }
+    },
+    {
+      "step": 9,
+      "tag": "a",
+      "type": "",
+      "id": "",
+      "cls": "rad-ws-navlink",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "0px none rgb(234, 230, 220)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 1048,
+        "y": 394,
+        "w": 328,
+        "h": 56
+      }
+    },
+    {
+      "step": 10,
+      "tag": "input",
+      "type": "date",
+      "id": "journalDatum",
+      "cls": "input rad-ws-input",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(194, 177, 142)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 85,
+        "y": 621,
+        "w": 426,
+        "h": 52
+      }
+    },
+    {
+      "step": 11,
+      "tag": "input",
+      "type": "date",
+      "id": "journalDatum",
+      "cls": "input rad-ws-input",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(198, 179, 142)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 85,
+        "y": 621,
+        "w": 426,
+        "h": 52
+      }
+    },
+    {
+      "step": 12,
+      "tag": "input",
+      "type": "date",
+      "id": "journalDatum",
+      "cls": "input rad-ws-input",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(198, 179, 142)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 85,
+        "y": 621,
+        "w": 426,
+        "h": 52
+      }
+    },
+    {
+      "step": 13,
+      "tag": "input",
+      "type": "date",
+      "id": "journalDatum",
+      "cls": "input rad-ws-input",
+      "focus": false,
+      "focusVisible": false,
+      "focusWithin": true,
+      "outline": "none 3px rgb(234, 230, 220) offset 0px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(134, 148, 142)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 85,
+        "y": 621,
+        "w": 426,
+        "h": 52
+      }
+    },
+    {
+      "step": 14,
+      "tag": "input",
+      "type": "text",
+      "id": "journalFrage",
+      "cls": "input rad-ws-input",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(178, 169, 142)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 85,
+        "y": 723,
+        "w": 426,
+        "h": 50
+      }
+    },
+    {
+      "step": 15,
+      "tag": "select",
+      "type": "select-one",
+      "id": "journalMethode",
+      "cls": "select",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 2px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(188, 174, 142)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 85,
+        "y": 822,
+        "w": 426,
+        "h": 50
+      }
+    },
+    {
+      "step": 16,
+      "tag": "input",
+      "type": "text",
+      "id": "journalVorhersage",
+      "cls": "input rad-ws-input",
+      "focus": true,
+      "focusVisible": true,
+      "focusWithin": true,
+      "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+      "boxShadow": "none",
+      "border": "1px solid rgb(188, 174, 142)",
+      "borderRadius": "2px",
+      "rect": {
+        "x": 85,
+        "y": 483,
+        "w": 426,
+        "h": 50
+      }
+    }
+  ],
+  "dateStep": {
+    "step": 13,
+    "tag": "input",
+    "type": "date",
+    "id": "journalDatum",
+    "cls": "input rad-ws-input",
+    "focus": false,
+    "focusVisible": false,
+    "focusWithin": true,
+    "outline": "none 3px rgb(234, 230, 220) offset 0px",
+    "boxShadow": "none",
+    "border": "1px solid rgb(134, 148, 142)",
+    "borderRadius": "2px",
+    "rect": {
+      "x": 85,
+      "y": 621,
+      "w": 426,
+      "h": 52
+    }
+  },
+  "programmaticFocus": {
+    "focus": true,
+    "focusVisible": true,
+    "outline": "solid 2px rgb(198, 179, 142) offset 4px",
+    "boxShadow": "none",
+    "border": "rgb(130, 146, 142)"
+  },
+  "redProbe": {
+    "applied": "solid rgb(255, 0, 0)",
+    "file": "fokus-datum-rotprobe.png"
+  },
+  "shots": [
+    "fokus-datum-fokussiert.png",
+    "fokus-datum-ruhe.png"
+  ],
+  "conclusion": "Im Tastaturfokus liegt der Fokus im Shadow-Tree des Datumsfelds: activeElement ist das Input, aber :focus/:focus-visible melden false und der berechnete outline des Hosts ist \"none\". Ob der sichtbare Ring vom Host oder von der UA gemalt wird, entscheidet die Rotprobe (fokus-datum-rotprobe.png) — Bildvergleich nötig."
+}

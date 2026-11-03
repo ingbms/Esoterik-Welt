@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Werkstatt-Mockup — ESOW-RAD-04</title>
+    <!-- Echte Projektstylesheets: Tokens und Primitives werden nicht nachgebaut. -->
+    <link rel="stylesheet" href="../../../../css/design-system.css" />
+    <link rel="stylesheet" href="../../../../css/main.css" />
+    <link rel="stylesheet" href="../../../../css/radiasthesie.css" />
+    <link rel="stylesheet" href="werkstatt.css" />
+  </head>
+  <body class="rad">
+    <main class="container rad-ws" id="radWerkstattSeite">
+      <!-- Sprunglink: die Werkzeugnavigation steht vor dem Inhalt, der Seitenkopf
+           ist fixiert. Ohne diesen Link kostet jeder Werkzeugwechsel auf der
+           Tastatur 8 Schritte durch Brotkrümel und Navigation. -->
+      <a class="rad-ws-skip" href="#radWerkzeug">Direkt zum Werkzeug</a>
+      <nav class="astro-breadcrumb" aria-label="Brotkrümelnavigation">
+        <ol>
+          <li><a href="#">Start</a></li>
+          <li><a href="#">Pendeln</a></li>
+          <li><a href="#">Werkstatt</a></li>
+          <li><span aria-current="page" id="crumbWerkzeug">Pendelsimulator</span></li>
+        </ol>
+      </nav>
+
+      <header class="rad-ws-head">
+        <p class="rad-ws-kicker" id="wsKicker">Werkstatt · Werkzeug 1 von 4</p>
+        <h1 class="rad-ws-title" id="wsTitel" tabindex="-1">Pendelsimulator</h1>
+        <p class="astro-lead" id="wsLead">
+          Länge, Auslenkung und Dämpfung einstellen und sehen, wie sich die
+          Schwingungsdauer verhält. Das Modell rechnet mit der klassischen
+          Pendelformel — es sagt nichts über Antworten oder Ausschläge auf
+          Fragen.
+        </p>
+      </header>
+
+      <div class="rad-status" role="note" aria-label="Einordnung dieses Werkzeugs">
+        <span class="rad-status-label">Einordnung</span>
+        <p class="rad-status-body">
+          Ein Werkzeug zum Ausprobieren, kein Messgerät.
+          <a class="rad-status-link" href="#">Wie die Kennzeichnung funktioniert</a>
+        </p>
+      </div>
+
+      <nav aria-label="Werkzeuge der Pendelwerkstatt">
+        <ul class="rad-ws-nav">
+          <li class="rad-ws-navli">
+            <a class="rad-ws-navlink" href="?tool=simulator" data-tool="simulator" aria-current="page">
+              <span class="rad-ws-navnum">01</span>
+              <span class="rad-ws-navlabel">Simulator</span>
+            </a>
+          </li>
+          <li class="rad-ws-navli">
+            <a class="rad-ws-navlink" href="?tool=studio" data-tool="studio">
+              <span class="rad-ws-navnum">02</span>
+              <span class="rad-ws-navlabel">Tafel-Studio</span>
+            </a>
+          </li>
+          <li class="rad-ws-navli">
+            <a class="rad-ws-navlink" href="?tool=experiment" data-tool="experiment" aria-label="Test- und Demo-Labor">
+              <span class="rad-ws-navnum">03</span>
+              <span class="rad-ws-navlabel">Test/Demo-Labor</span>
+            </a>
+          </li>
+          <li class="rad-ws-navli">
+            <a class="rad-ws-navlink" href="?tool=journal" data-tool="journal">
+              <span class="rad-ws-navnum">04</span>
+              <span class="rad-ws-navlabel">Journal</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Die eine Live-Region der Ansicht. Komponenten schreiben nur hierher. -->
+      <p class="rad-ws-status" role="status" aria-live="polite" id="wsStatus">
+        Bereit. Das Pendel steht in der Ruhelage.
+      </p>
+
+      <div id="radWerkzeug" tabindex="-1">
+        <!-- ==================================================================
+             01 · Simulator
+             ================================================================== -->
+        <section class="rad-ws-tool" data-toolpanel="simulator" aria-labelledby="simTitel" hidden>
+          <h2 class="sr-only" id="simTitel">Pendelsimulator: Einstellungen und Messwerte</h2>
+          <div class="rad-ws-grid">
+            <div class="rad-ws-main">
+              <figure class="rad-ws-stage" id="simStage">
+                <div class="rad-lab-stage" data-running="false" id="simBuehne">
+                  <svg viewBox="0 0 400 300" role="img" aria-labelledby="simSvgTitel simSvgDesc">
+                    <title id="simSvgTitel">Schematische Pendelzeichnung</title>
+                    <desc id="simSvgDesc">
+                      Ein Fadenpendel hängt an einem Balken. Der Faden ist gestrichelt
+                      als Ruhelage eingezeichnet; der Pendelkörper schwingt nach
+                      links und rechts.
+                    </desc>
+                    <line x1="140" y1="40" x2="260" y2="40" stroke="var(--color-line-strong)" stroke-width="2" />
+                    <line x1="200" y1="40" x2="200" y2="250" stroke="var(--color-border)" stroke-width="1" stroke-dasharray="4 6" />
+                    <g class="rad-lab-arm">
+                      <line x1="200" y1="40" x2="200" y2="236" stroke="var(--color-primary)" stroke-width="1.5" />
+                      <circle cx="200" cy="240" r="17" fill="var(--color-bg-deep)" stroke="var(--color-primary)" stroke-width="1.5" />
+                      <line x1="200" y1="223" x2="200" y2="257" stroke="var(--color-primary)" stroke-width="1" />
+                      <line x1="183" y1="240" x2="217" y2="240" stroke="var(--color-primary)" stroke-width="1" />
+                    </g>
+                    <text x="140" y="26" font-family="ui-monospace, monospace" font-size="13" fill="var(--color-text-secondary)">Aufhängung</text>
+                  </svg>
+                </div>
+                <figcaption id="simCaption">
+                  <strong>Schematische Darstellung.</strong> Der Pendelkörper ist eine
+                  Zeichnung, kein Foto eines Instruments. Die Bewegung zeigt das
+                  Modell, nicht das Verhalten eines physikalischen Pendels im Raum.
+                </figcaption>
+              </figure>
+
+              <div class="rad-lab-chart">
+                <svg viewBox="0 0 640 160" role="img" aria-labelledby="chartTitel" id="simChart">
+                  <title id="chartTitel">Winkel über Zeit, 0 bis 10 Sekunden</title>
+                  <line x1="0" y1="80" x2="640" y2="80" stroke="var(--color-border)" stroke-width="1" stroke-dasharray="4 6" />
+                  <path id="simChartPath" d="" fill="none" stroke="var(--color-primary)" stroke-width="1.5" />
+                </svg>
+                <p class="rad-lab-axis" aria-hidden="true">
+                  <span>0 s</span><span>5 s</span><span>10 s</span>
+                </p>
+              </div>
+
+              <dl class="rad-ws-readout" id="simReadout">
+                <div>
+                  <dt>Periode (Modell)</dt>
+                  <dd id="simPeriode">1,01 s</dd>
+                </div>
+                <div>
+                  <dt>Theorie 2π√(L/g)</dt>
+                  <dd id="simTheorie">1,00 s</dd>
+                </div>
+                <div>
+                  <dt>Abweichung</dt>
+                  <dd id="simAbw">0,4 %</dd>
+                </div>
+                <div>
+                  <dt>Dämpfung ζ</dt>
+                  <dd id="simZeta">0,04</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="rad-ws-panel" role="group" aria-labelledby="simPanelTitel">
+              <h2 class="rad-ws-panel-head" id="simPanelTitel">Einstellungen</h2>
+
+              <div class="rad-ws-field">
+                <div class="rad-ws-row">
+                  <label class="rad-ws-label" for="simLaenge">Fadenlänge</label>
+                  <output class="rad-ws-value" for="simLaenge" id="simLaengeOut">0,25 m</output>
+                </div>
+                <input class="rad-ws-range" type="range" id="simLaenge" min="5" max="100" step="1" value="25" />
+                <p class="rad-ws-hint" id="simLaengeHint">0,05 bis 1,00 m. Längere Fäden schwingen langsamer.</p>
+              </div>
+
+              <div class="rad-ws-field">
+                <div class="rad-ws-row">
+                  <label class="rad-ws-label" for="simAmp">Anfangsauslenkung</label>
+                  <output class="rad-ws-value" for="simAmp" id="simAmpOut">12°</output>
+                </div>
+                <input class="rad-ws-range" type="range" id="simAmp" min="2" max="30" step="1" value="12" />
+                <p class="rad-ws-hint">2 bis 30°. Über etwa 8° wird die Kleinwinkel-Näherung ungenau.</p>
+              </div>
+
+              <div class="rad-ws-field">
+                <div class="rad-ws-row">
+                  <label class="rad-ws-label" for="simDaempfung">Dämpfung</label>
+                  <output class="rad-ws-value" for="simDaempfung" id="simDaempfungOut">0,04</output>
+                </div>
+                <input class="rad-ws-range" type="range" id="simDaempfung" min="0" max="20" step="1" value="4" />
+                <p class="rad-ws-hint">0 bis 0,20. Höhere Werte lassen die Schwingung schneller abklingen.</p>
+              </div>
+
+              <fieldset class="rad-ws-choice">
+                <legend>Darstellung des Pendelkörpers</legend>
+                <div class="rad-ws-choice-grid">
+                  <label><input type="radio" name="simStil" value="scheibe" checked /><span>Scheibe</span></label>
+                  <label><input type="radio" name="simStil" value="kegel" /><span>Kegel</span></label>
+                  <label><input type="radio" name="simStil" value="ring" /><span>Ring</span></label>
+                </div>
+              </fieldset>
+
+              <div class="rad-ws-actions">
+                <button class="btn btn-primary" type="button" id="simStart" aria-pressed="false" data-show-in="bereit,laeuft">Start</button>
+                <button class="btn btn-secondary" type="button" id="simReset" data-show-in="bereit,laeuft,fehler">Zurücksetzen</button>
+              </div>
+
+              <p class="rad-ws-note" data-show-in="reduziert">
+                <strong>Reduzierte Bewegung ist aktiv.</strong> Die Animation ist
+                abgeschaltet; das Pendel bleibt in der Ruhelage gezeichnet. Periode und
+                Dämpfung bleiben ablesbar und ändern sich mit den Reglern. Über
+                „Start“ wird nichts in Bewegung gesetzt — der Status sagt das aus.
+              </p>
+
+              <p class="rad-ws-note rad-ws-note--limit" data-show-in="fehler">
+                <strong>Länge außerhalb des Bereichs.</strong> Der Wert wurde auf
+                0,05 m begrenzt. Das Feld zeigt den gültigen Wert, nicht den
+                eingegebenen — es wird nie „NaN“ angezeigt.
+              </p>
+
+              <ul class="rad-ws-chips">
+                <li class="rad-ws-chip" data-show-in="bereit">Ruhelage</li>
+                <li class="rad-ws-chip rad-ws-chip--live" data-show-in="laeuft">Läuft</li>
+                <li class="rad-ws-chip" data-show-in="reduziert">Bewegung reduziert</li>
+                <li class="rad-ws-chip rad-ws-chip--limit" data-show-in="fehler">Eingabe begrenzt</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================================================================
+             02 · Tafel-Studio
+             ================================================================== -->
+        <section class="rad-ws-tool" data-toolpanel="studio" aria-labelledby="studioTitel" hidden>
+          <h2 class="sr-only" id="studioTitel">Tafel-Studio: Tafel wählen, beschriften, exportieren</h2>
+          <div class="rad-ws-grid">
+            <div class="rad-ws-main">
+              <div class="rad-ws-error" role="alert" tabindex="-1" id="studioFehler" data-show-in="fehler">
+                <h3>Zwei Eingaben brauchen eine Korrektur</h3>
+                <ul>
+                  <li><a href="#studioLabels">Beschriftung 3</a>: darf nicht leer sein.</li>
+                  <li><a href="#studioTitelFeld">Titel</a>: höchstens 60 Zeichen (aktuell 64).</li>
+                </ul>
+              </div>
+
+              <div class="rad-ws-empty" data-show-in="leer">
+                <p><strong>Noch keine Tafel</strong></p>
+                <p>
+                  Für eine Tafel braucht es mindestens zwei Beschriftungen. Tragen Sie
+                  rechts zwei Begriffe ein, dann erscheint die Vorschau — und der
+                  Export wird freigeschaltet.
+                </p>
+              </div>
+
+              <figure class="rad-ws-stage" data-show-in="standard,fehler,violett,pergament">
+                <div class="rad-studio-plate" id="studioPlate" data-style="gold"></div>
+                <figcaption id="studioCaption">
+                  <strong>Vorschau 1:1.</strong> Die Tafel enthält nur Ihre
+                  Beschriftungen. Sie sagt nichts über Wahrscheinlichkeiten aus.
+                </figcaption>
+              </figure>
+
+              <div class="rad-studio-print-sheet" id="studioPrintSheet">
+                <h2 id="studioPrintTitel">Tafel</h2>
+                <div class="rad-studio-plate" id="studioPrintPlate" data-style="gold"></div>
+              </div>
+            </div>
+
+            <div class="rad-ws-panel" role="group" aria-labelledby="studioPanelTitel">
+              <h2 class="rad-ws-panel-head" id="studioPanelTitel">Tafel einrichten</h2>
+
+              <fieldset class="rad-ws-choice">
+                <legend>Tafeltyp</legend>
+                <div class="rad-ws-choice-grid">
+                  <label><input type="radio" name="studioTyp" value="jaNein" checked /><span>Ja / Nein</span></label>
+                  <label><input type="radio" name="studioTyp" value="zahlenkreis" /><span>Zahlenkreis</span></label>
+                  <label><input type="radio" name="studioTyp" value="buchstaben" /><span>Buchstaben A–Z</span></label>
+                  <label><input type="radio" name="studioTyp" value="segmente" /><span>Freie Segmente</span></label>
+                </div>
+              </fieldset>
+
+              <div class="rad-ws-field">
+                <label class="rad-ws-label" for="studioTitelFeld">Titel der Tafel</label>
+                <input class="input rad-ws-input" type="text" id="studioTitelFeld" maxlength="60" value="Pendeltafel" />
+                <p class="rad-ws-hint">Höchstens 60 Zeichen. Der Titel steht im Export und im Druck.</p>
+              </div>
+
+              <div class="rad-ws-field" id="studioLabels">
+                <div class="rad-ws-row">
+                  <span class="rad-ws-label" id="studioLabelsLabel">Beschriftungen</span>
+                  <span class="rad-studio-count" id="studioCount" data-over="false">2 von 24</span>
+                </div>
+                <ul class="rad-studio-labels" id="studioLabelList" aria-labelledby="studioLabelsLabel"></ul>
+                <p class="rad-ws-hint">2 bis 24 Beschriftungen, je höchstens 40 Zeichen. Duplikate sind erlaubt und werden durchnummeriert.</p>
+              </div>
+
+              <fieldset class="rad-ws-choice">
+                <legend>Farbstil</legend>
+                <div class="rad-ws-choice-grid">
+                  <label><input type="radio" name="studioStil" value="gold" checked /><span>Gold auf Nacht</span></label>
+                  <label><input type="radio" name="studioStil" value="violett" /><span>Gedämpftes Violett</span></label>
+                  <label><input type="radio" name="studioStil" value="pergament" /><span>Pergament</span></label>
+                </div>
+              </fieldset>
+
+              <label class="rad-ws-check">
+                <input type="checkbox" id="studioNummern" checked />
+                <span>Segmente nummerieren</span>
+              </label>
+
+              <div class="rad-ws-actions">
+                <button class="btn btn-primary" type="button" id="studioExport" data-show-in="standard,fehler,violett,pergament">SVG herunterladen</button>
+                <button class="btn btn-secondary" type="button" id="studioDruck" data-show-in="standard,violett,pergament">Drucken / PDF</button>
+                <button class="btn btn-secondary" type="button" id="studioExportLeer" aria-describedby="studioLeerGrund" disabled data-show-in="leer">SVG herunterladen</button>
+                <button class="btn btn-secondary" type="button" id="studioImportBtn" data-show-in="standard,fehler,violett,pergament">Tafel laden (JSON)</button>
+                <input type="file" id="studioImport" accept="application/json,.json" hidden />
+              </div>
+
+              <p class="rad-ws-hint" id="studioLeerGrund" data-show-in="leer">
+                Der Export ist gesperrt, solange weniger als zwei Beschriftungen
+                eingetragen sind. Der Grund steht hier als Text, nicht nur als
+                ausgegrauter Knopf.
+              </p>
+
+              <p class="rad-ws-note" data-show-in="standard,violett,pergament">
+                <strong>Export:</strong> eine eigenständige SVG-Datei mit Titel und
+                Beschreibung, ohne externe Verweise. <strong>PDF</strong> entsteht
+                ausschließlich über den Druckdialog des Browsers — es gibt keine
+                PDF-Bibliothek im Projekt.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================================================================
+             03 · Test- und Demo-Labor
+             ================================================================== -->
+        <section class="rad-ws-tool" data-toolpanel="experiment" aria-labelledby="expTitel" hidden>
+          <h2 class="sr-only" id="expTitel">Test- und Demo-Labor: verblindeter Ablauf</h2>
+          <div class="rad-ws-grid">
+            <div class="rad-ws-main">
+              <div class="rad-exp-progress">
+                <div class="rad-exp-meta">
+                  <span id="expZaehler">Versuch 0 von 40</span>
+                  <span id="expModus">Testmodus · protokolliert</span>
+                </div>
+                <div class="rad-exp-bar" role="img" aria-labelledby="expZaehler">
+                  <span id="expBar" style="--p: 0%"></span>
+                </div>
+              </div>
+
+              <figure class="rad-ws-stage">
+                <div class="rad-exp-stage" id="expStage">
+                  <span class="rad-exp-target" data-hidden="true" id="expZiel">?</span>
+                  <p id="expStageText">
+                    Noch kein Ziel gezogen. Im Testmodus wird das Ziel verdeckt
+                    gezogen, die Antwort gespeichert und erst danach aufgedeckt.
+                  </p>
+                </div>
+                <figcaption>
+                  <strong>Reihenfolge ist Teil des Protokolls:</strong> Ziel ziehen →
+                  Antwort festhalten → speichern → aufdecken. Vor dem Speichern steht
+                  das Ziel weder im Dokument noch im Speicher.
+                </figcaption>
+              </figure>
+
+              <fieldset class="rad-exp-answers" id="expAnswers">
+                <legend id="expAntwortLabel">Ihre Antwort</legend>
+                <button class="rad-exp-answer" type="button" aria-pressed="false">1</button>
+                <button class="rad-exp-answer" type="button" aria-pressed="false">2</button>
+                <button class="rad-exp-answer" type="button" aria-pressed="false">3</button>
+                <button class="rad-exp-answer" type="button" aria-pressed="false">4</button>
+              </fieldset>
+
+              <div class="rad-exp-result" id="expResult" data-hit="true" data-show-in="enthuellt,abgeschlossen">
+                <p><strong id="expResultTitel">Treffer.</strong> <span id="expResultText">Ziel 3, Antwort 3. Die Antwort war vor dem Aufdecken gespeichert und ist gesperrt.</span></p>
+              </div>
+
+              <dl class="rad-exp-stats" id="expStats" data-show-in="abgeschlossen">
+                <div><dt>Treffer</dt><dd id="expH">12 / 40</dd></div>
+                <div><dt>Erwartung</dt><dd id="expErwartung">10,0</dd></div>
+                <div><dt>p (exakt)</dt><dd id="expP">0,3472</dd></div>
+                <div><dt>95-%-Intervall</dt><dd id="expCI">0,19–0,44</dd></div>
+              </dl>
+
+              <div class="rad-ws-actions">
+                <button class="btn btn-primary" type="button" id="expWeiter" data-show-in="vorbereitet,verdeckt,antwort,enthuellt">Ziel ziehen</button>
+                <button class="btn btn-secondary" type="button" id="expNeu" data-show-in="abgeschlossen,leer">Neuer Lauf</button>
+                <button class="btn btn-secondary" type="button" id="expExport" data-show-in="abgeschlossen">Ergebnis exportieren (JSON)</button>
+              </div>
+
+              <p class="rad-ws-note" data-show-in="abgeschlossen">
+                <strong>Mehrere Läufe erhöhen die Fehlerrate.</strong> Wer zwanzig Mal
+                testet und den besten Lauf behält, hat keine 5-%-Schwelle mehr. Das
+                Ergebnis nennt die Anzahl der Läufe dieser Sitzung, korrigiert aber
+                nicht automatisch.
+              </p>
+            </div>
+
+            <div class="rad-ws-panel" role="group" aria-labelledby="expPanelTitel">
+              <h2 class="rad-ws-panel-head" id="expPanelTitel">Protokoll</h2>
+
+              <fieldset class="rad-ws-choice">
+                <legend>Modus</legend>
+                <div class="rad-ws-choice-grid">
+                  <label><input type="radio" name="expModusWahl" value="demo" /><span>Demo (ohne Wertung)</span></label>
+                  <label><input type="radio" name="expModusWahl" value="test" checked /><span>Test (protokolliert)</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="rad-ws-choice">
+                <legend>Testart</legend>
+                <div class="rad-ws-choice-grid">
+                  <label><input type="radio" name="expArt" value="richtung" checked /><span>Richtung (4)</span></label>
+                  <label><input type="radio" name="expArt" value="zahl" /><span>Zahl 1–4</span></label>
+                  <label><input type="radio" name="expArt" value="symbol" /><span>Symbol (4)</span></label>
+                </div>
+              </fieldset>
+
+              <div class="rad-ws-field">
+                <div class="rad-ws-row">
+                  <label class="rad-ws-label" for="expN">Geplante Versuche</label>
+                  <output class="rad-ws-value" for="expN" id="expNOut">40</output>
+                </div>
+                <input class="rad-ws-range" type="range" id="expN" min="10" max="200" step="10" value="40" />
+                <p class="rad-ws-hint">10 bis 200. Die Zahl wird vor dem ersten Versuch festgelegt und ist dann gesperrt.</p>
+              </div>
+
+              <p class="rad-ws-hint" id="expSperre" data-show-in="verdeckt,antwort,enthuellt,abgeschlossen">
+                Protokoll gesperrt: Testart, Zielraum und Versuchszahl lassen sich
+                während eines Laufs nicht ändern. Brechen Sie den Lauf ab, um neu
+                anzusetzen.
+              </p>
+
+              <p class="rad-ws-note rad-ws-note--limit" data-show-in="leer">
+                <strong>Noch keine Auswertung.</strong> Statistiken erscheinen erst
+                nach dem ersten abgeschlossenen Lauf. Ein einzelner Lauf ist keine
+                Bestätigung und kein Widerlegung — das steht auch im Ergebnis.
+              </p>
+
+              <p class="rad-ws-note" data-show-in="demo">
+                <strong>Demo-Modus.</strong> Dieser Modus ist zum Kennenlernen. Er
+                erscheint nicht in der Auswertung und wird nicht exportiert.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================================================================
+             04 · Journal
+             ================================================================== -->
+        <section class="rad-ws-tool" data-toolpanel="journal" aria-labelledby="journalTitel" hidden>
+          <h2 class="sr-only" id="journalTitel">Pendeltagebuch: Einträge erfassen und verwalten</h2>
+          <div class="rad-ws-grid rad-ws-grid--journal">
+            <div class="rad-ws-panel" role="group" aria-labelledby="journalPanelTitel">
+              <h2 class="rad-ws-panel-head" id="journalPanelTitel">Neuer Eintrag</h2>
+
+              <div class="rad-ws-error" role="alert" tabindex="-1" data-show-in="fehler">
+                <h3>Bitte zwei Angaben ergänzen</h3>
+                <ul>
+                  <li><a href="#journalFrage">Frage</a>: Pflichtfeld, darf nicht leer sein.</li>
+                  <li><a href="#journalVorhersage">Vorhersage</a>: Pflichtfeld, darf nicht leer sein.</li>
+                </ul>
+              </div>
+
+              <div class="rad-ws-field">
+                <label class="rad-ws-label" for="journalDatum">Datum</label>
+                <input class="input rad-ws-input" type="date" id="journalDatum" value="2026-11-03" />
+              </div>
+
+              <div class="rad-ws-field">
+                <div class="rad-ws-row">
+                  <label class="rad-ws-label" for="journalFrage">Frage</label>
+                  <span class="rad-ws-hint" id="journalFrageZaehler">0 / 200</span>
+                </div>
+                <input class="input rad-ws-input" type="text" id="journalFrage" maxlength="200" aria-describedby="journalFrageZaehler" />
+              </div>
+
+              <div class="rad-ws-field">
+                <label class="rad-ws-label" for="journalMethode">Methode</label>
+                <select class="select" id="journalMethode">
+                  <option>Pendel über Tafel</option>
+                  <option>Winkelrute</option>
+                  <option>Freies Pendeln</option>
+                  <option>Kartenlegen</option>
+                </select>
+              </div>
+
+              <div class="rad-ws-field">
+                <label class="rad-ws-label" for="journalVorhersage">Vorhersage</label>
+                <input class="input rad-ws-input" type="text" id="journalVorhersage" maxlength="200" />
+              </div>
+
+              <!-- Ergebnis und Bewertung sind optional und werden meist erst
+                   später ergänzt (Vertrag: js/modules/radiasthesie-vertraege.js,
+                   JOURNAL_LIMITS.result = 500, JOURNAL_LIMITS.review = 500). -->
+              <div class="rad-ws-field">
+                <div class="rad-ws-row">
+                  <label class="rad-ws-label" for="journalErgebnis">Ergebnis (später)</label>
+                  <span class="rad-ws-hint" id="journalErgebnisZaehler">0 / 500</span>
+                </div>
+                <textarea class="input rad-ws-input rad-ws-textarea" id="journalErgebnis" rows="2" maxlength="500" aria-describedby="journalErgebnisZaehler"></textarea>
+              </div>
+
+              <div class="rad-ws-field">
+                <div class="rad-ws-row">
+                  <label class="rad-ws-label" for="journalBewertung">Bewertung (später)</label>
+                  <span class="rad-ws-hint" id="journalBewertungZaehler">0 / 500</span>
+                </div>
+                <textarea class="input rad-ws-input rad-ws-textarea" id="journalBewertung" rows="2" maxlength="500" aria-describedby="journalBewertungZaehler"></textarea>
+              </div>
+
+              <fieldset class="rad-ws-choice">
+                <legend>Sicherheit (1 = geraten, 5 = sicher)</legend>
+                <div class="rad-ws-choice-grid">
+                  <label><input type="radio" name="journalSicher" value="1" /><span>1</span></label>
+                  <label><input type="radio" name="journalSicher" value="2" /><span>2</span></label>
+                  <label><input type="radio" name="journalSicher" value="3" checked /><span>3</span></label>
+                  <label><input type="radio" name="journalSicher" value="4" /><span>4</span></label>
+                  <label><input type="radio" name="journalSicher" value="5" /><span>5</span></label>
+                </div>
+              </fieldset>
+
+              <div class="rad-ws-actions">
+                <button class="btn btn-primary" type="button" id="journalSpeichern">Eintrag speichern</button>
+              </div>
+
+              <div class="rad-ws-actions">
+                <button class="btn btn-secondary" type="button" id="journalExportJson">Alle exportieren (JSON)</button>
+                <button class="btn btn-secondary" type="button" id="journalExportCsv">Alle exportieren (CSV)</button>
+                <button class="btn btn-secondary" type="button" id="journalAlles" data-show-in="liste,voll">Alle Einträge löschen</button>
+              </div>
+
+              <p class="rad-ws-hint">
+                Speicherorte: <code>esot_rad_journal_v1</code>,
+                <code>esot_rad_experiment_v1</code>, <code>esot_rad_studio_v1</code>.
+                Kein Netzwerkzugriff, keine Kennung, kein Konto.
+              </p>
+            </div>
+
+            <div class="rad-ws-main">
+              <div class="rad-ws-note rad-ws-note--limit" data-show-in="voll">
+                <p>
+                  <strong>Der lokale Speicher ist voll.</strong> Der Eintrag wurde
+                  <em>nicht</em> gespeichert. Exportieren Sie Ihre Einträge und löschen
+                  Sie alte Einträge, um Platz zu schaffen — die Eingaben bleiben im
+                  Formular stehen.
+                </p>
+              </div>
+
+              <div class="rad-ws-empty" data-show-in="leer,geloescht">
+                <p><strong>Noch kein Eintrag</strong></p>
+                <p>
+                  Einträge bleiben auf diesem Gerät: kein Konto, keine Übertragung.
+                  Wenn Sie den Browser-Speicher leeren, sind sie weg — exportieren Sie
+                  regelmäßig.
+                </p>
+              </div>
+
+              <fieldset class="rad-journal-filter" data-show-in="liste">
+                <legend>Einträge filtern</legend>
+                <label><input type="radio" name="journalFilter" value="alle" checked /><span>Alle</span></label>
+                <label><input type="radio" name="journalFilter" value="experiment" /><span>Mit Experimentbezug</span></label>
+              </fieldset>
+
+              <ol class="rad-journal-list" id="journalListe" data-show-in="liste"></ol>
+
+              <div class="rad-ws-dialog" role="dialog" aria-modal="false" aria-labelledby="journalDlgTitel" data-show-in="bestaetigung">
+                <h3 id="journalDlgTitel">Alle lokalen Einträge löschen?</h3>
+                <p>
+                  Gelöscht werden alle Daten dieses Werkzeugs auf diesem Gerät:
+                  Tagebucheinträge, Experimentläufe und die zuletzt genutzte Tafel.
+                  Das lässt sich nicht rückgängig machen. Ein Export vorher ist
+                  möglich.
+                </p>
+                <div class="rad-ws-actions">
+                  <button class="btn btn-secondary" type="button" id="journalAbbrechen">Abbrechen</button>
+                  <button class="btn btn-primary" type="button" id="journalLoeschen">Endgültig löschen</button>
+                </div>
+                <p class="rad-ws-hint">Im Betrieb ist dies ein <code>&lt;dialog&gt;</code>: Fokus bleibt im Dialog, Escape schließt, der Fokus kehrt zum Auslöser zurück.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <p class="rad-ws-note" style="margin-top: var(--space-8)">
+        <strong>Mockup-Hinweis.</strong> Diese Seite zeigt Zustände des
+        UX-Konzepts, nicht die Produktionsimplementierung. Sie schreibt nichts in
+        den Browserspeicher (die Zustände werden über die Adresse gewählt), damit
+        Messungen reproduzierbar bleiben.
+      </p>
+    </main>
+    <script src="werkstatt.js"></script>
+  </body>
+</html>
