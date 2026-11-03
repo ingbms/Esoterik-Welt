@@ -1278,11 +1278,12 @@ Verbindliche Eigenschaften:
 | Timer | `performance.now()`-basiert, Anzeige alle 250 ms, `role="timer"` mit `aria-live="off"`; Ansage nur bei Start, einer Minute Restzeit und Ende |
 | Autoplay | Der erste `play()`-Aufruf erfolgt ausschließlich im Klick auf „Sitzung starten“/„Fortsetzen“ (NFR-12) |
 | Ende | Ausblenden, dann `stop()`; die Sitzung endet auch bei `visibilitychange → hidden`, `pagehide` und beim Verlassen der Ansicht |
+| Ansichtswechsel | `FrequenzlaborModule.show()` ruft vor dem Neuaufbau `halt(null)`: Audio stoppt **sofort** (interne 40-ms-Rampe), die Restzeit wird **genau einmal** gesichert, in der Zielansicht bleibt kein Oszillator ohne Bedienelement; `MeditationView.dispose()` stoppt zusätzlich selbst |
 | Wiederaufnahme | Bei Unterbrechung wird die Restzeit lokal gesichert und beim nächsten Besuch als „Fortsetzen“ angeboten; ein ausdrückliches Beenden löscht sie |
 | Speicher | `esoterik-welt:frequenzlabor:meditation:v1`: `{version, favorites[], resume}`; maximal 8 Favoriten, Name ≤ 60 Zeichen, keine Zeitstempel, kein Verlauf |
 | Datenschutz | keine Registrierung, keine Cloud, keine Übertragung von Nutzungsdaten, keine Cookies (AD-4 gilt analog) |
 
-**Fades ohne neue Engine-Methode:** `setGain()` ist laut §4.4 synchron zulässig. Eine Sitzungsblende über 10 s wird deshalb als Folge von `setGain()`-Schritten (100 ms) ausgeführt: Start bei `−60 dBFS` (Hörschwelle des Labors, `minGainDb`), dann amplitudenlineare Annäherung an `−20 dBFS` (`defaultGainDb`); Ausblenden umgekehrt, danach `stop()`. Damit bleibt der Engine-Vertrag unverändert, und die Auflage „Pause/Weiter in der Engine“ (`t_f2a0868c`) kollidiert nicht mit P10 — die Meditation nutzt weder Pause noch einen dritten Audiozustand.
+**Fades ohne neue Engine-Methode:** `setGain()` ist laut §4.4 synchron zulässig. Eine Sitzungsblende über 10 s wird deshalb als Folge von `setGain()`-Schritten (100 ms) ausgeführt: Einblenden startet bei `−60 dBFS` (Hörschwelle des Labors, `minGainDb`) und nähert sich amplitudenlinear `−20 dBFS` (`defaultGainDb`); Ausblenden startet beim **Ist-Pegel** (`engine.state.gainDb`, geklemmt auf `−60…−20 dBFS`) und endet bei `−60 dBFS`, danach `stop()`. Der Ist-Pegel ist verbindlich: Ein Ausblenden ab Sitzungsziel würde den Pegel beim Abbruch während der Einblendung erst anheben (gemessen +16 dB vor der Korrektur) und widerspräche dem Gehörschutz. Damit bleibt der Engine-Vertrag unverändert, und die Auflage „Pause/Weiter in der Engine“ (`t_f2a0868c`) kollidiert nicht mit P10 — die Meditation nutzt weder Pause noch einen dritten Audiozustand.
 
 **Blockiertes `localStorage`:** Sitzung, Timer und Audio funktionieren; Favoriten und Wiederaufnahme entfallen mit sichtbarem Hinweis. Es gibt keinen stillen Fehlschlag.
 
@@ -1302,8 +1303,10 @@ Gemessen nach §7.1 (`npm run check:frequenz-budget`, gzip -9):
 | Kennzahl | Wert | Grenze |
 | --- | --- | --- |
 | NFR-1 Initialgraph | 85.613 B (17 Dateien) — unverändert | 86.275 B |
-| NFR-2 Feature-JS | 43.472 B (10 Dateien) | 100.000 B |
+| NFR-2 Feature-JS | 44.168 B (10 Dateien, LF-Basis der CI; Arbeitsbaum 44.565 B, frischer CRLF-Klon 44.414 B) | 100.000 B |
 | NFR-3 Feature-CSS | 3.338 B | 6.000 B |
+
+NFR-2 hängt an den Zeilenenden der Auscheckung, weil das Gate die Dateien so gzippt, wie sie auf der Platte liegen. Alle drei Varianten sind gemessen und in `docs/frequenzlabor-p9-p10.md` §7 belegt; `evidence/t_aa849c1c/measure-nfr2.cjs` rechnet sie für jeden Stand nach. Die frühere Angabe „43.472 B“ war ein Arbeitsbaum-Wert und deshalb nicht plattformneutral reproduzierbar.
 
 Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enthält beide Ansichten; `Lokal.html` wächst von 790.818 B auf 826.083 B. `file://` ist geprüft: Bibliothek mit 32 Einträgen, Cymatics zeichnet, Meditation startet und zählt.
 
@@ -1312,8 +1315,8 @@ Der Offline-Build (`scripts/build-local.cjs`, `dynamicImportMode: 'eager'`) enth
 | Ebene | Datei | Umfang |
 | --- | --- | --- |
 | Unit (node:test) | `tests/frequenz-chladni.mjs` | C1–C8: Gültigkeit, Antisymmetrie, Spiegelsymmetrie, Normierung, analytische Nulldurchgänge, Textentsprechung, Knotenlinienlage, keine Frequenzaussage |
-| Unit (node:test) | `tests/frequenz-meditation.mjs` | M1–M9: Allowlist, Validierung, Uhr/Restzeit, Fade-Hüllkurve, Speicher-Versionierung, blockierter Speicher, Favoriten-IDs, Wiederaufnahme, Dauern |
-| Browser (Playwright) | `tests/frequenzlabor-p9-p10.spec.js` | C1–C6, M1–M5, A1–A4 (axe-core WCAG 2.1 A/AA, Tastatur, 360 px, Lazy-Loading) |
+| Unit (node:test) | `tests/frequenz-meditation.mjs` | M1–M10: Allowlist, Validierung, Uhr/Restzeit, Fade-Hüllkurve, Speicher-Versionierung, blockierter Speicher, Favoriten-IDs, Wiederaufnahme, Dauern, Ausblenden ab Ist-Pegel |
+| Browser (Playwright) | `tests/frequenzlabor-p9-p10.spec.js` | C1–C6, M1–M8, A1–A4 (axe-core WCAG 2.1 A/AA, Tastatur, 360 px, Lazy-Loading); M6–M8 decken den Ansichtswechsel, die Rückkehr und die Ausblendhüllkurve ab |
 
 `npm run test:frequenz` führt beide Unit-Suiten mit aus; die CI-Konfiguration bleibt unverändert.
 

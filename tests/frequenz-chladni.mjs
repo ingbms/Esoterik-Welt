@@ -96,6 +96,12 @@ test('C6: die textliche Entsprechung nennt Moden, nicht Frequenzen', () => {
   assert.match(description.label, /Modus n = 2, m = 3/);
   assert.match(description.text, /Nulldurchgänge auf der waagerechten Mittelachse/);
   assert.match(description.text, /spiegelsymmetrisch/);
+  // R3: Die Symmetrieaussage gilt den Knotenlinien. Das vorzeichengefärbte
+  // Feld ist bei ungleicher Parität nicht drehsymmetrisch (Farbe tauscht).
+  assert.match(description.symmetry.label, /Knotenlinien sind 180°-drehsymmetrisch/);
+  assert.equal(description.symmetry.rotationSymmetric, true);
+  assert.equal(description.symmetry.fieldRotationSymmetric, false);
+  assert.equal(chladni.modeSymmetry(2, 4).fieldRotationSymmetric, true);
   assert.doesNotMatch(description.text, /\bHz\b/, 'keine Frequenzaussage im Text');
   assert.match(chladni.describeMode(3, 5).text, /vollständig auf einer Knotenlinie/);
 });

@@ -115,9 +115,15 @@ export function midlineCrossings(n, m, steps = 2048) {
 
 /**
  * Symmetrieeigenschaften der Modellfamilie. Sie folgen aus
- * f(1−u, v) = (−1)^n cos(nπu)cos(mπv) − (−1)^m cos(mπu)cos(nπv):
- * bei gleicher Parität ist das Bild spiegelsymmetrisch, sonst nur
- * punktsymmetrisch. Die 180°-Drehung erhält das Bild immer.
+ * f(1−u, v) = (−1)^n cos(nπu)cos(mπv) − (−1)^m cos(mπu)cos(nπv) und
+ * f(1−u, 1−v) = (−1)^(n+m)·f(u, v):
+ *
+ * - Die **Knotenlinien** (die Nullmenge) sind bei jeder Mode 180°-drehsymmetrisch
+ *   und bei gleicher Parität zusätzlich zu beiden Mittelachsen spiegelsymmetrisch.
+ * - Das **vorzeichengefärbte Feld** ist nur bei gleicher Parität invariant; bei
+ *   ungleicher Parität wechselt die 180°-Drehung das Vorzeichen und damit die
+ *   Farbe. Die Texte nennen deshalb ausdrücklich die Knotenlinien, nicht „das
+ *   Bild“ (NFR-16: der Text ist die Entsprechung des gezeichneten Canvas).
  */
 export function modeSymmetry(n, m) {
   assertMode(n, m);
@@ -125,9 +131,10 @@ export function modeSymmetry(n, m) {
   return Object.freeze({
     mirrorSymmetric: sameParity,
     rotationSymmetric: true,
+    fieldRotationSymmetric: sameParity,
     label: sameParity
-      ? 'spiegelsymmetrisch zu beiden Mittelachsen und 180°-drehsymmetrisch'
-      : 'nicht spiegelsymmetrisch, aber 180°-drehsymmetrisch',
+      ? 'die Knotenlinien sind zu beiden Mittelachsen spiegelsymmetrisch und 180°-drehsymmetrisch, das Feld ist ebenfalls drehsymmetrisch'
+      : 'die Knotenlinien sind 180°-drehsymmetrisch, aber nicht spiegelsymmetrisch; bei dieser Drehung wechselt das Feld das Vorzeichen und damit die Farbe',
   });
 }
 

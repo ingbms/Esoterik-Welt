@@ -260,6 +260,124 @@ test.describe('P10 — Meditationssitzung', () => {
     await expect(page.locator('#fqNotice')).toContainText('nicht aktiviert');
     expect(requests.filter((url) => url.includes('frequenz-meditation-view.js'))).toEqual([]);
   });
+
+  test('M6: Verlassen der Ansicht stoppt den Ton sofort und sichert genau einmal', async ({ page }) => {
+    // Zählt jeden Schreibzugriff auf den Meditations-Schlüssel: die Restzeit
+    // darf beim Ansichtswechsel genau einmal gesichert werden (R1).
+    await page.addInitScript(() => {
+      window.__medWrites = [];
+      const original = Storage.prototype.setItem;
+      Storage.prototype.setItem = function (key, value) {
+        if (key === 'esoterik-welt:frequenzlabor:meditation:v1') window.__medWrites.push(String(value));
+        return original.call(this, key, value);
+      };
+    });
+    const status = () => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status);
+    const medWrites = () =>
+      page.evaluate(() =>
+        window.__medWrites
+          .map((text) => {
+            try {
+              return JSON.parse(text).resume;
+            } catch {
+              return null;
+            }
+          })
+          .filter(Boolean)
+      );
+
+    await openRoute(page, 'frequenzen/meditation');
+    await page.locator('#fqMedDuration').selectOption('3');
+    await page.locator('#fqMedFadeIn').selectOption('0');
+    await page.locator('#fqMedStart').click();
+    await expect.poll(status).toBe('running');
+    await page.waitForTimeout(300);
+    expect(await page.evaluate(() => window.EsoterikWelt.frequenz.getState().gainDb)).toBe(-20);
+
+    // Wechsel in die Schwesteransicht: Ton endet sofort, kein Bedienelement zurück.
+    await page.locator('.fq-nav a[href="#frequenzen/cymatics"]').click();
+    await expect(page.locator('#fqCyCanvasA')).toBeVisible();
+    await expect.poll(status).toBe('idle');
+    expect(await page.locator('#fqMedStop').count(), 'kein Stopp-Knopf in der Zielansicht').toBe(0);
+
+    const saved = await medWrites();
+    expect(saved.length, 'Restzeit genau einmal gesichert').toBe(1);
+    expect(saved[0].remainingSeconds).toBeGreaterThan(170);
+    expect(saved[0].remainingSeconds).toBeLessThanOrEqual(180);
+
+    // Gleiches Verhalten beim Wechsel in den Hub.
+    await page.locator('.fq-nav a[href="#frequenzen/meditation"]').click();
+    await expect(page.locator('#fqMedStart')).toBeVisible();
+    await page.locator('#fqMedStart').click();
+    await expect.poll(status).toBe('running');
+    await page.locator('.fq-nav a[href="#frequenzen"]').click();
+    await expect(page.locator('#fqLibrary')).toBeVisible();
+    await expect.poll(status).toBe('idle');
+  });
+
+  test('M7: die Rückkehr zeigt keine laufende Sitzung und setzt genau einmal fort', async ({ page }) => {
+    const status = () => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status);
+    await openRoute(page, 'frequenzen/meditation');
+    await page.locator('#fqMedDuration').selectOption('3');
+    await page.locator('#fqMedFadeIn').selectOption('0');
+    await page.locator('#fqMedStart').click();
+    await expect.poll(status).toBe('running');
+    await page.waitForTimeout(700);
+
+    await page.locator('.fq-nav a[href="#frequenzen/cymatics"]').click();
+    await expect(page.locator('#fqCyCanvasA')).toBeVisible();
+    await expect.poll(status).toBe('idle');
+
+    await page.locator('.fq-nav a[href="#frequenzen/meditation"]').click();
+    await expect(page.locator('#fqMedStart')).toBeVisible();
+    // Kein „Start“-Knopf bei laufender Engine: Status und Bedienzustand passen zusammen.
+    expect(await status()).toBe('idle');
+    await expect(page.locator('#fqMedStart')).toBeEnabled();
+    await expect(page.locator('#fqMedStop')).toBeDisabled();
+    await expect(page.locator('#fqMedResume')).toBeVisible();
+    await expect(page.locator('#fqMedResumeText')).toContainText('übrig');
+
+    await page.locator('#fqMedResumeStart').click();
+    await expect.poll(status).toBe('running');
+    await expect(page.locator('#fqMedResume')).toBeHidden();
+    await expect(page.locator('#fqMedStop')).toBeEnabled();
+    await page.locator('#fqMedStop').click();
+    await expect.poll(status).toBe('idle');
+  });
+
+  test('M8: das Ausblenden springt nicht über den aktuellen Pegel', async ({ page }) => {
+    const status = () => page.evaluate(() => window.EsoterikWelt.frequenz.getState().status);
+    await openRoute(page, 'frequenzen/meditation');
+    await page.locator('#fqMedDuration').selectOption('3');
+    await page.locator('#fqMedFadeIn').selectOption('10');
+    await page.locator('#fqMedFadeOut').selectOption('2');
+    await page.locator('#fqMedStart').click();
+    await expect.poll(status).toBe('running');
+    await page.waitForTimeout(1500);
+    const before = await page.evaluate(() => window.EsoterikWelt.frequenz.getState().gainDb);
+    expect(before, 'Pegel liegt nach 1,5 s Einblendung deutlich unter dem Ziel').toBeLessThan(-28);
+
+    // Messreihe im Browser: 25-ms-Abtastung erfasst jeden 100-ms-Blendschritt.
+    await page.evaluate(() => {
+      window.__gains = [];
+      window.__sampler = window.setInterval(() => {
+        window.__gains.push(window.EsoterikWelt.frequenz.getState().gainDb);
+      }, 25);
+    });
+    await page.locator('#fqMedStop').click();
+    await expect.poll(status).toBe('idle');
+    const gains = await page.evaluate(() => {
+      window.clearInterval(window.__sampler);
+      return window.__gains;
+    });
+    expect(gains.length).toBeGreaterThan(20);
+    expect(Math.max(...gains), `Reihe: ${gains.join(', ')}`).toBeLessThanOrEqual(before + 0.5);
+    const distinct = gains.filter((value, index) => index === 0 || value !== gains[index - 1]);
+    for (let index = 1; index < distinct.length; index += 1) {
+      expect(distinct[index], `Sprung in ${distinct.join(', ')}`).toBeLessThanOrEqual(distinct[index - 1] + 1e-6);
+    }
+    expect(distinct[distinct.length - 1], 'Ausblenden endet bei der Hörschwelle').toBeLessThan(-55);
+  });
 });
 
 test.describe('P9/P10 — Barrierefreiheit und Mobil', () => {

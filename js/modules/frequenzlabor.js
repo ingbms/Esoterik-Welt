@@ -215,6 +215,12 @@ export class FrequenzlaborModule {
       }
     }
     this.view = nextView;
+    // Jeder Aufruf von show() baut die Kategorieansicht neu auf. Ein Ton aus
+    // der bisherigen Ansicht gehört zu Bedienelementen, die gleich verschwinden
+    // (ADR-Nachtrag §13.4, Doku §4.3): Er endet deshalb sofort, die Restzeit
+    // einer Sitzung wird genau einmal gesichert. Ohne diesen Schritt bliebe ein
+    // laufender Oszillator ohne Start/Stopp in der Zielansicht zurück.
+    if (this.featureView || this.engine.state.status !== 'idle') this.halt(null);
     if (!this.unsubscribe) {
       this.unsubscribe = this.engine.subscribe((state) => this.onEngineState(state));
       document.addEventListener('visibilitychange', this.onVisibility);

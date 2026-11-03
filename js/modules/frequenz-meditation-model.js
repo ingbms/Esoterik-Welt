@@ -131,11 +131,14 @@ export function formatClock(totalSeconds) {
 
 /**
  * Fade-Hüllkurve als Folge von dBFS-Werten für `engine.setGain()`.
- * Die Amplitude läuft linear von 0 auf den Zielwert (bzw. umgekehrt); in dB
- * ist das eine Kurve, nicht eine Gerade. Der erste Wert ist −60 dBFS
- * (Hörschwelle des Labors), der letzte exakt der Zielwert.
+ * Die Amplitude läuft linear zwischen Start- und Endwert; in dB ist das eine
+ * Kurve, nicht eine Gerade. Einblenden beginnt bei −60 dBFS (Hörschwelle des
+ * Labors) und endet exakt am Zielwert. Ausblenden beginnt beim **aktuellen**
+ * Pegel (`fromDb`, ohne Angabe: Zielwert) und endet bei −60 dBFS — ein
+ * Ausblenden darf den Pegel nie erst anheben. `fromDb` über dem Zielwert wird
+ * auf den Zielwert geklemmt; die Sitzung ist nie lauter als `targetDb`.
  */
-export function fadeGainSteps({ targetDb, seconds, stepMs = 100, direction = 'in' } = {}) {
+export function fadeGainSteps({ targetDb, fromDb = null, seconds, stepMs = 100, direction = 'in' } = {}) {
   if (typeof targetDb !== 'number' || !Number.isFinite(targetDb)) {
     throw new RangeError('Der Zielpegel muss eine endliche Zahl in dBFS sein.');
   }
@@ -143,10 +146,13 @@ export function fadeGainSteps({ targetDb, seconds, stepMs = 100, direction = 'in
   if (fade === 0) return Object.freeze([targetDb]);
   const steps = Math.max(1, Math.round((fade * 1000) / stepMs));
   const targetAmplitude = Math.pow(10, targetDb / 20);
+  const startAmplitude =
+    direction === 'out' ? Math.pow(10, Math.min(Number.isFinite(fromDb) ? fromDb : targetDb, targetDb) / 20) : 0;
+  const endAmplitude = direction === 'out' ? 0 : targetAmplitude;
   const values = [];
   for (let index = 0; index <= steps; index += 1) {
     const progress = index / steps;
-    const amplitude = targetAmplitude * (direction === 'out' ? 1 - progress : progress);
+    const amplitude = startAmplitude + (endAmplitude - startAmplitude) * progress;
     values.push(amplitude <= 0 ? -60 : Math.max(-60, 20 * Math.log10(amplitude)));
   }
   return Object.freeze(values);

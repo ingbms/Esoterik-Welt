@@ -25,7 +25,7 @@ Navigation, Footer und Startseiten-Register (jetzt sieben Karten) verlinken den 
 
 | Datei | Verantwortung |
 | --- | --- |
-| `js/modules/frequenzlabor.js` | Controller/View, 1.018 Zeilen: Rendering beider Ansichten, Events, Fokus, Fehlertexte, Sweep-Fortschritt |
+| `js/modules/frequenzlabor.js` | Controller/View, 1.108 Zeilen: Rendering beider Ansichten, Events, Fokus, Fehlertexte, Sweep-Fortschritt, `halt()` beim Ansichtswechsel |
 | `js/modules/frequenz-presets.js` | Laden (HTTP `fetch` / eingebettetes JSON), Validierung, Wiedergabe-Mapping, Präferenzen |
 | `js/modules/frequenz-visualisierung.js` | Canvas-Renderer, rAF nur bei laufendem Ton, statische Welle bei reduzierter Bewegung |
 | `js/modules/frequenz-flags.js` | Feature-Flags mit lokalem URL-Override (`?fq=+cymatics,-binaural`); `cymatics`/`meditation` sind seit dem ADR-Nachtrag §13 ausgeliefert |

@@ -432,7 +432,16 @@ export class MeditationView {
     clearInterval(this.fadeTimer);
     this.fadeTimer = 0;
     const targetDb = FREQUENCY_LIMITS.defaultGainDb;
-    const steps = fadeGainSteps({ targetDb, seconds: fadeOutSeconds, stepMs: FADE_STEP_MS, direction: 'out' });
+    // Vom aktuellen Pegel ausblenden, nicht vom Sitzungsziel: wer mitten in
+    // der Einblendung beendet, darf keinen Pegelsprung nach oben hören.
+    const fromDb = this.currentGainDb();
+    const steps = fadeGainSteps({
+      targetDb,
+      fromDb,
+      seconds: fadeOutSeconds,
+      stepMs: FADE_STEP_MS,
+      direction: 'out',
+    });
     if (steps.length <= 1) {
       this.engine.stop().catch(() => {});
       return;
@@ -451,19 +460,45 @@ export class MeditationView {
   }
 
   /**
-   * Wird vom Controller gerufen, bevor er Audio stoppt (Tabwechsel,
-   * pagehide, Verlassen der Ansicht). Sichert die Restzeit lokal.
+   * Aktueller Pegel der Engine, geklemmt auf den zulässigen Sitzungsbereich.
+   * Die Engine führt den zuletzt gesetzten Gain im Zustand; damit braucht die
+   * Ansicht keine zweite Kopie, die auseinanderlaufen könnte.
    */
-  onInterrupt() {
-    if (!this.session) return;
+  currentGainDb() {
+    const fallback = FREQUENCY_LIMITS.defaultGainDb;
+    const state = this.engine && this.engine.state ? this.engine.state : null;
+    const value = state ? state.gainDb : null;
+    if (typeof value !== 'number' || !Number.isFinite(value)) return fallback;
+    return Math.min(Math.max(value, FREQUENCY_LIMITS.minGainDb), fallback);
+  }
+
+  /**
+   * Beendet die laufende Sitzung durch eine Unterbrechung (Tabwechsel,
+   * `pagehide`, Verlassen der Ansicht) und sichert die Restzeit **genau
+   * einmal**. Liefert die gesicherten Sekunden oder null, wenn keine Sitzung
+   * lief; ein zweiter Aufruf ändert nichts mehr (idempotent über `session`).
+   */
+  saveInterrupted() {
+    if (!this.session) return null;
     const left = remainingSeconds(this.session.startedAtMs, this.session.totalSeconds, performance.now());
     const config = this.session.config;
     this.session = null;
     clearInterval(this.timer);
     clearInterval(this.fadeTimer);
+    this.timer = 0;
     this.fadeTimer = 0;
     if (left > 0) this.store.write({ favorites: this.stored.favorites, resume: { ...config, remainingSeconds: left } });
     this.stored = this.store.read();
+    return left;
+  }
+
+  /**
+   * Wird vom Controller gerufen, bevor er Audio stoppt (Tabwechsel,
+   * pagehide, Verlassen der Ansicht). Sichert die Restzeit lokal.
+   */
+  onInterrupt() {
+    const left = this.saveInterrupted();
+    if (left === null) return;
     this.syncControls();
     this.renderResume();
     this.announce('Sitzung unterbrochen. Fortsetzen ist möglich.');
@@ -575,21 +610,25 @@ export class MeditationView {
 
   /* ---------------------------------------------------------------- Abbau */
 
+  /**
+   * Abbau beim Verlassen der Ansicht (Routenwechsel innerhalb der Kategorie).
+   * Das Audio endet **sofort** (ADR-Nachtrag §13.4, Doku §4.3): In der
+   * Zielansicht gibt es kein Bedienelement für einen laufenden Oszillator.
+   * Die Restzeit wird dabei genau einmal gesichert; `saveInterrupted()` ist
+   * über `this.session` idempotent, ein vorheriger `onInterrupt()` verhindert
+   * den zweiten Eintrag.
+   */
   dispose() {
-    if (this.session) {
-      const left = remainingSeconds(this.session.startedAtMs, this.session.totalSeconds, performance.now());
-      if (left > 0) {
-        this.store.write({
-          favorites: this.stored.favorites,
-          resume: { ...this.session.config, remainingSeconds: left },
-        });
-      }
-    }
-    this.session = null;
+    this.saveInterrupted();
     clearInterval(this.timer);
     clearInterval(this.fadeTimer);
     this.timer = 0;
     this.fadeTimer = 0;
+    try {
+      this.engine.stop().catch(() => {});
+    } catch {
+      // Engine bereits beendet: Audio ist ohnehin weg.
+    }
     this.refs = {};
   }
 }

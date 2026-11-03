@@ -215,3 +215,35 @@ test('M9: die Sitzungsdauern der Oberfläche sind gültig und aufsteigend', () =
     assert.doesNotThrow(() => model.validateSession({ ...SESSION, fadeInSeconds: fade, fadeOutSeconds: fade }));
   }
 });
+
+test('M10: das Ausblenden beginnt beim aktuellen Pegel und hebt ihn nie an', () => {
+  // R2: Beenden mitten in der Einblendung (hier bei −38,42 dBFS) darf keinen
+  // Sprung nach oben erzeugen; die Hüllkurve startet exakt beim Ist-Pegel.
+  const current = -38.42;
+  const fadeOut = model.fadeGainSteps({
+    targetDb: -20,
+    fromDb: current,
+    seconds: 2,
+    stepMs: 100,
+    direction: 'out',
+  });
+  assert.equal(fadeOut.length, 21);
+  assert.ok(Math.abs(fadeOut[0] - current) < 1e-9, `Start ${fadeOut[0]} statt ${current}`);
+  assert.equal(fadeOut[fadeOut.length - 1], -60);
+  for (let index = 1; index < fadeOut.length; index += 1) {
+    assert.ok(fadeOut[index] <= fadeOut[index - 1] + 1e-9, `Sprung bei Schritt ${index}: ${fadeOut[index]}`);
+  }
+  // Kein Wert liegt über dem Ausgangspegel – auch nicht der erste.
+  assert.ok(Math.max(...fadeOut) <= current + 1e-9, `Maximum ${Math.max(...fadeOut)}`);
+
+  // Der Startpunkt wird auf den Sitzungszielpegel geklemmt, nie darüber.
+  const clamped = model.fadeGainSteps({ targetDb: -20, fromDb: -6, seconds: 1, direction: 'out' });
+  assert.ok(Math.abs(clamped[0] + 20) < 1e-9, `Start ${clamped[0]}`);
+
+  // Ohne fromDb bleibt das bisherige Verhalten (Start am Zielpegel) erhalten.
+  const legacy = model.fadeGainSteps({ targetDb: -20, seconds: 1, direction: 'out' });
+  assert.ok(Math.abs(legacy[0] + 20) < 1e-9);
+  // Einblenden ist von fromDb unabhängig: immer ab −60 dBFS.
+  const fadeIn = model.fadeGainSteps({ targetDb: -20, fromDb: -38.42, seconds: 1, direction: 'in' });
+  assert.equal(fadeIn[0], -60);
+});
