@@ -17,7 +17,7 @@
     "test:pages": "node --test tests/pages-regression.cjs",
     "test:crystals": "node --test tests/crystals-attribution.cjs",
     "test:frequencies": "node --test tests/frequencies-data.cjs",
-    "test:frequenz": "node --test tests/frequenz-engine.mjs tests/frequenz-presets.mjs",
+    "test:frequenz": "node --test tests/frequenz-engine.mjs tests/frequenz-presets.mjs tests/frequenz-chladni.mjs tests/frequenz-meditation.mjs",
     "check:frequenz-budget": "node scripts/check-frequenz-budget.cjs",
     "test:e2e": "npm run build && playwright test",
     "test:offline": "npm run build:local && node --test tests/offline-file.cjs",
