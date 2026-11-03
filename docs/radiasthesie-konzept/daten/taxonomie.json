@@ -2,7 +2,7 @@
   "$schema_version": "1.0",
   "contract": "radiasthesie-taxonomie",
   "updated": "2026-11-03",
-  "note": "Quelle der Wahrheit für die additiven Entitäten des Radiästhesie-Moduls. Wird von scripts/generate-radiasthesie-data.cjs gegen js/modules/radiasthesie-vertraege.js validiert und danach als data.taxonomie in js/data/radiasthesie.js geschrieben. Artikel- und Quellenmodell bleiben unverändert; jede Aussage trägt Quellenmarker Qxx aus docs/radiasthesie-konzept/recherche/quellen.json.",
+  "note": "Quelle der Wahrheit für die additiven Entitäten des Radiästhesie-Moduls. Wird von scripts/generate-radiasthesie-data.cjs gegen js/modules/radiasthesie-vertraege.js validiert und danach als data.taxonomie in js/data/radiasthesie.js geschrieben. Artikel- und Quellenmodell bleiben unverändert; jede Aussage trägt Quellenmarker Qxx aus docs/radiasthesie-konzept/recherche/quellen.json. Die sechs Commons-Fotos sind in RAD-05 geliefert und in RAD-06 über assets/radiasthesie/media/media-manifest.json eingebunden; ihre Einträge bleiben hier im Status 'planned', weil der Vertrag für verfügbare Medien einen flachen SVG-Pfad verlangt. Für Fotos ist das Manifest die maßgebliche Quelle, nicht diese Liste.",
   "medien": [
     {
       "id": "rad-pendel-geometrie",

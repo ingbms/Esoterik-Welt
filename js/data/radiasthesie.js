@@ -1,10 +1,10 @@
 // AUTO-GENERIERT — nicht direkt bearbeiten.
 // Quelle: docs/radiasthesie-konzept/inhalte/*.md
-// Erzeugt von scripts/generate-radiasthesie-data.cjs am 2026-11-02.
+// Erzeugt von scripts/generate-radiasthesie-data.cjs am 2026-11-03.
 
 // Fließtext-Markup: **fett**, *kursiv*, [Qxx]-Quellenmarker.
 export const RADIASTHESIE = {
-  generatedAt: '2026-11-02',
+  generatedAt: '2026-11-03',
   generatedFrom: 'docs/radiasthesie-konzept/inhalte/',
   schemaVersion: '1.0',
   module: {
@@ -21,10 +21,12 @@ export const RADIASTHESIE = {
   },
   counts: {
     topics: 3,
-    chapters: 30,
+    chapters: 31,
     levels: 5,
-    sources: 33,
-    glossary: 13,
+    sources: 66,
+    glossary: 17,
+    photos: 6,
+    ownDrawings: 4,
   },
   levels: [
     {
@@ -71,9 +73,9 @@ export const RADIASTHESIE = {
       description:
         'Radiästhesie: Begriffsgeschichte, Instrumente, Erdstrahlen und Forschungsstand — mit Evidenzstufen A–E und offenem Datierungskonflikt.',
       heading: 'Radiästhesie: Was die Quellen zur Wünschelrute und zu Erdstrahlen sagen',
-      lead: '**Radiästhesie** (von lat. *radius*, Strahl, griech. *aisthesis*, Wahrnehmung) bezeichnet die Vorstellung, Lebewesen könnten von Objekten oder Orten ausgehende Strahlungen wahrnehmen und mit Rute oder Pendel in Bewegung umsetzen [Q06]. Der Vorgang des Aufspürens heißt in der Szene *Mutung*; die Person, die ihn ausführt, wird als *Muter* oder *Wünnscher* bezeichnet [Q06].',
-      wordCount: 919,
-      chapterCount: 8,
+      lead: '**Radiästhesie** (von lat. *radius*, Strahl, griech. *aisthesis*, Wahrnehmung) bezeichnet die Vorstellung, Lebewesen könnten von Objekten oder Orten ausgehende Strahlungen wahrnehmen und mit Rute oder Pendel in Bewegung umsetzen [Q06]. Der Vorgang des Aufspürens heißt in der Szene *Mutung*; die ausführende Person wird als *Rutengänger* oder *Wünscher* bezeichnet [Q06].',
+      wordCount: 2934,
+      chapterCount: 9,
       figure: {
         src: 'assets/radiasthesie/winkelrute.svg',
         alt: 'Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander.',
@@ -93,7 +95,7 @@ export const RADIASTHESIE = {
           blocks: [
             {
               type: 'p',
-              text: '**Radiästhesie** (von lat. *radius*, Strahl, griech. *aisthesis*, Wahrnehmung) bezeichnet die Vorstellung, Lebewesen könnten von Objekten oder Orten ausgehende Strahlungen wahrnehmen und mit Rute oder Pendel in Bewegung umsetzen [Q06]. Der Vorgang des Aufspürens heißt in der Szene *Mutung*; die Person, die ihn ausführt, wird als *Muter* oder *Wünnscher* bezeichnet [Q06].',
+              text: '**Radiästhesie** (von lat. *radius*, Strahl, griech. *aisthesis*, Wahrnehmung) bezeichnet die Vorstellung, Lebewesen könnten von Objekten oder Orten ausgehende Strahlungen wahrnehmen und mit Rute oder Pendel in Bewegung umsetzen [Q06]. Der Vorgang des Aufspürens heißt in der Szene *Mutung*; die ausführende Person wird als *Rutengänger* oder *Wünscher* bezeichnet [Q06].',
             },
             {
               type: 'p',
@@ -103,8 +105,21 @@ export const RADIASTHESIE = {
               type: 'p',
               text: '**Wichtig zur Sprache:** Der Begriff „Radiästhesie“ selbst wird in wissenschaftlichen Kontexten meist als Bezeichnung für eine nicht bestätigte Hypothese verwendet, nicht als Bestätigung einer Wirkung [Q06, Q08]. In der Binnensicht der Szene ist er eine Selbstbezeichnung — das ist kein Widerspruch, nur ein Kontextwechsel.',
             },
+            {
+              type: 'p',
+              text: '**Der Begriff ist jünger als die Praxis.** Ruten und Pendel werden in Europa seit Jahrhunderten benutzt; das Wort „Radiästhesie“ entsteht erst im 20. Jahrhundert [Q64, Q65]. Wer heute von Radiästhesie spricht, meint also ein junges Etikett für eine alte Tätigkeit. Das erklärt einen Teil der Verwirrung in der Debatte: Die historische Frage („Wurde die Rute benutzt?“) und die physikalische Frage („Gibt es die unterstellte Strahlung?“) werden oft in einem Satz verhandelt, obwohl sie getrennt zu beantworten sind.',
+            },
+            {
+              type: 'p',
+              text: "**International ist die Praxis unterschiedlich verankert.** In den USA ist „water witching“ als ländliche Selbstverständlichkeit verbreitet und soziologisch untersucht [Q57, Q58]; die Persistenz wird dort mit Praxisnähe, geringen Kosten und lokaler Unsicherheit erklärt, nicht mit nachgewiesener Treffsicherheit [Q40, Q57]. Im marokkanischen Rif ist Wasserfindung mit Heilpraktiken und lokalen Glaubensvorstellungen verbunden [Q60]. In Palästina nutzen Raubgräber Dschinn-Vorstellungen und Ruten zur Suche nach Antiquitäten; die Archäologie dokumentiert die dadurch verursachten Zerstörungen [Q61]. In Estland ist Rutengehen in einen lokalen Diskurs über „Energien“ aus dem Boden eingebettet — etwa am Witch's Well in Tuhala — und damit Teil volkskundlicher Naturdeutung [Q59]. In der russischen Geowissenschaft gilt es weiter als ungelöstes Problem, für das geophysikalische, biophysikalische und „astrale“ Ansätze nebeneinander referiert werden [Q62]. Es gibt also nicht *die* Radiästhesie, sondern lokale Praktiken mit gemeinsamer Geste.",
+            },
+            {
+              type: 'p',
+              text: '**Exkurs — warum die Soziologie hier genauer ist als die Physik.** Die deutsche Szene ist als Milieu mit Geräten, Praktiken und Deutungen beschrieben, nicht als einheitliche Lehre [Q37, Q38]. Wer verstehen will, wie Menschen zu ihren Überzeugungen kommen, findet in dieser Literatur mehr als in jeder Feldstudie. Sie beantwortet allerdings nicht, ob die Überzeugungen zutreffen. Beides bleibt hier getrennt.',
+            },
           ],
-          words: 158,
+          photos: [],
+          words: 419,
         },
         {
           id: 'geschichte-1',
@@ -115,37 +130,104 @@ export const RADIASTHESIE = {
           blocks: [
             {
               type: 'p',
-              text: 'Die Nutzung von Ruten und Pendeln hat eine lange Vorgeschichte, die aber nur punktuell belegt ist. In der europäischen Tradition tritt die Wünschelrute erstmals deutlich im Bergbau des 15. und 16. Jahrhunderts auf — nicht als „Strahlungssucherei“, sondern als Hilfsmittel für Erz und Wasser [Q07, Q32]. Die Kirche reagierte früh: Bereits 1633 verurteilte ein Gutachten der Pariser Universität die Rutenmethode als „täuschend und ungegründet“; 1778 verbot ein Erlass der Bischöfe von Liège die Nutzung für Wasserfindung [Q32]. Die Aufklärung setzte die kritische Linie fort: 1692 erregte Jacques Aymar in Lyon Aufsehen — Versuche unter Aufsicht des Prince de Condé mit gezielter Täuschung sollen die Methode falsifiziert haben [Q07].',
+              text: 'Die Nutzung von Ruten und Pendeln hat eine lange Vorgeschichte, die aber nur punktuell belegt ist. In der europäischen Tradition tritt die Wünschelrute erstmals deutlich im Bergbau des 15. und 16. Jahrhunderts auf — nicht als „Strahlungssucherei“, sondern als Hilfsmittel für Erz und Wasser [Q07, Q32].',
             },
             {
               type: 'p',
-              text: '**Zusammenfassung:** Bis zum 18. Jahrhundert gibt es keine kontrollierte Forschung, wohl aber eine kontinuierliche Kritik durch Kirche und Aufklärung und eine kontinuierliche Praxis im Bergbau und in der Volksmedizin. Die Quellenlage erlaubt keine „Entdeckungsgeschichte“ der Radiästhesie, nur eine Dokumentation von Kritik und Praxis nebeneinander.',
+              text: '**Der früheste belastbare Druckbeleg ist datiert.** Georgius Agricola beschreibt die Rute 1556 in *De re metallica* (Buch II) zur Erz- und Wassersuche; die Hoover-Übersetzung von 1912 hält in einer Fußnote fest, dies sei die erste gedruckte Beschreibung der Rute für Mineralien oder Wasser, die sich finden lasse [Q34, Q35]. Bemerkenswert ist, was Agricola selbst schreibt: Er erklärt die Bewegung der Rute aus der Handhabung des Rutengängers, nicht aus einer Kraft der Erze [Q34]. Die Idee, dass der Ausschlag im Menschen entsteht, ist damit älter als ihre experimentelle Prüfung — eine Vorwegnahme der späteren Ideomotorik-Erklärung, aber kein Messbeleg [Q34].',
+            },
+            {
+              type: 'p',
+              text: '**Die Institutionen kommen später als die Kritik.** Eine Studie zur Freiberger Bergakademie beschreibt, dass das Rutengehen dort im 18. und 19. Jahrhundert in die bergbauliche Wissenschaft integriert und in den 1840er-Jahren amtlich begutachtet wurde [Q36]. Das ist ein Befund gegen die Annahme, die Rute sei immer nur „Aberglaube am Rand“ gewesen: Sie stand zeitweise im Zentrum einer angewandten Wissenschaft — und setzte sich dort nicht als verlässliches Instrument durch [Q36].',
+            },
+            {
+              type: 'p',
+              text: 'Die Kirche reagierte früh: Bereits 1633 verurteilte ein Gutachten der Pariser Universität die Rutenmethode als „täuschend und ungegründet“; 1778 verbot ein Erlass der Bischöfe von Liège die Nutzung für Wasserfindung [Q32]. Die Aufklärung setzte die kritische Linie fort: 1692 erregte Jacques Aymar in Lyon Aufsehen — Versuche unter Aufsicht des Prince de Condé mit gezielter Täuschung sollen die Methode falsifiziert haben [Q07].',
+            },
+            {
+              type: 'p',
+              text: '**Die Kontroverse ist keine Erfindung des 20. Jahrhunderts.** Der USGS-Bericht von 1917 bilanziert die Rute als praktisch nutzlos und verweist auf die schon damals vorliegenden Erklärungen von Chevreul und Faraday [Q35]. Wer die Debatte für eine Modeerscheinung der letzten Jahrzehnte hält, findet hier das Gegenbeispiel: Die Argumente lagen 1917 bereits auf dem Tisch. Einschränkend: Der Bericht ist eine Behördenposition, kein eigenes Experiment [Q35].',
+            },
+            {
+              type: 'p',
+              text: '**Zusammenfassung:** Bis zum 18. Jahrhundert gibt es keine kontrollierte Forschung im heutigen Sinn, wohl aber eine kontinuierliche Kritik durch Kirche und Aufklärung, eine kontinuierliche Praxis im Bergbau und in der Volksmedizin — und mit Agricola eine frühe mechanische Erklärung. Die Quellenlage erlaubt keine „Entdeckungsgeschichte“ der Radiästhesie, nur eine Dokumentation von Kritik und Praxis nebeneinander.',
             },
           ],
-          words: 151,
+          photos: [
+            {
+              id: 'rad-media-04',
+              motiv: 'Historische Wünschelrute',
+              topic: 'radiasthesie',
+              alt: 'Getönte Federzeichnung: Ein Mann in der Kleidung des 18. Jahrhunderts steht auf freiem Feld und hält mit beiden Händen eine gegabelte Rute schräg vor dem Körper; im Hintergrund Hügel.',
+              caption:
+                'Wünschelrute in einer Zeichnung aus dem erweiterten Exemplar von Thomas Pennants „A Tour in Wales“ (Ausgabe 1781), National Library of Wales. Gemeinfrei.',
+              attribution:
+                'Thomas Pennant (1726–1798), laut Dateiseite; Vorlage: National Library of Wales, „Historische Wünschelrute“, Public Domain (PD-old), via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+              license: {
+                short: 'Public Domain (PD-old)',
+                name: 'Gemeinfrei — Schutzfrist abgelaufen (Urheber 1798 gestorben)',
+                url: 'https://commons.wikimedia.org/wiki/Template:PD-old',
+                shareAlike: false,
+                changeNote:
+                  'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+              },
+              web: {
+                src: 'assets/radiasthesie/media/520/wuenschelrute-historisch.webp',
+                srcset:
+                  'assets/radiasthesie/media/520/wuenschelrute-historisch.webp 520w, assets/radiasthesie/media/1040/wuenschelrute-historisch.webp 1040w',
+                srcsetAvif:
+                  'assets/radiasthesie/media/520/wuenschelrute-historisch.avif 520w, assets/radiasthesie/media/1040/wuenschelrute-historisch.avif 1040w',
+                width: 520,
+                height: 313,
+                fallbackPng: '',
+              },
+              sourceUrl: 'https://commons.wikimedia.org/wiki/File:Divining_Rod.jpg',
+              rights: {
+                laenderhinweis:
+                  'Gemeinfrei weltweit: Der Urheber starb 1798, die Schutzfrist von 70 Jahren nach dem Tod ist in allen relevanten Rechtsordnungen abgelaufen.',
+                marken: null,
+                bedenken:
+                  'Die Dateiseite nennt als Urheber Thomas Pennant, obwohl die Beschreibung von Zeichnungen durch Moses Griffiths, Ingleby und weitere Künstler spricht. Wer das vorliegende Blatt gezeichnet hat, ist dort nicht eindeutig bestimmt — die Zuschreibung bleibt unsicher. Für die Gemeinfreiheit ist das ohne Belang, für die Bildunterschrift schon: Sie nennt deshalb die Publikation, nicht einen einzelnen Zeichner.',
+              },
+            },
+          ],
+          words: 391,
         },
         {
           id: 'geschichte-2',
           number: 3,
           title: 'Geschichte II: Von der Strahlenfühligkeit zur Radiästhesie — 1800–1945',
           period: '',
-          chips: ['A'],
+          chips: ['A', 'C'],
           blocks: [
             {
               type: 'p',
-              text: 'Im 19. Jahrhundert verschiebt sich das Interesse von der Bergbau-Anwendung zur „Strahlungssucherei“. Der französische Physiker Alphonse B. Bouly prägte den Begriff „Radiästhesie“ — das Jahr ist strittig: 1926 [Q10] oder um 1931 [Q06]. **Der Datierungskonflikt wird hier nicht geglättet**, weil keine Primärquelle (Boulys Originalpublikation) vorliegt — die französische Ausgabe ist nicht beschafft, der Verlagslink liefert 404. Bis zur Klärung durch Bibliotheks-Fernleihe gilt: ungenaue Formulierung.',
+              text: 'Im 19. Jahrhundert verschiebt sich das Interesse von der Bergbau-Anwendung zur „Strahlungssucherei“. Der französische Physiker Alphonse B. Bouly prägte den Begriff „Radiästhesie“ — das Jahr ist strittig: 1926 [Q10] oder um 1931 [Q06]. **Der Datierungskonflikt wird hier nicht geglättet**, weil keine Primärquelle (Boulys Originalpublikation) vorliegt — die französische Ausgabe ist nicht beschafft, der Verlagslink liefert 404.',
             },
             {
               type: 'p',
-              text: 'Die Hochphase dauert von etwa 1930 bis 1945. In Deutschland entsteht die „Strahlenfühligkeit“ als Konzept; in Frankreich und England verbreitet sich die Rutenmethode als Volkspraktik [Q06, Q15]. Die Quellenlage für diesen Zeitraum ist vor allem enzyklopädisch und biografisch; kontrollierte Experimente fehlen weitgehend. Die Ausnahme bilden die späteren Scheunenversuche (siehe Abschnitt 5).',
+              text: 'Die Recherche hat den Konflikt nicht aufgelöst, aber geschärft: Eine französische Enzyklopädie nennt 1926, ein Heilpraktiker-Fachartikel von 2009 nennt 1930 [Q64, Q56]. Die ältere Angabe ist besser belegt, bleibt aber sekundär [Q64]. Bis zur Klärung durch Bibliotheks-Fernleihe gilt: ungenaue Formulierung — und zwar als ausgewiesene Lücke, nicht als Randnotiz.',
+            },
+            {
+              type: 'p',
+              text: '**Die Institutionalisierung ist dagegen gut datiert — mit einer Einschränkung.** 1926 und 1929 entstehen in Frankreich Begriff und Vereinigung, 1933 wird die britische Gesellschaft gegründet, 1961 die US-amerikanische [Q63, Q64, Q66]. Diese Daten stammen aus Vereinsdarstellungen und Tertiärquellen; eine unabhängige Gegenprüfung steht aus, weil die Website der US-Gesellschaft den Abruf blockierte [Q63, Q66]. Die britische Gesellschaft ging aus einem ehemaligen Offizier hervor und verlagerte ihre Schwerpunkte im Lauf der Zeit von Wasser, Öl und Mineralien zu Gesundheit, Archäologie und spirituellen Anwendungen [Q63]. Das ist eine Selbstbeschreibung der Vereinigung, keine unabhängige Institutionsgeschichte — und zugleich eine Beobachtung zur Verschiebung des Gegenstands: Was als Suche nach Rohstoffen begann, wurde zu einem Feld für Befindlichkeit und Deutung.',
+            },
+            {
+              type: 'p',
+              text: 'Die Hochphase dauert von etwa 1930 bis 1945. In Deutschland entsteht die „Strahlenfühligkeit“ als Konzept; in Frankreich und England verbreitet sich die Rutenmethode als Volkspraktik [Q06, Q15]. Die Quellenlage für diesen Zeitraum ist vor allem enzyklopädisch und biografisch; kontrollierte Experimente fehlen weitgehend. Die Ausnahme bilden die späteren Scheunenversuche (siehe Kapitel 9).',
+            },
+            {
+              type: 'p',
+              text: '**Offene Lücke, ausdrücklich:** Für die Zeit von 1933 bis 1945 liegt in dieser Recherche keine neu geprüfte Primärquelle vor; die Darstellung stützt sich weiter auf Q15. Gerade für diesen Zeitraum wäre eine belastbare Quellenbasis wichtig, weil die Szene damals in staatliche Strukturen eingebunden war. Die Lücke wird benannt, nicht mit Vermutungen gefüllt.',
             },
           ],
-          words: 114,
+          photos: [],
+          words: 317,
         },
         {
           id: 'geschichte-3',
           number: 4,
-          title: 'Geschichte III: Nachkriegszeit, Gitter und Münchner Experimente',
+          title: 'Geschichte III: Nachkriegszeit, Gitter, Milieu und Münchner Experimente',
           period: '',
           chips: ['A', 'D'],
           blocks: [
@@ -155,10 +237,19 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
-              text: 'Die Münchner Experimente (Betz u. a., 1987–1989) sind die bekannteste kontrollierte Prüfung des Rutengehens. Der Bericht (Betz/König 1989, Eigenverlag) wurde in dieser Recherche **nicht beschafft**; seine Existenz und sein Datum sind über Q05 und Q10 belegt, der Inhalt nicht. Enright (1995) bestritt die Auswertung; Betz (1996) widersprach [Q02, Q04, Q05]. **Eine Einigung wird nicht erzielt** [Q05]; das wird im Modul offen ausgewiesen, nicht als „Studie widerlegt“ formuliert.',
+              text: 'Gleichzeitig entsteht eine Soziologie der Praxis. Die deutsche Szene ist als Milieu mit eigenen Geräten, Kursen und Deutungen beschrieben [Q37, Q38]; in den USA untersucht bereits 1956 ein Aufsatz, wie Rutengänger ihre Tätigkeit selbst erklären [Q58], und 1959 erscheint die bis heute zitierte soziologische Monografie zu „Water Witching U.S.A.“ [Q57]. Der Befund dieser Literatur ist unbequem für beide Seiten: Die Praxis hält sich nicht, weil sie funktioniert, sondern weil sie in lokale Entscheidungslagen passt [Q40, Q57].',
+            },
+            {
+              type: 'p',
+              text: 'Die Münchner Experimente (Betz u. a., 1986–1988 nach Q42; ältere Darstellungen nennen 1987–1989) sind die bekannteste kontrollierte Prüfung des Rutengehens. Der Aufbau ist inzwischen gut dokumentiert: 43 aus rund 500 vorausgewählte Rutengänger, 843 Einzeltests in 104 Serien, eine 10-Meter-Linie mit doppelblinder Zielsetzung [Q42]. Der ursprüngliche Bericht (Betz/König 1989, Selbstverlag) wurde in dieser Recherche **nicht beschafft**; seine Existenz und sein Datum sind über Q05 und Q10 belegt, der Inhalt nicht [Q05, Q43]. Enright (1995) bestritt die Auswertung; Betz (1996) widersprach [Q02, Q04, Q05]. Enrights Kritik ist als Magazinbeitrag von 1999 im Volltext nachlesbar, der Verlagslink der Originalarbeit führt dagegen ins Leere [Q42].',
+            },
+            {
+              type: 'p',
+              text: '**Eine Einigung wird nicht erzielt** [Q05]; das wird im Modul offen ausgewiesen, nicht als „Studie widerlegt“ formuliert. Eine unabhängige Replikation der Münchner Befunde durch eine andere Gruppe ist nicht dokumentiert [Q42]; die sechs „besten“ Rutengänger reproduzierten ihre Treffer in anderen Serien nicht [Q42]. Wer die Debatte verfolgt, sollte drei Dinge auseinanderhalten: den Versuchsaufbau (dokumentiert), die Deutung der Autoren (bestritten) und die Frage, ob ein Effekt reproduzierbar ist (offen).',
             },
           ],
-          words: 108,
+          photos: [],
+          words: 283,
         },
         {
           id: 'instrumente',
@@ -173,10 +264,58 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
+              text: '**Die Typologie ist überschaubar.** Überliefert sind Gabelrute (Hasel oder Zweig), Winkel- und L-Rute, Einhandrute beziehungsweise Tensor, Pendel sowie kommerzielle Varianten wie der Biotensor [Q34, Q56]. Die Geräte unterscheiden sich in Handhabung und Material, nicht in der behaupteten Wirkungsweise [Q34, Q39, Q56]. Wer sie vergleicht, vergleicht also Griffe und Konventionen — die unterstellte Ursache bleibt bei allen dieselbe [Q34]. Die Liste ist nicht abschließend: Auch die Lecher-Antenne gehört zum Umfeld [Q06].',
+            },
+            {
+              type: 'p',
+              text: '**Der Biotensor ist ein Sonderfall, weil er als Diagnoseinstrument auftritt.** Er ist eine kommerzielle Weiterentwicklung der Einhandrute und wird in der Heilpraxis zur Diagnostik eingesetzt; die Wirkung wird von Anwendern selbst als wissenschaftlich nicht bewiesen bezeichnet [Q56]. Eine peer-reviewte Validierungsstudie ließ sich nicht finden — das ist das Ergebnis einer dokumentierten Negativsuche und keine bewiesene Nichtexistenz [Q55]. Der einzige dokumentierte Doppelblindtest eines Anwenders endete mit 0 von 13 Treffern [Q55]; ein Einzelergebnis ist allerdings kein Studienbefund [Q55].',
+            },
+            {
+              type: 'p',
               text: '**Wichtig für die Einordnung:** Diese Instrumente sind in der Praxis beschrieben, nicht als Messgeräte verifiziert [Q13, Q07]. Ein Biotensor liefert keine reproduzierbare Messgröße; Interrater-Reliabilität und Intrarater-Stabilität sind nicht nachweisbar [Q12, Q06]. Das ist kein Vorwurf an die Praxis — es ist eine Limitation der Evidenzlage, die transparent sein muss.',
             },
+            {
+              type: 'p',
+              text: '**Beispiel — warum „derselbe Ausschlag“ wenig sagt.** Zwei Personen halten dieselbe Winkelrute über derselben Fläche. Bei der ersten schlägt sie nach zwei Sekunden aus, bei der zweiten nach zwanzig. In der Praxis wird das als unterschiedliche „Feinfühligkeit“ gedeutet. Für eine Prüfung wäre genau das der Punkt, an dem ein Protokoll nötig würde: feste Ausgangslage, verdecktes Ziel, vorher festgelegte Antwortzeit, Wiederholung. Fehlt das, ist der Unterschied zwischen den Personen nicht von einem Unterschied im Griff zu trennen.',
+            },
           ],
-          words: 115,
+          photos: [
+            {
+              id: 'rad-media-03',
+              motiv: 'Radiästhesierute (Winkelrute)',
+              topic: 'radiasthesie',
+              alt: 'Eine Person in blauem Hemd hockt im Freien über steinigem, trockenem Boden und hält eine Winkelrute: zwei Messingarme laufen an einem blau lackierten Griffstück zusammen.',
+              caption:
+                'Winkelrute mit blau lackiertem Griffstück und zwei Messingarmen, im Gelände gehalten. Das Foto zeigt die Handhabung, nicht das Ergebnis einer Messung.',
+              attribution:
+                'José Antonio Agraz Sandoval, „Radiästhesierute (Winkelrute)“, CC0 1.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+              license: {
+                short: 'CC0 1.0',
+                name: 'Creative Commons Zero 1.0 – Verzicht auf alle Rechte (Public Domain Dedication)',
+                url: 'https://creativecommons.org/publicdomain/zero/1.0/deed.de',
+                shareAlike: false,
+                changeNote:
+                  'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+              },
+              web: {
+                src: 'assets/radiasthesie/media/520/radiasthesierute.webp',
+                srcset: 'assets/radiasthesie/media/520/radiasthesierute.webp 520w',
+                srcsetAvif: 'assets/radiasthesie/media/520/radiasthesierute.avif 520w',
+                width: 520,
+                height: 390,
+                fallbackPng: '',
+              },
+              sourceUrl: 'https://commons.wikimedia.org/wiki/File:Varilla_de_radiestesia.JPG',
+              rights: {
+                laenderhinweis:
+                  'CC0 ist ein weltweiter Rechteverzicht; keine länderspezifische Einschränkung bekannt. Die Nennung des Urhebers erfolgt hier freiwillig.',
+                marken: null,
+                bedenken:
+                  'Das Original ist mit 566 × 425 px klein; es wird deshalb nur eine 520-px-Variante erzeugt und nicht hochskaliert. Für eine grossformatige Verwendung ist das Bild nicht geeignet.',
+              },
+            },
+          ],
+          words: 335,
         },
         {
           id: 'erdstrahlen',
@@ -191,10 +330,19 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
+              text: '**Die Gesundheitsbehauptung ist der schwächste Teil des Gebäudes.** Eine Studie, die „geopathischen Stress“ mit Herzfrequenz und Blutdruck verbindet, arbeitet ohne Verblindung, ohne Sham-Bedingung und ohne klare Definition der Zone [Q48]. Wer dort einen Unterschied findet, kann ihn nicht dem Ort zuschreiben — Erwartung der Versuchsperson und Messsituation sind nicht kontrolliert. Die Aussage „geopathischer Stress verändert messbar den Kreislauf“ ist deshalb als unbelegt zu führen, nicht als Befund [Q48].',
+            },
+            {
+              type: 'p',
+              text: '**Die physikalischen Deutungen sind ein eigenes Kapitel.** Es gibt Ansätze, die ein nicht-elektromagnetisches „dowsing field“ postulieren — etwa über Interferometrie oder eine angebliche Umkehrung der Effekte auf Nord- und Südhalbkugel [Q49, Q50]. Diese Arbeiten sind nicht unabhängig repliziert; sie erklären eine Wirkung, deren Existenz sie voraussetzen, und stützen sich auf beobachterabhängige Rutenreaktionen ohne Verblindung [Q49, Q50]. Ein Modell, das nur dann funktioniert, wenn die Messung schon ein Ergebnis hat, ist keine Prüfung — zumal die Bewegung mechanisch einfacher erklärbar ist [Q51].',
+            },
+            {
+              type: 'p',
               text: 'Solche Karten zeigen, wie diese Konzepte als *Kartierung* funktionieren — nicht als Messung. Das ist ein Unterschied: Eine Karte kann für Praktizierende sinnvoll sein, ohne dass ihre Inhalte validiert sind. Beide Ebenen bleiben hier getrennt.',
             },
           ],
-          words: 89,
+          photos: [],
+          words: 236,
         },
         {
           id: 'geologie',
@@ -205,14 +353,19 @@ export const RADIASTHESIE = {
           blocks: [
             {
               type: 'p',
-              text: 'Die geologischen Quellen (Q01 — Behördenpublikation Württemberg; Q06 — Enzyklopädie; Q08 — Enzyklopädie) bestätigen: Wasseradern sind lokal, nicht global grid-artig; ihre Lage hängt von Gestein, Neigung und Niederschlag ab; es gibt keine einheitliche „Erdstrahlung“, die über alle geologischen Kontexte hinweg gleichermaßen messbar wäre. Die Behauptung einer globalen Gitterstruktur (Hartmann, Curry) ist als geologische Aussage nicht haltbar [Q01, Q06].',
+              text: 'Die geologischen Quellen (Q01 — Behördenpublikation; Q06 — Enzyklopädie; Q08 — Enzyklopädie) bestätigen: Wasseradern sind lokal, nicht global grid-artig; ihre Lage hängt von Gestein, Neigung und Niederschlag ab; es gibt keine einheitliche „Erdstrahlung“, die über alle geologischen Kontexte hinweg gleichermaßen messbar wäre. Die Behauptung einer globalen Gitterstruktur (Hartmann, Curry) ist als geologische Aussage nicht haltbar [Q01, Q06].',
             },
             {
               type: 'p',
               text: '**Hinweis zur Sprache:** Formulierungen wie „Erdstrahlen schützen vor Krankheit“ oder „Störfelder verursachen Schlafstörungen“ werden in diesem Modul nicht verwendet — sie sind Wirkversprechen und nicht belegt [Q08]. Wenn die Praxis diese Sprache nutzt, wird sie als Zitat mit Klasse B/E markiert.',
             },
+            {
+              type: 'p',
+              text: '**Was daraus folgt — und was nicht.** Aus „die Geologie kennt kein Störfeld“ folgt nicht, dass Menschen an einem Ort nichts Unangenehmes empfinden. Es folgt nur, dass die Ursache nicht in einer physikalischen Strahlung liegt, die niemand gemessen hat [Q01]. Für die Leserin ist der Unterschied praktisch: Ein unangenehmer Schlafplatz lässt sich baulich, akustisch oder organisatorisch untersuchen; ein „Störfeld“ lässt sich nur beseitigen, indem man jemanden bezahlt, der es findet.',
+            },
           ],
-          words: 98,
+          photos: [],
+          words: 167,
         },
         {
           id: 'bovis',
@@ -225,15 +378,71 @@ export const RADIASTHESIE = {
               type: 'p',
               text: 'Die Bovis-Skalen behaupten eine numerische Bewertung von Orten oder Objekten: Ein verbreiteter Bezugswert ist 6.500 Bovis-Einheiten, der in der Szene als neutral gilt; niedrigere Werte gelten als energieentziehend, höhere bis etwa 8.000 als günstig, noch höhere wieder als zu hoch [Q12]. Wissenschaftlich sind sie als Messgröße nicht definiert; Interrater- und Intrarater-Tests zeigen keine Stabilität [Q12, Q06]. Das Modul behandelt die Bovis-Skalen als **Ordnungsschema der Szene**, nicht als Messinstrument — mit klarer Klasse E und dem Hinweis, dass ein Demo als „Spielmarke“ (nicht als Messung) gedacht ist.',
             },
+            {
+              type: 'p',
+              text: '**Die medizinische Variante heißt MRD.** In der Heilpraktiker-Literatur wird die „medizinische Radiästhesie-Diagnostik“ als eigenes Verfahren mit Rute und Pendel beschrieben, inklusive „Blockaden“ und „Belastungen“ [Q56]. Auch hier gilt: beschrieben, nicht validiert. Der Artikel ist als Praxisquelle brauchbar, als Wirkungsbeleg nicht [Q56].',
+            },
+            {
+              type: 'p',
+              text: '**Beispiel — was eine Skala ohne Einheit leistet.** Eine Zahl wie „7.200 Bovis“ sieht aus wie ein Messwert, hat aber keine Bezugsgröße: keinen Nullpunkt, keine Einheit, kein Kalibrierprotokoll, keine Fehlergrenze. In der Physik wäre das keine Messung, sondern eine Notiz. In der Praxis funktioniert die Zahl trotzdem — als gemeinsame Sprache für ein Gefühl. Genau darin liegt die Verwechslungsgefahr, und genau deshalb trägt dieses Kapitel die Stufe E.',
+            },
           ],
-          words: 86,
+          photos: [],
+          words: 195,
+        },
+        {
+          id: 'befunde',
+          number: 9,
+          title: 'Untersuchungen: was geprüft wurde und was dabei herauskam',
+          period: '',
+          chips: ['D', 'C'],
+          blocks: [
+            {
+              type: 'p',
+              text: 'Dieses Kapitel fasst die Prüfungen zusammen, die in den Quellen tatsächlich beschrieben sind. Es ist keine Liste von „Beweisen“, sondern eine Liste von Versuchen — mit Aufbau, Ergebnis und Grenze. Die Reihenfolge folgt dem Gegenstand, nicht der Stärke des Befunds.',
+            },
+            {
+              type: 'p',
+              text: '**Scheunen- und Linientests (D).** Der Münchner Aufbau ist der aufwendigste dokumentierte Test: 43 aus rund 500 vorausgewählte Rutengänger, 843 Einzeltests in 104 Serien, 10-Meter-Linie, verdecktes Ziel [Q42]. Die Autoren deuteten ihre Daten als Effekt; die kritische Reanalyse kam zum gegenteiligen Schluss: Zufall, nicht reproduzierbar [Q42, Q05]. Betz et al. antworteten 1996, der Effekt bestehe fort [Q04]; eine unabhängige Replikation durch Dritte ist nicht dokumentiert [Q42]. **Status: widersprüchlich, nicht aufgelöst.** Wer hier eine Seite wählt, wählt eine Deutung, keine Messung. Einschränkend: Die Aufbaudaten stammen aus der Reanalyse eines Kritikers; der Originalbericht wurde nicht eingesehen [Q42].',
+            },
+            {
+              type: 'p',
+              text: '**Karten- und Fernmutung (D).** Fernmutung wurde militärisch geprüft: Rutengänger sollten verdeckte Minen anhand von Karten lokalisieren. Nach der einen Darstellung umfasste die Serie 20 Attrappen-Minen und sieben Rutengänger [Q40], nach der anderen unter anderem eine 3.400-Fuß-Strecke mit fünf Minen [Q39]. Die Ergebnisse lagen nicht über dem Zufall [Q39, Q40, Q65]. Ein Review von 1982 fand unter den Kartentests nur drei methodisch gut kontrollierte; nur einer erreichte knappe Signifikanz [Q40]. **Status: kein belastbarer Effekt; die Gesamtbilanz bleibt uneindeutig, weil die Zahl gut kontrollierter Studien klein ist** — und weil der Review selbst aus der Parapsychologie stammt [Q40].',
+            },
+            {
+              type: 'p',
+              text: '**Archäologie und Forensik (D).** In der archäologischen Prospektion lokalisierte Rutengehen Metallobjekte, versagte aber bei bodengefüllten Strukturen; nicht zuordenbare Anomalien blieben häufig [Q45]. Ein kontrollierter Blindtest mit ungeübten Rutengängern fand keine bessere Trefferquote als die visuelle Inspektion und keine Beziehung zum tatsächlichen Knochenversteck [Q46]. **Status: Bei metallischen Zielen gibt es Einzelbefunde; bei den Aufgaben, für die die Methode beworben wird, nicht.** Beide Studien sind Einzelfälle, und der forensische Test prüfte Ungeübte [Q45, Q46].',
+            },
+            {
+              type: 'p',
+              text: '**Wiederholbarkeit (C/D).** Eine Studie mit neun erfahrenen Rutengängern berichtet 20 von 20 nicht zufälligen Reaktionen an vier „aktiven Orten“ und überlappende Reaktionsbereiche [Q47]. Der Befund ist bemerkenswert — aber er sagt nichts über die Ursache: Die Orte waren nicht verdeckt, ein „aktiver Ort“ wird über die Reaktion definiert, und ein überlappender Bereich kann ebenso gut bedeuten, dass alle Beteiligten dieselbe Erwartung teilen [Q47]. **Status: einzelne Studie, kein Replikationsstand.**',
+            },
+            {
+              type: 'p',
+              text: '**Homöopathie und Diagnostik (D).** Sechs mutende Homöopathen konnten Bryonia C12 nicht von Placebo unterscheiden: 48,1 Prozent Treffer bei 156 Paaren, p = 0,689 [Q44]. Das ist der sauberste negative Befund der Sammlung, weil er klinisch relevant und verblindet erhoben ist. **Status: kein Unterschied zu Placebo** — wobei der Test homöopathische Arzneien betrifft, nicht Wasseradern oder Erdstrahlen; die Übertragbarkeit ist begrenzt [Q44].',
+            },
+            {
+              type: 'p',
+              text: '**Pendel und Physik (D).** Die Bewegung eines handgeführten Pendels ist mit klassischer Mechanik als fremderregtes Kugelpendel erklärbar; ein übernatürlicher Antrieb ist dafür nicht erforderlich [Q51]. Experimente zur Chevreul-Täuschung zeigen, dass Bewegungsumfang und -richtung von Muskelspannung, Aufmerksamkeit und Pendellänge abhängen [Q52, Q53]. **Status: Der Mechanismus ist erklärt; die behauptete Informationsquelle nicht.** Das erklärt die Bewegung, nicht die Deutung — und widerlegt keine Anwendung, die anders funktioniert [Q51, Q53].',
+            },
+            {
+              type: 'p',
+              text: '**Biotensor (E/C).** Für den Biotensor existiert keine peer-reviewte Validierungsstudie; der dokumentierte Doppelblindtest eines Anwenders endete mit 0 von 13 Treffern [Q55]. **Status: keine Bestätigung, Negativbefund vorhanden.**',
+            },
+            {
+              type: 'p',
+              text: '**Wie diese Liste zu lesen ist.** Ein einzelner positiver Befund widerlegt keine Serie negativer Befunde, und eine negative Prüfung beweist nicht, dass niemand etwas kann [Q05, Q42]. Was sich sagen lässt: Für die Behauptungen, mit denen Ruten und Pendel beworben werden — Wasser, Erze, Krankheiten, Belastungen —, liegt kein reproduzierbarer Nachweis vor; für die Mechanik der Bewegung liegt eine Erklärung vor, die ohne verborgene Information auskommt [Q51, Q53]. Beides steht nebeneinander, und beides ist überprüfbar.',
+            },
+          ],
+          photos: [],
+          words: 591,
         },
       ],
       disclaimer: {
         tradition:
-          'Radiästhesie hat eine dokumentierbare Kulturgeschichte von Bergbau und Kirche über Aufklärung und Nachkriegszeit bis zur heutigen Szene. Die Binnensicht — Mutung, Gitter, Bovis, Erdstrahlen — ist als kulturelles Phänomen lesbar und respektierbar.',
+          'Radiästhesie hat eine dokumentierbare Kulturgeschichte von Bergbau und Kirche über Aufklärung und Nachkriegszeit bis zur heutigen Szene. Die Binnensicht — Mutung, Gitter, Bovis, Erdstrahlen — ist als kulturelles Phänomen lesbar und respektierbar. Die Praxis ist international unterschiedlich eingebettet: als ländliche Selbstverständlichkeit in den USA, als Verbindung von Wasserfindung und Heilvorstellungen im Rif, als Teil volkskundlicher Naturdeutung in Estland [Q57, Q59, Q60].',
         evidenz:
-          'Kontrollierte Doppelblind-Tests zeigen beim Rutengehen Trefferquoten im Zufallsbereich [Q01, Q02, Q05]. Die Geologie bestätigt keine globale Strahlung [Q01, Q06]. Die Bovis-Skalen sind als Messgröße nicht stabil [Q12]. Der Begriff selbst hat einen offenen Datierungskonflikt [Q06/Q10]. Die Münchner Experimente sind nur indirekt referierbar [Q05, Q02].',
+          'Kontrollierte Doppelblind-Tests zeigen beim Rutengehen Trefferquoten im Zufallsbereich [Q01, Q02, Q05]. Die Geologie bestätigt keine globale Strahlung [Q01, Q06]. Die Bovis-Skalen sind als Messgröße nicht stabil [Q12]. Der Begriff selbst hat einen offenen Datierungskonflikt [Q06/Q10, Q64]. Die Münchner Experimente sind nur indirekt referierbar und in der Deutung umstritten [Q05, Q42]. Der Biotensor ist nicht validiert, der einzige dokumentierte Doppelblindtest fiel negativ aus [Q55].',
         konsequenz:
           'Der Bereich dient der Bildung und der kritischen Einordnung. Er ersetzt keine fachliche Prüfung und keine medizinische Beratung.',
         fazit:
@@ -253,7 +462,7 @@ export const RADIASTHESIE = {
         'Pendeln: Geschichte seit 371 n. Chr., Arten, Antwortkonventionen und Mechanik — kontrollierte Tests und offene Fragen, ohne Wirkungsversprechen.',
       heading: 'Pendeln: Von Ammianus Marcellinus bis zur modernen Praxis',
       lead: 'Ein Pendel in der Radiästhesie-Praktik besteht meist aus einem Kegel oder einer Kugel (2–3 cm Körper), an einer 15–30 cm langen Schnur hängend [Q09]. Die Anwendung folgt einer Konvention: Frage formulieren, Pendel ruhig halten (meist über einer Tafel, über dem Körper oder über einer Karte), Bewegung beobachten — entweder Kreis, Oval, oder Pendelbewegung als „Ja“ oder „Nein“. Für mehr Antwortmöglichkeiten dienen **Pendeldiagramme** (Ja/Nein, Zahlenkreis, Buchstabenfeld, Segmenttafeln) [Q09].',
-      wordCount: 983,
+      wordCount: 2170,
       chapterCount: 10,
       figure: {
         src: 'assets/radiasthesie/pendeltafel.svg',
@@ -280,8 +489,13 @@ export const RADIASTHESIE = {
               type: 'p',
               text: '**Wichtig:** Die Antwortkonventionen sind **individuell und variabel**, nicht standardisiert [Q09]. Was für einen Praktizierenden „Ja“ bedeutet, kann für einen anderen „Nein“ sein — das ist nicht ein Fehler der Praxis, sondern ein Merkmal der Konvention. Die Eichung (Festlegung der Konvention vor der Sitzung) ist daher zentral [Q09].',
             },
+            {
+              type: 'p',
+              text: '**Die Mechanik ist dabei unspektakulär.** Ein handgeführtes Pendel ist ein fremderregtes Kugelpendel: Es schwingt, weil die Hand es führt, und seine Bewegung ist mit klassischer Mechanik beschreibbar, ohne dass ein übernatürlicher Antrieb nötig wäre [Q51]. Wer das einmal akzeptiert hat, kann die Frage genauer stellen: nicht „Bewegt sich das Pendel?“, sondern „Wer oder was bewegt es, und warum gerade so?“.',
+            },
           ],
-          words: 115,
+          photos: [],
+          words: 175,
         },
         {
           id: 'geschichte',
@@ -298,8 +512,13 @@ export const RADIASTHESIE = {
               type: 'p',
               text: 'In der Neuzeit verbreitet sich das Pendel als Instrument der Kleromantie und der Radiästhesie. Die Kriegsmarine nutzte Pendel für Minenortung — das war ein praxisbasierter Einsatz, nicht eine wissenschaftliche Bestätigung [Q09, Q15]. Die Quellenlage für diesen Übergang ist vor allem enzyklopädisch; kontrollierte Experimente fehlen.',
             },
+            {
+              type: 'p',
+              text: '**Was die Militärprüfungen tatsächlich ergaben.** Die später systematisch untersuchte Variante ist die Kartenmutung: Rutengänger oder Pendler sollten verdeckte Minen anhand einer Karte lokalisieren. In der einen Darstellung umfasste eine solche Serie 20 Attrappen-Minen und sieben Rutengänger [Q40], in einer anderen eine Strecke von 3.400 Fuß mit fünf Minen [Q39]. Die Trefferquoten lagen nicht über dem Zufall [Q39, Q40]. Das ist der historisch früheste gut dokumentierte Fall, in dem eine militärische Anwendung geprüft und nicht bestätigt wurde — ein Befund, der in der Praxisgeschichte selten erzählt wird.',
+            },
           ],
-          words: 126,
+          photos: [],
+          words: 211,
         },
         {
           id: 'arten',
@@ -314,10 +533,92 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
+              text: '**Die Formenvielfalt ist keine Typologie mit Grenzen.** Das Foto in diesem Kapitel zeigt ein Universalpendel: einen Kugelkörper mit aufgedruckten Buchstaben und einem Messingstab, der über eine Lederauflage austritt. Solche Körper werden in der Szene mit bestimmten „Ebenen“ oder „Zuständen“ verbunden; die Beschriftung stammt aus der Literatur der 1930er-Jahre. Für die Einordnung zählt: Es handelt sich um ein Objekt mit Markierungen, nicht um ein Gerät mit Skala [Q09, Q56].',
+            },
+            {
+              type: 'p',
+              text: '**Material und Handhabung hängen zusammen, nicht mit dem Ergebnis.** Ein Messingkegel ist schwerer als ein Holzkegel und schwingt bei gleicher Fadenlänge langsamer; ein kurzes Pendel schwingt schneller als ein langes [Q51]. Diese Unterschiede sind messbar und erklären einen Teil der Empfindung „dieses Pendel reagiert anders“. Sie erklären nicht, woher eine Antwort kommen soll [Q09, Q51].',
+            },
+            {
+              type: 'p',
               text: 'Die **Pendeltafel** (auch Pendeldiagramm) ist ein zentrales Element: Sie strukturiert die mögliche Antwort in Ja/Nein, Zahlen, Buchstaben oder Segmenten und ermöglicht so komplexere Fragen [Q09]. Das Tafel-Studio in der Werkstatt setzt diese Konvention als Gestaltung um — als Ordnungsschema, nicht als Demonstration der Wirksamkeit.',
             },
           ],
-          words: 88,
+          photos: [
+            {
+              id: 'rad-media-01',
+              motiv: 'Klassisches Pendel',
+              topic: 'pendeln',
+              alt: 'Ein kegelförmiges Messingpendel hängt an einer geflochtenen dunkelblauen Schnur; die Schnur liegt in einer grossen Schlaufe über hellem Untergrund.',
+              caption:
+                'Kegelpendel aus Messing an geflochtener Kordel — die verbreitetste Bauform. Das Objekt ist ein Alltagsgegenstand; das Foto belegt keine Wirkung.',
+              attribution:
+                'Carivaldi, „Klassisches Pendel“, CC BY-SA 3.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+              license: {
+                short: 'CC BY-SA 3.0',
+                name: 'Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 Unported',
+                url: 'https://creativecommons.org/licenses/by-sa/3.0/',
+                shareAlike: true,
+                changeNote:
+                  'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+              },
+              web: {
+                src: 'assets/radiasthesie/media/520/klassisches-pendel.webp',
+                srcset:
+                  'assets/radiasthesie/media/520/klassisches-pendel.webp 520w, assets/radiasthesie/media/1040/klassisches-pendel.webp 1040w',
+                srcsetAvif:
+                  'assets/radiasthesie/media/520/klassisches-pendel.avif 520w, assets/radiasthesie/media/1040/klassisches-pendel.avif 1040w',
+                width: 520,
+                height: 428,
+                fallbackPng: '',
+              },
+              sourceUrl: 'https://commons.wikimedia.org/wiki/File:Radiesthetic_pendulum.jpg',
+              rights: {
+                laenderhinweis:
+                  'Keine länderspezifische Besonderheit bekannt. Die Datei ist zusätzlich unter GFDL lizenziert; genutzt wird die CC-BY-SA-3.0-Option.',
+                marken: null,
+                bedenken:
+                  'Bearbeitungen (Skalierung, Formatwechsel) sind Weitergaben unter gleichen Bedingungen: Die Varianten stehen ebenfalls unter CC BY-SA 3.0 und nennen Urheber und Änderung.',
+              },
+            },
+            {
+              id: 'rad-media-02',
+              motiv: 'Universalpendel',
+              topic: 'pendeln',
+              alt: 'Schwarze Kugel mit weissen Buchstaben und Markierungen (M, G, BL, VL), aus der ein Messingstab über eine braune Lederauflage austritt; eine Kordel führt nach rechts unten, unten liegt eine 10-Cent-Münze als Grössenvergleich.',
+              caption:
+                'Universalpendel: Kugelkörper mit aufgedruckten Buchstaben und Messingstab, laut Bildbeschreibung Ergebnis der Arbeiten von de Belizal, Chaumery und Morel. Die Münze dient nur dem Grössenvergleich.',
+              attribution:
+                'Wouter Hagens, „Universalpendel“, CC BY-SA 3.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+              license: {
+                short: 'CC BY-SA 3.0',
+                name: 'Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 Unported',
+                url: 'https://creativecommons.org/licenses/by-sa/3.0/',
+                shareAlike: true,
+                changeNote:
+                  'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+              },
+              web: {
+                src: 'assets/radiasthesie/media/520/universalpendel.webp',
+                srcset:
+                  'assets/radiasthesie/media/520/universalpendel.webp 520w, assets/radiasthesie/media/1040/universalpendel.webp 1040w',
+                srcsetAvif:
+                  'assets/radiasthesie/media/520/universalpendel.avif 520w, assets/radiasthesie/media/1040/universalpendel.avif 1040w',
+                width: 520,
+                height: 438,
+                fallbackPng: '',
+              },
+              sourceUrl: 'https://commons.wikimedia.org/wiki/File:Universal_pendulum_E.jpg',
+              rights: {
+                laenderhinweis: 'Keine länderspezifische Besonderheit bekannt.',
+                marken:
+                  '„Universalpendel“ ist eine Gerätebezeichnung aus der Radiästhesie-Literatur; keine Prüfung einer allfälligen Marke erfolgt, die Bezeichnung wird rein beschreibend verwendet.',
+                bedenken:
+                  'Die Buchstaben auf der Kugel sind Teil eines Deutungssystems, keine Messskala. Die Varianten stehen unter CC BY-SA 3.0.',
+              },
+            },
+          ],
+          words: 209,
         },
         {
           id: 'lernen',
@@ -332,10 +633,19 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
-              text: 'Die Fragetechnik wird oft als "offene Frage" empfohlen — nicht als "Wird es morgen regnen?", sondern als "Welche Energie dominiert hier?". Die Unschärfe der Frage ermöglicht die Unschärfe der Antwort; das ist ein Merkmal, kein Fehler, der durch bessere Technik behoben werden könnte. Der Forer-Effekt (Abschnitt 9) erklärt, warum allgemeine Antworten als persönlich zutreffend empfunden werden.',
+              text: 'Die Fragetechnik wird oft als "offene Frage" empfohlen — nicht als "Wird es morgen regnen?", sondern als "Welche Energie dominiert hier?". Die Unschärfe der Frage ermöglicht die Unschärfe der Antwort; das ist ein Merkmal, kein Fehler, der durch bessere Technik behoben werden könnte. Der Forer-Effekt (siehe Orakel-Seite) erklärt, warum allgemeine Antworten als persönlich zutreffend empfunden werden.',
+            },
+            {
+              type: 'p',
+              text: '**Der wichtigste Lernschritt ist unbequem.** Wer pendeln lernt, muss zuerst lernen, dass die eigene Hand bewegt, was man sieht. Die Chevreul-Täuschung ist experimentell untersucht: Bewegungsumfang und -richtung hängen von Muskelspannung, Aufmerksamkeit und Pendellänge ab [Q52, Q54]. Das ist keine Entlarvung der Übenden — es ist die Voraussetzung dafür, überhaupt unterscheiden zu können, was man selbst beiträgt und was nicht.',
+            },
+            {
+              type: 'p',
+              text: '**Übung ohne Selbsttäuschung.** Ein einfacher Aufbau: Eine zweite Person legt verdeckt fest, ob links oder rechts ein Gegenstand liegt; die pendelnde Person notiert vor dem Nachsehen ihre Antwort; nach zwanzig Durchgängen wird ausgezählt. Wer diesen Aufbau ernst nimmt, merkt schnell, wie stark die Erwartung die Hand führt — und wie schwer es ist, eine Frage wirklich offen zu halten.',
             },
           ],
-          words: 116,
+          photos: [],
+          words: 233,
         },
         {
           id: 'tafeln',
@@ -350,10 +660,19 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
-              text: 'Die Bovis-Skalen (siehe Radiästhesie-Cluster) werden manchmal mit Pendeln kombiniert; das Modul behandelt das als separate Ebene mit Klasse E.',
+              text: 'Die Bovis-Skalen (siehe Kapitel 8 der Radiästhesie-Seite) werden manchmal mit Pendeln kombiniert; das Modul behandelt das als separate Ebene mit Klasse E.',
+            },
+            {
+              type: 'p',
+              text: '**Das Tafel-Studio der Werkstatt.** Es stellt eine Tafel als Vorlage bereit, deren Segmente mit einem Titel beschriftet werden können; der Titel steht im Bild und in der Druckansicht, ist auf eine feste Zeichenzahl begrenzt und erhält einen Randabstand, damit nichts am Blattrand klebt. Die Tafel lässt sich als SVG herunterladen und über die Druckansicht ausgeben. Was das Werkzeug **nicht** tut: Es misst nichts. Die Bedeutung der Segmente bleibt eine Vereinbarung der Person, die die Tafel benutzt — das steht auch auf der Seite selbst [Q09].',
+            },
+            {
+              type: 'p',
+              text: '**Beispiel — warum eine schöne Tafel keine Antwort erzeugt.** Eine Tafel mit zwölf Segmenten, sorgfältig beschriftet, sieht aus wie ein Messblatt. Der Unterschied liegt nicht im Layout, sondern im Protokoll: Ein Messblatt nennt Einheit, Nullpunkt und Toleranz; eine Pendeltafel nennt eine Vereinbarung. Wer diesen Unterschied kennt, kann eine Tafel als Denkwerkzeug nutzen, ohne sie für ein Instrument zu halten.',
             },
           ],
-          words: 63,
+          photos: [],
+          words: 210,
         },
         {
           id: 'biotensor',
@@ -368,10 +687,19 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
+              text: '**Der Biotensor ist eine kommerzielle Weiterentwicklung der Einhandrute** und wird in der Heilpraxis ausdrücklich als Diagnoseinstrument eingesetzt; die Wirkung wird von Anwendern selbst als wissenschaftlich nicht bewiesen bezeichnet [Q56]. Eine peer-reviewte Validierungsstudie ließ sich nicht finden — das ist das Ergebnis einer dokumentierten Negativsuche, keine bewiesene Nichtexistenz [Q55]. Der einzige dokumentierte Doppelblindtest eines Anwenders endete mit 0 von 13 Treffern [Q55].',
+            },
+            {
+              type: 'p',
+              text: '**Was daraus folgt.** Ein Gerät, dessen Wirkung von seinen Anwendern als unbewiesen bezeichnet wird, ist kein Messgerät, sondern ein Werkzeug mit Bedeutung. Das schließt nicht aus, dass Menschen damit arbeiten; es schließt aus, dass Ergebnisse als Befund weitergegeben werden. Der dokumentierte Doppelblindtest ist zudem ein Einzelfall und kein Studienbefund [Q55].',
+            },
+            {
+              type: 'p',
               text: '**Hinweis:** Die Alternativmedizin ist ein eigener Bereich; dieses Modul behandelt Biotensor und Einhandrute nur, soweit sie mit Pendeln verbunden sind, und ohne medizinische Empfehlungen.',
             },
           ],
-          words: 86,
+          photos: [],
+          words: 197,
         },
         {
           id: 'karten',
@@ -384,8 +712,17 @@ export const RADIASTHESIE = {
               type: 'p',
               text: 'Kartenpendeln (Pendel über einer Karte, um einen Ort oder eine Person zu "finden") und Fernmutung (Pendel über einer entfernten Karte, ohne physische Präsenz) gehören zur Praxis der Radiästhesie [Q17]. Kontrollversuche mit acht verdeckten Orten und Zufallsauswahl zeigen Trefferquoten im Zufallsbereich [Q17, Q05]. Die Praxis beschreibt diese Methode als nützlich; die evidenzbasierte Einordnung bleibt D (kein Unterschied zum Zufall).',
             },
+            {
+              type: 'p',
+              text: '**Die Prüfungen sind älter als die heutige Debatte.** Die militärischen Kartentests der 1960er- und 1970er-Jahre sind in zwei Übersichten dokumentiert: eine mit 20 Attrappen-Minen und sieben Rutengängern [Q40], eine mit einer 3.400-Fuß-Strecke und fünf Minen [Q39]. Ein Review von 1982 zählte unter den Kartentests nur drei methodisch gut kontrollierte; nur einer erreichte knappe Signifikanz [Q40]. Eine dritte, enzyklopädische Darstellung kommt zum selben Ergebnis [Q65].',
+            },
+            {
+              type: 'p',
+              text: '**Wie man den Befund liest.** „Kein Unterschied zum Zufall“ heißt: In diesen Prüfungen war kein Effekt sichtbar. Es heißt nicht, dass jede Form von Fernmutung widerlegt ist — die Zahl gut kontrollierter Studien ist klein, und der Review stammt aus der Parapsychologie, also aus einem Umfeld, das solchen Befunden gegenüber offen ist [Q40]. Genau deshalb wiegt das Ergebnis schwer: Auch eine wohlwollende Durchsicht fand keinen belastbaren Effekt.',
+            },
           ],
-          words: 57,
+          photos: [],
+          words: 188,
         },
         {
           id: 'mechanismen',
@@ -413,10 +750,19 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
-              text: 'Zusammen erklären diese Mechanismen, warum ein Pendel in der Praxis in Bewegung kommt — ohne dass eine „Strahlung“ oder eine „Information“ nötig wäre. Das ist kein Beweis, dass niemand etwas kann; es ist eine Erklärung dafür, warum die Beobachtung bei kontrollierten Tests nicht über Zufall hinausgeht.',
+              text: '**Die Chevreul-Täuschung ist quantifiziert.** Experimente zeigen, dass Umfang und Richtung der Pendelbewegung von Muskelspannung, Aufmerksamkeit und Pendellänge abhängen [Q52, Q54]. In einem kontrollierten Paradigma lieferten ideomotorische Antworten keinen Zugang zu Informationen, die der Person verbal nicht zur Verfügung standen; die Treffer lagen auf Zufallsniveau [Q53]. Das ist der stärkste Einzelbefund dieser Seite, weil er die naheliegende Alternativerklärung direkt prüft.',
+            },
+            {
+              type: 'p',
+              text: '**Und die Physik passt dazu.** Ein handgeführtes Pendel ist ein nichtlineares, fremderregtes Pendel; seine Bewegung ist mit den Gleichungen der klassischen Mechanik beschreibbar [Q51]. Für die Erklärung ist kein Feld nötig, das niemand gemessen hat [Q49, Q50].',
+            },
+            {
+              type: 'p',
+              text: 'Zusammen erklären diese Mechanismen, warum ein Pendel in der Praxis in Bewegung kommt — ohne dass eine „Strahlung“ oder eine „Information“ nötig wäre. Das ist kein Beweis, dass niemand etwas kann; es ist eine Erklärung dafür, warum die Beobachtung bei kontrollierten Tests nicht über Zufall hinausgeht. Einschränkend bleibt: Die Laborbefunde betreffen Allgemeinwissen und einfache Reize, nicht jede denkbare radiästhetische Anwendung [Q53].',
             },
           ],
-          words: 139,
+          photos: [],
+          words: 248,
         },
         {
           id: 'forschung',
@@ -433,8 +779,17 @@ export const RADIASTHESIE = {
               type: 'p',
               text: 'Der Forschungsstand zu Pendeln in der Diagnostik ist lückenhaft: Keine peer-reviewte kontrollierte Studie zur klinischen Pendeldiagnostik wurde gefunden (siehe Methodik-Seite). Die Referenz erfolgt über Q09 (Enzyklopädie) und Q28 (Übersichtsbeitrag mit Registrierungsschranke), nicht über eine Primärstudie.',
             },
+            {
+              type: 'p',
+              text: '**Ein sauberer Negativbefund aus der Nähe.** Sechs mutende Homöopathen sollten Bryonia C12 von Placebo unterscheiden: 48,1 Prozent Treffer bei 156 Paaren, p = 0,689 [Q44]. Das ist kein Pendeltest im engeren Sinn, aber derselbe Vorgang — eine Person mutet, eine zweite protokolliert, das Ziel ist verdeckt. Der Test ist verblindet, klinisch relevant und negativ. Übertragbarkeit bleibt begrenzt: Es ging um Arzneien, nicht um Wasseradern [Q44].',
+            },
+            {
+              type: 'p',
+              text: '**Ein positiver Einzelbefund, der nichts beweist.** Eine Studie mit neun erfahrenen Rutengängern berichtet 20 von 20 nicht zufälligen Reaktionen an vier „aktiven Orten“ mit überlappenden Reaktionsbereichen [Q47]. Der Befund ist als Existenz einer Studie dokumentiert, nicht als Replikation: Die Orte waren nicht verdeckt, der „aktive Ort“ wird über die Reaktion definiert, und ein Replikationsstand fehlt [Q47]. Wer hier von einem Durchbruch liest, liest mehr, als die Quelle hergibt.',
+            },
           ],
-          words: 80,
+          photos: [],
+          words: 213,
         },
         {
           id: 'labor',
@@ -449,17 +804,31 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
-              text: 'Ein persönliches Pendeltagebuch ergänzt das Labor: Es hält Frage, Methode, Vorhersage, subjektive Sicherheit, Ergebnis und eine spätere Bewertung fest — lokal im Browser, ohne Konto und ohne Übertragung. Ein abgeschlossener Testlauf lässt sich übernehmen; die Einträge bleiben auch dann lesbar, wenn der Lauf später gelöscht wird.',
+              text: '**Was die vier Werkzeuge der Werkstatt tatsächlich tun.**',
+            },
+            {
+              type: 'ul',
+              items: [
+                '**Pendellabor** (`#pendeln/labor`): ein Fadenpendel mit einstellbarer Länge (5–200 cm), Anfangsauslenkung (0–80°) und Dämpfung (0–0,2). Die Bewegung wird mit Runge-Kutta 4. Ordnung und festem Zeitschritt von 1/480 Sekunde integriert; angezeigt werden simulierte Zeit, Auslenkung, gemessene Schwingungsdauer und der Vergleichswert der Kleinwinkelformel. Das Werkzeug zeigt Mechanik — es beantwortet keine Frage.',
+                '**Pendeltafel-Studio** (`#pendeln/studio`): eine Tafel mit beschriftbaren Segmenten, begrenzter Titelzeichenzahl, Randabstand in der Druckansicht, Export als SVG und als Druckvorlage. Die Tafel ist ein Ordnungsschema; sie misst nichts.',
+                '**Experimentierlabor** (`#pendeln/experiment`): drei vorregistrierte Testreihen (Ja/Nein mit 20 Versuchen, acht Orte mit 16, Zahlen mit 25), strikt getrennte Ziel- und Antwortphase, Auswertung gegen die Zufallserwartung mit Konfidenzintervall und Rohdatenexport. Die Versuchsanzahl steht vor dem Start fest; Nachlese ist ausgeschlossen.',
+                '**Pendeltagebuch** (`#pendeln/journal`): hält einen eigenen Versuch mit Frage, Methode, Vorhersage, subjektiver Sicherheit (1–5), Ergebnis und späterer Bewertung fest — lokal im Browser, ohne Konto und ohne Übertragung. Ein abgeschlossener Testlauf lässt sich übernehmen; Einträge lassen sich als JSON oder CSV exportieren, importieren (bis 1 MiB) und vollständig löschen. Die Einträge liegen unverschlüsselt im lokalen Speicher des Browsers: Wer Zugriff auf das Browserprofil hat, kann sie lesen.',
+              ],
+            },
+            {
+              type: 'p',
+              text: 'Bleibt ein abgeschlossener Lauf später gelöscht, bleiben die übernommenen Einträge lesbar — der Lauf ist dann nicht mehr vorhanden, die Notiz schon.',
             },
           ],
-          words: 113,
+          photos: [],
+          words: 286,
         },
       ],
       disclaimer: {
         tradition:
           'Pendeln hat eine dokumentierbare Geschichte seit 371 n. Chr., eine Praxis der Frage-Antwort, Konventionen und Instrumente, und eine Kultur der Selbstreflexion und Entscheidungshilfe.',
         evidenz:
-          'Kontrollierte Tests zeigen keine Abweichung vom Zufall [Q02, Q05, Q09]. Mechanismen (Carpenter, Kohnstamm, Chevreul) erklären die Bewegung ohne "Information". Die Forschung zur klinischen Diagnostik fehlt [Q28, Abschnitt 8]. Die Konventionen sind individuell, nicht standardisiert [Q09].',
+          'Kontrollierte Tests zeigen keine Abweichung vom Zufall [Q02, Q05, Q09]. Mechanismen (Carpenter, Kohnstamm, Chevreul) erklären die Bewegung ohne "Information" [Q52, Q53]. Die Forschung zur klinischen Diagnostik fehlt [Q28, Abschnitt 8]. Die Konventionen sind individuell, nicht standardisiert [Q09]. Der Biotensor ist nicht validiert [Q55].',
         konsequenz:
           'Der Bereich dient der Bildung und der kritischen Einordnung. Er ersetzt keine fachliche Prüfung und keine medizinische Beratung.',
         fazit:
@@ -479,7 +848,7 @@ export const RADIASTHESIE = {
         'Orakel: Tarot seit den 1440ern, I Ging, Runen und Delphi — Geschichte, Praxis und Forschungslage, ohne Prognoseversprechen.',
       heading: 'Orakel: Tarot, I Ging, Runen, Delphi — Geschichte und Grenzen',
       lead: '**Divination** (von lat. *divinare* — vorhersagen) bezeichnet Verfahren, bei denen Zufallsereignisse, Zeichen oder Texte als Bedeutungsträger gelesen werden [Q20, Q29]. Die Grundfigur ist alt und kulturübergreifend — nicht auf Europa beschränkt. Die Gründe sind vielfältig: Unsicherheitsbewältigung, Entscheidungsunterstützung, gemeinschaftliche Rituale, narrative Selbstdeutung [Q29].',
-      wordCount: 1030,
+      wordCount: 1042,
       chapterCount: 12,
       figure: {
         src: 'assets/radiasthesie/orakel-karten.svg',
@@ -506,6 +875,45 @@ export const RADIASTHESIE = {
               text: 'Wichtig zur Einordnung: Divination lässt sich als **Verhaltensphänomen** beschreiben (A/D), nicht als **Wirkungsbehauptung** (E). Ob Karten, Lose oder Texte „wirklich“ die Zukunft sagen, ist nicht die Frage dieses Moduls — das Modul beschreibt, wie die Praxis funktioniert, was belegbar ist und wo Forschung fehlt.',
             },
           ],
+          photos: [
+            {
+              id: 'rad-media-06',
+              motiv: 'Historisches Ouija-Brett',
+              topic: 'orakel',
+              alt: 'Freigestelltes historisches Ouija-Brett aus orangebraunem Holz mit schwarzen Buchstaben A bis Z in zwei Bögen, den Ziffern 1 bis 9 und 0 sowie den Wörtern YES, NO und GOOD BYE; oben ein ovales Herstellerlogo mit Vogel-Emblem, in den Ecken Sterne, oben rechts Stern und Mondsichel, oben links ein dunkler Kreis.',
+              caption:
+                'Ouija-Brett der Kennard Novelty Company, Baltimore, um 1890. Gemeinfrei; die Bezeichnung „Ouija“ ist als Marke geschützt — das Bild zeigt ein historisches Objekt, keine Produktempfehlung.',
+              attribution:
+                'Elijah Bond (1847–1921) und Charles Kennard (1856–1925), „Historisches Ouija-Brett“, Public Domain (PD-Art / PD-old-70-1923), via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+              license: {
+                short: 'Public Domain (PD-Art / PD-old-70-1923)',
+                name: 'Gemeinfrei — zweidimensionales Werk, Schutzfrist abgelaufen',
+                url: 'https://commons.wikimedia.org/wiki/Template:PD-Art',
+                shareAlike: false,
+                changeNote:
+                  'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten. Zusätzlich PNG-Fassung mit erhaltenem Alphakanal.',
+              },
+              web: {
+                src: 'assets/radiasthesie/media/520/ouija-historisch.webp',
+                srcset:
+                  'assets/radiasthesie/media/520/ouija-historisch.webp 520w, assets/radiasthesie/media/1040/ouija-historisch.webp 1040w',
+                srcsetAvif:
+                  'assets/radiasthesie/media/520/ouija-historisch.avif 520w, assets/radiasthesie/media/1040/ouija-historisch.avif 1040w',
+                width: 520,
+                height: 347,
+                fallbackPng: 'assets/radiasthesie/media/520/ouija-historisch.png',
+              },
+              sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ouija_board_-_Kennard_Novelty_Company.png',
+              rights: {
+                laenderhinweis:
+                  'Die Dateiseite traegt {{PD-Art|PD-old-70-1923}} — nicht, wie in der Ausgangsliste vermerkt, eine Public-Domain-Mark. Beide Wege führen zu gemeinfrei, der genaue Baustein ist aber PD-old-70-1923. PD-Art ist am US-Recht ausgerichtet; für Deutschland und die EU greift § 64 UrhG: Bond starb 1921, Kennard 1925, die 70-Jahres-Frist endete 1992 bzw. 1996. Das Werk ist in beiden Rechtsordnungen gemeinfrei.',
+                marken:
+                  '„Ouija“ ist eine eingetragene Marke (Hasbro). Die Gemeinfreiheit des historischen Bretts berührt das Markenrecht nicht. Zulässig ist die beschreibende Verwendung als historisches Dokument; das Bild darf nicht als Herkunfts- oder Qualitätshinweis für Produkte dienen.',
+                bedenken:
+                  'Das Brett ist freigestellt (Alphakanal mit echter Transparenz). Die Varianten behalten den Alphakanal; JPEG kommt dafür nicht in Frage, weil es keine Transparenz kennt.',
+              },
+            },
+          ],
           words: 85,
         },
         {
@@ -521,10 +929,49 @@ export const RADIASTHESIE = {
             },
             {
               type: 'p',
-              text: 'Erhalten sind drei Luxusdecks: Der Visconti-Tarot (69 Karten, Beinecke Library, Universität Yale) und der Visconti-Sforza-Tarot (u. a. Morgan Library) — beide von der Familie Visconti in Mailand in Auftrag gegeben [Q16]. Der Vergleich historisch/modern ist als interaktives Element im Modul vorgesehen.',
+              text: 'Erhalten sind drei Luxusdecks: Der Visconti-Tarot (69 Karten, Beinecke Library, Universität Yale) und der Visconti-Sforza-Tarot (u. a. Morgan Library) — beide von der Familie Visconti in Mailand in Auftrag gegeben [Q16]. Historische und moderne Decks werden hier getrennt gehalten: Das Foto in diesem Kapitel zeigt eine Drei-Karten-Legung des 20. Jahrhunderts, nicht die Visconti-Karten.',
             },
           ],
-          words: 118,
+          photos: [
+            {
+              id: 'rad-media-05',
+              motiv: 'Tarot — Drei-Karten-Legung',
+              topic: 'orakel',
+              alt: 'Drei Tarotkarten liegen offen in einer Reihe auf blauem Samt: Die Hohepriesterin, Zwei der Kelche und Ass der Schwerter; dahinter liegt das ganze Deck gefächert, daneben drei weisse Kerzen und eine Hand aus schwarzem Holz.',
+              caption:
+                'Drei-Karten-Legung mit dem Rider-Waite-Smith-Deck (Ausgabe Smith-Waite Centennial): Die Hohepriesterin, Zwei der Kelche, Ass der Schwerter.',
+              attribution:
+                'Nosferattus, „Tarot — Drei-Karten-Legung“, CC0 1.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+              license: {
+                short: 'CC0 1.0',
+                name: 'Creative Commons Zero 1.0 – Verzicht auf alle Rechte (Public Domain Dedication)',
+                url: 'https://creativecommons.org/publicdomain/zero/1.0/deed.de',
+                shareAlike: false,
+                changeNote:
+                  'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+              },
+              web: {
+                src: 'assets/radiasthesie/media/520/tarot.webp',
+                srcset:
+                  'assets/radiasthesie/media/520/tarot.webp 520w, assets/radiasthesie/media/1040/tarot.webp 1040w',
+                srcsetAvif:
+                  'assets/radiasthesie/media/520/tarot.avif 520w, assets/radiasthesie/media/1040/tarot.avif 1040w',
+                width: 520,
+                height: 390,
+                fallbackPng: '',
+              },
+              sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tarot_cards_-_3_card_spread_with_candles.jpg',
+              rights: {
+                laenderhinweis:
+                  'Das Foto ist CC0. Die abgebildeten Kartenmotive sind Reproduktionen des 1909 erschienenen Rider-Waite-Smith-Decks (Zeichnungen: Pamela Colman Smith, gestorben 1951). Nach deutschem und EU-Recht endete die Schutzfrist Ende 2021; in den USA ist das Deck seit Langem gemeinfrei. Die Kartenrückseite und Eigenleistungen der Neuausgabe sind nicht abgebildet.',
+                marken:
+                  '„Smith-Waite Centennial“ und „Rider-Waite-Smith“ sind Bezeichnungen von Verlagen; sie werden hier nur zur Identifikation des abgebildeten Decks genannt.',
+                bedenken:
+                  'Die Legung ist gestellt. Das Bild dokumentiert eine verbreitete Praxis, nicht deren Treffsicherheit.',
+              },
+            },
+          ],
+          words: 130,
         },
         {
           id: 'tarot-2',
@@ -538,6 +985,7 @@ export const RADIASTHESIE = {
               text: 'Im 19. Jahrhundert verschiebt sich Tarot von Spiel zu Wahrsagerei. Die Verbindung mit Okkultismus, Rosenkreuzern und Theosophie entsteht nicht aus der Tradition der Karten, sondern aus der Neuinterpretation durch Autoren wie Eliphas Levi (1810–1875) und später durch die Golden Dawn (1890er) [Q16, Q19]. Diese Neuinterpretation ist historisch dokumentierbar — als Kulturgeschichte des 19. Jahrhunderts, nicht als Ursprung des Tarot. Das Modul zeigt beide Ebenen und vermeidet die Vermischung.',
             },
           ],
+          photos: [],
           words: 67,
         },
         {
@@ -556,6 +1004,7 @@ export const RADIASTHESIE = {
               text: 'Orakelkarten — moderne Decks ohne feste 78-Karten-Struktur (Engel, Tiere, Pflanzen, Affirmationen) — gehören zur gleichen Kategorie: als Phänomen des zeitgenössischen Marktes und der Selbsthilfekultur beschreibbar (B), ohne kontrollierte Forschung [Q20]. Das Modul benennt diese Lücke offen.',
             },
           ],
+          photos: [],
           words: 88,
         },
         {
@@ -574,6 +1023,7 @@ export const RADIASTHESIE = {
               text: 'Der Weg in den Westen (Wilhelm 1924, Jung 1950er/1960er) hat das I Ging als Selbstreflexions- und Entscheidungsinstrument verbreitet [Q21]. Die wissenschaftliche Einordnung bleibt D/E: Keine kontrollierte Prognose-Studie existiert; der Forer-Effekt und die Unschärfe der Frage erklären einen Teil der gefühlten Treffsicherheit [Q29].',
             },
           ],
+          photos: [],
           words: 97,
         },
         {
@@ -588,6 +1038,7 @@ export const RADIASTHESIE = {
               text: 'Richard Wilhelm übersetzte das I Ging 1924 ins Deutsche; Carl Gustav Jung und andere Psychologen der 1950er/1960er nutzten es als Reflexionsinstrument [Q21]. Diese Rezeption ist kulturell dokumentierbar — als Teil der westlichen Esoterik und der Psychologiegeschichte, nicht als Bestätigung einer Wirkung. Das Modul zeigt diese Rezeption als kulturelles Phänomen.',
             },
           ],
+          photos: [],
           words: 49,
         },
         {
@@ -606,6 +1057,7 @@ export const RADIASTHESIE = {
               text: '**Wichtig:** Q22 (Wikipedia de, mit Belegmängeln markiert) und Q23 (Blum 1982, kommerzieller Markt) sind beide als Quellen genutzt — mit offenem Hinweis auf den Interessenvermerk und die Belegmängel. Das Modul vermeidet, die Runen-Divination als "uralt" zu darstellen.',
             },
           ],
+          photos: [],
           words: 111,
         },
         {
@@ -620,6 +1072,7 @@ export const RADIASTHESIE = {
               text: 'Die moderne Runen-Divination (Runensteine, Runen als Orakel) entsteht als Genre des späten 20. Jahrhunderts [Q22, Q23]. Das ist nicht abwertend — es ist eine korrekte Datierung. Die Praxis nutzt Runen als Zeichen — das ist eine legitime kulturelle Praxis, die als solche beschrieben werden kann, ohne als "alt" zu behaupten.',
             },
           ],
+          photos: [],
           words: 49,
         },
         {
@@ -638,6 +1091,7 @@ export const RADIASTHESIE = {
               text: '**Hinweis:** Die Behauptung "Orakelkarten sagen die Zukunft voraus" wird in diesem Modul nicht vertreten. Die Praxisbeschreibung ("Man zieht eine Karte und liest eine Affirmation") ist als B zulässig.',
             },
           ],
+          photos: [],
           words: 93,
         },
         {
@@ -656,6 +1110,7 @@ export const RADIASTHESIE = {
               text: 'Die Quellenlage für Delphi ist archäologisch und literarisch (Herodot, Plutarch, Pausanias, Strabo) und durch die Ausgrabungen des französischen Instituts (Q24 — Behörde/Museum) bestätigt. Das Modul beschreibt Delphi als Institution und Ritual, nicht als Beleg für "Orakelwirkung".',
             },
           ],
+          photos: [],
           words: 109,
         },
         {
@@ -670,6 +1125,7 @@ export const RADIASTHESIE = {
               text: 'Die Pythia soll in Trance durch flüchtige Substanzen (Ethylen, möglicherweise weitere aus einem Spalt im Felsen) gesprochen haben [Q25, Q26, Q27]. Diese Hypothese wurde 2003 (Q25 — Fachjournal) und 2006 (Q26 — Fachjournal) diskutiert; Q27 (Skeptiker-Website) widerspricht. **Der Stand bleibt kontrovers (C/D)**. Das Modul stellt Pro und Contra dar, ohne einen Abschluss zu behaupten — das wäre eine unzulässige Glättung eines offenen wissenschaftlichen Disputs.',
             },
           ],
+          photos: [],
           words: 63,
         },
         {
@@ -688,6 +1144,7 @@ export const RADIASTHESIE = {
               text: 'Der Forer-Effekt ist nicht als "Orakel funktionieren nicht" zu lesen — er ist als Erklärung dafür zu lesen, warum die Beobachtung der Treffsicherheit nicht als Beleg für Wirkung dienen kann. Das ist ein wichtiger Unterschied für die Leserin und für das Modul.',
             },
           ],
+          photos: [],
           words: 101,
         },
       ],
@@ -708,12 +1165,19 @@ export const RADIASTHESIE = {
     description:
       'Von der Wünschelrute bis zum Tarot: Was die Quellen zur Radiästhesie, zum Pendeln und zu Orakeln wirklich sagen — sachlich, belegt und mit klarer Trennung von Tradition und Evidenz.',
     openQuestions: [
-      'Datierung Bouly (1926 vs. ~1931) — offene Frage, keine Glättung.',
+      'Datierung Bouly (1926 vs. ~1931) — offene Frage, keine Glättung; 1930 taucht in einem Fachartikel zusätzlich auf [Q56, Q64].',
       'Deutschsprachige klinische Studien zu Pendeldiagnostik — nicht gefunden; Referenz nur über Q09, Q28.',
       'Orakelkarten — keine kontrollierte Forschung gefunden; Aussage „fehlt“ ist selbst Recherche-Ergebnis.',
       'Geschichte des Pendelns 371 → Neuzeit — Lücke in der Überlieferungskette; nicht als kontinuierliche Linie dargestellt.',
-      'Enright 1995 — Volltext nicht gelesen; Kritik an Münchner Versuchen nur über Q05 referiert.',
+      'Enright 1995 — Volltext nicht gelesen; Kritik an Münchner Versuchen nur über Q05 und den Magazinbeitrag Q42 referiert.',
       'Zwei journalistische Quellen ohne Datum (Q13, Q14) — nutzbar für Praxis, nicht für Historie.',
+      'Der Münchner Schlussbericht (Wagner, Betz & König 1990, BMFT 01 KB8602) wurde nicht beschafft; alle Aufbaudaten stammen aus der Rezeption [Q42].',
+      'Die Monografie Betz/König 1989 ist katalogisiert, aber nicht gelesen; die positive Deutung ist über Q05 und Q42 referiert [Q43].',
+      'Für den Biotensor existiert keine peer-reviewte Validierung; die Aussage beruht auf einer dokumentierten Negativsuche, nicht auf bewiesener Nichtexistenz [Q55].',
+      'Der Gründungsdatensatz der US-Gesellschaft (1961) ist nur tertiär belegt; die Vereinsseite blockierte den Abruf [Q63, Q66].',
+      'Die NS-Zeit (1933–1945) ist nicht durch eine neu geprüfte Primärquelle abgedeckt; Q15 bleibt die Referenz.',
+      'Eine unabhängige Replikation der Münchner Befunde durch Dritte wurde nicht gefunden; die Suche war auf OpenAlex und Crossref beschränkt [Q42].',
+      'Spanischsprachige und afrikanische Literatur außer Marokko wurde nicht systematisch durchsucht (Sprachgrenze) [Q60].',
     ],
   },
   landing: {
@@ -730,7 +1194,7 @@ export const RADIASTHESIE = {
           caption:
             'Winkelrute in Aufsicht. Der Winkel zwischen den Ruten wird als Ausschlag gedeutet — eigene Zeichnung, keine Messung.',
         },
-        lead: '**Radiästhesie** (von lat. *radius*, Strahl, griech. *aisthesis*, Wahrnehmung) bezeichnet die Vorstellung, Lebewesen könnten von Objekten oder Orten ausgehende Strahlungen wahrnehmen und mit Rute oder Pendel in Bewegung umsetzen [Q06]. Der Vorgang des Aufspürens heißt in der Szene *Mutung*; die Person, die ihn ausführt, wird als *Muter* oder *Wünnscher* bezeichnet [Q06].',
+        lead: '**Radiästhesie** (von lat. *radius*, Strahl, griech. *aisthesis*, Wahrnehmung) bezeichnet die Vorstellung, Lebewesen könnten von Objekten oder Orten ausgehende Strahlungen wahrnehmen und mit Rute oder Pendel in Bewegung umsetzen [Q06]. Der Vorgang des Aufspürens heißt in der Szene *Mutung*; die ausführende Person wird als *Rutengänger* oder *Wünscher* bezeichnet [Q06].',
       },
       {
         slug: 'pendeln',
@@ -829,6 +1293,13 @@ export const RADIASTHESIE = {
       letter: 'B',
       terms: [
         {
+          term: 'Biotensor',
+          definition:
+            'Kommerzielle Weiterentwicklung der Einhandrute, in der Heilpraxis als Diagnoseinstrument verwendet; von Anwendern selbst als wissenschaftlich unbewiesen bezeichnet.',
+          levels: ['B', 'E'],
+          sources: ['Q55', 'Q56'],
+        },
+        {
           term: 'Bovis-Skalen',
           definition: 'Ordnungsschema der Szene (Bezugswert 6.500 = neutral); nicht als Messgröße validiert.',
           levels: ['E'],
@@ -848,8 +1319,27 @@ export const RADIASTHESIE = {
       ],
     },
     {
+      letter: 'E',
+      terms: [
+        {
+          term: 'Einhandrute / Tensor',
+          definition:
+            'Einzelner Stab mit Handfläche und Gegengewicht, neben Gabel- und Winkelrute eine der überlieferten Instrumentformen.',
+          levels: ['B'],
+          sources: ['Q13', 'Q34'],
+        },
+      ],
+    },
+    {
       letter: 'F',
       terms: [
+        {
+          term: 'Fernmutung',
+          definition:
+            'Mutung über einer Karte oder über eine entfernte Person beziehungsweise einen entfernten Ort, ohne physische Präsenz; militärisch geprüft, ohne Treffer über dem Zufall.',
+          levels: ['B', 'D'],
+          sources: ['Q17', 'Q39', 'Q40'],
+        },
         {
           term: 'Forer-Effekt',
           definition:
@@ -868,6 +1358,13 @@ export const RADIASTHESIE = {
             'Chinesisches Orakelbuch (Hexagramme, 64 Muster) seit 8. Jh. v. Chr.; Westeuropa-Rezeption 20. Jh.',
           levels: ['A'],
           sources: ['Q21'],
+        },
+        {
+          term: 'Ideomotorik',
+          definition:
+            'Unwillkürliche Muskelbewegung, die durch Erwartung und Aufmerksamkeit gesteuert wird; erklärt den Pendelausschlag ohne verborgene Information.',
+          levels: ['D'],
+          sources: ['Q52', 'Q53'],
         },
       ],
     },
@@ -956,16 +1453,16 @@ export const RADIASTHESIE = {
   sources: [
     {
       id: 'Q01',
-      citation: 'U.S. Geological Survey, Water Science School: Water Dowsing. USGS Water Science School',
+      citation: 'U.S. Geological Survey, Water Science School: Water Dowsing (1977 / 2026). USGS Water Science School',
       shortName: 'Water Dowsing (Behörde)',
       title: 'Water Dowsing',
       url: 'https://www.usgs.gov/water-science-school/science/water-dowsing',
       locator: 'https://www.usgs.gov/water-science-school/science/water-dowsing',
       type: 'Behörde / Publikation',
-      year: '—',
+      year: '1977 / 2026',
       levels: ['D'],
       verification: 'VL',
-      note: 'Scheunenversuche; Basis für T1',
+      note: 'Scheunenversuche; Basis für T1. Webfassung aktualisiert 2026-09-17, Printoriginal 1977 (DOI 10.3133/7000104)',
       interestNote:
         'Staatliche Geologiebehörde, keine kommerzielle Bindung; erklärt Dowsing-Erfolge naturalistisch (Grundwasser fast überall).',
       accessNote: '',
@@ -981,7 +1478,7 @@ export const RADIASTHESIE = {
       year: '1995',
       levels: ['D'],
       verification: 'DOI/CF',
-      note: 'Volltext 404 (Verlag); Kritik über Q05',
+      note: 'Volltext über Verlag nicht erreichbar (Verlagsseite 2026-11-02 HTTP 404); Kritik über Q05. Zwei DOI-Varianten im Umlauf (10.1007/s001140050198 und 10.1007/bf01134560) — Dublette, nicht Ersatz',
       interestNote:
         'Methodisch-statistische Reanalyse der Münchner Scheunenversuche; kritisch gegenüber der Deutung als Ruteneffekt.',
       accessNote:
@@ -1026,7 +1523,7 @@ export const RADIASTHESIE = {
       id: 'Q05',
       citation:
         'Mayer, G.: Rutengehen – Wie ist der Forschungsstand? (2003). Gesellschaft für Anomalistik e.V., Studie des Monats',
-      shortName: 'Rutengehen — Forschungsstand (Betz 2003)',
+      shortName: 'Rutengehen — Forschungsstand (Mayer 2003)',
       title: 'Rutengehen – Wie ist der Forschungsstand?',
       url: 'https://www.anomalistik.de/aktuell/sdm/rutengehen-wie-ist-der-forschungsstand',
       locator: 'https://www.anomalistik.de/aktuell/sdm/rutengehen-wie-ist-der-forschungsstand',
@@ -1034,7 +1531,7 @@ export const RADIASTHESIE = {
       year: '2003',
       levels: ['D'],
       verification: 'VL / HTTP',
-      note: 'Referenziert Münchner Versuche',
+      note: 'Von Gerhard Mayer, 10. Juni 2003 (Studie des Monats); Betz wird dort nur zitiert. Referenziert Münchner Versuche',
       interestNote:
         'INTERESSENVERMERK: Verein mit offener Haltung gegenüber Anomalien, methodenkritisch; keine kommerzielle Bindung. Referiert Hansen (1982) und die deutsche Studienlage.',
       accessNote: '',
@@ -1123,15 +1620,15 @@ export const RADIASTHESIE = {
       id: 'Q11',
       citation:
         'Harder, B.: Warum Wünschelrutengehen keine Wissenschaft ist (2013). GWUP-Blog (Gesellschaft zur wissenschaftlichen Untersuchung von Parawissenschaften)',
-      shortName: 'Warum Wünschelrutengehen keine Wissenschaft ist',
+      shortName: 'Harder 2013 — Warum Wünschelrutengehen keine Wissenschaft ist',
       title: 'Warum Wünschelrutengehen keine Wissenschaft ist',
       url: 'https://blog.gwup.net/2013/11/17/warum-wunschelrutengehen-keine-wissenschaft-ist/',
       locator: 'https://blog.gwup.net/2013/11/17/warum-wunschelrutengehen-keine-wissenschaft-ist/',
-      type: 'Blogbeitrag (Skeptikerorganisation)',
+      type: 'Blog (Skeptiker)',
       year: '2013',
       levels: ['E', 'D'],
-      verification: 'Volltext geprüft',
-      note: '',
+      verification: 'VL',
+      note: 'Position und Argumentationsnachweis, kein Studienbeleg',
       interestNote:
         'INTERESSENVERMERK: Skeptikerorganisation mit erklärter Gegenposition; kein Peer-Review. Als Position und Argumentationsnachweis zitierbar, nicht als Studienbeleg.',
       accessNote: '',
@@ -1172,16 +1669,16 @@ export const RADIASTHESIE = {
     {
       id: 'Q14',
       citation:
-        'haus.de (Redaktion), mit Zitat Tristan Jorde, Verbraucherzentrale Hamburg: Wasseradern und Erdstrahlen – eine Glaubenssache?. haus.de',
-      shortName: 'Wasseradern und Erdstrahlen – eine Glaubenssache?',
+        'haus.de (Redaktion), mit Zitat Tristan Jorde, Verbraucherzentrale Hamburg: Wasseradern und Erdstrahlen – eine Glaubenssache? (o. J.). haus.de',
+      shortName: 'haus.de — Wasseradern und Erdstrahlen',
       title: 'Wasseradern und Erdstrahlen – eine Glaubenssache?',
       url: 'https://www.haus.de/haushalt/wasseradern-und-erdstrahlen-glaubenssache-oder-nicht-25706',
       locator: 'https://www.haus.de/haushalt/wasseradern-und-erdstrahlen-glaubenssache-oder-nicht-25706',
-      type: 'Magazinbeitrag mit Verbraucherschutz-O-Ton',
-      year: '—',
+      type: 'Verbrauchermagazin',
+      year: 'o. J.',
       levels: ['B', 'E'],
-      verification: 'Volltext geprüft',
-      note: '',
+      verification: 'VL',
+      note: 'Praxis und Verbraucherhinweis; ohne Datum — nicht für Historie',
       interestNote:
         'Verbrauchermagazin; die zitierte Verbraucherzentrale ist verbraucherschützend, nicht methodisch neutral im Sinne einer Studie.',
       accessNote: '',
@@ -1239,15 +1736,15 @@ export const RADIASTHESIE = {
     {
       id: 'Q18',
       citation: 'Parlett, D.: Tarot. Encyclopaedia Britannica',
-      shortName: 'Tarot',
+      shortName: 'Parlett — Tarot (Britannica)',
       title: 'Tarot',
       url: 'https://www.britannica.com/topic/tarot',
       locator: 'https://www.britannica.com/topic/tarot',
-      type: 'Enzyklopädieartikel',
+      type: 'Enzyklopädie',
       year: '—',
       levels: ['A'],
-      verification: 'Volltext geprüft',
-      note: '',
+      verification: 'VL',
+      note: 'Spielehistorische Einordnung, keine esoterische Bindung',
       interestNote: 'Spielehistoriker als Autor; keine esoterische Bindung.',
       accessNote: '',
     },
@@ -1441,10 +1938,10 @@ export const RADIASTHESIE = {
       type: 'Buch (Fachliteratur)',
       year: '1985',
       levels: ['D'],
-      verification: 'ISBN (Sekundärquelle)',
-      note: 'Standardkritik; ISBN aus Q06 übernommen',
+      verification: 'ISBN/Katalog',
+      note: 'ISBN 3-432-84473-5 über lobid (TT002048267) bestätigt',
       interestNote:
-        'Standardkritik aus der Rechtsmedizin; ISBN aus der Literaturliste von Q06 übernommen, nicht separat im Katalog geprüft.',
+        'Standardkritik aus der Rechtsmedizin; ISBN 3-432-84473-5 im Katalog (lobid, TT002048267) bestätigt — die frühere Angabe „aus der Literaturliste von Q06 übernommen“ ist damit überholt (Korrektur K04 aus RAD-02).',
       accessNote: '',
     },
     {
@@ -1495,11 +1992,562 @@ export const RADIASTHESIE = {
         'Als „lesenswert“ ausgezeichnet; belegt Nutzungszeitraum (2.–14. Jh.) und die Mehrfachfunktion der Zeichen (Laut, Begriff, magisches Zeichen).',
       accessNote: '',
     },
+    {
+      id: 'Q34',
+      citation:
+        'Agricola, Georgius: De re metallica, libri XII (Buch II) (1556). Basel: Froben (Erstdruck); englische Übersetzung H. C. Hoover / L. H. Hoover, London 1912',
+      shortName: 'Agricola 1556 — De re metallica (Buch II)',
+      title: 'De re metallica, libri XII (Buch II)',
+      url: 'https://www.gutenberg.org/ebooks/38015',
+      locator: 'https://www.gutenberg.org/ebooks/38015',
+      type: 'Frühdruck / Übers. 1912',
+      year: '1556',
+      levels: ['A'],
+      verification: 'VL',
+      note: 'Erste gedruckte Rutenbeschreibung; erklärt die Bewegung mechanisch',
+      interestNote:
+        'Humanistischer Gelehrter und Montanwissenschaftler; keine okkulte Bindung. Frühste kritische Distanz zur Rute im Druck.',
+      accessNote:
+        'Hoover-Übersetzung als Volltext (Project Gutenberg #38015, 1.922.397 Bytes) geladen; Zitate aus Buch II, S. 38-41 der Druckausgabe 1912.',
+    },
+    {
+      id: 'Q35',
+      citation:
+        'Ellis, Arthur J.; Meinzer, O. E. (Intro.): The Divining Rod: A History of Water Witching, with a Bibliography (1917). U.S. Geological Survey, Water-Supply Paper 416, Washington: Government Printing Office',
+      shortName: 'Ellis 1917 — The Divining Rod (USGS WSP 416)',
+      title: 'The Divining Rod: A History of Water Witching, with a Bibliography',
+      url: 'https://pubs.usgs.gov/wsp/0416/report.pdf',
+      locator: 'https://pubs.usgs.gov/wsp/0416/report.pdf',
+      type: 'Behördenbericht',
+      year: '1917',
+      levels: ['A', 'D'],
+      verification: 'VL-T',
+      note: 'Literaturbericht, keine eigenen Tests',
+      interestNote:
+        "Staatliche Geologiebehörde, explizit aufklärend gegenüber 'water witching'; kein kommerzielles Interesse.",
+      accessNote:
+        'PDF geladen; Titelseite, Inhalt und Introductory Note gelesen. Der historische Hauptteil (S. 7-55) und die Bibliografie wurden nicht vollständig durchgearbeitet.',
+    },
+    {
+      id: 'Q36',
+      citation:
+        'Dym, Warren Alexander: 6. The Electric Rod: Dowsing and the Freiberg Mining Academy (2010). BRILL eBooks (Sammelband zur Wissenschafts- und Montangeschichte)',
+      shortName: 'Dym 2010 — The Electric Rod / Freiberg',
+      title: '6. The Electric Rod: Dowsing and the Freiberg Mining Academy',
+      url: 'https://doi.org/10.1163/ej.9789004186422.i-218.40',
+      locator: 'https://doi.org/10.1163/ej.9789004186422.i-218.40',
+      type: 'Buchkapitel (Brill)',
+      year: '2010',
+      levels: ['A'],
+      verification: 'AB',
+      note: 'Nur Abstract geprüft',
+      interestNote: 'Wissenschaftsgeschichte; keine Nähe zur Radiästhesieszene erkennbar.',
+      accessNote: 'Abstract über OpenAlex abgerufen; Buchkapitel selbst nicht beschafft (Brill, kostenpflichtig).',
+    },
+    {
+      id: 'Q37',
+      citation:
+        'Knoblauch, Hubert A.: Die Welt der Wünschelrutengänger und Pendler: Erkundungen einer verborgenen Wirklichkeit (1991). Frankfurt/Main: Campus-Verlag',
+      shortName: 'Knoblauch 1991 — Welt der Wünschelrutengänger',
+      title: 'Die Welt der Wünschelrutengänger und Pendler: Erkundungen einer verborgenen Wirklichkeit',
+      url: 'https://lobid.org/resources/HT003976043',
+      locator: 'https://lobid.org/resources/HT003976043',
+      type: 'Monografie (Soziologie)',
+      year: '1991',
+      levels: ['A', 'B'],
+      verification: 'ISBN/Katalog',
+      note: 'Milieu-Beschreibung, keine Wirkungsprüfung',
+      interestNote: 'Akademische Soziologie; untersucht Praxis und Milieu, nicht die Wirkung.',
+      accessNote: 'Katalogdatensatz (lobid/hbz, OCLC 611627271) geprüft; Buchinhalt nicht gelesen.',
+    },
+    {
+      id: 'Q38',
+      citation:
+        'Knoblauch, Hubert A.: The world of divining rods and dowsing (2026). DepositOnce (Repositorium der Technischen Universität Berlin)',
+      shortName: 'Knoblauch 2026 — The world of divining rods',
+      title: 'The world of divining rods and dowsing',
+      url: 'https://doi.org/10.14279/depositonce-26541',
+      locator: 'https://doi.org/10.14279/depositonce-26541',
+      type: 'Monografie (Open Access)',
+      year: '2026',
+      levels: ['A', 'B'],
+      verification: 'AB',
+      note: 'Nur Abstract geprüft',
+      interestNote: 'Soziologische Perspektive; beschreibt Akteure, Geräte und Deutungen, ohne Wirkbehauptung.',
+      accessNote: 'Abstract und Metadaten über OpenAlex/DOI geprüft; Volltext (Open Access) nicht durchgearbeitet.',
+    },
+    {
+      id: 'Q39',
+      citation: 'Foulkes, R. A.: Dowsing Experiments (1971). Nature',
+      shortName: 'Foulkes 1971 — Dowsing Experiments (Nature)',
+      title: 'Dowsing Experiments',
+      url: 'https://doi.org/10.1038/229163a0',
+      locator: 'https://doi.org/10.1038/229163a0',
+      type: 'Zeitschrift',
+      year: '1971',
+      levels: ['D'],
+      verification: 'VL-T',
+      note: 'Kartentests; Teilvolltext',
+      interestNote:
+        'Institut für Industrieforschung (Dublin), Auftrag durch britisches Verteidigungsministerium; militärisches Beschaffungsinteresse (Minensuche).',
+      accessNote:
+        'PDF-Transkript über dowsing-research.net geladen und gelesen (Scan-OCR, teilweise fehlerhaft); Verlagskopie nicht beschafft.',
+    },
+    {
+      id: 'Q40',
+      citation:
+        'Hansen, George P.: Dowsing: A Review of Experimental Research (1982). Journal of the Society for Psychical Research',
+      shortName: 'Hansen 1982 — Dowsing: A Review',
+      title: 'Dowsing: A Review of Experimental Research',
+      url: 'http://www.tricksterbook.com/ArticlesOnline/Dowsing-ReviewOfExperimetnalResearch-Hansen-JSPR-1982.pdf',
+      locator: 'http://www.tricksterbook.com/ArticlesOnline/Dowsing-ReviewOfExperimetnalResearch-Hansen-JSPR-1982.pdf',
+      type: 'Reviewaufsatz',
+      year: '1982',
+      levels: ['D', 'A'],
+      verification: 'VL-T',
+      note: 'Interessenvermerk: wohlwollende Durchsicht',
+      interestNote:
+        'Parapsychologisch interessierter Autor (JSPR), der die Experimentalgeschichte kritisch ordnet; kein kommerzielles Interesse.',
+      accessNote:
+        'PDF geladen und in Ausschnitten gelesen (Early Research, Tromp, Ongley, Sowjetunion, Hyman/Vogt, Fazit zu Kartentests). Vollständige 25-Seiten-Auswertung nicht erfolgt.',
+    },
+    {
+      id: 'Q41',
+      citation: 'Enright, J. T.: Dowsers lost in a Barn (1996). Naturwissenschaften',
+      shortName: 'Enright 1996 — Dowsers lost in a Barn',
+      title: 'Dowsers lost in a Barn',
+      url: 'https://doi.org/10.1007/BF01149601',
+      locator: 'https://doi.org/10.1007/BF01149601',
+      type: 'Zeitschrift (Replik)',
+      year: '1996',
+      levels: ['D'],
+      verification: 'DOI/CF',
+      note: 'Replik auf Betz et al.',
+      interestNote: 'Kritiker der Münchner Deutung; methodisch-statistische Reanalyse.',
+      accessNote:
+        'Metadaten über DOI-Content-Negotiation geprüft (Springer, ISSN 0028-1042). Volltext nicht beschafft; Inhalt über Q42 referiert.',
+    },
+    {
+      id: 'Q42',
+      citation: 'Enright, J. T.: Testing Dowsing: The Failure of the Munich Experiments (1999). Skeptical Inquirer',
+      shortName: 'Enright 1999 — Testing Dowsing',
+      title: 'Testing Dowsing: The Failure of the Munich Experiments',
+      url: 'https://skepticalinquirer.org/1999/01/testing-dowsing-the-failure-of-the-munich-experiments/',
+      locator: 'https://skepticalinquirer.org/1999/01/testing-dowsing-the-failure-of-the-munich-experiments/',
+      type: 'Magazin (Volltext)',
+      year: '1999',
+      levels: ['D'],
+      verification: 'VL',
+      note: 'Aufbaudaten der Münchner Versuche; Reanalyse',
+      interestNote:
+        'INTERESSENVERMERK: Skeptikerorganisation (CSICOP/Skeptical Inquirer), Autor langjähriger Kritiker; explizit parteiisch in der Kontroverse.',
+      accessNote:
+        'Volltext vollständig gelesen (HTML). Enthält Aufbaudaten, Ergebniszahlen und die Auseinandersetzung mit Betz et al. 1996.',
+    },
+    {
+      id: 'Q43',
+      citation:
+        'Betz, Hans-Dieter; König, Herbert L.: Erdstrahlen? Der Wünschelruten-Report. Wissenschaftlicher Untersuchungsbericht (1989). München: König und Betz',
+      shortName: 'Betz/König 1989 — Wünschelruten-Report',
+      title: 'Erdstrahlen? Der Wünschelruten-Report. Wissenschaftlicher Untersuchungsbericht',
+      url: 'https://lobid.org/resources/HT004087743',
+      locator: 'https://lobid.org/resources/HT004087743',
+      type: 'Forschungsbericht (Selbstverlag)',
+      year: '1989',
+      levels: ['C', 'D'],
+      verification: 'ISBN/Katalog',
+      note: 'Nur katalogisiert, nicht gelesen',
+      interestNote:
+        'INTERESSENVERMERK: Autoren sind Vertreter eines Ruteneffekts und Urheber der Münchner Versuche; Selbstverlag.',
+      accessNote:
+        "Katalogdatensatz geprüft; Bericht selbst nicht beschafft. Abweichung zu Q05: dort 'Herold-Verlag', im Katalog 'König und Betz' (Selbstverlag) – dokumentiert, nicht geglättet.",
+    },
+    {
+      id: 'Q44',
+      citation:
+        'McCarney, R.; Fisher, P.; Spink, F.; Flint, G. E.; van Haselen, R.: Can Homeopaths Detect Homeopathic Medicines by Dowsing? A Randomized, Double-Blind, Placebo-Controlled Trial (2002). Journal of the Royal Society of Medicine',
+      shortName: 'McCarney u. a. 2002 — Homeopaths Detect Medicines by Dowsing',
+      title:
+        'Can Homeopaths Detect Homeopathic Medicines by Dowsing? A Randomized, Double-Blind, Placebo-Controlled Trial',
+      url: 'https://doi.org/10.1177/014107680209500406',
+      locator: 'https://doi.org/10.1177/014107680209500406',
+      type: 'Zeitschrift (peer review)',
+      year: '2002',
+      levels: ['D'],
+      verification: 'AB',
+      note: 'Verblindeter Negativbefund; nur Abstract',
+      interestNote:
+        'Medizinische Fachgesellschaft; Test im homöopathischen Kontext, also innerhalb eines umstrittenen Feldes, aber methodisch als RCT angelegt.',
+      accessNote:
+        'Abstract vollständig gelesen; Volltext nicht beschafft (Open-Access-Status laut OpenAlex: true, jedoch nicht abgerufen).',
+    },
+    {
+      id: 'Q45',
+      citation:
+        'Locock, Martin: The effectiveness of dowsing as a method of determining the nature and location of buried features on historic garden sites (1995). Archaeological Prospection',
+      shortName: 'Locock 1995 — Dowsing on historic garden sites',
+      title:
+        'The effectiveness of dowsing as a method of determining the nature and location of buried features on historic garden sites',
+      url: 'https://doi.org/10.1002/1099-0763(199503)2:1<15::aid-arp6140020103>3.0.co;2-1',
+      locator: 'https://doi.org/10.1002/1099-0763(199503)2:1<15::aid-arp6140020103>3.0.co;2-1',
+      type: 'Zeitschrift (peer review)',
+      year: '1995',
+      levels: ['D'],
+      verification: 'AB',
+      note: 'Einzelfallstudie Archäologie; nur Abstract',
+      interestNote: 'Archäologische Prospektion; kein erkennbarer Interessenkonflikt.',
+      accessNote: 'Abstract gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q46',
+      citation: 'Easter, M. E.; Christensen, A. M.; Miller, M.: Dowsing for Bone (2021). Forensic Anthropology',
+      shortName: 'Easter u. a. 2021 — Dowsing for Bone',
+      title: 'Dowsing for Bone',
+      url: 'https://doi.org/10.5744/fa.2020.0024',
+      locator: 'https://doi.org/10.5744/fa.2020.0024',
+      type: 'Zeitschrift (peer review)',
+      year: '2021',
+      levels: ['D'],
+      verification: 'AB',
+      note: 'Blindtest mit Ungeübten; nur Abstract',
+      interestNote: 'Forensische Anthropologie; testet die praktische Verwendung durch Ermittlungsbehörden.',
+      accessNote: 'Abstract vollständig gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q47',
+      citation:
+        "von Tscharner, Vinzenz; Nigg, Benno Maurus: The Repeatability of Dowsing Reactions when Searching for 'Active Sites'. Site Dependent Dowsing Reactions (2018). Пространство и Время (Space and Time)",
+      shortName: "von Tscharner/Nigg 2018 — Repeatability at 'Active Sites'",
+      title:
+        "The Repeatability of Dowsing Reactions when Searching for 'Active Sites'. Site Dependent Dowsing Reactions",
+      url: 'https://doi.org/10.24411/2226-7271-2018-11092',
+      locator: 'https://doi.org/10.24411/2226-7271-2018-11092',
+      type: 'Zeitschrift',
+      year: '2018',
+      levels: ['C', 'D'],
+      verification: 'AB',
+      note: 'Einzelstudie, kein Replikationsstand',
+      interestNote:
+        'Autoren aus Biomechanik/Bewegungswissenschaft; kein erkennbarer kommerzieller Bezug, aber Publikationsort außerhalb des Mainstreams.',
+      accessNote:
+        'Abstract gelesen; Volltext über CyberLeninka frei zugänglich, aber nicht durchgearbeitet. Kein Volumen/keine Seiten in den CSL-Metadaten.',
+    },
+    {
+      id: 'Q48',
+      citation:
+        'Dharmadhikari, Nandkumar P.: Effect of geopathic stress on human heart rate and blood pressure (2010). Indian Journal of Science and Technology',
+      shortName: 'Dharmadhikari 2010 — Geopathic stress, heart rate',
+      title: 'Effect of geopathic stress on human heart rate and blood pressure',
+      url: 'https://doi.org/10.17485/ijst/2010/v3i1.11',
+      locator: 'https://doi.org/10.17485/ijst/2010/v3i1.11',
+      type: 'Zeitschrift',
+      year: '2010',
+      levels: ['E', 'C'],
+      verification: 'AB',
+      note: 'Ohne Verblindung und Sham; trägt die Gesundheitsbehauptung nicht',
+      interestNote:
+        "Autor aus dem Feld der 'geopathic stress'-Forschung; Zeitschrift mit sehr niedriger methodischer Hürde.",
+      accessNote: 'Abstract gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q49',
+      citation:
+        'Dodd, R. J.; Harris, J. W.; Humphries, C. M.; Reddish, V. C.: Towards a physics of dowsing: inverse effects in the northern and southern hemispheres (2002). Earth and Environmental Science Transactions of the Royal Society of Edinburgh',
+      shortName: 'Dodd u. a. 2002 — Towards a physics of dowsing',
+      title: 'Towards a physics of dowsing: inverse effects in the northern and southern hemispheres',
+      url: 'https://doi.org/10.1017/s0263593300000341',
+      locator: 'https://doi.org/10.1017/s0263593300000341',
+      type: 'Zeitschrift',
+      year: '2002',
+      levels: ['C', 'E'],
+      verification: 'AB',
+      note: 'Nicht unabhängig repliziert',
+      interestNote:
+        "Autorengruppe um V. C. Reddish verfolgt ein eigenes 'dowsing field'-Modell; kein kommerzieller Bezug erkennbar.",
+      accessNote: 'Abstract gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q50',
+      citation:
+        'Reddish, V. C.: Dowsing physics: interferometry (1998). Earth and Environmental Science Transactions of the Royal Society of Edinburgh',
+      shortName: 'Reddish 1998 — Dowsing physics: interferometry',
+      title: 'Dowsing physics: interferometry',
+      url: 'https://doi.org/10.1017/s0263593300002339',
+      locator: 'https://doi.org/10.1017/s0263593300002339',
+      type: 'Zeitschrift',
+      year: '1998',
+      levels: ['C', 'E'],
+      verification: 'AB',
+      note: 'Nicht unabhängig repliziert',
+      interestNote: "Vertreter eines physikalischen 'dowsing field'; kein kommerzieller Bezug erkennbar.",
+      accessNote: 'Abstract gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q51',
+      citation:
+        'Irons, F. E.: Concerning the nonlinear behaviour of the forced spherical pendulum including the dowsing pendulum (1990). European Journal of Physics',
+      shortName: 'Irons 1990 — Forced spherical pendulum',
+      title: 'Concerning the nonlinear behaviour of the forced spherical pendulum including the dowsing pendulum',
+      url: 'https://doi.org/10.1088/0143-0807/11/2/009',
+      locator: 'https://doi.org/10.1088/0143-0807/11/2/009',
+      type: 'Zeitschrift (Lehrbuchphysik)',
+      year: '1990',
+      levels: ['D', 'C'],
+      verification: 'AB',
+      note: 'Mechanische Erklärung des Pendels',
+      interestNote: 'Physikalische Grundlagenarbeit; keine esoterische Bindung.',
+      accessNote: 'Abstract gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q52',
+      citation:
+        'Easton, Randolph D.; Shor, Ronald E.: An Experimental Analysis of the Chevreul Pendulum Illusion (1976). The Journal of General Psychology',
+      shortName: 'Easton/Shor 1976 — Chevreul Pendulum Illusion',
+      title: 'An Experimental Analysis of the Chevreul Pendulum Illusion',
+      url: 'https://doi.org/10.1080/00221309.1976.9710871',
+      locator: 'https://doi.org/10.1080/00221309.1976.9710871',
+      type: 'Zeitschrift',
+      year: '1976',
+      levels: ['D'],
+      verification: 'AB',
+      note: 'Quantifizierung der Täuschung',
+      interestNote: 'Experimentalpsychologie; keine esoterische Bindung.',
+      accessNote: 'Abstract gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q53',
+      citation:
+        "Moga, Gyorgy; Dienes, Zoltan Paul: Expressing unconscious general knowledge using Chevreul's pendulum (2022). American Journal of Clinical Hypnosis",
+      shortName: 'Moga/Dienes 2022 — Unconscious knowledge, Chevreul',
+      title: "Expressing unconscious general knowledge using Chevreul's pendulum",
+      url: 'https://doi.org/10.1080/00029157.2021.2010641',
+      locator: 'https://doi.org/10.1080/00029157.2021.2010641',
+      type: 'Zeitschrift (peer review)',
+      year: '2022',
+      levels: ['D'],
+      verification: 'AB',
+      note: 'Kein Informationszugang im Paradigma',
+      interestNote: 'Hypnoseforschung; kein kommerzieller Bezug.',
+      accessNote: 'Abstract gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q54',
+      citation:
+        'Montgomery, Guy H.; Kirsch, Irving: The Effects of Subject Arm Position and Initial Experience on Chevreul Pendulum Responses (1996). American Journal of Clinical Hypnosis',
+      shortName: 'Montgomery/Kirsch 1996 — Arm position, Chevreul',
+      title: 'The Effects of Subject Arm Position and Initial Experience on Chevreul Pendulum Responses',
+      url: 'https://doi.org/10.1080/00029157.1996.10403336',
+      locator: 'https://doi.org/10.1080/00029157.1996.10403336',
+      type: 'Zeitschrift',
+      year: '1996',
+      levels: ['D'],
+      verification: 'AB',
+      note: 'Muskelspannung und Erwartung',
+      interestNote: 'Klinische Hypnoseforschung; kein kommerzieller Bezug.',
+      accessNote: 'Abstract gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q55',
+      citation:
+        'Gesellschaft zur wissenschaftlichen Untersuchung von Parawissenschaften (GWUP): Überraschung bei den Psi-Tests der GWUP (Biotensor-Test Emil Siebke) (2019). GWUP, Skeptiker-Artikel',
+      shortName: 'GWUP 2019 — Biotensor-Test Emil Siebke',
+      title: 'Überraschung bei den Psi-Tests der GWUP (Biotensor-Test Emil Siebke)',
+      url: 'https://www.gwup.org/skeptiker-artikel/pseudo-parawissenschaften/ueberraschung-psi-tests-gwup/',
+      locator: 'https://www.gwup.org/skeptiker-artikel/pseudo-parawissenschaften/ueberraschung-psi-tests-gwup/',
+      type: 'Vereinspublikation',
+      year: '2019',
+      levels: ['D'],
+      verification: 'VL',
+      note: '0 von 13 Treffern; Einzelfall, kein Studienbefund',
+      interestNote:
+        'INTERESSENVERMERK: Skeptikerorganisation, veranstaltet die Tests und berichtet darüber; Doppelrolle als Veranstalter und Berichterstatter.',
+      accessNote:
+        'Volltext gelesen; ergänzender Blogbeitrag vom 17.09.2019 verweist auf den ausführlichen Tag-eins-Bericht.',
+    },
+    {
+      id: 'Q56',
+      citation:
+        'Pickl, Karin Myria: Mit Rute und Pendel … Medizinische Radiästhesie-Diagnostik (MRD) (2009). Paracelsus – Naturheilpraxis – Psychologie – Tierheilkunde, Nr. 03/2009, S. 32-33 (PDF beim Heilpraktikerverband)',
+      shortName: 'Pickl 2009 — Medizinische Radiästhesie-Diagnostik',
+      title: 'Mit Rute und Pendel … Medizinische Radiästhesie-Diagnostik (MRD)',
+      url: 'https://heilpraktikerverband.de/images/stories/heilpraktiker/fachartikel/0309_MRD.pdf',
+      locator: 'https://heilpraktikerverband.de/images/stories/heilpraktiker/fachartikel/0309_MRD.pdf',
+      type: 'Heilpraktiker-Fachartikel',
+      year: '2009',
+      levels: ['B'],
+      verification: 'VL',
+      note: 'Praxisbeschreibung MRD; nennt Wirkung selbst unbewiesen',
+      interestNote:
+        'INTERESSENVERMERK: Heilpraktiker-Fachverband und praktizierende Autorin; bewirbt die Methode und das Instrument Biotensor®.',
+      accessNote: 'PDF geladen und gelesen (S. 32-33); Artikel ist ein Praxisbeitrag, keine Studie.',
+    },
+    {
+      id: 'Q57',
+      citation: 'Vogt, Evon Z.; Hyman, Ray: Water Witching U.S.A. (1959). Chicago: University of Chicago Press',
+      shortName: 'Vogt/Hyman 1959 — Water Witching U.S.A.',
+      title: 'Water Witching U.S.A.',
+      url: 'https://doi.org/10.1525/aa.1960.62.6.02a00640',
+      locator: 'https://doi.org/10.1525/aa.1960.62.6.02a00640',
+      type: 'Monografie (Soziologie)',
+      year: '1959',
+      levels: ['A', 'B'],
+      verification: 'OA-Meta',
+      note: 'Nur Metadaten geprüft',
+      interestNote: 'Akademische Sozialforschung; Hyman war später ein bekannter Skeptiker, Vogt Ethnologe.',
+      accessNote:
+        'Metadaten über Rezensionsdatensatz (American Anthropologist 62/1960, S. 1126-1127) geprüft; Buch selbst nicht beschafft.',
+    },
+    {
+      id: 'Q58',
+      citation: 'Vogt, Evon Z.: Interviewing Water-Dowsers (1956). American Journal of Sociology',
+      shortName: 'Vogt 1956 — Interviewing Water-Dowsers',
+      title: 'Interviewing Water-Dowsers',
+      url: 'https://doi.org/10.1086/221963',
+      locator: 'https://doi.org/10.1086/221963',
+      type: 'Zeitschrift',
+      year: '1956',
+      levels: ['A'],
+      verification: 'OA-Meta',
+      note: 'Nur Metadaten geprüft',
+      interestNote: 'Universitäre Ethnologie; kein kommerzielles Interesse.',
+      accessNote: 'Nur Metadaten geprüft (Seitenangabe 198 = Kurzbeitrag/Forschungsnotiz); Inhalt nicht gelesen.',
+    },
+    {
+      id: 'Q59',
+      citation:
+        'Kivari, Kristel: Energy as the Mediator between Natural and Supernatural Realms (2013). Journal of Ethnology and Folkloristics',
+      shortName: 'Kivari 2013 — Energy as Mediator',
+      title: 'Energy as the Mediator between Natural and Supernatural Realms',
+      url: 'https://ojs.utlib.ee/index.php/JEF/article/view/22611',
+      locator: 'https://ojs.utlib.ee/index.php/JEF/article/view/22611',
+      type: 'Zeitschrift (peer review, OA)',
+      year: '2013',
+      levels: ['A', 'B'],
+      verification: 'AB',
+      note: "Estland, Witch's Well; qualitative Fallstudie",
+      interestNote: 'Ethnologie/Folkloristik; untersucht Glaubenspraxis, keine Wirkbehauptung.',
+      accessNote:
+        'Abstract gelesen; Volltext (Open Access) nicht beschafft. Kein DOI vorhanden; Locator ist die Verlagsseite der Zeitschrift (OpenAlex W2992340880). Die Dissertation von 2016 (Univ. Tartu, hdl.handle.net/10062/51501) enthält laut Abstract keine Publikationen.',
+    },
+    {
+      id: 'Q60',
+      citation:
+        'Maymoun, Mouad; Boughaba, Abdesselam: Water Dowsing and Healing Practices in the Chefchaouen Basin: Between Popular Beliefs and Scientific Knowledge (2026). La Revue Espace, Homme et Développement Durable',
+      shortName: 'Maymoun/Boughaba 2026 — Water Dowsing, Chefchaouen',
+      title:
+        'Water Dowsing and Healing Practices in the Chefchaouen Basin: Between Popular Beliefs and Scientific Knowledge',
+      url: 'https://journals.imist.ma/index.php/index/article/view/6757',
+      locator: 'https://journals.imist.ma/index.php/index/article/view/6757',
+      type: 'Zeitschrift (arabisch)',
+      year: '2026',
+      levels: ['B', 'C'],
+      verification: 'AB',
+      note: 'Behauptet „praktische Erfolge“ ohne Kontrolltest',
+      interestNote: 'Regionale sozialwissenschaftliche Zeitschrift; deskriptiv-analytischer Ansatz.',
+      accessNote:
+        'Arabisches Abstract gelesen und sinngemäß übersetzt; Volltext nicht beschafft, kein DOI vorhanden (OpenAlex W7220155682).',
+    },
+    {
+      id: 'Q61',
+      citation:
+        'Al-Houdalieh, Salah Hussein; Jamal, Hasan Said: The Jinn and Dowsing Rods: The Recent Tragedy of Antiquities Plundering in Tulkarm, Palestine (2025). Al-Quds University Journal (Humanities and Social Sciences), Vol. 4, No. 4, S. 88-99',
+      shortName: 'Al-Houdalieh/Jamal 2025 — Jinn and Dowsing Rods',
+      title: 'The Jinn and Dowsing Rods: The Recent Tragedy of Antiquities Plundering in Tulkarm, Palestine',
+      url: 'https://doi.org/10.47874/aqupp:88-99',
+      locator: 'https://doi.org/10.47874/aqupp:88-99',
+      type: 'Zeitschrift (peer review)',
+      year: '2025',
+      levels: ['A', 'B'],
+      verification: 'AB',
+      note: 'Belegt Nutzung und Zerstörung, nicht Trefferquote',
+      interestNote: 'Archäologie/Denkmalschutz; dokumentiert Schäden durch Raubgrabungen.',
+      accessNote: 'Abstract gelesen; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q62',
+      citation:
+        'Shuleikin, V. N.; Zhigalin, A. D.: Dowsing, nanotechnologies and prospects of applied and fundamental geophysics (2016). Geologiya i Geofizika Yuga Rossii (Geology and Geophysics of the South of Russia)',
+      shortName: 'Shuleikin/Zhigalin 2016 — Dowsing and geophysics',
+      title: 'Dowsing, nanotechnologies and prospects of applied and fundamental geophysics',
+      url: 'https://doi.org/10.23671/vnc.2016.2.20813',
+      locator: 'https://doi.org/10.23671/vnc.2016.2.20813',
+      type: 'Zeitschrift (russisch)',
+      year: '2016',
+      levels: ['B', 'A'],
+      verification: 'AB',
+      note: 'Überblick ohne eigene Kontrolldaten',
+      interestNote:
+        'Geowissenschaftliches Institut; diskutiert Dowsing als offenes Forschungsproblem, ohne es zu bestätigen.',
+      accessNote: 'Russisches Abstract gelesen und sinngemäß übersetzt; Volltext nicht beschafft.',
+    },
+    {
+      id: 'Q63',
+      citation: 'The British Society of Dowsers: History – The British Society of Dowsers. britishdowsers.org',
+      shortName: 'British Society of Dowsers — History',
+      title: 'History – The British Society of Dowsers',
+      url: 'https://britishdowsers.org/dowsers-history/',
+      locator: 'https://britishdowsers.org/dowsers-history/',
+      type: 'Vereinswebsite',
+      year: '—',
+      levels: ['A', 'B'],
+      verification: 'VL',
+      note: 'Gründungsdaten als Eigenaussage',
+      interestNote:
+        'INTERESSENVERMERK: Selbstdarstellung der Vereinigung; Gründungsdatum und Selbstbild sind Eigenaussagen.',
+      accessNote: 'Seite mit Browser-User-Agent geladen (Standard-UA liefert HTTP 406); Text geprüft.',
+    },
+    {
+      id: 'Q64',
+      citation: 'Wikipedia-Autorinnen und -Autoren (fr): Radiesthésie. Wikipédia en français',
+      shortName: 'Radiesthésie (Wikipedia fr)',
+      title: 'Radiesthésie',
+      url: 'https://fr.wikipedia.org/wiki/Radiesth%C3%A9sie',
+      locator: 'https://fr.wikipedia.org/wiki/Radiesth%C3%A9sie',
+      type: 'Enzyklopädie',
+      year: '—',
+      levels: ['A', 'B'],
+      verification: 'VL',
+      note: 'Nennt 1926; Geschichte der Institutionen',
+      interestNote:
+        'Gemeinschaftlich erstellte Enzyklopädie; für Wirkaussagen nicht verwendbar, für Begriffs- und Institutionengeschichte mit Belegen brauchbar.',
+      accessNote: "Seite geladen; Abschnitt 'Histoire' geprüft (1926, 1929, 130+ Titel 1930-1940).",
+    },
+    {
+      id: 'Q65',
+      citation: 'Wikipedia-Autorinnen und -Autoren (en): Radiesthesia. Wikipedia, englischsprachige Ausgabe',
+      shortName: 'Radiesthesia (Wikipedia en)',
+      title: 'Radiesthesia',
+      url: 'https://en.wikipedia.org/wiki/Radiesthesia',
+      locator: 'https://en.wikipedia.org/wiki/Radiesthesia',
+      type: 'Enzyklopädie',
+      year: '—',
+      levels: ['B'],
+      verification: 'VL',
+      note: 'Überblick, keine Primärbelege',
+      interestNote: 'Gemeinschaftlich erstellte Enzyklopädie; beschreibt die Binnensicht der Praxis, keine Wirkbelege.',
+      accessNote: "Seite geladen; Abschnitt 'Claims' (Teleradiesthesia) geprüft.",
+    },
+    {
+      id: 'Q66',
+      citation: 'Encyclopedia.com (Gale): Dowsing. Encyclopedia.com',
+      shortName: 'Dowsing (Encyclopedia.com / Gale)',
+      title: 'Dowsing',
+      url: 'https://www.encyclopedia.com/philosophy-and-religion/other-religious-beliefs-and-general-terms/miscellaneous-religion/dowsing',
+      locator:
+        'https://www.encyclopedia.com/philosophy-and-religion/other-religious-beliefs-and-general-terms/miscellaneous-religion/dowsing',
+      type: 'Enzyklopädie (Tertiär)',
+      year: '—',
+      levels: ['A'],
+      verification: 'VL',
+      note: 'Bilanz der Kartentests',
+      interestNote: 'Tertiärquelle ohne eigene Forschung; nur für Institutionendaten mit Vorsicht verwendbar.',
+      accessNote: 'Seite geladen (HTTP 200); Abschnitt zur US-Geschichte und ASD-Gründung geprüft.',
+    },
   ],
   sourceLegend: [
     {
       label: 'Klasse A–E',
-      text: 'siehe Modul-Einstieg und die Seite „Methodik & Grenzen“.',
+      text: 'siehe Modul-Einstieg und die Seite „Methodik & Grenzen“. Die Klasse gilt je Aussage, nicht je Quelle; eine Quelle kann mehrere Klassen tragen (z. B. Q35: A für Geschichte, D für Bewertung).',
     },
     {
       label: 'Interessenvermerk',
@@ -1507,13 +2555,299 @@ export const RADIASTHESIE = {
     },
     {
       label: 'Verifikation',
-      text: 'VL = Volltext/Link geprüft; DOI/CF = Crossref-verifiziert; ISBN = Buch mit ISBN; Reg.-Schranke = Übersichtsbeitrag ohne Primärstudie; 404 = Verlagsseite nicht erreichbar (dokumentiert);',
+      text: 'VL = Volltext/Link geprüft; VL-T = Volltext nur teilweise geprüft (Auszug, Vorschau, einzelne Kapitel); AB = nur Abstract geprüft; DOI/CF = Crossref-verifiziert; ISBN/Katalog = Buch mit im Katalog bestätigter ISBN; OA-Meta = nur Metadaten über OpenAlex; Reg.-Schranke = Übersichtsbeitrag ohne Primärstudie.',
     },
     {
       label: 'Anmerkung',
       text: 'Offene Fragen und Lücken (Datierungskonflikt, nicht beschaffte Volltexte, fehlende Forschung) sind explizit vermerkt — nicht geglättet.',
     },
   ],
+  media: {
+    items: [
+      {
+        id: 'rad-media-01',
+        motiv: 'Klassisches Pendel',
+        topic: 'pendeln',
+        alt: 'Ein kegelförmiges Messingpendel hängt an einer geflochtenen dunkelblauen Schnur; die Schnur liegt in einer grossen Schlaufe über hellem Untergrund.',
+        caption:
+          'Kegelpendel aus Messing an geflochtener Kordel — die verbreitetste Bauform. Das Objekt ist ein Alltagsgegenstand; das Foto belegt keine Wirkung.',
+        attribution:
+          'Carivaldi, „Klassisches Pendel“, CC BY-SA 3.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+        license: {
+          short: 'CC BY-SA 3.0',
+          name: 'Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 Unported',
+          url: 'https://creativecommons.org/licenses/by-sa/3.0/',
+          shareAlike: true,
+          changeNote:
+            'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+        },
+        web: {
+          src: 'assets/radiasthesie/media/520/klassisches-pendel.webp',
+          srcset:
+            'assets/radiasthesie/media/520/klassisches-pendel.webp 520w, assets/radiasthesie/media/1040/klassisches-pendel.webp 1040w',
+          srcsetAvif:
+            'assets/radiasthesie/media/520/klassisches-pendel.avif 520w, assets/radiasthesie/media/1040/klassisches-pendel.avif 1040w',
+          width: 520,
+          height: 428,
+          fallbackPng: '',
+        },
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Radiesthetic_pendulum.jpg',
+        rights: {
+          laenderhinweis:
+            'Keine länderspezifische Besonderheit bekannt. Die Datei ist zusätzlich unter GFDL lizenziert; genutzt wird die CC-BY-SA-3.0-Option.',
+          marken: null,
+          bedenken:
+            'Bearbeitungen (Skalierung, Formatwechsel) sind Weitergaben unter gleichen Bedingungen: Die Varianten stehen ebenfalls unter CC BY-SA 3.0 und nennen Urheber und Änderung.',
+        },
+      },
+      {
+        id: 'rad-media-02',
+        motiv: 'Universalpendel',
+        topic: 'pendeln',
+        alt: 'Schwarze Kugel mit weissen Buchstaben und Markierungen (M, G, BL, VL), aus der ein Messingstab über eine braune Lederauflage austritt; eine Kordel führt nach rechts unten, unten liegt eine 10-Cent-Münze als Grössenvergleich.',
+        caption:
+          'Universalpendel: Kugelkörper mit aufgedruckten Buchstaben und Messingstab, laut Bildbeschreibung Ergebnis der Arbeiten von de Belizal, Chaumery und Morel. Die Münze dient nur dem Grössenvergleich.',
+        attribution:
+          'Wouter Hagens, „Universalpendel“, CC BY-SA 3.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+        license: {
+          short: 'CC BY-SA 3.0',
+          name: 'Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 Unported',
+          url: 'https://creativecommons.org/licenses/by-sa/3.0/',
+          shareAlike: true,
+          changeNote:
+            'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+        },
+        web: {
+          src: 'assets/radiasthesie/media/520/universalpendel.webp',
+          srcset:
+            'assets/radiasthesie/media/520/universalpendel.webp 520w, assets/radiasthesie/media/1040/universalpendel.webp 1040w',
+          srcsetAvif:
+            'assets/radiasthesie/media/520/universalpendel.avif 520w, assets/radiasthesie/media/1040/universalpendel.avif 1040w',
+          width: 520,
+          height: 438,
+          fallbackPng: '',
+        },
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Universal_pendulum_E.jpg',
+        rights: {
+          laenderhinweis: 'Keine länderspezifische Besonderheit bekannt.',
+          marken:
+            '„Universalpendel“ ist eine Gerätebezeichnung aus der Radiästhesie-Literatur; keine Prüfung einer allfälligen Marke erfolgt, die Bezeichnung wird rein beschreibend verwendet.',
+          bedenken:
+            'Die Buchstaben auf der Kugel sind Teil eines Deutungssystems, keine Messskala. Die Varianten stehen unter CC BY-SA 3.0.',
+        },
+      },
+      {
+        id: 'rad-media-03',
+        motiv: 'Radiästhesierute (Winkelrute)',
+        topic: 'radiasthesie',
+        alt: 'Eine Person in blauem Hemd hockt im Freien über steinigem, trockenem Boden und hält eine Winkelrute: zwei Messingarme laufen an einem blau lackierten Griffstück zusammen.',
+        caption:
+          'Winkelrute mit blau lackiertem Griffstück und zwei Messingarmen, im Gelände gehalten. Das Foto zeigt die Handhabung, nicht das Ergebnis einer Messung.',
+        attribution:
+          'José Antonio Agraz Sandoval, „Radiästhesierute (Winkelrute)“, CC0 1.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+        license: {
+          short: 'CC0 1.0',
+          name: 'Creative Commons Zero 1.0 – Verzicht auf alle Rechte (Public Domain Dedication)',
+          url: 'https://creativecommons.org/publicdomain/zero/1.0/deed.de',
+          shareAlike: false,
+          changeNote:
+            'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+        },
+        web: {
+          src: 'assets/radiasthesie/media/520/radiasthesierute.webp',
+          srcset: 'assets/radiasthesie/media/520/radiasthesierute.webp 520w',
+          srcsetAvif: 'assets/radiasthesie/media/520/radiasthesierute.avif 520w',
+          width: 520,
+          height: 390,
+          fallbackPng: '',
+        },
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Varilla_de_radiestesia.JPG',
+        rights: {
+          laenderhinweis:
+            'CC0 ist ein weltweiter Rechteverzicht; keine länderspezifische Einschränkung bekannt. Die Nennung des Urhebers erfolgt hier freiwillig.',
+          marken: null,
+          bedenken:
+            'Das Original ist mit 566 × 425 px klein; es wird deshalb nur eine 520-px-Variante erzeugt und nicht hochskaliert. Für eine grossformatige Verwendung ist das Bild nicht geeignet.',
+        },
+      },
+      {
+        id: 'rad-media-04',
+        motiv: 'Historische Wünschelrute',
+        topic: 'radiasthesie',
+        alt: 'Getönte Federzeichnung: Ein Mann in der Kleidung des 18. Jahrhunderts steht auf freiem Feld und hält mit beiden Händen eine gegabelte Rute schräg vor dem Körper; im Hintergrund Hügel.',
+        caption:
+          'Wünschelrute in einer Zeichnung aus dem erweiterten Exemplar von Thomas Pennants „A Tour in Wales“ (Ausgabe 1781), National Library of Wales. Gemeinfrei.',
+        attribution:
+          'Thomas Pennant (1726–1798), laut Dateiseite; Vorlage: National Library of Wales, „Historische Wünschelrute“, Public Domain (PD-old), via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+        license: {
+          short: 'Public Domain (PD-old)',
+          name: 'Gemeinfrei — Schutzfrist abgelaufen (Urheber 1798 gestorben)',
+          url: 'https://commons.wikimedia.org/wiki/Template:PD-old',
+          shareAlike: false,
+          changeNote:
+            'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+        },
+        web: {
+          src: 'assets/radiasthesie/media/520/wuenschelrute-historisch.webp',
+          srcset:
+            'assets/radiasthesie/media/520/wuenschelrute-historisch.webp 520w, assets/radiasthesie/media/1040/wuenschelrute-historisch.webp 1040w',
+          srcsetAvif:
+            'assets/radiasthesie/media/520/wuenschelrute-historisch.avif 520w, assets/radiasthesie/media/1040/wuenschelrute-historisch.avif 1040w',
+          width: 520,
+          height: 313,
+          fallbackPng: '',
+        },
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Divining_Rod.jpg',
+        rights: {
+          laenderhinweis:
+            'Gemeinfrei weltweit: Der Urheber starb 1798, die Schutzfrist von 70 Jahren nach dem Tod ist in allen relevanten Rechtsordnungen abgelaufen.',
+          marken: null,
+          bedenken:
+            'Die Dateiseite nennt als Urheber Thomas Pennant, obwohl die Beschreibung von Zeichnungen durch Moses Griffiths, Ingleby und weitere Künstler spricht. Wer das vorliegende Blatt gezeichnet hat, ist dort nicht eindeutig bestimmt — die Zuschreibung bleibt unsicher. Für die Gemeinfreiheit ist das ohne Belang, für die Bildunterschrift schon: Sie nennt deshalb die Publikation, nicht einen einzelnen Zeichner.',
+        },
+      },
+      {
+        id: 'rad-media-05',
+        motiv: 'Tarot — Drei-Karten-Legung',
+        topic: 'orakel',
+        alt: 'Drei Tarotkarten liegen offen in einer Reihe auf blauem Samt: Die Hohepriesterin, Zwei der Kelche und Ass der Schwerter; dahinter liegt das ganze Deck gefächert, daneben drei weisse Kerzen und eine Hand aus schwarzem Holz.',
+        caption:
+          'Drei-Karten-Legung mit dem Rider-Waite-Smith-Deck (Ausgabe Smith-Waite Centennial): Die Hohepriesterin, Zwei der Kelche, Ass der Schwerter.',
+        attribution:
+          'Nosferattus, „Tarot — Drei-Karten-Legung“, CC0 1.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+        license: {
+          short: 'CC0 1.0',
+          name: 'Creative Commons Zero 1.0 – Verzicht auf alle Rechte (Public Domain Dedication)',
+          url: 'https://creativecommons.org/publicdomain/zero/1.0/deed.de',
+          shareAlike: false,
+          changeNote:
+            'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten.',
+        },
+        web: {
+          src: 'assets/radiasthesie/media/520/tarot.webp',
+          srcset: 'assets/radiasthesie/media/520/tarot.webp 520w, assets/radiasthesie/media/1040/tarot.webp 1040w',
+          srcsetAvif: 'assets/radiasthesie/media/520/tarot.avif 520w, assets/radiasthesie/media/1040/tarot.avif 1040w',
+          width: 520,
+          height: 390,
+          fallbackPng: '',
+        },
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tarot_cards_-_3_card_spread_with_candles.jpg',
+        rights: {
+          laenderhinweis:
+            'Das Foto ist CC0. Die abgebildeten Kartenmotive sind Reproduktionen des 1909 erschienenen Rider-Waite-Smith-Decks (Zeichnungen: Pamela Colman Smith, gestorben 1951). Nach deutschem und EU-Recht endete die Schutzfrist Ende 2021; in den USA ist das Deck seit Langem gemeinfrei. Die Kartenrückseite und Eigenleistungen der Neuausgabe sind nicht abgebildet.',
+          marken:
+            '„Smith-Waite Centennial“ und „Rider-Waite-Smith“ sind Bezeichnungen von Verlagen; sie werden hier nur zur Identifikation des abgebildeten Decks genannt.',
+          bedenken:
+            'Die Legung ist gestellt. Das Bild dokumentiert eine verbreitete Praxis, nicht deren Treffsicherheit.',
+        },
+      },
+      {
+        id: 'rad-media-06',
+        motiv: 'Historisches Ouija-Brett',
+        topic: 'orakel',
+        alt: 'Freigestelltes historisches Ouija-Brett aus orangebraunem Holz mit schwarzen Buchstaben A bis Z in zwei Bögen, den Ziffern 1 bis 9 und 0 sowie den Wörtern YES, NO und GOOD BYE; oben ein ovales Herstellerlogo mit Vogel-Emblem, in den Ecken Sterne, oben rechts Stern und Mondsichel, oben links ein dunkler Kreis.',
+        caption:
+          'Ouija-Brett der Kennard Novelty Company, Baltimore, um 1890. Gemeinfrei; die Bezeichnung „Ouija“ ist als Marke geschützt — das Bild zeigt ein historisches Objekt, keine Produktempfehlung.',
+        attribution:
+          'Elijah Bond (1847–1921) und Charles Kennard (1856–1925), „Historisches Ouija-Brett“, Public Domain (PD-Art / PD-old-70-1923), via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)',
+        license: {
+          short: 'Public Domain (PD-Art / PD-old-70-1923)',
+          name: 'Gemeinfrei — zweidimensionales Werk, Schutzfrist abgelaufen',
+          url: 'https://commons.wikimedia.org/wiki/Template:PD-Art',
+          shareAlike: false,
+          changeNote:
+            'Skaliert (LANCZOS) auf 520 px und 1040 px Breite, nach WebP überführt, EXIF entfernt, ICC-Profil beibehalten, nicht beschnitten. Zusätzlich PNG-Fassung mit erhaltenem Alphakanal.',
+        },
+        web: {
+          src: 'assets/radiasthesie/media/520/ouija-historisch.webp',
+          srcset:
+            'assets/radiasthesie/media/520/ouija-historisch.webp 520w, assets/radiasthesie/media/1040/ouija-historisch.webp 1040w',
+          srcsetAvif:
+            'assets/radiasthesie/media/520/ouija-historisch.avif 520w, assets/radiasthesie/media/1040/ouija-historisch.avif 1040w',
+          width: 520,
+          height: 347,
+          fallbackPng: 'assets/radiasthesie/media/520/ouija-historisch.png',
+        },
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ouija_board_-_Kennard_Novelty_Company.png',
+        rights: {
+          laenderhinweis:
+            'Die Dateiseite traegt {{PD-Art|PD-old-70-1923}} — nicht, wie in der Ausgangsliste vermerkt, eine Public-Domain-Mark. Beide Wege führen zu gemeinfrei, der genaue Baustein ist aber PD-old-70-1923. PD-Art ist am US-Recht ausgerichtet; für Deutschland und die EU greift § 64 UrhG: Bond starb 1921, Kennard 1925, die 70-Jahres-Frist endete 1992 bzw. 1996. Das Werk ist in beiden Rechtsordnungen gemeinfrei.',
+          marken:
+            '„Ouija“ ist eine eingetragene Marke (Hasbro). Die Gemeinfreiheit des historischen Bretts berührt das Markenrecht nicht. Zulässig ist die beschreibende Verwendung als historisches Dokument; das Bild darf nicht als Herkunfts- oder Qualitätshinweis für Produkte dienen.',
+          bedenken:
+            'Das Brett ist freigestellt (Alphakanal mit echter Transparenz). Die Varianten behalten den Alphakanal; JPEG kommt dafür nicht in Frage, weil es keine Transparenz kennt.',
+        },
+      },
+    ],
+    ownAssets: [
+      {
+        file: 'assets/radiasthesie/pendel-geometrie.svg',
+        motiv: 'Pendelgeometrie',
+        alt: 'Schematische Zeichnung eines Pendels: Aufhängepunkt, Faden der Länge L, ausgelenkter Pendelkörper und der Winkel Alpha zwischen Ruhelage und Faden.',
+        caption: 'Pendelgeometrie: Länge L, Auslenkung α, Schwingungsdauer T.',
+        license: {
+          kurz: 'Eigenwerk (Projekt Esoterik-Welt)',
+          url: null,
+          hinweis:
+            'Im Repository liegt keine LICENSE-Datei; die Rechteangabe für eigene Assets ist projektweit offen (siehe offene Punkte).',
+        },
+      },
+      {
+        file: 'assets/radiasthesie/pendeltafel.svg',
+        motiv: 'Pendeltafel',
+        alt: 'Schematische Pendeltafel mit zwölf Segmenten: links JA, rechts NEIN, dazwischen die Ziffern 1 bis 10.',
+        caption: 'Pendeltafel als Ordnungsschema — die Tafel misst nichts.',
+        license: {
+          kurz: 'Eigenwerk (Projekt Esoterik-Welt)',
+          url: null,
+          hinweis:
+            'Im Repository liegt keine LICENSE-Datei; die Rechteangabe für eigene Assets ist projektweit offen (siehe offene Punkte).',
+        },
+      },
+      {
+        file: 'assets/radiasthesie/winkelrute.svg',
+        motiv: 'Winkelrute in Aufsicht',
+        alt: 'Schematische Aufsicht einer Winkelrute: zwei Ruten laufen vom Griffpunkt im Winkel von etwa 40 Grad auseinander.',
+        caption: 'Winkelrute in Aufsicht, eigene Zeichnung.',
+        license: {
+          kurz: 'Eigenwerk (Projekt Esoterik-Welt)',
+          url: null,
+          hinweis:
+            'Im Repository liegt keine LICENSE-Datei; die Rechteangabe für eigene Assets ist projektweit offen (siehe offene Punkte).',
+        },
+      },
+      {
+        file: 'assets/radiasthesie/orakel-karten.svg',
+        motiv: 'Orakelkarten',
+        alt: 'Drei hochformatige Karten liegen leicht gefächert übereinander; auf der mittleren stehen ein Kreis, ein Stern und ein Bogen.',
+        caption: 'Drei gefächerte Karten als Zeichen für Orakel, eigene Zeichnung.',
+        license: {
+          kurz: 'Eigenwerk (Projekt Esoterik-Welt)',
+          url: null,
+          hinweis:
+            'Im Repository liegt keine LICENSE-Datei; die Rechteangabe für eigene Assets ist projektweit offen (siehe offene Punkte).',
+        },
+      },
+    ],
+    figureSlot: {
+      breite: 520,
+      hoehe: 400,
+      quelle: 'js/data/radiasthesie.js / js/modules/radiasthesie-views.js (bestehendes Datenmodell)',
+      hinweis: 'Bestehender Slot für Themenbilder; die Fotos haben eigene Seitenverhältnisse.',
+    },
+    openIssues: [
+      'Keine LICENSE-Datei im Repository: die Lizenz der eigenen SVGs und der Projektinhalte ist nicht formal festgelegt.',
+      'Pfadabweichung zu RAD-01/INTEGRATIONSPUNKTE.md §2.5: dort sind assets/radiasthesie/fotos/ und assets/radiasthesie/media-manifest.json vorgesehen. Diese Karte schreibt assets/radiasthesie/media/ vor. Bewusst genau eine Manifestdatei unter assets/radiasthesie/media/media-manifest.json — eine Kopie an zweiter Stelle wäre eine zweite Wahrheit. RAD-06 muss diesen Pfad lesen.',
+      'Das Ouija-Logo ist bei 520 px nicht sicher zu entziffern; der Alt-Text beschreibt es deshalb, ohne es zu lesen.',
+      'Die Zuschreibung des Wünschelruten-Blattes an Thomas Pennant ist laut Dateiseite unsicher (Beschreibung nennt mehrere Zeichner).',
+      'Die Bilder sind noch nicht in js/data/radiasthesie.js eingebunden — das ist Integrationsumfang (RAD-06), nicht dieser Karte.',
+      'AVIF ist erzeugt, aber noch von keiner Ansicht ausgeliefert; der Einbau braucht <picture>/<source>.',
+      'Für die Auslieferung fehlt eine Bildnachweisseite im Seitenbau; hier liegt sie als generierte Datei bereit.',
+      'Bei den beiden CC-BY-SA-3.0-Motiven muss die Weitergabe unter gleichen Bedingungen sichtbar werden (Impressum- oder Bildnachweishinweis).',
+    ],
+    retrievedAt: '2026-11-03',
+    manifest: 'assets/radiasthesie/media/media-manifest.json',
+  },
   legal: {
     title: 'Rechtlicher Hinweis',
     paragraphs: [
@@ -1522,12 +2856,12 @@ export const RADIASTHESIE = {
       '**Kontakt / Verantwortlich:** Redaktion Esoterik-Welt, Themenmodul „Radiästhesie, Pendeln und Orakel“. Quellenbasis: 33 geprüfte Quellen (Q01–Q33) mit Crossref-geprüften DOIs, ISBN-Büchern, Behörden-, Museums- und Fachquellen sowie Skeptiker- und Befürworterpositionen mit Interessenvermerk. Stand: 2. November 2026.',
     ],
   },
-  updated: '2026-11-02',
+  updated: '2026-11-03',
   taxonomie: {
     $schema_version: '1.0',
     contract: 'radiasthesie-taxonomie',
     updated: '2026-11-03',
-    note: 'Quelle der Wahrheit für die additiven Entitäten des Radiästhesie-Moduls. Wird von scripts/generate-radiasthesie-data.cjs gegen js/modules/radiasthesie-vertraege.js validiert und danach als data.taxonomie in js/data/radiasthesie.js geschrieben. Artikel- und Quellenmodell bleiben unverändert; jede Aussage trägt Quellenmarker Qxx aus docs/radiasthesie-konzept/recherche/quellen.json.',
+    note: "Quelle der Wahrheit für die additiven Entitäten des Radiästhesie-Moduls. Wird von scripts/generate-radiasthesie-data.cjs gegen js/modules/radiasthesie-vertraege.js validiert und danach als data.taxonomie in js/data/radiasthesie.js geschrieben. Artikel- und Quellenmodell bleiben unverändert; jede Aussage trägt Quellenmarker Qxx aus docs/radiasthesie-konzept/recherche/quellen.json. Die sechs Commons-Fotos sind in RAD-05 geliefert und in RAD-06 über assets/radiasthesie/media/media-manifest.json eingebunden; ihre Einträge bleiben hier im Status 'planned', weil der Vertrag für verfügbare Medien einen flachen SVG-Pfad verlangt. Für Fotos ist das Manifest die maßgebliche Quelle, nicht diese Liste.",
     medien: [
       {
         id: 'rad-pendel-geometrie',

@@ -3023,3 +3023,30 @@
     display: none !important;
   }
 }
+
+/* --- Fotos (RAD-06) -------------------------------------------------------
+   Fotos aus dem Medien-Manifest. Bewusst ohne festen 520x400-Slot: Die
+   Motive haben eigene Seitenverhältnisse, und ein Beschnitt würde das
+   Motiv verändern. Die Maße kommen als width/height aus den Daten. */
+.rad-plate--photo {
+  max-width: 680px;
+}
+.rad-plate--photo picture {
+  display: block;
+}
+.rad-plate--photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+.rad-photo-credit {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+}
+.rad-media-credits li {
+  margin-bottom: var(--space-3);
+}

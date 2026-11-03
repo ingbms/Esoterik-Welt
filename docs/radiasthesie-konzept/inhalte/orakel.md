@@ -22,7 +22,7 @@ Wichtig zur Einordnung: Divination lässt sich als **Verhaltensphänomen** besch
 
 Die frühesten Belege für Tarot liegen in den 1440er- und 1450er-Jahren und befinden sich im Viereck Venedig–Mailand–Florenz–Urbino [Q16]. Das Deck umfasste 56 Farbkarten (Kelche, Schwerter, Stäbe, Münzen), 21 Trumpfkarten und den Narren — insgesamt 78 Karten [Q16]. Es war ein **Stichspiel**, kein Wahrsageinstrument. Die heutigen Tarot-Sätze mit esoterischen Inhalten stammen aus dem 19. Jahrhundert (vor allem Eliphas Levi, geb. Alphonse Louis Constant, und später Aleister Crowley) und haben mit den mittelalterlichen Karten **nichts zu tun** [Q16, Q19].
 
-Erhalten sind drei Luxusdecks: Der Visconti-Tarot (69 Karten, Beinecke Library, Universität Yale) und der Visconti-Sforza-Tarot (u. a. Morgan Library) — beide von der Familie Visconti in Mailand in Auftrag gegeben [Q16]. Der Vergleich historisch/modern ist als interaktives Element im Modul vorgesehen.
+Erhalten sind drei Luxusdecks: Der Visconti-Tarot (69 Karten, Beinecke Library, Universität Yale) und der Visconti-Sforza-Tarot (u. a. Morgan Library) — beide von der Familie Visconti in Mailand in Auftrag gegeben [Q16]. Historische und moderne Decks werden hier getrennt gehalten: Das Foto in diesem Kapitel zeigt eine Drei-Karten-Legung des 20. Jahrhunderts, nicht die Visconti-Karten.
 
 ## 3. Tarot II: Kartomantie und Okkultismus (1780–1900) (A)
 

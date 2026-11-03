@@ -1,5 +1,5 @@
 ---
-titel: "Glossar: Radiästhesie, Pendeln und Orakel — 13 Begriffe mit Evidenzklasse"
+titel: "Glossar: Radiästhesie, Pendeln und Orakel — 17 Begriffe mit Evidenzklasse"
 meta_description: "Kurzdefinitionen der zentralen Begriffe des Moduls — Radiästhesie, Wünschelrute, Pendel, Orakel, Tarot, I Ging, Runen, Bovis, Forer-Effekt — mit Evidenzklasse A–E und Quellenzuordnung."
 datum: 2026-11-02
 modul: ESOW-RAD-02 / Cluster A–C
@@ -46,6 +46,14 @@ autorin: Writer (t_059ba08e)
 **Divination** — Lesen von Zeichen; Grundfigur der Orakelpraxis. **Klasse A/D** — Q20, Q29.
 
 **Forer-Effekt** — Personen bewerten allgemeine Texte als hoch zutreffend für sich; erklärt gefühlte Treffsicherheit ohne Informationsübertragung. **Klasse D** — Q29.
+
+**Biotensor** — Kommerzielle Weiterentwicklung der Einhandrute, in der Heilpraxis als Diagnoseinstrument verwendet; von Anwendern selbst als wissenschaftlich unbewiesen bezeichnet. **Klasse B/E** — Q55, Q56.
+
+**Einhandrute / Tensor** — Einzelner Stab mit Handfläche und Gegengewicht, neben Gabel- und Winkelrute eine der überlieferten Instrumentformen. **Klasse B** — Q13, Q34.
+
+**Fernmutung** — Mutung über einer Karte oder über eine entfernte Person beziehungsweise einen entfernten Ort, ohne physische Präsenz; militärisch geprüft, ohne Treffer über dem Zufall. **Klasse B/D** — Q17, Q39, Q40.
+
+**Ideomotorik** — Unwillkürliche Muskelbewegung, die durch Erwartung und Aufmerksamkeit gesteuert wird; erklärt den Pendelausschlag ohne verborgene Information. **Klasse D** — Q52, Q53.
 
 ---
 

@@ -28,7 +28,7 @@ import { JOURNAL_LIMITS } from './radiasthesie-vertraege.js';
 import { CONFIDENCE_LABELS } from './journal-speicher.js';
 
 const SITE = 'Esoterik-Welt';
-const UPDATED_LABEL = 'Stand 2. November 2026';
+const UPDATED_LABEL = 'Stand 3. November 2026';
 const H1_ID = 'pendeln-title';
 
 const TITLES = {
@@ -43,7 +43,7 @@ const DESCRIPTIONS = {
   glossar:
     'Begriffe aus Radiästhesie, Pendeln und Orakel kurz erklärt — mit Evidenzstufe A–E und Quellenverweis, ohne Wirkungsversprechen.',
   quellen:
-    'Alle 33 Quellen des Themenmoduls mit Typ, Jahr, Prüftiefe, Interessenvermerk und, wo einschlägig, den Seiten, die sie belegen.',
+    'Alle Quellen des Themenmoduls mit Typ, Jahr, Prüftiefe, Interessenvermerk und, wo einschlägig, den Seiten, die sie belegen.',
   methodik: 'Wie dieses Modul prüft: Arbeitsannahme, Kennzeichnung A–E, Quelleninteressen, Grenzen und Datenschutz.',
   suche: 'Volltextsuche über Themen, Kapitel, Glossar und Quellen des Moduls Radiästhesie, Pendeln und Orakel.',
   notfound: 'Diese Adresse gehört nicht zum Themenmodul. Drei Wege zurück zu den Inhalten.',
@@ -65,6 +65,36 @@ function plate(figure, { className = '' } = {}) {
       <img src="${escapeHtml(figure.src)}" width="520" height="400" alt="${escapeHtml(figure.alt)}" loading="lazy" decoding="async" />
     </div>
     <figcaption>${inlineText(figure.caption)}</figcaption>
+  </figure>`;
+}
+
+/**
+ * Foto aus dem Medien-Manifest (RAD-05). Die Maße stammen aus dem Manifest,
+ * damit das Bild ohne Layoutsprung lädt; AVIF und WebP werden angeboten, das
+ * <img> bleibt der Rückfall. `object-fit` wird bewusst nicht erzwungen: Der
+ * 520×400-Slot der Zeichnungen würde die Fotos beschneiden, und ein
+ * Beschnitt verändert das Motiv — die Höhe folgt deshalb dem echten
+ * Seitenverhältnis.
+ */
+function photoFigure(item) {
+  const web = item.web;
+  const sizes = '(max-width: 640px) 100vw, 520px';
+  const avif = web.srcsetAvif
+    ? `<source type="image/avif" srcset="${escapeHtml(web.srcsetAvif)}" sizes="${sizes}" />`
+    : '';
+  const webp = web.srcset ? `<source type="image/webp" srcset="${escapeHtml(web.srcset)}" sizes="${sizes}" />` : '';
+  return `<figure class="rad-plate rad-plate--photo" id="bild-${escapeHtml(item.id)}">
+    <picture>
+      ${avif}${webp}
+      <img src="${escapeHtml(web.src)}" width="${web.width}" height="${web.height}" alt="${escapeHtml(
+        item.alt
+      )}" loading="lazy" decoding="async" />
+    </picture>
+    <figcaption><strong>${escapeHtml(item.motiv)}.</strong> ${inlineText(item.caption)}
+      <span class="rad-photo-credit">${inlineText(item.attribution)} · <a href="${
+        ROUTE.methodik
+      }">Bildnachweise und Lizenzen</a></span>
+    </figcaption>
   </figure>`;
 }
 
@@ -104,6 +134,7 @@ function topicSection(entry) {
     <h2 id="${headingId}" tabindex="-1">${escapeHtml(entry.title)}</h2>
     ${entry.chips.length ? `<p class="rad-section-levels">${levelChips(entry.chips)}</p>` : ''}
     ${renderBlocks(entry.blocks)}
+    ${(entry.photos || []).map(photoFigure).join('')}
   </section>`;
 }
 
@@ -1359,7 +1390,7 @@ export function renderQuellen(model, { sourceId = '' } = {}) {
   return {
     html,
     title: TITLES.quellen,
-    description: DESCRIPTIONS.quellen,
+    description: `Alle ${model.stats.sources} Quellen des Themenmoduls mit Typ, Jahr, Prüftiefe, Interessenvermerk und, wo einschlägig, den Seiten, die sie belegen.`,
     h1: 'Quellen & Belege',
     target: sourceId,
   };
@@ -1374,6 +1405,40 @@ export function renderMethodik(model) {
       </div>`
     )
     .join('');
+
+  const media = model.data.media || { items: [], ownAssets: [] };
+  const mediaCredits = [
+    ...media.items.map((item) => {
+      const rights = [item.rights && item.rights.laenderhinweis, item.rights && item.rights.marken]
+        .filter(Boolean)
+        .join(' ');
+      return `<li id="nachweis-${escapeHtml(item.id)}"><strong>${escapeHtml(item.motiv)}.</strong> ${inlineText(
+        item.attribution
+      )} Lizenz: ${
+        item.license.url
+          ? `<a href="${escapeHtml(item.license.url)}" rel="noopener">${escapeHtml(item.license.short)}</a>`
+          : escapeHtml(item.license.short)
+      }.${/verändert/i.test(item.attribution) ? '' : ` Änderung: ${escapeHtml(item.license.changeNote)}`}${
+        rights ? ` ${inlineText(rights)}` : ''
+      }</li>`;
+    }),
+    ...media.ownAssets.map(
+      (asset) =>
+        `<li><strong>${escapeHtml(asset.motiv)}.</strong> ${escapeHtml(asset.file)} — eigene Zeichnung des Projekts, keine Fremdvorlage.</li>`
+    ),
+  ].join('');
+
+  const shareAlike = media.items.filter((item) => item.license.shareAlike);
+  const shareAlikeNote = shareAlike.length
+    ? `${shareAlike.length === 2 ? 'Zwei Motive stehen' : `${shareAlike.length} Motive stehen`} unter CC BY-SA 3.0 (${shareAlike
+        .map((item) => escapeHtml(item.motiv))
+        .join(
+          ', '
+        )}). Wer sie weitergibt, muss Urheber und Änderung nennen und die Bearbeitung unter denselben Bedingungen weitergeben — das ist die Share-Alike-Bedingung von CC BY-SA. Die hier gezeigten Fassungen sind solche Bearbeitungen: skaliert und ins WebP-Format überführt.`
+    : 'Alle gezeigten Fotos stehen unter einer Lizenz ohne Share-Alike-Bedingung.';
+
+  const ownLicenseNote =
+    'Für die eigenen Zeichnungen liegt im Repository keine LICENSE-Datei; die Rechteangabe für Eigenassets ist projektweit offen. Sie werden hier als Eigenarbeiten geführt, ohne eine Lizenz zu behaupten, die nicht beschlossen ist.';
 
   const html = `<div class="rad">
     ${breadcrumb([{ label: 'Pendeln', href: ROUTE.base }, { label: 'Methodik & Grenzen' }])}
@@ -1400,7 +1465,7 @@ export function renderMethodik(model) {
 
       <section class="astro-section" id="pruefung" aria-labelledby="pruefung-title">
         <h2 id="pruefung-title" tabindex="-1">Was geprüft wird</h2>
-        <p class="astro-text">Die Quellenbasis umfasst ${model.stats.sources} Einträge: ${model.stats.crossref} mit Crossref-geprüfter DOI, ${model.stats.isbn} Bücher mit ISBN, dazu Behörden-, Museums- und Fachquellen sowie Enzyklopädien als Sekundärquellen.</p>
+        <p class="astro-text">Die Quellenbasis umfasst ${model.stats.sources} Einträge: ${model.stats.crossref} mit DOI, ${model.stats.isbn} Bücher mit ISBN, dazu Behörden-, Museums- und Fachquellen sowie Enzyklopädien als Sekundärquellen. Die Prüftiefe steht bei jeder Quelle: Volltext, Teilvolltext, Abstract, Katalogeintrag oder Metadaten.</p>
         <p class="astro-text">Zu jeder Quelle stehen Typ, Jahr, Prüftiefe und — wo vorhanden — ein Interessenvermerk. Fehlende Volltexte, Datierungskonflikte und Lücken in der Forschungslage werden in der Anmerkung benannt. Wo keine Untersuchung existiert, steht das als Feststellung und nicht als Beweis für oder gegen eine Wirkung.</p>
         <p class="astro-text"><a href="${ROUTE.quellen()}">Zum vollständigen Quellenverzeichnis</a></p>
       </section>
@@ -1424,8 +1489,19 @@ export function renderMethodik(model) {
 
       <section class="astro-section" id="datenschutz" aria-labelledby="datenschutz-title">
         <h2 id="datenschutz-title" tabindex="-1">Datenschutz</h2>
-        <p class="astro-text">Der Bereich ist eine statische Seite. Die Inhalte liegen als Datendatei im Projekt und werden im Browser gerendert; es gibt keine Anmeldung, kein Konto und keine Speicherung von Eingaben. Suchbegriffe und Buchstabenfilter stehen nur in der Adresse.</p>
+        <p class="astro-text">Der Bereich ist eine statische Seite. Die Inhalte liegen als Datendatei im Projekt und werden im Browser gerendert; es gibt keine Anmeldung und kein Konto. Suchbegriffe und Buchstabenfilter stehen nur in der Adresse.</p>
+        <p class="astro-text">Eine Ausnahme ist das Pendeltagebuch: Es speichert Ihre Einträge ausschließlich im lokalen Speicher des Browsers (Schlüssel mit dem Präfix <code>esot_rad_</code>). Nichts davon wird übertragen, es gibt keine Synchronisierung und keine Auswertung. Wer Zugriff auf das Browserprofil hat, kann die Einträge lesen — sie sind nicht verschlüsselt. Im Tagebuch lassen sich alle Einträge und Sicherungskopien vollständig löschen; die übrigen Werkzeuge legen keinen dauerhaften Zustand an.</p>
         <p class="astro-text">Es werden keine externen Skripte, Schriften oder Zähler nachgeladen. Auch die Quellen werden nur als Link geöffnet, wenn Sie darauf klicken.</p>
+      </section>
+
+      <section class="astro-section" id="bildnachweise" aria-labelledby="bildnachweise-title">
+        <h2 id="bildnachweise-title" tabindex="-1">Bildnachweise und Lizenzen</h2>
+        <p class="astro-text">Sechs Fotografien und vier eigene Zeichnungen stehen in diesem Bereich. Die Fotos stammen von Wikimedia Commons; Herkunft, Urheber, Lizenz und Änderung sind je Motiv einzeln belegt. Die Zeichnungen sind Eigenarbeiten des Projekts.</p>
+        <ul class="astro-list rad-media-credits">
+          ${mediaCredits}
+        </ul>
+        <p class="astro-text">${shareAlikeNote}</p>
+        <p class="astro-panel-note">${ownLicenseNote}</p>
       </section>
 
       <section class="astro-section" id="rechtliches" aria-labelledby="rechtliches-title">

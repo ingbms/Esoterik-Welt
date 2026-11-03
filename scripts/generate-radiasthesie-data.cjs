@@ -22,8 +22,28 @@ const contentDir = path.join(root, 'docs/radiasthesie-konzept/inhalte');
 const sourcesFile = path.join(root, 'docs/radiasthesie-konzept/recherche/quellen.json');
 const taxonomieFile = path.join(root, 'docs/radiasthesie-konzept/daten/taxonomie.json');
 const contractFile = path.join(root, 'js/modules/radiasthesie-vertraege.js');
+const mediaManifestFile = path.join(root, 'assets/radiasthesie/media/media-manifest.json');
 const outputFile = path.join(root, 'js/data/radiasthesie.js');
-const UPDATED = '2026-11-02';
+const UPDATED = '2026-11-03';
+
+// Bilder je Thema und Kapitel. Die Zuordnung ist eine redaktionelle
+// Entscheidung (welches Motiv erklärt welchen Abschnitt) und steht deshalb
+// hier, nicht im Medien-Manifest: Das Manifest beschreibt das Motiv, nicht
+// seinen Platz im Text. `media` ist die ID im Manifest.
+const PHOTOS = {
+  radiasthesie: [
+    { media: 'rad-media-04', section: 'geschichte-1' },
+    { media: 'rad-media-03', section: 'instrumente' },
+  ],
+  pendeln: [
+    { media: 'rad-media-01', section: 'arten' },
+    { media: 'rad-media-02', section: 'arten' },
+  ],
+  orakel: [
+    { media: 'rad-media-05', section: 'tarot-1' },
+    { media: 'rad-media-06', section: 'divination' },
+  ],
+};
 
 // --- Themenkonfiguration ---------------------------------------------------
 // Feste Oberflächentexte, die nicht im Fließtext der Quellen stehen: kurzer
@@ -58,6 +78,7 @@ const TOPICS = [
       'erdstrahlen',
       'geologie',
       'bovis',
+      'befunde',
       'einordnung',
     ],
     seoTitle: 'Radiästhesie — Ruten, Geschichte und Forschungsstand',
@@ -465,7 +486,95 @@ const VERIFIED_LABEL = {
   crossref: 'Crossref-verifiziert',
   library_record: 'ISBN/Katalog geprüft',
   secondary_isbn: 'ISBN aus Sekundärquelle',
+  // Stufen, die erst mit dem RAD-02-Delta (Q34–Q66) dazukommen. Bewusst
+  // schwächer formuliert als „Volltext geprüft“.
+  full_text_partial: 'Volltext teilweise geprüft',
+  abstract: 'Nur Abstract geprüft',
+  metadata_openalex: 'Metadaten (OpenAlex) geprüft',
 };
+
+// --- Medien ---------------------------------------------------------------
+// Das Medien-Manifest aus RAD-05 ist die einzige Quelle für Herkunft, Lizenz,
+// Alt-Text und Bildunterschrift. Der Generator prüft jede Datei, statt Pfaden
+// zu vertrauen: ein fehlendes Bild bricht den Lauf ab.
+function loadMedia(manifestFile, projectRoot) {
+  let manifest;
+  try {
+    manifest = JSON.parse(fs.readFileSync(manifestFile, 'utf8'));
+  } catch (error) {
+    fail(`Medien-Manifest nicht lesbar: ${error.message}`);
+  }
+  if (!Array.isArray(manifest.items) || !manifest.items.length) fail('Medien-Manifest ohne Motive');
+
+  const items = manifest.items.map((item) => {
+    const web = item.web || {};
+    if (!web.src || !web.width || !web.height) fail(`${item.id}: web.src/width/height fehlt`);
+    const listed = [web.src]
+      .concat(
+        String(web.srcset || '')
+          .split(',')
+          .map((part) => part.trim().split(/\s+/)[0])
+      )
+      .concat(
+        String(web.srcset_avif || '')
+          .split(',')
+          .map((part) => part.trim().split(/\s+/)[0])
+      )
+      .concat(web.fallback_png_520 ? [web.fallback_png_520] : []);
+    for (const file of listed.filter(Boolean)) {
+      if (!fs.existsSync(path.join(projectRoot, file))) fail(`${item.id}: Datei fehlt: ${file}`);
+    }
+    if (!item.alt || !item.caption) fail(`${item.id}: Alt-Text oder Bildunterschrift fehlt`);
+    if (!item.attribution_text) fail(`${item.id}: Attributionszeile fehlt`);
+    if (!item.lizenz || !item.lizenz.kurz) fail(`${item.id}: Lizenz fehlt`);
+    if (!item.einsatz) fail(`${item.id}: Einsatzthema fehlt`);
+    return {
+      id: item.id,
+      motiv: item.motiv,
+      topic: item.einsatz,
+      alt: item.alt,
+      caption: item.caption,
+      attribution: item.attribution_text,
+      license: {
+        short: item.lizenz.kurz,
+        name: item.lizenz.name || '',
+        url: item.lizenz.url || '',
+        shareAlike: Boolean(item.lizenz.share_alike),
+        changeNote: item.lizenz.aenderungshinweis || '',
+      },
+      web: {
+        src: web.src,
+        srcset: web.srcset || '',
+        srcsetAvif: web.srcset_avif || '',
+        width: web.width,
+        height: web.height,
+        fallbackPng: web.fallback_png_520 || '',
+      },
+      sourceUrl: (item.quelle && item.quelle.dateiseite) || '',
+      rights: item.rechte || {},
+    };
+  });
+
+  if (!Array.isArray(manifest.own_assets)) fail('Medien-Manifest ohne eigene Zeichnungen');
+  const ownAssets = manifest.own_assets.map((asset) => {
+    if (!fs.existsSync(path.join(projectRoot, asset.datei))) fail(`eigene Zeichnung fehlt: ${asset.datei}`);
+    return {
+      file: asset.datei,
+      motiv: asset.motiv,
+      alt: asset.alt,
+      caption: asset.caption,
+      license: asset.lizenz || {},
+    };
+  });
+
+  return {
+    items,
+    ownAssets,
+    figureSlot: manifest.figure_slot || null,
+    openIssues: manifest.open_issues || [],
+    retrievedAt: manifest.retrieved_at || '',
+  };
+}
 
 function parseSources(source, registry) {
   const { meta, body } = parseFrontmatter(source, 'quellenverzeichnis.md');
@@ -489,10 +598,11 @@ function parseSources(source, registry) {
     });
   }
 
-  // Maßgeblich ist die geprüfte Quellenbasis (recherche/quellen.json, 33
-  // Einträge). Die redaktionelle Tabelle liefert Kurznamen und Anmerkungen;
-  // vier Einträge (Q11, Q14, Q18, Q30) fehlen dort und werden aus der
-  // Quellenbasis ergänzt, statt sie stillschweigend zu unterschlagen.
+  // Maßgeblich ist die geprüfte Quellenbasis (recherche/quellen.json, 66
+  // Einträge: 33 Bestand Q01–Q33 + 33 Delta Q34–Q66 aus RAD-02). Die
+  // redaktionelle Tabelle liefert Kurznamen und Anmerkungen; Einträge ohne
+  // Zeile werden aus der Quellenbasis ergänzt, statt sie stillschweigend zu
+  // unterschlagen.
   const sources = (registry.sources || []).map((entry) => {
     const row = rows.get(entry.id) || {};
     const authors = (entry.authors || []).join('; ');
@@ -526,7 +636,7 @@ function parseSources(source, registry) {
     if (reference && notes.get(reference[1])) source.interestNote = notes.get(reference[1]);
   }
 
-  if (sources.length !== 33) fail(`Quellenbasis enthält ${sources.length} statt 33 Quellen`);
+  if (sources.length !== 66) fail(`Quellenbasis enthält ${sources.length} statt 66 Quellen (33 Bestand + 33 Delta)`);
 
   // Spaltenlegende aus dem Quellenverzeichnis (letzter Abschnitt der Datei).
   const legend = [];
@@ -539,7 +649,21 @@ function parseSources(source, registry) {
 
 // --- Zusammenbau ----------------------------------------------------------
 
-function buildTopic(config, parsed) {
+function buildTopic(config, parsed, media) {
+  const photosBySection = new Map();
+  for (const entry of PHOTOS[config.slug] || []) {
+    const item = media.items.find((candidate) => candidate.id === entry.media);
+    if (!item) fail(`${config.slug}: Bild ${entry.media} fehlt im Medien-Manifest`);
+    if (item.topic !== config.slug) {
+      fail(`${config.slug}: Bild ${entry.media} ist im Manifest dem Thema ${item.topic} zugeordnet`);
+    }
+    if (!config.sections.includes(entry.section)) {
+      fail(`${config.slug}: Bild ${entry.media} verweist auf unbekannten Anker ${entry.section}`);
+    }
+    if (!photosBySection.has(entry.section)) photosBySection.set(entry.section, []);
+    photosBySection.get(entry.section).push(item);
+  }
+
   const sections = parsed.sections.map((section, index) => {
     const id = config.sections[index];
     if (!id) fail(`${config.file}: mehr Abschnitte als Anker (${index + 1})`);
@@ -550,6 +674,7 @@ function buildTopic(config, parsed) {
       period: section.period,
       chips: section.chips,
       blocks: section.blocks,
+      photos: photosBySection.get(id) || [],
       words: wordsIn(section.blocks),
     };
   });
@@ -620,9 +745,24 @@ async function main() {
   const openQuestions = openQuestionsFromIntro(intro);
   if (levels.length !== 5) fail(`erwartet 5 Evidenzstufen, gefunden ${levels.length}`);
 
+  const media = loadMedia(mediaManifestFile, root);
+  for (const item of media.items) {
+    if (!['radiasthesie', 'pendeln', 'orakel'].includes(item.topic)) {
+      fail(`${item.id}: Einsatzthema ${item.topic} ist keine Modulseite`);
+    }
+  }
+
   const topics = {};
   for (const config of TOPICS) {
-    topics[config.slug] = buildTopic(config, parseTopic(read(config.file)));
+    topics[config.slug] = buildTopic(config, parseTopic(read(config.file)), media);
+  }
+  const usedMediaIds = new Set(
+    Object.values(topics).flatMap((topic) =>
+      topic.sections.flatMap((section) => section.photos.map((photo) => photo.id))
+    )
+  );
+  for (const item of media.items) {
+    if (!usedMediaIds.has(item.id)) fail(`Motiv ${item.id} ist im Manifest, aber in keiner Themenseite eingesetzt`);
   }
 
   const glossar = parseGlossar(read('glossar.md'));
@@ -675,6 +815,8 @@ async function main() {
       levels: levels.length,
       sources: quellen.sources.length,
       glossary: glossar.count,
+      photos: media.items.length,
+      ownDrawings: media.ownAssets.length,
     },
     levels,
     topics,
@@ -716,6 +858,14 @@ async function main() {
     glossary: glossar.groups,
     sources: quellen.sources,
     sourceLegend: quellen.legend,
+    media: {
+      items: media.items,
+      ownAssets: media.ownAssets,
+      figureSlot: media.figureSlot,
+      openIssues: media.openIssues,
+      retrievedAt: media.retrievedAt,
+      manifest: 'assets/radiasthesie/media/media-manifest.json',
+    },
     legal: {
       title: 'Rechtlicher Hinweis',
       paragraphs: legalParagraphs,

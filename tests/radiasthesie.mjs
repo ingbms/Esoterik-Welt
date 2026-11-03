@@ -1,8 +1,8 @@
 // Radiästhesie-Modul — Vertrags-, Vollständigkeits- und Renderingtests ohne Browser.
 //
 // Die Ansichten sind reine Funktionen (Modell + Route hinein, HTML heraus).
-// Damit lässt sich in Node prüfen, was tatsächlich gerendert wird: 30 Kapitel,
-// 33 Quellen, 13 Glossarbegriffe, auflösbare Quellenmarker, genau eine H1 je
+// Damit lässt sich in Node prüfen, was tatsächlich gerendert wird: 31 Kapitel,
+// 66 Quellen, 13 Glossarbegriffe, auflösbare Quellenmarker, genau eine H1 je
 // Ansicht und keine Platzhalter.
 //
 // Node behandelt .js in diesem Paket als CommonJS; die Browser-Module sind ESM.
@@ -31,7 +31,7 @@ const MODULE_FILES = [
 ];
 
 const TOPIC_SLUGS = ['radiasthesie', 'pendeln', 'orakel'];
-const CHAPTER_COUNTS = { radiasthesie: 8, pendeln: 10, orakel: 12 };
+const CHAPTER_COUNTS = { radiasthesie: 9, pendeln: 10, orakel: 12 };
 
 let tmp;
 let views;
@@ -86,7 +86,7 @@ test('drei Themenseiten mit vollständigem Kapitelinventar', () => {
 
 test('jeder Quellenmarker im Text löst auf eine vorhandene Quelle auf', () => {
   const ids = new Set(data.RADIASTHESIE.sources.map((source) => source.id));
-  assert.equal(ids.size, 33);
+  assert.equal(ids.size, 66);
   const missing = new Set();
   const used = new Set();
   for (const topic of Object.values(data.RADIASTHESIE.topics)) {
@@ -138,7 +138,7 @@ test('Quellenverzeichnis ist vollständig und ohne Platzhalter', () => {
 test('Glossar und Evidenzstufen sind vollständig', () => {
   assert.equal(
     data.RADIASTHESIE.glossary.reduce((sum, group) => sum + group.terms.length, 0),
-    13
+    17
   );
   for (const group of data.RADIASTHESIE.glossary) {
     assert.match(group.letter, /^[A-Z]$/);
@@ -253,20 +253,24 @@ test('Themenseite verlinkt nicht auf sich selbst als verwandt', () => {
   }
 });
 
-test('Glossar: Buchstabenleiste, Suche und 13 Begriffe', () => {
+test('Glossar: Buchstabenleiste, Suche und 17 Begriffe', () => {
   const html = htmlOf(views.renderGlossar(model));
-  assert.equal(count(html, /class="astro-term"/g), 13);
+  assert.equal(count(html, /class="astro-term"/g), 17);
   assert.equal(count(html, /<h1/g), 1);
   assert.ok(html.includes('id="glossarSuche"'), 'Suchfeld fehlt');
   assert.ok(html.includes('aria-live="polite"'), 'Trefferzahl braucht aria-live');
-  assert.equal(count(html, /class="astro-letter is-empty"/g), 18, 'leere Buchstaben sind nicht fokussierbar');
+  assert.equal(
+    count(html, /class="astro-letter is-empty"/g),
+    26 - new Set(data.RADIASTHESIE.glossary.map((group) => group.letter)).size,
+    'leere Buchstaben sind nicht fokussierbar'
+  );
   const gefiltert = htmlOf(views.renderGlossar(model, { query: 'bovis' }));
   assert.equal(count(gefiltert, /class="astro-term"/g), 1);
 });
 
-test('Quellen: 33 Karten mit Sprungziel und Rückverweis', () => {
+test('Quellen: 66 Karten mit Sprungziel und Rückverweis', () => {
   const html = htmlOf(views.renderQuellen(model));
-  assert.equal(count(html, /class="astro-source-card[ "]/g), 33);
+  assert.equal(count(html, /class="astro-source-card[ "]/g), 66);
   for (const source of data.RADIASTHESIE.sources) {
     assert.ok(html.includes(`id="quelle-${source.id}"`), `${source.id}: Anker fehlt`);
   }
@@ -281,7 +285,7 @@ test('Quellen: 33 Karten mit Sprungziel und Rückverweis', () => {
   assert.ok(target.includes('id="quelle-Q06"') && target.includes('is-target'));
 });
 
-test('Methodik: sechs Abschnitte plus Rechtliches, keine Wirkversprechen', () => {
+test('Methodik: Abschnitte inklusive Bildnachweise, keine Wirkversprechen', () => {
   const html = htmlOf(views.renderMethodik(model));
   for (const id of [
     'arbeitsannahme',
@@ -290,13 +294,50 @@ test('Methodik: sechs Abschnitte plus Rechtliches, keine Wirkversprechen', () =>
     'grenzen',
     'quelleninteressen',
     'datenschutz',
+    'bildnachweise',
     'rechtliches',
   ]) {
     assert.ok(html.includes(`id="${id}"`), `${id} fehlt`);
   }
   assert.match(html, /Keine Heil-, Therapie- oder Gesundheitsempfehlung/);
-  assert.match(html, /keine Anmeldung|kein Konto/);
+  // Datenschutz muss den lokalen Speicher des Tagebuchs benennen, nicht
+  // behaupten, es werde nichts gespeichert (RAD-10 speichert lokal).
+  assert.match(html, /lokalen Speicher des Browsers/);
+  assert.match(html, /esot_rad_/);
+  assert.doesNotMatch(html, /keine Speicherung von Eingaben/);
   assert.doesNotMatch(html, /heilt|garantiert|bewiesen wirksam/i);
+});
+
+test('Bildnachweise nennen alle sechs Fotos mit Lizenz und Share-Alike-Hinweis', () => {
+  const html = htmlOf(views.renderMethodik(model));
+  for (const item of data.RADIASTHESIE.media.items) {
+    assert.ok(html.includes(`nachweis-${item.id}`), `${item.id}: Nachweis fehlt`);
+    assert.ok(html.includes(item.attribution.slice(0, 40)), `${item.id}: Attributionszeile fehlt`);
+    assert.ok(html.includes(item.license.url || item.license.short), `${item.id}: Lizenzlink fehlt`);
+  }
+  assert.match(html, /CC BY-SA 3\.0/);
+  assert.match(html, /Weitergabe unter gleichen Bedingungen|Share-Alike/);
+  assert.match(html, /keine LICENSE-Datei/);
+});
+
+test('Fotos stehen im passenden Kapitel und tragen Alt-Text, Maße und Attributionszeile', () => {
+  const expected = { radiasthesie: 2, pendeln: 2, orakel: 2 };
+  for (const slug of TOPIC_SLUGS) {
+    const topic = data.RADIASTHESIE.topics[slug];
+    const html = htmlOf(views.renderTopic(model, topic));
+    assert.equal(count(html, /class="rad-plate rad-plate--photo"/g), expected[slug], `${slug}: Fotoanzahl`);
+    const withPhoto = topic.sections.filter((section) => section.photos.length).map((section) => section.id);
+    for (const anchor of withPhoto) {
+      const start = html.indexOf(`id="${anchor}"`);
+      assert.ok(start > -1, `${slug}/${anchor}: Kapitel fehlt`);
+      const next = html.indexOf('<section class="astro-section"', start + 10);
+      const chunk = html.slice(start, next === -1 ? undefined : next);
+      assert.match(chunk, /<picture>/, `${slug}/${anchor}: kein <picture>`);
+      assert.match(chunk, /type="image\/avif"/, `${slug}/${anchor}: keine AVIF-Quelle`);
+      assert.match(chunk, /width="\d+" height="\d+"/, `${slug}/${anchor}: Maße fehlen`);
+      assert.match(chunk, /class="rad-photo-credit"/, `${slug}/${anchor}: Attribution fehlt`);
+    }
+  }
 });
 
 test('Suche und Fehleransicht führen immer zurück', () => {

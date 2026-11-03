@@ -1,0 +1,535 @@
+{
+  "summary": {
+    "generated_at": "2026-11-03T06:16:58.846Z",
+    "checks": 211,
+    "failures": 0,
+    "counts": {
+      "topics": 3,
+      "chapters": 31,
+      "sources": 66,
+      "claims": 30,
+      "photos": 6,
+      "own_assets": 4,
+      "internal_links": 114
+    },
+    "unresolved_links": []
+  },
+  "contentRows": [
+    {
+      "frage": "Was ist Radiästhesie?",
+      "ziel": "#pendeln/radiasthesie/was",
+      "kapitel": "Was ist Radiästhesie?",
+      "stufen": "A/B",
+      "status": "ok"
+    },
+    {
+      "frage": "Welche historischen Ursprünge sind dokumentiert?",
+      "ziel": "#pendeln/radiasthesie/geschichte-1",
+      "kapitel": "Geschichte I: Bergleute, Kirche und Aufklärung — bis 1700",
+      "stufen": "A",
+      "status": "ok"
+    },
+    {
+      "frage": "Wie entstand der Begriff (1800–1945)?",
+      "ziel": "#pendeln/radiasthesie/geschichte-2",
+      "kapitel": "Geschichte II: Von der Strahlenfühligkeit zur Radiästhesie — 1800–1945",
+      "stufen": "A/C",
+      "status": "ok"
+    },
+    {
+      "frage": "Nachkriegszeit, Gitter, Institutionen",
+      "ziel": "#pendeln/radiasthesie/geschichte-3",
+      "kapitel": "Geschichte III: Nachkriegszeit, Gitter, Milieu und Münchner Experimente",
+      "stufen": "A/D",
+      "status": "ok"
+    },
+    {
+      "frage": "Was unterscheidet Wünschelrute, Winkelrute und Biotensor?",
+      "ziel": "#pendeln/radiasthesie/instrumente",
+      "kapitel": "Instrumentenkunde — Rute, Winkelrute, Einhandrute, Biotensor",
+      "stufen": "B",
+      "status": "ok"
+    },
+    {
+      "frage": "Erdstrahlen und Gesundheitsbehauptungen",
+      "ziel": "#pendeln/radiasthesie/erdstrahlen",
+      "kapitel": "Erdstrahlen, Wasseradern, Gitter — die Behauptungen im Detail",
+      "stufen": "B/E",
+      "status": "ok"
+    },
+    {
+      "frage": "Was sagt die Geologie?",
+      "ziel": "#pendeln/radiasthesie/geologie",
+      "kapitel": "Was die Geologie sagt — und was nicht",
+      "stufen": "D",
+      "status": "ok"
+    },
+    {
+      "frage": "Was sind Bovis-Skalen?",
+      "ziel": "#pendeln/radiasthesie/bovis",
+      "kapitel": "Bovis-Skalen: Ordnungsschema oder Messung?",
+      "stufen": "E",
+      "status": "ok"
+    },
+    {
+      "frage": "Welche Untersuchungen wurden durchgeführt?",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "kapitel": "Untersuchungen: was geprüft wurde und was dabei herauskam",
+      "stufen": "D/C",
+      "status": "ok"
+    },
+    {
+      "frage": "Wie funktioniert das Pendeln?",
+      "ziel": "#pendeln/pendeln/was",
+      "kapitel": "Was ein Pendel in der Praxis tun soll",
+      "stufen": "B",
+      "status": "ok"
+    },
+    {
+      "frage": "Geschichte des Pendelns",
+      "ziel": "#pendeln/pendeln/geschichte",
+      "kapitel": "Geschichte: Von Ammianus Marcellinus bis zur Kriegsmarine — 371 n. Chr. bis 19. Jh.",
+      "stufen": "A",
+      "status": "ok"
+    },
+    {
+      "frage": "Welche Pendelarten und Materialien gibt es?",
+      "ziel": "#pendeln/pendeln/arten",
+      "kapitel": "Pendelarten und Materialien",
+      "stufen": "B",
+      "status": "ok"
+    },
+    {
+      "frage": "Pendeln lernen: Ablauf und Eichung",
+      "ziel": "#pendeln/pendeln/lernen",
+      "kapitel": "Pendeln lernen: Ablauf, Eichung, Fragetechnik",
+      "stufen": "B",
+      "status": "ok"
+    },
+    {
+      "frage": "Wie werden Pendeltafeln benutzt?",
+      "ziel": "#pendeln/pendeln/tafeln",
+      "kapitel": "Pendeltafeln und Antwortskalen",
+      "stufen": "B/E",
+      "status": "ok"
+    },
+    {
+      "frage": "Biotensor und Einhandrute",
+      "ziel": "#pendeln/pendeln/biotensor",
+      "kapitel": "Biotensor und Einhandrute in der Alternativmedizin",
+      "stufen": "B/E",
+      "status": "ok"
+    },
+    {
+      "frage": "Kartenpendeln und Fernmutung",
+      "ziel": "#pendeln/pendeln/karten",
+      "kapitel": "Kartenpendeln und Fernmutung",
+      "stufen": "B",
+      "status": "ok"
+    },
+    {
+      "frage": "Welche Mechanismen sind bekannt?",
+      "ziel": "#pendeln/pendeln/mechanismen",
+      "kapitel": "Der Mechanismus: Carpenter-, Kohnstamm-Effekt, Chevreul-Täuschung",
+      "stufen": "D",
+      "status": "ok"
+    },
+    {
+      "frage": "Forschungsstand Pendeln",
+      "ziel": "#pendeln/pendeln/forschung",
+      "kapitel": "Forschungsstand: Was kontrollierte Tests zeigen",
+      "stufen": "D",
+      "status": "ok"
+    },
+    {
+      "frage": "Selbst testen (Werkzeuge)",
+      "ziel": "#pendeln/pendeln/labor",
+      "kapitel": "Selbst testen: verblindet prüfen",
+      "stufen": "D",
+      "status": "ok"
+    },
+    {
+      "frage": "Orakel und Divination",
+      "ziel": "#pendeln/orakel/divination",
+      "kapitel": "Divination: Warum Menschen Zeichen lesen",
+      "stufen": "A/D",
+      "status": "ok"
+    },
+    {
+      "frage": "Tarot: Geschichte",
+      "ziel": "#pendeln/orakel/tarot-1",
+      "kapitel": "Tarot I: Ein Spiel des 15. Jahrhunderts",
+      "stufen": "A",
+      "status": "ok"
+    },
+    {
+      "frage": "Forer-Effekt",
+      "ziel": "#pendeln/orakel/forer",
+      "kapitel": "Warum Orakel \"treffen\" (und wann nicht) — der Forer-Effekt",
+      "stufen": "D",
+      "status": "ok"
+    }
+  ],
+  "claimRows": [
+    {
+      "id": "C01",
+      "status": "belegt",
+      "quelle": "Q34",
+      "ziel": "#pendeln/radiasthesie/geschichte-1",
+      "stufen": "A",
+      "geprueft": "ja",
+      "aussage": "Die Wünschelrute ist seit dem 16. Jahrhundert schriftlich belegt; die früheste bekannte gedruckte Beschreibung der Rute zur Erz- und Wassersuche steht bei Agricola (1556)."
+    },
+    {
+      "id": "C02",
+      "status": "belegt",
+      "quelle": "Q34",
+      "ziel": "#pendeln/radiasthesie/geschichte-1",
+      "stufen": "A",
+      "geprueft": "ja",
+      "aussage": "Agricola erklärt die Bewegung der Rute bereits 1556 mechanisch durch die Handhabung des Rutengängers und nicht durch eine Kraft der Erze."
+    },
+    {
+      "id": "C03",
+      "status": "belegt",
+      "quelle": "Q35",
+      "ziel": "#pendeln/radiasthesie/geschichte-1",
+      "stufen": "A",
+      "geprueft": "ja",
+      "aussage": "Die wissenschaftliche Kontroverse ist mindestens seit dem 19. Jahrhundert dokumentiert; der USGS-Bericht von 1917 bilanziert die Rute als praktisch nutzlos und verweist auf Chevreul und Faraday."
+    },
+    {
+      "id": "C04",
+      "status": "belegt",
+      "quelle": "Q42",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "stufen": "D/C",
+      "geprueft": "ja",
+      "aussage": "Die Münchner Scheunenversuche (1986-1988) prüften 43 aus rund 500 vorausgewählte Rutengänger in 843 Einzeltests (104 Serien) an einer 10-Meter-Linie mit doppelblinder Zielsetzung."
+    },
+    {
+      "id": "C05",
+      "status": "widersprüchlich",
+      "quelle": "Q42",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "stufen": "D/C",
+      "geprueft": "ja",
+      "aussage": "Die Münchner Autoren deuteten ihre Daten als Beleg eines Ruteneffekts; die kritische Reanalyse kommt zum gegenteiligen Schluss (Zufall, nicht reproduzierbar). Der Konflikt ist bis heute nicht konsensual aufgelöst."
+    },
+    {
+      "id": "C06",
+      "status": "belegt",
+      "quelle": "Q04",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "stufen": "D/C",
+      "geprueft": "ja",
+      "aussage": "Die Erwiderung von Betz et al. (1996) behauptet einen persistierenden Effekt; eine unabhängige Replikation der Münchner Befunde durch eine andere Gruppe ist nicht dokumentiert."
+    },
+    {
+      "id": "C07",
+      "status": "belegt",
+      "quelle": "Q40",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "stufen": "D/C",
+      "geprueft": "ja",
+      "aussage": "Fern-/Kartenmutung wurde militärisch geprüft: Rutengänger sollten verdeckte Minen anhand von Karten lokalisieren; die Ergebnisse lagen nicht über Zufall. Die Serie umfasste nach Hansen (Q40) 20 Attrappen-Minen und sieben Rutengänger, nach Foulkes (Q39) u. a. eine 3.400-Fuß-Strecke mit fünf Minen."
+    },
+    {
+      "id": "C08",
+      "status": "belegt",
+      "quelle": "Q40",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "stufen": "D/C",
+      "geprueft": "ja",
+      "aussage": "Der Review von 1982 findet unter den Kartentests nur drei methodisch gut kontrollierte; nur einer erreicht knappe Signifikanz. Die Gesamtbilanz bleibt uneindeutig."
+    },
+    {
+      "id": "C09",
+      "status": "belegt",
+      "quelle": "Q52",
+      "ziel": "#pendeln/pendeln/mechanismen",
+      "stufen": "D",
+      "geprueft": "ja",
+      "aussage": "Die Chevreul-Pendeltäuschung ist experimentell als ideomotorisches Phänomen quantifiziert; Bewegungsumfang und -richtung hängen von Muskelspannung, Aufmerksamkeit und Pendellänge ab."
+    },
+    {
+      "id": "C10",
+      "status": "belegt",
+      "quelle": "Q53",
+      "ziel": "#pendeln/pendeln/mechanismen",
+      "stufen": "D",
+      "geprueft": "ja",
+      "aussage": "Ideomotorische Antworten liefern in kontrollierten Paradigmen keinen Zugang zu Informationen, die verbal nicht verfügbar sind; die Treffer liegen auf Zufallsniveau."
+    },
+    {
+      "id": "C11",
+      "status": "belegt",
+      "quelle": "Q56",
+      "ziel": "#pendeln/radiasthesie/instrumente",
+      "stufen": "B",
+      "geprueft": "ja",
+      "aussage": "Der 'Biotensor' ist eine kommerzielle Weiterentwicklung der Einhandrute und wird in der Heilpraxis zur Diagnostik eingesetzt; die Wirkung wird von Anwendern selbst als wissenschaftlich nicht bewiesen bezeichnet."
+    },
+    {
+      "id": "C12",
+      "status": "belegt",
+      "quelle": "Q55",
+      "ziel": "#pendeln/radiasthesie/instrumente",
+      "stufen": "B",
+      "geprueft": "ja",
+      "aussage": "Für den Biotensor existiert keine peer-reviewte Validierungsstudie; der dokumentierte Doppelblindtest eines Anwenders endete mit 0 von 13 Treffern."
+    },
+    {
+      "id": "C13",
+      "status": "belegt",
+      "quelle": "Q44",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "stufen": "D/C",
+      "geprueft": "ja",
+      "aussage": "Sechs mutende Homöopathen konnten Bryonia C12 nicht von Placebo unterscheiden (48,1 % Treffer, n = 156 Paare, p = 0,689)."
+    },
+    {
+      "id": "C14",
+      "status": "belegt",
+      "quelle": "Q45",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "stufen": "D/C",
+      "geprueft": "ja",
+      "aussage": "In der archäologischen Prospektion lokalisierte Rutengehen Metallobjekte, versagte aber bei bodengefüllten Strukturen; nicht zuordenbare Anomalien blieben häufig."
+    },
+    {
+      "id": "C15",
+      "status": "belegt",
+      "quelle": "Q46",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "stufen": "D/C",
+      "geprueft": "ja",
+      "aussage": "Ein kontrollierter Blindtest mit ungeübten Rutengängern fand keine bessere Trefferquote als visuelle Inspektion und keine Beziehung zum tatsächlichen Knochenversteck."
+    },
+    {
+      "id": "C16",
+      "status": "belegt",
+      "quelle": "Q47",
+      "ziel": "#pendeln/radiasthesie/befunde",
+      "stufen": "D/C",
+      "geprueft": "ja",
+      "aussage": "Eine Studie mit neun erfahrenen Rutengängern berichtet 20 von 20 nicht zufälligen Reaktionen an vier 'aktiven Orten' und überlappende Reaktionsbereiche."
+    },
+    {
+      "id": "C17",
+      "status": "unbelegt",
+      "quelle": "Q48",
+      "ziel": "#pendeln/radiasthesie/erdstrahlen",
+      "stufen": "B/E",
+      "geprueft": "ja",
+      "aussage": "Behauptungen, 'geopathischer Stress' verändere Herzfrequenz und Blutdruck, stützen sich auf Studien ohne Verblindung, Sham-Bedingung oder klare Zonendefinition."
+    },
+    {
+      "id": "C18",
+      "status": "unbelegt",
+      "quelle": "Q49",
+      "ziel": "#pendeln/radiasthesie/erdstrahlen",
+      "stufen": "B/E",
+      "geprueft": "ja",
+      "aussage": "Es existieren physikalische Deutungen, die ein nicht-elektromagnetisches 'dowsing field' postulieren (Interferometrie, Hemisphären-Inversion). Diese Behauptungen sind nicht unabhängig repliziert."
+    },
+    {
+      "id": "C19",
+      "status": "belegt",
+      "quelle": "Q51",
+      "ziel": "#pendeln/pendeln/was",
+      "stufen": "B",
+      "geprueft": "ja",
+      "aussage": "Die Bewegung eines handgeführten Pendels ist mit klassischer Mechanik (fremderregtes Kugelpendel) erklärbar; ein übernatürlicher Antrieb ist dafür nicht erforderlich."
+    },
+    {
+      "id": "C20",
+      "status": "belegt",
+      "quelle": "Q63",
+      "ziel": "#pendeln/radiasthesie/geschichte-2",
+      "stufen": "A/C",
+      "geprueft": "ja",
+      "aussage": "Die Radiästhesie institutionalisierte sich international: Begriff und französische Vereinigung 1926/1929, britische Gesellschaft 1933, US-amerikanische Gesellschaft 1961."
+    },
+    {
+      "id": "C21",
+      "status": "belegt",
+      "quelle": "Q63",
+      "ziel": "#pendeln/radiasthesie/geschichte-2",
+      "stufen": "A/C",
+      "geprueft": "ja",
+      "aussage": "Die britische Gesellschaft wurde von einem ehemaligen Offizier gegründet und verlagerte ihre Schwerpunkte im Lauf der Zeit von Wasser/Öl/Mineralien zu Gesundheit, Archäologie und spirituellen Anwendungen."
+    },
+    {
+      "id": "C22",
+      "status": "belegt",
+      "quelle": "Q36",
+      "ziel": "#pendeln/radiasthesie/geschichte-1",
+      "stufen": "A",
+      "geprueft": "ja",
+      "aussage": "An der Freiberger Bergakademie wurde das Rutengehen im 18./19. Jahrhundert in die bergbauliche Wissenschaft integriert und in den 1840er-Jahren amtlich begutachtet."
+    },
+    {
+      "id": "C23",
+      "status": "belegt",
+      "quelle": "Q59",
+      "ziel": "#pendeln/radiasthesie/was",
+      "stufen": "A/B",
+      "geprueft": "ja",
+      "aussage": "In Estland ist Rutengehen in einen lokalen Diskurs über 'Energien' aus dem Boden eingebettet (u. a. Witch's Well in Tuhala); es ist Teil volkskundlicher Naturdeutung, nicht nur ein technisches Suchverfahren."
+    },
+    {
+      "id": "C24",
+      "status": "unbelegt",
+      "quelle": "Q60",
+      "ziel": "#pendeln/radiasthesie/was",
+      "stufen": "A/B",
+      "geprueft": "ja",
+      "aussage": "Im marokkanischen Rif ist Wasserfindung mit Heilpraktiken und lokalen Glaubensvorstellungen verbunden; eine deskriptive Studie behauptet 'praktische Erfolge', ohne sie kontrolliert zu testen."
+    },
+    {
+      "id": "C25",
+      "status": "belegt",
+      "quelle": "Q61",
+      "ziel": "#pendeln/radiasthesie/was",
+      "stufen": "A/B",
+      "geprueft": "ja",
+      "aussage": "In Palästina nutzen Raubgräber Dschinn-Vorstellungen und Wünschelruten zur Suche nach Antiquitäten; die Archäologie dokumentiert dadurch verursachte Zerstörungen."
+    },
+    {
+      "id": "C26",
+      "status": "belegt",
+      "quelle": "Q62",
+      "ziel": "#pendeln/radiasthesie/was",
+      "stufen": "A/B",
+      "geprueft": "ja",
+      "aussage": "In der russischen Geowissenschaft wird Rutengehen weiter als ungelöstes Problem diskutiert; referiert werden ein geophysikalischer, ein biophysikalischer und ein 'astraler' Erklärungsansatz."
+    },
+    {
+      "id": "C27",
+      "status": "belegt",
+      "quelle": "Q57",
+      "ziel": "#pendeln/radiasthesie/was",
+      "stufen": "A/B",
+      "geprueft": "ja",
+      "aussage": "In den USA ist 'water witching' als ländliche Praxis weit verbreitet und wurde soziologisch/ethnografisch untersucht; die Persistenz wird mit Praktiken, Kosten und lokalen Unsicherheiten erklärt, nicht mit nachgewiesener Treffsicherheit."
+    },
+    {
+      "id": "C28",
+      "status": "belegt",
+      "quelle": "Q38",
+      "ziel": "#pendeln/radiasthesie/was",
+      "stufen": "A/B",
+      "geprueft": "ja",
+      "aussage": "Die deutsche Radiästhesieszene ist soziologisch als Milieu mit Geräten, Praktiken und Deutungen beschrieben, nicht als einheitliche Lehre."
+    },
+    {
+      "id": "C29",
+      "status": "widersprüchlich",
+      "quelle": "Q64",
+      "ziel": "#pendeln/radiasthesie/geschichte-2",
+      "stufen": "A/C",
+      "geprueft": "ja",
+      "aussage": "Die Datierung des Begriffs 'Radiästhesie' ist in den Quellen widersprüchlich: 1926 (Bouly, französische Enzyklopädie) steht gegen 1930 (Heilpraktiker-Fachartikel). Die ältere Angabe ist besser belegt, bleibt aber sekundär."
+    },
+    {
+      "id": "C30",
+      "status": "belegt",
+      "quelle": "Q34",
+      "ziel": "#pendeln/radiasthesie/instrumente",
+      "stufen": "B",
+      "geprueft": "ja",
+      "aussage": "Die überlieferten Instrumententypen umfassen Gabelrute (Hasel/Zweig), Winkel-/L-Rute, Einhandrute/Tensor, Pendel sowie kommerzielle Varianten wie den Biotensor; die Geräte unterscheiden sich in Handhabung, nicht in der behaupteten Wirkungsweise."
+    }
+  ],
+  "mediaRows": [
+    {
+      "id": "rad-media-01",
+      "motiv": "Klassisches Pendel",
+      "datei": "assets/radiasthesie/media/520/klassisches-pendel.webp",
+      "masse": "520×428",
+      "einsatz": "pendeln/arten",
+      "lizenz": "CC BY-SA 3.0",
+      "urheber": "[object Object]",
+      "alt": "Ein kegelförmiges Messingpendel hängt an einer geflochtenen dunkelblauen Schnur; die Schnur liegt in einer grossen Schlaufe über hellem Untergrund.",
+      "attribution": "Carivaldi, „Klassisches Pendel“, CC BY-SA 3.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)"
+    },
+    {
+      "id": "rad-media-02",
+      "motiv": "Universalpendel",
+      "datei": "assets/radiasthesie/media/520/universalpendel.webp",
+      "masse": "520×438",
+      "einsatz": "pendeln/arten",
+      "lizenz": "CC BY-SA 3.0",
+      "urheber": "[object Object]",
+      "alt": "Schwarze Kugel mit weissen Buchstaben und Markierungen (M, G, BL, VL), aus der ein Messingstab über eine braune Lederauflage austritt; eine Kordel führt nach rechts unten, unten liegt eine 10-Cent-Münze als Grössenvergleich.",
+      "attribution": "Wouter Hagens, „Universalpendel“, CC BY-SA 3.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)"
+    },
+    {
+      "id": "rad-media-03",
+      "motiv": "Radiästhesierute (Winkelrute)",
+      "datei": "assets/radiasthesie/media/520/radiasthesierute.webp",
+      "masse": "520×390",
+      "einsatz": "radiasthesie/instrumente",
+      "lizenz": "CC0 1.0",
+      "urheber": "[object Object]",
+      "alt": "Eine Person in blauem Hemd hockt im Freien über steinigem, trockenem Boden und hält eine Winkelrute: zwei Messingarme laufen an einem blau lackierten Griffstück zusammen.",
+      "attribution": "José Antonio Agraz Sandoval, „Radiästhesierute (Winkelrute)“, CC0 1.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)"
+    },
+    {
+      "id": "rad-media-04",
+      "motiv": "Historische Wünschelrute",
+      "datei": "assets/radiasthesie/media/520/wuenschelrute-historisch.webp",
+      "masse": "520×313",
+      "einsatz": "radiasthesie/geschichte-1",
+      "lizenz": "Public Domain (PD-old)",
+      "urheber": "[object Object]",
+      "alt": "Getönte Federzeichnung: Ein Mann in der Kleidung des 18. Jahrhunderts steht auf freiem Feld und hält mit beiden Händen eine gegabelte Rute schräg vor dem Körper; im Hintergrund Hügel.",
+      "attribution": "Thomas Pennant (1726–1798), laut Dateiseite; Vorlage: National Library of Wales, „Historische Wünschelrute“, Public Domain (PD-old), via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)"
+    },
+    {
+      "id": "rad-media-05",
+      "motiv": "Tarot — Drei-Karten-Legung",
+      "datei": "assets/radiasthesie/media/520/tarot.webp",
+      "masse": "520×390",
+      "einsatz": "orakel/tarot-1",
+      "lizenz": "CC0 1.0",
+      "urheber": "[object Object]",
+      "alt": "Drei Tarotkarten liegen offen in einer Reihe auf blauem Samt: Die Hohepriesterin, Zwei der Kelche und Ass der Schwerter; dahinter liegt das ganze Deck gefächert, daneben drei weisse Kerzen und eine Hand aus schwarzem Holz.",
+      "attribution": "Nosferattus, „Tarot — Drei-Karten-Legung“, CC0 1.0, via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)"
+    },
+    {
+      "id": "rad-media-06",
+      "motiv": "Historisches Ouija-Brett",
+      "datei": "assets/radiasthesie/media/520/ouija-historisch.webp",
+      "masse": "520×347",
+      "einsatz": "orakel/divination",
+      "lizenz": "Public Domain (PD-Art / PD-old-70-1923)",
+      "urheber": "[object Object]",
+      "alt": "Freigestelltes historisches Ouija-Brett aus orangebraunem Holz mit schwarzen Buchstaben A bis Z in zwei Bögen, den Ziffern 1 bis 9 und 0 sowie den Wörtern YES, NO und GOOD BYE; oben ein ovales Herstellerlogo mit Vogel-Emblem, in den Ecken Sterne, oben rechts Stern und Mondsichel, oben links ein dunkler Kreis.",
+      "attribution": "Elijah Bond (1847–1921) und Charles Kennard (1856–1925), „Historisches Ouija-Brett“, Public Domain (PD-Art / PD-old-70-1923), via Wikimedia Commons (verändert: skaliert und ins WebP-Format überführt)"
+    }
+  ],
+  "ownRows": [
+    {
+      "datei": "assets/radiasthesie/pendel-geometrie.svg",
+      "motiv": "Pendelgeometrie",
+      "lizenz": "Eigenwerk (Projekt Esoterik-Welt)"
+    },
+    {
+      "datei": "assets/radiasthesie/pendeltafel.svg",
+      "motiv": "Pendeltafel",
+      "lizenz": "Eigenwerk (Projekt Esoterik-Welt)"
+    },
+    {
+      "datei": "assets/radiasthesie/winkelrute.svg",
+      "motiv": "Winkelrute in Aufsicht",
+      "lizenz": "Eigenwerk (Projekt Esoterik-Welt)"
+    },
+    {
+      "datei": "assets/radiasthesie/orakel-karten.svg",
+      "motiv": "Orakelkarten",
+      "lizenz": "Eigenwerk (Projekt Esoterik-Welt)"
+    }
+  ]
+}

@@ -79,12 +79,12 @@ test('bestehendes Artikel- und Quellenmodell bleibt unverändert nutzbar', () =>
   assert.deepEqual(Object.keys(RADIASTHESIE.topics).sort(), ['orakel', 'pendeln', 'radiasthesie']);
   assert.equal(
     Object.values(RADIASTHESIE.topics).reduce((sum, topic) => sum + topic.sections.length, 0),
-    30
+    31
   );
-  assert.equal(RADIASTHESIE.sources.length, 33);
+  assert.equal(RADIASTHESIE.sources.length, 66);
   assert.equal(
     RADIASTHESIE.glossary.reduce((sum, group) => sum + group.terms.length, 0),
-    13
+    17
   );
   assert.deepEqual(
     RADIASTHESIE.levels.map((level) => level.key),

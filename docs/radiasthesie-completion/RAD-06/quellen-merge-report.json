@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-11-03",
+  "base_sources": 33,
+  "delta_sources": 33,
+  "total": 66,
+  "base_sha256_before": "6cd703bea66e9d1604599608918d02c2c1dae65b8251d86af0f9a80365ea9057",
+  "full_registry_sha256_after": "c62a368229b26c592de3e863987ebc892112436f1d860775b2121d624da253f2",
+  "changes": [
+    {
+      "kind": "verification_mapped",
+      "id": "Q34",
+      "from": "full_text",
+      "to": "page_loaded",
+      "reason": "Delta-Stufe hat im Bestandsschema dieselbe Bedeutung"
+    },
+    {
+      "kind": "verification_mapped",
+      "id": "Q41",
+      "from": "metadata_doi_csl",
+      "to": "crossref",
+      "reason": "Delta-Stufe hat im Bestandsschema dieselbe Bedeutung"
+    },
+    {
+      "kind": "verification_mapped",
+      "id": "Q42",
+      "from": "full_text",
+      "to": "page_loaded",
+      "reason": "Delta-Stufe hat im Bestandsschema dieselbe Bedeutung"
+    },
+    {
+      "kind": "verification_mapped",
+      "id": "Q55",
+      "from": "full_text",
+      "to": "page_loaded",
+      "reason": "Delta-Stufe hat im Bestandsschema dieselbe Bedeutung"
+    },
+    {
+      "kind": "verification_mapped",
+      "id": "Q56",
+      "from": "full_text",
+      "to": "page_loaded",
+      "reason": "Delta-Stufe hat im Bestandsschema dieselbe Bedeutung"
+    },
+    {
+      "kind": "correction",
+      "id": "Q01",
+      "code": "K03",
+      "field": "year_note",
+      "from": "Seite ohne belastbare Datumsangabe; Stand der Abfrage 2026-11-02",
+      "to": "Webfassung, aktualisiert 2026-09-17 (Abruf 2026-11-02); Printoriginal: USGS GIP „Water Dowsing“, 1977, DOI 10.3133/7000104"
+    },
+    {
+      "kind": "correction",
+      "id": "Q30",
+      "code": "K04",
+      "field": "verified",
+      "from": "secondary_isbn",
+      "to": "library_record",
+      "note": "ISBN 3-432-84473-5 über lobid (TT002048267) bestätigt"
+    }
+  ],
+  "unchanged_base_entries": 31,
+  "verification_levels_used": [
+    "abstract",
+    "crossref",
+    "full_text_partial",
+    "library_record",
+    "metadata_openalex",
+    "page_loaded",
+    "secondary_isbn"
+  ],
+  "topics": {
+    "radiasthesie": 49,
+    "pendeln": 19,
+    "orakel": 13
+  }
+}
