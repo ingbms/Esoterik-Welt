@@ -96,7 +96,10 @@ const MEDIA_COLUMNS = [
   'delivery',
 ];
 
-const MEDIA_VECTOR_FORMATS = new Set(['svg', 'ttf', 'otf', 'woff', 'woff2', 'json', 'txt']);
+// Formate ohne Pixelmaße. §8 verlangt `n/a` „bei Vektor- und Schriftformaten“;
+// `md` und `html` sind Textformate ohne Rastermaß und gehören aus demselben Grund
+// hierher. Rasterformate (jpg/webp/avif/png) verlangen weiterhin zwingend Maße.
+const MEDIA_VECTOR_FORMATS = new Set(['svg', 'ttf', 'otf', 'woff', 'woff2', 'json', 'txt', 'md', 'html']);
 
 const ID_PATTERNS = {
   design: /^DES-(TOK|CMP|LAY|PAT|STA|ICO|ILL|BP)-[0-9]{3}$/,
