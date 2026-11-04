@@ -1,0 +1,56 @@
+---
+/**
+ * Detaildialoge der Bestandswerkzeuge.
+ *
+ * Markup und Klassen stammen aus `index.html` (Modal-Block). Der Fokus-Rahmen
+ * kommt aus `js/dialog.js` (`DialogController`), den die jeweilige Insel
+ * initialisiert; ohne JavaScript bleiben die Dialoge geschlossen und die
+ * Werkzeuge zeigen ihre Listen.
+ */
+export type DialogKind = 'card' | 'crystal' | 'rune' | 'article';
+
+export interface Props {
+  kind: DialogKind;
+}
+
+const { kind } = Astro.props;
+
+const DIALOGS: Record<DialogKind, { id: string; titleId: string; title: string; bodyId: string; closeId: string; wide?: boolean }> = {
+  card: { id: 'cardModal', titleId: 'cardModalTitle', title: 'Karten-Detail', bodyId: 'cardModalBody', closeId: 'closeCardModal' },
+  crystal: {
+    id: 'crystalModal',
+    titleId: 'crystalModalTitle',
+    title: 'Kristall-Detail',
+    bodyId: 'crystalModalBody',
+    closeId: 'closeCrystalModal',
+  },
+  rune: { id: 'runeModal', titleId: 'runeModalTitle', title: 'Runen-Detail', bodyId: 'runeModalBody', closeId: 'closeRuneModal' },
+  article: {
+    id: 'articleModal',
+    titleId: 'articleModalTitle',
+    title: 'Artikel',
+    bodyId: 'articleModalBody',
+    closeId: 'closeArticleModal',
+    wide: true,
+  },
+};
+
+const dialog = DIALOGS[kind];
+---
+
+<div
+  class="modal-backdrop"
+  id={dialog.id}
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby={dialog.titleId}
+  hidden
+>
+  <div class="modal" style={dialog.wide ? 'max-width: 800px' : undefined}>
+    <div class="modal-header">
+      <h3 class="modal-title" id={dialog.titleId}>{dialog.title}</h3>
+      <button class="modal-close" id={dialog.closeId} aria-label="Schließen">&times;</button>
+    </div>
+    <div class="modal-body" id={dialog.bodyId}></div>
+  </div>
+</div>

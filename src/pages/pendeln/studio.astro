@@ -1,74 +1,23 @@
 ---
 /**
- * Pendeltafel-Studio — Tafeln beschriften, Stil wählen, ausgeben.
+ * Pendeltafel-Studio — Tafeln beschriften, Stil wählen, als SVG oder
+ * Druckvorlage ausgeben.
  *
- * Instrumente und Medien stammen aus der Werkstatt-Konfiguration; die
- * SVG-/Druck-Ausgabe ist eine Client-Insel (`pendeltafel-studio.js`).
+ * Bestandsansicht `#pendeln/studio` (`pendeltafel-studio.js`).
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import AreaNav from '../../components/AreaNav.astro';
-import { WERKSTATT } from '../../data/legacy';
-
-const ROUTE = '/pendeln/studio.html';
-const trail = [
-  { label: 'Start', href: '/' },
-  { label: 'Radiästhesie & Pendeln', href: '/radiasthesie/' },
-  { label: 'Tafel-Studio' },
-];
-const NAV = [
-  { href: '/radiasthesie/', label: 'Bereich' },
-  { href: '/pendeln/labor.html', label: 'Labor' },
-  { href: '/pendeln/studio.html', label: 'Tafel-Studio' },
-  { href: '/pendeln/experiment.html', label: 'Experiment' },
-  { href: '/pendeln/journal.html', label: 'Tagebuch' },
-  { href: '/pendeln/suche.html', label: 'Suche' },
-];
-const instruments = WERKSTATT.instrumente;
+import PendelnTool from '../../components/PendelnTool.astro';
 ---
 
 <BaseLayout
   title="Pendeltafel-Studio — Tafeln gestalten und ausgeben"
-  description="Tafeln beschriften, Farbstil wählen und als SVG oder Druckvorlage ausgeben — mit den Instrumenten-Daten der Radiästhesie-Werkstatt."
-  trail={trail}
+  description="Tafeln beschriften, Farbstil wählen und als SVG oder Druckvorlage ausgeben — ein Ordnungsschema, keine Messung."
+  trail={[
+    { label: 'Start', href: '/' },
+    { label: 'Radiästhesie', href: '/radiasthesie/' },
+    { label: 'Pendeltafel-Studio' },
+  ]}
+  mainClass="page-shell"
 >
-  <div class="page-head">
-    <p class="label">Werkzeug · Gestaltung</p>
-    <h1>Pendeltafel-Studio</h1>
-    <p class="lede">
-      Tafeln beschriften, Farbstil wählen, als SVG oder Druckvorlage ausgeben. Die Tafel ist ein Ordnungsschema: Was ein
-      Segment bedeutet, wird vorher festgelegt — die Tafel misst nichts.
-    </p>
-    <p class="client-note">
-      Der Editor ist eine Client-Insel des Bestands (<code>js/modules/pendeltafel-studio.js</code>); Formular
-      <code>#ptfForm</code>, keine Speicherung, keine Übertragung.
-    </p>
-    <AreaNav items={NAV} current={ROUTE} />
-  </div>
-
-  <div class="page-body">
-    <section aria-labelledby="instrumente-title">
-      <h2 id="instrumente-title">Instrumente ({instruments.length})</h2>
-      <ul class="summary-list">
-        {instruments.map((instrument) => (
-          <li>
-            <h3>{instrument.title}</h3>
-            <p>{instrument.summary}</p>
-            <p class="entry-note">
-              {instrument.instrumentType} · Evidenzstatus: {instrument.evidenceStatus} · geprüft:{' '}
-              {instrument.lastReviewed}
-            </p>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    <section aria-labelledby="grenzen-title">
-      <h2 id="grenzen-title">Grenzen</h2>
-      <ul class="block-list">
-        <li>Die Tafel ist ein selbst gesetztes Ordnungsschema, kein Messinstrument.</li>
-        <li>Beschriftungen und Farben sind Gestaltung; sie begründen keine Wirkung.</li>
-        <li>Es werden keine Eingaben gespeichert oder übertragen.</li>
-      </ul>
-    </section>
-  </div>
+  <PendelnTool view="studio" title="Pendeltafel-Studio" />
 </BaseLayout>

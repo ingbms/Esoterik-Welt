@@ -1,83 +1,39 @@
 ---
 /**
- * Kristalle — Katalog der 30 Steine.
+ * Kristalle — Katalog mit Chakra-, Farb- und Wirkungsfilter, Favoriten und
+ * Detaildialog.
  *
- * Quelle ist `data/crystals.json` (die Datei, die das Modul tatsächlich lädt).
- * `js/data/crystals.js` mit 36 Steinen ist toter Code und wird bewusst nicht
- * übernommen (Migrationsplan §3 „Toter Bestand“, §4.2).
- *
- * Jedes Bild trägt `alt` und einen Bildnachweis; die Lizenzangaben sind Teil
- * der Seite, nicht nur des Impressums (Migrationsplan R12).
+ * Markup aus dem Bestand (`#crystals`), Initialisierung über dasselbe Modul
+ * (`js/modules/crystals.js`). Der Katalogdatensatz (`data/crystals.json`, die
+ * Datei, die das Modul tatsächlich lädt) wird als JSON-Insel eingebettet —
+ * dieselbe Lösung wie im Offline-Build des Bestands (`#local-crystals-data`);
+ * damit entfällt der relative `fetch('./data/crystals.json')`, der in der
+ * Astro-Ausgabe sonst ins Leere liefe.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { KRISTALLE } from '../data/legacy';
+import ToolDialog from '../components/ToolDialog.astro';
+import crystalsJson from '../../data/crystals.json';
+import body from '../content/tools/kristalle.html?raw';
 
-const trail = [{ label: 'Start', href: '/' }, { label: 'Kristalle' }];
-
-const byChakra = KRISTALLE.reduce<Record<string, typeof KRISTALLE>>((acc, crystal) => {
-  acc[crystal.chakra] = acc[crystal.chakra] ?? [];
-  acc[crystal.chakra].push(crystal);
-  return acc;
-}, {});
+const payload = JSON.stringify(crystalsJson).replace(/</g, '\\u003c');
 ---
 
 <BaseLayout
   title="Kristalle & Steine — Chakra, Farbe, Wirkung | VELARKANA"
   description="Kristall-Katalog mit Chakra-, Farb- und Wirkungsfilter: Steine im Überblick, Details und Favoriten."
-  trail={trail}
-  jsonLd={{ '@type': 'CollectionPage', name: 'Kristall-Katalog', numberOfItems: KRISTALLE.length }}
+  mainClass="page-shell"
 >
-  <div class="page-head">
-    <p class="label">Kristalle · {KRISTALLE.length} Steine</p>
-    <h1>Kristall-Katalog</h1>
-    <p class="lede">
-      {KRISTALLE.length} Steine mit Formel, Mohs-Härte, Chakra- und Farbzuordnung, traditioneller Wirkungsangabe und
-      vollständigem Bildnachweis. Die Wirkungsangaben sind Traditionsmaterial, keine medizinischen Aussagen.
-    </p>
-    <ul class="chip-row">
-      {Object.entries(byChakra).map(([chakra, list]) => (
-        <li class="chip">
-          {chakra} ({list.length})
-        </li>
-      ))}
-    </ul>
-  </div>
-
-  <div class="page-body">
-    {Object.entries(byChakra).map(([chakra, list]) => (
-      <section aria-labelledby={`chakra-${chakra.replace(/[^a-zA-Z0-9]+/g, '-')}`}>
-        <h2 id={`chakra-${chakra.replace(/[^a-zA-Z0-9]+/g, '-')}`}>{chakra}</h2>
-        <ul class="summary-list">
-          {list.map((crystal) => (
-            <li id={crystal.id}>
-              <h3>{crystal.name}</h3>
-              <p class="entry-note">
-                {crystal.chemical_formula} · Mohs {crystal.hardness} · {crystal.color} · {crystal.rarity}
-              </p>
-              <figure>
-                <img
-                  src={`/${crystal.image}`}
-                  alt={crystal.image_alt}
-                  width="640"
-                  height="640"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="caption">
-                  Foto: {crystal.image_credit.author} · {crystal.image_credit.license} ·{' '}
-                  <a href={crystal.image_credit.source_url} rel="noopener">
-                    {crystal.image_credit.source_label}
-                  </a>
-                  <br />
-                  Änderungen: {crystal.image_credit.changes}
-                </figcaption>
-              </figure>
-              <p>{crystal.effect}</p>
-              <p>{crystal.description}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))}
-  </div>
+  <Fragment set:html={body} />
+  <ToolDialog kind="crystal" />
+  <script type="application/json" id="local-crystals-data" set:html={payload} />
 </BaseLayout>
+
+<script>
+  import { DialogController } from '../../js/dialog.js';
+  import { initCrystalsModule } from '../../js/modules/crystals.js';
+
+  const modal = document.getElementById('crystalModal');
+  const closeButton = document.getElementById('closeCrystalModal');
+  if (modal && closeButton) new DialogController(modal, closeButton);
+  initCrystalsModule();
+</script>

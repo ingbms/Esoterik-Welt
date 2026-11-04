@@ -85,9 +85,9 @@ Nicht von Hand bearbeiten — Skript erneut ausführen.
 
 | Gegenstand | Erwartet | Gebaut | Status |
 |---|---|---|---|
-| geprüfte interne Verweise | 7264 | — |  |
-| externe Verweise (nicht geprüft) | 575 | — |  |
-| Fragment-/mailto-/data-Verweise | 238 | — |  |
+| geprüfte interne Verweise | 7538 | — |  |
+| externe Verweise (nicht geprüft) | 584 | — |  |
+| Fragment-/mailto-/data-Verweise | 253 | — |  |
 | tote interne Ziele | 0 | 0 | keine |
 
 ## 5. Sitemap und robots

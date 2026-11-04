@@ -1,135 +1,27 @@
 ---
 /**
- * Mondphasen — acht Phasen, Vertiefung und Quellen.
+ * Mondphasen — aktuelle Phase, Zeitachse, Monatskalender, iCal-Export,
+ * Phasenregister und Deutung.
  *
- * Die astronomische Berechnung der aktuellen Phase (Mondphase heute,
- * Beleuchtungsgrad, iCal-Export) ist eine Client-Funktion des Bestands; sie
- * bleibt als Insel offen. Die Deutungstexte, die Geometrie, die Zahlen und die
- * Ritualbeschreibungen sind hier vollständig als Dokument vorhanden.
+ * Markup aus dem Bestand (`#moon`), Berechnung und Kalender aus
+ * `js/modules/moon.js` (Meeus, Kap. 48–49) im Browser. Die Datenmodule
+ * (`js/data/moon.js`) werden vom Modul selbst geladen.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
-import {
-  MOON_DEEP_DIVE as DEEP,
-  MOON_RITUALS as RITUALS,
-  MOON_SOURCES as SOURCES,
-  PHASE_CONTENT,
-  PHASE_ORDER,
-} from '../data/legacy';
-import { formatInline } from '../lib/inline';
-
-const trail = [{ label: 'Start', href: '/' }, { label: 'Mondphasen' }];
+import body from '../content/tools/mondphasen.html?raw';
 ---
 
 <BaseLayout
   title="Mondphasen, Kalender & Deutung | VELARKANA"
   description="Aktuelle Mondphase mit Beleuchtungsgrad, Zeitachse der vier Hauptphasen, Monatskalender mit Tagesdetails und iCal-Export."
-  trail={trail}
-  jsonLd={{ '@type': 'CollectionPage', name: 'Mondphasen', numberOfItems: PHASE_ORDER.length }}
+  mainClass="page-shell"
 >
-  <div class="page-head">
-    <p class="label">Mondphasen · {PHASE_ORDER.length} Phasen</p>
-    <h1>Mondphasen</h1>
-    <p class="lede">
-      Acht Phasen zwischen Neumond und abnehmender Sichel: Erscheinungsbild, Geometrie, astronomische Zahlen, kulturelle
-      Einordnung und eine Reflexionsfrage. Die Phasenangaben sind gerundete Näherungen eines synodischen Monats von
-      29,53059 Tagen.
-    </p>
-  </div>
-
-  <div class="page-body">
-    <ul class="entry-grid">
-      {PHASE_ORDER.map((key) => (
-        <li>
-          <a class="entry-card" href={`#phase-${key}`}>
-            <span class="entry-title">{PHASE_CONTENT[key].name}</span>
-            <span class="entry-note">{PHASE_CONTENT[key].sector}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-
-    {PHASE_ORDER.map((key) => {
-      const phase = PHASE_CONTENT[key];
-      return (
-        <section id={`phase-${key}`} aria-labelledby={`phase-${key}-title`}>
-          <h2 id={`phase-${key}-title`}>{phase.name}</h2>
-          <table class="facts">
-            <caption class="sr-only">Kennzahlen zu {phase.name}</caption>
-            <tbody>
-              <tr>
-                <th scope="row">Sektor</th>
-                <td>{phase.sector}</td>
-              </tr>
-              <tr>
-                <th scope="row">Erscheinung</th>
-                <td set:html={formatInline(phase.appearance)} />
-              </tr>
-              <tr>
-                <th scope="row">Geometrie</th>
-                <td set:html={formatInline(phase.geometry)} />
-              </tr>
-              <tr>
-                <th scope="row">Zahlen</th>
-                <td set:html={formatInline(phase.numbers)} />
-              </tr>
-              <tr>
-                <th scope="row">Kultur</th>
-                <td set:html={formatInline(phase.culture)} />
-              </tr>
-              <tr>
-                <th scope="row">Reflexion</th>
-                <td set:html={formatInline(phase.reflection)} />
-              </tr>
-            </tbody>
-          </table>
-          {(RITUALS[key] ?? []).length > 0 && (
-            <>
-              <h3>Rituale</h3>
-              <ul class="summary-list">
-                {RITUALS[key].map((ritual) => (
-                  <li>
-                    <h4>{ritual.title}</h4>
-                    <p>{ritual.description}</p>
-                    <p class="entry-note">Dauer: {ritual.duration}</p>
-                    <ul class="block-list">
-                      {ritual.items.map((item: string) => (
-                        <li>{item}</li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-        </section>
-      );
-    })}
-
-    {Object.entries(DEEP).map(([key, section]) => (
-      <section aria-labelledby={`tiefe-${key}`}>
-        <h2 id={`tiefe-${key}`}>{section.title}</h2>
-        {section.paragraphs.map((paragraph) => (
-          <p set:html={formatInline(paragraph)} />
-        ))}
-      </section>
-    ))}
-
-    <section aria-labelledby="quellen-title">
-      <h2 id="quellen-title">Quellen</h2>
-      <ul class="block-sources">
-        {SOURCES.map((source) => (
-          <li>
-            {source.url ? (
-              <a href={source.url} rel="noopener">
-                {source.label}
-              </a>
-            ) : (
-              source.label
-            )}
-            {source.note ? <span class="entry-note"> — {source.note}</span> : null}
-          </li>
-        ))}
-      </ul>
-    </section>
-  </div>
+  <Fragment set:html={body} />
 </BaseLayout>
+
+<script>
+  import { MoonModule } from '../../js/modules/moon.js';
+
+  const moon = new MoonModule();
+  void moon.init();
+</script>

@@ -20,9 +20,10 @@ const trail = [{ label: 'Start', href: '/' }, { label: 'Impressum' }];
   title="Impressum — VELARKANA"
   description="Impressum, Bild- und Schriftennachweise der VELARKANA."
   trail={trail}
+  footerVariant="compact"
 >
   <div class="container legal-content">
-    <h1 class="sr-only">Impressum</h1>
+
     <Fragment set:html={body} />
   </div>
 </BaseLayout>

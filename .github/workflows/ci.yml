@@ -58,8 +58,14 @@ jobs:
         run: npm ci
       - name: Type check (astro check, TypeScript strict)
         run: npm run check
+      - name: Format check (Prettier)
+        run: npm run format:check
       - name: Static production build (Astro -> dist/)
         run: npm run build
+      - name: Migration gate (routes, counts, SEO parity, internal links)
+        run: npm run verify:migration
+      - name: Build audit (single H1, single WebPage node, .nojekyll)
+        run: node scripts/migration/audit-build.cjs
       - name: Post status — ci/astro
         if: always()
         uses: actions/github-script@v7

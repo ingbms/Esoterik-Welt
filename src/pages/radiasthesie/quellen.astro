@@ -2,24 +2,15 @@
 /**
  * Quellen und Belege — 66 Quellen mit Typ, Jahr, Prüftiefe, Interessenvermerk.
  *
- * Die Kennungen (`Q01` …) sind Anker (`id="Q09"`), weil die Kapitel und das
- * Glossar genau darauf verweisen. Damit bleiben die Verweise auflösbar, die im
- * Bestand auf `?quelle=Q09` zeigten.
+ * Inhalt 1:1 aus dem Bestandsgenerator (Fragment
+ * `src/content/radiasthesie/quellen.body.html`). Die Kennungen (`Q01` …) sind
+ * Anker (`id="quelle-Q01"`), weil die Kapitel und das Glossar genau darauf
+ * verweisen.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import AreaNav from '../../components/AreaNav.astro';
 import { RADIASTHESIE as R } from '../../data/legacy';
+import body from '../../content/radiasthesie/quellen.body.html?raw';
 
-const ROUTE = '/radiasthesie/quellen.html';
-const AREA_NAV = [
-  { href: '/radiasthesie/', label: 'Übersicht' },
-  { href: '/radiasthesie/radiasthesie.html', label: 'Radiästhesie' },
-  { href: '/radiasthesie/pendeln.html', label: 'Pendeln' },
-  { href: '/radiasthesie/orakel.html', label: 'Orakel' },
-  { href: '/radiasthesie/glossar.html', label: 'Glossar' },
-  { href: '/radiasthesie/quellen.html', label: 'Quellen' },
-  { href: '/radiasthesie/methodik.html', label: 'Methodik' },
-];
 const trail = [
   { label: 'Start', href: '/' },
   { label: R.module.title, href: '/radiasthesie/' },
@@ -32,58 +23,8 @@ const trail = [
   exactTitle
   description="Alle 66 Quellen des Themenmoduls mit Typ, Jahr, Prüftiefe, Interessenvermerk und, wo einschlägig, den Seiten, die sie belegen."
   trail={trail}
+  mainClass="container rad-root rad-static-main"
   jsonLd={{ '@type': 'CollectionPage', name: 'Quellen und Belege', numberOfItems: R.sources.length }}
 >
-  <div class="page-head">
-    <p class="label">Belege</p>
-    <h1>Quellen und Belege</h1>
-    <p class="lede">
-      {R.counts.sources} Quellen, gruppiert nach Kennung. Jede Angabe nennt Typ, Jahr, Prüftiefe und — wo vorhanden —
-      einen Interessenvermerk.
-    </p>
-    <AreaNav items={AREA_NAV} current={ROUTE} />
-  </div>
-
-  <div class="page-body">
-    <section aria-labelledby="legende-title">
-      <h2 id="legende-title">Zur Kennzeichnung</h2>
-      <dl class="definition-list">
-        {
-          R.sourceLegend.map((entry) => (
-            <div>
-              <dt>{entry.label}</dt>
-              <dd>{entry.text}</dd>
-            </div>
-          ))
-        }
-      </dl>
-      <p class="entry-note">Abgerufen am {R.media.retrievedAt}.</p>
-    </section>
-
-    <ol class="block-sources">
-      {
-        R.sources.map((source) => (
-          <li id={source.id}>
-            <span class="source-id">[{source.id}]</span> <strong>{source.title}</strong> — {source.shortName}.
-            {/^https?:\/\//.test(source.url ?? '') ? (
-              <>
-                {' '}
-                <a href={source.url} rel="noopener">
-                  {source.locator || source.url}
-                </a>
-              </>
-            ) : (
-              <span class="entry-note"> {source.locator || source.url}</span>
-            )}
-            <span class="entry-note">
-              {' '}
-              · {source.type}, {source.year} · Evidenz {source.levels.join(', ')} · Prüftiefe: {source.verification}
-            </span>
-            {source.interestNote ? <span class="entry-note"> · Interessenvermerk: {source.interestNote}</span> : null}
-            {source.note ? <span class="entry-note"> · Hinweis: {source.note}</span> : null}
-          </li>
-        ))
-      }
-    </ol>
-  </div>
+  <Fragment set:html={body} />
 </BaseLayout>

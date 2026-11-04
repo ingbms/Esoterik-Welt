@@ -1,0 +1,59 @@
+---
+/**
+ * Rahmen für die Pendel-Werkzeuge (Labor, Tafel-Studio, Experimentierlabor,
+ * Tagebuch).
+ *
+ * Die Ansicht selbst rendert das Bestandsmodul
+ * (`js/modules/radiasthesie.js` über den Loader) in `#pendelnRoot`. Für die
+ * statische Ausgabe steht dort eine `<h1>` als Fallback: Ohne JavaScript ist
+ * die Seite sonst ohne Hauptüberschrift, mit JavaScript ersetzt das Modul den
+ * Inhalt und liefert seine eigene Überschrift. Die `noscript`-Kurzfassung
+ * stammt aus `index.html`.
+ */
+export type PendelnView = 'labor' | 'studio' | 'experiment' | 'journal';
+
+export interface Props {
+  view: PendelnView;
+  title: string;
+}
+
+const { view, title } = Astro.props;
+---
+
+<section id="pendeln" aria-label="Radiästhesie, Pendeln und Orakel">
+  <div class="container">
+    <noscript>
+      <div class="astro-callout astro-callout--limit">
+        <p>
+          <strong>Dieser Bereich braucht JavaScript.</strong> Die Inhalte liegen als lokale Datendatei im Projekt; es wird
+          nichts nachgeladen und nichts übertragen.
+        </p>
+        <p>
+          Kurzfassung ohne Skript: Radiästhesie ist der Oberbegriff für Ruten- und Pendelpraxis; der Bereich beschreibt
+          Instrumente, Geschichte und Forschungsstand, ohne eine Wirkung zu behaupten. Kontrollierte Tests erbrachten keine
+          Treffer über dem Zufall.
+        </p>
+      </div>
+    </noscript>
+    <div id="pendelnRoot" class="rad-root" data-pendeln-view={view}>
+      <h1 class="sr-only">{title}</h1>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { RadiasthesieLoader } from '../../js/modules/radiasthesie-loader.js';
+  import { rebaseAssets } from '../lib/rebase-assets';
+
+  const root = document.getElementById('pendelnRoot');
+  const view = root?.dataset.pendelnView;
+  if (root && view) {
+    const loader = new RadiasthesieLoader(root);
+    const module = await loader.load();
+    // Titel und Canonical kommen aus dem Astro-Layout; das Bestandsmodul
+    // würde sie mit der Altmarke überschreiben.
+    module.applyMeta = () => {};
+    await loader.show([view]);
+    rebaseAssets(root);
+  }
+</script>

@@ -156,7 +156,11 @@ const robotsValue = robots !== undefined ? robots : noindex ? 'noindex, nofollow
   <body class={bodyClass}>
     <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
     <SiteHeader variant={headerVariant} currentPath={Astro.url.pathname} />
-    <main id="main" class:list={['site-main', { 'site-main--hero': hero }, mainClass]} tabindex="-1">
+    <main
+      id="main"
+      class:list={[mainClass ?? 'site-main', { 'site-main--hero': hero }]}
+      tabindex="-1"
+    >
       {trail.length > 0 && <Breadcrumbs trail={trail} />}
       <slot />
     </main>

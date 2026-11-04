@@ -1,106 +1,37 @@
 ---
 /**
- * Meditation — Sitzungsmodell, Presets und Datenschutz.
+ * Meditation — Sitzungsmodell mit Presets, Dauer, Fadeauswahl und Favoriten.
  *
- * Quellen der Texte: Kommentare und Konstanten von
- * `js/modules/frequenz-meditation-model.js` (Dauer-/Fadeauswahl, Preset-Liste,
- * Datenschutzhinweis). Keine Wirkaussagen — die Presets sind Töne, keine
- * Versprechen.
+ * Bestandsansicht `#frequenzen/meditation`; Bedienung und Speicherung liegen
+ * im Browser (`js/modules/frequenz-meditation-*`). Die Seite liefert denselben
+ * Bereichskopf wie der Bestand.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import AreaNav from '../../components/AreaNav.astro';
-import {
-  DURATION_OPTIONS,
-  FADE_OPTIONS,
-  MAX_FAVORITES,
-  MAX_NAME_LENGTH,
-  MEDITATION_STORAGE_KEY,
-  SESSION_PRESETS,
-} from '../../../js/modules/frequenz-meditation-model.js';
-import { FREQUENZEN } from '../../data/legacy';
-
-const ROUTE = '/frequenzen/meditation.html';
-const trail = [{ label: 'Start', href: '/' }, { label: 'Frequenzen', href: '/frequenzen/' }, { label: 'Meditation' }];
-const NAV = [
-  { href: '/frequenzen/', label: 'Bibliothek' },
-  { href: '/frequenzen/labor.html', label: 'Frequenzlabor' },
-  { href: '/frequenzen/cymatics.html', label: 'Chladni-Muster' },
-  { href: '/frequenzen/meditation.html', label: 'Meditation' },
-  { href: '/frequenzen/quellen.html', label: 'Quellen & Methodik' },
-];
+import body from '../../content/tools/frequenzen.html?raw';
+import EmbeddedJson from '../../components/EmbeddedJson.astro';
+import frequenciesJson from '../../../data/frequencies.json';
 ---
 
 <BaseLayout
-  title="Meditationssitzung — Dauer, Presets und Datenschutz"
-  description="Sitzungsmodell der Frequenz-Meditation: Dauer und Ausblendung wählbar, Presets aus der Allowlist, ausschließlich lokale Speicherung."
-  trail={trail}
+  title="Meditation — Sitzungen mit Tönen"
+  description="Meditationssitzungen mit Presets, Dauer und Fadeauswahl: Bedienung, lokale Speicherung und Grenzen — ohne Wirkungsversprechen."
+  trail={[
+    { label: 'Start', href: '/' },
+    { label: 'Frequenzen', href: '/frequenzen/' },
+    { label: 'Meditation' },
+  ]}
+  mainClass="page-shell"
 >
-  <div class="page-head">
-    <p class="label">Werkzeug · Sitzung</p>
-    <h1>Meditation</h1>
-    <p class="lede">
-      Eine Sitzung besteht aus einem Ton oder einer Differenzfrequenz, einer Dauer und einer Ein-/Ausblendung. Es gibt
-      keine Anmeldung, keine Cloud und keine Übertragung von Nutzungsdaten.
-    </p>
-    <p class="client-note">{FREQUENZEN.disclaimer.kurz}</p>
-    <AreaNav items={NAV} current={ROUTE} />
-  </div>
-
-  <div class="page-body">
-    <section aria-labelledby="presets-title">
-      <h2 id="presets-title">Klangpresets ({SESSION_PRESETS.length})</h2>
-      <p class="entry-note">
-        Die Töne stammen ausschließlich aus der Allowlist des ADR: Solfeggio 174–963 Hz sowie die Referenztöne 432 und
-        440 Hz. Binaurale Einträge sind Differenzfrequenzen zur Demonstration, keine Wirkaussage — dafür sind Kopfhörer
-        nötig.
-      </p>
-      <ul class="chip-row">
-        {SESSION_PRESETS.map((preset) => (
-          <li class="chip">{preset.label}</li>
-        ))}
-      </ul>
-    </section>
-
-    <section aria-labelledby="einstellungen-title">
-      <h2 id="einstellungen-title">Einstellungen</h2>
-      <table class="facts">
-        <caption class="sr-only">Wählbare Sitzungsparameter</caption>
-        <tbody>
-          <tr>
-            <th scope="row">Dauer (Minuten)</th>
-            <td>{DURATION_OPTIONS.join(', ')}</td>
-          </tr>
-          <tr>
-            <th scope="row">Ein-/Ausblendung (Sekunden)</th>
-            <td>{FADE_OPTIONS.join(', ')}</td>
-          </tr>
-          <tr>
-            <th scope="row">Favoriten</th>
-            <td>
-              maximal {MAX_FAVORITES}, Name bis {MAX_NAME_LENGTH} Zeichen
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Speicher</th>
-            <td>
-              <code>{MEDITATION_STORAGE_KEY}</code> (localStorage)
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section aria-labelledby="datenschutz-title">
-      <h2 id="datenschutz-title">Datenschutz</h2>
-      <p>
-        Gespeichert werden ausschließlich vom Nutzer ausdrücklich angelegte Favoriten und die zuletzt unterbrochene
-        Sitzung — im localStorage dieses Browsers, ohne Zeitstempel und ohne Verlaufsdaten. Fehlt oder blockiert
-        localStorage, bleibt die Sitzung nutzbar; nur Speichern und Fortsetzen entfallen.
-      </p>
-      <p class="entry-note">
-        Die interaktive Sitzungsansicht ist eine Client-Insel des Bestands (
-        <code>js/modules/frequenz-meditation-view.js</code>); ihre Portierung ist als offener Punkt dokumentiert.
-      </p>
-    </section>
-  </div>
+  <Fragment set:html={body} />
+  <EmbeddedJson id="local-frequencies-data" data={frequenciesJson} />
 </BaseLayout>
+
+<script>
+  import { FrequenzlaborLoader } from '../../../js/modules/frequenzlabor-loader.js';
+
+  const root = document.getElementById('frequenzlaborRoot');
+  if (root) {
+    const loader = new FrequenzlaborLoader(root);
+    await loader.show(['meditation']);
+  }
+</script>

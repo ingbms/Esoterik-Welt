@@ -1,88 +1,43 @@
 ---
 /**
- * Tarot — Katalog der 78 Karten.
+ * Tarot — Ziehungs-Werkzeug, Galerie, Filter und Detaildialog.
  *
- * Der Bestand zeigte die Karten in `#tarot` als Ziehungs-Werkzeug mit
- * Detaildialog. Hier stehen alle 78 Karten mit Stichwörtern, Bildsprache und
- * beiden Deutungen als Text — vollständig lesbar und crawlbar. Die interaktive
- * Ziehung bleibt als Insel offen (dokumentiert in
- * `docs/migration-offene-punkte.md`); der Katalog ist ihre Datengrundlage.
+ * Die Seite rendert das Bestandsmarkup des Abschnitts `#tarot`
+ * (`src/content/tools/tarot.html`) und initialisiert dieselben Vanilla-Module
+ * wie die SPA (`js/modules/tarot.js`, `js/dialog.js`). Damit bleiben
+ * Kartenraster, Deckwahl (Nachtatelier/Gartenbrevier), Suche, Filter,
+ * Tageskarte, 3-Karten-Legung und Verlauf funktional — ohne Framework und ohne
+ * zweite Implementierung (Review B-7).
+ *
+ * Ohne JavaScript bleibt eine leere Galerie; die Karten selbst sind über die
+ * Wissensartikel und den Katalogtext erreichbar. Das ist der Preis dafür, die
+ * abgenommene Oberfläche nicht durch eine Neugestaltung zu ersetzen.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { SUIT_LABELS, TAROT_CARD_COUNT, TAROT_DISCLAIMER, tarotCards, SUPPORTED_DECK_IDS } from '../data/legacy';
-import { formatInline } from '../lib/inline';
-
-const trail = [{ label: 'Start', href: '/' }, { label: 'Tarot' }];
-
-const major = tarotCards.filter((card) => card.arcana === 'major');
-const minorBySuit = Object.entries(SUIT_LABELS).map(([suit, label]) => ({
-  suit,
-  label,
-  cards: tarotCards.filter((card) => card.suit === suit),
-}));
+import ToolDialog from '../components/ToolDialog.astro';
+import body from '../content/tools/tarot.html?raw';
 ---
 
 <BaseLayout
   title="Tarot — 78 Karten, Tageskarte & Legungen | VELARKANA"
   description="Tarot-Karten ziehen und deuten: 78 Karten der Major und Minor Arcana, Tageskarte und 3-Karten-Legung."
-  trail={trail}
-  jsonLd={{ '@type': 'CollectionPage', name: 'Tarot — 78 Karten', numberOfItems: TAROT_CARD_COUNT }}
+  mainClass="page-shell"
 >
-  <div class="page-head">
-    <p class="label">
-      Tarot · {TAROT_CARD_COUNT} Karten · {SUPPORTED_DECK_IDS.length} Decks
-    </p>
-    <h1>Tarot — Der Spiegel der Seele</h1>
-    <p class="lede">
-      78 Karten: 22 Große Arkana und vier Farben mit je 14 Karten. Jede Karte hat Stichwörter, eine Beschreibung ihrer
-      Bildsprache und je eine Deutung für aufrecht und umgekehrt.
-    </p>
-    <p class="client-note">{TAROT_DISCLAIMER}</p>
-  </div>
-
-  <div class="page-body">
-    <section aria-labelledby="major-title">
-      <h2 id="major-title">Große Arkana ({major.length})</h2>
-      <ul class="summary-list">
-        {major.map((card) => (
-          <li id={`karte-${card.id}`}>
-            <h3>
-              {card.numeral} · {card.name}
-            </h3>
-            <p class="entry-note">{card.keywords.join(' · ')}</p>
-            <p set:html={formatInline(card.symbolism)} />
-            <p>
-              <strong>Aufrecht:</strong> <span set:html={formatInline(card.meaning_up)} />
-            </p>
-            <p>
-              <strong>Umgekehrt:</strong> <span set:html={formatInline(card.meaning_rev)} />
-            </p>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    {minorBySuit.map((group) => (
-      <section aria-labelledby={`suit-${group.suit}`}>
-        <h2 id={`suit-${group.suit}`}>
-          {group.label} ({group.cards.length})
-        </h2>
-        <ul class="summary-list">
-          {group.cards.map((card) => (
-            <li id={`karte-${card.id}`}>
-              <h3>{card.name}</h3>
-              <p class="entry-note">{card.keywords.join(' · ')}</p>
-              <p set:html={formatInline(card.symbolism)} />
-              <p>
-                <strong>Aufrecht:</strong> <span set:html={formatInline(card.meaning_up)} />
-              </p>
-              <p>
-                <strong>Umgekehrt:</strong> <span set:html={formatInline(card.meaning_rev)} />
-              </p>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))}
-  </div>
+  <Fragment set:html={body} />
+  <ToolDialog kind="card" />
 </BaseLayout>
+
+<script>
+  import { DialogController } from '../../js/dialog.js';
+  import { TarotModule } from '../../js/modules/tarot.js';
+
+  const modal = document.getElementById('cardModal');
+  const modalBody = document.getElementById('cardModalBody');
+  const closeButton = document.getElementById('closeCardModal');
+
+  if (modal && modalBody && closeButton) {
+    new DialogController(modal, closeButton);
+    const tarot = new TarotModule(modal, modalBody, closeButton);
+    void tarot.init();
+  }
+</script>

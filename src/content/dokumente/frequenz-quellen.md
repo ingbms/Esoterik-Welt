@@ -1,4 +1,4 @@
-# Frequenzen: Quellen, Evidenzstatus und Methodik
+## Frequenzen: Quellen, Evidenzstatus und Methodik
 
 Stand: 2026-11-03 · Datenbestand: `data/frequencies.json` · Vertragstest: `tests/frequencies-data.cjs`
 

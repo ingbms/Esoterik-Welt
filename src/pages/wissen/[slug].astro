@@ -66,10 +66,8 @@ const canonical = new URL(ROUTE, Astro.site ?? Astro.url.origin).href;
     <article class="prose">
       <Content />
     </article>
-    <p class="client-note">
-      <a href="/wissen/">Alle Artikel</a> — dieser Artikel ersetzt die Dialogansicht{' '}
-      <code>#blog/{entry.data.legacyId}</code>
-      des Bestands.
+    <p class="entry-note">
+      <a href="/wissen/">Alle Artikel</a>
     </p>
   </div>
 </BaseLayout>

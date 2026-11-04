@@ -1,26 +1,17 @@
 ---
 /**
- * Methodik und Grenzen — Evidenzstufen A–E, Quelleninteressen, Rechtshinweis.
+ * Methodik und Grenzen.
  *
- * Entspricht dem generierten Dokument `/radiasthesie/methodik.html`; die
- * Inhalte kommen aus denselben Feldern (`levels`, `sourceLegend`, `legal`,
- * `introduction`), aus denen der Bestandsgenerator sie las.
+ * Inhalt 1:1 aus dem Bestandsgenerator (Fragment
+ * `src/content/radiasthesie/methodik.body.html`): Arbeitsannahme,
+ * Kennzeichnung A–E, Quelleninteressen, was der Bereich nicht tut,
+ * Datenschutz und Bildnachweise. Die frühere Astro-Fassung ließ ganze
+ * Abschnitte weg (Review B-2: −38,4 %).
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import AreaNav from '../../components/AreaNav.astro';
-import EvidenceLegend from '../../components/EvidenceLegend.astro';
 import { RADIASTHESIE as R } from '../../data/legacy';
+import body from '../../content/radiasthesie/methodik.body.html?raw';
 
-const ROUTE = '/radiasthesie/methodik.html';
-const AREA_NAV = [
-  { href: '/radiasthesie/', label: 'Übersicht' },
-  { href: '/radiasthesie/radiasthesie.html', label: 'Radiästhesie' },
-  { href: '/radiasthesie/pendeln.html', label: 'Pendeln' },
-  { href: '/radiasthesie/orakel.html', label: 'Orakel' },
-  { href: '/radiasthesie/glossar.html', label: 'Glossar' },
-  { href: '/radiasthesie/quellen.html', label: 'Quellen' },
-  { href: '/radiasthesie/methodik.html', label: 'Methodik' },
-];
 const trail = [
   { label: 'Start', href: '/' },
   { label: R.module.title, href: '/radiasthesie/' },
@@ -33,58 +24,7 @@ const trail = [
   exactTitle
   description="Wie dieses Modul prüft: Arbeitsannahme, Kennzeichnung A–E, Quelleninteressen, Grenzen und Datenschutz."
   trail={trail}
+  mainClass="container rad-root rad-static-main"
 >
-  <div class="page-head">
-    <p class="label">Methodik</p>
-    <h1>Methodik und Grenzen</h1>
-    <p class="lede">
-      Dieses Modul beschreibt Praktiken, nicht Wirkungen. Was das konkret heißt, steht hier: Arbeitsannahme,
-      Kennzeichnung, Quelleninteressen, Grenzen.
-    </p>
-    <AreaNav items={AREA_NAV} current={ROUTE} />
-  </div>
-
-  <div class="page-body">
-    <section aria-labelledby="annahme-title">
-      <h2 id="annahme-title">Arbeitsannahme</h2>
-      <p>{R.introduction.description}</p>
-      <p>{R.module.status}</p>
-    </section>
-
-    <EvidenceLegend levels={R.levels} />
-
-    <section aria-labelledby="quellen-title">
-      <h2 id="quellen-title">Quelleninteressen und Prüftiefe</h2>
-      <dl class="definition-list">
-        {
-          R.sourceLegend.map((entry) => (
-            <div>
-              <dt>{entry.label}</dt>
-              <dd>{entry.text}</dd>
-            </div>
-          ))
-        }
-      </dl>
-    </section>
-
-    <section aria-labelledby="grenzen-title">
-      <h2 id="grenzen-title">Grenzen</h2>
-      <ul class="block-list">
-        {R.media.openIssues.map((issue) => <li>{issue}</li>)}
-      </ul>
-    </section>
-
-    <section aria-labelledby="fragen-title">
-      <h2 id="fragen-title">Offene Fragen</h2>
-      <ul class="block-list">
-        {R.introduction.openQuestions.map((question) => <li>{question}</li>)}
-      </ul>
-    </section>
-
-    <section aria-labelledby="recht-title">
-      <h2 id="recht-title">{R.legal.title}</h2>
-      {R.legal.paragraphs.map((paragraph) => <p class="prose">{paragraph}</p>)}
-      <p class="entry-note">Stand: {R.updated}</p>
-    </section>
-  </div>
+  <Fragment set:html={body} />
 </BaseLayout>

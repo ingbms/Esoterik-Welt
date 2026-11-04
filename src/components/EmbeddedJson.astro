@@ -1,0 +1,21 @@
+---
+/**
+ * Bettet einen JSON-Datensatz als `<script type="application/json">` ein.
+ *
+ * Die Bestandswerkzeuge laden ihre Daten unter HTTP per `fetch('./data/…')`.
+ * In der Astro-Ausgabe liegt die Seite aber eine Ebene tiefer
+ * (`/frequenzen/labor.html`), sodass der relative Pfad ins Leere zeigt. Der
+ * Offline-Build des Bestands löst dasselbe Problem mit eingebetteten
+ * JSON-Inseln (`#local-*`); diese Komponente erzeugt sie für die Migration.
+ * `<` wird escaped, damit der Inhalt nicht vorzeitig als Markup endet.
+ */
+export interface Props {
+  id: string;
+  data: unknown;
+}
+
+const { id, data } = Astro.props;
+const payload = JSON.stringify(data).replace(/</g, '\\u003c');
+---
+
+<script type="application/json" id={id} set:html={payload} />

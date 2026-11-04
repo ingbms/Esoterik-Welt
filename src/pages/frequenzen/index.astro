@@ -1,113 +1,35 @@
 ---
 /**
- * Frequenzen — Bereichs-Hub.
+ * Frequenzen — Bibliothek mit Evidenzstatus und Frequenzlabor.
  *
- * Der Bestand zeigte hier eine Bibliothek mit Evidenzstatus und ein
- * interaktives Labor (`#frequenzen`). Die Bibliothek ist vollständig als Text
- * vorhanden (41 Einträge); das Labor ist eine Audio-Insel und bleibt offen.
+ * Markup aus dem Bestand (`#frequenzen`), Inhalt und Bedienung aus demselben
+ * Modul (`js/modules/frequenzlabor.js`, lazy über den Loader). Die Ansicht
+ * wird im Browser in `#frequenzlaborRoot` gerendert; ohne JavaScript bleibt
+ * der erklärende `<noscript>`-Block lesbar. Interne Links des Moduls
+ * (`#frequenzen/labor`) löst der Legacy-Shim des Layouts auf die echten
+ * Werkzeugseiten auf.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import AreaNav from '../../components/AreaNav.astro';
-import { FREQUENZEN } from '../../data/legacy';
-
-const ROUTE = '/frequenzen/';
-const trail = [{ label: 'Start', href: '/' }, { label: 'Frequenzen' }];
-const NAV = [
-  { href: '/frequenzen/', label: 'Bibliothek' },
-  { href: '/frequenzen/labor.html', label: 'Frequenzlabor' },
-  { href: '/frequenzen/cymatics.html', label: 'Chladni-Muster' },
-  { href: '/frequenzen/meditation.html', label: 'Meditation' },
-  { href: '/frequenzen/quellen.html', label: 'Quellen & Methodik' },
-];
-
-const entries = FREQUENZEN.frequencies;
-const byCategory = Object.entries(FREQUENZEN.kategorien).map(([category, definition]) => ({
-  category,
-  definition,
-  items: entries.filter((entry) => entry.kategorie === category),
-}));
-
-const formatHz = (entry: { hz: number | null; range_hz_min?: number | null; range_hz_max?: number | null }): string => {
-  if (entry.hz != null) return `${entry.hz} Hz`;
-  if (entry.range_hz_min != null && entry.range_hz_max != null) {
-    return `${entry.range_hz_min} – ${entry.range_hz_max} Hz`;
-  }
-  return '—';
-};
+import body from '../../content/tools/frequenzen.html?raw';
+import EmbeddedJson from '../../components/EmbeddedJson.astro';
+import frequenciesJson from '../../../data/frequencies.json';
 ---
 
 <BaseLayout
-  title="Frequenzen & Schwingungen — Bibliothek und Frequenzlabor | VELARKANA"
+  title="Frequenzen — Bibliothek, Evidenzstatus und Frequenzlabor | VELARKANA"
   description="Frequenzbibliothek mit Evidenzstatus und interaktives Frequenzlabor: Tongenerator, Oszillogramm, binaurale Demonstration und 432/440-Vergleich."
-  trail={trail}
-  jsonLd={{ '@type': 'CollectionPage', name: FREQUENZEN.titel, numberOfItems: entries.length }}
+  mainClass="page-shell"
 >
-  <div class="page-head">
-    <p class="label">
-      Frequenzen · {entries.length} Einträge · Stand {FREQUENZEN.stand}
-    </p>
-    <h1>Frequenzen und Schwingungen</h1>
-    <p class="lede">{FREQUENZEN.beschreibung}</p>
-    <p class="client-note">{FREQUENZEN.disclaimer.kurz}</p>
-    <AreaNav items={NAV} current={ROUTE} />
-  </div>
-
-  <div class="page-body">
-    <section aria-labelledby="evidenz-title">
-      <h2 id="evidenz-title">Evidenzstatus</h2>
-      <dl class="definition-list">
-        {Object.entries(FREQUENZEN.evidenzstatus_definitionen).map(([key, value]) => (
-          <div>
-            <dt>{key}</dt>
-            <dd>{value}</dd>
-          </div>
-        ))}
-      </dl>
-    </section>
-
-    {byCategory.map((group) => (
-      <section aria-labelledby={`kategorie-${group.category}`}>
-        <h2 id={`kategorie-${group.category}`}>
-          {group.category} ({group.items.length})
-        </h2>
-        {group.definition ? <p class="entry-note">{group.definition}</p> : null}
-        <table class="facts">
-          <caption class="sr-only">Frequenzeinträge der Kategorie {group.category}</caption>
-          <tbody>
-            {group.items.map((entry) => (
-              <tr id={entry.id}>
-                <th scope="row">{entry.name}</th>
-                <td>
-                  {formatHz(entry)} · Evidenz: {entry.evidenzstatus}
-                  <br />
-                  <span class="entry-note">{entry.beschreibung_kurz}</span>
-                  {entry.quelle_titel ? (
-                    <>
-                      <br />
-                      <span class="entry-note">
-                        Quelle:{' '}
-                        {entry.quelle_url ? (
-                          <a href={entry.quelle_url} rel="noopener">
-                            {entry.quelle_titel}
-                          </a>
-                        ) : (
-                          entry.quelle_titel
-                        )}
-                      </span>
-                    </>
-                  ) : null}
-                  {entry.warnhinweis ? (
-                    <>
-                      <br />
-                      <span class="entry-note">Hinweis: {entry.warnhinweis}</span>
-                    </>
-                  ) : null}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-    ))}
-  </div>
+  <Fragment set:html={body} />
+  <EmbeddedJson id="local-frequencies-data" data={frequenciesJson} />
 </BaseLayout>
+
+<script>
+  import { FrequenzlaborLoader } from '../../../js/modules/frequenzlabor-loader.js';
+
+  const root = document.getElementById('frequenzlaborRoot');
+  if (root) {
+    const loader = new FrequenzlaborLoader(root);
+    await loader.show([]);
+  }
+</script>

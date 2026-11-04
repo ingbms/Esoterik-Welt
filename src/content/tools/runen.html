@@ -1,0 +1,52 @@
+<section id="runes" aria-labelledby="runes-title">
+<div class="container">
+          <div class="section-header mb-8">
+            <p class="label">Runen / Älteres Futhark</p>
+            <h1 id="runes-title" class="page-title">Runen — Das ältere Futhark</h1>
+            <p class="text-muted">24 Runen. Werfe die Runen für Antworten aus der Tiefe der Zeit.</p>
+          </div>
+
+          <div class="runes-controls flex flex-wrap gap-3 mb-6">
+            <button class="btn btn-primary" id="castRunesBtn">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="M12 2v20M17 5H7" />
+              </svg>
+              3 Runen werfen (Vergangenheit, Gegenwart, Zukunft)
+            </button>
+            <button class="btn btn-secondary" id="castSingleRuneBtn">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v8M8 12h8" />
+              </svg>
+              Einzelne Rune
+            </button>
+          </div>
+
+          <div id="runeCastResult" class="mb-8" hidden>
+            <h2 class="mb-4 card-heading">Deine Runen</h2>
+            <div class="grid grid-3 gap-6" id="castRunes"></div>
+            <div class="mt-6" id="runeInterpretation"></div>
+          </div>
+
+          <h2 class="mb-4 card-heading">Alle Runen des älteren Futhark</h2>
+          <div class="grid grid-auto" id="runeGrid" role="group" aria-label="Runen"></div>
+
+          <div id="runesHistory" class="mt-6" aria-label="Wurf-Historie"></div>
+        </div>
+</section>

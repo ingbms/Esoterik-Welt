@@ -1,88 +1,25 @@
 ---
 /**
- * Pendellabor — Simulation von Länge, Auslenkung und Dämpfung.
+ * Pendellabor — Länge, Auslenkung und Dämpfung einstellen, Schwingungsdauer
+ * ablesen und mit der Formel vergleichen.
  *
- * Inhalte: Beschreibung aus der Werkstatt-Konfiguration
- * (`js/data/radiasthesie-werkstatt.js`) und die Methoden-/Instrumentendaten,
- * die das Werkzeug fachlich tragen. Die interaktive Simulation ist eine
- * Client-Insel des Bestands (`js/modules/pendel-simulator.js`).
+ * Bestandsansicht `#pendeln/labor`; Markup und Rechenmodell kommen aus
+ * `js/modules/radiasthesie.js` + `pendel-simulator.js`. Der Bereichsrahmen
+ * (`#pendeln`) ist derselbe wie im Bestand.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import AreaNav from '../../components/AreaNav.astro';
-import { WERKSTATT } from '../../data/legacy';
-
-const ROUTE = '/pendeln/labor.html';
-const trail = [
-  { label: 'Start', href: '/' },
-  { label: 'Radiästhesie & Pendeln', href: '/radiasthesie/' },
-  { label: 'Pendellabor' },
-];
-const NAV = [
-  { href: '/radiasthesie/', label: 'Bereich' },
-  { href: '/pendeln/labor.html', label: 'Labor' },
-  { href: '/pendeln/studio.html', label: 'Tafel-Studio' },
-  { href: '/pendeln/experiment.html', label: 'Experiment' },
-  { href: '/pendeln/journal.html', label: 'Tagebuch' },
-  { href: '/pendeln/suche.html', label: 'Suche' },
-];
-const methods = WERKSTATT.methoden.filter((method) =>
-  /pendel|schwing|physik|labor/i.test(`${method.slug} ${method.title} ${method.summary}`)
-);
+import PendelnTool from '../../components/PendelnTool.astro';
 ---
 
 <BaseLayout
-  title="Pendellabor — Länge, Auslenkung und Schwingungsdauer"
-  description="Simulation des Fadenpendels: Länge, Auslenkung und Dämpfung einstellen, Schwingungsdauer ablesen und mit der Formel vergleichen."
-  trail={trail}
+  title="Pendellabor — Schwingung, Auslenkung und Dämpfung"
+  description="Länge, Auslenkung und Dämpfung einstellen, Schwingungsdauer ablesen und mit der Formel vergleichen — Mechanik, keine verborgene Information."
+  trail={[
+    { label: 'Start', href: '/' },
+    { label: 'Radiästhesie', href: '/radiasthesie/' },
+    { label: 'Pendellabor' },
+  ]}
+  mainClass="page-shell"
 >
-  <div class="page-head">
-    <p class="label">Werkzeug · Simulation</p>
-    <h1>Pendellabor</h1>
-    <p class="lede">
-      Länge, Auslenkung und Dämpfung einstellen, Schwingungsdauer ablesen und mit der Formel vergleichen. Das Labor
-      zeigt Physik — nicht die behauptete Anzeige einer Wünschelrute.
-    </p>
-    <p class="client-note">
-      Die interaktive Simulation ist eine Client-Insel des Bestands (<code>js/modules/pendel-simulator.js</code>); ihre
-      Portierung ist als offener Punkt dokumentiert.
-    </p>
-    <AreaNav items={NAV} current={ROUTE} />
-  </div>
-
-  <div class="page-body">
-    <section aria-labelledby="methode-title">
-      <h2 id="methode-title">Fachlicher Hintergrund</h2>
-      <p>
-        Ein Fadenpendel schwingt bei kleinen Auslenkungen harmonisch; die Schwingungsdauer hängt von der Fadenlänge und
-        der Fallbeschleunigung ab, nicht von der Masse des Pendelkörpers. Dämpfung verkürzt die Amplitude, nicht die
-        Periodendauer.
-      </p>
-      <ul class="summary-list">
-        {methods.map((method) => (
-          <li>
-            <h3>{method.title}</h3>
-            <p>{method.summary}</p>
-            <p class="entry-note">
-              Evidenzstatus: {method.evidenceStatus} · geprüft: {method.lastReviewed}
-            </p>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    <section aria-labelledby="werkzeuge-title">
-      <h2 id="werkzeuge-title">Weitere Werkzeuge</h2>
-      <ul class="chip-row">
-        <li class="chip">
-          <a href="/pendeln/studio.html">Tafel-Studio</a>
-        </li>
-        <li class="chip">
-          <a href="/pendeln/experiment.html">Experimentierlabor</a>
-        </li>
-        <li class="chip">
-          <a href="/pendeln/journal.html">Pendeltagebuch</a>
-        </li>
-      </ul>
-    </section>
-  </div>
+  <PendelnTool view="labor" title="Pendellabor" />
 </BaseLayout>
