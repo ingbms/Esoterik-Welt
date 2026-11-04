@@ -260,7 +260,7 @@ AX-Baum (Chromium-CDP) weist als Namen nur noch „AUF DIESER SEITE“ aus.
 | QA-Szenario D-1 in drei Engines | **9/9** (Chromium 156, Firefox 157, WebKit 27.2; je 390/1024/1199 px, Sprung 0 px, genau ein `aria-current`) | `evidence/velarkana-toc-fix/scrollspy-engines.json` |
 | Build-Determinismus | zwei Builds byte-identisch (Pilotseite und `_astro`) | `sha256`-Vergleich |
 | `astro check` / `eslint` / `prettier` | 0 Fehler, 0 Warnungen / 0 Probleme / grün | Konsolenausgabe |
-| Lighthouse (Pilot, mobil) | Accessibility 0,92, Performance 0,62, **CLS 0**; nur die zwei vorbestehenden Artikelbefunde | `lh-after.json` der Sitzung |
+| Lighthouse (Pilot, mobil) | Accessibility 0,92, Performance 0,62, **CLS 0**; nur die zwei vorbestehenden Artikelbefunde | `evidence/velarkana-toc-fix/lighthouse-after.json` |
 
 Neue Prüfskripte: `scripts/toc/verify-scrollspy-engines.mjs`
 (`npm run verify:toc:engines`) und die erweiterten Fälle in
