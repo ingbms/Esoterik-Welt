@@ -1,0 +1,482 @@
+{
+ "1920": {
+  "vw": 1920,
+  "vh": 1080,
+  "clientW": 1905,
+  "docSW": 1905,
+  "headerH": 101,
+  "gutter": "64px",
+  "prose": {
+   "x": 337,
+   "y": 448,
+   "w": 720,
+   "h": 22250,
+   "display": "block"
+  },
+  "toc": {
+   "x": 1309,
+   "y": 448,
+   "w": 260,
+   "h": 883,
+   "display": "block"
+  },
+  "gap": 252,
+  "position": "sticky",
+  "top": "124px",
+  "alignSelf": "start",
+  "budget": 883,
+  "tocH": 883,
+  "detailsOpen": true,
+  "summary": {
+   "display": "none",
+   "h": 0
+  },
+  "body": {
+   "h": 850,
+   "ch": 850,
+   "sh": 1383,
+   "sw": 225,
+   "cw": 225,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 53,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": false,
+  "tocOverflow": false
+ },
+ "1440": {
+  "vw": 1440,
+  "vh": 900,
+  "clientW": 1425,
+  "docSW": 1425,
+  "headerH": 101,
+  "gutter": "64px",
+  "prose": {
+   "x": 97,
+   "y": 448,
+   "w": 720,
+   "h": 22250,
+   "display": "block"
+  },
+  "toc": {
+   "x": 1069,
+   "y": 448,
+   "w": 260,
+   "h": 703,
+   "display": "block"
+  },
+  "gap": 252,
+  "position": "sticky",
+  "top": "124px",
+  "alignSelf": "start",
+  "budget": 703,
+  "tocH": 703,
+  "detailsOpen": true,
+  "summary": {
+   "display": "none",
+   "h": 0
+  },
+  "body": {
+   "h": 670,
+   "ch": 670,
+   "sh": 1383,
+   "sw": 225,
+   "cw": 225,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 53,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": false,
+  "tocOverflow": false
+ },
+ "1280": {
+  "vw": 1280,
+  "vh": 800,
+  "clientW": 1265,
+  "docSW": 1265,
+  "headerH": 101,
+  "gutter": "64px",
+  "prose": {
+   "x": 64,
+   "y": 448,
+   "w": 720,
+   "h": 22250,
+   "display": "block"
+  },
+  "toc": {
+   "x": 941,
+   "y": 448,
+   "w": 260,
+   "h": 603,
+   "display": "block"
+  },
+  "gap": 157,
+  "position": "sticky",
+  "top": "124px",
+  "alignSelf": "start",
+  "budget": 603,
+  "tocH": 603,
+  "detailsOpen": true,
+  "summary": {
+   "display": "none",
+   "h": 0
+  },
+  "body": {
+   "h": 570,
+   "ch": 570,
+   "sh": 1383,
+   "sw": 225,
+   "cw": 225,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 53,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": false,
+  "tocOverflow": false
+ },
+ "1200": {
+  "vw": 1200,
+  "vh": 800,
+  "clientW": 1185,
+  "docSW": 1185,
+  "headerH": 101,
+  "gutter": "64px",
+  "prose": {
+   "x": 64,
+   "y": 448,
+   "w": 720,
+   "h": 22250,
+   "display": "block"
+  },
+  "toc": {
+   "x": 861,
+   "y": 448,
+   "w": 260,
+   "h": 603,
+   "display": "block"
+  },
+  "gap": 77,
+  "position": "sticky",
+  "top": "124px",
+  "alignSelf": "start",
+  "budget": 603,
+  "tocH": 603,
+  "detailsOpen": true,
+  "summary": {
+   "display": "none",
+   "h": 0
+  },
+  "body": {
+   "h": 570,
+   "ch": 570,
+   "sh": 1383,
+   "sw": 225,
+   "cw": 225,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 53,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": false,
+  "tocOverflow": false
+ },
+ "1199": {
+  "vw": 1199,
+  "vh": 800,
+  "clientW": 1184,
+  "docSW": 1184,
+  "headerH": 101,
+  "gutter": "64px",
+  "prose": {
+   "x": 64,
+   "y": 518,
+   "w": 720,
+   "h": 22250,
+   "display": "block"
+  },
+  "toc": {
+   "x": 64,
+   "y": 448,
+   "w": 1056,
+   "h": 46,
+   "display": "block"
+  },
+  "gap": -720,
+  "position": "static",
+  "top": "auto",
+  "alignSelf": "auto",
+  "budget": 603,
+  "tocH": 46,
+  "detailsOpen": false,
+  "summary": {
+   "display": "flex",
+   "h": 44
+  },
+  "body": {
+   "h": 480,
+   "ch": 480,
+   "sh": 957,
+   "sw": 1044,
+   "cw": 1044,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 32,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": false,
+  "tocOverflow": false
+ },
+ "1024": {
+  "vw": 1024,
+  "vh": 768,
+  "clientW": 1009,
+  "docSW": 1009,
+  "headerH": 101,
+  "gutter": "32px",
+  "prose": {
+   "x": 32,
+   "y": 518,
+   "w": 720,
+   "h": 22250,
+   "display": "block"
+  },
+  "toc": {
+   "x": 32,
+   "y": 448,
+   "w": 945,
+   "h": 46,
+   "display": "block"
+  },
+  "gap": -720,
+  "position": "static",
+  "top": "auto",
+  "alignSelf": "auto",
+  "budget": 571,
+  "tocH": 46,
+  "detailsOpen": false,
+  "summary": {
+   "display": "flex",
+   "h": 44
+  },
+  "body": {
+   "h": 461,
+   "ch": 461,
+   "sh": 957,
+   "sw": 933,
+   "cw": 933,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 32,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": false,
+  "tocOverflow": false
+ },
+ "768": {
+  "vw": 768,
+  "vh": 1024,
+  "clientW": 753,
+  "docSW": 753,
+  "headerH": 101,
+  "gutter": "32px",
+  "prose": {
+   "x": 32,
+   "y": 518,
+   "w": 689,
+   "h": 23342,
+   "display": "block"
+  },
+  "toc": {
+   "x": 32,
+   "y": 448,
+   "w": 689,
+   "h": 46,
+   "display": "block"
+  },
+  "gap": -689,
+  "position": "static",
+  "top": "auto",
+  "alignSelf": "auto",
+  "budget": 827,
+  "tocH": 46,
+  "detailsOpen": false,
+  "summary": {
+   "display": "flex",
+   "h": 44
+  },
+  "body": {
+   "h": 614,
+   "ch": 614,
+   "sh": 957,
+   "sw": 677,
+   "cw": 677,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 32,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": false,
+  "tocOverflow": false
+ },
+ "390": {
+  "vw": 390,
+  "vh": 844,
+  "clientW": 375,
+  "docSW": 540,
+  "headerH": 85,
+  "gutter": "24px",
+  "prose": {
+   "x": 24,
+   "y": 627,
+   "w": 327,
+   "h": 48284,
+   "display": "block"
+  },
+  "toc": {
+   "x": 24,
+   "y": 557,
+   "w": 327,
+   "h": 46,
+   "display": "block"
+  },
+  "gap": -327,
+  "position": "static",
+  "top": "auto",
+  "alignSelf": "auto",
+  "budget": 663,
+  "tocH": 46,
+  "detailsOpen": false,
+  "summary": {
+   "display": "flex",
+   "h": 44
+  },
+  "body": {
+   "h": 473,
+   "ch": 473,
+   "sh": 1156,
+   "sw": 315,
+   "cw": 315,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 53,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": true,
+  "tocOverflow": false
+ },
+ "320": {
+  "vw": 320,
+  "vh": 640,
+  "clientW": 305,
+  "docSW": 540,
+  "headerH": 85,
+  "gutter": "24px",
+  "prose": {
+   "x": 24,
+   "y": 723,
+   "w": 257,
+   "h": 55976,
+   "display": "block"
+  },
+  "toc": {
+   "x": 24,
+   "y": 653,
+   "w": 257,
+   "h": 46,
+   "display": "block"
+  },
+  "gap": -257,
+  "position": "static",
+  "top": "auto",
+  "alignSelf": "auto",
+  "budget": 459,
+  "tocH": 46,
+  "detailsOpen": false,
+  "summary": {
+   "display": "flex",
+   "h": 44
+  },
+  "body": {
+   "h": 358,
+   "ch": 358,
+   "sh": 1399,
+   "sw": 245,
+   "cw": 245,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 53,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": true,
+  "tocOverflow": false
+ },
+ "zoom200": {
+  "vw": 720,
+  "vh": 450,
+  "clientW": 705,
+  "docSW": 705,
+  "headerH": 101,
+  "gutter": "32px",
+  "prose": {
+   "x": 32,
+   "y": 518,
+   "w": 641,
+   "h": 25038,
+   "display": "block"
+  },
+  "toc": {
+   "x": 32,
+   "y": 448,
+   "w": 641,
+   "h": 46,
+   "display": "block"
+  },
+  "gap": -641,
+  "position": "static",
+  "top": "auto",
+  "alignSelf": "auto",
+  "budget": 253,
+  "tocH": 46,
+  "detailsOpen": false,
+  "summary": {
+   "display": "flex",
+   "h": 44
+  },
+  "body": {
+   "h": 270,
+   "ch": 270,
+   "sh": 957,
+   "sw": 629,
+   "cw": 629,
+   "ov": "bottom"
+  },
+  "links": 29,
+  "itemH": 32,
+  "aria": 1,
+  "isActive": 1,
+  "active": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+  "hOverflowPage": false,
+  "tocOverflow": false
+ }
+}

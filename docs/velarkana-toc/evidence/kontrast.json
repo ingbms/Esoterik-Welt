@@ -1,0 +1,276 @@
+{
+ "dark": [
+  {
+   "pair": "Link (Ruhezustand)",
+   "fg": "#babdb7",
+   "bg": "#0b1012",
+   "ratio": 10.07,
+   "target": 4.5,
+   "pass": true,
+   "use": "Text auf Seitenfläche (Rail)"
+  },
+  {
+   "pair": "Link (Ruhezustand, Inline)",
+   "fg": "#babdb7",
+   "bg": "#141c1f",
+   "ratio": 9.09,
+   "target": 4.5,
+   "pass": true,
+   "use": "Text auf Karte (Panel < 1200 px)"
+  },
+  {
+   "pair": "Link (Hover)",
+   "fg": "#c6b38e",
+   "bg": "#0b1012",
+   "ratio": 9.33,
+   "target": 4.5,
+   "pass": true,
+   "use": "Hover-Farbe"
+  },
+  {
+   "pair": "Link (Hover, Inline)",
+   "fg": "#c6b38e",
+   "bg": "#141c1f",
+   "ratio": 8.42,
+   "target": 4.5,
+   "pass": true,
+   "use": "Hover im Panel"
+  },
+  {
+   "pair": "Aktiver Link",
+   "fg": "#eae6dc",
+   "bg": "#0b1012",
+   "ratio": 15.36,
+   "target": 4.5,
+   "pass": true,
+   "use": "aria-current='location'"
+  },
+  {
+   "pair": "Aktiver Link (Inline)",
+   "fg": "#eae6dc",
+   "bg": "#141c1f",
+   "ratio": 13.86,
+   "target": 4.5,
+   "pass": true,
+   "use": "aria-current im Panel"
+  },
+  {
+   "pair": "Rail-Titel / Summary",
+   "fg": "#babdb7",
+   "bg": "#0b1012",
+   "ratio": 10.07,
+   "target": 4.5,
+   "pass": true,
+   "use": "Label „Auf dieser Seite“"
+  },
+  {
+   "pair": "Rail-Titel / Summary (Inline)",
+   "fg": "#babdb7",
+   "bg": "#141c1f",
+   "ratio": 9.09,
+   "target": 4.5,
+   "pass": true,
+   "use": "Label im Panel"
+  },
+  {
+   "pair": "Fokusring",
+   "fg": "#eae6dc",
+   "bg": "#0b1012",
+   "ratio": 15.36,
+   "target": 3.0,
+   "pass": true,
+   "use": "2-px-Ring, angrenzend an Seitenfläche"
+  },
+  {
+   "pair": "Fokusring (Inline)",
+   "fg": "#eae6dc",
+   "bg": "#141c1f",
+   "ratio": 13.86,
+   "target": 3.0,
+   "pass": true,
+   "use": "2-px-Ring im Panel"
+  },
+  {
+   "pair": "Aktivmarke (2-px-Balken)",
+   "fg": "#c6b38e",
+   "bg": "#0b1012",
+   "ratio": 9.33,
+   "target": 3.0,
+   "pass": true,
+   "use": "Nicht-textlicher Indikator"
+  },
+  {
+   "pair": "Aktivmarke (Inline)",
+   "fg": "#c6b38e",
+   "bg": "#141c1f",
+   "ratio": 8.42,
+   "target": 3.0,
+   "pass": true,
+   "use": "Nicht-textlicher Indikator im Panel"
+  },
+  {
+   "pair": "Trennlinie Rail (dekorativ)",
+   "fg": "#3c484b",
+   "bg": "#0b1012",
+   "ratio": 2.02,
+   "target": 3.0,
+   "pass": false,
+   "use": "1-px-Rahmen, rein dekorativ"
+  },
+  {
+   "pair": "Panel-Rahmen (funktional)",
+   "fg": "#82928e",
+   "bg": "#0b1012",
+   "ratio": 5.88,
+   "target": 3.0,
+   "pass": true,
+   "use": "Rahmen der Disclosure, `--color-line-strong`"
+  },
+  {
+   "pair": "Panel-Rahmen (auf Karte)",
+   "fg": "#82928e",
+   "bg": "#141c1f",
+   "ratio": 5.31,
+   "target": 3.0,
+   "pass": true,
+   "use": "Rahmen gegen eigene Fläche"
+  }
+ ],
+ "light_reserve": [
+  {
+   "pair": "Link (Ruhezustand)",
+   "fg": "#5a4a7a",
+   "bg": "#f8f5fc",
+   "ratio": 7.22,
+   "target": 4.5,
+   "pass": true,
+   "use": "Text auf Seitenfläche (Rail)"
+  },
+  {
+   "pair": "Link (Ruhezustand, Inline)",
+   "fg": "#5a4a7a",
+   "bg": "#ffffff",
+   "ratio": 7.79,
+   "target": 4.5,
+   "pass": true,
+   "use": "Text auf Karte (Panel < 1200 px)"
+  },
+  {
+   "pair": "Link (Hover)",
+   "fg": "#7041a6",
+   "bg": "#f8f5fc",
+   "ratio": 6.5,
+   "target": 4.5,
+   "pass": true,
+   "use": "Hover-Farbe"
+  },
+  {
+   "pair": "Link (Hover, Inline)",
+   "fg": "#7041a6",
+   "bg": "#ffffff",
+   "ratio": 7.01,
+   "target": 4.5,
+   "pass": true,
+   "use": "Hover im Panel"
+  },
+  {
+   "pair": "Aktiver Link",
+   "fg": "#2d1b47",
+   "bg": "#f8f5fc",
+   "ratio": 14.31,
+   "target": 4.5,
+   "pass": true,
+   "use": "aria-current='location'"
+  },
+  {
+   "pair": "Aktiver Link (Inline)",
+   "fg": "#2d1b47",
+   "bg": "#ffffff",
+   "ratio": 15.45,
+   "target": 4.5,
+   "pass": true,
+   "use": "aria-current im Panel"
+  },
+  {
+   "pair": "Rail-Titel / Summary",
+   "fg": "#5a4a7a",
+   "bg": "#f8f5fc",
+   "ratio": 7.22,
+   "target": 4.5,
+   "pass": true,
+   "use": "Label „Auf dieser Seite“"
+  },
+  {
+   "pair": "Rail-Titel / Summary (Inline)",
+   "fg": "#5a4a7a",
+   "bg": "#ffffff",
+   "ratio": 7.79,
+   "target": 4.5,
+   "pass": true,
+   "use": "Label im Panel"
+  },
+  {
+   "pair": "Fokusring",
+   "fg": "#2d1b47",
+   "bg": "#f8f5fc",
+   "ratio": 14.31,
+   "target": 3.0,
+   "pass": true,
+   "use": "2-px-Ring, angrenzend an Seitenfläche"
+  },
+  {
+   "pair": "Fokusring (Inline)",
+   "fg": "#2d1b47",
+   "bg": "#ffffff",
+   "ratio": 15.45,
+   "target": 3.0,
+   "pass": true,
+   "use": "2-px-Ring im Panel"
+  },
+  {
+   "pair": "Aktivmarke (2-px-Balken)",
+   "fg": "#7041a6",
+   "bg": "#f8f5fc",
+   "ratio": 6.5,
+   "target": 3.0,
+   "pass": true,
+   "use": "Nicht-textlicher Indikator"
+  },
+  {
+   "pair": "Aktivmarke (Inline)",
+   "fg": "#7041a6",
+   "bg": "#ffffff",
+   "ratio": 7.01,
+   "target": 3.0,
+   "pass": true,
+   "use": "Nicht-textlicher Indikator im Panel"
+  },
+  {
+   "pair": "Trennlinie Rail (dekorativ)",
+   "fg": "#d4c4e8",
+   "bg": "#f8f5fc",
+   "ratio": 1.51,
+   "target": 3.0,
+   "pass": false,
+   "use": "1-px-Rahmen, rein dekorativ"
+  },
+  {
+   "pair": "Panel-Rahmen (funktional)",
+   "fg": "#bb86fc",
+   "bg": "#f8f5fc",
+   "ratio": 2.45,
+   "target": 3.0,
+   "pass": false,
+   "use": "Rahmen der Disclosure, `--color-line-strong`"
+  },
+  {
+   "pair": "Panel-Rahmen (auf Karte)",
+   "fg": "#bb86fc",
+   "bg": "#ffffff",
+   "ratio": 2.65,
+   "target": 3.0,
+   "pass": false,
+   "use": "Rahmen gegen eigene Fläche"
+  }
+ ]
+}

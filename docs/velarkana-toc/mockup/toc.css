@@ -1,0 +1,277 @@
+/* ============================================================================
+   VELARKANA · Seiten-Inhaltsverzeichnis (TOC) — Gestaltungsentwurf
+   ----------------------------------------------------------------------------
+   NICHT PRODUKTIV. Entwurfs-CSS zu docs/velarkana-toc/01-design.md; Grenzen
+   und Verhalten stammen aus docs/velarkana-toc/spezifikation.md (t_5edc1d8c).
+
+   Werte ausschließlich aus den bestehenden Tokens (css/design-system.css):
+   keine neuen Farben, Schriften, Schatten, Rundungen.
+
+   Quellreihenfolge: Basisregeln (schmal) zuerst, Desktop-Overrides danach.
+   Medienabfragen erhöhen keine Spezifität — eine spätere Basisregel würde
+   eine frühere Desktop-Regel überschreiben (im ersten Entwurf real passiert).
+
+   Breakpoints:
+     ≥ 1200px  rechte Spalte, sticky, dauerhaft offen
+     < 1200px  Inline-Disclosure oberhalb des Artikels, mit JS geschlossen
+     <  700px  kompaktere Innenabstände; grobe Zeiger: 44-px-Ziele
+   ============================================================================ */
+
+.page-body--toc {
+  --toc-rail-width: 260px; /* Spezifikation AK-E1: 240–280 px */
+  --toc-item-min: 32px;
+  --toc-inset: var(--space-3); /* 12px: Raum für die 2-px-Aktivmarke */
+  /* Höhe von `.page-toc__title` (13px × 1,4 + 16px Abstand) für die max-height */
+  --toc-title-block: 34px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* Der erste Prosa-Block beginnt auf der Höhe des Verzeichnis-Einstiegs.
+   `content.css` gibt jedem `.prose h2` 1,8 em Abstand nach oben; beim ersten
+   Kind schiebt das den Artikeltext 79 px unter die Rail (gemessen 1440 px).
+   Die Regel ist auf Seiten MIT Verzeichnis begrenzt — andere Seiten bleiben
+   unverändert. */
+.page-body--toc .prose > :first-child {
+  margin-top: 0;
+}
+
+/* --- Inline-Disclosure (< 1200 px) --------------------------------------
+   Kein umlaufender Rahmen: `--color-border` erreicht 2,02:1, `--color-line-strong`
+   im Dunkeln 5,88:1, in der Light-Reserve aber nur 2,45:1 — eine Rahmenlösung wäre
+   also themenabhängig. Die 2-px-Sandkante trägt in beiden Fällen (9,33:1 dunkel,
+   6,50:1 hell) und entspricht dem Muster von `.block-quote` im Bestand, nur leichter. */
+.page-toc__details {
+  border: 0;
+  border-left: 2px solid var(--color-primary);
+  border-radius: 0;
+  background: var(--color-bg-card);
+}
+
+.page-toc__summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.page-toc__summary::-webkit-details-marker {
+  display: none;
+}
+.page-toc__summary::marker {
+  content: '';
+}
+/* Plus/Minus als Textzeichen im Mono-Schnitt: keine Icon-Schrift, kein Asset,
+   gleiche Strichstärke wie die 1-px-Rasterlinien. */
+.page-toc__summary::after {
+  content: '+';
+  margin-left: auto;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-primary);
+}
+.page-toc__details[open] > .page-toc__summary::after {
+  content: '–';
+}
+
+/* Rail-Überschrift: nur Desktop sichtbar, weil dort das Summary ausgeblendet
+   ist. Rein visuell — das Landmark trägt `aria-label="Inhaltsverzeichnis"`. */
+.page-toc__title {
+  display: none;
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* --- Scrollbereich ------------------------------------------------------- */
+.page-toc__body {
+  max-height: 60dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--space-1) var(--space-4) var(--space-4);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+.page-toc__body::-webkit-scrollbar {
+  width: 8px;
+}
+.page-toc__body::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 0;
+}
+
+/* Scroll-Hinweis: Verlauf nur, wenn tatsächlich etwas abgeschnitten ist.
+   `data-overflow` setzt das Skript; ohne JS bleibt der Verlauf aus. */
+.page-toc__body[data-overflow='top'] {
+  mask-image: linear-gradient(to bottom, transparent 0, #000 16px);
+}
+.page-toc__body[data-overflow='bottom'] {
+  mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 24px), transparent 100%);
+}
+.page-toc__body[data-overflow='both'] {
+  mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%);
+}
+
+/* --- Liste --------------------------------------------------------------- */
+.page-toc__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0;
+}
+
+.page-toc__item {
+  min-width: 0;
+}
+
+.page-toc__link {
+  display: flex;
+  align-items: center;
+  min-height: var(--toc-item-min);
+  padding: 6px var(--space-1) 6px var(--toc-inset);
+  /* 2-px-Marke ist immer reserviert, damit der aktive Zustand nichts verschiebt. */
+  border-left: 2px solid transparent;
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  /* Lange Überschriften (bis 235 Zeichen im Bestand) brechen um, statt zu
+     kürzen oder die Spalte zu sprengen (Spezifikation AK-B7, R-8). */
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* Ebene h3: verschachtelte Liste, eingerückt, gleiche Schriftgröße — die
+   Hierarchie trägt die Einrückung, nicht ein zweiter Schriftgrad. Die
+   Verschachtelung ist semantisch (verschachteltes <ol>), damit Screenreader
+   die Ebenen ansagen (Spezifikation AK-B6). */
+.page-toc__list .page-toc__list {
+  margin: 0;
+  padding: 0;
+}
+.page-toc__item--3 > .page-toc__link {
+  padding-left: calc(var(--toc-inset) + var(--space-4));
+}
+
+.page-toc__link:hover {
+  color: var(--color-primary);
+}
+
+.page-toc__link:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+  /* Innenliegender Puffer, damit der Ring im Scrollbereich nicht abgeschnitten
+     wird; negativer Außenabstand hält die Textkante auf der Rasterlinie. */
+  margin-inline: -6px;
+  padding-inline: calc(var(--toc-inset) + 6px) calc(var(--space-1) + 6px);
+}
+
+.page-toc__link[aria-current='location'],
+.page-toc__link.is-active {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  border-left-color: var(--color-primary);
+}
+
+/* --- Grobe Zeiger (Touch) ------------------------------------------------ */
+@media (pointer: coarse) {
+  .page-body--toc {
+    --toc-item-min: 44px;
+  }
+  .page-toc__link {
+    padding-block: 10px;
+  }
+}
+
+/* --- Schmale Viewports --------------------------------------------------- */
+@media (max-width: 699px) {
+  .page-toc__summary {
+    padding-inline: var(--space-3);
+  }
+  .page-toc__body {
+    max-height: 56dvh;
+    padding: var(--space-1) var(--space-3) var(--space-3);
+  }
+}
+
+/* --- Rail ab 1200 px ----------------------------------------------------- */
+@media (min-width: 1200px) {
+  .page-body--toc {
+    grid-template-columns: minmax(0, 1fr) var(--toc-rail-width);
+    gap: var(--space-16); /* 64 px, Spezifikation AK-E1: ≥ 32 px */
+  }
+  /* DOM-Reihenfolge bleibt (Verzeichnis vor Artikel); die Spaltenzuweisung ist
+     explizit, damit sie nicht von der Kinderreihenfolge abhängt. */
+  .page-body--toc > .page-toc {
+    grid-column: 2;
+    grid-row: 1;
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-6));
+    align-self: start; /* nicht auf Zeilenhöhe strecken (R-2 des Bestands) */
+    /* AK-E3: TOC-Höhe ≤ viewportHeight − headerHeight − 96 px.
+       −1 px für die 1-px-Unterkante des Headers (gemessen 101 statt 100). */
+    max-height: calc(100dvh - var(--header-height) - var(--space-24) - 1px);
+    border-left: 1px solid var(--color-border);
+    padding-left: var(--space-6);
+    z-index: 0; /* unter dem Header (--z-sticky: 200) */
+  }
+  .page-body--toc > .prose {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  /* Auf dem Desktop ist das Verzeichnis immer offen; der Schalter entfällt.
+     `open` steht im Markup, das Skript schließt nur unter 1200 px. Kein
+     `display: contents` auf <details>: in Chromium nicht verlässlich. */
+  .page-toc__details {
+    border: 0;
+    border-left: 0;
+    border-radius: 0;
+    background: none;
+  }
+  .page-toc__summary {
+    display: none;
+  }
+  .page-toc__title {
+    display: block;
+  }
+  .page-toc__body {
+    max-height: calc(
+      100dvh - var(--header-height) - var(--space-24) - var(--toc-title-block)
+    );
+    padding: 0 var(--space-1) 0 0;
+  }
+}
+
+/* --- Druck (AK-E8) ------------------------------------------------------- */
+@media print {
+  .page-toc {
+    display: none;
+  }
+}
+
+/* --- Reduced Motion (AK-F5) --------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .page-toc * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

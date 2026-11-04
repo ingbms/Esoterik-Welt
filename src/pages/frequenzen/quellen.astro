@@ -10,10 +10,14 @@
 import { getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AreaNav from '../../components/AreaNav.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
 
 const entry = await getEntry('dokumente', 'frequenz-quellen');
 if (!entry) throw new Error('Dokument frequenz-quellen fehlt in der Collection');
-const { Content } = await render(entry);
+// `headings` kommt aus dem gerenderten Markdown und trägt die IDs, die Astro
+// aus den Überschriften erzeugt hat (github-slugger 2.0.0). Das Verzeichnis
+// übernimmt sie unverändert — Deep-Links bleiben stabil.
+const { Content, headings } = await render(entry);
 
 const ROUTE = '/frequenzen/quellen.html';
 const trail = [
@@ -45,8 +49,12 @@ const NAV = [
     <AreaNav items={NAV} current={ROUTE} />
   </div>
 
-  <div class="page-body">
-    <article class="prose">
+  <div class="page-body page-body--toc">
+    {/* Verzeichnis vor dem Artikel im DOM: Lesereihenfolge = Abfolge auf
+        schmalen Viewports (§5.3 der Spezifikation). Auf Desktop setzt das
+        Raster es in die rechte Spalte. */}
+    <TableOfContents headings={headings} />
+    <article class="prose" data-toc-scope>
       <Content />
     </article>
   </div>

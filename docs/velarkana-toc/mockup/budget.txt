@@ -1,0 +1,5 @@
+css_raw=9054
+css_minified=4032
+css_gzip=1233
+js_minified=4788
+js_gzip=1685

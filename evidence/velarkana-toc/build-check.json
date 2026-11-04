@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-11-04T16:42:40.781Z",
+  "root": "dist",
+  "expectDisabled": false,
+  "pages": 145,
+  "checks": [
+    {
+      "id": "AK-A1",
+      "description": "genau ein aside.page-toc auf der Pilotseite",
+      "ok": true,
+      "detail": {
+        "asides": 1
+      }
+    },
+    {
+      "id": "AK-F1",
+      "description": "genau ein nav[aria-label=\"Inhaltsverzeichnis\"]",
+      "ok": true,
+      "detail": {
+        "navs": 1
+      }
+    },
+    {
+      "id": "AK-B1",
+      "description": "Pilotseite hat 29 Einträge",
+      "ok": true,
+      "detail": {
+        "expected": 29,
+        "actual": 29
+      }
+    },
+    {
+      "id": "AK-B2",
+      "description": "Reihenfolge und Texte entsprechen §14.1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-C1",
+      "description": "alle TOC-Anker lösen im selben Dokument auf",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-C2",
+      "description": "Überschriften-IDs der Pilotseite unverändert gegenüber der Baseline",
+      "ok": true,
+      "detail": {
+        "baseline": 29,
+        "current": 29
+      }
+    },
+    {
+      "id": "AK-B5",
+      "description": "keine h1-/Footer-Überschrift in der Liste",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-B6",
+      "description": "ol-Verschachtelung entspricht den h2/h3-Gruppen",
+      "ok": true,
+      "detail": {
+        "rootLists": 4,
+        "items2": 14,
+        "items3": 15,
+        "expectedH2": 14,
+        "expectedH3": 15
+      }
+    },
+    {
+      "id": "AK-G4",
+      "description": "kein aria-current im serverseitigen TOC-Markup",
+      "ok": true,
+      "detail": {
+        "found": 0
+      }
+    },
+    {
+      "id": "AK-N1",
+      "description": "details kommt offen aus dem Server (No-JS)",
+      "ok": true
+    },
+    {
+      "id": "AK-N2",
+      "description": "summary trägt id=\"page-toc-title\", aside referenziert sie",
+      "ok": true
+    },
+    {
+      "id": "AK-I3",
+      "description": "data-toc-dynamic fehlt im Piloten",
+      "ok": true
+    },
+    {
+      "id": "AK-H6",
+      "description": "keine doppelte ID im Dokument eingeführt",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-A2",
+      "description": "kein aside.page-toc auf den übrigen Seiten",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-A5",
+      "description": "kein zusätzliches nav \"Inhaltsverzeichnis\" auf den übrigen Seiten",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-H5",
+      "description": "bestehende Verzeichnisse behalten genau ein nav und erhalten kein page-toc",
+      "ok": true,
+      "detail": [
+        {
+          "rel": "radiasthesie/orakel.html",
+          "navs": 1,
+          "asides": 0
+        },
+        {
+          "rel": "radiasthesie/pendeln.html",
+          "navs": 1,
+          "asides": 0
+        },
+        {
+          "rel": "radiasthesie/radiasthesie.html",
+          "navs": 1,
+          "asides": 0
+        },
+        {
+          "rel": "wissen/01-die-78-tarot-karten-eine.html",
+          "navs": 1,
+          "asides": 0
+        }
+      ]
+    },
+    {
+      "id": "AK-H5b",
+      "description": "bestehendes Radiästhesie-TOC bleibt bei 10 Links",
+      "ok": true,
+      "detail": {
+        "legacyLinks": 10
+      }
+    },
+    {
+      "id": "AK-B8",
+      "description": "Leerzustand: 404 und labor.html ohne TOC",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "summary": {
+    "total": 18,
+    "passed": 18,
+    "failed": 0
+  }
+}

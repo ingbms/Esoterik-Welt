@@ -38,6 +38,9 @@
     "test:radiasthesie:experiment": "node --test tests/experiment-statistik.mjs",
     "test:radiasthesie:journal": "node --test tests/journal-speicher.mjs",
     "test:farbwelten": "node --test tests/farbwelten.mjs tests/farbwelten-sources.mjs",
+    "test:toc": "node --test tests/toc-unit.mjs",
+    "verify:toc": "node scripts/toc/verify-toc.cjs dist",
+    "verify:toc:browser": "node scripts/toc/verify-browser.mjs",
     "verify:sync": "node scripts/verify-farbwelten-sync.cjs",
     "data:astrologie": "node scripts/generate-astrologie-data.cjs",
     "data:radiasthesie": "node scripts/generate-radiasthesie-data.cjs && npx prettier --write js/data/radiasthesie.js",
@@ -87,7 +90,8 @@
     "@astrojs/sitemap": "3.7.4",
     "astro": "7.4.5",
     "cookie": "2.0.1",
-    "express": "^4.18.0"
+    "express": "^4.18.0",
+    "github-slugger": "2.0.0"
   },
   "directories": {
     "doc": "docs",

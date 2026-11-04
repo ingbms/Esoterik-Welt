@@ -1,0 +1,79 @@
+---
+/**
+ * Automatisches Seiten-Inhaltsverzeichnis — Astro-Komponente.
+ *
+ * Markup und Zustände: `docs/velarkana-toc/spezifikation.md` §6.4 und
+ * `docs/velarkana-toc/02-komponenten-spezifikation.md` §1/§2.
+ *
+ * Die Liste wird **serverseitig** gerendert (§D-6): ohne JavaScript sind alle
+ * Anker vorhanden und bedienbar (§6.9). Das gebündelte Skript ergänzt nur
+ * Scroll-Spy, Mobilschalter und – ausschließlich bei `dynamic` – fehlende IDs
+ * (§6.11).
+ *
+ * Leerzustand: ohne `headings`, bei deaktiviertem Schalter (`TOC_DISABLED=1`)
+ * oder wenn nach Filterung weniger als `minHeadings` Einträge bleiben, wird
+ * **nichts** gerendert — kein Container, kein Platzhalter (§6.6).
+ */
+import { buildTocTree, renderTocList, resolveTocOptions, TOC_ENABLED } from '../lib/toc';
+import type { TocHeadingInput } from '../lib/toc';
+
+export interface Props {
+  /** Überschriften des Seiteninhalts (`headings` aus `render(entry)`). */
+  headings?: TocHeadingInput[];
+  /** Sichtbarer Titel; Default „Auf dieser Seite“. */
+  title?: string;
+  /** Einzubeziehende h-Ebenen; Default `[2, 3]`. */
+  levels?: number[];
+  /** Unter dieser Anzahl an Einträgen kein Verzeichnis; Default `3`. */
+  minHeadings?: number;
+  /** CSS-Ausdruck für den Sticky-Abstand unter dem Header. */
+  stickyOffset?: string;
+  /**
+   * Liste clientseitig aus `[data-toc-scope]` aufbauen und fehlende IDs
+   * erzeugen. Nur für Seiten ohne serverseitige `headings` (§6.11); im Piloten
+   * nicht aktiv.
+   */
+  dynamic?: boolean;
+}
+
+const { headings, title, levels, minHeadings, stickyOffset, dynamic = false } = Astro.props;
+
+const options = resolveTocOptions({ title, levels, minHeadings, stickyOffset, dynamic });
+
+// Den Schalter hier auswerten und nicht im Markup: so entsteht bei
+// `TOC_DISABLED=1` weder ein Kommentar noch ein leerer Container.
+const tree = TOC_ENABLED ? buildTocTree(headings, options) : null;
+const listHtml = tree ? renderTocList(tree.items) : '';
+---
+
+{tree && (
+  <aside
+    class="page-toc"
+    data-toc
+    aria-labelledby="page-toc-title"
+    data-toc-dynamic={options.dynamic ? 'true' : undefined}
+    data-toc-levels={options.levels.join(',')}
+    data-toc-min={String(options.minHeadings)}
+    style={`--toc-sticky-offset: ${options.stickyOffset};`}
+  >
+    <details class="page-toc__details" data-toc-details open>
+      <summary class="page-toc__summary" id="page-toc-title">
+        {options.title}
+      </summary>
+      <nav class="page-toc__nav" aria-label="Inhaltsverzeichnis">
+        {/* Rein visuelles Rail-Label: auf dem Desktop ist das Summary ausgeblendet
+            (Design G-7). Das Landmark trägt `aria-label="Inhaltsverzeichnis"`. */}
+        <p class="page-toc__title" aria-hidden="true">
+          {options.title}
+        </p>
+        <div class="page-toc__body" data-toc-body>
+          <Fragment set:html={listHtml} />
+        </div>
+      </nav>
+    </details>
+  </aside>
+)}
+
+<script>
+  import '../scripts/toc';
+</script>

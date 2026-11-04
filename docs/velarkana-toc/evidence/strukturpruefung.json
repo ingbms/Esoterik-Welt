@@ -1,0 +1,47 @@
+[
+ {
+  "file": "blau.html",
+  "nav_inhaltsverzeichnis": 1,
+  "asides": 1,
+  "summaries": 1,
+  "summary_ids": [
+   "page-toc-title"
+  ],
+  "links": 8,
+  "nested_ol": 0,
+  "items_h2": 8,
+  "items_h3": 0,
+  "title_aria_hidden": "true",
+  "h1": 1
+ },
+ {
+  "file": "quellen.html",
+  "nav_inhaltsverzeichnis": 1,
+  "asides": 1,
+  "summaries": 1,
+  "summary_ids": [
+   "page-toc-title"
+  ],
+  "links": 29,
+  "nested_ol": 3,
+  "items_h2": 14,
+  "items_h3": 15,
+  "title_aria_hidden": "true",
+  "h1": 1
+ },
+ {
+  "file": "stress.html",
+  "nav_inhaltsverzeichnis": 1,
+  "asides": 1,
+  "summaries": 1,
+  "summary_ids": [
+   "page-toc-title"
+  ],
+  "links": 5,
+  "nested_ol": 2,
+  "items_h2": 3,
+  "items_h3": 2,
+  "title_aria_hidden": "true",
+  "h1": 1
+ }
+]

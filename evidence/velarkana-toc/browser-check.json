@@ -1,0 +1,447 @@
+{
+  "generatedAt": "2026-11-04T17:02:23.866Z",
+  "dist": "C:\\Users\\mas\\Arbeit\\Esoterik-Welt\\.worktrees\\t_3c130426\\dist",
+  "pilot": "/frequenzen/quellen.html",
+  "metrics": {
+    "desktop": {
+      "asideWidth": 260,
+      "asideLeft": 1076,
+      "proseWidth": 720,
+      "proseRight": 824,
+      "gap": 252,
+      "asideHeight": 703,
+      "bodyScroll": 1322,
+      "bodyClient": 670,
+      "sticky": "sticky",
+      "alignSelf": "start",
+      "headerHeight": 100,
+      "docHeight": 23164
+    },
+    "sticky": {
+      "top": 124,
+      "height": 703,
+      "viewport": 900
+    },
+    "breakpoint-1200": {
+      "position": "sticky",
+      "open": true,
+      "top": 448.171875,
+      "asideLeft": 876,
+      "proseTop": 448.171875,
+      "asideBottom": 1051.171875,
+      "docScrollWidth": 1200,
+      "viewport": 1200
+    },
+    "breakpoint-1199": {
+      "position": "static",
+      "open": false,
+      "top": 448.171875,
+      "asideLeft": 64,
+      "proseTop": 516.171875,
+      "asideBottom": 492.171875,
+      "docScrollWidth": 1199,
+      "viewport": 1199
+    },
+    "breakpoint-1024": {
+      "position": "static",
+      "open": false,
+      "top": 448.171875,
+      "asideLeft": 32,
+      "proseTop": 516.171875,
+      "asideBottom": 492.171875,
+      "docScrollWidth": 1024,
+      "viewport": 1024
+    },
+    "mobile": {
+      "open": false,
+      "summaryHeight": 44,
+      "asideBottom": 601.484375,
+      "proseTop": 625.484375,
+      "asideScrollWidth": 342,
+      "asideClientWidth": 342,
+      "docScrollWidth": 540,
+      "viewport": 390
+    },
+    "narrow": {
+      "summaryHeight": 44,
+      "asideScrollWidth": 272,
+      "asideClientWidth": 272,
+      "docScrollWidth": 540
+    }
+  },
+  "screenshots": [
+    "1440-start.png",
+    "1440-sticky-aktiv.png",
+    "1200-rail.png",
+    "1024-offen.png",
+    "390-zu.png",
+    "390-offen.png",
+    "390-nach-klick.png",
+    "390-nojs.png"
+  ],
+  "checks": [
+    {
+      "id": "AK-E1",
+      "description": "Randspalte 240–280 px, Prose 718–722 px, Abstand ≥ 32 px",
+      "ok": true,
+      "detail": {
+        "asideWidth": 260,
+        "asideLeft": 1076,
+        "proseWidth": 720,
+        "proseRight": 824,
+        "gap": 252,
+        "asideHeight": 703,
+        "bodyScroll": 1322,
+        "bodyClient": 670,
+        "sticky": "sticky",
+        "alignSelf": "start",
+        "headerHeight": 100,
+        "docHeight": 23164
+      }
+    },
+    {
+      "id": "AK-E2a",
+      "description": "Randspalte klebt (position: sticky, align-self: start)",
+      "ok": true,
+      "detail": {
+        "sticky": "sticky",
+        "alignSelf": "start"
+      }
+    },
+    {
+      "id": "AK-E3",
+      "description": "TOC-Höhe im Budget (vh − Header − 96 px)",
+      "ok": true,
+      "detail": {
+        "asideHeight": 703,
+        "budget": 704
+      }
+    },
+    {
+      "id": "AK-D1",
+      "description": "nach dem Laden genau ein aria-current",
+      "ok": true,
+      "detail": {
+        "count": 1,
+        "href": "#frequenzen-quellen-evidenzstatus-und-methodik",
+        "classed": 1,
+        "total": 29
+      }
+    },
+    {
+      "id": "AK-D2",
+      "description": "ohne Hash ist der erste Eintrag aktiv",
+      "ok": true,
+      "detail": {
+        "count": 1,
+        "href": "#frequenzen-quellen-evidenzstatus-und-methodik",
+        "classed": 1,
+        "total": 29
+      }
+    },
+    {
+      "id": "AK-E2b",
+      "description": "nach 1.500 px Scroll: TOC-Oberkante = Header + 24 ± 2 px, nicht gestreckt",
+      "ok": true,
+      "detail": {
+        "top": 124,
+        "height": 703,
+        "viewport": 900
+      }
+    },
+    {
+      "id": "AK-D3a",
+      "description": "Abwärts: aktiver Eintrag folgt der Überschrift",
+      "ok": true,
+      "detail": [
+        {
+          "id": "4-datenschema",
+          "result": {
+            "count": 1,
+            "href": "#4-datenschema",
+            "classed": 1,
+            "total": 29
+          }
+        },
+        {
+          "id": "6-einzelprüfungen",
+          "result": {
+            "count": 1,
+            "href": "#6-einzelprüfungen",
+            "classed": 1,
+            "total": 29
+          }
+        },
+        {
+          "id": "11-hinweise-für-ui-und-audio-engine",
+          "result": {
+            "count": 1,
+            "href": "#11-hinweise-für-ui-und-audio-engine",
+            "classed": 1,
+            "total": 29
+          }
+        }
+      ]
+    },
+    {
+      "id": "AK-D3b",
+      "description": "Aufwärts an den Seitenanfang: erster Eintrag aktiv",
+      "ok": true,
+      "detail": {
+        "count": 1,
+        "href": "#frequenzen-quellen-evidenzstatus-und-methodik",
+        "classed": 1,
+        "total": 29
+      }
+    },
+    {
+      "id": "AK-D4",
+      "description": "Dokumentende: letzter Eintrag aktiv",
+      "ok": true,
+      "detail": {
+        "count": 1,
+        "href": "#13-änderungslog",
+        "classed": 1,
+        "total": 29
+      }
+    },
+    {
+      "id": "AK-D5",
+      "description": "Klick springt zum Ziel im Offsetfenster [header+4, header+40] und setzt den Hash",
+      "ok": true,
+      "detail": {
+        "top": 115.578125,
+        "hash": "#6-einzelprüfungen",
+        "active": "#frequenzen-quellen-evidenzstatus-und-methodik",
+        "header": 100
+      }
+    },
+    {
+      "id": "AK-C6",
+      "description": "prozentkodierter Hash trifft dasselbe Ziel und markiert denselben Eintrag",
+      "ok": true,
+      "detail": {
+        "top": 115.578125,
+        "active": "#6-einzelprüfungen",
+        "header": 100
+      }
+    },
+    {
+      "id": "AK-D6",
+      "description": "hashchange aktualisiert die Aktivierung ohne Neuladen",
+      "ok": true,
+      "detail": {
+        "hashChange": "#4-datenschema"
+      }
+    },
+    {
+      "id": "AK-F3a",
+      "description": "Links sind fokussierbar, Fokusring ≥ 2 px, Zielhöhe ≥ 24 px",
+      "ok": true,
+      "detail": {
+        "focused": true,
+        "outlineWidth": 3,
+        "minHeight": 52.59375
+      }
+    },
+    {
+      "id": "AK-B7",
+      "description": "kein Eintrag wird abgeschnitten (scrollWidth = clientWidth)",
+      "ok": true,
+      "detail": {
+        "truncation": 0
+      }
+    },
+    {
+      "id": "AK-F4",
+      "description": "Kontrast Link und aktiver Link ≥ 4,5:1",
+      "ok": true,
+      "detail": {
+        "resting": 10.072770007445314,
+        "active": 15.359559958450754
+      }
+    },
+    {
+      "id": "AK-H2b",
+      "description": "keine externen Netzwerk-Anfragen",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-H2c",
+      "description": "Pilot lädt den dynamischen Chunk (Slug-Bibliothek) nicht",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-H4b",
+      "description": "keine Konsolenfehler",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-E8",
+      "description": "im Druck ist das TOC ausgeblendet",
+      "ok": true,
+      "detail": {
+        "display": "none"
+      }
+    },
+    {
+      "id": "AK-F5",
+      "description": "prefers-reduced-motion: scroll-behavior auto, keine Transition",
+      "ok": true,
+      "detail": {
+        "scrollBehavior": "auto",
+        "tocTransition": "0s"
+      }
+    },
+    {
+      "id": "AK-E6a",
+      "description": "1200 px: Randspalte rechts, sticky, offen",
+      "ok": true,
+      "detail": {
+        "position": "sticky",
+        "open": true,
+        "top": 448.171875,
+        "asideLeft": 876,
+        "proseTop": 448.171875,
+        "asideBottom": 1051.171875,
+        "docScrollWidth": 1200,
+        "viewport": 1200
+      }
+    },
+    {
+      "id": "AK-E6b",
+      "description": "1199 px: Block über dem Artikel, geschlossen, kein Überlauf",
+      "ok": true,
+      "detail": {
+        "position": "static",
+        "open": false,
+        "top": 448.171875,
+        "asideLeft": 64,
+        "proseTop": 516.171875,
+        "asideBottom": 492.171875,
+        "docScrollWidth": 1199,
+        "viewport": 1199
+      }
+    },
+    {
+      "id": "AK-E4a",
+      "description": "1024 px: TOC steht vor dem Artikel",
+      "ok": true,
+      "detail": {
+        "position": "static",
+        "open": false,
+        "top": 448.171875,
+        "asideLeft": 32,
+        "proseTop": 516.171875,
+        "asideBottom": 492.171875,
+        "docScrollWidth": 1024,
+        "viewport": 1024
+      }
+    },
+    {
+      "id": "AK-E4b",
+      "description": "390 px: Block über dem Artikel, geschlossen, Summary ≥ 44 px",
+      "ok": true,
+      "detail": {
+        "open": false,
+        "summaryHeight": 44,
+        "asideBottom": 601.484375,
+        "proseTop": 625.484375,
+        "asideScrollWidth": 342,
+        "asideClientWidth": 342,
+        "docScrollWidth": 540,
+        "viewport": 390
+      }
+    },
+    {
+      "id": "AK-E5",
+      "description": "390 px: kein zusätzlicher Überlauf durch das TOC (Ausgangswert 540 px)",
+      "ok": true,
+      "detail": {
+        "open": false,
+        "summaryHeight": 44,
+        "asideBottom": 601.484375,
+        "proseTop": 625.484375,
+        "asideScrollWidth": 342,
+        "asideClientWidth": 342,
+        "docScrollWidth": 540,
+        "viewport": 390
+      }
+    },
+    {
+      "id": "AK-E4c",
+      "description": "390 px: Summary öffnet die Liste, eigener Scrollbereich, kein neuer Überlauf",
+      "ok": true,
+      "detail": {
+        "open": true,
+        "bodyHeight": 472.625,
+        "bodyOverflow": true,
+        "docScrollWidth": 540
+      }
+    },
+    {
+      "id": "AK-G2",
+      "description": "Klick auf Mobil: Panel zu, Ziel unter dem Header",
+      "ok": true,
+      "detail": {
+        "open": false,
+        "top": 99.515625,
+        "header": 84
+      }
+    },
+    {
+      "id": "AK-H4c",
+      "description": "keine Konsolenfehler auf Mobil",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-E7",
+      "description": "320 px: TOC ohne Clipping und ohne eigenen Überlauf",
+      "ok": true,
+      "detail": {
+        "summaryHeight": 44,
+        "asideScrollWidth": 272,
+        "asideClientWidth": 272,
+        "docScrollWidth": 540
+      }
+    },
+    {
+      "id": "AK-G1",
+      "description": "ohne JavaScript: alle 29 Links im HTML",
+      "ok": true,
+      "detail": {
+        "links": 29,
+        "open": true,
+        "current": 0
+      }
+    },
+    {
+      "id": "AK-G3",
+      "description": "ohne JavaScript: details offen, kein aria-current",
+      "ok": true,
+      "detail": {
+        "links": 29,
+        "open": true,
+        "current": 0
+      }
+    },
+    {
+      "id": "AK-G2b",
+      "description": "ohne JavaScript: Ankerlink springt korrekt",
+      "ok": true,
+      "detail": {
+        "hash": "#4-datenschema",
+        "top": 100
+      }
+    }
+  ],
+  "summary": {
+    "total": 32,
+    "passed": 32,
+    "failed": 0
+  }
+}

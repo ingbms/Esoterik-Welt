@@ -117,6 +117,18 @@ module.exports = [
       parserOptions: { parser: tseslint.parser },
     },
   },
+  {
+    // Browser-getriebene Prüfskripte in ESM: Sie laufen im Node-Prozess, führen
+    // aber Code in `page.evaluate()`-Callbacks aus. Deshalb Node- und
+    // Browser-Globals; bewusst nur für die TOC-Browserprüfung, damit die
+    // Regel nicht für Anwendungscode gilt.
+    files: ['scripts/toc/verify-browser.mjs'],
+    languageOptions: {
+      ecmaVersion: 2023,
+      sourceType: 'module',
+      globals: { ...globals.node, ...globals.browser },
+    },
+  },
   // TypeScript: empfohlener Regelsatz plus Regeln gegen unsaubere Typen.
   // Die TS-Configs werden auf src/**/*.ts begrenzt: der typescript-eslint-
   // Basiseintrag aktiviert sonst Regeln wie no-require-imports auch für die

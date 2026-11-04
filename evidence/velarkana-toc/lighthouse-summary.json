@@ -1,0 +1,58 @@
+{
+  "tool": "lighthouse (lokal, headless Chromium, Standard-Throttling)",
+  "note": "Baseline = Build 9d14d37 ohne TOC (Worktree t_7ad19549); Pilot = Build mit TOC. Beide Läufe gegen einen lokalen statischen Server, gleiche Flags.",
+  "baseline": {
+    "url": "http://127.0.0.1:8798/frequenzen/quellen.html",
+    "accessibility": 0.91,
+    "performance": 0.62,
+    "cls": "0.002",
+    "tbt": "0 ms",
+    "consoleErrors": 0,
+    "failingA11yAudits": [
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "selectors": [
+          "pre.astro-code > code > span.line > span",
+          "pre.astro-code > code > span.line > span"
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "title": "Links rely on color to be distinguishable.",
+        "selectors": [
+          "article.prose > ol > li > a",
+          "article.prose > ol > li > a",
+          "article.prose > ol > li > a"
+        ]
+      }
+    ]
+  },
+  "pilot": {
+    "url": "http://127.0.0.1:8799/frequenzen/quellen.html",
+    "accessibility": 0.92,
+    "performance": 0.62,
+    "cls": "0",
+    "tbt": "0 ms",
+    "consoleErrors": 0,
+    "failingA11yAudits": [
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "selectors": [
+          "pre.astro-code > code > span.line > span",
+          "pre.astro-code > code > span.line > span"
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "title": "Links rely on color to be distinguishable.",
+        "selectors": [
+          "article.prose > ol > li > a",
+          "article.prose > ol > li > a",
+          "article.prose > ol > li > a"
+        ]
+      }
+    ]
+  }
+}
