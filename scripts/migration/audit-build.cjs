@@ -41,5 +41,8 @@ console.log('Mehr als ein WebPage-Knoten:', problems.multipleWebPage.length, pro
 console.log('Sichtbare Migrationshinweise:', problems.migrationNotes.length, problems.migrationNotes.slice(0, 10));
 console.log('.nojekyll fehlt:', problems.noNojekyll);
 const failed =
-  problems.multipleH1.length || problems.multipleWebPage.length || problems.migrationNotes.length || problems.noNojekyll;
+  problems.multipleH1.length ||
+  problems.multipleWebPage.length ||
+  problems.migrationNotes.length ||
+  problems.noNojekyll;
 if (failed) process.exitCode = 1;

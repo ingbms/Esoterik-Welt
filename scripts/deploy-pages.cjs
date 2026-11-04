@@ -34,7 +34,16 @@ const PREFIX = '/velarkana/';
 const REPO = 'https://github.com/ingbms/velarkana.git';
 
 const TEXT_EXTENSIONS = new Set(['.html', '.xml', '.css', '.js', '.txt', '.json', '.svg']);
-const FORBIDDEN = [/^src\//, /^tests\//, /^docs\//, /^scripts\//, /^qa\//, /\.ts$/, /\.astro$/, /^package(-lock)?\.json$/];
+const FORBIDDEN = [
+  /^src\//,
+  /^tests\//,
+  /^docs\//,
+  /^scripts\//,
+  /^qa\//,
+  /\.ts$/,
+  /\.astro$/,
+  /^package(-lock)?\.json$/,
+];
 
 function walk(dir) {
   const out = [];

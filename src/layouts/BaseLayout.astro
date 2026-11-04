@@ -96,22 +96,15 @@ const path = canonicalPath(Astro.url.pathname);
 const origin = Astro.site ?? new URL(Astro.url.origin);
 const canonical = new URL(path, origin).href;
 
-const documentTitle =
-  exactTitle || !appendBrand || title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+const documentTitle = exactTitle || !appendBrand || title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
 
 // Ein Seitenknoten aus der Seite ersetzt den generischen WebPage-Knoten, statt
 // einen zweiten mit derselben Absicht danebenzustellen (Review M-3). Der
 // `@id` bleibt der des Layouts, damit `isPartOf`-Referenzen eindeutig bleiben.
-const extraNodes: Record<string, unknown>[] = Array.isArray(jsonLd)
-  ? jsonLd
-  : jsonLd
-    ? [jsonLd]
-    : [];
+const extraNodes: Record<string, unknown>[] = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 const pageOverride = extraNodes.find((node) => node['@type'] === 'WebPage');
 const basePage = webPage({ url: canonical, name: documentTitle, description });
-const pageNode = pageOverride
-  ? { ...basePage, ...pageOverride, '@id': basePage['@id'], url: canonical }
-  : basePage;
+const pageNode = pageOverride ? { ...basePage, ...pageOverride, '@id': basePage['@id'], url: canonical } : basePage;
 
 const structuredData: Record<string, unknown>[] = [
   pageNode,
@@ -158,13 +151,11 @@ const robotsValue = robots !== undefined ? robots : noindex ? 'noindex, nofollow
     <slot name="head" />
   </head>
   <body class={bodyClass}>
-    <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
+    <a class="skip-link" href="#main">
+      Zum Hauptinhalt springen
+    </a>
     <SiteHeader variant={headerVariant} currentPath={Astro.url.pathname} />
-    <main
-      id="main"
-      class:list={[mainClass ?? 'site-main', { 'site-main--hero': hero }]}
-      tabindex="-1"
-    >
+    <main id="main" class:list={[mainClass ?? 'site-main', { 'site-main--hero': hero }]} tabindex="-1">
       {trail.length > 0 && <Breadcrumbs trail={trail} />}
       <slot />
     </main>

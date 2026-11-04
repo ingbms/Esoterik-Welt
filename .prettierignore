@@ -4,6 +4,7 @@ dist/
 coverage/
 .lighthouseci/
 test-results/
+.deploy/
 
 # Generated / evidence artifacts
 evidence/
@@ -38,8 +39,14 @@ js/data/astrologie.js
 # scripts/migration/split-legacy-css.py, damit der Side-by-Side-Vergleich auf
 # demselben CSS beruht. Prettier wuerde die Bloecke umformatieren und den
 # Byte-Vergleich mit css/design-system.css bzw. css/main.css zerstoeren.
-# Geprueft wird stattdessen mit `python scripts/migration/split-legacy-css.py --check`.
+# Geprüft wird stattdessen mit `python scripts/migration/split-legacy-css.py --check`.
 src/styles/fonts.css
 src/styles/tokens.css
 src/styles/design-system.css
 src/styles/shell.css
+
+# Zeilengenaue Bestandsfragmente (Werkzeuge, Radiästhesie-Dokumente). Sie
+# werden mit scripts/migration/extract-*.cjs erzeugt; Prettier würde sie
+# umformatieren und den Vergleich mit dem Bestand zerstören.
+src/content/tools/
+src/content/radiasthesie/

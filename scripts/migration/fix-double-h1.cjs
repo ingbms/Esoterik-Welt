@@ -14,6 +14,9 @@ for (const file of ['src/pages/impressum.astro', 'src/pages/datenschutz.astro', 
 
 const md = 'src/content/dokumente/frequenz-quellen.md';
 let doc = fs.readFileSync(md, 'utf8');
-doc = doc.replace(/^# Frequenzen: Quellen, Evidenzstatus und Methodik/m, '## Frequenzen: Quellen, Evidenzstatus und Methodik');
+doc = doc.replace(
+  /^# Frequenzen: Quellen, Evidenzstatus und Methodik/m,
+  '## Frequenzen: Quellen, Evidenzstatus und Methodik'
+);
 fs.writeFileSync(md, doc, 'utf8');
 console.log('Markdown-Titel auf h2 gesetzt:', md);

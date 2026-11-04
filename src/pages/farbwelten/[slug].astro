@@ -12,7 +12,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import AreaNav from '../../components/AreaNav.astro';
 import { FARBWELTEN, FARB_TOPIC_PAGES } from '../../data/legacy';
 import { farbHref, farbSlug } from '../../lib/farbwelten';
-import { formatInline } from '../../lib/inline';
 
 export async function getStaticPaths() {
   const entries = await getCollection('farbwelten');

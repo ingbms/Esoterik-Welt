@@ -50,7 +50,9 @@ async function main() {
     console.log(
       `${row.ok ? 'OK  ' : 'FAIL'} ${row.name.padEnd(18)} Kinder ${String(row.targetChildren).padStart(4)} Text ${String(
         row.targetText
-      ).padStart(6)} input ${String(row.inputs).padStart(3)} button ${String(row.buttons).padStart(3)} h1 ${row.h1.length} Fehler ${row.errors.length}`
+      ).padStart(
+        6
+      )} input ${String(row.inputs).padStart(3)} button ${String(row.buttons).padStart(3)} h1 ${row.h1.length} Fehler ${row.errors.length}`
     );
     if (row.errors.length) console.log('     ', row.errors.slice(0, 3).join(' | '));
   }

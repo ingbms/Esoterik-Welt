@@ -13,7 +13,7 @@ const freqPages = [
 
 for (const file of freqPages) {
   let astro = fs.readFileSync(file, 'utf8');
-  if (!astro.includes("EmbeddedJson")) {
+  if (!astro.includes('EmbeddedJson')) {
     astro = astro.replace(
       "import body from '../../content/tools/frequenzen.html?raw';",
       "import body from '../../content/tools/frequenzen.html?raw';\nimport EmbeddedJson from '../../components/EmbeddedJson.astro';\nimport frequenciesJson from '../../../data/frequencies.json';"

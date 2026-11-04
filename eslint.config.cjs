@@ -29,6 +29,11 @@ module.exports = [
       'coverage/**',
       'docs/**',
       'public/**',
+      // Generiertes Deployment-Artefakt (dist + Pfadumschreibung).
+      '.deploy/**',
+      // Einmalige Migrations-/Prüfwerkzeuge (werden über npm-Skripte
+      // aufgerufen, nicht als Anwendungscode gepflegt).
+      'scripts/migration/**',
       // Archivierter Vor-Astro-Platzhalter (siehe legacy/public/README.md).
       'legacy/**',
       // Astro generiert Typen und Content-Collection-Typen nach .astro/.
