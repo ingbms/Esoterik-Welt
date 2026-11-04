@@ -1,0 +1,1727 @@
+{
+  "$comment": "Erzeugt von scripts/migration-baseline/render-catalogs.cjs aus design-catalog.json. Nicht von Hand bearbeiten.",
+  "schema_version": "1.0.0",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "stand": "2026-11-03",
+  "count": 170,
+  "groups": {
+    "color": {
+      "--color-bg-deep": "#0b1012",
+      "--color-bg-card": "#141c1f",
+      "--color-text-primary": "#eae6dc",
+      "--color-text-secondary": "#babdb7",
+      "--color-primary": "#c6b38e",
+      "--color-hover": "#d5c4a2",
+      "--color-border": "#3c484b",
+      "--color-line-strong": "#82928e",
+      "--color-bg-card-hover": "#1a2427",
+      "--color-primary-light": "var(--color-hover)",
+      "--color-primary-dark": "#a89670",
+      "--color-secondary": "var(--color-line-strong)",
+      "--color-secondary-dark": "#6e7c79",
+      "--color-secondary-text": "var(--color-text-secondary)",
+      "--color-accent-gold": "var(--color-primary)",
+      "--color-accent-rose": "#c09489",
+      "--color-accent-emerald": "#9db3a4",
+      "--color-border-glow": "var(--color-line-strong)",
+      "--color-text-muted": "var(--color-text-secondary)",
+      "--color-text": "var(--color-text-primary)",
+      "--color-text-on-primary": "var(--color-bg-deep)",
+      "--surface-ghost": "var(--color-bg-card)",
+      "--border-glow-subtle": "var(--color-border)",
+      "--color-chakra-root": "#e53935",
+      "--color-chakra-sacral": "#fb8c00",
+      "--color-chakra-solar": "#fdd835",
+      "--color-chakra-heart": "#43a047",
+      "--color-chakra-throat": "#1e88e5",
+      "--color-chakra-third-eye": "#5e35b1",
+      "--color-chakra-crown": "#8e24aa",
+      "--fw-rot-ink": "#cf6a60",
+      "--fw-rot-core": "#bc4a41",
+      "--fw-rot-core-deep": "#853630",
+      "--fw-rot-soft": "#d69991",
+      "--fw-rot-line": "#985c55",
+      "--fw-rot-deep": "#281715",
+      "--fw-rot-deep-alt": "#1d100e",
+      "--fw-orange-ink": "#c77434",
+      "--fw-orange-core": "#ad5c13",
+      "--fw-orange-core-deep": "#7a4213",
+      "--fw-orange-soft": "#d09f7d",
+      "--fw-orange-line": "#936240",
+      "--fw-orange-deep": "#26180f",
+      "--fw-orange-deep-alt": "#1c110a",
+      "--fw-gelb-ink": "#a08b32",
+      "--fw-gelb-core": "#887315",
+      "--fw-gelb-core-deep": "#605213",
+      "--fw-gelb-soft": "#b9ab74",
+      "--fw-gelb-line": "#786c3a",
+      "--fw-gelb-deep": "#201c0c",
+      "--fw-gelb-deep-alt": "#171408",
+      "--fw-gruen-ink": "#4da15d",
+      "--fw-gruen-core": "#1d8b3d",
+      "--fw-gruen-core-deep": "#1b622d",
+      "--fw-gruen-soft": "#8bb890",
+      "--fw-gruen-line": "#47764e",
+      "--fw-gruen-deep": "#131f14",
+      "--fw-gruen-deep-alt": "#0d170e",
+      "--fw-tuerkis-ink": "#389d9d",
+      "--fw-tuerkis-core": "#1b8585",
+      "--fw-tuerkis-core-deep": "#185e5e",
+      "--fw-tuerkis-soft": "#6fbab9",
+      "--fw-tuerkis-line": "#3f7776",
+      "--fw-tuerkis-deep": "#0a2020",
+      "--fw-tuerkis-deep-alt": "#071717",
+      "--fw-blau-ink": "#4391d7",
+      "--fw-blau-core": "#1678c3",
+      "--fw-blau-core-deep": "#15568a",
+      "--fw-blau-soft": "#85afd8",
+      "--fw-blau-line": "#447098",
+      "--fw-blau-deep": "#111d28",
+      "--fw-blau-deep-alt": "#0c151d",
+      "--fw-indigo-ink": "#857fd7",
+      "--fw-indigo-core": "#6e64c8",
+      "--fw-indigo-core-deep": "#4d478c",
+      "--fw-indigo-soft": "#a5a5d9",
+      "--fw-indigo-line": "#6a689c",
+      "--fw-indigo-deep": "#1a1a28",
+      "--fw-indigo-deep-alt": "#13121d",
+      "--fw-violett-ink": "#ad71bf",
+      "--fw-violett-core": "#9853ad",
+      "--fw-violett-core-deep": "#6b3c79",
+      "--fw-violett-soft": "#bf9cca",
+      "--fw-violett-line": "#82608d",
+      "--fw-violett-deep": "#211824",
+      "--fw-violett-deep-alt": "#18111a",
+      "--fw-magenta-ink": "#c3699e",
+      "--fw-magenta-core": "#af4a88",
+      "--fw-magenta-core-deep": "#7b3660",
+      "--fw-magenta-soft": "#ce98b6",
+      "--fw-magenta-line": "#905b79",
+      "--fw-magenta-deep": "#25161f",
+      "--fw-magenta-deep-alt": "#1b1016",
+      "--fw-rosa-ink": "#c9899c",
+      "--fw-rosa-core": "#a15c72",
+      "--fw-rosa-core-deep": "#714251",
+      "--fw-rosa-soft": "#c59fa9",
+      "--fw-rosa-line": "#8e6973",
+      "--fw-rosa-deep": "#23181b",
+      "--fw-rosa-deep-alt": "#191113",
+      "--fw-weiss-ink": "#c9c4b5",
+      "--fw-weiss-core": "#f1ebda",
+      "--fw-weiss-core-deep": "#d9d4c8",
+      "--fw-weiss-soft": "#fbf8f0",
+      "--fw-weiss-line": "#95928a",
+      "--fw-weiss-deep": "#1e1c14",
+      "--fw-weiss-deep-alt": "#16140e",
+      "--fw-schwarz-ink": "#b0ab9c",
+      "--fw-schwarz-core": "#383225",
+      "--fw-schwarz-core-deep": "#201d13",
+      "--fw-schwarz-soft": "#55524b",
+      "--fw-schwarz-line": "#6f6c64",
+      "--fw-schwarz-deep": "#1e1c14",
+      "--fw-schwarz-deep-alt": "#16140e"
+    },
+    "typography": {
+      "--font-display": "'Fraunces', Georgia, 'Times New Roman', serif",
+      "--font-body": "'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "--font-mono": "ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Menlo, monospace",
+      "--text-xs": "13px",
+      "--text-sm": "14px",
+      "--text-base": "16px",
+      "--text-lg": "18px",
+      "--text-xl": "20px",
+      "--text-2xl": "28px",
+      "--text-3xl": "34px",
+      "--text-4xl": "44px",
+      "--text-h1": "80px",
+      "--text-page-title": "56px",
+      "--font-weight-light": "300",
+      "--font-weight-normal": "400",
+      "--font-weight-medium": "500",
+      "--font-weight-semibold": "600",
+      "--font-weight-bold": "700"
+    },
+    "space": {
+      "--space-0": "0",
+      "--space-1": "4px",
+      "--space-2": "8px",
+      "--space-3": "12px",
+      "--space-4": "16px",
+      "--space-5": "20px",
+      "--space-6": "24px",
+      "--space-8": "32px",
+      "--space-10": "40px",
+      "--space-12": "48px",
+      "--space-16": "64px",
+      "--space-20": "80px",
+      "--space-24": "96px",
+      "--gutter": "64px"
+    },
+    "radius": {
+      "--radius-sm": "2px",
+      "--radius-md": "2px",
+      "--radius-lg": "2px",
+      "--radius-xl": "4px",
+      "--radius-2xl": "4px",
+      "--radius-full": "2px"
+    },
+    "shadow": {
+      "--shadow-sm": "none",
+      "--shadow-md": "none",
+      "--shadow-lg": "none",
+      "--shadow-xl": "none",
+      "--shadow-glow": "none",
+      "--shadow-glow-strong": "none"
+    },
+    "motion": {
+      "--transition-fast": "120ms ease",
+      "--transition-base": "200ms ease",
+      "--transition-slow": "300ms ease"
+    },
+    "z": {
+      "--z-dropdown": "100",
+      "--z-sticky": "200",
+      "--z-modal-backdrop": "300",
+      "--z-modal": "400",
+      "--z-tooltip": "500",
+      "--z-toast": "600"
+    },
+    "size": {
+      "--container-max": "1360px",
+      "--header-height": "100px",
+      "--footer-height": "auto"
+    }
+  },
+  "tokens": [
+    {
+      "id": "DES-TOK-001",
+      "name": "--color-bg-deep",
+      "value": "#0b1012",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L42"
+    },
+    {
+      "id": "DES-TOK-002",
+      "name": "--color-bg-card",
+      "value": "#141c1f",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L43"
+    },
+    {
+      "id": "DES-TOK-003",
+      "name": "--color-text-primary",
+      "value": "#eae6dc",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L44"
+    },
+    {
+      "id": "DES-TOK-004",
+      "name": "--color-text-secondary",
+      "value": "#babdb7",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L45"
+    },
+    {
+      "id": "DES-TOK-005",
+      "name": "--color-primary",
+      "value": "#c6b38e",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L46"
+    },
+    {
+      "id": "DES-TOK-006",
+      "name": "--color-hover",
+      "value": "#d5c4a2",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L47"
+    },
+    {
+      "id": "DES-TOK-007",
+      "name": "--color-border",
+      "value": "#3c484b",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L48"
+    },
+    {
+      "id": "DES-TOK-008",
+      "name": "--color-line-strong",
+      "value": "#82928e",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L49"
+    },
+    {
+      "id": "DES-TOK-009",
+      "name": "--color-bg-card-hover",
+      "value": "#1a2427",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L52"
+    },
+    {
+      "id": "DES-TOK-010",
+      "name": "--color-primary-light",
+      "value": "var(--color-hover)",
+      "group": "color",
+      "status": "veraltet",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L55"
+    },
+    {
+      "id": "DES-TOK-011",
+      "name": "--color-primary-dark",
+      "value": "#a89670",
+      "group": "color",
+      "status": "veraltet",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L56"
+    },
+    {
+      "id": "DES-TOK-012",
+      "name": "--color-secondary",
+      "value": "var(--color-line-strong)",
+      "group": "color",
+      "status": "veraltet",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L57"
+    },
+    {
+      "id": "DES-TOK-013",
+      "name": "--color-secondary-dark",
+      "value": "#6e7c79",
+      "group": "color",
+      "status": "veraltet",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L58"
+    },
+    {
+      "id": "DES-TOK-014",
+      "name": "--color-secondary-text",
+      "value": "var(--color-text-secondary)",
+      "group": "color",
+      "status": "veraltet",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L59"
+    },
+    {
+      "id": "DES-TOK-015",
+      "name": "--color-accent-gold",
+      "value": "var(--color-primary)",
+      "group": "color",
+      "status": "veraltet",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L60"
+    },
+    {
+      "id": "DES-TOK-016",
+      "name": "--color-accent-rose",
+      "value": "#c09489",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L63"
+    },
+    {
+      "id": "DES-TOK-017",
+      "name": "--color-accent-emerald",
+      "value": "#9db3a4",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L64"
+    },
+    {
+      "id": "DES-TOK-018",
+      "name": "--color-border-glow",
+      "value": "var(--color-line-strong)",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L65"
+    },
+    {
+      "id": "DES-TOK-019",
+      "name": "--color-text-muted",
+      "value": "var(--color-text-secondary)",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L66"
+    },
+    {
+      "id": "DES-TOK-020",
+      "name": "--color-text",
+      "value": "var(--color-text-primary)",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L67"
+    },
+    {
+      "id": "DES-TOK-021",
+      "name": "--color-text-on-primary",
+      "value": "var(--color-bg-deep)",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L68"
+    },
+    {
+      "id": "DES-TOK-022",
+      "name": "--surface-ghost",
+      "value": "var(--color-bg-card)",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L69"
+    },
+    {
+      "id": "DES-TOK-023",
+      "name": "--border-glow-subtle",
+      "value": "var(--color-border)",
+      "group": "color",
+      "status": "veraltet",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L70"
+    },
+    {
+      "id": "DES-TOK-024",
+      "name": "--color-chakra-root",
+      "value": "#e53935",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L75"
+    },
+    {
+      "id": "DES-TOK-025",
+      "name": "--color-chakra-sacral",
+      "value": "#fb8c00",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L76"
+    },
+    {
+      "id": "DES-TOK-026",
+      "name": "--color-chakra-solar",
+      "value": "#fdd835",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L77"
+    },
+    {
+      "id": "DES-TOK-027",
+      "name": "--color-chakra-heart",
+      "value": "#43a047",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L78"
+    },
+    {
+      "id": "DES-TOK-028",
+      "name": "--color-chakra-throat",
+      "value": "#1e88e5",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L79"
+    },
+    {
+      "id": "DES-TOK-029",
+      "name": "--color-chakra-third-eye",
+      "value": "#5e35b1",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L80"
+    },
+    {
+      "id": "DES-TOK-030",
+      "name": "--color-chakra-crown",
+      "value": "#8e24aa",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L81"
+    },
+    {
+      "id": "DES-TOK-031",
+      "name": "--fw-rot-ink",
+      "value": "#cf6a60",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L95"
+    },
+    {
+      "id": "DES-TOK-032",
+      "name": "--fw-rot-core",
+      "value": "#bc4a41",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L96"
+    },
+    {
+      "id": "DES-TOK-033",
+      "name": "--fw-rot-core-deep",
+      "value": "#853630",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L97"
+    },
+    {
+      "id": "DES-TOK-034",
+      "name": "--fw-rot-soft",
+      "value": "#d69991",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L98"
+    },
+    {
+      "id": "DES-TOK-035",
+      "name": "--fw-rot-line",
+      "value": "#985c55",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L99"
+    },
+    {
+      "id": "DES-TOK-036",
+      "name": "--fw-rot-deep",
+      "value": "#281715",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L100"
+    },
+    {
+      "id": "DES-TOK-037",
+      "name": "--fw-rot-deep-alt",
+      "value": "#1d100e",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L101"
+    },
+    {
+      "id": "DES-TOK-038",
+      "name": "--fw-orange-ink",
+      "value": "#c77434",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L103"
+    },
+    {
+      "id": "DES-TOK-039",
+      "name": "--fw-orange-core",
+      "value": "#ad5c13",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L104"
+    },
+    {
+      "id": "DES-TOK-040",
+      "name": "--fw-orange-core-deep",
+      "value": "#7a4213",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L105"
+    },
+    {
+      "id": "DES-TOK-041",
+      "name": "--fw-orange-soft",
+      "value": "#d09f7d",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L106"
+    },
+    {
+      "id": "DES-TOK-042",
+      "name": "--fw-orange-line",
+      "value": "#936240",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L107"
+    },
+    {
+      "id": "DES-TOK-043",
+      "name": "--fw-orange-deep",
+      "value": "#26180f",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L108"
+    },
+    {
+      "id": "DES-TOK-044",
+      "name": "--fw-orange-deep-alt",
+      "value": "#1c110a",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L109"
+    },
+    {
+      "id": "DES-TOK-045",
+      "name": "--fw-gelb-ink",
+      "value": "#a08b32",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L111"
+    },
+    {
+      "id": "DES-TOK-046",
+      "name": "--fw-gelb-core",
+      "value": "#887315",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L112"
+    },
+    {
+      "id": "DES-TOK-047",
+      "name": "--fw-gelb-core-deep",
+      "value": "#605213",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L113"
+    },
+    {
+      "id": "DES-TOK-048",
+      "name": "--fw-gelb-soft",
+      "value": "#b9ab74",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L114"
+    },
+    {
+      "id": "DES-TOK-049",
+      "name": "--fw-gelb-line",
+      "value": "#786c3a",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L115"
+    },
+    {
+      "id": "DES-TOK-050",
+      "name": "--fw-gelb-deep",
+      "value": "#201c0c",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L116"
+    },
+    {
+      "id": "DES-TOK-051",
+      "name": "--fw-gelb-deep-alt",
+      "value": "#171408",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L117"
+    },
+    {
+      "id": "DES-TOK-052",
+      "name": "--fw-gruen-ink",
+      "value": "#4da15d",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L119"
+    },
+    {
+      "id": "DES-TOK-053",
+      "name": "--fw-gruen-core",
+      "value": "#1d8b3d",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L120"
+    },
+    {
+      "id": "DES-TOK-054",
+      "name": "--fw-gruen-core-deep",
+      "value": "#1b622d",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L121"
+    },
+    {
+      "id": "DES-TOK-055",
+      "name": "--fw-gruen-soft",
+      "value": "#8bb890",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L122"
+    },
+    {
+      "id": "DES-TOK-056",
+      "name": "--fw-gruen-line",
+      "value": "#47764e",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L123"
+    },
+    {
+      "id": "DES-TOK-057",
+      "name": "--fw-gruen-deep",
+      "value": "#131f14",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L124"
+    },
+    {
+      "id": "DES-TOK-058",
+      "name": "--fw-gruen-deep-alt",
+      "value": "#0d170e",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L125"
+    },
+    {
+      "id": "DES-TOK-059",
+      "name": "--fw-tuerkis-ink",
+      "value": "#389d9d",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L127"
+    },
+    {
+      "id": "DES-TOK-060",
+      "name": "--fw-tuerkis-core",
+      "value": "#1b8585",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L128"
+    },
+    {
+      "id": "DES-TOK-061",
+      "name": "--fw-tuerkis-core-deep",
+      "value": "#185e5e",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L129"
+    },
+    {
+      "id": "DES-TOK-062",
+      "name": "--fw-tuerkis-soft",
+      "value": "#6fbab9",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L130"
+    },
+    {
+      "id": "DES-TOK-063",
+      "name": "--fw-tuerkis-line",
+      "value": "#3f7776",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L131"
+    },
+    {
+      "id": "DES-TOK-064",
+      "name": "--fw-tuerkis-deep",
+      "value": "#0a2020",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L132"
+    },
+    {
+      "id": "DES-TOK-065",
+      "name": "--fw-tuerkis-deep-alt",
+      "value": "#071717",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L133"
+    },
+    {
+      "id": "DES-TOK-066",
+      "name": "--fw-blau-ink",
+      "value": "#4391d7",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L135"
+    },
+    {
+      "id": "DES-TOK-067",
+      "name": "--fw-blau-core",
+      "value": "#1678c3",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L136"
+    },
+    {
+      "id": "DES-TOK-068",
+      "name": "--fw-blau-core-deep",
+      "value": "#15568a",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L137"
+    },
+    {
+      "id": "DES-TOK-069",
+      "name": "--fw-blau-soft",
+      "value": "#85afd8",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L138"
+    },
+    {
+      "id": "DES-TOK-070",
+      "name": "--fw-blau-line",
+      "value": "#447098",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L139"
+    },
+    {
+      "id": "DES-TOK-071",
+      "name": "--fw-blau-deep",
+      "value": "#111d28",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L140"
+    },
+    {
+      "id": "DES-TOK-072",
+      "name": "--fw-blau-deep-alt",
+      "value": "#0c151d",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L141"
+    },
+    {
+      "id": "DES-TOK-073",
+      "name": "--fw-indigo-ink",
+      "value": "#857fd7",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L143"
+    },
+    {
+      "id": "DES-TOK-074",
+      "name": "--fw-indigo-core",
+      "value": "#6e64c8",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L144"
+    },
+    {
+      "id": "DES-TOK-075",
+      "name": "--fw-indigo-core-deep",
+      "value": "#4d478c",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L145"
+    },
+    {
+      "id": "DES-TOK-076",
+      "name": "--fw-indigo-soft",
+      "value": "#a5a5d9",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L146"
+    },
+    {
+      "id": "DES-TOK-077",
+      "name": "--fw-indigo-line",
+      "value": "#6a689c",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L147"
+    },
+    {
+      "id": "DES-TOK-078",
+      "name": "--fw-indigo-deep",
+      "value": "#1a1a28",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L148"
+    },
+    {
+      "id": "DES-TOK-079",
+      "name": "--fw-indigo-deep-alt",
+      "value": "#13121d",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L149"
+    },
+    {
+      "id": "DES-TOK-080",
+      "name": "--fw-violett-ink",
+      "value": "#ad71bf",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L151"
+    },
+    {
+      "id": "DES-TOK-081",
+      "name": "--fw-violett-core",
+      "value": "#9853ad",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L152"
+    },
+    {
+      "id": "DES-TOK-082",
+      "name": "--fw-violett-core-deep",
+      "value": "#6b3c79",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L153"
+    },
+    {
+      "id": "DES-TOK-083",
+      "name": "--fw-violett-soft",
+      "value": "#bf9cca",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L154"
+    },
+    {
+      "id": "DES-TOK-084",
+      "name": "--fw-violett-line",
+      "value": "#82608d",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L155"
+    },
+    {
+      "id": "DES-TOK-085",
+      "name": "--fw-violett-deep",
+      "value": "#211824",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L156"
+    },
+    {
+      "id": "DES-TOK-086",
+      "name": "--fw-violett-deep-alt",
+      "value": "#18111a",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L157"
+    },
+    {
+      "id": "DES-TOK-087",
+      "name": "--fw-magenta-ink",
+      "value": "#c3699e",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L160"
+    },
+    {
+      "id": "DES-TOK-088",
+      "name": "--fw-magenta-core",
+      "value": "#af4a88",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L161"
+    },
+    {
+      "id": "DES-TOK-089",
+      "name": "--fw-magenta-core-deep",
+      "value": "#7b3660",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L162"
+    },
+    {
+      "id": "DES-TOK-090",
+      "name": "--fw-magenta-soft",
+      "value": "#ce98b6",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L163"
+    },
+    {
+      "id": "DES-TOK-091",
+      "name": "--fw-magenta-line",
+      "value": "#905b79",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L164"
+    },
+    {
+      "id": "DES-TOK-092",
+      "name": "--fw-magenta-deep",
+      "value": "#25161f",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L165"
+    },
+    {
+      "id": "DES-TOK-093",
+      "name": "--fw-magenta-deep-alt",
+      "value": "#1b1016",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L166"
+    },
+    {
+      "id": "DES-TOK-094",
+      "name": "--fw-rosa-ink",
+      "value": "#c9899c",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L168"
+    },
+    {
+      "id": "DES-TOK-095",
+      "name": "--fw-rosa-core",
+      "value": "#a15c72",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L169"
+    },
+    {
+      "id": "DES-TOK-096",
+      "name": "--fw-rosa-core-deep",
+      "value": "#714251",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L170"
+    },
+    {
+      "id": "DES-TOK-097",
+      "name": "--fw-rosa-soft",
+      "value": "#c59fa9",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L171"
+    },
+    {
+      "id": "DES-TOK-098",
+      "name": "--fw-rosa-line",
+      "value": "#8e6973",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L172"
+    },
+    {
+      "id": "DES-TOK-099",
+      "name": "--fw-rosa-deep",
+      "value": "#23181b",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L173"
+    },
+    {
+      "id": "DES-TOK-100",
+      "name": "--fw-rosa-deep-alt",
+      "value": "#191113",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L174"
+    },
+    {
+      "id": "DES-TOK-101",
+      "name": "--fw-weiss-ink",
+      "value": "#c9c4b5",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L180"
+    },
+    {
+      "id": "DES-TOK-102",
+      "name": "--fw-weiss-core",
+      "value": "#f1ebda",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L181"
+    },
+    {
+      "id": "DES-TOK-103",
+      "name": "--fw-weiss-core-deep",
+      "value": "#d9d4c8",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L182"
+    },
+    {
+      "id": "DES-TOK-104",
+      "name": "--fw-weiss-soft",
+      "value": "#fbf8f0",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L183"
+    },
+    {
+      "id": "DES-TOK-105",
+      "name": "--fw-weiss-line",
+      "value": "#95928a",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L184"
+    },
+    {
+      "id": "DES-TOK-106",
+      "name": "--fw-weiss-deep",
+      "value": "#1e1c14",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L185"
+    },
+    {
+      "id": "DES-TOK-107",
+      "name": "--fw-weiss-deep-alt",
+      "value": "#16140e",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L186"
+    },
+    {
+      "id": "DES-TOK-108",
+      "name": "--fw-schwarz-ink",
+      "value": "#b0ab9c",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L188"
+    },
+    {
+      "id": "DES-TOK-109",
+      "name": "--fw-schwarz-core",
+      "value": "#383225",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L189"
+    },
+    {
+      "id": "DES-TOK-110",
+      "name": "--fw-schwarz-core-deep",
+      "value": "#201d13",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L190"
+    },
+    {
+      "id": "DES-TOK-111",
+      "name": "--fw-schwarz-soft",
+      "value": "#55524b",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L191"
+    },
+    {
+      "id": "DES-TOK-112",
+      "name": "--fw-schwarz-line",
+      "value": "#6f6c64",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L192"
+    },
+    {
+      "id": "DES-TOK-113",
+      "name": "--fw-schwarz-deep",
+      "value": "#1e1c14",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L193"
+    },
+    {
+      "id": "DES-TOK-114",
+      "name": "--fw-schwarz-deep-alt",
+      "value": "#16140e",
+      "group": "color",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L194"
+    },
+    {
+      "id": "DES-TOK-115",
+      "name": "--font-display",
+      "value": "'Fraunces', Georgia, 'Times New Roman', serif",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L197"
+    },
+    {
+      "id": "DES-TOK-116",
+      "name": "--font-body",
+      "value": "'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L198"
+    },
+    {
+      "id": "DES-TOK-117",
+      "name": "--font-mono",
+      "value": "ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Menlo, monospace",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L199"
+    },
+    {
+      "id": "DES-TOK-118",
+      "name": "--text-xs",
+      "value": "13px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L201"
+    },
+    {
+      "id": "DES-TOK-119",
+      "name": "--text-sm",
+      "value": "14px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L202"
+    },
+    {
+      "id": "DES-TOK-120",
+      "name": "--text-base",
+      "value": "16px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L203"
+    },
+    {
+      "id": "DES-TOK-121",
+      "name": "--text-lg",
+      "value": "18px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L204"
+    },
+    {
+      "id": "DES-TOK-122",
+      "name": "--text-xl",
+      "value": "20px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L205"
+    },
+    {
+      "id": "DES-TOK-123",
+      "name": "--text-2xl",
+      "value": "28px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L206"
+    },
+    {
+      "id": "DES-TOK-124",
+      "name": "--text-3xl",
+      "value": "34px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L207"
+    },
+    {
+      "id": "DES-TOK-125",
+      "name": "--text-4xl",
+      "value": "44px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L208"
+    },
+    {
+      "id": "DES-TOK-126",
+      "name": "--text-h1",
+      "value": "80px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L210"
+    },
+    {
+      "id": "DES-TOK-127",
+      "name": "--text-page-title",
+      "value": "56px",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L212"
+    },
+    {
+      "id": "DES-TOK-128",
+      "name": "--font-weight-light",
+      "value": "300",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L214"
+    },
+    {
+      "id": "DES-TOK-129",
+      "name": "--font-weight-normal",
+      "value": "400",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L215"
+    },
+    {
+      "id": "DES-TOK-130",
+      "name": "--font-weight-medium",
+      "value": "500",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L216"
+    },
+    {
+      "id": "DES-TOK-131",
+      "name": "--font-weight-semibold",
+      "value": "600",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L217"
+    },
+    {
+      "id": "DES-TOK-132",
+      "name": "--font-weight-bold",
+      "value": "700",
+      "group": "typography",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L218"
+    },
+    {
+      "id": "DES-TOK-133",
+      "name": "--space-0",
+      "value": "0",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L221"
+    },
+    {
+      "id": "DES-TOK-134",
+      "name": "--space-1",
+      "value": "4px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L222"
+    },
+    {
+      "id": "DES-TOK-135",
+      "name": "--space-2",
+      "value": "8px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L223"
+    },
+    {
+      "id": "DES-TOK-136",
+      "name": "--space-3",
+      "value": "12px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L224"
+    },
+    {
+      "id": "DES-TOK-137",
+      "name": "--space-4",
+      "value": "16px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L225"
+    },
+    {
+      "id": "DES-TOK-138",
+      "name": "--space-5",
+      "value": "20px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L226"
+    },
+    {
+      "id": "DES-TOK-139",
+      "name": "--space-6",
+      "value": "24px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L227"
+    },
+    {
+      "id": "DES-TOK-140",
+      "name": "--space-8",
+      "value": "32px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L228"
+    },
+    {
+      "id": "DES-TOK-141",
+      "name": "--space-10",
+      "value": "40px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L229"
+    },
+    {
+      "id": "DES-TOK-142",
+      "name": "--space-12",
+      "value": "48px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L230"
+    },
+    {
+      "id": "DES-TOK-143",
+      "name": "--space-16",
+      "value": "64px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L231"
+    },
+    {
+      "id": "DES-TOK-144",
+      "name": "--space-20",
+      "value": "80px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L232"
+    },
+    {
+      "id": "DES-TOK-145",
+      "name": "--space-24",
+      "value": "96px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L233"
+    },
+    {
+      "id": "DES-TOK-146",
+      "name": "--radius-sm",
+      "value": "2px",
+      "group": "radius",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L236"
+    },
+    {
+      "id": "DES-TOK-147",
+      "name": "--radius-md",
+      "value": "2px",
+      "group": "radius",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L237"
+    },
+    {
+      "id": "DES-TOK-148",
+      "name": "--radius-lg",
+      "value": "2px",
+      "group": "radius",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L238"
+    },
+    {
+      "id": "DES-TOK-149",
+      "name": "--radius-xl",
+      "value": "4px",
+      "group": "radius",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L239"
+    },
+    {
+      "id": "DES-TOK-150",
+      "name": "--radius-2xl",
+      "value": "4px",
+      "group": "radius",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L240"
+    },
+    {
+      "id": "DES-TOK-151",
+      "name": "--radius-full",
+      "value": "2px",
+      "group": "radius",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L241"
+    },
+    {
+      "id": "DES-TOK-152",
+      "name": "--shadow-sm",
+      "value": "none",
+      "group": "shadow",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L244"
+    },
+    {
+      "id": "DES-TOK-153",
+      "name": "--shadow-md",
+      "value": "none",
+      "group": "shadow",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L245"
+    },
+    {
+      "id": "DES-TOK-154",
+      "name": "--shadow-lg",
+      "value": "none",
+      "group": "shadow",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L246"
+    },
+    {
+      "id": "DES-TOK-155",
+      "name": "--shadow-xl",
+      "value": "none",
+      "group": "shadow",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L247"
+    },
+    {
+      "id": "DES-TOK-156",
+      "name": "--shadow-glow",
+      "value": "none",
+      "group": "shadow",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L248"
+    },
+    {
+      "id": "DES-TOK-157",
+      "name": "--shadow-glow-strong",
+      "value": "none",
+      "group": "shadow",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L249"
+    },
+    {
+      "id": "DES-TOK-158",
+      "name": "--transition-fast",
+      "value": "120ms ease",
+      "group": "motion",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L251"
+    },
+    {
+      "id": "DES-TOK-159",
+      "name": "--transition-base",
+      "value": "200ms ease",
+      "group": "motion",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L252"
+    },
+    {
+      "id": "DES-TOK-160",
+      "name": "--transition-slow",
+      "value": "300ms ease",
+      "group": "motion",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L253"
+    },
+    {
+      "id": "DES-TOK-161",
+      "name": "--z-dropdown",
+      "value": "100",
+      "group": "z",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L255"
+    },
+    {
+      "id": "DES-TOK-162",
+      "name": "--z-sticky",
+      "value": "200",
+      "group": "z",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L256"
+    },
+    {
+      "id": "DES-TOK-163",
+      "name": "--z-modal-backdrop",
+      "value": "300",
+      "group": "z",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L257"
+    },
+    {
+      "id": "DES-TOK-164",
+      "name": "--z-modal",
+      "value": "400",
+      "group": "z",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L258"
+    },
+    {
+      "id": "DES-TOK-165",
+      "name": "--z-tooltip",
+      "value": "500",
+      "group": "z",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L259"
+    },
+    {
+      "id": "DES-TOK-166",
+      "name": "--z-toast",
+      "value": "600",
+      "group": "z",
+      "status": "final",
+      "release_relevance": "should",
+      "source": "css/design-system.css · `:root` · L260"
+    },
+    {
+      "id": "DES-TOK-167",
+      "name": "--container-max",
+      "value": "1360px",
+      "group": "size",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L263"
+    },
+    {
+      "id": "DES-TOK-168",
+      "name": "--gutter",
+      "value": "64px",
+      "group": "space",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L264"
+    },
+    {
+      "id": "DES-TOK-169",
+      "name": "--header-height",
+      "value": "100px",
+      "group": "size",
+      "status": "final",
+      "release_relevance": "must",
+      "source": "css/design-system.css · `:root` · L265"
+    },
+    {
+      "id": "DES-TOK-170",
+      "name": "--footer-height",
+      "value": "auto",
+      "group": "size",
+      "status": "final",
+      "release_relevance": "none",
+      "source": "css/design-system.css · `:root` · L266"
+    }
+  ]
+}

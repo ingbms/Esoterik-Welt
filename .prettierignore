@@ -26,6 +26,12 @@ js/modules/_tarot_old.js
 # would only produce diff noise). Freshness is enforced by tests/astrologie.mjs.
 js/data/astrologie.js
 
+# Generated data module: emitted from data/articles/*.md by
+# scripts/generate-articles-data.cjs. It is compared byte for byte in --check,
+# so Prettier must not rewrap it; freshness is enforced by that check and by
+# tests/generate-articles-data.test.js.
+js/data/articles-markdown.js
+
 # Binaries / data blobs
 *.min.js
 *.png

@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "catalog": "content",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "stand": "2026-11-03",
+  "scope_document": "docs/migration-baseline/00-schema-und-scope.md",
+  "entries": [
+    {
+      "id": "CNT-PAG-001",
+      "name": "Startseite (#home)",
+      "description": "Einstiegsseite mit Hero, Themenuebersicht und Wegweiser in die neun Hauptbereiche; Traeger der Seitenmetadaten fuer die Wurzel-URL.",
+      "type": "page",
+      "source": { "path": "index.html", "selector": "#home", "lines": "L110" },
+      "text_ref": "index.html#home",
+      "route": "#home",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Aufruf der Wurzel-URL zeigt die Sektion #home als aktive Seite; Titel und Description entsprechen PAGE_META.home in js/main.js.",
+      "headings": [
+        { "level": 1, "text": "Entdecke die verborgene Sprache des Universums" },
+        { "level": 2, "text": "Ein leiser Bezug zum großen Ganzen." }
+      ],
+      "links": {
+        "internal": ["#tarot", "#crystals", "#moon", "#astrologie", "#frequenzen", "#runes", "#pendeln", "#farbwelten", "#blog"]
+      },
+      "evidence": ["index.html#L110", "index.html#L116", "js/main.js#L83"],
+      "notes": "Navigationsziele und Reihenfolge stehen in index.html; die kanonische Seitenliste fuehrt js/main.js (MAIN_PAGES, 10 Seiten). Neun der zehn Navigationseintraege fuehren in andere Rubriken."
+    },
+    {
+      "id": "CNT-PAG-002",
+      "name": "Kristalle und Steine (#crystals)",
+      "description": "Katalogseite mit 30 Steinen, Filtern nach Chakra und Farbe sowie Detaildialog; Daten stammen aus data/crystals.json.",
+      "type": "page",
+      "source": { "path": "index.html", "selector": "#crystals" },
+      "text_ref": "index.html#crystals",
+      "route": "#crystals",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Die Seite nennt die tatsaechliche Anzahl ausgelieferter Steine; Zahl und Datenquelle stimmen mit data/crystals.json ueberein.",
+      "claims": ["CLM-002"],
+      "evidence": ["index.html#crystals", "data/crystals.json"],
+      "open_questions": [
+        "Anzahl im Seitentext gegen data/crystals.json (30) pruefen; js/data/crystals.js enthaelt 36 Objekte und wird von js/modules/crystals.js nicht gelesen."
+      ]
+    },
+    {
+      "id": "CNT-ART-001",
+      "name": "Die 78 Tarot-Karten: Eine Reise durch die Major & Minor Arcana",
+      "description": "Erster Blogartikel des ausgelieferten Artikelmoduls; Ueberblick ueber Major und Minor Arcana samt Suiten. Volltext liegt im Template-Literal von js/data/articles.js.",
+      "type": "article",
+      "source": { "path": "js/data/articles.js", "selector": "articles[0]", "lines": "L3-L27" },
+      "text_ref": "js/data/articles.js#L3-L27",
+      "route": "#blog/1",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Aufruf #blog/1 zeigt Titel und Excerpt aus articles[0]; die Route bleibt bei unbekannter ID auf der Artikelliste mit Hinweis stehen.",
+      "claims": ["CLM-001"],
+      "headings": [
+        { "level": 1, "text": "Die 78 Tarot-Karten: Eine Reise durch die Major & Minor Arcana" },
+        { "level": 2, "text": "Die Struktur des Tarot" },
+        { "level": 3, "text": "Die vier Suiten (Elemente)" }
+      ],
+      "evidence": ["js/data/articles.js#L3-L27", "js/modules/blog.js"],
+      "notes": "Nicht zu verwechseln mit data/articles/article-01.md: anderer Titel, andere Fassung, kein Bezug. Die Markdown-Bestaende werden nach Abschnitt 7.5 als eigene Eintraege gefuehrt."
+    },
+    {
+      "id": "CNT-STR-001",
+      "name": "Sprunglink „Zum Hauptinhalt springen“",
+      "description": "Erstes fokussierbares Element jeder Seite; springt auf #main und ist nur bei Tastaturfokus sichtbar.",
+      "type": "ui-string",
+      "source": { "path": "index.html", "selector": ".skip-link", "lines": "L64" },
+      "text_ref": "index.html#L64",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Erstes Tab-Ereignis fokussiert den Sprunglink, Enter setzt den Fokus auf #main; der Linktext lautet wortgleich „Zum Hauptinhalt springen“.",
+      "evidence": ["index.html#L64"]
+    },
+    {
+      "id": "CNT-LEG-001",
+      "name": "Impressum",
+      "description": "Rechtstext mit Anbieterkennzeichnung, Decklizenz und Haftungshinweisen; eigene HTML-Seite ausserhalb des Hash-Routings.",
+      "type": "legal",
+      "source": { "path": "impressum.html", "selector": "h1", "lines": "L34" },
+      "text_ref": "impressum.html#L34",
+      "route": "impressum.html",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "impressum.html ist direkt erreichbar, steht nicht im Hash-Routing und ist im Footer jeder Seite verlinkt.",
+      "evidence": ["impressum.html#L34"]
+    },
+    {
+      "id": "CNT-SUB-001",
+      "name": "Farbwelt Rot (#farbwelten/rot)",
+      "description": "Farbseite zu Rot: Physik (620-750 nm), kulturelle Assoziation, Chakra-Zuordnung und die Grenzen farbtherapeutischer Aussagen.",
+      "type": "subroute",
+      "source": { "path": "content/farbwelten/rot.md", "selector": "h1", "lines": "L10" },
+      "produced_by": { "command": "npm run data:farbwelten", "from": ["content/farbwelten/rot.md"] },
+      "text_ref": "content/farbwelten/rot.md#L10",
+      "route": "#farbwelten/rot",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "Aufruf #farbwelten/rot zeigt H1 Rot und den Lede-Text aus dem Markdown; die Seite nennt 620-750 nm und 400-484 THz.",
+      "claims": ["CLM-003"],
+      "headings": [
+        { "level": 1, "text": "Rot" },
+        { "level": 2, "text": "Einführung" }
+      ],
+      "evidence": ["content/farbwelten/rot.md#L10", "js/data/farbwelten.js"],
+      "notes": "Der Fliesstext steht ausschliesslich im Markdown; js/data/farbwelten.js ist die generierte Projektion und nicht die Quelle."
+    },
+    {
+      "id": "CNT-GLO-001",
+      "name": "Radiästhesie-Glossar",
+      "description": "Glossar der Radiästhesie, alphabetisch gruppiert, mit Buchstaben-Navigation; eigenes indexierbares Dokument ausserhalb des Hash-Routings.",
+      "type": "glossary",
+      "source": { "path": "radiasthesie/glossar.html", "selector": "h1", "lines": "L44" },
+      "produced_by": { "command": "npm run build", "from": ["js/data/radiasthesie.js", "js/modules/radiasthesie-model.js"] },
+      "text_ref": "radiasthesie/glossar.html#L44",
+      "route": "radiasthesie/glossar.html",
+      "language": "de",
+      "stand": "2026-11-03",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "delivery": "shipped",
+      "acceptance_check": "radiasthesie/glossar.html ist direkt erreichbar und steht in sitemap.xml; die Anzahl der Begriffe im Kopf entspricht model.stats.glossary.",
+      "evidence": ["radiasthesie/glossar.html#L44", "sitemap.xml", "cmd: node scripts/generate-radiasthesie-pages.cjs"]
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "claim": "78 Karten: 22 Große Arkana und vier Farben mit je 14 Karten",
+      "kind": "number",
+      "text_ref": "index.html#L240",
+      "verification": "verified",
+      "citation": "data/tarot.json und js/data/tarot.js enthalten je 78 Kartenobjekte; README.md, Abschnitt Datenquellen (Rider-Waite-Smith, Public Domain)",
+      "status": "final",
+      "owner": "writer",
+      "release_relevance": "must",
+      "evidence": ["data/tarot.json", "js/data/tarot.js"]
+    },
+    {
+      "id": "CLM-002",
+      "claim": "30 Kristalle im Katalog",
+      "kind": "number",
+      "text_ref": "index.html#crystals",
+      "verification": "unverified",
+      "citation": "data/crystals.json enthaelt 30 Objekte, js/data/crystals.js enthaelt 36 Objekte — die ausgelieferte Zahl haengt davon ab, welche Quelle js/modules/crystals.js rendert",
+      "status": "offen",
+      "owner": "writer",
+      "release_relevance": "must",
+      "open_questions": [
+        "Welche Kristallquelle ist massgeblich: data/crystals.json (30, per fetch ausgeliefert) oder js/data/crystals.js (36, nicht importiert)? Vor dem Push entscheiden, sonst ist die Zahl im Text unbelegt."
+      ],
+      "evidence": ["cmd: grep -c '\"id\"' data/crystals.json", "cmd: grep -oE \"id: '[^']+'\" js/data/crystals.js | wc -l"]
+    },
+    {
+      "id": "CLM-003",
+      "claim": "Rot ist die Farbe mit der längsten Wellenlänge im sichtbaren Spektrum: etwa 620 bis 750 Nanometer, 400 bis 484 Terahertz",
+      "kind": "number",
+      "text_ref": "content/farbwelten/rot.md#L18",
+      "verification": "unverified",
+      "status": "entwurf",
+      "owner": "writer",
+      "release_relevance": "should",
+      "open_questions": [
+        "Die im Text gesetzten Belege [10] und [24] tragen die Aussage nicht: [10] ist Son et al. 2025 (Photobiomodulation-Umbrella-Review), [24] ist NIST SP 330 (SI-Broschuere, Einheiten). Vor einer Einstufung als verified eine Quelle fuer den Rotbereich ergaenzen."
+      ],
+      "evidence": ["content/farbwelten/rot.md#L18"]
+    }
+  ]
+}

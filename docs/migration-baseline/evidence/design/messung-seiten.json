@@ -1,0 +1,80 @@
+{
+  "measured_at": "2026-11-03T16:25:44.520Z",
+  "pages": [
+    {
+      "file": "farbwelten-rot-1440.png",
+      "url": "http://127.0.0.1:47404/Esoterik-Welt/#farbwelten/rot",
+      "title": "Rot — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "activePage": "farbwelten",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "headings": [
+        "H1 Rot",
+        "H2 Die Farbe erleben",
+        "H2 Physikalische Eigenschaften",
+        "H2 Farbpsychologie",
+        "H2 Spirituelle Bedeutung",
+        "H2 Farbtherapeutische Anwendung"
+      ],
+      "figures": 1,
+      "consoleErrors": []
+    },
+    {
+      "file": "frequenzlabor-1440.png",
+      "url": "http://127.0.0.1:47404/Esoterik-Welt/#frequenzen",
+      "title": "Frequenzen & Schwingungen — Bibliothek und Frequenzlabor | Esoterik-Welt",
+      "activePage": "frequenzen",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "headings": [
+        "H1 Frequenzen & Schwingungen",
+        "H2 Was ist Schwingung?",
+        "H2 Frequenzbibliothek",
+        "H2 Quellen und Methode",
+        "H2 Hinweis zur Nutzung"
+      ],
+      "figures": 0,
+      "consoleErrors": []
+    },
+    {
+      "file": "radiasthesie-glossar-1440.png",
+      "url": "http://127.0.0.1:47404/Esoterik-Welt/radiasthesie/glossar.html",
+      "title": "Glossar — Radiästhesie, Pendeln und Orakel von A bis Z",
+      "activePage": null,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "headings": [
+        "H1 Glossar",
+        "H2 B",
+        "H2 D",
+        "H2 E",
+        "H2 F",
+        "H2 I"
+      ],
+      "figures": 0,
+      "consoleErrors": []
+    },
+    {
+      "file": "farbwelten-rot-390.png",
+      "url": "http://127.0.0.1:47404/Esoterik-Welt/#farbwelten/rot",
+      "title": "Rot — Licht, Wirkung und Bedeutung | Esoterik-Welt",
+      "activePage": "farbwelten",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "headings": [
+        "H1 Rot",
+        "H2 Die Farbe erleben",
+        "H2 Physikalische Eigenschaften",
+        "H2 Farbpsychologie",
+        "H2 Spirituelle Bedeutung",
+        "H2 Farbtherapeutische Anwendung"
+      ],
+      "figures": 1,
+      "consoleErrors": []
+    }
+  ]
+}

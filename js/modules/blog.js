@@ -10,8 +10,17 @@ export class BlogModule {
   }
 
   async init() {
-    const mod = await import('../data/articles.js');
-    this.articles = mod.articles || mod.default || [];
+    // Zwei Bestände, eine Liste: die zehn kuratierten Einträge aus articles.js
+    // (handgepflegt, kein Generatorprodukt) und die zwölf Artikel aus den
+    // Markdown-Quellen (data/articles/*.md → articles-markdown.js, IDs 11–22).
+    // Sortiert wird nach Datum absteigend; bei gleichem Datum entscheidet die ID.
+    const [curated, markdown] = await Promise.all([
+      import('../data/articles.js'),
+      import('../data/articles-markdown.js'),
+    ]);
+    this.articles = [...(curated.articles || []), ...(markdown.articlesMarkdown || [])].sort(
+      (a, b) => String(b.date).localeCompare(String(a.date)) || a.id - b.id
+    );
     this.renderGrid();
     this.setupEventListeners();
   }

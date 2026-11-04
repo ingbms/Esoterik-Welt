@@ -1,0 +1,25 @@
+{
+  "_comment": "SHA-256-Werte, die die Release-Gate-Karte t_9c2a7824 in ihrem Abschluss-Handoff fuer diese Dateien behauptet hat. Der Master vergleicht sie mit dem Arbeitsbaum: node scripts/migration-baseline/crosscheck-master-package.cjs --expect-hashes docs/migration-baseline/evidence/release-gate/parent-declared-hashes.json",
+  "_source": "Kanban-Handoff t_9c2a7824, Feld metadata.file_hashes_sha256 (Stand 2026-11-03)",
+  "_excluded": [
+    "docs/migration-baseline/evidence/release-gate/pruefungen.json",
+    "docs/migration-baseline/evidence/release-gate/runtime-fakten.json"
+  ],
+  "_excluded_reason": "Beide Dateien werden bei jedem Gate-Lauf neu geschrieben (Zeitstempel, Port, Laufzeit). Der Master hat sie auf dem PR-Eingangsstand fdef1aa neu gemessen; ein Hash-Vergleich gegen die Vorlage waere ein Vergleich von Messzeitpunkten, nicht von Inhalten.",
+  "superseded": {
+    "scripts/migration-baseline/verify-release-gate.cjs": "Vom Master korrigiert (Befund B-1: falscher CSV-Trenner in der Lizenz-Kennzahl). Der Vorlagen-Hash gilt fuer den Eingangsstand fdef1aa, nicht fuer den korrigierten Stand.",
+    "scripts/migration-baseline/verify-release-gate-facts.cjs": "Nur Prettier-Formatierung (npm run format:check war rot). AST-Vergleich gegen den Eingangsstand ist identisch; keine Semantikaenderung."
+  },
+  "hashes": {
+    "docs/migration-baseline/content-catalog-meta.json": "4982d1d54bbaff7f4aba5d364b9e065d82426083b9aaebdaa0b9d440834c2b62",
+    "docs/migration-baseline/content-catalog.json": "2d8bfc189fdd2045d48ffb027083fbfd202b36b33f5b79a59990725b14401b09",
+    "docs/migration-baseline/design-catalog.json": "7d24bbbeeb6d1f832f8df550ba0e9a7f7ffe63514492cd9322f257645c7d294a",
+    "docs/migration-baseline/evidence/release-gate/content-catalog-reparatur.json": "de4041a36dcb2439203d079b93825e5689cf05da057cd170e5dd9238a2542fc2",
+    "docs/migration-baseline/evidence/release-gate/design-katalog-nachzug.json": "f9caf1d474d5851d05e23c128d9fb1d0b1e24d03daf151d3cbbeb92553bb82a9",
+    "docs/migration-baseline/push-handoff.md": "1fef03255e4dee5dd8082f50e020a15f2faf47447878cc567bf24dab55e9aa3c",
+    "docs/migration-baseline/release-gate.json": "c6fb459626ee6df5cc1cfe9cdec11d8bb3f0afade9237dd6ea520afc2d8c5288",
+    "docs/migration-baseline/release-gate.md": "f2820adf080a9466a60c366d42bf01a09b89a8a9d8bee887b9d1ca15e115b94a",
+    "scripts/migration-baseline/verify-release-gate-facts.cjs": "a187f7c2cceb27c6bbf6fdff704354633cbc005c20ed7ddcb6dfb088e906bb2e",
+    "scripts/migration-baseline/verify-release-gate.cjs": "7dd3e3bb809ad5fcc78f54d1aa9c1d1cd69dba62222d5e2d5127c49a930f925f"
+  }
+}

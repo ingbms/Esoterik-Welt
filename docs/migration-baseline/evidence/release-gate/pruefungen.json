@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-11-03T23:57:55.442Z",
+  "card": "t_9c2a7824",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "head_commit": "a3ffe38efcabdaac2972e3bf935409458a7b9247",
+  "counts": {
+    "design_entries": 277,
+    "design_states": 12,
+    "content_entries": 54,
+    "content_pages": 10,
+    "content_subroutes": 15,
+    "content_articles": 22,
+    "content_legal": 3,
+    "claims": 6,
+    "media_rows": 644,
+    "functions": 96
+  },
+  "checks": [
+    {
+      "id": "M1",
+      "criterion": "Inhalts- und Design-Katalog entsprechen dem gemeinsamen Schema",
+      "command": "node scripts/migration-baseline/validate-schema.cjs",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "Exit 0, Muster bestaetigt (/0 Abweichung/)",
+      "duration_ms": 349
+    },
+    {
+      "id": "M2",
+      "criterion": "Alle Kataloge erfuellen die Pflichtfelder und Feldregeln",
+      "command": "node scripts/migration-baseline/validate-catalogs.cjs",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "Exit 0, Muster bestaetigt (/0 Fehler/)",
+      "duration_ms": 2205
+    },
+    {
+      "id": "M3",
+      "criterion": "Generierte Markdown-/Token-Dateien sind aktuell",
+      "command": "node scripts/migration-baseline/render-catalogs.cjs --check",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "Exit 0, Muster bestaetigt (/OK\\s+docs\\/migration-baseline\\/content-catalog\\.md/)",
+      "duration_ms": 136
+    },
+    {
+      "id": "M4",
+      "criterion": "Design-Katalog ist gegen das CSS gegenprüfbar (eigener Prüfer)",
+      "command": "node scripts/migration-baseline/verify-design-catalog.cjs",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "Exit 0, Muster bestaetigt (/OK, 0 Warnungen/)",
+      "duration_ms": 520
+    },
+    {
+      "id": "M5",
+      "criterion": "Design-Katalog haelt einer unabhaengigen Gegenpruefung mit eigenen Parsern stand",
+      "command": "node scripts/migration-baseline/verify-design-catalog-independent.cjs",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "Exit 0, Muster bestaetigt (/\"errors\": 0/)",
+      "duration_ms": 362
+    },
+    {
+      "id": "M6",
+      "criterion": "Medien-Katalog deckt jede Datei unter assets/ ab (Bytes, Hashes, Lizenzen)",
+      "command": "node scripts/migration-baseline/verify-media-catalog.cjs",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "Exit 0, Muster bestaetigt (/17\\/17 (Pruefungen|Prüfungen) bestanden/)",
+      "duration_ms": 3568
+    },
+    {
+      "id": "M7",
+      "criterion": "Funktions-Katalog ist vollstaendig belegt",
+      "command": "node scripts/migration-baseline/verify-function-catalog.cjs",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "Exit 0, Muster bestaetigt (/alle Quellen und Nachweise vorhanden/)",
+      "duration_ms": 197
+    },
+    {
+      "id": "M8",
+      "criterion": "Bestandsaufnahme entspricht dem Arbeitsbaum",
+      "command": "node scripts/migration-baseline/inventory-baseline.cjs --check",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "Exit 0, Muster bestaetigt (/^OK:/m)",
+      "duration_ms": 233
+    },
+    {
+      "id": "M9",
+      "criterion": "Jede katalogisierte Route existiert und jede verlinkte Route ist katalogisiert",
+      "command": "node scripts/migration-baseline/check-catalog-routes.cjs",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "51 Routen, 0 nicht gefunden, 0 verlinkt aber nicht katalogisiert",
+      "duration_ms": 63008
+    },
+    {
+      "id": "M10",
+      "criterion": "Laufzeitfakten (Kristallzahl, Farbregister, Blogartikel) stimmen mit dem Katalog ueberein",
+      "command": "node scripts/migration-baseline/verify-release-gate-facts.cjs",
+      "status": "pass",
+      "exit_code": 0,
+      "detail": "Exit 0",
+      "duration_ms": 11814
+    }
+  ],
+  "structural_findings": [
+    {
+      "level": "info",
+      "id": "MED-LIZENZ",
+      "message": "644 Medienzeilen, 1 ohne geklaerte Lizenz"
+    }
+  ],
+  "must_failed": [],
+  "structural_errors": 0,
+  "ok": true
+}

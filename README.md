@@ -31,7 +31,7 @@ npm run verify:pages -- http://localhost:3000/Esoterik-Welt/ evidence/preview
 - **Kristalle:** Mindat.org (Mohs-Härte, chemische Formeln). Keine Heilversprechen.
 - **Runen:** Elder Futhark (`data/runes.json`, `js/data/runes.js`).
 - **Mond:** Synodische Periode 29,53059 d; Referenz 2000-01-06; 42-Tage-Grid; iCal-Export `.ics`. Astronomische Formel, keine astrologische Prognose.
-- **Blog:** 10 reale Artikel (`js/data/articles.js`) mit Markdown-Inhalten.
+- **Blog:** 22 Artikel — zehn kuratierte in `js/data/articles.js`, zwölf aus `data/articles/*.md` über `npm run data:articles` erzeugt (`js/data/articles-markdown.js`).
 
 ## Frequenzlabor-Audio-Engine
 

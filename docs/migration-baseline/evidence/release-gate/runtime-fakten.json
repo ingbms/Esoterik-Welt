@@ -1,0 +1,167 @@
+{
+  "generated_at": "2026-11-03T23:57:54.272Z",
+  "base": "http://127.0.0.1:16934/Esoterik-Welt/",
+  "base_commit": "a3ffe38efcabdaac2972e3bf935409458a7b9247",
+  "facts": {
+    "crystals": {
+      "cards": 30,
+      "cardIds": [
+        "crys-01",
+        "crys-09",
+        "crys-24",
+        "crys-28",
+        "crys-08",
+        "crys-05",
+        "crys-14",
+        "crys-18",
+        "crys-29",
+        "crys-11",
+        "crys-06",
+        "crys-20",
+        "crys-22",
+        "crys-26",
+        "crys-02",
+        "crys-17",
+        "crys-21",
+        "crys-25",
+        "crys-03",
+        "crys-13",
+        "crys-07",
+        "crys-16",
+        "crys-12",
+        "crys-27",
+        "crys-15",
+        "crys-30",
+        "crys-19",
+        "crys-23",
+        "crys-04",
+        "crys-10"
+      ],
+      "dataRequests": [
+        "http://127.0.0.1:16934/Esoterik-Welt/js/modules/crystals.js",
+        "http://127.0.0.1:16934/Esoterik-Welt/data/crystals.json"
+      ]
+    },
+    "farbwelten": {
+      "registerLinks": [
+        "#farbwelten/blau",
+        "#farbwelten/chakren",
+        "#farbwelten/farbmeditation",
+        "#farbwelten/farbpsychologie",
+        "#farbwelten/farbtherapie",
+        "#farbwelten/gelb",
+        "#farbwelten/gruen",
+        "#farbwelten/indigo",
+        "#farbwelten/kompass",
+        "#farbwelten/lichtfrequenzen",
+        "#farbwelten/lichtmedizin",
+        "#farbwelten/magenta",
+        "#farbwelten/orange",
+        "#farbwelten/register",
+        "#farbwelten/rosa",
+        "#farbwelten/rot",
+        "#farbwelten/schwarz",
+        "#farbwelten/tuerkis",
+        "#farbwelten/violett",
+        "#farbwelten/weiss",
+        "#farbwelten/zeitleiste"
+      ],
+      "h1": "Entdecke die verborgene Sprache des Universums",
+      "registerColors": [
+        "blau",
+        "gelb",
+        "gruen",
+        "indigo",
+        "magenta",
+        "orange",
+        "rosa",
+        "rot",
+        "schwarz",
+        "tuerkis",
+        "violett",
+        "weiss"
+      ]
+    },
+    "probeder": [
+      {
+        "hash": "#farbwelten/indigo",
+        "heading": "Indigo",
+        "notFound": false
+      },
+      {
+        "hash": "#farbwelten/braun",
+        "heading": "Diese Farbwelt gibt es nicht",
+        "notFound": true
+      },
+      {
+        "hash": "#farbwelten/farbtherapie",
+        "heading": "Farbtherapie und Chromotherapie",
+        "notFound": false
+      },
+      {
+        "hash": "#farbwelten/farbpsychologie",
+        "heading": "Farbpsychologie",
+        "notFound": false
+      },
+      {
+        "hash": "#farbwelten/lichtmedizin",
+        "heading": "Lichtmedizin und Photobiologie",
+        "notFound": false
+      },
+      {
+        "hash": "#farbwelten/therapie",
+        "heading": "Diese Farbwelt gibt es nicht",
+        "notFound": true
+      },
+      {
+        "hash": "#farbwelten/psychologie",
+        "heading": "Diese Farbwelt gibt es nicht",
+        "notFound": true
+      },
+      {
+        "hash": "#farbwelten/licht",
+        "heading": "Diese Farbwelt gibt es nicht",
+        "notFound": true
+      }
+    ],
+    "blog": {
+      "listItems": 22,
+      "article6": {
+        "modalOpen": true,
+        "title": "Einsteiger-Guide: Wie du mit Tarot, Kristallen und Runen beginnst"
+      },
+      "article22": {
+        "modalOpen": true,
+        "title": "Kristall-Grids für Manifestation"
+      }
+    },
+    "datenschutz": {
+      "mentionsJournal": false,
+      "mentionsExperiment": false,
+      "mentionsRunes": true,
+      "mentionsTarot": false,
+      "trackedKeys": [
+        "esot_crystals_fav",
+        "esot_rad_journal_v",
+        "esot_rad_experiment_v",
+        "esoterik_runes_history",
+        "esoterik_tarot_deck"
+      ]
+    }
+  },
+  "expectations": {
+    "crystalCardsEqualDataFile": true,
+    "crystalCountIs30": true,
+    "noLegacyCrystalModule": true,
+    "registerHas12Colors": true,
+    "indigoResolves": true,
+    "braunIsNotARoute": true,
+    "topicPagesResolve": true,
+    "oldTopicSlugsAreNotRoutes": true,
+    "blog6Opens": true,
+    "blogListIs22": true,
+    "blog22Opens": true,
+    "blog22IsKristallGrids": true
+  },
+  "ok": true
+}

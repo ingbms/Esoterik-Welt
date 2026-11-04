@@ -62,6 +62,8 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Run Jest tests (unit/API only, no browser specs)
         run: npm test
+      - name: Check article data (data/articles/*.md → js/data/articles-markdown.js)
+        run: npm run verify:articles
       - name: Run pages regression (node:test)
         run: npm run test:pages
       - name: Run crystal attribution contract (licence texts, four levels, assets)

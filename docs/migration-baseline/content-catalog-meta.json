@@ -1,0 +1,108 @@
+{
+  "catalog": "content",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "stand": "2026-11-03",
+  "note": "Metadaten zum Inhalts-Katalog. Sie stehen bewusst nicht in content-catalog.json, weil catalog.schema.json fuer die Katalogwurzel additionalProperties:false setzt und nur schema_version, catalog, base_commit, stand, scope_document, entries und claims zulaesst. Inhalt und Herkunft bleiben damit erhalten, ohne das gemeinsame Schema zu erweitern.",
+  "source_inventory": "docs/migration-baseline/inventory-baseline.json",
+  "produced_by": {
+    "command": "manuell gegen Baseline 9f58439; Reparatur im Release-Gate (t_9c2a7824)",
+    "from": [
+      "docs/migration-baseline/inventory-baseline.json",
+      "docs/migration-baseline/evidence/release-gate/runtime-fakten.json",
+      "js/data/articles.js",
+      "data/articles/*.md",
+      "content/farbwelten/*.md",
+      "js/data/farbwelten.js",
+      "radiasthesie/"
+    ]
+  },
+  "localization": {
+    "language": "de",
+    "translations_found": false,
+    "translations_expected": false,
+    "opening_notes": "Gesamte Website und alle Katalogeintraege liegen ausschliesslich auf Deutsch vor. Keine Uebersetzungen (en, fr, it, es) im Baseline-Commit enthalten. Keine Lokalisierungsdateien (i18n/, locales/, translations/) gefunden. Nur ein Sprachstand (de) fuers Release erforderlich; falls spaeter Mehrsprachigkeit gewuenscht, ist ein eigenes Lokalisierungsprojekt (mit Schlueseldatei und Uebersetzer) notwendig, nicht im aktuellen Scope.",
+    "terminology": {
+      "terms_in_use": [
+        "Tarot",
+        "Kristalle",
+        "Mondzyklen",
+        "Astrologie",
+        "Frequenzen",
+        "Runen",
+        "Pendeln / Radiästhesie",
+        "Farbwelten",
+        "Blog",
+        "Glossar"
+      ],
+      "terms_avoid": [
+        "Astro-Tarot als kombinierter Begriff (nur als Rubrik, nicht als gemischter Inhalt)",
+        "Heilversprechen in Farbsprache (nur als Tradition / Reflexion kennzeichnen, nicht als klinische Wirkung)",
+        "Zertifikate ohne Beleg (siehe Claim-Liste)"
+      ]
+    },
+    "open_localization_gaps": [
+      "Keine Übersetzung der rechtlichen Texte (Impressum, Datenschutzerklaerung) vorgesehen — bei Mehrsprachigkeit erforderlich.",
+      "Farbwelten-Begriff in anderen Sprachen (color worlds / mondes de couleur) nicht definiert.",
+      "Radiästhesie-Glossar-Begriffe nicht übersetzt (Zeiger, Pendel, Skalen, Winkelschritt)."
+    ]
+  },
+  "tone_and_style": {
+    "tone": "Sachlich-poetisch, einladend, nicht wertend; spirituelle Deutungen immer als Tradition / Reflexion gekennzeichnet, keine medizinischen Heilversprechen.",
+    "addressing": "Unpersoenlich / allgemein («Entdecke...», «Die 78 Karten...»); keine direkte Anrede («Du»/«Sie») als Standard.",
+    "terminology_glossary_rules": [
+      "Tarot = 78 Karten (22 Grosse, 56 Kleine in vier Farb-Suiten); Datenquelle data/tarot.json.",
+      "Kristalle = Steine mit Chakra- und Farb-Filtern; Datenquelle data/crystals.json (30) — Quelle vor Release klaeren.",
+      "Farbwelten = 12 Farbseiten + 3 Themen (Farbtherapie, Farbpsychologie, Lichtmedizin); alle in Markdown, generiert via npm run data:farbwelten.",
+      "Radiästhesie = Pendeln, Rahmen, Skalen, Winkelschritt; Glossar radiasthesie/glossar.html.",
+      "Frequenzen / Schwingungen = nicht als medizinische Behandlung, sondern als Referenzraumen beschrieben."
+    ],
+    "disclaimers_required": [
+      "Alle farbtherapeutischen Aussagen sind Tradition / Reflexion, kein medizinischer Rat.",
+      "Kristall-Aussagen basieren auf Datenquellen; keine Heilwirkung behauptet.",
+      "Tarot-Aussagen sind symbolisch / interpretativ; keine Zukunftssicherheit."
+    ]
+  },
+  "gaps_and_placeholders": {
+    "open_entries": [
+      "CLM-003 Rot-Wellenlaenge ohne Quellenangabe auf der Seite (physikalischer Standardwert, unbelegt).",
+      "CNT-LEG-002 Datenschutzerklaerung nennt Journal und Experimentlaeufe nicht (rechtliche Abnahme offen)."
+    ],
+    "missing_translations": "Alle (de nur).",
+    "placeholder_texts": [
+      "Keine expliziten Lorem-Ipsum-Platzhalter in index.html oder Datenquellen gefunden (geprueft durch grep).",
+      "Offene Fragen in Claim- und Subroute-Eintraegen als open_questions markiert, nicht als Platzhaltertexte."
+    ],
+    "inconsistent_terminology": [
+      "«Farbwelten» vs «Farbsymbolik» — Seite verwendet konsistent «Farbwelten»; kein Korrekturbedarf.",
+      "«Pendeln» und «Radiästhesie» werden als Synonyme verwendet; Glossar klärt Terminologie."
+    ]
+  },
+  "entscheidungen": [
+    {
+      "id": "E-03",
+      "titel": "Zwoelf Markdown-Artikel",
+      "entscheidung": "veroeffentlicht",
+      "variante": "A",
+      "datum": "2026-11-03",
+      "karte": "t_44e58074",
+      "umsetzung": "data/articles/article-01.md … article-12.md → js/data/articles-markdown.js, IDs 11–22, Routen #blog/11–#blog/22",
+      "folge": "Die Quellen bleiben versioniert. Die HTML-Doppelseiten aus der Jekyll-Verarbeitung entfallen durch den Ausschluss in `_config.yml`; die Quellen bleiben versioniert, aber oeffentlich nicht abrufbar."
+    }
+  ],
+  "aenderungsprotokoll": [
+    {
+      "datum": "2026-11-03",
+      "karte": "t_44e58074",
+      "aenderung": "E-03/A-5 umgesetzt: zwoelf Markdown-Artikel als Blogartikel 11–22 veroeffentlicht.",
+      "details": [
+        "Datumsreparatur: Reihe von 2026-10-23 bis 2026-11-03 verschoben (vorher 2026-11-01 bis 2026-11-12, davon neun in der Zukunft).",
+        "readTime neu berechnet (200 Woerter/Minute, aufgerundet); die alten Werte 5–6 Min bei 112–356 Woertern waren falsch.",
+        "excerpt aus dem ersten Absatz erzeugt (200–240 Zeichen, Satzgrenze); das Frontmatter-Feld excerpt entfaellt, damit es nur eine Wahrheit gibt.",
+        "Textlaenge auf 600–704 Woerter erweitert, ausschliesslich mit Material aus dem eigenen Bestand (Tarot-, Runen-, Kristall-, Mond- und Astrologiedaten, radiasthesie/orakel.html, content/farbwelten).",
+        "Blockquote in article-01.md und Tabelle in article-06.md in renderer-konforme Absaetze/Listen ueberfuehrt.",
+        "Kategorie-Mapping dokumentiert: Tarot→tarot, Kristalle→crystals, Mond→moon, Runen→runes, Praxis→rituals, Astrologie→astrologie, Vergleich→tarot.",
+        "data/articles/article-010.md.bak entfernt (E-04/S10)."
+      ]
+    }
+  ]
+}

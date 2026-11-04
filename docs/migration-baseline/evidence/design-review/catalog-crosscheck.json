@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-11-03T23:56:36.558Z",
+  "catalog": "docs/migration-baseline/design-catalog.json",
+  "base_commit": "9f584397f8cc86a261fccdfc36dfbb8999f55ea7",
+  "entries": 277,
+  "root_tokens_in_css": 170,
+  "checked": {
+    "tokens": 170,
+    "components": 94,
+    "breakpoints": 13
+  },
+  "counts_by_type": {
+    "token-color": 114,
+    "token-typography": 18,
+    "token-space": 14,
+    "token-radius": 6,
+    "token-shadow": 6,
+    "token-motion": 3,
+    "token-z": 6,
+    "token-size": 3,
+    "component": 59,
+    "layout": 10,
+    "pattern": 5,
+    "state": 12,
+    "icon": 2,
+    "illustration": 6,
+    "breakpoint": 13
+  },
+  "status_counts": {
+    "final": 269,
+    "veraltet": 8
+  },
+  "hardcoded_colors": {
+    "occurrences": 25,
+    "distinct": 17,
+    "colors": [
+      "#9db3c4",
+      "#c0a889",
+      "#1b2629",
+      "#0e1517",
+      "#6f6042",
+      "#141c1f",
+      "#c6b38e",
+      "#101a17",
+      "#9db3a4",
+      "#0d141b",
+      "#c09489",
+      "#fbf9f4",
+      "#6b5b3e",
+      "#eae6dc",
+      "#e7eee8",
+      "#e8e6e1",
+      "#2b2a26"
+    ]
+  },
+  "findings": [],
+  "errors": 0,
+  "warnings": 0
+}

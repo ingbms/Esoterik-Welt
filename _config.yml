@@ -1,0 +1,20 @@
+# GitHub Pages liefert das Repository-Wurzelverzeichnis aus und verarbeitet es
+# mit Jekyll. Die Artikelquellen unter data/articles/ sind Redaktionsmaterial:
+# scripts/generate-articles-data.cjs liest sie und erzeugt daraus die
+# Blogartikel 11–22 (js/data/articles-markdown.js). Ohne diesen Ausschluss
+# rendert Jekyll aus jeder .md-Datei eine zweite, öffentliche HTML-Seite
+# (z. B. data/articles/article-01.html) — derselbe Text unter zwei URLs.
+# Der Ausschluss nimmt beide Varianten aus dem Auslieferungspfad; die Quellen
+# bleiben versioniert und für den Generator lokal lesbar.
+#
+# Eine eigene exclude-Liste ersetzt Jekylls Vorgabe. Die Standardwerte stehen
+# deshalb vollständig darunter, damit z. B. node_modules nicht ausgeliefert wird.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - data/articles/
