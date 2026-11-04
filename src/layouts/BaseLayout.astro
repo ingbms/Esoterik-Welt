@@ -150,6 +150,10 @@ const robotsValue = robots !== undefined ? robots : noindex ? 'noindex, nofollow
     <link rel="preload" href="/assets/fonts/Fraunces.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="/assets/fonts/Manrope.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    {/* Wurzelpfad der Anwendung; der Deploy-Schritt schreibt ihn auf das
+        GitHub-Pages-Präfix um. Inseln setzen damit relative Bestandsassets
+        korrekt absolut (siehe src/lib/rebase-assets.ts). */}
+    <meta name="app-base" content={import.meta.env.BASE_URL} />
     <JsonLd data={structuredData} />
     <slot name="head" />
   </head>

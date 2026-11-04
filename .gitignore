@@ -50,3 +50,6 @@ __pycache__/
 
 # Kristalle: abgeleitete Zwischendatei, erzeugt von docs/kristalle/scripts/extract-selection.py
 docs/kristalle/.selection.json
+
+# Deployment-Artefakt (generiert, wird nach velarkana gepusht)
+.deploy/
