@@ -1,0 +1,24 @@
+---
+/**
+ * Haftungsausschluss.
+ *
+ * Textsubstanz unverändert aus `haftung.html` über
+ * `src/content/legal/haftung.html` (erzeugt von
+ * `scripts/migrate-content.cjs`).
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import body from '../content/legal/haftung.html?raw';
+
+const trail = [{ label: 'Start', href: '/' }, { label: 'Haftungsausschluss' }];
+---
+
+<BaseLayout
+  title="Haftungsausschluss — VELARKANA"
+  description="Haftungsausschluss der VELARKANA: Information, keine medizinische oder rechtliche Beratung."
+  trail={trail}
+>
+  <div class="container legal-content">
+    <h1 class="sr-only">Haftungsausschluss</h1>
+    <Fragment set:html={body} />
+  </div>
+</BaseLayout>

@@ -1,0 +1,34 @@
+---
+/** Evidenzstufen-Legende A–E — im Bestand Teil von Methodik und Themenseiten. */
+export interface Level {
+  key: string;
+  label: string;
+  definition: string;
+  examples?: string;
+}
+
+export interface Props {
+  levels: Level[];
+  title?: string;
+}
+
+const { levels, title = 'Evidenzstufen A–E' } = Astro.props;
+---
+
+<section class="evidence-legend" aria-labelledby="legend-title">
+  <h2 id="legend-title">{title}</h2>
+  <p class="entry-note">Die Klasse gilt je Aussage, nicht je Quelle. Eine Quelle kann mehrere Klassen tragen.</p>
+  <dl class="definition-list">
+    {levels.map((level) => (
+      <div class="level">
+        <dt>
+          <span class="source-id">{level.key}</span> {level.label}
+        </dt>
+        <dd>
+          {level.definition}
+          {level.examples ? <span class="entry-note"> — {level.examples}</span> : null}
+        </dd>
+      </div>
+    ))}
+  </dl>
+</section>

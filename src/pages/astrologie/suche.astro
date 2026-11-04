@@ -1,0 +1,137 @@
+---
+/**
+ * Astrologie-Suche.
+ *
+ * Der Bestand filterte clientseitig über `?q=` in `#astrologie/suche`. Hier
+ * steht ein vollständiges Verzeichnis aller Einträge mit einem Filter, der ohne
+ * Framework funktioniert: Ein Eingabefeld blendet Zeilen aus, deren
+ * `data-search` den Suchbegriff nicht enthält. Ohne JavaScript bleibt das
+ * Verzeichnis vollständig lesbar — es gibt also keinen leeren Zustand.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { ASPEKTE, BEISPIELE, FAKTOREN, GRUNDLAGEN, HAEUSER, LERNPFAD, ZEICHEN } from '../../data/legacy';
+import { ASTROLOGIE_NAV } from '../../lib/astrologie';
+import { truncate } from '../../lib/inline';
+
+const ROUTE = '/astrologie/suche.html';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Astrologie', href: '/astrologie/' }, { label: 'Suche' }];
+
+const INDEX = [
+  ...LERNPFAD.map((entry) => ({
+    href: `/astrologie/lernpfad/${entry.slug}.html`,
+    label: entry.title,
+    group: 'Lernpfad',
+    text: entry.goal,
+  })),
+  ...ZEICHEN.map((entry) => ({
+    href: `/astrologie/zeichen/${entry.slug}.html`,
+    label: entry.name,
+    group: 'Zeichen',
+    text: entry.short,
+  })),
+  ...FAKTOREN.map((entry) => ({
+    href: `/astrologie/faktoren/${entry.slug}.html`,
+    label: entry.name,
+    group: 'Faktoren',
+    text: entry.short,
+  })),
+  ...HAEUSER.map((entry) => ({
+    href: `/astrologie/haeuser/${entry.slug}.html`,
+    label: entry.name,
+    group: 'Häuser',
+    text: entry.short,
+  })),
+  ...ASPEKTE.map((entry) => ({
+    href: `/astrologie/aspekte/${entry.slug}.html`,
+    label: entry.name,
+    group: 'Aspekte',
+    text: entry.short,
+  })),
+  ...GRUNDLAGEN.map((entry) => ({
+    href: `/astrologie/grundlagen/${entry.slug}.html`,
+    label: entry.title,
+    group: 'Grundlagen',
+    text: entry.short,
+  })),
+  ...BEISPIELE.map((entry) => ({
+    href: `/astrologie/beispiele/${entry.slug}.html`,
+    label: entry.titel,
+    group: 'Lehrbeispiele',
+    text: entry.synthese,
+  })),
+];
+---
+
+<BaseLayout
+  title="Suche im Astrologie-Bereich"
+  description="Vollständiges Verzeichnis aller Astrologie-Seiten mit Filter: Zeichen, Faktoren, Häuser, Aspekte, Grundlagen, Lernpfad und Lehrbeispiele."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">{INDEX.length} Einträge</p>
+    <h1>Suche</h1>
+    <p class="lede">
+      Alle Seiten dieses Bereichs in einer Liste. Der Filter arbeitet im Browser; ohne JavaScript bleibt die Liste
+      vollständig sichtbar.
+    </p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <form class="search-form" role="search" id="astrologie-search-form" action="/astrologie/suche.html" method="get">
+      <label for="q">Begriff suchen</label>
+      <input type="search" id="q" name="q" placeholder="z. B. Widder, Orb, Häusersystem" autocomplete="off" />
+      <p class="entry-note" id="search-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <ul class="summary-list" id="search-list">
+      {INDEX.map((entry) => (
+        <li data-search={`${entry.label} ${entry.group} ${entry.text}`.toLowerCase()}>
+          <h3>
+            <a href={entry.href}>{entry.label}</a>
+          </h3>
+          <p class="entry-note">{entry.group}</p>
+          <p>{truncate(entry.text, 200)}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('astrologie-search-form') as HTMLFormElement | null;
+  const input = document.getElementById('q') as HTMLInputElement | null;
+  const status = document.getElementById('search-status');
+  const list = document.getElementById('search-list');
+
+  const applyFilter = (term: string): void => {
+    const needle = term.trim().toLowerCase();
+    if (!list) return;
+    let visible = 0;
+    for (const item of Array.from(list.children) as HTMLElement[]) {
+      const haystack = item.dataset.search ?? '';
+      const match = needle === '' || haystack.includes(needle);
+      item.hidden = !match;
+      if (match) visible += 1;
+    }
+    if (status) {
+      status.textContent = needle === '' ? '' : `${visible} Treffer für „${term.trim()}“`;
+    }
+  };
+
+  const initial = new URLSearchParams(window.location.search).get('q') ?? '';
+  if (input && initial) input.value = initial;
+  applyFilter(initial);
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const term = input?.value ?? '';
+    applyFilter(term);
+    const url = new URL(window.location.href);
+    if (term.trim()) url.searchParams.set('q', term.trim());
+    else url.searchParams.delete('q');
+    window.history.replaceState({}, '', url);
+  });
+  input?.addEventListener('input', () => applyFilter(input.value));
+</script>

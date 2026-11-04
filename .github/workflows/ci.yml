@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   lint:
-    name: Lint (ESLint / Prettier for .js / .cjs / .html)
+    name: Lint (ESLint / Prettier for .js / .cjs / .mjs / .ts / .astro / .html)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
@@ -43,6 +43,38 @@ jobs:
               description: '${{ job.status == 'success' && 'Lint passed' || 'Lint failed' }}',
             });
 
+  astro:
+    name: Astro Build + Type Check (Astro 7 / TypeScript strict)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Type check (astro check, TypeScript strict)
+        run: npm run check
+      - name: Static production build (Astro -> dist/)
+        run: npm run build
+      - name: Post status — ci/astro
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: '${{ job.status == 'success' && 'success' || 'failure' }}',
+              context: 'ci/astro',
+              description: '${{ job.status == 'success' && 'Astro build passed' || 'Astro build failed' }}',
+            });
+
   unit-test:
     name: Unit Tests (Jest + node:test pages regression + offline file)
     runs-on: ubuntu-latest
@@ -52,12 +84,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
       - name: Static production build (unit tests exercise the preview server, which serves dist/Esoterik-Welt)
-        run: npm run build
+        run: npm run build:legacy
       - name: Install Chromium for the offline file check
         run: npx playwright install --with-deps chromium
       - name: Run Jest tests (unit/API only, no browser specs)
@@ -120,7 +152,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
@@ -155,7 +187,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
       - name: Install dependencies
         run: npm ci

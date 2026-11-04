@@ -1,0 +1,117 @@
+---
+/**
+ * Renderer für die Blockstrukturen des Bestands.
+ *
+ * Die Datenmodule liefern Inhalte als Blocklisten
+ * (`{type: 'p'|'h3'|'list'|'ul'|'facts'|'quote'|'timeline'|'swatch'|'sources'}`),
+ * die bisher `js/modules/farbwelten.js` bzw. `-radiasthesie.js` clientseitig zu
+ * HTML machten. Hier entsteht dasselbe HTML beim Build — dadurch ist der Text
+ * ohne JavaScript lesbar und crawlbar (Kernziel der Migration, §6.4).
+ */
+import { formatInline } from '../lib/inline';
+
+export interface Block {
+  type: string;
+  text?: string;
+  items?: (string | { id?: string; label?: string; url?: string })[];
+  rows?: [string, string][];
+  caption?: string;
+}
+
+export interface Props {
+  blocks: Block[];
+}
+
+const { blocks } = Astro.props;
+
+function isSource(item: string | { id?: string; label?: string; url?: string }): item is {
+  id?: string;
+  label?: string;
+  url?: string;
+} {
+  return typeof item === 'object' && item !== null;
+}
+---
+
+{blocks.map((block) => {
+  switch (block.type) {
+    case 'p':
+      return <p set:html={formatInline(block.text ?? '')} />;
+    case 'h3':
+      return <h3 set:html={formatInline(block.text ?? '')} />;
+    case 'quote':
+      return (
+        <blockquote class="block-quote">
+          <p set:html={formatInline(block.text ?? '')} />
+        </blockquote>
+      );
+    case 'list':
+    case 'ul':
+      return (
+        <ul class="block-list">
+          {(block.items ?? []).map((item) =>
+            isSource(item) ? (
+              <li>
+                {item.url ? (
+                  <a href={item.url} rel="noopener">
+                    {item.label ?? item.url}
+                  </a>
+                ) : (
+                  (item.label ?? '')
+                )}
+              </li>
+            ) : (
+              <li set:html={formatInline(item)} />
+            )
+          )}
+        </ul>
+      );
+    case 'facts':
+      return (
+        <table class="facts">
+          <caption class="sr-only">Kennzahlen</caption>
+          <tbody>
+            {(block.rows ?? []).map(([label, value]) => (
+              <tr>
+                <th scope="row">{label}</th>
+                <td>{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      );
+    case 'timeline':
+      return (
+        <ol class="timeline">
+          {(block.items ?? []).map((item) => (
+            <li set:html={formatInline(typeof item === 'string' ? item : (item.label ?? ''))} />
+          ))}
+        </ol>
+      );
+    case 'sources':
+      return (
+        <ul class="block-sources">
+          {(block.items ?? []).map((item) =>
+            isSource(item) ? (
+              <li>
+                {item.id ? <span class="source-id">[{item.id}]</span> : null}{' '}
+                {item.url ? (
+                  <a href={item.url} rel="noopener">
+                    {item.label ?? item.url}
+                  </a>
+                ) : (
+                  (item.label ?? '')
+                )}
+              </li>
+            ) : (
+              <li set:html={formatInline(item)} />
+            )
+          )}
+        </ul>
+      );
+    case 'swatch':
+      return <div class="swatch" aria-hidden="true" />;
+    default:
+      return block.text ? <p set:html={formatInline(block.text)} /> : null;
+  }
+})}

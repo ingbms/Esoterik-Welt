@@ -1,0 +1,156 @@
+---
+/**
+ * Themenseiten Radiästhesie / Pendeln / Orakel.
+ *
+ * `getStaticPaths()` erzeugt genau die drei Dokumente des Bestands
+ * (`/radiasthesie/<slug>.html`), inklusive der Kapitelanker (`section.id`), die
+ * die alten Hash-Adressen `#pendeln/<thema>/<abschnitt>` anspringen.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import Blocks from '../../components/Blocks.astro';
+import EvidenceLegend from '../../components/EvidenceLegend.astro';
+import { RADIASTHESIE as R } from '../../data/legacy';
+import { resolveLegacyHash } from '../../lib/legacy-routes';
+
+export function getStaticPaths() {
+  return Object.entries(R.topics).map(([slug, topic]) => ({
+    params: { slug },
+    props: { topic, slug },
+  }));
+}
+
+const { topic, slug } = Astro.props;
+const ROUTE = `/radiasthesie/${slug}.html`;
+const AREA_NAV = [
+  { href: '/radiasthesie/', label: 'Übersicht' },
+  { href: '/radiasthesie/radiasthesie.html', label: 'Radiästhesie' },
+  { href: '/radiasthesie/pendeln.html', label: 'Pendeln' },
+  { href: '/radiasthesie/orakel.html', label: 'Orakel' },
+  { href: '/radiasthesie/glossar.html', label: 'Glossar' },
+  { href: '/radiasthesie/quellen.html', label: 'Quellen' },
+  { href: '/radiasthesie/methodik.html', label: 'Methodik' },
+];
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: R.module.title, href: '/radiasthesie/' },
+  { label: topic.title },
+];
+
+const photoSrc = (src: string): string => (src.startsWith('/') ? src : `/${src}`);
+---
+
+<BaseLayout
+  title={topic.seoTitle}
+  exactTitle
+  description={topic.description}
+  trail={trail}
+  jsonLd={{
+    '@type': 'WebPage',
+    name: topic.seoTitle,
+    description: topic.description,
+    hasPart: topic.sections.map((section) => ({
+      '@type': 'WebPageElement',
+      name: section.title,
+      url: `${ROUTE}#${section.id}`,
+    })),
+  }}
+>
+  <div class="page-head">
+    <p class="label">{topic.eyebrow}</p>
+    <h1>{topic.title}</h1>
+    <p class="lede">{topic.lead}</p>
+    <p class="client-note">{topic.status}</p>
+    <ul class="chip-row">
+      {topic.facts.map((fact) => <li class="chip">{fact}</li>)}
+    </ul>
+    <AreaNav items={AREA_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    {
+      topic.figure && (
+        <figure class="prose">
+          <img src={photoSrc(topic.figure.src)} alt={topic.figure.alt} loading="lazy" decoding="async" />
+          <figcaption class="caption">{topic.figure.caption}</figcaption>
+        </figure>
+      )
+    }
+
+    {
+      topic.sections.map((section) => (
+        <section id={section.id} aria-labelledby={`${section.id}-title`}>
+          <h2 id={`${section.id}-title`}>
+            {section.number}. {section.title}
+          </h2>
+          {section.period ? <p class="entry-note">{section.period}</p> : null}
+          {section.chips?.length ? (
+            <ul class="chip-row">
+              {section.chips.map((chip: string) => (
+                <li class="chip">Evidenz {chip}</li>
+              ))}
+            </ul>
+          ) : null}
+          <Blocks blocks={section.blocks} />
+          {(section.photos ?? []).map((photo) => (
+            <figure>
+              <img src={photoSrc(photo.web.src)} alt={photo.alt} loading="lazy" decoding="async" />
+              <figcaption class="caption">
+                {photo.caption} <span class="entry-note">— {photo.attribution}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </section>
+      ))
+    }
+
+    <section aria-labelledby="einordnung-title">
+      <h2 id="einordnung-title">Einordnung</h2>
+      <dl class="definition-list">
+        <div>
+          <dt>Tradition</dt>
+          <dd>{topic.disclaimer.tradition}</dd>
+        </div>
+        <div>
+          <dt>Evidenz</dt>
+          <dd>{topic.disclaimer.evidenz}</dd>
+        </div>
+        <div>
+          <dt>Konsequenz</dt>
+          <dd>{topic.disclaimer.konsequenz}</dd>
+        </div>
+        <div>
+          <dt>Fazit</dt>
+          <dd>{topic.disclaimer.fazit}</dd>
+        </div>
+      </dl>
+    </section>
+
+    <EvidenceLegend levels={R.levels} />
+
+    <section aria-labelledby="vernetzung-title">
+      <h2 id="vernetzung-title">Vernetzung</h2>
+      <ul class="summary-list">
+        {
+          topic.related.map((entry) => {
+            const target = resolveLegacyHash(entry.href) ?? '/radiasthesie/';
+            return (
+              <li>
+                <h3>
+                  <a href={target}>{entry.title}</a>
+                </h3>
+                <p>{entry.note}</p>
+                <p class="entry-note">Abgrenzung: {entry.abgrenzung}</p>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+
+    <p class="entry-note">
+      Quellen: <a href="/radiasthesie/quellen.html">alle {R.counts.sources} Quellen mit Prüftiefe</a> · Stand:
+      {R.updated}
+    </p>
+  </div>
+</BaseLayout>

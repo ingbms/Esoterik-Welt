@@ -1,0 +1,184 @@
+---
+/**
+ * Astrologie-Hub.
+ *
+ * Der Bestand hatte genau eine Astrologie-Ansicht (`#astrologie`) mit
+ * 85 Unteransichten derselben URL. Hier ist der Hub ein Dokument mit Verweisen
+ * auf die Unterbereiche — die Unteransichten sind eigene, crawlbar gerenderte
+ * Seiten (Migrationsplan §6.4 Punkt 1).
+ *
+ * Titel/Description sind die Laufzeit-Metas des Bestands (`PAGE_META.astrologie`
+ * in `js/main.js`) mit der Marke des Arbeitsprojekts.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import {
+  ASTROLOGIE_META as META,
+  ZEICHEN,
+  FAKTOREN,
+  HAEUSER,
+  ASPEKTE,
+  GRUNDLAGEN,
+  LERNPFAD,
+  BEISPIELE,
+} from '../../data/legacy';
+
+const ROUTE = '/astrologie/';
+const AREA_NAV = [
+  { href: '/astrologie/', label: 'Hub' },
+  { href: '/astrologie/lernpfad/', label: 'Lernpfad' },
+  { href: '/astrologie/zeichen/', label: 'Zeichen' },
+  { href: '/astrologie/faktoren/', label: 'Faktoren' },
+  { href: '/astrologie/haeuser/', label: 'Häuser' },
+  { href: '/astrologie/aspekte/', label: 'Aspekte' },
+  { href: '/astrologie/grundlagen/', label: 'Grundlagen' },
+  { href: '/astrologie/beispiele/', label: 'Beispiele' },
+  { href: '/astrologie/faq.html', label: 'FAQ' },
+  { href: '/astrologie/glossar.html', label: 'Glossar' },
+  { href: '/astrologie/quellen.html', label: 'Quellen' },
+  { href: '/astrologie/methodik.html', label: 'Methodik' },
+  { href: '/astrologie/suche.html', label: 'Suche' },
+];
+const trail = [{ label: 'Start', href: '/' }, { label: 'Astrologie' }];
+
+const AREAS = [
+  {
+    href: '/astrologie/lernpfad/',
+    label: 'Lernpfad',
+    note: 'Sechs Stufen von der Orientierung bis zur Synthese',
+    count: LERNPFAD.length,
+  },
+  {
+    href: '/astrologie/zeichen/',
+    label: 'Zeichen',
+    note: 'Die zwölf tropischen Zeichen mit Bildsprache und Deutung',
+    count: ZEICHEN.length,
+  },
+  {
+    href: '/astrologie/faktoren/',
+    label: 'Faktoren',
+    note: 'Sonne, Mond und die acht Körper — Astronomie und Deutung',
+    count: FAKTOREN.length,
+  },
+  {
+    href: '/astrologie/haeuser/',
+    label: 'Häuser',
+    note: 'Zwölf Lebensfelder, abhängig von Zeit und Ort',
+    count: HAEUSER.length,
+  },
+  {
+    href: '/astrologie/aspekte/',
+    label: 'Aspekte',
+    note: 'Fünf Hauptaspekte mit Winkel und Orben',
+    count: ASPEKTE.length,
+  },
+  {
+    href: '/astrologie/grundlagen/',
+    label: 'Grundlagen',
+    note: 'Grundlagen- und Vertiefungstexte',
+    count: GRUNDLAGEN.length,
+  },
+  {
+    href: '/astrologie/beispiele/',
+    label: 'Lehrbeispiele',
+    note: 'Vier ausdrücklich fiktive Leseproben',
+    count: BEISPIELE.length,
+  },
+];
+---
+
+<BaseLayout
+  title="Astrologie — Zeichen, Faktoren, Häuser, Aspekte | VELARKANA"
+  description="Astrologie lernen und nachschlagen: zwölf Zeichen, zehn Faktoren, zwölf Häuser, fünf Hauptaspekte, Lernpfad, Glossar und FAQ — ohne Berechnung, ohne Geburtsdaten."
+  trail={trail}
+  jsonLd={{ '@type': 'CollectionPage', name: 'Astrologie', numberOfItems: META.counts.zeichen }}
+>
+  <div class="page-head">
+    <p class="label">Bereich · Deutungstradition und Astronomie</p>
+    <h1>Astrologie</h1>
+    <p class="lede">{META.arbeitsannahme.zeichen}</p>
+    <AreaNav items={AREA_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <ul class="entry-grid">
+      {AREAS.map((area) => (
+        <li>
+          <a class="entry-card" href={area.href}>
+            <span class="entry-meta">{area.count} Einträge</span>
+            <span class="entry-title">{area.label}</span>
+            <span class="entry-note">{area.note}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <section aria-labelledby="umfang-title">
+      <h2 id="umfang-title">Umfang dieses Bereichs</h2>
+      <table class="facts">
+        <caption class="sr-only">Anzahl der Einträge je Bereich</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Zeichen</th>
+            <td>{META.counts.zeichen}</td>
+          </tr>
+          <tr>
+            <th scope="row">Faktoren</th>
+            <td>{META.counts.faktoren}</td>
+          </tr>
+          <tr>
+            <th scope="row">Häuser</th>
+            <td>{META.counts.haeuser}</td>
+          </tr>
+          <tr>
+            <th scope="row">Hauptaspekte</th>
+            <td>{META.counts.aspekte}</td>
+          </tr>
+          <tr>
+            <th scope="row">Grundlagen</th>
+            <td>{META.counts.grundlagen}</td>
+          </tr>
+          <tr>
+            <th scope="row">Lehrbeispiele</th>
+            <td>{META.counts.beispiele}</td>
+          </tr>
+          <tr>
+            <th scope="row">FAQ</th>
+            <td>{META.counts.faq}</td>
+          </tr>
+          <tr>
+            <th scope="row">Glossar</th>
+            <td>{META.counts.glossar}</td>
+          </tr>
+          <tr>
+            <th scope="row">Lernpfadstufen</th>
+            <td>{META.counts.lernpfad}</td>
+          </tr>
+          <tr>
+            <th scope="row">Quellen</th>
+            <td>{META.counts.quellen}</td>
+          </tr>
+          <tr>
+            <th scope="row">Belegte Aussagen</th>
+            <td>{META.counts.claims}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="entry-note">
+        Stand {META.stand} · Version {META.version}
+      </p>
+    </section>
+
+    <section aria-labelledby="annahmen-title">
+      <h2 id="annahmen-title">Arbeitsannahmen je Bereich</h2>
+      <dl class="definition-list">
+        {Object.entries(META.arbeitsannahme).map(([key, text]) => (
+          <div>
+            <dt>{key}</dt>
+            <dd>{text}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,71 @@
+---
+/** Lernpfad-Stufe: Leseschritte, Reflexionsfragen, nächste Stufe. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import { LERNPFAD } from '../../../data/legacy';
+import { ASTROLOGIE_NAV, astrologieTrail } from '../../../lib/astrologie';
+import { crossRefTarget } from '../../../lib/astrologie-links';
+
+export function getStaticPaths() {
+  return LERNPFAD.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const ROUTE = `/astrologie/lernpfad/${entry.slug}.html`;
+const trail = astrologieTrail('Lernpfad', '/astrologie/lernpfad/', entry.title);
+const next = LERNPFAD.find((item) => item.slug === entry.next);
+---
+
+<BaseLayout title={`${entry.title} — Lernpfad Stufe`} description={entry.goal} trail={trail}>
+  <div class="page-head">
+    <p class="label">
+      Lernpfad · {entry.level} · {entry.reading_time_min} Minuten
+    </p>
+    <h1>{entry.title}</h1>
+    <p class="lede">{entry.goal}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="schritte-title">
+      <h2 id="schritte-title">Leseschritte</h2>
+      <ol class="timeline">
+        {entry.steps.map((step) => (
+          <li>
+            <strong>{step.title}</strong>
+            <p>{step.task}</p>
+            {step.refs?.length ? (
+              <p class="entry-note">
+                Verweise:{' '}
+                {step.refs.map((ref: string, index: number) => {
+                  const target = crossRefTarget(ref);
+                  return (
+                    <>
+                      {index > 0 ? ', ' : ''}
+                      {target ? <a href={target.href}>{target.label}</a> : ref}
+                    </>
+                  );
+                })}
+              </p>
+            ) : null}
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="fragen-title">
+      <h2 id="fragen-title">Verständnisfragen</h2>
+      <ul class="block-list">
+        {entry.check_questions.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    {next && (
+      <p class="client-note">
+        Nächste Stufe: <a href={`/astrologie/lernpfad/${next.slug}.html`}>{next.title}</a>
+      </p>
+    )}
+  </div>
+</BaseLayout>

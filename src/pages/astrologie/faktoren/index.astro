@@ -1,0 +1,34 @@
+---
+/** Zehn Deutungsfaktoren — Index. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import EntryIndex from '../../../components/EntryIndex.astro';
+import { ASTROLOGIE_META as META, FAKTOREN } from '../../../data/legacy';
+import { ASTROLOGIE_NAV } from '../../../lib/astrologie';
+
+const ROUTE = '/astrologie/faktoren/';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Astrologie', href: '/astrologie/' }, { label: 'Faktoren' }];
+---
+
+<BaseLayout
+  title="Die zehn Deutungsfaktoren — Sonne, Mond und acht Körper"
+  description="Sonne, Mond, Merkur bis Pluto: astronomische Daten, zugeordnete Themen und typische Fehldeutungen der zehn astrologischen Deutungsfaktoren."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">{FAKTOREN.length} Faktoren</p>
+    <h1>Die zehn Faktoren</h1>
+    <p class="lede">{META.arbeitsannahme.faktoren}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+  <div class="page-body">
+    <EntryIndex
+      entries={FAKTOREN.map((entry) => ({
+        href: `/astrologie/faktoren/${entry.slug}.html`,
+        label: entry.name,
+        note: entry.short,
+        meta: entry.kind,
+      }))}
+    />
+  </div>
+</BaseLayout>

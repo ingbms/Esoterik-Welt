@@ -1,0 +1,24 @@
+---
+/**
+ * Datenschutzerklärung.
+ *
+ * Textsubstanz unverändert aus `datenschutz.html` über
+ * `src/content/legal/datenschutz.html` (erzeugt von
+ * `scripts/migrate-content.cjs`).
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import body from '../content/legal/datenschutz.html?raw';
+
+const trail = [{ label: 'Start', href: '/' }, { label: 'Datenschutz' }];
+---
+
+<BaseLayout
+  title="Datenschutz — VELARKANA"
+  description="Datenschutzerklärung der VELARKANA: keine Tracker, keine Cookies, lokale Speicherung."
+  trail={trail}
+>
+  <div class="container legal-content">
+    <h1 class="sr-only">Datenschutzerklärung</h1>
+    <Fragment set:html={body} />
+  </div>
+</BaseLayout>

@@ -1,0 +1,34 @@
+---
+/** Indexraster für Bereichsseiten (Zeichen, Häuser, Farben, Artikel …). */
+export interface Entry {
+  href: string;
+  label: string;
+  note?: string;
+  meta?: string;
+}
+
+export interface Props {
+  entries: Entry[];
+  /** Überschrift des Rasters für die Gliederung. */
+  heading?: string;
+}
+
+const { entries, heading = 'Alle Einträge' } = Astro.props;
+---
+
+<section aria-labelledby="entries-title">
+  <h2 id="entries-title" class="sr-only">
+    {heading}
+  </h2>
+  <ul class="entry-grid">
+    {entries.map((entry) => (
+      <li>
+        <a class="entry-card" href={entry.href}>
+          {entry.meta ? <span class="entry-meta">{entry.meta}</span> : null}
+          <span class="entry-title">{entry.label}</span>
+          {entry.note ? <span class="entry-note">{entry.note}</span> : null}
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>

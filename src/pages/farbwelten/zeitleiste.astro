@@ -1,0 +1,61 @@
+---
+/** Zeitleiste — 17 Stationen der Farbgeschichte in fünf Strängen. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { FARB_TIMELINE as TIMELINE } from '../../data/legacy';
+import { formatInline } from '../../lib/inline';
+
+const ROUTE = '/farbwelten/zeitleiste.html';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Farbwelten', href: '/farbwelten/' }, { label: 'Zeitleiste' }];
+const NAV = [
+  { href: '/farbwelten/', label: 'Übersicht' },
+  { href: '/farbwelten/kompass.html', label: 'Kompass' },
+  { href: '/farbwelten/zeitleiste.html', label: 'Zeitleiste' },
+  { href: '/farbwelten/farbmeditation.html', label: 'Meditation' },
+];
+const strandLabel = new Map(TIMELINE.strands.map((strand) => [strand.id, strand.label]));
+---
+
+<BaseLayout title={TIMELINE.meta.title} description={TIMELINE.meta.description} trail={trail}>
+  <div class="page-head">
+    <p class="label">Werkzeug · {TIMELINE.events.length} Stationen</p>
+    <h1>{TIMELINE.title}</h1>
+    <p class="lede">{TIMELINE.lede}</p>
+    <p class="entry-note">{TIMELINE.hinweis}</p>
+    <AreaNav items={NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <ol class="timeline">
+      {TIMELINE.events.map((event) => (
+        <li>
+          <p class="entry-meta">
+            {event.year} · {strandLabel.get(event.strand) ?? event.strand}
+          </p>
+          <h2>{event.title}</h2>
+          <p set:html={formatInline(event.text)} />
+          {event.sources?.length ? <p class="entry-note">Quellen: {event.sources.join(', ')}</p> : null}
+        </li>
+      ))}
+    </ol>
+
+    <section aria-labelledby="strange-title">
+      <h2 id="strange-title">Stränge</h2>
+      <ul class="chip-row">
+        {TIMELINE.strands.map((strand) => (
+          <li class="chip">{strand.label}</li>
+        ))}
+      </ul>
+      <p class="entry-note">{TIMELINE.fallback}</p>
+    </section>
+
+    <section aria-labelledby="quellen-title">
+      <h2 id="quellen-title">Quellen</h2>
+      <ul class="block-sources">
+        {TIMELINE.sources.map((source) => (
+          <li set:html={formatInline(source)} />
+        ))}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

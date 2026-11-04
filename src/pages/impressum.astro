@@ -1,0 +1,28 @@
+---
+/**
+ * Impressum.
+ *
+ * Der Text ist die unveränderte Inhaltssubstanz von `impressum.html`
+ * (Bild- und Schriftennachweise, 30 KB). Er wird aus
+ * `src/content/legal/impressum.html` gelesen — erzeugt von
+ * `scripts/migrate-content.cjs` aus dem Bestandsdokument. Eine Abschrift von
+ * Hand wäre bei dieser Länge die sicherste Art, Nachweise zu verlieren.
+ *
+ * Titel/Description: SEO-Baseline §6.1 mit der Marke des Arbeitsprojekts.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import body from '../content/legal/impressum.html?raw';
+
+const trail = [{ label: 'Start', href: '/' }, { label: 'Impressum' }];
+---
+
+<BaseLayout
+  title="Impressum — VELARKANA"
+  description="Impressum, Bild- und Schriftennachweise der VELARKANA."
+  trail={trail}
+>
+  <div class="container legal-content">
+    <h1 class="sr-only">Impressum</h1>
+    <Fragment set:html={body} />
+  </div>
+</BaseLayout>

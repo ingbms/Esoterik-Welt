@@ -1,0 +1,124 @@
+---
+/**
+ * Zeichen-Detailseite.
+ *
+ * Rendert alle Inhaltsfelder des Datensatzes: Kurz- und Langtext, Bildsprache,
+ * Stärken, Spannungen, Reflexionsfragen, typische Missdeutung, Querverweise.
+ * Der Langtext enthält Absätze und Zitationsmarker — er wird über `Prose`
+ * gerendert, damit Struktur und Marken erhalten bleiben.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import Prose from '../../../components/Prose.astro';
+import { ZEICHEN } from '../../../data/legacy';
+import { ASTROLOGIE_NAV, astrologieTrail, metaDescription } from '../../../lib/astrologie';
+import { crossRefTarget } from '../../../lib/astrologie-links';
+
+export function getStaticPaths() {
+  return ZEICHEN.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const ROUTE = `/astrologie/zeichen/${entry.slug}.html`;
+const trail = astrologieTrail('Zeichen', '/astrologie/zeichen/', entry.name);
+
+const chips = [
+  entry.symbol.glyph,
+  `Element: ${entry.element.replace('element-', '')}`,
+  `Modalität: ${entry.modality.replace('modalitaet-', '')}`,
+  `Polarität: ${entry.polarity}`,
+  `Herrscher: ${entry.ruler_traditional.replace('faktor-', '')}`,
+  `${entry.date_range_tropical.from} – ${entry.date_range_tropical.to}`,
+];
+---
+
+<BaseLayout
+  title={`${entry.name} — Zeichen, Bildsprache und Deutung`}
+  description={metaDescription(entry.short)}
+  trail={trail}
+  jsonLd={{ '@type': 'WebPage', name: entry.name, description: entry.short }}
+>
+  <div class="page-head">
+    <p class="label">Zeichen · {entry.symbol.name}</p>
+    <h1>
+      {entry.symbol.glyph} {entry.name}
+    </h1>
+    <p class="lede">{entry.short}</p>
+    <ul class="chip-row">
+      {chips.map((chip) => (
+        <li class="chip">{chip}</li>
+      ))}
+    </ul>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <Prose text={entry.long} />
+
+    <section aria-labelledby="bildsprache-title">
+      <h2 id="bildsprache-title">Bildsprache</h2>
+      <p>{entry.symbol.bildsprache}</p>
+      <p class="entry-note">
+        Herrschaft traditionell: {entry.ruler_traditional.replace('faktor-', '')} · modern:{' '}
+        {entry.ruler_modern.replace('faktor-', '')} · natürliches Haus: {entry.natural_house.replace('haus-', '')}
+      </p>
+    </section>
+
+    <section aria-labelledby="staerken-title">
+      <h2 id="staerken-title">Stärken und Spannungen</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>Stärken</h3>
+          <ul class="block-list">
+            {entry.strengths.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3>Spannungen</h3>
+          <ul class="block-list">
+            {entry.tensions.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="fragen-title">
+      <h2 id="fragen-title">Reflexionsfragen</h2>
+      <ul class="block-list">
+        {entry.reflection_questions.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="missdeutung-title">
+      <h2 id="missdeutung-title">Typische Missdeutung</h2>
+      <p>{entry.common_misreading}</p>
+      <p class="entry-note">{entry.kennzeichnung.hinweis}</p>
+    </section>
+
+    <section aria-labelledby="verweise-title">
+      <h2 id="verweise-title">Querverweise und Belege</h2>
+      <ul class="chip-row">
+        {entry.cross_refs.map((ref) => {
+          const target = crossRefTarget(ref);
+          return target ? (
+            <li class="chip">
+              <a href={target.href}>{target.label}</a>
+            </li>
+          ) : (
+            <li class="chip">{ref}</li>
+          );
+        })}
+      </ul>
+      <p class="entry-note">
+        Quellen: {entry.sources.join(', ')} · belegte Aussagen: {entry.claims.join(', ')} — vollständig unter
+        <a href="/astrologie/quellen.html">Quellen</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,46 @@
+---
+/** Hauptnavigation — Ziele aus `index.html`, Pfade auf die neuen Dokumente. */
+import { SITE_NAME } from '../lib/site';
+
+export interface Props {
+  /** Pfad der aktuellen Seite für `aria-current`. */
+  current?: string;
+}
+
+const { current = '' } = Astro.props;
+
+const NAV = [
+  { href: '/', label: 'Start' },
+  { href: '/tarot.html', label: 'Tarot' },
+  { href: '/kristalle.html', label: 'Kristalle' },
+  { href: '/mondphasen.html', label: 'Mondphasen' },
+  { href: '/astrologie/', label: 'Astrologie' },
+  { href: '/frequenzen/', label: 'Frequenzen' },
+  { href: '/runen.html', label: 'Runen' },
+  { href: '/radiasthesie/', label: 'Pendeln' },
+  { href: '/farbwelten/', label: 'Farben' },
+  { href: '/wissen/', label: 'Wissen' },
+];
+
+const isCurrent = (href: string): boolean =>
+  href === '/' ? current === '/' : current === href || current.startsWith(href);
+---
+
+<header class="header" role="banner">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label={`${SITE_NAME} Startseite`}>
+      {SITE_NAME}
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        {NAV.map((item) => (
+          <li>
+            <a href={item.href} class="nav-link" aria-current={isCurrent(item.href) ? 'page' : undefined}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

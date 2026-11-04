@@ -1,0 +1,40 @@
+---
+/** Quellenverzeichnis mit Kennungen und (wo vorhanden) Links. */
+import { formatInline } from '../lib/inline';
+
+export interface SourceEntry {
+  id: string;
+  label?: string;
+  url?: string;
+  citation?: string;
+  title?: string;
+  year?: string;
+  type?: string;
+}
+
+export interface Props {
+  sources: SourceEntry[];
+  title?: string;
+}
+
+const { sources, title = 'Quellen' } = Astro.props;
+---
+
+<section class="sources" aria-labelledby="sources-title">
+  <h2 id="sources-title">{title}</h2>
+  <ol class="block-sources">
+    {sources.map((source) => (
+      <li>
+        <span class="source-id">[{source.id}]</span>{' '}
+        {source.url ? (
+          <a href={source.url} rel="noopener">
+            {source.citation ?? source.label ?? source.url}
+          </a>
+        ) : (
+          <span set:html={formatInline(source.citation ?? source.label ?? '')} />
+        )}
+        {source.year ? <span class="entry-note"> ({source.year})</span> : null}
+      </li>
+    ))}
+  </ol>
+</section>

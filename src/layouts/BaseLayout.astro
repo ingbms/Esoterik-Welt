@@ -1,0 +1,129 @@
+---
+/**
+ * Globales Layout — Kopf, Navigation, Fuß.
+ *
+ * Erweiterung gegenüber dem Gerüst aus t_5a343e3c (additiv, gleiche Props):
+ * Description, Canonical, OpenGraph, robots, JSON-LD, Brotkrumen und der
+ * Legacy-Hash-Shim. Header/Footer sind aus `index.html` übernommen (Marke auf
+ * „VELARKANA“, Migrationsplan §11.5) — die vollständige Komponentenportierung
+ * ist Aufgabe von t_2d9fbecf.
+ */
+import '../styles/global.css';
+// CSS des Bestands: unverändert übernommen, damit Tokens, Raster und
+// Komponentenstile nicht neu geschrieben werden (Migrationsplan P1/P3).
+import '../../css/design-system.css';
+import '../../css/main.css';
+// Eigene Ergänzungen (Brotkrumen, Raster, Suchseiten) — bewusst NACH dem
+// Bestands-CSS, damit Overrides greifen (z. B. sichtbare Navigation unter 900 px).
+import '../styles/content.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { canonicalPath, SITE_NAME } from '../lib/site';
+import { breadcrumbList, webPage } from '../lib/jsonld';
+
+export interface TrailEntry {
+  label: string;
+  /** Pfad relativ zur Projektbasis; das letzte Element bleibt ohne Link. */
+  href?: string;
+}
+
+export interface Props {
+  /** Anzeigetitel ohne Markensuffix. */
+  title: string;
+  /**
+   * Titel wörtlich verwenden, ohne Markensuffix.
+   * Nötig für die Radiästhesie-Dokumente: ihre Titel sind in der SEO-Baseline
+   * ohne Marke festgelegt (§6.1) und sollen beim Vergleich Zeichen für Zeichen
+   * gleich bleiben.
+   */
+  exactTitle?: boolean;
+  /** Meta-Description; ohne Wert wird kein Tag erzeugt. */
+  description?: string;
+  /** `noindex` für Fehler- und Werkzeugseiten ohne Suchrelevanz. */
+  robots?: string | null;
+  /** Kein Canonical (nur 404, wie im Bestand). */
+  omitCanonical?: boolean;
+  /** Brotkrumen; erzeugen Navigation und `BreadcrumbList`-JSON-LD. */
+  trail?: TrailEntry[];
+  /** Zusätzliche strukturierte Daten (z. B. CollectionPage). */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** Für Layouts, die den Kopf selbst zeichnen (Startseite). */
+  hero?: boolean;
+}
+
+const {
+  title,
+  description,
+  robots = 'index, follow',
+  omitCanonical = false,
+  trail = [],
+  jsonLd,
+  hero = false,
+  exactTitle = false,
+} = Astro.props;
+
+const path = canonicalPath(Astro.url.pathname);
+const origin = Astro.site ?? new URL(Astro.url.origin);
+const canonical = new URL(path, origin).href;
+const documentTitle = exactTitle || title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+
+const structuredData: Record<string, unknown>[] = [
+  webPage({ url: canonical, name: documentTitle, description }),
+  ...(trail.length > 0 ? [breadcrumbList(trail, origin)] : []),
+  ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []),
+];
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{documentTitle}</title>
+    {description && <meta name="description" content={description} />}
+    {!omitCanonical && <link rel="canonical" href={canonical} />}
+    {robots && <meta name="robots" content={robots} />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content={documentTitle} />
+    {description && <meta property="og:description" content={description} />}
+    {!omitCanonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={documentTitle} />
+    {description && <meta name="twitter:description" content={description} />}
+
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <JsonLd data={structuredData} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Zum Hauptinhalt springen
+    </a>
+    <SiteHeader />
+    <main id="main" class:list={['site-main', { 'site-main--hero': hero }]} tabindex="-1">
+      {trail.length > 0 && <Breadcrumbs trail={trail} />}
+      <slot />
+    </main>
+    <SiteFooter />
+    <!-- Legacy-Hash-Shim: alte Adressen wie #astrologie/zeichen/widder werden
+         auf ihre neue URL umgeschrieben (Redirect-Map aus src/lib/legacy-routes.ts).
+         Der Listener ist nötig, weil eine reine Hash-Navigation innerhalb der
+         Seite kein Neuladen auslöst — sonst bliebe ein alter Link stehen. -->
+    <script>
+      import { resolveLegacyHash } from '../lib/legacy-routes';
+
+      const applyLegacyRedirect = (): void => {
+        const target = resolveLegacyHash(window.location.hash, window.location.search);
+        if (target) window.location.replace(target);
+      };
+
+      applyLegacyRedirect();
+      window.addEventListener('hashchange', applyLegacyRedirect);
+    </script>
+  </body>
+</html>

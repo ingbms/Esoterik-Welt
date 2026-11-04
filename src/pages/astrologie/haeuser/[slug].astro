@@ -1,0 +1,62 @@
+---
+/** Haus-Detailseite: Themen, Fragen, natürliches Zeichen, Warnhinweis. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import Prose from '../../../components/Prose.astro';
+import { HAEUSER } from '../../../data/legacy';
+import { ASTROLOGIE_NAV, astrologieTrail, metaDescription } from '../../../lib/astrologie';
+import { crossRefTarget } from '../../../lib/astrologie-links';
+
+export function getStaticPaths() {
+  return HAEUSER.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const ROUTE = `/astrologie/haeuser/${entry.slug}.html`;
+const trail = astrologieTrail('Häuser', '/astrologie/haeuser/', entry.name);
+const naturalSign = crossRefTarget(entry.natural_sign);
+---
+
+<BaseLayout title={`${entry.number}. Haus — ${entry.name}`} description={metaDescription(entry.short)} trail={trail}>
+  <div class="page-head">
+    <p class="label">Haus {entry.number}</p>
+    <h1>{entry.name}</h1>
+    <p class="lede">{entry.short}</p>
+    <ul class="chip-row">
+      <li class="chip">{entry.angularity}</li>
+      <li class="chip">{entry.hemisphere}</li>
+      <li class="chip">
+        Natürliches Zeichen: {naturalSign ? <a href={naturalSign.href}>{naturalSign.label}</a> : entry.natural_sign}
+      </li>
+    </ul>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <Prose text={entry.long} />
+
+    <section aria-labelledby="themen-title">
+      <h2 id="themen-title">Themen</h2>
+      <ul class="block-list">
+        {entry.themes.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <h3>Leitfragen</h3>
+      <ul class="block-list">
+        {entry.questions.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="achtung-title">
+      <h2 id="achtung-title">Hinweis zur Zuordnung</h2>
+      <p>{entry.caution}</p>
+      <p class="entry-note">{entry.kennzeichnung.hinweis}</p>
+      <p class="entry-note">
+        Quellen: {entry.sources.join(', ')} · belegte Aussagen: {entry.claims.join(', ')}
+      </p>
+    </section>
+  </div>
+</BaseLayout>

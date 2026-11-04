@@ -1,0 +1,53 @@
+---
+/**
+ * Quellen und Methodik der Frequenzbibliothek.
+ *
+ * Der Bestand lud `docs/frequenz-quellen.md` per `fetch` und rendert es im
+ * Browser (markdown-lite). Hier rendert der Build dasselbe Dokument aus der
+ * Content-Collection — 401 Zeilen Quellenarbeit, die vorher von Suchmaschinen
+ * nicht gesehen wurden.
+ */
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+
+const entry = await getEntry('dokumente', 'frequenz-quellen');
+if (!entry) throw new Error('Dokument frequenz-quellen fehlt in der Collection');
+const { Content } = await render(entry);
+
+const ROUTE = '/frequenzen/quellen.html';
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: 'Frequenzen', href: '/frequenzen/' },
+  { label: 'Quellen & Methodik' },
+];
+const NAV = [
+  { href: '/frequenzen/', label: 'Bibliothek' },
+  { href: '/frequenzen/labor.html', label: 'Frequenzlabor' },
+  { href: '/frequenzen/cymatics.html', label: 'Chladni-Muster' },
+  { href: '/frequenzen/meditation.html', label: 'Meditation' },
+  { href: '/frequenzen/quellen.html', label: 'Quellen & Methodik' },
+];
+---
+
+<BaseLayout
+  title="Quellen & Methodik der Frequenzbibliothek | VELARKANA"
+  description="Quellendokument zum Frequenzbereich: Suchstrategie, Aufnahmekriterien, Evidenzstatus, Claim-Quelle-Matrix und Quellenverzeichnis."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">Belege</p>
+    <h1>Quellen und Methodik</h1>
+    <p class="lede">
+      Für jeden Eintrag des Frequenzlabors: woher die Zahl kommt, was genau behauptet wird und wie belastbar diese
+      Behauptung ist.
+    </p>
+    <AreaNav items={NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <article class="prose">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>

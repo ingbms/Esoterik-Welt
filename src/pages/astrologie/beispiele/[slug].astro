@@ -1,0 +1,83 @@
+---
+/** Lehrbeispiel-Detailseite: Annahmen, Denkweg, Synthese, alternative Lesart, Grenzen. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import { BEISPIELE } from '../../../data/legacy';
+import { ASTROLOGIE_NAV, astrologieTrail, metaDescription } from '../../../lib/astrologie';
+import { crossRefTarget } from '../../../lib/astrologie-links';
+
+export function getStaticPaths() {
+  return BEISPIELE.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const ROUTE = `/astrologie/beispiele/${entry.slug}.html`;
+const trail = astrologieTrail('Lehrbeispiele', '/astrologie/beispiele/', entry.titel);
+---
+
+<BaseLayout title={entry.titel} description={metaDescription(entry.synthese)} trail={trail}>
+  <div class="page-head">
+    <p class="label">Lehrbeispiel · fiktiv</p>
+    <h1>{entry.titel}</h1>
+    <p class="lede">{entry.disclaimer}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="annahmen-title">
+      <h2 id="annahmen-title">Gesetzte Annahmen</h2>
+      <ul class="block-list">
+        {entry.annahmen.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <p class="entry-note">
+        Figuren: {entry.figuren.join(', ')} · keine Berechnung: {entry.no_calculation ? 'ja' : 'nein'}
+      </p>
+    </section>
+
+    <section aria-labelledby="denkweg-title">
+      <h2 id="denkweg-title">Denkweg</h2>
+      <ol class="timeline">
+        {entry.schritte.map((step) => (
+          <li>
+            <strong>{step.titel}</strong>
+            <p>{step.denkweg}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="synthese-title">
+      <h2 id="synthese-title">Synthese</h2>
+      <p>{entry.synthese}</p>
+      <h3>Alternative Lesart</h3>
+      <p>{entry.alternative_lesart}</p>
+    </section>
+
+    <section aria-labelledby="grenzen-title">
+      <h2 id="grenzen-title">Grenzen</h2>
+      <ul class="block-list">
+        {entry.grenzen.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <p class="entry-note">{entry.kennzeichnung.hinweis}</p>
+      <ul class="chip-row">
+        {entry.cross_refs.map((ref) => {
+          const target = crossRefTarget(ref);
+          return target ? (
+            <li class="chip">
+              <a href={target.href}>{target.label}</a>
+            </li>
+          ) : (
+            <li class="chip">{ref}</li>
+          );
+        })}
+      </ul>
+      <p class="entry-note">
+        Quellen: {entry.sources.join(', ')} · belegte Aussagen: {entry.claims.join(', ')}
+      </p>
+    </section>
+  </div>
+</BaseLayout>

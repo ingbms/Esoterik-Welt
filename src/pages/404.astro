@@ -1,0 +1,46 @@
+---
+/**
+ * 404 — Status 404, Suche/Einstiege statt Sackgasse.
+ *
+ * Titel und Description: SEO-Baseline §6.1 (`Seite nicht gefunden — …`,
+ * Description wörtlich). Kein Canonical — der Bestand hatte für 404.html
+ * ebenfalls keines, und ein Canonical auf eine Fehlerseite ist ein Fehler.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const LINKS = [
+  { href: '/', label: 'Zur Startseite' },
+  { href: '/wissen/', label: 'Artikel-Archiv' },
+  { href: '/astrologie/', label: 'Astrologie' },
+  { href: '/radiasthesie/', label: 'Radiästhesie & Pendeln' },
+  { href: '/farbwelten/', label: 'Farbwelten' },
+];
+---
+
+<BaseLayout
+  title="Seite nicht gefunden — VELARKANA"
+  description="Die angeforderte Seite existiert nicht. Zurück zur Startseite oder Suche."
+  robots="noindex, follow"
+  omitCanonical
+>
+  <section class="container legal-content">
+    <div class="card">
+      <p class="label">Fehler 404</p>
+      <h1>404</h1>
+      <p class="error-subtitle">Seite nicht gefunden</p>
+      <p class="text-muted">
+        Die Seite, die du suchst, existiert nicht oder wurde verschoben. Nutze einen der Einstiege unten oder kehre zur
+        Startseite zurück.
+      </p>
+      <ul class="entry-grid">
+        {LINKS.map((link) => (
+          <li>
+            <a class="entry-card" href={link.href}>
+              <span class="entry-title">{link.label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,38 @@
+---
+/** Vier fiktive Lehrbeispiele — Index. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import EntryIndex from '../../../components/EntryIndex.astro';
+import { ASTROLOGIE_META as META, BEISPIELE } from '../../../data/legacy';
+import { ASTROLOGIE_NAV } from '../../../lib/astrologie';
+
+const ROUTE = '/astrologie/beispiele/';
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: 'Astrologie', href: '/astrologie/' },
+  { label: 'Lehrbeispiele' },
+];
+---
+
+<BaseLayout
+  title="Lehrbeispiele — vier fiktive Leseübungen"
+  description="Vier ausdrücklich fiktive Lehrbeispiele zum synthetischen Lesen: gesetzte Annahmen, Denkweg in Schritten, Synthese, alternative Lesart und Grenzen."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">{BEISPIELE.length} Beispiele</p>
+    <h1>Lehrbeispiele</h1>
+    <p class="lede">{META.arbeitsannahme.beispiele}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+  <div class="page-body">
+    <EntryIndex
+      entries={BEISPIELE.map((entry) => ({
+        href: `/astrologie/beispiele/${entry.slug}.html`,
+        label: entry.titel,
+        note: entry.figuren?.join(', '),
+        meta: entry.fictional ? 'fiktiv' : 'real',
+      }))}
+    />
+  </div>
+</BaseLayout>

@@ -2,7 +2,7 @@
 export interface TarotCard {
   id: string;
   name: string;
-  arcana: "major" | "minor";
+  arcana: 'major' | 'minor';
   suit: string | null;
   number: number;
   meaning_upright: string;
@@ -44,10 +44,10 @@ export interface MoonPhaseInfo {
 
 export interface ArticleFrontmatter {
   title: string;
-  date: string;        // YYYY-MM-DD
+  date: string; // YYYY-MM-DD
   category: string;
   tags: string[];
-  readTime: number;    // Minuten
+  readTime: number; // Minuten
   excerpt: string;
   relatedPosts: string[];
 }

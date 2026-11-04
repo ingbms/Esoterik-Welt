@@ -1,0 +1,61 @@
+---
+/** Farbmeditation — Ablauf und Einordnung, ohne Wirkversprechen. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { FARB_MEDITATION as MEDITATION } from '../../data/legacy';
+import { formatInline } from '../../lib/inline';
+
+const ROUTE = '/farbwelten/farbmeditation.html';
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: 'Farbwelten', href: '/farbwelten/' },
+  { label: 'Farbmeditation' },
+];
+const NAV = [
+  { href: '/farbwelten/', label: 'Übersicht' },
+  { href: '/farbwelten/kompass.html', label: 'Kompass' },
+  { href: '/farbwelten/zeitleiste.html', label: 'Zeitleiste' },
+  { href: '/farbwelten/farbmeditation.html', label: 'Meditation' },
+];
+---
+
+<BaseLayout
+  title={MEDITATION.meta.title}
+  description={MEDITATION.meta.description}
+  trail={trail}
+  jsonLd={{ '@type': 'HowTo', name: MEDITATION.title, description: MEDITATION.lede }}
+>
+  <div class="page-head">
+    <p class="label">Werkzeug · {MEDITATION.dauer.default} Minuten</p>
+    <h1>{MEDITATION.title}</h1>
+    <p class="lede">{MEDITATION.lede}</p>
+    <p class="entry-note">{MEDITATION.einordnung}</p>
+    <AreaNav items={NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="ablauf-title">
+      <h2 id="ablauf-title">Ablauf</h2>
+      <ol class="timeline">
+        {MEDITATION.ablauf.map((step) => (
+          <li set:html={formatInline(typeof step === 'string' ? step : '')} />
+        ))}
+      </ol>
+      <p class="entry-note">
+        Dauer einstellbar von {MEDITATION.dauer.min} bis {MEDITATION.dauer.max} Minuten (Schrittweite
+        {MEDITATION.dauer.step}); Standard {MEDITATION.dauer.default}.
+      </p>
+      <p class="entry-note">{MEDITATION.reflexionHinweis}</p>
+    </section>
+
+    <section aria-labelledby="disclaimer-title">
+      <h2 id="disclaimer-title">Grenzen</h2>
+      <p>{MEDITATION.disclaimer}</p>
+      <ul class="block-sources">
+        {MEDITATION.sources.map((source) => (
+          <li set:html={formatInline(source)} />
+        ))}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

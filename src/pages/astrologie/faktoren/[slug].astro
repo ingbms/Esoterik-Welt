@@ -1,0 +1,99 @@
+---
+/** Faktor-Detailseite: Astronomie, Themen, Fragen, Fehldeutungen, Herrschaften. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import Prose from '../../../components/Prose.astro';
+import { FAKTOREN } from '../../../data/legacy';
+import { ASTROLOGIE_NAV, astrologieTrail, metaDescription } from '../../../lib/astrologie';
+
+export function getStaticPaths() {
+  return FAKTOREN.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const ROUTE = `/astrologie/faktoren/${entry.slug}.html`;
+const trail = astrologieTrail('Faktoren', '/astrologie/faktoren/', entry.name);
+const astronomy = entry.astronomy;
+---
+
+<BaseLayout
+  title={`${entry.name} — Faktor, Astronomie und Deutung`}
+  description={metaDescription(entry.short)}
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">Faktor · {entry.kind}</p>
+    <h1>{entry.name}</h1>
+    <p class="lede">{entry.short}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <Prose text={entry.long} />
+
+    <section aria-labelledby="astronomie-title">
+      <h2 id="astronomie-title">Astronomische Angaben</h2>
+      <table class="facts">
+        <caption class="sr-only">Astronomische Kennzahlen zu{entry.name}</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Umlaufzeit</th>
+            <td>{astronomy.orbital_period_text}</td>
+          </tr>
+          <tr>
+            <th scope="row">Entdeckung</th>
+            <td>{astronomy.discovery}</td>
+          </tr>
+          <tr>
+            <th scope="row">Sichtbarkeit</th>
+            <td>{astronomy.visibility}</td>
+          </tr>
+          <tr>
+            <th scope="row">Zyklus im Horoskop</th>
+            <td>{entry.cycle_text}</td>
+          </tr>
+        </tbody>
+      </table>
+      {astronomy.note ? <p class="entry-note">{astronomy.note}</p> : null}
+    </section>
+
+    <section aria-labelledby="themen-title">
+      <h2 id="themen-title">Zugeordnete Themen</h2>
+      <ul class="block-list">
+        {entry.themes.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <h3>Leitfragen</h3>
+      <ul class="block-list">
+        {entry.questions.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="fehldeutung-title">
+      <h2 id="fehldeutung-title">Typische Fehldeutungen</h2>
+      <ul class="block-list">
+        {entry.misreadings.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <p class="entry-note">{entry.kennzeichnung.hinweis}</p>
+    </section>
+
+    <section aria-labelledby="herrschaft-title">
+      <h2 id="herrschaft-title">Herrschaft</h2>
+      <ul class="block-list">
+        {entry.rulerships.map((rulership) => (
+          <li>
+            {rulership.system}: {rulership.sign}
+          </li>
+        ))}
+      </ul>
+      <p class="entry-note">
+        Quellen: {entry.sources.join(', ')} · belegte Aussagen: {entry.claims.join(', ')}
+      </p>
+    </section>
+  </div>
+</BaseLayout>

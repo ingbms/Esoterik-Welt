@@ -1,0 +1,59 @@
+---
+/** Farbkompass — zwölf Farben mit Assoziationen, Kulturbezug und Hinweis. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { FARB_COMPASS as COMPASS, FARBWELTEN } from '../../data/legacy';
+import { farbHref, farbSlug } from '../../lib/farbwelten';
+import { formatInline } from '../../lib/inline';
+
+const ROUTE = '/farbwelten/kompass.html';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Farbwelten', href: '/farbwelten/' }, { label: 'Farbkompass' }];
+
+const NAV = [
+  { href: '/farbwelten/', label: 'Übersicht' },
+  ...FARBWELTEN.map((world) => ({ href: farbHref(world.route), label: world.name })),
+  { href: '/farbwelten/kompass.html', label: 'Kompass' },
+  { href: '/farbwelten/zeitleiste.html', label: 'Zeitleiste' },
+  { href: '/farbwelten/farbmeditation.html', label: 'Meditation' },
+];
+
+const worlds = Object.entries(COMPASS.worlds);
+---
+
+<BaseLayout title={COMPASS.meta.title} description={COMPASS.meta.description} trail={trail}>
+  <div class="page-head">
+    <p class="label">Werkzeug</p>
+    <h1>{COMPASS.title}</h1>
+    <p class="lede">{COMPASS.lede}</p>
+    <p class="entry-note">{COMPASS.note}</p>
+    <AreaNav items={NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <ul class="summary-list">
+      {worlds.map(([key, world]) => {
+        const name = FARBWELTEN.find((entry) => farbSlug(entry.route) === key)?.name ?? key;
+        return (
+          <li>
+            <h2>
+              <a href={`/farbwelten/${key}.html`}>{name}</a>
+            </h2>
+            <p set:html={formatInline(world.associations)} />
+            <p class="entry-note" set:html={formatInline(`Kulturell: ${world.kulturell}`)} />
+            <p class="entry-note">{world.hinweis}</p>
+            {world.quellen?.length ? <p class="entry-note">Quellen: {world.quellen.join(', ')}</p> : null}
+          </li>
+        );
+      })}
+    </ul>
+
+    <section aria-labelledby="quellen-title">
+      <h2 id="quellen-title">Quellen</h2>
+      <ul class="block-sources">
+        {COMPASS.sources.map((source) => (
+          <li set:html={formatInline(source)} />
+        ))}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

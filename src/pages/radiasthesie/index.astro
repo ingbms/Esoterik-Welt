@@ -1,0 +1,119 @@
+---
+/**
+ * Radiästhesie / Pendeln / Orakel — Bereichs-Landing.
+ *
+ * Warum diese Seite die kanonische Adresse ist: Der Bestand führte den Bereich
+ * doppelt (`#pendeln` in der SPA **und** `/radiasthesie/` als generiertes
+ * Dokument). Entscheidung E2 des Migrationsplans macht das Dokument kanonisch;
+ * `#pendeln` leitet per Shim hierher.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { RADIASTHESIE as R } from '../../data/legacy';
+
+const ROUTE = '/radiasthesie/';
+const AREA_NAV = [
+  { href: '/radiasthesie/', label: 'Übersicht' },
+  { href: '/radiasthesie/radiasthesie.html', label: 'Radiästhesie' },
+  { href: '/radiasthesie/pendeln.html', label: 'Pendeln' },
+  { href: '/radiasthesie/orakel.html', label: 'Orakel' },
+  { href: '/radiasthesie/glossar.html', label: 'Glossar' },
+  { href: '/radiasthesie/quellen.html', label: 'Quellen' },
+  { href: '/radiasthesie/methodik.html', label: 'Methodik' },
+];
+
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: R.module.title },
+];
+
+/** Werkstatt-Ziele: im Bestand Hash-Adressen, hier echte Seiten. */
+const WORKSHOP_TARGETS: Record<string, string> = {
+  '#pendeln/labor': '/pendeln/labor.html',
+  '#pendeln/studio': '/pendeln/studio.html',
+  '#pendeln/experiment': '/pendeln/experiment.html',
+  '#pendeln/journal': '/pendeln/journal.html',
+  '#pendeln/suche': '/pendeln/suche.html',
+};
+---
+
+<BaseLayout
+  title={R.module.seoTitle}
+  exactTitle
+  description={R.module.seoDescription}
+  trail={trail}
+  jsonLd={{ '@type': 'CollectionPage', name: R.module.title, description: R.module.seoDescription }}
+>
+  <div class="page-head">
+    <p class="label">{R.module.eyebrow}</p>
+    <h1>{R.module.title}</h1>
+    <p class="lede">{R.module.lead}</p>
+    <p class="client-note">{R.module.status}</p>
+    <AreaNav items={AREA_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <ul class="entry-grid">
+      {
+        R.landing.topics.map((topic) => (
+          <li>
+            <a class="entry-card" href={`/radiasthesie/${topic.slug}.html`}>
+              <span class="entry-meta">{topic.metaLine}</span>
+              <span class="entry-title">{topic.title}</span>
+              <span class="entry-note">{topic.text}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <section aria-labelledby="werkstatt-title">
+      <h2 id="werkstatt-title">Werkstatt</h2>
+      <ul class="summary-list">
+        {
+          R.landing.workshop.map((item) => (
+            <li>
+              <h3>
+                <a href={WORKSHOP_TARGETS[item.href] ?? '/radiasthesie/'}>{item.title}</a>
+              </h3>
+              <p class="entry-note">{item.state}</p>
+              <p>{item.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section aria-labelledby="einordnung-title">
+      <h2 id="einordnung-title">{R.landing.disclaimer.title}</h2>
+      <dl class="definition-list">
+        {
+          R.landing.disclaimer.paragraphs.map((paragraph) => (
+            <div>
+              <dt>{paragraph.label}</dt>
+              <dd>{paragraph.text}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section aria-labelledby="fragen-title">
+      <h2 id="fragen-title">{R.introduction.title}</h2>
+      <p class="lede">{R.introduction.description}</p>
+      <h3>Offene Fragen, die dieses Modul beantwortet</h3>
+      <ul class="block-list">
+        {R.introduction.openQuestions.map((question) => <li>{question}</li>)}
+      </ul>
+    </section>
+
+    <section aria-labelledby="recht-title">
+      <h2 id="recht-title">{R.legal.title}</h2>
+      {R.legal.paragraphs.map((paragraph) => <p class="prose">{paragraph}</p>)}
+      <p class="entry-note">
+        Stand: {R.updated} · {R.counts.topics} Themen, {R.counts.chapters} Kapitel, {R.counts.sources} Quellen,
+        {R.counts.glossary} Glossarbegriffe.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

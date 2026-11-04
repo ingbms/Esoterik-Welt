@@ -1,0 +1,70 @@
+---
+/** Glossar — 65 Begriffe, alphabetisch mit Sprungmarken. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { ASTROLOGIE_GLOSSAR as GLOSSAR } from '../../data/legacy';
+import { ASTROLOGIE_NAV } from '../../lib/astrologie';
+import { definedTermSet } from '../../lib/jsonld';
+
+const ROUTE = '/astrologie/glossar.html';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Astrologie', href: '/astrologie/' }, { label: 'Glossar' }];
+
+const sorted = [...GLOSSAR].sort((a, b) => a.term.localeCompare(b.term, 'de'));
+const groups = sorted.reduce<Record<string, typeof sorted>>((acc, entry) => {
+  const letter = entry.term.charAt(0).toUpperCase();
+  acc[letter] = acc[letter] ?? [];
+  acc[letter].push(entry);
+  return acc;
+}, {});
+const canonical = new URL(ROUTE, Astro.site ?? Astro.url.origin).href;
+---
+
+<BaseLayout
+  title="Glossar der Astrologie — 65 Begriffe"
+  description="Glossar der westlichen tropischen Astrologie: 65 Begriffe kurz erklärt, mit Trennung von Tradition, Konvention und astronomischem Fakt."
+  trail={trail}
+  jsonLd={definedTermSet({
+    url: canonical,
+    name: 'Glossar der Astrologie',
+    terms: sorted.map((entry) => ({ term: entry.term, definition: entry.definition })),
+  })}
+>
+  <div class="page-head">
+    <p class="label">{sorted.length} Begriffe</p>
+    <h1>Glossar</h1>
+    <p class="lede">Kurze Definitionen; wo ein Begriff Tradition ist, steht das dabei.</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <nav class="area-nav" aria-label="Buchstaben">
+      <ul>
+        {Object.keys(groups).map((letter) => (
+          <li>
+            <a href={`#${letter}`}>{letter}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    {Object.entries(groups).map(([letter, entries]) => (
+      <section id={letter}>
+        <h2>{letter}</h2>
+        <dl class="definition-list">
+          {entries.map((entry) => (
+            <div id={entry.slug}>
+              <dt>{entry.term}</dt>
+              <dd>
+                {entry.definition}
+                {entry.see_also?.length ? (
+                  <span class="entry-note"> · Siehe auch: {entry.see_also.join(', ')}</span>
+                ) : null}
+                {entry.sources?.length ? <span class="entry-note"> · Quellen: {entry.sources.join(', ')}</span> : null}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    ))}
+  </div>
+</BaseLayout>
