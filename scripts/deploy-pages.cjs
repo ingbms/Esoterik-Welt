@@ -90,8 +90,13 @@ function main() {
     console.error('dist/ fehlt — zuerst `npm run build` ausführen.');
     process.exit(1);
   }
-  fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(OUT, { recursive: true });
+  // .git des Artefakt-Repositories erhalten, damit die Veröffentlichung
+  // fast-forward bleibt und nicht bei jedem Lauf eine neue Wurzel entsteht.
+  for (const entry of fs.readdirSync(OUT)) {
+    if (entry === '.git') continue;
+    fs.rmSync(path.join(OUT, entry), { recursive: true, force: true });
+  }
   fs.cpSync(DIST, OUT, { recursive: true });
 
   const files = walk(OUT);
@@ -159,7 +164,15 @@ function main() {
       run(['config', 'user.email', 'hermes@localhost']);
     }
     run(['add', '-A']);
-    run(['commit', '-m', `deploy: Astro-Build ${new Date().toISOString()}`]);
+    let hasChanges = true;
+    try {
+      execFileSync('git', ['diff', '--cached', '--quiet'], { cwd: OUT });
+      hasChanges = false;
+    } catch {
+      hasChanges = true;
+    }
+    if (hasChanges) run(['commit', '-m', `deploy: Astro-Build ${new Date().toISOString()}`]);
+    else console.log('Artefakt unverändert — kein neuer Commit.');
     try {
       run(['remote', 'get-url', 'origin']);
     } catch {
