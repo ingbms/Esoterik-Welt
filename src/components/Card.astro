@@ -1,0 +1,40 @@
+---
+/**
+ * Karte — Fläche zweiter Ebene aus dem Design-System (`.card`).
+ *
+ * Die inneren Bausteine bleiben beim Aufrufer: `.card-title`, `.card-subtitle`,
+ * `.card-body` und `.card-footer` sind eigene Klassen und werden nicht durch
+ * Slot-Wrapper erzwungen. `header` und `footer` erzeugen nur dann einen
+ * Wrapper, wenn sie gefüllt sind — sonst entstünden leere Linien.
+ */
+import { cx } from '@/lib/cx';
+
+export type CardElement = 'div' | 'article' | 'section' | 'li' | 'aside';
+
+export interface Props {
+  as?: CardElement;
+  /** Hebt Hover/Fokus auf echte Interaktion; ohne `role`/`href` rein dekorativ. */
+  interactive?: boolean;
+  /** Semantische Rolle, wenn die ganze Karte ein Ziel ist (`link`, `button`). */
+  role?: 'link' | 'button' | 'group' | 'region';
+  class?: string;
+}
+
+const { as: Tag = 'div', interactive = false, role, class: className } = Astro.props;
+const hasHeader = Astro.slots.has('header');
+const hasFooter = Astro.slots.has('footer');
+---
+
+<Tag class={cx('card', interactive && 'card-interactive', className)} role={role}>
+  {hasHeader && (
+    <div class="card-header">
+      <slot name="header" />
+    </div>
+  )}
+  <slot />
+  {hasFooter && (
+    <div class="card-footer">
+      <slot name="footer" />
+    </div>
+  )}
+</Tag>

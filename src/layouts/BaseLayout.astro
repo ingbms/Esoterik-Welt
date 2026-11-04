@@ -1,51 +1,110 @@
 ---
 /**
- * Globales Layout-Gerüst der Astro-Migration.
+ * Globales Layout: `<head>`, Kopfzeile, Hauptbereich, Fußzeile.
  *
- * Platzhalter: Header, Hauptnavigation und Footer werden in t_2d9fbecf als
- * eigene Komponenten ergänzt; hier steht bewusst noch kein erfundenes Design.
- * Vorhanden sind die Pflichtbestandteile des <head> (Titel, Description,
- * Canonical, Icon), die Skip-Link-Struktur und der Slot für Seiteninhalte.
+ * Der `<head>` enthält die Pflichtangaben des Bestands — Titel, Description,
+ * Canonical, OpenGraph, Twitter-Card, Icon und die beiden Schrift-Preloads.
+ * Titel und Description kommen als Props von der Seite; fehlt `description`,
+ * wird bewusst kein description-Tag erzeugt (kein leerer Meta-Tag).
+ *
+ * Canonical: `build.format: 'file'` erzeugt `/tarot.html` und
+ * `/astrologie/index.html`. Für Verzeichnisseiten wird das Dateinamen-Segment
+ * entfernt, damit die kanonische Adresse die Verzeichnis-URL bleibt. Der Host
+ * stammt aus `site` (astro.config.mjs, per ASTRO_SITE überschreibbar) — die
+ * Umstellung des Hosts auf die Zieldomain ist Entscheidung F1 des
+ * Migrationsplans und nicht Teil dieser Karte.
  */
-import '../styles/global.css';
+import '@/styles/global.css';
+import SiteFooter from '@/components/SiteFooter.astro';
+import SiteHeader from '@/components/SiteHeader.astro';
+import type { FooterVariant } from '@/components/SiteFooter.astro';
+import type { HeaderVariant } from '@/components/SiteHeader.astro';
+import { SITE } from '@/data/site';
 
 export interface Props {
-  /** Dokumenttitel. Das Marken-Suffix wird nur ergänzt, wenn es fehlt. */
+  /** Seitentitel ohne Marke; die Marke wird ergänzt, wenn sie fehlt. */
   title: string;
-  /** Meta-Description der Seite; ohne Wert wird kein description-Tag erzeugt. */
+  /** Meta-Description; ohne Wert wird kein Tag erzeugt. */
   description?: string;
+  /** Marken-Suffix im `<title>` unterdrücken (z. B. wenn der Titel sie enthält). */
+  appendBrand?: boolean;
+  /** `noindex` für Vorschau- und Prüfseiten. */
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  /** Abweichender OpenGraph-Titel (Bestand nutzt teils Kurzformen). */
+  ogTitle?: string;
+  /** Abweichende OpenGraph-Description. */
+  ogDescription?: string;
+  /** Absolute Pfad- oder URL-Angabe für ein Vorschaubild (Bestand: keins). */
+  ogImage?: string;
+  headerVariant?: HeaderVariant;
+  footerVariant?: FooterVariant;
+  bodyClass?: string;
+  mainClass?: string;
 }
 
-const BRAND = 'VELARKANA';
+const {
+  title,
+  description,
+  appendBrand = true,
+  noindex = false,
+  ogType = 'website',
+  ogTitle,
+  ogDescription,
+  ogImage,
+  headerVariant = 'primary',
+  footerVariant = 'full',
+  bodyClass,
+  mainClass,
+} = Astro.props;
 
-const { title, description } = Astro.props;
+const documentTitle = appendBrand && !title.includes(SITE.name) ? `${title}${SITE.titleSeparator}${SITE.name}` : title;
+// Der Bestand setzt twitter:title auf den reinen Markennamen, wenn der
+// Dokumenttitel die Marke bereits enthält (Startseite), sonst auf den Titel.
+const twitterTitle = title.includes(SITE.name) ? SITE.name : documentTitle;
 
-const documentTitle = title.includes(BRAND) ? title : `${title} · ${BRAND}`;
-// `build.format: 'file'` lässt Startseiten als /index.html entstehen; kanonisch
-// ist aber die Verzeichnis-URL. Deshalb wird das Dateinamen-Segment entfernt.
+// Kanonische Adresse ohne `index.html`.
 const canonicalPath = Astro.url.pathname.replace(/index\.html$/, '');
-// Astro.site ist im Build gesetzt (siehe astro.config.mjs); der Fallback greift
-// nur im Dev-Server, wenn keine site konfiguriert wäre.
-const canonicalUrl = Astro.site ? new URL(canonicalPath, Astro.site) : Astro.url;
+const canonicalBase = Astro.site ?? Astro.url;
+const canonicalUrl = new URL(canonicalPath, canonicalBase);
+const ogImageUrl = ogImage ? new URL(ogImage, canonicalBase) : null;
+const metaDescription = ogDescription ?? description;
 ---
 
 <!doctype html>
-<html lang="de">
+<html lang={SITE.language}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{documentTitle}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={ogTitle ?? documentTitle} />
+    {metaDescription && <meta property="og:description" content={metaDescription} />}
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={SITE.ogLocale} />
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={twitterTitle} />
+    {metaDescription && <meta name="twitter:description" content={metaDescription} />}
+
+    {/* Lokale Variable Fonts (SIL OFL 1.1), wie im Bestand vorgeladen. */}
+    <link rel="preload" href="/assets/fonts/Fraunces.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/assets/fonts/Manrope.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   </head>
-  <body>
-    <a class="skip-link" href="#main">
-      Zum Inhalt springen
+  <body class={bodyClass}>
+    <a class="skip-link" href={`#${SITE.mainId}`}>
+      {SITE.skipLinkLabel}
     </a>
-    <main id="main">
+    <SiteHeader variant={headerVariant} currentPath={Astro.url.pathname} />
+    <main id={SITE.mainId} class={mainClass} tabindex="-1">
       <slot />
     </main>
+    <SiteFooter variant={footerVariant} />
   </body>
 </html>

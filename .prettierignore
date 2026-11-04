@@ -33,3 +33,13 @@ js/data/astrologie.js
 *.png
 *.jpg
 *.svg
+
+# Zeilengenaue Uebernahme aus dem Bestand (t_2d9fbecf): erzeugt von
+# scripts/migration/split-legacy-css.py, damit der Side-by-Side-Vergleich auf
+# demselben CSS beruht. Prettier wuerde die Bloecke umformatieren und den
+# Byte-Vergleich mit css/design-system.css bzw. css/main.css zerstoeren.
+# Geprueft wird stattdessen mit `python scripts/migration/split-legacy-css.py --check`.
+src/styles/fonts.css
+src/styles/tokens.css
+src/styles/design-system.css
+src/styles/shell.css

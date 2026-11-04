@@ -1,0 +1,153 @@
+---
+/**
+ * TEMPORÄRE PRÜFSEITE — nicht Teil der veröffentlichten Website.
+ *
+ * Sie zeigt jede migrierte Komponente einmal in allen Varianten, damit
+ * Gestaltung, Fokus-States und Responsive-Verhalten ohne Umweg über die
+ * Inhaltsmigration geprüft werden können (Abnahmekriterium dieser Karte).
+ * `noindex` hält sie aus Suchmaschinen; mit P6 (Paritäts- und Abnahme-Paket)
+ * wird sie gelöscht.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Badge from '@/components/Badge.astro';
+import Button from '@/components/Button.astro';
+import Card from '@/components/Card.astro';
+import Hero from '@/components/Hero.astro';
+import PageHeader from '@/components/PageHeader.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import SelectField from '@/components/SelectField.astro';
+import TextField from '@/components/TextField.astro';
+import TextLink from '@/components/TextLink.astro';
+
+const CHAKRA_OPTIONS = [
+  { value: 'all', label: 'Alle Chakren' },
+  { value: 'root', label: 'Wurzel (Rot)' },
+  { value: 'sacral', label: 'Sakral (Orange)' },
+  { value: 'solar', label: 'Solarplexus (Gelb)' },
+  { value: 'heart', label: 'Herz (Grün/Rosa)' },
+] as const;
+---
+
+<BaseLayout
+  title="Komponentenprüfung"
+  description="Temporäre Prüfseite der Astro-Migration: Layout, Komponenten und Formularfelder im Vergleich zur Bestandsseite."
+  noindex
+  appendBrand={false}
+>
+  <div class="container" style="padding-block: var(--space-16)">
+    <PageHeader
+      label="Prüfseite / temporär"
+      title="Komponenten und Layout"
+      text="Jede migrierte Komponente einmal in allen Varianten. Diese Seite ist nicht Teil der Website und wird mit dem Paritäts-Paket (P6) entfernt."
+      titleId="komponenten-title"
+    />
+
+    <section class="section section--ruled" aria-labelledby="buttons-title">
+      <SectionHead title="Schaltflächen" label="Button.astro" titleId="buttons-title" />
+      <p class="flex flex-wrap gap-4 items-center">
+        <Button href="/tarot.html" variant="primary">
+          Primär als Link <span aria-hidden="true">↓</span>
+        </Button>
+        <Button variant="secondary">Sekundär als Button</Button>
+        <Button variant="ghost">Ghost</Button>
+        <Button variant="secondary" size="sm">
+          Klein
+        </Button>
+        <Button variant="primary" size="lg">
+          Groß
+        </Button>
+        <Button variant="secondary" pressed={true}>
+          Umschalter (gedrückt)
+        </Button>
+        <Button variant="primary" disabled>
+          Deaktiviert
+        </Button>
+      </p>
+      <p class="mt-6">
+        <TextLink href="/astrologie/">Textlink mit Pfeil</TextLink>
+      </p>
+    </section>
+
+    <section class="section section--ruled" aria-labelledby="badges-title">
+      <SectionHead title="Abzeichen" label="Badge.astro" titleId="badges-title" />
+      <p class="flex flex-wrap gap-3 items-center">
+        <Badge>Standard</Badge>
+        <Badge variant="primary">Primär</Badge>
+        <Badge variant="secondary">Sekundär</Badge>
+        <Badge variant="upright">Aufrecht</Badge>
+        <Badge variant="reversed">Verkehrt</Badge>
+      </p>
+    </section>
+
+    <section class="section section--ruled" aria-labelledby="cards-title">
+      <SectionHead title="Karten" label="Card.astro" titleId="cards-title" />
+      <div class="grid grid-3">
+        <Card as="article">
+          <div class="card-header">
+            <h3 class="card-title">Karte mit Kopf</h3>
+            <p class="card-subtitle">Untertitel in Sekundärfarbe</p>
+          </div>
+          <p class="card-body">Fläche zweiter Ebene, 1-px-Rahmen, kein Schatten — wie im Bestand.</p>
+        </Card>
+        <Card as="article" interactive={true} role="group">
+          <h3 class="card-title">Interaktive Karte</h3>
+          <p class="card-body">Hover hebt ausschließlich die Rahmenfarbe an, kein Lift.</p>
+          <div class="card-footer">
+            <Badge variant="secondary">Details</Badge>
+            <TextLink href="/tarot.html">Öffnen</TextLink>
+          </div>
+        </Card>
+        <Card as="article">
+          <p class="card-body">Karte ohne Kopf und Fuß: die Wrapper entstehen nur, wenn der Slot gefüllt ist.</p>
+        </Card>
+      </div>
+    </section>
+
+    <section class="section section--ruled" aria-labelledby="forms-title">
+      <SectionHead title="Formularfelder" label="TextField / SelectField" titleId="forms-title" />
+      <div class="grid grid-3">
+        <TextField id="demo-suche" name="q" type="search" label="Suche" placeholder="Karte oder Stichwort suchen …" />
+        <TextField
+          id="demo-suche-versteckt"
+          name="q2"
+          type="search"
+          label="Suche ohne sichtbares Label"
+          labelHidden={true}
+          placeholder="Nur für Screenreader beschriftet"
+        />
+        <SelectField id="demo-chakra" name="chakra" label="Chakra" options={CHAKRA_OPTIONS} value="heart" />
+        <TextField
+          id="demo-hinweis"
+          name="email"
+          type="email"
+          label="E-Mail mit Hinweis"
+          hint="Wird nur lokal verarbeitet, nicht übertragen."
+          autocomplete="email"
+        />
+        <TextField
+          id="demo-fehler"
+          name="betreff"
+          label="Feld mit Fehlermeldung"
+          value="Zu kurz"
+          error="Bitte mindestens 5 Zeichen eingeben."
+          minLength={5}
+        />
+      </div>
+    </section>
+  </div>
+
+  <Hero
+    label="Hero / ohne Fotografie"
+    title="Diese Kopie steht allein, wenn"
+    emphasis="keine Abbildung nötig ist."
+    intro="Ohne Figure fällt das Raster auf eine Spalte zurück; mit Fotografie bleibt es beim asymmetrischen 5:7."
+    titleId="hero-demo-title"
+  >
+    <Button slot="actions" href="/tarot.html" variant="primary">
+      Karte ziehen <span aria-hidden="true">↓</span>
+    </Button>
+    <TextLink slot="actions" href="/astrologie/">
+      Astrologie lernen
+    </TextLink>
+  </Hero>
+</BaseLayout>

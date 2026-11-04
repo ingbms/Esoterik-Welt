@@ -1,0 +1,69 @@
+---
+/**
+ * Hero der Startseite — asymmetrisches 5:7-Raster mit einer echten
+ * Materialfotografie (`.hero`, `.hero-grid`, `.specimen` aus dem Bestand).
+ *
+ * Ein kursiv gesetztes Titelwort ist Teil der Gestaltungssprache
+ * (STYLEGUIDE §3, höchstens ein betontes Wort pro Ansicht). Deshalb wird es
+ * als eigenes Prop übergeben und nicht als HTML durchgereicht.
+ */
+import { cx } from '@/lib/cx';
+
+export interface HeroFigure {
+  readonly src: string;
+  readonly width: number;
+  readonly height: number;
+  readonly alt: string;
+  /** Bildunterschrift, eine Zeile pro Array-Eintrag (getrennt durch `<br />`). */
+  readonly captionLines?: readonly string[];
+}
+
+export interface Props {
+  /** Kleines Label über dem Titel. */
+  label: string;
+  /** Titeltext vor dem betonten Wort. */
+  title: string;
+  /** Ein kursiv gesetztes Schlusswort; entfällt ohne Wert. */
+  emphasis?: string;
+  /** Einleitungstext unter dem Titel. */
+  intro?: string;
+  titleId?: string;
+  /** Materialfotografie rechts; ohne Wert bleibt die Kopie allein. */
+  figure?: HeroFigure;
+  class?: string;
+}
+
+const { label, title, emphasis, intro, titleId, figure, class: className } = Astro.props;
+---
+
+<div class={cx('hero', 'hero-band', className)}>
+  <div class="container">
+    <div class={cx('hero-grid', !figure && 'hero-grid--copy-only')}>
+      <div class="hero-copy">
+        <p class="label">{label}</p>
+        <h1 id={titleId}>
+          {title} {emphasis && <em>{emphasis}</em>}
+        </h1>
+        {intro && <p class="hero-intro">{intro}</p>}
+        <div class="hero-actions">
+          <slot name="actions" />
+        </div>
+      </div>
+      {figure && (
+        <figure class="specimen">
+          <img class="mineral" src={figure.src} width={figure.width} height={figure.height} alt={figure.alt} />
+          {figure.captionLines && figure.captionLines.length > 0 && (
+            <figcaption class="caption">
+              {figure.captionLines.map((line, index) => (
+                <>
+                  {index > 0 && <br />}
+                  {line}
+                </>
+              ))}
+            </figcaption>
+          )}
+        </figure>
+      )}
+    </div>
+  </div>
+</div>

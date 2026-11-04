@@ -1,0 +1,59 @@
+---
+/**
+ * Schaltfläche — Gestalt aus dem Bestand (`.btn`, `.btn-*`), Verhalten aus HTML.
+ *
+ * Mit `href` wird ein `<a>` gerendert (Navigation), ohne `href` ein `<button>`
+ * mit `type`. Die Tastaturbedienung kommt damit vom Element selbst; das
+ * Aussehen bleibt identisch, weil beide Varianten dieselben Klassen tragen.
+ *
+ * `pressed` ist nur für `<button>` zulässig (aria-pressed) und bildet den
+ * Umschaltzustand der Raster-/Listenansicht ab.
+ */
+import { cx } from '@/lib/cx';
+
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
+export type ButtonSize = 'md' | 'sm' | 'lg';
+
+export interface Props {
+  /** Farbrolle; entspricht `.btn-primary`, `.btn-secondary`, `.btn-ghost`. */
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  /** Ziel-URL: rendert ein `<a>` statt `<button>`. */
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  /** Volle Breite (`.btn-full`). */
+  full?: boolean;
+  /** Umschaltzustand, nur für `<button>`; setzt `aria-pressed`. */
+  pressed?: boolean;
+  disabled?: boolean;
+  /** `aria-label`, wenn der sichtbare Text allein nicht ausreicht. */
+  label?: string;
+  class?: string;
+}
+
+const {
+  variant = 'primary',
+  size = 'md',
+  href,
+  type = 'button',
+  full = false,
+  pressed,
+  disabled = false,
+  label,
+  class: className,
+} = Astro.props;
+
+const classes = cx('btn', `btn-${variant}`, size !== 'md' && `btn-${size}`, full && 'btn-full', className);
+---
+
+{href ? (
+  <a class={classes} href={href} aria-label={label}>
+    <slot name="icon" />
+    <slot />
+  </a>
+) : (
+  <button class={classes} type={type} aria-label={label} aria-pressed={pressed} disabled={disabled}>
+    <slot name="icon" />
+    <slot />
+  </button>
+)}

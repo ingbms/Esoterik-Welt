@@ -1,44 +1,170 @@
 ---
 /**
- * Minimale Startseite des Astro-Gerüsts.
+ * Startseite — Grundgerüst aus dem Bestand (`index.html`, Abschnitt `#home`).
  *
- * Sie belegt, dass Layout, globales Stylesheet und der Pfad-Alias `@/*`
- * zusammen funktionieren. Die realen Inhalte der Bestandswebsite werden in
- * t_a3fc82b3 migriert; Design und Texte werden dabei nicht neu erfunden.
+ * Portiert sind Aufbau und Gestaltung: Hero mit Materialfotografie,
+ * Pfadregister der neun Zugänge, Materialband, Kosmos-Tafel. Titel und
+ * Description entsprechen der SEO-Baseline aus `docs/migration-plan.md` §6.1,
+ * die OpenGraph-Kurzform dem Bestand (`og:title` ohne „& Mehr“).
+ *
+ * Die Texte sind nicht neu geschrieben, sondern übernommen. Inhalte, die
+ * eigene Recherche brauchen (Artikel, Bereichsseiten), folgen in
+ * t_a3fc82b3; Bereiche ohne Zielroute sind hier bewusst nicht verlinkt.
  */
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/Button.astro';
+import FeatureList from '@/components/FeatureList.astro';
+import Hero from '@/components/Hero.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import TextLink from '@/components/TextLink.astro';
+import type { FeatureItem } from '@/components/FeatureList.astro';
+
+const FEATURES: readonly FeatureItem[] = [
+  { title: 'Tarot', description: '78 Karten, Major & Minor Arcana, Tageskarte & Legungen', href: '/tarot.html' },
+  { title: 'Kristalle', description: '30+ Steine mit Chakra-Filter, Wirkungen & Details', href: '/kristalle.html' },
+  {
+    title: 'Mondphasen',
+    description: 'Heute-Überblick, Zeitachse, Kalender, acht Phasen & Deutung',
+    href: '/mondphasen.html',
+  },
+  {
+    title: 'Astrologie',
+    description: '12 Zeichen, 10 Faktoren, 12 Häuser, 5 Aspekte, Lernpfad & Glossar',
+    href: '/astrologie/',
+  },
+  {
+    title: 'Frequenzen',
+    description: 'Frequenzbibliothek mit Evidenzstatus, Tongenerator, Oszillogramm und Hörvergleich',
+    href: '/frequenzen/',
+  },
+  { title: 'Runen', description: 'Älteres Futhark, 3-Runen-Wurf & Deutung', href: '/runen.html' },
+  {
+    title: 'Pendeln',
+    description: 'Radiästhesie, Pendeln & Orakel: Instrumente, Geschichte, Prüfverfahren & Journal',
+    href: '/radiasthesie/',
+  },
+  {
+    title: 'Farben',
+    description: 'Zwölf Farbwelten: Bedeutung, Wellenlängen, Chakren und Forschungsstand',
+    href: '/farbwelten/',
+  },
+  { title: 'Wissen', description: 'Artikel zu Esoterik, Geschichte, Ritualen & Praxis', href: '/wissen/' },
+];
 ---
 
 <BaseLayout
-  title="Migration in Arbeit"
-  description="Technisches Grundgerüst der VELARKANA-Website. Die Inhalte der bestehenden Website werden derzeit auf Astro migriert."
+  title="Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen & Mehr"
+  description="Esoterik-Welt — Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen."
+  ogTitle="Esoterik-Welt | Tarot, Kristalle, Runen, Mondphasen"
+  ogDescription="Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen."
+  mainClass="page-shell"
 >
-  <div class="container start">
-    <h1>VELARKANA</h1>
-    <p class="start__lead">
-      Dieses Gerüst ist der technische Unterbau der Migration. Die abgenommenen Inhalte, Bilder und das Erscheinungsbild
-      der bestehenden Website werden unverändert übernommen.
-    </p>
-    <p class="start__hint">
-      Layout-Platzhalter – Header, Navigation und Footer folgen als Komponenten, die Seiten selbst als Routen unter
-      <code>src/pages</code>.
-    </p>
-  </div>
+  <section id="home" aria-labelledby="home-title">
+    <Hero
+      label="Material · Zeichen · Zyklen"
+      title="Entdecke die verborgene Sprache des"
+      emphasis="Universums"
+      intro="Tarot · Kristalle · Runen · Mondphasen · Astrologie · Frequenzen · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen."
+      titleId="home-title"
+      figure={{
+        src: '/assets/mineral/quartz-light-2400.jpg',
+        width: 2400,
+        height: 2045,
+        alt: 'Räumliche Bergkristallgruppe vor dunklem Grund: durchscheinende Spitzen, geriefte Flächen und gestaffelte Facetten, vollständig im Bild',
+        captionLines: [
+          'Bergkristall · Fotografie: Didier Descouens · CC BY-SA 4.0',
+          'Gewachsene Form, gerichtete Reflexe, echte Einschlüsse.',
+        ],
+      }}
+    >
+      <Button slot="actions" href="/tarot.html" variant="primary">
+        Karte ziehen
+        <span aria-hidden="true">↓</span>
+      </Button>
+      <TextLink slot="actions" href="/astrologie/">
+        Astrologie lernen
+      </TextLink>
+    </Hero>
+
+    <section class="section section--ruled" aria-labelledby="pfade-title">
+      <div class="container">
+        <SectionHead
+          title="Pfade der Erkenntnis"
+          label="Neun Zugänge"
+          lede="Wähle dein Tor zur Weisheit — jede Ansicht ist ein eigenes Werkzeug."
+          titleId="pfade-title"
+        />
+        <FeatureList id="featureGrid" items={FEATURES} class="mt-8" />
+      </div>
+    </section>
+
+    <section class="section section--ruled" aria-labelledby="material-title">
+      <div class="container">
+        <div class="material-grid">
+          <figure class="material-figure">
+            <img
+              class="detail"
+              src="/assets/mineral/mineral-detail-1000.jpg"
+              width="1000"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+              alt="Detailstudie einer Quarzstufe: eine lange durchscheinende Spitze über milchiger Basis, Riefen und Bruchflächen sichtbar"
+            />
+            <figcaption class="caption">Detailstudie · Fotografie: Didier Descouens · CC BY-SA 4.0</figcaption>
+          </figure>
+          <div>
+            <p class="label">Material / Bildsprache</p>
+            <h2 id="material-title">Ein Stein ist mehr als sein Glanz.</h2>
+            <p class="cosmos-text">
+              Risse, Trübungen und unregelmäßige Kanten machen das Material lesbar. Licht zeigt den Körper, statt ihn
+              mit einer Aura zu übermalen. Erst aus der aufmerksamen Betrachtung entsteht eine eigene Lesart.
+            </p>
+            <TextLink href="/kristalle.html">Zum Kristall-Katalog</TextLink>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cosmos" aria-labelledby="kosmos-title">
+      <div class="container">
+        <div class="cosmos-grid">
+          <div>
+            <p class="label">Kosmos / Eine zweite Ebene</p>
+            <h2 id="kosmos-title">Ein leiser Bezug zum großen Ganzen.</h2>
+            <p class="cosmos-text">
+              Wenige Punkte, feine Beziehungen. Diese Tafel ordnet, ohne die Materialwelt zu übertönen: Orion als
+              reduzierte Koordinatenstudie aus sieben Hauptsternen — nicht als aktueller Himmel und nicht als
+              astrologische Vorhersage.
+            </p>
+            <TextLink href="/wissen/">Artikel zu Zyklen und Materie</TextLink>
+          </div>
+          <figure class="cosmos-figure">
+            <img
+              class="chart"
+              src="/assets/cosmos/orion-chart.svg"
+              width="430"
+              height="430"
+              alt="Orion: sieben Hauptsterne in einer reduzierten Koordinatenprojektion, Norden oben, Osten links"
+            />
+            <figcaption class="caption">
+              Orion · sieben Hauptsterne · Deklination +10° bis −10°
+              <br />
+              Schematische Projektion; keine Beobachtungsvorhersage. Daten: Sternliste Orion (Wikimedia, abgerufen
+              31.10.2026), eigene Vektorzeichnung.
+            </figcaption>
+            <div class="star-key" aria-label="Sternnamen">
+              <span>α Betelgeuse</span>
+              <span>β Rigel</span>
+              <span>γ Bellatrix</span>
+              <span>δ Mintaka</span>
+              <span>ε Alnilam</span>
+              <span>ζ Alnitak</span>
+              <span>κ Saiph</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </section>
 </BaseLayout>
-
-<style>
-  .start {
-    padding-block: var(--space-16);
-    max-width: 68ch;
-  }
-
-  .start__lead {
-    color: var(--color-text-secondary);
-    font-size: 18px;
-  }
-
-  .start__hint {
-    color: var(--color-text-secondary);
-    font-size: 14px;
-  }
-</style>

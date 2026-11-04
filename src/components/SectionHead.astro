@@ -1,0 +1,27 @@
+---
+/**
+ * Abschnittskopf der Startseite — Titel links, Label rechts, Lede darunter
+ * (`.section-head`/`.section-lede` aus dem Bestand).
+ *
+ * Die `id` des Titels ist der Anker für `aria-labelledby` der Sektion.
+ */
+import { cx } from '@/lib/cx';
+
+export interface Props {
+  title: string;
+  /** Zweite, rechte Stimme neben dem Titel (z. B. „Neun Zugänge“). */
+  label?: string;
+  /** Einleitungssatz unter dem Kopf. */
+  lede?: string;
+  titleId?: string;
+  class?: string;
+}
+
+const { title, label, lede, titleId, class: className } = Astro.props;
+---
+
+<div class={cx('section-head', className)}>
+  <h2 id={titleId}>{title}</h2>
+  {label && <p class="label">{label}</p>}
+</div>
+{lede && <p class="section-lede">{lede}</p>}

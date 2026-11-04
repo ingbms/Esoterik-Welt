@@ -1,0 +1,77 @@
+---
+/**
+ * Auswahlfeld mit Label — Pendant zu `.select` aus dem Design-System.
+ *
+ * Die Optionen kommen als typisierte Liste; `value` markiert die Vorauswahl.
+ * Damit ersetzt das Prop die im Bestand inline gepflegten `<option>`-Blöcke
+ * (Chakra-, Farb-, Arcana- und Kategoriefilter) durch eine Datenquelle.
+ */
+import { cx } from '@/lib/cx';
+
+export interface SelectOption {
+  readonly value: string;
+  readonly label: string;
+}
+
+export interface Props {
+  id: string;
+  name: string;
+  label: string;
+  options: readonly SelectOption[];
+  /** Vorauswahl; ohne Wert ist die erste Option gewählt. */
+  value?: string;
+  required?: boolean;
+  /** Label nur für Screenreader (Filtersatz wie im Bestand). */
+  labelHidden?: boolean;
+  hint?: string;
+  error?: string;
+  class?: string;
+}
+
+const {
+  id,
+  name,
+  label,
+  options,
+  value,
+  required = false,
+  labelHidden = false,
+  hint,
+  error,
+  class: className,
+} = Astro.props;
+
+const hintId = hint ? `${id}-hint` : undefined;
+const errorId = error ? `${id}-error` : undefined;
+const describedBy = [hintId, errorId].filter(Boolean).join(' ') || undefined;
+---
+
+<div class={cx('field', className)}>
+  <label class={labelHidden ? 'sr-only' : 'field-label'} for={id}>
+    {label}
+  </label>
+  <select
+    class="select"
+    id={id}
+    name={name}
+    required={required}
+    aria-describedby={describedBy}
+    aria-invalid={error ? 'true' : undefined}
+  >
+    {options.map((option) => (
+      <option value={option.value} selected={option.value === value}>
+        {option.label}
+      </option>
+    ))}
+  </select>
+  {hint && (
+    <p class="field-hint" id={hintId}>
+      {hint}
+    </p>
+  )}
+  {error && (
+    <p class="field-error" id={errorId} role="alert">
+      {error}
+    </p>
+  )}
+</div>
