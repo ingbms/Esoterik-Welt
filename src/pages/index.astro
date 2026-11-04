@@ -1,164 +1,169 @@
 ---
 /**
- * Startseite.
+ * Startseite — Grundgerüst aus dem Bestand (`index.html`, Abschnitt `#home`).
  *
- * Inhaltlich aus `index.html` übernommen: Hero, „Pfade der Erkenntnis“ mit neun
- * Zugängen, Materialstudie und Kosmos-Tafel. Die neun Zugänge waren im Bestand
- * Hash-Routen derselben Datei; hier sind es echte Dokumente (Migrationsplan
- * §6.4 — einziger Weg, sie crawlbar zu machen).
+ * Portiert sind Aufbau und Gestaltung: Hero mit Materialfotografie,
+ * Pfadregister der neun Zugänge, Materialband, Kosmos-Tafel. Die Texte sind
+ * nicht neu geschrieben, sondern wörtlich aus dem Bestand übernommen; das
+ * Pfadregister ist die einspaltige Zeilenliste (`FeatureList`, `.feature-list`)
+ * und keine Kachelwand (Review B-4).
  *
- * Titel und Description sind wörtlich die SEO-Baseline §6.1 mit der Marke des
- * Arbeitsprojekts (E5/§11.5).
+ * Titel und Description entsprechen der SEO-Baseline aus
+ * `docs/migration-plan.md` §6.1 mit der Marke des Arbeitsprojekts VELARKANA;
+ * die OpenGraph-Kurzform folgt dem Bestand (`og:title` ohne „& Mehr“).
  */
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/Button.astro';
+import FeatureList from '@/components/FeatureList.astro';
+import Hero from '@/components/Hero.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import TextLink from '@/components/TextLink.astro';
+import type { FeatureItem } from '@/components/FeatureList.astro';
 
-const TITLE = 'VELARKANA | Tarot, Kristalle, Runen, Mondphasen & Mehr';
-const DESCRIPTION = 'VELARKANA — Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen.';
-
-const PATHS = [
-  { href: '/tarot.html', title: 'Tarot', note: '78 Karten, Tageskarte und Legungen' },
-  { href: '/kristalle.html', title: 'Kristalle', note: '30 Steine mit Chakra, Farbe und Herkunft' },
-  { href: '/mondphasen.html', title: 'Mondphasen', note: 'Acht Phasen, Kalender und Deutung' },
-  { href: '/astrologie/', title: 'Astrologie', note: 'Zeichen, Faktoren, Häuser, Lernpfad' },
-  { href: '/frequenzen/', title: 'Frequenzen', note: 'Bibliothek mit Evidenzstatus' },
-  { href: '/runen.html', title: 'Runen', note: 'Das ältere Futhark, 24 Runen' },
-  { href: '/radiasthesie/', title: 'Pendeln', note: 'Radiästhesie, Orakel und Prüfstand' },
-  { href: '/farbwelten/', title: 'Farben', note: 'Zwölf Farbwelten zwischen Licht und Tradition' },
-  { href: '/wissen/', title: 'Wissen', note: 'Artikel zu Symbolik, Materie und Zyklen' },
+const FEATURES: readonly FeatureItem[] = [
+  { title: 'Tarot', description: '78 Karten, Major & Minor Arcana, Tageskarte & Legungen', href: '/tarot.html' },
+  { title: 'Kristalle', description: '30+ Steine mit Chakra-Filter, Wirkungen & Details', href: '/kristalle.html' },
+  {
+    title: 'Mondphasen',
+    description: 'Heute-Überblick, Zeitachse, Kalender, acht Phasen & Deutung',
+    href: '/mondphasen.html',
+  },
+  {
+    title: 'Astrologie',
+    description: '12 Zeichen, 10 Faktoren, 12 Häuser, 5 Aspekte, Lernpfad & Glossar',
+    href: '/astrologie/',
+  },
+  {
+    title: 'Frequenzen',
+    description: 'Frequenzbibliothek mit Evidenzstatus, Tongenerator, Oszillogramm und Hörvergleich',
+    href: '/frequenzen/',
+  },
+  { title: 'Runen', description: 'Älteres Futhark, 3-Runen-Wurf & Deutung', href: '/runen.html' },
+  {
+    title: 'Pendeln',
+    description: 'Radiästhesie, Pendeln & Orakel: Instrumente, Geschichte, Prüfverfahren & Journal',
+    href: '/radiasthesie/',
+  },
+  {
+    title: 'Farben',
+    description: 'Zwölf Farbwelten: Bedeutung, Wellenlängen, Chakren und Forschungsstand',
+    href: '/farbwelten/',
+  },
+  { title: 'Wissen', description: 'Artikel zu Esoterik, Geschichte, Ritualen & Praxis', href: '/wissen/' },
 ];
 ---
 
-<BaseLayout title={TITLE} description={DESCRIPTION} hero>
-  <section class="hero hero-band">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="label">Material · Zeichen · Zyklen</p>
-          <h1 id="home-title">
-            Entdecke die verborgene Sprache des <em>Universums</em>
-          </h1>
-          <p class="hero-intro">
-            Tarot · Kristalle · Runen · Mondphasen · Astrologie · Frequenzen · Altes Wissen für moderne Suchende. Ein
-            ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen.
-          </p>
-          <div class="hero-actions">
-            <a href="/tarot.html" class="btn btn-primary">
-              Karte ziehen <span aria-hidden="true">↓</span>
-            </a>
-            <a href="/astrologie/" class="textlink">
-              Astrologie lernen <span aria-hidden="true">↗</span>
-            </a>
+<BaseLayout
+  title="VELARKANA | Tarot, Kristalle, Runen, Mondphasen & Mehr"
+  description="VELARKANA — Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen."
+  ogTitle="VELARKANA | Tarot, Kristalle, Runen, Mondphasen"
+  ogDescription="Deine Pforte zu Tarot, Kristallen, Runen, Mondphasen und esoterischem Wissen."
+  mainClass="page-shell"
+>
+  <section id="home" aria-labelledby="home-title">
+    <Hero
+      label="Material · Zeichen · Zyklen"
+      title="Entdecke die verborgene Sprache des"
+      emphasis="Universums"
+      intro="Tarot · Kristalle · Runen · Mondphasen · Astrologie · Frequenzen · Altes Wissen für moderne Suchende. Ein ruhiger Zugang zu Material, Symbolik und Zyklen — ohne Wirkungsversprechen."
+      titleId="home-title"
+      figure={{
+        src: '/assets/mineral/quartz-light-2400.jpg',
+        width: 2400,
+        height: 2045,
+        alt: 'Räumliche Bergkristallgruppe vor dunklem Grund: durchscheinende Spitzen, geriefte Flächen und gestaffelte Facetten, vollständig im Bild',
+        captionLines: [
+          'Bergkristall · Fotografie: Didier Descouens · CC BY-SA 4.0',
+          'Gewachsene Form, gerichtete Reflexe, echte Einschlüsse.',
+        ],
+      }}
+    >
+      <Button slot="actions" href="/tarot.html" variant="primary">
+        Karte ziehen
+        <span aria-hidden="true">↓</span>
+      </Button>
+      <TextLink slot="actions" href="/astrologie/">Astrologie lernen</TextLink>
+    </Hero>
+
+    <section class="section section--ruled" aria-labelledby="pfade-title">
+      <div class="container">
+        <SectionHead
+          title="Pfade der Erkenntnis"
+          label="Neun Zugänge"
+          lede="Wähle dein Tor zur Weisheit — jede Ansicht ist ein eigenes Werkzeug."
+          titleId="pfade-title"
+        />
+        <FeatureList id="featureGrid" items={FEATURES} class="mt-8" />
+      </div>
+    </section>
+
+    <section class="section section--ruled" aria-labelledby="material-title">
+      <div class="container">
+        <div class="material-grid">
+          <figure class="material-figure">
+            <img
+              class="detail"
+              src="/assets/mineral/mineral-detail-1000.jpg"
+              width="1000"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+              alt="Detailstudie einer Quarzstufe: eine lange durchscheinende Spitze über milchiger Basis, Riefen und Bruchflächen sichtbar"
+            />
+            <figcaption class="caption">Detailstudie · Fotografie: Didier Descouens · CC BY-SA 4.0</figcaption>
+          </figure>
+          <div>
+            <p class="label">Material / Bildsprache</p>
+            <h2 id="material-title">Ein Stein ist mehr als sein Glanz.</h2>
+            <p class="cosmos-text">
+              Risse, Trübungen und unregelmäßige Kanten machen das Material lesbar. Licht zeigt den Körper, statt ihn
+              mit einer Aura zu übermalen. Erst aus der aufmerksamen Betrachtung entsteht eine eigene Lesart.
+            </p>
+            <TextLink href="/kristalle.html">Zum Kristall-Katalog</TextLink>
           </div>
         </div>
-        <figure class="specimen">
-          <img
-            class="mineral"
-            src="/assets/mineral/quartz-light-2400.jpg"
-            width="2400"
-            height="2045"
-            alt="Räumliche Bergkristallgruppe vor dunklem Grund: durchscheinende Spitzen, geriefte Flächen und gestaffelte Facetten, vollständig im Bild"
-          />
-          <figcaption class="caption">
-            Bergkristall · Fotografie: Didier Descouens · CC BY-SA 4.0
-            <br />
-            Gewachsene Form, gerichtete Reflexe, echte Einschlüsse.
-          </figcaption>
-        </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section--ruled" aria-labelledby="pfade-title">
-    <div class="container">
-      <div class="section-head">
-        <h2 id="pfade-title">Pfade der Erkenntnis</h2>
-        <p class="label">Neun Zugänge</p>
-      </div>
-      <p class="section-lede">Wähle dein Tor zur Weisheit — jede Ansicht ist ein eigenes Werkzeug.</p>
-      <ul class="entry-grid">
-        {PATHS.map((entry, index) => (
-          <li>
-            <a class="entry-card" href={entry.href}>
-              <span class="entry-meta">{String(index + 1).padStart(2, '0')}</span>
-              <span class="entry-title">{entry.title}</span>
-              <span class="entry-note">{entry.note}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <section class="section section--ruled" aria-labelledby="material-title">
-    <div class="container">
-      <div class="material-grid">
-        <figure class="material-figure">
-          <img
-            class="detail"
-            src="/assets/mineral/mineral-detail-1000.jpg"
-            width="1000"
-            height="1000"
-            loading="lazy"
-            decoding="async"
-            alt="Detailstudie einer Quarzstufe: eine lange durchscheinende Spitze über milchiger Basis, Riefen und Bruchflächen sichtbar"
-          />
-          <figcaption class="caption">Detailstudie · Fotografie: Didier Descouens · CC BY-SA 4.0</figcaption>
-        </figure>
-        <div>
-          <p class="label">Material / Bildsprache</p>
-          <h2 id="material-title">Ein Stein ist mehr als sein Glanz.</h2>
-          <p class="cosmos-text">
-            Risse, Trübungen und unregelmäßige Kanten machen das Material lesbar. Licht zeigt den Körper, statt ihn mit
-            einer Aura zu übermalen. Erst aus der aufmerksamen Betrachtung entsteht eine eigene Lesart.
-          </p>
-          <a class="textlink" href="/kristalle.html">
-            Zum Kristall-Katalog <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cosmos" aria-labelledby="kosmos-title">
-    <div class="container">
-      <div class="cosmos-grid">
-        <div>
-          <p class="label">Kosmos / Eine zweite Ebene</p>
-          <h2 id="kosmos-title">Ein leiser Bezug zum großen Ganzen.</h2>
-          <p class="cosmos-text">
-            Wenige Punkte, feine Beziehungen. Diese Tafel ordnet, ohne die Materialwelt zu übertönen: Orion als
-            reduzierte Koordinatenstudie aus sieben Hauptsternen — nicht als aktueller Himmel und nicht als
-            astrologische Vorhersage.
-          </p>
-          <a class="textlink" href="/wissen/">
-            Artikel zu Zyklen und Materie <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-        <figure class="cosmos-figure">
-          <img
-            class="chart"
-            src="/assets/cosmos/orion-chart.svg"
-            width="430"
-            height="430"
-            alt="Orion: sieben Hauptsterne in einer reduzierten Koordinatenprojektion, Norden oben, Osten links"
-          />
-          <figcaption class="caption">
-            Orion · sieben Hauptsterne · Deklination +10° bis −10°
-            <br />
-            Schematische Projektion; keine Beobachtungsvorhersage. Daten: Sternliste Orion (Wikimedia, abgerufen
-            31.10.2026), eigene Vektorzeichnung.
-          </figcaption>
-          <div class="star-key" aria-label="Sternnamen">
-            <span>α Betelgeuse</span>
-            <span>β Rigel</span>
-            <span>γ Bellatrix</span>
-            <span>δ Mintaka</span>
-            <span>ε Alnilam</span>
-            <span>ζ Alnitak</span>
-            <span>κ Saiph</span>
+    <section class="section cosmos" aria-labelledby="kosmos-title">
+      <div class="container">
+        <div class="cosmos-grid">
+          <div>
+            <p class="label">Kosmos / Eine zweite Ebene</p>
+            <h2 id="kosmos-title">Ein leiser Bezug zum großen Ganzen.</h2>
+            <p class="cosmos-text">
+              Wenige Punkte, feine Beziehungen. Diese Tafel ordnet, ohne die Materialwelt zu übertönen: Orion als
+              reduzierte Koordinatenstudie aus sieben Hauptsternen — nicht als aktueller Himmel und nicht als
+              astrologische Vorhersage.
+            </p>
+            <TextLink href="/wissen/">Artikel zu Zyklen und Materie</TextLink>
           </div>
-        </figure>
+          <figure class="cosmos-figure">
+            <img
+              class="chart"
+              src="/assets/cosmos/orion-chart.svg"
+              width="430"
+              height="430"
+              alt="Orion: sieben Hauptsterne in einer reduzierten Koordinatenprojektion, Norden oben, Osten links"
+            />
+            <figcaption class="caption">
+              Orion · sieben Hauptsterne · Deklination +10° bis −10°
+              <br />
+              Schematische Projektion; keine Beobachtungsvorhersage. Daten: Sternliste Orion (Wikimedia, abgerufen
+              31.10.2026), eigene Vektorzeichnung.
+            </figcaption>
+            <div class="star-key" aria-label="Sternnamen">
+              <span>α Betelgeuse</span>
+              <span>β Rigel</span>
+              <span>γ Bellatrix</span>
+              <span>δ Mintaka</span>
+              <span>ε Alnilam</span>
+              <span>ζ Alnitak</span>
+              <span>κ Saiph</span>
+            </div>
+          </figure>
+        </div>
       </div>
-    </div>
+    </section>
   </section>
 </BaseLayout>

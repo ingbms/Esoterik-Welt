@@ -85,8 +85,8 @@ Nicht von Hand bearbeiten — Skript erneut ausführen.
 
 | Gegenstand | Erwartet | Gebaut | Status |
 |---|---|---|---|
-| geprüfte interne Verweise | 6688 | — |  |
-| externe Verweise (nicht geprüft) | 431 | — |  |
+| geprüfte interne Verweise | 7264 | — |  |
+| externe Verweise (nicht geprüft) | 575 | — |  |
 | Fragment-/mailto-/data-Verweise | 238 | — |  |
 | tote interne Ziele | 0 | 0 | keine |
 

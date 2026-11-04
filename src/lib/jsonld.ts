@@ -9,6 +9,8 @@
  * Suchmaschinen dieselbe Seite (Migrationsplan §6.3).
  */
 
+import { SITE_NAME } from './site';
+
 export interface TrailEntry {
   label: string;
   href?: string;
@@ -59,7 +61,7 @@ export function webPage({ url, name, description, lastmod, kind = 'WebPage' }: W
     name,
     ...(description ? { description } : {}),
     inLanguage: 'de',
-    isPartOf: { '@type': 'WebSite', '@id': `${origin}/#website`, url: `${origin}/`, name: 'VELARKANA' },
+    isPartOf: { '@type': 'WebSite', '@id': `${origin}/#website`, url: `${origin}/`, name: SITE_NAME },
     ...(lastmod ? { dateModified: lastmod } : {}),
   };
 }

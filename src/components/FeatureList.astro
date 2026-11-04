@@ -1,0 +1,51 @@
+---
+/**
+ * Pfadregister — die neun Zugänge der Startseite als typografische Zeilen,
+ * nicht als gleichrangige Kacheln (`.feature-list`/`.feature-card`).
+ *
+ * Im Bestand war jede Zeile ein `<article role="link" tabindex="0">` mit
+ * JS-Navigation. Hier ist sie ein echtes `<a>`: gleiche Optik (siehe
+ * `src/styles/shell.css`, Abschnitt „Astro-Anpassung“), aber ohne Skript
+ * bedienbar und ohne `role`-Ersatz für ein natives Element.
+ *
+ * Die Nummerierung 01–09 ist Gestaltung (STYLEGUIDE: kein Emoji), deshalb
+ * `aria-hidden`; die Reihenfolge trägt die `<ol>`-Semantik.
+ */
+import { cx } from '@/lib/cx';
+
+export interface FeatureItem {
+  readonly title: string;
+  readonly description: string;
+  readonly href: string;
+}
+
+export interface Props {
+  items: readonly FeatureItem[];
+  /** Beschriftung der Liste für Screenreader. */
+  ariaLabel?: string;
+  /** `id` des Registers (Ankerziel). */
+  id?: string;
+  class?: string;
+}
+
+const { items, ariaLabel = 'Pfade der Erkenntnis', id, class: className } = Astro.props;
+---
+
+<ol class={cx('grid', 'feature-list', className)} id={id} aria-label={ariaLabel}>
+  {items.map((item, index) => (
+    <li>
+      <a class="feature-card" href={item.href}>
+        <span class="feature-icon" aria-hidden="true">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <div class="feature-body">
+          <h3 class="feature-title">{item.title}</h3>
+          <p class="feature-desc">{item.description}</p>
+        </div>
+        <span class="feature-arrow" aria-hidden="true">
+          ↗
+        </span>
+      </a>
+    </li>
+  ))}
+</ol>

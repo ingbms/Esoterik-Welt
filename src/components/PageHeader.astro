@@ -1,0 +1,32 @@
+---
+/**
+ * Seitenkopf einer Modul- oder Rechtseite — Label, Titel, Einleitung
+ * (`.section-header` und `.page-title` aus dem Bestand).
+ *
+ * Der Titel liegt auf einer gemeinsamen, kleineren Ebene als die Hero-H1
+ * (`--text-page-title`), genau wie in der Vorlage.
+ */
+import { cx } from '@/lib/cx';
+
+export interface Props {
+  /** Überschrift (H1 der Seite). */
+  title: string;
+  /** Kleines Label über dem Titel, z. B. „Tarot / Spiegel der Seele“. */
+  label?: string;
+  /** Einleitungstext unter dem Titel. */
+  text?: string;
+  /** `id` der H1 — Ziel für `aria-labelledby` der Sektion. */
+  titleId?: string;
+  class?: string;
+}
+
+const { title, label, text, titleId, class: className } = Astro.props;
+---
+
+<div class={cx('section-header', 'mb-8', className)}>
+  {label && <p class="label">{label}</p>}
+  <h1 id={titleId} class="page-title">
+    {title}
+  </h1>
+  {text && <p class="text-muted">{text}</p>}
+</div>

@@ -1,0 +1,21 @@
+---
+/**
+ * Textlink mit Pfeil — der zweite Handlungsweg neben einer Schaltfläche
+ * (`.textlink` im Bestand, z. B. „Astrologie lernen ↗“).
+ */
+import { cx } from '@/lib/cx';
+
+export interface Props {
+  href: string;
+  /** Pfeilrichtung; `null` rendert nur Text. */
+  arrow?: '↗' | '↓' | '→' | null;
+  class?: string;
+}
+
+const { href, arrow = '↗', class: className } = Astro.props;
+---
+
+<a class={cx('textlink', className)} href={href}>
+  <slot />
+  {arrow && <span aria-hidden="true">{arrow}</span>}
+</a>

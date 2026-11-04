@@ -1,0 +1,91 @@
+---
+/**
+ * Textfeld mit Label, Hinweis und Fehlertext.
+ *
+ * Der Bestand rendert seine Suchfelder mit `aria-label` bzw. verstecktem
+ * Label (`sr-only`) und der Klasse `.input`. Das sichtbare Label ist hier
+ * möglich, aber optional — so bleibt der Filtersatz der Vorlage (nur Feld,
+ * Beschriftung für Screenreader) erreichbar und trotzdem korrekt verknüpft.
+ *
+ * `id` ist Pflicht, weil Label, Hinweis und Fehler per `for`/`aria-describedby`
+ * daran hängen; ohne stabile Id wäre die Zuordnung nicht prüfbar.
+ */
+import { cx } from '@/lib/cx';
+
+export type TextFieldType = 'text' | 'search' | 'email' | 'password' | 'url' | 'tel' | 'number';
+
+export interface Props {
+  id: string;
+  name: string;
+  label: string;
+  type?: TextFieldType;
+  value?: string;
+  placeholder?: string;
+  required?: boolean;
+  /** `autocomplete`-Wert nach HTML-Standard, z. B. `off` oder `email`. */
+  autocomplete?: string;
+  /** Hinweis unter dem Feld (dauerhaft sichtbar). */
+  hint?: string;
+  /** Fehlertext; setzt `aria-invalid` und `role="alert"`. */
+  error?: string;
+  /** Label nur für Screenreader (Filtersatz wie im Bestand). */
+  labelHidden?: boolean;
+  minLength?: number;
+  maxLength?: number;
+  pattern?: string;
+  class?: string;
+}
+
+const {
+  id,
+  name,
+  label,
+  type = 'text',
+  value,
+  placeholder,
+  required = false,
+  autocomplete,
+  hint,
+  error,
+  labelHidden = false,
+  minLength,
+  maxLength,
+  pattern,
+  class: className,
+} = Astro.props;
+
+const hintId = hint ? `${id}-hint` : undefined;
+const errorId = error ? `${id}-error` : undefined;
+const describedBy = [hintId, errorId].filter(Boolean).join(' ') || undefined;
+---
+
+<div class={cx('field', className)}>
+  <label class={labelHidden ? 'sr-only' : 'field-label'} for={id}>
+    {label}
+  </label>
+  <input
+    class="input"
+    id={id}
+    name={name}
+    type={type}
+    value={value}
+    placeholder={placeholder}
+    required={required}
+    autocomplete={autocomplete}
+    minlength={minLength}
+    maxlength={maxLength}
+    pattern={pattern}
+    aria-describedby={describedBy}
+    aria-invalid={error ? 'true' : undefined}
+  />
+  {hint && (
+    <p class="field-hint" id={hintId}>
+      {hint}
+    </p>
+  )}
+  {error && (
+    <p class="field-error" id={errorId} role="alert">
+      {error}
+    </p>
+  )}
+</div>

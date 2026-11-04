@@ -1,0 +1,19 @@
+---
+/**
+ * Abzeichen — quadratischer Rahmen, nie eine Pille (Design-System `.badge`).
+ */
+import { cx } from '@/lib/cx';
+
+export type BadgeVariant = 'default' | 'primary' | 'secondary' | 'chakra' | 'upright' | 'reversed';
+
+export interface Props {
+  variant?: BadgeVariant;
+  class?: string;
+}
+
+const { variant = 'default', class: className } = Astro.props;
+---
+
+<span class={cx('badge', variant !== 'default' && `badge-${variant}`, className)}>
+  <slot />
+</span>

@@ -1,0 +1,557 @@
+/* ============================================================================
+   Seiten-Shell — Hero, Abschnittskoepfe, Pfadregister, Kosmos-Tafel
+   ----------------------------------------------------------------------------
+   Zeilengenaue Uebernahme aus dem Bestand (css/main.css: "Shared document
+   shell", "Hero", "Section heads", "Home: path register", "Cosmos" sowie das
+   Materialband der Startseite). Bereichs-spezifische Modulstyles (Tarot,
+   Kristalle, Mond, ...) bleiben bis zur Portierung ihrer Seiten in
+   css/main.css.
+
+   Minimal-invasiv geaendert:
+   - `#featureGrid` -> `.feature-list` (kein SPA-Id-Selektor mehr),
+   - Link-Normalisierung fuer `.feature-card` (im Bestand ein <article
+     role="link">; in Astro ein echtes <a>),
+   - Feld- und Hero-Bausteine der neuen Komponenten, siehe Dateiende.
+   ============================================================================ */
+
+/* --- Shared document shell (legal, error, module titles) ------------------ */
+.legal-content {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+/* Module, legal and error titles share one visual level (--text-page-title);
+   only the hero h1 uses the larger H1 scale from STYLEGUIDE §3. */
+.page-title,
+.legal-content h1,
+.error-card h1 {
+  font-size: var(--text-page-title);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.legal-content .card {
+  max-width: 780px;
+  margin-inline: auto;
+}
+.legal-prose {
+  max-width: 68ch;
+}
+.legal-prose h2 {
+  font-size: var(--text-xl);
+  margin-block: var(--space-8) var(--space-2);
+  letter-spacing: 0;
+}
+/* Deck subsections in the imprint must read as subordinates of their h2
+   (--text-xl 20px). The global h3 (--text-2xl 28px) would invert the
+   hierarchy, so legal sub-headings take the next step down with their own
+   leading above, the way .article-prose h3 does. */
+.legal-prose h3 {
+  font-size: var(--text-lg);
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin-block: var(--space-6) var(--space-2);
+}
+.legal-prose p,
+.legal-prose li {
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+.legal-prose ul {
+  padding-inline-start: var(--space-6);
+}
+.legal-prose a {
+  overflow-wrap: anywhere;
+}
+.legal-note {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Error shell shares the site's card, button and typography tokens. */
+.error-page {
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-16) var(--gutter);
+}
+.error-card {
+  width: 100%;
+  max-width: 560px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.error-card h1 {
+  color: var(--color-primary);
+}
+.error-subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.3;
+  color: var(--color-text-primary);
+}
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+.error-label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: var(--space-8) 0 0;
+}
+
+
+/* --- Hero: asymmetric 5:7 with one real material body --------------------- */
+.hero {
+  padding-block: var(--space-12) var(--space-16);
+}
+.hero-band {
+  width: 100%;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+.hero-copy {
+  min-width: 0;
+}
+.hero-copy .label {
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+.hero h1 {
+  margin-bottom: var(--space-6);
+  max-width: 15ch;
+}
+.hero-intro {
+  max-width: 46ch;
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+.hero-actions .btn-primary {
+  min-width: 220px;
+}
+.hero-actions .textlink {
+  min-height: 44px;
+}
+
+/* Small caps-style label used by the art direction. */
+.label {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-2);
+}
+
+/* Real photograph, full silhouette, no crop: the body is the focal point. */
+.specimen {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.mineral {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  /* Light editorial tuning of the existing photograph (STYLEGUIDE §5):
+     no blur, no shadow, no invented glow. */
+  filter: saturate(0.65) brightness(1.04);
+  mix-blend-mode: screen;
+}
+.caption {
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-4);
+}
+.specimen .caption {
+  text-align: right;
+}
+
+.textlink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 44px;
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+}
+.textlink:hover {
+  color: var(--color-hover);
+}
+
+/* --- Section heads: left aligned, label as a second voice ----------------- */
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+.section-head h2 {
+  margin: 0;
+  max-width: 22ch;
+}
+.section-head .label {
+  margin: 0;
+  text-align: right;
+}
+.section-lede {
+  max-width: 56ch;
+  color: var(--color-text-secondary);
+  margin: var(--space-4) 0 0;
+}
+
+/* Kept for the module views that still use the centred header block. */
+.section-header {
+  margin-bottom: var(--space-8);
+}
+.section-header h1,
+.section-header h2 {
+  margin-bottom: var(--space-2);
+}
+.section-header p {
+  max-width: 62ch;
+  margin: 0;
+}
+.card-heading {
+  font-size: var(--text-xl);
+  line-height: 1.25;
+  letter-spacing: 0;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* --- Home: path register (not equal feature tiles) ----------------------- */
+.feature-list {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--color-border);
+}
+.feature-card {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) 24px;
+  align-items: start;
+  gap: var(--space-4);
+  padding: var(--space-5) 0;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+.feature-card:hover,
+.feature-card:focus-visible {
+  border-bottom-color: var(--color-line-strong);
+}
+.feature-icon {
+  width: auto;
+  height: auto;
+  margin: 0;
+  display: block;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 2;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+.feature-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-1);
+  color: var(--color-text-primary);
+}
+.feature-card:hover .feature-title {
+  color: var(--color-hover);
+}
+.feature-desc {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 62ch;
+}
+.feature-arrow {
+  justify-self: end;
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.4;
+}
+.feature-card:hover .feature-arrow {
+  color: var(--color-primary);
+}
+
+/* --- Cosmos: exactly one astronomical plate per view --------------------- */
+.cosmos {
+  background: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.cosmos-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-24);
+  align-items: center;
+}
+.cosmos h2 {
+  margin: var(--space-2) 0 var(--space-4);
+  max-width: 24ch;
+}
+.cosmos-text {
+  max-width: 56ch;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+.cosmos-figure {
+  margin: 0;
+  text-align: center;
+}
+.chart {
+  width: 360px;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+.cosmos-figure .caption {
+  text-align: center;
+  max-width: 360px;
+  margin-inline: auto;
+}
+.star-key {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1) var(--space-3);
+  max-width: 360px;
+  margin: var(--space-3) auto 0;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+.star-key span {
+  white-space: nowrap;
+}
+
+/* --- Grundregeln aus dem Bestand -------------------------------------------
+   Uebernommen aus css/main.css, Abschnitt "Grundregeln": ohne `min-width: 0`
+   sprengt eine lange Zeile auf Mobile die Rasterspalte. */
+.grid > * {
+  min-width: 0;
+}
+.feature-card {
+  overflow-wrap: anywhere;
+}
+
+/* --- Responsive Shell ------------------------------------------------------
+   Uebernommen aus css/main.css, Abschnitt "Responsive" (1100/900/700 px) und
+   dem Druckblock: Hero stapelt auf Mobile (Text vor Bild), das Pfadregister
+   verliert seine drei Spalten, die Kosmos-Tafel wird einspaltig. */
+@media (max-width: 1100px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-6);
+  }
+  .cosmos-grid {
+    gap: var(--space-10);
+  }
+  .hero h1 {
+    max-width: 18ch;
+  }
+}
+@media (max-width: 900px) {
+  .cosmos-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+}
+@media (max-width: 700px) {
+  .hero {
+    padding-block: var(--space-8) var(--space-12);
+  }
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-6);
+  }
+  .hero h1 {
+    max-width: none;
+  }
+  .hero-intro {
+    max-width: none;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    min-width: 0;
+  }
+  .specimen .caption {
+    text-align: left;
+    margin-top: var(--space-3);
+  }
+  .section-head {
+    display: block;
+  }
+  .section-head .label {
+    display: block;
+    text-align: left;
+    margin-top: var(--space-3);
+  }
+  .feature-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .feature-card {
+    grid-template-columns: 40px minmax(0, 1fr) 20px;
+    gap: var(--space-3);
+  }
+  .feature-title {
+    font-size: 20px;
+  }
+}
+@media print {
+  .hero {
+    display: block;
+  }
+  .hero-grid {
+    display: block;
+  }
+}
+
+/* --- Home: Materialband (eine bewusste Detailstudie) ----------------------
+   Uebernommen aus css/main.css, Abschnitt "Home: material detail band". */
+.material-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-16);
+  align-items: center;
+}
+.material-figure {
+  margin: 0;
+  min-width: 0;
+}
+.detail {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  filter: saturate(0.65) brightness(1.04);
+  mix-blend-mode: screen;
+}
+@media (max-width: 900px) {
+  .material-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+
+/* --- Astro-Anpassung: Pfadregister als echte Links ------------------------
+   Im Bestand war die Zeile ein <article role="link" tabindex="0"> mit
+   JS-Navigation. In Astro ist sie ein <a href>, also gelten die globalen
+   Link-Regeln (Sandfarbe, Unterstreichung im Hover). Beides wird hier auf den
+   Bestand zurueckgesetzt, damit die Zeile unveraendert aussieht.
+
+   Das Register ist jetzt ein <ol> (Reihenfolge ist Inhalt), deshalb muss die
+   Listenformatierung entfallen — die Nummer steht schon in .feature-icon.
+   `:where()` haelt die Spezifitaet bei 0, damit Abstands-Utilities wie `mt-8`
+   am Aufrufer weiterhin greifen; mit einer normalen Klassenregel wuerde die
+   hier deklarierte Null-Margin den Utility-Wert ueberschreiben. */
+.feature-card {
+  color: inherit;
+  text-decoration: none;
+}
+.feature-card:hover {
+  color: inherit;
+  text-decoration: none;
+}
+:where(.feature-list) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Neu in Astro: Feld-Bausteine -----------------------------------------
+   Der Bestand beschriftet Filterfelder per aria-label oder sr-only-Label und
+   kennt deshalb keine sichtbare Feldbeschriftung. Die Komponenten TextField
+   und SelectField bringen eine mit; sie nutzt dieselben Tokens wie .label,
+   aber ohne die Versalien der Gestaltungssprache (die bleibt dem .label-Titel
+   vorbehalten). Fehlerfarbe ist der funktionale Signalton des Design-Systems. */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.field-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+.field .input,
+.field .select {
+  width: 100%;
+}
+.field-hint {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+.field-error {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-accent-rose);
+}
+
+/* --- Neu in Astro: Seitenrahmen -------------------------------------------
+   Im Bestand ist jede Ansicht ein `.page`-Container mit 64 px Bodenabstand
+   (`padding: var(--space-12) 0 var(--space-16)`, Startseite ohne oberen Teil).
+   In Astro ist die Seite selbst der Container; ohne diesen Abstand endet der
+   letzte Abschnitt 64 px hoeher als in der Vorlage. Der Wert gilt in beiden
+   Viewports, weil der Bestand ihn nicht responsive anpasst. */
+.page-shell {
+  padding-bottom: var(--space-16);
+}
+
+/* --- Neu in Astro: Hero ohne Abbildung ------------------------------------
+   Das Bestandsraster ist auf 5:7 mit Fotografie ausgelegt. Fehlt die Figure,
+   wuerde die Kopie in einer 5/12-Spalte stehen und daneben eine leere Flaeche
+   bleiben; deshalb faellt das Raster dann auf eine Spalte zurueck. */
+.hero-grid--copy-only {
+  grid-template-columns: minmax(0, 1fr);
+}

@@ -1,0 +1,30 @@
+/*
+ * Schriften — unveraendert aus css/design-system.css uebernommen.
+ *
+ * Die Schriftdateien liegen wie im Bestand in assets/fonts (SIL OFL 1.1,
+ * Lizenztexte daneben). Der Pfad ist jetzt wurzelabsolut, weil Astro das
+ * Stylesheet nach /_astro/ buendelt und relative Pfade sonst brechen wuerden.
+ * Geaendert wurde ausschliesslich das Pfadpraefix (`../assets/` -> `/assets/`).
+ */
+/* --- Local variable fonts (SIL OFL 1.1, licences in assets/fonts/) --------- */
+@font-face {
+  font-family: 'Fraunces';
+  src: url('/assets/fonts/Fraunces.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('/assets/fonts/Fraunces-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}

@@ -1,59 +1,63 @@
 ---
-/** Fuß — Spalten und Ziele aus dem Footer des Bestands (`index.html`). */
-import { SITE_NAME } from '../lib/site';
+/**
+ * Fußzeile — aus dem Bestand (`index.html` Footer, Rechtsseiten-Fußzeile).
+ *
+ * - `full`: Markenblock plus drei Spalten und Schlusszeile (Startseite)
+ * - `compact`: nur die Schlusszeile mit Pflichtlinks (Rechtsseiten)
+ */
+import { FOOTER_BRAND_TEXT, FOOTER_COLUMNS, LEGAL_FOOTER_LINKS, SITE } from '@/data/site';
+import { cx } from '@/lib/cx';
 
-const COLUMNS = [
-  {
-    title: 'Tools',
-    links: [
-      { href: '/tarot.html', label: 'Tarot-Karten' },
-      { href: '/kristalle.html', label: 'Kristall-Katalog' },
-      { href: '/mondphasen.html', label: 'Mondphasen' },
-      { href: '/frequenzen/', label: 'Frequenzlabor' },
-      { href: '/runen.html', label: 'Runen-Wurf' },
-    ],
-  },
-  {
-    title: 'Wissen',
-    links: [
-      { href: '/astrologie/', label: 'Astrologie-Bereich' },
-      { href: '/radiasthesie/', label: 'Radiästhesie & Pendeln' },
-      { href: '/farbwelten/', label: 'Farbwelten & Farben' },
-      { href: '/wissen/', label: 'Artikel-Archiv' },
-      { href: '/astrologie/lernpfad/', label: 'Lernpfad Astrologie' },
-    ],
-  },
-  {
-    title: 'Rechtliches',
-    links: [
-      { href: '/impressum.html', label: 'Impressum' },
-      { href: '/datenschutz.html', label: 'Datenschutz' },
-      { href: '/haftung.html', label: 'Haftungsausschluss' },
-    ],
-  },
-];
+export type FooterVariant = 'full' | 'compact';
+
+export interface Props {
+  variant?: FooterVariant;
+  class?: string;
+}
+
+const { variant = 'full', class: className } = Astro.props;
 ---
 
-<footer class="footer" role="contentinfo">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo">{SITE_NAME}</div>
-      <p class="footer-tagline">
-        Eine Sammlung esoterischer Werkzeuge und Wissens für moderne Suchende. Kein Dogma — nur Werkzeuge für deine
-        eigene Reise.
-      </p>
-    </div>
-    {COLUMNS.map((column) => (
-      <div class="footer-column">
-        <h2>{column.title}</h2>
-        <ul class="footer-links">
-          {column.links.map((link) => (
-            <li>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
+<footer class={cx('footer', className)}>
+  {variant === 'full' ? (
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">{SITE.name}</div>
+        <p class="footer-tagline">{FOOTER_BRAND_TEXT}</p>
       </div>
-    ))}
+      {FOOTER_COLUMNS.map((column) => (
+        <div class="footer-column">
+          <h2>{column.heading}</h2>
+          <ul class="footer-links">
+            {column.links.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  ) : null}
+  <div class="footer-bottom">
+    {variant === 'compact' ? (
+      <p>
+        {LEGAL_FOOTER_LINKS.map((link, index) => (
+          <>
+            {index > 0 ? ' · ' : null}
+            <a href={link.href}>{link.label}</a>
+          </>
+        ))}
+      </p>
+    ) : (
+      <>
+        <p>{SITE.footerNote}</p>
+        <p>
+          <a href={SITE.repositoryUrl} target="_blank" rel="noopener">
+            {SITE.repositoryLabel}
+          </a>
+        </p>
+      </>
+    )}
   </div>
 </footer>

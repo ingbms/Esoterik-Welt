@@ -1,46 +1,146 @@
 ---
-/** Hauptnavigation — Ziele aus `index.html`, Pfade auf die neuen Dokumente. */
-import { SITE_NAME } from '../lib/site';
+/**
+ * Kopfzeile mit Hauptnavigation — 1:1 aus dem Bestand (`index.html` Header).
+ *
+ * Zwei Varianten wie in der Vorlage:
+ * - `primary`: Logo, zehn Navigationsziele, Burger für ≤900 px, Favoritenzähler
+ * - `minimal`: Logo und ein Rückweg zur Startseite (Rechts- und Fehlerseiten)
+ *
+ * Das Skript ist kein Framework-Island, sondern ein von Astro gebündeltes
+ * Modul: `client:*` gilt nur für UI-Framework-Komponenten (React/Vue/Svelte),
+ * die hier bewusst nicht eingeführt werden. Das Verhalten entspricht
+ * `setupNavigation()`/`onScroll()` aus `js/main.js`.
+ */
+import { NAV_ITEMS, SITE, isNavItemActive } from '@/data/site';
+import { cx } from '@/lib/cx';
+
+export type HeaderVariant = 'primary' | 'minimal';
 
 export interface Props {
-  /** Pfad der aktuellen Seite für `aria-current`. */
-  current?: string;
+  variant?: HeaderVariant;
+  /** Aktueller Pfad für die Aktivmarkierung; im Layout `Astro.url.pathname`. */
+  currentPath?: string;
+  class?: string;
 }
 
-const { current = '' } = Astro.props;
-
-const NAV = [
-  { href: '/', label: 'Start' },
-  { href: '/tarot.html', label: 'Tarot' },
-  { href: '/kristalle.html', label: 'Kristalle' },
-  { href: '/mondphasen.html', label: 'Mondphasen' },
-  { href: '/astrologie/', label: 'Astrologie' },
-  { href: '/frequenzen/', label: 'Frequenzen' },
-  { href: '/runen.html', label: 'Runen' },
-  { href: '/radiasthesie/', label: 'Pendeln' },
-  { href: '/farbwelten/', label: 'Farben' },
-  { href: '/wissen/', label: 'Wissen' },
-];
-
-const isCurrent = (href: string): boolean =>
-  href === '/' ? current === '/' : current === href || current.startsWith(href);
+const { variant = 'primary', currentPath = '/', class: className } = Astro.props;
 ---
 
-<header class="header" role="banner">
+<header class={cx('header', className)} id="header" data-site-header>
   <div class="header-inner">
-    <a href="/" class="logo" aria-label={`${SITE_NAME} Startseite`}>
-      {SITE_NAME}
+    <a href="/" class="logo" aria-label={`${SITE.name} Startseite`}>
+      {SITE.name}
     </a>
-    <nav class="nav" aria-label="Hauptnavigation">
-      <ul class="nav-list">
-        {NAV.map((item) => (
-          <li>
-            <a href={item.href} class="nav-link" aria-current={isCurrent(item.href) ? 'page' : undefined}>
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+
+    {variant === 'primary' ? (
+      <>
+        <nav class="nav" id="nav" aria-label="Hauptnavigation" data-site-nav>
+          <ul class="nav-list" id="navList" data-nav-list>
+            {NAV_ITEMS.map((item) => {
+              const active = isNavItemActive(item, currentPath);
+              return (
+                <li>
+                  <a
+                    href={item.href}
+                    class:list={['nav-link', { active }]}
+                    data-page={item.id}
+                    aria-current={active ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+            aria-controls="navList"
+            data-nav-toggle
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+        {/* Statisch im Markup: reserviert den Platz, bevor der Zähler aus dem
+              lokalen Speicher gefüllt wird. Nachträgliches Einfügen würde den
+              Burger verschieben (Befund B2 im Bestand). */}
+        <span
+          id="favCounter"
+          class="badge badge-primary fav-counter"
+          aria-label="Anzahl Kristall-Favoriten"
+          aria-live="polite"
+        >
+          ♥ 0
+        </span>
+      </>
+    ) : (
+      <nav aria-label="Seitennavigation">
+        <a class="btn btn-secondary btn-sm" href="/">
+          Zur Startseite
+        </a>
+      </nav>
+    )}
   </div>
 </header>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-site-header]');
+  const nav = document.querySelector<HTMLElement>('[data-site-nav]');
+  const toggle = document.querySelector<HTMLButtonElement>('[data-nav-toggle]');
+  const list = document.querySelector<HTMLElement>('[data-nav-list]');
+
+  if (header && nav && toggle && list) {
+    const setOpen = (open: boolean): void => {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    };
+
+    toggle.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
+
+    // Escape schließt das gestapelte Menü und gibt den Fokus an den Schalter
+    // zurück; der Handler liegt am Dokument, damit er auch bei Fokus auf einem
+    // Link im Menü greift.
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' && event.key !== 'Esc') return;
+      if (!nav.classList.contains('open')) return;
+      event.preventDefault();
+      setOpen(false);
+      toggle.focus();
+    });
+
+    list.addEventListener('click', (event) => {
+      if (event.target instanceof Element && event.target.closest('.nav-link')) setOpen(false);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (event.target instanceof Node && !header.contains(event.target)) setOpen(false);
+    });
+
+    const onScroll = (): void => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Favoritenzähler aus dem lokalen Speicher (Schlüssel wie im Bestand:
+  // js/modules/crystals.js). Ohne gespeicherte Werte bleibt „♥ 0“ stehen.
+  const counter = document.querySelector<HTMLElement>('#favCounter');
+  if (counter) {
+    try {
+      const raw = localStorage.getItem('esot_crystals_fav');
+      const parsed: unknown = raw ? JSON.parse(raw) : [];
+      const count = Array.isArray(parsed) ? parsed.length : 0;
+      counter.textContent = `♥ ${count}`;
+      counter.setAttribute('aria-label', `Anzahl Kristall-Favoriten: ${count}`);
+    } catch {
+      // localStorage gesperrt oder defekter Wert: Anzeige bleibt bei „♥ 0“.
+    }
+  }
+</script>
