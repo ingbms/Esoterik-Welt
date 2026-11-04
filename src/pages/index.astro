@@ -1,0 +1,44 @@
+---
+/**
+ * Minimale Startseite des Astro-Gerüsts.
+ *
+ * Sie belegt, dass Layout, globales Stylesheet und der Pfad-Alias `@/*`
+ * zusammen funktionieren. Die realen Inhalte der Bestandswebsite werden in
+ * t_a3fc82b3 migriert; Design und Texte werden dabei nicht neu erfunden.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Migration in Arbeit"
+  description="Technisches Grundgerüst der VELARKANA-Website. Die Inhalte der bestehenden Website werden derzeit auf Astro migriert."
+>
+  <div class="container start">
+    <h1>VELARKANA</h1>
+    <p class="start__lead">
+      Dieses Gerüst ist der technische Unterbau der Migration. Die abgenommenen Inhalte, Bilder und das Erscheinungsbild
+      der bestehenden Website werden unverändert übernommen.
+    </p>
+    <p class="start__hint">
+      Layout-Platzhalter – Header, Navigation und Footer folgen als Komponenten, die Seiten selbst als Routen unter
+      <code>src/pages</code>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .start {
+    padding-block: var(--space-16);
+    max-width: 68ch;
+  }
+
+  .start__lead {
+    color: var(--color-text-secondary);
+    font-size: 18px;
+  }
+
+  .start__hint {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+  }
+</style>

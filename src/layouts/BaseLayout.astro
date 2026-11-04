@@ -1,0 +1,51 @@
+---
+/**
+ * Globales Layout-Gerüst der Astro-Migration.
+ *
+ * Platzhalter: Header, Hauptnavigation und Footer werden in t_2d9fbecf als
+ * eigene Komponenten ergänzt; hier steht bewusst noch kein erfundenes Design.
+ * Vorhanden sind die Pflichtbestandteile des <head> (Titel, Description,
+ * Canonical, Icon), die Skip-Link-Struktur und der Slot für Seiteninhalte.
+ */
+import '../styles/global.css';
+
+export interface Props {
+  /** Dokumenttitel. Das Marken-Suffix wird nur ergänzt, wenn es fehlt. */
+  title: string;
+  /** Meta-Description der Seite; ohne Wert wird kein description-Tag erzeugt. */
+  description?: string;
+}
+
+const BRAND = 'VELARKANA';
+
+const { title, description } = Astro.props;
+
+const documentTitle = title.includes(BRAND) ? title : `${title} · ${BRAND}`;
+// `build.format: 'file'` lässt Startseiten als /index.html entstehen; kanonisch
+// ist aber die Verzeichnis-URL. Deshalb wird das Dateinamen-Segment entfernt.
+const canonicalPath = Astro.url.pathname.replace(/index\.html$/, '');
+// Astro.site ist im Build gesetzt (siehe astro.config.mjs); der Fallback greift
+// nur im Dev-Server, wenn keine site konfiguriert wäre.
+const canonicalUrl = Astro.site ? new URL(canonicalPath, Astro.site) : Astro.url;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{documentTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Zum Inhalt springen
+    </a>
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>

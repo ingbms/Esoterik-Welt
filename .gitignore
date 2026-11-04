@@ -8,6 +8,8 @@ yarn-error.log*
 dist/
 build/
 *.tsbuildinfo
+# Astro: generierte Typen und Content-Collections-Typen (astro sync / build)
+.astro/
 
 # Environment files
 .env

@@ -9,6 +9,8 @@ test-results/
 evidence/
 docs/
 public/
+# Archivierter Vor-Astro-Platzhalter (siehe legacy/public/README.md).
+legacy/
 Lokal*.html
 package-lock.json
 # Erzeugt von scripts/generate-radiasthesie-pages.cjs (wie Lokal*.html):
