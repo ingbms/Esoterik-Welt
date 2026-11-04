@@ -181,7 +181,7 @@ Erzeugnisse und Kerndateien:
 
 | Datei | sha256 |
 | --- | --- |
-| `js/data/articles-markdown.js` | `d74596992f12d157783fcade908992f2d4c61dd3f91236d354be385213bd4d32` |
+| `js/data/articles-markdown.js` | `d16f8e0bbe6fa85160d59eaffa437af8abcf25b7abe8bc51745f825b02a76431` |
 | `scripts/generate-articles-data.cjs` | `d3eba55c7aafde1635001964ee4ea538d382699ade6f850dfd43d800103ac03c` |
 | `js/modules/blog.js` | `54deda523543d7f7c59f8a843700d9b67118534fd58f65f2abc40cd49384b644` |
 | `index.html` | `4a31329e96d6e868aebbf6e4856cc1b6c27889eb1485d5f0f664e329f87df266` |
@@ -198,7 +198,7 @@ Redaktionsquellen:
 
 | Datei | sha256 |
 | --- | --- |
-| `data/articles/article-01.md` | `489b58e937a0e20d1a5cc7a7a7d5198312e106544b3da7ee7bf32bd61d116753` |
+| `data/articles/article-01.md` | `d41b70a30e8c5ca4f2ce418ef193e45eeeffd4390ba52b2c76c525e552042531` |
 | `data/articles/article-02.md` | `2e4865fc898455e1fb2ae3c3ca6dbbb3ac1202084ecfd129961644a742f739da` |
 | `data/articles/article-03.md` | `e3edf8eb251e4d3ddc17ce7b136e5a50418e7d7d9e36a7864474d3ce39ef5898` |
 | `data/articles/article-04.md` | `8538e89152fbf49c544ac0be9944c6dcfcfc8bbae67a1c7c849f01074a064ffd` |

@@ -20,28 +20,28 @@ export const articlesMarkdown = [
 
 Die Nummerierung ist nicht willkürlich. Sie beschreibt einen Weg, der bei der Unbefangenheit beginnt und bei der Integration endet. Die Stichworte stammen aus der Datenbasis des Projekts:
 
-0. **Der Narr** – Aufbruch, Vertrauen, Offenheit, Unbekanntes.
-1. **Der Magier** – Wille, Können, Handlung, Konzentration.
-2. **Die Hohepriesterin** – Intuition, Schweigen, Wissen, Beobachtung.
-3. **Die Herrscherin** – Fülle, Fürsorge, Wachstum, Sinnlichkeit.
-4. **Der Herrscher** – Ordnung, Verantwortung, Grenze, Stabilität.
-5. **Der Hierophant** – Lehre, Tradition, Zugehörigkeit, Regel.
-6. **Die Liebenden** – Wahl, Verbindung, Übereinstimmung, Werte.
-7. **Der Wagen** – Richtung, Wille, Fahrt, Selbstkontrolle.
-8. **Die Kraft** – Mut, Geduld, Sanftheit, Triebkontrolle.
-9. **Der Eremit** – Rückzug, Prüfung, eigenes Licht, Stille.
-10. **Das Rad des Schicksals** – Zyklus, Wende, Muster, Bewegung.
-11. **Die Gerechtigkeit** – Abwägung, Verantwortung, Folge, Klarheit.
-12. **Der Gehängte** – Perspektive, Anhalten, Loslassen, Hingabe.
-13. **Der Tod** – Ende, Abschnitt, Klarheit, Neubeginn.
-14. **Die Mäßigkeit** – Maß, Mischung, Geduld, Heilung.
-15. **Der Teufel** – Bindung, Abhängigkeit, Schatten, Prüfung.
-16. **Der Turm** – Einbruch, Bruch, Wahrheit, Befreiung.
-17. **Der Stern** – Hoffnung, Vertrauen, Heilung, Klarheit.
-18. **Der Mond** – Unbewusstes, Täuschung, Angst, Intuition.
-19. **Die Sonne** – Freude, Klarheit, Erfolg, Lebendigkeit.
-20. **Das Gericht** – Ruf, Bilanz, Vergebung, Erwachen.
-21. **Die Welt** – Vollendung, Ganzheit, Abschluss, Integration.
+- **Der Narr (0)** – Aufbruch, Vertrauen, Offenheit, Unbekanntes.
+- **Der Magier (1)** – Wille, Können, Handlung, Konzentration.
+- **Die Hohepriesterin (2)** – Intuition, Schweigen, Wissen, Beobachtung.
+- **Die Herrscherin (3)** – Fülle, Fürsorge, Wachstum, Sinnlichkeit.
+- **Der Herrscher (4)** – Ordnung, Verantwortung, Grenze, Stabilität.
+- **Der Hierophant (5)** – Lehre, Tradition, Zugehörigkeit, Regel.
+- **Die Liebenden (6)** – Wahl, Verbindung, Übereinstimmung, Werte.
+- **Der Wagen (7)** – Richtung, Wille, Fahrt, Selbstkontrolle.
+- **Die Kraft (8)** – Mut, Geduld, Sanftheit, Triebkontrolle.
+- **Der Eremit (9)** – Rückzug, Prüfung, eigenes Licht, Stille.
+- **Das Rad des Schicksals (10)** – Zyklus, Wende, Muster, Bewegung.
+- **Die Gerechtigkeit (11)** – Abwägung, Verantwortung, Folge, Klarheit.
+- **Der Gehängte (12)** – Perspektive, Anhalten, Loslassen, Hingabe.
+- **Der Tod (13)** – Ende, Abschnitt, Klarheit, Neubeginn.
+- **Die Mäßigkeit (14)** – Maß, Mischung, Geduld, Heilung.
+- **Der Teufel (15)** – Bindung, Abhängigkeit, Schatten, Prüfung.
+- **Der Turm (16)** – Einbruch, Bruch, Wahrheit, Befreiung.
+- **Der Stern (17)** – Hoffnung, Vertrauen, Heilung, Klarheit.
+- **Der Mond (18)** – Unbewusstes, Täuschung, Angst, Intuition.
+- **Die Sonne (19)** – Freude, Klarheit, Erfolg, Lebendigkeit.
+- **Das Gericht (20)** – Ruf, Bilanz, Vergebung, Erwachen.
+- **Die Welt (21)** – Vollendung, Ganzheit, Abschluss, Integration.
 
 Zwei Namen weichen im Projekt bewusst von der geläufigen Zählung ab: Karte III heißt hier Die Herrscherin, Karte IV Der Herrscher. Gebräuchlich sind auch Kaiserin und Kaiser; gemeint ist dieselbe Figur.
 
