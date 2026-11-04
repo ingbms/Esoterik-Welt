@@ -22,6 +22,7 @@ und den Stand veröffentlicht.
 | Komponenten | `53ee6d5` | Merge der Layout-/Komponentenschicht (`e934596`), Konflikte in vier Dateien inhaltlich aufgelöst |
 | Blockerfixes | `8b7ff84` | B-2 bis B-7, M-1 bis M-12 |
 | Deployment | `338dd93` | Pages-Artefakt, Pfadpräfix, Prüfung |
+| Abschluss | `ef2f6b5` | Integrationsbericht, Lint-/Format-Gates, idempotenter Deploy |
 
 **Entscheidungen der Konfliktauflösung:**
 
@@ -114,7 +115,7 @@ node scripts/deploy-pages.cjs --push        # Artefakt bauen und veröffentliche
 
 | Punkt | Wert |
 |---|---|
-| Privates Entwicklungs-Repository | `ingbms/velarkana-dev`, Branch `astro-migration`, Commit `338dd93` (Remote geprüft) |
+| Privates Entwicklungs-Repository | `ingbms/velarkana-dev`, Branch `astro-migration`, Commit `ef2f6b5` (Remote geprüft) |
 | Öffentliches Website-Repository | `ingbms/velarkana` (public, neu angelegt) |
 | Veröffentlichungsbranch | `main`, Repository-Wurzel, GitHub Pages `build_type=legacy` |
 | Website | https://ingbms.github.io/velarkana/ |
