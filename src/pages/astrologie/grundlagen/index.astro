@@ -1,0 +1,34 @@
+---
+/** Grundlagen und Vertiefung — Index (24 Texte). */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import EntryIndex from '../../../components/EntryIndex.astro';
+import { ASTROLOGIE_META as META, GRUNDLAGEN } from '../../../data/legacy';
+import { ASTROLOGIE_NAV } from '../../../lib/astrologie';
+
+const ROUTE = '/astrologie/grundlagen/';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Astrologie', href: '/astrologie/' }, { label: 'Grundlagen' }];
+---
+
+<BaseLayout
+  title="Grundlagen und Vertiefung der Astrologie"
+  description="Vierundzwanzig Grundlagen- und Vertiefungstexte: Ekliptik, tropisch und siderisch, Elemente, Modalitäten, Häusersysteme, Aszendent, Transite und Grenzen."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">{GRUNDLAGEN.length} Texte</p>
+    <h1>Grundlagen und Vertiefung</h1>
+    <p class="lede">{META.arbeitsannahme.grundlagen}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+  <div class="page-body">
+    <EntryIndex
+      entries={GRUNDLAGEN.map((entry) => ({
+        href: `/astrologie/grundlagen/${entry.slug}.html`,
+        label: entry.title,
+        note: entry.short,
+        meta: entry.level,
+      }))}
+    />
+  </div>
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+/** Ein einzelner `application/ld+json`-Block für die übergebenen Knoten. */
+import { graph } from '../lib/jsonld';
+
+export interface Props {
+  data: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { data } = Astro.props;
+const payload = Array.isArray(data) ? graph(data) : data;
+const json = JSON.stringify(payload).replace(/</g, '\\u003c');
+---
+
+<script type="application/ld+json" set:html={json} />

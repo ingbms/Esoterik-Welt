@@ -1,0 +1,55 @@
+---
+/**
+ * FAQ — 15 Fragen mit kurzer und langer Antwort.
+ *
+ * `FAQPage`-JSON-LD ist hier belegt: Es gibt echte Frage-Antwort-Paare im
+ * sichtbaren Text (im Bestand fehlte strukturiertes FAQ-Markup vollständig).
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { ASTROLOGIE_FAQ as FAQ } from '../../data/legacy';
+import { ASTROLOGIE_NAV } from '../../lib/astrologie';
+import { formatInline } from '../../lib/inline';
+
+const ROUTE = '/astrologie/faq.html';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Astrologie', href: '/astrologie/' }, { label: 'FAQ' }];
+---
+
+<BaseLayout
+  title="Häufige Fragen zur Astrologie"
+  description="Fünfzehn häufige Fragen zur westlichen tropischen Astrologie — beantwortet mit klarer Trennung von Tradition, Astronomie und Evidenz."
+  trail={trail}
+  jsonLd={{
+    '@type': 'FAQPage',
+    mainEntity: FAQ.map((entry) => ({
+      '@type': 'Question',
+      name: entry.frage,
+      acceptedAnswer: { '@type': 'Answer', text: entry.short_answer },
+    })),
+  }}
+>
+  <div class="page-head">
+    <p class="label">{FAQ.length} Fragen</p>
+    <h1>Häufige Fragen</h1>
+    <p class="lede">Kurze Antworten für den Einstieg, lange Antworten für die Einordnung.</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <div class="prose">
+      {FAQ.map((entry) => (
+        <section id={entry.slug}>
+          <h2>{entry.frage}</h2>
+          <p>
+            <strong set:html={formatInline(entry.short_answer)} />
+          </p>
+          <p set:html={formatInline(entry.long_answer)} />
+          {entry.related?.length ? <p class="entry-note">Verwandt: {entry.related.join(', ')}</p> : null}
+          <p class="entry-note">
+            Quellen: {entry.sources.join(', ')} · belegte Aussagen: {entry.claims.join(', ')}
+          </p>
+        </section>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

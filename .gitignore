@@ -11,6 +11,10 @@ build/
 # Astro: generierte Typen und Content-Collections-Typen (astro sync / build)
 .astro/
 
+# Astro: Assets werden vor dev/build aus assets/ kopiert (scripts/sync-public-assets.cjs).
+# Quelle bleibt assets/; die Kopie ist nicht Teil des Repositories.
+public/assets/
+
 # Environment files
 .env
 .env.local

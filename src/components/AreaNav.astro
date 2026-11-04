@@ -1,0 +1,21 @@
+---
+/** Bereichsnavigation (Unterrouten eines Bereichs) — ersetzt `renderViewNav` des Bestands. */
+export interface Props {
+  items: { href: string; label: string }[];
+  current?: string;
+}
+
+const { items, current = '' } = Astro.props;
+---
+
+<nav class="area-nav" aria-label="Bereichsnavigation">
+  <ul>
+    {items.map((item) => (
+      <li>
+        <a href={item.href} aria-current={item.href === current ? 'page' : undefined}>
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

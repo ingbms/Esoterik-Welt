@@ -1,0 +1,66 @@
+---
+/**
+ * Runen — das ältere Futhark (24 Runen, drei Ættir).
+ *
+ * Die Wurf-Funktion (`#runes` im Bestand) ist eine Client-Insel und bleibt
+ * offen; Lesetexte, Stichwörter und beide Deutungen stehen hier vollständig.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { RUNEN, RUNEN_AETTIR } from '../data/legacy';
+import { formatInline } from '../lib/inline';
+
+const trail = [{ label: 'Start', href: '/' }, { label: 'Runen' }];
+
+const AETTIR_LABELS: Record<string, string> = {
+  freyja: 'Freyr-Ætt (1–8)',
+  heindall: 'Heimdall-Ætt (9–16)',
+  tyr: 'Týr-Ætt (17–24)',
+};
+
+const groups = Object.entries(RUNEN_AETTIR).map(([key, ids]) => ({
+  key,
+  label: AETTIR_LABELS[key] ?? key,
+  runes: RUNEN.filter((rune) => (ids as number[]).includes(rune.id)),
+}));
+---
+
+<BaseLayout
+  title="Runen — Das ältere Futhark | VELARKANA"
+  description="24 Runen des älteren Futhark: 3-Runen-Wurf, Einzelrune, Deutung und Wurf-Historie."
+  trail={trail}
+  jsonLd={{ '@type': 'CollectionPage', name: 'Runen — Das ältere Futhark', numberOfItems: RUNEN.length }}
+>
+  <div class="page-head">
+    <p class="label">Runen · {RUNEN.length} Zeichen · 3 Ættir</p>
+    <h1>Runen — Das ältere Futhark</h1>
+    <p class="lede">
+      Die 24 Runen des älteren Futhark in drei Ættir, jeweils mit Lautwert, Grundbedeutung, Stichwörtern und Deutung für
+      aufrecht und umgekehrt.
+    </p>
+  </div>
+
+  <div class="page-body">
+    {groups.map((group) => (
+      <section aria-labelledby={`aett-${group.key}`}>
+        <h2 id={`aett-${group.key}`}>{group.label}</h2>
+        <ul class="summary-list">
+          {group.runes.map((rune) => (
+            <li id={`rune-${rune.id}`}>
+              <h3>
+                <span aria-hidden="true">{rune.symbol}</span> {rune.name} ({rune.phonetic})
+              </h3>
+              <p class="entry-note">{rune.keywords.join(' · ')}</p>
+              <p set:html={formatInline(rune.meaning)} />
+              <p>
+                <strong>Aufrecht:</strong> <span set:html={formatInline(rune.meaning_upright)} />
+              </p>
+              <p>
+                <strong>Umgekehrt:</strong> <span set:html={formatInline(rune.meaning_reversed)} />
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

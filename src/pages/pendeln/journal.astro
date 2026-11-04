@@ -1,0 +1,97 @@
+---
+/**
+ * Pendeltagebuch — eigene Versuche dokumentieren.
+ *
+ * Die Feldgrenzen und Methoden stammen aus der Werkstatt-Konfiguration
+ * (`journalLimits`, `journalMethods`); die Speicherung liegt ausschließlich im
+ * localStorage dieses Browsers (`esot_rad_journal_v1`).
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { WERKSTATT } from '../../data/legacy';
+
+const ROUTE = '/pendeln/journal.html';
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: 'Radiästhesie & Pendeln', href: '/radiasthesie/' },
+  { label: 'Pendeltagebuch' },
+];
+const NAV = [
+  { href: '/radiasthesie/', label: 'Bereich' },
+  { href: '/pendeln/labor.html', label: 'Labor' },
+  { href: '/pendeln/studio.html', label: 'Tafel-Studio' },
+  { href: '/pendeln/experiment.html', label: 'Experiment' },
+  { href: '/pendeln/journal.html', label: 'Tagebuch' },
+  { href: '/pendeln/suche.html', label: 'Suche' },
+];
+const limits = WERKSTATT.journalLimits;
+---
+
+<BaseLayout
+  title="Pendeltagebuch — Versuche dokumentieren und prüfen"
+  description="Eigene Versuche mit Frage, Vorhersage, Ergebnis und Rückblick dokumentieren; ausschließlich lokale Speicherung ohne Übertragung."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">Werkzeug · Dokumentation</p>
+    <h1>Pendeltagebuch</h1>
+    <p class="lede">
+      Eigene Versuche festhalten: Frage, Vorhersage, Ergebnis, Rückblick und Methode. Das Tagebuch liegt ausschließlich
+      im lokalen Speicher dieses Browsers.
+    </p>
+    <p class="client-note">
+      Formular <code>#jrForm</code> · Speicher <code>esot_rad_journal_v1</code> · Version {WERKSTATT.storageSchema} ·
+      keine Übertragung, keine Konten.
+    </p>
+    <AreaNav items={NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="felder-title">
+      <h2 id="felder-title">Felder und Grenzen</h2>
+      <table class="facts">
+        <caption class="sr-only">Zeichenbegrenzungen der Tagebuchfelder</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Frage</th>
+            <td>{limits.question} Zeichen</td>
+          </tr>
+          <tr>
+            <th scope="row">Vorhersage</th>
+            <td>{limits.prediction} Zeichen</td>
+          </tr>
+          <tr>
+            <th scope="row">Ergebnis</th>
+            <td>{limits.result} Zeichen</td>
+          </tr>
+          <tr>
+            <th scope="row">Rückblick</th>
+            <td>{limits.review} Zeichen</td>
+          </tr>
+          <tr>
+            <th scope="row">Methode</th>
+            <td>{limits.method} Zeichen</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="methoden-title">
+      <h2 id="methoden-title">Wählbare Methoden</h2>
+      <ul class="chip-row">
+        {WERKSTATT.journalMethods.map((method) => (
+          <li class="chip">{method}</li>
+        ))}
+      </ul>
+      <p class="entry-note">Vertragsversion der Werkstatt: {WERKSTATT.contractVersion}</p>
+    </section>
+
+    <section aria-labelledby="datenschutz-title">
+      <h2 id="datenschutz-title">Datenschutz</h2>
+      <p>
+        Einträge entstehen nur durch ausdrückliche Eingabe und bleiben im Browser. Es gibt keine Synchronisation, keine
+        Auswertung auf einem Server und keine Weitergabe an Dritte. Löschen ist durch Löschen der Browserdaten möglich.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

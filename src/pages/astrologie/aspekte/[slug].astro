@@ -1,0 +1,67 @@
+---
+/** Aspekt-Detailseite: Winkel, Orben, traditionelle Qualität, Fehldeutung. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import Prose from '../../../components/Prose.astro';
+import { ASPEKTE } from '../../../data/legacy';
+import { ASTROLOGIE_NAV, astrologieTrail, metaDescription } from '../../../lib/astrologie';
+
+export function getStaticPaths() {
+  return ASPEKTE.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const ROUTE = `/astrologie/aspekte/${entry.slug}.html`;
+const trail = astrologieTrail('Aspekte', '/astrologie/aspekte/', entry.name);
+---
+
+<BaseLayout title={`${entry.name} — Aspekt, Winkel und Orben`} description={metaDescription(entry.short)} trail={trail}>
+  <div class="page-head">
+    <p class="label">Aspekt · {entry.angle_deg}°</p>
+    <h1>
+      {entry.glyph} {entry.name}
+    </h1>
+    <p class="lede">{entry.short}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <Prose text={entry.long} />
+
+    <section aria-labelledby="orb-title">
+      <h2 id="orb-title">Winkel und Orben</h2>
+      <table class="facts">
+        <caption class="sr-only">Winkel und Orben für{entry.name}</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Winkel</th>
+            <td>{entry.angle_deg} Grad</td>
+          </tr>
+          <tr>
+            <th scope="row">Orb (modern, typisch)</th>
+            <td>{entry.orb.modern_typisch}</td>
+          </tr>
+          <tr>
+            <th scope="row">Spanne</th>
+            <td>{entry.orb.spanne}</td>
+          </tr>
+          <tr>
+            <th scope="row">Einordnung</th>
+            <td>{entry.traditionelle_qualitaet}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="entry-note">{entry.orb.schulhinweis}</p>
+    </section>
+
+    <section aria-labelledby="missdeutung-title">
+      <h2 id="missdeutung-title">Typische Missdeutung</h2>
+      <p>{entry.common_misreading}</p>
+      <p class="entry-note">{entry.kennzeichnung.hinweis}</p>
+      <p class="entry-note">
+        Quellen: {entry.sources.join(', ')} · belegte Aussagen: {entry.claims.join(', ')} · verwandte Themen:{' '}
+        {entry.cross_refs.join(', ')}
+      </p>
+    </section>
+  </div>
+</BaseLayout>

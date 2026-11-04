@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import sitemapFilePaths from './astro-plugins/sitemap-file-paths.mjs';
 
 /**
  * Kanonische Produktionsadresse.
@@ -24,10 +25,19 @@ export default defineConfig({
   output: 'static',
 
   // URL-Parität: Der Bestand liefert Dateien wie /impressum.html und
-  // /radiasthesie/pendeln.html aus. `format: 'file'` erzeugt beim Build genau
-  // diese Dateinamen, damit die Migration keine Redirects und keine geänderten
-  // URLs benötigt (Master-Auftrag §6/§11.3).
-  build: { format: 'file' },
+  // /radiasthesie/pendeln.html aus. `format: 'preserve'` erzeugt beim Build
+  // genau diese Dateinamen und hält gleichzeitig Verzeichnisrouten als
+  // Verzeichnis (`radiasthesie/index.astro` → `/radiasthesie/`, nicht
+  // `/radiasthesie.html`) — mit `format: 'file'` würde der Bereichs-Hub seine
+  // kanonische Adresse aus dem Bestand verlieren (Migrationsplan §6.3).
+  build: { format: 'preserve' },
 
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Die Fehlerseite gehört nicht in eine Sitemap (kein kanonischer Inhalt).
+      filter: (page) => !page.endsWith('/404.html'),
+    }),
+    // Sitemap-Adressen auf die ausgelieferten Dateipfade bringen (`/x` → `/x.html`).
+    sitemapFilePaths(),
+  ],
 });

@@ -1,0 +1,93 @@
+---
+/**
+ * Farbwelt-Seiten aus der Content Collection.
+ *
+ * Eine Route für alle 17 Dokumente (12 Farben, 3 Themenseiten, Chakren,
+ * Lichtfrequenzen) — genau die Adressen, die der Bestand unter
+ * `#farbwelten/<slug>` führte. Titel und Description stammen aus dem
+ * Frontmatter der Markdown-Quelle (SEO-Baseline der Farbseiten).
+ */
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { FARBWELTEN, FARB_TOPIC_PAGES } from '../../data/legacy';
+import { farbHref, farbSlug } from '../../lib/farbwelten';
+import { formatInline } from '../../lib/inline';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('farbwelten');
+  return entries
+    .filter((entry) => entry.id !== 'farbwelten')
+    .map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const ROUTE = `/farbwelten/${entry.id}.html`;
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: 'Farbwelten', href: '/farbwelten/' },
+  { label: entry.data.farbe ?? entry.data.title.split('–')[0].trim() },
+];
+
+const FARB_NAV = [
+  { href: '/farbwelten/', label: 'Übersicht' },
+  ...FARBWELTEN.map((world) => ({ href: farbHref(world.route), label: world.name })),
+  ...FARB_TOPIC_PAGES.map((topic) => ({
+    href: `/farbwelten/${topic.slug}.html`,
+    label: topic.title.split('–')[0].trim(),
+  })),
+];
+
+/** Verwandte Seiten aus dem Register des Bestands, sofern vorhanden. */
+const relatedIds = FARBWELTEN.find((world) => farbSlug(world.route) === entry.id)?.verwandt ?? [];
+const related = FARBWELTEN.filter((world) => relatedIds.includes(farbSlug(world.route))).map((world) => ({
+  href: farbHref(world.route),
+  label: world.name,
+}));
+---
+
+<BaseLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  trail={trail}
+  jsonLd={{ '@type': 'WebPage', name: entry.data.title, description: entry.data.description }}
+>
+  <div class="page-head">
+    {entry.data.farbe ? (
+      <p class="label">Farbwelt · {entry.data.farbe}</p>
+    ) : (
+      <p class="label">Farbwelten · {entry.data.seite}</p>
+    )}
+    <h1>{entry.data.farbe ?? entry.data.title.split('–')[0].trim()}</h1>
+    <p class="lede">{entry.data.description}</p>
+    {entry.data.chakra_modern ? <p class="entry-note">Moderne Chakra-Zuordnung: {entry.data.chakra_modern}</p> : null}
+    <AreaNav items={FARB_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <article class="prose">
+      <Content />
+    </article>
+
+    {related.length > 0 && (
+      <section aria-labelledby="verwandt-title">
+        <h2 id="verwandt-title">Verwandte Farbwelten</h2>
+        <ul class="chip-row">
+          {related.map((item) => (
+            <li class="chip">
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <p class="client-note">
+      <span set:html={formatInline('Diese Seite ersetzt die Ansicht `#farbwelten/' + entry.id + '` des Bestands.')} />
+      Die interaktiven Werkzeuge des Bereichs (Kompass, Zeitleiste, Meditation) stehen unter
+      <a href="/farbwelten/kompass.html">/farbwelten/kompass.html</a>.
+    </p>
+  </div>
+</BaseLayout>

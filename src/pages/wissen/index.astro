@@ -1,0 +1,73 @@
+---
+/**
+ * Wissen — Artikelliste.
+ *
+ * Der Bestand zeigte die Liste unter `#blog` und öffnete Artikel als Dialog
+ * über derselben Seite. Hier ist jeder Artikel ein eigenes Dokument
+ * (`/wissen/<slug>.html`) — die Voraussetzung dafür, dass Titel, Description
+ * und Canonical je Artikel existieren (§6.4 Punkt 2).
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articles = (await getCollection('articles')).sort(
+  (a, b) => b.data.date.localeCompare(a.data.date) || b.data.legacyId - a.data.legacyId
+);
+
+const CATEGORY_LABELS: Record<string, string> = {
+  tarot: 'Tarot',
+  crystals: 'Kristalle',
+  runes: 'Runen',
+  moon: 'Mond',
+  history: 'Geschichte',
+  rituals: 'Rituale',
+};
+
+const trail = [{ label: 'Start', href: '/' }, { label: 'Wissen' }];
+
+const categories = [...new Set(articles.map((article) => article.data.category))];
+---
+
+<BaseLayout
+  title="Wissen & Artikel — Esoterik, Rituale, Geschichte | VELARKANA"
+  description="Artikel zu Esoterik, Spiritualität und alter Weisheit: Tarot, Kristalle, Runen, Mondzyklen und Rituale."
+  trail={trail}
+  jsonLd={{ '@type': 'CollectionPage', name: 'Wissen & Artikel', numberOfItems: articles.length }}
+>
+  <div class="page-head">
+    <p class="label">
+      {articles.length} Artikel · {categories.length} Kategorien
+    </p>
+    <h1>Wissen &amp; Artikel</h1>
+    <p class="lede">
+      Artikel zu Esoterik, Spiritualität und alter Weisheit: Tarot, Kristalle, Runen, Mondzyklen und Rituale.
+    </p>
+    <ul class="chip-row">
+      {categories.map((category) => (
+        <li class="chip">{CATEGORY_LABELS[category] ?? category}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="page-body">
+    <ul class="summary-list">
+      {articles.map((article) => (
+        <li>
+          <p class="entry-meta">
+            {CATEGORY_LABELS[article.data.category] ?? article.data.category} · {article.data.date} ·{' '}
+            {article.data.readTime}
+          </p>
+          <h2>
+            <a href={`/wissen/${article.id}.html`}>{article.data.title}</a>
+          </h2>
+          <p>{article.data.excerpt}</p>
+          <p class="entry-note">
+            {article.data.tags.map((tag) => (
+              <span class="chip">{tag}</span>
+            ))}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

@@ -1,0 +1,98 @@
+---
+/**
+ * Farbwelten — Landing.
+ *
+ * Der Text kommt aus `src/content/farbwelten/farbwelten.md` (Redaktionsquelle
+ * des Bestands). Die Markdown-Datei ist die einzige Quelle; das früher
+ * generierte JS-Modul `js/data/farbwelten.js` wird für die strukturierten
+ * Register (Farbkarten, Werkzeuge) weiterhin gelesen, nicht für Fließtext.
+ */
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryIndex from '../../components/EntryIndex.astro';
+import { FARBWELTEN, FARB_TOPIC_PAGES } from '../../data/legacy';
+import { farbHref } from '../../lib/farbwelten';
+
+const entries = await getCollection('farbwelten');
+const landing = entries.find((entry) => entry.id === 'farbwelten');
+if (!landing) throw new Error('farbwelten.md fehlt in der Collection');
+const { Content } = await render(landing);
+
+const trail = [{ label: 'Start', href: '/' }, { label: 'Farbwelten' }];
+
+const farbKarten = FARBWELTEN.map((world) => ({
+  href: farbHref(world.route),
+  label: world.name,
+  note: world.summary,
+  meta: world.typeLabel,
+}));
+
+const themenKarten = FARB_TOPIC_PAGES.map((topic) => ({
+  href: `/farbwelten/${topic.slug}.html`,
+  label: topic.title,
+  note: topic.lede,
+  meta: 'Themenseite',
+}));
+
+const werkzeuge = [
+  {
+    href: '/farbwelten/kompass.html',
+    label: 'Farbkompass',
+    note: 'Zwölf Farben mit Assoziationen und Kulturbezug',
+    meta: 'Werkzeug',
+  },
+  {
+    href: '/farbwelten/zeitleiste.html',
+    label: 'Zeitleiste',
+    note: '17 Stationen der Farbgeschichte in fünf Strängen',
+    meta: 'Werkzeug',
+  },
+  {
+    href: '/farbwelten/farbmeditation.html',
+    label: 'Farbmeditation',
+    note: 'Ablauf, Dauer und Reflexion — ohne Wirkversprechen',
+    meta: 'Werkzeug',
+  },
+  {
+    href: '/farbwelten/chakren.html',
+    label: 'Chakren',
+    note: 'Tradition, Regenbogenmodell und wissenschaftliche Einordnung',
+    meta: 'Übersicht',
+  },
+  {
+    href: '/farbwelten/lichtfrequenzen.html',
+    label: 'Lichtfrequenzen',
+    note: 'Belegte Lichtmedizin und ihre Grenzen',
+    meta: 'Einordnung',
+  },
+];
+---
+
+<BaseLayout title={landing.data.title} description={landing.data.description} trail={trail}>
+  <div class="page-head">
+    <p class="label">Bereich · Licht, Wahrnehmung und Tradition</p>
+    <h1>{landing.data.title}</h1>
+    <p class="lede">{landing.data.description}</p>
+  </div>
+
+  <div class="page-body">
+    <div class="prose">
+      <Content />
+    </div>
+
+    <section aria-labelledby="farben-title">
+      <h2 id="farben-title">Zwölf Farbwelten</h2>
+      <EntryIndex entries={farbKarten} heading="Zwölf Farbwelten" />
+    </section>
+
+    <section aria-labelledby="themen-title">
+      <h2 id="themen-title">Themenseiten</h2>
+      <EntryIndex entries={themenKarten} heading="Themenseiten" />
+    </section>
+
+    <section aria-labelledby="werkzeuge-title">
+      <h2 id="werkzeuge-title">Werkzeuge und Übersichten</h2>
+      <EntryIndex entries={werkzeuge} heading="Werkzeuge" />
+    </section>
+  </div>
+</BaseLayout>

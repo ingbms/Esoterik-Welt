@@ -1,0 +1,97 @@
+---
+/**
+ * Experimentierlabor — verblindete Testreihe.
+ *
+ * Die drei Experimente und die Statistik-Erklärung kommen aus der
+ * Werkstatt-Konfiguration; die Rechenlogik des Bestands ist DOM-frei getestet
+ * (`js/modules/experiment-statistik.js`, `tests/experiment-statistik.mjs`).
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { WERKSTATT } from '../../data/legacy';
+
+const ROUTE = '/pendeln/experiment.html';
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: 'Radiästhesie & Pendeln', href: '/radiasthesie/' },
+  { label: 'Experimentierlabor' },
+];
+const NAV = [
+  { href: '/radiasthesie/', label: 'Bereich' },
+  { href: '/pendeln/labor.html', label: 'Labor' },
+  { href: '/pendeln/studio.html', label: 'Tafel-Studio' },
+  { href: '/pendeln/experiment.html', label: 'Experiment' },
+  { href: '/pendeln/journal.html', label: 'Tagebuch' },
+  { href: '/pendeln/suche.html', label: 'Suche' },
+];
+const studies = WERKSTATT.studien;
+---
+
+<BaseLayout
+  title="Experimentierlabor — verblindet prüfen"
+  description="Verblindete Testreihe mit festgelegtem Ziel, Zufallserwartung, Konfidenzintervall und Rohdatenexport: die drei Experimente und ihre Studienlage."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">Werkzeug · Prüfung</p>
+    <h1>Experimentierlabor</h1>
+    <p class="lede">
+      Verblindete Testreihe mit festgelegtem Ziel, Zufallserwartung, Konfidenzintervall und Rohdatenexport. Das Labor
+      ist dazu da, eine Trefferquote gegen den Zufall zu prüfen — nicht, sie zu bestätigen.
+    </p>
+    <p class="client-note">
+      Die Rechenlogik ist im Bestand DOM-frei implementiert (<code>experiment-statistik.js</code>,
+      <code>experiment-zufall.js</code>) und durch Tests abgedeckt; die Bedienoberfläche ist eine Client-Insel.
+    </p>
+    <AreaNav items={NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="experimente-title">
+      <h2 id="experimente-title">Experimente ({WERKSTATT.experimente.length})</h2>
+      <ul class="summary-list">
+        {WERKSTATT.experimente.map((experiment) => (
+          <li>
+            <h3>{experiment.title}</h3>
+            <p>{experiment.summary}</p>
+            <p>{experiment.body}</p>
+            <p class="entry-note">
+              Typ: {experiment.testType} · Evidenzstatus: {experiment.evidenceStatus} · geprüft:{' '}
+              {experiment.lastReviewed}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="statistik-title">
+      <h2 id="statistik-title">Wie ausgewertet wird</h2>
+      <ul class="block-list">
+        <li>Die Zufallserwartung ergibt sich aus der Zahl der Antwortoptionen je Durchgang.</li>
+        <li>
+          Das Konfidenzintervall zeigt, welcher Bereich mit den Daten vereinbar ist — ein Treffer über Zufall allein
+          belegt nichts.
+        </li>
+        <li>Rohdaten werden exportiert, damit die Auswertung nachvollziehbar bleibt.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="studien-title">
+      <h2 id="studien-title">Studienlage ({studies.length})</h2>
+      <ul class="summary-list">
+        {studies.map((study) => (
+          <li>
+            <h3>{study.title}</h3>
+            <p>{study.summary}</p>
+            <p class="entry-note">
+              {study.studyType} · Evidenzstatus: {study.evidenceStatus} · geprüft: {study.lastReviewed}
+            </p>
+          </li>
+        ))}
+      </ul>
+      <p class="entry-note">
+        Vollständige Quellen mit Prüftiefe: <a href="/radiasthesie/quellen.html">Quellen und Belege</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

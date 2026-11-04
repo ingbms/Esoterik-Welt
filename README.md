@@ -15,10 +15,31 @@ npm run build          # Astro-Produktionsbuild nach dist/ (statisch)
 npm run check          # astro check: TypeScript- und Astro-Diagnostik
 npm run lint           # ESLint (Legacy + Astro/TypeScript), keine Warnungen erlaubt
 npm run format:check   # Prettier inkl. .astro
+npm run verify:migration # Routen, Mengen, SEO-Parität, Links, Sitemap → docs/verifikation-migration.md
 ```
 
 Style-Ansatz: **plain CSS** (kein Tailwind), Begründung in
 [`docs/migration-plan.md` §1](docs/migration-plan.md).
+
+### Aufbau der Astro-Seite
+
+Umsetzungsstand: [`docs/migration-umsetzung.md`](docs/migration-umsetzung.md),
+offene Punkte: [`docs/migration-offene-punkte.md`](docs/migration-offene-punkte.md),
+Redirect-Tabelle: [`docs/redirects.md`](docs/redirects.md).
+
+| Pfad | Inhalt |
+|---|---|
+| `src/pages/` | alle Routen: Dokumente (`impressum.astro` → `/impressum.html`), Bereichs-Hubs (`astrologie/index.astro` → `/astrologie/`), Detailseiten über `getStaticPaths()` |
+| `src/content/` | Content Collections mit Zod-Schema (`content.config.ts`): `articles` (10), `farbwelten` (18), `dokumente` (1); `content/legal/` hält die Rechtstexte als HTML-Fragment |
+| `src/data/` | typisierte Grenze zu den Datenmodulen des Bestands (`js/data/*.js`, `data/*.json`) |
+| `src/lib/` | Marke/Titelregel (`site.ts`), JSON-LD (`jsonld.ts`), Altlink-Shim (`legacy-routes.ts` + generierte Map), Helfer |
+| `src/components/` | Header, Footer, Brotkrumen, Blockrenderer, Quellenliste, Bereichsnavigation |
+| `scripts/` | Inhaltsübernahme (`migrate-content.cjs`), Redirect-Map (`generate-legacy-map.cjs`), Asset-Sync, Prüfung (`verify-migration.cjs`) |
+| `public/assets/` | wird vor `dev`/`build` aus `assets/` erzeugt (gitignoriert) |
+
+Inhalte ändern: Artikel und Farbseiten als Markdown unter `src/content/`
+bearbeiten. Nach Änderungen an `js/data/*` die Redirect-Map neu erzeugen
+(`npm run routes:generate`) und den Build prüfen (`npm run verify:migration`).
 
 ### Legacy-Site (Referenz und Regressionstests)
 
@@ -37,7 +58,7 @@ npm run verify:pages -- http://localhost:3000/Esoterik-Welt/ evidence/preview
 
 ## Architektur-Entscheidungen
 
-- **Astro ist der neue Build:** `npm run build` erzeugt die statische Site aus `src/pages/` nach `dist/` (Astro 7, `output: 'static'`, `build.format: 'file'` für URL-Parität zu `.html`-Adressen). TypeScript läuft im Strict-Modus mit dem Alias `@/*` → `src/*`.
+- **Astro ist der neue Build:** `npm run build` erzeugt die statische Site aus `src/pages/` nach `dist/` (Astro 7, `output: 'static'`, `build.format: 'preserve'`: `.html`-Dateien bleiben Dateien, Verzeichnisrouten bleiben Verzeichnisse). TypeScript läuft im Strict-Modus mit dem Alias `@/*` → `src/*`.
 - **Eine kanonische Legacy-Website:** bis zum Abschluss der Migration veröffentlicht GitHub Pages weiterhin `main:/` mit `index.html`, `css/`, `js/`, `data/` und `assets/`. `npm run build:legacy` verpackt dieselben Quellen; die Express-Vorschau verwendet `/Esoterik-Welt/`. `public/` ist seit der Migration Astros statisches Verzeichnis; der alte Vor-Astro-Platzhalter liegt archiviert in `legacy/public/` und ist nicht im Build.
 - **Live-Prüfung:** `npm run verify:pages -- https://ingbms.github.io/Esoterik-Welt/ evidence/live` erzeugt Screenshots, CSS-/JS-MIME- und Netzwerk-/Console-Protokolle für zehn Ansichten bei 375/768/1440 px. Bestehende `test-results/` und andere Tests werden nicht überschrieben. Screenshots separat prüfen; historische QA-Aussagen unten sind kein Beleg für einen aktuellen Deploy.
 

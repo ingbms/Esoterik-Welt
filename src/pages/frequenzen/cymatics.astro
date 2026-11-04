@@ -1,0 +1,78 @@
+---
+/**
+ * Chladni-Muster — Werkzeugbeschreibung.
+ *
+ * Die Texte sind aus den verbindlichen Kommentaren und Konstanten von
+ * `js/modules/frequenz-chladni.js` übernommen (Modellfamilie, Grenzen,
+ * Modusbereich). Es wird nichts ergänzt, was dort nicht steht: insbesondere
+ * keine Zuordnung „Frequenz → Muster", weil das Modell keine Frequenz liefert.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import {
+  CHLADNI_MODEL_ID,
+  CHLADNI_MODEL_LABEL,
+  DEFAULT_MODE_A,
+  DEFAULT_MODE_B,
+  MAX_MODE,
+  MIN_MODE,
+} from '../../../js/modules/frequenz-chladni.js';
+import { FREQUENZEN } from '../../data/legacy';
+
+const ROUTE = '/frequenzen/cymatics.html';
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: 'Frequenzen', href: '/frequenzen/' },
+  { label: 'Chladni-Muster' },
+];
+const NAV = [
+  { href: '/frequenzen/', label: 'Bibliothek' },
+  { href: '/frequenzen/labor.html', label: 'Frequenzlabor' },
+  { href: '/frequenzen/cymatics.html', label: 'Chladni-Muster' },
+  { href: '/frequenzen/meditation.html', label: 'Meditation' },
+  { href: '/frequenzen/quellen.html', label: 'Quellen & Methodik' },
+];
+---
+
+<BaseLayout
+  title="Chladni-Muster — idealisiertes Rechteckmodell"
+  description="Wie die Chladni-Darstellung rechnet: Differenzform auf dem Einheitsquadrat, Modenzahlen statt Frequenzzuordnung, ausdrückliche Grenzen des Modells."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">Werkzeug · Modell {CHLADNI_MODEL_ID}</p>
+    <h1>Chladni-Muster</h1>
+    <p class="lede">{CHLADNI_MODEL_LABEL}.</p>
+    <p class="client-note">{FREQUENZEN.disclaimer.kurz}</p>
+    <AreaNav items={NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="modell-title">
+      <h2 id="modell-title">Modell</h2>
+      <p>
+        Die Darstellung nutzt die verbreitete Näherung für die Knotenlinien frei schwingender quadratischer Platten:
+        <code>f(u, v) = cos(nπu)·cos(mπv) − cos(mπu)·cos(nπv)</code> auf dem Einheitsquadrat. Sie beschreibt die
+        <em>Form</em> einer Mode, nicht ihre Frequenz.
+      </p>
+      <p class="entry-note">
+        Modenzahlen n, m von {MIN_MODE} bis {MAX_MODE}; n = m ist in dieser Differenzform entartet (f ≡ 0) und wird
+        abgelehnt. Startwerte: n = {DEFAULT_MODE_A.n}, m = {DEFAULT_MODE_A.m} und n = {DEFAULT_MODE_B.n}, m ={' '}
+        {DEFAULT_MODE_B.m}.
+      </p>
+    </section>
+
+    <section aria-labelledby="grenzen-title">
+      <h2 id="grenzen-title">Bewusste Grenzen</h2>
+      <ul class="block-list">
+        <li>Die Funktion ist kein Eigenwertlöser: Sie liefert keine Frequenz zu einer Mode.</li>
+        <li>Material, Dicke, Halterung und Plattengröße gehen nicht ein.</li>
+        <li>Deshalb gibt es keine Zuordnung „Frequenz X → Muster Y“; wählbar sind nur die Modenzahlen.</li>
+      </ul>
+      <p class="entry-note">
+        Die interaktive Canvas-Darstellung ist im Bestand eine Client-Insel (
+        <code>js/modules/frequenz-cymatics-view.js</code>); ihre Portierung ist als offener Punkt dokumentiert.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

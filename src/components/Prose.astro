@@ -1,0 +1,13 @@
+---
+/** Fließtext aus den Datenmodulen (Absätze, `**fett**`, `*kursiv*`, URLs). */
+import { renderParagraphs } from '../lib/inline';
+
+export interface Props {
+  text: string;
+  class?: string;
+}
+
+const { text, class: className = 'prose' } = Astro.props;
+---
+
+<div class={className} set:html={renderParagraphs(text)} />

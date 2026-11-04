@@ -126,10 +126,13 @@ module.exports = [
       '@typescript-eslint/consistent-type-imports': 'error',
     },
   },
-  // Node-Globals für Build-Konfigurationen (astro.config.mjs liest process.env).
+  // Node-Globals für Build-Konfigurationen (astro.config.mjs liest process.env)
+  // und für eigene Astro-Integrationen (astro-plugins/*.mjs).
   {
-    files: ['*.mjs'],
+    files: ['*.mjs', 'astro-plugins/**/*.mjs'],
     languageOptions: {
+      ecmaVersion: 2023,
+      sourceType: 'module',
       globals: { ...globals.node },
     },
   },

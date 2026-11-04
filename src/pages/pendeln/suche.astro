@@ -1,0 +1,158 @@
+---
+/**
+ * Bereichssuche Pendeln / Radiästhesie.
+ *
+ * Der Bestand filterte eine Trefferliste clientseitig über `?q=`. Hier steht ein
+ * vollständiges Verzeichnis aller Inhalte dieses Bereichs (Kapitel, Glossar,
+ * Quellen, Instrumente, Methoden, Studien, Medien, Experimente) mit Filter im
+ * Browser — ohne JavaScript bleibt das Verzeichnis lesbar.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { RADIASTHESIE as R, WERKSTATT } from '../../data/legacy';
+import { truncate } from '../../lib/inline';
+
+const ROUTE = '/pendeln/suche.html';
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: 'Radiästhesie & Pendeln', href: '/radiasthesie/' },
+  { label: 'Suche' },
+];
+const NAV = [
+  { href: '/radiasthesie/', label: 'Bereich' },
+  { href: '/pendeln/labor.html', label: 'Labor' },
+  { href: '/pendeln/studio.html', label: 'Tafel-Studio' },
+  { href: '/pendeln/experiment.html', label: 'Experiment' },
+  { href: '/pendeln/journal.html', label: 'Tagebuch' },
+  { href: '/pendeln/suche.html', label: 'Suche' },
+];
+
+const INDEX = [
+  ...Object.values(R.topics).flatMap((topic) =>
+    topic.sections.map((section) => ({
+      href: `/radiasthesie/${topic.slug}.html#${section.id}`,
+      label: section.title,
+      group: `Kapitel · ${topic.title}`,
+      text: section.blocks
+        .filter((block) => block.type === 'p')
+        .map((block) => block.text)
+        .join(' '),
+    }))
+  ),
+  ...R.glossary.flatMap((group) =>
+    group.terms.map((term) => ({
+      href: '/radiasthesie/glossar.html',
+      label: term.term,
+      group: 'Glossar',
+      text: term.definition,
+    }))
+  ),
+  ...R.sources.map((source) => ({
+    href: `/radiasthesie/quellen.html#${source.id}`,
+    label: `${source.id} · ${source.title}`,
+    group: 'Quelle',
+    text: `${source.shortName} ${source.type} ${source.year}`,
+  })),
+  ...WERKSTATT.instrumente.map((entry) => ({
+    href: '/pendeln/studio.html',
+    label: entry.title,
+    group: 'Instrument',
+    text: entry.summary,
+  })),
+  ...WERKSTATT.methoden.map((entry) => ({
+    href: '/pendeln/labor.html',
+    label: entry.title,
+    group: 'Methode',
+    text: entry.summary,
+  })),
+  ...WERKSTATT.studien.map((entry) => ({
+    href: '/pendeln/experiment.html',
+    label: entry.title,
+    group: 'Studie',
+    text: entry.summary,
+  })),
+  ...WERKSTATT.medien.map((entry) => ({
+    href: '/pendeln/suche.html',
+    label: entry.title,
+    group: 'Medium',
+    text: entry.summary,
+  })),
+  ...WERKSTATT.experimente.map((entry) => ({
+    href: '/pendeln/experiment.html',
+    label: entry.title,
+    group: 'Experiment',
+    text: entry.summary,
+  })),
+];
+---
+
+<BaseLayout
+  title="Suche im Bereich Radiästhesie und Pendeln"
+  description="Vollständiges Verzeichnis des Bereichs mit Filter: Kapitel, Glossarbegriffe, Quellen, Instrumente, Methoden, Studien, Medien und Experimente."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">{INDEX.length} Einträge</p>
+    <h1>Suche</h1>
+    <p class="lede">
+      Alle Inhalte dieses Bereichs in einer Liste. Der Filter arbeitet im Browser; ohne JavaScript bleibt die Liste
+      vollständig sichtbar.
+    </p>
+    <AreaNav items={NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <form role="search" id="rad-search-form" action="/pendeln/suche.html" method="get">
+      <label for="q">Begriff suchen</label>
+      <input type="search" id="q" name="q" placeholder="z. B. Bovis, Rute, Carlson" autocomplete="off" />
+      <p class="entry-note" id="search-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <ul class="summary-list" id="search-list">
+      {INDEX.map((entry) => (
+        <li data-search={`${entry.label} ${entry.group} ${entry.text}`.toLowerCase()}>
+          <h3>
+            <a href={entry.href}>{entry.label}</a>
+          </h3>
+          <p class="entry-note">{entry.group}</p>
+          <p>{truncate(entry.text, 200)}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('rad-search-form') as HTMLFormElement | null;
+  const input = document.getElementById('q') as HTMLInputElement | null;
+  const status = document.getElementById('search-status');
+  const list = document.getElementById('search-list');
+
+  const applyFilter = (term: string): void => {
+    const needle = term.trim().toLowerCase();
+    if (!list) return;
+    let visible = 0;
+    for (const item of Array.from(list.children) as HTMLElement[]) {
+      const haystack = item.dataset.search ?? '';
+      const match = needle === '' || haystack.includes(needle);
+      item.hidden = !match;
+      if (match) visible += 1;
+    }
+    if (status) status.textContent = needle === '' ? '' : `${visible} Treffer für „${term.trim()}“`;
+  };
+
+  const initial = new URLSearchParams(window.location.search).get('q') ?? '';
+  if (input && initial) input.value = initial;
+  applyFilter(initial);
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const term = input?.value ?? '';
+    applyFilter(term);
+    const url = new URL(window.location.href);
+    if (term.trim()) url.searchParams.set('q', term.trim());
+    else url.searchParams.delete('q');
+    window.history.replaceState({}, '', url);
+  });
+  input?.addEventListener('input', () => applyFilter(input.value));
+</script>

@@ -32,7 +32,11 @@ const ENTRIES = [
 
 async function main() {
   await buildStaticPages();
-  fs.rmSync(path.join(root, 'dist'), { recursive: true, force: true });
+  // Nur das eigene Ausgabeverzeichnis leeren, nicht das ganze dist/: Seit der
+  // Astro-Migration liegt der Astro-Build direkt in dist/ (dist/index.html,
+  // dist/astrologie/…). Ein `rm -rf dist` würde ihn beim Legacy-Build löschen —
+  // Reihenfolge build → build:legacy hätte dann still eine leere Astro-Site.
+  fs.rmSync(output, { recursive: true, force: true });
   fs.mkdirSync(output, { recursive: true });
   for (const entry of ENTRIES) {
     fs.cpSync(path.join(root, entry), path.join(output, entry), {

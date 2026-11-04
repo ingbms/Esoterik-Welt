@@ -1,0 +1,101 @@
+---
+/**
+ * Frequenzlabor — Werkzeugbeschreibung und Grenzen.
+ *
+ * Der Tongenerator selbst (Web Audio, Slider, Sweep, Schwebung, binaural) ist
+ * eine Client-Insel des Bestands (`js/modules/frequenz-engine.js` +
+ * `frequenzlabor.js`). Diese Seite dokumentiert, was das Werkzeug tut, welche
+ * Presets es nutzt und welche Grenzen gelten — und macht die Bedienregeln ohne
+ * JavaScript lesbar. Die Insel selbst ist als offener Punkt dokumentiert.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { FREQUENZEN } from '../../data/legacy';
+
+const ROUTE = '/frequenzen/labor.html';
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: 'Frequenzen', href: '/frequenzen/' },
+  { label: 'Frequenzlabor' },
+];
+const NAV = [
+  { href: '/frequenzen/', label: 'Bibliothek' },
+  { href: '/frequenzen/labor.html', label: 'Frequenzlabor' },
+  { href: '/frequenzen/cymatics.html', label: 'Chladni-Muster' },
+  { href: '/frequenzen/meditation.html', label: 'Meditation' },
+  { href: '/frequenzen/quellen.html', label: 'Quellen & Methodik' },
+];
+
+const playback = FREQUENZEN.frequencies
+  .filter(
+    (entry): entry is typeof entry & { playback: NonNullable<typeof entry.playback> } =>
+      Boolean(entry.playback) && entry.playback!.mode !== 'none'
+  )
+  .map((entry) => ({ name: entry.name, playback: entry.playback }));
+---
+
+<BaseLayout
+  title="Frequenzlabor — Tongenerator, Grenzen und Bedienung"
+  description="Wie das Frequenzlabor arbeitet: Presets mit Evidenzstatus, Bedienregeln für Lautstärke und Pausen, technische Grenzen und was es nicht behauptet."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">Werkzeug · Tongenerator</p>
+    <h1>Frequenzlabor</h1>
+    <p class="lede">
+      Das Labor gibt Sinustöne und Differenzfrequenzen aus der Bibliothek wieder. Es ist ein Bildungs- und
+      Experimentierangebot — kein Medizinprodukt.
+    </p>
+    <p class="client-note">{FREQUENZEN.disclaimer.lang}</p>
+    <AreaNav items={NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="bedienung-title">
+      <h2 id="bedienung-title">Bedienung und Sicherheit</h2>
+      <ul class="block-list">
+        <li>Ton startet ausschließlich nach einer Nutzerhandlung (kein Autoplay, keine Hintergrundwiedergabe).</li>
+        <li>{FREQUENZEN.disclaimer.lautstaerke}</li>
+        <li>Pausen einplanen; bei Unwohlsein oder Ohrgeräuschen sofort beenden.</li>
+        <li>Binaurale Einträge sind Differenzfrequenzen für die Demonstration und benötigen Kopfhörer.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="presets-title">
+      <h2 id="presets-title">Wiedergabezuordnung der Bibliothek</h2>
+      <p class="entry-note">
+        Nur Einträge mit einer Wiedergabezuordnung sind im Labor hörbar; alle übrigen bleiben reine Leseeinträge.
+      </p>
+      <table class="facts">
+        <caption class="sr-only">Einträge mit Wiedergabezuordnung</caption>
+        <tbody>
+          {playback.map((entry) => (
+            <tr>
+              <th scope="row">{entry.name}</th>
+              <td>
+                {entry.playback.mode}
+                {entry.playback.hz ? ` · ${entry.playback.hz} Hz` : ''}
+                {entry.playback.carrier_hz ? ` · Träger ${entry.playback.carrier_hz} Hz` : ''}
+                {entry.playback.partner_hz ? ` · Partner ${entry.playback.partner_hz} Hz` : ''}
+                {entry.playback.delta_hz ? ` · Differenz ${entry.playback.delta_hz} Hz` : ''}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="grenzen-title">
+      <h2 id="grenzen-title">Technische Grenzen</h2>
+      <ul class="block-list">
+        <li>Die Wiedergabe hängt an der Audioausgabe des Geräts; Pegel und Frequenzgang sind nicht kalibriert.</li>
+        <li>Der Browser blockiert Audio ohne Nutzerinteraktion — das ist beabsichtigt und wird nicht umgangen.</li>
+        <li>Es werden keine Nutzungsdaten übertragen; Einstellungen liegen ausschließlich im lokalen Speicher.</li>
+      </ul>
+      <p class="entry-note">
+        Vollständige Herleitung, Quellen und Claim-Matrix: <a href="/frequenzen/quellen.html">Quellen &amp; Methodik</a>
+        .
+      </p>
+    </section>
+  </div>
+</BaseLayout>

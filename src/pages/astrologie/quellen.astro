@@ -1,0 +1,77 @@
+---
+/**
+ * Quellen (25) und belegte Aussagen (28).
+ *
+ * Die Kennungen `S01`…`S25` sind Anker — die Detailseiten verweisen mit genau
+ * diesen Kürzeln. Jede Aussage nennt ihren Evidenztyp (astronomischer Fakt,
+ * Konvention, Deutungstradition, historisch, empirischer Befund) und die
+ * Quellen, auf denen sie steht.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { ASTROLOGIE_CLAIMS as CLAIMS, ASTROLOGIE_META as META, ASTROLOGIE_QUELLEN as QUELLEN } from '../../data/legacy';
+import { ASTROLOGIE_NAV } from '../../lib/astrologie';
+
+const ROUTE = '/astrologie/quellen.html';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Astrologie', href: '/astrologie/' }, { label: 'Quellen' }];
+---
+
+<BaseLayout
+  title="Quellen und belegte Aussagen der Astrologie"
+  description="25 tatsächlich abgerufene Quellen und 28 belegte Aussagen — mit Evidenztyp, Abrufstatus und den Grenzen jeder Quelle."
+  trail={trail}
+  jsonLd={{ '@type': 'CollectionPage', name: 'Quellen und belegte Aussagen', numberOfItems: QUELLEN.length }}
+>
+  <div class="page-head">
+    <p class="label">
+      {QUELLEN.length} Quellen · {CLAIMS.length} Aussagen
+    </p>
+    <h1>Quellen und Belege</h1>
+    <p class="lede">{META.arbeitsannahme.quellen}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="claims-title">
+      <h2 id="claims-title">Belegte Aussagen</h2>
+      <ol class="block-sources">
+        {CLAIMS.map((claim) => (
+          <li id={claim.id}>
+            <span class="source-id">[{claim.id}]</span> {claim.aussage}
+            <span class="entry-note">
+              {' '}
+              · Evidenztyp: {claim.evidenztyp} · Sicherheit: {claim.sicherheit} · Quellen:{' '}
+              {claim.quellen.map((sourceId: string, index: number) => (
+                <>
+                  {index > 0 ? ', ' : ''}
+                  <a href={`#${sourceId}`}>{sourceId}</a>
+                </>
+              ))}
+            </span>
+            {claim.hinweis ? <span class="entry-note"> · {claim.hinweis}</span> : null}
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="quellen-title">
+      <h2 id="quellen-title">Quellenverzeichnis</h2>
+      <ol class="block-sources">
+        {QUELLEN.map((source) => (
+          <li id={source.id}>
+            <span class="source-id">[{source.id}]</span> {source.herausgeber}:{' '}
+            <a href={source.url} rel="noopener">
+              {source.titel}
+            </a>
+            <span class="entry-note">
+              {' '}
+              · {source.typ}, abgerufen {source.abgerufen_am} ({source.sprache}) · Abrufstatus: {source.abrufstatus}
+            </span>
+            {source.kurzzitat ? <span class="entry-note"> · Zitat: „{source.kurzzitat}“</span> : null}
+            {source.grenzen ? <span class="entry-note"> · Grenzen: {source.grenzen}</span> : null}
+          </li>
+        ))}
+      </ol>
+    </section>
+  </div>
+</BaseLayout>

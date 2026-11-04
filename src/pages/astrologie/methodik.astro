@@ -1,0 +1,102 @@
+---
+/**
+ * Methodik — Arbeitsannahmen, Kennzeichnungstypen und Grenzen.
+ *
+ * Die Kennzeichnungstypen werden aus den Datensätzen abgeleitet (jeder Eintrag
+ * trägt `kennzeichnung.typ`); so steht hier keine gepflegte Zweitliste, die
+ * auseinanderlaufen könnte.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import {
+  ASPEKTE,
+  ASTROLOGIE_FAQ as FAQ,
+  ASTROLOGIE_GLOSSAR as GLOSSAR,
+  ASTROLOGIE_META as META,
+  BEISPIELE,
+  FAKTOREN,
+  GRUNDLAGEN,
+  HAEUSER,
+  ZEICHEN,
+} from '../../data/legacy';
+import { ASTROLOGIE_NAV } from '../../lib/astrologie';
+
+const ROUTE = '/astrologie/methodik.html';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Astrologie', href: '/astrologie/' }, { label: 'Methodik' }];
+
+const entries = [...ZEICHEN, ...FAKTOREN, ...HAEUSER, ...ASPEKTE, ...GRUNDLAGEN, ...BEISPIELE, ...FAQ, ...GLOSSAR];
+const types = new Map<string, { typ: string; hinweis: string; count: number }>();
+for (const entry of entries) {
+  const kennzeichnung = (entry as { kennzeichnung?: { typ: string; hinweis: string } }).kennzeichnung;
+  if (!kennzeichnung) continue;
+  const existing = types.get(kennzeichnung.typ);
+  if (existing) existing.count += 1;
+  else types.set(kennzeichnung.typ, { ...kennzeichnung, count: 1 });
+}
+const kennzeichnungTypen = [...types.values()].sort((a, b) => b.count - a.count);
+---
+
+<BaseLayout
+  title="Methodik der Astrologie — Kennzeichnung und Grenzen"
+  description="Wie dieser Bereich arbeitet: Arbeitsannahmen je Teilbereich, Kennzeichnung von Tradition, Astronomie, Konvention und Evidenz, ausdrückliche Grenzen."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">Methodik</p>
+    <h1>Methodik und Grenzen</h1>
+    <p class="lede">
+      Astrologie wird hier als Deutungstradition beschrieben, nicht als Messverfahren. Was das heißt, steht in den
+      Arbeitsannahmen und in der Kennzeichnung jeder Aussage.
+    </p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="annahmen-title">
+      <h2 id="annahmen-title">Arbeitsannahmen</h2>
+      <dl class="definition-list">
+        {Object.entries(META.arbeitsannahme).map(([key, text]) => (
+          <div>
+            <dt>{key}</dt>
+            <dd>{text}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="entry-note">
+        Stand {META.stand} · Version {META.version}
+      </p>
+    </section>
+
+    <section aria-labelledby="kennzeichnung-title">
+      <h2 id="kennzeichnung-title">Kennzeichnungstypen</h2>
+      <p class="entry-note">
+        Gezählt über alle {entries.length} Einträge des Bereichs; die Typen stammen aus den Datensätzen, nicht aus einer
+        zweiten Liste.
+      </p>
+      <table class="facts">
+        <caption class="sr-only">Kennzeichnungstypen mit Anzahl und Hinweis</caption>
+        <tbody>
+          {kennzeichnungTypen.map((item) => (
+            <tr>
+              <th scope="row">
+                {item.typ} ({item.count})
+              </th>
+              <td>{item.hinweis}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="grenzen-title">
+      <h2 id="grenzen-title">Grenzen dieses Bereichs</h2>
+      <ul class="block-list">
+        <li>Es werden keine Horoskope berechnet: keine Geburtsdaten, keine Ephemeriden, keine Häuserberechnung.</li>
+        <li>Zeichen- und Faktorendeutungen sind Traditionsmaterial, keine Persönlichkeitsdiagnostik.</li>
+        <li>Astronomische Angaben sind von der Deutung getrennt belegt; Datumsgrenzen sind Näherungen.</li>
+        <li>Die Einordnung astrologischer Wirkbehauptungen als Pseudowissenschaft wird zitiert, nicht bewertet.</li>
+        <li>Keine Beratung: Die Texte sind Bildungs- und Reflexionsmaterial.</li>
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

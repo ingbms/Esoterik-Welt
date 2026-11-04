@@ -1,0 +1,101 @@
+---
+/**
+ * Glossar A–Z (17 Begriffe, 9 Buchstabengruppen).
+ *
+ * Der Bestand filterte clientseitig (`?b=R`, `?q=`). Hier stehen alle Begriffe
+ * mit Sprungmarken je Buchstabe — ohne JavaScript lesbar; die Query-Filterung
+ * bleibt als offener Punkt dokumentiert (docs/migration-offene-punkte.md).
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AreaNav from '../../components/AreaNav.astro';
+import { RADIASTHESIE as R } from '../../data/legacy';
+import { definedTermSet } from '../../lib/jsonld';
+
+const ROUTE = '/radiasthesie/glossar.html';
+const AREA_NAV = [
+  { href: '/radiasthesie/', label: 'Übersicht' },
+  { href: '/radiasthesie/radiasthesie.html', label: 'Radiästhesie' },
+  { href: '/radiasthesie/pendeln.html', label: 'Pendeln' },
+  { href: '/radiasthesie/orakel.html', label: 'Orakel' },
+  { href: '/radiasthesie/glossar.html', label: 'Glossar' },
+  { href: '/radiasthesie/quellen.html', label: 'Quellen' },
+  { href: '/radiasthesie/methodik.html', label: 'Methodik' },
+];
+const trail = [
+  { label: 'Start', href: '/' },
+  { label: R.module.title, href: '/radiasthesie/' },
+  { label: 'Glossar' },
+];
+
+const titles = {
+  title: 'Glossar — Radiästhesie, Pendeln und Orakel von A bis Z',
+  // Description wörtlich aus der SEO-Baseline (§6.1) — Paritätsprüfung vergleicht Zeichen für Zeichen.
+  description:
+    'Begriffe aus Radiästhesie, Pendeln und Orakel kurz erklärt — mit Evidenzstufe A–E und Quellenverweis, ohne Wirkungsversprechen.',
+};
+
+const termList = R.glossary.flatMap((group) => group.terms);
+const canonical = new URL(ROUTE, Astro.site ?? Astro.url.origin).href;
+---
+
+<BaseLayout
+  title={titles.title}
+  exactTitle
+  description={titles.description}
+  trail={trail}
+  jsonLd={definedTermSet({
+    url: canonical,
+    name: 'Glossar Radiästhesie, Pendeln und Orakel',
+    terms: termList.map((term) => ({ term: term.term, definition: term.definition })),
+  })}
+>
+  <div class="page-head">
+    <p class="label">Glossar</p>
+    <h1>Glossar A–Z</h1>
+    <p class="lede">
+      {termList.length} Begriffe aus Radiästhesie, Pendeln und Orakel — jeweils mit Evidenzstufe und Quellenverweis.
+    </p>
+    <AreaNav items={AREA_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <nav class="area-nav" aria-label="Buchstabengruppen">
+      <ul>
+        {R.glossary.map((group) => <li><a href={`#buchstabe-${group.letter}`}>{group.letter}</a></li>)}
+      </ul>
+    </nav>
+
+    {
+      R.glossary.map((group) => (
+        <section id={`buchstabe-${group.letter}`} aria-labelledby={`buchstabe-${group.letter}-title`}>
+          <h2 id={`buchstabe-${group.letter}-title`}>{group.letter}</h2>
+          <dl class="definition-list">
+            {group.terms.map((term) => (
+              <div id={`begriff-${term.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
+                <dt>
+                  {term.term}
+                  {term.levels?.length ? <span class="entry-note"> · Evidenz {term.levels.join(', ')}</span> : null}
+                </dt>
+                <dd>
+                  {term.definition}
+                  {term.sources?.length ? (
+                    <span class="entry-note">
+                      {' '}
+                      · Quellen:{' '}
+                      {term.sources.map((sourceId: string, index: number) => (
+                        <>
+                          {index > 0 ? ', ' : ''}
+                          <a href={`/radiasthesie/quellen.html#${sourceId}`}>{sourceId}</a>
+                        </>
+                      ))}
+                    </span>
+                  ) : null}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>

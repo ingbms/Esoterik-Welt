@@ -1,0 +1,60 @@
+---
+/** Grundlagen-Detailseite: Langtext, Kernpunkte, Querverweise. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import Prose from '../../../components/Prose.astro';
+import { GRUNDLAGEN } from '../../../data/legacy';
+import { ASTROLOGIE_NAV, astrologieTrail, metaDescription } from '../../../lib/astrologie';
+import { crossRefTarget } from '../../../lib/astrologie-links';
+
+export function getStaticPaths() {
+  return GRUNDLAGEN.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const ROUTE = `/astrologie/grundlagen/${entry.slug}.html`;
+const trail = astrologieTrail('Grundlagen', '/astrologie/grundlagen/', entry.title);
+---
+
+<BaseLayout title={entry.title} description={metaDescription(entry.short)} trail={trail}>
+  <div class="page-head">
+    <p class="label">Grundlagen · {entry.level}</p>
+    <h1>{entry.title}</h1>
+    <p class="lede">{entry.short}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+
+  <div class="page-body">
+    <Prose text={entry.long} />
+
+    <section aria-labelledby="kernpunkte-title">
+      <h2 id="kernpunkte-title">Kernpunkte</h2>
+      <ul class="block-list">
+        {entry.key_points.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="verweise-title">
+      <h2 id="verweise-title">Querverweise</h2>
+      <ul class="chip-row">
+        {entry.cross_refs.map((ref) => {
+          const target = crossRefTarget(ref);
+          return target ? (
+            <li class="chip">
+              <a href={target.href}>{target.label}</a>
+            </li>
+          ) : (
+            <li class="chip">{ref}</li>
+          );
+        })}
+      </ul>
+      <p class="entry-note">{entry.kennzeichnung.hinweis}</p>
+      <p class="entry-note">
+        Quellen: {entry.sources.join(', ')} · belegte Aussagen: {entry.claims.join(', ')} · Schlagwörter:{' '}
+        {entry.keywords.join(', ')}
+      </p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,88 @@
+---
+/**
+ * Tarot — Katalog der 78 Karten.
+ *
+ * Der Bestand zeigte die Karten in `#tarot` als Ziehungs-Werkzeug mit
+ * Detaildialog. Hier stehen alle 78 Karten mit Stichwörtern, Bildsprache und
+ * beiden Deutungen als Text — vollständig lesbar und crawlbar. Die interaktive
+ * Ziehung bleibt als Insel offen (dokumentiert in
+ * `docs/migration-offene-punkte.md`); der Katalog ist ihre Datengrundlage.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SUIT_LABELS, TAROT_CARD_COUNT, TAROT_DISCLAIMER, tarotCards, SUPPORTED_DECK_IDS } from '../data/legacy';
+import { formatInline } from '../lib/inline';
+
+const trail = [{ label: 'Start', href: '/' }, { label: 'Tarot' }];
+
+const major = tarotCards.filter((card) => card.arcana === 'major');
+const minorBySuit = Object.entries(SUIT_LABELS).map(([suit, label]) => ({
+  suit,
+  label,
+  cards: tarotCards.filter((card) => card.suit === suit),
+}));
+---
+
+<BaseLayout
+  title="Tarot — 78 Karten, Tageskarte & Legungen | VELARKANA"
+  description="Tarot-Karten ziehen und deuten: 78 Karten der Major und Minor Arcana, Tageskarte und 3-Karten-Legung."
+  trail={trail}
+  jsonLd={{ '@type': 'CollectionPage', name: 'Tarot — 78 Karten', numberOfItems: TAROT_CARD_COUNT }}
+>
+  <div class="page-head">
+    <p class="label">
+      Tarot · {TAROT_CARD_COUNT} Karten · {SUPPORTED_DECK_IDS.length} Decks
+    </p>
+    <h1>Tarot — Der Spiegel der Seele</h1>
+    <p class="lede">
+      78 Karten: 22 Große Arkana und vier Farben mit je 14 Karten. Jede Karte hat Stichwörter, eine Beschreibung ihrer
+      Bildsprache und je eine Deutung für aufrecht und umgekehrt.
+    </p>
+    <p class="client-note">{TAROT_DISCLAIMER}</p>
+  </div>
+
+  <div class="page-body">
+    <section aria-labelledby="major-title">
+      <h2 id="major-title">Große Arkana ({major.length})</h2>
+      <ul class="summary-list">
+        {major.map((card) => (
+          <li id={`karte-${card.id}`}>
+            <h3>
+              {card.numeral} · {card.name}
+            </h3>
+            <p class="entry-note">{card.keywords.join(' · ')}</p>
+            <p set:html={formatInline(card.symbolism)} />
+            <p>
+              <strong>Aufrecht:</strong> <span set:html={formatInline(card.meaning_up)} />
+            </p>
+            <p>
+              <strong>Umgekehrt:</strong> <span set:html={formatInline(card.meaning_rev)} />
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {minorBySuit.map((group) => (
+      <section aria-labelledby={`suit-${group.suit}`}>
+        <h2 id={`suit-${group.suit}`}>
+          {group.label} ({group.cards.length})
+        </h2>
+        <ul class="summary-list">
+          {group.cards.map((card) => (
+            <li id={`karte-${card.id}`}>
+              <h3>{card.name}</h3>
+              <p class="entry-note">{card.keywords.join(' · ')}</p>
+              <p set:html={formatInline(card.symbolism)} />
+              <p>
+                <strong>Aufrecht:</strong> <span set:html={formatInline(card.meaning_up)} />
+              </p>
+              <p>
+                <strong>Umgekehrt:</strong> <span set:html={formatInline(card.meaning_rev)} />
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

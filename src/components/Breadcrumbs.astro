@@ -1,0 +1,29 @@
+---
+/** Brotkrumen-Navigation (sichtbar) — dieselbe Liste erzeugt das JSON-LD. */
+export interface TrailEntry {
+  label: string;
+  href?: string;
+}
+
+export interface Props {
+  trail: TrailEntry[];
+}
+
+const { trail } = Astro.props;
+---
+
+{trail.length > 1 && (
+  <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+    <ol>
+      {trail.map((entry, index) => (
+        <li>
+          {entry.href && index < trail.length - 1 ? (
+            <a href={entry.href}>{entry.label}</a>
+          ) : (
+            <span aria-current="page">{entry.label}</span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}

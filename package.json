@@ -6,7 +6,12 @@
   "scripts": {
     "prestart": "npm run build:legacy",
     "start": "node index.js",
+    "predev": "node scripts/sync-public-assets.cjs --quiet",
     "dev": "astro dev",
+    "prebuild": "node scripts/sync-public-assets.cjs --quiet",
+    "content:migrate": "node scripts/migrate-content.cjs",
+    "routes:generate": "node scripts/generate-legacy-map.cjs",
+    "verify:migration": "node scripts/verify-migration.cjs",
     "test": "jest",
     "test:unit": "jest",
     "lint": "eslint . --max-warnings 0",

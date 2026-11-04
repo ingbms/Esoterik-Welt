@@ -1,0 +1,34 @@
+---
+/** Fünf Hauptaspekte — Index. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AreaNav from '../../../components/AreaNav.astro';
+import EntryIndex from '../../../components/EntryIndex.astro';
+import { ASTROLOGIE_META as META, ASPEKTE } from '../../../data/legacy';
+import { ASTROLOGIE_NAV } from '../../../lib/astrologie';
+
+const ROUTE = '/astrologie/aspekte/';
+const trail = [{ label: 'Start', href: '/' }, { label: 'Astrologie', href: '/astrologie/' }, { label: 'Aspekte' }];
+---
+
+<BaseLayout
+  title="Die fünf Hauptaspekte — Winkel, Orben und Deutung"
+  description="Konjunktion, Sextil, Quadrat, Trigon und Opposition: Winkeldefinitionen, typische Orben und der Unterschied zwischen Definition und Deutungstradition."
+  trail={trail}
+>
+  <div class="page-head">
+    <p class="label">{ASPEKTE.length} Hauptaspekte</p>
+    <h1>Die fünf Hauptaspekte</h1>
+    <p class="lede">{META.arbeitsannahme.aspekte}</p>
+    <AreaNav items={ASTROLOGIE_NAV} current={ROUTE} />
+  </div>
+  <div class="page-body">
+    <EntryIndex
+      entries={ASPEKTE.map((entry) => ({
+        href: `/astrologie/aspekte/${entry.slug}.html`,
+        label: `${entry.glyph} ${entry.name}`,
+        note: entry.short,
+        meta: `${entry.angle_deg}°`,
+      }))}
+    />
+  </div>
+</BaseLayout>
