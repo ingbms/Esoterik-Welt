@@ -115,7 +115,7 @@ node scripts/deploy-pages.cjs --push        # Artefakt bauen und veröffentliche
 
 | Punkt | Wert |
 |---|---|
-| Privates Entwicklungs-Repository | `ingbms/velarkana-dev`, Branch `astro-migration`, Commit `ef2f6b5` (Remote geprüft) |
+| Privates Entwicklungs-Repository | `ingbms/velarkana-dev`, Branch `astro-migration`; Integrationscommit `ef2f6b5` (danach nur Dokumentationscommits) |
 | Öffentliches Website-Repository | `ingbms/velarkana` (public, neu angelegt) |
 | Veröffentlichungsbranch | `main`, Repository-Wurzel, GitHub Pages `build_type=legacy` |
 | Website | https://ingbms.github.io/velarkana/ |
