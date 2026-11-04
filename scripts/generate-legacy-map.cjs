@@ -138,12 +138,16 @@ function astrologieFamily(entries) {
 
   // --- Ausgabe -------------------------------------------------------------
   const entries = [...map.entries()].sort((a, b) => a[0].localeCompare(b[0], 'de'));
+  // Ausgabe in der Form, die Prettier (singleQuote, quoteProps: as-needed) stehen
+  // lässt — sonst würde `npm run format:check` nach jeder Neuerzeugung fehlschlagen.
+  const key = (value) => (/^[A-Za-z_$][\w$]*$/.test(value) ? value : `'${value.replace(/'/g, "\\'")}'`);
+  const value = (text) => `'${text.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
   const ts = [
     '// GENERIERT von scripts/generate-legacy-map.cjs — nicht von Hand bearbeiten.',
     '// Quelle: js/data/{astrologie,farbwelten,radiasthesie}.js und src/content/articles.',
     '',
     'export const LEGACY_ROUTE_MAP: Readonly<Record<string, string>> = {',
-    ...entries.map(([hash, target]) => `  ${JSON.stringify(hash)}: ${JSON.stringify(target)},`),
+    ...entries.map(([hash, target]) => `  ${key(hash)}: ${value(target)},`),
     '};',
     '',
     `export const LEGACY_ROUTE_COUNT = ${entries.length};`,

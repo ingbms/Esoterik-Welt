@@ -11,9 +11,15 @@ Nicht von Hand bearbeiten — Skript erneut ausführen.
 
 | Gegenstand | Erwartet | Gebaut | Status |
 |---|---|---|---|
-| Altadressen gesamt | 0 | alle auflösbar |
-| Kapitelanker geprüft | 0 | alle vorhanden |
-| HTML-Dateien im Build | 145 |  |
+| Altadressen gesamt | 274 | — | alle auflösbar |
+| #(Bereiche) | 13 | — |  |
+| #astrologie | 85 | — |  |
+| #blog | 10 | — |  |
+| #farbwelten | 119 | — |  |
+| #frequenzen | 4 | — |  |
+| #pendeln | 43 | — |  |
+| Kapitelanker geprüft | 32 | — | alle vorhanden |
+| HTML-Dateien im Build | — | 145 |  |
 
 ## 2. Mengenparität (Datenmodule → Build)
 
@@ -27,7 +33,7 @@ Nicht von Hand bearbeiten — Skript erneut ausführen.
 | Lehrbeispiele (4 + Index) | 5 | 5 | ok |
 | Lernpfad (6 + Index) | 7 | 7 | ok |
 | Farbwelten (18 Collection + 3 Werkzeuge) | 21 | 21 | ok |
-| Artikel | 11 | 11 | ok |
+| Artikel (10 + Index) | 11 | 11 | ok |
 | Radiästhesie-Dokumente | 7 | 7 | ok |
 | Frequenzen (5) | 5 | 5 | ok |
 | Pendeln-Werkzeuge (5) | 5 | 5 | ok |
@@ -79,17 +85,17 @@ Nicht von Hand bearbeiten — Skript erneut ausführen.
 
 | Gegenstand | Erwartet | Gebaut | Status |
 |---|---|---|---|
-| geprüfte interne Verweise | 6688 |  |
-| externe Verweise (nicht geprüft) | 431 |  |
-| Fragment-/mailto-/data-Verweise | 238 |  |
-| tote interne Ziele | 0 | keine |
+| geprüfte interne Verweise | 6688 | — |  |
+| externe Verweise (nicht geprüft) | 431 | — |  |
+| Fragment-/mailto-/data-Verweise | 238 | — |  |
+| tote interne Ziele | 0 | 0 | keine |
 
 ## 5. Sitemap und robots
 
 | Gegenstand | Erwartet | Gebaut | Status |
 |---|---|---|---|
-| `<loc>`-Einträge | 143 | alle auflösbar |
-| Sitemap-Datei | dist/sitemap-0.xml | index vorhanden |
+| `<loc>`-Einträge | 143 | — | alle auflösbar |
+| Sitemap-Datei | dist/sitemap-0.xml | — | index vorhanden |
 
 ## 5b. Kopfprüfung aller Seiten
 
@@ -101,7 +107,7 @@ Nicht von Hand bearbeiten — Skript erneut ausführen.
 
 ## Hinweise
 
-- Altlink-Map: 0 Adressen, 0 davon mit Anker.
+- Altlink-Map: 274 Adressen, 32 davon mit Anker.
 - Vergleich normalisiert Marke (Esoterik-Welt → VELARKANA) und Origin (https://ingbms.github.io/Esoterik-Welt/ → https://velarkana.de/): der Domainwechsel ist Entscheidung E5/F1, keine Textänderung.
 
 ## Befunde

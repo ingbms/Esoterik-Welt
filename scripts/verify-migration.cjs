@@ -112,10 +112,15 @@ function decodeEntities(text) {
 // ---------------------------------------------------------------------------
 function checkLegacyRoutes(htmlFiles) {
   const mapSource = read(path.join(root, 'src/lib/legacy-routes.generated.ts'));
-  const entries = [...mapSource.matchAll(/^\s*"([^"]+)": "([^"]+)",$/gm)].map((match) => ({
-    hash: match[1],
-    target: match[2],
+  // Toleriert beide Schreibweisen (JSON-Schlüssel wie Prettier-Ausgabe mit
+  // einfachen Anführungszeichen) — sonst läuft die Prüfung leer durch.
+  const entries = [...mapSource.matchAll(/^\s*(?:'([^']+)'|"([^"]+)"|([\w/-]+)):\s*'([^']+)',?$/gm)].map((match) => ({
+    hash: match[1] ?? match[2] ?? match[3],
+    target: match[4],
   }));
+  if (entries.length === 0) {
+    fail('Routen', 'Altlink-Map konnte nicht gelesen werden — Prüfung wäre leer.');
+  }
   const rows = [];
   let missingTargets = 0;
   let missingAnchors = 0;
@@ -145,20 +150,22 @@ function checkLegacyRoutes(htmlFiles) {
     families.set(key, (families.get(key) ?? 0) + 1);
   }
   for (const [key, count] of [...families.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
-    rows.push([`#${key}`, String(count), '']);
+    rows.push([`#${key}`, String(count), '—', '']);
   }
 
   rows.unshift([
     'Altadressen gesamt',
     String(entries.length),
+    '—',
     missingTargets === 0 ? 'alle auflösbar' : `${missingTargets} fehlen`,
   ]);
   rows.push([
     'Kapitelanker geprüft',
     String(checkedAnchors),
+    '—',
     missingAnchors === 0 ? 'alle vorhanden' : `${missingAnchors} fehlen`,
   ]);
-  rows.push(['HTML-Dateien im Build', String(htmlFiles.length), '']);
+  rows.push(['HTML-Dateien im Build', '—', String(htmlFiles.length), '']);
   section('1. Routenabdeckung (Altlink-Map → Build)', rows);
   notes.push(`Altlink-Map: ${entries.length} Adressen, ${checkedAnchors} davon mit Anker.`);
 }
@@ -188,7 +195,7 @@ async function checkCounts() {
     ['Lehrbeispiele (4 + Index)', 'astrologie/beispiele', astro.BEISPIELE.length + 1],
     ['Lernpfad (6 + Index)', 'astrologie/lernpfad', astro.LERNPFAD.length + 1],
     ['Farbwelten (18 Collection + 3 Werkzeuge)', 'farbwelten', 18 + 3],
-    ['Artikel', 'wissen', readDirCount(path.join(root, 'src/content/articles')) + 1],
+    ['Artikel (10 + Index)', 'wissen', readDirCount(path.join(root, 'src/content/articles')) + 1],
     ['Radiästhesie-Dokumente', 'radiasthesie', Object.keys(rad.RADIASTHESIE.topics).length + 4],
     ['Frequenzen (5)', 'frequenzen', 5],
     ['Pendeln-Werkzeuge (5)', 'pendeln', 5],
@@ -342,10 +349,10 @@ function checkLinks(htmlFiles) {
   }
 
   section('4. Link-Check', [
-    ['geprüfte interne Verweise', String(checked), ''],
-    ['externe Verweise (nicht geprüft)', String(ignored.external), ''],
-    ['Fragment-/mailto-/data-Verweise', String(ignored.fragment + ignored.mailto + ignored.data), ''],
-    ['tote interne Ziele', String(broken.size), broken.size === 0 ? 'keine' : 'siehe Befunde'],
+    ['geprüfte interne Verweise', String(checked), '—', ''],
+    ['externe Verweise (nicht geprüft)', String(ignored.external), '—', ''],
+    ['Fragment-/mailto-/data-Verweise', String(ignored.fragment + ignored.mailto + ignored.data), '—', ''],
+    ['tote interne Ziele', '0', String(broken.size), broken.size === 0 ? 'keine' : 'siehe Befunde'],
   ]);
 }
 
@@ -373,10 +380,11 @@ function checkSitemapAndHeads(htmlFiles) {
       }
     }
     section('5. Sitemap und robots', [
-      ['`<loc>`-Einträge', String(locs.length), unresolved === 0 ? 'alle auflösbar' : `${unresolved} offen`],
+      ['`<loc>`-Einträge', String(locs.length), '—', unresolved === 0 ? 'alle auflösbar' : `${unresolved} offen`],
       [
         'Sitemap-Datei',
         'dist/sitemap-0.xml',
+        '—',
         fs.existsSync(path.join(dist, 'sitemap-index.xml')) ? 'index vorhanden' : 'index fehlt',
       ],
     ]);
