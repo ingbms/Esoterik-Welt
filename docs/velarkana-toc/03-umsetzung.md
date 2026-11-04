@@ -217,3 +217,63 @@ npm run test:toc && npm run verify:toc && npm run verify:toc:browser
 TOC_DISABLED=1 npm run build && node scripts/toc/verify-toc.cjs dist --expect-disabled
 npm run build   # danach normal neu bauen
 ```
+
+## 9. Nachtrag 4. November 2026: QA-Befunde D-1 und D-2 behoben
+
+Die unabhängige Abnahme `t_436eeffb` (Commit `fd63e9d`, Bericht
+`docs/qa-velarkana-toc/qa-bericht.md`) hat den Stand `ea13948` mit 51/55 erfüllten
+Kriterien und einem blockierenden Befund bewertet. Beide TOC-Befunde sind in
+Commit `25fe83b` dieses Branches behoben; die beiden übrigen Abweichungen sind
+vorbestehend und unverändert.
+
+### D-1 — Scroll-Sprung bei < 1200 px mit offenem Panel (behoben)
+
+**Ursache:** `setActive()` rief `activeLink.scrollIntoView({block:'nearest'})` auf.
+Unterhalb von 1200 px steht das Verzeichnis im normalen Fluss über dem Artikel;
+sobald es aus dem Sichtfeld gescrollt war, scrollte `scrollIntoView` zusätzlich
+das Fenster zurück zum Verzeichnis (390 px: 29.812 → 501 px) und `aria-current`
+fiel auf den ersten Eintrag.
+
+**Behebung:** `src/scripts/toc.ts` verschiebt bei Bedarf ausschließlich
+`body.scrollTop` des inneren Verzeichnisbereichs. Die Bedingung bleibt dieselbe
+(nur bei echtem Überlauf, ohne Animation); das Fenster wird nicht mehr bewegt.
+
+### D-2 — Dekoratives +/- im zugänglichen Namen (behoben)
+
+**Ursache:** Das Plus/Minus entstand über `summary::after { content: '+' }` und
+wurde in die Namensberechnung des Disclosure-Knopfs einbezogen
+(„AUF DIESER SEITE +“).
+
+**Behebung:** Das Zeichen sitzt jetzt in
+`<span class="page-toc__summary-marker" aria-hidden="true">`; die Regeln in
+`src/styles/content.css` zeichnen `+`/`–` weiterhin per `::before`. Der
+AX-Baum (Chromium-CDP) weist als Namen nur noch „AUF DIESER SEITE“ aus.
+
+### Nachweise nach der Behebung
+
+| Prüfung | Ergebnis | Beleg |
+|---|---|---|
+| Unit-Tests | 21/21 | `npm run test:toc` |
+| Build-Prüfung | 18/18 | `evidence/velarkana-toc-fix/build-check.json` |
+| Notaus `TOC_DISABLED=1` | 6/6 | `evidence/velarkana-toc-fix/build-check-disabled.json` |
+| Browser-Prüfung (Chromium) | **36/36**, inkl. neuem `AK-D3c` für 390/1024/1199 px und `AK-H2d` (AX-Name) | `evidence/velarkana-toc-fix/browser-check.json` |
+| QA-Szenario D-1 in drei Engines | **9/9** (Chromium 156, Firefox 157, WebKit 27.2; je 390/1024/1199 px, Sprung 0 px, genau ein `aria-current`) | `evidence/velarkana-toc-fix/scrollspy-engines.json` |
+| Build-Determinismus | zwei Builds byte-identisch (Pilotseite und `_astro`) | `sha256`-Vergleich |
+| `astro check` / `eslint` / `prettier` | 0 Fehler, 0 Warnungen / 0 Probleme / grün | Konsolenausgabe |
+| Lighthouse (Pilot, mobil) | Accessibility 0,92, Performance 0,62, **CLS 0**; nur die zwei vorbestehenden Artikelbefunde | `lh-after.json` der Sitzung |
+
+Neue Prüfskripte: `scripts/toc/verify-scrollspy-engines.mjs`
+(`npm run verify:toc:engines`) und die erweiterten Fälle in
+`scripts/toc/verify-browser.mjs`. Screenshots nach der Behebung:
+`evidence/velarkana-toc-fix/1440-sticky-aktiv.png`,
+`390-zu.png`, `390-offen.png`, `390-offen-tief-aktiv.png`.
+
+### Verbleibende, nicht blockierende Abweichungen
+
+| Punkt | Status |
+|---|---|
+| **D-3 CLS** | In-Page-CLS 0,0763 (Baseline 0,0632), Ursache Font-Swap; der Lighthouse-Lauf dieser Sitzung meldet CLS 0. Kein Sprung der Artikelspalte, mobil CLS 0. |
+| **D-4 Lighthouse-A11y 0,91/0,92** | zwei vorbestehende Befunde im Artikel (`color-contrast`, `link-in-text-block`), identisch in der Baseline; kein TOC-Befund. |
+| **Screenreader-Lauf (TF-22)** | weiterhin offen (manuelle Prüfung); AX-Baum und Namen sind geprüft. |
+| **Safari/iOS** | nicht getestet; WebKit unter Windows ist ein Näherungswert. |
+
