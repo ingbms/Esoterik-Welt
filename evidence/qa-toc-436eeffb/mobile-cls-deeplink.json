@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-11-04T17:28:26.194Z",
+  "clsRuns": [
+    {
+      "cls": 0,
+      "entries": [],
+      "detailsOpen": false,
+      "proseTop": 625
+    },
+    {
+      "cls": 0,
+      "entries": [],
+      "detailsOpen": false,
+      "proseTop": 625
+    },
+    {
+      "cls": 0,
+      "entries": [],
+      "detailsOpen": false,
+      "proseTop": 625
+    }
+  ],
+  "deep": [
+    {
+      "hash": "#10-reproduktion-und-pr%C3%BCfung",
+      "id": "10-reproduktion-und-prüfung",
+      "top": 100,
+      "header": 84,
+      "inWindow": true,
+      "active": [
+        "#10-reproduktion-und-prüfung"
+      ],
+      "detailsOpen": false,
+      "scrollY": 39369
+    },
+    {
+      "hash": "#10-reproduktion-und-pr%C3%BCfung",
+      "id": "10-reproduktion-und-prüfung",
+      "top": 100,
+      "header": 84,
+      "inWindow": true,
+      "active": [
+        "#10-reproduktion-und-prüfung"
+      ],
+      "detailsOpen": false,
+      "scrollY": 39369
+    },
+    {
+      "hash": "#12-quellenverzeichnis",
+      "id": "12-quellenverzeichnis",
+      "top": 100,
+      "header": 84,
+      "inWindow": true,
+      "active": [
+        "#12-quellenverzeichnis"
+      ],
+      "detailsOpen": false,
+      "scrollY": 41933
+    }
+  ]
+}

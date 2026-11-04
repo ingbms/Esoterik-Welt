@@ -1,0 +1,452 @@
+{
+  "htmlFiles": 145,
+  "pagesWithToc": [],
+  "pilotEntries": 29,
+  "expectedEntries": 0,
+  "listDiffs": [
+    {
+      "index": 1,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "frequenzen-quellen-evidenzstatus-und-methodik",
+        "text": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+        "className": ""
+      }
+    },
+    {
+      "index": 2,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "1-zweck-und-geltungsbereich",
+        "text": "1. Zweck und Geltungsbereich",
+        "className": ""
+      }
+    },
+    {
+      "index": 3,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "2-suchstrategie-und-aufnahmekriterien",
+        "text": "2. Suchstrategie und Aufnahmekriterien",
+        "className": ""
+      }
+    },
+    {
+      "index": 4,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "3-evidenzstatus-im-einzelnen",
+        "text": "3. Evidenzstatus im Einzelnen",
+        "className": ""
+      }
+    },
+    {
+      "index": 5,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "4-datenschema",
+        "text": "4. Datenschema",
+        "className": ""
+      }
+    },
+    {
+      "index": 6,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "5-claim-quelle-matrix",
+        "text": "5. Claim-Quelle-Matrix",
+        "className": ""
+      }
+    },
+    {
+      "index": 7,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "51-physikalisch--physiologisch",
+        "text": "5.1 Physikalisch / physiologisch",
+        "className": ""
+      }
+    },
+    {
+      "index": 8,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "52-esoterisch--traditionell",
+        "text": "5.2 Esoterisch / traditionell",
+        "className": ""
+      }
+    },
+    {
+      "index": 9,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "6-einzelprüfungen",
+        "text": "6. Einzelprüfungen",
+        "className": ""
+      }
+    },
+    {
+      "index": 10,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "61-eeg-bänder-warum-bereiche-und-keine-punktwerte",
+        "text": "6.1 EEG-Bänder: Warum Bereiche und keine Punktwerte",
+        "className": ""
+      }
+    },
+    {
+      "index": 11,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "62-hörbereich-und-infraschall",
+        "text": "6.2 Hörbereich und Infraschall",
+        "className": ""
+      }
+    },
+    {
+      "index": 12,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "63-stimmton-historie",
+        "text": "6.3 Stimmton-Historie",
+        "className": ""
+      }
+    },
+    {
+      "index": 13,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "64-schwebung-binaurale-beats-und-die-entrainment-frage",
+        "text": "6.4 Schwebung, binaurale Beats und die Entrainment-Frage",
+        "className": ""
+      }
+    },
+    {
+      "index": 14,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "65-solfeggio-primärquelle-und-beweislage",
+        "text": "6.5 Solfeggio: Primärquelle und Beweislage",
+        "className": ""
+      }
+    },
+    {
+      "index": 15,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "66-planetenfrequenzen-rechnung-nachvollziehbar-deutung-nicht",
+        "text": "6.6 Planetenfrequenzen: Rechnung nachvollziehbar, Deutung nicht",
+        "className": ""
+      }
+    },
+    {
+      "index": 16,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+        "text": "6.7 432 Hz: kleiner Effekt, keine Gesundheitswirkung",
+        "className": ""
+      }
+    },
+    {
+      "index": 17,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "68-40-hz-mausmodell--therapie",
+        "text": "6.8 40 Hz: Mausmodell ≠ Therapie",
+        "className": ""
+      }
+    },
+    {
+      "index": 18,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "69-rife-und-bioresonanz-zahlen-ohne-wirknachweis",
+        "text": "6.9 Rife und Bioresonanz: Zahlen ohne Wirknachweis",
+        "className": ""
+      }
+    },
+    {
+      "index": 19,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "610-cymatics-und-chladni-figuren-figur-statt-frequenz",
+        "text": "6.10 Cymatics und Chladni-Figuren: Figur statt Frequenz",
+        "className": ""
+      }
+    },
+    {
+      "index": 20,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "611-klangschalen-mantras-chakren",
+        "text": "6.11 Klangschalen, Mantras, Chakren",
+        "className": ""
+      }
+    },
+    {
+      "index": 21,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "612-solfeggio-erweiterungen-174285963-hz",
+        "text": "6.12 Solfeggio-Erweiterungen 174/285/963 Hz",
+        "className": ""
+      }
+    },
+    {
+      "index": 22,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "7-bewusst-nicht-aufgenommene-einträge",
+        "text": "7. Bewusst nicht aufgenommene Einträge",
+        "className": ""
+      }
+    },
+    {
+      "index": 23,
+      "expected": null,
+      "actual": {
+        "tag": "h3",
+        "id": "71-bewusst-aufgenommene-grenzfälle-nachtrag-zu-befund-b2",
+        "text": "7.1 Bewusst aufgenommene Grenzfälle (Nachtrag zu Befund B2)",
+        "className": ""
+      }
+    },
+    {
+      "index": 24,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "8-widersprüche-grenzen-offene-punkte",
+        "text": "8. Widersprüche, Grenzen, offene Punkte",
+        "className": ""
+      }
+    },
+    {
+      "index": 25,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "9-disclaimer-verbindlicher-text",
+        "text": "9. Disclaimer (verbindlicher Text)",
+        "className": ""
+      }
+    },
+    {
+      "index": 26,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "10-reproduktion-und-prüfung",
+        "text": "10. Reproduktion und Prüfung",
+        "className": ""
+      }
+    },
+    {
+      "index": 27,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "11-hinweise-für-ui-und-audio-engine",
+        "text": "11. Hinweise für UI und Audio-Engine",
+        "className": ""
+      }
+    },
+    {
+      "index": 28,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "12-quellenverzeichnis",
+        "text": "12. Quellenverzeichnis",
+        "className": ""
+      }
+    },
+    {
+      "index": 29,
+      "expected": null,
+      "actual": {
+        "tag": "h2",
+        "id": "13-änderungslog",
+        "text": "13. Änderungslog",
+        "className": ""
+      }
+    }
+  ],
+  "headingsWithoutId": 0,
+  "pilotDupIds": [],
+  "emptyHeadingPages": [
+    "404.html",
+    "astrologie/aspekte/index.html",
+    "astrologie/aspekte/konjunktion.html",
+    "astrologie/aspekte/opposition.html",
+    "astrologie/aspekte/quadrat.html",
+    "astrologie/aspekte/sextil.html",
+    "astrologie/aspekte/trigon.html",
+    "astrologie/beispiele/beispiel-mira.html",
+    "astrologie/beispiele/beispiel-nora.html",
+    "astrologie/beispiele/beispiel-selin.html",
+    "astrologie/beispiele/beispiel-tobias.html",
+    "astrologie/beispiele/index.html",
+    "astrologie/faktoren/index.html",
+    "astrologie/faktoren/jupiter.html",
+    "astrologie/faktoren/mars.html",
+    "astrologie/faktoren/merkur.html",
+    "astrologie/faktoren/mond.html",
+    "astrologie/faktoren/neptun.html",
+    "astrologie/faktoren/pluto.html",
+    "astrologie/faktoren/saturn.html",
+    "astrologie/faktoren/sonne.html",
+    "astrologie/faktoren/uranus.html",
+    "astrologie/faktoren/venus.html",
+    "astrologie/faq.html",
+    "astrologie/glossar.html",
+    "astrologie/grundlagen/aspekte-und-orben.html",
+    "astrologie/grundlagen/aszendent-und-mc.html",
+    "astrologie/grundlagen/echte-berechnung.html",
+    "astrologie/grundlagen/ekliptik-und-himmelssphaere.html",
+    "astrologie/grundlagen/element-erde.html",
+    "astrologie/grundlagen/element-feuer.html",
+    "astrologie/grundlagen/element-luft.html",
+    "astrologie/grundlagen/element-wasser.html",
+    "astrologie/grundlagen/ethik-und-grenzen.html",
+    "astrologie/grundlagen/evidenz-und-grenzen.html",
+    "astrologie/grundlagen/geschichte.html",
+    "astrologie/grundlagen/grenzen-der-sonnenzeichen.html",
+    "astrologie/grundlagen/haeusersysteme.html",
+    "astrologie/grundlagen/herrschaft-und-wuerden.html",
+    "astrologie/grundlagen/index.html",
+    "astrologie/grundlagen/modalitaet-fix.html",
+    "astrologie/grundlagen/modalitaet-kardinal.html",
+    "astrologie/grundlagen/modalitaet-veraenderlich.html",
+    "astrologie/grundlagen/mond-verstehen.html",
+    "astrologie/grundlagen/radix-lesen.html",
+    "astrologie/grundlagen/ruecklaeufigkeit.html",
+    "astrologie/grundlagen/transite.html",
+    "astrologie/grundlagen/tropisch-und-siderisch.html",
+    "astrologie/grundlagen/was-astrologie-ist.html",
+    "astrologie/grundlagen/zeichen-und-sternbilder.html",
+    "astrologie/haeuser/achtes-haus.html",
+    "astrologie/haeuser/drittes-haus.html",
+    "astrologie/haeuser/elftes-haus.html",
+    "astrologie/haeuser/erstes-haus.html",
+    "astrologie/haeuser/fuenftes-haus.html",
+    "astrologie/haeuser/index.html",
+    "astrologie/haeuser/neuntes-haus.html",
+    "astrologie/haeuser/sechstes-haus.html",
+    "astrologie/haeuser/siebtes-haus.html",
+    "astrologie/haeuser/viertes-haus.html",
+    "astrologie/haeuser/zehntes-haus.html",
+    "astrologie/haeuser/zweites-haus.html",
+    "astrologie/haeuser/zwoelftes-haus.html",
+    "astrologie/index.html",
+    "astrologie/lernpfad/die-zwoelf-zeichen.html",
+    "astrologie/lernpfad/faktoren-und-aspekte.html",
+    "astrologie/lernpfad/haeuser-und-achsen.html",
+    "astrologie/lernpfad/index.html",
+    "astrologie/lernpfad/nachschlagen-und-vertiefen.html",
+    "astrologie/lernpfad/orientierung.html",
+    "astrologie/lernpfad/synthese-und-grenzen.html",
+    "astrologie/methodik.html",
+    "astrologie/quellen.html",
+    "astrologie/suche.html",
+    "astrologie/zeichen/fische.html",
+    "astrologie/zeichen/index.html",
+    "astrologie/zeichen/jungfrau.html",
+    "astrologie/zeichen/krebs.html",
+    "astrologie/zeichen/loewe.html",
+    "astrologie/zeichen/schuetze.html",
+    "astrologie/zeichen/skorpion.html",
+    "astrologie/zeichen/steinbock.html",
+    "astrologie/zeichen/stier.html",
+    "astrologie/zeichen/waage.html",
+    "astrologie/zeichen/wassermann.html",
+    "astrologie/zeichen/widder.html",
+    "astrologie/zeichen/zwillinge.html",
+    "farbwelten/farbmeditation.html",
+    "farbwelten/index.html",
+    "farbwelten/kompass.html",
+    "farbwelten/zeitleiste.html",
+    "frequenzen/cymatics.html",
+    "frequenzen/index.html",
+    "frequenzen/labor.html",
+    "frequenzen/meditation.html",
+    "index.html",
+    "kristalle.html",
+    "mondphasen.html",
+    "pendeln/experiment.html",
+    "pendeln/journal.html",
+    "pendeln/labor.html",
+    "pendeln/studio.html",
+    "pendeln/suche.html",
+    "radiasthesie/glossar.html",
+    "radiasthesie/methodik.html",
+    "radiasthesie/orakel.html",
+    "radiasthesie/pendeln.html",
+    "radiasthesie/radiasthesie.html",
+    "runen.html",
+    "tarot.html",
+    "wissen/02-kristalle-als-werkzeuge-wie-steine.html",
+    "wissen/03-runenwerfen-die-drei-positionen-der.html",
+    "wissen/04-die-mondphasen-von-neumond-bis.html",
+    "wissen/05-die-geschichte-des-tarot-von.html",
+    "wissen/06-einsteiger-guide-wie-du-mit.html",
+    "wissen/07-chakren-kristalle-welche-steine-fuer.html",
+    "wissen/08-die-bedeutung-des-futhark-von.html",
+    "wissen/09-rituale-fuer-jede-mondphase-ein.html",
+    "wissen/10-moldavit-der-meteorit-unter-den.html",
+    "wissen/index.html"
+  ],
+  "fewHeadingPages": 124,
+  "dupsBuild": [
+    {
+      "rel": "farbwelten/index.html",
+      "dupIds": [
+        {
+          "id": "entries-title",
+          "n": 3
+        }
+      ]
+    }
+  ],
+  "farbweltenIndex": {
+    "rel": "farbwelten/index.html",
+    "headings": 0,
+    "tocAside": 0,
+    "dupIds": [
+      {
+        "id": "entries-title",
+        "n": 3
+      }
+    ],
+    "firstHeading": null
+  },
+  "tocMarkupOnOtherPages": [
+    "radiasthesie/orakel.html",
+    "radiasthesie/pendeln.html",
+    "radiasthesie/radiasthesie.html",
+    "wissen/01-die-78-tarot-karten-eine.html"
+  ]
+}

@@ -1,0 +1,891 @@
+{
+  "generatedAt": "2026-11-04T17:35:00.600Z",
+  "viewport": "1440x900",
+  "results": [
+    {
+      "id": "AK-H3",
+      "name": "CLS 0 nach dem Laden",
+      "ok": false,
+      "detail": {
+        "total": 0.0763,
+        "entries": [
+          {
+            "value": 0.0763,
+            "hadRecentInput": false,
+            "startTime": 270,
+            "sources": [
+              "#text.",
+              "#text.",
+              "#text.",
+              "NAV.nav",
+              "#text."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "AK-A1",
+      "name": "genau ein aside.page-toc und ein nav[aria-label=\"Inhaltsverzeichnis\"]",
+      "ok": true,
+      "detail": {
+        "asideCount": 1,
+        "navCount": 1,
+        "allNavLabels": [
+          "Hauptnavigation",
+          "Brotkrümelnavigation",
+          "Bereichsnavigation",
+          "Inhaltsverzeichnis"
+        ]
+      }
+    },
+    {
+      "id": "AK-F1",
+      "name": "genau ein Navigations-Landmark „Inhaltsverzeichnis“ auf der Pilotseite",
+      "ok": true,
+      "detail": {
+        "navCount": 1,
+        "labels": [
+          "Hauptnavigation",
+          "Brotkrümelnavigation",
+          "Bereichsnavigation",
+          "Inhaltsverzeichnis"
+        ]
+      }
+    },
+    {
+      "id": "AK-B1",
+      "name": "exakt 29 Einträge",
+      "ok": true,
+      "detail": {
+        "linkCount": 29
+      }
+    },
+    {
+      "id": "AK-F2",
+      "name": "Listen-Semantik ol > li > a ohne Rollen-Ersatz",
+      "ok": true,
+      "detail": {
+        "lists": 4,
+        "lis": 29,
+        "anchors": 29,
+        "allInsideLi": true,
+        "roleOverrides": [],
+        "levels": [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "3",
+          "3",
+          "3",
+          "3",
+          "3",
+          "3",
+          "3",
+          "3",
+          "3",
+          "3",
+          "3",
+          "3",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ]
+      }
+    },
+    {
+      "id": "AK-B6",
+      "name": "h3 unter vorangehendem h2, kein Sprung über eine Einrückungsstufe",
+      "ok": true,
+      "detail": {
+        "jumps": 0,
+        "depths": "1,1,1,1,1,1,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,1,2,1,1,1,1,1,1"
+      }
+    },
+    {
+      "id": "AK-B5",
+      "name": "h1, Footer-Überschriften und sr-only nicht im Verzeichnis",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "h1": "Quellen und Methodik",
+        "footerHeads": [
+          "Tools",
+          "Wissen",
+          "Rechtliches"
+        ],
+        "srOnlyCount": 0
+      }
+    },
+    {
+      "id": "AK-B7",
+      "name": "kein Eintrag wird abgeschnitten (Volltext, kein ellipsis)",
+      "ok": true,
+      "detail": {
+        "clipped": [],
+        "sample": [
+          {
+            "text": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+            "scrollWidth": 229,
+            "clientWidth": 229,
+            "textOverflow": "clip"
+          },
+          {
+            "text": "1. Zweck und Geltungsbereich",
+            "scrollWidth": 229,
+            "clientWidth": 229,
+            "textOverflow": "clip"
+          },
+          {
+            "text": "2. Suchstrategie und Aufnahmekriterien",
+            "scrollWidth": 229,
+            "clientWidth": 229,
+            "textOverflow": "clip"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AK-C1",
+      "name": "29 Anker lösen zu genau einem Element auf",
+      "ok": true,
+      "detail": {
+        "dead": [],
+        "count": 29
+      }
+    },
+    {
+      "id": "AK-H6",
+      "name": "keine doppelte ID, kein doppeltes nav-Label",
+      "ok": true,
+      "detail": {
+        "dups": [],
+        "labels": [
+          "Hauptnavigation",
+          "Brotkrümelnavigation",
+          "Bereichsnavigation",
+          "Inhaltsverzeichnis"
+        ]
+      }
+    },
+    {
+      "id": "AK-E1",
+      "name": "Sidebar 240–280 px, Prose 718–722 px, Abstand ≥ 32 px",
+      "ok": true,
+      "detail": {
+        "asideWidth": 260,
+        "proseWidth": 720,
+        "gap": 252,
+        "asideLeft": 1076,
+        "proseRight": 824
+      }
+    },
+    {
+      "id": "AK-D2",
+      "name": "ohne Hash ist der erste Eintrag aktiv",
+      "ok": true,
+      "detail": {
+        "active": [
+          "#frequenzen-quellen-evidenzstatus-und-methodik"
+        ],
+        "first": "#frequenzen-quellen-evidenzstatus-und-methodik",
+        "activeCount": 1
+      }
+    },
+    {
+      "id": "AK-E2",
+      "name": "Sticky-Oberkante = headerHeight + 24 ± 2, nicht gestreckt",
+      "ok": true,
+      "detail": {
+        "headerHeight": 100,
+        "sticky": {
+          "top": 124,
+          "height": 703,
+          "position": "sticky",
+          "alignSelf": "start",
+          "stickyOffset": "124px",
+          "layoutHeight": 22219.703125,
+          "scrollY": 1500
+        }
+      }
+    },
+    {
+      "id": "AK-E3a",
+      "name": "TOC-Höhe ≤ viewportHeight − headerHeight − 96",
+      "ok": true,
+      "detail": {
+        "asideHeight": 703,
+        "bodyClient": 670,
+        "bodyScroll": 1322,
+        "overflowY": "auto",
+        "dataOverflow": "bottom",
+        "maxAllowed": 704
+      }
+    },
+    {
+      "id": "AK-E3b",
+      "name": "letzter Eintrag per Tastatur erreichbar und im Scrollbereich sichtbar",
+      "ok": true,
+      "detail": {
+        "before": 0,
+        "after": 652,
+        "inView": true,
+        "focusVisible": true
+      }
+    },
+    {
+      "id": "AK-E9",
+      "name": "TOC überdeckt den Header nicht",
+      "ok": true,
+      "detail": {
+        "headerBottom": 101,
+        "asideTop": 124,
+        "overlap": false,
+        "headerZ": "200",
+        "asideZ": "0"
+      }
+    },
+    {
+      "id": "AK-D1/D3/D4",
+      "name": "Scroll-Spy abwärts, aufwärts, zwischen Abschnitten, Dokumentende; genau ein aria-current",
+      "ok": true,
+      "detail": {
+        "samples": [
+          {
+            "index": 10,
+            "expected": "62-hörbereich-und-infraschall",
+            "count": 1,
+            "id": "62-hörbereich-und-infraschall"
+          },
+          {
+            "index": 3,
+            "expected": "3-evidenzstatus-im-einzelnen",
+            "count": 1,
+            "id": "3-evidenzstatus-im-einzelnen"
+          },
+          {
+            "index": 24,
+            "expected": "9-disclaimer-verbindlicher-text",
+            "count": 1,
+            "id": "9-disclaimer-verbindlicher-text"
+          }
+        ],
+        "end": {
+          "expected": "13-änderungslog",
+          "count": 1,
+          "id": "13-änderungslog"
+        },
+        "up": {
+          "index": 12,
+          "expected": "64-schwebung-binaurale-beats-und-die-entrainment-frage",
+          "count": 1,
+          "id": "64-schwebung-binaurale-beats-und-die-entrainment-frage"
+        },
+        "between": {
+          "expected": "5-claim-quelle-matrix",
+          "count": 1,
+          "id": "5-claim-quelle-matrix"
+        }
+      }
+    },
+    {
+      "id": "AK-D5",
+      "name": "Deep-Link: Ziel im Fenster [header+4, header+40], Eintrag sofort aktiv",
+      "ok": true,
+      "detail": {
+        "top": 115.58,
+        "header": 100,
+        "windowOk": true,
+        "current": [
+          "#6-einzelprüfungen"
+        ],
+        "href": "#6-einzelpr%C3%BCfungen"
+      }
+    },
+    {
+      "id": "AK-C6",
+      "name": "prozentkodierter und roher Hash landen am selben Ziel und markieren denselben Eintrag",
+      "ok": true,
+      "detail": {
+        "encTop": 115.58,
+        "raw": {
+          "top": 115.58,
+          "current": [
+            "#6-einzelprüfungen"
+          ],
+          "href": "#6-einzelpr%C3%BCfungen"
+        }
+      }
+    },
+    {
+      "id": "AK-D6",
+      "name": "hashchange ohne Reload aktualisiert die Aktivierung",
+      "ok": true,
+      "detail": {
+        "before": [
+          "#6-einzelprüfungen"
+        ],
+        "href": "#612-solfeggio-erweiterungen-174285963-hz",
+        "after": [
+          "#612-solfeggio-erweiterungen-174285963-hz"
+        ],
+        "hash": "#612-solfeggio-erweiterungen-174285963-hz"
+      }
+    },
+    {
+      "id": "AK-D5b",
+      "name": "Klick auf Eintrag: richtige Position, Hash gesetzt, Ziel fokussiert",
+      "ok": true,
+      "detail": {
+        "id": "61-eeg-bänder-warum-bereiche-und-keine-punktwerte",
+        "hash": "#61-eeg-b%C3%A4nder-warum-bereiche-und-keine-punktwerte",
+        "top": 116.23,
+        "header": 100,
+        "windowOk": true,
+        "activeElement": "H3#61-eeg-bänder-warum-bereiche-und-keine-punktwerte",
+        "current": [
+          "#61-eeg-bänder-warum-bereiche-und-keine-punktwerte"
+        ]
+      }
+    },
+    {
+      "id": "AK-F3a",
+      "name": "Tab erreicht alle 29 TOC-Links in Dokumentreihenfolge",
+      "ok": true,
+      "detail": {
+        "count": 29,
+        "order": [
+          "#frequenzen-quellen-evidenzstatus-und-methodik",
+          "#1-zweck-und-geltungsbereich",
+          "#2-suchstrategie-und-aufnahmekriterien",
+          "#3-evidenzstatus-im-einzelnen",
+          "#4-datenschema"
+        ],
+        "expected": [
+          "#frequenzen-quellen-evidenzstatus-und-methodik",
+          "#1-zweck-und-geltungsbereich",
+          "#2-suchstrategie-und-aufnahmekriterien",
+          "#3-evidenzstatus-im-einzelnen",
+          "#4-datenschema"
+        ]
+      }
+    },
+    {
+      "id": "AK-F3b",
+      "name": "sichtbarer Fokusring ≥ 2 px",
+      "ok": true,
+      "detail": {
+        "tag": "A",
+        "cls": "page-toc__link is-active",
+        "href": "#frequenzen-quellen-evidenzstatus-und-methodik",
+        "text": "Frequenzen: Quellen, Evidenzstatus und M",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(234, 230, 220)",
+        "outlineStyle": "solid",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "id": "AK-F4",
+      "name": "Kontrast Linktext/aktiv ≥ 4,5:1 (Dark)",
+      "ok": true,
+      "detail": {
+        "normal": [
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          11.48,
+          13.67
+        ],
+        "normalMin": 10.07,
+        "active": {
+          "ratio": 13.67,
+          "fg": "rgb(220, 218, 209)",
+          "bg": "rgb(11, 16, 18)",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        "title": {
+          "ratio": 10.07,
+          "fg": "rgb(186, 189, 183)",
+          "bg": "rgb(11, 16, 18)",
+          "fontSize": "13px",
+          "fontWeight": "400"
+        },
+        "ringColor": "rgb(186, 189, 183)",
+        "ringStyle": "3px",
+        "sample": {
+          "ratio": 10.07,
+          "fg": "rgb(186, 189, 183)",
+          "bg": "rgb(11, 16, 18)",
+          "fontSize": "14px",
+          "fontWeight": "400"
+        }
+      }
+    },
+    {
+      "id": "AK-F4b",
+      "name": "Kontrast ≥ 4,5:1 in der Light-Reserve",
+      "ok": true,
+      "detail": {
+        "normalMin": 7.22,
+        "active": {
+          "ratio": 14.31,
+          "fg": "rgb(45, 27, 71)",
+          "bg": "rgb(248, 245, 252)",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        "sample": {
+          "ratio": 7.22,
+          "fg": "rgb(90, 74, 122)",
+          "bg": "rgb(248, 245, 252)",
+          "fontSize": "14px",
+          "fontWeight": "400"
+        }
+      }
+    },
+    {
+      "id": "AK-F6a",
+      "name": "Links ≥ 24 px hoch (feiner Zeiger)",
+      "ok": true,
+      "detail": {
+        "minLink": 32.3,
+        "maxLink": 72.89
+      }
+    },
+    {
+      "id": "AK-F5",
+      "name": "prefers-reduced-motion: reduce → scroll-behavior auto, keine erzwungene Bewegung",
+      "ok": true,
+      "detail": {
+        "scrollBehavior": "auto",
+        "transitions": [
+          "1e-05s",
+          "0s",
+          "0s"
+        ],
+        "scrollPaddingTop": "116px"
+      }
+    },
+    {
+      "id": "AK-E8",
+      "name": "im Druck ist das TOC ausgeblendet",
+      "ok": true,
+      "detail": {
+        "display": "none"
+      }
+    },
+    {
+      "id": "AK-E6",
+      "name": "Umschaltung genau bei 1200 px, keine Überlappung, kein Überlauf",
+      "ok": true,
+      "detail": {
+        "1024": {
+          "asideLeft": 32,
+          "asideTop": -20656.8,
+          "proseLeft": 32,
+          "proseTop": -20588.8,
+          "sideBySide": false,
+          "above": true,
+          "detailsOpen": false,
+          "asideWidth": 960,
+          "overflowX": false,
+          "docScrollWidth": 1024
+        },
+        "1199": {
+          "asideLeft": 64,
+          "asideTop": -20656.8,
+          "proseLeft": 64,
+          "proseTop": -20588.8,
+          "sideBySide": false,
+          "above": true,
+          "detailsOpen": false,
+          "asideWidth": 1071,
+          "overflowX": false,
+          "docScrollWidth": 1199
+        },
+        "1200": {
+          "asideLeft": 876,
+          "asideTop": 124,
+          "proseLeft": 64,
+          "proseTop": -21196.8,
+          "sideBySide": true,
+          "above": false,
+          "detailsOpen": true,
+          "asideWidth": 260,
+          "overflowX": false,
+          "docScrollWidth": 1200
+        },
+        "1440": {
+          "asideLeft": 1076,
+          "asideTop": 124,
+          "proseLeft": 104,
+          "proseTop": -21196.8,
+          "sideBySide": true,
+          "above": false,
+          "detailsOpen": true,
+          "asideWidth": 260,
+          "overflowX": false,
+          "docScrollWidth": 1440
+        }
+      }
+    },
+    {
+      "id": "AK-E4b",
+      "name": "1199 px: Inline-Disclosure schließt/öffnet, Summary 44 px",
+      "ok": true,
+      "detail": {
+        "before": false,
+        "afterOpen": true,
+        "afterClose": false,
+        "summaryHeight": 44,
+        "bodyHeightOpen": 540
+      }
+    },
+    {
+      "id": "AK-H4b",
+      "name": "keine Konsolenfehler, keine fehlgeschlagenen oder externen Requests",
+      "ok": true,
+      "detail": {
+        "consoleErrors": [],
+        "failedRequests": [],
+        "externalRequests": [],
+        "scriptCss": [
+          "/_astro/SiteHeader.astro_astro_type_script_index_0_lang.hDDJVzW9.js",
+          "/_astro/BaseLayout.C9cg-69v.css",
+          "/_astro/TableOfContents.astro_astro_type_script_index_0_lang.BktuqbeO.js",
+          "/_astro/BaseLayout.astro_astro_type_script_index_0_lang.BECeyUNJ.js",
+          "/_astro/rolldown-runtime.B8xr6ykz.js",
+          "/_astro/preload-helper.KS-HV6LQ.js"
+        ]
+      }
+    },
+    {
+      "id": "AK-F1b",
+      "name": "AX-Baum: genau ein Navigations-Landmark mit Namen „Inhaltsverzeichnis“",
+      "ok": true,
+      "detail": {
+        "navigation": [
+          "Hauptnavigation",
+          "Brotkrümelnavigation",
+          "Bereichsnavigation",
+          "Inhaltsverzeichnis"
+        ],
+        "tocNav": 1,
+        "tocNavRoles": {
+          "list": 4,
+          "listitem": 29,
+          "link": 29
+        },
+        "tocLinkNames": [
+          "Frequenzen: Quellen, Evidenzstatus und Methodik",
+          "1. Zweck und Geltungsbereich",
+          "2. Suchstrategie und Aufnahmekriterien"
+        ],
+        "allLinkProperties": [
+          "focusable",
+          "url"
+        ],
+        "complementary": [
+          "Auf dieser Seite"
+        ]
+      }
+    },
+    {
+      "id": "AK-F2b",
+      "name": "AX-Baum: 4 Listen, 29 Listeneinträge, 29 Links im TOC",
+      "ok": true,
+      "detail": {
+        "navigation": [
+          "Hauptnavigation",
+          "Brotkrümelnavigation",
+          "Bereichsnavigation",
+          "Inhaltsverzeichnis"
+        ],
+        "tocNav": 1,
+        "tocNavRoles": {
+          "list": 4,
+          "listitem": 29,
+          "link": 29
+        },
+        "tocLinkNames": [
+          "Frequenzen: Quellen, Evidenzstatus und Methodik",
+          "1. Zweck und Geltungsbereich",
+          "2. Suchstrategie und Aufnahmekriterien"
+        ],
+        "allLinkProperties": [
+          "focusable",
+          "url"
+        ],
+        "complementary": [
+          "Auf dieser Seite"
+        ]
+      }
+    },
+    {
+      "id": "AXE-TOC",
+      "name": "axe-core (WCAG 2.1 AA) ohne Verstöße im TOC-Teilbaum",
+      "ok": true,
+      "detail": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 14
+      }
+    },
+    {
+      "id": "AXE-PAGE",
+      "name": "axe-core (WCAG 2.1 AA) auf der ganzen Pilotseite ohne Verstöße",
+      "ok": false,
+      "detail": {
+        "violations": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": [
+              "pre[data-language=\"bash\"] > code > .line:nth-child(1) > span",
+              "pre[data-language=\"bash\"] > code > .line:nth-child(4) > span"
+            ]
+          },
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "nodes": [
+              "ol:nth-child(110) > li:nth-child(1) > a",
+              "ol:nth-child(110) > li:nth-child(2) > a",
+              "ol:nth-child(110) > li:nth-child(3) > a",
+              "ol:nth-child(110) > li:nth-child(4) > a",
+              "ol:nth-child(110) > li:nth-child(6) > a",
+              "ol:nth-child(110) > li:nth-child(8) > a",
+              "ol:nth-child(110) > li:nth-child(11) > a",
+              "ol:nth-child(110) > li:nth-child(12) > a",
+              "ol:nth-child(110) > li:nth-child(14) > a",
+              "li:nth-child(15) > a",
+              "li:nth-child(16) > a",
+              "li:nth-child(17) > a",
+              "li:nth-child(18) > a",
+              "li:nth-child(19) > a",
+              "li:nth-child(22) > a",
+              "li:nth-child(23) > a",
+              "li:nth-child(24) > a",
+              "li:nth-child(26) > a",
+              "li:nth-child(27) > a",
+              "li:nth-child(28) > a",
+              "li:nth-child(29) > a"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "AK-E4",
+      "name": "390 px: TOC oberhalb des Artikels, mit JS geschlossen, Summary ≥ 44 px",
+      "ok": true,
+      "detail": {
+        "above": true,
+        "asideTop": 557.5,
+        "proseTop": 625.5,
+        "detailsOpen": false,
+        "summaryHeight": 44,
+        "summaryWidth": 340,
+        "bodyHeight": 472.6,
+        "bodyScrollHeight": 1441,
+        "linkHeights": [
+          60.6,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          60.6,
+          44,
+          44,
+          60.6,
+          44,
+          60.6,
+          60.6,
+          44,
+          60.6,
+          60.6,
+          44,
+          60.6,
+          44,
+          60.6,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44
+        ],
+        "scrollWidth": 540,
+        "innerWidth": 390,
+        "activeCount": 1,
+        "tocInnerOverflow": false
+      }
+    },
+    {
+      "id": "AX-NAME-SUMMARY",
+      "name": "Summary-Name enthält kein dekoratives Zeichen",
+      "ok": false,
+      "detail": [
+        {
+          "name": "AUF DIESER SEITE +",
+          "expanded": false
+        }
+      ]
+    },
+    {
+      "id": "AK-F6b",
+      "name": "Touch: Links ≥ 44 px hoch",
+      "ok": true,
+      "detail": {
+        "min": 44,
+        "heights": [
+          60.6,
+          44,
+          44,
+          44,
+          44
+        ]
+      }
+    },
+    {
+      "id": "AK-E5",
+      "name": "390 px: kein zusätzlicher horizontaler Überlauf durch das TOC",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 540,
+        "baseline": 540,
+        "innerOverflow": false
+      }
+    },
+    {
+      "id": "AK-E4b2",
+      "name": "390 px: Summary öffnet, Klick springt zum Ziel, Panel schließt",
+      "ok": true,
+      "detail": {
+        "opened": true,
+        "closedAfterClick": true,
+        "id": "64-schwebung-binaurale-beats-und-die-entrainment-frage",
+        "hash": "#64-schwebung-binaurale-beats-und-die-entrainment-frage",
+        "top": 100.16,
+        "header": 84,
+        "windowOk": true,
+        "activeCount": 1,
+        "active": [
+          "#64-schwebung-binaurale-beats-und-die-entrainment-frage"
+        ],
+        "activeElement": "H3#64-schwebung-binaurale-beats-und-die-entrainment-frage"
+      }
+    },
+    {
+      "id": "AK-F3c",
+      "name": "Mobil: Summary per Tab erreichbar, Enter und Leertaste toggeln",
+      "ok": true,
+      "detail": {
+        "found": true,
+        "beforeOpen": false,
+        "afterEnter": true,
+        "afterSpace": false,
+        "focusRing": {
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(198, 179, 142)"
+        }
+      }
+    },
+    {
+      "id": "AK-D3b",
+      "name": "Mobil: Scroll-Spy markiert Abschnitt 16 (67-432-hz)",
+      "ok": false,
+      "detail": {
+        "count": 1,
+        "href": "#frequenzen-quellen-evidenzstatus-und-methodik",
+        "scrollY": 501
+      }
+    },
+    {
+      "id": "AK-E7",
+      "name": "320 px und 200 % Zoom (160 px CSS): TOC bedienbar, kein Clipping",
+      "ok": true,
+      "detail": {
+        "160": {
+          "asideLeft": 24,
+          "asideRight": 136,
+          "viewport": 160,
+          "clipped": false,
+          "summaryWidth": 110,
+          "linkWidth": 86,
+          "tocHorizontalScrollbar": false,
+          "docScrollWidth": 540,
+          "summaryHeight": 70.6
+        },
+        "320": {
+          "asideLeft": 24,
+          "asideRight": 296,
+          "viewport": 320,
+          "clipped": false,
+          "summaryWidth": 270,
+          "linkWidth": 246,
+          "tocHorizontalScrollbar": false,
+          "docScrollWidth": 540,
+          "summaryHeight": 44
+        }
+      }
+    },
+    {
+      "id": "MOBIL-CONSOLE",
+      "name": "keine Konsolenfehler mobil",
+      "ok": true,
+      "detail": {
+        "errors": []
+      }
+    }
+  ],
+  "metrics": {
+    "headerHeight": 100,
+    "asideWidth": 260,
+    "proseWidth": 720,
+    "linkCount": 29,
+    "summaryDisplay": "none"
+  }
+}

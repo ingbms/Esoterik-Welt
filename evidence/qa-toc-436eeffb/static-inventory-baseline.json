@@ -1,0 +1,2161 @@
+{
+  "generatedAt": "2026-11-04T17:22:34.679Z",
+  "dist": "C:\\Users\\mas\\Arbeit\\Esoterik-Welt\\.worktrees\\t_436eeffb\\dist",
+  "htmlFiles": 145,
+  "pages": 145,
+  "withToc": [],
+  "expectedFromSpec": 0,
+  "pilot": {
+    "rel": "frequenzen/quellen.html",
+    "tocAside": 0,
+    "tocNav": 0,
+    "tocLinks": [],
+    "headingCount": 29,
+    "h2": 14,
+    "h3": 15,
+    "h4plus": 0,
+    "headingsWithoutId": 0,
+    "dupIds": [],
+    "headings": [
+      {
+        "tag": "h2",
+        "id": "frequenzen-quellen-evidenzstatus-und-methodik",
+        "text": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "1-zweck-und-geltungsbereich",
+        "text": "1. Zweck und Geltungsbereich",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "2-suchstrategie-und-aufnahmekriterien",
+        "text": "2. Suchstrategie und Aufnahmekriterien",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "3-evidenzstatus-im-einzelnen",
+        "text": "3. Evidenzstatus im Einzelnen",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "4-datenschema",
+        "text": "4. Datenschema",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "5-claim-quelle-matrix",
+        "text": "5. Claim-Quelle-Matrix",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "51-physikalisch--physiologisch",
+        "text": "5.1 Physikalisch / physiologisch",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "52-esoterisch--traditionell",
+        "text": "5.2 Esoterisch / traditionell",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "6-einzelprüfungen",
+        "text": "6. Einzelprüfungen",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "61-eeg-bänder-warum-bereiche-und-keine-punktwerte",
+        "text": "6.1 EEG-Bänder: Warum Bereiche und keine Punktwerte",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "62-hörbereich-und-infraschall",
+        "text": "6.2 Hörbereich und Infraschall",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "63-stimmton-historie",
+        "text": "6.3 Stimmton-Historie",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "64-schwebung-binaurale-beats-und-die-entrainment-frage",
+        "text": "6.4 Schwebung, binaurale Beats und die Entrainment-Frage",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "65-solfeggio-primärquelle-und-beweislage",
+        "text": "6.5 Solfeggio: Primärquelle und Beweislage",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "66-planetenfrequenzen-rechnung-nachvollziehbar-deutung-nicht",
+        "text": "6.6 Planetenfrequenzen: Rechnung nachvollziehbar, Deutung nicht",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+        "text": "6.7 432 Hz: kleiner Effekt, keine Gesundheitswirkung",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "68-40-hz-mausmodell--therapie",
+        "text": "6.8 40 Hz: Mausmodell ≠ Therapie",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "69-rife-und-bioresonanz-zahlen-ohne-wirknachweis",
+        "text": "6.9 Rife und Bioresonanz: Zahlen ohne Wirknachweis",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "610-cymatics-und-chladni-figuren-figur-statt-frequenz",
+        "text": "6.10 Cymatics und Chladni-Figuren: Figur statt Frequenz",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "611-klangschalen-mantras-chakren",
+        "text": "6.11 Klangschalen, Mantras, Chakren",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "612-solfeggio-erweiterungen-174285963-hz",
+        "text": "6.12 Solfeggio-Erweiterungen 174/285/963 Hz",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "7-bewusst-nicht-aufgenommene-einträge",
+        "text": "7. Bewusst nicht aufgenommene Einträge",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "id": "71-bewusst-aufgenommene-grenzfälle-nachtrag-zu-befund-b2",
+        "text": "7.1 Bewusst aufgenommene Grenzfälle (Nachtrag zu Befund B2)",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "8-widersprüche-grenzen-offene-punkte",
+        "text": "8. Widersprüche, Grenzen, offene Punkte",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "9-disclaimer-verbindlicher-text",
+        "text": "9. Disclaimer (verbindlicher Text)",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "10-reproduktion-und-prüfung",
+        "text": "10. Reproduktion und Prüfung",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "11-hinweise-für-ui-und-audio-engine",
+        "text": "11. Hinweise für UI und Audio-Engine",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "12-quellenverzeichnis",
+        "text": "12. Quellenverzeichnis",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "id": "13-änderungslog",
+        "text": "13. Änderungslog",
+        "className": ""
+      }
+    ],
+    "expected": []
+  },
+  "fewHeadings": [
+    {
+      "rel": "404.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "assets/radiasthesie/media/bildnachweis.html",
+      "headingCount": 1,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/aspekte/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/aspekte/konjunktion.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/aspekte/opposition.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/aspekte/quadrat.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/aspekte/sextil.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/aspekte/trigon.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/beispiele/beispiel-mira.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/beispiele/beispiel-nora.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/beispiele/beispiel-selin.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/beispiele/beispiel-tobias.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/beispiele/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/jupiter.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/mars.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/merkur.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/mond.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/neptun.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/pluto.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/saturn.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/sonne.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/uranus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faktoren/venus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/faq.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/glossar.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/aspekte-und-orben.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/aszendent-und-mc.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/echte-berechnung.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/ekliptik-und-himmelssphaere.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/element-erde.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/element-feuer.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/element-luft.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/element-wasser.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/ethik-und-grenzen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/evidenz-und-grenzen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/geschichte.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/grenzen-der-sonnenzeichen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/haeusersysteme.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/herrschaft-und-wuerden.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/modalitaet-fix.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/modalitaet-kardinal.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/modalitaet-veraenderlich.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/mond-verstehen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/radix-lesen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/ruecklaeufigkeit.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/transite.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/tropisch-und-siderisch.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/was-astrologie-ist.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/grundlagen/zeichen-und-sternbilder.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/achtes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/drittes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/elftes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/erstes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/fuenftes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/neuntes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/sechstes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/siebtes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/viertes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/zehntes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/zweites-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/haeuser/zwoelftes-haus.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/lernpfad/die-zwoelf-zeichen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/lernpfad/faktoren-und-aspekte.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/lernpfad/haeuser-und-achsen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/lernpfad/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/lernpfad/nachschlagen-und-vertiefen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/lernpfad/orientierung.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/lernpfad/synthese-und-grenzen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/methodik.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/quellen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/suche.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/fische.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/jungfrau.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/krebs.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/loewe.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/schuetze.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/skorpion.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/steinbock.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/stier.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/waage.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/wassermann.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/widder.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "astrologie/zeichen/zwillinge.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "farbwelten/farbmeditation.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "farbwelten/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "farbwelten/kompass.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "farbwelten/zeitleiste.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "frequenzen/cymatics.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "frequenzen/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "frequenzen/labor.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "frequenzen/meditation.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "kristalle.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "mondphasen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "pendeln/experiment.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "pendeln/journal.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "pendeln/labor.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "pendeln/studio.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "pendeln/suche.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "radiasthesie/glossar.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "radiasthesie/index.html",
+      "headingCount": 1,
+      "tocAside": 0
+    },
+    {
+      "rel": "radiasthesie/methodik.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "radiasthesie/orakel.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "radiasthesie/pendeln.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "radiasthesie/quellen.html",
+      "headingCount": 1,
+      "tocAside": 0
+    },
+    {
+      "rel": "radiasthesie/radiasthesie.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "runen.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "tarot.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/01-die-78-tarot-karten-eine.html",
+      "headingCount": 2,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/02-kristalle-als-werkzeuge-wie-steine.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/03-runenwerfen-die-drei-positionen-der.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/04-die-mondphasen-von-neumond-bis.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/05-die-geschichte-des-tarot-von.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/06-einsteiger-guide-wie-du-mit.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/07-chakren-kristalle-welche-steine-fuer.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/08-die-bedeutung-des-futhark-von.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/09-rituale-fuer-jede-mondphase-ein.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/10-moldavit-der-meteorit-unter-den.html",
+      "headingCount": 0,
+      "tocAside": 0
+    },
+    {
+      "rel": "wissen/index.html",
+      "headingCount": 0,
+      "tocAside": 0
+    }
+  ],
+  "emptyHeadings": [
+    "404.html",
+    "astrologie/aspekte/index.html",
+    "astrologie/aspekte/konjunktion.html",
+    "astrologie/aspekte/opposition.html",
+    "astrologie/aspekte/quadrat.html",
+    "astrologie/aspekte/sextil.html",
+    "astrologie/aspekte/trigon.html",
+    "astrologie/beispiele/beispiel-mira.html",
+    "astrologie/beispiele/beispiel-nora.html",
+    "astrologie/beispiele/beispiel-selin.html",
+    "astrologie/beispiele/beispiel-tobias.html",
+    "astrologie/beispiele/index.html",
+    "astrologie/faktoren/index.html",
+    "astrologie/faktoren/jupiter.html",
+    "astrologie/faktoren/mars.html",
+    "astrologie/faktoren/merkur.html",
+    "astrologie/faktoren/mond.html",
+    "astrologie/faktoren/neptun.html",
+    "astrologie/faktoren/pluto.html",
+    "astrologie/faktoren/saturn.html",
+    "astrologie/faktoren/sonne.html",
+    "astrologie/faktoren/uranus.html",
+    "astrologie/faktoren/venus.html",
+    "astrologie/faq.html",
+    "astrologie/glossar.html",
+    "astrologie/grundlagen/aspekte-und-orben.html",
+    "astrologie/grundlagen/aszendent-und-mc.html",
+    "astrologie/grundlagen/echte-berechnung.html",
+    "astrologie/grundlagen/ekliptik-und-himmelssphaere.html",
+    "astrologie/grundlagen/element-erde.html",
+    "astrologie/grundlagen/element-feuer.html",
+    "astrologie/grundlagen/element-luft.html",
+    "astrologie/grundlagen/element-wasser.html",
+    "astrologie/grundlagen/ethik-und-grenzen.html",
+    "astrologie/grundlagen/evidenz-und-grenzen.html",
+    "astrologie/grundlagen/geschichte.html",
+    "astrologie/grundlagen/grenzen-der-sonnenzeichen.html",
+    "astrologie/grundlagen/haeusersysteme.html",
+    "astrologie/grundlagen/herrschaft-und-wuerden.html",
+    "astrologie/grundlagen/index.html",
+    "astrologie/grundlagen/modalitaet-fix.html",
+    "astrologie/grundlagen/modalitaet-kardinal.html",
+    "astrologie/grundlagen/modalitaet-veraenderlich.html",
+    "astrologie/grundlagen/mond-verstehen.html",
+    "astrologie/grundlagen/radix-lesen.html",
+    "astrologie/grundlagen/ruecklaeufigkeit.html",
+    "astrologie/grundlagen/transite.html",
+    "astrologie/grundlagen/tropisch-und-siderisch.html",
+    "astrologie/grundlagen/was-astrologie-ist.html",
+    "astrologie/grundlagen/zeichen-und-sternbilder.html",
+    "astrologie/haeuser/achtes-haus.html",
+    "astrologie/haeuser/drittes-haus.html",
+    "astrologie/haeuser/elftes-haus.html",
+    "astrologie/haeuser/erstes-haus.html",
+    "astrologie/haeuser/fuenftes-haus.html",
+    "astrologie/haeuser/index.html",
+    "astrologie/haeuser/neuntes-haus.html",
+    "astrologie/haeuser/sechstes-haus.html",
+    "astrologie/haeuser/siebtes-haus.html",
+    "astrologie/haeuser/viertes-haus.html",
+    "astrologie/haeuser/zehntes-haus.html",
+    "astrologie/haeuser/zweites-haus.html",
+    "astrologie/haeuser/zwoelftes-haus.html",
+    "astrologie/index.html",
+    "astrologie/lernpfad/die-zwoelf-zeichen.html",
+    "astrologie/lernpfad/faktoren-und-aspekte.html",
+    "astrologie/lernpfad/haeuser-und-achsen.html",
+    "astrologie/lernpfad/index.html",
+    "astrologie/lernpfad/nachschlagen-und-vertiefen.html",
+    "astrologie/lernpfad/orientierung.html",
+    "astrologie/lernpfad/synthese-und-grenzen.html",
+    "astrologie/methodik.html",
+    "astrologie/quellen.html",
+    "astrologie/suche.html",
+    "astrologie/zeichen/fische.html",
+    "astrologie/zeichen/index.html",
+    "astrologie/zeichen/jungfrau.html",
+    "astrologie/zeichen/krebs.html",
+    "astrologie/zeichen/loewe.html",
+    "astrologie/zeichen/schuetze.html",
+    "astrologie/zeichen/skorpion.html",
+    "astrologie/zeichen/steinbock.html",
+    "astrologie/zeichen/stier.html",
+    "astrologie/zeichen/waage.html",
+    "astrologie/zeichen/wassermann.html",
+    "astrologie/zeichen/widder.html",
+    "astrologie/zeichen/zwillinge.html",
+    "farbwelten/farbmeditation.html",
+    "farbwelten/index.html",
+    "farbwelten/kompass.html",
+    "farbwelten/zeitleiste.html",
+    "frequenzen/cymatics.html",
+    "frequenzen/index.html",
+    "frequenzen/labor.html",
+    "frequenzen/meditation.html",
+    "index.html",
+    "kristalle.html",
+    "mondphasen.html",
+    "pendeln/experiment.html",
+    "pendeln/journal.html",
+    "pendeln/labor.html",
+    "pendeln/studio.html",
+    "pendeln/suche.html",
+    "radiasthesie/glossar.html",
+    "radiasthesie/methodik.html",
+    "radiasthesie/orakel.html",
+    "radiasthesie/pendeln.html",
+    "radiasthesie/radiasthesie.html",
+    "runen.html",
+    "tarot.html",
+    "wissen/02-kristalle-als-werkzeuge-wie-steine.html",
+    "wissen/03-runenwerfen-die-drei-positionen-der.html",
+    "wissen/04-die-mondphasen-von-neumond-bis.html",
+    "wissen/05-die-geschichte-des-tarot-von.html",
+    "wissen/06-einsteiger-guide-wie-du-mit.html",
+    "wissen/07-chakren-kristalle-welche-steine-fuer.html",
+    "wissen/08-die-bedeutung-des-futhark-von.html",
+    "wissen/09-rituale-fuer-jede-mondphase-ein.html",
+    "wissen/10-moldavit-der-meteorit-unter-den.html",
+    "wissen/index.html"
+  ],
+  "dups": [
+    {
+      "rel": "farbwelten/index.html",
+      "dupIds": [
+        {
+          "id": "entries-title",
+          "n": 3
+        }
+      ]
+    }
+  ],
+  "radiasthesie": [
+    {
+      "rel": "radiasthesie/glossar.html",
+      "asideLinks": 0
+    },
+    {
+      "rel": "radiasthesie/index.html",
+      "asideLinks": 1
+    },
+    {
+      "rel": "radiasthesie/methodik.html",
+      "asideLinks": 0
+    },
+    {
+      "rel": "radiasthesie/orakel.html",
+      "asideLinks": 15
+    },
+    {
+      "rel": "radiasthesie/pendeln.html",
+      "asideLinks": 19
+    },
+    {
+      "rel": "radiasthesie/quellen.html",
+      "asideLinks": 0
+    },
+    {
+      "rel": "radiasthesie/radiasthesie.html",
+      "asideLinks": 27
+    }
+  ],
+  "farbweltenIndex": {
+    "rel": "farbwelten/index.html",
+    "headings": 0,
+    "tocAside": 0,
+    "dupIds": [
+      {
+        "id": "entries-title",
+        "n": 3
+      }
+    ],
+    "firstHeading": null
+  },
+  "pages_detail": [
+    {
+      "rel": "404.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "assets/radiasthesie/media/bildnachweis.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 1,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/aspekte/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/aspekte/konjunktion.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/aspekte/opposition.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/aspekte/quadrat.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/aspekte/sextil.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/aspekte/trigon.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/beispiele/beispiel-mira.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/beispiele/beispiel-nora.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/beispiele/beispiel-selin.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/beispiele/beispiel-tobias.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/beispiele/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/jupiter.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/mars.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/merkur.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/mond.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/neptun.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/pluto.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/saturn.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/sonne.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/uranus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faktoren/venus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/faq.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/glossar.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/aspekte-und-orben.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/aszendent-und-mc.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/echte-berechnung.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/ekliptik-und-himmelssphaere.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/element-erde.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/element-feuer.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/element-luft.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/element-wasser.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/ethik-und-grenzen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/evidenz-und-grenzen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/geschichte.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/grenzen-der-sonnenzeichen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/haeusersysteme.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/herrschaft-und-wuerden.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/modalitaet-fix.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/modalitaet-kardinal.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/modalitaet-veraenderlich.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/mond-verstehen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/radix-lesen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/ruecklaeufigkeit.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/transite.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/tropisch-und-siderisch.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/was-astrologie-ist.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/grundlagen/zeichen-und-sternbilder.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/achtes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/drittes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/elftes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/erstes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/fuenftes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/neuntes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/sechstes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/siebtes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/viertes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/zehntes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/zweites-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/haeuser/zwoelftes-haus.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/lernpfad/die-zwoelf-zeichen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/lernpfad/faktoren-und-aspekte.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/lernpfad/haeuser-und-achsen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/lernpfad/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/lernpfad/nachschlagen-und-vertiefen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/lernpfad/orientierung.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/lernpfad/synthese-und-grenzen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/methodik.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/quellen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/suche.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/fische.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/jungfrau.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/krebs.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/loewe.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/schuetze.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/skorpion.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/steinbock.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/stier.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/waage.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/wassermann.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/widder.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "astrologie/zeichen/zwillinge.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "datenschutz.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 3,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/blau.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 8,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/chakren.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 6,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/farbmeditation.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/farbpsychologie.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/farbtherapie.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 6,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/gelb.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/gruen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": [
+        {
+          "id": "entries-title",
+          "n": 3
+        }
+      ]
+    },
+    {
+      "rel": "farbwelten/indigo.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/kompass.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/lichtfrequenzen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 6,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/lichtmedizin.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/magenta.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/orange.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/rosa.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/rot.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/schwarz.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/tuerkis.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/violett.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/weiss.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 7,
+      "dupIds": []
+    },
+    {
+      "rel": "farbwelten/zeitleiste.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "frequenzen/cymatics.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "frequenzen/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "frequenzen/labor.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "frequenzen/meditation.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "frequenzen/quellen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 29,
+      "dupIds": []
+    },
+    {
+      "rel": "haftung.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 3,
+      "dupIds": []
+    },
+    {
+      "rel": "impressum.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 9,
+      "dupIds": []
+    },
+    {
+      "rel": "index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "kristalle.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "mondphasen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "pendeln/experiment.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "pendeln/journal.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "pendeln/labor.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "pendeln/studio.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "pendeln/suche.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "radiasthesie/glossar.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "radiasthesie/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 1,
+      "dupIds": []
+    },
+    {
+      "rel": "radiasthesie/methodik.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "radiasthesie/orakel.html",
+      "tocAside": 0,
+      "tocNav": 1,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "radiasthesie/pendeln.html",
+      "tocAside": 0,
+      "tocNav": 1,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "radiasthesie/quellen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 1,
+      "dupIds": []
+    },
+    {
+      "rel": "radiasthesie/radiasthesie.html",
+      "tocAside": 0,
+      "tocNav": 1,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "runen.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "tarot.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/01-die-78-tarot-karten-eine.html",
+      "tocAside": 0,
+      "tocNav": 1,
+      "tocLinks": [],
+      "headingCount": 2,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/02-kristalle-als-werkzeuge-wie-steine.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/03-runenwerfen-die-drei-positionen-der.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/04-die-mondphasen-von-neumond-bis.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/05-die-geschichte-des-tarot-von.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/06-einsteiger-guide-wie-du-mit.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/07-chakren-kristalle-welche-steine-fuer.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/08-die-bedeutung-des-futhark-von.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/09-rituale-fuer-jede-mondphase-ein.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/10-moldavit-der-meteorit-unter-den.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    },
+    {
+      "rel": "wissen/index.html",
+      "tocAside": 0,
+      "tocNav": 0,
+      "tocLinks": [],
+      "headingCount": 0,
+      "dupIds": []
+    }
+  ]
+}

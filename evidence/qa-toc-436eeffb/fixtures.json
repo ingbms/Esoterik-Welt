@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-11-04T17:34:33.443Z",
+  "ssr": {
+    "url": "/__qa__/ssr-duplikate.html",
+    "headings": [
+      {
+        "depth": 2,
+        "text": "Gleicher Titel",
+        "expectedId": "gleicher-titel"
+      },
+      {
+        "depth": 2,
+        "text": "Gleicher Titel",
+        "expectedId": "gleicher-titel-1"
+      },
+      {
+        "depth": 2,
+        "text": "Gleicher Titel",
+        "expectedId": "gleicher-titel-2"
+      },
+      {
+        "depth": 2,
+        "text": "Prüfung: Umlaute äöü ß",
+        "expectedId": "prüfung-umlaute-äöü-ß"
+      },
+      {
+        "depth": 2,
+        "text": "Sonderzeichen »Zitat« & <em>kursiv</em>",
+        "expectedId": "sonderzeichen-zitat--kursiv"
+      },
+      {
+        "depth": 3,
+        "text": "Unterpunkt",
+        "expectedId": "unterpunkt"
+      }
+    ],
+    "listHtml": "<ol class=\"page-toc__list\"><li class=\"page-toc__item page-toc__item--2\"><a class=\"page-toc__link\" href=\"#gleicher-titel\">Gleicher Titel</a></li><li class=\"page-toc__item page-toc__item--2\"><a class=\"page-toc__link\" href=\"#gleicher-titel-1\">Gleicher Titel</a></li><li class=\"page-toc__item page-toc__item--2\"><a class=\"page-toc__link\" href=\"#gleicher-titel-2\">Gleicher Titel</a></li><li class=\"page-toc__item page-toc__item--2\"><a class=\"page-toc__link\" href=\"#prüfung-umlaute-äöü-ß\">Prüfung: Umlaute äöü ß</a></li><li class=\"page-toc__item page-toc__item--2\"><a class=\"page-toc__link\" href=\"#sonderzeichen-zitat--kursiv\">Sonderzeichen »Zitat« &amp; kursiv</a><ol class=\"page-toc__list\"><li class=\"page-toc__item page-toc__item--3\"><a class=\"page-toc__link\" href=\"#unterpunkt\">Unterpunkt</a></li></ol></li></ol>"
+  },
+  "dynamic": {
+    "url": "/__qa__/dynamic.html",
+    "headings": [
+      {
+        "depth": 2,
+        "text": "Gleicher Titel",
+        "expectedId": "gleicher-titel"
+      },
+      {
+        "depth": 2,
+        "text": "Gleicher Titel",
+        "expectedId": "gleicher-titel"
+      },
+      {
+        "depth": 2,
+        "text": "Prüfung äöü",
+        "expectedId": "prüfung-äöü"
+      },
+      {
+        "depth": 2,
+        "text": "Sonderzeichen !!!",
+        "expectedId": "sonderzeichen-"
+      },
+      {
+        "depth": 3,
+        "text": "Unterpunkt",
+        "expectedId": "unterpunkt"
+      }
+    ],
+    "bundle": "/__qa__/scripts/toc.js"
+  }
+}

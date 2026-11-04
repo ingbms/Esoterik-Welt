@@ -1,0 +1,418 @@
+{
+  "generatedAt": "2026-11-04T17:34:40.078Z",
+  "results": [
+    {
+      "id": "FIX-C4",
+      "name": "drei gleiche Überschriften → drei eigene, auflösende Anker in Dokumentreihenfolge",
+      "ok": true,
+      "detail": [
+        {
+          "i": 0,
+          "href": "#gleicher-titel",
+          "id": "gleicher-titel",
+          "text": "Gleicher Titel",
+          "targetCount": 1,
+          "targetTag": "H2",
+          "targetTop": 448,
+          "targetText": "Gleicher Titel",
+          "innerHtml": "Gleicher Titel"
+        },
+        {
+          "i": 1,
+          "href": "#gleicher-titel-1",
+          "id": "gleicher-titel-1",
+          "text": "Gleicher Titel",
+          "targetCount": 1,
+          "targetTag": "H2",
+          "targetTop": 620,
+          "targetText": "Gleicher Titel",
+          "innerHtml": "Gleicher Titel"
+        },
+        {
+          "i": 2,
+          "href": "#gleicher-titel-2",
+          "id": "gleicher-titel-2",
+          "text": "Gleicher Titel",
+          "targetCount": 1,
+          "targetTag": "H2",
+          "targetTop": 791,
+          "targetText": "Gleicher Titel",
+          "innerHtml": "Gleicher Titel"
+        }
+      ]
+    },
+    {
+      "id": "FIX-UM",
+      "name": "Umlaut-ID wird unverändert übernommen und löst auf",
+      "ok": true,
+      "detail": {
+        "i": 3,
+        "href": "#prüfung-umlaute-äöü-ß",
+        "id": "prüfung-umlaute-äöü-ß",
+        "text": "Prüfung: Umlaute äöü ß",
+        "targetCount": 1,
+        "targetTag": "H2",
+        "targetTop": 963,
+        "targetText": "Prüfung: Umlaute äöü ß",
+        "innerHtml": "Prüfung: Umlaute äöü ß"
+      }
+    },
+    {
+      "id": "FIX-SZ",
+      "name": "Sonderzeichen/Inline-Markup: Text ohne Markup, Anker löst auf",
+      "ok": true,
+      "detail": {
+        "i": 4,
+        "href": "#sonderzeichen-zitat--kursiv",
+        "id": "sonderzeichen-zitat--kursiv",
+        "text": "Sonderzeichen »Zitat« & kursiv",
+        "targetCount": 1,
+        "targetTag": "H2",
+        "targetTop": 1135,
+        "targetText": "Sonderzeichen »Zitat« & kursiv",
+        "innerHtml": "Sonderzeichen »Zitat« &amp; kursiv"
+      }
+    },
+    {
+      "id": "FIX-B6",
+      "name": "h3 ist eingerückt und dem letzten h2 untergeordnet",
+      "ok": true,
+      "detail": {
+        "nestedLists": 1,
+        "h3ParentText": "Unterpunkt"
+      }
+    },
+    {
+      "id": "FIX-C4b",
+      "name": "Klick auf jeden der drei gleichen Einträge springt zum jeweils eigenen Ziel",
+      "ok": true,
+      "detail": [
+        {
+          "id": "gleicher-titel",
+          "hash": "gleicher-titel",
+          "top": 116,
+          "docTop": 448,
+          "scrollY": 332,
+          "active": [
+            "#gleicher-titel"
+          ],
+          "otherTargets": 1
+        },
+        {
+          "id": "gleicher-titel-1",
+          "hash": "gleicher-titel-1",
+          "top": 116,
+          "docTop": 620,
+          "scrollY": 504,
+          "active": [
+            "#gleicher-titel-1"
+          ],
+          "otherTargets": 1
+        },
+        {
+          "id": "gleicher-titel-2",
+          "hash": "gleicher-titel-2",
+          "top": 116,
+          "docTop": 791,
+          "scrollY": 675,
+          "active": [
+            "#gleicher-titel-2"
+          ],
+          "otherTargets": 1
+        }
+      ]
+    },
+    {
+      "id": "FIX-UM2",
+      "name": "prozentkodierter Umlaut-Hash aktiviert den richtigen Eintrag",
+      "ok": true,
+      "detail": {
+        "top": 116,
+        "active": [
+          "#prüfung-umlaute-äöü-ß"
+        ]
+      }
+    },
+    {
+      "id": "AK-I1",
+      "name": "dynamic: Liste aus DOM-Überschriften, fehlende IDs erzeugt, keine Duplikate",
+      "ok": true,
+      "detail": {
+        "links": 5,
+        "entries": [
+          {
+            "href": "#gleicher-titel",
+            "text": "Gleicher Titel"
+          },
+          {
+            "href": "#gleicher-titel-1",
+            "text": "Gleicher Titel"
+          },
+          {
+            "href": "#prüfung-äöü",
+            "text": "Prüfung äöü"
+          },
+          {
+            "href": "#sonderzeichen-",
+            "text": "Sonderzeichen !!!"
+          },
+          {
+            "href": "#unterpunkt",
+            "text": "Unterpunkt"
+          }
+        ],
+        "headings": [
+          {
+            "tag": "H2",
+            "id": "gleicher-titel",
+            "text": "Gleicher Titel"
+          },
+          {
+            "tag": "H2",
+            "id": "gleicher-titel-1",
+            "text": "Gleicher Titel"
+          },
+          {
+            "tag": "H2",
+            "id": "prüfung-äöü",
+            "text": "Prüfung äöü"
+          },
+          {
+            "tag": "H2",
+            "id": "sonderzeichen-",
+            "text": "Sonderzeichen !!!"
+          },
+          {
+            "tag": "H3",
+            "id": "unterpunkt",
+            "text": "Unterpunkt"
+          }
+        ],
+        "idDuplicates": [],
+        "current": [
+          "#gleicher-titel"
+        ],
+        "dynamicFlag": "true"
+      }
+    },
+    {
+      "id": "AK-I1b",
+      "name": "dynamic: genau ein aktiver Eintrag",
+      "ok": true,
+      "detail": [
+        "#gleicher-titel"
+      ]
+    },
+    {
+      "id": "AK-I1c",
+      "name": "dynamic: Klick springt zum erzeugten Anker",
+      "ok": true,
+      "detail": {
+        "id": "prüfung-äöü",
+        "hash": "prüfung-äöü",
+        "top": 116,
+        "active": [
+          "#prüfung-äöü"
+        ],
+        "scrollY": 675
+      }
+    },
+    {
+      "id": "AK-I2",
+      "name": "dynamic: unter minHeadings verschwindet das Verzeichnis",
+      "ok": true,
+      "detail": {
+        "asideExists": false,
+        "headingIds": [
+          "",
+          ""
+        ],
+        "bodyHtml": "<h2>Nur eine</h2>\n<p>Probeinhalt.</p>\n<h2>Nur zwei</h2>\n<p>P"
+      }
+    },
+    {
+      "id": "FIX-CONSOLE",
+      "name": "keine Konsolenfehler in den Fixtures",
+      "ok": true,
+      "detail": {
+        "errors": []
+      }
+    }
+  ],
+  "ssr": {
+    "linkCount": 6,
+    "entries": [
+      {
+        "i": 0,
+        "href": "#gleicher-titel",
+        "id": "gleicher-titel",
+        "text": "Gleicher Titel",
+        "targetCount": 1,
+        "targetTag": "H2",
+        "targetTop": 448,
+        "targetText": "Gleicher Titel",
+        "innerHtml": "Gleicher Titel"
+      },
+      {
+        "i": 1,
+        "href": "#gleicher-titel-1",
+        "id": "gleicher-titel-1",
+        "text": "Gleicher Titel",
+        "targetCount": 1,
+        "targetTag": "H2",
+        "targetTop": 620,
+        "targetText": "Gleicher Titel",
+        "innerHtml": "Gleicher Titel"
+      },
+      {
+        "i": 2,
+        "href": "#gleicher-titel-2",
+        "id": "gleicher-titel-2",
+        "text": "Gleicher Titel",
+        "targetCount": 1,
+        "targetTag": "H2",
+        "targetTop": 791,
+        "targetText": "Gleicher Titel",
+        "innerHtml": "Gleicher Titel"
+      },
+      {
+        "i": 3,
+        "href": "#prüfung-umlaute-äöü-ß",
+        "id": "prüfung-umlaute-äöü-ß",
+        "text": "Prüfung: Umlaute äöü ß",
+        "targetCount": 1,
+        "targetTag": "H2",
+        "targetTop": 963,
+        "targetText": "Prüfung: Umlaute äöü ß",
+        "innerHtml": "Prüfung: Umlaute äöü ß"
+      },
+      {
+        "i": 4,
+        "href": "#sonderzeichen-zitat--kursiv",
+        "id": "sonderzeichen-zitat--kursiv",
+        "text": "Sonderzeichen »Zitat« & kursiv",
+        "targetCount": 1,
+        "targetTag": "H2",
+        "targetTop": 1135,
+        "targetText": "Sonderzeichen »Zitat« & kursiv",
+        "innerHtml": "Sonderzeichen »Zitat« &amp; kursiv"
+      },
+      {
+        "i": 5,
+        "href": "#unterpunkt",
+        "id": "unterpunkt",
+        "text": "Unterpunkt",
+        "targetCount": 1,
+        "targetTag": "H3",
+        "targetTop": 1278,
+        "targetText": "Unterpunkt",
+        "innerHtml": "Unterpunkt"
+      }
+    ],
+    "nestedLists": 1,
+    "h3ParentText": "Unterpunkt",
+    "current": 1
+  },
+  "clicks": [
+    {
+      "id": "gleicher-titel",
+      "hash": "gleicher-titel",
+      "top": 116,
+      "docTop": 448,
+      "scrollY": 332,
+      "active": [
+        "#gleicher-titel"
+      ],
+      "otherTargets": 1
+    },
+    {
+      "id": "gleicher-titel-1",
+      "hash": "gleicher-titel-1",
+      "top": 116,
+      "docTop": 620,
+      "scrollY": 504,
+      "active": [
+        "#gleicher-titel-1"
+      ],
+      "otherTargets": 1
+    },
+    {
+      "id": "gleicher-titel-2",
+      "hash": "gleicher-titel-2",
+      "top": 116,
+      "docTop": 791,
+      "scrollY": 675,
+      "active": [
+        "#gleicher-titel-2"
+      ],
+      "otherTargets": 1
+    }
+  ],
+  "dyn": {
+    "links": 5,
+    "entries": [
+      {
+        "href": "#gleicher-titel",
+        "text": "Gleicher Titel"
+      },
+      {
+        "href": "#gleicher-titel-1",
+        "text": "Gleicher Titel"
+      },
+      {
+        "href": "#prüfung-äöü",
+        "text": "Prüfung äöü"
+      },
+      {
+        "href": "#sonderzeichen-",
+        "text": "Sonderzeichen !!!"
+      },
+      {
+        "href": "#unterpunkt",
+        "text": "Unterpunkt"
+      }
+    ],
+    "headings": [
+      {
+        "tag": "H2",
+        "id": "gleicher-titel",
+        "text": "Gleicher Titel"
+      },
+      {
+        "tag": "H2",
+        "id": "gleicher-titel-1",
+        "text": "Gleicher Titel"
+      },
+      {
+        "tag": "H2",
+        "id": "prüfung-äöü",
+        "text": "Prüfung äöü"
+      },
+      {
+        "tag": "H2",
+        "id": "sonderzeichen-",
+        "text": "Sonderzeichen !!!"
+      },
+      {
+        "tag": "H3",
+        "id": "unterpunkt",
+        "text": "Unterpunkt"
+      }
+    ],
+    "idDuplicates": [],
+    "current": [
+      "#gleicher-titel"
+    ],
+    "dynamicFlag": "true"
+  },
+  "dynClick": {
+    "id": "prüfung-äöü",
+    "hash": "prüfung-äöü",
+    "top": 116,
+    "active": [
+      "#prüfung-äöü"
+    ],
+    "scrollY": 675
+  },
+  "errors": []
+}

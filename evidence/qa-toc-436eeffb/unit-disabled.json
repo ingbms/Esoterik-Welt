@@ -1,0 +1,204 @@
+{
+  "generatedAt": "2026-11-04T17:31:18.652Z",
+  "results": [
+    {
+      "id": "AK-C3",
+      "name": "Slug-Testvektoren aus §14.3",
+      "ok": true,
+      "detail": [
+        {
+          "text": "Frequenzen: Quellen, Evidenzstatus und Methodik",
+          "expected": "frequenzen-quellen-evidenzstatus-und-methodik",
+          "actual": "frequenzen-quellen-evidenzstatus-und-methodik",
+          "ok": true
+        },
+        {
+          "text": "1. Zweck und Geltungsbereich",
+          "expected": "1-zweck-und-geltungsbereich",
+          "actual": "1-zweck-und-geltungsbereich",
+          "ok": true
+        },
+        {
+          "text": "5.1 Physikalisch / physiologisch",
+          "expected": "51-physikalisch--physiologisch",
+          "actual": "51-physikalisch--physiologisch",
+          "ok": true
+        },
+        {
+          "text": "6.8 40 Hz: Mausmodell ≠ Therapie",
+          "expected": "68-40-hz-mausmodell--therapie",
+          "actual": "68-40-hz-mausmodell--therapie",
+          "ok": true
+        },
+        {
+          "text": "6.11 Klangschalen, Mantras, Chakren",
+          "expected": "611-klangschalen-mantras-chakren",
+          "actual": "611-klangschalen-mantras-chakren",
+          "ok": true
+        },
+        {
+          "text": "6.12 Solfeggio-Erweiterungen 174/285/963 Hz",
+          "expected": "612-solfeggio-erweiterungen-174285963-hz",
+          "actual": "612-solfeggio-erweiterungen-174285963-hz",
+          "ok": true
+        },
+        {
+          "text": "6. Einzelprüfungen",
+          "expected": "6-einzelprüfungen",
+          "actual": "6-einzelprüfungen",
+          "ok": true
+        },
+        {
+          "text": "7. Bewusst nicht aufgenommene Einträge",
+          "expected": "7-bewusst-nicht-aufgenommene-einträge",
+          "actual": "7-bewusst-nicht-aufgenommene-einträge",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "AK-B7/NORM",
+      "name": "Textnormalisierung (Markup, Entitäten, Whitespace)",
+      "ok": true,
+      "detail": [
+        {
+          "input": "  Zwei   Wörter  ",
+          "expected": "Zwei Wörter",
+          "actual": "Zwei Wörter",
+          "ok": true
+        },
+        {
+          "input": "<em>Ein</em> Titel",
+          "expected": "Ein Titel",
+          "actual": "Ein Titel",
+          "ok": true
+        },
+        {
+          "input": "A &amp; B",
+          "expected": "A & B",
+          "actual": "A & B",
+          "ok": true
+        },
+        {
+          "input": "Zeile mit&nbsp;NBSP",
+          "expected": "Zeile mit NBSP",
+          "actual": "Zeile mit NBSP",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "AK-C4",
+      "name": "zwei gleiche Überschriften → … und …-1; drei → zusätzlich …-2",
+      "ok": true,
+      "detail": {
+        "dup2Ids": [
+          "wiederholung",
+          "wiederholung-1",
+          "drittes"
+        ],
+        "dup3Ids": [
+          "gleich",
+          "gleich-1",
+          "gleich-2"
+        ]
+      }
+    },
+    {
+      "id": "K-1",
+      "name": "vorbelegte ID wird nicht doppelt vergeben",
+      "ok": true,
+      "detail": {
+        "collisionIds": [
+          "vorhanden",
+          "vorhanden-1"
+        ]
+      }
+    },
+    {
+      "id": "AK-C7",
+      "name": "Überschrift aus Satzzeichen erhält abschnitt-<n>",
+      "ok": true,
+      "detail": {
+        "emptyIds": [
+          "abschnitt-1",
+          "abschnitt-2",
+          "echter-titel"
+        ]
+      }
+    },
+    {
+      "id": "AK-B3",
+      "name": "levels={[2]} → nur h2",
+      "ok": true,
+      "detail": {
+        "count": 14
+      }
+    },
+    {
+      "id": "AK-B4",
+      "name": "levels={[2,3,4]} ohne h4 → unverändert",
+      "ok": true,
+      "detail": {
+        "count234": 29,
+        "count23": 29
+      }
+    },
+    {
+      "id": "AK-B6b",
+      "name": "übersprungene Ebene erzeugt genau eine Einrückungsstufe",
+      "ok": true,
+      "detail": [
+        {
+          "depth": 2,
+          "level": 2
+        },
+        {
+          "depth": 4,
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "K-2",
+      "name": "führende h3 werden oberste Ebene, kein Einrückungssprung",
+      "ok": true,
+      "detail": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "AK-A4",
+      "name": "ohne headings / unter minHeadings kein Baum (kein leeres Markup)",
+      "ok": true,
+      "detail": {
+        "none": null,
+        "two": true,
+        "undef": true,
+        "emptyMin0": true,
+        "twoMin0": true
+      }
+    },
+    {
+      "id": "K-3",
+      "name": "Markup escaping (& und \" im Text, kein rohes Tag im Markup)",
+      "ok": true,
+      "detail": {
+        "html": "<ol class=\"page-toc__list\"><li class=\"page-toc__item page-toc__item--2\"><a class=\"page-toc__link\" href=\"#a-alert1--zitat\">A alert(1) &amp; &quot;Zitat&quot;</a></li><li class=\"page-toc__item page-toc__item--2\"><a class=\""
+      }
+    },
+    {
+      "id": "K-4",
+      "name": "TOC_ENABLED folgt dem Schalter (TOC_DISABLED=1)",
+      "ok": true,
+      "detail": {
+        "TOC_ENABLED": false,
+        "expectedEnabled": false,
+        "env": "1"
+      }
+    }
+  ],
+  "failed": 0
+}

@@ -1,0 +1,414 @@
+{
+  "label": "pilot2",
+  "generatedAt": "2026-11-04T17:23:48.790Z",
+  "htmlFiles": 145,
+  "files": {
+    "404.html": "837d21f23c1eff01a1e34319ad95392513dadf51374f3647c7b0fdd5ac6376b0",
+    "assets/radiasthesie/media/bildnachweis.html": "54040de4a883b955c20e45e83a5ef76db1dc39635a85eda3c67a7241332ff3c3",
+    "astrologie/aspekte/index.html": "d5fed8df63e1919340010c2f03e5804a7baa301033d8803d6c048ddd2dc98974",
+    "astrologie/aspekte/konjunktion.html": "4282bfb5c161202903279f079cd9de47158f8d6064d57510c9b27ced787c6049",
+    "astrologie/aspekte/opposition.html": "69196143597c3ad27c916a3cab02aa891cbc004b02f1c8157e195e1c6cf89888",
+    "astrologie/aspekte/quadrat.html": "4cf78c8f675dac824fa149158d8de7b864c484001309b3333f02da550f39fba5",
+    "astrologie/aspekte/sextil.html": "0589533d2b3ba325e0d4acf45e5be4ec049b5c663624baf18475d5ca6017e271",
+    "astrologie/aspekte/trigon.html": "183378488e003fead9b85d7f4efad878285074a1289662b6dc8d67782c43530f",
+    "astrologie/beispiele/beispiel-mira.html": "888685e1a064c052864a586791ca6e4be44d38268eeffd32d34283b87baee3b8",
+    "astrologie/beispiele/beispiel-nora.html": "ebb0868147123cde6cd5fc59f0ed1b8b468124941b32d37ea75f0bffd4f38520",
+    "astrologie/beispiele/beispiel-selin.html": "4e171918545af137eedfa13f089d7b99f55517eaa7f88ced97d7429818fef77b",
+    "astrologie/beispiele/beispiel-tobias.html": "158c5f42671f18e2b0a6a53bca900df202164f1fd1b70412ccd0cc2837342cb7",
+    "astrologie/beispiele/index.html": "42abb77067ed6d52393757d4ee840ca769bae8b59192b7f92c7ee0a6a40cf5d3",
+    "astrologie/faktoren/index.html": "971b91d99ca5df0ff55c86eb71a6df1b974d08ffb05ceda571b0628cab85a610",
+    "astrologie/faktoren/jupiter.html": "5322fbc923c0492fa2047132b324b9b241c47537f75452e6b6336e1ba6483dda",
+    "astrologie/faktoren/mars.html": "facc7aeb929e05331d23075cdb9784bd1602a2e74b379c0f47564240d7ef85b7",
+    "astrologie/faktoren/merkur.html": "79859e750426c34347ee9f318171d18b411e15e8cbd153107298715c92abf44a",
+    "astrologie/faktoren/mond.html": "a9bbbdf4ece4a2677e3dc0f07108890dae05e63a039166e8ce4392a73a908e55",
+    "astrologie/faktoren/neptun.html": "80a700976f347ca7e39ec57021c687e7e837c2078122f356cf1cabd17563454a",
+    "astrologie/faktoren/pluto.html": "5c030656d26234751563cb930c1156d27094ffb92aa168b0b81edd9a4e96a97f",
+    "astrologie/faktoren/saturn.html": "de1f79557635f6f582bcba3fd405afcfb163be65d7b18321876d5ccb59b473e3",
+    "astrologie/faktoren/sonne.html": "c830c9fccd41cbd2eca9ae23536bdf9d27bc37ca20051713e758d0b19c2b2ade",
+    "astrologie/faktoren/uranus.html": "dab00e889cf809849449d31e1b5d40d0b640027d89bf66e5d225fc063af00bb4",
+    "astrologie/faktoren/venus.html": "1e1cddde0c596e10a0a8ffc8cad400784b692516525939e516a9a8bd8796e8b6",
+    "astrologie/faq.html": "d8af7d1f157e234f67f48a09217928b4403027990c61fb8b6bdca0eafbc516f6",
+    "astrologie/glossar.html": "863d98b254cc68ab1b22c2574505961b7a9d7d6193914a88340d266fe6eeb6d3",
+    "astrologie/grundlagen/aspekte-und-orben.html": "782e24c6de371193d746b7e6dd78dc81c3018731505386f3daedc14f3de97e65",
+    "astrologie/grundlagen/aszendent-und-mc.html": "f77d12aa631367e02685822a6f1ad4e8e46b660e06ec8c9e04995fca655562c4",
+    "astrologie/grundlagen/echte-berechnung.html": "d40513756383b8b8cfabc50ed1ed03c7ed07b29d577f6494155aac9019d59513",
+    "astrologie/grundlagen/ekliptik-und-himmelssphaere.html": "f584d8031787af6f6b2b6980064714feb87f0540fc10157d347bf5c0a8fbc410",
+    "astrologie/grundlagen/element-erde.html": "8a53dc2179c359fa301429611c013e886fcd11da91996743e81525e58d2a0374",
+    "astrologie/grundlagen/element-feuer.html": "4238d965c5c9eb529353f97b593259fd15ba17a08a4ddb2f20f2a580ff9c226a",
+    "astrologie/grundlagen/element-luft.html": "7b687dfc5b106393456727986f689326ed0348d0f107ebe5a411265fa4c4b444",
+    "astrologie/grundlagen/element-wasser.html": "e03e4b1985aeecbd8ac2e976782b4fe574af5b90e4269669ca3a7a63124de686",
+    "astrologie/grundlagen/ethik-und-grenzen.html": "4992a047893745a76732ed1979aa203e226674f43cbbfe0e50f080611f171df9",
+    "astrologie/grundlagen/evidenz-und-grenzen.html": "4c0b6ceac493f67a40d8626c00f7f818dc650295a2a409e6e3528f640e07d4b4",
+    "astrologie/grundlagen/geschichte.html": "9b137a378057654ad69ab5e77bde4aed7c4f07589a8eecbb97bf496bd6099d3c",
+    "astrologie/grundlagen/grenzen-der-sonnenzeichen.html": "b6bb031c752f04b95e0708f421f2935cf1eda217f34c971b701e6a2abf5d7ea9",
+    "astrologie/grundlagen/haeusersysteme.html": "00442b66c6aa1ab0b4da88a2e09fc4920f0cb599a62eda2236ae1766f959701f",
+    "astrologie/grundlagen/herrschaft-und-wuerden.html": "b143b56bbc95aeca407eda0095e0e8c40ebec1485a7d2f7f7a37ce4b76270b59",
+    "astrologie/grundlagen/index.html": "adcf7593e2766b634e56300479421a8c768a883f2414399a7dc39ffb22772581",
+    "astrologie/grundlagen/modalitaet-fix.html": "663192ca7f20dd39d0d4e7b3eb27ed55e3801c0bfc22022a4dfaf223dabcb87f",
+    "astrologie/grundlagen/modalitaet-kardinal.html": "41d2cc93a73a04e1393127fa1ea0cc623284650056c8417a37fb9266c700c60e",
+    "astrologie/grundlagen/modalitaet-veraenderlich.html": "b3eca1e30729ec115311ee3d1526473c42223b762664cfd515fada94b5dba251",
+    "astrologie/grundlagen/mond-verstehen.html": "4ce1ae422fc08418a47e5fba3c41754c03e77b437d989ebec44cdc41c555e165",
+    "astrologie/grundlagen/radix-lesen.html": "abb899371b935aac7723353e5034689f2c36710f8fce552b2b621efaab6ac14b",
+    "astrologie/grundlagen/ruecklaeufigkeit.html": "ddeaf67f2c9d5a5f9873b780a9c9efe40f00089bfa85446fae884bed24508b9d",
+    "astrologie/grundlagen/transite.html": "3000d8bc4b16e1e8c5fd676e54982634200f6da02480005e9df1fa9c53f3131e",
+    "astrologie/grundlagen/tropisch-und-siderisch.html": "5d7b0709fe5e9b2c3950bab235fd393d682266e1d6225be10418581717253bef",
+    "astrologie/grundlagen/was-astrologie-ist.html": "5a07b070983fc3014b1e2b1a08b1ec6badaf1e5dd5a25a20923bf72071f679cb",
+    "astrologie/grundlagen/zeichen-und-sternbilder.html": "92784254bd79508572b71fbe967ba14eb7fd176599e83f215687cfcebca92fb5",
+    "astrologie/haeuser/achtes-haus.html": "9cabf78ba63c79a3fd8354c6a3b02ae8f44ece98d6e1310ce0cdc2a1f210f564",
+    "astrologie/haeuser/drittes-haus.html": "73662df53af99a6fe045c01aa99302748061f731af0d7b4c44e32859b2e7afbf",
+    "astrologie/haeuser/elftes-haus.html": "3b64993e3e08c9b5ba00fcdcda933ad8f185ab4e85cf26654e2ea29f7a136266",
+    "astrologie/haeuser/erstes-haus.html": "b443c8f4b70f8a25487fd2c1d73be5f9bae3f1aeab3e3a8662db697cf3114e82",
+    "astrologie/haeuser/fuenftes-haus.html": "3c7a466ebc80345fed41fe149a545d1dabb285c9489770e03a0c08c40a28436d",
+    "astrologie/haeuser/index.html": "07688e9597ea28674a0f7fc0954bd84840a9b95a164649684adc9348db3469ad",
+    "astrologie/haeuser/neuntes-haus.html": "c0fafd4c26dc8e4e9effe16b3fb145b4f87ad71002c0819949aebbc4d4284883",
+    "astrologie/haeuser/sechstes-haus.html": "eec562e3c48005be03fcdad4aa277bef10b2c362152f7be27dacba7553180a67",
+    "astrologie/haeuser/siebtes-haus.html": "f7914522f24e385ff9fbb7845161c5810e50bcd35d03d8191f146dd7a525a791",
+    "astrologie/haeuser/viertes-haus.html": "1551e7b2ce2e62e2da3871cd17ad1ea826a53ff07358e1fcbed87c90615f1560",
+    "astrologie/haeuser/zehntes-haus.html": "50d49a11d6573d0f627e7135ca467eeffa01730a49c44c9af78f905787da0fde",
+    "astrologie/haeuser/zweites-haus.html": "9df38ad653e9c77d5395ec7d4e5bb61a0998e0c77f635ae61ac9c3e5cf5ad586",
+    "astrologie/haeuser/zwoelftes-haus.html": "88ddc6bc4c6490deb136ccbb3b84137ed81d85f916fdeb3d67ccc868e442d1e1",
+    "astrologie/index.html": "ecfa8d858202de767e22cd170e8b05f185a256390d5293c202416a71efc25847",
+    "astrologie/lernpfad/die-zwoelf-zeichen.html": "cb39dca4f85fe8fa3253f5e3279c97804107464bd4ac7740bc8f1127c3ddc966",
+    "astrologie/lernpfad/faktoren-und-aspekte.html": "71c71c08453ea605172c59db4c4747eb6d44063881058003d301be4645ff24bb",
+    "astrologie/lernpfad/haeuser-und-achsen.html": "c0a5286b7a46cdbe6baf732d090ed8c5920613d5f6e169b651e8ed4afecd5dc7",
+    "astrologie/lernpfad/index.html": "141d43910987d40c2daa93404b6ab9283263d2846782b96cc55191fdf0f8b28c",
+    "astrologie/lernpfad/nachschlagen-und-vertiefen.html": "5602a6663fd017d44f073fef74fab7c4cdb2f10830e91ebcb08f4fae4208e6be",
+    "astrologie/lernpfad/orientierung.html": "744e8228418d8ca57bd042ca6b37a30fd7d6a0b58e3dcb656ceced6ca90d8032",
+    "astrologie/lernpfad/synthese-und-grenzen.html": "f165c382a7321a475a40ca2fdf896799e13abd0491de9d750029d7905a44c9eb",
+    "astrologie/methodik.html": "fc313112aa367709131835e0909b68164a9ca233949eeb74dea2da8fd4549159",
+    "astrologie/quellen.html": "928f5fa73629e9992a74e478c5b088bf8d86c0065155cb8699e74f2203216826",
+    "astrologie/suche.html": "bcb614d4ca4c7a6f0bef17a49a991c17322af415c93e783142a048c30b7019ba",
+    "astrologie/zeichen/fische.html": "2d235ff31efaabf39b2be46b514303f4ce6d48e8b73b17a4e0ae1ea0d33a0bcc",
+    "astrologie/zeichen/index.html": "ffff17f1b1a7865d56d43ed284784ad91898c50d69624daf9360eec2b446d931",
+    "astrologie/zeichen/jungfrau.html": "4bdeba193a04b059539f09fddf5de379182cb4bb1a5540b88fac088087085312",
+    "astrologie/zeichen/krebs.html": "15a7fe001955eaa5068ae95c4e63bff15bb931ed5535a9ebcc4465d3f740605f",
+    "astrologie/zeichen/loewe.html": "24826794fedc2c2a14d04de4fca966abdc2078b58d652548610162ed95a94736",
+    "astrologie/zeichen/schuetze.html": "4d6b96927dd7ef058732c0b5791ec3942d335bf50ca507b4bfbba24426dfacaa",
+    "astrologie/zeichen/skorpion.html": "b7148a75852c27b70cc10221c40c3fa7b76ce87223dfb7649308bd97f796fda4",
+    "astrologie/zeichen/steinbock.html": "d283be89ac5d527d63381f91b85cc1a797d302c3ef7ae18af9fb8ca454217c0b",
+    "astrologie/zeichen/stier.html": "3201f0c320cd661d198904ea964b0f30c5aeda8814ea9ed0b66252b2a10cd10f",
+    "astrologie/zeichen/waage.html": "e56ad59021a290880d313fa6c312c35f47459296b0624fc99018cfdf6ab06ae4",
+    "astrologie/zeichen/wassermann.html": "e0635228b5b79326067c486b74c8d6f816219d3f493c834a954cda88d919eaba",
+    "astrologie/zeichen/widder.html": "b85aee19ac90f56631fea647ed21ae88c22d8dcd9dd83c41a8caf1e940f7e322",
+    "astrologie/zeichen/zwillinge.html": "3ffffbe73a8b3dc62979154117a455e005ed77f9be980d7f502ac8bb01e895cb",
+    "datenschutz.html": "7843df0f1b65809ea3456467aa33c02a68e0e420fd568fd3cd1f6c4bd08248ac",
+    "farbwelten/blau.html": "af883ee58b3bd21108496e6475d067bc974cfa744d9911a2c63e80eb1fd39118",
+    "farbwelten/chakren.html": "8c3579ba2671935965571409addaf3c31c744fd78d6597b04a5905e95e10fbe4",
+    "farbwelten/farbmeditation.html": "8bc6bcc795bdb513e58bb7148d32e07badd7fa8a08b5d2ab8e5b4864b674c566",
+    "farbwelten/farbpsychologie.html": "e4cb75e358e687c54f58f2358c1f73500d3ed676635a082f582984da0dcc9061",
+    "farbwelten/farbtherapie.html": "d95c23ff79eb9a9fd626a80b2dba38ee0429904e0160053cb485da9c6a663aa9",
+    "farbwelten/gelb.html": "276cd68601995a4c1bdcddbb80abf235db0e55d57fb04ffc4f52837efeee136c",
+    "farbwelten/gruen.html": "ce3507e878141426775461097a730c60b8daea6643897cb3a3d6c97e0c6f34fe",
+    "farbwelten/index.html": "04edcab2ad0a2dcd293fcc3642211ed8aef509800e3db92410f0814b4576cbe6",
+    "farbwelten/indigo.html": "fb4da20006f14bb9f7e44c3c77921d1828dd648957cbdc3066588ed62dbae0fd",
+    "farbwelten/kompass.html": "72f6992b44bff3041b3a050267736a564aba8b5d55280975e00f404dab97bf87",
+    "farbwelten/lichtfrequenzen.html": "271e909c2c9f46af98d7bd59bd9fbc2e95ba836315bee5fbdb612bba832d4ffd",
+    "farbwelten/lichtmedizin.html": "201170187b3f0ebd07d6d1cec0f89b9a744a93b914240a843bce725a69c2215a",
+    "farbwelten/magenta.html": "4bda5174da5d9301dbfc69ad3c3c32e1637faac265a3e540950f7db0b81b4ae2",
+    "farbwelten/orange.html": "4e48e70b666dad70273595a71632fd5f409c4fc22f21a43e2f971ee3e5cc3220",
+    "farbwelten/rosa.html": "84bf04e2eae2ca63af484a9e6db8ff08a445c1e07003bc410b95337965159643",
+    "farbwelten/rot.html": "ed1770a929a45a02dc3898bab95678cbb17f80923831d94450b7c475877d3d36",
+    "farbwelten/schwarz.html": "843bdde77cf5bb6942171019b2e1f69895a4904065b5f9598d084804fc02bc8e",
+    "farbwelten/tuerkis.html": "67b1a94f58cd7cc02477b323ec366224eb1f26401cbbe72bba53c9d1cbce2646",
+    "farbwelten/violett.html": "cd1997c466f1dc0e0e1dfcd54333253abf68f52e56fe88b6bf5449fd2c3da8fc",
+    "farbwelten/weiss.html": "157557e274d217a8639acbc28ac1d6e0d4a2f1799ceabd1823f6d531c29ded25",
+    "farbwelten/zeitleiste.html": "bb2d8e3c28a492c24f41a27725f3e5063408d78a09a161bc545f4777588f0630",
+    "frequenzen/cymatics.html": "ab5f9142c85acc478ac389199d78973931f5849d97b9f5f378c0f642e32133ce",
+    "frequenzen/index.html": "e6de834271ecaec2465a3e65e13fa68874f3c87228637e0d683908e9b6e4051c",
+    "frequenzen/labor.html": "7be621446f8afb630e6563c120af2bb140087700c1d2b760e262db9ca239e5fd",
+    "frequenzen/meditation.html": "eab85cb191009ecc1bdee294b903c7a37384e630c963fc679a90b3e7ae00acf6",
+    "frequenzen/quellen.html": "9aa95c754d4b1cf7c3f2a0c8d273c84b3d9e0f7185a9a8bc04a9c7ed2984eb0e",
+    "haftung.html": "84f50a185091e250d65a93778f5859188dfda7d014ce7a8bef88c7f24cb0351b",
+    "impressum.html": "5869d7e436b4e9de66324df4c61851b43158a96526cc05adc9019e8adb97a431",
+    "index.html": "55644892bca9ef9db6e530215e22e73972ad0f3970747f625bd4f85eb3b1a346",
+    "kristalle.html": "e972fd6e1d8be7ae7d2a3ff045df29b68872804d81b8f8b381625cdae21a93fb",
+    "mondphasen.html": "42c2e42addf7a36303c55697a850f04e0d645604e9e9fa1f255ed781d0e13fbf",
+    "pendeln/experiment.html": "18f5cc679dbba0c4ff2f91224b52bf9b4102c4100afb2e222b25bd0eff685c28",
+    "pendeln/journal.html": "b361bf0470977fac66fd78e05c3d0c1d3b06d6c931bb5da961ab8910887a3785",
+    "pendeln/labor.html": "7cc488c05560202b67784b0fcdb2e0c71f38dc41f845a1a0585c8eee0628fdf9",
+    "pendeln/studio.html": "f4317ceb55b1a4fd4e7e91c1f6db01bd12272ce755e98006f714630b0c5eff8b",
+    "pendeln/suche.html": "3efe96a4530869ab49afecfcc2b4a0e59d5c7bde4ed1dfb04090813701884538",
+    "radiasthesie/glossar.html": "093b4a76f39fc767ede5b2c566c5f3beeb9a9c5f2e63eb6030214764b89af82e",
+    "radiasthesie/index.html": "cc69422de42c7a87eb50047b581f3aa959010b37797f9fe3cded77a1fd17a293",
+    "radiasthesie/methodik.html": "c7824caf9ef98d662c21070b12604c956c39672567bd9bffb88183c6423ac4fe",
+    "radiasthesie/orakel.html": "007b1f1fb6383b56334d264f9629fd93b61910f8910d863302f97a51bf191c67",
+    "radiasthesie/pendeln.html": "96ca9cc490f5b670bad4e79ae36d2208cbc293de7c6f497d563b129663f1891a",
+    "radiasthesie/quellen.html": "3202ead7330baffd909c7cf3268447ad4f088b05fc3b732bc48066c050945899",
+    "radiasthesie/radiasthesie.html": "d664b69828e3641d6654c82f8f494b6fffd8f44134fb4a4bb5913fc1d67a112d",
+    "runen.html": "da88234529c9283628c17a37f72be8bd4dd975b304f4273680b9d51e0d6a916b",
+    "tarot.html": "aa955403e088c68139b7ea003b126dea01f73ba336b9f307a682299393bfadb7",
+    "wissen/01-die-78-tarot-karten-eine.html": "449300236387391a73fe6226b99af934bb3a715092500b5f03eb185e7e83d4d6",
+    "wissen/02-kristalle-als-werkzeuge-wie-steine.html": "339a92479310324936ab8c7aa2eadd61a566b6981ad02672e5303d2af6529e8a",
+    "wissen/03-runenwerfen-die-drei-positionen-der.html": "df1b91a76cf6ab4b865bc6f43cf4c185be47d95a6aa1f4227f813a2e96b93b32",
+    "wissen/04-die-mondphasen-von-neumond-bis.html": "0166a76efde186677b30a156955a750fc4b957f64995020e975e95529ee7bb1e",
+    "wissen/05-die-geschichte-des-tarot-von.html": "185ea3a5f6949c30e4ff931a46583afee270d99fdb68d8f6bcaf9cd277d59e74",
+    "wissen/06-einsteiger-guide-wie-du-mit.html": "fac9e959bee35c6c13efe11c277758e688334ad0bbbb8365a8986c7ec653fcc9",
+    "wissen/07-chakren-kristalle-welche-steine-fuer.html": "1b9b3ac3449d13215346f6020ec3a763cf771c7cb69bd91f361f1a4ac4735a43",
+    "wissen/08-die-bedeutung-des-futhark-von.html": "488f7a3fa322c9538d81d8229907a8eddaa2834ff3e4579f0efe52dc27868f03",
+    "wissen/09-rituale-fuer-jede-mondphase-ein.html": "a239c5e9416c6ce2566ef223368f304c90610b693a51a542d2b5a21dd2a06fbd",
+    "wissen/10-moldavit-der-meteorit-unter-den.html": "2e1ef68241922c10c9694f0a1601732f2051898358022945deca9f169c46d62e",
+    "wissen/index.html": "6d02fbf646e2f1d669af7c6d9c90864bf6314a170912b85d5ae9a8b589e4448d"
+  },
+  "pilotIds": [
+    {
+      "depth": 2,
+      "id": "frequenzen-quellen-evidenzstatus-und-methodik"
+    },
+    {
+      "depth": 2,
+      "id": "1-zweck-und-geltungsbereich"
+    },
+    {
+      "depth": 2,
+      "id": "2-suchstrategie-und-aufnahmekriterien"
+    },
+    {
+      "depth": 2,
+      "id": "3-evidenzstatus-im-einzelnen"
+    },
+    {
+      "depth": 2,
+      "id": "4-datenschema"
+    },
+    {
+      "depth": 2,
+      "id": "5-claim-quelle-matrix"
+    },
+    {
+      "depth": 3,
+      "id": "51-physikalisch--physiologisch"
+    },
+    {
+      "depth": 3,
+      "id": "52-esoterisch--traditionell"
+    },
+    {
+      "depth": 2,
+      "id": "6-einzelprüfungen"
+    },
+    {
+      "depth": 3,
+      "id": "61-eeg-bänder-warum-bereiche-und-keine-punktwerte"
+    },
+    {
+      "depth": 3,
+      "id": "62-hörbereich-und-infraschall"
+    },
+    {
+      "depth": 3,
+      "id": "63-stimmton-historie"
+    },
+    {
+      "depth": 3,
+      "id": "64-schwebung-binaurale-beats-und-die-entrainment-frage"
+    },
+    {
+      "depth": 3,
+      "id": "65-solfeggio-primärquelle-und-beweislage"
+    },
+    {
+      "depth": 3,
+      "id": "66-planetenfrequenzen-rechnung-nachvollziehbar-deutung-nicht"
+    },
+    {
+      "depth": 3,
+      "id": "67-432-hz-kleiner-effekt-keine-gesundheitswirkung"
+    },
+    {
+      "depth": 3,
+      "id": "68-40-hz-mausmodell--therapie"
+    },
+    {
+      "depth": 3,
+      "id": "69-rife-und-bioresonanz-zahlen-ohne-wirknachweis"
+    },
+    {
+      "depth": 3,
+      "id": "610-cymatics-und-chladni-figuren-figur-statt-frequenz"
+    },
+    {
+      "depth": 3,
+      "id": "611-klangschalen-mantras-chakren"
+    },
+    {
+      "depth": 3,
+      "id": "612-solfeggio-erweiterungen-174285963-hz"
+    },
+    {
+      "depth": 2,
+      "id": "7-bewusst-nicht-aufgenommene-einträge"
+    },
+    {
+      "depth": 3,
+      "id": "71-bewusst-aufgenommene-grenzfälle-nachtrag-zu-befund-b2"
+    },
+    {
+      "depth": 2,
+      "id": "8-widersprüche-grenzen-offene-punkte"
+    },
+    {
+      "depth": 2,
+      "id": "9-disclaimer-verbindlicher-text"
+    },
+    {
+      "depth": 2,
+      "id": "10-reproduktion-und-prüfung"
+    },
+    {
+      "depth": 2,
+      "id": "11-hinweise-für-ui-und-audio-engine"
+    },
+    {
+      "depth": 2,
+      "id": "12-quellenverzeichnis"
+    },
+    {
+      "depth": 2,
+      "id": "13-änderungslog"
+    }
+  ],
+  "pilotLength": 67176,
+  "assets": {
+    "css": [
+      {
+        "file": "BaseLayout.C9cg-69v.css",
+        "bytes": 181441,
+        "gzip": 28118
+      }
+    ],
+    "tocScript": [
+      {
+        "file": "TableOfContents.astro_astro_type_script_index_0_lang.BktuqbeO.js",
+        "bytes": 4509,
+        "gzip": 2018
+      }
+    ],
+    "chunks": [
+      {
+        "file": "BaseLayout.astro_astro_type_script_index_0_lang.BECeyUNJ.js",
+        "bytes": 16852,
+        "gzip": 2740
+      },
+      {
+        "file": "cymatics.astro_astro_type_script_index_0_lang.CQFZvQqs.js",
+        "bytes": 246,
+        "gzip": 211
+      },
+      {
+        "file": "dialog.D2dj6DLX.js",
+        "bytes": 2112,
+        "gzip": 941
+      },
+      {
+        "file": "frequenz-cymatics-view.CoUIggaV.js",
+        "bytes": 9939,
+        "gzip": 3957
+      },
+      {
+        "file": "frequenz-engine.D6DVW3NC.js",
+        "bytes": 16270,
+        "gzip": 5112
+      },
+      {
+        "file": "frequenz-meditation-view.BKdvpQVu.js",
+        "bytes": 20251,
+        "gzip": 6230
+      },
+      {
+        "file": "frequenz-nav.Bel-39wa.js",
+        "bytes": 604,
+        "gzip": 384
+      },
+      {
+        "file": "frequenzlabor-loader.DNF8LpdT.js",
+        "bytes": 1011,
+        "gzip": 511
+      },
+      {
+        "file": "index.astro_astro_type_script_index_0_lang.B5I78UM-.js",
+        "bytes": 236,
+        "gzip": 201
+      },
+      {
+        "file": "kristalle.astro_astro_type_script_index_0_lang.C-p2p1vx.js",
+        "bytes": 17028,
+        "gzip": 5231
+      },
+      {
+        "file": "labor.astro_astro_type_script_index_0_lang.D0EQS3IX.js",
+        "bytes": 243,
+        "gzip": 204
+      },
+      {
+        "file": "meditation.astro_astro_type_script_index_0_lang.D3vANELz.js",
+        "bytes": 248,
+        "gzip": 212
+      },
+      {
+        "file": "mondphasen.astro_astro_type_script_index_0_lang.BUUE-uvL.js",
+        "bytes": 31807,
+        "gzip": 11350
+      },
+      {
+        "file": "moon-astro.DF4yZN0l.js",
+        "bytes": 10077,
+        "gzip": 4284
+      },
+      {
+        "file": "PendelnTool.astro_astro_type_script_index_0_lang.Br-wSgCA.js",
+        "bytes": 1676,
+        "gzip": 829
+      },
+      {
+        "file": "preload-helper.KS-HV6LQ.js",
+        "bytes": 1748,
+        "gzip": 916
+      },
+      {
+        "file": "radiasthesie.Cj_3KLcC.js",
+        "bytes": 92,
+        "gzip": 104
+      },
+      {
+        "file": "rolldown-runtime.B8xr6ykz.js",
+        "bytes": 182,
+        "gzip": 145
+      },
+      {
+        "file": "runen.astro_astro_type_script_index_0_lang.DHEVGkb2.js",
+        "bytes": 8866,
+        "gzip": 3079
+      },
+      {
+        "file": "runes.6XfdWyvP.js",
+        "bytes": 7583,
+        "gzip": 2944
+      },
+      {
+        "file": "SiteHeader.astro_astro_type_script_index_0_lang.hDDJVzW9.js",
+        "bytes": 1200,
+        "gzip": 630
+      },
+      {
+        "file": "suche.astro_astro_type_script_index_0_lang.ChJKnJP6.js",
+        "bytes": 831,
+        "gzip": 496
+      },
+      {
+        "file": "suche.astro_astro_type_script_index_0_lang.MNFnPacc.js",
+        "bytes": 838,
+        "gzip": 501
+      },
+      {
+        "file": "TableOfContents.astro_astro_type_script_index_0_lang.BktuqbeO.js",
+        "bytes": 4509,
+        "gzip": 2018
+      },
+      {
+        "file": "toc.CSQ1dtFr.js",
+        "bytes": 11221,
+        "gzip": 4794
+      }
+    ]
+  }
+}
