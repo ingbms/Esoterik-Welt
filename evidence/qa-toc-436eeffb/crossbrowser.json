@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-11-04T17:27:17.386Z",
+  "results": [
+    {
+      "engine": "firefox",
+      "ok": true,
+      "version": "157.0",
+      "desktop": {
+        "tocLinks": 29,
+        "asideWidth": 260,
+        "proseWidth": 720,
+        "stickyTop": 124,
+        "position": "sticky",
+        "current": [
+          "#2-suchstrategie-und-aufnahmekriterien"
+        ],
+        "activeAfterScroll": 1,
+        "clickTop": 116,
+        "clickWindowOk": true,
+        "hash": "61-eeg-bänder-warum-bereiche-und-keine-punktwerte",
+        "header": 100
+      },
+      "mobile": {
+        "closedInitially": true,
+        "opened": true,
+        "asideBottom": -8083,
+        "proseTop": -8059,
+        "overlapsArticle": false,
+        "summaryHeight": 44,
+        "tocLinks": 29,
+        "scrollWidth": 538
+      },
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "ok": true,
+      "version": "27.2",
+      "desktop": {
+        "tocLinks": 29,
+        "asideWidth": 260,
+        "proseWidth": 703,
+        "stickyTop": 124,
+        "position": "sticky",
+        "current": [
+          "#2-suchstrategie-und-aufnahmekriterien"
+        ],
+        "activeAfterScroll": 1,
+        "clickTop": 116,
+        "clickWindowOk": true,
+        "hash": "61-eeg-bänder-warum-bereiche-und-keine-punktwerte",
+        "header": 100
+      },
+      "mobile": {
+        "closedInitially": true,
+        "opened": true,
+        "asideBottom": -23426,
+        "proseTop": -23402,
+        "overlapsArticle": false,
+        "summaryHeight": 44,
+        "tocLinks": 29,
+        "scrollWidth": 537
+      },
+      "errors": []
+    }
+  ]
+}

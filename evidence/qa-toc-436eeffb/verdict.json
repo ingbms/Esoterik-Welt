@@ -1,0 +1,44 @@
+{
+  "task": "t_436eeffb",
+  "subject": {
+    "commit": "ea139481249f78c5e1d60d480cb2990581760a59",
+    "tree": "af2cee4011ca7055ebd172f9d0e8590b61ac877a",
+    "base": "9d14d374645729bd63b2abcf7a521949ed7d80a5",
+    "branch": "wt/t_436eeffb",
+    "main_is_ancestor": true,
+    "pushed": false
+  },
+  "generatedAt": "2026-11-04",
+  "summary": { "total": 55, "pass": 51, "fail": 3, "not_tested": 1 },
+  "criteria": {
+    "AK-A1": "pass", "AK-A2": "pass", "AK-A3": "pass", "AK-A4": "pass", "AK-A5": "pass",
+    "AK-B1": "pass", "AK-B2": "pass", "AK-B3": "pass", "AK-B4": "pass", "AK-B5": "pass",
+    "AK-B6": "pass", "AK-B7": "pass", "AK-B8": "pass",
+    "AK-C1": "pass", "AK-C2": "pass", "AK-C3": "pass", "AK-C4": "pass", "AK-C5": "pass",
+    "AK-C6": "pass", "AK-C7": "pass",
+    "AK-D1": "pass", "AK-D2": "pass", "AK-D3": "fail", "AK-D4": "pass", "AK-D5": "pass", "AK-D6": "pass",
+    "AK-E1": "pass", "AK-E2": "pass", "AK-E3": "pass", "AK-E4": "pass", "AK-E5": "pass",
+    "AK-E6": "pass", "AK-E7": "pass", "AK-E8": "pass", "AK-E9": "pass",
+    "AK-F1": "pass", "AK-F2": "pass", "AK-F3": "pass", "AK-F4": "pass", "AK-F5": "pass",
+    "AK-F6": "pass", "AK-F7": "not_tested",
+    "AK-G1": "pass", "AK-G2": "pass", "AK-G3": "pass", "AK-G4": "pass",
+    "AK-H1": "pass", "AK-H2": "pass", "AK-H3": "fail", "AK-H4": "fail", "AK-H5": "pass", "AK-H6": "pass",
+    "AK-I1": "pass", "AK-I2": "pass", "AK-I3": "pass"
+  },
+  "failures": ["AK-D3", "AK-H3", "AK-H4"],
+  "notTested": ["AK-F7"],
+  "defects": [
+    { "id": "D-1", "severity": "hoch", "blocks_release": true, "title": "Scroll-Sprung zum Verzeichnis bei <1200 px mit geöffnetem Panel", "criteria": ["AK-D3"], "evidence": "evidence/qa-toc-436eeffb/defect-scrolljump.json" },
+    { "id": "D-2", "severity": "gering", "blocks_release": false, "title": "Dekoratives +/- im zugänglichen Namen des Summary", "criteria": ["AK-F7"], "evidence": "evidence/qa-toc-436eeffb/a11y-extra.json" },
+    { "id": "D-3", "severity": "gering", "blocks_release": false, "title": "CLS 0,076 statt 0 (Baseline 0,063)", "criteria": ["AK-H3"], "evidence": "evidence/qa-toc-436eeffb/cls-pilot.json" },
+    { "id": "D-4", "severity": "gering", "blocks_release": false, "title": "Lighthouse-A11y 0,91 statt 1,0 (zwei vorbestehende Artikelbefunde)", "criteria": ["AK-H4"], "evidence": "evidence/qa-toc-436eeffb/lighthouse-pilot.json" }
+  ],
+  "gaps": [
+    "Echter Screenreader-Lauf (NVDA/VoiceOver) fehlt",
+    "aria-current nicht als AX-Property in Chromium-CDP auslesbar",
+    "Safari/iOS und echtes Touch-Gerät nicht getestet",
+    "200 % Zoom nur als 160-px-CSS-Viewport simuliert",
+    "dynamic-Modus nur gegen Fixture geprüft"
+  ],
+  "recommendation": "keine Freigabe in der vorliegenden Form; Freigabe nach Behebung von D-1 (und empfohlen D-2) mit Retest"
+}

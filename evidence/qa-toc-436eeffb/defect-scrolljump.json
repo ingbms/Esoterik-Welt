@@ -1,0 +1,196 @@
+{
+  "generatedAt": "2026-11-04T17:17:15.585Z",
+  "runs": {
+    "390-panel-open": {
+      "before": {
+        "y": 0,
+        "x": 0,
+        "docHeight": 49423
+      },
+      "target": 29812,
+      "immediate": 29812,
+      "samples": [
+        {
+          "t": 100,
+          "y": 501,
+          "x": 0,
+          "active": "#frequenzen-quellen-evidenzstatus-und-methodik",
+          "calls": 0
+        },
+        {
+          "t": 500,
+          "y": 501,
+          "x": 0,
+          "active": "#frequenzen-quellen-evidenzstatus-und-methodik",
+          "calls": 0
+        },
+        {
+          "t": 1200,
+          "y": 501,
+          "x": 0,
+          "active": "#frequenzen-quellen-evidenzstatus-und-methodik",
+          "calls": 0
+        }
+      ],
+      "finalY": 501,
+      "jump": 29311,
+      "calls": [],
+      "tocBlockTop": 56.484375,
+      "detailsOpen": true
+    },
+    "390-panel-open-stubbed": {
+      "before": {
+        "y": 0,
+        "x": 0,
+        "docHeight": 49423
+      },
+      "target": 29812,
+      "immediate": 29812,
+      "samples": [
+        {
+          "t": 100,
+          "y": 29812,
+          "x": 0,
+          "active": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "calls": 1
+        },
+        {
+          "t": 500,
+          "y": 29812,
+          "x": 0,
+          "active": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "calls": 1
+        },
+        {
+          "t": 1200,
+          "y": 29812,
+          "x": 0,
+          "active": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "calls": 1
+        }
+      ],
+      "finalY": 29812,
+      "jump": 0,
+      "calls": [
+        {
+          "tag": "A",
+          "cls": "page-toc__link is-active",
+          "arg": "{\"block\":\"nearest\",\"inline\":\"nearest\",\"behavior\":\"auto\"}"
+        }
+      ],
+      "tocBlockTop": -29254.515625,
+      "detailsOpen": true
+    },
+    "390-panel-closed": {
+      "before": {
+        "y": 0,
+        "x": 0,
+        "docHeight": 48950
+      },
+      "target": 29812,
+      "immediate": 29812,
+      "samples": [
+        {
+          "t": 100,
+          "y": 29812,
+          "x": 0,
+          "active": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "calls": 0
+        },
+        {
+          "t": 500,
+          "y": 29812,
+          "x": 0,
+          "active": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "calls": 0
+        },
+        {
+          "t": 1200,
+          "y": 29812,
+          "x": 0,
+          "active": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "calls": 0
+        }
+      ],
+      "finalY": 29812,
+      "jump": 0,
+      "calls": [],
+      "tocBlockTop": -29254.515625,
+      "detailsOpen": false
+    },
+    "1199-panel-open": {
+      "before": {
+        "y": 0,
+        "x": 0,
+        "docHeight": 23739
+      },
+      "target": 29812,
+      "immediate": 22895,
+      "samples": [
+        {
+          "t": 100,
+          "y": 376,
+          "x": 0,
+          "active": "#frequenzen-quellen-evidenzstatus-und-methodik",
+          "calls": 0
+        },
+        {
+          "t": 500,
+          "y": 376,
+          "x": 0,
+          "active": "#frequenzen-quellen-evidenzstatus-und-methodik",
+          "calls": 0
+        },
+        {
+          "t": 1200,
+          "y": 376,
+          "x": 0,
+          "active": "#frequenzen-quellen-evidenzstatus-und-methodik",
+          "calls": 0
+        }
+      ],
+      "finalY": 376,
+      "jump": 29436,
+      "calls": [],
+      "tocBlockTop": 72.171875,
+      "detailsOpen": true
+    },
+    "1440-desktop": {
+      "before": {
+        "y": 0,
+        "x": 0,
+        "docHeight": 23164
+      },
+      "target": 29812,
+      "immediate": 22320,
+      "samples": [
+        {
+          "t": 100,
+          "y": 22320,
+          "x": 0,
+          "active": "#13-änderungslog",
+          "calls": 0
+        },
+        {
+          "t": 500,
+          "y": 22320,
+          "x": 0,
+          "active": "#13-änderungslog",
+          "calls": 0
+        },
+        {
+          "t": 1200,
+          "y": 22320,
+          "x": 0,
+          "active": "#13-änderungslog",
+          "calls": 0
+        }
+      ],
+      "finalY": 22320,
+      "jump": 7492,
+      "calls": [],
+      "tocBlockTop": -299.125,
+      "detailsOpen": true
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "generatedAt": "2026-11-04T17:20:22.393Z",
+  "results": [
+    {
+      "id": "AK-G1",
+      "name": "ohne JavaScript sind alle 29 Links im HTML",
+      "ok": true,
+      "detail": {
+        "links": 29,
+        "detailsOpen": true,
+        "ariaCurrent": 3,
+        "tocAriaCurrent": 0,
+        "ariaCurrentWhere": [
+          "A.nav-link active:page",
+          "SPAN.:page",
+          "A.:page"
+        ],
+        "asideVisible": true,
+        "listVisibleHeight": 670,
+        "summaryDisplay": "none",
+        "tocTitleDisplay": "block"
+      }
+    },
+    {
+      "id": "AK-G4",
+      "name": "ohne JavaScript kein aria-current im Verzeichnis",
+      "ok": true,
+      "detail": {
+        "links": 29,
+        "detailsOpen": true,
+        "ariaCurrent": 3,
+        "tocAriaCurrent": 0,
+        "ariaCurrentWhere": [
+          "A.nav-link active:page",
+          "SPAN.:page",
+          "A.:page"
+        ],
+        "asideVisible": true,
+        "listVisibleHeight": 670,
+        "summaryDisplay": "none",
+        "tocTitleDisplay": "block"
+      }
+    },
+    {
+      "id": "NOJS-1",
+      "name": "Desktop ohne JS: Liste offen und sichtbar",
+      "ok": true,
+      "detail": {
+        "links": 29,
+        "detailsOpen": true,
+        "ariaCurrent": 3,
+        "tocAriaCurrent": 0,
+        "ariaCurrentWhere": [
+          "A.nav-link active:page",
+          "SPAN.:page",
+          "A.:page"
+        ],
+        "asideVisible": true,
+        "listVisibleHeight": 670,
+        "summaryDisplay": "none",
+        "tocTitleDisplay": "block"
+      }
+    },
+    {
+      "id": "AK-G2",
+      "name": "ohne JavaScript springen alle Stichproben unter den Header und sind sichtbar",
+      "ok": true,
+      "detail": [
+        {
+          "index": 3,
+          "href": "#3-evidenzstatus-im-einzelnen",
+          "hash": "3-evidenzstatus-im-einzelnen",
+          "scrollY": 2383,
+          "top": 116,
+          "header": 100,
+          "belowHeader": true,
+          "visibleInViewport": true
+        },
+        {
+          "index": 12,
+          "href": "#64-schwebung-binaurale-beats-und-die-entrainment-frage",
+          "hash": "64-schwebung-binaurale-beats-und-die-entrainment-frage",
+          "scrollY": 10914,
+          "top": 116,
+          "header": 100,
+          "belowHeader": true,
+          "visibleInViewport": true
+        },
+        {
+          "index": 25,
+          "href": "#10-reproduktion-und-prüfung",
+          "hash": "10-reproduktion-und-prüfung",
+          "scrollY": 18254,
+          "top": 116,
+          "header": 100,
+          "belowHeader": true,
+          "visibleInViewport": true
+        }
+      ]
+    },
+    {
+      "id": "AK-G3",
+      "name": "ohne JavaScript öffnet und schließt das Summary die Liste nativ",
+      "ok": true,
+      "detail": {
+        "links": 29,
+        "detailsOpen": true,
+        "summaryHeight": 44,
+        "ariaCurrent": 3,
+        "scrollWidth": 540,
+        "closed": false,
+        "reopened": true
+      }
+    },
+    {
+      "id": "AK-G2b",
+      "name": "ohne JavaScript (390 px) springt der Link unter den Header",
+      "ok": true,
+      "detail": {
+        "id": "6-einzelprüfungen",
+        "top": 100,
+        "header": 84,
+        "belowHeader": true,
+        "scrollY": 23570
+      }
+    }
+  ],
+  "initial": {
+    "links": 29,
+    "detailsOpen": true,
+    "ariaCurrent": 3,
+    "tocAriaCurrent": 0,
+    "ariaCurrentWhere": [
+      "A.nav-link active:page",
+      "SPAN.:page",
+      "A.:page"
+    ],
+    "asideVisible": true,
+    "listVisibleHeight": 670,
+    "summaryDisplay": "none",
+    "tocTitleDisplay": "block"
+  },
+  "jumps": [
+    {
+      "index": 3,
+      "href": "#3-evidenzstatus-im-einzelnen",
+      "hash": "3-evidenzstatus-im-einzelnen",
+      "scrollY": 2383,
+      "top": 116,
+      "header": 100,
+      "belowHeader": true,
+      "visibleInViewport": true
+    },
+    {
+      "index": 12,
+      "href": "#64-schwebung-binaurale-beats-und-die-entrainment-frage",
+      "hash": "64-schwebung-binaurale-beats-und-die-entrainment-frage",
+      "scrollY": 10914,
+      "top": 116,
+      "header": 100,
+      "belowHeader": true,
+      "visibleInViewport": true
+    },
+    {
+      "index": 25,
+      "href": "#10-reproduktion-und-prüfung",
+      "hash": "10-reproduktion-und-prüfung",
+      "scrollY": 18254,
+      "top": 116,
+      "header": 100,
+      "belowHeader": true,
+      "visibleInViewport": true
+    }
+  ],
+  "mobileNoJs": {
+    "links": 29,
+    "detailsOpen": true,
+    "summaryHeight": 44,
+    "ariaCurrent": 3,
+    "scrollWidth": 540
+  },
+  "mtarget": {
+    "top": 100,
+    "header": 84,
+    "belowHeader": true,
+    "scrollY": 23570
+  }
+}

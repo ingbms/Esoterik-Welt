@@ -1,0 +1,42 @@
+{
+  "label": "baseline",
+  "url": "http://127.0.0.1:2841/frequenzen/quellen.html",
+  "generatedAt": "2026-11-04T17:22:57.703Z",
+  "lighthouseVersion": "12.6.1",
+  "scores": {
+    "accessibility": 0.91,
+    "performance": 0.54
+  },
+  "metrics": {
+    "cls": 0.07630709163151607,
+    "lcp": 7663.827242680703,
+    "tbt": 0,
+    "fcp": 5413.8272426807025,
+    "speedIndex": 5413.8272426807025
+  },
+  "failingA11y": [
+    {
+      "id": "color-contrast",
+      "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+      "score": 0,
+      "nodes": [
+        "pre.astro-code > code > span.line > span",
+        "pre.astro-code > code > span.line > span"
+      ]
+    },
+    {
+      "id": "link-in-text-block",
+      "title": "Links rely on color to be distinguishable.",
+      "score": 0,
+      "nodes": [
+        "article.prose > ol > li > a",
+        "article.prose > ol > li > a",
+        "article.prose > ol > li > a",
+        "article.prose > ol > li > a",
+        "article.prose > ol > li > a",
+        "article.prose > ol > li > a"
+      ]
+    }
+  ],
+  "consoleErrors": 0
+}

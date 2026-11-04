@@ -1,0 +1,144 @@
+{
+  "label": "baseline",
+  "generatedAt": "2026-11-04T17:22:35.391Z",
+  "desktop": {
+    "cls": 0.0632,
+    "clsEntries": [
+      {
+        "v": 0.0632,
+        "hadInput": false,
+        "t": 237,
+        "sources": [
+          "#text.",
+          "#text.",
+          "NAV.nav",
+          "#text.",
+          "#text."
+        ]
+      }
+    ],
+    "tocAside": 0,
+    "tocLinks": 0,
+    "docHeight": 23244,
+    "proseWidth": 720
+  },
+  "axe": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          "pre[data-language=\"bash\"] > code > .line:nth-child(1) > span",
+          "pre[data-language=\"bash\"] > code > .line:nth-child(4) > span"
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "nodes": [
+          "ol:nth-child(110) > li:nth-child(1) > a",
+          "ol:nth-child(110) > li:nth-child(2) > a",
+          "ol:nth-child(110) > li:nth-child(3) > a",
+          "ol:nth-child(110) > li:nth-child(4) > a",
+          "ol:nth-child(110) > li:nth-child(6) > a",
+          "ol:nth-child(110) > li:nth-child(8) > a",
+          "li:nth-child(11) > a",
+          "li:nth-child(12) > a",
+          "li:nth-child(14) > a",
+          "li:nth-child(15) > a",
+          "li:nth-child(16) > a",
+          "li:nth-child(17) > a",
+          "li:nth-child(18) > a",
+          "li:nth-child(19) > a",
+          "li:nth-child(22) > a",
+          "li:nth-child(23) > a",
+          "li:nth-child(24) > a",
+          "li:nth-child(26) > a",
+          "li:nth-child(27) > a",
+          "li:nth-child(28) > a",
+          "li:nth-child(29) > a"
+        ]
+      }
+    ],
+    "passes": 22
+  },
+  "consoleErrors": [],
+  "mobile": {
+    "320": {
+      "scrollWidth": 540,
+      "bodyScrollWidth": 540,
+      "innerWidth": 320,
+      "tocAside": 0,
+      "widest": [
+        {
+          "tag": "CODE",
+          "cls": "",
+          "right": 1284,
+          "width": 1260
+        },
+        {
+          "tag": "SPAN",
+          "cls": "line",
+          "right": 1284,
+          "width": 1260
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "right": 1284,
+          "width": 9
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "right": 1275,
+          "width": 1071
+        },
+        {
+          "tag": "CODE",
+          "cls": "",
+          "right": 753,
+          "width": 729
+        }
+      ]
+    },
+    "390": {
+      "scrollWidth": 540,
+      "bodyScrollWidth": 540,
+      "innerWidth": 390,
+      "tocAside": 0,
+      "widest": [
+        {
+          "tag": "CODE",
+          "cls": "",
+          "right": 1284,
+          "width": 1260
+        },
+        {
+          "tag": "SPAN",
+          "cls": "line",
+          "right": 1284,
+          "width": 1260
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "right": 1284,
+          "width": 9
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "right": 1275,
+          "width": 1071
+        },
+        {
+          "tag": "CODE",
+          "cls": "",
+          "right": 753,
+          "width": 729
+        }
+      ]
+    }
+  }
+}

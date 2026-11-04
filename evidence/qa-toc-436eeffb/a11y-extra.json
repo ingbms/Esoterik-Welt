@@ -1,0 +1,120 @@
+{
+  "generatedAt": "2026-11-04T17:26:36.669Z",
+  "results": [
+    {
+      "id": "AK-F3b2",
+      "name": "Fokusring 2 px mit Kontrast ≥ 3:1",
+      "ok": true,
+      "detail": {
+        "outline": "2px solid rgb(234, 230, 220)",
+        "outlineOffset": "2px",
+        "background": "rgb(11, 16, 18)",
+        "textColor": "rgb(186, 189, 183)",
+        "ringContrast": 15.36,
+        "focusVisible": true
+      }
+    },
+    {
+      "id": "AK-D1c",
+      "name": "aria-current im DOM gesetzt; AX-Exposition in Chromium-CDP nicht auslesbar",
+      "ok": true,
+      "detail": {
+        "ariaCurrentInDom": 1,
+        "axPropertiesOnLinks": [
+          "focusable",
+          "url",
+          "focused"
+        ],
+        "axNodesWithCurrent": 0,
+        "note": "CDP Accessibility.getFullAXTree führt für Links nur focusable/url; aria-current ist nicht als AX-Property sichtbar. Die Exposition ist damit nicht widerlegt, aber auch nicht belegt."
+      }
+    },
+    {
+      "id": "AK-E6b",
+      "name": "1024 px: Panel klappt auf, keine Überlappung mit Header/Artikel, kein Überlauf",
+      "ok": true,
+      "detail": {
+        "before": false,
+        "open": true,
+        "summaryHeight": 44,
+        "asideTop": 448,
+        "asideBottom": 972,
+        "proseTop": 996,
+        "headerBottom": 101,
+        "overlapsHeader": false,
+        "overlapsProse": false,
+        "overflowX": false,
+        "docScrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "id": "AK-E4c",
+      "name": "1024 px: Summary ≥ 44 px",
+      "ok": true,
+      "detail": {
+        "before": false,
+        "open": true,
+        "summaryHeight": 44,
+        "asideTop": 448,
+        "asideBottom": 972,
+        "proseTop": 996,
+        "headerBottom": 101,
+        "overlapsHeader": false,
+        "overlapsProse": false,
+        "overflowX": false,
+        "docScrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "id": "AXE-TOC-M",
+      "name": "axe-core 390 px (zu und offen) ohne Verstöße im TOC",
+      "ok": true,
+      "detail": {
+        "axeClosed": {
+          "violations": [],
+          "incomplete": []
+        },
+        "axeOpen": {
+          "violations": [],
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    }
+  ],
+  "ring": {
+    "outline": "2px solid rgb(234, 230, 220)",
+    "outlineOffset": "2px",
+    "background": "rgb(11, 16, 18)",
+    "textColor": "rgb(186, 189, 183)",
+    "ringContrast": 15.36,
+    "focusVisible": true
+  },
+  "at1024": {
+    "before": false,
+    "open": true,
+    "summaryHeight": 44,
+    "asideTop": 448,
+    "asideBottom": 972,
+    "proseTop": 996,
+    "headerBottom": 101,
+    "overlapsHeader": false,
+    "overlapsProse": false,
+    "overflowX": false,
+    "docScrollWidth": 1024,
+    "innerWidth": 1024
+  },
+  "axeClosed": {
+    "violations": [],
+    "incomplete": []
+  },
+  "axeOpen": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
+  }
+}

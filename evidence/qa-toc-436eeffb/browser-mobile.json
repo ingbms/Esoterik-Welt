@@ -1,0 +1,485 @@
+{
+  "generatedAt": "2026-11-04T17:35:00.603Z",
+  "viewport": "390x844",
+  "results": [
+    {
+      "id": "AK-F4",
+      "name": "Kontrast Linktext/aktiv ≥ 4,5:1 (Dark)",
+      "ok": true,
+      "detail": {
+        "normal": [
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          10.07,
+          11.48,
+          13.67
+        ],
+        "normalMin": 10.07,
+        "active": {
+          "ratio": 13.67,
+          "fg": "rgb(220, 218, 209)",
+          "bg": "rgb(11, 16, 18)",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        "title": {
+          "ratio": 10.07,
+          "fg": "rgb(186, 189, 183)",
+          "bg": "rgb(11, 16, 18)",
+          "fontSize": "13px",
+          "fontWeight": "400"
+        },
+        "ringColor": "rgb(186, 189, 183)",
+        "ringStyle": "3px",
+        "sample": {
+          "ratio": 10.07,
+          "fg": "rgb(186, 189, 183)",
+          "bg": "rgb(11, 16, 18)",
+          "fontSize": "14px",
+          "fontWeight": "400"
+        }
+      }
+    },
+    {
+      "id": "AK-F4b",
+      "name": "Kontrast ≥ 4,5:1 in der Light-Reserve",
+      "ok": true,
+      "detail": {
+        "normalMin": 7.22,
+        "active": {
+          "ratio": 14.31,
+          "fg": "rgb(45, 27, 71)",
+          "bg": "rgb(248, 245, 252)",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        "sample": {
+          "ratio": 7.22,
+          "fg": "rgb(90, 74, 122)",
+          "bg": "rgb(248, 245, 252)",
+          "fontSize": "14px",
+          "fontWeight": "400"
+        }
+      }
+    },
+    {
+      "id": "AK-F5",
+      "name": "prefers-reduced-motion: reduce → scroll-behavior auto, keine erzwungene Bewegung",
+      "ok": true,
+      "detail": {
+        "scrollBehavior": "auto",
+        "transitions": [
+          "1e-05s",
+          "0s",
+          "0s"
+        ],
+        "scrollPaddingTop": "116px"
+      }
+    },
+    {
+      "id": "AK-E8",
+      "name": "im Druck ist das TOC ausgeblendet",
+      "ok": true,
+      "detail": {
+        "display": "none"
+      }
+    },
+    {
+      "id": "AK-E6",
+      "name": "Umschaltung genau bei 1200 px, keine Überlappung, kein Überlauf",
+      "ok": true,
+      "detail": {
+        "1024": {
+          "asideLeft": 32,
+          "asideTop": -20656.8,
+          "proseLeft": 32,
+          "proseTop": -20588.8,
+          "sideBySide": false,
+          "above": true,
+          "detailsOpen": false,
+          "asideWidth": 960,
+          "overflowX": false,
+          "docScrollWidth": 1024
+        },
+        "1199": {
+          "asideLeft": 64,
+          "asideTop": -20656.8,
+          "proseLeft": 64,
+          "proseTop": -20588.8,
+          "sideBySide": false,
+          "above": true,
+          "detailsOpen": false,
+          "asideWidth": 1071,
+          "overflowX": false,
+          "docScrollWidth": 1199
+        },
+        "1200": {
+          "asideLeft": 876,
+          "asideTop": 124,
+          "proseLeft": 64,
+          "proseTop": -21196.8,
+          "sideBySide": true,
+          "above": false,
+          "detailsOpen": true,
+          "asideWidth": 260,
+          "overflowX": false,
+          "docScrollWidth": 1200
+        },
+        "1440": {
+          "asideLeft": 1076,
+          "asideTop": 124,
+          "proseLeft": 104,
+          "proseTop": -21196.8,
+          "sideBySide": true,
+          "above": false,
+          "detailsOpen": true,
+          "asideWidth": 260,
+          "overflowX": false,
+          "docScrollWidth": 1440
+        }
+      }
+    },
+    {
+      "id": "AK-E4b",
+      "name": "1199 px: Inline-Disclosure schließt/öffnet, Summary 44 px",
+      "ok": true,
+      "detail": {
+        "before": false,
+        "afterOpen": true,
+        "afterClose": false,
+        "summaryHeight": 44,
+        "bodyHeightOpen": 540
+      }
+    },
+    {
+      "id": "AK-E4",
+      "name": "390 px: TOC oberhalb des Artikels, mit JS geschlossen, Summary ≥ 44 px",
+      "ok": true,
+      "detail": {
+        "above": true,
+        "asideTop": 557.5,
+        "proseTop": 625.5,
+        "detailsOpen": false,
+        "summaryHeight": 44,
+        "summaryWidth": 340,
+        "bodyHeight": 472.6,
+        "bodyScrollHeight": 1441,
+        "linkHeights": [
+          60.6,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          60.6,
+          44,
+          44,
+          60.6,
+          44,
+          60.6,
+          60.6,
+          44,
+          60.6,
+          60.6,
+          44,
+          60.6,
+          44,
+          60.6,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44
+        ],
+        "scrollWidth": 540,
+        "innerWidth": 390,
+        "activeCount": 1,
+        "tocInnerOverflow": false
+      }
+    },
+    {
+      "id": "AK-F6b",
+      "name": "Touch: Links ≥ 44 px hoch",
+      "ok": true,
+      "detail": {
+        "min": 44,
+        "heights": [
+          60.6,
+          44,
+          44,
+          44,
+          44
+        ]
+      }
+    },
+    {
+      "id": "AK-E5",
+      "name": "390 px: kein zusätzlicher horizontaler Überlauf durch das TOC",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 540,
+        "baseline": 540,
+        "innerOverflow": false
+      }
+    },
+    {
+      "id": "AK-E4b2",
+      "name": "390 px: Summary öffnet, Klick springt zum Ziel, Panel schließt",
+      "ok": true,
+      "detail": {
+        "opened": true,
+        "closedAfterClick": true,
+        "id": "64-schwebung-binaurale-beats-und-die-entrainment-frage",
+        "hash": "#64-schwebung-binaurale-beats-und-die-entrainment-frage",
+        "top": 100.16,
+        "header": 84,
+        "windowOk": true,
+        "activeCount": 1,
+        "active": [
+          "#64-schwebung-binaurale-beats-und-die-entrainment-frage"
+        ],
+        "activeElement": "H3#64-schwebung-binaurale-beats-und-die-entrainment-frage"
+      }
+    },
+    {
+      "id": "AK-F3c",
+      "name": "Mobil: Summary per Tab erreichbar, Enter und Leertaste toggeln",
+      "ok": true,
+      "detail": {
+        "found": true,
+        "beforeOpen": false,
+        "afterEnter": true,
+        "afterSpace": false,
+        "focusRing": {
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(198, 179, 142)"
+        }
+      }
+    },
+    {
+      "id": "AK-D3b",
+      "name": "Mobil: Scroll-Spy markiert Abschnitt 16 (67-432-hz)",
+      "ok": false,
+      "detail": {
+        "count": 1,
+        "href": "#frequenzen-quellen-evidenzstatus-und-methodik",
+        "scrollY": 501
+      }
+    },
+    {
+      "id": "AK-E7",
+      "name": "320 px und 200 % Zoom (160 px CSS): TOC bedienbar, kein Clipping",
+      "ok": true,
+      "detail": {
+        "160": {
+          "asideLeft": 24,
+          "asideRight": 136,
+          "viewport": 160,
+          "clipped": false,
+          "summaryWidth": 110,
+          "linkWidth": 86,
+          "tocHorizontalScrollbar": false,
+          "docScrollWidth": 540,
+          "summaryHeight": 70.6
+        },
+        "320": {
+          "asideLeft": 24,
+          "asideRight": 296,
+          "viewport": 320,
+          "clipped": false,
+          "summaryWidth": 270,
+          "linkWidth": 246,
+          "tocHorizontalScrollbar": false,
+          "docScrollWidth": 540,
+          "summaryHeight": 44
+        }
+      }
+    },
+    {
+      "id": "MOBIL-CONSOLE",
+      "name": "keine Konsolenfehler mobil",
+      "ok": true,
+      "detail": {
+        "errors": []
+      }
+    }
+  ],
+  "mobile": {
+    "above": true,
+    "asideTop": 557.5,
+    "proseTop": 625.5,
+    "detailsOpen": false,
+    "summaryHeight": 44,
+    "summaryWidth": 340,
+    "bodyHeight": 472.6,
+    "bodyScrollHeight": 1441,
+    "linkHeights": [
+      60.6,
+      44,
+      44,
+      44,
+      44,
+      44,
+      44,
+      44,
+      44,
+      60.6,
+      44,
+      44,
+      60.6,
+      44,
+      60.6,
+      60.6,
+      44,
+      60.6,
+      60.6,
+      44,
+      60.6,
+      44,
+      60.6,
+      44,
+      44,
+      44,
+      44,
+      44,
+      44
+    ],
+    "scrollWidth": 540,
+    "innerWidth": 390,
+    "activeCount": 1,
+    "tocInnerOverflow": false
+  },
+  "mobClick": {
+    "opened": true,
+    "closedAfterClick": true,
+    "id": "64-schwebung-binaurale-beats-und-die-entrainment-frage",
+    "hash": "#64-schwebung-binaurale-beats-und-die-entrainment-frage",
+    "top": 100.16,
+    "header": 84,
+    "windowOk": true,
+    "activeCount": 1,
+    "active": [
+      "#64-schwebung-binaurale-beats-und-die-entrainment-frage"
+    ],
+    "activeElement": "H3#64-schwebung-binaurale-beats-und-die-entrainment-frage"
+  },
+  "keyboardToggle": {
+    "found": true,
+    "beforeOpen": false,
+    "afterEnter": true,
+    "afterSpace": false,
+    "focusRing": {
+      "outlineWidth": "2px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(198, 179, 142)"
+    }
+  },
+  "mobSpy": {
+    "count": 1,
+    "href": "#frequenzen-quellen-evidenzstatus-und-methodik",
+    "scrollY": 501
+  },
+  "narrow": {
+    "160": {
+      "asideLeft": 24,
+      "asideRight": 136,
+      "viewport": 160,
+      "clipped": false,
+      "summaryWidth": 110,
+      "linkWidth": 86,
+      "tocHorizontalScrollbar": false,
+      "docScrollWidth": 540,
+      "summaryHeight": 70.6
+    },
+    "320": {
+      "asideLeft": 24,
+      "asideRight": 296,
+      "viewport": 320,
+      "clipped": false,
+      "summaryWidth": 270,
+      "linkWidth": 246,
+      "tocHorizontalScrollbar": false,
+      "docScrollWidth": 540,
+      "summaryHeight": 44
+    }
+  },
+  "breakpoint": {
+    "1024": {
+      "asideLeft": 32,
+      "asideTop": -20656.8,
+      "proseLeft": 32,
+      "proseTop": -20588.8,
+      "sideBySide": false,
+      "above": true,
+      "detailsOpen": false,
+      "asideWidth": 960,
+      "overflowX": false,
+      "docScrollWidth": 1024
+    },
+    "1199": {
+      "asideLeft": 64,
+      "asideTop": -20656.8,
+      "proseLeft": 64,
+      "proseTop": -20588.8,
+      "sideBySide": false,
+      "above": true,
+      "detailsOpen": false,
+      "asideWidth": 1071,
+      "overflowX": false,
+      "docScrollWidth": 1199
+    },
+    "1200": {
+      "asideLeft": 876,
+      "asideTop": 124,
+      "proseLeft": 64,
+      "proseTop": -21196.8,
+      "sideBySide": true,
+      "above": false,
+      "detailsOpen": true,
+      "asideWidth": 260,
+      "overflowX": false,
+      "docScrollWidth": 1200
+    },
+    "1440": {
+      "asideLeft": 1076,
+      "asideTop": 124,
+      "proseLeft": 104,
+      "proseTop": -21196.8,
+      "sideBySide": true,
+      "above": false,
+      "detailsOpen": true,
+      "asideWidth": 260,
+      "overflowX": false,
+      "docScrollWidth": 1440
+    }
+  }
+}

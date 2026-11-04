@@ -1,0 +1,113 @@
+{
+  "generatedAt": "2026-11-04T17:26:06.499Z",
+  "determinism": {
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "identicalToVerbatim": true,
+    "css": {
+      "pilot": [
+        {
+          "file": "BaseLayout.C9cg-69v.css",
+          "bytes": 181441,
+          "gzip": 28118
+        }
+      ],
+      "pilot2": [
+        {
+          "file": "BaseLayout.C9cg-69v.css",
+          "bytes": 181441,
+          "gzip": 28118
+        }
+      ]
+    },
+    "tocScript": {
+      "pilot": [
+        {
+          "file": "TableOfContents.astro_astro_type_script_index_0_lang.BktuqbeO.js",
+          "bytes": 4509,
+          "gzip": 2018
+        }
+      ],
+      "pilot2": [
+        {
+          "file": "TableOfContents.astro_astro_type_script_index_0_lang.BktuqbeO.js",
+          "bytes": 4509,
+          "gzip": 2018
+        }
+      ]
+    }
+  },
+  "otherPages": {
+    "htmlFilesPilot": 145,
+    "htmlFilesBaseline": 145,
+    "added": [],
+    "removed": [],
+    "changed": [
+      "frequenzen/quellen.html"
+    ],
+    "onlyPilotChanged": true
+  },
+  "headingIds": {
+    "baselineCount": 29,
+    "pilotCount": 29,
+    "identical": true,
+    "diff": []
+  },
+  "radiasthesie": {
+    "baseline": {
+      "radiasthesie/glossar.html": 0,
+      "radiasthesie/index.html": 1,
+      "radiasthesie/methodik.html": 0,
+      "radiasthesie/orakel.html": 15,
+      "radiasthesie/pendeln.html": 19,
+      "radiasthesie/quellen.html": 0,
+      "radiasthesie/radiasthesie.html": 27
+    },
+    "pilot": {
+      "radiasthesie/glossar.html": 0,
+      "radiasthesie/index.html": 1,
+      "radiasthesie/methodik.html": 0,
+      "radiasthesie/orakel.html": 15,
+      "radiasthesie/pendeln.html": 19,
+      "radiasthesie/quellen.html": 0,
+      "radiasthesie/radiasthesie.html": 27
+    },
+    "identical": true
+  },
+  "farbwelten": {
+    "baseline": {
+      "rel": "farbwelten/index.html",
+      "dupIds": [
+        {
+          "id": "entries-title",
+          "n": 3
+        }
+      ]
+    },
+    "pilot": {
+      "rel": "farbwelten/index.html",
+      "dupIds": [
+        {
+          "id": "entries-title",
+          "n": 3
+        }
+      ]
+    }
+  },
+  "budgets": {
+    "cssBaselineGzip": [
+      27418
+    ],
+    "cssPilotGzip": [
+      28118
+    ],
+    "cssDeltaGzip": 700,
+    "tocScriptGzip": [
+      2018
+    ],
+    "tocScriptBytes": [
+      4509
+    ]
+  }
+}
