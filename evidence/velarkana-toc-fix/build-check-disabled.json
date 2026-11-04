@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-11-04T17:49:07.619Z",
+  "root": "dist",
+  "expectDisabled": true,
+  "pages": 145,
+  "checks": [
+    {
+      "id": "AK-A3",
+      "description": "TOC_DISABLED=1: kein TOC auf der Pilotseite",
+      "ok": true,
+      "detail": {
+        "asides": 0,
+        "navs": 0
+      }
+    },
+    {
+      "id": "AK-A2",
+      "description": "kein aside.page-toc auf den übrigen Seiten",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-A5",
+      "description": "kein zusätzliches nav \"Inhaltsverzeichnis\" auf den übrigen Seiten",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "AK-H5",
+      "description": "bestehende Verzeichnisse behalten genau ein nav und erhalten kein page-toc",
+      "ok": true,
+      "detail": [
+        {
+          "rel": "radiasthesie/orakel.html",
+          "navs": 1,
+          "asides": 0
+        },
+        {
+          "rel": "radiasthesie/pendeln.html",
+          "navs": 1,
+          "asides": 0
+        },
+        {
+          "rel": "radiasthesie/radiasthesie.html",
+          "navs": 1,
+          "asides": 0
+        },
+        {
+          "rel": "wissen/01-die-78-tarot-karten-eine.html",
+          "navs": 1,
+          "asides": 0
+        }
+      ]
+    },
+    {
+      "id": "AK-H5b",
+      "description": "bestehendes Radiästhesie-TOC bleibt bei 10 Links",
+      "ok": true,
+      "detail": {
+        "legacyLinks": 10
+      }
+    },
+    {
+      "id": "AK-B8",
+      "description": "Leerzustand: 404 und labor.html ohne TOC",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "skipped": [
+    "AK-B1",
+    "AK-B2",
+    "AK-C1",
+    "AK-C2",
+    "AK-B5",
+    "AK-B6",
+    "AK-G4",
+    "AK-N1",
+    "AK-N2",
+    "AK-I3",
+    "AK-H6"
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0
+  }
+}

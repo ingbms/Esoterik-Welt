@@ -122,7 +122,7 @@ module.exports = [
     // aber Code in `page.evaluate()`-Callbacks aus. Deshalb Node- und
     // Browser-Globals; bewusst nur für die TOC-Browserprüfung, damit die
     // Regel nicht für Anwendungscode gilt.
-    files: ['scripts/toc/verify-browser.mjs'],
+    files: ['scripts/toc/verify-browser.mjs', 'scripts/toc/verify-scrollspy-engines.mjs'],
     languageOptions: {
       ecmaVersion: 2023,
       sourceType: 'module',

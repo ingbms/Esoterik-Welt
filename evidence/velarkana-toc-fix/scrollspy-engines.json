@@ -1,0 +1,128 @@
+{
+  "generatedAt": "2026-11-04T17:48:04.901Z",
+  "target": "67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+  "engines": {
+    "chromium": {
+      "version": "156.0.8078.4",
+      "cases": {
+        "390": {
+          "target": 29878,
+          "y": 29878,
+          "jump": 0,
+          "current": 1,
+          "activeHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "expectedHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "detailsOpen": true,
+          "docHeight": 49454,
+          "ok": true
+        },
+        "1024": {
+          "target": 13715,
+          "y": 13715,
+          "jump": 0,
+          "current": 1,
+          "activeHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "expectedHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "detailsOpen": true,
+          "docHeight": 23772,
+          "ok": true
+        },
+        "1199": {
+          "target": 13715,
+          "y": 13715,
+          "jump": 0,
+          "current": 1,
+          "activeHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "expectedHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "detailsOpen": true,
+          "docHeight": 23772,
+          "ok": true
+        }
+      }
+    },
+    "firefox": {
+      "version": "157.0",
+      "cases": {
+        "390": {
+          "target": 30169,
+          "y": 30169,
+          "jump": 0,
+          "current": 1,
+          "activeHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "expectedHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "detailsOpen": true,
+          "docHeight": 49472,
+          "ok": true
+        },
+        "1024": {
+          "target": 13789,
+          "y": 13789,
+          "jump": 0,
+          "current": 1,
+          "activeHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "expectedHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "detailsOpen": true,
+          "docHeight": 23788,
+          "ok": true
+        },
+        "1199": {
+          "target": 13789,
+          "y": 13789,
+          "jump": 0,
+          "current": 1,
+          "activeHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "expectedHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "detailsOpen": true,
+          "docHeight": 23788,
+          "ok": true
+        }
+      }
+    },
+    "webkit": {
+      "version": "27.2",
+      "cases": {
+        "390": {
+          "target": 31297,
+          "y": 31297,
+          "jump": 0,
+          "current": 1,
+          "activeHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "expectedHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "detailsOpen": true,
+          "docHeight": 51161,
+          "ok": true
+        },
+        "1024": {
+          "target": 12879,
+          "y": 12879,
+          "jump": 0,
+          "current": 1,
+          "activeHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "expectedHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "detailsOpen": true,
+          "docHeight": 23260,
+          "ok": true
+        },
+        "1199": {
+          "target": 12879,
+          "y": 12879,
+          "jump": 0,
+          "current": 1,
+          "activeHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "expectedHref": "#67-432-hz-kleiner-effekt-keine-gesundheitswirkung",
+          "detailsOpen": true,
+          "docHeight": 23260,
+          "ok": true
+        }
+      }
+    }
+  },
+  "shots": [
+    "C:\\Users\\mas\\Arbeit\\Esoterik-Welt\\.worktrees\\t_296b0496\\evidence\\velarkana-toc-fix\\390-offen-tief-aktiv.png"
+  ],
+  "summary": {
+    "total": 9,
+    "passed": 9,
+    "failed": 0
+  }
+}

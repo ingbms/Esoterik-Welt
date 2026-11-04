@@ -395,16 +395,22 @@
   content: '';
 }
 
-/* Plus/Minus als Textzeichen im Mono-Schnitt: kein Icon-Asset. */
-.page-toc__summary::after {
-  content: '+';
+/* Plus/Minus als Textzeichen im Mono-Schnitt: kein Icon-Asset. Das Zeichen
+   sitzt in einem `aria-hidden`-Span, damit es nicht als Teil des zugänglichen
+   Namens des Aufklappers vorgelesen wird (QA-Befund D-2). */
+.page-toc__summary-marker {
+  flex: none;
   margin-left: auto;
   font-size: 16px;
   line-height: 1;
   color: var(--color-primary);
 }
 
-.page-toc__details[open] > .page-toc__summary::after {
+.page-toc__summary-marker::before {
+  content: '+';
+}
+
+.page-toc__details[open] > .page-toc__summary > .page-toc__summary-marker::before {
   content: '–';
 }
 

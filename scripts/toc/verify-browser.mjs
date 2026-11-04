@@ -526,7 +526,71 @@ const main = async () => {
     await mobilePage.screenshot({ path: join(OUT, '390-nach-klick.png') });
     shots.push('390-nach-klick.png');
     check('AK-H4c', 'keine Konsolenfehler auf Mobil', mobileErrors.length === 0, mobileErrors.slice(0, 5));
+
+    /* --- Regression D-1: offenes Panel + Seitenscrollung (QA t_436eeffb) --- */
+    // Unter 1200 px steht das Verzeichnis im Fluss über dem Artikel. Das
+    // Nachführen der aktiven Zeile darf deshalb nur den inneren Scrollbereich
+    // bewegen; `Element.scrollIntoView` würde das Fenster zurücksetzen.
+    const scrollSpyWithOpenPanel = async (page, width) => {
+      const alreadyOpen = await page.evaluate(() => document.querySelector('[data-toc-details]').open);
+      if (!alreadyOpen) {
+        await page.click('.page-toc__summary');
+        await page.waitForTimeout(200);
+      }
+      const target = await page.evaluate(() => {
+        const heading = document.getElementById('67-432-hz-kleiner-effekt-keine-gesundheitswirkung');
+        if (!heading) return null;
+        const header =
+          Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 100;
+        return Math.round(heading.getBoundingClientRect().top + window.scrollY - header + 10);
+      });
+      if (target === null) {
+        check(`AK-D3c-${width}`, `${width} px: Zielüberschrift vorhanden`, false, null);
+        return;
+      }
+      await page.evaluate((y) => window.scrollTo(0, y), target);
+      await page.waitForTimeout(600);
+      const state = await page.evaluate(() => ({
+        y: Math.round(window.scrollY),
+        activeHref: document.querySelector('.page-toc [aria-current="location"]')?.getAttribute('href') ?? null,
+        current: document.querySelectorAll('.page-toc [aria-current]').length,
+        detailsOpen: document.querySelector('[data-toc-details]').open,
+      }));
+      check(
+        `AK-D3c-${width}`,
+        `${width} px mit offenem Panel: Seitenscrollung bleibt stehen, aktiver Abschnitt korrekt`,
+        state.detailsOpen === true &&
+          Math.abs(state.y - target) <= 2 &&
+          state.current === 1 &&
+          state.activeHref === '#67-432-hz-kleiner-effekt-keine-gesundheitswirkung',
+        { target, ...state }
+      );
+    };
+    await scrollSpyWithOpenPanel(mobilePage, 390);
+
+    // D-2: das dekorative Plus/Minus darf nicht im zugänglichen Namen stehen.
+    // `ariaSnapshot` von Playwright gibt für <summary> nur den Textknoten aus;
+    // maßgeblich ist der AX-Baum (Rolle DisclosureTriangle).
+    const axClient = await mobilePage.context().newCDPSession(mobilePage);
+    const { nodes: axNodes } = await axClient.send('Accessibility.getFullAXTree');
+    const summaryAx = axNodes.find((node) => node.role?.value === 'DisclosureTriangle');
+    const summaryName = summaryAx?.name?.value ?? '';
+    check(
+      'AK-H2d',
+      'Summary: dekoratives +/- nicht im zugänglichen Namen',
+      summaryName.trim().toUpperCase() === 'AUF DIESER SEITE',
+      { role: summaryAx?.role?.value, name: summaryName }
+    );
     await mobile.close();
+
+    for (const width of [1024, 1199]) {
+      const context = await browser.newContext({ viewport: { width, height: 900 }, hasTouch: true });
+      const { page } = await openPilot(context, { width, height: 900 });
+      await page.click('.page-toc__summary');
+      await page.waitForTimeout(200);
+      await scrollSpyWithOpenPanel(page, width);
+      await context.close();
+    }
 
     /* ------------------------------ 320 px ------------------------------- */
     const narrow = await browser.newContext({ viewport: { width: 320, height: 640 }, hasTouch: true });

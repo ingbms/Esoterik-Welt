@@ -41,6 +41,7 @@
     "test:toc": "node --test tests/toc-unit.mjs",
     "verify:toc": "node scripts/toc/verify-toc.cjs dist",
     "verify:toc:browser": "node scripts/toc/verify-browser.mjs",
+    "verify:toc:engines": "node scripts/toc/verify-scrollspy-engines.mjs",
     "verify:sync": "node scripts/verify-farbwelten-sync.cjs",
     "data:astrologie": "node scripts/generate-astrologie-data.cjs",
     "data:radiasthesie": "node scripts/generate-radiasthesie-data.cjs && npx prettier --write js/data/radiasthesie.js",

@@ -59,6 +59,9 @@ const listHtml = tree ? renderTocList(tree.items) : '';
     <details class="page-toc__details" data-toc-details open>
       <summary class="page-toc__summary" id="page-toc-title">
         {options.title}
+        {/* Dekoratives Plus/Minus; `aria-hidden`, damit es nicht im
+            zugänglichen Namen des Aufklappers erscheint (QA-Befund D-2). */}
+        <span class="page-toc__summary-marker" aria-hidden="true"></span>
       </summary>
       <nav class="page-toc__nav" aria-label="Inhaltsverzeichnis">
         {/* Rein visuelles Rail-Label: auf dem Desktop ist das Summary ausgeblendet

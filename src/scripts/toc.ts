@@ -188,11 +188,17 @@ async function initToc(root: HTMLElement): Promise<void> {
     }
     // Bei langen Verzeichnissen bleibt der aktive Eintrag im Scrollbereich
     // sichtbar (Design G-11). Nur bei echtem Überlauf, ohne eigene Animation.
+    // Bewusst ausschließlich `body.scrollTop` statt `scrollIntoView`: unterhalb
+    // von 1200 px steht das Verzeichnis im Fluss über dem Artikel und ist beim
+    // Scrollen aus dem Sichtfeld; `scrollIntoView` würde dann auch das Fenster
+    // scrollen und die Leseposition zurücksetzen (QA-Befund D-1).
     if (activeLink && body.clientHeight > 0 && body.scrollHeight > body.clientHeight + 1) {
       const linkBox = activeLink.getBoundingClientRect();
       const bodyBox = body.getBoundingClientRect();
-      if (linkBox.top < bodyBox.top || linkBox.bottom > bodyBox.bottom) {
-        activeLink.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'auto' });
+      if (linkBox.top < bodyBox.top) {
+        body.scrollTop -= bodyBox.top - linkBox.top;
+      } else if (linkBox.bottom > bodyBox.bottom) {
+        body.scrollTop += linkBox.bottom - bodyBox.bottom;
       }
     }
   };
