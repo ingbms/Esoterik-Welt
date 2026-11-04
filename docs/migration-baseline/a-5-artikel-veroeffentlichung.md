@@ -174,3 +174,43 @@ sich Jekyll lokal nicht ausführen (kein Ruby/Jekyll im Arbeitsbaum).
   (Rot-Wellenlänge ohne Quelle), `CNT-LEG-002` (Datenschutz/Entwurf), `MED-0130` (offene Lizenz).
 - Die Sitemap führt weiterhin nur `index.html`; die Artikel sind Hash-Routen (`#blog/11`) und damit
   keine eigenen URLs. Bewusst unverändert.
+
+## 10. Datei-Hashes (sha256 des Commits)
+
+Erzeugnisse und Kerndateien:
+
+| Datei | sha256 |
+| --- | --- |
+| `js/data/articles-markdown.js` | `d74596992f12d157783fcade908992f2d4c61dd3f91236d354be385213bd4d32` |
+| `scripts/generate-articles-data.cjs` | `d3eba55c7aafde1635001964ee4ea538d382699ade6f850dfd43d800103ac03c` |
+| `js/modules/blog.js` | `54deda523543d7f7c59f8a843700d9b67118534fd58f65f2abc40cd49384b644` |
+| `index.html` | `4a31329e96d6e868aebbf6e4856cc1b6c27889eb1485d5f0f664e329f87df266` |
+| `_config.yml` | `915156c7a04f3afb6c209d0a097d9b3a1de6e56ef5b5de8f61e0d04b1a275c2a` |
+| `tests/generate-articles-data.test.js` | `573f6fa475659f5936c3c1c76d4c8ccdb3a38d16333111ce0838290bf6077503` |
+| `tests/blog-articles.spec.js` | `eae229070d2f2ecd60d186611bf1f59985add396902c2d648e623dd8abde1c29` |
+| `docs/migration-baseline/content-catalog.json` | `28e559dcaf1f99f323e027101f92a6e261d238165ac9c0f72030711ab2890c36` |
+| `docs/migration-baseline/content-catalog-meta.json` | `29ddc1711c7732cd43d58a60ddb919717f564498717245c4e63c70642e485f7a` |
+| `docs/migration-baseline/funktionen-katalog.md` | `2c35fd1e345c9d352402669a111f07ce562ba3837f8062958d29c296ef586d87` |
+| `docs/migration-baseline/release-gate.md` | `c650a71eed529e01f8035b1ec9ff8b1f05f5776e9daae8286f7c00c5fcf7cd1b` |
+| `docs/migration-baseline/push-handoff.md` | `8b3af0d5d7b4fd162bb560a60104811c25e6da7a2910d891133f1982ac49c5cb` |
+
+Redaktionsquellen:
+
+| Datei | sha256 |
+| --- | --- |
+| `data/articles/article-01.md` | `489b58e937a0e20d1a5cc7a7a7d5198312e106544b3da7ee7bf32bd61d116753` |
+| `data/articles/article-02.md` | `2e4865fc898455e1fb2ae3c3ca6dbbb3ac1202084ecfd129961644a742f739da` |
+| `data/articles/article-03.md` | `e3edf8eb251e4d3ddc17ce7b136e5a50418e7d7d9e36a7864474d3ce39ef5898` |
+| `data/articles/article-04.md` | `8538e89152fbf49c544ac0be9944c6dcfcfc8bbae67a1c7c849f01074a064ffd` |
+| `data/articles/article-05.md` | `721ffd4a84f47862cac180b9d26993c479b6edad7121432b845a180cdc2184c1` |
+| `data/articles/article-06.md` | `1798689b9163f734c59daa0e223552b87eb436bf4aed651fdb496f2387db43a2` |
+| `data/articles/article-07.md` | `83e0bc7ce8378870ad26cb168714e98e61c50a466bb4014c83c7d4ef75e72787` |
+| `data/articles/article-08.md` | `602bb3f8f70bdf4360843911c74c090aff55baa03ce602802cfd7c2c22c6e148` |
+| `data/articles/article-09.md` | `ba3a50ed36286a1a85f16203440ac37ec01a56e8bb6da00145e1f83c94a60155` |
+| `data/articles/article-10.md` | `41cb8c87d58692865d5b0349ae930c3f3aa5aaed0ccb6b6900ac6c02f52302d5` |
+| `data/articles/article-11.md` | `f85f695ffcab3d8cdc11fe4d676dcd017f91cb717092542ae678ac3c54303ffb` |
+| `data/articles/article-12.md` | `0f59b4e5f1875a4d27689dea22a3eb8b5f6e1935298f090a333168e87505a8ee` |
+
+Die Hashes sind mit `git cat-file blob <commit>:<pfad> | sha256sum` reproduzierbar; für die
+`.md`-Quellen und `js/data/articles-markdown.js` entsprechen sie den Bytes im Commit (keine
+CRLF-Konvertierung im Blob).
